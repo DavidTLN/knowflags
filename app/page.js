@@ -1,10 +1,11 @@
 import Navbar from '@/components/Navbar'
+import Hero from '@/components/Hero'
 
 export default function Home() {
   return (
     <main>
       <Navbar />
-      <h1>Bienvenue sur KnowFlags</h1>
+      <Hero />
     </main>
   )
 }

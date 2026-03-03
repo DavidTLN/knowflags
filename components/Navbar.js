@@ -1,26 +1,158 @@
+'use client'
+
+import { useState, useEffect } from 'react'
+import { useLocale, useTranslations } from 'next-intl'
+import { useRouter, usePathname } from 'next/navigation'
+
 export default function Navbar() {
+  const locale = useLocale()
+  const router = useRouter()
+  const pathname = usePathname()
+  const t = useTranslations('nav')
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    function checkMobile() {
+      setIsMobile(window.innerWidth < 768)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
+  function switchLanguage() {
+    const newLocale = locale === 'en' ? 'fr' : 'en'
+    const newPath = pathname.replace('/' + locale, '/' + newLocale)
+    router.push(newPath)
+  }
+
+  const navLinks = [
+    { label: t('gallery'), href: '#' },
+    { label: t('games'), href: '#' },
+    { label: t('history'), href: '#' },
+    { label: t('submit'), href: '#' },
+  ]
+
+  const BurgerIcon = () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F4F1E6" strokeWidth="2" strokeLinecap="round">
+      <line x1="3" y1="6" x2="21" y2="6" />
+      <line x1="3" y1="12" x2="21" y2="12" />
+      <line x1="3" y1="18" x2="21" y2="18" />
+    </svg>
+  )
+
+  const CloseIcon = () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F4F1E6" strokeWidth="2" strokeLinecap="round">
+      <line x1="18" y1="6" x2="6" y2="18" />
+      <line x1="6" y1="6" x2="18" y2="18" />
+    </svg>
+  )
+
   return (
-    <header className="flex items-center justify-between px-6 py-4 bg-primary text-secondary sticky top-0 z-50">
-      
-      {/* Logo */}
-      <div className="flex items-center gap-2">
-        <span className="text-2xl">🏳️</span>
-        <span className="text-xl font-black tracking-tight">knowflags</span>
-      </div>
+    <>
+      <header style={{backgroundColor: '#0B1F3B', color: '#F4F1E6', position: 'sticky', top: 0, zIndex: 50}}>
+        <div style={{padding: '16px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
 
-      {/* Navigation */}
-      <nav className="hidden md:flex items-center gap-8">
-        <a href="#" className="text-sm font-semibold hover:text-accent-gold transition-colors">Gallery</a>
-        <a href="#" className="text-sm font-semibold hover:text-accent-gold transition-colors">Games</a>
-        <a href="#" className="text-sm font-semibold hover:text-accent-gold transition-colors">History</a>
-        <a href="#" className="text-sm font-semibold hover:text-accent-gold transition-colors">Submit</a>
-      </nav>
+          <span style={{fontSize: '20px', fontWeight: '900'}}>knowflags</span>
 
-      {/* Bouton langue */}
-      <button className="bg-secondary text-primary px-4 py-2 rounded-lg text-sm font-bold hover:bg-accent-blue transition-colors">
-        EN / FR
-      </button>
+          {!isMobile && (
+            <nav style={{display: 'flex', alignItems: 'center', gap: '32px'}}>
+              {navLinks.map((link) => (
+                <a key={link.label} href={link.href} style={{color: '#F4F1E6', textDecoration: 'none', fontSize: '14px', fontWeight: '600'}}>
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+          )}
 
-    </header>
+          <div style={{display: 'flex', alignItems: 'center', gap: '12px'}}>
+            <button onClick={switchLanguage} style={{backgroundColor: '#F4F1E6', color: '#0B1F3B', padding: '8px 16px', borderRadius: '8px', fontSize: '14px', fontWeight: 'bold', border: 'none', cursor: 'pointer'}}>
+              {locale === 'en' ? 'EN' : 'FR'}
+            </button>
+
+            {isMobile && (
+              <button
+                onClick={() => setMenuOpen(!menuOpen)}
+                style={{backgroundColor: 'transparent', border: 'none', cursor: 'pointer', padding: '4px', display: 'flex', alignItems: 'center'}}
+              >
+                <BurgerIcon />
+              </button>
+            )}
+          </div>
+        </div>
+      </header>
+
+      {isMobile && (
+        <div
+          onClick={() => setMenuOpen(false)}
+          style={{
+            position: 'fixed',
+            inset: 0,
+            backgroundColor: 'rgba(0,0,0,0.5)',
+            zIndex: 98,
+            opacity: menuOpen ? 1 : 0,
+            pointerEvents: menuOpen ? 'auto' : 'none',
+            transition: 'opacity 0.3s ease'
+          }}
+        />
+      )}
+
+      {isMobile && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          right: 0,
+          height: '100vh',
+          width: '75%',
+          maxWidth: '320px',
+          backgroundColor: '#0B1F3B',
+          zIndex: 99,
+          transform: menuOpen ? 'translateX(0)' : 'translateX(100%)',
+          transition: 'transform 0.3s ease',
+          display: 'flex',
+          flexDirection: 'column',
+          padding: '24px'
+        }}>
+
+          <div style={{display: 'flex', justifyContent: 'flex-end', marginBottom: '40px'}}>
+            <button
+              onClick={() => setMenuOpen(false)}
+              style={{backgroundColor: 'transparent', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center'}}
+            >
+              <CloseIcon />
+            </button>
+          </div>
+
+          <nav style={{display: 'flex', flexDirection: 'column', gap: '8px'}}>
+            {navLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                style={{
+                  color: '#F4F1E6',
+                  textDecoration: 'none',
+                  fontSize: '20px',
+                  fontWeight: '700',
+                  padding: '16px 0',
+                  borderBottom: '1px solid rgba(244,241,230,0.1)',
+                  display: 'block'
+                }}
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+
+          <div style={{marginTop: 'auto'}}>
+            <button onClick={switchLanguage} style={{backgroundColor: '#F4F1E6', color: '#0B1F3B', padding: '12px 24px', borderRadius: '8px', fontSize: '14px', fontWeight: 'bold', border: 'none', cursor: 'pointer', width: '100%'}}>
+              {locale === 'en' ? 'EN / FR' : 'FR / EN'}
+            </button>
+          </div>
+
+        </div>
+      )}
+    </>
   )
 }

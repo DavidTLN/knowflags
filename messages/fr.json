@@ -1,0 +1,23 @@
+{
+  "nav": {
+    "gallery": "Galerie",
+    "games": "Jeux",
+    "history": "Histoire",
+    "submit": "Soumettre"
+  },
+  "hero": {
+    "featured": "À la une aujourd'hui",
+    "button": "Histoire complète"
+  },
+  "cards": {
+    "quiz_title": "Quiz de drapeaux",
+    "quiz_desc": "Testez vos connaissances avec nos défis quotidiens d'identification de drapeaux.",
+    "quiz_link": "Jouer",
+    "atlas_title": "Atlas mondial",
+    "atlas_desc": "Explorez notre base de données de plus de 250 drapeaux souverains et régionaux.",
+    "atlas_link": "Explorer la carte",
+    "vexil_title": "Vexillologie 101",
+    "vexil_desc": "Plongez dans la science et l'art du design de drapeaux et du symbolisme culturel.",
+    "vexil_link": "En savoir plus"
+  }
+}

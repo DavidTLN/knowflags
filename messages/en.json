@@ -1,0 +1,23 @@
+{
+  "nav": {
+    "gallery": "Gallery",
+    "games": "Games",
+    "history": "History",
+    "submit": "Submit"
+  },
+  "hero": {
+    "featured": "Featured Today",
+    "button": "Full History"
+  },
+  "cards": {
+    "quiz_title": "Flag Quiz",
+    "quiz_desc": "Test your knowledge with our daily interactive flag identification challenges.",
+    "quiz_link": "Play Now",
+    "atlas_title": "Global Atlas",
+    "atlas_desc": "Explore our comprehensive database of over 250 sovereign and regional flags.",
+    "atlas_link": "Explore Map",
+    "vexil_title": "Vexillology 101",
+    "vexil_desc": "Dive deep into the science and art of flag design and cultural symbolism.",
+    "vexil_link": "Learn More"
+  }
+}

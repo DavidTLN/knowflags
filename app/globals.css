@@ -29,3 +29,24 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Navbar responsive */
+.nav-desktop {
+  display: none;
+}
+
+.burger-btn {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .nav-desktop {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .burger-btn {
+    display: none;
+  }
+}

@@ -53,7 +53,7 @@ const FLAGS = [
   { en: 'Djibouti',                         fr: 'Djibouti',                         code: 'dj' },
   { en: 'Dominica',                         fr: 'Dominique',                        code: 'dm' },
   { en: 'Dominican Republic',               fr: 'République dominicaine',           code: 'do' },
-  { en: 'DR Congo',                         fr: 'RD Congo',                         code: 'cd' },
+  { en: 'Democratic Republic of the Congo', fr: 'République démocratique du Congo', code: 'cd' },
   { en: 'Ecuador',                          fr: 'Équateur',                         code: 'ec' },
   { en: 'Egypt',                            fr: 'Égypte',                           code: 'eg' },
   { en: 'El Salvador',                      fr: 'Salvador',                         code: 'sv' },
@@ -222,21 +222,22 @@ export default function FlagReveal() {
   const [input, setInput] = useState('')
   const [streak, setStreak] = useState(0)
   const [lives, setLives] = useState(MAX_LIVES)
-  const [gameState, setGameState] = useState('playing')
+  const [gameState, setGameState] = useState('playing') // playing | won | lost | gameover
   const [revealedTiles, setRevealedTiles] = useState(new Set())
   const [howToPlayOpen, setHowToPlayOpen] = useState(false)
   const [suggestions, setSuggestions] = useState([])
+  const [activeIdx, setActiveIdx] = useState(0) // keyboard nav index
+  const activeIdxRef = useRef(0)
+  const suggestionsRef = useRef([])
   const [imageLoaded, setImageLoaded] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
-
-  // Auth + stats
   const [user, setUser] = useState(null)
-  const [myStats, setMyStats] = useState(null)   // { streak_current, streak_best, flags_found, games_played }
+  const [myStats, setMyStats] = useState(null)
   const [leaderboard, setLeaderboard] = useState([])
 
   const getName = (flag) => flag ? (locale === 'fr' ? flag.fr : flag.en) : ''
 
-  // ── responsive ─────────────────────────────────────────────────────────
+  // ── responsive ────────────────────────────────────────────────────────────
   useEffect(() => {
     function check() { setIsMobile(window.innerWidth < 768) }
     check()
@@ -244,7 +245,7 @@ export default function FlagReveal() {
     return () => window.removeEventListener('resize', check)
   }, [])
 
-  // ── auth + load stats ────────────────────────────────────────────────────
+  // ── auth + stats ──────────────────────────────────────────────────────────
   useEffect(() => {
     const supabase = createClient()
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -273,7 +274,7 @@ export default function FlagReveal() {
     const supabase = createClient()
     const { data } = await supabase
       .from('player_stats')
-      .select('streak_best, flags_found, profiles(username)')
+      .select('user_id, streak_best, flags_found, profiles(username)')
       .order('streak_best', { ascending: false })
       .limit(5)
     if (data) setLeaderboard(data)
@@ -283,11 +284,7 @@ export default function FlagReveal() {
     if (!user) return
     const supabase = createClient()
     const { data: existing } = await supabase
-      .from('player_stats')
-      .select('*')
-      .eq('user_id', user.id)
-      .single()
-
+      .from('player_stats').select('*').eq('user_id', user.id).single()
     if (existing) {
       await supabase.from('player_stats').update({
         streak_current: won ? newStreak : 0,
@@ -309,7 +306,7 @@ export default function FlagReveal() {
     loadLeaderboard()
   }
 
-  // ── game logic ───────────────────────────────────────────────────────────
+  // ── game ──────────────────────────────────────────────────────────────────
   useEffect(() => { startNewFlag() }, [])
   useEffect(() => { if (imageLoaded) drawCanvas() }, [imageLoaded, revealedTiles])
 
@@ -322,6 +319,7 @@ export default function FlagReveal() {
     setGameState('playing')
     setImageLoaded(false)
     setSuggestions([])
+    setActiveIdx(0)
     setTimeout(() => inputRef.current?.focus(), 150)
   }
 
@@ -359,14 +357,14 @@ export default function FlagReveal() {
     return new Promise((resolve) => {
       const W = CANVAS_W; const H = CANVAS_H
       const tC = document.createElement('canvas'); tC.width = W; tC.height = H
-      const tCtx = tC.getContext('2d'); tCtx.drawImage(imgRef.current, 0, 0, W, H)
-      const tData = tCtx.getImageData(0, 0, W, H).data
+      tC.getContext('2d').drawImage(imgRef.current, 0, 0, W, H)
+      const tData = tC.getContext('2d').getImageData(0, 0, W, H).data
       const gImg = new Image(); gImg.crossOrigin = 'anonymous'
       gImg.src = 'https://flagcdn.com/w640/' + guessCode + '.png'
       gImg.onload = () => {
         const gC = document.createElement('canvas'); gC.width = W; gC.height = H
-        const gCtx = gC.getContext('2d'); gCtx.drawImage(gImg, 0, 0, W, H)
-        const gData = gCtx.getImageData(0, 0, W, H).data
+        gC.getContext('2d').drawImage(gImg, 0, 0, W, H)
+        const gData = gC.getContext('2d').getImageData(0, 0, W, H).data
         const cols = Math.ceil(W / TILE_SIZE); const rows = Math.ceil(H / TILE_SIZE)
         const newRevealed = new Set(revealedTiles)
         let matched = 0; const total = cols * rows
@@ -393,24 +391,50 @@ export default function FlagReveal() {
 
   function handleInputChange(val) {
     setInput(val)
-    if (val.length < 2) { setSuggestions([]); return }
-    setSuggestions(FLAGS.filter(f =>
+    if (val.length < 2) {
+      setSuggestions([])
+      suggestionsRef.current = []
+      setActiveIdx(0)
+      activeIdxRef.current = 0
+      return
+    }
+    const filtered = FLAGS.filter(f =>
       getName(f).toLowerCase().startsWith(val.toLowerCase()) &&
       !guesses.find(g => g.code === f.code)
-    ).slice(0, 6))
+    ).slice(0, 6)
+    setSuggestions(filtered)
+    suggestionsRef.current = filtered
+    setActiveIdx(0)
+    activeIdxRef.current = 0
   }
 
   function handleKeyDown(e) {
-    if (e.key === 'Enter' && suggestions.length > 0) handleGuess(suggestions[0])
+    if (suggestionsRef.current.length === 0) return
+    if (e.key === 'ArrowDown') {
+      e.preventDefault()
+      const next = Math.min(activeIdxRef.current + 1, suggestionsRef.current.length - 1)
+      activeIdxRef.current = next
+      setActiveIdx(next)
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault()
+      const prev = Math.max(activeIdxRef.current - 1, 0)
+      activeIdxRef.current = prev
+      setActiveIdx(prev)
+    } else if (e.key === 'Enter') {
+      e.preventDefault()
+      const flag = suggestionsRef.current[activeIdxRef.current]
+      if (flag) handleGuess(flag)
+    }
   }
 
   async function handleGuess(flag) {
     if (gameState !== 'playing') return
-    setSuggestions([]); setInput('')
+    setSuggestions([]); setInput(''); setActiveIdx(0)
     const isCorrect = flag.code === target.code
     const { newRevealed, pct } = await computeSimilarity(flag.code)
     const newGuesses = [...guesses, { ...flag, correct: isCorrect, similarity: pct }]
     setGuesses(newGuesses)
+
     if (isCorrect) {
       revealAll()
       const newStreak = streak + 1
@@ -420,34 +444,53 @@ export default function FlagReveal() {
     } else {
       setRevealedTiles(newRevealed)
       if (newGuesses.length >= MAX_GUESSES) {
+        // Used all guesses — lose a life
         revealAll()
         const newLives = lives - 1
         setLives(newLives)
         setStreak(0)
-        const nextState = newLives <= 0 ? 'gameover' : 'lost'
-        setGameState(nextState)
-        await saveStats(false, 0)
+        if (newLives <= 0) {
+          setGameState('gameover')
+          await saveStats(false, 0)
+        } else {
+          setGameState('lost')
+          await saveStats(false, 0)
+        }
       }
     }
   }
 
   const emptyRows = Math.max(0, MAX_GUESSES - guesses.length)
-  const isOver = gameState !== 'playing'
 
-  // ── JSX blocks ───────────────────────────────────────────────────────────
+  // ── RENDER ────────────────────────────────────────────────────────────────
+
+  // Lives + streak row — always visible
+  const livesRow = (
+    <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '8px' }}>
+      <span style={{ fontSize: '13px', fontWeight: '600', color: '#64748b' }}>{t('lives')}</span>
+      {Array.from({ length: MAX_LIVES }).map((_, i) => (
+        <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill={i < lives ? '#ef4444' : '#e2e8f0'}>
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+      ))}
+      <span style={{ marginLeft: 'auto', fontSize: '14px', fontWeight: '800', color: streak > 0 ? '#806D40' : '#cbd5e1' }}>
+        🔥 {streak}
+      </span>
+    </div>
+  )
 
   const canvasBlock = (
     <div style={{ position: 'relative' }}>
       <canvas ref={canvasRef} width={CANVAS_W} height={CANVAS_H}
         style={{ width: '100%', borderRadius: '10px', border: '2px solid #ddd', display: 'block' }} />
-      {isOver && (
+      {gameState !== 'playing' && (
         <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(0,0,0,0.55)', borderRadius: '10px' }}>
           <div style={{ textAlign: 'center' }}>
             <div style={{ fontSize: '44px' }}>{gameState === 'won' ? '🎉' : gameState === 'lost' ? '😔' : '💀'}</div>
             <div style={{ fontSize: '24px', fontWeight: '900', color: gameState === 'won' ? '#FCD116' : '#ef4444', marginTop: '6px' }}>
               {gameState === 'gameover' ? t('gameOver') : getName(target)}
             </div>
-            {gameState === 'gameover' && (
+            {(gameState === 'lost' || gameState === 'gameover') && (
               <div style={{ fontSize: '15px', color: '#F4F1E6', marginTop: '4px' }}>{t('itWas')} {getName(target)}</div>
             )}
           </div>
@@ -466,24 +509,10 @@ export default function FlagReveal() {
     </button>
   ) : null
 
-  // Input block — inline JSX (never a sub-component) to preserve focus
-  const inputBlock = gameState === 'playing' && (
+  // Input — inline JSX to preserve focus
+  const inputBlock = (
     <div>
-      {/* Lives row — streak at the far right */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '8px' }}>
-        <span style={{ fontSize: '13px', fontWeight: '600', color: '#64748b' }}>{t('lives')}</span>
-        {Array.from({ length: MAX_LIVES }).map((_, i) => (
-          <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill={i < lives ? '#ef4444' : '#e2e8f0'}>
-            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-          </svg>
-        ))}
-        {/* Streak pushed to the far right */}
-        <span style={{ marginLeft: 'auto', fontSize: '14px', fontWeight: '800', color: streak > 0 ? '#806D40' : '#cbd5e1' }}>
-          🔥 {streak}
-        </span>
-      </div>
-
-      {/* Input */}
+      {livesRow}
       <div style={{ position: 'relative' }}>
         <input
           ref={inputRef}
@@ -491,19 +520,26 @@ export default function FlagReveal() {
           value={input}
           onChange={e => handleInputChange(e.target.value)}
           onKeyDown={handleKeyDown}
-          placeholder={t('placeholder')}
+          placeholder={gameState === 'playing' ? t('placeholder') : ''}
+          disabled={gameState !== 'playing'}
           autoComplete="off"
-          style={{ width: '100%', padding: '14px 16px', borderRadius: '10px', border: '2px solid #ddd', backgroundColor: 'white', color: '#0B1F3B', fontSize: '16px', outline: 'none', boxSizing: 'border-box' }}
+          style={{ width: '100%', padding: '14px 16px', borderRadius: '10px', border: '2px solid #ddd', backgroundColor: gameState === 'playing' ? 'white' : '#e2e8f0', color: '#0B1F3B', fontSize: '16px', outline: 'none', boxSizing: 'border-box', cursor: gameState === 'playing' ? 'text' : 'default' }}
         />
-        {suggestions.length > 0 && (
-          <div style={{ position: 'absolute', top: '100%', left: 0, right: 0, backgroundColor: 'white', borderRadius: '10px', border: '1px solid #e2e8f0', boxShadow: '0 8px 24px rgba(0,0,0,0.12)', overflow: 'hidden', zIndex: 20, marginTop: '4px' }}>
+        {suggestions.length > 0 && gameState === 'playing' && (
+          <div style={{ position: 'absolute', top: '100%', left: 0, right: 0, backgroundColor: 'white', borderRadius: '10px', border: '1px solid #C0BDB4', boxShadow: '0 8px 24px rgba(0,0,0,0.12)', overflow: 'hidden', zIndex: 20, marginTop: '4px' }}>
             {suggestions.map((f, i) => (
               <button key={f.code}
                 onMouseDown={e => { e.preventDefault(); handleGuess(f) }}
-                style={{ width: '100%', padding: '13px 16px', textAlign: 'left', backgroundColor: i === 0 ? '#f0f4ff' : 'transparent', border: 'none', borderBottom: '1px solid #f0f0f0', color: '#0B1F3B', cursor: 'pointer', fontSize: '15px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
+                style={{
+                  width: '100%', padding: '13px 16px', textAlign: 'left',
+                  backgroundColor: i === activeIdx ? '#dbeafe' : 'transparent',
+                  border: 'none', borderBottom: '1px solid #f0f0f0',
+                  color: '#0B1F3B', cursor: 'pointer', fontSize: '15px',
+                  display: 'flex', justifyContent: 'space-between', alignItems: 'center'
+                }}
               >
                 {getName(f)}
-                {i === 0 && <span style={{ fontSize: '11px', color: '#9EB7E5' }}>↵ {t('enter')}</span>}
+                {i === activeIdx && <span style={{ fontSize: '11px', color: '#9EB7E5' }}>↵</span>}
               </button>
             ))}
           </div>
@@ -512,7 +548,7 @@ export default function FlagReveal() {
     </div>
   )
 
-  // Guess history desktop
+  // Guess rows — grey empty slots
   const guessHistory = (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
       {guesses.map((g, i) => (
@@ -523,12 +559,11 @@ export default function FlagReveal() {
         </div>
       ))}
       {Array.from({ length: emptyRows }).map((_, i) => (
-        <div key={'e'+i} style={{ padding: '10px 14px', borderRadius: '10px', backgroundColor: 'white', border: '1px solid #e2e8f0', height: '44px' }} />
+        <div key={'e'+i} style={{ padding: '10px 14px', borderRadius: '10px', backgroundColor: '#C8C5BC', border: '1px solid #C0BDB4', height: '44px' }} />
       ))}
     </div>
   )
 
-  // Guess history mobile 2-col
   const guessHistoryMobile = (
     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
       {guesses.map((g, i) => (
@@ -541,32 +576,29 @@ export default function FlagReveal() {
         </div>
       ))}
       {Array.from({ length: emptyRows }).map((_, i) => (
-        <div key={'e'+i} style={{ padding: '8px 10px', borderRadius: '10px', backgroundColor: 'white', border: '1px solid #e2e8f0', height: '42px' }} />
+        <div key={'e'+i} style={{ padding: '8px 10px', borderRadius: '10px', backgroundColor: '#C8C5BC', border: '1px solid #C0BDB4', height: '42px' }} />
       ))}
     </div>
   )
 
-  // Stats + leaderboard block
   const statsBlock = (
-    <div style={{ backgroundColor: 'white', borderRadius: '10px', border: '1px solid #e2e8f0', overflow: 'hidden' }}>
+    <div style={{ backgroundColor: 'white', borderRadius: '10px', border: '1px solid #C0BDB4', overflow: 'hidden' }}>
       <div style={{ padding: '14px 16px', borderBottom: '1px solid #e2e8f0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <span style={{ fontSize: '14px', fontWeight: '700', color: '#0B1F3B' }}>
           {locale === 'fr' ? 'Classement' : 'Leaderboard'}
         </span>
         {user && myStats && (
           <span style={{ fontSize: '12px', color: '#64748b' }}>
-            {locale === 'fr' ? 'Ma meilleure série' : 'My best streak'}: <strong style={{ color: '#806D40' }}>🔥 {myStats.streak_best || 0}</strong>
+            {locale === 'fr' ? 'Meilleure série' : 'Best streak'}: <strong style={{ color: '#806D40' }}>🔥 {myStats.streak_best || 0}</strong>
           </span>
         )}
       </div>
-
-      {/* My stats row */}
       {user && myStats && (
         <div style={{ padding: '10px 16px', backgroundColor: '#f8faff', borderBottom: '1px solid #e2e8f0', display: 'flex', gap: '16px' }}>
           {[
             { label: locale === 'fr' ? 'Série actuelle' : 'Current streak', value: '🔥 ' + (myStats.streak_current || 0) },
             { label: locale === 'fr' ? 'Drapeaux trouvés' : 'Flags found', value: '🏳️ ' + (myStats.flags_found || 0) },
-            { label: locale === 'fr' ? 'Parties jouées' : 'Games played', value: '🎮 ' + (myStats.games_played || 0) },
+            { label: locale === 'fr' ? 'Parties' : 'Games', value: '🎮 ' + (myStats.games_played || 0) },
           ].map((s, i) => (
             <div key={i} style={{ textAlign: 'center' }}>
               <div style={{ fontSize: '14px', fontWeight: '800', color: '#0B1F3B' }}>{s.value}</div>
@@ -575,38 +607,30 @@ export default function FlagReveal() {
           ))}
         </div>
       )}
-
       {!user && (
         <div style={{ padding: '12px 16px', fontSize: '13px', color: '#94a3b8', textAlign: 'center' }}>
           {locale === 'fr' ? 'Connectez-vous pour sauvegarder vos scores' : 'Sign in to save your scores'}
         </div>
       )}
-
-      {/* Top 5 */}
-      {leaderboard.length > 0 && (
-        <div>
-          {leaderboard.map((row, i) => {
-            const username = row.profiles?.username || (locale === 'fr' ? 'Anonyme' : 'Anonymous')
-            const medal = i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : `${i + 1}.`
-            const isMe = user && row.user_id === user.id
-            return (
-              <div key={i} style={{ padding: '10px 16px', display: 'flex', alignItems: 'center', gap: '10px', borderBottom: i < leaderboard.length - 1 ? '1px solid #f0f0f0' : 'none', backgroundColor: isMe ? '#f0f9ff' : 'transparent' }}>
-                <span style={{ fontSize: '14px', width: '24px', flexShrink: 0 }}>{medal}</span>
-                <span style={{ flex: 1, fontSize: '13px', fontWeight: isMe ? '700' : '500', color: '#0B1F3B' }}>
-                  {username}{isMe ? ' (vous)' : ''}
-                </span>
-                <span style={{ fontSize: '13px', fontWeight: '700', color: '#806D40' }}>🔥 {row.streak_best}</span>
-              </div>
-            )
-          })}
-        </div>
-      )}
+      {leaderboard.length > 0 && leaderboard.map((row, i) => {
+        const username = row.profiles?.username || (locale === 'fr' ? 'Anonyme' : 'Anonymous')
+        const medal = i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : `${i + 1}.`
+        const isMe = user && row.user_id === user.id
+        return (
+          <div key={i} style={{ padding: '10px 16px', display: 'flex', alignItems: 'center', gap: '10px', borderBottom: i < leaderboard.length - 1 ? '1px solid #f0f0f0' : 'none', backgroundColor: isMe ? '#f0f9ff' : 'transparent' }}>
+            <span style={{ fontSize: '14px', width: '24px', flexShrink: 0 }}>{medal}</span>
+            <span style={{ flex: 1, fontSize: '13px', fontWeight: isMe ? '700' : '500', color: '#0B1F3B' }}>
+              {username}{isMe ? (locale === 'fr' ? ' (vous)' : ' (you)') : ''}
+            </span>
+            <span style={{ fontSize: '13px', fontWeight: '700', color: '#806D40' }}>🔥 {row.streak_best}</span>
+          </div>
+        )
+      })}
     </div>
   )
 
-  // How to play
   const howToPlay = (
-    <div style={{ backgroundColor: 'white', borderRadius: '10px', overflow: 'hidden', border: '1px solid #e2e8f0' }}>
+    <div style={{ backgroundColor: 'white', borderRadius: '10px', overflow: 'hidden', border: '1px solid #C0BDB4' }}>
       <button onClick={() => setHowToPlayOpen(!howToPlayOpen)}
         style={{ width: '100%', padding: '14px 16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'none', border: 'none', color: '#0B1F3B', cursor: 'pointer', fontSize: '14px', fontWeight: '700' }}>
         {t('howToPlay')}
@@ -627,7 +651,6 @@ export default function FlagReveal() {
     </div>
   )
 
-  // ── RENDER ────────────────────────────────────────────────────────────────
   return (
     <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: 'Arial, sans-serif' }}>
       <div style={{ maxWidth: '960px', margin: '0 auto', padding: isMobile ? '16px 12px' : '32px 16px' }}>

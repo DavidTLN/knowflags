@@ -6,18 +6,31 @@
     "submit": "Soumettre"
   },
   "hero": {
-    "featured": "À la une aujourd'hui",
-    "button": "Histoire complète"
+    "featured": "Drapeau à la une",
+    "button": "Explorer la galerie"
   },
   "cards": {
-    "quiz_title": "Quiz de drapeaux",
-    "quiz_desc": "Testez vos connaissances avec nos défis quotidiens d'identification de drapeaux.",
-    "quiz_link": "Jouer",
-    "atlas_title": "Atlas mondial",
-    "atlas_desc": "Explorez notre base de données de plus de 250 drapeaux souverains et régionaux.",
-    "atlas_link": "Explorer la carte",
-    "vexil_title": "Vexillologie 101",
-    "vexil_desc": "Plongez dans la science et l'art du design de drapeaux et du symbolisme culturel.",
-    "vexil_link": "En savoir plus"
+    "continents": "Par continent",
+    "colors": "Par couleur",
+    "symbols": "Par symbole",
+    "history": "Histoire"
+  },
+  "game": {
+    "title": "Flag Reveal",
+    "lives": "Vies",
+    "streak": "Série",
+    "placeholder": "Tapez un nom de pays...",
+    "enter": "Entrée",
+    "nextFlag": "Drapeau suivant →",
+    "playAgain": "Rejouer",
+    "gameOver": "Partie terminée",
+    "itWas": "C'était",
+    "howToPlay": "Comment jouer",
+    "rules": {
+      "1": "Un drapeau est caché derrière des tuiles. Tapez un pays pour deviner.",
+      "2": "Chaque proposition révèle les tuiles aux couleurs similaires. % = similarité.",
+      "3": "Trouvez-le en 5 essais pour garder votre série !",
+      "4": "3 vies — ratez 3 drapeaux et c'est la fin de la partie."
+    }
   }
 }

@@ -6,18 +6,31 @@
     "submit": "Submit"
   },
   "hero": {
-    "featured": "Featured Today",
-    "button": "Full History"
+    "featured": "Featured Flag",
+    "button": "Explore Gallery"
   },
   "cards": {
-    "quiz_title": "Flag Quiz",
-    "quiz_desc": "Test your knowledge with our daily interactive flag identification challenges.",
-    "quiz_link": "Play Now",
-    "atlas_title": "Global Atlas",
-    "atlas_desc": "Explore our comprehensive database of over 250 sovereign and regional flags.",
-    "atlas_link": "Explore Map",
-    "vexil_title": "Vexillology 101",
-    "vexil_desc": "Dive deep into the science and art of flag design and cultural symbolism.",
-    "vexil_link": "Learn More"
+    "continents": "By Continent",
+    "colors": "By Color",
+    "symbols": "By Symbol",
+    "history": "History"
+  },
+  "game": {
+    "title": "Flag Reveal",
+    "lives": "Lives",
+    "streak": "Streak",
+    "placeholder": "Type a country name...",
+    "enter": "Enter",
+    "nextFlag": "Next Flag →",
+    "playAgain": "Play Again",
+    "gameOver": "Game Over",
+    "itWas": "It was",
+    "howToPlay": "How to Play",
+    "rules": {
+      "1": "A flag is hidden behind tiles. Type a country to guess.",
+      "2": "Each guess reveals tiles with matching colors. % = similarity.",
+      "3": "Find it in 5 tries to keep your streak!",
+      "4": "3 lives — miss 3 flags and it's game over."
+    }
   }
 }

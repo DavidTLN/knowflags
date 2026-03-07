@@ -1,6 +1,6 @@
 import LoginForm from '@/components/auth/LoginForm'
 import AuthButtons from '@/components/auth/AuthButtons'
-import Navbar from '@/components/Navbar'
+import Navbar from '@/components/Header'
 
 export const metadata = {
   title: 'Sign In',

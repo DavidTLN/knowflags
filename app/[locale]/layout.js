@@ -1,5 +1,6 @@
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
+import Header from '@/components/Header'
 import '../globals.css'
 
 export const metadata = {
@@ -34,6 +35,7 @@ export default async function RootLayout({ children, params }) {
         {/* End Google Tag Manager (noscript) */}
 
         <NextIntlClientProvider messages={messages}>
+          <Header />
           {children}
         </NextIntlClientProvider>
       </body>

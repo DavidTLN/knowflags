@@ -1,6 +1,6 @@
 // Page d'accueil — knowflags.com/en
 
-import Navbar from '@/components/Navbar'
+import Navbar from '@/components/Header'
 import Hero from '@/components/Hero'
 import CategoryGrid from '@/components/CategoryGrid'
 

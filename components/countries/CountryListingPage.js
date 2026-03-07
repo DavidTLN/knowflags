@@ -779,7 +779,5 @@ export default function CountryListingPage() {
 
       </div>
     </div>
-
   )
 }
-

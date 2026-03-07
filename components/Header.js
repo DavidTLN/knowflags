@@ -195,11 +195,6 @@ export default function Header() {
             )}
           </div>
 
-          {/* History */}
-          <Link href={`/${locale}/history`} style={navLinkStyle(isActive(`/${locale}/history`))}>
-            {t('History', 'Histoire')}
-          </Link>
-
           {/* Submit */}
           <Link href={`/${locale}/submit`} style={navLinkStyle(isActive(`/${locale}/submit`))}>
             {t('Submit', 'Soumettre')}
@@ -281,10 +276,6 @@ export default function Header() {
                 ))}
               </div>
             </div>
-            <Link href={`/${locale}/history`} onClick={() => setMenuOpen(false)}
-              style={{ padding: '12px 0', fontSize: '16px', color: '#F4F1E6', textDecoration: 'none', fontWeight: '500', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-              {t('History', 'Histoire')}
-            </Link>
             <Link href={`/${locale}/submit`} onClick={() => setMenuOpen(false)}
               style={{ padding: '12px 0', fontSize: '16px', color: '#F4F1E6', textDecoration: 'none', fontWeight: '500' }}>
               {t('Submit', 'Soumettre')}

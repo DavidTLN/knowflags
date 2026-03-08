@@ -22,7 +22,6 @@ const GAMES = [
     fr: 'Quiz Drapeaux',
     descEn: 'Multiple choice flag challenge',
     descFr: 'Quelle est ce drapeau ?',
-    soon: true,
   },
   {
     key: 'capital-city',
@@ -199,6 +198,16 @@ export default function Header() {
           <Link href={`/${locale}/submit`} style={navLinkStyle(isActive(`/${locale}/submit`))}>
             {t('Submit', 'Soumettre')}
           </Link>
+
+          {/* Shop */}
+          <Link href={`/${locale}/shop`} style={navLinkStyle(isActive(`/${locale}/shop`))}>
+            {t('Shop', 'Shop')}
+          </Link>
+
+          {/* Community */}
+          <Link href={`/${locale}/community`} style={navLinkStyle(isActive(`/${locale}/community`))}>
+            {t('Community', 'Communauté')}
+          </Link>
         </nav>
 
         {/* Right side */}
@@ -277,8 +286,16 @@ export default function Header() {
               </div>
             </div>
             <Link href={`/${locale}/submit`} onClick={() => setMenuOpen(false)}
-              style={{ padding: '12px 0', fontSize: '16px', color: '#F4F1E6', textDecoration: 'none', fontWeight: '500' }}>
+              style={{ padding: '12px 0', fontSize: '16px', color: '#F4F1E6', textDecoration: 'none', fontWeight: '500', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
               {t('Submit', 'Soumettre')}
+            </Link>
+            <Link href={`/${locale}/shop`} onClick={() => setMenuOpen(false)}
+              style={{ padding: '12px 0', fontSize: '16px', color: '#F4F1E6', textDecoration: 'none', fontWeight: '500', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
+              {t('Shop', 'Shop')}
+            </Link>
+            <Link href={`/${locale}/community`} onClick={() => setMenuOpen(false)}
+              style={{ padding: '12px 0', fontSize: '16px', color: '#F4F1E6', textDecoration: 'none', fontWeight: '500' }}>
+              {t('Community', 'Communauté')}
             </Link>
           </div>
         </div>

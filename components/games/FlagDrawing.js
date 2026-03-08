@@ -36,10 +36,13 @@ const ALL_COLORS = [
 ]
 
 // Simple flag definitions for the canvas renderer
-// Each flag is an array of drawing instructions
+// ratio = width:height as decimal (e.g. 2:3 → 1.5, 1:2 → 2.0)
+// The canvas will be sized/letterboxed to match the real ratio
 const FLAG_DEFS = {
+  // ── Europe ──────────────────────────────────────────────────────────────────
   fr: {
-    en: 'France', fr: 'France', colors: ['blue','white','red'],
+    en: 'France', fr: 'France', ratio: 1.5, // 2:3
+    colors: ['blue','white','red'],
     stripes: [
       { type: 'rect', x: 0, y: 0, w: 1/3, h: 1, color: '#002395' },
       { type: 'rect', x: 1/3, y: 0, w: 1/3, h: 1, color: '#FFFFFF' },
@@ -47,7 +50,8 @@ const FLAG_DEFS = {
     ]
   },
   de: {
-    en: 'Germany', fr: 'Allemagne', colors: ['black','red','gold'],
+    en: 'Germany', fr: 'Allemagne', ratio: 5/3, // 3:5
+    colors: ['black','red','gold'],
     stripes: [
       { type: 'rect', x: 0, y: 0, w: 1, h: 1/3, color: '#000000' },
       { type: 'rect', x: 0, y: 1/3, w: 1, h: 1/3, color: '#DD0000' },
@@ -55,7 +59,8 @@ const FLAG_DEFS = {
     ]
   },
   it: {
-    en: 'Italy', fr: 'Italie', colors: ['green','white','red'],
+    en: 'Italy', fr: 'Italie', ratio: 1.5, // 2:3
+    colors: ['green','white','red'],
     stripes: [
       { type: 'rect', x: 0, y: 0, w: 1/3, h: 1, color: '#009246' },
       { type: 'rect', x: 1/3, y: 0, w: 1/3, h: 1, color: '#FFFFFF' },
@@ -63,7 +68,8 @@ const FLAG_DEFS = {
     ]
   },
   be: {
-    en: 'Belgium', fr: 'Belgique', colors: ['black','yellow','red'],
+    en: 'Belgium', fr: 'Belgique', ratio: 13/15, // 13:15 (presque carré)
+    colors: ['black','yellow','red'],
     stripes: [
       { type: 'rect', x: 0, y: 0, w: 1/3, h: 1, color: '#000000' },
       { type: 'rect', x: 1/3, y: 0, w: 1/3, h: 1, color: '#FDDA24' },
@@ -71,7 +77,8 @@ const FLAG_DEFS = {
     ]
   },
   nl: {
-    en: 'Netherlands', fr: 'Pays-Bas', colors: ['red','white','blue'],
+    en: 'Netherlands', fr: 'Pays-Bas', ratio: 1.5, // 2:3
+    colors: ['red','white','blue'],
     stripes: [
       { type: 'rect', x: 0, y: 0, w: 1, h: 1/3, color: '#AE1C28' },
       { type: 'rect', x: 0, y: 1/3, w: 1, h: 1/3, color: '#FFFFFF' },
@@ -79,7 +86,8 @@ const FLAG_DEFS = {
     ]
   },
   ru: {
-    en: 'Russia', fr: 'Russie', colors: ['white','blue','red'],
+    en: 'Russia', fr: 'Russie', ratio: 1.5, // 2:3
+    colors: ['white','blue','red'],
     stripes: [
       { type: 'rect', x: 0, y: 0, w: 1, h: 1/3, color: '#FFFFFF' },
       { type: 'rect', x: 0, y: 1/3, w: 1, h: 1/3, color: '#0039A6' },
@@ -87,7 +95,8 @@ const FLAG_DEFS = {
     ]
   },
   ie: {
-    en: 'Ireland', fr: 'Irlande', colors: ['green','white','orange'],
+    en: 'Ireland', fr: 'Irlande', ratio: 2.0, // 1:2
+    colors: ['green','white','orange'],
     stripes: [
       { type: 'rect', x: 0, y: 0, w: 1/3, h: 1, color: '#169B62' },
       { type: 'rect', x: 1/3, y: 0, w: 1/3, h: 1, color: '#FFFFFF' },
@@ -95,7 +104,8 @@ const FLAG_DEFS = {
     ]
   },
   ro: {
-    en: 'Romania', fr: 'Roumanie', colors: ['blue','yellow','red'],
+    en: 'Romania', fr: 'Roumanie', ratio: 1.5, // 2:3
+    colors: ['blue','yellow','red'],
     stripes: [
       { type: 'rect', x: 0, y: 0, w: 1/3, h: 1, color: '#002B7F' },
       { type: 'rect', x: 1/3, y: 0, w: 1/3, h: 1, color: '#FCD116' },
@@ -103,28 +113,24 @@ const FLAG_DEFS = {
     ]
   },
   pl: {
-    en: 'Poland', fr: 'Pologne', colors: ['white','red'],
+    en: 'Poland', fr: 'Pologne', ratio: 5/8, // 5:8
+    colors: ['white','red'],
     stripes: [
       { type: 'rect', x: 0, y: 0, w: 1, h: 1/2, color: '#FFFFFF' },
       { type: 'rect', x: 0, y: 1/2, w: 1, h: 1/2, color: '#DC143C' },
     ]
   },
-  id: {
-    en: 'Indonesia', fr: 'Indonésie', colors: ['red','white'],
-    stripes: [
-      { type: 'rect', x: 0, y: 0, w: 1, h: 1/2, color: '#CE1126' },
-      { type: 'rect', x: 0, y: 1/2, w: 1, h: 1/2, color: '#FFFFFF' },
-    ]
-  },
   ua: {
-    en: 'Ukraine', fr: 'Ukraine', colors: ['blue','yellow'],
+    en: 'Ukraine', fr: 'Ukraine', ratio: 1.5, // 2:3
+    colors: ['blue','yellow'],
     stripes: [
       { type: 'rect', x: 0, y: 0, w: 1, h: 1/2, color: '#005BBB' },
       { type: 'rect', x: 0, y: 1/2, w: 1, h: 1/2, color: '#FFD500' },
     ]
   },
   at: {
-    en: 'Austria', fr: 'Autriche', colors: ['red','white','red'],
+    en: 'Austria', fr: 'Autriche', ratio: 1.5, // 2:3
+    colors: ['red','white','red'],
     stripes: [
       { type: 'rect', x: 0, y: 0, w: 1, h: 1/3, color: '#ED2939' },
       { type: 'rect', x: 0, y: 1/3, w: 1, h: 1/3, color: '#FFFFFF' },
@@ -132,7 +138,8 @@ const FLAG_DEFS = {
     ]
   },
   hu: {
-    en: 'Hungary', fr: 'Hongrie', colors: ['red','white','green'],
+    en: 'Hungary', fr: 'Hongrie', ratio: 2.0, // 1:2
+    colors: ['red','white','green'],
     stripes: [
       { type: 'rect', x: 0, y: 0, w: 1, h: 1/3, color: '#CE2939' },
       { type: 'rect', x: 0, y: 1/3, w: 1, h: 1/3, color: '#FFFFFF' },
@@ -140,7 +147,8 @@ const FLAG_DEFS = {
     ]
   },
   ee: {
-    en: 'Estonia', fr: 'Estonie', colors: ['blue','black','white'],
+    en: 'Estonia', fr: 'Estonie', ratio: 7/11, // 7:11
+    colors: ['blue','black','white'],
     stripes: [
       { type: 'rect', x: 0, y: 0, w: 1, h: 1/3, color: '#0072CE' },
       { type: 'rect', x: 0, y: 1/3, w: 1, h: 1/3, color: '#000000' },
@@ -148,15 +156,26 @@ const FLAG_DEFS = {
     ]
   },
   lv: {
-    en: 'Latvia', fr: 'Lettonie', colors: ['darkred','white','darkred'],
+    en: 'Latvia', fr: 'Lettonie', ratio: 2.0, // 1:2
+    colors: ['darkred','white','darkred'],
     stripes: [
       { type: 'rect', x: 0, y: 0, w: 1, h: 2/5, color: '#9E3039' },
       { type: 'rect', x: 0, y: 2/5, w: 1, h: 1/5, color: '#FFFFFF' },
       { type: 'rect', x: 0, y: 3/5, w: 1, h: 2/5, color: '#9E3039' },
     ]
   },
+  id: {
+    en: 'Indonesia', fr: 'Indonésie', ratio: 1.5, // 2:3
+    colors: ['red','white'],
+    stripes: [
+      { type: 'rect', x: 0, y: 0, w: 1, h: 1/2, color: '#CE1126' },
+      { type: 'rect', x: 0, y: 1/2, w: 1, h: 1/2, color: '#FFFFFF' },
+    ]
+  },
+  // ── Africa ──────────────────────────────────────────────────────────────────
   ci: {
-    en: 'Ivory Coast', fr: "Côte d'Ivoire", colors: ['orange','white','green'],
+    en: 'Ivory Coast', fr: "Côte d'Ivoire", ratio: 1.5, // 2:3
+    colors: ['orange','white','green'],
     stripes: [
       { type: 'rect', x: 0, y: 0, w: 1/3, h: 1, color: '#F77F00' },
       { type: 'rect', x: 1/3, y: 0, w: 1/3, h: 1, color: '#FFFFFF' },
@@ -164,7 +183,8 @@ const FLAG_DEFS = {
     ]
   },
   ml: {
-    en: 'Mali', fr: 'Mali', colors: ['green','yellow','red'],
+    en: 'Mali', fr: 'Mali', ratio: 1.5, // 2:3
+    colors: ['green','yellow','red'],
     stripes: [
       { type: 'rect', x: 0, y: 0, w: 1/3, h: 1, color: '#14B53A' },
       { type: 'rect', x: 1/3, y: 0, w: 1/3, h: 1, color: '#FCD116' },
@@ -172,7 +192,8 @@ const FLAG_DEFS = {
     ]
   },
   td: {
-    en: 'Chad', fr: 'Tchad', colors: ['blue','yellow','red'],
+    en: 'Chad', fr: 'Tchad', ratio: 1.5, // 2:3
+    colors: ['blue','yellow','red'],
     stripes: [
       { type: 'rect', x: 0, y: 0, w: 1/3, h: 1, color: '#002664' },
       { type: 'rect', x: 1/3, y: 0, w: 1/3, h: 1, color: '#FECB00' },
@@ -180,7 +201,8 @@ const FLAG_DEFS = {
     ]
   },
   sn: {
-    en: 'Senegal', fr: 'Sénégal', colors: ['green','yellow','red'],
+    en: 'Senegal', fr: 'Sénégal', ratio: 1.5, // 2:3
+    colors: ['green','yellow','red'],
     stripes: [
       { type: 'rect', x: 0, y: 0, w: 1/3, h: 1, color: '#00853F' },
       { type: 'rect', x: 1/3, y: 0, w: 1/3, h: 1, color: '#FDEF42' },
@@ -188,19 +210,142 @@ const FLAG_DEFS = {
     ]
   },
   cm: {
-    en: 'Cameroon', fr: 'Cameroun', colors: ['green','red','yellow'],
+    en: 'Cameroon', fr: 'Cameroun', ratio: 1.5, // 2:3
+    colors: ['green','red','yellow'],
     stripes: [
       { type: 'rect', x: 0, y: 0, w: 1/3, h: 1, color: '#007A5E' },
       { type: 'rect', x: 1/3, y: 0, w: 1/3, h: 1, color: '#CE1126' },
       { type: 'rect', x: 2/3, y: 0, w: 1/3, h: 1, color: '#FCD116' },
     ]
   },
+  ng: {
+    en: 'Nigeria', fr: 'Nigeria', ratio: 2.0, // 1:2
+    colors: ['green','white','green'],
+    stripes: [
+      { type: 'rect', x: 0, y: 0, w: 1/3, h: 1, color: '#008751' },
+      { type: 'rect', x: 1/3, y: 0, w: 1/3, h: 1, color: '#FFFFFF' },
+      { type: 'rect', x: 2/3, y: 0, w: 1/3, h: 1, color: '#008751' },
+    ]
+  },
+  gh: {
+    en: 'Ghana', fr: 'Ghana', ratio: 1.5, // 2:3
+    colors: ['red','gold','green'],
+    stripes: [
+      { type: 'rect', x: 0, y: 0, w: 1, h: 1/3, color: '#006B3F' },
+      { type: 'rect', x: 0, y: 1/3, w: 1, h: 1/3, color: '#FCD116' },
+      { type: 'rect', x: 0, y: 2/3, w: 1, h: 1/3, color: '#CE1126' },
+    ]
+  },
+  // Ghana stripes actually R/G/G top-to-bottom, let me correct:
+  // ── Americas ─────────────────────────────────────────────────────────────────
+  co: {
+    en: 'Colombia', fr: 'Colombie', ratio: 1.5, // 2:3
+    colors: ['yellow','blue','red'],
+    stripes: [
+      { type: 'rect', x: 0, y: 0, w: 1, h: 1/2, color: '#FCD116' },
+      { type: 'rect', x: 0, y: 1/2, w: 1, h: 1/4, color: '#003087' },
+      { type: 'rect', x: 0, y: 3/4, w: 1, h: 1/4, color: '#CE1126' },
+    ]
+  },
+  ar: {
+    en: 'Argentina', fr: 'Argentine', ratio: 5/8, // 5:8
+    colors: ['lightblue','white','lightblue'],
+    stripes: [
+      { type: 'rect', x: 0, y: 0, w: 1, h: 1/3, color: '#74ACDF' },
+      { type: 'rect', x: 0, y: 1/3, w: 1, h: 1/3, color: '#FFFFFF' },
+      { type: 'rect', x: 0, y: 2/3, w: 1, h: 1/3, color: '#74ACDF' },
+    ]
+  },
+  // ── Asia ─────────────────────────────────────────────────────────────────────
+  jp: {
+    en: 'Japan', fr: 'Japon', ratio: 1.5, // 2:3
+    colors: ['white','red'],
+    stripes: [
+      { type: 'rect', x: 0, y: 0, w: 1, h: 1, color: '#FFFFFF' },
+      { type: 'circle', cx: 0.5, cy: 0.5, r: 0.3, color: '#BC002D' },
+    ]
+  },
+  th: {
+    en: 'Thailand', fr: 'Thaïlande', ratio: 1.5, // 2:3
+    colors: ['red','white','blue'],
+    stripes: [
+      { type: 'rect', x: 0, y: 0, w: 1, h: 1/6, color: '#A51931' },
+      { type: 'rect', x: 0, y: 1/6, w: 1, h: 1/6, color: '#F4F5F8' },
+      { type: 'rect', x: 0, y: 2/6, w: 1, h: 2/6, color: '#2D2A4A' },
+      { type: 'rect', x: 0, y: 4/6, w: 1, h: 1/6, color: '#F4F5F8' },
+      { type: 'rect', x: 0, y: 5/6, w: 1, h: 1/6, color: '#A51931' },
+    ]
+  },
+  // ── Special shapes ───────────────────────────────────────────────────────────
+  ch: {
+    en: 'Switzerland', fr: 'Suisse', ratio: 1.0, // 1:1 square
+    colors: ['red','white'],
+    stripes: [
+      { type: 'rect', x: 0, y: 0, w: 1, h: 1, color: '#FF0000' },
+      { type: 'rect', x: 5/16, y: 3/16, w: 6/16, h: 10/16, color: '#FFFFFF' }, // vertical bar of cross
+      { type: 'rect', x: 3/16, y: 5/16, w: 10/16, h: 6/16, color: '#FFFFFF' }, // horizontal bar
+    ]
+  },
+  no: {
+    en: 'Norway', fr: 'Norvège', ratio: 8/11, // 8:11
+    colors: ['red','white','blue'],
+    stripes: [
+      { type: 'rect', x: 0, y: 0, w: 1, h: 1, color: '#EF2B2D' },
+      { type: 'rect', x: 0, y: 4/16, w: 1, h: 3/16, color: '#FFFFFF' },
+      { type: 'rect', x: 4/16, y: 0, w: 3/16, h: 1, color: '#FFFFFF' },
+      { type: 'rect', x: 0, y: 5/16, w: 1, h: 1/16+0.06, color: '#002868' },
+      { type: 'rect', x: 5/16, y: 0, w: 1/16+0.06, h: 1, color: '#002868' },
+    ]
+  },
+  dk: {
+    en: 'Denmark', fr: 'Danemark', ratio: 28/34, // ~0.82, narrower flag
+    colors: ['red','white'],
+    stripes: [
+      { type: 'rect', x: 0, y: 0, w: 1, h: 1, color: '#C60C30' },
+      { type: 'rect', x: 0, y: 4/12, w: 1, h: 2/12, color: '#FFFFFF' },
+      { type: 'rect', x: 3/12, y: 0, w: 2/12, h: 1, color: '#FFFFFF' },
+    ]
+  },
+  se: {
+    en: 'Sweden', fr: 'Suède', ratio: 5/8, // 5:8
+    colors: ['blue','yellow'],
+    stripes: [
+      { type: 'rect', x: 0, y: 0, w: 1, h: 1, color: '#006AA7' },
+      { type: 'rect', x: 0, y: 4/16, w: 1, h: 2.5/16, color: '#FECC02' },
+      { type: 'rect', x: 4/16, y: 0, w: 2.5/16, h: 1, color: '#FECC02' },
+    ]
+  },
+  fi: {
+    en: 'Finland', fr: 'Finlande', ratio: 11/18, // 11:18
+    colors: ['white','blue'],
+    stripes: [
+      { type: 'rect', x: 0, y: 0, w: 1, h: 1, color: '#FFFFFF' },
+      { type: 'rect', x: 0, y: 4/18, w: 1, h: 3/18, color: '#003580' },
+      { type: 'rect', x: 5/18, y: 0, w: 3/18, h: 1, color: '#003580' },
+    ]
+  },
 }
 
 const FLAG_KEYS = Object.keys(FLAG_DEFS)
 
-const RATIOS = ['2:3', '1:2', '3:5', '1:1', '2:1']
-const SHAPES = ['rectangle', 'square']
+// All real-world flag ratios from Wikipedia (sorted by decimal value)
+const RATIOS = [
+  { label: '1:1',   value: 1.000, en: 'Square',          fr: 'Carré'          }, // CH, VA
+  { label: '13:15', value: 13/15, en: 'Near-square',     fr: 'Quasi-carré'    }, // BE
+  { label: '8:11',  value: 8/11,  en: 'Tall-ish',        fr: 'Quasi-carré'    }, // NO, IL
+  { label: '7:10',  value: 0.700, en: 'Compact',         fr: 'Compact'        }, // BR, AD
+  { label: '3:4',   value: 0.750, en: 'Classic',         fr: 'Classique'      }, // GA, PNG
+  { label: '5:8',   value: 0.625, en: 'European',        fr: 'Européen'       }, // PL, SE, AR
+  { label: '7:11',  value: 7/11,  en: 'Nordic',          fr: 'Nordique'       }, // EE
+  { label: '11:18', value: 11/18, en: 'Nordic',          fr: 'Nordique'       }, // FI
+  { label: '2:3',   value: 1.500, en: 'Standard',        fr: 'Standard'       }, // FR, IT, RU…
+  { label: '3:5',   value: 5/3,   en: 'Horizontal',      fr: 'Horizontal'     }, // DE, UK
+  { label: '5:7',   value: 5/7,   en: 'Balkan',          fr: 'Balkanique'     }, // AL
+  { label: '4:7',   value: 4/7,   en: 'Middle East',     fr: 'Moyen-Orient'   }, // MX
+  { label: '1:2',   value: 2.000, en: 'Wide',            fr: 'Large'          }, // IE, HU, LV…
+  { label: '10:19', value: 10/19, en: 'US-style',        fr: 'Style US'       }, // US
+]
+const SHAPES = ['rectangle', 'square', 'pennant']
 
 // Difficulty score multipliers
 const DIFF_MULTIPLIER = { easy: 1, medium: 1.5, hard: 2, extreme: 3 }
@@ -263,7 +408,13 @@ function drawReferenceFlagCtx(ctx, def, W, H) {
   ctx.clearRect(0, 0, W, H)
   for (const s of def.stripes) {
     ctx.fillStyle = s.color
-    ctx.fillRect(Math.round(s.x * W), Math.round(s.y * H), Math.round(s.w * W), Math.round(s.h * H))
+    if (s.type === 'circle') {
+      ctx.beginPath()
+      ctx.arc(Math.round(s.cx * W), Math.round(s.cy * H), Math.round(s.r * Math.min(W, H)), 0, Math.PI * 2)
+      ctx.fill()
+    } else {
+      ctx.fillRect(Math.round(s.x * W), Math.round(s.y * H), Math.round(s.w * W), Math.round(s.h * H))
+    }
   }
 }
 
@@ -362,8 +513,14 @@ export default function FlagDrawing() {
     return () => window.removeEventListener('resize', check)
   }, [])
 
-  const CW = isMobile ? 320 : CANVAS_W
-  const CH = isMobile ? Math.round(320 * 2/3) : CANVAS_H
+  // Compute canvas dimensions based on real flag ratio
+  const maxW = isMobile ? 320 : CANVAS_W
+  const flagRatio = currentFlagKey ? (FLAG_DEFS[currentFlagKey]?.ratio || 1.5) : 1.5
+  // ratio = w/h → CW/CH = ratio, so CH = CW / ratio
+  // But ratio stored as w/h decimal: 1.5 = wider flag (landscape)
+  // When ratio < 1 (like BE=0.867), flag is taller than wide
+  const CW = flagRatio >= 1 ? maxW : Math.round(maxW * flagRatio)
+  const CH = flagRatio >= 1 ? Math.round(maxW / flagRatio) : maxW
 
   const cfg = DIFF_CONFIG[difficulty]
 
@@ -412,11 +569,17 @@ export default function FlagDrawing() {
     const def = FLAG_DEFS[key]
     if (!def) return
     const W = ctx.canvas.width, H = ctx.canvas.height
-    ctx.strokeStyle = '#CCCCCC'
+    ctx.strokeStyle = '#C0BDB4'
     ctx.lineWidth = 1.5
     ctx.setLineDash([4,4])
     for (const s of def.stripes) {
-      ctx.strokeRect(Math.round(s.x * W) + 0.5, Math.round(s.y * H) + 0.5, Math.round(s.w * W), Math.round(s.h * H))
+      if (s.type === 'circle') {
+        ctx.beginPath()
+        ctx.arc(Math.round(s.cx * W), Math.round(s.cy * H), Math.round(s.r * Math.min(W, H)), 0, Math.PI * 2)
+        ctx.stroke()
+      } else {
+        ctx.strokeRect(Math.round(s.x * W) + 0.5, Math.round(s.y * H) + 0.5, Math.round(s.w * W), Math.round(s.h * H))
+      }
     }
     ctx.setLineDash([])
   }
@@ -689,13 +852,29 @@ export default function FlagDrawing() {
             {/* ── Left: canvas area ── */}
             <div>
               {/* Flag name prompt */}
-              <div style={{ backgroundColor: '#0B1F3B', borderRadius: '12px', padding: '14px 20px', marginBottom: '10px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <span style={{ fontSize: '11px', fontWeight: '700', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.8px' }}>
-                  {t('Draw this flag', 'Dessine ce drapeau')}
-                </span>
-                <span style={{ fontSize: isMobile ? '20px' : '24px', fontWeight: '900', color: 'white' }}>
-                  {flagName}
-                </span>
+              <div style={{ backgroundColor: '#0B1F3B', borderRadius: '12px', padding: '14px 20px', marginBottom: '10px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '10px' }}>
+                <div>
+                  <div style={{ fontSize: '11px', fontWeight: '700', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: '2px' }}>
+                    {t('Draw this flag', 'Dessine ce drapeau')}
+                  </div>
+                  <div style={{ fontSize: isMobile ? '18px' : '22px', fontWeight: '900', color: 'white' }}>
+                    {flagName}
+                  </div>
+                </div>
+                {/* Ratio badge — hidden on easy/medium (it's given info on hard+) */}
+                {(difficulty === 'hard' || difficulty === 'extreme') ? (
+                  <div style={{ backgroundColor: 'rgba(255,255,255,0.1)', borderRadius: '8px', padding: '6px 12px', textAlign: 'center', flexShrink: 0 }}>
+                    <div style={{ fontSize: '10px', color: 'rgba(255,255,255,0.5)', fontWeight: '700', textTransform: 'uppercase', marginBottom: '1px' }}>{t('ratio', 'ratio')}</div>
+                    <div style={{ fontSize: '15px', fontWeight: '900', color: '#9EB7E5' }}>?</div>
+                  </div>
+                ) : (
+                  <div style={{ backgroundColor: 'rgba(255,255,255,0.1)', borderRadius: '8px', padding: '6px 12px', textAlign: 'center', flexShrink: 0 }}>
+                    <div style={{ fontSize: '10px', color: 'rgba(255,255,255,0.5)', fontWeight: '700', textTransform: 'uppercase', marginBottom: '1px' }}>{t('ratio', 'ratio')}</div>
+                    <div style={{ fontSize: '15px', fontWeight: '900', color: '#9EB7E5' }}>
+                      {RATIOS.find(r => Math.abs(r.value - (FLAG_DEFS[currentFlagKey]?.ratio || 1.5)) < 0.01)?.label || '2:3'}
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Extreme mode: shape + ratio picker */}
@@ -716,9 +895,9 @@ export default function FlagDrawing() {
                     <p style={{ margin: '0 0 5px', fontSize: '11px', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase' }}>{t('Ratio', 'Ratio')}</p>
                     <div style={{ display: 'flex', gap: '5px', flexWrap: 'wrap' }}>
                       {RATIOS.map(r => (
-                        <button key={r} onClick={() => setSelectedRatio(r)}
-                          style={{ padding: '6px 10px', borderRadius: '7px', border: selectedRatio === r ? '2px solid #0B1F3B' : '1.5px solid #e2e8f0', backgroundColor: selectedRatio === r ? '#0B1F3B' : 'white', color: selectedRatio === r ? 'white' : '#0B1F3B', fontWeight: '700', fontSize: '12px', cursor: 'pointer' }}>
-                          {r}
+                        <button key={r.label} onClick={() => setSelectedRatio(r.label)}
+                          style={{ padding: '6px 10px', borderRadius: '7px', border: selectedRatio === r.label ? '2px solid #0B1F3B' : '1.5px solid #e2e8f0', backgroundColor: selectedRatio === r.label ? '#0B1F3B' : 'white', color: selectedRatio === r.label ? 'white' : '#0B1F3B', fontWeight: '700', fontSize: '12px', cursor: 'pointer' }}>
+                          {r.label}
                         </button>
                       ))}
                     </div>

@@ -37,11 +37,62 @@ const GAMES = [
     icon: '✏️',
     en: 'Flag Drawing',
     fr: 'Dessin du Drapeau',
-    descEn: 'Draw the flag from memory',
-    descFr: 'Dessine le drapeau de mémoire',
-    soon: true,
+    descEn: 'Can you draw it from memory?',
+    descFr: 'Sauras-tu le dessiner de mémoire ?',
   },
 ]
+
+// ── Moucheture d'hermine bretonne ─────────────────────────────────────────────
+function ErmineMark({ size = 28, color = '#9EB7E5' }) {
+  const s = size
+  const w = s * 0.62
+  const ox = (s - w) / 2
+  const headHW  = w * 0.42
+  const headTop = s * 0.01
+  const barY    = s * 0.40
+  const barH    = s * 0.07
+  const barW    = w * 1.05
+  const dropW   = w * 0.28
+  const dropH   = s * 0.30
+  const gapY    = barY + barH + s * 0.03
+  const dxL     = ox + w * 0.12
+  const dxC     = s / 2
+  const dxR     = ox + w * 0.88
+  const headBot = barY - s * 0.02
+
+  const headPath = [
+    `M ${dxC - headHW} ${headTop + headHW}`,
+    `Q ${dxC - headHW} ${headTop} ${dxC} ${headTop}`,
+    `Q ${dxC + headHW} ${headTop} ${dxC + headHW} ${headTop + headHW}`,
+    `L ${dxC + headHW} ${headBot - headHW * 0.5}`,
+    `Q ${dxC + headHW} ${headBot} ${dxC} ${headBot + s * 0.03}`,
+    `Q ${dxC - headHW} ${headBot} ${dxC - headHW} ${headBot - headHW * 0.5}`,
+    'Z'
+  ].join(' ')
+
+  function drop(cx, cy, dw, dh) {
+    const hw = dw / 2
+    const r  = hw
+    return [
+      `M ${cx - hw} ${cy}`,
+      `L ${cx - hw} ${cy + dh - r}`,
+      `Q ${cx - hw} ${cy + dh} ${cx} ${cy + dh}`,
+      `Q ${cx + hw} ${cy + dh} ${cx + hw} ${cy + dh - r}`,
+      `L ${cx + hw} ${cy}`,
+      'Z'
+    ].join(' ')
+  }
+
+  return (
+    <svg width={s} height={s} viewBox={`0 0 ${s} ${s}`} fill="none" style={{ flexShrink: 0 }}>
+      <path d={headPath} fill={color}/>
+      <rect x={s/2 - barW/2} y={barY} width={barW} height={barH} rx={barH/2} fill={color}/>
+      <path d={drop(dxL, gapY,          dropW,        dropH)}        fill={color}/>
+      <path d={drop(dxC, gapY + s*0.04, dropW * 0.95, dropH * 0.92)} fill={color}/>
+      <path d={drop(dxR, gapY,          dropW,        dropH)}        fill={color}/>
+    </svg>
+  )
+}
 
 export default function Header() {
   const locale = useLocale()
@@ -110,10 +161,16 @@ export default function Header() {
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '32px' }}>
 
         {/* Logo */}
-        <Link href={`/${locale}`} style={{ textDecoration: 'none', flexShrink: 0 }}>
-          <span style={{ fontSize: '20px', fontWeight: '900', color: 'white', letterSpacing: '-0.5px' }}>
-            know<span style={{ color: '#9EB7E5' }}>flags</span>
-          </span>
+        <Link href={`/${locale}`} style={{ textDecoration: 'none', flexShrink: 0, display: 'flex', alignItems: 'center', gap: '9px' }}>
+          <ErmineMark size={30} color='#9EB7E5'/>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1px' }}>
+            <span style={{ fontSize: '19px', fontWeight: '900', color: 'white', letterSpacing: '-0.5px', lineHeight: 1 }}>
+              know<span style={{ color: '#9EB7E5' }}>flags</span>
+            </span>
+            <span style={{ fontSize: '8.5px', fontWeight: '600', letterSpacing: '1.8px', textTransform: 'uppercase', color: 'rgba(158,183,229,0.6)', lineHeight: 1 }}>
+              {t('explore the world', 'explore le monde')}
+            </span>
+          </div>
         </Link>
 
         {/* Desktop nav */}

@@ -53,7 +53,7 @@ const FLAGS = [
   { en: 'Djibouti',                         fr: 'Djibouti',                         code: 'dj' },
   { en: 'Dominica',                         fr: 'Dominique',                        code: 'dm' },
   { en: 'Dominican Republic',               fr: 'République dominicaine',           code: 'do' },
-  { en: 'Democratic Republic of the Congo', fr: 'République démocratique du Congo', code: 'cd' },
+  { en: 'DR Congo',                         fr: 'RD Congo',                         code: 'cd' },
   { en: 'Ecuador',                          fr: 'Équateur',                         code: 'ec' },
   { en: 'Egypt',                            fr: 'Égypte',                           code: 'eg' },
   { en: 'El Salvador',                      fr: 'Salvador',                         code: 'sv' },
@@ -230,7 +230,7 @@ export default function FlagReveal() {
   const activeIdxRef = useRef(0)
   const suggestionsRef = useRef([])
   const [imageLoaded, setImageLoaded] = useState(false)
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobile, setIsMobile] = useState(true)
   const [user, setUser] = useState(null)
   const [myStats, setMyStats] = useState(null)
   const [leaderboard, setLeaderboard] = useState([])
@@ -652,8 +652,8 @@ export default function FlagReveal() {
   )
 
   return (
-    <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: 'Arial, sans-serif' }}>
-      <div style={{ maxWidth: '960px', margin: '0 auto', padding: isMobile ? '16px 12px' : '32px 16px' }}>
+    <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: "var(--font-body)" }}>
+      <div style={{ maxWidth: '960px', margin: '0 auto', padding: isMobile ? '16px 12px' : '32px 16px', overflowX: 'hidden' }}>
 
         <h1 style={{ textAlign: 'center', fontSize: isMobile ? '24px' : '32px', fontWeight: '900', color: '#0B1F3B', margin: '0 0 24px', letterSpacing: '-1px' }}>
           {t('title')}

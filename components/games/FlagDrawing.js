@@ -476,7 +476,7 @@ export default function FlagDrawing() {
 
   const [screen, setScreen] = useState(SCREEN.SETUP)
   const [difficulty, setDifficulty] = useState('easy')
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobile, setIsMobile] = useState(true)
 
   // Game state
   const [lives, setLives] = useState(MAX_LIVES)
@@ -774,7 +774,7 @@ export default function FlagDrawing() {
   // ─── SETUP SCREEN ───────────────────────────────────────────────────────────
   if (screen === SCREEN.SETUP) {
     return (
-      <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: 'Arial, sans-serif', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px 16px' }}>
+      <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: "var(--font-body)", display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px 16px' }}>
         <div style={{ width: '100%', maxWidth: '480px' }}>
           <div style={{ textAlign: 'center', marginBottom: '36px' }}>
             <div style={{ fontSize: '48px', marginBottom: '10px' }}>✏️</div>
@@ -835,7 +835,7 @@ export default function FlagDrawing() {
     const flagName = locale === 'fr' ? def.fr : def.en
 
     return (
-      <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: 'Arial, sans-serif' }}>
+      <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: "var(--font-body)" }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', padding: isMobile ? '12px 12px 24px' : '24px 24px 32px' }}>
 
           {/* Header */}
@@ -1016,7 +1016,7 @@ export default function FlagDrawing() {
     const emoji = score >= 90 ? '🏆' : score >= 75 ? '🎉' : score >= 60 ? '😅' : '💪'
 
     return (
-      <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: 'Arial, sans-serif' }}>
+      <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: "var(--font-body)" }}>
         <div style={{ maxWidth: '700px', margin: '0 auto', padding: isMobile ? '16px 14px 32px' : '32px 24px 48px' }}>
 
           {livesRow}
@@ -1087,7 +1087,7 @@ export default function FlagDrawing() {
     const avgScore = total > 0 ? Math.round(history.reduce((s,h) => s + h.score, 0) / total) : 0
 
     return (
-      <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: 'Arial, sans-serif', padding: '32px 16px 60px' }}>
+      <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: "var(--font-body)", padding: '32px 16px 60px' }}>
         <div style={{ maxWidth: '520px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '28px' }}>
             <div style={{ fontSize: '52px', marginBottom: '10px' }}>🏁</div>

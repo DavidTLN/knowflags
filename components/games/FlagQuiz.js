@@ -234,7 +234,7 @@ export default function FlagQuiz() {
   const [screen, setScreen] = useState(SCREEN.SETUP)
   const [mode, setMode] = useState('name')
   const [regionFilter, setRegionFilter] = useState([])
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobile, setIsMobile] = useState(true)
 
   const [lives, setLives] = useState(MAX_LIVES)
   const [streak, setStreak] = useState(0)
@@ -332,7 +332,7 @@ export default function FlagQuiz() {
   // ─── SETUP SCREEN ──────────────────────────────────────────────────────────
   if (screen === SCREEN.SETUP) {
     return (
-      <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: 'Arial, sans-serif', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px 16px' }}>
+      <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: "var(--font-body)", display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px 16px' }}>
         <div style={{ width: '100%', maxWidth: '440px' }}>
           <div style={{ textAlign: 'center', marginBottom: '36px' }}>
             <div style={{ fontSize: '44px', marginBottom: '10px' }}>🎯</div>
@@ -421,7 +421,7 @@ export default function FlagQuiz() {
         height: availableH + 'px',
         maxHeight: availableH + 'px',
         overflow: 'hidden',
-        fontFamily: 'Arial, sans-serif',
+        fontFamily: "var(--font-body)",
         display: 'flex',
         flexDirection: 'column',
       }}>
@@ -612,7 +612,7 @@ export default function FlagQuiz() {
     const wrong = history.filter(h => !h.isCorrect)
 
     return (
-      <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: 'Arial, sans-serif', padding: '32px 16px 60px' }}>
+      <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: "var(--font-body)", padding: '32px 16px 60px' }}>
         <div style={{ maxWidth: '520px', margin: '0 auto' }}>
 
           <div style={{ textAlign: 'center', marginBottom: '28px' }}>

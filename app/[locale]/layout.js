@@ -1,7 +1,22 @@
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
+import { Roboto, Roboto_Slab } from 'next/font/google'
 import Header from '@/components/Header'
 import '../globals.css'
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  variable: '--font-body',
+  display: 'swap',
+})
+
+const robotoSlab = Roboto_Slab({
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
+  variable: '--font-display',
+  display: 'swap',
+})
 
 export const metadata = {
   title: {
@@ -11,13 +26,24 @@ export const metadata = {
   description: 'Discover, explore and learn about flags from around the world.',
 }
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+}
+
 export default async function RootLayout({ children, params }) {
   const { locale } = await params
   const messages = await getMessages()
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={`${roboto.variable} ${robotoSlab.variable}`}>
       <head>
+        <style>{`
+          *, *::before, *::after { box-sizing: border-box; }
+          html, body { overflow-x: hidden; max-width: 100vw; }
+          img, video, canvas { max-width: 100%; }
+        `}</style>
         {/* Google Tag Manager */}
         <script dangerouslySetInnerHTML={{__html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-W6DS4C7M');`}} />
         {/* End Google Tag Manager */}

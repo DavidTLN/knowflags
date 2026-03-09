@@ -158,7 +158,7 @@ export default function Header() {
 
   return (
     <header style={{ position: 'sticky', top: 0, zIndex: 100, backgroundColor: '#0B1F3B', boxShadow: '0 2px 16px rgba(0,0,0,0.25)' }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '32px' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 16px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '16px', minWidth: 0 }}>
 
         {/* Logo */}
         <Link href={`/${locale}`} style={{ textDecoration: 'none', flexShrink: 0, display: 'flex', alignItems: 'center', gap: '9px' }}>
@@ -167,7 +167,7 @@ export default function Header() {
             <span style={{ fontSize: '19px', fontWeight: '900', color: 'white', letterSpacing: '-0.5px', lineHeight: 1 }}>
               know<span style={{ color: '#9EB7E5' }}>flags</span>
             </span>
-            <span style={{ fontSize: '8.5px', fontWeight: '600', letterSpacing: '1.8px', textTransform: 'uppercase', color: 'rgba(158,183,229,0.6)', lineHeight: 1 }}>
+            <span className="logo-tagline" style={{ fontSize: '8.5px', fontWeight: '600', letterSpacing: '1.8px', textTransform: 'uppercase', color: 'rgba(158,183,229,0.6)', lineHeight: 1 }}>
               {t('explore the world', 'explore le monde')}
             </span>
           </div>
@@ -267,53 +267,57 @@ export default function Header() {
           </Link>
         </nav>
 
-        {/* Right side */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexShrink: 0 }}>
+        {/* Right side — desktop: locale + avatar/login | mobile: locale + burger only */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexShrink: 0 }}>
 
+          {/* Locale switcher — always visible */}
           <button onClick={switchLocale}
             style={{ fontSize: '13px', fontWeight: '700', color: '#F4F1E6', background: 'rgba(255,255,255,0.1)', border: 'none', borderRadius: '6px', padding: '5px 10px', cursor: 'pointer', letterSpacing: '0.5px' }}>
             {locale === 'en' ? 'FR' : 'EN'}
           </button>
 
-          {user ? (
-            <div ref={avatarRef} style={{ position: 'relative' }}>
-              <button onClick={() => setAvatarOpen(o => !o)}
-                style={{ width: '34px', height: '34px', borderRadius: '50%', backgroundColor: '#426A5A', border: 'none', color: 'white', fontWeight: '700', fontSize: '14px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                {initials}
-              </button>
-              {avatarOpen && (
-                <div style={{ position: 'absolute', top: 'calc(100% + 8px)', right: 0, backgroundColor: 'white', borderRadius: '12px', boxShadow: '0 8px 32px rgba(0,0,0,0.16)', overflow: 'hidden', minWidth: '180px', zIndex: 200 }}>
-                  <div style={{ padding: '12px 16px', borderBottom: '1px solid #f0f0f0' }}>
-                    <p style={{ margin: 0, fontSize: '12px', color: '#94a3b8' }}>{user.email}</p>
+          {/* Avatar / Sign-in — hidden on mobile, shown via drawer */}
+          <div className="desktop-right">
+            {user ? (
+              <div ref={avatarRef} style={{ position: 'relative' }}>
+                <button onClick={() => setAvatarOpen(o => !o)}
+                  style={{ width: '34px', height: '34px', borderRadius: '50%', backgroundColor: '#426A5A', border: 'none', color: 'white', fontWeight: '700', fontSize: '14px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  {initials}
+                </button>
+                {avatarOpen && (
+                  <div style={{ position: 'absolute', top: 'calc(100% + 8px)', right: 0, backgroundColor: 'white', borderRadius: '12px', boxShadow: '0 8px 32px rgba(0,0,0,0.16)', overflow: 'hidden', minWidth: '180px', zIndex: 200 }}>
+                    <div style={{ padding: '12px 16px', borderBottom: '1px solid #f0f0f0' }}>
+                      <p style={{ margin: 0, fontSize: '12px', color: '#94a3b8' }}>{user.email}</p>
+                    </div>
+                    <Link href={`/${locale}/profile`} onClick={() => setAvatarOpen(false)}
+                      style={{ display: 'block', padding: '11px 16px', fontSize: '14px', color: '#0B1F3B', textDecoration: 'none', fontWeight: '500' }}
+                      onMouseEnter={e => e.currentTarget.style.backgroundColor = '#f8f8f8'}
+                      onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}>
+                      {t('My Profile', 'Mon Profil')}
+                    </Link>
+                    <button onClick={handleSignOut}
+                      style={{ width: '100%', textAlign: 'left', padding: '11px 16px', fontSize: '14px', color: '#ef4444', background: 'none', border: 'none', cursor: 'pointer', fontWeight: '500' }}>
+                      {t('Sign out', 'Déconnexion')}
+                    </button>
                   </div>
-                  <Link href={`/${locale}/profile`} onClick={() => setAvatarOpen(false)}
-                    style={{ display: 'block', padding: '11px 16px', fontSize: '14px', color: '#0B1F3B', textDecoration: 'none', fontWeight: '500' }}
-                    onMouseEnter={e => e.currentTarget.style.backgroundColor = '#f8f8f8'}
-                    onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}>
-                    {t('My Profile', 'Mon Profil')}
-                  </Link>
-                  <button onClick={handleSignOut}
-                    style={{ width: '100%', textAlign: 'left', padding: '11px 16px', fontSize: '14px', color: '#ef4444', background: 'none', border: 'none', cursor: 'pointer', fontWeight: '500' }}>
-                    {t('Sign out', 'Déconnexion')}
-                  </button>
-                </div>
-              )}
-            </div>
-          ) : (
-            <Link href={`/${locale}/auth/login`}
-              style={{ fontSize: '14px', fontWeight: '600', color: '#0B1F3B', backgroundColor: '#9EB7E5', padding: '7px 16px', borderRadius: '8px', textDecoration: 'none' }}>
-              {t('Sign in', 'Connexion')}
-            </Link>
-          )}
+                )}
+              </div>
+            ) : (
+              <Link href={`/${locale}/auth/login`}
+                style={{ fontSize: '14px', fontWeight: '600', color: '#0B1F3B', backgroundColor: '#9EB7E5', padding: '7px 16px', borderRadius: '8px', textDecoration: 'none' }}>
+                {t('Sign in', 'Connexion')}
+              </Link>
+            )}
+          </div>
 
-          {/* Mobile burger */}
+          {/* Burger — mobile only */}
           <button onClick={() => setMenuOpen(o => !o)}
             style={{ display: 'none', background: 'none', border: 'none', cursor: 'pointer', padding: '4px', color: 'white' }}
             className="burger-btn">
-            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
               {menuOpen
-                ? <><line x1="3" y1="3" x2="19" y2="19"/><line x1="19" y1="3" x2="3" y2="19"/></>
-                : <><line x1="3" y1="6" x2="19" y2="6"/><line x1="3" y1="11" x2="19" y2="11"/><line x1="3" y1="16" x2="19" y2="16"/></>
+                ? <><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></>
+                : <><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></>
               }
             </svg>
           </button>
@@ -351,17 +355,41 @@ export default function Header() {
               {t('Shop', 'Shop')}
             </Link>
             <Link href={`/${locale}/community`} onClick={() => setMenuOpen(false)}
-              style={{ padding: '12px 0', fontSize: '16px', color: '#F4F1E6', textDecoration: 'none', fontWeight: '500' }}>
+              style={{ padding: '12px 0', fontSize: '16px', color: '#F4F1E6', textDecoration: 'none', fontWeight: '500', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
               {t('Community', 'Communauté')}
             </Link>
+
+            {/* Auth in drawer */}
+            {user ? (
+              <div style={{ paddingTop: '8px', display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                <Link href={`/${locale}/profile`} onClick={() => setMenuOpen(false)}
+                  style={{ padding: '12px 0', fontSize: '16px', color: '#9EB7E5', textDecoration: 'none', fontWeight: '600' }}>
+                  👤 {t('My Profile', 'Mon Profil')}
+                </Link>
+                <button onClick={() => { handleSignOut(); setMenuOpen(false) }}
+                  style={{ textAlign: 'left', padding: '10px 0', fontSize: '15px', color: '#ef4444', background: 'none', border: 'none', cursor: 'pointer', fontWeight: '500' }}>
+                  {t('Sign out', 'Déconnexion')}
+                </button>
+              </div>
+            ) : (
+              <Link href={`/${locale}/auth/login`} onClick={() => setMenuOpen(false)}
+                style={{ display: 'block', marginTop: '12px', padding: '12px', textAlign: 'center', fontSize: '15px', fontWeight: '700', color: '#0B1F3B', backgroundColor: '#9EB7E5', borderRadius: '10px', textDecoration: 'none' }}>
+                {t('Sign in', 'Connexion')}
+              </Link>
+            )}
           </div>
         </div>
       )}
 
       <style>{`
+        header { overflow: visible; }
         @media (max-width: 768px) {
-          .desktop-nav { display: none !important; }
-          .burger-btn { display: flex !important; }
+          .desktop-nav   { display: none !important; }
+          .desktop-right { display: none !important; }
+          .burger-btn    { display: flex !important; }
+        }
+        @media (max-width: 380px) {
+          .logo-tagline  { display: none !important; }
         }
       `}</style>
     </header>

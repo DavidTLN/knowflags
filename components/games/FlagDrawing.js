@@ -18,21 +18,28 @@ const DIFFICULTY = {
 
 // All possible flag colors (medium+ uses the full palette)
 const ALL_COLORS = [
-  { name: 'white',   hex: '#FFFFFF', label: 'Blanc' },
-  { name: 'black',   hex: '#1a1a1a', label: 'Noir' },
-  { name: 'red',     hex: '#D32F2F', label: 'Rouge' },
-  { name: 'blue',    hex: '#1565C0', label: 'Bleu' },
-  { name: 'green',   hex: '#2E7D32', label: 'Vert' },
-  { name: 'yellow',  hex: '#F9A825', label: 'Jaune' },
-  { name: 'orange',  hex: '#E65100', label: 'Orange' },
-  { name: 'brown',   hex: '#6D4C41', label: 'Marron' },
-  { name: 'pink',    hex: '#E91E63', label: 'Rose' },
-  { name: 'violet',  hex: '#7B1FA2', label: 'Violet' },
-  { name: 'gold',    hex: '#FFD700', label: 'Or' },
-  { name: 'lightblue', hex: '#29B6F6', label: 'Bleu clair' },
-  { name: 'darkgreen', hex: '#1B5E20', label: 'Vert foncé' },
-  { name: 'darkblue',  hex: '#0D47A1', label: 'Bleu marine' },
-  { name: 'gray',    hex: '#9E9E9E', label: 'Gris' },
+  { name: 'white',      hex: '#FFFFFF', label: 'Blanc'       },
+  { name: 'black',      hex: '#1a1a1a', label: 'Noir'        },
+  { name: 'red',        hex: '#CE1126', label: 'Rouge'       }, // standard flag red
+  { name: 'blue',       hex: '#003DA5', label: 'Bleu'        }, // standard flag blue
+  { name: 'green',      hex: '#008751', label: 'Vert'        }, // Nigeria / standard flag green
+  { name: 'yellow',     hex: '#FCD116', label: 'Jaune'       }, // standard flag yellow
+  { name: 'orange',     hex: '#F77F00', label: 'Orange'      }, // Ivory Coast exact
+  { name: 'lightblue',  hex: '#74ACDF', label: 'Bleu ciel'   }, // Argentina/Uruguay
+  { name: 'navyblue',   hex: '#002395', label: 'Bleu marine' }, // France
+  { name: 'royalblue',  hex: '#0032A0', label: 'Bleu royal'  }, // EU/Colombia
+  { name: 'darkblue',   hex: '#0D47A1', label: 'Bleu foncé'  },
+  { name: 'darkgreen',  hex: '#006600', label: 'Vert foncé'  },
+  { name: 'emerald',    hex: '#169B62', label: 'Vert émeraude'}, // Ireland
+  { name: 'gold',       hex: '#FFBE29', label: 'Or'          }, // Sri Lanka / Ghana
+  { name: 'maroon',     hex: '#8D153A', label: 'Bordeaux'    }, // Sri Lanka
+  { name: 'purple',     hex: '#6B2D8B', label: 'Violet'      }, // Dominica/Nicaragua
+  { name: 'gray',       hex: '#9E9E9E', label: 'Gris'        },
+  { name: 'brown',      hex: '#6D4C41', label: 'Marron'      },
+  { name: 'cerulean',   hex: '#3D9BDC', label: 'Bleu ciel'   }, // Nicaragua/Honduras
+  { name: 'teal',       hex: '#008080', label: 'Turquoise'   },
+  { name: 'darkred',    hex: '#9E3039', label: 'Rouge foncé'  }, // Latvia
+  { name: 'crimson',    hex: '#DC143C', label: 'Cramoisi'    }, // Poland
 ]
 
 // Simple flag definitions for the canvas renderer
@@ -42,7 +49,7 @@ const FLAG_DEFS = {
   // ── Europe ──────────────────────────────────────────────────────────────────
   fr: {
     en: 'France', fr: 'France', ratio: 1.5, // 2:3
-    colors: ['blue','white','red'],
+    colors: ['navyblue','white','red'],
     stripes: [
       { type: 'rect', x: 0, y: 0, w: 1/3, h: 1, color: '#002395' },
       { type: 'rect', x: 1/3, y: 0, w: 1/3, h: 1, color: '#FFFFFF' },
@@ -68,7 +75,7 @@ const FLAG_DEFS = {
     ]
   },
   be: {
-    en: 'Belgium', fr: 'Belgique', ratio: 13/15, // 13:15 (presque carré)
+    en: 'Belgium', fr: 'Belgique', ratio: 15/13, // 13:15 official → W/H≈1.154
     colors: ['black','yellow','red'],
     stripes: [
       { type: 'rect', x: 0, y: 0, w: 1/3, h: 1, color: '#000000' },
@@ -78,7 +85,7 @@ const FLAG_DEFS = {
   },
   nl: {
     en: 'Netherlands', fr: 'Pays-Bas', ratio: 1.5, // 2:3
-    colors: ['red','white','blue'],
+    colors: ['red','white','royalblue'],
     stripes: [
       { type: 'rect', x: 0, y: 0, w: 1, h: 1/3, color: '#AE1C28' },
       { type: 'rect', x: 0, y: 1/3, w: 1, h: 1/3, color: '#FFFFFF' },
@@ -87,7 +94,7 @@ const FLAG_DEFS = {
   },
   ru: {
     en: 'Russia', fr: 'Russie', ratio: 1.5, // 2:3
-    colors: ['white','blue','red'],
+    colors: ['white','royalblue','red'],
     stripes: [
       { type: 'rect', x: 0, y: 0, w: 1, h: 1/3, color: '#FFFFFF' },
       { type: 'rect', x: 0, y: 1/3, w: 1, h: 1/3, color: '#0039A6' },
@@ -105,15 +112,15 @@ const FLAG_DEFS = {
   },
   ro: {
     en: 'Romania', fr: 'Roumanie', ratio: 1.5, // 2:3
-    colors: ['blue','yellow','red'],
+    colors: ['navyblue','yellow','red'],
     stripes: [
-      { type: 'rect', x: 0, y: 0, w: 1/3, h: 1, color: '#002B7F' },
+      { type: 'rect', x: 0, y: 0, w: 1/3, h: 1, color: '#002395' }, // navyblue
       { type: 'rect', x: 1/3, y: 0, w: 1/3, h: 1, color: '#FCD116' },
       { type: 'rect', x: 2/3, y: 0, w: 1/3, h: 1, color: '#CE1126' },
     ]
   },
   pl: {
-    en: 'Poland', fr: 'Pologne', ratio: 5/8, // 5:8
+    en: 'Poland', fr: 'Pologne', ratio: 8/5, // 5:8 official → W/H=1.6
     colors: ['white','red'],
     stripes: [
       { type: 'rect', x: 0, y: 0, w: 1, h: 1/2, color: '#FFFFFF' },
@@ -122,7 +129,7 @@ const FLAG_DEFS = {
   },
   ua: {
     en: 'Ukraine', fr: 'Ukraine', ratio: 1.5, // 2:3
-    colors: ['blue','yellow'],
+    colors: ['royalblue','yellow'],
     stripes: [
       { type: 'rect', x: 0, y: 0, w: 1, h: 1/2, color: '#005BBB' },
       { type: 'rect', x: 0, y: 1/2, w: 1, h: 1/2, color: '#FFD500' },
@@ -147,8 +154,8 @@ const FLAG_DEFS = {
     ]
   },
   ee: {
-    en: 'Estonia', fr: 'Estonie', ratio: 7/11, // 7:11
-    colors: ['blue','black','white'],
+    en: 'Estonia', fr: 'Estonie', ratio: 11/7, // 7:11 official → W/H≈1.571
+    colors: ['royalblue','black','white'],
     stripes: [
       { type: 'rect', x: 0, y: 0, w: 1, h: 1/3, color: '#0072CE' },
       { type: 'rect', x: 0, y: 1/3, w: 1, h: 1/3, color: '#000000' },
@@ -179,7 +186,7 @@ const FLAG_DEFS = {
     stripes: [
       { type: 'rect', x: 0, y: 0, w: 1/3, h: 1, color: '#F77F00' },
       { type: 'rect', x: 1/3, y: 0, w: 1/3, h: 1, color: '#FFFFFF' },
-      { type: 'rect', x: 2/3, y: 0, w: 1/3, h: 1, color: '#009A44' },
+      { type: 'rect', x: 2/3, y: 0, w: 1/3, h: 1, color: '#008751' },
     ]
   },
   ml: {
@@ -193,9 +200,9 @@ const FLAG_DEFS = {
   },
   td: {
     en: 'Chad', fr: 'Tchad', ratio: 1.5, // 2:3
-    colors: ['blue','yellow','red'],
+    colors: ['navyblue','yellow','red'],
     stripes: [
-      { type: 'rect', x: 0, y: 0, w: 1/3, h: 1, color: '#002664' },
+      { type: 'rect', x: 0, y: 0, w: 1/3, h: 1, color: '#002395' }, // navyblue
       { type: 'rect', x: 1/3, y: 0, w: 1/3, h: 1, color: '#FECB00' },
       { type: 'rect', x: 2/3, y: 0, w: 1/3, h: 1, color: '#C60C30' },
     ]
@@ -220,27 +227,34 @@ const FLAG_DEFS = {
   },
   ng: {
     en: 'Nigeria', fr: 'Nigeria', ratio: 2.0, // 1:2
-    colors: ['green','white','green'],
+    colors: ['green','white'],
     stripes: [
-      { type: 'rect', x: 0, y: 0, w: 1/3, h: 1, color: '#008751' },
+      { type: 'rect', x: 0,   y: 0, w: 1/3, h: 1, color: '#008751' },
       { type: 'rect', x: 1/3, y: 0, w: 1/3, h: 1, color: '#FFFFFF' },
       { type: 'rect', x: 2/3, y: 0, w: 1/3, h: 1, color: '#008751' },
+    ],
+    zones: [
+      { type: 'rect', x: 0,   y: 0, w: 1/3,  h: 1 }, // left green
+      { type: 'rect', x: 1/3, y: 0, w: 1/3,  h: 1 }, // white center
+      { type: 'rect', x: 2/3, y: 0, w: 1/3,  h: 1 }, // right green
     ]
   },
   gh: {
-    en: 'Ghana', fr: 'Ghana', ratio: 1.5, // 2:3
+    en: 'Ghana', fr: 'Ghana', ratio: 1.5, // 2:3 — red/gold/green + black star
     colors: ['red','gold','green'],
     stripes: [
-      { type: 'rect', x: 0, y: 0, w: 1, h: 1/3, color: '#006B3F' },
-      { type: 'rect', x: 0, y: 1/3, w: 1, h: 1/3, color: '#FCD116' },
-      { type: 'rect', x: 0, y: 2/3, w: 1, h: 1/3, color: '#CE1126' },
+      { type: 'rect',   x: 0,    y: 0,   w: 1, h: 1/3, color: '#CE1126' },
+      { type: 'rect',   x: 0,    y: 1/3, w: 1, h: 1/3, color: '#FCD116' },
+      { type: 'rect',   x: 0,    y: 2/3, w: 1, h: 1/3, color: '#006B3F' },
+      // Black star — pre-drawn, player paints the bands around it
+      { type: 'image', src: 'https://flagcdn.com/w320/gh.png',
+        clipX: 0.38, clipY: 0.36, clipW: 0.24, clipH: 0.28, fixed: true },
     ]
   },
-  // Ghana stripes actually R/G/G top-to-bottom, let me correct:
   // ── Americas ─────────────────────────────────────────────────────────────────
   co: {
     en: 'Colombia', fr: 'Colombie', ratio: 1.5, // 2:3
-    colors: ['yellow','blue','red'],
+    colors: ['yellow','royalblue','red'],
     stripes: [
       { type: 'rect', x: 0, y: 0, w: 1, h: 1/2, color: '#FCD116' },
       { type: 'rect', x: 0, y: 1/2, w: 1, h: 1/4, color: '#003087' },
@@ -248,12 +262,14 @@ const FLAG_DEFS = {
     ]
   },
   ar: {
-    en: 'Argentina', fr: 'Argentine', ratio: 5/8, // 5:8
-    colors: ['lightblue','white','lightblue'],
+    en: 'Argentina', fr: 'Argentine', ratio: 14/9, // 9:14 official (W/H=14/9≈1.556)
+    colors: ['lightblue','white','gold'],
     stripes: [
-      { type: 'rect', x: 0, y: 0, w: 1, h: 1/3, color: '#74ACDF' },
-      { type: 'rect', x: 0, y: 1/3, w: 1, h: 1/3, color: '#FFFFFF' },
-      { type: 'rect', x: 0, y: 2/3, w: 1, h: 1/3, color: '#74ACDF' },
+      { type: 'rect',   x: 0,   y: 0,   w: 1,    h: 1/3,  color: '#74ACDF' },
+      { type: 'rect',   x: 0,   y: 1/3, w: 1,    h: 1/3,  color: '#FFFFFF' },
+      { type: 'rect',   x: 0,   y: 2/3, w: 1,    h: 1/3,  color: '#74ACDF' },
+      // Sol de Mayo — cercle or central
+      { type: 'circle', cx: 0.5, cy: 0.5, r: 0.08, color: '#F6B40E' },
     ]
   },
   // ── Asia ─────────────────────────────────────────────────────────────────────
@@ -261,8 +277,12 @@ const FLAG_DEFS = {
     en: 'Japan', fr: 'Japon', ratio: 1.5, // 2:3
     colors: ['white','red'],
     stripes: [
-      { type: 'rect', x: 0, y: 0, w: 1, h: 1, color: '#FFFFFF' },
+      { type: 'rect',   x: 0,   y: 0,   w: 1,   h: 1,   color: '#FFFFFF' },
       { type: 'circle', cx: 0.5, cy: 0.5, r: 0.3, color: '#BC002D' },
+    ],
+    zones: [
+      { type: 'rect',   x: 0,   y: 0,   w: 1,   h: 1  }, // white background
+      { type: 'circle', cx: 0.5, cy: 0.5, r: 0.3       }, // red circle
     ]
   },
   th: {
@@ -281,47 +301,216 @@ const FLAG_DEFS = {
     en: 'Switzerland', fr: 'Suisse', ratio: 1.0, // 1:1 square
     colors: ['red','white'],
     stripes: [
-      { type: 'rect', x: 0, y: 0, w: 1, h: 1, color: '#FF0000' },
-      { type: 'rect', x: 5/16, y: 3/16, w: 6/16, h: 10/16, color: '#FFFFFF' }, // vertical bar of cross
-      { type: 'rect', x: 3/16, y: 5/16, w: 10/16, h: 6/16, color: '#FFFFFF' }, // horizontal bar
+      { type: 'rect', x: 0,    y: 0,    w: 1,     h: 1,     color: '#FF0000' },
+      { type: 'rect', x: 5/16, y: 3/16, w: 6/16,  h: 10/16, color: '#FFFFFF' },
+      { type: 'rect', x: 3/16, y: 5/16, w: 10/16, h: 6/16,  color: '#FFFFFF' },
+    ],
+    zones: [
+      // 4 red corners
+      { type: 'rect', x: 0,     y: 0,     w: 5/16,  h: 5/16  }, // TL red
+      { type: 'rect', x: 11/16, y: 0,     w: 5/16,  h: 5/16  }, // TR red
+      { type: 'rect', x: 0,     y: 11/16, w: 5/16,  h: 5/16  }, // BL red
+      { type: 'rect', x: 11/16, y: 11/16, w: 5/16,  h: 5/16  }, // BR red
+      // 4 red side rectangles (between cross arms and corners)
+      { type: 'rect', x: 5/16,  y: 0,     w: 6/16,  h: 3/16  }, // red top
+      { type: 'rect', x: 5/16,  y: 13/16, w: 6/16,  h: 3/16  }, // red bottom
+      { type: 'rect', x: 0,     y: 5/16,  w: 3/16,  h: 6/16  }, // red left
+      { type: 'rect', x: 13/16, y: 5/16,  w: 3/16,  h: 6/16  }, // red right
+      // White cross: center + 4 arms
+      { type: 'rect', x: 5/16,  y: 3/16,  w: 6/16,  h: 2/16  }, // white top arm
+      { type: 'rect', x: 5/16,  y: 11/16, w: 6/16,  h: 2/16  }, // white bottom arm
+      { type: 'rect', x: 3/16,  y: 5/16,  w: 2/16,  h: 6/16  }, // white left arm
+      { type: 'rect', x: 11/16, y: 5/16,  w: 2/16,  h: 6/16  }, // white right arm
+      { type: 'rect', x: 5/16,  y: 5/16,  w: 6/16,  h: 6/16  }, // white center
     ]
   },
   no: {
-    en: 'Norway', fr: 'Norvège', ratio: 8/11, // 8:11
-    colors: ['red','white','blue'],
+    en: 'Norway', fr: 'Norvège', ratio: 11/8, // 8:11 official → W/H=1.375
+    colors: ['red','white','navyblue'],
     stripes: [
-      { type: 'rect', x: 0, y: 0, w: 1, h: 1, color: '#EF2B2D' },
-      { type: 'rect', x: 0, y: 4/16, w: 1, h: 3/16, color: '#FFFFFF' },
-      { type: 'rect', x: 4/16, y: 0, w: 3/16, h: 1, color: '#FFFFFF' },
-      { type: 'rect', x: 0, y: 5/16, w: 1, h: 1/16+0.06, color: '#002868' },
-      { type: 'rect', x: 5/16, y: 0, w: 1/16+0.06, h: 1, color: '#002868' },
+      { type: 'rect', x: 0,    y: 0,    w: 1,     h: 1,          color: '#EF2B2D' },
+      { type: 'rect', x: 0,    y: 4/16, w: 1,     h: 3/16,       color: '#FFFFFF' },
+      { type: 'rect', x: 4/16, y: 0,    w: 3/16,  h: 1,          color: '#FFFFFF' },
+      { type: 'rect', x: 0,    y: 5/16, w: 1,     h: 1/16+0.062, color: '#002868' },
+      { type: 'rect', x: 5/16, y: 0,    w: 1/16+0.062, h: 1,     color: '#002868' },
+    ],
+    zones: [
+      // 4 red corners
+      { type: 'rect', x: 0,    y: 0,    w: 4/16,  h: 4/16  }, // TL red
+      { type: 'rect', x: 7/16, y: 0,    w: 9/16,  h: 4/16  }, // TR red
+      { type: 'rect', x: 0,    y: 7/16, w: 4/16,  h: 9/16  }, // BL red
+      { type: 'rect', x: 7/16, y: 7/16, w: 9/16,  h: 9/16  }, // BR red
+      // blue cross center (vertical bar full height, minus white ring)
+      { type: 'rect', x: 5/16, y: 0,    w: 2/16,  h: 1     }, // blue v-bar
+      { type: 'rect', x: 0,    y: 5/16, w: 5/16,  h: 2/16  }, // blue h-bar left
+      { type: 'rect', x: 7/16, y: 5/16, w: 9/16,  h: 2/16  }, // blue h-bar right
+      // white ring segments
+      { type: 'rect', x: 4/16, y: 0,    w: 1/16,  h: 5/16  }, // white v-left top
+      { type: 'rect', x: 4/16, y: 7/16, w: 1/16,  h: 9/16  }, // white v-left bot
+      { type: 'rect', x: 6/16, y: 0,    w: 1/16,  h: 5/16  }, // white v-right top
+      { type: 'rect', x: 6/16, y: 7/16, w: 1/16,  h: 9/16  }, // white v-right bot
+      { type: 'rect', x: 0,    y: 4/16, w: 5/16,  h: 1/16  }, // white h-top left
+      { type: 'rect', x: 7/16, y: 4/16, w: 9/16,  h: 1/16  }, // white h-top right
+      { type: 'rect', x: 0,    y: 6/16, w: 5/16,  h: 1/16  }, // white h-bot left
+      { type: 'rect', x: 7/16, y: 6/16, w: 9/16,  h: 1/16  }, // white h-bot right
     ]
   },
   dk: {
-    en: 'Denmark', fr: 'Danemark', ratio: 28/34, // ~0.82, narrower flag
+    en: 'Denmark', fr: 'Danemark', ratio: 37/28, // 28:37 official → W/H≈1.321
     colors: ['red','white'],
     stripes: [
-      { type: 'rect', x: 0, y: 0, w: 1, h: 1, color: '#C60C30' },
-      { type: 'rect', x: 0, y: 4/12, w: 1, h: 2/12, color: '#FFFFFF' },
-      { type: 'rect', x: 3/12, y: 0, w: 2/12, h: 1, color: '#FFFFFF' },
+      { type: 'rect', x: 0,    y: 0,    w: 1,    h: 1,    color: '#C60C30' },
+      { type: 'rect', x: 0,    y: 4/12, w: 1,    h: 2/12, color: '#FFFFFF' },
+      { type: 'rect', x: 3/12, y: 0,    w: 2/12, h: 1,    color: '#FFFFFF' },
+    ],
+    zones: [
+      { type: 'rect', x: 0,    y: 0,    w: 3/12,  h: 4/12  }, // TL red
+      { type: 'rect', x: 5/12, y: 0,    w: 7/12,  h: 4/12  }, // TR red
+      { type: 'rect', x: 0,    y: 6/12, w: 3/12,  h: 6/12  }, // BL red
+      { type: 'rect', x: 5/12, y: 6/12, w: 7/12,  h: 6/12  }, // BR red
+      { type: 'rect', x: 3/12, y: 0,    w: 2/12,  h: 4/12  }, // white v-bar top
+      { type: 'rect', x: 3/12, y: 6/12, w: 2/12,  h: 6/12  }, // white v-bar bot
+      { type: 'rect', x: 0,    y: 4/12, w: 3/12,  h: 2/12  }, // white h-bar left
+      { type: 'rect', x: 5/12, y: 4/12, w: 7/12,  h: 2/12  }, // white h-bar right
     ]
   },
   se: {
-    en: 'Sweden', fr: 'Suède', ratio: 5/8, // 5:8
-    colors: ['blue','yellow'],
+    en: 'Sweden', fr: 'Suède', ratio: 8/5, // 5:8 official → W/H=1.6
+    colors: ['royalblue','yellow'],
     stripes: [
-      { type: 'rect', x: 0, y: 0, w: 1, h: 1, color: '#006AA7' },
-      { type: 'rect', x: 0, y: 4/16, w: 1, h: 2.5/16, color: '#FECC02' },
-      { type: 'rect', x: 4/16, y: 0, w: 2.5/16, h: 1, color: '#FECC02' },
+      { type: 'rect', x: 0,    y: 0,    w: 1,       h: 1,       color: '#006AA7' },
+      { type: 'rect', x: 0,    y: 4/16, w: 1,       h: 2.5/16,  color: '#FECC02' },
+      { type: 'rect', x: 4/16, y: 0,    w: 2.5/16,  h: 1,       color: '#FECC02' },
+    ],
+    zones: [
+      { type: 'rect', x: 0,       y: 0,       w: 4/16,    h: 4/16    }, // TL blue
+      { type: 'rect', x: 6.5/16,  y: 0,       w: 9.5/16,  h: 4/16    }, // TR blue
+      { type: 'rect', x: 0,       y: 6.5/16,  w: 4/16,    h: 9.5/16  }, // BL blue
+      { type: 'rect', x: 6.5/16,  y: 6.5/16,  w: 9.5/16,  h: 9.5/16  }, // BR blue
+      { type: 'rect', x: 4/16,    y: 0,       w: 2.5/16,  h: 4/16    }, // yellow v-bar top
+      { type: 'rect', x: 4/16,    y: 6.5/16,  w: 2.5/16,  h: 9.5/16  }, // yellow v-bar bot
+      { type: 'rect', x: 0,       y: 4/16,    w: 4/16,    h: 2.5/16  }, // yellow h-bar left
+      { type: 'rect', x: 6.5/16,  y: 4/16,    w: 9.5/16,  h: 2.5/16  }, // yellow h-bar right
     ]
   },
   fi: {
-    en: 'Finland', fr: 'Finlande', ratio: 11/18, // 11:18
-    colors: ['white','blue'],
+    en: 'Finland', fr: 'Finlande', ratio: 18/11, // 11:18 official → W/H≈1.636
+    colors: ['white','navyblue'],
     stripes: [
-      { type: 'rect', x: 0, y: 0, w: 1, h: 1, color: '#FFFFFF' },
-      { type: 'rect', x: 0, y: 4/18, w: 1, h: 3/18, color: '#003580' },
-      { type: 'rect', x: 5/18, y: 0, w: 3/18, h: 1, color: '#003580' },
+      { type: 'rect', x: 0,     y: 0,     w: 1,     h: 1,     color: '#FFFFFF' },
+      { type: 'rect', x: 0,     y: 4/18,  w: 1,     h: 3/18,  color: '#003580' },
+      { type: 'rect', x: 5/18,  y: 0,     w: 3/18,  h: 1,     color: '#003580' },
+    ],
+    // Non-overlapping zones for guide drawing & flood fill
+    zones: [
+      { type: 'rect', x: 0,     y: 0,     w: 5/18,  h: 4/18  }, // top-left white
+      { type: 'rect', x: 8/18,  y: 0,     w: 10/18, h: 4/18  }, // top-right white
+      { type: 'rect', x: 0,     y: 7/18,  w: 5/18,  h: 11/18 }, // bottom-left white
+      { type: 'rect', x: 8/18,  y: 7/18,  w: 10/18, h: 11/18 }, // bottom-right white
+      { type: 'rect', x: 5/18,  y: 0,     w: 3/18,  h: 1     }, // vertical blue bar
+      { type: 'rect', x: 0,     y: 4/18,  w: 5/18,  h: 3/18  }, // left horizontal segment
+      { type: 'rect', x: 8/18,  y: 4/18,  w: 10/18, h: 3/18  }, // right horizontal segment
+    ]
+  },
+
+  // ── Asie ─────────────────────────────────────────────────────────────────
+  lk: {
+    en: 'Sri Lanka', fr: 'Sri Lanka', ratio: 2.0, // 1:2 → width:height
+    hasEmblem: true,
+    emblem: { url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Emblem_of_Sri_Lanka.svg/200px-Emblem_of_Sri_Lanka.svg.png', x: 0.28, y: 0.05, w: 0.44, h: 0.9 },
+    emblemClip: { x: 0.45, y: 0.05, w: 0.5, h: 0.9 },
+    colors: ['gold','maroon','orange','green'],
+    stripes: [
+      // Fond bordeaux
+      { type: 'rect', x: 0,    y: 0, w: 1,    h: 1, color: '#8D153A' },
+      // Bande orange à gauche
+      { type: 'rect', x: 0,    y: 0, w: 0.10, h: 1, color: '#FF7300' },
+      // Bande verte
+      { type: 'rect', x: 0.10, y: 0, w: 0.10, h: 1, color: '#00534E' },
+      { type: 'image', src: 'https://flagcdn.com/w320/lk.png',
+        clipX: 0.22, clipY: 0.05, clipW: 0.78, clipH: 0.9, fixed: true },
+    ]
+  },
+
+  // ── Caraïbes / Amériques ──────────────────────────────────────────────────
+  ht: {
+    en: 'Haiti', fr: 'Haïti', ratio: 1.667,
+    hasEmblem: true,
+    colors: ['navyblue','red'],
+    stripes: [
+      { type: 'rect', x: 0, y: 0,   w: 1, h: 0.5, color: '#00209F' },
+      { type: 'rect', x: 0, y: 0.5, w: 1, h: 0.5, color: '#D21034' },
+      // Coat of arms — drawn as image overlay (fixed)
+      { type: 'image', src: 'https://flagcdn.com/w320/ht.png',
+        clipX: 0.28, clipY: 0.18, clipW: 0.44, clipH: 0.64, fixed: true },
+    ]
+  },
+
+  gt: {
+    en: 'Guatemala', fr: 'Guatemala', ratio: 1.6, // 5:8 → width:height
+    hasEmblem: true,
+    emblem: { url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Coat_of_arms_of_Guatemala.svg/200px-Coat_of_arms_of_Guatemala.svg.png', x: 0.3, y: 0.1, w: 0.4, h: 0.8 },
+    emblemClip: { x: 0.35, y: 0.15, w: 0.3, h: 0.7 },
+    colors: ['blue','white'],
+    stripes: [
+      { type: 'rect', x: 0,   y: 0, w: 1/3, h: 1, color: '#4997D0' },
+      { type: 'rect', x: 1/3, y: 0, w: 1/3, h: 1, color: '#FFFFFF' },
+      { type: 'rect', x: 2/3, y: 0, w: 1/3, h: 1, color: '#4997D0' },
+      { type: 'image', src: 'https://flagcdn.com/w320/gt.png',
+        clipX: 0.3, clipY: 0.1, clipW: 0.4, clipH: 0.8, fixed: true },
+    ]
+  },
+
+  dm: {
+    en: 'Dominica', fr: 'Dominique', ratio: 2.0, // 1:2 → width:height
+    hasEmblem: true,
+    emblem: { url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Coat_of_arms_of_Dominica.svg/200px-Coat_of_arms_of_Dominica.svg.png', x: 0.32, y: 0.2, w: 0.36, h: 0.6 },
+    emblemClip: { x: 0.3, y: 0.2, w: 0.4, h: 0.6 },
+    colors: ['green','yellow','black','white','red','violet'],
+    stripes: [
+      // Fond vert
+      { type: 'rect', x: 0, y: 0, w: 1, h: 1, color: '#009E60' },
+      // Croix jaune
+      { type: 'rect', x: 0, y: 0.40, w: 1, h: 0.067, color: '#FCD116' },
+      { type: 'rect', x: 0.46, y: 0, w: 0.08, h: 1, color: '#FCD116' },
+      // Croix noire (intérieure)
+      { type: 'rect', x: 0, y: 0.433, w: 1, h: 0.033, color: '#000000' },
+      { type: 'rect', x: 0.483, y: 0, w: 0.033, h: 1, color: '#000000' },
+      // Croix blanche (intérieure)
+      { type: 'rect', x: 0, y: 0.453, w: 1, h: 0.013, color: '#FFFFFF' },
+      { type: 'rect', x: 0.493, y: 0, w: 0.013, h: 1, color: '#FFFFFF' },
+      // Disque central rouge
+      { type: 'rect', x: 0.37, y: 0.28, w: 0.26, h: 0.44, color: '#CE1126' },
+      { type: 'rect', x: 0.43, y: 0.34, w: 0.14, h: 0.24, color: '#6B2D8B' },
+      { type: 'rect', x: 0.44, y: 0.32, w: 0.12, h: 0.08, color: '#009E60' },
+      // Étoiles vertes (10) autour — simplifiées en petits carrés
+      { type: 'rect', x: 0.38, y: 0.25, w: 0.04, h: 0.04, color: '#009E60' },
+      { type: 'rect', x: 0.48, y: 0.23, w: 0.04, h: 0.04, color: '#009E60' },
+      { type: 'rect', x: 0.58, y: 0.25, w: 0.04, h: 0.04, color: '#009E60' },
+      { type: 'rect', x: 0.62, y: 0.35, w: 0.04, h: 0.04, color: '#009E60' },
+      { type: 'rect', x: 0.62, y: 0.52, w: 0.04, h: 0.04, color: '#009E60' },
+      { type: 'rect', x: 0.58, y: 0.62, w: 0.04, h: 0.04, color: '#009E60' },
+      { type: 'rect', x: 0.48, y: 0.64, w: 0.04, h: 0.04, color: '#009E60' },
+      { type: 'rect', x: 0.38, y: 0.62, w: 0.04, h: 0.04, color: '#009E60' },
+      { type: 'rect', x: 0.34, y: 0.52, w: 0.04, h: 0.04, color: '#009E60' },
+      { type: 'rect', x: 0.34, y: 0.35, w: 0.04, h: 0.04, color: '#009E60' },
+      { type: 'image', src: 'https://flagcdn.com/w320/dm.png',
+        clipX: 0.33, clipY: 0.22, clipW: 0.34, clipH: 0.56, fixed: true },
+    ]
+  },
+
+  ni: {
+    en: 'Nicaragua', fr: 'Nicaragua', ratio: 1.667, // 3:5 → width:height
+    hasEmblem: true,
+    emblem: { url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Coat_of_arms_of_Nicaragua.svg/200px-Coat_of_arms_of_Nicaragua.svg.png', x: 0.3, y: 0.15, w: 0.4, h: 0.7 },
+    emblemClip: { x: 0.3, y: 0.25, w: 0.4, h: 0.5 },
+    colors: ['cerulean','white'],
+    stripes: [
+      { type: 'rect', x: 0, y: 0,   w: 1, h: 1/3, color: '#3D9BDC' },
+      { type: 'rect', x: 0, y: 1/3, w: 1, h: 1/3, color: '#FFFFFF' },
+      { type: 'rect', x: 0, y: 2/3, w: 1, h: 1/3, color: '#3D9BDC' },
+      { type: 'image', src: 'https://flagcdn.com/w320/ni.png',
+        clipX: 0.33, clipY: 0.2, clipW: 0.34, clipH: 0.6, fixed: true },
     ]
   },
 }
@@ -418,17 +607,81 @@ function drawReferenceFlagCtx(ctx, def, W, H) {
   }
 }
 
-// Compare two canvas ImageData and return similarity 0-100
-function compareImages(data1, data2) {
+// Replace dark border pixels with the average color of their non-dark neighbors
+// so guide lines don't penalize the score
+function flattenBorderPixels(imageData, W, H) {
+  const data = imageData.data
+  const DARK = 150 // threshold: r+g+b < DARK = border pixel
+  const idx = (y, x) => (y * W + x) * 4
+
+  // Two-pass: first identify borders, then replace with neighbor average
+  const isBorder = new Uint8Array(W * H)
+  for (let y = 0; y < H; y++) {
+    for (let x = 0; x < W; x++) {
+      const pi = idx(y, x)
+      if (data[pi] + data[pi+1] + data[pi+2] < DARK) {
+        isBorder[y * W + x] = 1
+      }
+    }
+  }
+
+  for (let y = 0; y < H; y++) {
+    for (let x = 0; x < W; x++) {
+      if (!isBorder[y * W + x]) continue
+      // Find nearest non-border neighbor in a 3x3 window expanding to 7x7
+      let r = 0, g = 0, b = 0, count = 0
+      for (let radius = 1; radius <= 4 && count === 0; radius++) {
+        for (let dy = -radius; dy <= radius; dy++) {
+          for (let dx = -radius; dx <= radius; dx++) {
+            const nx = x + dx, ny = y + dy
+            if (nx < 0 || nx >= W || ny < 0 || ny >= H) continue
+            if (isBorder[ny * W + nx]) continue
+            const pi = idx(ny, nx)
+            r += data[pi]; g += data[pi+1]; b += data[pi+2]
+            count++
+          }
+        }
+      }
+      if (count > 0) {
+        const pi = idx(y, x)
+        data[pi]   = Math.round(r / count)
+        data[pi+1] = Math.round(g / count)
+        data[pi+2] = Math.round(b / count)
+        data[pi+3] = 255
+      }
+    }
+  }
+  return imageData
+}
+
+// Compare two ImageData, skipping dark border pixels in the drawing (data1)
+// so guide lines don't penalize the score → 100% possible when colors are correct
+function compareImagesIgnoreBorders(data1, data2) {
   const len = data1.data.length
   let totalDist = 0
-  const maxDist = 441.67 // sqrt(255^2 * 3)
+  let counted = 0
+  const maxDist = 441.67
+  // Tolerance: color differences below this Euclidean distance count as perfect
+  // Accounts for palette vs real-flag slight shade differences
+  const TOLERANCE = 50
   for (let i = 0; i < len; i += 4) {
-    const d = colorDistance(data1.data[i],data1.data[i+1],data1.data[i+2], data2.data[i],data2.data[i+1],data2.data[i+2])
-    totalDist += d / maxDist
+    const r1 = data1.data[i], g1 = data1.data[i+1], b1 = data1.data[i+2]
+    // Skip dark border pixels in the drawing (guide lines)
+    if (r1 + g1 + b1 < 150) continue
+    const r2 = data2.data[i], g2 = data2.data[i+1], b2 = data2.data[i+2]
+    const d = colorDistance(r1,g1,b1, r2,g2,b2)
+    // Within tolerance = treat as perfect match
+    const penalised = Math.max(0, d - TOLERANCE)
+    totalDist += penalised / maxDist
+    counted++
   }
-  const pixels = len / 4
-  return Math.round((1 - totalDist / pixels) * 100)
+  if (counted === 0) return 0
+  return Math.min(100, Math.round((1 - totalDist / counted) * 100))
+}
+
+// Compare two canvas ImageData and return similarity 0-100 (legacy, unused)
+function compareImages(data1, data2) {
+  return compareImagesIgnoreBorders(data1, data2)
 }
 
 // Flood fill algorithm
@@ -438,6 +691,10 @@ function floodFill(imageData, W, H, startX, startY, fillColorHex) {
   const idx = (y, x) => (y * W + x) * 4
   const start = idx(startY, startX)
   const tr = data[start], tg = data[start+1], tb = data[start+2]
+
+  // Don't fill if clicking on a dark border line (r+g+b < 150 = very dark)
+  if (tr + tg + tb < 150) return imageData
+  // Don't fill if already same color
   if (colorDistance(tr,tg,tb, fr,fg,fb) < 10) return imageData
 
   const stack = [[startX, startY]]
@@ -449,7 +706,11 @@ function floodFill(imageData, W, H, startX, startY, fillColorHex) {
     const i = y * W + x
     if (visited[i]) continue
     const pi = i * 4
-    if (colorDistance(data[pi],data[pi+1],data[pi+2], tr,tg,tb) > 30) continue
+    const pr = data[pi], pg = data[pi+1], pb = data[pi+2]
+    // Stop at dark border pixels
+    if (pr + pg + pb < 150) continue
+    // Stop if pixel color differs too much from the target (already filled with another color)
+    if (colorDistance(pr,pg,pb, tr,tg,tb) > 40) continue
     visited[i] = 1
     data[pi] = fr; data[pi+1] = fg; data[pi+2] = fb; data[pi+3] = 255
     stack.push([x+1,y],[x-1,y],[x,y+1],[x,y-1])
@@ -499,6 +760,7 @@ export default function FlagDrawing() {
   // Extreme mode selections
   const [selectedShape, setSelectedShape] = useState('rectangle')
   const [selectedRatio, setSelectedRatio] = useState('2:3')
+  const [snapshotUrl, setSnapshotUrl] = useState(null) // captured drawing before result screen
 
   const drawingCanvasRef = useRef(null)
   const overlayCanvasRef = useRef(null) // for line preview
@@ -527,7 +789,8 @@ export default function FlagDrawing() {
   function getAvailableColors() {
     if (cfg.colorsRestricted && currentFlagKey) {
       const def = FLAG_DEFS[currentFlagKey]
-      return ALL_COLORS.filter(c => def.colors.some(fc => c.name === fc || c.hex.toLowerCase().includes(fc.toLowerCase().slice(0,3))))
+      // Exact match only — show only the colors listed in the flag definition
+      return ALL_COLORS.filter(c => def.colors.includes(c.name))
     }
     return ALL_COLORS
   }
@@ -561,7 +824,14 @@ export default function FlagDrawing() {
       const ctx = canvas.getContext('2d')
       ctx.fillStyle = '#FFFFFF'
       ctx.fillRect(0, 0, canvas.width, canvas.height)
+      // Guide lines on DRAWING canvas — dark borders act as flood-fill boundaries
+      // compareImagesIgnoreBorders already skips dark pixels so score is unaffected
       if (cfg.showLines) drawGuideLines(ctx, key)
+      // Fixed decorations (emblems) also on drawing canvas
+      drawFixedDecorations(ctx, key)
+      // Clear overlay (used only for line-tool preview)
+      const overlay = overlayCanvasRef.current
+      if (overlay) overlay.getContext('2d').clearRect(0, 0, overlay.width, overlay.height)
     }, 50)
   }
 
@@ -569,19 +839,86 @@ export default function FlagDrawing() {
     const def = FLAG_DEFS[key]
     if (!def) return
     const W = ctx.canvas.width, H = ctx.canvas.height
-    ctx.strokeStyle = '#C0BDB4'
-    ctx.lineWidth = 1.5
-    ctx.setLineDash([4,4])
-    for (const s of def.stripes) {
-      if (s.type === 'circle') {
+
+    const allZones = (def.zones || def.stripes).filter(s => !s.fixed)
+
+    // Draw only dark border lines — NO tint fills
+    // Canvas stays white so flood fill works cleanly
+    // Dark lines act as natural flood-fill barriers
+    // compareImagesIgnoreBorders skips dark pixels so lines don't penalize score
+    ctx.strokeStyle = '#1A1A2E'
+    ctx.lineWidth = 3
+    ctx.setLineDash([])
+    ctx.lineJoin = 'miter'
+    allZones.filter(s => s.type !== 'circle').forEach(s => drawShape(ctx, s, W, H, 'stroke'))
+  }
+
+  function drawShape(ctx, s, W, H, mode) {
+    if (s.type === 'circle') {
+      ctx.beginPath()
+      ctx.arc(Math.round(s.cx * W), Math.round(s.cy * H), Math.round(s.r * Math.min(W, H)), 0, Math.PI * 2)
+      mode === 'fill' ? ctx.fill() : ctx.stroke()
+    } else if (s.type === 'polygon') {
+      ctx.beginPath()
+      s.points.forEach(([px, py], i) => {
+        const fn = i === 0 ? 'moveTo' : 'lineTo'
+        ctx[fn](Math.round(px * W), Math.round(py * H))
+      })
+      ctx.closePath()
+      mode === 'fill' ? ctx.fill() : ctx.stroke()
+    } else {
+      // rect
+      const x = Math.round((s.x ?? 0) * W)
+      const y = Math.round((s.y ?? 0) * H)
+      const w = Math.round((s.w ?? 1) * W)
+      const h = Math.round((s.h ?? 1) * H)
+      if (mode === 'fill') ctx.fillRect(x, y, w, h)
+      else ctx.strokeRect(x, y, w, h)
+    }
+  }
+
+  // Draw all fixed decorations — handles both rect/circle stripes and image clips
+  function drawFixedDecorations(ctx, key) {
+    const def = FLAG_DEFS[key]
+    if (!def) return
+    const W = ctx.canvas.width, H = ctx.canvas.height
+    const fixedStripes = def.stripes.filter(s => s.fixed)
+    for (const s of fixedStripes) {
+      if (s.type === 'image') {
+        // Clip the real flag image to emblem region and draw at full opacity
+        const img = new Image()
+        img.crossOrigin = 'anonymous'
+        img.onload = () => {
+          ctx.save()
+          ctx.beginPath()
+          ctx.rect(
+            Math.round(s.clipX * W), Math.round(s.clipY * H),
+            Math.round(s.clipW * W), Math.round(s.clipH * H)
+          )
+          ctx.clip()
+          ctx.drawImage(img, 0, 0, W, H)
+          ctx.restore()
+        }
+        img.src = s.src
+      } else if (s.type === 'circle') {
+        ctx.fillStyle = s.color
         ctx.beginPath()
         ctx.arc(Math.round(s.cx * W), Math.round(s.cy * H), Math.round(s.r * Math.min(W, H)), 0, Math.PI * 2)
-        ctx.stroke()
+        ctx.fill()
+      } else if (s.type === 'polygon') {
+        ctx.fillStyle = s.color
+        ctx.beginPath()
+        s.points.forEach(([px, py], i) => {
+          i === 0 ? ctx.moveTo(Math.round(px * W), Math.round(py * H))
+                  : ctx.lineTo(Math.round(px * W), Math.round(py * H))
+        })
+        ctx.closePath()
+        ctx.fill()
       } else {
-        ctx.strokeRect(Math.round(s.x * W) + 0.5, Math.round(s.y * H) + 0.5, Math.round(s.w * W), Math.round(s.h * H))
+        ctx.fillStyle = s.color
+        ctx.fillRect(Math.round(s.x * W), Math.round(s.y * H), Math.round(s.w * W), Math.round(s.h * H))
       }
     }
-    ctx.setLineDash([])
   }
 
   function validate() {
@@ -591,15 +928,16 @@ export default function FlagDrawing() {
 
     const W = drawingCanvasRef.current.width
     const H = drawingCanvasRef.current.height
-
-    // Draw reference flag onto hidden canvas
     const def = FLAG_DEFS[currentFlagKey]
-    drawReferenceFlagCtx(refCtx, def, W, H)
 
-    const drawData = drawCtx.getImageData(0, 0, W, H)
-    const refData = refCtx.getImageData(0, 0, W, H)
-    const sim = compareImages(drawData, refData)
-    setScore(sim)
+    // 1. Snapshot FIRST — before any modification
+    const snapshotDataUrl = drawingCanvasRef.current.toDataURL('image/png')
+
+    const runComparison = () => {
+      const drawData = drawCtx.getImageData(0, 0, W, H)
+      const refData = refCtx.getImageData(0, 0, W, H)
+      const sim = compareImagesIgnoreBorders(drawData, refData)
+      setScore(sim)
 
     const passed = sim >= 70
 
@@ -628,10 +966,28 @@ export default function FlagDrawing() {
         return
       }
     }
-    setScreen(SCREEN.RESULT)
+      setSnapshotUrl(snapshotDataUrl)
+      setScreen(SCREEN.RESULT)
+    } // end runComparison
+
+    // Always use real flagcdn image as reference — guarantees pixel-perfect comparison
+    const img = new Image()
+    img.crossOrigin = 'anonymous'
+    img.onload = () => {
+      refCtx.clearRect(0, 0, W, H)
+      refCtx.drawImage(img, 0, 0, W, H)
+      runComparison()
+    }
+    img.onerror = () => {
+      // Fallback: draw from stripes definition
+      drawReferenceFlagCtx(refCtx, def, W, H)
+      runComparison()
+    }
+    img.src = `https://flagcdn.com/w320/${currentFlagKey}.png`
   }
 
   function nextFlag() {
+    setSnapshotUrl(null)
     setScreen(SCREEN.PLAYING)
     loadNextFlag(queueRef.current)
   }
@@ -732,6 +1088,9 @@ export default function FlagDrawing() {
     ctx.fillStyle = '#FFFFFF'
     ctx.fillRect(0, 0, canvas.width, canvas.height)
     if (cfg.showLines) drawGuideLines(ctx, currentFlagKey)
+    drawFixedDecorations(ctx, currentFlagKey)
+    const overlay = overlayCanvasRef.current
+    if (overlay) overlay.getContext('2d').clearRect(0, 0, overlay.width, overlay.height)
     setScore(null)
   }
 
@@ -774,7 +1133,7 @@ export default function FlagDrawing() {
   // ─── SETUP SCREEN ───────────────────────────────────────────────────────────
   if (screen === SCREEN.SETUP) {
     return (
-      <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: "var(--font-body)", display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px 16px' }}>
+      <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: "var(--font-body), system-ui, sans-serif", display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px 16px' }}>
         <div style={{ width: '100%', maxWidth: '480px' }}>
           <div style={{ textAlign: 'center', marginBottom: '36px' }}>
             <div style={{ fontSize: '48px', marginBottom: '10px' }}>✏️</div>
@@ -835,7 +1194,7 @@ export default function FlagDrawing() {
     const flagName = locale === 'fr' ? def.fr : def.en
 
     return (
-      <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: "var(--font-body)" }}>
+      <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: "var(--font-body), system-ui, sans-serif" }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', padding: isMobile ? '12px 12px 24px' : '24px 24px 32px' }}>
 
           {/* Header */}
@@ -1016,7 +1375,7 @@ export default function FlagDrawing() {
     const emoji = score >= 90 ? '🏆' : score >= 75 ? '🎉' : score >= 60 ? '😅' : '💪'
 
     return (
-      <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: "var(--font-body)" }}>
+      <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: "var(--font-body), system-ui, sans-serif" }}>
         <div style={{ maxWidth: '700px', margin: '0 auto', padding: isMobile ? '16px 14px 32px' : '32px 24px 48px' }}>
 
           {livesRow}
@@ -1048,16 +1407,10 @@ export default function FlagDrawing() {
             <div>
               <p style={{ margin: '0 0 8px', fontSize: '12px', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.6px' }}>{t('Your drawing', 'Ton dessin')}</p>
               <div style={{ borderRadius: '10px', overflow: 'hidden', border: `2px solid ${passed ? '#16a34a' : '#dc2626'}` }}>
-                <canvas
-                  ref={el => {
-                    if (el && drawingCanvasRef.current) {
-                      const ctx = el.getContext('2d')
-                      ctx.drawImage(drawingCanvasRef.current, 0, 0, el.width, el.height)
-                    }
-                  }}
-                  width={240} height={160}
-                  style={{ display: 'block', width: '100%' }}
-                />
+                {snapshotUrl
+                  ? <img src={snapshotUrl} alt="your drawing" style={{ display: 'block', width: '100%' }} />
+                  : <div style={{ width: '100%', aspectRatio: '3/2', backgroundColor: '#f0ede4', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#94a3b8', fontSize: '13px' }}>—</div>
+                }
               </div>
             </div>
             <div>
@@ -1087,7 +1440,7 @@ export default function FlagDrawing() {
     const avgScore = total > 0 ? Math.round(history.reduce((s,h) => s + h.score, 0) / total) : 0
 
     return (
-      <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: "var(--font-body)", padding: '32px 16px 60px' }}>
+      <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: "var(--font-body), system-ui, sans-serif", padding: '32px 16px 60px' }}>
         <div style={{ maxWidth: '520px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '28px' }}>
             <div style={{ fontSize: '52px', marginBottom: '10px' }}>🏁</div>

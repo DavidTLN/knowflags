@@ -54,7 +54,7 @@ const COUNTRIES = [
   { code: 'cz', en: 'Czech Republic',                   fr: 'République tchèque',               region: 'Europe',  colors: ['white','red','blue'],                symbols: ['triangle'] , ratio: '2:3', shape: 'rectangle' },
   { code: 'dk', en: 'Denmark',                          fr: 'Danemark',                         region: 'Europe',  colors: ['red','white'],                       symbols: ['cross'] , ratio: '28:37', shape: 'rectangle' },
   { code: 'dj', en: 'Djibouti',                         fr: 'Djibouti',                         region: 'Africa',  colors: ['blue','green','white','red'],        symbols: ['star','triangle'] , ratio: '2:3', shape: 'rectangle' },
-  { code: 'dm', en: 'Dominica',                         fr: 'Dominique',                        region: 'Americas',colors: ['green','yellow','black','white','red'],symbols: ['bird','cross','stars'] , ratio: '1:2', shape: 'rectangle' },
+  { code: 'dm', en: 'Dominica',                         fr: 'Dominique',                        region: 'Americas',colors: ['green','yellow','black','white','red','purple'],symbols: ['bird','cross','stars'] , ratio: '1:2', shape: 'rectangle' },
   { code: 'do', en: 'Dominican Republic',               fr: 'République dominicaine',           region: 'Americas',colors: ['blue','red','white'],                symbols: ['cross','coat of arms'] , ratio: '2:3', shape: 'rectangle' },
   { code: 'cd', en: 'DR Congo',                         fr: 'RD Congo',                         region: 'Africa',  colors: ['blue','red','yellow'],               symbols: ['star','diagonal'] , ratio: '2:3', shape: 'rectangle' },
   { code: 'ec', en: 'Ecuador',                          fr: 'Équateur',                         region: 'Americas',colors: ['yellow','blue','red'],               symbols: ['coat of arms'] , ratio: '2:3', shape: 'rectangle' },
@@ -75,11 +75,11 @@ const COUNTRIES = [
   { code: 'gh', en: 'Ghana',                            fr: 'Ghana',                            region: 'Africa',  colors: ['red','yellow','green','black'],      symbols: ['star'] , ratio: '2:3', shape: 'rectangle' },
   { code: 'gr', en: 'Greece',                           fr: 'Grèce',                            region: 'Europe',  colors: ['blue','white'],                      symbols: ['cross','stripes'] , ratio: '2:3', shape: 'rectangle' },
   { code: 'gd', en: 'Grenada',                          fr: 'Grenade',                          region: 'Americas',colors: ['yellow','red','green'],              symbols: ['star','nutmeg'] , ratio: '1:2', shape: 'rectangle' },
-  { code: 'gt', en: 'Guatemala',                        fr: 'Guatemala',                        region: 'Americas',colors: ['blue','white'],                      symbols: ['coat of arms','quetzal'] , ratio: '5:8', shape: 'rectangle' },
+  { code: 'gt', en: 'Guatemala',                        fr: 'Guatemala',                        region: 'Americas',colors: ['blue','white'],                      symbols: ['coat of arms','quetzal','rifle','sword'] , ratio: '5:8', shape: 'rectangle' },
   { code: 'gn', en: 'Guinea',                           fr: 'Guinée',                           region: 'Africa',  colors: ['red','yellow','green'],              symbols: [] , ratio: '2:3', shape: 'rectangle' },
   { code: 'gw', en: 'Guinea-Bissau',                    fr: 'Guinée-Bissau',                    region: 'Africa',  colors: ['red','yellow','green','black'],      symbols: ['star'] , ratio: '1:2', shape: 'rectangle' },
   { code: 'gy', en: 'Guyana',                           fr: 'Guyana',                           region: 'Americas',colors: ['green','white','yellow','black','red'],symbols: ['triangle','arrow'] , ratio: '3:5', shape: 'rectangle' },
-  { code: 'ht', en: 'Haiti',                            fr: 'Haïti',                            region: 'Americas',colors: ['blue','red','white'],                symbols: ['coat of arms'] , ratio: '3:5', shape: 'rectangle' },
+  { code: 'ht', en: 'Haiti',                            fr: 'Haïti',                            region: 'Americas',colors: ['blue','red','white'],                symbols: ['coat of arms','cannon','gun'] , ratio: '3:5', shape: 'rectangle' },
   { code: 'hn', en: 'Honduras',                         fr: 'Honduras',                         region: 'Americas',colors: ['blue','white'],                      symbols: ['stars'] , ratio: '1:2', shape: 'rectangle' },
   { code: 'hu', en: 'Hungary',                          fr: 'Hongrie',                          region: 'Europe',  colors: ['red','white','green'],               symbols: [] , ratio: '1:2', shape: 'rectangle' },
   { code: 'is', en: 'Iceland',                          fr: 'Islande',                          region: 'Europe',  colors: ['blue','white','red'],                symbols: ['cross'] , ratio: '18:25', shape: 'rectangle' },
@@ -131,7 +131,7 @@ const COUNTRIES = [
   { code: 'np', en: 'Nepal',                            fr: 'Népal',                            region: 'Asia',    colors: ['red','blue','white'],                symbols: ['moon','sun','pennant'] , ratio: '4:3', shape: 'pennant' },
   { code: 'nl', en: 'Netherlands',                      fr: 'Pays-Bas',                         region: 'Europe',  colors: ['red','white','blue'],                symbols: [] , ratio: '2:3', shape: 'rectangle' },
   { code: 'nz', en: 'New Zealand',                      fr: 'Nouvelle-Zélande',                 region: 'Oceania', colors: ['blue','red','white'],                symbols: ['stars','union jack'] , ratio: '1:2', shape: 'rectangle' },
-  { code: 'ni', en: 'Nicaragua',                        fr: 'Nicaragua',                        region: 'Americas',colors: ['blue','white'],                      symbols: ['coat of arms'] , ratio: '3:5', shape: 'rectangle' },
+  { code: 'ni', en: 'Nicaragua',                        fr: 'Nicaragua',                        region: 'Americas',colors: ['blue','white','purple'],             symbols: ['coat of arms','rainbow'] , ratio: '3:5', shape: 'rectangle' },
   { code: 'ne', en: 'Niger',                            fr: 'Niger',                            region: 'Africa',  colors: ['orange','white','green'],            symbols: ['circle'] , ratio: '6:7', shape: 'rectangle' },
   { code: 'ng', en: 'Nigeria',                          fr: 'Nigéria',                          region: 'Africa',  colors: ['green','white'],                     symbols: [] , ratio: '1:2', shape: 'rectangle' },
   { code: 'kp', en: 'North Korea',                      fr: 'Corée du Nord',                    region: 'Asia',    colors: ['red','blue','white'],                symbols: ['star','circle'] , ratio: '1:2', shape: 'rectangle' },
@@ -172,7 +172,7 @@ const COUNTRIES = [
   { code: 'kr', en: 'South Korea',                      fr: 'Corée du Sud',                     region: 'Asia',    colors: ['white','red','blue','black'],        symbols: ['yin yang','trigrams'] , ratio: '2:3', shape: 'rectangle' },
   { code: 'ss', en: 'South Sudan',                      fr: 'Soudan du Sud',                    region: 'Africa',  colors: ['black','red','green','white','blue','yellow'],symbols: ['star','triangle'] , ratio: '1:2', shape: 'rectangle' },
   { code: 'es', en: 'Spain',                            fr: 'Espagne',                          region: 'Europe',  colors: ['red','yellow'],                      symbols: ['coat of arms'] , ratio: '2:3', shape: 'rectangle' },
-  { code: 'lk', en: 'Sri Lanka',                        fr: 'Sri Lanka',                        region: 'Asia',    colors: ['maroon','orange','green','yellow'],  symbols: ['lion','bo leaves'] , ratio: '1:2', shape: 'rectangle' },
+  { code: 'lk', en: 'Sri Lanka',                        fr: 'Sri Lanka',                        region: 'Asia',    colors: ['maroon','orange','green','yellow'],  symbols: ['lion','sword','bo leaves'] , ratio: '1:2', shape: 'rectangle' },
   { code: 'sd', en: 'Sudan',                            fr: 'Soudan',                           region: 'Africa',  colors: ['red','white','black','green'],       symbols: ['triangle'] , ratio: '1:2', shape: 'rectangle' },
   { code: 'sr', en: 'Suriname',                         fr: 'Suriname',                         region: 'Americas',colors: ['green','white','red','yellow'],      symbols: ['star'] , ratio: '2:3', shape: 'rectangle' },
   { code: 'se', en: 'Sweden',                           fr: 'Suède',                            region: 'Europe',  colors: ['blue','yellow'],                     symbols: ['cross'] , ratio: '5:8', shape: 'rectangle' },
@@ -217,6 +217,7 @@ const COLOR_OPTIONS = [
   { key: 'white',  label: { en: 'White',  fr: 'Blanc'  }, hex: '#e5e7eb', border: true },
   { key: 'black',  label: { en: 'Black',  fr: 'Noir'   }, hex: '#1f2937' },
   { key: 'orange', label: { en: 'Orange', fr: 'Orange' }, hex: '#f97316' },
+  { key: 'purple', label: { en: 'Purple', fr: 'Violet' }, hex: '#7c3aed' },
 ]
 
 const SYMBOL_OPTIONS = [
@@ -235,7 +236,7 @@ const SYMBOL_OPTIONS = [
   { key: '__blade',     label: { en: 'Blade weapon',  fr: 'Arme blanche'      }, special: 'blade'   },
 ]
 
-const FIREARM_SYMBOLS = ['gun', 'rifle', 'musket', 'cannon']
+const FIREARM_SYMBOLS = ['gun', 'rifle', 'musket', 'cannon', 'firearms']
 const BLADE_SYMBOLS   = ['sword', 'swords', 'dagger', 'machete', 'spear', 'spears', 'trident', 'knife', 'saber']
 const ALL_WEAPON_SYMBOLS = [...FIREARM_SYMBOLS, ...BLADE_SYMBOLS]
 
@@ -368,7 +369,7 @@ export default function CountryListingPage() {
 
 
   return (
-    <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: 'Arial, sans-serif' }}>
+    <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: "var(--font-body), system-ui, sans-serif" }}>
       <div style={{ maxWidth: '1400px', margin: '0 auto', padding: isMobile ? '20px 16px' : '40px 32px' }}>
 
         {/* Header */}
@@ -604,7 +605,7 @@ export default function CountryListingPage() {
         {!isMobile && (
           <div style={{ display: 'flex', gap: '32px', alignItems: 'flex-start' }}>
 
-            <div style={{ width: '340px', flexShrink: 0, position: 'sticky', top: '76px', alignSelf: 'flex-start', backgroundColor: 'white', borderRadius: '14px', border: '1px solid #e2e8f0', padding: '24px 20px', maxHeight: 'calc(100vh - 100px)', overflowY: 'auto' }}>
+            <div style={{ width: 'min(340px, 100%)', flexShrink: 0, position: 'sticky', top: '76px', alignSelf: 'flex-start', backgroundColor: 'white', borderRadius: '14px', border: '1px solid #e2e8f0', padding: '24px 20px', maxHeight: 'calc(100vh - 100px)', overflowY: 'auto' }}>
 
               {/* Results + Clear */}
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '8px', marginBottom: '20px', paddingBottom: '16px', borderBottom: '1px solid #f0f0f0' }}>

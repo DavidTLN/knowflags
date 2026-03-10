@@ -157,51 +157,84 @@ function vibrantHex(hex) {
   return rgbToHex(Math.round(nr*255), Math.round(ng*255), Math.round(nb*255))
 }
 
-// ─── Sobel edge detection ─────────────────────────────────────────────────────
-function detectEdges(imageData, W, H, threshold = 30) {
+// ─── Color segmentation → thick boundary lines ───────────────────────────────
+// Step 1: quantize every pixel to its nearest dominant color (from k-means result)
+// Step 2: find pixels where neighbors belong to a different segment → boundary
+// Step 3: dilate boundaries by BORDER_RADIUS pixels → thick walls the fill can't cross
+
+const BORDER_RADIUS = 3  // px thickness of guide lines — must be >= 3 to block flood fill
+
+function buildSegmentMap(imageData, W, H, centroids) {
+  // Assign each pixel to its nearest centroid
   const src = imageData.data
-  const gray = new Float32Array(W * H)
+  const seg = new Uint8Array(W * H)
   for (let i = 0; i < W * H; i++) {
-    gray[i] = 0.299 * src[i*4] + 0.587 * src[i*4+1] + 0.114 * src[i*4+2]
-  }
-
-  const edges = new Uint8Array(W * H)
-  const Kx = [-1, 0, 1, -2, 0, 2, -1, 0, 1]
-  const Ky = [-1, -2, -1, 0, 0, 0, 1, 2, 1]
-
-  for (let y = 1; y < H-1; y++) {
-    for (let x = 1; x < W-1; x++) {
-      let gx = 0, gy = 0
-      for (let ky = -1; ky <= 1; ky++) {
-        for (let kx = -1; kx <= 1; kx++) {
-          const v = gray[(y+ky)*W + (x+kx)]
-          const ki = (ky+1)*3 + (kx+1)
-          gx += Kx[ki] * v
-          gy += Ky[ki] * v
-        }
-      }
-      edges[y*W+x] = Math.sqrt(gx*gx + gy*gy) > threshold ? 1 : 0
+    const r = src[i*4], g = src[i*4+1], b = src[i*4+2]
+    let best = 0, bestD = Infinity
+    for (let ci = 0; ci < centroids.length; ci++) {
+      const [cr, cg, cb] = centroids[ci]
+      const d = (r-cr)**2 + (g-cg)**2 + (b-cb)**2
+      if (d < bestD) { bestD = d; best = ci }
     }
+    seg[i] = best
   }
-  return edges
+  return seg
 }
 
-// Draw edges onto canvas ctx as dark lines
-function drawEdgesOnCanvas(ctx, edges, W, H) {
-  const imgData = ctx.createImageData(W, H)
-  const d = imgData.data
-  // Start with white background
-  for (let i = 0; i < d.length; i += 4) { d[i]=255; d[i+1]=255; d[i+2]=255; d[i+3]=255 }
-  // Draw edge pixels as dark navy
-  for (let i = 0; i < edges.length; i++) {
-    if (edges[i]) {
-      d[i*4]   = 15
-      d[i*4+1] = 30
-      d[i*4+2] = 60
-      d[i*4+3] = 255
+function buildBoundaryMap(seg, W, H) {
+  // Mark pixels where any neighbor has a different segment
+  const boundary = new Uint8Array(W * H)
+  for (let y = 1; y < H-1; y++) {
+    for (let x = 1; x < W-1; x++) {
+      const s = seg[y*W+x]
+      if (seg[y*W+x+1] !== s || seg[y*W+x-1] !== s ||
+          seg[(y+1)*W+x] !== s || seg[(y-1)*W+x] !== s) {
+        boundary[y*W+x] = 1
+      }
     }
   }
-  ctx.putImageData(imgData, 0, 0)
+  return boundary
+}
+
+function dilateBoundary(boundary, W, H, radius) {
+  // Expand each boundary pixel by radius in all directions
+  const dilated = new Uint8Array(W * H)
+  for (let y = 0; y < H; y++) {
+    for (let x = 0; x < W; x++) {
+      if (!boundary[y*W+x]) continue
+      for (let dy = -radius; dy <= radius; dy++) {
+        for (let dx = -radius; dx <= radius; dx++) {
+          const nx = x+dx, ny = y+dy
+          if (nx >= 0 && nx < W && ny >= 0 && ny < H) {
+            dilated[ny*W+nx] = 1
+          }
+        }
+      }
+    }
+  }
+  return dilated
+}
+
+// Build guide canvas: white background + thick dark borders between color zones
+function buildGuideCanvas(ctx, imageData, W, H, centroids) {
+  // Get raw centroid arrays for segmentation
+  const centroidArrays = centroids.map(c => [c.r, c.g, c.b])
+  const seg = buildSegmentMap(imageData, W, H, centroidArrays)
+  const boundary = buildBoundaryMap(seg, W, H)
+  const thick = dilateBoundary(boundary, W, H, BORDER_RADIUS)
+
+  // Write to canvas: white everywhere, dark navy on boundary
+  const out = ctx.createImageData(W, H)
+  const d = out.data
+  for (let i = 0; i < W * H; i++) {
+    if (thick[i]) {
+      d[i*4]=15; d[i*4+1]=30; d[i*4+2]=60; d[i*4+3]=255
+    } else {
+      d[i*4]=255; d[i*4+1]=255; d[i*4+2]=255; d[i*4+3]=255
+    }
+  }
+  ctx.putImageData(out, 0, 0)
+  return thick // return for use in emblem masking
 }
 
 // ─── Emblem detection — find the "complex" center region ─────────────────────
@@ -421,41 +454,19 @@ export default function FlagDrawingV2() {
       // ── 3. Set up drawing canvas ──
       const drawCtx = drawingCanvasRef.current?.getContext('2d')
       if (!drawCtx) { setFlagLoading(false); return }
-      drawCtx.fillStyle = '#FFFFFF'
-      drawCtx.fillRect(0, 0, W, H)
+
+      if (cfg.showLines) {
+        // Build guide canvas from color segmentation — thick boundaries block flood fill
+        // Pass raw centroid data (not vibrant) for accurate segmentation
+        buildGuideCanvas(drawCtx, imgData, W, H, extracted)
+      } else {
+        drawCtx.fillStyle = '#FFFFFF'
+        drawCtx.fillRect(0, 0, W, H)
+      }
 
       if (def.hasEmblem) {
-        // For emblem flags: stamp the whole flag at low opacity as background hint
-        // then re-stamp the emblem region at full opacity
+        // Detect and stamp the emblem region from the real flag at full opacity
         const emblemRegion = detectEmblemRegion(imgData, W, H)
-
-        if (cfg.showLines) {
-          // Edges on drawing canvas as guides
-          const edges = detectEdges(imgData, W, H, 25)
-          // Draw only the non-emblem-region edges
-          const edgeCtx = drawingCanvasRef.current.getContext('2d')
-          const edgeData = edgeCtx.createImageData(W, H)
-          const dd = edgeData.data
-          for (let i = 0; i < dd.length; i += 4) {
-            dd[i]=255; dd[i+1]=255; dd[i+2]=255; dd[i+3]=255
-          }
-          for (let py = 0; py < H; py++) {
-            for (let px = 0; px < W; px++) {
-              if (!edges[py*W+px]) continue
-              // Skip edge pixels inside emblem region
-              if (emblemRegion) {
-                const ex = emblemRegion.x*W, ey = emblemRegion.y*H
-                const ew = emblemRegion.w*W, eh = emblemRegion.h*H
-                if (px >= ex && px <= ex+ew && py >= ey && py <= ey+eh) continue
-              }
-              const pi = (py*W+px)*4
-              dd[pi]=15; dd[pi+1]=30; dd[pi+2]=60; dd[pi+3]=255
-            }
-          }
-          edgeCtx.putImageData(edgeData, 0, 0)
-        }
-
-        // Stamp emblem region from real flag at full opacity
         if (emblemRegion) {
           const { x, y, w, h } = emblemRegion
           drawCtx.save()
@@ -465,16 +476,9 @@ export default function FlagDrawingV2() {
           drawCtx.drawImage(img, 0, 0, W, H)
           drawCtx.restore()
         }
-
-      } else {
-        // Simple flags: edge detection only
-        if (cfg.showLines) {
-          const edges = detectEdges(imgData, W, H, 25)
-          drawEdgesOnCanvas(drawCtx, edges, W, H)
-        }
       }
 
-      // Clear overlay
+      // Clear overlay (used only for brush preview)
       const ov = overlayCanvasRef.current
       if (ov) ov.getContext('2d').clearRect(0, 0, W, H)
 

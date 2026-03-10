@@ -83,7 +83,7 @@ export default async function RootLayout({ children, params }) {
       <head>
         <style>{`
           *, *::before, *::after { box-sizing: border-box; }
-          html, body { overflow-x: hidden; max-width: 100vw; }
+          html { overflow-x: clip; } body { overflow-x: hidden; max-width: 100vw; }
           img, video, canvas { max-width: 100%; }
         `}</style>
 

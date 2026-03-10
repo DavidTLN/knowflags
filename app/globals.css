@@ -6,7 +6,11 @@
 }
 
 /* ── Base ────────────────────────────────────────────────────────────────── */
-html, body {
+html {
+  overflow-x: clip; /* use clip instead of hidden — does not break position:sticky */
+}
+
+body {
   overflow-x: hidden;
   max-width: 100vw;
   -webkit-font-smoothing: antialiased;

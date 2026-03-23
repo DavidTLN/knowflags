@@ -2,6 +2,12 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
+
+// Normalize string: remove accents for accent-insensitive matching
+function normalize(str) {
+  return str.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
+}
+
 import { createClient } from '@/lib/supabase-client'
 
 const FLAGS = [
@@ -337,14 +343,28 @@ export default function FlagReveal() {
     const ctx = canvas.getContext('2d')
     const W = CANVAS_W; const H = CANVAS_H
     const cols = Math.ceil(W / TILE_SIZE); const rows = Math.ceil(H / TILE_SIZE)
+    // Compute contain (letterbox) dimensions so non-rectangular flags (e.g. Nepal) display correctly
+    const imgW = imgRef.current.naturalWidth; const imgH = imgRef.current.naturalHeight
+    const scale = Math.min(W / imgW, H / imgH)
+    const drawW = imgW * scale; const drawH = imgH * scale
+    const offsetX = (W - drawW) / 2; const offsetY = (H - drawH) / 2
     for (let r = 0; r < rows; r++) {
       for (let c = 0; c < cols; c++) {
         const x = c * TILE_SIZE; const y = r * TILE_SIZE
         if (revealedTiles.has(r + '-' + c)) {
-          ctx.drawImage(imgRef.current,
-            (x / W) * imgRef.current.naturalWidth, (y / H) * imgRef.current.naturalHeight,
-            (TILE_SIZE / W) * imgRef.current.naturalWidth, (TILE_SIZE / H) * imgRef.current.naturalHeight,
-            x, y, TILE_SIZE, TILE_SIZE)
+          // Map canvas tile back to image coordinates using contain dimensions
+          const srcX = Math.max(0, (x - offsetX) / scale)
+          const srcY = Math.max(0, (y - offsetY) / scale)
+          const srcW = TILE_SIZE / scale; const srcH = TILE_SIZE / scale
+          // Only draw if tile overlaps the actual image area
+          if (x + TILE_SIZE > offsetX && x < offsetX + drawW && y + TILE_SIZE > offsetY && y < offsetY + drawH) {
+            ctx.fillStyle = '#F4F1E6'
+            ctx.fillRect(x, y, TILE_SIZE, TILE_SIZE)
+            ctx.drawImage(imgRef.current, srcX, srcY, srcW, srcH, x, y, TILE_SIZE, TILE_SIZE)
+          } else {
+            ctx.fillStyle = '#F4F1E6'
+            ctx.fillRect(x, y, TILE_SIZE, TILE_SIZE)
+          }
         } else {
           ctx.fillStyle = (r + c) % 2 === 0 ? '#e0e0e0' : '#d0d0d0'
           ctx.fillRect(x, y, TILE_SIZE, TILE_SIZE)
@@ -399,7 +419,7 @@ export default function FlagReveal() {
       return
     }
     const filtered = FLAGS.filter(f =>
-      getName(f).toLowerCase().startsWith(val.toLowerCase()) &&
+      normalize(getName(f)).includes(normalize(val)) &&
       !guesses.find(g => g.code === f.code)
     ).slice(0, 6)
     setSuggestions(filtered)
@@ -553,7 +573,7 @@ export default function FlagReveal() {
     <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
       {guesses.map((g, i) => (
         <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '10px 14px', borderRadius: '10px', backgroundColor: g.correct ? '#dcfce7' : '#fee2e2', border: '1px solid ' + (g.correct ? '#86efac' : '#fca5a5') }}>
-          <img src={'https://flagcdn.com/w40/' + g.code + '.png'} width="30" height="20" style={{ borderRadius: '3px', objectFit: 'cover', flexShrink: 0 }} />
+          <img src={'https://flagcdn.com/w40/' + g.code + '.png'} width="30" height="20" style={{ borderRadius: '3px', objectFit: 'contain', backgroundColor: '#f8f8f8', flexShrink: 0 }} />
           <span style={{ flex: 1, fontSize: '14px', fontWeight: '600', color: '#0B1F3B' }}>{getName(g)}</span>
           <span style={{ fontSize: '13px', fontWeight: '700', color: g.correct ? '#166534' : '#991b1b' }}>{g.similarity}%</span>
         </div>
@@ -568,7 +588,7 @@ export default function FlagReveal() {
     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
       {guesses.map((g, i) => (
         <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '8px 10px', borderRadius: '10px', backgroundColor: g.correct ? '#dcfce7' : '#fee2e2', border: '1px solid ' + (g.correct ? '#86efac' : '#fca5a5') }}>
-          <img src={'https://flagcdn.com/w40/' + g.code + '.png'} width="26" height="17" style={{ borderRadius: '2px', objectFit: 'cover', flexShrink: 0 }} />
+          <img src={'https://flagcdn.com/w40/' + g.code + '.png'} width="26" height="17" style={{ borderRadius: '2px', objectFit: 'contain', backgroundColor: '#f8f8f8', flexShrink: 0 }} />
           <div style={{ flex: 1, minWidth: 0 }}>
             <div style={{ fontSize: '12px', fontWeight: '600', color: '#0B1F3B', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{getName(g)}</div>
             <div style={{ fontSize: '11px', fontWeight: '700', color: g.correct ? '#166534' : '#991b1b' }}>{g.similarity}%</div>

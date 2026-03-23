@@ -403,12 +403,12 @@ export default function CapitalCity() {
           const finalBest = Math.max(bestStreak, streakRef.current)
           await saveBestScore(finalBest)
           setScreen(SCREEN.GAME_OVER)
-        }, 1200)
+        }, 2000)
         return
       }
     }
 
-    setTimeout(() => makeNextQuestion(), 1000)
+    setTimeout(() => makeNextQuestion(), 1800)
   }
 
   // ── Type answer submit ───────────────────────────────────────────────────────
@@ -440,7 +440,7 @@ export default function CapitalCity() {
         }, 1200)
         return
       }
-      setTimeout(() => makeNextQuestion(), 1200)
+      setTimeout(() => makeNextQuestion(), 2000)
     }
   }
 
@@ -634,7 +634,7 @@ export default function CapitalCity() {
               />
             ) : question.qMode === 'capital-flag' ? (
               <div style={{ fontSize: isMobile ? '28px' : '34px', fontWeight: '900', color: C.navy, letterSpacing: '-0.5px' }}>
-                🏙️ {question.correct.capital}
+                {question.correct.capital}
               </div>
             ) : (
               <div style={{ fontSize: isMobile ? '28px' : '36px', fontWeight: '900', color: C.navy, letterSpacing: '-1px' }}>
@@ -660,10 +660,12 @@ export default function CapitalCity() {
                     {isCapitalFlag ? (
                       <div>
                         <img src={`https://flagcdn.com/w320/${opt.code}.png`} alt={getName(opt)}
-                          style={{ width: '100%', height: isMobile ? '90px' : '110px', objectFit: 'cover', borderRadius: '6px', display: 'block', marginBottom: '8px' }} />
-                        <div style={{ fontSize: '13px', fontWeight: '700', color: isAnswered ? color : C.navy, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                          {getName(opt)}
-                        </div>
+                          style={{ width: '100%', height: isMobile ? '90px' : '110px', objectFit: 'cover', borderRadius: '6px', display: 'block', marginBottom: isAnswered ? '8px' : '0' }} />
+                        {isAnswered && (
+                          <div style={{ fontSize: '13px', fontWeight: '700', color, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                            {getName(opt)}
+                          </div>
+                        )}
                       </div>
                     ) : opt.capital}
                   </button>

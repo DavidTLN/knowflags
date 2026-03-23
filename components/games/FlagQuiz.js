@@ -322,11 +322,11 @@ export default function FlagQuiz() {
       livesRef.current = nl
       setLives(nl)
       if (nl <= 0) {
-        setTimeout(() => setScreen(SCREEN.GAME_OVER), 1400)
+        setTimeout(() => setScreen(SCREEN.GAME_OVER), 2000)
         return
       }
     }
-    setTimeout(() => makeNextQuestion(), isCorrect ? 800 : 1400)
+    setTimeout(() => makeNextQuestion(), isCorrect ? 1800 : 2000)
   }
 
   // ─── SETUP SCREEN ──────────────────────────────────────────────────────────

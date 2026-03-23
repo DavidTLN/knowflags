@@ -30,7 +30,6 @@ const GAMES = [
     fr: 'Capitale',
     descEn: 'Match the capital to its country',
     descFr: 'Trouve la capitale du pays',
-    soon: true,
   },
   {
     key: 'flag-drawing',
@@ -162,12 +161,12 @@ export default function Header() {
 
         {/* Logo */}
         <Link href={`/${locale}`} style={{ textDecoration: 'none', flexShrink: 0, display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <img src="/logo.png" alt="KnowFlags" style={{ height: '42px', width: 'auto', display: 'block' }} />
+          <img src='/logo.png' alt='KnowFlags' style={{ height: '42px', width: 'auto', display: 'block' }} />
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1px' }}>
             <span style={{ fontSize: '18px', fontWeight: '900', color: '#ffffff', letterSpacing: '-0.3px', lineHeight: 1 }}>
               KnowFlags
             </span>
-            <span style={{ fontSize: '9px', fontWeight: '600', letterSpacing: '1.5px', textTransform: 'uppercase', color: '#FEB12F', lineHeight: 1 }}>
+            <span style={{ fontSize: '9px', fontWeight: '600', letterSpacing: '1.5px', color: '#FEB12F', lineHeight: 1, marginTop: '4px', display: 'block' }}>
               Learn. Play. Explore.
             </span>
           </div>
@@ -262,8 +261,13 @@ export default function Header() {
           </Link>
 
           {/* Community */}
-          <Link href={`/${locale}/community`} style={navLinkStyle(isActive(`/${locale}/community`))}>
+          <a href='https://knowflags.discourse.group/' target='_blank' rel='noopener noreferrer' style={navLinkStyle(false)}>
             {t('Community', 'Communauté')}
+          </a>
+
+          {/* Blog */}
+          <Link href={`/${locale}/blog`} style={navLinkStyle(isActive(`/${locale}/blog`))}>
+            {t('Blog', 'Blog')}
           </Link>
         </nav>
 
@@ -354,9 +358,14 @@ export default function Header() {
               style={{ padding: '12px 0', fontSize: '16px', color: '#F4F1E6', textDecoration: 'none', fontWeight: '500', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
               {t('Shop', 'Shop')}
             </Link>
-            <Link href={`/${locale}/community`} onClick={() => setMenuOpen(false)}
+            <a href='https://knowflags.discourse.group/' target='_blank' rel='noopener noreferrer' onClick={() => setMenuOpen(false)}
               style={{ padding: '12px 0', fontSize: '16px', color: '#F4F1E6', textDecoration: 'none', fontWeight: '500', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
               {t('Community', 'Communauté')}
+            </a>
+
+            <Link href={`/${locale}/blog`} onClick={() => setMenuOpen(false)}
+              style={{ padding: '12px 0', fontSize: '16px', color: '#F4F1E6', textDecoration: 'none', fontWeight: '500', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
+              {t('Blog', 'Blog')}
             </Link>
 
             {/* Auth in drawer */}

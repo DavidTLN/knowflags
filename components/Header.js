@@ -157,18 +157,18 @@ export default function Header() {
   })
 
   return (
-    <header style={{ position: 'sticky', top: 0, zIndex: 100, backgroundColor: '#0B1F3B', boxShadow: '0 2px 16px rgba(0,0,0,0.25)' }}>
+    <header style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, backgroundColor: '#0B1F3B', boxShadow: '0 2px 16px rgba(0,0,0,0.25)' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 16px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '16px', minWidth: 0 }}>
 
         {/* Logo */}
-        <Link href={`/${locale}`} style={{ textDecoration: 'none', flexShrink: 0, display: 'flex', alignItems: 'center', gap: '9px' }}>
-          <ErmineMark size={30} color='#9EB7E5'/>
+        <Link href={`/${locale}`} style={{ textDecoration: 'none', flexShrink: 0, display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <img src="/logo.png" alt="KnowFlags" style={{ height: '42px', width: 'auto', display: 'block' }} />
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1px' }}>
-            <span style={{ fontSize: '19px', fontWeight: '900', color: 'white', letterSpacing: '-0.5px', lineHeight: 1 }}>
-              know<span style={{ color: '#9EB7E5' }}>flags</span>
+            <span style={{ fontSize: '18px', fontWeight: '900', color: '#ffffff', letterSpacing: '-0.3px', lineHeight: 1 }}>
+              KnowFlags
             </span>
-            <span className="logo-tagline" style={{ fontSize: '8.5px', fontWeight: '600', letterSpacing: '1.8px', textTransform: 'uppercase', color: 'rgba(158,183,229,0.6)', lineHeight: 1 }}>
-              {t('explore the world', 'explore le monde')}
+            <span style={{ fontSize: '9px', fontWeight: '600', letterSpacing: '1.5px', textTransform: 'uppercase', color: '#FEB12F', lineHeight: 1 }}>
+              Learn. Play. Explore.
             </span>
           </div>
         </Link>

@@ -202,6 +202,14 @@ const COUNTRIES = [
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 const MAX_LIVES     = 3
+const POINTS_CORRECT  = 50
+const POINTS_TIMER_BONUS = 2
+const STREAK_MULTIPLIER = (streak) => {
+  if (streak >= 20) return 3
+  if (streak >= 10) return 2
+  if (streak >= 5)  return 1.5
+  return 1
+}
 const TIMER_SECONDS = 15
 const SCREEN        = { SETUP: 'setup', PLAYING: 'playing', GAME_OVER: 'gameover' }
 const REGIONS = [
@@ -263,12 +271,16 @@ export default function CapitalCity() {
   const [lives,      setLives]      = useState(MAX_LIVES)
   const [streak,     setStreak]     = useState(0)
   const [bestStreak, setBestStreak] = useState(0)
+  const [lastPoints, setLastPoints] = useState(null)
   const [question,   setQuestion]   = useState(null)
   const [answered,   setAnswered]   = useState(null)  // null | { correct, selected, isCorrect }
   const [history,    setHistory]    = useState([])
   const [timer,      setTimer]      = useState(TIMER_SECONDS)
   const [typeInput,  setTypeInput]  = useState('')
   const [typeResult, setTypeResult] = useState(null)  // null | 'correct' | 'wrong'
+  const [score,      setScore]      = useState(0)
+  const [bestScore,  setBestScore]  = useState(0)
+  const scoreRef = useRef(0)
 
   // Supabase
   const [user,       setUser]       = useState(null)
@@ -349,6 +361,9 @@ export default function CapitalCity() {
     setTypeInput('')
     setTypeResult(null)
     setTimer(TIMER_SECONDS)
+    scoreRef.current = 0
+    setScore(0)
+    setBestScore(0)
   }, [getPool, questionMode, answerMode])
 
   // ── Start ───────────────────────────────────────────────────────────────────
@@ -358,6 +373,8 @@ export default function CapitalCity() {
     setLives(MAX_LIVES)
     setStreak(0)
     setBestStreak(0)
+    setScore(0)
+    setLastPoints(null)
     setHistory([])
     setScreen(SCREEN.PLAYING)
     const q = buildQuestion(getPool(), questionMode, answerMode)
@@ -366,6 +383,9 @@ export default function CapitalCity() {
     setTypeInput('')
     setTypeResult(null)
     setTimer(TIMER_SECONDS)
+    scoreRef.current = 0
+    setScore(0)
+    setBestScore(0)
   }
 
   // ── Timer ───────────────────────────────────────────────────────────────────
@@ -392,6 +412,15 @@ export default function CapitalCity() {
         const nb = Math.max(prev, ns)
         return nb
       })
+      const multiplier = Math.max(1, ns)
+      const timerBonus = timer * 10
+      const pts = Math.round((500 + timerBonus) * multiplier)
+      const newScore = scoreRef.current + pts
+      scoreRef.current = newScore
+      setScore(newScore)
+      setBestScore(b => Math.max(b, newScore))
+      setLastPoints({ pts, multiplier })
+      setTimeout(() => setLastPoints(null), 1500)
     } else {
       streakRef.current = 0
       setStreak(0)
@@ -581,228 +610,162 @@ export default function CapitalCity() {
   // PLAYING SCREEN
   // ─────────────────────────────────────────────────────────────────────────────
   if (screen === SCREEN.PLAYING && question) {
-    const isAnswered    = answered !== null
-    const timerPct      = (timer / TIMER_SECONDS) * 100
-    const timerColor    = timer > 8 ? C.green : timer > 4 ? C.gold : C.red
+    const isAnswered = answered !== null
+    const timerPct   = (timer / TIMER_SECONDS) * 100
+    const timerColor = timer > 8 ? '#4ade80' : timer > 4 ? '#FEB12F' : '#f87171'
+    const isCapitalFlag = question.qMode === 'capital-flag'
 
-    return (
-      <div style={{ backgroundColor: C.cream, minHeight: '100vh', padding: '16px 16px 60px', fontFamily: 'var(--font-body)' }}>
-        <div style={{ maxWidth: '480px', margin: '0 auto' }}>
+    const questionLabel = (
+      <p style={{ margin: '0 0 14px', fontSize: '11px', fontWeight: '800', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.8px' }}>
+        {question.qMode === 'flag'
+          ? t('What is the capital of this country?', 'Quelle est la capitale de ce pays ?')
+          : question.qMode === 'capital-flag'
+          ? t('Which flag belongs to this capital?', 'Quel drapeau correspond à cette capitale ?')
+          : t('What is the capital of…', 'Quelle est la capitale de…')}
+      </p>
+    )
 
-          {/* Top bar */}
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
-            <div style={{ display: 'flex', gap: '6px' }}>
-              {Array.from({ length: MAX_LIVES }).map((_, i) => (
-                <span key={i} style={{ fontSize: '22px', opacity: i < lives ? 1 : 0.2 }}>❤️</span>
-              ))}
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-              {streak > 0 && (
-                <div style={{ display: 'flex', alignItems: 'center', gap: '4px', backgroundColor: '#fefce8', border: '1px solid #fde68a', borderRadius: '99px', padding: '4px 10px' }}>
-                  <span style={{ fontSize: '14px' }}>🔥</span>
-                  <span style={{ fontSize: '13px', fontWeight: '800', color: '#92400e' }}>{streak}</span>
-                </div>
-              )}
-              <button onClick={() => setScreen(SCREEN.SETUP)}
-                style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '13px', color: C.muted, fontWeight: '600' }}>
-                ✕
+    const timerBar = (
+      <div style={{ height: '4px', backgroundColor: 'rgba(255,255,255,0.1)', borderRadius: '99px', overflow: 'hidden', marginBottom: '16px' }}>
+        <div style={{ height: '100%', width: `${timerPct}%`, backgroundColor: timerColor, borderRadius: '99px', transition: 'width 1s linear, background-color 0.3s' }} />
+      </div>
+    )
+
+    const hud = (
+      <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
+        <div style={{ backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '12px', padding: '8px 14px', textAlign: 'center' }}>
+          <div style={{ fontSize: '10px', fontWeight: '700', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '4px' }}>{locale === 'fr' ? 'Vies' : 'Lives'}</div>
+          <div style={{ display: 'flex', gap: '3px', justifyContent: 'center' }}>
+            {Array.from({ length: MAX_LIVES }).map((_, i) => (
+              <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill={i < lives ? '#ef4444' : 'rgba(255,255,255,0.15)'}>
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+            ))}
+          </div>
+        </div>
+        <div style={{ backgroundColor: streak > 0 ? 'rgba(254,177,47,0.15)' : 'rgba(255,255,255,0.08)', borderRadius: '12px', padding: '8px 14px', textAlign: 'center', border: streak > 0 ? '1px solid rgba(254,177,47,0.3)' : 'none' }}>
+          <div style={{ fontSize: '10px', fontWeight: '700', color: streak > 0 ? 'rgba(254,177,47,0.7)' : 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.07em' }}>Streak</div>
+          <div style={{ fontSize: '18px', fontWeight: '900', color: streak > 0 ? '#FEB12F' : 'rgba(255,255,255,0.3)', lineHeight: 1 }}>🔥 {streak}</div>
+        </div>
+        <div style={{ backgroundColor: 'rgba(74,222,128,0.12)', borderRadius: '12px', padding: '8px 14px', textAlign: 'center', border: '1px solid rgba(74,222,128,0.25)' }}>
+          <div style={{ fontSize: '10px', fontWeight: '700', color: 'rgba(74,222,128,0.7)', textTransform: 'uppercase', letterSpacing: '0.07em' }}>Score</div>
+          <div style={{ fontSize: '16px', fontWeight: '900', color: '#4ade80', lineHeight: 1, whiteSpace: 'nowrap' }}>{score.toLocaleString()} pts</div>
+        </div>
+        <button onClick={() => setScreen(SCREEN.SETUP)} style={{ background: 'rgba(255,255,255,0.08)', border: 'none', cursor: 'pointer', fontSize: '13px', color: 'rgba(255,255,255,0.5)', fontWeight: '600', borderRadius: '8px', padding: '6px 10px' }}>✕</button>
+      </div>
+    )
+
+    const stimulus = (
+      <div style={{ backgroundColor: 'rgba(255,255,255,0.06)', borderRadius: '18px', border: '1px solid rgba(255,255,255,0.1)', padding: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
+        {question.qMode === 'flag' ? (
+          <img src={`https://flagcdn.com/w640/${question.correct.code}.png`} alt="flag"
+            style={{ maxWidth: '280px', width: '100%', height: 'auto', borderRadius: '8px', boxShadow: '0 4px 20px rgba(0,0,0,0.3)', display: 'block' }} />
+        ) : question.qMode === 'capital-flag' ? (
+          <div style={{ fontSize: isMobile ? '28px' : '34px', fontWeight: '900', color: 'white', letterSpacing: '-0.5px', textAlign: 'center' }}>
+            {question.correct.capital}
+          </div>
+        ) : (
+          <div style={{ fontSize: isMobile ? '28px' : '36px', fontWeight: '900', color: 'white', letterSpacing: '-1px', textAlign: 'center' }}>
+            {getName(question.correct)}
+          </div>
+        )}
+      </div>
+    )
+
+    const answerArea = (
+      <>
+        {question.aMode === 'mcq' ? (
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+            {question.options.map((opt, i) => {
+              const isCorrectOpt = opt.code === question.correct.code
+              const isSelected = answered?.selected?.code === opt.code
+              let bg = 'rgba(255,255,255,0.06)', border = '1.5px solid rgba(255,255,255,0.12)', color = 'white'
+              if (isAnswered) {
+                if (isCorrectOpt)    { bg = 'rgba(74,222,128,0.15)'; border = '2px solid #4ade80'; color = '#4ade80' }
+                else if (isSelected) { bg = 'rgba(248,113,113,0.15)'; border = '2px solid #f87171'; color = '#f87171' }
+                else                 { bg = 'rgba(255,255,255,0.03)'; color = 'rgba(255,255,255,0.3)' }
+              }
+              return (
+                <button key={i} onClick={() => !isAnswered && handleAnswer(opt)} disabled={isAnswered}
+                  style={{ padding: isCapitalFlag ? '10px' : '14px 12px', borderRadius: '12px', border, backgroundColor: bg, color, fontSize: '14px', fontWeight: '700', cursor: isAnswered ? 'default' : 'pointer', transition: 'all 0.15s', textAlign: 'center', lineHeight: 1.3 }}>
+                  {isCapitalFlag ? (
+                    <div>
+                      <div style={{ width: '100%', aspectRatio: '3/2', overflow: 'hidden', borderRadius: '6px', marginBottom: isAnswered ? '8px' : '0', backgroundColor: '#1a2a40' }}>
+                        <img src={`https://flagcdn.com/w320/${opt.code}.png`} alt={getName(opt)}
+                          style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }} />
+                      </div>
+                      {isAnswered && (
+                        <div style={{ fontSize: '12px', fontWeight: '700', color, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                          {getName(opt)}
+                        </div>
+                      )}
+                    </div>
+                  ) : opt.capital}
+                </button>
+              )
+            })}
+          </div>
+        ) : (
+          <div>
+            <div style={{ display: 'flex', gap: '8px', marginBottom: '10px' }}>
+              <input ref={inputRef} type="text" value={typeInput}
+                onChange={e => setTypeInput(e.target.value)}
+                onKeyDown={e => e.key === 'Enter' && !isAnswered && handleTypeSubmit()}
+                placeholder={t('Type the capital city…', 'Tapez la capitale…')}
+                disabled={isAnswered} autoFocus
+                style={{ flex: 1, padding: '14px 16px', borderRadius: '12px', border: `2px solid ${typeResult === 'correct' ? '#4ade80' : typeResult === 'wrong' ? '#f87171' : 'rgba(255,255,255,0.15)'}`, fontSize: '15px', outline: 'none', backgroundColor: typeResult === 'correct' ? 'rgba(74,222,128,0.1)' : typeResult === 'wrong' ? 'rgba(248,113,113,0.1)' : 'rgba(255,255,255,0.08)', color: 'white', fontWeight: '600' }} />
+              <button onClick={handleTypeSubmit} disabled={isAnswered || !typeInput.trim()}
+                style={{ padding: '14px 20px', borderRadius: '12px', backgroundColor: '#9EB7E5', color: '#0B1F3B', border: 'none', fontSize: '14px', fontWeight: '800', cursor: isAnswered || !typeInput.trim() ? 'not-allowed' : 'pointer', opacity: isAnswered || !typeInput.trim() ? 0.5 : 1 }}>
+                {t('Go', 'OK')}
               </button>
             </div>
-          </div>
-
-          {/* Timer bar */}
-          <div style={{ height: '5px', backgroundColor: '#e2e8f0', borderRadius: '99px', marginBottom: '20px', overflow: 'hidden' }}>
-            <div style={{ height: '100%', width: `${timerPct}%`, backgroundColor: timerColor, borderRadius: '99px', transition: 'width 1s linear, background-color 0.3s' }} />
-          </div>
-
-          {/* Question label */}
-          <p style={{ margin: '0 0 16px', fontSize: '13px', fontWeight: '700', color: C.muted, textTransform: 'uppercase', letterSpacing: '0.8px', textAlign: 'center' }}>
-            {question.qMode === 'flag'
-              ? t('What is the capital of this country?', 'Quelle est la capitale de ce pays ?')
-              : question.qMode === 'capital-flag'
-              ? t('Which flag belongs to this capital?', 'Quel drapeau correspond à cette capitale ?')
-              : t('What is the capital of…', 'Quelle est la capitale de…')}
-          </p>
-
-          {/* Question display */}
-          <div style={{ backgroundColor: 'white', borderRadius: '16px', border: `1px solid ${C.border}`, padding: '24px', marginBottom: '20px', textAlign: 'center' }}>
-            {question.qMode === 'flag' ? (
-              <img
-                src={`https://flagcdn.com/w320/${question.correct.code}.png`}
-                alt="flag"
-                style={{ width: isMobile ? '180px' : '220px', height: 'auto', borderRadius: '6px', boxShadow: '0 4px 16px rgba(0,0,0,0.12)', margin: '0 auto', display: 'block' }}
-              />
-            ) : question.qMode === 'capital-flag' ? (
-              <div style={{ fontSize: isMobile ? '28px' : '34px', fontWeight: '900', color: C.navy, letterSpacing: '-0.5px' }}>
-                {question.correct.capital}
-              </div>
-            ) : (
-              <div style={{ fontSize: isMobile ? '28px' : '36px', fontWeight: '900', color: C.navy, letterSpacing: '-1px' }}>
-                {getName(question.correct)}
+            {isAnswered && !answered?.isCorrect && (
+              <div style={{ padding: '12px 16px', borderRadius: '10px', backgroundColor: 'rgba(248,113,113,0.15)', border: '1px solid #f87171', fontSize: '14px', color: '#f87171', fontWeight: '700' }}>
+                {t('Correct answer: ', 'Bonne réponse : ')}<strong>{question.correct.capital}</strong>
               </div>
             )}
           </div>
-
-          {/* Answer area */}
-          {question.aMode === 'mcq' ? (
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
-              {question.options.map((opt, i) => {
-                let bg = 'white', border = `1.5px solid ${C.border}`, color = C.navy
-                if (isAnswered) {
-                  if (opt.code === question.correct.code) { bg = '#f0fdf4'; border = `2px solid ${C.green}`; color = C.green }
-                  else if (answered.selected?.code === opt.code) { bg = '#fef2f2'; border = `2px solid ${C.red}`; color = C.red }
-                }
-                const isCapitalFlag = question.qMode === 'capital-flag'
-                return (
-                  <button key={i} onClick={() => !isAnswered && handleAnswer(opt)}
-                    disabled={isAnswered}
-                    style={{ padding: isCapitalFlag ? '10px' : '14px 12px', borderRadius: '12px', border, backgroundColor: bg, color, fontSize: '14px', fontWeight: '700', cursor: isAnswered ? 'default' : 'pointer', transition: 'all 0.15s', textAlign: 'center', lineHeight: 1.3 }}>
-                    {isCapitalFlag ? (
-                      <div>
-                        <img src={`https://flagcdn.com/w320/${opt.code}.png`} alt={getName(opt)}
-                          style={{ width: '100%', height: isMobile ? '90px' : '110px', objectFit: 'cover', borderRadius: '6px', display: 'block', marginBottom: isAnswered ? '8px' : '0' }} />
-                        {isAnswered && (
-                          <div style={{ fontSize: '13px', fontWeight: '700', color, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                            {getName(opt)}
-                          </div>
-                        )}
-                      </div>
-                    ) : opt.capital}
-                  </button>
-                )
-              })}
-            </div>
-          ) : (
-            <div>
-              <div style={{ display: 'flex', gap: '8px', marginBottom: '10px' }}>
-                <input
-                  ref={inputRef}
-                  type="text"
-                  value={typeInput}
-                  onChange={e => setTypeInput(e.target.value)}
-                  onKeyDown={e => e.key === 'Enter' && !isAnswered && handleTypeSubmit()}
-                  placeholder={t('Type the capital city…', 'Tapez la capitale…')}
-                  disabled={isAnswered}
-                  autoFocus
-                  style={{ flex: 1, padding: '14px 16px', borderRadius: '12px', border: `2px solid ${typeResult === 'correct' ? C.green : typeResult === 'wrong' ? C.red : C.border}`, fontSize: '15px', outline: 'none', backgroundColor: typeResult === 'correct' ? '#f0fdf4' : typeResult === 'wrong' ? '#fef2f2' : 'white', color: C.navy, fontWeight: '600' }}
-                />
-                <button onClick={handleTypeSubmit} disabled={isAnswered || !typeInput.trim()}
-                  style={{ padding: '14px 20px', borderRadius: '12px', backgroundColor: C.navy, color: 'white', border: 'none', fontSize: '14px', fontWeight: '800', cursor: isAnswered || !typeInput.trim() ? 'not-allowed' : 'pointer', opacity: isAnswered || !typeInput.trim() ? 0.5 : 1 }}>
-                  {t('Go', 'OK')}
-                </button>
-              </div>
-              {isAnswered && !answered?.isCorrect && (
-                <div style={{ padding: '12px 16px', borderRadius: '10px', backgroundColor: '#fef2f2', border: `1px solid ${C.red}`, fontSize: '14px', color: C.red, fontWeight: '700' }}>
-                  {t('Correct answer: ', 'Bonne réponse : ')}<strong>{question.correct.capital}</strong>
-                </div>
-              )}
-            </div>
-          )}
-
-          {/* Correct feedback */}
-          {isAnswered && answered.isCorrect && (
-            <div style={{ marginTop: '12px', textAlign: 'center', fontSize: '15px', fontWeight: '700', color: C.green }}>
-              ✓ {t('Correct!', 'Correct !')} 🔥 {streakRef.current}
-            </div>
-          )}
-        </div>
-      </div>
+        )}
+        {isAnswered && answered.isCorrect && (
+          <div style={{ marginTop: '12px', textAlign: 'center', fontSize: '15px', fontWeight: '700', color: '#4ade80' }}>
+            ✓ {t('Correct!', 'Correct !')} 🔥 {streakRef.current}
+          </div>
+        )}
+      </>
     )
-  }
 
-  // ─────────────────────────────────────────────────────────────────────────────
-  // GAME OVER SCREEN
-  // ─────────────────────────────────────────────────────────────────────────────
-  if (screen === SCREEN.GAME_OVER) {
-    const total   = history.length
-    const correct = history.filter(h => h.isCorrect).length
-    const pct     = total > 0 ? Math.round((correct / total) * 100) : 0
-    const savedBest = bestScores[scoreKey(questionMode, answerMode)] ?? bestStreak
+    if (isMobile) {
+      return (
+        <div style={{ backgroundColor: '#0B1F3B', minHeight: '100dvh', fontFamily: 'var(--font-body)', display: 'flex', flexDirection: 'column', padding: '16px 14px 24px' }}>
+          {hud}
+          {timerBar}
+          {questionLabel}
+          {stimulus}
+          {answerArea}
+        </div>
+      )
+    }
 
     return (
-      <div style={{ backgroundColor: C.cream, minHeight: '100vh', fontFamily: 'var(--font-body)', padding: '32px 16px 60px' }}>
-        <div style={{ maxWidth: '520px', margin: '0 auto' }}>
-
-          <div style={{ textAlign: 'center', marginBottom: '28px' }}>
-            <div style={{ fontSize: '52px', marginBottom: '10px' }}>{pct >= 80 ? '🏆' : pct >= 50 ? '🎯' : '💪'}</div>
-            <h2 style={{ margin: '0 0 4px', fontSize: '26px', fontWeight: '900', color: C.navy }}>
-              {t('Game Over', 'Partie terminée')}
-            </h2>
-            <p style={{ margin: 0, color: C.muted, fontSize: '14px' }}>
-              {total} {t('questions', 'questions')}
-            </p>
+      <div style={{ backgroundColor: '#0B1F3B', minHeight: '100vh', fontFamily: 'var(--font-body)', padding: '24px 24px 40px' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
+            <h1 style={{ fontSize: '28px', fontWeight: '900', color: 'white', margin: 0, letterSpacing: '-1px' }}>
+              🏙️ {t('Capital City', 'Capitale')}
+            </h1>
+            {hud}
           </div>
-
-          {/* Stats */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px', marginBottom: '20px' }}>
-            {[
-              { label: t('Correct', 'Corrects'),           value: correct,        color: C.green,  bg: '#f0fdf4' },
-              { label: t('Best streak', 'Meilleure série'), value: `🔥 ${bestStreak}`, color: '#806D40', bg: '#fefce8' },
-              { label: t('Score', 'Score'),                value: `${pct}%`,      color: C.navy,   bg: 'white' },
-            ].map((s, i) => (
-              <div key={i} style={{ backgroundColor: s.bg, borderRadius: '10px', border: `1px solid ${C.border}`, padding: '14px 10px', textAlign: 'center' }}>
-                <div style={{ fontSize: '20px', fontWeight: '900', color: s.color }}>{s.value}</div>
-                <div style={{ fontSize: '11px', color: C.muted, marginTop: '3px' }}>{s.label}</div>
-              </div>
-            ))}
+          {timerBar}
+          <div style={{ display: 'flex', gap: '24px', alignItems: 'flex-start' }}>
+            <div style={{ flex: 1, minWidth: 0 }}>
+              {stimulus}
+            </div>
+            <div style={{ width: '320px', flexShrink: 0, backgroundColor: 'rgba(255,255,255,0.06)', borderRadius: '18px', padding: '20px', border: '1px solid rgba(255,255,255,0.1)' }}>
+              {questionLabel}
+              {answerArea}
+            </div>
           </div>
-
-          {/* Best score saved */}
-          {user && savedBest > 0 && (
-            <div style={{ backgroundColor: '#fefce8', border: '1px solid #fde68a', borderRadius: '10px', padding: '12px 16px', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <span style={{ fontSize: '20px' }}>🏆</span>
-              <div>
-                <div style={{ fontSize: '12px', fontWeight: '800', color: '#854d0e' }}>{t('Best streak saved', 'Meilleure série sauvegardée')}</div>
-                <div style={{ fontSize: '20px', fontWeight: '900', color: '#92400e' }}>{savedBest}</div>
-              </div>
-            </div>
-          )}
-          {!user && (
-            <div style={{ backgroundColor: '#f0f9ff', border: '1px solid #bae6fd', borderRadius: '10px', padding: '12px 16px', marginBottom: '16px', fontSize: '13px', color: '#0369a1' }}>
-              <Link href={`/${locale}/auth/login`} style={{ color: '#0369a1', fontWeight: '700' }}>
-                {t('Log in', 'Se connecter')}
-              </Link>
-              {t(' to save your scores.', ' pour sauvegarder vos scores.')}
-            </div>
-          )}
-
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            <button onClick={startGame}
-              style={{ width: '100%', padding: '15px', borderRadius: '12px', backgroundColor: C.navy, color: 'white', fontSize: '15px', fontWeight: '900', border: 'none', cursor: 'pointer' }}>
-              {t('Play Again', 'Rejouer')} →
-            </button>
-            <button onClick={() => setScreen(SCREEN.SETUP)}
-              style={{ width: '100%', padding: '15px', borderRadius: '12px', backgroundColor: 'white', color: C.navy, fontSize: '15px', fontWeight: '700', border: `1.5px solid ${C.border}`, cursor: 'pointer' }}>
-              {t('Change Settings', 'Changer les paramètres')}
-            </button>
-          </div>
-
-          {/* History */}
-          {history.length > 0 && (
-            <div style={{ marginTop: '28px' }}>
-              <p style={{ margin: '0 0 12px', fontSize: '11px', fontWeight: '800', color: C.muted, textTransform: 'uppercase', letterSpacing: '0.8px' }}>
-                {t('Round recap', 'Récap de la partie')}
-              </p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                {history.slice(-10).reverse().map((h, i) => (
-                  <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '12px', backgroundColor: 'white', borderRadius: '10px', border: `1px solid ${C.border}`, padding: '10px 12px' }}>
-                    <img src={`https://flagcdn.com/w80/${h.question.correct.code}.png`} alt="" style={{ width: '36px', height: 'auto', borderRadius: '3px', flexShrink: 0 }} />
-                    <div style={{ flex: 1, minWidth: 0 }}>
-                      <div style={{ fontSize: '13px', fontWeight: '700', color: C.navy, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                        {locale === 'fr' ? h.question.correct.fr : h.question.correct.en}
-                      </div>
-                      <div style={{ fontSize: '12px', color: C.muted }}>{h.question.correct.capital}</div>
-                    </div>
-                    <span style={{ fontSize: '18px', flexShrink: 0 }}>{h.isCorrect ? '✅' : '❌'}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
         </div>
       </div>
     )
-  }
-
-  return null
-}
+  }}

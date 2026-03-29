@@ -239,6 +239,9 @@ export default function FlagQuiz() {
   const [lives, setLives] = useState(MAX_LIVES)
   const [streak, setStreak] = useState(0)
   const [bestStreak, setBestStreak] = useState(0)
+  const [score,      setScore]      = useState(0)
+  const [bestScore,  setBestScore]  = useState(0)
+  const scoreRef = useRef(0)
   const [question, setQuestion] = useState(null)
   const [answered, setAnswered] = useState(null)
   const [history, setHistory] = useState([])
@@ -283,9 +286,12 @@ export default function FlagQuiz() {
   function startGame() {
     livesRef.current = MAX_LIVES
     streakRef.current = 0
+    scoreRef.current = 0
     setLives(MAX_LIVES)
     setStreak(0)
     setBestStreak(0)
+    setScore(0)
+    setBestScore(0)
     setHistory([])
     setScreen(SCREEN.PLAYING)
     const pool = getPool()
@@ -315,6 +321,11 @@ export default function FlagQuiz() {
       streakRef.current = ns
       setStreak(ns)
       setBestStreak(prev => Math.max(prev, ns))
+      const pts = Math.round((POINTS_CORRECT + timer * POINTS_TIMER_BONUS) * STREAK_MULTIPLIER(ns))
+      const newScore = scoreRef.current + pts
+      scoreRef.current = newScore
+      setScore(newScore)
+      setBestScore(b => Math.max(b, newScore))
     } else {
       streakRef.current = 0
       setStreak(0)
@@ -322,11 +333,11 @@ export default function FlagQuiz() {
       livesRef.current = nl
       setLives(nl)
       if (nl <= 0) {
-        setTimeout(() => setScreen(SCREEN.GAME_OVER), 2000)
+        setTimeout(() => setScreen(SCREEN.GAME_OVER), 1400)
         return
       }
     }
-    setTimeout(() => makeNextQuestion(), isCorrect ? 1800 : 2000)
+    // User clicks Next button to advance
   }
 
   // ─── SETUP SCREEN ──────────────────────────────────────────────────────────
@@ -412,193 +423,191 @@ export default function FlagQuiz() {
     const { correct, options, mode: qMode } = question
     const isAnswered = answered !== null
     const timerPct = (timer / TIMER_SECONDS) * 100
-    const timerColor = timer > 6 ? '#426A5A' : timer > 3 ? '#806D40' : '#dc2626'
+    const timerColor = timer > 6 ? '#4ade80' : timer > 3 ? '#FEB12F' : '#f87171'
     const isCorrectAnswer = answered?.selected?.code === correct.code
 
-    return (
-      <div style={{
-        backgroundColor: '#F4F1E6',
-        height: availableH + 'px',
-        maxHeight: availableH + 'px',
-        overflow: 'hidden',
-        fontFamily: "var(--font-body)",
-        display: 'flex',
-        flexDirection: 'column',
-      }}>
-        <div style={{
-          flex: 1,
-          display: 'flex',
-          flexDirection: 'column',
-          maxWidth: '520px',
-          width: '100%',
-          margin: '0 auto',
-          padding: isMobile ? '12px 14px 14px' : '24px 32px 24px',
-          minHeight: 0,
-          boxSizing: 'border-box',
-        }}>
+    // ── Shared answer options ─────────────────────────────────────────────────
+    const renderOptions = () => qMode === 'name' ? (
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+        {options.map((opt, idx) => {
+          const isCorrectOpt = opt.code === correct.code
+          const isSelected = answered?.selected?.code === opt.code
+          let bg = 'rgba(255,255,255,0.08)', borderColor = 'rgba(255,255,255,0.12)', color = 'white', opacity = 1
+          if (isAnswered) {
+            if (isCorrectOpt)       { bg = 'rgba(74,222,128,0.15)'; borderColor = '#4ade80'; color = '#4ade80' }
+            else if (isSelected)    { bg = 'rgba(248,113,113,0.15)'; borderColor = '#f87171'; color = '#f87171' }
+            else                    { opacity = 0.35 }
+          }
+          return (
+            <button key={opt.code} onClick={() => !isAnswered && handleAnswer(opt)} disabled={isAnswered}
+              style={{ padding: '12px 14px', borderRadius: '12px', border: `2px solid ${borderColor}`, backgroundColor: bg, color, fontWeight: '700', fontSize: '15px', cursor: isAnswered ? 'default' : 'pointer', textAlign: 'left', display: 'flex', alignItems: 'center', gap: '10px', opacity, transition: 'all 0.10s', WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation', userSelect: 'none' }}>
+              <span style={{ width: '26px', height: '26px', borderRadius: '50%', flexShrink: 0, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px', fontWeight: '900', backgroundColor: isAnswered && isCorrectOpt ? '#4ade80' : isAnswered && isSelected ? '#f87171' : 'rgba(255,255,255,0.15)', color: isAnswered && (isCorrectOpt || isSelected) ? '#0B1F3B' : 'white' }}>
+                {String.fromCharCode(65 + idx)}
+              </span>
+              <span style={{ flex: 1 }}>{getName(opt)}</span>
+              {isAnswered && isCorrectOpt && <span>✓</span>}
+              {isAnswered && isSelected && !isCorrectOpt && <span>✗</span>}
+            </button>
+          )
+        })}
+      </div>
+    ) : (
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+        {options.map(opt => {
+          const isCorrectOpt = opt.code === correct.code
+          const isSelected = answered?.selected?.code === opt.code
+          let borderColor = 'rgba(255,255,255,0.12)', borderWidth = '2px', overlayBg = 'transparent'
+          if (isAnswered) {
+            if (isCorrectOpt)    { borderColor = '#4ade80'; borderWidth = '3px' }
+            else if (isSelected) { borderColor = '#f87171'; borderWidth = '3px' }
+            else                 { overlayBg = 'rgba(11,31,59,0.6)' }
+          }
+          return (
+            <button key={opt.code} onClick={() => !isAnswered && handleAnswer(opt)} disabled={isAnswered}
+              style={{ position: 'relative', aspectRatio: '3/2', borderRadius: '12px', border: `${borderWidth} solid ${borderColor}`, overflow: 'hidden', cursor: isAnswered ? 'default' : 'pointer', padding: 0, backgroundColor: '#1a2a40', transition: 'all 0.10s', WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}>
+              <img src={`https://flagcdn.com/w320/${opt.code}.png`} alt={getName(opt)} style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', padding: '6px' }} />
+              {isAnswered && overlayBg !== 'transparent' && <div style={{ position: 'absolute', inset: 0, backgroundColor: overlayBg }} />}
+              {isAnswered && (isCorrectOpt || isSelected) && (
+                <div style={{ position: 'absolute', top: '7px', right: '7px', width: '24px', height: '24px', borderRadius: '50%', backgroundColor: isCorrectOpt ? '#4ade80' : '#f87171', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <span style={{ color: '#0B1F3B', fontSize: '12px', fontWeight: '900' }}>{isCorrectOpt ? '✓' : '✗'}</span>
+                </div>
+              )}
+              {/* Show name only after answered */}
+              {isAnswered && (
+                <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '4px 7px', background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%)' }}>
+                  <span style={{ fontSize: '10px', fontWeight: '700', color: isCorrectOpt ? '#4ade80' : isSelected ? '#f87171' : 'rgba(255,255,255,0.6)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', display: 'block' }}>{getName(opt)}</span>
+                </div>
+              )}
+            </button>
+          )
+        })}
+      </div>
+    )
 
-          {/* ── Top bar: lives + streak + timer count ── */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '5px', marginBottom: isMobile ? '8px' : '12px', flexShrink: 0 }}>
-            <span style={{ fontSize: '12px', fontWeight: '600', color: '#94a3b8', marginRight: '2px' }}>{t('lives', 'vies')}</span>
+    // ── HUD ───────────────────────────────────────────────────────────────────
+    const hud = (
+      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+        {/* Lives */}
+        <div style={{ backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '12px', padding: '8px 14px', textAlign: 'center' }}>
+          <div style={{ fontSize: '10px', fontWeight: '700', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '4px' }}>{locale === 'fr' ? 'Vies' : 'Lives'}</div>
+          <div style={{ display: 'flex', gap: '3px', justifyContent: 'center' }}>
             {Array.from({ length: MAX_LIVES }).map((_, i) => (
-              <svg key={i} width="20" height="20" viewBox="0 0 24 24"
-                fill={i < lives ? '#ef4444' : '#e2e8f0'}
-                stroke={i < lives ? '#ef4444' : '#e2e8f0'} strokeWidth="1">
+              <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill={i < lives ? '#ef4444' : 'rgba(255,255,255,0.15)'}>
                 <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
               </svg>
             ))}
-            <span style={{ marginLeft: 'auto', fontSize: '14px', fontWeight: '900', color: streak > 0 ? '#806D40' : '#cbd5e1' }}>
-              🔥 {streak}
-            </span>
           </div>
+        </div>
+        {/* Timer */}
+        <div style={{ backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '12px', padding: '8px 14px', textAlign: 'center' }}>
+          <div style={{ fontSize: '10px', fontWeight: '700', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.07em' }}>{locale === 'fr' ? 'Temps' : 'Time'}</div>
+          <div style={{ fontSize: '18px', fontWeight: '900', color: timerColor, fontVariantNumeric: 'tabular-nums', lineHeight: 1 }}>{timer}s</div>
+        </div>
+        {/* Streak */}
+        <div style={{ backgroundColor: streak > 0 ? 'rgba(254,177,47,0.15)' : 'rgba(255,255,255,0.08)', borderRadius: '12px', padding: '8px 14px', textAlign: 'center', border: streak > 0 ? '1px solid rgba(254,177,47,0.3)' : 'none' }}>
+          <div style={{ fontSize: '10px', fontWeight: '700', color: streak > 0 ? 'rgba(254,177,47,0.7)' : 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.07em' }}>Streak</div>
+          <div style={{ fontSize: '18px', fontWeight: '900', color: streak > 0 ? '#FEB12F' : 'rgba(255,255,255,0.3)', lineHeight: 1 }}>🔥 {streak}</div>
+        </div>
+        {/* Score */}
+        <div style={{ backgroundColor: 'rgba(74,222,128,0.12)', borderRadius: '12px', padding: '8px 14px', textAlign: 'center', border: '1px solid rgba(74,222,128,0.25)' }}>
+          <div style={{ fontSize: '10px', fontWeight: '700', color: 'rgba(74,222,128,0.7)', textTransform: 'uppercase', letterSpacing: '0.07em' }}>Score</div>
+          <div style={{ fontSize: '16px', fontWeight: '900', color: '#4ade80', lineHeight: 1, whiteSpace: 'nowrap' }}>{score.toLocaleString()} pts</div>
+        </div>
+      </div>
+    )
 
-          {/* ── Timer bar ── */}
-          <div style={{ height: '5px', backgroundColor: '#ddd9d0', borderRadius: '3px', overflow: 'hidden', marginBottom: isMobile ? '8px' : '12px', flexShrink: 0 }}>
-            <div style={{ height: '100%', width: `${timerPct}%`, backgroundColor: timerColor, transition: 'width 1s linear, background-color 0.3s', borderRadius: '3px' }} />
-          </div>
+    // ── Timer bar ─────────────────────────────────────────────────────────────
+    const timerBar = (
+      <div style={{ height: '4px', backgroundColor: 'rgba(255,255,255,0.1)', borderRadius: '99px', overflow: 'hidden', marginBottom: '16px' }}>
+        <div style={{ height: '100%', width: `${timerPct}%`, backgroundColor: timerColor, transition: 'width 1s linear, background-color 0.3s', borderRadius: '99px' }} />
+      </div>
+    )
 
-          {/* ── Question label + timer count ── */}
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: isMobile ? '8px' : '12px', flexShrink: 0 }}>
-            <span style={{ fontSize: '11px', fontWeight: '800', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.8px' }}>
-              {qMode === 'name' ? t('Which country?', 'Quel pays ?') : t('Which flag?', 'Quel drapeau ?')}
-            </span>
-            <span style={{ fontSize: '13px', fontWeight: '900', color: timerColor, fontVariantNumeric: 'tabular-nums' }}>
-              {timer}s
-            </span>
-          </div>
+    // ── Feedback ──────────────────────────────────────────────────────────────
+    const feedback = isAnswered && (
+      <div style={{ marginBottom: '12px' }}>
+        <div style={{ padding: '10px 14px', borderRadius: '10px', backgroundColor: isCorrectAnswer ? 'rgba(74,222,128,0.15)' : 'rgba(248,113,113,0.15)', border: `1px solid ${isCorrectAnswer ? '#4ade80' : '#f87171'}`, textAlign: 'center', marginBottom: '10px' }}>
+          {answered.selected === null ? (
+            <span style={{ fontWeight: '800', fontSize: '13px', color: '#f87171' }}>⏱ {t("Time's up!", 'Temps écoulé !')} — {getName(correct)}</span>
+          ) : isCorrectAnswer ? (
+            <span style={{ fontWeight: '800', fontSize: '13px', color: '#4ade80' }}>✓ {t('Correct!', 'Correct !')} {streak > 1 ? `🔥 ×${streak}` : ''}</span>
+          ) : (
+            <span style={{ fontWeight: '800', fontSize: '13px', color: '#f87171' }}>✗ {t('It was', "C'était")} {getName(correct)}</span>
+          )}
+        </div>
+        <button onClick={makeNextQuestion}
+          style={{ width: '100%', padding: '12px', borderRadius: '12px', backgroundColor: isCorrectAnswer ? '#4ade80' : '#9EB7E5', color: '#0B1F3B', border: 'none', fontSize: '15px', fontWeight: '800', cursor: 'pointer' }}>
+          {t('Next →', 'Suivant →')}
+        </button>
+      </div>
+    )
 
-          {/* ── Stimulus ── */}
-          <div style={{ flex: isMobile ? '0 0 auto' : 1, display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 0, marginBottom: isMobile ? '12px' : '16px' }}>
+    // ── Question label ────────────────────────────────────────────────────────
+    const questionLabel = (
+      <p style={{ margin: '0 0 14px', fontSize: '11px', fontWeight: '800', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.8px' }}>
+        {qMode === 'name' ? t('Which country?', 'Quel pays ?') : t('Which flag?', 'Quel drapeau ?')}
+      </p>
+    )
+
+    if (isMobile) {
+      return (
+        <div style={{ backgroundColor: '#0B1F3B', minHeight: '100dvh', fontFamily: 'var(--font-body)', display: 'flex', flexDirection: 'column', padding: '16px 14px 24px' }}>
+          {hud}
+          {timerBar}
+          {/* Stimulus */}
+          <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
             {qMode === 'name' ? (
-              <div style={{ width: '100%', maxWidth: '360px', aspectRatio: '3/2', backgroundColor: '#e8e4d9', borderRadius: '16px', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '12px', boxShadow: '0 6px 24px rgba(0,0,0,0.10)' }}>
-                <img
-                  src={`https://flagcdn.com/w640/${correct.code}.png`}
-                  alt="?"
-                  style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }}
-                />
+              <div style={{ width: '100%', maxWidth: '340px', aspectRatio: '3/2', backgroundColor: '#1a2a40', borderRadius: '16px', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '12px', boxShadow: '0 8px 32px rgba(0,0,0,0.3)' }}>
+                <img src={`https://flagcdn.com/w640/${correct.code}.png`} alt="?" style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }} />
               </div>
             ) : (
-              <div style={{ backgroundColor: '#0B1F3B', borderRadius: '18px', padding: '22px 36px', boxShadow: '0 6px 24px rgba(11,31,59,0.20)' }}>
-                <span style={{ fontSize: isMobile ? '28px' : '36px', fontWeight: '900', color: 'white', letterSpacing: '-0.5px' }}>
-                  {getName(correct)}
-                </span>
+              <div style={{ backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '18px', padding: '24px 36px', boxShadow: '0 8px 32px rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.1)' }}>
+                <span style={{ fontSize: '32px', fontWeight: '900', color: 'white', letterSpacing: '-0.5px' }}>{getName(correct)}</span>
               </div>
             )}
           </div>
+          {feedback}
+          {questionLabel}
+          {renderOptions()}
+        </div>
+      )
+    }
 
-          {/* ── Feedback banner ── */}
-          {isAnswered && (
-            <div style={{ marginBottom: isMobile ? '8px' : '12px', padding: '9px 14px', borderRadius: '10px', backgroundColor: isCorrectAnswer ? '#dcfce7' : '#fee2e2', textAlign: 'center', flexShrink: 0 }}>
-              {answered.selected === null ? (
-                <span style={{ fontWeight: '800', fontSize: '13px', color: '#dc2626' }}>
-                  ⏱ {t("Time's up!", 'Temps écoulé !')} — {getName(correct)}
-                </span>
-              ) : isCorrectAnswer ? (
-                <span style={{ fontWeight: '800', fontSize: '13px', color: '#15803d' }}>
-                  ✓ {t('Correct!', 'Correct !')} {streak > 1 ? `🔥 ×${streak}` : ''}
-                </span>
+    // ── DESKTOP ───────────────────────────────────────────────────────────────
+    return (
+      <div style={{ backgroundColor: '#0B1F3B', minHeight: '100vh', fontFamily: 'var(--font-body)', padding: '24px 24px 40px' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+          {/* Title + HUD */}
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
+            <h1 style={{ fontSize: '28px', fontWeight: '900', color: 'white', margin: 0, letterSpacing: '-1px' }}>
+              ❓ {t('Flag Quiz', 'Quiz Drapeaux')}
+            </h1>
+            {hud}
+          </div>
+          {timerBar}
+
+          {/* Main: flag left, answers right */}
+          <div style={{ display: 'flex', gap: '24px', alignItems: 'flex-start' }}>
+            {/* Left: flag or country name */}
+            <div style={{ flex: 1, minWidth: 0 }}>
+              {qMode === 'name' ? (
+                <div style={{ width: '100%', aspectRatio: '3/2', backgroundColor: '#1a2a40', borderRadius: '20px', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', boxShadow: '0 8px 32px rgba(0,0,0,0.3)' }}>
+                  <img src={`https://flagcdn.com/w640/${correct.code}.png`} alt="?" style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }} />
+                </div>
               ) : (
-                <span style={{ fontWeight: '800', fontSize: '13px', color: '#dc2626' }}>
-                  ✗ {t('It was', "C'était")} {getName(correct)}
-                </span>
+                <div style={{ width: '100%', aspectRatio: '3/2', backgroundColor: '#1a2a40', borderRadius: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 8px 32px rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.08)' }}>
+                  <span style={{ fontSize: '48px', fontWeight: '900', color: 'white', letterSpacing: '-1px', textAlign: 'center', padding: '0 24px' }}>{getName(correct)}</span>
+                </div>
               )}
             </div>
-          )}
 
-          {/* ── Options — anchored at bottom, never scroll ── */}
-          {qMode === 'name' ? (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: isMobile ? '7px' : '8px', flexShrink: 0 }}>
-              {options.map((opt, idx) => {
-                const isCorrectOpt = opt.code === correct.code
-                const isSelected = answered?.selected?.code === opt.code
-                let bg = 'white', borderColor = '#ddd9d0', color = '#0B1F3B', opacity = 1
-                if (isAnswered) {
-                  if (isCorrectOpt) { bg = '#dcfce7'; borderColor = '#16a34a'; color = '#15803d' }
-                  else if (isSelected) { bg = '#fee2e2'; borderColor = '#dc2626'; color = '#dc2626' }
-                  else { opacity = 0.38 }
-                }
-                return (
-                  <button key={opt.code}
-                    onClick={() => !isAnswered && handleAnswer(opt)}
-                    disabled={isAnswered}
-                    style={{
-                      padding: '13px 14px',
-                      borderRadius: '12px',
-                      border: `2px solid ${borderColor}`,
-                      backgroundColor: bg,
-                      color,
-                      fontWeight: '700',
-                      fontSize: '15px',
-                      cursor: isAnswered ? 'default' : 'pointer',
-                      textAlign: 'left',
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '10px',
-                      opacity,
-                      transition: 'all 0.10s',
-                      WebkitTapHighlightColor: 'transparent',
-                      touchAction: 'manipulation',
-                      userSelect: 'none',
-                    }}>
-                    {/* A B C D badge */}
-                    <span style={{
-                      width: '26px', height: '26px', borderRadius: '50%', flexShrink: 0,
-                      display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                      fontSize: '12px', fontWeight: '900',
-                      backgroundColor: isAnswered && isCorrectOpt ? '#16a34a' : isAnswered && isSelected ? '#dc2626' : '#0B1F3B',
-                      color: 'white',
-                    }}>
-                      {String.fromCharCode(65 + idx)}
-                    </span>
-                    <span style={{ flex: 1 }}>{getName(opt)}</span>
-                    {isAnswered && isCorrectOpt && <span style={{ fontSize: '15px' }}>✓</span>}
-                    {isAnswered && isSelected && !isCorrectOpt && <span style={{ fontSize: '15px' }}>✗</span>}
-                  </button>
-                )
-              })}
+            {/* Right sidebar */}
+            <div style={{ width: '320px', flexShrink: 0, backgroundColor: 'rgba(255,255,255,0.06)', borderRadius: '18px', padding: '20px', border: '1px solid rgba(255,255,255,0.1)' }}>
+              {questionLabel}
+              {feedback}
+              {renderOptions()}
             </div>
-          ) : (
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', flexShrink: 0 }}>
-              {options.map(opt => {
-                const isCorrectOpt = opt.code === correct.code
-                const isSelected = answered?.selected?.code === opt.code
-                let borderColor = '#ddd9d0', borderWidth = '2px', overlayBg = 'transparent'
-                if (isAnswered) {
-                  if (isCorrectOpt) { borderColor = '#16a34a'; borderWidth = '3px' }
-                  else if (isSelected) { borderColor = '#dc2626'; borderWidth = '3px' }
-                  else { overlayBg = 'rgba(244,241,230,0.65)' }
-                }
-                return (
-                  <button key={opt.code}
-                    onClick={() => !isAnswered && handleAnswer(opt)}
-                    disabled={isAnswered}
-                    style={{
-                      position: 'relative', aspectRatio: '3/2', borderRadius: '12px',
-                      border: `${borderWidth} solid ${borderColor}`, overflow: 'hidden',
-                      cursor: isAnswered ? 'default' : 'pointer', padding: 0,
-                      backgroundColor: '#e8e4d9', transition: 'all 0.10s',
-                      WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation',
-                    }}>
-                    <img src={`https://flagcdn.com/w320/${opt.code}.png`} alt={getName(opt)}
-                      style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', padding: '6px' }} />
-                    {isAnswered && overlayBg !== 'transparent' && (
-                      <div style={{ position: 'absolute', inset: 0, backgroundColor: overlayBg }} />
-                    )}
-                    {/* Name label */}
-                    <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '5px 7px', background: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 100%)', borderRadius: '0 0 10px 10px' }}>
-                      <span style={{ fontSize: '10px', fontWeight: '700', color: 'white', textShadow: '0 1px 3px rgba(0,0,0,0.6)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', display: 'block' }}>{getName(opt)}</span>
-                    </div>
-                    {isAnswered && (isCorrectOpt || isSelected) && (
-                      <div style={{ position: 'absolute', top: '7px', right: '7px', width: '24px', height: '24px', borderRadius: '50%', backgroundColor: isCorrectOpt ? '#16a34a' : '#dc2626', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 6px rgba(0,0,0,0.25)' }}>
-                        <span style={{ color: 'white', fontSize: '12px', fontWeight: '900' }}>{isCorrectOpt ? '✓' : '✗'}</span>
-                      </div>
-                    )}
-                  </button>
-                )
-              })}
-            </div>
-          )}
-
+          </div>
         </div>
       </div>
     )
@@ -626,11 +635,12 @@ export default function FlagQuiz() {
           </div>
 
           {/* Stats */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px', marginBottom: '20px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '10px', marginBottom: '20px' }}>
             {[
-              { label: t('Correct', 'Corrects'), value: correct, color: '#426A5A', bg: '#f0fdf4' },
-              { label: t('Best streak', 'Meilleure série'), value: `🔥 ${bestStreak}`, color: '#806D40', bg: '#fefce8' },
-              { label: t('Score', 'Score'), value: `${pct}%`, color: '#0B1F3B', bg: 'white' },
+              { label: t('Correct', 'Corrects'),             value: correct,                          color: '#426A5A', bg: '#f0fdf4' },
+              { label: t('Best streak', 'Meilleure série'),  value: `🔥 ${bestStreak}`,               color: '#806D40', bg: '#fefce8' },
+              { label: t('Score', 'Score'),                  value: `${pct}%`,                        color: '#0B1F3B', bg: 'white' },
+              { label: t('Total Points', 'Points totaux'),   value: `⭐ ${bestScore.toLocaleString()}`, color: '#166534', bg: '#f0fdf4' },
             ].map((s, i) => (
               <div key={i} style={{ backgroundColor: s.bg, borderRadius: '10px', border: '1px solid #e2e8f0', padding: '14px 10px', textAlign: 'center' }}>
                 <div style={{ fontSize: '20px', fontWeight: '900', color: s.color }}>{s.value}</div>

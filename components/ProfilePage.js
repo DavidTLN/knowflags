@@ -71,9 +71,31 @@ const BADGES = [
 ]
 
 const GAMES_META = {
-  'flag-reveal':  { icon: '🏳️', en: 'Flag Reveal',  fr: 'Révèle le Drapeau', color: C.blue  },
-  'flag-quiz':    { icon: '❓', en: 'Flag Quiz',     fr: 'Quiz Drapeaux',     color: C.green },
-  'flag-drawing': { icon: '✏️', en: 'Flag Drawing',  fr: 'Dessin du Drapeau', color: C.gold  },
+  'flag-reveal':    { icon: '🏳️', en: 'Flag Reveal',   fr: 'Révèle le Drapeau', color: C.blue,  href: 'flag-reveal'  },
+  'flag-quiz':      { icon: '❓', en: 'Flag Quiz',      fr: 'Quiz Drapeaux',     color: C.green, href: 'flag-quiz'    },
+  'capital-city':   { icon: '🏙️', en: 'Capital City',  fr: 'Capitale',          color: '#e07c3a', href: 'capital-city' },
+  'flag-drawing':   { icon: '✏️', en: 'Flag Drawing',  fr: 'Dessin du Drapeau', color: C.gold,  href: 'flag-drawing' },
+}
+
+// Capital City mode labels
+const CAPITAL_MODES = {
+  'capital_city_flag_mcq':    { en: 'Flag → Capital (MCQ)',    fr: 'Drapeau → Capitale (QCM)' },
+  'capital_city_flag_type':   { en: 'Flag → Capital (Type)',   fr: 'Drapeau → Capitale (Saisie)' },
+  'capital_city_flag_both':   { en: 'Flag → Capital (Mixed)',  fr: 'Drapeau → Capitale (Mixte)' },
+  'capital_city_name_mcq':    { en: 'Country → Capital (MCQ)', fr: 'Pays → Capitale (QCM)' },
+  'capital_city_name_type':   { en: 'Country → Capital (Type)',fr: 'Pays → Capitale (Saisie)' },
+  'capital_city_name_both':   { en: 'Country → Capital (Mixed)',fr: 'Pays → Capitale (Mixte)' },
+  'capital_city_both_mcq':    { en: 'Mixed → Capital (MCQ)',   fr: 'Mixte → Capitale (QCM)' },
+  'capital_city_both_type':   { en: 'Mixed → Capital (Type)',  fr: 'Mixte → Capitale (Saisie)' },
+  'capital_city_both_both':   { en: 'Mixed → Capital (Mixed)', fr: 'Mixte → Capitale (Mixte)' },
+}
+
+// ── Helpers ──────────────────────────────────────────────
+function formatDuration(secs) {
+  if (!secs) return '—'
+  const m = Math.floor(secs / 60)
+  const s = secs % 60
+  return m > 0 ? `${m}m ${s}s` : `${s}s`
 }
 
 // ── Sub-components ────────────────────────────────────────────────────────────
@@ -159,21 +181,24 @@ export default function ProfilePage() {
   const [saving, setSaving]       = useState(false)
   const [saveMsg, setSaveMsg]     = useState('')
   const [avatarBusy, setAvatarBusy] = useState(false)
+  const [gameScores, setGameScores] = useState([])
   const fileRef = useRef(null)
 
   // ── Load ──────────────────────────────────────────────────
   useEffect(() => {
     const supabase = createClient()
     async function load(uid) {
-      const [pR, sR, hR] = await Promise.all([
+      const [pR, sR, hR, gR] = await Promise.all([
         supabase.from('profiles').select('*').eq('user_id', uid).single(),
         supabase.from('player_stats').select('*').eq('user_id', uid),
         supabase.from('flag_history').select('*').eq('user_id', uid)
           .order('played_at', { ascending: false }).limit(200),
+        supabase.from('game_scores').select('*').eq('user_id', uid),
       ])
       if (pR.data) setProfile(pR.data)
       if (sR.data) setStats(sR.data)
       if (hR.data) setHistory(hR.data)
+      if (gR.data) setGameScores(gR.data)
       setLoading(false)
     }
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -242,6 +267,7 @@ export default function ProfilePage() {
 
   const TABS = [
     { id: 'overview',  en: 'Overview',   fr: 'Résumé'      },
+    { id: 'games',     en: 'Games',      fr: 'Jeux'        },
     { id: 'history',   en: 'History',    fr: 'Historique'  },
     { id: 'flags',     en: 'Flags',      fr: 'Drapeaux'    },
     { id: 'badges',    en: 'Badges',     fr: 'Badges'      },
@@ -432,6 +458,79 @@ export default function ProfilePage() {
               </div>
             )
           }
+        </>)}
+
+        {/* ══ GAMES ══ */}
+        {activeTab === 'games' && (<>
+          <SectionTitle>{t('Games Statistics', 'Statistiques par jeu')}</SectionTitle>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '36px' }}>
+            {Object.entries(GAMES_META).map(([key, meta]) => {
+              const s = stats.find(x => x.game === key)
+              const capitalModeScores = gameScores.filter(g => g.mode?.startsWith('capital_city_'))
+              const singleScore = gameScores.find(g => g.mode === key.replace('-', '_'))
+              return (
+                <div key={key} style={{ backgroundColor: C.white, borderRadius: '16px', border: `1px solid ${C.border}`, overflow: 'hidden', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
+                  <div style={{ backgroundColor: meta.color + '18', borderBottom: `1px solid ${C.border}`, padding: '14px 20px', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                    <span style={{ fontSize: '28px' }}>{meta.icon}</span>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ fontSize: '16px', fontWeight: '800', color: C.navy }}>{t(meta.en, meta.fr)}</div>
+                    </div>
+                    <a href={`/${locale}/games/${meta.href}`} style={{ fontSize: '12px', fontWeight: '700', color: meta.color, textDecoration: 'none', padding: '6px 12px', border: `1px solid ${meta.color}`, borderRadius: '99px' }}>
+                      {t('Play →', 'Jouer →')}
+                    </a>
+                  </div>
+                  {key !== 'capital-city' ? (
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1px', backgroundColor: C.border }}>
+                      {[
+                        { label: t('Games played', 'Parties jouées'),      value: s?.games_played || 0,             icon: '🎮' },
+                        { label: t('Best streak', 'Meilleure série'),       value: s?.streak_best || 0,              icon: '🔥' },
+                        { label: t('Flags found', 'Drapeaux trouvés'),      value: s?.flags_found || 0,              icon: '✅' },
+                        { label: t('Longest game', 'Partie la plus longue'),value: formatDuration(s?.longest_game),  icon: '⏱' },
+                        ...(key === 'flag-reveal' || key === 'flag-quiz' ? [
+                          { label: t('Best score', 'Meilleur score'), value: singleScore?.best_streak ? `${singleScore.best_streak} pts` : '—', icon: '⭐' },
+                        ] : []),
+                        ...(key === 'flag-drawing' ? [
+                          { label: t('Best accuracy', 'Meilleure précision'), value: `${s?.drawing_best_score || 0}%`, icon: '🎨' },
+                        ] : []),
+                      ].map((item, i) => (
+                        <div key={i} style={{ backgroundColor: C.white, padding: '16px', textAlign: 'center' }}>
+                          <div style={{ fontSize: '18px', marginBottom: '4px' }}>{item.icon}</div>
+                          <div style={{ fontSize: '20px', fontWeight: '900', color: meta.color }}>{item.value}</div>
+                          <div style={{ fontSize: '11px', color: C.muted, marginTop: '2px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{item.label}</div>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div style={{ padding: '16px 20px' }}>
+                      {capitalModeScores.length === 0 ? (
+                        <p style={{ color: C.muted, fontSize: '14px', textAlign: 'center', margin: '12px 0' }}>
+                          {t('No games played yet', 'Aucune partie jouée')}
+                        </p>
+                      ) : (
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                          {capitalModeScores.map(gs => {
+                            const modeLabel = CAPITAL_MODES[gs.mode]
+                            return (
+                              <div key={gs.mode} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '10px 14px', backgroundColor: C.bg, borderRadius: '10px', border: `1px solid ${C.border}` }}>
+                                <span style={{ fontSize: '13px', fontWeight: '600', color: C.navy }}>
+                                  {modeLabel ? t(modeLabel.en, modeLabel.fr) : gs.mode}
+                                </span>
+                                <div style={{ display: 'flex', gap: '16px' }}>
+                                  <span style={{ fontSize: '13px', color: C.muted }}>
+                                    🔥 <strong style={{ color: '#e07c3a' }}>{gs.best_streak}</strong> {t('best streak', 'meilleure série')}
+                                  </span>
+                                </div>
+                              </div>
+                            )
+                          })}
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </div>
+              )
+            })}
+          </div>
         </>)}
 
         {/* ══ HISTORY ══ */}

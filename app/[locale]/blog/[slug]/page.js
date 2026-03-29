@@ -1,11 +1,9 @@
-// app/[locale]/blog/[slug]/page.js
-
 import BlogPostPage from '@/components/blog/BlogPostPage'
 import { getPostBySlug, getAllSlugs } from '@/lib/contentful'
 
-export const revalidate = 60 // ISR — refresh every 60s
+export const revalidate = 60
+export const dynamicParams = true  // ← ajoute cette ligne
 
-// Pre-generate all article pages at build time
 export async function generateStaticParams() {
   const slugs = await getAllSlugs()
   return slugs.map(slug => ({ slug }))

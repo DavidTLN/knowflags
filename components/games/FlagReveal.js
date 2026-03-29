@@ -72,15 +72,30 @@ export default function FlagReveal() {
 
   // ── Load countries from Supabase ──────────────────────────────────────────
   useEffect(() => {
+    // Safety timeout — if fetch takes > 8s, unblock the game
+    const timeout = setTimeout(() => {
+      console.warn('Countries fetch timeout — unblocking game')
+      setCountriesLoading(false)
+    }, 8000)
+
     const supabase = createClient()
     supabase
       .from('countries')
       .select('iso_code, name_en, name_fr')
       .order('name_en')
-      .then(({ data }) => {
-        if (data) setFlags(data.map(c => ({ code: c.iso_code, en: c.name_en, fr: c.name_fr })))
+      .then(({ data, error }) => {
+        clearTimeout(timeout)
+        if (error) console.error('Supabase error:', error.message)
+        if (data && data.length > 0) setFlags(data.map(c => ({ code: c.iso_code, en: c.name_en, fr: c.name_fr })))
         setCountriesLoading(false)
       })
+      .catch(err => {
+        clearTimeout(timeout)
+        console.error('Countries fetch failed:', err)
+        setCountriesLoading(false)
+      })
+
+    return () => clearTimeout(timeout)
   }, [])
 
   const getName = (flag) => flag ? (locale === 'fr' ? flag.fr : flag.en) : ''

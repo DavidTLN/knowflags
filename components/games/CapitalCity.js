@@ -64,6 +64,12 @@ function scoreKey(questionMode, answerMode) {
 }
 
 // ─── Component ────────────────────────────────────────────────────────────────
+function formatTime(secs) {
+  const m = Math.floor(secs / 60).toString().padStart(2, '0')
+  const s = (secs % 60).toString().padStart(2, '0')
+  return `${m}:${s}`
+}
+
 export default function CapitalCity() {
   const locale    = useLocale()
   const t         = (en, fr) => locale === 'fr' ? fr : en
@@ -90,7 +96,11 @@ export default function CapitalCity() {
   const [typeResult, setTypeResult] = useState(null)  // null | 'correct' | 'wrong'
   const [score,      setScore]      = useState(0)
   const [bestScore,  setBestScore]  = useState(0)
-  const scoreRef = useRef(0)
+  const scoreRef   = useRef(0)
+  const [elapsed,     setElapsed]     = useState(0)
+  const [showQuitTip, setShowQuitTip] = useState(false)
+  const sessionTimerRef = useRef(null)
+  const sessionStartRef = useRef(null)
 
   // Supabase
   const [user,       setUser]       = useState(null)
@@ -101,8 +111,23 @@ export default function CapitalCity() {
   const streakRef = useRef(0)
   const inputRef  = useRef(null)
 
+  // ── Float-up animation CSS ──────────────────────────────────────────────────
+  useEffect(() => {
+    if (!document.getElementById('capitalcity-anim')) {
+      const style = document.createElement('style')
+      style.id = 'capitalcity-anim'
+      style.textContent = '@keyframes floatUpCC { 0% { opacity:1; transform:translateX(-50%) translateY(0); } 100% { opacity:0; transform:translateX(-50%) translateY(-28px); } }'
+      document.head.appendChild(style)
+    }
+  }, [])
+
   // ── Load countries from Supabase ────────────────────────────────────────────
   useEffect(() => {
+    const timeout = setTimeout(() => {
+      console.warn('Countries fetch timeout — unblocking game')
+      setCountriesLoading(false)
+    }, 8000)
+
     const supabase = createClient()
     supabase
       .from('countries')
@@ -119,6 +144,12 @@ export default function CapitalCity() {
         })))
         setCountriesLoading(false)
       })
+      .catch(err => {
+        clearTimeout(timeout)
+        console.error('Countries fetch failed:', err)
+        setCountriesLoading(false)
+      })
+    return () => clearTimeout(timeout)
   }, [])
 
   // ── Auth & best scores ──────────────────────────────────────────────────────
@@ -165,6 +196,52 @@ export default function CapitalCity() {
     setBestScores(prev => ({ ...prev, [key]: newStreak }))
   }
 
+  function startSessionTimer() {
+    clearInterval(sessionTimerRef.current)
+    sessionStartRef.current = Date.now()
+    sessionTimerRef.current = setInterval(() => {
+      setElapsed(Math.floor((Date.now() - sessionStartRef.current) / 1000))
+    }, 1000)
+  }
+
+  function stopSessionTimer() {
+    clearInterval(sessionTimerRef.current)
+  }
+
+  async function quitGame() {
+    stopSessionTimer()
+    const correctCount = history.filter(h => h.isCorrect).length
+    await saveBestScore(Math.max(bestStreak, streakRef.current))
+    await saveStats(correctCount, Math.max(bestStreak, streakRef.current))
+    setScreen(SCREEN.GAME_OVER)
+  }
+
+  async function saveStats(correctCount, bestStreakVal) {
+    if (!user) return
+    const supabase = createClient()
+    const { data: existing } = await supabase
+      .from('player_stats').select('*').eq('user_id', user.id).eq('game', 'capital-city').single()
+    if (existing) {
+      await supabase.from('player_stats').update({
+        game:           'capital-city',
+        games_played:   (existing.games_played || 0) + 1,
+        flags_found:    (existing.flags_found || 0) + correctCount,
+        streak_best:    Math.max(existing.streak_best || 0, bestStreakVal),
+        streak_current: 0,
+        updated_at:     new Date().toISOString(),
+      }).eq('user_id', user.id).eq('game', 'capital-city')
+    } else {
+      await supabase.from('player_stats').insert({
+        user_id:        user.id,
+        game:           'capital-city',
+        games_played:   1,
+        flags_found:    correctCount,
+        streak_best:    bestStreakVal,
+        streak_current: 0,
+      })
+    }
+  }
+
   // ── Resize ──────────────────────────────────────────────────────────────────
   useEffect(() => {
     const update = () => setIsMobile(window.innerWidth < 640)
@@ -177,9 +254,9 @@ export default function CapitalCity() {
   const getPool = useCallback(() => {
     const base = regionFilter.length > 0
       ? countries.filter(c => regionFilter.includes(c.region))
-      : COUNTRIES
-    return base.length >= 4 ? base : COUNTRIES
-  }, [regionFilter])
+      : countries
+    return base.length >= 4 ? base : countries
+  }, [regionFilter, countries])
 
   const getName = (c) => locale === 'fr' ? c.fr : c.en
 
@@ -194,6 +271,8 @@ export default function CapitalCity() {
     scoreRef.current = 0
     setScore(0)
     setBestScore(0)
+    setElapsed(0)
+    startSessionTimer()
   }, [getPool, questionMode, answerMode])
 
   // ── Start ───────────────────────────────────────────────────────────────────
@@ -216,6 +295,8 @@ export default function CapitalCity() {
     scoreRef.current = 0
     setScore(0)
     setBestScore(0)
+    setElapsed(0)
+    startSessionTimer()
   }
 
   // ── Timer ───────────────────────────────────────────────────────────────────
@@ -238,18 +319,13 @@ export default function CapitalCity() {
       const ns = streakRef.current + 1
       streakRef.current = ns
       setStreak(ns)
-      setBestStreak(prev => {
-        const nb = Math.max(prev, ns)
-        return nb
-      })
-      const multiplier = Math.max(1, ns)
-      const timerBonus = timer * 10
-      const pts = Math.round((500 + timerBonus) * multiplier)
+      setBestStreak(prev => Math.max(prev, ns))
+      const pts = Math.round((POINTS_CORRECT + timer * POINTS_TIMER_BONUS) * STREAK_MULTIPLIER(ns))
       const newScore = scoreRef.current + pts
       scoreRef.current = newScore
       setScore(newScore)
       setBestScore(b => Math.max(b, newScore))
-      setLastPoints({ pts, multiplier })
+      setLastPoints({ pts, multiplier: STREAK_MULTIPLIER(ns) })
       setTimeout(() => setLastPoints(null), 1500)
     } else {
       streakRef.current = 0
@@ -259,8 +335,11 @@ export default function CapitalCity() {
       setLives(nl)
       if (nl <= 0) {
         setTimeout(async () => {
+          stopSessionTimer()
           const finalBest = Math.max(bestStreak, streakRef.current)
+          const correctCount = history.filter(h => h.isCorrect).length
           await saveBestScore(finalBest)
+          await saveStats(correctCount, finalBest)
           setScreen(SCREEN.GAME_OVER)
         }, 2000)
         return
@@ -294,7 +373,10 @@ export default function CapitalCity() {
       setLives(nl)
       if (nl <= 0) {
         setTimeout(async () => {
+          stopSessionTimer()
+          const correctCount = history.filter(h => h.isCorrect).length
           await saveBestScore(bestStreak)
+          await saveStats(correctCount, bestStreak)
           setScreen(SCREEN.GAME_OVER)
         }, 1200)
         return
@@ -488,19 +570,43 @@ export default function CapitalCity() {
           <div style={{ fontSize: '10px', fontWeight: '700', color: streak > 0 ? 'rgba(254,177,47,0.7)' : 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.07em' }}>Streak</div>
           <div style={{ fontSize: '18px', fontWeight: '900', color: streak > 0 ? '#FEB12F' : 'rgba(255,255,255,0.3)', lineHeight: 1 }}>🔥 {streak}</div>
         </div>
-        <div style={{ backgroundColor: 'rgba(74,222,128,0.12)', borderRadius: '12px', padding: '8px 14px', textAlign: 'center', border: '1px solid rgba(74,222,128,0.25)' }}>
+        <div style={{ position: 'relative', backgroundColor: 'rgba(74,222,128,0.12)', borderRadius: '12px', padding: '8px 14px', textAlign: 'center', border: '1px solid rgba(74,222,128,0.25)' }}>
           <div style={{ fontSize: '10px', fontWeight: '700', color: 'rgba(74,222,128,0.7)', textTransform: 'uppercase', letterSpacing: '0.07em' }}>Score</div>
           <div style={{ fontSize: '16px', fontWeight: '900', color: '#4ade80', lineHeight: 1, whiteSpace: 'nowrap' }}>{score.toLocaleString()} pts</div>
+          {lastPoints && (
+            <span style={{ position: 'absolute', top: '-22px', left: '50%', fontSize: '14px', fontWeight: '900', color: '#4ade80', animation: 'floatUpCC 1.5s ease-out forwards', whiteSpace: 'nowrap', pointerEvents: 'none', backgroundColor: 'rgba(74,222,128,0.15)', borderRadius: '99px', padding: '2px 8px' }}>
+              +{lastPoints.pts} pts
+            </span>
+          )}
         </div>
-        <button onClick={() => setScreen(SCREEN.SETUP)} style={{ background: 'rgba(255,255,255,0.08)', border: 'none', cursor: 'pointer', fontSize: '13px', color: 'rgba(255,255,255,0.5)', fontWeight: '600', borderRadius: '8px', padding: '6px 10px' }}>✕</button>
+        {/* Session clock */}
+        <div style={{ backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '12px', padding: '8px 14px', textAlign: 'center' }}>
+          <div style={{ fontSize: '10px', fontWeight: '700', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.07em' }}>⏱</div>
+          <div style={{ fontSize: '16px', fontWeight: '900', color: 'white', fontVariantNumeric: 'tabular-nums', lineHeight: 1 }}>{formatTime(elapsed)}</div>
+        </div>
+        {/* Quit */}
+        <div style={{ position: 'relative' }}>
+          <button
+            onClick={quitGame}
+            onMouseEnter={() => setShowQuitTip(true)}
+            onMouseLeave={() => setShowQuitTip(false)}
+            style={{ padding: '8px 14px', backgroundColor: 'transparent', color: '#ef4444', border: '1.5px solid #fecaca', borderRadius: '10px', fontSize: '13px', fontWeight: '600', cursor: 'pointer', whiteSpace: 'nowrap' }}>
+            🚪 {locale === 'fr' ? 'Quitter' : 'Quit'}
+          </button>
+          {showQuitTip && (
+            <div style={{ position: 'absolute', bottom: '110%', right: 0, backgroundColor: '#1e293b', color: 'white', fontSize: '12px', padding: '8px 12px', borderRadius: '8px', whiteSpace: 'nowrap', zIndex: 50, pointerEvents: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.2)' }}>
+              {locale === 'fr' ? 'Sauvegarde ton score et quitte' : 'Saves your score and quits'}
+            </div>
+          )}
+        </div>
       </div>
     )
 
     const stimulus = (
-      <div style={{ backgroundColor: 'rgba(255,255,255,0.06)', borderRadius: '18px', border: '1px solid rgba(255,255,255,0.1)', padding: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
+      <div style={{ backgroundColor: 'rgba(255,255,255,0.06)', borderRadius: '18px', border: '1px solid rgba(255,255,255,0.1)', padding: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px', minHeight: '200px' }}>
         {question.qMode === 'flag' ? (
           <img src={`https://flagcdn.com/w640/${question.correct.code}.png`} alt="flag"
-            style={{ maxWidth: '280px', width: '100%', height: 'auto', borderRadius: '8px', boxShadow: '0 4px 20px rgba(0,0,0,0.3)', display: 'block' }} />
+            style={{ maxWidth: '420px', width: '100%', height: 'auto', borderRadius: '8px', boxShadow: '0 4px 20px rgba(0,0,0,0.3)', display: 'block' }} />
         ) : question.qMode === 'capital-flag' ? (
           <div style={{ fontSize: isMobile ? '28px' : '34px', fontWeight: '900', color: 'white', letterSpacing: '-0.5px', textAlign: 'center' }}>
             {question.correct.capital}
@@ -588,20 +694,20 @@ export default function CapitalCity() {
     }
 
     return (
-      <div style={{ backgroundColor: '#0B1F3B', minHeight: '100vh', fontFamily: 'var(--font-body)', padding: '24px 24px 40px' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
-            <h1 style={{ fontSize: '28px', fontWeight: '900', color: 'white', margin: 0, letterSpacing: '-1px' }}>
+      <div style={{ backgroundColor: '#0B1F3B', minHeight: '100vh', fontFamily: 'var(--font-body)', padding: '12px 24px 24px' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+            <h1 style={{ fontSize: '22px', fontWeight: '900', color: 'white', margin: 0, letterSpacing: '-0.5px' }}>
               🏙️ {t('Capital City', 'Capitale')}
             </h1>
             {hud}
           </div>
           {timerBar}
-          <div style={{ display: 'flex', gap: '24px', alignItems: 'flex-start' }}>
-            <div style={{ flex: 1, minWidth: 0 }}>
+          <div style={{ display: 'flex', gap: '24px', alignItems: 'stretch' }}>
+            <div style={{ flex: '0 0 55%', minWidth: 0 }}>
               {stimulus}
             </div>
-            <div style={{ width: '320px', flexShrink: 0, backgroundColor: 'rgba(255,255,255,0.06)', borderRadius: '18px', padding: '20px', border: '1px solid rgba(255,255,255,0.1)' }}>
+            <div style={{ flex: 1, backgroundColor: 'rgba(255,255,255,0.06)', borderRadius: '18px', padding: '20px', border: '1px solid rgba(255,255,255,0.1)' }}>
               {questionLabel}
               {answerArea}
             </div>

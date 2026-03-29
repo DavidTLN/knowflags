@@ -5,6 +5,12 @@ import { useLocale } from 'next-intl'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase-client'
 
+function formatTime(secs) {
+  const m = Math.floor(secs / 60).toString().padStart(2, '0')
+  const s = (secs % 60).toString().padStart(2, '0')
+  return `${m}:${s}`
+}
+
 // ─── Data ────────────────────────────────────────────────────────────────────
 
 // COUNTRIES loaded from Supabase — see useEffect below
@@ -43,13 +49,19 @@ export default function FlagQuiz() {
   const [isMobile, setIsMobile] = useState(true)
   const [countries, setCountries] = useState([])
   const [countriesLoading, setCountriesLoading] = useState(true)
+  const [user, setUser] = useState(null)
 
   const [lives, setLives] = useState(MAX_LIVES)
   const [streak, setStreak] = useState(0)
   const [bestStreak, setBestStreak] = useState(0)
   const [score,      setScore]      = useState(0)
   const [bestScore,  setBestScore]  = useState(0)
-  const scoreRef = useRef(0)
+  const scoreRef   = useRef(0)
+  const [elapsed,   setElapsed]   = useState(0)
+  const [showQuitTip, setShowQuitTip] = useState(false)
+  const sessionTimerRef = useRef(null)
+  const sessionStartRef = useRef(null)
+  const [lastPts, setLastPts] = useState(null)
   const [question, setQuestion] = useState(null)
   const [answered, setAnswered] = useState(null)
   const [history, setHistory] = useState([])
@@ -59,17 +71,115 @@ export default function FlagQuiz() {
   const livesRef = useRef(MAX_LIVES)
   const streakRef = useRef(0)
 
+  // ── Float-up animation CSS ──────────────────────────────────────────────────
+  useEffect(() => {
+    if (!document.getElementById('flagquiz-anim')) {
+      const style = document.createElement('style')
+      style.id = 'flagquiz-anim'
+      style.textContent = '@keyframes floatUp { 0% { opacity:1; transform:translateX(-50%) translateY(0); } 100% { opacity:0; transform:translateX(-50%) translateY(-28px); } }'
+      document.head.appendChild(style)
+    }
+  }, [])
+
+  // ── Auth ────────────────────────────────────────────────────────────────────
+  useEffect(() => {
+    const supabase = createClient()
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setUser(session?.user ?? null)
+    })
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_e, session) => {
+      setUser(session?.user ?? null)
+    })
+    return () => subscription.unsubscribe()
+  }, [])
+
+  function startSessionTimer() {
+    clearInterval(sessionTimerRef.current)
+    sessionStartRef.current = Date.now()
+    sessionTimerRef.current = setInterval(() => {
+      setElapsed(Math.floor((Date.now() - sessionStartRef.current) / 1000))
+    }, 1000)
+  }
+
+  function stopSessionTimer() {
+    clearInterval(sessionTimerRef.current)
+  }
+
+  async function quitGame() {
+    stopSessionTimer()
+    await saveScore(scoreRef.current, bestStreak)
+    await saveStats(
+      history.filter(h => h.isCorrect).length,
+      history.length,
+      Math.max(bestStreak, streakRef.current)
+    )
+    setScreen(SCREEN.GAME_OVER)
+  }
+
+  async function saveStats(correct, total, bestStreakVal) {
+    if (!user) return
+    const supabase = createClient()
+    const { data: existing } = await supabase
+      .from('player_stats').select('*').eq('user_id', user.id).eq('game', 'flag-quiz').single()
+    if (existing) {
+      await supabase.from('player_stats').update({
+        game:           'flag-quiz',
+        games_played:   (existing.games_played || 0) + 1,
+        flags_found:    (existing.flags_found || 0) + correct,
+        streak_best:    Math.max(existing.streak_best || 0, bestStreakVal),
+        streak_current: 0,
+        updated_at:     new Date().toISOString(),
+      }).eq('user_id', user.id).eq('game', 'flag-quiz')
+    } else {
+      await supabase.from('player_stats').insert({
+        user_id:        user.id,
+        game:           'flag-quiz',
+        games_played:   1,
+        flags_found:    correct,
+        streak_best:    bestStreakVal,
+        streak_current: 0,
+      })
+    }
+  }
+
+  async function saveScore(finalScore, bestStreakVal) {
+    if (!user || finalScore === 0) return
+    const supabase = createClient()
+    const { data: existing } = await supabase
+      .from('game_scores').select('best_streak, best_duration')
+      .eq('user_id', user.id).eq('mode', 'flag_quiz').single()
+    await supabase.from('game_scores').upsert({
+      user_id:       user.id,
+      mode:          'flag_quiz',
+      best_streak:   Math.max(existing?.best_streak ?? 0, finalScore),
+      updated_at:    new Date().toISOString(),
+    }, { onConflict: 'user_id,mode' })
+  }
+
   // ── Load countries from Supabase ────────────────────────────────────────────
   useEffect(() => {
+    const timeout = setTimeout(() => {
+      console.warn('Countries fetch timeout — unblocking game')
+      setCountriesLoading(false)
+    }, 8000)
+
     const supabase = createClient()
     supabase
       .from('countries')
       .select('iso_code, name_en, name_fr, region')
       .order('name_en')
-      .then(({ data }) => {
+      .then(({ data, error }) => {
+        clearTimeout(timeout)
+        if (error) console.error('Supabase error:', error.message)
         if (data) setCountries(data.map(c => ({ code: c.iso_code, en: c.name_en, fr: c.name_fr, region: c.region })))
         setCountriesLoading(false)
       })
+      .catch(err => {
+        clearTimeout(timeout)
+        console.error('Countries fetch failed:', err)
+        setCountriesLoading(false)
+      })
+    return () => clearTimeout(timeout)
   }, [])
 
   useEffect(() => {
@@ -87,9 +197,9 @@ export default function FlagQuiz() {
   const getName = (c) => locale === 'fr' ? c.fr : c.en
 
   const getPool = useCallback(() => {
-    const base = regionFilter.length > 0 ? countries.filter(c => regionFilter.includes(c.region)) : COUNTRIES
-    return base.length >= 4 ? base : COUNTRIES
-  }, [regionFilter])
+    const base = regionFilter.length > 0 ? countries.filter(c => regionFilter.includes(c.region)) : countries
+    return base.length >= 4 ? base : countries
+  }, [regionFilter, countries])
 
   const pickMode = useCallback(() => {
     if (mode === 'both') return Math.random() > 0.5 ? 'name' : 'flag'
@@ -113,8 +223,11 @@ export default function FlagQuiz() {
     setBestStreak(0)
     setScore(0)
     setBestScore(0)
+    setElapsed(0)
+    setLastPts(null)
     setHistory([])
     setScreen(SCREEN.PLAYING)
+    startSessionTimer()
     const pool = getPool()
     const q = buildQuestion(pool, pickMode())
     setQuestion(q)
@@ -147,6 +260,8 @@ export default function FlagQuiz() {
       scoreRef.current = newScore
       setScore(newScore)
       setBestScore(b => Math.max(b, newScore))
+      setLastPts(pts)
+      setTimeout(() => setLastPts(null), 1500)
     } else {
       streakRef.current = 0
       setStreak(0)
@@ -154,7 +269,14 @@ export default function FlagQuiz() {
       livesRef.current = nl
       setLives(nl)
       if (nl <= 0) {
-        setTimeout(() => setScreen(SCREEN.GAME_OVER), 1400)
+        setTimeout(async () => {
+          stopSessionTimer()
+          const correctCount = history.filter(h => h.isCorrect).length
+          const finalStreak = Math.max(bestStreak, streakRef.current)
+          await saveStats(correctCount, history.length + 1, finalStreak)
+          await saveScore(scoreRef.current, finalStreak)
+          setScreen(SCREEN.GAME_OVER)
+        }, 1400)
         return
       }
     }
@@ -330,10 +452,15 @@ export default function FlagQuiz() {
             ))}
           </div>
         </div>
-        {/* Timer */}
+        {/* Per-question timer */}
         <div style={{ backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '12px', padding: '8px 14px', textAlign: 'center' }}>
           <div style={{ fontSize: '10px', fontWeight: '700', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.07em' }}>{locale === 'fr' ? 'Temps' : 'Time'}</div>
           <div style={{ fontSize: '18px', fontWeight: '900', color: timerColor, fontVariantNumeric: 'tabular-nums', lineHeight: 1 }}>{timer}s</div>
+        </div>
+        {/* Session clock */}
+        <div style={{ backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '12px', padding: '8px 14px', textAlign: 'center' }}>
+          <div style={{ fontSize: '10px', fontWeight: '700', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.07em' }}>⏱</div>
+          <div style={{ fontSize: '16px', fontWeight: '900', color: 'white', fontVariantNumeric: 'tabular-nums', lineHeight: 1 }}>{formatTime(elapsed)}</div>
         </div>
         {/* Streak */}
         <div style={{ backgroundColor: streak > 0 ? 'rgba(254,177,47,0.15)' : 'rgba(255,255,255,0.08)', borderRadius: '12px', padding: '8px 14px', textAlign: 'center', border: streak > 0 ? '1px solid rgba(254,177,47,0.3)' : 'none' }}>
@@ -341,9 +468,30 @@ export default function FlagQuiz() {
           <div style={{ fontSize: '18px', fontWeight: '900', color: streak > 0 ? '#FEB12F' : 'rgba(255,255,255,0.3)', lineHeight: 1 }}>🔥 {streak}</div>
         </div>
         {/* Score */}
-        <div style={{ backgroundColor: 'rgba(74,222,128,0.12)', borderRadius: '12px', padding: '8px 14px', textAlign: 'center', border: '1px solid rgba(74,222,128,0.25)' }}>
+        <div style={{ position: 'relative', backgroundColor: 'rgba(74,222,128,0.12)', borderRadius: '12px', padding: '8px 14px', textAlign: 'center', border: '1px solid rgba(74,222,128,0.25)' }}>
           <div style={{ fontSize: '10px', fontWeight: '700', color: 'rgba(74,222,128,0.7)', textTransform: 'uppercase', letterSpacing: '0.07em' }}>Score</div>
           <div style={{ fontSize: '16px', fontWeight: '900', color: '#4ade80', lineHeight: 1, whiteSpace: 'nowrap' }}>{score.toLocaleString()} pts</div>
+          {lastPts && (
+            <span style={{ position: 'absolute', top: '-22px', left: '50%', fontSize: '14px', fontWeight: '900', color: '#4ade80', animation: 'floatUp 1.5s ease-out forwards', whiteSpace: 'nowrap', pointerEvents: 'none', backgroundColor: 'rgba(74,222,128,0.15)', borderRadius: '99px', padding: '2px 8px' }}>
+              +{lastPts} pts
+            </span>
+          )}
+        </div>
+        {/* Quit button — in HUD to avoid misclicks near answers */}
+        <div style={{ position: 'relative' }}>
+          <button
+            onClick={quitGame}
+            onMouseEnter={() => setShowQuitTip(true)}
+            onMouseLeave={() => setShowQuitTip(false)}
+            style={{ padding: '8px 12px', backgroundColor: 'transparent', color: '#ef4444', border: '1.5px solid rgba(239,68,68,0.4)', borderRadius: '10px', fontSize: '13px', fontWeight: '600', cursor: 'pointer', whiteSpace: 'nowrap' }}>
+            🚪
+          </button>
+          {showQuitTip && (
+            <div style={{ position: 'absolute', top: '110%', right: 0, backgroundColor: '#1e293b', color: 'white', fontSize: '12px', padding: '8px 12px', borderRadius: '8px', whiteSpace: 'nowrap', zIndex: 50, pointerEvents: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.2)' }}>
+              {locale === 'fr' ? 'Quitter et sauvegarder' : 'Quit and save score'}
+              <div style={{ position: 'absolute', top: '-5px', right: '12px', width: '10px', height: '10px', backgroundColor: '#1e293b', transform: 'rotate(45deg)' }} />
+            </div>
+          )}
         </div>
       </div>
     )

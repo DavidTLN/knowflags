@@ -25,204 +25,8 @@ function formatTime(secs) {
   return `${m}:${s}`
 }
 
-const FLAGS = [
-  { en: 'Afghanistan',                      fr: 'Afghanistan',                      code: 'af' },
-  { en: 'Albania',                          fr: 'Albanie',                          code: 'al' },
-  { en: 'Algeria',                          fr: 'Algérie',                          code: 'dz' },
-  { en: 'Andorra',                          fr: 'Andorre',                          code: 'ad' },
-  { en: 'Angola',                           fr: 'Angola',                           code: 'ao' },
-  { en: 'Antigua and Barbuda',              fr: 'Antigua-et-Barbuda',               code: 'ag' },
-  { en: 'Argentina',                        fr: 'Argentine',                        code: 'ar' },
-  { en: 'Armenia',                          fr: 'Arménie',                          code: 'am' },
-  { en: 'Australia',                        fr: 'Australie',                        code: 'au' },
-  { en: 'Austria',                          fr: 'Autriche',                         code: 'at' },
-  { en: 'Azerbaijan',                       fr: 'Azerbaïdjan',                      code: 'az' },
-  { en: 'Bahamas',                          fr: 'Bahamas',                          code: 'bs' },
-  { en: 'Bahrain',                          fr: 'Bahreïn',                          code: 'bh' },
-  { en: 'Bangladesh',                       fr: 'Bangladesh',                       code: 'bd' },
-  { en: 'Barbados',                         fr: 'Barbade',                          code: 'bb' },
-  { en: 'Belarus',                          fr: 'Biélorussie',                      code: 'by' },
-  { en: 'Belgium',                          fr: 'Belgique',                         code: 'be' },
-  { en: 'Belize',                           fr: 'Belize',                           code: 'bz' },
-  { en: 'Benin',                            fr: 'Bénin',                            code: 'bj' },
-  { en: 'Bhutan',                           fr: 'Bhoutan',                          code: 'bt' },
-  { en: 'Bolivia',                          fr: 'Bolivie',                          code: 'bo' },
-  { en: 'Bosnia and Herzegovina',           fr: 'Bosnie-Herzégovine',               code: 'ba' },
-  { en: 'Botswana',                         fr: 'Botswana',                         code: 'bw' },
-  { en: 'Brazil',                           fr: 'Brésil',                           code: 'br' },
-  { en: 'Brunei',                           fr: 'Brunéi',                           code: 'bn' },
-  { en: 'Bulgaria',                         fr: 'Bulgarie',                         code: 'bg' },
-  { en: 'Burkina Faso',                     fr: 'Burkina Faso',                     code: 'bf' },
-  { en: 'Burundi',                          fr: 'Burundi',                          code: 'bi' },
-  { en: 'Cambodia',                         fr: 'Cambodge',                         code: 'kh' },
-  { en: 'Cameroon',                         fr: 'Cameroun',                         code: 'cm' },
-  { en: 'Canada',                           fr: 'Canada',                           code: 'ca' },
-  { en: 'Cape Verde',                       fr: 'Cap-Vert',                         code: 'cv' },
-  { en: 'Central African Republic',         fr: 'République centrafricaine',        code: 'cf' },
-  { en: 'Chad',                             fr: 'Tchad',                            code: 'td' },
-  { en: 'Chile',                            fr: 'Chili',                            code: 'cl' },
-  { en: 'China',                            fr: 'Chine',                            code: 'cn' },
-  { en: 'Colombia',                         fr: 'Colombie',                         code: 'co' },
-  { en: 'Comoros',                          fr: 'Comores',                          code: 'km' },
-  { en: 'Congo',                            fr: 'Congo',                            code: 'cg' },
-  { en: 'Costa Rica',                       fr: 'Costa Rica',                       code: 'cr' },
-  { en: 'Croatia',                          fr: 'Croatie',                          code: 'hr' },
-  { en: 'Cuba',                             fr: 'Cuba',                             code: 'cu' },
-  { en: 'Cyprus',                           fr: 'Chypre',                           code: 'cy' },
-  { en: 'Czech Republic',                   fr: 'République tchèque',               code: 'cz' },
-  { en: 'Denmark',                          fr: 'Danemark',                         code: 'dk' },
-  { en: 'Djibouti',                         fr: 'Djibouti',                         code: 'dj' },
-  { en: 'Dominica',                         fr: 'Dominique',                        code: 'dm' },
-  { en: 'Dominican Republic',               fr: 'République dominicaine',           code: 'do' },
-  { en: 'DR Congo',                         fr: 'RD Congo',                         code: 'cd' },
-  { en: 'Ecuador',                          fr: 'Équateur',                         code: 'ec' },
-  { en: 'Egypt',                            fr: 'Égypte',                           code: 'eg' },
-  { en: 'El Salvador',                      fr: 'Salvador',                         code: 'sv' },
-  { en: 'Equatorial Guinea',                fr: 'Guinée équatoriale',               code: 'gq' },
-  { en: 'Eritrea',                          fr: 'Érythrée',                         code: 'er' },
-  { en: 'Estonia',                          fr: 'Estonie',                          code: 'ee' },
-  { en: 'Eswatini',                         fr: 'Eswatini',                         code: 'sz' },
-  { en: 'Ethiopia',                         fr: 'Éthiopie',                         code: 'et' },
-  { en: 'Fiji',                             fr: 'Fidji',                            code: 'fj' },
-  { en: 'Finland',                          fr: 'Finlande',                         code: 'fi' },
-  { en: 'France',                           fr: 'France',                           code: 'fr' },
-  { en: 'Gabon',                            fr: 'Gabon',                            code: 'ga' },
-  { en: 'Gambia',                           fr: 'Gambie',                           code: 'gm' },
-  { en: 'Georgia',                          fr: 'Géorgie',                          code: 'ge' },
-  { en: 'Germany',                          fr: 'Allemagne',                        code: 'de' },
-  { en: 'Ghana',                            fr: 'Ghana',                            code: 'gh' },
-  { en: 'Greece',                           fr: 'Grèce',                            code: 'gr' },
-  { en: 'Grenada',                          fr: 'Grenade',                          code: 'gd' },
-  { en: 'Guatemala',                        fr: 'Guatemala',                        code: 'gt' },
-  { en: 'Guinea',                           fr: 'Guinée',                           code: 'gn' },
-  { en: 'Guinea-Bissau',                    fr: 'Guinée-Bissau',                    code: 'gw' },
-  { en: 'Guyana',                           fr: 'Guyana',                           code: 'gy' },
-  { en: 'Haiti',                            fr: 'Haïti',                            code: 'ht' },
-  { en: 'Honduras',                         fr: 'Honduras',                         code: 'hn' },
-  { en: 'Hungary',                          fr: 'Hongrie',                          code: 'hu' },
-  { en: 'Iceland',                          fr: 'Islande',                          code: 'is' },
-  { en: 'India',                            fr: 'Inde',                             code: 'in' },
-  { en: 'Indonesia',                        fr: 'Indonésie',                        code: 'id' },
-  { en: 'Iran',                             fr: 'Iran',                             code: 'ir' },
-  { en: 'Iraq',                             fr: 'Irak',                             code: 'iq' },
-  { en: 'Ireland',                          fr: 'Irlande',                          code: 'ie' },
-  { en: 'Israel',                           fr: 'Israël',                           code: 'il' },
-  { en: 'Italy',                            fr: 'Italie',                           code: 'it' },
-  { en: 'Ivory Coast',                      fr: "Côte d'Ivoire",                    code: 'ci' },
-  { en: 'Jamaica',                          fr: 'Jamaïque',                         code: 'jm' },
-  { en: 'Japan',                            fr: 'Japon',                            code: 'jp' },
-  { en: 'Jordan',                           fr: 'Jordanie',                         code: 'jo' },
-  { en: 'Kazakhstan',                       fr: 'Kazakhstan',                       code: 'kz' },
-  { en: 'Kenya',                            fr: 'Kenya',                            code: 'ke' },
-  { en: 'Kiribati',                         fr: 'Kiribati',                         code: 'ki' },
-  { en: 'Kuwait',                           fr: 'Koweït',                           code: 'kw' },
-  { en: 'Kyrgyzstan',                       fr: 'Kirghizistan',                     code: 'kg' },
-  { en: 'Laos',                             fr: 'Laos',                             code: 'la' },
-  { en: 'Latvia',                           fr: 'Lettonie',                         code: 'lv' },
-  { en: 'Lebanon',                          fr: 'Liban',                            code: 'lb' },
-  { en: 'Lesotho',                          fr: 'Lesotho',                          code: 'ls' },
-  { en: 'Liberia',                          fr: 'Libéria',                          code: 'lr' },
-  { en: 'Libya',                            fr: 'Libye',                            code: 'ly' },
-  { en: 'Liechtenstein',                    fr: 'Liechtenstein',                    code: 'li' },
-  { en: 'Lithuania',                        fr: 'Lituanie',                         code: 'lt' },
-  { en: 'Luxembourg',                       fr: 'Luxembourg',                       code: 'lu' },
-  { en: 'Madagascar',                       fr: 'Madagascar',                       code: 'mg' },
-  { en: 'Malawi',                           fr: 'Malawi',                           code: 'mw' },
-  { en: 'Malaysia',                         fr: 'Malaisie',                         code: 'my' },
-  { en: 'Maldives',                         fr: 'Maldives',                         code: 'mv' },
-  { en: 'Mali',                             fr: 'Mali',                             code: 'ml' },
-  { en: 'Malta',                            fr: 'Malte',                            code: 'mt' },
-  { en: 'Marshall Islands',                 fr: 'Îles Marshall',                    code: 'mh' },
-  { en: 'Mauritania',                       fr: 'Mauritanie',                       code: 'mr' },
-  { en: 'Mauritius',                        fr: 'Maurice',                          code: 'mu' },
-  { en: 'Mexico',                           fr: 'Mexique',                          code: 'mx' },
-  { en: 'Micronesia',                       fr: 'Micronésie',                       code: 'fm' },
-  { en: 'Moldova',                          fr: 'Moldavie',                         code: 'md' },
-  { en: 'Monaco',                           fr: 'Monaco',                           code: 'mc' },
-  { en: 'Mongolia',                         fr: 'Mongolie',                         code: 'mn' },
-  { en: 'Montenegro',                       fr: 'Monténégro',                       code: 'me' },
-  { en: 'Morocco',                          fr: 'Maroc',                            code: 'ma' },
-  { en: 'Mozambique',                       fr: 'Mozambique',                       code: 'mz' },
-  { en: 'Myanmar',                          fr: 'Myanmar',                          code: 'mm' },
-  { en: 'Namibia',                          fr: 'Namibie',                          code: 'na' },
-  { en: 'Nauru',                            fr: 'Nauru',                            code: 'nr' },
-  { en: 'Nepal',                            fr: 'Népal',                            code: 'np' },
-  { en: 'Netherlands',                      fr: 'Pays-Bas',                         code: 'nl' },
-  { en: 'New Zealand',                      fr: 'Nouvelle-Zélande',                 code: 'nz' },
-  { en: 'Nicaragua',                        fr: 'Nicaragua',                        code: 'ni' },
-  { en: 'Niger',                            fr: 'Niger',                            code: 'ne' },
-  { en: 'Nigeria',                          fr: 'Nigéria',                          code: 'ng' },
-  { en: 'North Korea',                      fr: 'Corée du Nord',                    code: 'kp' },
-  { en: 'North Macedonia',                  fr: 'Macédoine du Nord',                code: 'mk' },
-  { en: 'Norway',                           fr: 'Norvège',                          code: 'no' },
-  { en: 'Oman',                             fr: 'Oman',                             code: 'om' },
-  { en: 'Pakistan',                         fr: 'Pakistan',                         code: 'pk' },
-  { en: 'Palau',                            fr: 'Palaos',                           code: 'pw' },
-  { en: 'Palestine',                        fr: 'Palestine',                        code: 'ps' },
-  { en: 'Panama',                           fr: 'Panama',                           code: 'pa' },
-  { en: 'Papua New Guinea',                 fr: 'Papouasie-Nouvelle-Guinée',        code: 'pg' },
-  { en: 'Paraguay',                         fr: 'Paraguay',                         code: 'py' },
-  { en: 'Peru',                             fr: 'Pérou',                            code: 'pe' },
-  { en: 'Philippines',                      fr: 'Philippines',                      code: 'ph' },
-  { en: 'Poland',                           fr: 'Pologne',                          code: 'pl' },
-  { en: 'Portugal',                         fr: 'Portugal',                         code: 'pt' },
-  { en: 'Qatar',                            fr: 'Qatar',                            code: 'qa' },
-  { en: 'Romania',                          fr: 'Roumanie',                         code: 'ro' },
-  { en: 'Russia',                           fr: 'Russie',                           code: 'ru' },
-  { en: 'Rwanda',                           fr: 'Rwanda',                           code: 'rw' },
-  { en: 'Saint Kitts and Nevis',            fr: 'Saint-Kitts-et-Nevis',             code: 'kn' },
-  { en: 'Saint Lucia',                      fr: 'Sainte-Lucie',                     code: 'lc' },
-  { en: 'Saint Vincent and the Grenadines', fr: 'Saint-Vincent-et-les-Grenadines',  code: 'vc' },
-  { en: 'Samoa',                            fr: 'Samoa',                            code: 'ws' },
-  { en: 'San Marino',                       fr: 'Saint-Marin',                      code: 'sm' },
-  { en: 'Sao Tome and Principe',            fr: 'Sao Tomé-et-Principe',             code: 'st' },
-  { en: 'Saudi Arabia',                     fr: 'Arabie saoudite',                  code: 'sa' },
-  { en: 'Senegal',                          fr: 'Sénégal',                          code: 'sn' },
-  { en: 'Serbia',                           fr: 'Serbie',                           code: 'rs' },
-  { en: 'Seychelles',                       fr: 'Seychelles',                       code: 'sc' },
-  { en: 'Sierra Leone',                     fr: 'Sierra Leone',                     code: 'sl' },
-  { en: 'Singapore',                        fr: 'Singapour',                        code: 'sg' },
-  { en: 'Slovakia',                         fr: 'Slovaquie',                        code: 'sk' },
-  { en: 'Slovenia',                         fr: 'Slovénie',                         code: 'si' },
-  { en: 'Solomon Islands',                  fr: 'Îles Salomon',                     code: 'sb' },
-  { en: 'Somalia',                          fr: 'Somalie',                          code: 'so' },
-  { en: 'South Africa',                     fr: 'Afrique du Sud',                   code: 'za' },
-  { en: 'South Korea',                      fr: 'Corée du Sud',                     code: 'kr' },
-  { en: 'South Sudan',                      fr: 'Soudan du Sud',                    code: 'ss' },
-  { en: 'Spain',                            fr: 'Espagne',                          code: 'es' },
-  { en: 'Sri Lanka',                        fr: 'Sri Lanka',                        code: 'lk' },
-  { en: 'Sudan',                            fr: 'Soudan',                           code: 'sd' },
-  { en: 'Suriname',                         fr: 'Suriname',                         code: 'sr' },
-  { en: 'Sweden',                           fr: 'Suède',                            code: 'se' },
-  { en: 'Switzerland',                      fr: 'Suisse',                           code: 'ch' },
-  { en: 'Syria',                            fr: 'Syrie',                            code: 'sy' },
-  { en: 'Taiwan',                           fr: 'Taïwan',                           code: 'tw' },
-  { en: 'Tajikistan',                       fr: 'Tadjikistan',                      code: 'tj' },
-  { en: 'Tanzania',                         fr: 'Tanzanie',                         code: 'tz' },
-  { en: 'Thailand',                         fr: 'Thaïlande',                        code: 'th' },
-  { en: 'Timor-Leste',                      fr: 'Timor oriental',                   code: 'tl' },
-  { en: 'Togo',                             fr: 'Togo',                             code: 'tg' },
-  { en: 'Tonga',                            fr: 'Tonga',                            code: 'to' },
-  { en: 'Trinidad and Tobago',              fr: 'Trinité-et-Tobago',                code: 'tt' },
-  { en: 'Tunisia',                          fr: 'Tunisie',                          code: 'tn' },
-  { en: 'Turkey',                           fr: 'Turquie',                          code: 'tr' },
-  { en: 'Turkmenistan',                     fr: 'Turkménistan',                     code: 'tm' },
-  { en: 'Tuvalu',                           fr: 'Tuvalu',                           code: 'tv' },
-  { en: 'UAE',                              fr: 'Émirats arabes unis',              code: 'ae' },
-  { en: 'Uganda',                           fr: 'Ouganda',                          code: 'ug' },
-  { en: 'Ukraine',                          fr: 'Ukraine',                          code: 'ua' },
-  { en: 'United Kingdom',                   fr: 'Royaume-Uni',                      code: 'gb' },
-  { en: 'United States',                    fr: 'États-Unis',                       code: 'us' },
-  { en: 'Uruguay',                          fr: 'Uruguay',                          code: 'uy' },
-  { en: 'Uzbekistan',                       fr: 'Ouzbékistan',                      code: 'uz' },
-  { en: 'Vanuatu',                          fr: 'Vanuatu',                          code: 'vu' },
-  { en: 'Vatican City',                     fr: 'Vatican',                          code: 'va' },
-  { en: 'Venezuela',                        fr: 'Venezuela',                        code: 've' },
-  { en: 'Vietnam',                          fr: 'Viêt Nam',                         code: 'vn' },
-  { en: 'Yemen',                            fr: 'Yémen',                            code: 'ye' },
-  { en: 'Zambia',                           fr: 'Zambie',                           code: 'zm' },
-  { en: 'Zimbabwe',                         fr: 'Zimbabwe',                         code: 'zw' },
-]
+// FLAGS loaded from Supabase — see useEffect below
+const FLAGS_FALLBACK = [] // populated at runtime
 
 const MAX_GUESSES = 5
 const MAX_LIVES = 3
@@ -256,6 +60,8 @@ export default function FlagReveal() {
   const [user, setUser] = useState(null)
   const [myStats, setMyStats] = useState(null)
   const [leaderboard, setLeaderboard] = useState([])
+  const [flags, setFlags] = useState([])
+  const [countriesLoading, setCountriesLoading] = useState(true)
   const [score, setScore] = useState(0)
   const [lastPts,    setLastPts]    = useState(null)
   const [elapsed,    setElapsed]    = useState(0)       // seconds since game start
@@ -263,6 +69,19 @@ export default function FlagReveal() {
   const scoreRef    = useRef(0)
   const timerRef2   = useRef(null)
   const sessionStart= useRef(null)
+
+  // ── Load countries from Supabase ──────────────────────────────────────────
+  useEffect(() => {
+    const supabase = createClient()
+    supabase
+      .from('countries')
+      .select('iso_code, name_en, name_fr')
+      .order('name_en')
+      .then(({ data }) => {
+        if (data) setFlags(data.map(c => ({ code: c.iso_code, en: c.name_en, fr: c.name_fr })))
+        setCountriesLoading(false)
+      })
+  }, [])
 
   const getName = (flag) => flag ? (locale === 'fr' ? flag.fr : flag.en) : ''
 
@@ -412,7 +231,7 @@ export default function FlagReveal() {
   }
 
   function startNewFlag() {
-    const random = FLAGS[Math.floor(Math.random() * FLAGS.length)]
+    const random = flags[Math.floor(Math.random() * flags.length)]
     setTarget(random)
     setGuesses([])
     setInput('')
@@ -469,37 +288,37 @@ export default function FlagReveal() {
         const cols = Math.ceil(W / TILE_SIZE); const rows = Math.ceil(H / TILE_SIZE)
         const newRevealed = new Set(revealedTiles)
         let matched = 0; const total = cols * rows
-
-        // Build guess color palette (sample every 8th pixel for speed)
-        const guessPalette = []
-        for (let i = 0; i < gData.length; i += 32) {
-          if (gData[i + 3] > 128) guessPalette.push([gData[i], gData[i+1], gData[i+2]])
-        }
+        const potentialReveal = new Set()
 
         for (let r = 0; r < rows; r++) {
           for (let c = 0; c < cols; c++) {
-            // Get target tile center color
             const px = (r * TILE_SIZE + Math.floor(TILE_SIZE / 2)) * W + (c * TILE_SIZE + Math.floor(TILE_SIZE / 2))
             const i = px * 4
-            if (tData[i + 3] < 128) continue
-            const tColor = [tData[i], tData[i+1], tData[i+2]]
+            if (tData[i + 3] < 128 || gData[i + 3] < 128) continue
 
-            // Positional similarity for % calculation
-            const posDist = Math.sqrt(
-              Math.pow(tData[i] - gData[i], 2) +
+            const dist = Math.sqrt(
+              Math.pow(tData[i]   - gData[i],   2) +
               Math.pow(tData[i+1] - gData[i+1], 2) +
               Math.pow(tData[i+2] - gData[i+2], 2)
             )
-            if (posDist < 80) matched++
 
-            // Reveal: check if tile color exists anywhere in guess flag
-            const minDist = Math.min(...guessPalette.map(p =>
-              Math.sqrt(Math.pow(tColor[0]-p[0],2) + Math.pow(tColor[1]-p[1],2) + Math.pow(tColor[2]-p[2],2))
-            ))
-            if (minDist < 80) newRevealed.add(r + '-' + c)
+            // % calc: strict positional match
+            if (dist < 65) {
+              matched++
+              potentialReveal.add(r + '-' + c)
+            }
           }
         }
-        resolve({ newRevealed, pct: Math.round((matched / total) * 100) })
+
+        const pct = Math.round((matched / total) * 100)
+
+        // Only reveal tiles if there's at least 5% similarity
+        // This prevents 0% matches from revealing anything
+        if (pct >= 5) {
+          potentialReveal.forEach(key => newRevealed.add(key))
+        }
+
+        resolve({ newRevealed, pct })
       }
     })
   }
@@ -521,7 +340,7 @@ export default function FlagReveal() {
       activeIdxRef.current = 0
       return
     }
-    const filtered = FLAGS.filter(f =>
+    const filtered = flags.filter(f =>
       normalize(getName(f)).includes(normalize(val)) &&
       !guesses.find(g => g.code === f.code)
     ).slice(0, 6)
@@ -847,6 +666,19 @@ export default function FlagReveal() {
       <span style={{ fontSize: '15px', fontWeight: '900', color: 'white', lineHeight: 1, whiteSpace: 'nowrap' }}>{icon} {value}</span>
     </div>
   )
+
+  if (countriesLoading) {
+    return (
+      <div style={{ backgroundColor: '#0B1F3B', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div style={{ textAlign: 'center', color: 'white' }}>
+          <div style={{ fontSize: '32px', marginBottom: '12px' }}>🏳️</div>
+          <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '14px' }}>
+            {locale === 'fr' ? 'Chargement des drapeaux...' : 'Loading flags...'}
+          </p>
+        </div>
+      </div>
+    )
+  }
 
   // ── SETUP SCREEN ────────────────────────────────────────────────────────
   if (!difficulty) {

@@ -3,205 +3,11 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { useLocale } from 'next-intl'
 import Link from 'next/link'
+import { createClient } from '@/lib/supabase-client'
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
-const COUNTRIES = [
-  { code: 'af', en: 'Afghanistan',              fr: 'Afghanistan',              region: 'Asia' },
-  { code: 'al', en: 'Albania',                  fr: 'Albanie',                  region: 'Europe' },
-  { code: 'dz', en: 'Algeria',                  fr: 'Algérie',                  region: 'Africa' },
-  { code: 'ad', en: 'Andorra',                  fr: 'Andorre',                  region: 'Europe' },
-  { code: 'ao', en: 'Angola',                   fr: 'Angola',                   region: 'Africa' },
-  { code: 'ag', en: 'Antigua and Barbuda',      fr: 'Antigua-et-Barbuda',       region: 'Americas' },
-  { code: 'ar', en: 'Argentina',                fr: 'Argentine',                region: 'Americas' },
-  { code: 'am', en: 'Armenia',                  fr: 'Arménie',                  region: 'Asia' },
-  { code: 'au', en: 'Australia',                fr: 'Australie',                region: 'Oceania' },
-  { code: 'at', en: 'Austria',                  fr: 'Autriche',                 region: 'Europe' },
-  { code: 'az', en: 'Azerbaijan',               fr: 'Azerbaïdjan',              region: 'Asia' },
-  { code: 'bs', en: 'Bahamas',                  fr: 'Bahamas',                  region: 'Americas' },
-  { code: 'bh', en: 'Bahrain',                  fr: 'Bahreïn',                  region: 'Asia' },
-  { code: 'bd', en: 'Bangladesh',               fr: 'Bangladesh',               region: 'Asia' },
-  { code: 'bb', en: 'Barbados',                 fr: 'Barbade',                  region: 'Americas' },
-  { code: 'by', en: 'Belarus',                  fr: 'Biélorussie',              region: 'Europe' },
-  { code: 'be', en: 'Belgium',                  fr: 'Belgique',                 region: 'Europe' },
-  { code: 'bz', en: 'Belize',                   fr: 'Belize',                   region: 'Americas' },
-  { code: 'bj', en: 'Benin',                    fr: 'Bénin',                    region: 'Africa' },
-  { code: 'bt', en: 'Bhutan',                   fr: 'Bhoutan',                  region: 'Asia' },
-  { code: 'bo', en: 'Bolivia',                  fr: 'Bolivie',                  region: 'Americas' },
-  { code: 'ba', en: 'Bosnia and Herzegovina',   fr: 'Bosnie-Herzégovine',       region: 'Europe' },
-  { code: 'bw', en: 'Botswana',                 fr: 'Botswana',                 region: 'Africa' },
-  { code: 'br', en: 'Brazil',                   fr: 'Brésil',                   region: 'Americas' },
-  { code: 'bn', en: 'Brunei',                   fr: 'Brunéi',                   region: 'Asia' },
-  { code: 'bg', en: 'Bulgaria',                 fr: 'Bulgarie',                 region: 'Europe' },
-  { code: 'bf', en: 'Burkina Faso',             fr: 'Burkina Faso',             region: 'Africa' },
-  { code: 'bi', en: 'Burundi',                  fr: 'Burundi',                  region: 'Africa' },
-  { code: 'kh', en: 'Cambodia',                 fr: 'Cambodge',                 region: 'Asia' },
-  { code: 'cm', en: 'Cameroon',                 fr: 'Cameroun',                 region: 'Africa' },
-  { code: 'ca', en: 'Canada',                   fr: 'Canada',                   region: 'Americas' },
-  { code: 'cv', en: 'Cape Verde',               fr: 'Cap-Vert',                 region: 'Africa' },
-  { code: 'cf', en: 'Central African Republic', fr: 'République centrafricaine',region: 'Africa' },
-  { code: 'td', en: 'Chad',                     fr: 'Tchad',                    region: 'Africa' },
-  { code: 'cl', en: 'Chile',                    fr: 'Chili',                    region: 'Americas' },
-  { code: 'cn', en: 'China',                    fr: 'Chine',                    region: 'Asia' },
-  { code: 'co', en: 'Colombia',                 fr: 'Colombie',                 region: 'Americas' },
-  { code: 'km', en: 'Comoros',                  fr: 'Comores',                  region: 'Africa' },
-  { code: 'cg', en: 'Congo',                    fr: 'Congo',                    region: 'Africa' },
-  { code: 'cr', en: 'Costa Rica',               fr: 'Costa Rica',               region: 'Americas' },
-  { code: 'hr', en: 'Croatia',                  fr: 'Croatie',                  region: 'Europe' },
-  { code: 'cu', en: 'Cuba',                     fr: 'Cuba',                     region: 'Americas' },
-  { code: 'cy', en: 'Cyprus',                   fr: 'Chypre',                   region: 'Europe' },
-  { code: 'cz', en: 'Czech Republic',           fr: 'République tchèque',       region: 'Europe' },
-  { code: 'dk', en: 'Denmark',                  fr: 'Danemark',                 region: 'Europe' },
-  { code: 'dj', en: 'Djibouti',                 fr: 'Djibouti',                 region: 'Africa' },
-  { code: 'dm', en: 'Dominica',                 fr: 'Dominique',                region: 'Americas' },
-  { code: 'do', en: 'Dominican Republic',       fr: 'République dominicaine',   region: 'Americas' },
-  { code: 'cd', en: 'DR Congo',                 fr: 'RD Congo',                 region: 'Africa' },
-  { code: 'ec', en: 'Ecuador',                  fr: 'Équateur',                 region: 'Americas' },
-  { code: 'eg', en: 'Egypt',                    fr: 'Égypte',                   region: 'Africa' },
-  { code: 'sv', en: 'El Salvador',              fr: 'Salvador',                 region: 'Americas' },
-  { code: 'gq', en: 'Equatorial Guinea',        fr: 'Guinée équatoriale',       region: 'Africa' },
-  { code: 'er', en: 'Eritrea',                  fr: 'Érythrée',                 region: 'Africa' },
-  { code: 'ee', en: 'Estonia',                  fr: 'Estonie',                  region: 'Europe' },
-  { code: 'sz', en: 'Eswatini',                 fr: 'Eswatini',                 region: 'Africa' },
-  { code: 'et', en: 'Ethiopia',                 fr: 'Éthiopie',                 region: 'Africa' },
-  { code: 'fj', en: 'Fiji',                     fr: 'Fidji',                    region: 'Oceania' },
-  { code: 'fi', en: 'Finland',                  fr: 'Finlande',                 region: 'Europe' },
-  { code: 'fr', en: 'France',                   fr: 'France',                   region: 'Europe' },
-  { code: 'ga', en: 'Gabon',                    fr: 'Gabon',                    region: 'Africa' },
-  { code: 'gm', en: 'Gambia',                   fr: 'Gambie',                   region: 'Africa' },
-  { code: 'ge', en: 'Georgia',                  fr: 'Géorgie',                  region: 'Asia' },
-  { code: 'de', en: 'Germany',                  fr: 'Allemagne',                region: 'Europe' },
-  { code: 'gh', en: 'Ghana',                    fr: 'Ghana',                    region: 'Africa' },
-  { code: 'gr', en: 'Greece',                   fr: 'Grèce',                    region: 'Europe' },
-  { code: 'gd', en: 'Grenada',                  fr: 'Grenade',                  region: 'Americas' },
-  { code: 'gt', en: 'Guatemala',                fr: 'Guatemala',                region: 'Americas' },
-  { code: 'gn', en: 'Guinea',                   fr: 'Guinée',                   region: 'Africa' },
-  { code: 'gw', en: 'Guinea-Bissau',            fr: 'Guinée-Bissau',            region: 'Africa' },
-  { code: 'gy', en: 'Guyana',                   fr: 'Guyana',                   region: 'Americas' },
-  { code: 'ht', en: 'Haiti',                    fr: 'Haïti',                    region: 'Americas' },
-  { code: 'hn', en: 'Honduras',                 fr: 'Honduras',                 region: 'Americas' },
-  { code: 'hu', en: 'Hungary',                  fr: 'Hongrie',                  region: 'Europe' },
-  { code: 'is', en: 'Iceland',                  fr: 'Islande',                  region: 'Europe' },
-  { code: 'in', en: 'India',                    fr: 'Inde',                     region: 'Asia' },
-  { code: 'id', en: 'Indonesia',                fr: 'Indonésie',                region: 'Asia' },
-  { code: 'ir', en: 'Iran',                     fr: 'Iran',                     region: 'Asia' },
-  { code: 'iq', en: 'Iraq',                     fr: 'Irak',                     region: 'Asia' },
-  { code: 'ie', en: 'Ireland',                  fr: 'Irlande',                  region: 'Europe' },
-  { code: 'il', en: 'Israel',                   fr: 'Israël',                   region: 'Asia' },
-  { code: 'it', en: 'Italy',                    fr: 'Italie',                   region: 'Europe' },
-  { code: 'ci', en: 'Ivory Coast',              fr: "Côte d'Ivoire",            region: 'Africa' },
-  { code: 'jm', en: 'Jamaica',                  fr: 'Jamaïque',                 region: 'Americas' },
-  { code: 'jp', en: 'Japan',                    fr: 'Japon',                    region: 'Asia' },
-  { code: 'jo', en: 'Jordan',                   fr: 'Jordanie',                 region: 'Asia' },
-  { code: 'kz', en: 'Kazakhstan',               fr: 'Kazakhstan',               region: 'Asia' },
-  { code: 'ke', en: 'Kenya',                    fr: 'Kenya',                    region: 'Africa' },
-  { code: 'ki', en: 'Kiribati',                 fr: 'Kiribati',                 region: 'Oceania' },
-  { code: 'kw', en: 'Kuwait',                   fr: 'Koweït',                   region: 'Asia' },
-  { code: 'kg', en: 'Kyrgyzstan',               fr: 'Kirghizistan',             region: 'Asia' },
-  { code: 'la', en: 'Laos',                     fr: 'Laos',                     region: 'Asia' },
-  { code: 'lv', en: 'Latvia',                   fr: 'Lettonie',                 region: 'Europe' },
-  { code: 'lb', en: 'Lebanon',                  fr: 'Liban',                    region: 'Asia' },
-  { code: 'ls', en: 'Lesotho',                  fr: 'Lesotho',                  region: 'Africa' },
-  { code: 'lr', en: 'Liberia',                  fr: 'Libéria',                  region: 'Africa' },
-  { code: 'ly', en: 'Libya',                    fr: 'Libye',                    region: 'Africa' },
-  { code: 'li', en: 'Liechtenstein',            fr: 'Liechtenstein',            region: 'Europe' },
-  { code: 'lt', en: 'Lithuania',                fr: 'Lituanie',                 region: 'Europe' },
-  { code: 'lu', en: 'Luxembourg',               fr: 'Luxembourg',               region: 'Europe' },
-  { code: 'mg', en: 'Madagascar',               fr: 'Madagascar',               region: 'Africa' },
-  { code: 'mw', en: 'Malawi',                   fr: 'Malawi',                   region: 'Africa' },
-  { code: 'my', en: 'Malaysia',                 fr: 'Malaisie',                 region: 'Asia' },
-  { code: 'mv', en: 'Maldives',                 fr: 'Maldives',                 region: 'Asia' },
-  { code: 'ml', en: 'Mali',                     fr: 'Mali',                     region: 'Africa' },
-  { code: 'mt', en: 'Malta',                    fr: 'Malte',                    region: 'Europe' },
-  { code: 'mh', en: 'Marshall Islands',         fr: 'Îles Marshall',            region: 'Oceania' },
-  { code: 'mr', en: 'Mauritania',               fr: 'Mauritanie',               region: 'Africa' },
-  { code: 'mu', en: 'Mauritius',                fr: 'Maurice',                  region: 'Africa' },
-  { code: 'mx', en: 'Mexico',                   fr: 'Mexique',                  region: 'Americas' },
-  { code: 'fm', en: 'Micronesia',               fr: 'Micronésie',               region: 'Oceania' },
-  { code: 'md', en: 'Moldova',                  fr: 'Moldavie',                 region: 'Europe' },
-  { code: 'mc', en: 'Monaco',                   fr: 'Monaco',                   region: 'Europe' },
-  { code: 'mn', en: 'Mongolia',                 fr: 'Mongolie',                 region: 'Asia' },
-  { code: 'me', en: 'Montenegro',               fr: 'Monténégro',               region: 'Europe' },
-  { code: 'ma', en: 'Morocco',                  fr: 'Maroc',                    region: 'Africa' },
-  { code: 'mz', en: 'Mozambique',               fr: 'Mozambique',               region: 'Africa' },
-  { code: 'mm', en: 'Myanmar',                  fr: 'Myanmar',                  region: 'Asia' },
-  { code: 'na', en: 'Namibia',                  fr: 'Namibie',                  region: 'Africa' },
-  { code: 'nr', en: 'Nauru',                    fr: 'Nauru',                    region: 'Oceania' },
-  { code: 'np', en: 'Nepal',                    fr: 'Népal',                    region: 'Asia' },
-  { code: 'nl', en: 'Netherlands',              fr: 'Pays-Bas',                 region: 'Europe' },
-  { code: 'nz', en: 'New Zealand',              fr: 'Nouvelle-Zélande',         region: 'Oceania' },
-  { code: 'ni', en: 'Nicaragua',                fr: 'Nicaragua',                region: 'Americas' },
-  { code: 'ne', en: 'Niger',                    fr: 'Niger',                    region: 'Africa' },
-  { code: 'ng', en: 'Nigeria',                  fr: 'Nigeria',                  region: 'Africa' },
-  { code: 'kp', en: 'North Korea',              fr: 'Corée du Nord',            region: 'Asia' },
-  { code: 'mk', en: 'North Macedonia',          fr: 'Macédoine du Nord',        region: 'Europe' },
-  { code: 'no', en: 'Norway',                   fr: 'Norvège',                  region: 'Europe' },
-  { code: 'om', en: 'Oman',                     fr: 'Oman',                     region: 'Asia' },
-  { code: 'pk', en: 'Pakistan',                 fr: 'Pakistan',                 region: 'Asia' },
-  { code: 'pw', en: 'Palau',                    fr: 'Palaos',                   region: 'Oceania' },
-  { code: 'pa', en: 'Panama',                   fr: 'Panama',                   region: 'Americas' },
-  { code: 'pg', en: 'Papua New Guinea',         fr: 'Papouasie-Nouvelle-Guinée',region: 'Oceania' },
-  { code: 'py', en: 'Paraguay',                 fr: 'Paraguay',                 region: 'Americas' },
-  { code: 'pe', en: 'Peru',                     fr: 'Pérou',                    region: 'Americas' },
-  { code: 'ph', en: 'Philippines',              fr: 'Philippines',              region: 'Asia' },
-  { code: 'pl', en: 'Poland',                   fr: 'Pologne',                  region: 'Europe' },
-  { code: 'pt', en: 'Portugal',                 fr: 'Portugal',                 region: 'Europe' },
-  { code: 'qa', en: 'Qatar',                    fr: 'Qatar',                    region: 'Asia' },
-  { code: 'ro', en: 'Romania',                  fr: 'Roumanie',                 region: 'Europe' },
-  { code: 'ru', en: 'Russia',                   fr: 'Russie',                   region: 'Europe' },
-  { code: 'rw', en: 'Rwanda',                   fr: 'Rwanda',                   region: 'Africa' },
-  { code: 'kn', en: 'Saint Kitts and Nevis',    fr: 'Saint-Kitts-et-Nevis',     region: 'Americas' },
-  { code: 'lc', en: 'Saint Lucia',              fr: 'Sainte-Lucie',             region: 'Americas' },
-  { code: 'vc', en: 'Saint Vincent',            fr: 'Saint-Vincent',            region: 'Americas' },
-  { code: 'ws', en: 'Samoa',                    fr: 'Samoa',                    region: 'Oceania' },
-  { code: 'sm', en: 'San Marino',               fr: 'Saint-Marin',              region: 'Europe' },
-  { code: 'st', en: 'São Tomé and Príncipe',    fr: 'Sao Tomé-et-Principe',     region: 'Africa' },
-  { code: 'sa', en: 'Saudi Arabia',             fr: 'Arabie saoudite',          region: 'Asia' },
-  { code: 'sn', en: 'Senegal',                  fr: 'Sénégal',                  region: 'Africa' },
-  { code: 'rs', en: 'Serbia',                   fr: 'Serbie',                   region: 'Europe' },
-  { code: 'sc', en: 'Seychelles',               fr: 'Seychelles',               region: 'Africa' },
-  { code: 'sl', en: 'Sierra Leone',             fr: 'Sierra Leone',             region: 'Africa' },
-  { code: 'sg', en: 'Singapore',                fr: 'Singapour',                region: 'Asia' },
-  { code: 'sk', en: 'Slovakia',                 fr: 'Slovaquie',                region: 'Europe' },
-  { code: 'si', en: 'Slovenia',                 fr: 'Slovénie',                 region: 'Europe' },
-  { code: 'sb', en: 'Solomon Islands',          fr: 'Îles Salomon',             region: 'Oceania' },
-  { code: 'so', en: 'Somalia',                  fr: 'Somalie',                  region: 'Africa' },
-  { code: 'za', en: 'South Africa',             fr: 'Afrique du Sud',           region: 'Africa' },
-  { code: 'ss', en: 'South Sudan',              fr: 'Soudan du Sud',            region: 'Africa' },
-  { code: 'es', en: 'Spain',                    fr: 'Espagne',                  region: 'Europe' },
-  { code: 'lk', en: 'Sri Lanka',                fr: 'Sri Lanka',                region: 'Asia' },
-  { code: 'sd', en: 'Sudan',                    fr: 'Soudan',                   region: 'Africa' },
-  { code: 'sr', en: 'Suriname',                 fr: 'Suriname',                 region: 'Americas' },
-  { code: 'se', en: 'Sweden',                   fr: 'Suède',                    region: 'Europe' },
-  { code: 'ch', en: 'Switzerland',              fr: 'Suisse',                   region: 'Europe' },
-  { code: 'sy', en: 'Syria',                    fr: 'Syrie',                    region: 'Asia' },
-  { code: 'tw', en: 'Taiwan',                   fr: 'Taïwan',                   region: 'Asia' },
-  { code: 'tj', en: 'Tajikistan',               fr: 'Tadjikistan',              region: 'Asia' },
-  { code: 'tz', en: 'Tanzania',                 fr: 'Tanzanie',                 region: 'Africa' },
-  { code: 'th', en: 'Thailand',                 fr: 'Thaïlande',                region: 'Asia' },
-  { code: 'tl', en: 'Timor-Leste',              fr: 'Timor oriental',           region: 'Asia' },
-  { code: 'tg', en: 'Togo',                     fr: 'Togo',                     region: 'Africa' },
-  { code: 'to', en: 'Tonga',                    fr: 'Tonga',                    region: 'Oceania' },
-  { code: 'tt', en: 'Trinidad and Tobago',      fr: 'Trinité-et-Tobago',        region: 'Americas' },
-  { code: 'tn', en: 'Tunisia',                  fr: 'Tunisie',                  region: 'Africa' },
-  { code: 'tr', en: 'Turkey',                   fr: 'Turquie',                  region: 'Europe' },
-  { code: 'tm', en: 'Turkmenistan',             fr: 'Turkménistan',             region: 'Asia' },
-  { code: 'tv', en: 'Tuvalu',                   fr: 'Tuvalu',                   region: 'Oceania' },
-  { code: 'ug', en: 'Uganda',                   fr: 'Ouganda',                  region: 'Africa' },
-  { code: 'ua', en: 'Ukraine',                  fr: 'Ukraine',                  region: 'Europe' },
-  { code: 'ae', en: 'United Arab Emirates',     fr: 'Émirats arabes unis',      region: 'Asia' },
-  { code: 'gb', en: 'United Kingdom',           fr: 'Royaume-Uni',              region: 'Europe' },
-  { code: 'us', en: 'United States',            fr: 'États-Unis',               region: 'Americas' },
-  { code: 'uy', en: 'Uruguay',                  fr: 'Uruguay',                  region: 'Americas' },
-  { code: 'uz', en: 'Uzbekistan',               fr: 'Ouzbékistan',              region: 'Asia' },
-  { code: 'vu', en: 'Vanuatu',                  fr: 'Vanuatu',                  region: 'Oceania' },
-  { code: 'va', en: 'Vatican City',             fr: 'Vatican',                  region: 'Europe' },
-  { code: 've', en: 'Venezuela',                fr: 'Venezuela',                region: 'Americas' },
-  { code: 'vn', en: 'Vietnam',                  fr: 'Vietnam',                  region: 'Asia' },
-  { code: 'ye', en: 'Yemen',                    fr: 'Yémen',                    region: 'Asia' },
-  { code: 'zm', en: 'Zambia',                   fr: 'Zambie',                   region: 'Africa' },
-  { code: 'zw', en: 'Zimbabwe',                 fr: 'Zimbabwe',                 region: 'Africa' },
-]
+// COUNTRIES loaded from Supabase — see useEffect below
 
 const REGIONS = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania']
 const REGION_LABELS = { Africa: 'Afrique', Americas: 'Amériques', Asia: 'Asie', Europe: 'Europe', Oceania: 'Océanie' }
@@ -235,6 +41,8 @@ export default function FlagQuiz() {
   const [mode, setMode] = useState('name')
   const [regionFilter, setRegionFilter] = useState([])
   const [isMobile, setIsMobile] = useState(true)
+  const [countries, setCountries] = useState([])
+  const [countriesLoading, setCountriesLoading] = useState(true)
 
   const [lives, setLives] = useState(MAX_LIVES)
   const [streak, setStreak] = useState(0)
@@ -251,6 +59,19 @@ export default function FlagQuiz() {
   const livesRef = useRef(MAX_LIVES)
   const streakRef = useRef(0)
 
+  // ── Load countries from Supabase ────────────────────────────────────────────
+  useEffect(() => {
+    const supabase = createClient()
+    supabase
+      .from('countries')
+      .select('iso_code, name_en, name_fr, region')
+      .order('name_en')
+      .then(({ data }) => {
+        if (data) setCountries(data.map(c => ({ code: c.iso_code, en: c.name_en, fr: c.name_fr, region: c.region })))
+        setCountriesLoading(false)
+      })
+  }, [])
+
   useEffect(() => {
     const update = () => {
       setIsMobile(window.innerWidth < 640)
@@ -266,7 +87,7 @@ export default function FlagQuiz() {
   const getName = (c) => locale === 'fr' ? c.fr : c.en
 
   const getPool = useCallback(() => {
-    const base = regionFilter.length > 0 ? COUNTRIES.filter(c => regionFilter.includes(c.region)) : COUNTRIES
+    const base = regionFilter.length > 0 ? countries.filter(c => regionFilter.includes(c.region)) : COUNTRIES
     return base.length >= 4 ? base : COUNTRIES
   }, [regionFilter])
 
@@ -341,6 +162,17 @@ export default function FlagQuiz() {
   }
 
   // ─── SETUP SCREEN ──────────────────────────────────────────────────────────
+  if (countriesLoading) {
+    return (
+      <div style={{ backgroundColor: '#0B1F3B', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div style={{ textAlign: 'center', color: 'white' }}>
+          <div style={{ fontSize: '32px', marginBottom: '12px' }}>❓</div>
+          <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '14px' }}>{locale === 'fr' ? 'Chargement...' : 'Loading...'}</p>
+        </div>
+      </div>
+    )
+  }
+
   if (screen === SCREEN.SETUP) {
     return (
       <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: "var(--font-body)", display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px 16px' }}>

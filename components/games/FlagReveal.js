@@ -66,6 +66,7 @@ export default function FlagReveal() {
   const [lastPts,    setLastPts]    = useState(null)
   const [elapsed,    setElapsed]    = useState(0)       // seconds since game start
   const [showQuitTip,setShowQuitTip]= useState(false)   // tooltip on quit button
+  const [showQuitConfirm, setShowQuitConfirm] = useState(false)
   const scoreRef    = useRef(0)
   const timerRef2   = useRef(null)
   const sessionStart= useRef(null)
@@ -271,7 +272,12 @@ export default function FlagReveal() {
     if (!canvas || !imgRef.current) return
     const ctx = canvas.getContext('2d')
     const W = CANVAS_W; const H = CANVAS_H
-    const cols = Math.ceil(W / TILE_SIZE); const rows = Math.ceil(H / TILE_SIZE)
+    // Use floor to avoid partial orphan tiles at edges
+    const cols = Math.floor(W / TILE_SIZE); const rows = Math.floor(H / TILE_SIZE)
+    // Clear canvas first to avoid leftover pixels
+    ctx.clearRect(0, 0, W, H)
+    ctx.fillStyle = '#1a1a1a'
+    ctx.fillRect(0, 0, W, H)
     for (let r = 0; r < rows; r++) {
       for (let c = 0; c < cols; c++) {
         const x = c * TILE_SIZE; const y = r * TILE_SIZE
@@ -281,7 +287,7 @@ export default function FlagReveal() {
             (TILE_SIZE / W) * imgRef.current.naturalWidth, (TILE_SIZE / H) * imgRef.current.naturalHeight,
             x, y, TILE_SIZE, TILE_SIZE)
         } else {
-          ctx.fillStyle = (r + c) % 2 === 0 ? '#3a3a3a' : '#2e2e2e'
+          ctx.fillStyle = (r + c) % 2 === 0 ? '#c8c4bc' : '#bab6ae'
           ctx.fillRect(x, y, TILE_SIZE, TILE_SIZE)
         }
       }
@@ -300,10 +306,26 @@ export default function FlagReveal() {
         const gC = document.createElement('canvas'); gC.width = W; gC.height = H
         gC.getContext('2d').drawImage(gImg, 0, 0, W, H)
         const gData = gC.getContext('2d').getImageData(0, 0, W, H).data
-        const cols = Math.ceil(W / TILE_SIZE); const rows = Math.ceil(H / TILE_SIZE)
+        const cols = Math.floor(W / TILE_SIZE); const rows = Math.floor(H / TILE_SIZE)
         const newRevealed = new Set(revealedTiles)
         let matched = 0; const total = cols * rows
         const potentialReveal = new Set()
+
+        // Step 1: Build guess palette — all unique-ish colors in the guess flag
+        const guessPalette = []
+        for (let i = 0; i < gData.length; i += 16) {
+          if (gData[i + 3] > 128) {
+            guessPalette.push([gData[i], gData[i+1], gData[i+2]])
+          }
+        }
+
+        // Step 2: Palette-gated positional matching
+        // PALETTE_MANHATTAN: max distance (Manhattan) to consider a color "in palette"
+        //   150 = generous enough to catch shading/compression variants of same hue
+        //   But still blocks: France blue (0,35,149) vs Switzerland red/white → dist > 200
+        // POSITIONAL_THRESHOLD: euclidean distance for same-position tile match
+        const PALETTE_MANHATTAN = 150
+        const POSITIONAL_THRESHOLD = 65
 
         for (let r = 0; r < rows; r++) {
           for (let c = 0; c < cols; c++) {
@@ -311,14 +333,21 @@ export default function FlagReveal() {
             const i = px * 4
             if (tData[i + 3] < 128 || gData[i + 3] < 128) continue
 
-            const dist = Math.sqrt(
-              Math.pow(tData[i]   - gData[i],   2) +
-              Math.pow(tData[i+1] - gData[i+1], 2) +
-              Math.pow(tData[i+2] - gData[i+2], 2)
-            )
+            const tR = tData[i], tG = tData[i+1], tB = tData[i+2]
 
-            // % calc: strict positional match
-            if (dist < 65) {
+            // Gate: skip tiles whose color doesn't appear anywhere in the guess flag
+            const inPalette = guessPalette.some(([pR, pG, pB]) =>
+              Math.abs(tR - pR) + Math.abs(tG - pG) + Math.abs(tB - pB) < PALETTE_MANHATTAN
+            )
+            if (!inPalette) continue
+
+            // Positional match: same location in both flags must be similar color
+            const dist = Math.sqrt(
+              Math.pow(tR - gData[i],   2) +
+              Math.pow(tG - gData[i+1], 2) +
+              Math.pow(tB - gData[i+2], 2)
+            )
+            if (dist < POSITIONAL_THRESHOLD) {
               matched++
               potentialReveal.add(r + '-' + c)
             }
@@ -327,8 +356,7 @@ export default function FlagReveal() {
 
         const pct = Math.round((matched / total) * 100)
 
-        // Only reveal tiles if there's at least 5% similarity
-        // This prevents 0% matches from revealing anything
+        // Reveal if ≥ 5% — palette gate already prevents false positives
         if (pct >= 5) {
           potentialReveal.forEach(key => newRevealed.add(key))
         }
@@ -340,8 +368,8 @@ export default function FlagReveal() {
 
   function revealAll() {
     const all = new Set()
-    for (let r = 0; r < Math.ceil(CANVAS_H/TILE_SIZE); r++)
-      for (let c = 0; c < Math.ceil(CANVAS_W/TILE_SIZE); c++)
+    for (let r = 0; r < Math.floor(CANVAS_H/TILE_SIZE); r++)
+      for (let c = 0; c < Math.floor(CANVAS_W/TILE_SIZE); c++)
         all.add(r+'-'+c)
     setRevealedTiles(all)
   }
@@ -474,18 +502,18 @@ export default function FlagReveal() {
   )
 
   const canvasBlock = (
-    <div style={{ position: 'relative' }}>
+    <div style={{ position: 'relative', lineHeight: 0 }}>
       <canvas ref={canvasRef} width={CANVAS_W} height={CANVAS_H}
-        style={{ width: '100%', borderRadius: '10px', border: '2px solid #333', display: 'block', backgroundColor: '#1a1a1a' }} />
+        style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '10px', border: '1px solid #E2DDD5', display: 'block', backgroundColor: '#e8e4dc', flex: 1 }} />
       {gameState !== 'playing' && (
         <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(0,0,0,0.55)', borderRadius: '10px' }}>
-          <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '44px' }}>{gameState === 'won' ? '🎉' : gameState === 'lost' ? '😔' : '💀'}</div>
-            <div style={{ fontSize: '24px', fontWeight: '900', color: gameState === 'won' ? '#FCD116' : '#ef4444', marginTop: '6px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', textAlign: 'center' }}>
+            <div style={{ fontSize: '44px', lineHeight: 1 }}>{gameState === 'won' ? '🎉' : gameState === 'lost' ? '😔' : '💀'}</div>
+            <div style={{ fontSize: '24px', fontWeight: '900', color: gameState === 'won' ? '#FCD116' : '#ef4444', lineHeight: 1.2 }}>
               {gameState === 'gameover' ? t('gameOver') : getName(target)}
             </div>
             {(gameState === 'lost' || gameState === 'gameover') && (
-              <div style={{ fontSize: '15px', color: '#F4F1E6', marginTop: '4px' }}>{t('itWas')} {getName(target)}</div>
+              <div style={{ fontSize: '15px', color: '#F4F1E6', lineHeight: 1.2 }}>{t('itWas')} {getName(target)}</div>
             )}
           </div>
         </div>
@@ -493,44 +521,28 @@ export default function FlagReveal() {
     </div>
   )
 
-  const actionButton = (gameState === 'won' || gameState === 'lost') ? (
-    <button onClick={startNewFlag} style={{ width: '100%', padding: '14px', backgroundColor: gameState === 'won' ? '#426A5A' : '#0B1F3B', color: 'white', border: 'none', borderRadius: '10px', fontSize: '16px', fontWeight: '700', cursor: 'pointer' }}>
-      {t('nextFlag')}
+  // Always-visible next button — active only when flag is done
+  const isDone = gameState === 'won' || gameState === 'lost' || gameState === 'gameover'
+  const actionButton = (
+    <button
+      onClick={isDone ? (gameState === 'gameover' ? () => { setLives(MAX_LIVES); setStreak(0); scoreRef.current = 0; setScore(0); setElapsed(0); setDifficulty(null) } : startNewFlag) : undefined}
+      disabled={!isDone}
+      style={{
+        width: '100%', padding: '13px',
+        backgroundColor: isDone ? (gameState === 'won' ? '#426A5A' : gameState === 'gameover' ? '#9EB7E5' : '#0B1F3B') : '#E2DDD5',
+        color: isDone ? 'white' : '#A0998F',
+        border: 'none',
+        borderRadius: '10px', fontSize: '15px', fontWeight: '700',
+        cursor: isDone ? 'pointer' : 'not-allowed',
+        transition: 'all 0.3s',
+      }}>
+      {gameState === 'gameover'
+        ? t('playAgain')
+        : isDone
+          ? t('nextFlag')
+          : locale === 'fr' ? 'Drapeau suivant' : 'Next flag'}
     </button>
-  ) : gameState === 'gameover' ? (
-    <button onClick={() => { setLives(MAX_LIVES); setStreak(0); scoreRef.current = 0; setScore(0); setElapsed(0); setDifficulty(null) }} style={{ width: '100%', padding: '14px', backgroundColor: '#9EB7E5', color: '#0B1F3B', border: 'none', borderRadius: '10px', fontSize: '16px', fontWeight: '700', cursor: 'pointer' }}>
-      {t('playAgain')}
-    </button>
-  ) : gameState === 'playing' ? (
-    <div style={{ display: 'flex', gap: '8px', marginTop: '4px' }}>
-      <button onClick={giveUpFlag} style={{ flex: 1, padding: '10px', backgroundColor: 'transparent', color: '#94a3b8', border: '1.5px solid #e2e8f0', borderRadius: '10px', fontSize: '13px', fontWeight: '600', cursor: 'pointer' }}>
-        🏳️ {locale === 'fr' ? 'Passer ce drapeau' : 'Give up this flag'}
-      </button>
-      <div style={{ position: 'relative' }}>
-        <button
-          onClick={endGame}
-          onMouseEnter={() => setShowQuitTip(true)}
-          onMouseLeave={() => setShowQuitTip(false)}
-          style={{ padding: '10px 14px', backgroundColor: 'transparent', color: '#ef4444', border: '1.5px solid #fecaca', borderRadius: '10px', fontSize: '13px', fontWeight: '600', cursor: 'pointer', whiteSpace: 'nowrap' }}>
-          🚪 {locale === 'fr' ? 'Quitter' : 'Quit game'}
-        </button>
-        {showQuitTip && (
-          <div style={{
-            position: 'absolute', bottom: '110%', right: 0,
-            backgroundColor: '#1e293b', color: 'white',
-            fontSize: '12px', padding: '8px 12px', borderRadius: '8px',
-            whiteSpace: 'nowrap', zIndex: 50, pointerEvents: 'none',
-            boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
-          }}>
-            {locale === 'fr'
-              ? 'Arrête la partie et sauvegarde ton score'
-              : 'Stops the game and saves your current score'}
-            <div style={{ position: 'absolute', bottom: '-5px', right: '20px', width: '10px', height: '10px', backgroundColor: '#1e293b', transform: 'rotate(45deg)' }} />
-          </div>
-        )}
-      </div>
-    </div>
-  ) : null
+  )
 
   // Input — inline JSX to preserve focus
   const inputBlock = (
@@ -784,7 +796,7 @@ export default function FlagReveal() {
             </div>
           ) : (
             <span style={{ fontSize: '11px', fontWeight: '700', color: 'rgba(255,255,255,0.4)', fontStyle: 'italic' }}>
-              🎓 {locale === 'fr' ? 'Entraînement' : 'Training'}
+              {locale === 'fr' ? 'Entraînement' : 'Training'}
             </span>
           )}
         </div>
@@ -858,24 +870,24 @@ export default function FlagReveal() {
 
   // ── DESKTOP layout ──────────────────────────────────────────────────────────
   return (
-    <div style={{ backgroundColor: '#0B1F3B', minHeight: '100vh', fontFamily: 'var(--font-body)' }}>
-      <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '24px 24px 40px', display: 'flex', flexDirection: 'column', gap: '0' }}>
+    <div style={{ backgroundColor: '#F4F1E6', height: 'calc(100vh - 60px)', overflow: 'hidden', fontFamily: 'var(--font-body)', display: 'flex', flexDirection: 'column' }}>
+      <div style={{ maxWidth: '1100px', width: '100%', margin: '0 auto', padding: '12px 24px', flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0 }}>
 
         {/* Top bar */}
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <h1 style={{ fontSize: '28px', fontWeight: '900', color: 'white', margin: 0, letterSpacing: '-1px' }}>
-              🏳️ {t('title')}
+            <h1 style={{ fontSize: '22px', fontWeight: '900', color: '#0B1F3B', margin: 0, letterSpacing: '-0.5px' }}>
+              {t('title')}
             </h1>
             <span style={{ fontSize: '12px', fontWeight: '700', padding: '4px 10px', borderRadius: '99px', backgroundColor: difficulty === 'easy' ? 'rgba(74,222,128,0.15)' : 'rgba(254,177,47,0.15)', color: difficulty === 'easy' ? '#4ade80' : '#FEB12F', border: `1px solid ${difficulty === 'easy' ? 'rgba(74,222,128,0.3)' : 'rgba(254,177,47,0.3)'}` }}>
-              {difficulty === 'easy' ? (locale === 'fr' ? '🎓 Entraînement' : '🎓 Training') : (locale === 'fr' ? '💪 Normal' : '💪 Normal')}
+              {difficulty === 'easy' ? (locale === 'fr' ? 'Entraînement' : 'Training') : 'Normal'}
             </span>
           </div>
           {/* HUD pills */}
-          <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+          <div style={{ display: 'flex', gap: '8px', alignItems: 'stretch' }}>
             {/* Lives */}
-            <div style={{ backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '12px', padding: '8px 14px', textAlign: 'center' }}>
-              <div style={{ fontSize: '10px', fontWeight: '700', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '4px' }}>{locale === 'fr' ? 'Vies' : 'Lives'}</div>
+            <div style={{ backgroundColor: 'white', borderRadius: '12px', padding: '8px 14px', textAlign: 'center', border: '1px solid #E2DDD5', boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
+              <div style={{ fontSize: '10px', fontWeight: '700', color: '#8A8278', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '4px' }}>{locale === 'fr' ? 'Vies' : 'Lives'}</div>
               <div style={{ display: 'flex', gap: '3px', justifyContent: 'center' }}>
                 {Array.from({ length: MAX_LIVES }).map((_, i) => (
                   <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill={i < lives ? '#ef4444' : 'rgba(255,255,255,0.15)'}>
@@ -885,18 +897,18 @@ export default function FlagReveal() {
               </div>
             </div>
             {/* Timer */}
-            <div style={{ backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '12px', padding: '8px 14px', textAlign: 'center' }}>
-              <div style={{ fontSize: '10px', fontWeight: '700', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.07em' }}>Time</div>
-              <div style={{ fontSize: '16px', fontWeight: '900', color: 'white', fontVariantNumeric: 'tabular-nums' }}>{formatTime(elapsed)}</div>
+            <div style={{ backgroundColor: 'white', borderRadius: '12px', padding: '8px 14px', textAlign: 'center', border: '1px solid #E2DDD5', boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
+              <div style={{ fontSize: '10px', fontWeight: '700', color: '#8A8278', textTransform: 'uppercase', letterSpacing: '0.07em' }}>Time</div>
+              <div style={{ fontSize: '16px', fontWeight: '900', color: '#0B1F3B', fontVariantNumeric: 'tabular-nums' }}>{formatTime(elapsed)}</div>
             </div>
             {/* Streak */}
-            <div style={{ backgroundColor: streak > 0 ? 'rgba(254,177,47,0.15)' : 'rgba(255,255,255,0.08)', borderRadius: '12px', padding: '8px 14px', textAlign: 'center', border: streak > 0 ? '1px solid rgba(254,177,47,0.3)' : 'none' }}>
-              <div style={{ fontSize: '10px', fontWeight: '700', color: streak > 0 ? 'rgba(254,177,47,0.7)' : 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.07em' }}>Streak</div>
-              <div style={{ fontSize: '16px', fontWeight: '900', color: streak > 0 ? '#FEB12F' : 'rgba(255,255,255,0.3)' }}>🔥 {streak}</div>
+            <div style={{ backgroundColor: streak > 0 ? 'rgba(254,177,47,0.15)' : 'white', borderRadius: '12px', padding: '8px 14px', textAlign: 'center', border: streak > 0 ? '1px solid rgba(254,177,47,0.3)' : '1px solid #E2DDD5', boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
+              <div style={{ fontSize: '10px', fontWeight: '700', color: streak > 0 ? 'rgba(254,177,47,0.7)' : '#8A8278', textTransform: 'uppercase', letterSpacing: '0.07em' }}>Streak</div>
+              <div style={{ fontSize: '16px', fontWeight: '900', color: streak > 0 ? '#FEB12F' : '#CBD5E1' }}>🔥 {streak}</div>
             </div>
             {/* Score — only in Normal mode */}
             {difficulty !== 'easy' && (
-              <div style={{ position: 'relative', backgroundColor: 'rgba(74,222,128,0.12)', borderRadius: '12px', padding: '8px 14px', textAlign: 'center', border: '1px solid rgba(74,222,128,0.25)' }}>
+              <div style={{ position: 'relative', backgroundColor: 'rgba(74,222,128,0.1)', borderRadius: '12px', padding: '8px 14px', textAlign: 'center', border: '1px solid rgba(74,222,128,0.4)', boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
                 <div style={{ fontSize: '10px', fontWeight: '700', color: 'rgba(74,222,128,0.7)', textTransform: 'uppercase', letterSpacing: '0.07em' }}>Score</div>
                 <div style={{ fontSize: '16px', fontWeight: '900', color: '#4ade80', whiteSpace: 'nowrap' }}>{score.toLocaleString()} pts</div>
                 {lastPts && (
@@ -906,27 +918,36 @@ export default function FlagReveal() {
                 )}
               </div>
             )}
+            {/* Quit — styled as HUD pill */}
+            <div style={{ position: 'relative', display: 'flex', alignItems: 'stretch' }}>
+              <button
+                onClick={() => setShowQuitConfirm(true)}
+                onMouseEnter={() => setShowQuitTip(true)}
+                onMouseLeave={() => setShowQuitTip(false)}
+                style={{ backgroundColor: 'rgba(239,68,68,0.08)', borderRadius: '12px', padding: '8px 14px', textAlign: 'center', border: '1px solid rgba(239,68,68,0.3)', cursor: 'pointer', boxShadow: '0 1px 4px rgba(0,0,0,0.06)', minWidth: '60px', height: '100%', boxSizing: 'border-box' }}>
+                <div style={{ fontSize: '10px', fontWeight: '700', color: '#ef4444', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '4px' }}>{locale === 'fr' ? 'Quitter' : 'Quit'}</div>
+                <div style={{ fontSize: '16px', lineHeight: 1 }}>🚪</div>
+              </button>
+              {showQuitTip && (
+                <div style={{ position: 'absolute', top: '110%', right: 0, backgroundColor: '#1e293b', color: 'white', fontSize: '12px', padding: '8px 12px', borderRadius: '8px', whiteSpace: 'nowrap', zIndex: 50, pointerEvents: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.2)' }}>
+                  {locale === 'fr' ? 'Quitter et sauvegarder' : 'Quit and save score'}
+                  <div style={{ position: 'absolute', top: '-5px', right: '12px', width: '10px', height: '10px', backgroundColor: '#1e293b', transform: 'rotate(45deg)' }} />
+                </div>
+              )}
+            </div>
           </div>
         </div>
 
         {/* Main content: flag + sidebar */}
-        <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
+        <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-start', flex: 1, minHeight: 0 }}>
 
-          {/* Left: flag */}
-          <div style={{ flex: 1, minWidth: 0 }}>
+          {/* Left: flag — fills remaining height */}
+          <div style={{ flex: 1, minWidth: 0, minHeight: 0, display: 'flex', flexDirection: 'column' }}>
             {canvasBlock}
-            {/* Action buttons below flag */}
-            <div style={{ marginTop: '12px' }}>
-              {actionButton}
-            </div>
-            {/* Leaderboard / stats */}
-            <div style={{ marginTop: '16px' }}>
-              {statsBlock}
-            </div>
           </div>
 
           {/* Right sidebar: dark card */}
-          <div style={{ width: '300px', flexShrink: 0, backgroundColor: 'rgba(255,255,255,0.06)', borderRadius: '18px', padding: '18px', display: 'flex', flexDirection: 'column', gap: '14px', border: '1px solid rgba(255,255,255,0.1)' }}>
+          <div style={{ width: '300px', flexShrink: 0, backgroundColor: 'white', borderRadius: '18px', padding: '18px', display: 'flex', flexDirection: 'column', gap: '14px', border: '1px solid #E2DDD5', boxShadow: '0 2px 12px rgba(0,0,0,0.06)' }}>
 
             {/* Input */}
             <div style={{ position: 'relative' }}>
@@ -939,7 +960,7 @@ export default function FlagReveal() {
                 placeholder={gameState === 'playing' ? t('placeholder') : ''}
                 disabled={gameState !== 'playing'}
                 autoComplete="off"
-                style={{ width: '100%', padding: '13px 16px', borderRadius: '12px', border: '2px solid rgba(255,255,255,0.15)', backgroundColor: gameState === 'playing' ? 'rgba(255,255,255,0.95)' : 'rgba(255,255,255,0.1)', color: '#0B1F3B', fontSize: '15px', outline: 'none', boxSizing: 'border-box' }}
+                style={{ width: '100%', padding: '13px 16px', borderRadius: '12px', border: '2px solid #E2DDD5', backgroundColor: gameState === 'playing' ? 'white' : '#F4F1E6', color: '#0B1F3B', fontSize: '15px', outline: 'none', boxSizing: 'border-box' }}
               />
               {suggestions.length > 0 && gameState === 'playing' && (
                 <div style={{ position: 'absolute', top: '110%', left: 0, right: 0, backgroundColor: 'white', borderRadius: '12px', border: '1px solid #E2DDD5', boxShadow: '0 8px 24px rgba(0,0,0,0.3)', overflow: 'hidden', zIndex: 20, marginTop: '4px' }}>
@@ -960,38 +981,156 @@ export default function FlagReveal() {
             {/* Guess history */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
               {guesses.map((g, i) => (
-                <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '9px 12px', borderRadius: '10px', backgroundColor: g.correct ? 'rgba(74,222,128,0.15)' : 'rgba(239,68,68,0.12)', border: '1px solid ' + (g.correct ? 'rgba(74,222,128,0.3)' : 'rgba(239,68,68,0.3)') }}>
+                <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '9px 12px', borderRadius: '10px', backgroundColor: g.correct ? '#f0fdf4' : '#fff1f2', border: '1px solid ' + (g.correct ? '#86efac' : '#fca5a5') }}>
                   <img src={'https://flagcdn.com/w40/' + g.code + '.png'} width="30" height="20" style={{ borderRadius: '3px', objectFit: 'cover', flexShrink: 0 }} />
-                  <span style={{ flex: 1, fontSize: '13px', fontWeight: '600', color: 'white', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{getName(g)}</span>
+                  <span style={{ flex: 1, fontSize: '13px', fontWeight: '600', color: '#0B1F3B', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{getName(g)}</span>
                   <span style={{ fontSize: '12px', fontWeight: '800', color: g.correct ? '#4ade80' : '#f87171' }}>{g.similarity}%</span>
                 </div>
               ))}
               {Array.from({ length: emptyRows }).map((_, i) => (
-                <div key={'e'+i} style={{ padding: '9px 12px', borderRadius: '10px', backgroundColor: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)', height: '42px' }} />
+                <div key={'e'+i} style={{ padding: '9px 12px', borderRadius: '10px', backgroundColor: '#F8F7F4', border: '1px solid #E2DDD5', height: '42px' }} />
               ))}
             </div>
 
-            {/* How to play */}
-            <div style={{ borderRadius: '12px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)' }}>
-              <button onClick={() => setHowToPlayOpen(!howToPlayOpen)}
-                style={{ width: '100%', padding: '12px 14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'rgba(255,255,255,0.06)', border: 'none', color: 'white', cursor: 'pointer', fontSize: '13px', fontWeight: '700' }}>
-                {t('howToPlay')}
-                <span style={{ fontSize: '10px', transform: howToPlayOpen ? 'rotate(180deg)' : 'rotate(0)', transition: 'transform 0.2s', display: 'inline-block', opacity: 0.6 }}>▼</span>
-              </button>
-              {howToPlayOpen && (
-                <div style={{ padding: '12px 14px', borderTop: '1px solid rgba(255,255,255,0.08)', display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                  {[['🏳️', t('rules.1')], ['🔍', t('rules.2')], ['🔥', t('rules.3')], ['❤️', t('rules.4')]].map(([icon, text], i) => (
-                    <div key={i} style={{ display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
-                      <span>{icon}</span>
-                      <p style={{ margin: 0, fontSize: '12px', color: 'rgba(255,255,255,0.55)', lineHeight: 1.5 }}>{text}</p>
-                    </div>
-                  ))}
-                </div>
-              )}
+            {/* How to play — visible button */}
+            <button onClick={() => setHowToPlayOpen(true)}
+              style={{ width: '100%', padding: '10px 16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: '#0B1F3B', border: 'none', borderRadius: '10px', color: 'white', cursor: 'pointer', fontSize: '13px', fontWeight: '700' }}>
+              <span>{t('howToPlay')}</span>
+              <span style={{ fontSize: '12px', opacity: 0.7 }}>→</span>
+            </button>
+
+
+            {/* Action buttons — at bottom of sidebar, close to answers */}
+            <div style={{ marginTop: '4px' }}>
+              {actionButton}
             </div>
+
           </div>
         </div>
       </div>
+
+      {/* Quit Confirm Modal */}
+      {showQuitConfirm && (
+        <div style={{ position: 'fixed', top: '60px', left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(11,31,59,0.7)', backdropFilter: 'blur(4px)', zIndex: 100, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px' }}>
+          <div style={{ backgroundColor: 'white', borderRadius: '20px', padding: '28px', maxWidth: '380px', width: '100%', textAlign: 'center', boxShadow: '0 24px 60px rgba(0,0,0,0.2)' }}>
+            <div style={{ fontSize: '36px', marginBottom: '12px' }}>🚪</div>
+            <h3 style={{ margin: '0 0 8px', fontSize: '20px', fontWeight: '900', color: '#0B1F3B' }}>
+              {locale === 'fr' ? 'Quitter la partie ?' : 'Quit the game?'}
+            </h3>
+            <p style={{ margin: '0 0 24px', fontSize: '14px', color: '#64748b', lineHeight: 1.6 }}>
+              {locale === 'fr'
+                ? `Ton score actuel de ${score} pts sera sauvegardé. Tu pourras reprendre une nouvelle partie quand tu veux.`
+                : `Your current score of ${score} pts will be saved. You can start a new game whenever you want.`}
+            </p>
+            <div style={{ display: 'flex', gap: '10px' }}>
+              <button
+                onClick={() => setShowQuitConfirm(false)}
+                style={{ flex: 1, padding: '12px', backgroundColor: '#F4F1E6', color: '#0B1F3B', border: '1px solid #E2DDD5', borderRadius: '12px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
+                {locale === 'fr' ? 'Continuer' : 'Keep playing'}
+              </button>
+              <button
+                onClick={() => { setShowQuitConfirm(false); endGame() }}
+                style={{ flex: 1, padding: '12px', backgroundColor: '#ef4444', color: 'white', border: 'none', borderRadius: '12px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
+                {locale === 'fr' ? 'Quitter' : 'Quit'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* How to Play Modal */}
+      {howToPlayOpen && (
+        <div
+          onClick={() => setHowToPlayOpen(false)}
+          style={{ position: 'fixed', top: '60px', left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(11,31,59,0.85)', backdropFilter: 'blur(6px)', zIndex: 100, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px' }}>
+          <div
+            onClick={e => e.stopPropagation()}
+            style={{ backgroundColor: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(20px)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '20px', padding: '20px', maxWidth: '600px', width: '100%', color: 'white' }}>
+
+            {/* Close button only */}
+            <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '12px' }}>
+              <button onClick={() => setHowToPlayOpen(false)}
+                style={{ background: 'rgba(255,255,255,0.1)', border: 'none', borderRadius: '99px', width: '28px', height: '28px', color: 'white', cursor: 'pointer', fontSize: '14px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>✕</button>
+            </div>
+
+
+
+            {/* Steps */}
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginBottom: '0' }}>
+              {[
+                {
+                  step: '1',
+                  title: locale === 'fr' ? 'Observe les tuiles' : 'Observe the tiles',
+                  desc: locale === 'fr' ? 'Le drapeau est caché derrière une grille de carrés.' : 'The flag is hidden behind a grid of tiles.',
+                  visual: (
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: '2px', padding: '10px', backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '8px' }}>
+                      {Array.from({length: 24}).map((_, i) => (
+                        <div key={i} style={{ aspectRatio: '1', borderRadius: '2px', backgroundColor: (Math.floor(i/6) + i%6) % 2 === 0 ? '#3a3a3a' : '#2e2e2e' }} />
+                      ))}
+                    </div>
+                  )
+                },
+                {
+                  step: '2',
+                  title: locale === 'fr' ? 'Tape un nom de pays' : 'Type a country name',
+                  desc: locale === 'fr' ? 'Les tuiles similaires se révèlent selon la ressemblance.' : 'Similar tiles reveal based on color similarity.',
+                  visual: (
+                    <div style={{ padding: '10px', backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '8px' }}>
+                      <div style={{ backgroundColor: 'rgba(255,255,255,0.9)', borderRadius: '6px', padding: '6px 10px', fontSize: '12px', color: '#0B1F3B', fontWeight: '600', marginBottom: '6px' }}>France</div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '5px 8px', borderRadius: '6px', backgroundColor: 'rgba(239,68,68,0.15)', border: '1px solid rgba(239,68,68,0.3)' }}>
+                        <img src="https://flagcdn.com/w40/fr.png" width="20" height="13" style={{ borderRadius: '2px' }} />
+                        <span style={{ fontSize: '11px', color: 'white', fontWeight: '600' }}>France</span>
+                        <span style={{ fontSize: '11px', color: '#f87171', marginLeft: 'auto', fontWeight: '800' }}>13%</span>
+                      </div>
+                    </div>
+                  )
+                },
+                {
+                  step: '3',
+                  title: locale === 'fr' ? 'Construis ta série' : 'Build your streak',
+                  desc: locale === 'fr' ? 'Trouve le drapeau avant 5 essais pour multiplier ton score.' : 'Find the flag within 5 guesses to multiply your score.',
+                  visual: (
+                    <div style={{ padding: '10px', backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '8px', display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                      {[['🔥 ×1', '#94a3b8'], ['🔥 ×1.5', '#FEB12F'], ['🔥 ×2', '#FEB12F'], ['🔥 ×3', '#4ade80']].map(([label, color], i) => (
+                        <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                          <div style={{ height: '6px', borderRadius: '99px', backgroundColor: color, width: `${(i+1)*22}%`, opacity: 0.8 }} />
+                          <span style={{ fontSize: '10px', color, fontWeight: '700', whiteSpace: 'nowrap' }}>{label}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )
+                },
+                {
+                  step: '4',
+                  title: locale === 'fr' ? 'Surveille tes vies' : 'Watch your lives',
+                  desc: locale === 'fr' ? 'Tu as 3 vies. Chaque mauvaise réponse en coûte une.' : 'You have 3 lives. Each wrong answer costs one.',
+                  visual: (
+                    <div style={{ padding: '10px', backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '8px', display: 'flex', gap: '8px', alignItems: 'center', justifyContent: 'center' }}>
+                      {[true, true, false].map((alive, i) => (
+                        <svg key={i} width="28" height="28" viewBox="0 0 24 24" fill={alive ? '#ef4444' : 'rgba(255,255,255,0.15)'}>
+                          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                      ))}
+                    </div>
+                  )
+                },
+              ].map(({ step, title, desc, visual }) => (
+                <div key={step} style={{ backgroundColor: 'rgba(255,255,255,0.05)', borderRadius: '12px', padding: '10px', border: '1px solid rgba(255,255,255,0.08)' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '6px' }}>
+                    <span style={{ width: '18px', height: '18px', borderRadius: '99px', backgroundColor: '#9EB7E5', color: '#0B1F3B', fontSize: '10px', fontWeight: '900', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>{step}</span>
+                    <span style={{ fontSize: '13px', fontWeight: '700' }}>{title}</span>
+                  </div>
+                  {visual}
+                  <p style={{ margin: '8px 0 0', fontSize: '11px', color: 'rgba(255,255,255,0.5)', lineHeight: 1.5 }}>{desc}</p>
+                </div>
+              ))}
+            </div>
+
+
+
+          </div>
+        </div>
+      )}
     </div>
   )
 }

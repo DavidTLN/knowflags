@@ -504,7 +504,7 @@ export default function FlagReveal() {
   const canvasBlock = (
     <div style={{ position: 'relative', lineHeight: 0 }}>
       <canvas ref={canvasRef} width={CANVAS_W} height={CANVAS_H}
-        style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '10px', border: '1px solid #E2DDD5', display: 'block', backgroundColor: '#e8e4dc', flex: 1 }} />
+        style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '10px', border: '1px solid #E2DDD5', display: 'block', backgroundColor: '#e8e4dc', flexShrink: 1, flexGrow: 1 }} />
       {gameState !== 'playing' && (
         <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(0,0,0,0.55)', borderRadius: '10px' }}>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', textAlign: 'center' }}>
@@ -767,56 +767,70 @@ export default function FlagReveal() {
   if (isMobile) {
     // ── MOBILE: Full-screen app layout ─────────────────────────────────────
     return (
-      <div style={{ backgroundColor: '#0B1F3B', height: '100dvh', display: 'flex', flexDirection: 'column', fontFamily: 'var(--font-body)', overflow: 'hidden', position: 'relative' }}>
+      <div style={{ backgroundColor: '#F4F1E6', height: 'calc(100dvh - 60px)', display: 'flex', flexDirection: 'column', fontFamily: 'var(--font-body)', overflow: 'hidden', position: 'relative' }}>
 
-        {/* Top HUD bar */}
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '10px 14px', flexShrink: 0, gap: '8px' }}>
+        {/* Title row */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '8px 12px 0', flexShrink: 0 }}>
+          <span style={{ fontSize: '16px', fontWeight: '900', color: '#0B1F3B' }}>{t('title')}</span>
+          <span style={{ fontSize: '10px', fontWeight: '700', padding: '2px 8px', borderRadius: '99px', backgroundColor: difficulty === 'easy' ? 'rgba(74,222,128,0.15)' : 'rgba(254,177,47,0.15)', color: difficulty === 'easy' ? '#4ade80' : '#FEB12F', border: `1px solid ${difficulty === 'easy' ? 'rgba(74,222,128,0.3)' : 'rgba(254,177,47,0.3)'}` }}>
+            {difficulty === 'easy' ? (locale === 'fr' ? 'Entraînement' : 'Training') : 'Normal'}
+          </span>
+        </div>
+
+        {/* Spacer between title and HUD */}
+        <div style={{ flex: '0 0 32px' }} />
+
+        {/* HUD pills — below title, scrollable if needed */}
+        <div style={{ display: 'flex', alignItems: 'stretch', gap: '5px', padding: '0 12px 6px', flexShrink: 0, overflowX: 'auto' }}>
           {/* Lives */}
-          <div style={{ display: 'flex', gap: '4px' }}>
-            {Array.from({ length: MAX_LIVES }).map((_, i) => (
-              <svg key={i} width="18" height="18" viewBox="0 0 24 24" fill={i < lives ? '#ef4444' : 'rgba(255,255,255,0.2)'}>
-                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-              </svg>
-            ))}
+          <div style={{ backgroundColor: 'white', borderRadius: '10px', padding: '4px 10px', textAlign: 'center', border: '1px solid #E2DDD5', display: 'flex', flexDirection: 'column', justifyContent: 'center', flexShrink: 0 }}>
+            <div style={{ fontSize: '9px', fontWeight: '700', color: '#8A8278', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '2px' }}>{locale === 'fr' ? 'Vies' : 'Lives'}</div>
+            <div style={{ display: 'flex', gap: '2px', justifyContent: 'center' }}>
+              {Array.from({ length: MAX_LIVES }).map((_, i) => (
+                <svg key={i} width="12" height="12" viewBox="0 0 24 24" fill={i < lives ? '#ef4444' : '#E2DDD5'}>
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+              ))}
+            </div>
           </div>
-          {/* Center: timer */}
-          <span style={{ fontSize: '13px', fontWeight: '700', color: 'rgba(255,255,255,0.7)', fontVariantNumeric: 'tabular-nums' }}>⏱ {formatTime(elapsed)}</span>
-          {/* Score — only in Normal mode */}
-          {difficulty !== 'easy' ? (
-            <div style={{ position: 'relative' }}>
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <span style={{ fontSize: '9px', fontWeight: '700', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Score</span>
-                <span style={{ fontSize: '14px', fontWeight: '900', color: '#4ade80' }}>{score.toLocaleString()} pts</span>
-              </div>
+          {/* Timer */}
+          <div style={{ backgroundColor: 'white', borderRadius: '10px', padding: '4px 10px', textAlign: 'center', border: '1px solid #E2DDD5', display: 'flex', flexDirection: 'column', justifyContent: 'center', flexShrink: 0 }}>
+            <div style={{ fontSize: '9px', fontWeight: '700', color: '#8A8278', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '2px' }}>Time</div>
+            <div style={{ fontSize: '13px', fontWeight: '900', color: '#0B1F3B', fontVariantNumeric: 'tabular-nums' }}>{formatTime(elapsed)}</div>
+          </div>
+          {/* Streak */}
+          <div style={{ backgroundColor: streak > 0 ? 'rgba(254,177,47,0.12)' : 'white', borderRadius: '10px', padding: '4px 10px', textAlign: 'center', border: `1px solid ${streak > 0 ? 'rgba(254,177,47,0.3)' : '#E2DDD5'}`, display: 'flex', flexDirection: 'column', justifyContent: 'center', flexShrink: 0 }}>
+            <div style={{ fontSize: '9px', fontWeight: '700', color: streak > 0 ? 'rgba(254,177,47,0.8)' : '#8A8278', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '2px' }}>Streak</div>
+            <div style={{ fontSize: '13px', fontWeight: '900', color: streak > 0 ? '#FEB12F' : '#CBD5E1' }}>🔥 {streak}</div>
+          </div>
+          {/* Score (Normal only) */}
+          {difficulty !== 'easy' && (
+            <div style={{ position: 'relative', backgroundColor: 'rgba(74,222,128,0.1)', borderRadius: '10px', padding: '4px 10px', textAlign: 'center', border: '1px solid rgba(74,222,128,0.3)', display: 'flex', flexDirection: 'column', justifyContent: 'center', flexShrink: 0 }}>
+              <div style={{ fontSize: '9px', fontWeight: '700', color: 'rgba(74,222,128,0.8)', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '2px' }}>Score</div>
+              <div style={{ fontSize: '13px', fontWeight: '900', color: '#16a34a', whiteSpace: 'nowrap' }}>{score} pts</div>
               {lastPts && (
-                <span style={{ position: 'absolute', top: '-20px', left: '50%', transform: 'translateX(-50%)', fontSize: '13px', fontWeight: '900', color: '#4ade80', animation: 'floatUp 1.5s ease-out forwards', whiteSpace: 'nowrap', pointerEvents: 'none' }}>
-                  +{lastPts} pts
+                <span style={{ position: 'absolute', top: '-16px', left: '50%', transform: 'translateX(-50%)', fontSize: '11px', fontWeight: '900', color: '#4ade80', animation: 'floatUp 1.5s ease-out forwards', whiteSpace: 'nowrap', pointerEvents: 'none' }}>
+                  +{lastPts}
                 </span>
               )}
             </div>
-          ) : (
-            <span style={{ fontSize: '11px', fontWeight: '700', color: 'rgba(255,255,255,0.4)', fontStyle: 'italic' }}>
-              {locale === 'fr' ? 'Entraînement' : 'Training'}
-            </span>
           )}
+          {/* Quit */}
+          <button
+            onClick={() => setShowQuitConfirm(true)}
+            style={{ backgroundColor: 'rgba(239,68,68,0.08)', borderRadius: '10px', padding: '4px 10px', textAlign: 'center', border: '1px solid rgba(239,68,68,0.3)', cursor: 'pointer', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', flexShrink: 0 }}>
+            <div style={{ fontSize: '9px', fontWeight: '700', color: '#ef4444', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '2px' }}>{locale === 'fr' ? 'Quitter' : 'Quit'}</div>
+            <div style={{ fontSize: '14px', lineHeight: 1 }}>🚪</div>
+          </button>
         </div>
 
-        {/* Streak bar */}
-        {streak > 0 && (
-          <div style={{ textAlign: 'center', paddingBottom: '6px', flexShrink: 0 }}>
-            <span style={{ fontSize: '12px', fontWeight: '800', color: '#FEB12F', backgroundColor: 'rgba(254,177,47,0.15)', borderRadius: '99px', padding: '3px 12px' }}>
-              🔥 {streak} {locale === 'fr' ? 'série' : 'streak'} ×{STREAK_MULTIPLIER(streak)}
-            </span>
-          </div>
-        )}
-
-        {/* Flag — fills remaining space */}
-        <div style={{ flex: 1, minHeight: 0, position: 'relative', margin: '0 14px' }}>
+        {/* Flag — fills remaining space, no extra margin */}
+        <div style={{ flex: 1, minHeight: 0, position: 'relative', margin: '0 12px', display: 'flex', flexDirection: 'column' }}>
           {canvasBlock}
         </div>
 
         {/* Bottom panel */}
-        <div style={{ flexShrink: 0, backgroundColor: '#F4F1E6', borderRadius: '20px 20px 0 0', padding: '16px 14px 20px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+        <div style={{ flexShrink: 0, backgroundColor: 'white', borderRadius: '20px 20px 0 0', padding: '10px 12px 12px', display: 'flex', flexDirection: 'column', gap: '7px', boxShadow: '0 -4px 20px rgba(0,0,0,0.08)' }}>
 
           {/* Input */}
           <div style={{ position: 'relative' }}>
@@ -829,7 +843,7 @@ export default function FlagReveal() {
               placeholder={gameState === 'playing' ? t('placeholder') : ''}
               disabled={gameState !== 'playing'}
               autoComplete="off"
-              style={{ width: '100%', padding: '13px 16px', borderRadius: '12px', border: '2px solid #E2DDD5', backgroundColor: gameState === 'playing' ? 'white' : '#e2e8f0', color: '#0B1F3B', fontSize: '16px', outline: 'none', boxSizing: 'border-box' }}
+              style={{ width: '100%', padding: '11px 14px', borderRadius: '12px', border: '2px solid #E2DDD5', backgroundColor: gameState === 'playing' ? 'white' : '#F4F1E6', color: '#0B1F3B', fontSize: '15px', outline: 'none', boxSizing: 'border-box' }}
             />
             {suggestions.length > 0 && gameState === 'playing' && (
               <div style={{ position: 'absolute', bottom: '110%', left: 0, right: 0, backgroundColor: 'white', borderRadius: '12px', border: '1px solid #E2DDD5', boxShadow: '0 -8px 24px rgba(0,0,0,0.12)', overflow: 'hidden', zIndex: 20, marginBottom: '4px' }}>
@@ -850,18 +864,24 @@ export default function FlagReveal() {
           {/* Guess history — horizontal compact chips */}
           <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
             {guesses.map((g, i) => (
-              <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '5px', padding: '5px 9px', borderRadius: '99px', backgroundColor: g.correct ? '#dcfce7' : '#fee2e2', border: '1px solid ' + (g.correct ? '#86efac' : '#fca5a5') }}>
+              <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '4px', padding: '4px 8px', borderRadius: '99px', backgroundColor: g.correct ? '#f0fdf4' : '#fff1f2', border: '1px solid ' + (g.correct ? '#86efac' : '#fca5a5') }}>
                 <img src={'https://flagcdn.com/w40/' + g.code + '.png'} width="20" height="13" style={{ borderRadius: '2px', objectFit: 'cover' }} />
                 <span style={{ fontSize: '11px', fontWeight: '700', color: g.correct ? '#166534' : '#991b1b' }}>{g.similarity}%</span>
               </div>
             ))}
             {Array.from({ length: emptyRows }).map((_, i) => (
-              <div key={'e'+i} style={{ width: '42px', height: '30px', borderRadius: '99px', backgroundColor: '#E2DDD5' }} />
+              <div key={'e'+i} style={{ width: '36px', height: '26px', borderRadius: '99px', backgroundColor: '#E2DDD5' }} />
             ))}
           </div>
 
-          {/* Action buttons */}
-          {actionButton}
+          {/* How to Play + Next Flag */}
+          <div style={{ display: 'flex', gap: '8px' }}>
+            <button onClick={() => setHowToPlayOpen(true)}
+              style={{ padding: '8px 12px', background: '#F4F1E6', border: '1px solid #E2DDD5', borderRadius: '10px', color: '#8A8278', cursor: 'pointer', fontSize: '11px', fontWeight: '700', whiteSpace: 'nowrap' }}>
+              {t('howToPlay')}
+            </button>
+            <div style={{ flex: 1 }}>{actionButton}</div>
+          </div>
         </div>
 
       </div>

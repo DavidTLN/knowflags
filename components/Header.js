@@ -269,7 +269,14 @@ export default function Header() {
           <Link href={`/${locale}/blog`} style={navLinkStyle(isActive(`/${locale}/blog`))}>
             {t('Blog', 'Blog')}
           </Link>
+  
+
+          {/* True Size Map */}
+          <Link href={`/${locale}/true-size`} style={navLinkStyle(isActive(`/${locale}/true-size`))}>
+            {t('True Size Map', 'Carte Taille Réelle')}
+          </Link>
         </nav>
+
 
         {/* Right side — desktop: locale + avatar/login | mobile: locale + burger only */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexShrink: 0 }}>

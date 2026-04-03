@@ -393,7 +393,7 @@ export default function ContinentPage({ slug }) {
             }}>
               ← {locale === 'fr' ? 'Accueil' : 'Home'}
             </Link>
-            <h1 style={{ fontSize: '52px', fontWeight: '900', margin: '0 0 12px', letterSpacing: '-1px' }}>{title}</h1>
+            <h1 style={{ fontSize: '52px', fontWeight: '900', margin: '0 0 12px', letterSpacing: '-1px', color: 'white', WebkitTextFillColor: 'white' }}>{title}</h1>
             <p style={{ fontSize: '16px', opacity: 0.85, maxWidth: '540px', lineHeight: '1.65', margin: 0 }}>{desc}</p>
           </div>
           <div style={{ width: '180px', flexShrink: 0, opacity: 0.3 }}>

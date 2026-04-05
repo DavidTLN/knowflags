@@ -135,55 +135,89 @@ const COUNTRIES = [
   { id: 862, code: 've', en: 'Venezuela',        fr: 'Venezuela',          area: 912050   },
   { id: 887, code: 'ye', en: 'Yemen',            fr: 'Yémen',              area: 527968   },
   { id: 894, code: 'zm', en: 'Zambia',           fr: 'Zambie',             area: 752612   },
-  { id: 20,  code: 'ad', en: 'Andorra',               fr: 'Andorre',                area: 468     },
-  { id: 31,  code: 'az', en: 'Azerbaijan',            fr: 'Azerbaïdjan',            area: 86600   },
   { id: 48,  code: 'bh', en: 'Bahrain',               fr: 'Bahreïn',                area: 765     },
-  { id: 51,  code: 'am', en: 'Armenia',               fr: 'Arménie',                area: 29743   },
-  { id: 70,  code: 'ba', en: 'Bosnia & Herzegovina',  fr: 'Bosnie-Herzégovine',     area: 51197   },
-  { id: 72,  code: 'bw', en: 'Botswana',              fr: 'Botswana',               area: 581730  },
-  { id: 84,  code: 'bz', en: 'Belize',                fr: 'Belize',                 area: 22966   },
-  { id: 90,  code: 'sb', en: 'Solomon Islands',       fr: 'Îles Salomon',           area: 28896   },
-  { id: 108, code: 'bi', en: 'Burundi',               fr: 'Burundi',                area: 27834   },
-  { id: 112, code: 'by', en: 'Belarus',               fr: 'Biélorussie',            area: 207600  },
-  { id: 132, code: 'cv', en: 'Cabo Verde',            fr: 'Cap-Vert',               area: 4033    },
-  { id: 140, code: 'cf', en: 'Central African Rep.',  fr: 'Rép. centrafricaine',    area: 622984  },
-  { id: 148, code: 'td', en: 'Chad',                  fr: 'Tchad',                  area: 1284000 },
-  { id: 158, code: 'tw', en: 'Taiwan',                fr: 'Taïwan',                 area: 36193   },
-  { id: 174, code: 'km', en: 'Comoros',               fr: 'Comores',                area: 1862    },
-  { id: 214, code: 'do', en: 'Dominican Republic',    fr: 'Rép. dominicaine',       area: 48671   },
-  { id: 222, code: 'sv', en: 'El Salvador',           fr: 'Salvador',               area: 21041   },
-  { id: 226, code: 'gq', en: 'Equatorial Guinea',     fr: 'Guinée équatoriale',     area: 28051   },
-  { id: 242, code: 'fj', en: 'Fiji',                  fr: 'Fidji',                  area: 18274   },
   { id: 262, code: 'dj', en: 'Djibouti',              fr: 'Djibouti',               area: 23200   },
-  { id: 268, code: 'ge', en: 'Georgia',               fr: 'Géorgie',                area: 69700   },
-  { id: 270, code: 'gm', en: 'Gambia',                fr: 'Gambie',                 area: 11295   },
-  { id: 275, code: 'ps', en: 'Palestine',             fr: 'Palestine',              area: 6020    },
-  { id: 328, code: 'gy', en: 'Guyana',                fr: 'Guyana',                 area: 214969  },
-  { id: 352, code: 'is', en: 'Iceland',               fr: 'Islande',                area: 103000  },
-  { id: 417, code: 'kg', en: 'Kyrgyzstan',            fr: 'Kirghizistan',           area: 199951  },
-  { id: 428, code: 'lv', en: 'Latvia',                fr: 'Lettonie',               area: 64589   },
-  { id: 470, code: 'mt', en: 'Malta',                 fr: 'Malte',                  area: 316     },
-  { id: 480, code: 'mu', en: 'Mauritius',             fr: 'Maurice',                area: 2040    },
-  { id: 499, code: 'me', en: 'Montenegro',            fr: 'Monténégro',             area: 13812   },
-  { id: 512, code: 'om', en: 'Oman',                  fr: 'Oman',                   area: 309500  },
-  { id: 548, code: 'vu', en: 'Vanuatu',               fr: 'Vanuatu',                area: 12189   },
-  { id: 624, code: 'gw', en: 'Guinea-Bissau',         fr: 'Guinée-Bissau',          area: 36125   },
-  { id: 626, code: 'tl', en: 'Timor-Leste',           fr: 'Timor oriental',         area: 14874   },
-  { id: 678, code: 'st', en: 'São Tomé & Príncipe',   fr: 'Sao Tomé-et-Príncipe',   area: 964     },
-  { id: 688, code: 'rs', en: 'Serbia',                fr: 'Serbie',                 area: 77474   },
-  { id: 690, code: 'sc', en: 'Seychelles',            fr: 'Seychelles',             area: 455     },
-  { id: 702, code: 'sg', en: 'Singapore',             fr: 'Singapour',              area: 728     },
-  { id: 705, code: 'si', en: 'Slovenia',              fr: 'Slovénie',               area: 20273   },
-  { id: 728, code: 'ss', en: 'South Sudan',           fr: 'Soudan du Sud',          area: 619745  },
+  { id: 626, code: 'tl', en: 'Timor-Leste',           fr: 'Timor oriental',          area: 14874   },
   { id: 748, code: 'sz', en: 'Eswatini',              fr: 'Eswatini',               area: 17364   },
-  { id: 762, code: 'tj', en: 'Tajikistan',            fr: 'Tadjikistan',            area: 143100  },
+  { id: 140, code: 'cf', en: 'Central African Rep.',  fr: 'Rép. centrafricaine',     area: 622984  },
+  { id: 226, code: 'gq', en: 'Equatorial Guinea',     fr: 'Guinée équatoriale',      area: 28051   },
+  { id: 624, code: 'gw', en: 'Guinea-Bissau',         fr: 'Guinée-Bissau',           area: 36125   },
+  { id: 270, code: 'gm', en: 'Gambia',                fr: 'Gambie',                 area: 11295   },
   { id: 768, code: 'tg', en: 'Togo',                  fr: 'Togo',                   area: 56785   },
-  { id: 776, code: 'to', en: 'Tonga',                 fr: 'Tonga',                  area: 747     },
-  { id: 780, code: 'tt', en: 'Trinidad & Tobago',     fr: 'Trinité-et-Tobago',      area: 5130    },
+  { id: 174, code: 'km', en: 'Comoros',               fr: 'Comores',                area: 1862    },
+  { id: 480, code: 'mu', en: 'Mauritius',             fr: 'Maurice',                area: 2040    },
+  { id: 690, code: 'sc', en: 'Seychelles',            fr: 'Seychelles',             area: 455     },
+  { id: 132, code: 'cv', en: 'Cabo Verde',            fr: 'Cap-Vert',               area: 4033    },
+  { id: 678, code: 'st', en: 'São Tomé & Príncipe',   fr: 'Sao Tomé-et-Príncipe',   area: 964     },
+  { id: 728, code: 'ss', en: 'South Sudan',           fr: 'Soudan du Sud',           area: 619745  },
+  { id: 108, code: 'bi', en: 'Burundi',               fr: 'Burundi',                area: 27834   },
+  { id: 72,  code: 'bw', en: 'Botswana',              fr: 'Botswana',               area: 581730  },
+  { id: 148, code: 'td', en: 'Chad',                  fr: 'Tchad',                  area: 1284000 },
+  { id: 512, code: 'om', en: 'Oman',                  fr: 'Oman',                   area: 309500  },
+  { id: 275, code: 'ps', en: 'Palestine',             fr: 'Palestine',              area: 6020    },
+  { id: 268, code: 'ge', en: 'Georgia',               fr: 'Géorgie',                area: 69700   },
+  { id: 51,  code: 'am', en: 'Armenia',               fr: 'Arménie',                area: 29743   },
+  { id: 31,  code: 'az', en: 'Azerbaijan',            fr: 'Azerbaïdjan',            area: 86600   },
   { id: 795, code: 'tm', en: 'Turkmenistan',          fr: 'Turkménistan',           area: 488100  },
+  { id: 762, code: 'tj', en: 'Tajikistan',            fr: 'Tadjikistan',            area: 143100  },
+  { id: 417, code: 'kg', en: 'Kyrgyzstan',            fr: 'Kirghizistan',           area: 199951  },
+  { id: 702, code: 'sg', en: 'Singapore',             fr: 'Singapour',              area: 728     },
+  { id: 158, code: 'tw', en: 'Taiwan',                fr: 'Taïwan',                 area: 36193   },
+  { id: 20,  code: 'ad', en: 'Andorra',               fr: 'Andorre',                area: 468     },
+  { id: 70,  code: 'ba', en: 'Bosnia & Herzegovina',  fr: 'Bosnie-Herzégovine',     area: 51197   },
   { id: 807, code: 'mk', en: 'North Macedonia',       fr: 'Macédoine du Nord',      area: 25713   },
+  { id: 499, code: 'me', en: 'Montenegro',            fr: 'Monténégro',             area: 13812   },
+  { id: 688, code: 'rs', en: 'Serbia',                fr: 'Serbie',                 area: 77474   },
+  { id: 112, code: 'by', en: 'Belarus',               fr: 'Biélorussie',            area: 207600  },
+  { id: 428, code: 'lv', en: 'Latvia',                fr: 'Lettonie',               area: 64589   },
+  { id: 352, code: 'is', en: 'Iceland',               fr: 'Islande',                area: 103000  },
+  { id: 470, code: 'mt', en: 'Malta',                 fr: 'Malte',                  area: 316     },
+  { id: 705, code: 'si', en: 'Slovenia',              fr: 'Slovénie',               area: 20273   },
+  { id: 222, code: 'sv', en: 'El Salvador',           fr: 'Salvador',               area: 21041   },
+  { id: 84,  code: 'bz', en: 'Belize',               fr: 'Belize',                 area: 22966   },
+  { id: 780, code: 'tt', en: 'Trinidad & Tobago',     fr: 'Trinité-et-Tobago',      area: 5130    },
+  { id: 328, code: 'gy', en: 'Guyana',               fr: 'Guyana',                 area: 214969  },
+  { id: 214, code: 'do', en: 'Dominican Republic',    fr: 'Rép. dominicaine',       area: 48671   },
+  { id: 242, code: 'fj', en: 'Fiji',                  fr: 'Fidji',                  area: 18274   },
+  { id: 90,  code: 'sb', en: 'Solomon Islands',       fr: 'Îles Salomon',           area: 28896   },
+  { id: 548, code: 'vu', en: 'Vanuatu',               fr: 'Vanuatu',                area: 12189   },
   { id: 882, code: 'ws', en: 'Samoa',                 fr: 'Samoa',                  area: 2831    },
+  { id: 776, code: 'to', en: 'Tonga',                 fr: 'Tonga',                  area: 747     },
   { id: 384, code: 'ci', en: "Côte d'Ivoire",    fr: "Côte d'Ivoire",      area: 322463   },
+]
+
+
+const CONTINENTS = [
+  {
+    id: 'continent-africa', code: 'continent', type: 'continent',
+    en: 'Africa', fr: 'Afrique', area: 30370000,
+    memberIds: [12,24,72,108,120,132,140,148,174,178,180,204,226,231,232,262,266,270,288,324,384,404,426,430,434,450,454,466,478,504,508,516,562,566,624,646,678,686,690,694,706,710,716,728,729,748,768,788,800,818,834,854,894]
+  },
+  {
+    id: 'continent-europe', code: 'continent', type: 'continent',
+    en: 'Europe', fr: 'Europe', area: 10530000,
+    memberIds: [8,20,40,56,70,100,112,191,196,203,208,233,246,250,276,300,348,352,372,380,428,440,442,470,498,499,528,578,616,620,642,643,688,703,705,724,752,756,804,807,826]
+  },
+  {
+    id: 'continent-asia', code: 'continent', type: 'continent',
+    en: 'Asia', fr: 'Asie', area: 44580000,
+    memberIds: [4,31,48,50,51,64,96,104,116,156,158,268,275,356,360,364,368,376,392,398,400,408,410,414,417,418,422,458,462,496,512,524,586,608,634,682,702,704,760,762,764,784,792,795,887,158]
+  },
+  {
+    id: 'continent-north-america', code: 'continent', type: 'continent',
+    en: 'North America', fr: 'Amérique du Nord', area: 24710000,
+    memberIds: [84,124,188,192,214,222,320,332,340,388,484,558,591,840,780,328]
+  },
+  {
+    id: 'continent-south-america', code: 'continent', type: 'continent',
+    en: 'South America', fr: 'Amérique du Sud', area: 17840000,
+    memberIds: [32,68,76,152,170,218,328,600,604,740,858,862]
+  },
+  {
+    id: 'continent-oceania', code: 'continent', type: 'continent',
+    en: 'Oceania', fr: 'Océanie', area: 8510000,
+    memberIds: [36,90,242,548,554,598,776,882]
+  },
 ]
 
 const COLORS = ['#E63946','#2196F3','#4CAF50','#FF9800','#9C27B0','#00BCD4','#FF5722','#3F51B5']
@@ -210,262 +244,223 @@ function buildProj(map) {
     .translate([sz.x / 2, sz.y / 2])
 }
 
+// Returns centroid of the largest polygon in a feature (handles multipolygon countries)
+// Uses d3.geoArea (steradians) instead of bounding box to correctly handle
+// countries crossing the antimeridian (Russia, USA, Fiji, etc.)
+function getLargestPolygonCentroid(feature) {
+  if (!feature) return [0, 0]
+  if (feature.geometry.type === 'Polygon') {
+    return d3.geoCentroid(feature)
+  }
+  // MultiPolygon — find largest sub-polygon by spherical area
+  let largest = null
+  let largestArea = 0
+  for (const coords of feature.geometry.coordinates) {
+    const poly = { type: 'Feature', geometry: { type: 'Polygon', coordinates: coords } }
+    const area = d3.geoArea(poly)
+    if (area > largestArea) { largestArea = area; largest = poly }
+  }
+  return largest ? d3.geoCentroid(largest) : d3.geoCentroid(feature)
+}
+
 export default function TrueSizeMap() {
   const locale = useLocale()
   const t = (en, fr) => locale === 'fr' ? fr : en
 
-  const wrapRef    = useRef(null)  // outer wrapper div
-  const mapDivRef  = useRef(null)  // leaflet target
-  const canvasRef  = useRef(null)  // drawing canvas
-  const mapRef     = useRef(null)
-  const topoRef    = useRef(null)
-  const featuresRef = useRef(null) // cached topojson features
+  const mapDivRef   = useRef(null)  // leaflet target div
+  const mapRef      = useRef(null)
+  const featuresRef = useRef(null)  // topojson features cache
+  const svgRef      = useRef(null)  // SVG element inside Leaflet pane
+  const topoRef             = useRef(null)  // raw topojson world data (for merge)
+  const continentFeaturesRef = useRef({})   // pre-computed merged continent features
+  const drag        = useRef({ on: false, id: null, x: 0, y: 0 })
 
-  // drag state in a single ref — never triggers re-render
-  const drag = useRef({ on: false, id: null, x: 0, y: 0 })
-
-  const [loaded, setLoaded]     = useState(false)
-  const [overlays, setOverlays] = useState([])
+  const [loaded, setLoaded]               = useState(false)
+  const [overlays, setOverlays]           = useState([])
   const ovRef = useRef([])
   ovRef.current = overlays
 
-  const [search, setSearch]           = useState('')
-  const [showDropdown, setShowDropdown] = useState(false)
-  const [suggestions, setSuggestions] = useState([])
+  const [search, setSearch]               = useState('')
+  const [showDropdown, setShowDropdown]   = useState(false)
+  const [suggestions, setSuggestions]     = useState([])
   const colorIdx = useRef(0)
-  const [showTutorial, setShowTutorial] = useState(false)
-  const [tutStep, setTutStep]         = useState(0)
+  const [showTutorial, setShowTutorial]   = useState(false)
+  const [tutStep, setTutStep]             = useState(0)
 
-  const sortedCountries = [...COUNTRIES]
-    .filter((c, i, a) => a.findIndex(x => x.id === c.id) === i)
-    .sort((a, b) => (locale === 'fr' ? a.fr : a.en).localeCompare(locale === 'fr' ? b.fr : b.en))
+  const sortedCountries = [
+    ...CONTINENTS.map(c => ({ ...c, _isContinent: true })),
+    ...COUNTRIES.filter((c, i, a) => a.findIndex(x => x.id === c.id) === i),
+  ].sort((a, b) => (locale === 'fr' ? a.fr : a.en).localeCompare(locale === 'fr' ? b.fr : b.en))
 
-  // ── Draw ────────────────────────────────────────────────────────────────────
+  // ── Projection helper: geo coords → Leaflet pixel point ─────────────────────
+  // We use Leaflet's own latLngToContainerPoint — no D3 projection needed!
+  // This is always accurate regardless of zoom/pan.
+
+  // ── Draw all overlays into the SVG pane ──────────────────────────────────────
   const draw = useCallback((forcedOverlays) => {
-    const canvas = canvasRef.current
-    const map    = mapRef.current
-    if (!canvas || !map || !featuresRef.current) return
-
-    // Size from canvas parent div (most reliable — same element)
-    const parent = canvas.parentElement
-    const W = parent ? parent.clientWidth  : map.getSize().x
-    const H = parent ? parent.clientHeight : map.getSize().y
-    if (!W || !H) return
-
-    console.log('[draw sizing] parent:', parent?.tagName, 'W:', W, 'H:', H, 'canvas parent rect:', parent?.getBoundingClientRect().width)
-
-    canvas.width  = W
-    canvas.height = H
-    canvas.style.width  = W + 'px'
-    canvas.style.height = H + 'px'
-
-    const ctx  = canvas.getContext('2d')
-    const proj = buildProj(map)
-    ctx.clearRect(0, 0, W, H)
-    // TEST: draw red rect to confirm canvas is visible
-    ctx.fillStyle = 'rgba(255,0,0,0.5)'
-    ctx.fillRect(10, 10, 200, 100)
-    ctx.fillStyle = 'black'
-    ctx.font = 'bold 16px sans-serif'
-    ctx.fillText('CANVAS VISIBLE', 20, 60)
+    const map = mapRef.current
+    const svg = svgRef.current
+    if (!map || !svg || !featuresRef.current) return
 
     const ovList = forcedOverlays || ovRef.current
+
+    // Remove old paths
+    while (svg.firstChild) svg.removeChild(svg.firstChild)
+
+    // Resize SVG to match map
+    const sz = map.getSize()
+    svg.setAttribute('width',  sz.x)
+    svg.setAttribute('height', sz.y)
+    svg.style.width  = sz.x + 'px'
+    svg.style.height = sz.y + 'px'
+
+    // Build a D3 projection aligned with Leaflet's current view.
+    // IMPORTANT: use rotate+translate only, never .center() — .center() is
+    // syntactic sugar that modifies translate internally, making it impossible
+    // to compose projections correctly for the shifted overlay.
+    const c = map.getCenter()
+    const z = map.getZoom()
+    const scale = (256 / (2 * Math.PI)) * Math.pow(2, z)
+
+    // Convert Leaflet center to raw Mercator translate offset
+    const lngRad = c.lng * Math.PI / 180
+    const latRad = c.lat * Math.PI / 180
+    const mercX  = lngRad                         // raw Mercator x
+    const mercY  = -Math.log(Math.tan(Math.PI / 4 + latRad / 2))  // raw Mercator y
+
+    // proj maps geo → pixel without using .center()
+    const proj = d3.geoMercator()
+      .scale(scale)
+      .translate([sz.x / 2 - scale * mercX, sz.y / 2 - scale * mercY])
+      .center([0, 0])
+
+
+    // ── Country name labels ──────────────────────────────────────────────────
+    const z0 = map.getZoom()
+    const minArea = z0 <= 2 ? 800000 : z0 <= 3 ? 200000 : z0 <= 4 ? 50000 : z0 <= 5 ? 10000 : 0
+    COUNTRIES.forEach(country => {
+      if (country.area < minArea) return
+      const feature = featuresRef.current.find(f => parseInt(f.id) === country.id)
+      if (!feature) return
+      const centroid = getLargestPolygonCentroid(feature)
+      const [px, py] = proj(centroid)
+      if (px < -10 || px > sz.x + 10 || py < -10 || py > sz.y + 10) return
+
+      const label = (locale === 'fr' ? country.fr : country.en).toUpperCase()
+      const fontSize = country.area > 5000000 ? 10 : country.area > 1000000 ? 9 : country.area > 200000 ? 8 : 7
+
+      const text = document.createElementNS('http://www.w3.org/2000/svg', 'text')
+      text.setAttribute('x', String(px))
+      text.setAttribute('y', String(py))
+      text.setAttribute('text-anchor', 'middle')
+      text.setAttribute('dominant-baseline', 'middle')
+      text.setAttribute('font-size', String(fontSize))
+      text.setAttribute('font-weight', '700')
+      text.setAttribute('font-family', 'system-ui, sans-serif')
+      text.setAttribute('fill', '#697383')
+      text.setAttribute('stroke', 'rgba(240,239,236,0.9)')
+      text.setAttribute('stroke-width', '3')
+      text.setAttribute('paint-order', 'stroke')
+      text.setAttribute('pointer-events', 'none')
+      text.setAttribute('letter-spacing', '0.08em')
+      text.textContent = label
+      svg.appendChild(text)
+    })
+
     if (ovList.length === 0) return
-    console.log('[TrueSize] draw W:', W, 'H:', H, 'overlays:', ovList.length)
 
     ovList.forEach(ov => {
-      console.log('[draw forEach] ov:', ov.meta.en, 'destLon:', ov.destLon, 'destLat:', ov.destLat)
-      const feature = featuresRef.current.find(f => parseInt(f.id) === ov.meta.id)
-      if (!feature) { console.warn('[TrueSize] feature not found for id:', ov.meta.id); return }
+      let feature
+      if (ov.meta._isContinent) {
+        feature = continentFeaturesRef.current[ov.meta.id]
+      } else {
+        feature = featuresRef.current.find(f => parseInt(f.id) === ov.meta.id)
+      }
+      if (!feature) return
 
-      const sc = mercatorScale(ov.origLat, ov.destLat)
+      // Scale factor for Mercator distortion at destination latitude
+      const r  = Math.PI / 180
+      const co = Math.cos(ov.origLat * r)
+      const cd = Math.cos(Math.max(-75, Math.min(75, ov.destLat)) * r)
+      const sc = cd === 0 ? 1 : co / cd
+
+      // Where the country's centroid lands on screen (origin position)
       const [ox, oy] = proj([ov.origLon, ov.origLat])
+      // Where we want it to appear (destination position)
       const [dx, dy] = proj([ov.destLon, ov.destLat])
-      const tx = dx - ox * sc
-      const ty = dy - oy * sc
-      console.log('[draw proj] ox:', ox.toFixed(0), 'oy:', oy.toFixed(0), 'tx:', tx.toFixed(0), 'ty:', ty.toFixed(0), 'sc:', sc.toFixed(3))
 
-      const pathGen = d3.geoPath().projection(proj).context(ctx)
+      // The shifted projection: same scale*sc, translate adjusted so
+      // the country centroid moves from (ox,oy) to (dx,dy)
+      const shiftedProj = d3.geoMercator()
+        .scale(scale * sc)
+        .translate([
+          proj.translate()[0] * sc + (dx - ox * sc),
+          proj.translate()[1] * sc + (dy - oy * sc)
+        ])
+        .center([0, 0])
 
-      ctx.save()
-      ctx.translate(tx, ty)
-      ctx.scale(sc, sc)
+      const pathGen = d3.geoPath().projection(shiftedProj)
 
-      ctx.beginPath()
-      pathGen(feature)
-      ctx.globalAlpha = 0.55
-      ctx.fillStyle   = ov.color
-      ctx.fill()
+      // Fill path — pointerEvents 'fill' means only filled area is clickable (not empty inside)
+      const fill = document.createElementNS('http://www.w3.org/2000/svg', 'path')
+      fill.setAttribute('d', pathGen(feature) || '')
+      fill.setAttribute('fill', ov.color)
+      fill.setAttribute('fill-opacity', '0.45')
+      fill.setAttribute('stroke', ov.color)
+      fill.setAttribute('stroke-width', '2')
+      fill.setAttribute('stroke-opacity', '0.9')
+      fill.setAttribute('data-id', String(ov.id))
+      fill.style.cursor = 'grab'
+      fill.style.pointerEvents = 'all'
+      fill.style.touchAction = 'none'
+      fill.style.cursor = 'grab'
+      if (dragHandlers.current) {
+        fill.addEventListener('pointerdown', dragHandlers.current.onPointerDown)
+        fill.addEventListener('mouseenter', () => { svg.style.cursor = 'grab' })
+        fill.addEventListener('mouseleave', () => { if (!drag.current.on) svg.style.cursor = '' })
+      }
+      svg.appendChild(fill)
 
-      ctx.beginPath()
-      pathGen(feature)
-      ctx.globalAlpha = 0.9
-      ctx.strokeStyle = ov.color
-      ctx.lineWidth   = 1.5 / sc
-      ctx.stroke()
-
-      ctx.restore()
-
-      // label at centroid (screen coords)
-      const [cx, cy] = proj([ov.origLon, ov.origLat])
-      const lx = tx + cx * sc
-      const ly = ty + cy * sc
-      ctx.globalAlpha  = 1
-      ctx.font         = '800 12px sans-serif'
-      ctx.textAlign    = 'center'
-      ctx.textBaseline = 'middle'
-      ctx.lineWidth    = 3
-      ctx.strokeStyle  = 'rgba(0,0,0,0.65)'
-      ctx.strokeText(locale === 'fr' ? ov.meta.fr : ov.meta.en, lx, ly)
-      ctx.fillStyle = 'white'
-      ctx.fillText(locale === 'fr' ? ov.meta.fr : ov.meta.en, lx, ly)
+      // Label at centroid of largest polygon (avoids DOM-TOM pulling centroid)
+      const centroid = getLargestPolygonCentroid(feature)
+      const [lx, ly] = shiftedProj(centroid)
+      if (lx > 0 && lx < sz.x && ly > 0 && ly < sz.y) {
+        const text = document.createElementNS('http://www.w3.org/2000/svg', 'text')
+        text.setAttribute('x', String(lx))
+        text.setAttribute('y', String(ly))
+        text.setAttribute('text-anchor', 'middle')
+        text.setAttribute('dominant-baseline', 'middle')
+        text.setAttribute('font-size', '12')
+        text.setAttribute('font-weight', '800')
+        text.setAttribute('fill', 'white')
+        text.setAttribute('stroke', 'rgba(0,0,0,0.6)')
+        text.setAttribute('stroke-width', '3')
+        text.setAttribute('paint-order', 'stroke')
+        text.setAttribute('pointer-events', 'none')
+        text.textContent = locale === 'fr' ? ov.meta.fr : ov.meta.en
+        svg.appendChild(text)
+      }
     })
   }, [locale])
 
-  // Store draw in ref so map event listeners always call latest version
   const drawRef = useRef(draw)
   useEffect(() => { drawRef.current = draw }, [draw])
 
+  // Redraw when overlays change
   useEffect(() => {
     if (!loaded) return
-    console.log('[useEffect] overlays changed, drawing', overlays.length)
-    const t = setTimeout(() => draw(overlays), 50)
+    const t = setTimeout(() => drawRef.current(), 16)
     return () => clearTimeout(t)
-  }, [overlays, loaded, draw])
+  }, [overlays, loaded])
 
-  // ── Hit test ────────────────────────────────────────────────────────────────
-  const hitTest = useCallback((clientX, clientY) => {
-    const canvas = canvasRef.current
-    const map    = mapRef.current
-    if (!canvas || !map || !featuresRef.current || !ovRef.current.length) return null
-
-    const rect = canvas.getBoundingClientRect()
-    const px   = clientX - rect.left
-    const py   = clientY - rect.top
-    const proj = buildProj(map)
-
-    // offscreen canvas for hit testing
-    const off    = document.createElement('canvas')
-    off.width    = canvas.width
-    off.height   = canvas.height
-    const ctx2   = off.getContext('2d')
-    const pathGen = d3.geoPath().projection(proj).context(ctx2)
-
-    for (let i = ovRef.current.length - 1; i >= 0; i--) {
-      const ov      = ovRef.current[i]
-      const feature = featuresRef.current.find(f => parseInt(f.id) === ov.meta.id)
-      if (!feature) continue
-
-      const sc = mercatorScale(ov.origLat, ov.destLat)
-      const [ox, oy] = proj([ov.origLon, ov.origLat])
-      const [dx2, dy2] = proj([ov.destLon, ov.destLat])
-      const tx = dx2 - ox * sc
-      const ty = dy2 - oy * sc
-
-      ctx2.save()
-      ctx2.translate(tx, ty)
-      ctx2.scale(sc, sc)
-      ctx2.beginPath()
-      pathGen(feature)
-      ctx2.restore()
-
-      if (ctx2.isPointInPath(px, py)) return ov.id
-    }
-    return null
-  }, [])
-
-  // ── Pointer events ──────────────────────────────────────────────────────────
-  useEffect(() => {
-    if (!loaded) return
-    const canvas = canvasRef.current
-    const map    = mapRef.current
-    if (!canvas || !map) return
-
-    // canvas starts transparent; becomes opaque to events only when hovering a shape
-    canvas.style.pointerEvents = 'none'
-
-    // Track mouse globally to update cursor & enable canvas on hover
-    const onDocMove = (e) => {
-      if (drag.current.on) return
-      if (!ovRef.current.length) { canvas.style.pointerEvents = 'none'; return }
-      const id = hitTest(e.clientX, e.clientY)
-      if (id !== null) {
-        canvas.style.pointerEvents = 'auto'
-        canvas.style.cursor = 'grab'
-      } else {
-        canvas.style.pointerEvents = 'none'
-      }
-    }
-
-    const onDown = (e) => {
-      const id = hitTest(e.clientX, e.clientY)
-      if (id === null) return
-      e.preventDefault()
-      canvas.setPointerCapture(e.pointerId)
-      drag.current = { on: true, id, x: e.clientX, y: e.clientY }
-      canvas.style.cursor = 'grabbing'
-      map.dragging.disable()
-      map.scrollWheelZoom.disable()
-    }
-
-    const onMove = (e) => {
-      if (!drag.current.on) return
-      e.preventDefault()
-      const proj = buildProj(map)
-      const ov   = ovRef.current.find(o => o.id === drag.current.id)
-      if (!ov) return
-
-      const [curPx, curPy] = proj([ov.destLon, ov.destLat])
-      const nc = proj.invert([curPx + e.clientX - drag.current.x, curPy + e.clientY - drag.current.y])
-      if (!nc) return
-      drag.current.x = e.clientX
-      drag.current.y = e.clientY
-
-      setOverlays(prev => prev.map(o => o.id === drag.current.id
-        ? { ...o, destLon: nc[0], destLat: Math.max(-75, Math.min(75, nc[1])) }
-        : o
-      ))
-    }
-
-    const onUp = (e) => {
-      if (!drag.current.on) return
-      drag.current.on = false
-      try { canvas.releasePointerCapture(e.pointerId) } catch (_) {}
-      map.dragging.enable()
-      map.scrollWheelZoom.enable()
-      canvas.style.cursor = 'default'
-      // Check if still over a shape
-      const id = hitTest(e.clientX, e.clientY)
-      canvas.style.pointerEvents = id !== null ? 'auto' : 'none'
-      if (id !== null) canvas.style.cursor = 'grab'
-    }
-
-    document.addEventListener('mousemove', onDocMove)
-    canvas.addEventListener('pointerdown', onDown)
-    canvas.addEventListener('pointermove', onMove)
-    canvas.addEventListener('pointerup',   onUp)
-    canvas.addEventListener('pointercancel', onUp)
-
-    return () => {
-      document.removeEventListener('mousemove', onDocMove)
-      canvas.removeEventListener('pointerdown', onDown)
-      canvas.removeEventListener('pointermove', onMove)
-      canvas.removeEventListener('pointerup',   onUp)
-      canvas.removeEventListener('pointercancel', onUp)
-    }
-  }, [loaded, hitTest])
-
-  // ── Init Leaflet ────────────────────────────────────────────────────────────
+  // ── Init Leaflet ─────────────────────────────────────────────────────────────
   useEffect(() => {
     if (!mapDivRef.current || mapRef.current) return
+
     import('leaflet').then(Lmod => {
       const Lf = Lmod.default || Lmod
       if (!mapDivRef.current || mapRef.current) return
-
-      // Clear any previous Leaflet instance on the div
-      if (mapDivRef.current._leaflet_id) {
-        mapDivRef.current._leaflet_id = null
-      }
+      if (mapDivRef.current._leaflet_id) mapDivRef.current._leaflet_id = null
 
       delete Lf.Icon.Default.prototype._getIconUrl
       Lf.Icon.Default.mergeOptions({ iconRetinaUrl: '', iconUrl: '', shadowUrl: '' })
@@ -475,78 +470,234 @@ export default function TrueSizeMap() {
       })
       mapRef.current = map
 
-      // Use locale-aware tile URL
-      const tileUrl = locale === 'fr'
-        ? 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'
-        : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'
-      Lf.tileLayer(tileUrl, {
+      // Base tiles without any labels — we draw our own in the SVG layer (FR/EN)
+      Lf.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
         attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com">CARTO</a>',
         subdomains: 'abcd', maxZoom: 19,
       }).addTo(map)
 
-      fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
+      // SVG is a React element in the JSX (ref={svgRef}), not inside Leaflet's DOM
+
+      fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json')
         .then(r => r.json())
         .then(world => {
           topoRef.current = world
           featuresRef.current = topojson.feature(world, world.objects.countries).features
+          // Pre-compute continent features with robust merge
+          // topojson.merge() dissolves shared borders but may miss non-adjacent polygons.
+          // We combine merge() result with individual features for complete coverage.
+          const allFeatures = topojson.feature(world, world.objects.countries).features
+          const cf = {}
+          CONTINENTS.forEach(cont => {
+            const memberIdSet = new Set(cont.memberIds.map(String))
+            const memberGeoms = world.objects.countries.geometries
+              .filter(g => memberIdSet.has(String(g.id)))
+            if (!memberGeoms.length) return
+
+            // Collect all coordinates from member countries
+            const allCoords = []
+            memberGeoms.forEach(g => {
+              const feat = allFeatures.find(f => String(f.id) === String(g.id))
+              if (!feat) return
+              if (feat.geometry.type === 'Polygon') {
+                allCoords.push(feat.geometry.coordinates)
+              } else if (feat.geometry.type === 'MultiPolygon') {
+                allCoords.push(...feat.geometry.coordinates)
+              }
+            })
+
+            // Try topojson.merge for dissolved borders, then supplement with any
+            // missing polygons (countries whose arcs aren't shared in the topology)
+            try {
+              const merged = topojson.merge(world, memberGeoms)
+              // merged may be Polygon or MultiPolygon
+              const mergedCoords = merged.type === 'Polygon'
+                ? [merged.coordinates]
+                : merged.coordinates
+
+              // Find polygons from allCoords that are NOT covered by merged result
+              // (i.e. countries that weren't topologically connected)
+              // We detect this by checking if any memberGeom produced 0 area in merge
+              const mergedFeat = { type: 'Feature', geometry: merged }
+              const missingCoords = []
+              memberGeoms.forEach(g => {
+                const feat = allFeatures.find(f => String(f.id) === String(g.id))
+                if (!feat) return
+                const centroid = d3.geoCentroid(feat)
+                // Use d3.geoContains to check if centroid is inside merged shape
+                if (!d3.geoContains(mergedFeat, centroid)) {
+                  if (feat.geometry.type === 'Polygon') missingCoords.push(feat.geometry.coordinates)
+                  else if (feat.geometry.type === 'MultiPolygon') missingCoords.push(...feat.geometry.coordinates)
+                }
+              })
+
+              const finalCoords = [...mergedCoords, ...missingCoords]
+              cf[cont.id] = {
+                type: 'Feature', id: cont.id, properties: {},
+                geometry: finalCoords.length === 1
+                  ? { type: 'Polygon', coordinates: finalCoords[0] }
+                  : { type: 'MultiPolygon', coordinates: finalCoords }
+              }
+            } catch(e) {
+              // Fallback: plain MultiPolygon without border dissolution
+              console.warn('merge failed for', cont.id, e)
+              cf[cont.id] = {
+                type: 'Feature', id: cont.id, properties: {},
+                geometry: { type: 'MultiPolygon', coordinates: allCoords }
+              }
+            }
+          })
+          continentFeaturesRef.current = cf
           setLoaded(true)
-          // Force initial canvas size after Leaflet renders
-          setTimeout(() => {
-            const c = canvasRef.current
-            if (!c) return
-            const sz = map.getSize()
-            if (sz.x > 0) { c.width = sz.x; c.height = sz.y; c.style.width = sz.x+'px'; c.style.height = sz.y+'px' }
-          }, 200)
         })
 
-      map.on('moveend zoomend', () => requestAnimationFrame(() => drawRef.current()))
-      map.on('move zoom',       () => requestAnimationFrame(() => drawRef.current()))
+      map.on('moveend zoomend move zoom', () => requestAnimationFrame(() => drawRef.current()))
     })
-    return () => { mapRef.current?.remove(); mapRef.current = null }
-  }, [draw])
 
-  // ── Country management ───────────────────────────────────────────────────────
+    return () => { mapRef.current?.remove(); mapRef.current = null }
+  }, [])
+
+  // ── Drag logic ───────────────────────────────────────────────────────────────
+  const dragHandlers = useRef(null)
+
+  useEffect(() => {
+    if (!loaded) return
+    const map = mapRef.current
+    const svg = svgRef.current
+    if (!map || !svg) return
+
+    svg.style.pointerEvents = 'none'
+
+    const buildProj = () => {
+      const sz     = map.getSize()
+      const c      = map.getCenter()
+      const z      = map.getZoom()
+      const scale  = (256 / (2 * Math.PI)) * Math.pow(2, z)
+      const lngRad = c.lng * Math.PI / 180
+      const latRad = c.lat * Math.PI / 180
+      const mercY  = -Math.log(Math.tan(Math.PI / 4 + latRad / 2))
+      return d3.geoMercator()
+        .scale(scale)
+        .translate([sz.x / 2 - scale * lngRad, sz.y / 2 - scale * mercY])
+        .center([0, 0])
+    }
+
+    // pointerdown on a path starts the drag
+    const onPointerDown = (e) => {
+      const id = Number(e.currentTarget.getAttribute('data-id'))
+      e.preventDefault()
+      e.stopPropagation()
+      drag.current = { on: true, id, x: e.clientX, y: e.clientY }
+      svg.style.cursor = 'grabbing'
+      map.dragging.disable()
+      map.scrollWheelZoom.disable()
+      map.doubleClickZoom.disable()
+    }
+
+    // pointermove on document — always fires even when shape is redrawn
+    const onDocPointerMove = (e) => {
+      if (!drag.current.on) return
+      e.preventDefault()
+
+      const ov = ovRef.current.find(o => o.id === drag.current.id)
+      if (!ov) return
+
+      const proj = buildProj()
+      const [curPx, curPy] = proj([ov.destLon, ov.destLat])
+      const nc = proj.invert([
+        curPx + (e.clientX - drag.current.x),
+        curPy + (e.clientY - drag.current.y),
+      ])
+      if (!nc) return
+
+      drag.current.x = e.clientX
+      drag.current.y = e.clientY
+
+      // Update ref directly for instant redraw, then sync state
+      const updated = ovRef.current.map(o =>
+        o.id === drag.current.id
+          ? { ...o, destLon: nc[0], destLat: Math.max(-75, Math.min(75, nc[1])) }
+          : o
+      )
+      ovRef.current = updated
+      drawRef.current(updated)           // draw immediately — no React state delay
+      setOverlays(updated)               // sync state for chips/% display
+    }
+
+    // pointerup on document
+    const onDocPointerUp = () => {
+      if (!drag.current.on) return
+      drag.current.on = false
+      svg.style.cursor = ''
+      map.dragging.enable()
+      map.scrollWheelZoom.enable()
+      map.doubleClickZoom.enable()
+    }
+
+    dragHandlers.current = { onPointerDown }
+
+    document.addEventListener('pointermove', onDocPointerMove, { passive: false })
+    document.addEventListener('pointerup',   onDocPointerUp)
+
+    return () => {
+      dragHandlers.current = null
+      document.removeEventListener('pointermove', onDocPointerMove)
+      document.removeEventListener('pointerup',   onDocPointerUp)
+      map.dragging.enable()
+      map.scrollWheelZoom.enable()
+      map.doubleClickZoom.enable()
+    }
+  }, [loaded])
+
+  // ── Country management ────────────────────────────────────────────────────────
   const addCountry = useCallback((meta) => {
-    console.log('[addCountry] called with', meta?.en, 'featuresRef:', !!featuresRef.current)
     if (!featuresRef.current) return
     if (ovRef.current.find(o => o.meta.id === meta.id)) {
       setSearch(''); setShowDropdown(false); setSuggestions([]); return
     }
-    const feature = featuresRef.current.find(f => parseInt(f.id) === meta.id)
-    if (!feature) return
-    const [origLon, origLat] = d3.geoCentroid(feature)
+
+    let feature
+    if (meta._isContinent) {
+      // Use pre-computed merged feature (borders dissolved)
+      feature = continentFeaturesRef.current[meta.id]
+      if (!feature) return
+    } else {
+      feature = featuresRef.current.find(f => parseInt(f.id) === meta.id)
+      if (!feature) return
+    }
+
+    const [origLon, origLat] = getLargestPolygonCentroid(feature)
     const newOverlay = {
-      id: Date.now(), meta, origLon, origLat, destLon: origLon, destLat: origLat,
+      id: Date.now(), meta, origLon, origLat,
+      destLon: origLon, destLat: origLat,
       color: COLORS[colorIdx.current++ % COLORS.length],
     }
     const nextOverlays = [...ovRef.current, newOverlay]
     setOverlays(nextOverlays)
     setSearch(''); setShowDropdown(false); setSuggestions([])
-    // Draw immediately with the new list (bypasses React state delay)
-    console.log('[addCountry] calling draw with', nextOverlays.length, 'overlays')
     requestAnimationFrame(() => drawRef.current(nextOverlays))
   }, [])
 
   const removeOverlay = useCallback((id) => setOverlays(p => p.filter(o => o.id !== id)), [])
-  const resetOverlay  = useCallback((id) => setOverlays(p => p.map(o => o.id === id ? { ...o, destLon: o.origLon, destLat: o.origLat } : o)), [])
+  const resetOverlay  = useCallback((id) => setOverlays(p => p.map(o =>
+    o.id === id ? { ...o, destLon: o.origLon, destLat: o.origLat } : o
+  )), [])
 
   // Search / dropdown
   useEffect(() => {
     if (!search.trim()) {
-      console.log('[suggestions] showing all', sortedCountries.length, 'countries')
       setSuggestions(sortedCountries)
     } else {
       const q = search.toLowerCase()
-      const filtered = sortedCountries.filter(c => (locale === 'fr' ? c.fr : c.en).toLowerCase().includes(q))
-      console.log('[suggestions] filtered:', filtered.length)
-      setSuggestions(filtered)
+      setSuggestions(sortedCountries.filter(c => (locale === 'fr' ? c.fr : c.en).toLowerCase().includes(q)))
     }
   }, [search, locale])
+
 
   return (
     <>
       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-      <div ref={wrapRef} style={{ display: 'flex', flexDirection: 'column', height: 'calc(100vh - 60px)', fontFamily: 'var(--font-body)', overflow: 'hidden' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', height: 'calc(100vh - 60px)', fontFamily: 'var(--font-body)', overflow: 'hidden' }}>
 
         {/* ── Top bar ── */}
         <div style={{ flexShrink: 0, backgroundColor: 'white', borderBottom: '1px solid #E2DDD5', padding: '8px 16px', display: 'flex', gap: '10px', alignItems: 'center', flexWrap: 'wrap', zIndex: 1000, boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
@@ -582,7 +733,10 @@ export default function TrueSizeMap() {
                     style={{ width: '100%', padding: '8px 12px', textAlign: 'left', border: 'none', borderBottom: '1px solid #F4F1E6', backgroundColor: 'transparent', fontSize: '13px', fontWeight: '600', color: '#0B1F3B', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px' }}
                     onMouseEnter={e => e.currentTarget.style.backgroundColor = '#F4F1E6'}
                     onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}>
-                    <img src={`https://flagcdn.com/w40/${s.code}.png`} width="18" height="12" style={{ borderRadius: '2px', objectFit: 'cover', flexShrink: 0 }} />
+                    {s._isContinent
+                      ? <span style={{ fontSize: '16px', flexShrink: 0 }}>🌍</span>
+                      : <img src={`https://flagcdn.com/w40/${s.code}.png`} width="18" height="12" style={{ borderRadius: '2px', objectFit: 'cover', flexShrink: 0 }} />
+                    }
                     {locale === 'fr' ? s.fr : s.en}
                     <span style={{ fontSize: '10px', color: '#8A8278', marginLeft: 'auto' }}>{formatArea(s.area)}</span>
                   </button>
@@ -603,7 +757,10 @@ export default function TrueSizeMap() {
               const pct = Math.round((1/sc - 1) * 100)
               return (
                 <div key={o.id} style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', padding: '3px 8px 3px 5px', borderRadius: '99px', backgroundColor: o.color + '18', border: `1.5px solid ${o.color}` }}>
-                  <img src={`https://flagcdn.com/w40/${o.meta.code}.png`} width="16" height="11" style={{ borderRadius: '2px', objectFit: 'cover' }} />
+                  {o.meta._isContinent
+                    ? <span style={{ fontSize: '14px' }}>🌍</span>
+                    : <img src={`https://flagcdn.com/w40/${o.meta.code}.png`} width="16" height="11" style={{ borderRadius: '2px', objectFit: 'cover' }} />
+                  }
                   <span style={{ fontSize: '12px', fontWeight: '700', color: '#0B1F3B' }}>{locale === 'fr' ? o.meta.fr : o.meta.en}</span>
                   <span style={{ fontSize: '10px', color: '#8A8278' }}>{formatArea(o.meta.area)}</span>
                   {pct !== 0 && <span style={{ fontSize: '10px', fontWeight: '700', color: pct > 0 ? '#4CAF50' : '#E63946' }}>{pct > 0 ? `+${pct}%` : `${pct}%`}</span>}
@@ -623,7 +780,7 @@ export default function TrueSizeMap() {
         {/* ── Map area ── */}
         <div style={{ flex: 1, position: 'relative', overflow: 'hidden' }}>
           <div ref={mapDivRef} style={{ position: 'absolute', inset: 0 }} />
-          <canvas ref={canvasRef} style={{ position: 'absolute', top: 0, left: 0, zIndex: 10, pointerEvents: 'none' }} />
+          <svg ref={svgRef} style={{ position: 'absolute', top: 0, left: 0, pointerEvents: 'none', zIndex: 400 }} />
 
           {/* Zoom buttons */}
           <div style={{ position: 'absolute', top: 12, right: 12, zIndex: 999, display: 'flex', flexDirection: 'column', gap: 4 }}>

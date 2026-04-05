@@ -48,14 +48,14 @@ const FLAGS_MENU = {
     fr: 'Drapeaux des Pays',
     descEn: 'Browse all countries of the world',
     descFr: 'Tous les drapeaux du monde',
-    href: 'countries',
   },
-  orgs: [
-    { key: 'un',    icon: '🇺🇳', en: 'United Nations', fr: 'Nations Unies',    descEn: 'UN member states & flag', descFr: 'États membres & drapeau' },
-    { key: 'eu',    icon: '🇪🇺', en: 'European Union', fr: 'Union Européenne', descEn: 'EU member states & flag', descFr: 'États membres & drapeau' },
-    { key: 'nato',  icon: '🏴', en: 'NATO',            fr: 'OTAN',             descEn: 'NATO members & flag',     descFr: 'Membres & drapeau'      },
-    { key: 'uefa',  icon: '⚽', en: 'UEFA',            fr: 'UEFA',             descEn: 'UEFA member associations', descFr: 'Associations membres'   },
-  ]
+  organisations: {
+    icon: '🏛️',
+    en: 'Organisations',
+    fr: 'Organisations',
+    descEn: 'UN, EU, NATO, FIFA and more',
+    descFr: 'ONU, UE, OTAN, FIFA et plus',
+  },
 }
 
 // ── Moucheture d'hermine bretonne ─────────────────────────────────────────────
@@ -238,40 +238,23 @@ export default function Header() {
             {flagsOpen && (
               <DropdownPanel width={300}>
                 <div style={{ padding: '8px' }}>
-                  {/* Country flags — main link */}
-                  <div
-                    onClick={() => { router.push(`/${locale}/countries`); setFlagsOpen(false) }}
-                    style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '11px 12px', borderRadius: '10px', cursor: 'pointer', transition: 'background 0.12s', marginBottom: '4px' }}
-                    onMouseEnter={e => e.currentTarget.style.backgroundColor = '#f0f4ff'}
-                    onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}
-                  >
-                    <span style={{ fontSize: '22px', width: '32px', textAlign: 'center', flexShrink: 0 }}>🌍</span>
-                    <div>
-                      <div style={{ fontSize: '14px', fontWeight: '700', color: '#0B1F3B' }}>{t('Country Flags', 'Drapeaux des Pays')}</div>
-                      <p style={{ margin: 0, fontSize: '12px', color: '#94a3b8', marginTop: '1px' }}>{t('Browse all countries of the world', 'Tous les drapeaux du monde')}</p>
-                    </div>
-                  </div>
-
-                  {/* Separator */}
-                  <div style={{ borderTop: '1px solid #f0f0f0', margin: '6px 4px', paddingTop: '6px' }}>
-                    <p style={{ margin: '0 0 6px 8px', fontSize: '10px', fontWeight: '700', color: '#94a3b8', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
-                      {t('Organizations', 'Organisations')}
-                    </p>
-                    {FLAGS_MENU.orgs.map(org => (
-                      <div key={org.key}
-                        onClick={() => { router.push(`/${locale}/flags/${org.key}`); setFlagsOpen(false) }}
-                        style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '9px 12px', borderRadius: '10px', cursor: 'pointer', transition: 'background 0.12s' }}
-                        onMouseEnter={e => e.currentTarget.style.backgroundColor = '#f0f4ff'}
-                        onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}
-                      >
-                        <span style={{ fontSize: '20px', width: '32px', textAlign: 'center', flexShrink: 0 }}>{org.icon}</span>
-                        <div>
-                          <div style={{ fontSize: '13px', fontWeight: '700', color: '#0B1F3B' }}>{t(org.en, org.fr)}</div>
-                          <p style={{ margin: 0, fontSize: '11px', color: '#94a3b8', marginTop: '1px' }}>{t(org.descEn, org.descFr)}</p>
-                        </div>
+                  {[
+                    { href: `/${locale}/countries`, icon: FLAGS_MENU.countries.icon, en: FLAGS_MENU.countries.en, fr: FLAGS_MENU.countries.fr, descEn: FLAGS_MENU.countries.descEn, descFr: FLAGS_MENU.countries.descFr },
+                    { href: `/${locale}/organisations`, icon: FLAGS_MENU.organisations.icon, en: FLAGS_MENU.organisations.en, fr: FLAGS_MENU.organisations.fr, descEn: FLAGS_MENU.organisations.descEn, descFr: FLAGS_MENU.organisations.descFr },
+                  ].map(item => (
+                    <div key={item.href}
+                      onClick={() => { router.push(item.href); setFlagsOpen(false) }}
+                      style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '12px', borderRadius: '10px', cursor: 'pointer', transition: 'background 0.12s' }}
+                      onMouseEnter={e => e.currentTarget.style.backgroundColor = '#f0f4ff'}
+                      onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}
+                    >
+                      <span style={{ fontSize: '22px', width: '32px', textAlign: 'center', flexShrink: 0 }}>{item.icon}</span>
+                      <div>
+                        <div style={{ fontSize: '14px', fontWeight: '700', color: '#0B1F3B' }}>{t(item.en, item.fr)}</div>
+                        <p style={{ margin: 0, fontSize: '12px', color: '#94a3b8', marginTop: '1px' }}>{t(item.descEn, item.descFr)}</p>
                       </div>
-                    ))}
-                  </div>
+                    </div>
+                  ))}
                 </div>
               </DropdownPanel>
             )}
@@ -361,49 +344,78 @@ export default function Header() {
             {t('+ Submit', '+ Soumettre')}
           </Link>
 
-          {/* Shop — cart icon */}
+          {/* Locale switcher — shows target language flag only */}
+          <button onClick={switchLocale}
+            title={locale === 'en' ? 'Passer en français' : 'Switch to English'}
+            style={{
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              width: '34px', height: '34px',
+              background: 'rgba(255,255,255,0.08)',
+              border: '1px solid rgba(255,255,255,0.15)',
+              borderRadius: '7px',
+              padding: '0',
+              cursor: 'pointer',
+              transition: 'background 0.15s',
+              flexShrink: 0,
+              overflow: 'hidden',
+            }}
+            onMouseEnter={e => e.currentTarget.style.background = 'rgba(255,255,255,0.18)'}
+            onMouseLeave={e => e.currentTarget.style.background = 'rgba(255,255,255,0.08)'}
+          >
+            {locale === 'en'
+              ? /* Target = FR — French flag */
+                <svg width="24" height="16" viewBox="0 0 3 2" style={{ display: 'block' }}>
+                    <rect width="1" height="2" fill="#002395"/>
+                    <rect x="1" width="1" height="2" fill="#fff"/>
+                    <rect x="2" width="1" height="2" fill="#ED2939"/>
+                  </svg>
+              : /* Target = EN — UK/US hybrid: UK cross + US stars quadrant */
+                <svg width="24" height="16" viewBox="0 0 60 40" style={{ display: 'block' }}>
+                    {/* Base blue */}
+                    <rect width="60" height="40" fill="#012169"/>
+                    {/* UK diagonal crosses */}
+                    <line x1="0" y1="0" x2="60" y2="40" stroke="#fff" strokeWidth="8"/>
+                    <line x1="60" y1="0" x2="0" y2="40" stroke="#fff" strokeWidth="8"/>
+                    <line x1="0" y1="0" x2="60" y2="40" stroke="#C8102E" strokeWidth="4"/>
+                    <line x1="60" y1="0" x2="0" y2="40" stroke="#C8102E" strokeWidth="4"/>
+                    {/* UK horizontal/vertical cross */}
+                    <rect x="0" y="15" width="60" height="10" fill="#fff"/>
+                    <rect x="25" y="0" width="10" height="40" fill="#fff"/>
+                    <rect x="0" y="17" width="60" height="6" fill="#C8102E"/>
+                    <rect x="27" y="0" width="6" height="40" fill="#C8102E"/>
+                    {/* US stars quadrant top-left */}
+                    <rect width="30" height="20" fill="#012169"/>
+                    {[3,9,15,21,27].map((x,i) => [6,14].map((y,j) => (
+                      <circle key={`${i}-${j}`} cx={x} cy={y} r="1.8" fill="white"/>
+                    )))}
+                    {[6,12,18,24].map((x,i) => [10].map((y,j) => (
+                      <circle key={`s-${i}`} cx={x} cy={y} r="1.8" fill="white"/>
+                    )))}
+                  </svg>
+            }
+          </button>
+
+          {/* Shop — cart icon, left of profile */}
           <Link href={`/${locale}/shop`}
             title={t('Shop', 'Boutique')}
             style={{
               display: 'flex', alignItems: 'center', justifyContent: 'center',
-              width: '34px', height: '34px',
-              color: isActive(`/${locale}/shop`) ? '#9EB7E5' : 'rgba(244,241,230,0.7)',
+              width: '36px', height: '36px',
+              color: isActive(`/${locale}/shop`) ? '#9EB7E5' : 'rgba(244,241,230,0.75)',
               textDecoration: 'none',
               transition: 'color 0.15s',
               flexShrink: 0,
             }}
             className="desktop-right"
             onMouseEnter={e => e.currentTarget.style.color = '#9EB7E5'}
-            onMouseLeave={e => e.currentTarget.style.color = isActive(`/${locale}/shop`) ? '#9EB7E5' : 'rgba(244,241,230,0.7)'}
+            onMouseLeave={e => e.currentTarget.style.color = isActive(`/${locale}/shop`) ? '#9EB7E5' : 'rgba(244,241,230,0.75)'}
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
               <line x1="3" y1="6" x2="21" y2="6"/>
               <path d="M16 10a4 4 0 01-8 0"/>
             </svg>
           </Link>
-
-          {/* Locale switcher */}
-          <button onClick={switchLocale}
-            style={{
-              display: 'flex', alignItems: 'center', gap: '5px',
-              fontSize: '12px', fontWeight: '700',
-              color: '#F4F1E6',
-              background: 'rgba(255,255,255,0.08)',
-              border: '1px solid rgba(255,255,255,0.15)',
-              borderRadius: '7px',
-              padding: '5px 9px',
-              cursor: 'pointer',
-              letterSpacing: '0.3px',
-              transition: 'background 0.15s',
-              flexShrink: 0,
-            }}
-            onMouseEnter={e => e.currentTarget.style.background = 'rgba(255,255,255,0.15)'}
-            onMouseLeave={e => e.currentTarget.style.background = 'rgba(255,255,255,0.08)'}
-          >
-            <span style={{ fontSize: '14px' }}>{locale === 'en' ? '🇫🇷' : '🇬🇧'}</span>
-            {locale === 'en' ? 'FR' : 'EN'}
-          </button>
 
           {/* Avatar / Sign-in */}
           <div className="desktop-right">
@@ -466,12 +478,10 @@ export default function Header() {
                   style={{ fontSize: '15px', color: '#9EB7E5', textDecoration: 'none', fontWeight: '600' }}>
                   🌍 {t('Country Flags', 'Drapeaux des Pays')}
                 </Link>
-                {FLAGS_MENU.orgs.map(org => (
-                  <Link key={org.key} href={`/${locale}/flags/${org.key}`} onClick={() => setMenuOpen(false)}
-                    style={{ fontSize: '15px', color: '#9EB7E5', textDecoration: 'none', fontWeight: '600' }}>
-                    {org.icon} {t(org.en, org.fr)}
-                  </Link>
-                ))}
+                <Link href={`/${locale}/organisations`} onClick={() => setMenuOpen(false)}
+                  style={{ fontSize: '15px', color: '#9EB7E5', textDecoration: 'none', fontWeight: '600' }}>
+                  🏛️ {t('Organisations', 'Organisations')}
+                </Link>
               </div>
             </div>
 

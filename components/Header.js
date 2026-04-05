@@ -41,6 +41,23 @@ const GAMES = [
   },
 ]
 
+const FLAGS_MENU = {
+  countries: {
+    icon: '🌍',
+    en: 'Country Flags',
+    fr: 'Drapeaux des Pays',
+    descEn: 'Browse all countries of the world',
+    descFr: 'Tous les drapeaux du monde',
+    href: 'countries',
+  },
+  orgs: [
+    { key: 'un',    icon: '🇺🇳', en: 'United Nations', fr: 'Nations Unies',    descEn: 'UN member states & flag', descFr: 'États membres & drapeau' },
+    { key: 'eu',    icon: '🇪🇺', en: 'European Union', fr: 'Union Européenne', descEn: 'EU member states & flag', descFr: 'États membres & drapeau' },
+    { key: 'nato',  icon: '🏴', en: 'NATO',            fr: 'OTAN',             descEn: 'NATO members & flag',     descFr: 'Membres & drapeau'      },
+    { key: 'uefa',  icon: '⚽', en: 'UEFA',            fr: 'UEFA',             descEn: 'UEFA member associations', descFr: 'Associations membres'   },
+  ]
+}
+
 // ── Moucheture d'hermine bretonne ─────────────────────────────────────────────
 function ErmineMark({ size = 28, color = '#9EB7E5' }) {
   const s = size
@@ -93,17 +110,29 @@ function ErmineMark({ size = 28, color = '#9EB7E5' }) {
   )
 }
 
+// ── Chevron icon ──────────────────────────────────────────────────────────────
+function Chevron({ open }) {
+  return (
+    <svg width="11" height="11" viewBox="0 0 11 11" fill="currentColor"
+      style={{ transform: open ? 'rotate(180deg)' : 'rotate(0)', transition: 'transform 0.2s', color: '#9EB7E5', flexShrink: 0 }}>
+      <path d="M5.5 7.5L1 2.5h9l-4.5 5z"/>
+    </svg>
+  )
+}
+
 export default function Header() {
   const locale = useLocale()
   const pathname = usePathname()
   const router = useRouter()
 
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen]   = useState(false)
   const [gamesOpen, setGamesOpen] = useState(false)
-  const [user, setUser] = useState(null)
+  const [flagsOpen, setFlagsOpen] = useState(false)
+  const [user, setUser]           = useState(null)
   const [avatarOpen, setAvatarOpen] = useState(false)
 
-  const gamesRef = useRef(null)
+  const gamesRef  = useRef(null)
+  const flagsRef  = useRef(null)
   const avatarRef = useRef(null)
 
   useEffect(() => {
@@ -115,7 +144,8 @@ export default function Header() {
 
   useEffect(() => {
     function handleClick(e) {
-      if (gamesRef.current && !gamesRef.current.contains(e.target)) setGamesOpen(false)
+      if (gamesRef.current  && !gamesRef.current.contains(e.target))  setGamesOpen(false)
+      if (flagsRef.current  && !flagsRef.current.contains(e.target))  setFlagsOpen(false)
       if (avatarRef.current && !avatarRef.current.contains(e.target)) setAvatarOpen(false)
     }
     document.addEventListener('mousedown', handleClick)
@@ -140,9 +170,7 @@ export default function Header() {
 
   const initials = user?.email?.[0]?.toUpperCase() ?? '?'
 
-  function isActive(href) {
-    return pathname.startsWith(href)
-  }
+  function isActive(href) { return pathname.startsWith(href) }
 
   const navLinkStyle = (active) => ({
     fontSize: '15px',
@@ -155,63 +183,112 @@ export default function Header() {
     whiteSpace: 'nowrap',
   })
 
+  const dropdownBtnStyle = (active) => ({
+    fontSize: '15px',
+    fontWeight: active ? '700' : '500',
+    color: active ? '#9EB7E5' : '#F4F1E6',
+    background: 'none',
+    border: 'none',
+    borderBottom: active ? '2px solid #9EB7E5' : '2px solid transparent',
+    cursor: 'pointer',
+    display: 'flex',
+    alignItems: 'center',
+    gap: '5px',
+    padding: '6px 2px',
+    transition: 'color 0.15s',
+    whiteSpace: 'nowrap',
+  })
+
+  // ── Dropdown panel shell ────────────────────────────────────────────────────
+  const DropdownPanel = ({ children, width = 280 }) => (
+    <div style={{ position: 'absolute', top: 'calc(100% + 14px)', left: '50%', transform: 'translateX(-50%)', width: `${width}px`, backgroundColor: 'white', borderRadius: '14px', boxShadow: '0 16px 48px rgba(0,0,0,0.18)', overflow: 'hidden', zIndex: 200 }}>
+      <div style={{ position: 'absolute', top: '-6px', left: '50%', transform: 'translateX(-50%) rotate(45deg)', width: '12px', height: '12px', backgroundColor: 'white', boxShadow: '-2px -2px 4px rgba(0,0,0,0.06)', zIndex: -1 }} />
+      {children}
+    </div>
+  )
+
   return (
     <header style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, backgroundColor: '#0B1F3B', boxShadow: '0 2px 16px rgba(0,0,0,0.25)' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 16px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '16px', minWidth: 0 }}>
 
-        {/* Logo */}
+        {/* ── Logo ── */}
         <Link href={`/${locale}`} style={{ textDecoration: 'none', flexShrink: 0, display: 'flex', alignItems: 'center', gap: '10px' }}>
           <img src='/logo.png' alt='KnowFlags' style={{ height: '42px', width: 'auto', display: 'block' }} />
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1px' }}>
-            <span style={{ fontSize: '18px', fontWeight: '900', color: '#ffffff', letterSpacing: '-0.3px', lineHeight: 1 }}>
-              KnowFlags
-            </span>
+            <span style={{ fontSize: '18px', fontWeight: '900', color: '#ffffff', letterSpacing: '-0.3px', lineHeight: 1 }}>KnowFlags</span>
             <span style={{ fontSize: '9px', fontWeight: '600', letterSpacing: '1.5px', color: '#FEB12F', lineHeight: 1, marginTop: '4px', display: 'block' }}>
               Learn. Play. Explore.
             </span>
           </div>
         </Link>
 
-        {/* Desktop nav */}
+        {/* ── Desktop nav ── */}
         <nav style={{ display: 'flex', alignItems: 'center', gap: '28px', flex: 1, justifyContent: 'center' }} className="desktop-nav">
 
-          {/* Country Flags */}
-          <Link href={`/${locale}/countries`} style={navLinkStyle(isActive(`/${locale}/countries`))}>
-            {t('Country Flags', 'Drapeaux · Pays')}
-          </Link>
+          {/* Flags dropdown */}
+          <div ref={flagsRef} style={{ position: 'relative' }}>
+            <button
+              onClick={() => { setFlagsOpen(o => !o); setGamesOpen(false) }}
+              style={dropdownBtnStyle(isActive(`/${locale}/countries`))}
+            >
+              {t('Flags', 'Drapeaux')}
+              <Chevron open={flagsOpen} />
+            </button>
+
+            {flagsOpen && (
+              <DropdownPanel width={300}>
+                <div style={{ padding: '8px' }}>
+                  {/* Country flags — main link */}
+                  <div
+                    onClick={() => { router.push(`/${locale}/countries`); setFlagsOpen(false) }}
+                    style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '11px 12px', borderRadius: '10px', cursor: 'pointer', transition: 'background 0.12s', marginBottom: '4px' }}
+                    onMouseEnter={e => e.currentTarget.style.backgroundColor = '#f0f4ff'}
+                    onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}
+                  >
+                    <span style={{ fontSize: '22px', width: '32px', textAlign: 'center', flexShrink: 0 }}>🌍</span>
+                    <div>
+                      <div style={{ fontSize: '14px', fontWeight: '700', color: '#0B1F3B' }}>{t('Country Flags', 'Drapeaux des Pays')}</div>
+                      <p style={{ margin: 0, fontSize: '12px', color: '#94a3b8', marginTop: '1px' }}>{t('Browse all countries of the world', 'Tous les drapeaux du monde')}</p>
+                    </div>
+                  </div>
+
+                  {/* Separator */}
+                  <div style={{ borderTop: '1px solid #f0f0f0', margin: '6px 4px', paddingTop: '6px' }}>
+                    <p style={{ margin: '0 0 6px 8px', fontSize: '10px', fontWeight: '700', color: '#94a3b8', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+                      {t('Organizations', 'Organisations')}
+                    </p>
+                    {FLAGS_MENU.orgs.map(org => (
+                      <div key={org.key}
+                        onClick={() => { router.push(`/${locale}/flags/${org.key}`); setFlagsOpen(false) }}
+                        style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '9px 12px', borderRadius: '10px', cursor: 'pointer', transition: 'background 0.12s' }}
+                        onMouseEnter={e => e.currentTarget.style.backgroundColor = '#f0f4ff'}
+                        onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}
+                      >
+                        <span style={{ fontSize: '20px', width: '32px', textAlign: 'center', flexShrink: 0 }}>{org.icon}</span>
+                        <div>
+                          <div style={{ fontSize: '13px', fontWeight: '700', color: '#0B1F3B' }}>{t(org.en, org.fr)}</div>
+                          <p style={{ margin: 0, fontSize: '11px', color: '#94a3b8', marginTop: '1px' }}>{t(org.descEn, org.descFr)}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </DropdownPanel>
+            )}
+          </div>
 
           {/* Games dropdown */}
           <div ref={gamesRef} style={{ position: 'relative' }}>
             <button
-              onClick={() => setGamesOpen(o => !o)}
-              style={{
-                fontSize: '15px',
-                fontWeight: isActive(`/${locale}/games`) ? '700' : '500',
-                color: isActive(`/${locale}/games`) ? '#9EB7E5' : '#F4F1E6',
-                background: 'none',
-                border: 'none',
-                borderBottom: isActive(`/${locale}/games`) ? '2px solid #9EB7E5' : '2px solid transparent',
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '5px',
-                padding: '6px 2px',
-                transition: 'color 0.15s',
-                whiteSpace: 'nowrap',
-              }}
+              onClick={() => { setGamesOpen(o => !o); setFlagsOpen(false) }}
+              style={dropdownBtnStyle(isActive(`/${locale}/games`))}
             >
               {t('Games', 'Jeux')}
-              <svg width="11" height="11" viewBox="0 0 11 11" fill="currentColor"
-                style={{ transform: gamesOpen ? 'rotate(180deg)' : 'rotate(0)', transition: 'transform 0.2s', color: '#9EB7E5', flexShrink: 0 }}>
-                <path d="M5.5 7.5L1 2.5h9l-4.5 5z"/>
-              </svg>
+              <Chevron open={gamesOpen} />
             </button>
 
             {gamesOpen && (
-              <div style={{ position: 'absolute', top: 'calc(100% + 14px)', left: '50%', transform: 'translateX(-50%)', width: '280px', backgroundColor: 'white', borderRadius: '14px', boxShadow: '0 16px 48px rgba(0,0,0,0.18)', overflow: 'hidden', zIndex: 200 }}>
-                {/* Caret */}
-                <div style={{ position: 'absolute', top: '-6px', left: '50%', transform: 'translateX(-50%) rotate(45deg)', width: '12px', height: '12px', backgroundColor: 'white', boxShadow: '-2px -2px 4px rgba(0,0,0,0.06)', zIndex: -1 }} />
-
+              <DropdownPanel width={280}>
                 <div style={{ padding: '8px' }}>
                   {GAMES.map(game => (
                     <div key={game.key}
@@ -223,42 +300,27 @@ export default function Header() {
                       <span style={{ fontSize: '22px', width: '32px', textAlign: 'center', flexShrink: 0 }}>{game.icon}</span>
                       <div style={{ flex: 1, minWidth: 0 }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                          <span style={{ fontSize: '14px', fontWeight: '700', color: game.soon ? '#94a3b8' : '#0B1F3B' }}>
-                            {t(game.en, game.fr)}
-                          </span>
+                          <span style={{ fontSize: '14px', fontWeight: '700', color: game.soon ? '#94a3b8' : '#0B1F3B' }}>{t(game.en, game.fr)}</span>
                           {game.soon && (
                             <span style={{ fontSize: '10px', fontWeight: '700', color: '#806D40', backgroundColor: '#fef3c7', padding: '1px 6px', borderRadius: '99px' }}>
                               {t('Soon', 'Bientôt')}
                             </span>
                           )}
                         </div>
-                        <p style={{ margin: 0, fontSize: '12px', color: '#94a3b8', marginTop: '1px' }}>
-                          {t(game.descEn, game.descFr)}
-                        </p>
+                        <p style={{ margin: 0, fontSize: '12px', color: '#94a3b8', marginTop: '1px' }}>{t(game.descEn, game.descFr)}</p>
                       </div>
                     </div>
                   ))}
                 </div>
-
                 <div style={{ borderTop: '1px solid #f0f0f0', padding: '10px 16px' }}>
                   <Link href={`/${locale}/games`} onClick={() => setGamesOpen(false)}
                     style={{ fontSize: '13px', color: '#9EB7E5', textDecoration: 'none', fontWeight: '600' }}>
                     {t('View all games →', 'Voir tous les jeux →')}
                   </Link>
                 </div>
-              </div>
+              </DropdownPanel>
             )}
           </div>
-
-          {/* Submit */}
-          <Link href={`/${locale}/submit`} style={navLinkStyle(isActive(`/${locale}/submit`))}>
-            {t('Submit', 'Soumettre')}
-          </Link>
-
-          {/* Shop */}
-          <Link href={`/${locale}/shop`} style={navLinkStyle(isActive(`/${locale}/shop`))}>
-            {t('Shop', 'Shop')}
-          </Link>
 
           {/* Community */}
           <a href='https://knowflags.discourse.group/' target='_blank' rel='noopener noreferrer' style={navLinkStyle(false)}>
@@ -269,7 +331,6 @@ export default function Header() {
           <Link href={`/${locale}/blog`} style={navLinkStyle(isActive(`/${locale}/blog`))}>
             {t('Blog', 'Blog')}
           </Link>
-  
 
           {/* True Size Map */}
           <Link href={`/${locale}/true-size`} style={navLinkStyle(isActive(`/${locale}/true-size`))}>
@@ -277,17 +338,74 @@ export default function Header() {
           </Link>
         </nav>
 
+        {/* ── Right side ── */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
 
-        {/* Right side — desktop: locale + avatar/login | mobile: locale + burger only */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexShrink: 0 }}>
+          {/* Submit — CTA button */}
+          <Link href={`/${locale}/submit`}
+            style={{
+              fontSize: '13px', fontWeight: '700',
+              color: '#FEB12F',
+              background: 'rgba(254,177,47,0.12)',
+              border: '1.5px solid rgba(254,177,47,0.35)',
+              borderRadius: '8px',
+              padding: '6px 13px',
+              textDecoration: 'none',
+              whiteSpace: 'nowrap',
+              transition: 'background 0.15s',
+            }}
+            className="submit-btn desktop-right"
+            onMouseEnter={e => e.currentTarget.style.background = 'rgba(254,177,47,0.22)'}
+            onMouseLeave={e => e.currentTarget.style.background = 'rgba(254,177,47,0.12)'}
+          >
+            {t('+ Submit', '+ Soumettre')}
+          </Link>
 
-          {/* Locale switcher — always visible */}
+          {/* Shop — cart icon */}
+          <Link href={`/${locale}/shop`}
+            title={t('Shop', 'Boutique')}
+            style={{
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              width: '34px', height: '34px',
+              color: isActive(`/${locale}/shop`) ? '#9EB7E5' : 'rgba(244,241,230,0.7)',
+              textDecoration: 'none',
+              transition: 'color 0.15s',
+              flexShrink: 0,
+            }}
+            className="desktop-right"
+            onMouseEnter={e => e.currentTarget.style.color = '#9EB7E5'}
+            onMouseLeave={e => e.currentTarget.style.color = isActive(`/${locale}/shop`) ? '#9EB7E5' : 'rgba(244,241,230,0.7)'}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <path d="M16 10a4 4 0 01-8 0"/>
+            </svg>
+          </Link>
+
+          {/* Locale switcher */}
           <button onClick={switchLocale}
-            style={{ fontSize: '13px', fontWeight: '700', color: '#F4F1E6', background: 'rgba(255,255,255,0.1)', border: 'none', borderRadius: '6px', padding: '5px 10px', cursor: 'pointer', letterSpacing: '0.5px' }}>
+            style={{
+              display: 'flex', alignItems: 'center', gap: '5px',
+              fontSize: '12px', fontWeight: '700',
+              color: '#F4F1E6',
+              background: 'rgba(255,255,255,0.08)',
+              border: '1px solid rgba(255,255,255,0.15)',
+              borderRadius: '7px',
+              padding: '5px 9px',
+              cursor: 'pointer',
+              letterSpacing: '0.3px',
+              transition: 'background 0.15s',
+              flexShrink: 0,
+            }}
+            onMouseEnter={e => e.currentTarget.style.background = 'rgba(255,255,255,0.15)'}
+            onMouseLeave={e => e.currentTarget.style.background = 'rgba(255,255,255,0.08)'}
+          >
+            <span style={{ fontSize: '14px' }}>{locale === 'en' ? '🇫🇷' : '🇬🇧'}</span>
             {locale === 'en' ? 'FR' : 'EN'}
           </button>
 
-          {/* Avatar / Sign-in — hidden on mobile, shown via drawer */}
+          {/* Avatar / Sign-in */}
           <div className="desktop-right">
             {user ? (
               <div ref={avatarRef} style={{ position: 'relative' }}>
@@ -335,14 +453,29 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile drawer */}
+      {/* ── Mobile drawer ── */}
       {menuOpen && (
         <div style={{ backgroundColor: '#0B1F3B', borderTop: '1px solid rgba(255,255,255,0.1)', padding: '16px 24px 24px' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-            <Link href={`/${locale}/countries`} onClick={() => setMenuOpen(false)}
-              style={{ padding: '12px 0', fontSize: '16px', color: '#F4F1E6', textDecoration: 'none', fontWeight: '500', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-              {t('Country Flags', 'Drapeaux · Pays')}
-            </Link>
+
+            {/* Flags section */}
+            <div style={{ borderBottom: '1px solid rgba(255,255,255,0.08)', paddingBottom: '8px' }}>
+              <div style={{ padding: '12px 0', fontSize: '16px', color: '#F4F1E6', fontWeight: '600' }}>{t('Flags', 'Drapeaux')}</div>
+              <div style={{ paddingLeft: '12px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                <Link href={`/${locale}/countries`} onClick={() => setMenuOpen(false)}
+                  style={{ fontSize: '15px', color: '#9EB7E5', textDecoration: 'none', fontWeight: '600' }}>
+                  🌍 {t('Country Flags', 'Drapeaux des Pays')}
+                </Link>
+                {FLAGS_MENU.orgs.map(org => (
+                  <Link key={org.key} href={`/${locale}/flags/${org.key}`} onClick={() => setMenuOpen(false)}
+                    style={{ fontSize: '15px', color: '#9EB7E5', textDecoration: 'none', fontWeight: '600' }}>
+                    {org.icon} {t(org.en, org.fr)}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Games section */}
             <div style={{ borderBottom: '1px solid rgba(255,255,255,0.08)', paddingBottom: '8px' }}>
               <div style={{ padding: '12px 0', fontSize: '16px', color: '#F4F1E6', fontWeight: '600' }}>{t('Games', 'Jeux')}</div>
               <div style={{ paddingLeft: '12px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
@@ -357,22 +490,28 @@ export default function Header() {
                 ))}
               </div>
             </div>
-            <Link href={`/${locale}/submit`} onClick={() => setMenuOpen(false)}
-              style={{ padding: '12px 0', fontSize: '16px', color: '#F4F1E6', textDecoration: 'none', fontWeight: '500', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-              {t('Submit', 'Soumettre')}
-            </Link>
-            <Link href={`/${locale}/shop`} onClick={() => setMenuOpen(false)}
-              style={{ padding: '12px 0', fontSize: '16px', color: '#F4F1E6', textDecoration: 'none', fontWeight: '500', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-              {t('Shop', 'Shop')}
-            </Link>
+
             <a href='https://knowflags.discourse.group/' target='_blank' rel='noopener noreferrer' onClick={() => setMenuOpen(false)}
               style={{ padding: '12px 0', fontSize: '16px', color: '#F4F1E6', textDecoration: 'none', fontWeight: '500', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
               {t('Community', 'Communauté')}
             </a>
-
             <Link href={`/${locale}/blog`} onClick={() => setMenuOpen(false)}
               style={{ padding: '12px 0', fontSize: '16px', color: '#F4F1E6', textDecoration: 'none', fontWeight: '500', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
               {t('Blog', 'Blog')}
+            </Link>
+            <Link href={`/${locale}/true-size`} onClick={() => setMenuOpen(false)}
+              style={{ padding: '12px 0', fontSize: '16px', color: '#F4F1E6', textDecoration: 'none', fontWeight: '500', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
+              {t('True Size Map', 'Carte Taille Réelle')}
+            </Link>
+            <Link href={`/${locale}/shop`} onClick={() => setMenuOpen(false)}
+              style={{ padding: '12px 0', fontSize: '16px', color: '#F4F1E6', textDecoration: 'none', fontWeight: '500', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
+              🛍️ {t('Shop', 'Boutique')}
+            </Link>
+
+            {/* Submit CTA in drawer */}
+            <Link href={`/${locale}/submit`} onClick={() => setMenuOpen(false)}
+              style={{ display: 'block', marginTop: '12px', padding: '12px', textAlign: 'center', fontSize: '15px', fontWeight: '700', color: '#FEB12F', backgroundColor: 'rgba(254,177,47,0.12)', border: '1.5px solid rgba(254,177,47,0.35)', borderRadius: '10px', textDecoration: 'none' }}>
+              {t('+ Submit a Flag', '+ Soumettre un drapeau')}
             </Link>
 
             {/* Auth in drawer */}
@@ -389,7 +528,7 @@ export default function Header() {
               </div>
             ) : (
               <Link href={`/${locale}/auth/login`} onClick={() => setMenuOpen(false)}
-                style={{ display: 'block', marginTop: '12px', padding: '12px', textAlign: 'center', fontSize: '15px', fontWeight: '700', color: '#0B1F3B', backgroundColor: '#9EB7E5', borderRadius: '10px', textDecoration: 'none' }}>
+                style={{ display: 'block', marginTop: '8px', padding: '12px', textAlign: 'center', fontSize: '15px', fontWeight: '700', color: '#0B1F3B', backgroundColor: '#9EB7E5', borderRadius: '10px', textDecoration: 'none' }}>
                 {t('Sign in', 'Connexion')}
               </Link>
             )}

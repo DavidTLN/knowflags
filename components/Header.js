@@ -41,22 +41,36 @@ const GAMES = [
   },
 ]
 
-const FLAGS_MENU = {
-  countries: {
+const FLAGS_MENU = [
+  {
+    href: 'countries',
     icon: '🌍',
-    en: 'Country Flags',
-    fr: 'Drapeaux des Pays',
-    descEn: 'Browse all countries of the world',
+    en: 'Country Flags',     fr: 'Drapeaux des Pays',
+    descEn: 'All countries of the world',
     descFr: 'Tous les drapeaux du monde',
   },
-  organisations: {
+  {
+    href: 'flags/regions',
+    icon: '🗺️',
+    en: 'Regions & States',  fr: 'Régions & États',
+    descEn: 'Provinces, cantons, Bundesländer…',
+    descFr: 'Provinces, cantons, Bundesländer…',
+  },
+  {
+    href: 'flags/cities',
+    icon: '🏙️',
+    en: 'City Flags',        fr: 'Drapeaux des Villes',
+    descEn: 'Major cities around the world',
+    descFr: 'Grandes villes du monde entier',
+  },
+  {
+    href: 'organisations',
     icon: '🏛️',
-    en: 'Organisations',
-    fr: 'Organisations',
+    en: 'Organisations',     fr: 'Organisations',
     descEn: 'UN, EU, NATO, FIFA and more',
     descFr: 'ONU, UE, OTAN, FIFA et plus',
   },
-}
+]
 
 // ── Moucheture d'hermine bretonne ─────────────────────────────────────────────
 function ErmineMark({ size = 28, color = '#9EB7E5' }) {
@@ -238,20 +252,17 @@ export default function Header() {
             {flagsOpen && (
               <DropdownPanel width={300}>
                 <div style={{ padding: '8px' }}>
-                  {[
-                    { href: `/${locale}/countries`, icon: FLAGS_MENU.countries.icon, en: FLAGS_MENU.countries.en, fr: FLAGS_MENU.countries.fr, descEn: FLAGS_MENU.countries.descEn, descFr: FLAGS_MENU.countries.descFr },
-                    { href: `/${locale}/organisations`, icon: FLAGS_MENU.organisations.icon, en: FLAGS_MENU.organisations.en, fr: FLAGS_MENU.organisations.fr, descEn: FLAGS_MENU.organisations.descEn, descFr: FLAGS_MENU.organisations.descFr },
-                  ].map(item => (
+                  {FLAGS_MENU.map(item => (
                     <div key={item.href}
-                      onClick={() => { router.push(item.href); setFlagsOpen(false) }}
-                      style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '12px', borderRadius: '10px', cursor: 'pointer', transition: 'background 0.12s' }}
+                      onClick={() => { router.push(`/${locale}/${item.href}`); setFlagsOpen(false) }}
+                      style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '11px 12px', borderRadius: '10px', cursor: 'pointer', transition: 'background 0.12s' }}
                       onMouseEnter={e => e.currentTarget.style.backgroundColor = '#f0f4ff'}
                       onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}
                     >
-                      <span style={{ fontSize: '22px', width: '32px', textAlign: 'center', flexShrink: 0 }}>{item.icon}</span>
+                      <span style={{ fontSize: '20px', width: '28px', textAlign: 'center', flexShrink: 0 }}>{item.icon}</span>
                       <div>
-                        <div style={{ fontSize: '14px', fontWeight: '700', color: '#0B1F3B' }}>{t(item.en, item.fr)}</div>
-                        <p style={{ margin: 0, fontSize: '12px', color: '#94a3b8', marginTop: '1px' }}>{t(item.descEn, item.descFr)}</p>
+                        <div style={{ fontSize: '13px', fontWeight: '700', color: '#0B1F3B' }}>{t(item.en, item.fr)}</div>
+                        <p style={{ margin: 0, fontSize: '11px', color: '#94a3b8', marginTop: '1px' }}>{t(item.descEn, item.descFr)}</p>
                       </div>
                     </div>
                   ))}
@@ -474,14 +485,13 @@ export default function Header() {
             <div style={{ borderBottom: '1px solid rgba(255,255,255,0.08)', paddingBottom: '8px' }}>
               <div style={{ padding: '12px 0', fontSize: '16px', color: '#F4F1E6', fontWeight: '600' }}>{t('Flags', 'Drapeaux')}</div>
               <div style={{ paddingLeft: '12px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                <Link href={`/${locale}/countries`} onClick={() => setMenuOpen(false)}
-                  style={{ fontSize: '15px', color: '#9EB7E5', textDecoration: 'none', fontWeight: '600' }}>
-                  🌍 {t('Country Flags', 'Drapeaux des Pays')}
-                </Link>
-                <Link href={`/${locale}/organisations`} onClick={() => setMenuOpen(false)}
-                  style={{ fontSize: '15px', color: '#9EB7E5', textDecoration: 'none', fontWeight: '600' }}>
-                  🏛️ {t('Organisations', 'Organisations')}
-                </Link>
+                {FLAGS_MENU.map(item => (
+                  <Link key={item.href} href={`/${locale}/${item.href}`} onClick={() => setMenuOpen(false)}
+                    style={{ fontSize: '15px', color: '#9EB7E5', textDecoration: 'none', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <span>{item.icon}</span>
+                    {t(item.en, item.fr)}
+                  </Link>
+                ))}
               </div>
             </div>
 

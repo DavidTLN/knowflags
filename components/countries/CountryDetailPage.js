@@ -1,23 +1,173 @@
 'use client'
 import { createClient } from '@/lib/supabase-client'
-
 import { useParams } from 'next/navigation'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import FlagImage from '@/components/FlagImage'
 import { useLocale } from 'next-intl'
-
-// Same data as CountriesPage — in production you'd import from a shared file
-// COUNTRIES loaded from Supabase
 
 const REGION_LABELS = { Africa: 'Afrique', Americas: 'Amériques', Asia: 'Asie', Europe: 'Europe', Oceania: 'Océanie' }
 
+// ── CountryFlagsSection ──────────────────────────────────────────────────────
+function CountryFlagsSection({ countryIso2 }) {
+  const locale = useLocale()
+  const t = (en, fr) => locale === 'fr' ? fr : en
+
+  const [regions, setRegions]     = useState([])
+  const [cities, setCities]       = useState([])
+  const [orgs, setOrgs]           = useState([])
+  const [activeTab, setActiveTab] = useState('regions')
+  const [loading, setLoading]     = useState(true)
+
+  useEffect(() => {
+    if (!countryIso2) return
+    const supabase = createClient()
+
+    supabase
+      .from('flag_taxonomy')
+      .select('id')
+      .eq('flag_type', 'country')
+      .eq('metadata->>iso2', countryIso2.toLowerCase())
+      .single()
+      .then(({ data: country }) => {
+        if (!country) { setLoading(false); return }
+        supabase
+          .from('flag_taxonomy')
+          .select('id, slug, name_en, name_fr, flag_type, image_path, sort_order, parent:parent_id(name_en, name_fr)')
+          .eq('country_id', country.id)
+          .neq('id', country.id)
+          .order('sort_order')
+          .then(({ data }) => {
+            const all = data ?? []
+            const r = all.filter(f => f.flag_type === 'region')
+            const c = all.filter(f => f.flag_type === 'city')
+            const o = all.filter(f => f.flag_type === 'organisation')
+            setRegions(r)
+            setCities(c)
+            setOrgs(o)
+            if (r.length === 0 && c.length > 0) setActiveTab('cities')
+            else if (r.length === 0 && o.length > 0) setActiveTab('orgs')
+            setLoading(false)
+          })
+      })
+  }, [countryIso2])
+
+  const tabs = [
+    { key: 'regions', label: t('Regions', 'Régions'),           count: regions.length },
+    { key: 'cities',  label: t('Cities', 'Villes'),             count: cities.length },
+    { key: 'orgs',    label: t('Organisations', 'Organisations'),count: orgs.length },
+  ].filter(tab => tab.count > 0)
+
+  if (!loading && tabs.length === 0) return null
+
+  const current = activeTab === 'regions' ? regions : activeTab === 'cities' ? cities : orgs
+
+  return (
+    <section style={{ marginTop: '48px', fontFamily: 'var(--font-body, Arial)' }}>
+      {/* Header + tabs */}
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px', flexWrap: 'wrap', gap: '12px' }}>
+        <h2 style={{ margin: 0, fontSize: '22px', fontWeight: '900', color: '#0B1F3B', fontFamily: 'var(--font-display, Arial)' }}>
+          {t('Sub-national Flags', 'Drapeaux Infranationaux')}
+        </h2>
+        {tabs.length > 1 && (
+          <div style={{ display: 'flex', gap: '4px', backgroundColor: '#F4F1E6', borderRadius: '10px', padding: '4px' }}>
+            {tabs.map(tab => (
+              <button key={tab.key} onClick={() => setActiveTab(tab.key)}
+                style={{
+                  padding: '6px 14px', borderRadius: '7px', border: 'none', cursor: 'pointer',
+                  fontSize: '13px', fontWeight: '600',
+                  backgroundColor: activeTab === tab.key ? 'white' : 'transparent',
+                  color: activeTab === tab.key ? '#0B1F3B' : '#8A8278',
+                  boxShadow: activeTab === tab.key ? '0 1px 4px rgba(0,0,0,0.1)' : 'none',
+                  transition: 'all 0.15s',
+                  display: 'flex', alignItems: 'center', gap: '6px',
+                }}>
+                {tab.label}
+                <span style={{
+                  fontSize: '10px', fontWeight: '700', borderRadius: '99px', padding: '1px 6px',
+                  backgroundColor: activeTab === tab.key ? '#0B1F3B' : '#E2DDD5',
+                  color: activeTab === tab.key ? 'white' : '#8A8278',
+                }}>
+                  {tab.count}
+                </span>
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* Cards grid */}
+      {loading ? (
+        <div style={{ height: '120px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#94a3b8', fontSize: '14px' }}>
+          {t('Loading...', 'Chargement...')}
+        </div>
+      ) : (
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(180px, calc(50% - 7px)), 1fr))', gap: '14px' }}>
+          {current.map(flag => {
+            const name = locale === 'fr' ? flag.name_fr : flag.name_en
+            const parentName = flag.parent
+              ? (locale === 'fr' ? flag.parent.name_fr : flag.parent.name_en)
+              : null
+            return (
+              <SubFlagCard
+                key={flag.slug}
+                slug={flag.slug}
+                name={name}
+                parentName={activeTab === 'cities' ? parentName : null}
+                imagePath={flag.image_path}
+              />
+            )
+          })}
+        </div>
+      )}
+    </section>
+  )
+}
+
+function SubFlagCard({ slug, name, parentName, imagePath }) {
+  const [hovered, setHovered] = useState(false)
+  return (
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        backgroundColor: 'white', borderRadius: '12px', overflow: 'hidden',
+        boxShadow: hovered ? '0 8px 24px rgba(0,0,0,0.10)' : '0 1px 6px rgba(0,0,0,0.06)',
+        transition: 'all 0.18s', transform: hovered ? 'translateY(-2px)' : 'none',
+        cursor: 'pointer', border: '1px solid #F0EEE8',
+      }}
+    >
+      <div style={{ height: '120px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '12px' }}>
+        <FlagImage
+          slug={slug}
+          prefix={imagePath?.includes?.('/cities/') ? '/flags/cities' : '/flags/regions'}
+          name={name}
+          color="#0B1F3B"
+          width={150} height={96}
+        />
+      </div>
+      <div style={{ padding: '8px 10px' }}>
+        <div style={{ fontSize: '12px', fontWeight: '700', color: '#0B1F3B', lineHeight: 1.3, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+          {name}
+        </div>
+        {parentName && (
+          <div style={{ fontSize: '10px', color: '#94a3b8', marginTop: '2px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+            {parentName}
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}
+
+// ── CountryDetailPage ────────────────────────────────────────────────────────
 export default function CountryDetailPage() {
   const { code } = useParams()
   const locale = useLocale()
   const t = (en, fr) => locale === 'fr' ? fr : en
 
-  const [country, setCountry] = useState(null)
-  const [loading, setLoading] = useState(true)
+  const [country, setCountry]               = useState(null)
+  const [loading, setLoading]               = useState(true)
   const [relatedCountries, setRelatedCountries] = useState([])
 
   useEffect(() => {
@@ -25,7 +175,7 @@ export default function CountryDetailPage() {
     const supabase = createClient()
     supabase
       .from('countries')
-      .select('iso_code, name_en, name_fr, region, capital, capital_fr, colors, symbols, ratio, shape, population, area_km2, adopted_year, has_weapons, has_blade, has_firearm')
+      .select('iso_code, name_en, name_fr, region, capital, capital_fr, colors, symbols, ratio, shape, population, area_km2, adopted_year')
       .eq('iso_code', code.toLowerCase())
       .single()
       .then(({ data }) => {
@@ -45,7 +195,6 @@ export default function CountryDetailPage() {
             adopted_year: data.adopted_year,
           }
           setCountry(c)
-          // Fetch related countries in same region
           supabase
             .from('countries')
             .select('iso_code, name_en, name_fr')
@@ -62,11 +211,10 @@ export default function CountryDetailPage() {
       })
   }, [code])
 
-  // country is loaded from Supabase via useEffect above
   if (loading) {
     return (
       <div style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <p style={{ color: '#8A8278', fontSize: '16px' }}>{locale === 'fr' ? 'Chargement...' : 'Loading...'}</p>
+        <p style={{ color: '#8A8278', fontSize: '16px' }}>{t('Loading...', 'Chargement...')}</p>
       </div>
     )
   }
@@ -85,12 +233,9 @@ export default function CountryDetailPage() {
     )
   }
 
-  const name = locale === 'fr' ? country.fr : country.en
+  const name    = locale === 'fr' ? country.fr : country.en
   const capital = country.capital ? (locale === 'fr' ? country.capital.fr : country.capital.en) : '—'
-  const region = locale === 'fr' ? REGION_LABELS[country.region] : country.region
-
-  // Related: same region, fetched from Supabase via useEffect
-  const related = relatedCountries
+  const region  = locale === 'fr' ? REGION_LABELS[country.region] : country.region
 
   const COLOR_HEX = { red: '#ef4444', blue: '#3b82f6', green: '#22c55e', yellow: '#eab308', white: '#e5e7eb', black: '#1f2937', orange: '#f97316', maroon: '#7f1d1d' }
 
@@ -129,9 +274,9 @@ export default function CountryDetailPage() {
             {/* Info cards */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '24px' }}>
               {[
-                { label: t('Capital', 'Capitale'), value: capital, icon: '🏙️' },
-                { label: t('Region', 'Région'), value: region, icon: '🌍' },
-                { label: t('ISO Code', 'Code ISO'), value: country.code.toUpperCase(), icon: '🔤' },
+                { label: t('Capital', 'Capitale'),   value: capital,               icon: '🏙️' },
+                { label: t('Region', 'Région'),       value: region,                icon: '🌍' },
+                { label: t('ISO Code', 'Code ISO'),   value: country.code.toUpperCase(), icon: '🔤' },
               ].map((item, i) => (
                 <div key={i} style={{ backgroundColor: 'white', borderRadius: '12px', padding: '14px 16px', border: '1px solid #e2e8f0' }}>
                   <p style={{ margin: '0 0 2px', fontSize: '11px', color: '#94a3b8', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{item.label}</p>
@@ -175,8 +320,11 @@ export default function CountryDetailPage() {
           </div>
         </div>
 
+        {/* ── Sub-national flags section ── */}
+        <CountryFlagsSection countryIso2={country.code} />
+
         {/* Play games CTA */}
-        <div style={{ backgroundColor: '#0B1F3B', borderRadius: '16px', padding: '24px 28px', marginBottom: '40px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px' }}>
+        <div style={{ backgroundColor: '#0B1F3B', borderRadius: '16px', padding: '24px 28px', marginTop: '48px', marginBottom: '40px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px' }}>
           <div>
             <h2 style={{ margin: '0 0 4px', fontSize: '20px', fontWeight: '900', color: 'white' }}>
               {t('Test your knowledge!', 'Testez vos connaissances !')}
@@ -192,13 +340,13 @@ export default function CountryDetailPage() {
         </div>
 
         {/* Related countries */}
-        {related.length > 0 && (
+        {relatedCountries.length > 0 && (
           <div>
             <h2 style={{ fontSize: '20px', fontWeight: '900', color: '#0B1F3B', margin: '0 0 16px', letterSpacing: '-0.5px' }}>
               {t(`More from ${region}`, `Autres pays — ${region}`)}
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '12px' }}>
-              {related.map(c => {
+              {relatedCountries.map(c => {
                 const cName = locale === 'fr' ? c.fr : c.en
                 return (
                   <Link key={c.code} href={`/${locale}/countries/${c.code}`}

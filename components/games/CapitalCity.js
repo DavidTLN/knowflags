@@ -268,11 +268,7 @@ export default function CapitalCity() {
     setTypeInput('')
     setTypeResult(null)
     setTimer(TIMER_SECONDS)
-    scoreRef.current = 0
-    setScore(0)
-    setBestScore(0)
-    setElapsed(0)
-    startSessionTimer()
+    // NOTE: score and elapsed are NOT reset here — only on startGame()
   }, [getPool, questionMode, answerMode])
 
   // ── Start ───────────────────────────────────────────────────────────────────
@@ -715,4 +711,82 @@ export default function CapitalCity() {
         </div>
       </div>
     )
-  }}
+  }
+
+  // ─── GAME OVER SCREEN ────────────────────────────────────────────────────
+  if (screen === SCREEN.GAME_OVER) {
+    const total   = history.length
+    const correct = history.filter(h => h.isCorrect).length
+    const pct     = total > 0 ? Math.round((correct / total) * 100) : 0
+    const wrong   = history.filter(h => !h.isCorrect)
+
+    return (
+      <div style={{ backgroundColor: C.cream, minHeight: '100vh', fontFamily: 'var(--font-body)', padding: '32px 16px 60px' }}>
+        <div style={{ maxWidth: '520px', margin: '0 auto' }}>
+
+          <div style={{ textAlign: 'center', marginBottom: '28px' }}>
+            <div style={{ fontSize: '52px', marginBottom: '10px' }}>{pct >= 80 ? '🏆' : pct >= 50 ? '🎯' : '💪'}</div>
+            <h2 style={{ margin: '0 0 4px', fontSize: '26px', fontWeight: '900', color: C.navy }}>
+              {t('Game Over', 'Partie terminée')}
+            </h2>
+            <p style={{ margin: 0, color: C.muted, fontSize: '14px' }}>
+              {total} {t('questions', 'questions')} · {formatTime(elapsed)}
+            </p>
+          </div>
+
+          {/* Stats */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '10px', marginBottom: '20px' }}>
+            {[
+              { label: t('Correct', 'Corrects'),            value: `${correct}/${total}`,             color: C.green, bg: '#f0fdf4' },
+              { label: t('Best streak', 'Meilleure série'), value: `🔥 ${bestStreak}`,                color: '#806D40', bg: '#fefce8' },
+              { label: t('Accuracy', 'Précision'),          value: `${pct}%`,                         color: C.navy,  bg: 'white' },
+              { label: t('Score', 'Score'),                 value: `⭐ ${score.toLocaleString()}`,    color: C.green, bg: '#f0fdf4' },
+            ].map((s, i) => (
+              <div key={i} style={{ backgroundColor: s.bg, borderRadius: '10px', border: `1px solid ${C.border}`, padding: '14px 10px', textAlign: 'center' }}>
+                <div style={{ fontSize: '20px', fontWeight: '900', color: s.color }}>{s.value}</div>
+                <div style={{ fontSize: '10px', fontWeight: '700', color: C.muted, marginTop: '3px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{s.label}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Wrong answers */}
+          {wrong.length > 0 && (
+            <div style={{ backgroundColor: 'white', borderRadius: '14px', border: `1px solid ${C.border}`, padding: '18px', marginBottom: '20px' }}>
+              <p style={{ margin: '0 0 14px', fontSize: '12px', fontWeight: '800', color: C.muted, textTransform: 'uppercase', letterSpacing: '0.8px' }}>
+                {t('Missed', 'Manqués')} ({wrong.length})
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                {wrong.slice(0, 10).map((h, i) => (
+                  <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '9px 11px', backgroundColor: '#fafafa', borderRadius: '8px', border: `1px solid ${C.border}` }}>
+                    <img src={`https://flagcdn.com/w80/${h.question.correct.code}.png`} alt=""
+                      style={{ width: '44px', height: '30px', objectFit: 'contain', borderRadius: '4px', backgroundColor: '#e8e4d9', flexShrink: 0, padding: '2px' }} />
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <div style={{ fontSize: '13px', fontWeight: '700', color: C.navy }}>{getName(h.question.correct)}</div>
+                      <div style={{ fontSize: '11px', color: C.red, marginTop: '1px' }}>
+                        {t('Capital:', 'Capitale :')} <strong>{h.question.correct.capital}</strong>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            <button onClick={startGame}
+              style={{ width: '100%', padding: '15px', backgroundColor: C.navy, color: 'white', border: 'none', borderRadius: '10px', fontSize: '16px', fontWeight: '900', cursor: 'pointer' }}>
+              {t('Play Again', 'Rejouer')} 🔄
+            </button>
+            <button onClick={() => setScreen(SCREEN.SETUP)}
+              style={{ width: '100%', padding: '13px', backgroundColor: 'white', color: C.navy, border: `1.5px solid ${C.border}`, borderRadius: '10px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
+              {t('Change settings', 'Modifier les réglages')}
+            </button>
+          </div>
+
+        </div>
+      </div>
+    )
+  }
+
+  return null
+}

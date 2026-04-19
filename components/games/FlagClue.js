@@ -25,28 +25,26 @@ export default function FlagClue() {
   const locale = useLocale()
   const t = (en, fr) => locale === 'fr' ? fr : en
 
-  const [screen, setScreen]       = useState('intro')  // intro | playing | gameover
-  const [mode, setMode]           = useState(null)     // 'clue2flag' | 'flag2clue'
+  const [screen, setScreen]       = useState('intro')
+  const [mode, setMode]           = useState(null)
   const [countries, setCountries] = useState([])
-  const [facts, setFacts]         = useState([])        // all facts indexed by code
+  const [facts, setFacts]         = useState({})
   const [loading, setLoading]     = useState(true)
 
-  // Game state
-  const [score, setScore]         = useState(0)
-  const [lives, setLives]         = useState(MAX_LIVES)
-  const [streak, setStreak]       = useState(0)
+  const [score, setScore]           = useState(0)
+  const [lives, setLives]           = useState(MAX_LIVES)
+  const [streak, setStreak]         = useState(0)
   const [bestStreak, setBestStreak] = useState(0)
-  const [question, setQuestion]   = useState(null)
-  const [answered, setAnswered]   = useState(null)     // null | 'correct' | 'wrong'
-  const [timer, setTimer]         = useState(TIMER_SECS)
-  const [lastPts, setLastPts]     = useState(null)
-  const [history, setHistory]     = useState([])
+  const [question, setQuestion]     = useState(null)
+  const [answered, setAnswered]     = useState(null)
+  const [timer, setTimer]           = useState(TIMER_SECS)
+  const [lastPts, setLastPts]       = useState(null)
+  const [history, setHistory]       = useState([])
   const timerRef  = useRef(null)
   const livesRef  = useRef(MAX_LIVES)
   const scoreRef  = useRef(0)
   const streakRef = useRef(0)
 
-  // Load data
   useEffect(() => {
     const supabase = createClient()
     Promise.all([
@@ -55,7 +53,6 @@ export default function FlagClue() {
     ]).then(([{ data: c }, { data: f }]) => {
       if (c) setCountries(c)
       if (f) {
-        // Index facts by country code
         const idx = {}
         for (const fact of f) {
           if (!idx[fact.country_code]) idx[fact.country_code] = []
@@ -83,7 +80,6 @@ export default function FlagClue() {
     setLastPts(null)
     clearInterval(timerRef.current)
 
-    // Pick a country that has facts
     const eligible = countries.filter(c => facts[c.iso_code]?.length >= 4)
     if (eligible.length < 4) return
 
@@ -93,14 +89,11 @@ export default function FlagClue() {
 
     let q
     if (m === 'clue2flag') {
-      // Show 1 fact → choose correct country from 4
       const fact = correctFacts[0]
       const distractors = shuffle(shuffled.slice(1)).slice(0, 3)
       const options = shuffle([correct, ...distractors])
       q = { type: 'clue2flag', fact, correct, options }
     } else {
-      // Show country name → choose correct fact from 4
-      // Distractors: facts from 3 other countries
       const wrongCountries = shuffle(shuffled.slice(1)).slice(0, 3)
       const correctFact  = correctFacts[0]
       const wrongFacts   = wrongCountries.map(wc => {
@@ -114,7 +107,6 @@ export default function FlagClue() {
     setQuestion(q)
     setTimer(TIMER_SECS)
 
-    // Start countdown
     timerRef.current = setInterval(() => {
       setTimer(prev => {
         if (prev <= 1) {
@@ -138,7 +130,7 @@ export default function FlagClue() {
     if (newLives <= 0) {
       setTimeout(() => setScreen('gameover'), 1800)
     } else {
-      setTimeout(() => nextQuestion(mode), 2000)
+      setTimeout(() => nextQuestion(mode), 2200)
     }
   }
 
@@ -152,30 +144,27 @@ export default function FlagClue() {
 
     if (isCorrect) {
       const pts = calcPoints(timer)
-      const newScore  = scoreRef.current + pts
-      const newStreak = streakRef.current + 1
-      scoreRef.current  = newScore
-      streakRef.current = newStreak
-      setScore(newScore)
-      setStreak(newStreak)
-      setBestStreak(prev => Math.max(prev, newStreak))
+      scoreRef.current  += pts
+      streakRef.current += 1
+      setScore(scoreRef.current)
+      setStreak(streakRef.current)
+      setBestStreak(prev => Math.max(prev, streakRef.current))
       setLastPts(pts)
       setAnswered('correct')
       setHistory(h => [...h, { correct: true, country: question.correct, pts }])
       setTimeout(() => nextQuestion(mode), 1800)
     } else {
-      const newLives = livesRef.current - 1
-      livesRef.current = newLives
-      streakRef.current = 0
-      setLives(newLives)
+      livesRef.current  -= 1
+      streakRef.current  = 0
+      setLives(livesRef.current)
       setStreak(0)
       setLastPts(0)
       setAnswered('wrong')
       setHistory(h => [...h, { correct: false, country: question.correct, pts: 0 }])
-      if (newLives <= 0) {
+      if (livesRef.current <= 0) {
         setTimeout(() => setScreen('gameover'), 1800)
       } else {
-        setTimeout(() => nextQuestion(mode), 2000)
+        setTimeout(() => nextQuestion(mode), 2200)
       }
     }
   }
@@ -200,11 +189,11 @@ export default function FlagClue() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '28px' }}>
               {[
                 { id: 'clue2flag', icon: '💡', en: 'Clue → Country', fr: 'Anecdote → Pays',
-                  descEn: 'Read a fun fact about a flag or country. Find which country it refers to.',
-                  descFr: 'Lisez une anecdote sur un drapeau ou pays. Trouvez de quel pays il s\'agit.' },
+                  descEn: 'Read a fact. Guess the country — flag stays hidden until you answer!',
+                  descFr: "Lisez une anecdote. Devinez le pays — le drapeau reste masqué jusqu'à votre réponse !" },
                 { id: 'flag2clue', icon: '🏳️', en: 'Country → Clue', fr: 'Pays → Anecdote',
-                  descEn: 'See a country name and flag. Choose which of the 4 facts is actually true.',
-                  descFr: 'Voyez un nom de pays et son drapeau. Choisissez laquelle des 4 anecdotes est vraie.' },
+                  descEn: 'See a country name and flag. Which of the 4 facts is true?',
+                  descFr: "Voyez un nom de pays et son drapeau. Quelle anecdote est vraie ?" },
               ].map(m => (
                 <button key={m.id} onClick={() => startGame(m.id)}
                   style={{ ...S.modeBtn, borderColor: m.id === 'clue2flag' ? '#8b5cf6' : '#0ea5e9' }}>
@@ -220,7 +209,6 @@ export default function FlagClue() {
               ))}
             </div>
 
-            {/* Rules */}
             <div style={S.rulesBox}>
               <div style={{ fontSize: '11px', fontWeight: '800', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: '8px' }}>
                 {t('Rules', 'Règles')}
@@ -229,6 +217,7 @@ export default function FlagClue() {
                 { icon: '⏱️', en: `${TIMER_SECS}s per question — faster = more points`, fr: `${TIMER_SECS}s par question — plus rapide = plus de points` },
                 { icon: '❤️', en: `${MAX_LIVES} lives — wrong answer or timeout costs 1`, fr: `${MAX_LIVES} vies — mauvaise réponse ou timeout = −1 vie` },
                 { icon: '🔥', en: 'Build streaks for bonus points', fr: 'Enchaînez les bonnes réponses pour des bonus' },
+                { icon: '🙈', en: 'Clue mode: no flag shown until you answer!', fr: 'Mode anecdote : drapeau masqué jusqu\'à votre réponse !' },
               ].map((r, i) => (
                 <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12px', color: '#475569', padding: '3px 0' }}>
                   <span>{r.icon}</span><span>{locale === 'fr' ? r.fr : r.en}</span>
@@ -254,6 +243,7 @@ export default function FlagClue() {
           <h1 style={S.title}>{t('Game Over!', 'Partie terminée !')}</h1>
           <div style={{ fontSize: '52px', fontWeight: '900', color: '#0B1F3B', margin: '16px 0 4px', letterSpacing: '-2px' }}>{score.toLocaleString()}</div>
           <div style={{ fontSize: '14px', color: '#94a3b8', marginBottom: '20px' }}>pts</div>
+
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px', marginBottom: '28px' }}>
             {[
               { label: t('Correct', 'Correctes'), value: `${correct}/${total}` },
@@ -267,7 +257,6 @@ export default function FlagClue() {
             ))}
           </div>
 
-          {/* Last answers */}
           <div style={{ maxHeight: '180px', overflowY: 'auto', marginBottom: '24px', display: 'flex', flexDirection: 'column', gap: '5px' }}>
             {[...history].reverse().slice(0, 8).map((h, i) => (
               <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '5px 10px', backgroundColor: h.correct ? '#f0fdf4' : '#fef2f2', borderRadius: '8px', border: `1px solid ${h.correct ? '#bbf7d0' : '#fecaca'}` }}>
@@ -293,27 +282,24 @@ export default function FlagClue() {
   // ── PLAYING ────────────────────────────────────────────────────────────────
   if (!question) return null
 
-  const isCorrectMode = mode === 'clue2flag'
-  const timerPct = (timer / TIMER_SECS) * 100
+  const isClueMode = mode === 'clue2flag'
+  const timerPct   = (timer / TIMER_SECS) * 100
   const timerColor = timerPct > 60 ? '#22c55e' : timerPct > 30 ? '#f59e0b' : '#ef4444'
 
   return (
     <div style={S.page}>
       <div style={{ maxWidth: '640px', margin: '0 auto', padding: '0 16px' }}>
 
-        {/* Header bar */}
+        {/* HUD */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px', gap: '8px', flexWrap: 'wrap' }}>
-          {/* Lives */}
           <div style={{ display: 'flex', gap: '4px' }}>
             {Array.from({ length: MAX_LIVES }).map((_, i) => (
               <span key={i} style={{ fontSize: '20px', opacity: i < lives ? 1 : 0.25 }}>❤️</span>
             ))}
           </div>
-          {/* Score */}
-          <div style={{ backgroundColor: '#0B1F3B', borderRadius: '10px', padding: '6px 14px', textAlign: 'center' }}>
+          <div style={{ backgroundColor: '#0B1F3B', borderRadius: '10px', padding: '6px 14px' }}>
             <div style={{ fontSize: '18px', fontWeight: '900', color: 'white', letterSpacing: '-0.5px' }}>{score.toLocaleString()}</div>
           </div>
-          {/* Streak */}
           {streak >= 2 && (
             <div style={{ backgroundColor: '#FFF7ED', border: '1px solid #FED7AA', borderRadius: '8px', padding: '4px 10px', fontSize: '13px', fontWeight: '700', color: '#EA580C' }}>
               🔥 ×{streak}
@@ -328,8 +314,7 @@ export default function FlagClue() {
 
         {/* Question card */}
         <div style={{ backgroundColor: 'white', borderRadius: '16px', border: '1px solid #e2e8f0', padding: '20px', marginBottom: '16px', boxShadow: '0 2px 12px rgba(0,0,0,0.06)' }}>
-          {isCorrectMode ? (
-            /* Clue → Flag: show the fact */
+          {isClueMode ? (
             <>
               <div style={{ fontSize: '11px', fontWeight: '800', color: '#8b5cf6', textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: '12px' }}>
                 💡 {t('Which country does this describe?', 'Quel pays cela décrit-il ?')}
@@ -337,9 +322,31 @@ export default function FlagClue() {
               <div style={{ fontSize: '16px', color: '#0B1F3B', lineHeight: 1.7, fontStyle: 'italic', borderLeft: '3px solid #8b5cf6', paddingLeft: '14px' }}>
                 "{locale === 'fr' ? question.fact.fact_fr : question.fact.fact_en}"
               </div>
+
+              {/* FLAG REVEAL — only after answer */}
+              {answered && (
+                <div style={{ marginTop: '16px', display: 'flex', alignItems: 'center', gap: '12px', padding: '12px 14px', backgroundColor: answered === 'correct' ? '#f0fdf4' : '#fef2f2', borderRadius: '10px', border: `1px solid ${answered === 'correct' ? '#bbf7d0' : '#fecaca'}` }}>
+                  <img
+                    src={`https://flagcdn.com/w160/${question.correct.iso_code}.png`}
+                    alt=""
+                    style={{ height: '44px', borderRadius: '6px', objectFit: 'cover', border: '1px solid rgba(0,0,0,0.08)', boxShadow: '0 2px 6px rgba(0,0,0,0.1)', flexShrink: 0 }}
+                  />
+                  <div>
+                    <div style={{ fontSize: '15px', fontWeight: '900', color: '#0B1F3B' }}>
+                      {locale === 'fr' ? question.correct.name_fr : question.correct.name_en}
+                    </div>
+                    <div style={{ fontSize: '12px', color: '#64748b', marginTop: '2px' }}>
+                      {answered === 'correct'
+                        ? t('✅ Correct!', '✅ Correct !')
+                        : answered === 'timeout'
+                        ? t('⏱️ Time\'s up!', '⏱️ Temps écoulé !')
+                        : t('❌ That was the answer', '❌ C\'était la bonne réponse')}
+                    </div>
+                  </div>
+                </div>
+              )}
             </>
           ) : (
-            /* Flag → Clue: show country flag + name */
             <>
               <div style={{ fontSize: '11px', fontWeight: '800', color: '#0ea5e9', textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: '12px' }}>
                 🏳️ {t('Which fact is true about this country?', 'Quelle anecdote est vraie sur ce pays ?')}
@@ -357,7 +364,6 @@ export default function FlagClue() {
             </>
           )}
 
-          {/* Timer digit */}
           <div style={{ textAlign: 'right', marginTop: '12px', fontSize: '13px', fontWeight: '700', color: timerColor }}>
             {timer}s
           </div>
@@ -366,31 +372,27 @@ export default function FlagClue() {
         {/* Options */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
           {question.options.map((opt, i) => {
-            let bg = 'white', border = '#e2e8f0', color = '#0B1F3B', shadow = '0 1px 4px rgba(0,0,0,0.05)'
+            const isThis = isClueMode
+              ? opt.iso_code === question.correct.iso_code
+              : opt === question.correctFact
+
+            let bg = 'white', border = '#e2e8f0', color = '#0B1F3B'
 
             if (answered) {
-              const isThis = isCorrectMode
-                ? opt.iso_code === question.correct.iso_code
-                : opt === question.correctFact
-              const wasChosen = isCorrectMode
-                ? (answered !== 'timeout' && opt.iso_code === question.correct.iso_code && answered === 'correct')
-                : (answered !== 'timeout' && opt === question.correctFact && answered === 'correct')
-
-              if (isThis) { bg = '#f0fdf4'; border = '#22c55e'; color = '#15803d' }
-              else if (answered === 'wrong' && (
-                isCorrectMode ? opt.iso_code !== question.correct.iso_code : opt !== question.correctFact
-              )) { bg = '#fef2f2'; border = '#ef4444'; color = '#dc2626' }
+              if (isThis) {
+                bg = '#f0fdf4'; border = '#22c55e'; color = '#15803d'
+              } else {
+                bg = 'white'; border = '#e2e8f0'; color = '#94a3b8'
+              }
             }
 
             return (
               <button key={i} onClick={() => handleAnswer(opt)}
                 disabled={!!answered}
-                style={{ padding: '12px 16px', borderRadius: '12px', border: `2px solid ${border}`, backgroundColor: bg, color, fontSize: isCorrectMode ? '14px' : '13px', fontWeight: '700', cursor: answered ? 'default' : 'pointer', textAlign: 'left', transition: 'all 0.15s', boxShadow: shadow, lineHeight: 1.5 }}>
-                {isCorrectMode ? (
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    <img src={`https://flagcdn.com/w40/${opt.iso_code}.png`} style={{ height: '20px', borderRadius: '2px', flexShrink: 0 }} alt="" />
-                    {locale === 'fr' ? opt.name_fr : opt.name_en}
-                  </div>
+                style={{ padding: '12px 16px', borderRadius: '12px', border: `2px solid ${border}`, backgroundColor: bg, color, fontSize: isClueMode ? '14px' : '13px', fontWeight: '700', cursor: answered ? 'default' : 'pointer', textAlign: 'left', transition: 'all 0.15s', lineHeight: 1.5 }}>
+                {isClueMode ? (
+                  /* CLUE MODE: show country name only — NO flag image */
+                  <span>{locale === 'fr' ? opt.name_fr : opt.name_en}</span>
                 ) : (
                   <span>"{locale === 'fr' ? opt.fact_fr : opt.fact_en}"</span>
                 )}
@@ -399,7 +401,7 @@ export default function FlagClue() {
           })}
         </div>
 
-        {/* Points float */}
+        {/* Points */}
         {lastPts !== null && answered === 'correct' && (
           <div style={{ textAlign: 'center', marginTop: '12px', fontSize: '20px', fontWeight: '900', color: '#22c55e', animation: 'fadeUp 1s ease forwards' }}>
             +{lastPts} pts
@@ -408,24 +410,6 @@ export default function FlagClue() {
         {answered === 'timeout' && (
           <div style={{ textAlign: 'center', marginTop: '12px', fontSize: '15px', fontWeight: '700', color: '#ef4444' }}>
             ⏱️ {t('Too slow!', 'Trop lent !')}
-          </div>
-        )}
-
-        {/* After answer: show flag reveal */}
-        {answered && (
-          <div style={{ marginTop: '16px', backgroundColor: '#F8F7F4', borderRadius: '12px', padding: '14px 16px', display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <img src={`https://flagcdn.com/w160/${question.correct.iso_code}.png`}
-              style={{ height: '44px', borderRadius: '6px', objectFit: 'cover', border: '1px solid #e2e8f0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', flexShrink: 0 }} alt="" />
-            <div>
-              <div style={{ fontSize: '14px', fontWeight: '800', color: '#0B1F3B' }}>
-                {locale === 'fr' ? question.correct.name_fr : question.correct.name_en}
-              </div>
-              <div style={{ fontSize: '12px', color: '#64748b', marginTop: '2px' }}>
-                {answered === 'correct'
-                  ? t('✅ Correct!', '✅ Correct !')
-                  : t('❌ Wrong — here is the flag', '❌ Faux — voici le drapeau')}
-              </div>
-            </div>
           </div>
         )}
       </div>

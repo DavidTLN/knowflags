@@ -19,6 +19,14 @@ const REGIONS = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania']
 const REGION_LABELS = { Africa: 'Afrique', Americas: 'Amériques', Asia: 'Asie', Europe: 'Europe', Oceania: 'Océanie' }
 const MAX_LIVES = 3
 const TIMER_SECONDS = 10
+const POINTS_CORRECT = 50
+const POINTS_TIMER_BONUS = 2
+const STREAK_MULTIPLIER = (streak) => {
+  if (streak >= 20) return 3
+  if (streak >= 10) return 2
+  if (streak >= 5)  return 1.5
+  return 1
+}
 
 function shuffle(arr) {
   const a = [...arr]
@@ -276,11 +284,12 @@ export default function FlagQuiz() {
           await saveStats(correctCount, history.length + 1, finalStreak)
           await saveScore(scoreRef.current, finalStreak)
           setScreen(SCREEN.GAME_OVER)
-        }, 1400)
+        }, 1800)
         return
       }
     }
-    // User clicks Next button to advance
+    // Auto-advance: correct = 1.4s, wrong = 2s
+    setTimeout(() => makeNextQuestion(), isCorrect ? 1400 : 2000)
   }
 
   // ─── SETUP SCREEN ──────────────────────────────────────────────────────────
@@ -506,7 +515,7 @@ export default function FlagQuiz() {
     // ── Feedback ──────────────────────────────────────────────────────────────
     const feedback = isAnswered && (
       <div style={{ marginBottom: '12px' }}>
-        <div style={{ padding: '10px 14px', borderRadius: '10px', backgroundColor: isCorrectAnswer ? 'rgba(74,222,128,0.15)' : 'rgba(248,113,113,0.15)', border: `1px solid ${isCorrectAnswer ? '#4ade80' : '#f87171'}`, textAlign: 'center', marginBottom: '10px' }}>
+        <div style={{ padding: '10px 14px', borderRadius: '10px', backgroundColor: isCorrectAnswer ? 'rgba(74,222,128,0.15)' : 'rgba(248,113,113,0.15)', border: `1px solid ${isCorrectAnswer ? '#4ade80' : '#f87171'}`, textAlign: 'center' }}>
           {answered.selected === null ? (
             <span style={{ fontWeight: '800', fontSize: '13px', color: '#f87171' }}>⏱ {t("Time's up!", 'Temps écoulé !')} — {getName(correct)}</span>
           ) : isCorrectAnswer ? (
@@ -515,10 +524,6 @@ export default function FlagQuiz() {
             <span style={{ fontWeight: '800', fontSize: '13px', color: '#f87171' }}>✗ {t('It was', "C'était")} {getName(correct)}</span>
           )}
         </div>
-        <button onClick={makeNextQuestion}
-          style={{ width: '100%', padding: '12px', borderRadius: '12px', backgroundColor: isCorrectAnswer ? '#4ade80' : '#9EB7E5', color: '#0B1F3B', border: 'none', fontSize: '15px', fontWeight: '800', cursor: 'pointer' }}>
-          {t('Next →', 'Suivant →')}
-        </button>
       </div>
     )
 

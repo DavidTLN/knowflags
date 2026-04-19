@@ -62,6 +62,8 @@ export default function FlagReveal() {
   const [leaderboard, setLeaderboard] = useState([])
   const [flags, setFlags] = useState([])
   const [countriesLoading, setCountriesLoading] = useState(true)
+  const [allFacts, setAllFacts] = useState({})  // facts indexed by iso_code
+  const [revealFact, setRevealFact] = useState(null)  // fact shown after won/lost
   const [score, setScore] = useState(0)
   const [lastPts,    setLastPts]    = useState(null)
   const [elapsed,    setElapsed]    = useState(0)       // seconds since game start
@@ -80,21 +82,27 @@ export default function FlagReveal() {
     }, 8000)
 
     const supabase = createClient()
-    supabase
-      .from('countries')
-      .select('iso_code, name_en, name_fr')
-      .order('name_en')
-      .then(({ data, error }) => {
-        clearTimeout(timeout)
-        if (error) console.error('Supabase error:', error.message)
-        if (data && data.length > 0) setFlags(data.map(c => ({ code: c.iso_code, en: c.name_en, fr: c.name_fr })))
-        setCountriesLoading(false)
-      })
-      .catch(err => {
-        clearTimeout(timeout)
-        console.error('Countries fetch failed:', err)
-        setCountriesLoading(false)
-      })
+    Promise.all([
+      supabase.from('countries').select('iso_code, name_en, name_fr').order('name_en'),
+      supabase.from('country_facts').select('country_code, fact_en, fact_fr, category'),
+    ]).then(([{ data, error }, { data: factsData }]) => {
+      clearTimeout(timeout)
+      if (error) console.error('Supabase error:', error.message)
+      if (data && data.length > 0) setFlags(data.map(c => ({ code: c.iso_code, en: c.name_en, fr: c.name_fr })))
+      if (factsData) {
+        const idx = {}
+        for (const f of factsData) {
+          if (!idx[f.country_code]) idx[f.country_code] = []
+          idx[f.country_code].push(f)
+        }
+        setAllFacts(idx)
+      }
+      setCountriesLoading(false)
+    }).catch(err => {
+      clearTimeout(timeout)
+      console.error('Countries fetch failed:', err)
+      setCountriesLoading(false)
+    })
 
     return () => clearTimeout(timeout)
   }, [])
@@ -249,6 +257,7 @@ export default function FlagReveal() {
   function startNewFlag() {
     const random = flags[Math.floor(Math.random() * flags.length)]
     setTarget(random)
+    setRevealFact(null)
     setGuesses([])
     setInput('')
     setRevealedTiles(new Set())
@@ -425,6 +434,11 @@ export default function FlagReveal() {
       const newStreak = streak + 1
       setStreak(newStreak)
       setGameState('won')
+      // Pick a random fun fact for this country
+      const targetFacts = allFacts[target.code]
+      if (targetFacts && targetFacts.length > 0) {
+        setRevealFact(targetFacts[Math.floor(Math.random() * targetFacts.length)])
+      }
       // Score: only in Normal mode, not Training
       if (difficulty !== 'easy') {
         const guessCount = newGuesses.length
@@ -449,6 +463,11 @@ export default function FlagReveal() {
           endGame()
         } else {
           setGameState('lost')
+          // Pick a random fun fact for this country
+          const targetFacts = allFacts[target.code]
+          if (targetFacts && targetFacts.length > 0) {
+            setRevealFact(targetFacts[Math.floor(Math.random() * targetFacts.length)])
+          }
           await saveStats(false, 0)
         }
       }
@@ -523,6 +542,21 @@ export default function FlagReveal() {
 
   // Always-visible next button — active only when flag is done
   const isDone = gameState === 'won' || gameState === 'lost' || gameState === 'gameover'
+
+  // Fun fact shown after flag is revealed
+  const factBlock = revealFact && isDone && gameState !== 'gameover' ? (
+    <div style={{ backgroundColor: '#FFF8E7', border: '1px solid #FDE68A', borderRadius: '12px', padding: '12px 14px', marginTop: '10px', display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
+      <span style={{ fontSize: '16px', flexShrink: 0, marginTop: '1px' }}>💡</span>
+      <div>
+        <div style={{ fontSize: '10px', fontWeight: '800', color: '#92400E', textTransform: 'uppercase', letterSpacing: '0.7px', marginBottom: '4px' }}>
+          {locale === 'fr' ? 'Le saviez-vous ?' : 'Did you know?'}
+        </div>
+        <div style={{ fontSize: '13px', color: '#78350F', lineHeight: 1.6 }}>
+          {locale === 'fr' ? revealFact.fact_fr : revealFact.fact_en}
+        </div>
+      </div>
+    </div>
+  ) : null
   const actionButton = (
     <button
       onClick={isDone ? (gameState === 'gameover' ? () => { setLives(MAX_LIVES); setStreak(0); scoreRef.current = 0; setScore(0); setElapsed(0); setDifficulty(null) } : startNewFlag) : undefined}
@@ -874,6 +908,9 @@ export default function FlagReveal() {
             ))}
           </div>
 
+          {/* Fun fact reveal */}
+          {factBlock}
+
           {/* How to Play + Next Flag */}
           <div style={{ display: 'flex', gap: '8px' }}>
             <button onClick={() => setHowToPlayOpen(true)}
@@ -1019,6 +1056,8 @@ export default function FlagReveal() {
               <span style={{ fontSize: '12px', opacity: 0.7 }}>→</span>
             </button>
 
+            {/* Fun fact reveal */}
+            {factBlock}
 
             {/* Action buttons — at bottom of sidebar, close to answers */}
             <div style={{ marginTop: '4px' }}>

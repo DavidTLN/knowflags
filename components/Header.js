@@ -332,11 +332,6 @@ export default function Header() {
             )}
           </div>
 
-          {/* Community */}
-          <a href='https://knowflags.discourse.group/' target='_blank' rel='noopener noreferrer' style={navLinkStyle(false)}>
-            {t('Community', 'Communauté')}
-          </a>
-
           {/* Blog */}
           <Link href={`/${locale}/blog`} style={navLinkStyle(isActive(`/${locale}/blog`))}>
             {t('Blog', 'Blog')}
@@ -371,79 +366,6 @@ export default function Header() {
             {t('+ Submit', '+ Soumettre')}
           </Link>
 
-          {/* Locale switcher — shows target language flag only */}
-          <button onClick={switchLocale}
-            title={locale === 'en' ? 'Passer en français' : 'Switch to English'}
-            style={{
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              width: '34px', height: '34px',
-              background: 'rgba(255,255,255,0.08)',
-              border: '1px solid rgba(255,255,255,0.15)',
-              borderRadius: '7px',
-              padding: '0',
-              cursor: 'pointer',
-              transition: 'background 0.15s',
-              flexShrink: 0,
-              overflow: 'hidden',
-            }}
-            onMouseEnter={e => e.currentTarget.style.background = 'rgba(255,255,255,0.18)'}
-            onMouseLeave={e => e.currentTarget.style.background = 'rgba(255,255,255,0.08)'}
-          >
-            {locale === 'en'
-              ? /* Target = FR — French flag */
-                <svg width="24" height="16" viewBox="0 0 3 2" style={{ display: 'block' }}>
-                    <rect width="1" height="2" fill="#002395"/>
-                    <rect x="1" width="1" height="2" fill="#fff"/>
-                    <rect x="2" width="1" height="2" fill="#ED2939"/>
-                  </svg>
-              : /* Target = EN — UK/US hybrid: UK cross + US stars quadrant */
-                <svg width="24" height="16" viewBox="0 0 60 40" style={{ display: 'block' }}>
-                    {/* Base blue */}
-                    <rect width="60" height="40" fill="#012169"/>
-                    {/* UK diagonal crosses */}
-                    <line x1="0" y1="0" x2="60" y2="40" stroke="#fff" strokeWidth="8"/>
-                    <line x1="60" y1="0" x2="0" y2="40" stroke="#fff" strokeWidth="8"/>
-                    <line x1="0" y1="0" x2="60" y2="40" stroke="#C8102E" strokeWidth="4"/>
-                    <line x1="60" y1="0" x2="0" y2="40" stroke="#C8102E" strokeWidth="4"/>
-                    {/* UK horizontal/vertical cross */}
-                    <rect x="0" y="15" width="60" height="10" fill="#fff"/>
-                    <rect x="25" y="0" width="10" height="40" fill="#fff"/>
-                    <rect x="0" y="17" width="60" height="6" fill="#C8102E"/>
-                    <rect x="27" y="0" width="6" height="40" fill="#C8102E"/>
-                    {/* US stars quadrant top-left */}
-                    <rect width="30" height="20" fill="#012169"/>
-                    {[3,9,15,21,27].map((x,i) => [6,14].map((y,j) => (
-                      <circle key={`${i}-${j}`} cx={x} cy={y} r="1.8" fill="white"/>
-                    )))}
-                    {[6,12,18,24].map((x,i) => [10].map((y,j) => (
-                      <circle key={`s-${i}`} cx={x} cy={y} r="1.8" fill="white"/>
-                    )))}
-                  </svg>
-            }
-          </button>
-
-          {/* Shop — cart icon, left of profile */}
-          <Link href={`/${locale}/shop`}
-            title={t('Shop', 'Boutique')}
-            style={{
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              width: '36px', height: '36px',
-              color: isActive(`/${locale}/shop`) ? '#9EB7E5' : 'rgba(244,241,230,0.75)',
-              textDecoration: 'none',
-              transition: 'color 0.15s',
-              flexShrink: 0,
-            }}
-            className="desktop-right"
-            onMouseEnter={e => e.currentTarget.style.color = '#9EB7E5'}
-            onMouseLeave={e => e.currentTarget.style.color = isActive(`/${locale}/shop`) ? '#9EB7E5' : 'rgba(244,241,230,0.75)'}
-          >
-            <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
-              <line x1="3" y1="6" x2="21" y2="6"/>
-              <path d="M16 10a4 4 0 01-8 0"/>
-            </svg>
-          </Link>
-
           {/* Avatar / Sign-in */}
           <div className="desktop-right">
             {user ? (
@@ -453,7 +375,7 @@ export default function Header() {
                   {initials}
                 </button>
                 {avatarOpen && (
-                  <div style={{ position: 'absolute', top: 'calc(100% + 8px)', right: 0, backgroundColor: 'white', borderRadius: '12px', boxShadow: '0 8px 32px rgba(0,0,0,0.16)', overflow: 'hidden', minWidth: '180px', zIndex: 200 }}>
+                  <div style={{ position: 'absolute', top: 'calc(100% + 8px)', right: 0, backgroundColor: 'white', borderRadius: '12px', boxShadow: '0 8px 32px rgba(0,0,0,0.16)', overflow: 'hidden', minWidth: '200px', zIndex: 200 }}>
                     <div style={{ padding: '12px 16px', borderBottom: '1px solid #f0f0f0' }}>
                       <p style={{ margin: 0, fontSize: '12px', color: '#94a3b8' }}>{user.email}</p>
                     </div>
@@ -463,18 +385,42 @@ export default function Header() {
                       onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}>
                       {t('My Profile', 'Mon Profil')}
                     </Link>
+                    {/* Language switcher */}
+                    <button onClick={() => { switchLocale(); setAvatarOpen(false) }}
+                      style={{ width: '100%', textAlign: 'left', padding: '11px 16px', fontSize: '14px', color: '#0B1F3B', background: 'none', border: 'none', borderTop: '1px solid #f0f0f0', cursor: 'pointer', fontWeight: '500', display: 'flex', alignItems: 'center', gap: '10px' }}
+                      onMouseEnter={e => e.currentTarget.style.backgroundColor = '#f8f8f8'}
+                      onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}>
+                      {locale === 'en'
+                        ? <><svg width="20" height="13" viewBox="0 0 3 2" style={{ borderRadius: '2px', flexShrink: 0 }}><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ED2939"/></svg> Passer en français</>
+                        : <><svg width="20" height="13" viewBox="0 0 60 40" style={{ borderRadius: '2px', flexShrink: 0 }}><rect width="60" height="40" fill="#012169"/><line x1="0" y1="0" x2="60" y2="40" stroke="#fff" strokeWidth="8"/><line x1="60" y1="0" x2="0" y2="40" stroke="#fff" strokeWidth="8"/><line x1="0" y1="0" x2="60" y2="40" stroke="#C8102E" strokeWidth="4"/><line x1="60" y1="0" x2="0" y2="40" stroke="#C8102E" strokeWidth="4"/><rect x="0" y="15" width="60" height="10" fill="#fff"/><rect x="25" y="0" width="10" height="40" fill="#fff"/><rect x="0" y="17" width="60" height="6" fill="#C8102E"/><rect x="27" y="0" width="6" height="40" fill="#C8102E"/></svg> Switch to English</>
+                      }
+                    </button>
                     <button onClick={handleSignOut}
-                      style={{ width: '100%', textAlign: 'left', padding: '11px 16px', fontSize: '14px', color: '#ef4444', background: 'none', border: 'none', cursor: 'pointer', fontWeight: '500' }}>
+                      style={{ width: '100%', textAlign: 'left', padding: '11px 16px', fontSize: '14px', color: '#ef4444', background: 'none', border: 'none', borderTop: '1px solid #f0f0f0', cursor: 'pointer', fontWeight: '500' }}>
                       {t('Sign out', 'Déconnexion')}
                     </button>
                   </div>
                 )}
               </div>
             ) : (
-              <Link href={`/${locale}/auth/login`}
-                style={{ fontSize: '14px', fontWeight: '600', color: '#0B1F3B', backgroundColor: '#9EB7E5', padding: '7px 16px', borderRadius: '8px', textDecoration: 'none' }}>
-                {t('Sign in', 'Connexion')}
-              </Link>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                {/* Language switcher — logged out */}
+                <button onClick={switchLocale}
+                  title={locale === 'en' ? 'Passer en français' : 'Switch to English'}
+                  style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '34px', height: '34px', background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '7px', padding: '0', cursor: 'pointer', overflow: 'hidden', flexShrink: 0 }}
+                  onMouseEnter={e => e.currentTarget.style.background = 'rgba(255,255,255,0.18)'}
+                  onMouseLeave={e => e.currentTarget.style.background = 'rgba(255,255,255,0.08)'}
+                >
+                  {locale === 'en'
+                    ? <svg width="24" height="16" viewBox="0 0 3 2" style={{ display: 'block' }}><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ED2939"/></svg>
+                    : <svg width="24" height="16" viewBox="0 0 60 40" style={{ display: 'block' }}><rect width="60" height="40" fill="#012169"/><line x1="0" y1="0" x2="60" y2="40" stroke="#fff" strokeWidth="8"/><line x1="60" y1="0" x2="0" y2="40" stroke="#fff" strokeWidth="8"/><line x1="0" y1="0" x2="60" y2="40" stroke="#C8102E" strokeWidth="4"/><line x1="60" y1="0" x2="0" y2="40" stroke="#C8102E" strokeWidth="4"/><rect x="0" y="15" width="60" height="10" fill="#fff"/><rect x="25" y="0" width="10" height="40" fill="#fff"/><rect x="0" y="17" width="60" height="6" fill="#C8102E"/><rect x="27" y="0" width="6" height="40" fill="#C8102E"/></svg>
+                  }
+                </button>
+                <Link href={`/${locale}/auth/login`}
+                  style={{ fontSize: '14px', fontWeight: '600', color: '#0B1F3B', backgroundColor: '#9EB7E5', padding: '7px 16px', borderRadius: '8px', textDecoration: 'none' }}>
+                  {t('Sign in', 'Connexion')}
+                </Link>
+              </div>
             )}
           </div>
 
@@ -527,10 +473,6 @@ export default function Header() {
               </div>
             </div>
 
-            <a href='https://knowflags.discourse.group/' target='_blank' rel='noopener noreferrer' onClick={() => setMenuOpen(false)}
-              style={{ padding: '12px 0', fontSize: '16px', color: '#F4F1E6', textDecoration: 'none', fontWeight: '500', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-              {t('Community', 'Communauté')}
-            </a>
             <Link href={`/${locale}/blog`} onClick={() => setMenuOpen(false)}
               style={{ padding: '12px 0', fontSize: '16px', color: '#F4F1E6', textDecoration: 'none', fontWeight: '500', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
               {t('Blog', 'Blog')}
@@ -539,11 +481,6 @@ export default function Header() {
               style={{ padding: '12px 0', fontSize: '16px', color: '#F4F1E6', textDecoration: 'none', fontWeight: '500', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
               {t('True Size Map', 'Carte Taille Réelle')}
             </Link>
-            <Link href={`/${locale}/shop`} onClick={() => setMenuOpen(false)}
-              style={{ padding: '12px 0', fontSize: '16px', color: '#F4F1E6', textDecoration: 'none', fontWeight: '500', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-              🛍️ {t('Shop', 'Boutique')}
-            </Link>
-
             {/* Submit CTA in drawer */}
             <Link href={`/${locale}/submit`} onClick={() => setMenuOpen(false)}
               style={{ display: 'block', marginTop: '12px', padding: '12px', textAlign: 'center', fontSize: '15px', fontWeight: '700', color: '#FEB12F', backgroundColor: 'rgba(254,177,47,0.12)', border: '1.5px solid rgba(254,177,47,0.35)', borderRadius: '10px', textDecoration: 'none' }}>
@@ -557,16 +494,34 @@ export default function Header() {
                   style={{ padding: '12px 0', fontSize: '16px', color: '#9EB7E5', textDecoration: 'none', fontWeight: '600' }}>
                   👤 {t('My Profile', 'Mon Profil')}
                 </Link>
+                {/* Language switcher */}
+                <button onClick={() => { switchLocale(); setMenuOpen(false) }}
+                  style={{ textAlign: 'left', padding: '12px 0', fontSize: '15px', color: '#F4F1E6', background: 'none', border: 'none', cursor: 'pointer', fontWeight: '500', display: 'flex', alignItems: 'center', gap: '10px', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+                  {locale === 'en'
+                    ? <><svg width="20" height="13" viewBox="0 0 3 2" style={{ borderRadius: '2px' }}><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ED2939"/></svg> Passer en français</>
+                    : <><svg width="20" height="13" viewBox="0 0 60 40" style={{ borderRadius: '2px' }}><rect width="60" height="40" fill="#012169"/><line x1="0" y1="0" x2="60" y2="40" stroke="#fff" strokeWidth="8"/><line x1="60" y1="0" x2="0" y2="40" stroke="#fff" strokeWidth="8"/><line x1="0" y1="0" x2="60" y2="40" stroke="#C8102E" strokeWidth="4"/><line x1="60" y1="0" x2="0" y2="40" stroke="#C8102E" strokeWidth="4"/><rect x="0" y="15" width="60" height="10" fill="#fff"/><rect x="25" y="0" width="10" height="40" fill="#fff"/><rect x="0" y="17" width="60" height="6" fill="#C8102E"/><rect x="27" y="0" width="6" height="40" fill="#C8102E"/></svg> Switch to English</>
+                  }
+                </button>
                 <button onClick={() => { handleSignOut(); setMenuOpen(false) }}
                   style={{ textAlign: 'left', padding: '10px 0', fontSize: '15px', color: '#ef4444', background: 'none', border: 'none', cursor: 'pointer', fontWeight: '500' }}>
                   {t('Sign out', 'Déconnexion')}
                 </button>
               </div>
             ) : (
-              <Link href={`/${locale}/auth/login`} onClick={() => setMenuOpen(false)}
-                style={{ display: 'block', marginTop: '8px', padding: '12px', textAlign: 'center', fontSize: '15px', fontWeight: '700', color: '#0B1F3B', backgroundColor: '#9EB7E5', borderRadius: '10px', textDecoration: 'none' }}>
-                {t('Sign in', 'Connexion')}
-              </Link>
+              <div style={{ paddingTop: '8px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                {/* Language switcher */}
+                <button onClick={() => { switchLocale(); setMenuOpen(false) }}
+                  style={{ textAlign: 'left', padding: '12px 0', fontSize: '15px', color: '#F4F1E6', background: 'none', border: 'none', borderBottom: '1px solid rgba(255,255,255,0.08)', cursor: 'pointer', fontWeight: '500', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  {locale === 'en'
+                    ? <><svg width="20" height="13" viewBox="0 0 3 2" style={{ borderRadius: '2px' }}><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ED2939"/></svg> Passer en français</>
+                    : <><svg width="20" height="13" viewBox="0 0 60 40" style={{ borderRadius: '2px' }}><rect width="60" height="40" fill="#012169"/><line x1="0" y1="0" x2="60" y2="40" stroke="#fff" strokeWidth="8"/><line x1="60" y1="0" x2="0" y2="40" stroke="#fff" strokeWidth="8"/><line x1="0" y1="0" x2="60" y2="40" stroke="#C8102E" strokeWidth="4"/><line x1="60" y1="0" x2="0" y2="40" stroke="#C8102E" strokeWidth="4"/><rect x="0" y="15" width="60" height="10" fill="#fff"/><rect x="25" y="0" width="10" height="40" fill="#fff"/><rect x="0" y="17" width="60" height="6" fill="#C8102E"/><rect x="27" y="0" width="6" height="40" fill="#C8102E"/></svg> Switch to English</>
+                  }
+                </button>
+                <Link href={`/${locale}/auth/login`} onClick={() => setMenuOpen(false)}
+                  style={{ display: 'block', padding: '12px', textAlign: 'center', fontSize: '15px', fontWeight: '700', color: '#0B1F3B', backgroundColor: '#9EB7E5', borderRadius: '10px', textDecoration: 'none' }}>
+                  {t('Sign in', 'Connexion')}
+                </Link>
+              </div>
             )}
           </div>
         </div>

@@ -5,7 +5,6 @@ import CategoryGrid from '@/components/CategoryGrid'
 import Footer from '@/components/Footer'
 import TrueSizeModule from '@/components/TrueSizeModule'
 
-
 export default function Home() {
   return (
     <main>

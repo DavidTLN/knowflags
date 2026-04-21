@@ -263,6 +263,72 @@ function getLargestPolygonCentroid(feature) {
   return largest ? d3.geoCentroid(largest) : d3.geoCentroid(feature)
 }
 
+// ── Rotation Dial — interactive SVG arc ──────────────────────────────────────
+function RotationDial({ rotation, color, onChange }) {
+  const dialRef = useRef(null)
+  const dragging = useRef(false)
+
+  function getAngleFromEvent(e, rect) {
+    const cx = rect.left + rect.width / 2
+    const cy = rect.top + rect.height / 2
+    const dx = (e.clientX ?? e.touches?.[0]?.clientX ?? cx) - cx
+    const dy = (e.clientY ?? e.touches?.[0]?.clientY ?? cy) - cy
+    return ((Math.atan2(dy, dx) * 180 / Math.PI) + 90 + 360) % 360
+  }
+
+  function onPointerDown(e) {
+    dragging.current = true
+    e.currentTarget.setPointerCapture(e.pointerId)
+    const angle = getAngleFromEvent(e, e.currentTarget.getBoundingClientRect())
+    onChange(angle)
+  }
+  function onPointerMove(e) {
+    if (!dragging.current) return
+    const angle = getAngleFromEvent(e, e.currentTarget.getBoundingClientRect())
+    onChange(angle)
+  }
+  function onPointerUp() { dragging.current = false }
+
+  const r = 22
+  const cx = 28, cy = 28
+  const rad = ((rotation - 90) * Math.PI) / 180
+  const nx = cx + r * Math.cos(rad)
+  const ny = cy + r * Math.sin(rad)
+
+  // Arc for the rotation amount
+  const arcRad = (rotation * Math.PI) / 180
+  const arcX = cx + r * Math.cos(-Math.PI / 2 + arcRad)
+  const arcY = cy + r * Math.sin(-Math.PI / 2 + arcRad)
+  const largeArc = rotation > 180 ? 1 : 0
+
+  return (
+    <svg ref={dialRef} width="56" height="56" viewBox="0 0 56 56"
+      style={{ cursor: 'pointer', userSelect: 'none', touchAction: 'none' }}
+      onPointerDown={onPointerDown} onPointerMove={onPointerMove} onPointerUp={onPointerUp}>
+
+      {/* Track circle */}
+      <circle cx={cx} cy={cy} r={r} fill="none" stroke="rgba(255,255,255,0.12)" strokeWidth="4" />
+
+      {/* Colored arc showing rotation amount */}
+      {rotation > 0 && (
+        <path
+          d={`M ${cx} ${cy - r} A ${r} ${r} 0 ${largeArc} 1 ${arcX} ${arcY}`}
+          fill="none" stroke={color} strokeWidth="4" strokeLinecap="round" opacity="0.7"
+        />
+      )}
+
+      {/* North indicator (fixed red dot at top) */}
+      <circle cx={cx} cy={cy - r} r="3" fill="#ef4444" />
+
+      {/* Handle — rotates with the country */}
+      <circle cx={nx} cy={ny} r="5" fill={color} stroke="white" strokeWidth="1.5" />
+
+      {/* Center dot */}
+      <circle cx={cx} cy={cy} r="2.5" fill="rgba(255,255,255,0.3)" />
+    </svg>
+  )
+}
+
 export default function TrueSizeMap() {
   const locale = useLocale()
   const t = (en, fr) => locale === 'fr' ? fr : en
@@ -286,6 +352,7 @@ export default function TrueSizeMap() {
   const colorIdx = useRef(0)
   const [showTutorial, setShowTutorial]   = useState(false)
   const [tutStep, setTutStep]             = useState(0)
+  const [selectedId, setSelectedId]       = useState(null)  // which overlay is selected for rotation
 
   const sortedCountries = [
     ...CONTINENTS.map(c => ({ ...c, _isContinent: true })),
@@ -410,6 +477,10 @@ export default function TrueSizeMap() {
       fill.setAttribute('stroke-width', '2')
       fill.setAttribute('stroke-opacity', '0.9')
       fill.setAttribute('data-id', String(ov.id))
+      // Apply rotation transform centered on destination pixel
+      if (ov.rotation && ov.rotation !== 0) {
+        fill.setAttribute('transform', `rotate(${ov.rotation}, ${dx}, ${dy})`)
+      }
       fill.style.cursor = 'grab'
       fill.style.pointerEvents = 'all'
       fill.style.touchAction = 'none'
@@ -438,6 +509,9 @@ export default function TrueSizeMap() {
         text.setAttribute('paint-order', 'stroke')
         text.setAttribute('pointer-events', 'none')
         text.textContent = locale === 'fr' ? ov.meta.fr : ov.meta.en
+        if (ov.rotation && ov.rotation !== 0) {
+          text.setAttribute('transform', `rotate(${ov.rotation}, ${dx}, ${dy})`)
+        }
         svg.appendChild(text)
       }
     })
@@ -588,6 +662,7 @@ export default function TrueSizeMap() {
       e.preventDefault()
       e.stopPropagation()
       drag.current = { on: true, id, x: e.clientX, y: e.clientY }
+      setSelectedId(id)
       svg.style.cursor = 'grabbing'
       map.dragging.disable()
       map.scrollWheelZoom.disable()
@@ -670,6 +745,7 @@ export default function TrueSizeMap() {
     const newOverlay = {
       id: Date.now(), meta, origLon, origLat,
       destLon: origLon, destLat: origLat,
+      rotation: 0,
       color: COLORS[colorIdx.current++ % COLORS.length],
     }
     const nextOverlays = [...ovRef.current, newOverlay]
@@ -680,8 +756,16 @@ export default function TrueSizeMap() {
 
   const removeOverlay = useCallback((id) => setOverlays(p => p.filter(o => o.id !== id)), [])
   const resetOverlay  = useCallback((id) => setOverlays(p => p.map(o =>
-    o.id === id ? { ...o, destLon: o.origLon, destLat: o.origLat } : o
+    o.id === id ? { ...o, destLon: o.origLon, destLat: o.origLat, rotation: 0 } : o
   )), [])
+  const rotateOverlay = useCallback((id, deg) => {
+    const updated = ovRef.current.map(o =>
+      o.id === id ? { ...o, rotation: ((o.rotation || 0) + deg + 360) % 360 } : o
+    )
+    ovRef.current = updated
+    setOverlays(updated)
+    requestAnimationFrame(() => drawRef.current(updated))
+  }, [])
 
   // Search / dropdown
   useEffect(() => {
@@ -764,6 +848,12 @@ export default function TrueSizeMap() {
                   <span style={{ fontSize: '12px', fontWeight: '700', color: '#0B1F3B' }}>{locale === 'fr' ? o.meta.fr : o.meta.en}</span>
                   <span style={{ fontSize: '10px', color: '#8A8278' }}>{formatArea(o.meta.area)}</span>
                   {pct !== 0 && <span style={{ fontSize: '10px', fontWeight: '700', color: pct > 0 ? '#4CAF50' : '#E63946' }}>{pct > 0 ? `+${pct}%` : `${pct}%`}</span>}
+                  {/* Rotation indicator + select button */}
+                  <button onClick={() => setSelectedId(selectedId === o.id ? null : o.id)}
+                    title={t('Rotate', 'Rotation')}
+                    style={{ background: selectedId === o.id ? o.color + '30' : 'none', border: selectedId === o.id ? `1px solid ${o.color}60` : 'none', borderRadius: 5, cursor: 'pointer', color: selectedId === o.id ? o.color : '#94a3b8', fontSize: '12px', padding: '1px 4px', lineHeight: 1, display: 'flex', alignItems: 'center', gap: 2 }}>
+                    ⟳{o.rotation ? ` ${Math.round(o.rotation)}°` : ''}
+                  </button>
                   <button onClick={() => resetOverlay(o.id)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#9EB7E5', fontSize: '13px', padding: '0 1px', lineHeight: 1 }}>↺</button>
                   <button onClick={() => removeOverlay(o.id)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#94a3b8', fontSize: '14px', padding: '0', lineHeight: 1 }}>×</button>
                 </div>
@@ -794,6 +884,105 @@ export default function TrueSizeMap() {
               {t('Click the search bar → pick a country → drag to compare', 'Cliquez la recherche → choisissez un pays → glissez pour comparer')}
             </div>
           )}
+
+          {/* ── Rotation widget — appears when an overlay is selected ── */}
+          {selectedId && overlays.find(o => o.id === selectedId) && (() => {
+            const ov = overlays.find(o => o.id === selectedId)
+            const rot = ov.rotation || 0
+            return (
+              <div style={{
+                position: 'absolute', bottom: 20, left: '50%', transform: 'translateX(-50%)',
+                zIndex: 999, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8,
+              }}>
+                <div style={{
+                  backgroundColor: 'rgba(11,31,59,0.92)', backdropFilter: 'blur(12px)',
+                  borderRadius: 16, padding: '12px 16px',
+                  border: `1.5px solid ${ov.color}40`,
+                  display: 'flex', alignItems: 'center', gap: 12,
+                  boxShadow: `0 4px 24px rgba(0,0,0,0.3), 0 0 0 1px ${ov.color}30`,
+                }}>
+                  {/* Country flag + name */}
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 7, paddingRight: 12, borderRight: '1px solid rgba(255,255,255,0.12)' }}>
+                    {ov.meta._isContinent
+                      ? <span style={{ fontSize: 16 }}>🌍</span>
+                      : <img src={`https://flagcdn.com/w40/${ov.meta.code}.png`} width="22" height="15" style={{ borderRadius: 3, objectFit: 'cover' }} />
+                    }
+                    <span style={{ fontSize: 12, fontWeight: 700, color: 'white' }}>{locale === 'fr' ? ov.meta.fr : ov.meta.en}</span>
+                  </div>
+
+                  {/* Compass / rotation dial */}
+                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 }}>
+                    <span style={{ fontSize: 9, fontWeight: 700, color: 'rgba(255,255,255,0.45)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+                      {t('Rotate', 'Rotation')}
+                    </span>
+                    {/* Dial SVG — clickable/draggable arc */}
+                    <RotationDial
+                      rotation={rot}
+                      color={ov.color}
+                      onChange={deg => rotateOverlay(selectedId, deg - rot)}
+                    />
+                    <span style={{ fontSize: 11, fontWeight: 800, color: ov.color, minWidth: 36, textAlign: 'center' }}>
+                      {Math.round(rot)}°
+                    </span>
+                  </div>
+
+                  {/* Quick rotation buttons */}
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 4, paddingLeft: 12, borderLeft: '1px solid rgba(255,255,255,0.12)' }}>
+                    <div style={{ display: 'flex', gap: 4 }}>
+                      {[
+                        { label: '↺ 15°', deg: -15 },
+                        { label: '↻ 15°', deg: +15 },
+                      ].map(btn => (
+                        <button key={btn.label} onClick={() => rotateOverlay(selectedId, btn.deg)}
+                          style={{ padding: '5px 8px', backgroundColor: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: 7, color: 'white', fontSize: 11, fontWeight: 700, cursor: 'pointer', whiteSpace: 'nowrap' }}
+                          onMouseEnter={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.18)'}
+                          onMouseLeave={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)'}
+                        >{btn.label}</button>
+                      ))}
+                    </div>
+                    <div style={{ display: 'flex', gap: 4 }}>
+                      {[
+                        { label: '↺ 90°', deg: -90 },
+                        { label: '↻ 90°', deg: +90 },
+                      ].map(btn => (
+                        <button key={btn.label} onClick={() => rotateOverlay(selectedId, btn.deg)}
+                          style={{ padding: '5px 8px', backgroundColor: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: 7, color: 'white', fontSize: 11, fontWeight: 700, cursor: 'pointer', whiteSpace: 'nowrap' }}
+                          onMouseEnter={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.18)'}
+                          onMouseLeave={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)'}
+                        >{btn.label}</button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Reset rotation + close */}
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 4, paddingLeft: 12, borderLeft: '1px solid rgba(255,255,255,0.12)' }}>
+                    <button onClick={() => rotateOverlay(selectedId, -rot)}
+                      title={t('Reset rotation', 'Réinitialiser la rotation')}
+                      style={{ padding: '5px 9px', backgroundColor: rot !== 0 ? `${ov.color}30` : 'rgba(255,255,255,0.06)', border: `1px solid ${rot !== 0 ? ov.color + '60' : 'rgba(255,255,255,0.12)'}`, borderRadius: 7, color: rot !== 0 ? ov.color : 'rgba(255,255,255,0.4)', fontSize: 13, cursor: 'pointer' }}
+                      onMouseEnter={e => e.currentTarget.style.opacity = '0.7'}
+                      onMouseLeave={e => e.currentTarget.style.opacity = '1'}
+                    >↺ 0°</button>
+                    <button onClick={() => setSelectedId(null)}
+                      style={{ padding: '5px 9px', backgroundColor: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 7, color: 'rgba(255,255,255,0.5)', fontSize: 12, cursor: 'pointer' }}
+                      onMouseEnter={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.12)'}
+                      onMouseLeave={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.06)'}
+                    >✕ {t('Close', 'Fermer')}</button>
+                  </div>
+                </div>
+
+                {/* Compass north indicator */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: 5, opacity: 0.55 }}>
+                  <svg width="10" height="10" viewBox="0 0 10 10">
+                    <polygon points="5,0 6.5,5 5,4 3.5,5" fill="#ef4444" />
+                    <polygon points="5,10 6.5,5 5,6 3.5,5" fill="rgba(255,255,255,0.4)" />
+                  </svg>
+                  <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.55)', fontWeight: 600 }}>
+                    N {rot === 0 ? t('↑ North up', '↑ Nord en haut') : `${Math.round(rot)}° ${t('from north', 'depuis le nord')}`}
+                  </span>
+                </div>
+              </div>
+            )
+          })()}
         </div>
       </div>
 

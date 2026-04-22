@@ -25,19 +25,22 @@ const COLOR_OPTIONS = [
 ]
 
 const SYMBOL_OPTIONS = [
-  { key: 'Star',         label: { en: 'Star',         fr: 'Étoile'     } },
-  { key: 'Cross',        label: { en: 'Cross',         fr: 'Croix'      } },
-  { key: 'Crescent',     label: { en: 'Crescent',      fr: 'Croissant'  } },
-  { key: 'Eagle',        label: { en: 'Eagle',         fr: 'Aigle'      } },
-  { key: 'Sun',          label: { en: 'Sun',           fr: 'Soleil'     } },
-  { key: 'Coat of arms', label: { en: 'Coat of Arms',  fr: 'Blason'     } },
-  { key: 'Stripes',      label: { en: 'Stripes',       fr: 'Rayures'    } },
-  { key: 'Triangle',     label: { en: 'Triangle',      fr: 'Triangle'   } },
-  { key: 'Dragon',       label: { en: 'Dragon',        fr: 'Dragon'     } },
-  { key: 'Union Jack',   label: { en: 'Union Jack',    fr: 'Union Jack' } },
-  { key: '__weapon',     label: { en: 'Any weapon',    fr: 'Arme (tout type)'  }, special: 'weapon'  },
-  { key: '__firearm',    label: { en: 'Firearm',       fr: 'Arme à feu'         }, special: 'firearm' },
-  { key: '__blade',      label: { en: 'Blade weapon',  fr: 'Arme blanche'      }, special: 'blade'   },
+  { key: 'Star',         label: { en: 'Star',              fr: 'Étoile'           } },
+  { key: 'Cross',        label: { en: 'Cross',             fr: 'Croix'            } },
+  { key: 'Crescent',     label: { en: 'Crescent',          fr: 'Croissant'        } },
+  { key: 'Eagle',        label: { en: 'Eagle',             fr: 'Aigle'            } },
+  { key: 'Bird',         label: { en: 'Bird',              fr: 'Oiseau'           } },
+  { key: 'Sun',          label: { en: 'Sun',               fr: 'Soleil'           } },
+  { key: 'Coat of arms', label: { en: 'Coat of Arms',      fr: 'Blason'           } },
+  { key: 'Triangle',     label: { en: 'Triangle',          fr: 'Triangle'         } },
+  { key: 'Dragon',       label: { en: 'Dragon',            fr: 'Dragon'           } },
+  { key: 'Union Jack',   label: { en: 'Union Jack',        fr: 'Union Jack'       } },
+  { key: 'Animals',      label: { en: 'Animals',           fr: 'Animaux'          } },
+  { key: 'Tools',        label: { en: 'Tools',             fr: 'Outils'           } },
+  { key: 'Map',          label: { en: 'Geographic Map',    fr: 'Carte géographique' } },
+  { key: '__weapon',     label: { en: 'Any weapon',        fr: 'Arme (tout type)' }, special: 'weapon'  },
+  { key: '__firearm',    label: { en: 'Firearm',           fr: 'Arme à feu'       }, special: 'firearm' },
+  { key: '__blade',      label: { en: 'Blade weapon',      fr: 'Arme blanche'     }, special: 'blade'   },
 ]
 
 const FIREARM_SYMBOLS = ['Gun', 'Rifle', 'Musket', 'Cannon', 'Firearms', 'Firearm']

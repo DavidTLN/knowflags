@@ -5,4 +5,7 @@ export const metadata = {
   description: 'Discover the flag, capital, and details of this country.',
 }
 
-export default CountryDetailPage
+export default async function Page({ params }) {
+  const { code } = await params
+  return <CountryDetailPage code={code} />
+}

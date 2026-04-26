@@ -4,6 +4,8 @@ import Hero from '@/components/Hero'
 import CategoryGrid from '@/components/CategoryGrid'
 import Footer from '@/components/Footer'
 import TrueSizeModule from '@/components/TrueSizeModule'
+import FeaturedFlag from '@/components/FeaturedFlag'
+
 
 export default function Home() {
   return (

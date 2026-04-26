@@ -52,7 +52,6 @@ const ALL_COUNTRIES = [
   { code: 'ua', en: 'Ukraine',                  fr: 'Ukraine',            continent: 'europe',           population: 43733762,   medianAge: 41.4, official: true },
   { code: 'gb', en: 'United Kingdom',           fr: 'Royaume-Uni',        continent: 'europe',           population: 67886011,   medianAge: 40.5, official: true },
   { code: 'va', en: 'Vatican',                  fr: 'Vatican',            continent: 'europe',           population: 801,        medianAge: 55.0, official: true },
-
   // AFRICA
   { code: 'dz', en: 'Algeria',                  fr: 'Algérie',            continent: 'africa',           population: 43851044,   medianAge: 28.5, official: true },
   { code: 'ao', en: 'Angola',                   fr: 'Angola',             continent: 'africa',           population: 32866272,   medianAge: 16.8, official: true },
@@ -108,7 +107,6 @@ const ALL_COUNTRIES = [
   { code: 'ug', en: 'Uganda',                   fr: 'Ouganda',            continent: 'africa',           population: 45741007,   medianAge: 16.7, official: true },
   { code: 'zm', en: 'Zambia',                   fr: 'Zambie',             continent: 'africa',           population: 18383955,   medianAge: 17.0, official: true },
   { code: 'zw', en: 'Zimbabwe',                 fr: 'Zimbabwe',           continent: 'africa',           population: 14862924,   medianAge: 20.0, official: true },
-
   // ASIA
   { code: 'af', en: 'Afghanistan',              fr: 'Afghanistan',        continent: 'asia',             population: 38928346,   medianAge: 18.4, official: true },
   { code: 'am', en: 'Armenia',                  fr: 'Arménie',            continent: 'asia',             population: 2963243,    medianAge: 37.0, official: true },
@@ -158,13 +156,11 @@ const ALL_COUNTRIES = [
   { code: 'uz', en: 'Uzbekistan',               fr: 'Ouzbékistan',        continent: 'asia',             population: 33469203,   medianAge: 28.2, official: true },
   { code: 'vn', en: 'Vietnam',                  fr: 'Vietnam',            continent: 'asia',             population: 97338579,   medianAge: 30.5, official: true },
   { code: 'ye', en: 'Yemen',                    fr: 'Yémen',              continent: 'asia',             population: 29825964,   medianAge: 19.5, official: true },
-
   // NORTH AMERICAS
   { code: 'ca', en: 'Canada',                   fr: 'Canada',             continent: 'north-americas',   population: 37742154,   medianAge: 41.1, official: true },
   { code: 'us', en: 'United States',            fr: 'États-Unis',         continent: 'north-americas',   population: 331002651,  medianAge: 38.5, official: true },
   { code: 'mx', en: 'Mexico',                   fr: 'Mexique',            continent: 'north-americas',   population: 128932753,  medianAge: 29.2, official: true },
   { code: 'gl', en: 'Greenland',                fr: 'Groenland',          continent: 'north-americas',   population: 56367,      medianAge: 34.3, official: false },
-
   // CENTRAL AMERICAS
   { code: 'bz', en: 'Belize',                   fr: 'Belize',             continent: 'central-americas', population: 397628,     medianAge: 25.3, official: true },
   { code: 'gt', en: 'Guatemala',                fr: 'Guatemala',          continent: 'central-americas', population: 17915568,   medianAge: 22.8, official: true },
@@ -186,7 +182,6 @@ const ALL_COUNTRIES = [
   { code: 'lc', en: 'Saint Lucia',              fr: 'Sainte-Lucie',       continent: 'central-americas', population: 183627,     medianAge: 34.9, official: true },
   { code: 'vc', en: 'Saint Vincent',            fr: 'Saint-Vincent',      continent: 'central-americas', population: 110940,     medianAge: 32.0, official: true },
   { code: 'tt', en: 'Trinidad & Tobago',        fr: 'Trinité-et-Tobago',  continent: 'central-americas', population: 1399488,    medianAge: 36.4, official: true },
-
   // SOUTH AMERICAS
   { code: 'co', en: 'Colombia',                 fr: 'Colombie',           continent: 'south-americas',   population: 50882891,   medianAge: 30.8, official: true },
   { code: 've', en: 'Venezuela',                fr: 'Venezuela',          continent: 'south-americas',   population: 28435943,   medianAge: 29.1, official: true },
@@ -200,7 +195,6 @@ const ALL_COUNTRIES = [
   { code: 'ar', en: 'Argentina',                fr: 'Argentine',          continent: 'south-americas',   population: 45195774,   medianAge: 31.7, official: true },
   { code: 'cl', en: 'Chile',                    fr: 'Chili',              continent: 'south-americas',   population: 19116201,   medianAge: 35.0, official: true },
   { code: 'uy', en: 'Uruguay',                  fr: 'Uruguay',            continent: 'south-americas',   population: 3473730,    medianAge: 35.6, official: true },
-
   // OCEANIA
   { code: 'au', en: 'Australia',                fr: 'Australie',          continent: 'oceania',          population: 25499884,   medianAge: 37.9, official: true },
   { code: 'fj', en: 'Fiji',                     fr: 'Fidji',              continent: 'oceania',          population: 896445,     medianAge: 28.6, official: true },
@@ -218,28 +212,50 @@ const ALL_COUNTRIES = [
   { code: 'vu', en: 'Vanuatu',                  fr: 'Vanuatu',            continent: 'oceania',          population: 307145,     medianAge: 22.0, official: true },
 ]
 
+// svgBottom / svgWidth (mobile) tweaked per continent
 const CONTINENT_META = {
-  'europe':           { en: 'Europe',           fr: 'Europe',             color: '#1a3a6b', accent: '#4a7fd4', light: '#e8f0fa', svg: '/europe.svg',
+  'europe': {
+    en: 'Europe', fr: 'Europe', color: '#1a3a6b', accent: '#4a7fd4', light: '#e8f0fa', svg: '/europe.svg',
+    svgBottom: '-5%',  svgWidth: '72%',  // moved up
     descEn: "The cradle of Western civilization, home to rich history, diverse cultures, and the world's oldest democracies.",
-    descFr: "Berceau de la civilisation occidentale, riche en histoire et cultures diverses." },
-  'africa':           { en: 'Africa',           fr: 'Afrique',            color: '#6b2a1a', accent: '#e07840', light: '#fdf0e8', svg: '/africa.svg',
+    descFr: "Berceau de la civilisation occidentale, riche en histoire et cultures diverses.",
+  },
+  'africa': {
+    en: 'Africa', fr: 'Afrique', color: '#6b2a1a', accent: '#e07840', light: '#fdf0e8', svg: '/africa.svg',
+    svgBottom: '-15%', svgWidth: '75%',  // default
     descEn: "The world's second-largest continent, birthplace of humanity with extraordinary biodiversity.",
-    descFr: "Le deuxième plus grand continent, berceau de l'humanité et foyer d'une biodiversité extraordinaire." },
-  'asia':             { en: 'Asia',             fr: 'Asie',               color: '#1a5c3a', accent: '#4ab870', light: '#e8f8ee', svg: '/asia.svg',
+    descFr: "Le deuxième plus grand continent, berceau de l'humanité et foyer d'une biodiversité extraordinaire.",
+  },
+  'asia': {
+    en: 'Asia', fr: 'Asie', color: '#1a5c3a', accent: '#4ab870', light: '#e8f8ee', svg: '/asia.svg',
+    svgBottom: '-15%', svgWidth: '75%',
     descEn: "The largest continent by area and population, home to ancient civilizations and fast-growing economies.",
-    descFr: "Le plus grand continent, berceau de civilisations anciennes et d'économies en plein essor." },
-  'north-americas':   { en: 'North America',   fr: 'Amérique du Nord',   color: '#3b0764', accent: '#a855d4', light: '#f5e8fd', svg: '/north-america.svg',
+    descFr: "Le plus grand continent, berceau de civilisations anciennes et d'économies en plein essor.",
+  },
+  'north-americas': {
+    en: 'North America', fr: 'Amérique du Nord', color: '#3b0764', accent: '#a855d4', light: '#f5e8fd', svg: '/north-america.svg',
+    svgBottom: '-5%',  svgWidth: '72%',  // moved up
     descEn: "Canada and the United States — vast landscapes, multicultural societies, and economic powerhouses.",
-    descFr: "Le Canada et les États-Unis — vastes paysages, sociétés multiculturelles et puissances économiques." },
-  'central-americas': { en: 'Central America', fr: 'Amérique centrale',  color: '#581c87', accent: '#c084fc', light: '#f3e8ff', svg: '/central-america.svg',
+    descFr: "Le Canada et les États-Unis — vastes paysages, sociétés multiculturelles et puissances économiques.",
+  },
+  'central-americas': {
+    en: 'Central America', fr: 'Amérique centrale', color: '#581c87', accent: '#c084fc', light: '#f3e8ff', svg: '/central-america.svg',
+    svgBottom: '-15%', svgWidth: '75%',
     descEn: "A vibrant region of diverse cultures, tropical landscapes, and Caribbean island nations.",
-    descFr: "Une région vibrante de cultures diverses, paysages tropicaux et nations insulaires des Caraïbes." },
-  'south-americas':   { en: 'South America',   fr: 'Amérique du Sud',    color: '#4a044e', accent: '#e879f9', light: '#fdf4ff', svg: '/south-america.svg',
+    descFr: "Une région vibrante de cultures diverses, paysages tropicaux et nations insulaires des Caraïbes.",
+  },
+  'south-americas': {
+    en: 'South America', fr: 'Amérique du Sud', color: '#4a044e', accent: '#e879f9', light: '#fdf4ff', svg: '/south-america.svg',
+    svgBottom: '-25%', svgWidth: '75%',  // moved down more
     descEn: "From the Amazon rainforest to the Andes, a continent of remarkable natural and cultural diversity.",
-    descFr: "De la forêt amazonienne aux Andes, un continent d'une remarquable diversité naturelle et culturelle." },
-  'oceania':          { en: 'Oceania',          fr: 'Océanie',            color: '#1a4a6b', accent: '#38b2d4', light: '#e8f6fc', svg: '/oceania.svg',
+    descFr: "De la forêt amazonienne aux Andes, un continent d'une remarquable diversité naturelle et culturelle.",
+  },
+  'oceania': {
+    en: 'Oceania', fr: 'Océanie', color: '#1a4a6b', accent: '#38b2d4', light: '#e8f6fc', svg: '/oceania.svg',
+    svgBottom: '-15%', svgWidth: '85%',  // bigger
     descEn: "A vast oceanic region encompassing Australia, Melanesia, Micronesia, and Polynesia.",
-    descFr: "Une vaste région océanique englobant l'Australie, la Mélanésie, la Micronésie et la Polynésie." },
+    descFr: "Une vaste région océanique englobant l'Australie, la Mélanésie, la Micronésie et la Polynésie.",
+  },
 }
 
 function formatPop(n) {
@@ -249,7 +265,6 @@ function formatPop(n) {
   return n.toString()
 }
 
-// ── CountryCard ────────────────────────────────────────────────────────────────
 function CountryCard({ country, locale, accentColor }) {
   const [hovered, setHovered] = useState(false)
   const name = locale === 'fr' ? country.fr : country.en
@@ -285,48 +300,35 @@ function CountryCard({ country, locale, accentColor }) {
   )
 }
 
-// ── StatsBar — 2x2 on mobile, 4 cols on desktop ───────────────────────────────
 function StatsBar({ countries, meta, locale, isMobile }) {
   const official   = countries.filter(c => c.official).length
   const unofficial = countries.filter(c => !c.official).length
   const totalPop   = countries.reduce((s, c) => s + c.population, 0)
   const avgAge     = (countries.reduce((s, c) => s + c.medianAge, 0) / countries.length).toFixed(1)
-
   const stats = [
     { label: locale === 'fr' ? 'Population totale' : 'Total Population', value: formatPop(totalPop) },
     { label: locale === 'fr' ? 'Pays officiels'    : 'Official Countries', value: official },
     { label: locale === 'fr' ? 'Non-officiels'     : 'Non-official', value: unofficial },
     { label: locale === 'fr' ? 'Âge médian moyen'  : 'Avg. Median Age', value: avgAge + (locale === 'fr' ? ' ans' : ' yr') },
   ]
-
   return (
     <div style={{ backgroundColor: '#fff', borderBottom: '1px solid #e5e0d0' }}>
-      <div style={{
-        maxWidth: '1152px', margin: '0 auto',
-        display: 'grid',
-        gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)',
-      }}>
-        {stats.map((s, i) => {
-          const isLastRow = isMobile ? i >= 2 : false
-          const isRightCol = isMobile ? i % 2 === 1 : i < 3
-          return (
-            <div key={i} style={{
-              padding: isMobile ? '16px 12px' : '20px 24px',
-              textAlign: 'center',
-              borderRight: isRightCol ? '1px solid #e5e0d0' : 'none',
-              borderBottom: isLastRow ? 'none' : (isMobile && i < 2 ? '1px solid #e5e0d0' : 'none'),
-            }}>
-              <div style={{ fontSize: isMobile ? '22px' : '28px', fontWeight: '900', color: meta.color, letterSpacing: '-0.5px' }}>{s.value}</div>
-              <div style={{ fontSize: isMobile ? '10px' : '11px', color: '#888', marginTop: '4px', textTransform: 'uppercase', letterSpacing: '0.05em', lineHeight: 1.3 }}>{s.label}</div>
-            </div>
-          )
-        })}
+      <div style={{ maxWidth: '1152px', margin: '0 auto', display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)' }}>
+        {stats.map((s, i) => (
+          <div key={i} style={{
+            padding: isMobile ? '16px 12px' : '20px 24px', textAlign: 'center',
+            borderRight: (isMobile ? i % 2 === 0 : i < 3) ? '1px solid #e5e0d0' : 'none',
+            borderBottom: isMobile && i < 2 ? '1px solid #e5e0d0' : 'none',
+          }}>
+            <div style={{ fontSize: isMobile ? '22px' : '28px', fontWeight: '900', color: meta.color, letterSpacing: '-0.5px' }}>{s.value}</div>
+            <div style={{ fontSize: isMobile ? '10px' : '11px', color: '#888', marginTop: '4px', textTransform: 'uppercase', letterSpacing: '0.05em', lineHeight: 1.3 }}>{s.label}</div>
+          </div>
+        ))}
       </div>
     </div>
   )
 }
 
-// ── CountriesGrid ──────────────────────────────────────────────────────────────
 function CountriesGrid({ countries, locale, accentColor, search, filter }) {
   const filtered = useMemo(() => {
     let list = countries
@@ -336,9 +338,7 @@ function CountriesGrid({ countries, locale, accentColor, search, filter }) {
       const q = search.toLowerCase()
       list = list.filter(c => c.en.toLowerCase().includes(q) || c.fr.toLowerCase().includes(q))
     }
-    return list.sort((a, b) =>
-      (locale === 'fr' ? a.fr : a.en).localeCompare(locale === 'fr' ? b.fr : b.en)
-    )
+    return list.sort((a, b) => (locale === 'fr' ? a.fr : a.en).localeCompare(locale === 'fr' ? b.fr : b.en))
   }, [countries, filter, search, locale])
 
   if (filtered.length === 0) return (
@@ -346,41 +346,25 @@ function CountriesGrid({ countries, locale, accentColor, search, filter }) {
       {locale === 'fr' ? 'Aucun pays trouvé.' : 'No countries found.'}
     </div>
   )
-
   return (
-    <div style={{
-      display: 'grid',
-      // Mobile: exactly 2 cols. Desktop: auto-fill with min 160px.
-      gridTemplateColumns: 'repeat(2, 1fr)',
-      gap: '12px',
-    }}
-    className="continent-grid">
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px' }} className="continent-grid">
       {filtered.map(c => <CountryCard key={c.code} country={c} locale={locale} accentColor={accentColor} />)}
       <style>{`
-        @media (min-width: 640px) {
-          .continent-grid { grid-template-columns: repeat(3, 1fr) !important; }
-        }
-        @media (min-width: 900px) {
-          .continent-grid { grid-template-columns: repeat(4, 1fr) !important; }
-        }
-        @media (min-width: 1100px) {
-          .continent-grid { grid-template-columns: repeat(5, 1fr) !important; }
-        }
+        @media (min-width: 640px)  { .continent-grid { grid-template-columns: repeat(3, 1fr) !important; } }
+        @media (min-width: 900px)  { .continent-grid { grid-template-columns: repeat(4, 1fr) !important; } }
+        @media (min-width: 1100px) { .continent-grid { grid-template-columns: repeat(5, 1fr) !important; } }
       `}</style>
     </div>
   )
 }
 
-// ── Main ───────────────────────────────────────────────────────────────────────
 export default function ContinentPage({ slug }) {
   const locale = useLocale()
-  const [filter, setFilter] = useState('all')
-  const [search, setSearch] = useState('')
+  const [filter, setFilter]     = useState('all')
+  const [search, setSearch]     = useState('')
   const [isMobile, setIsMobile] = useState(false)
 
-  useEffect(() => {
-    window.scrollTo({ top: 0 })
-  }, [slug])
+  useEffect(() => { window.scrollTo({ top: 0 }) }, [slug])
 
   useEffect(() => {
     function check() { setIsMobile(window.innerWidth < 768) }
@@ -413,29 +397,50 @@ export default function ContinentPage({ slug }) {
         background: `linear-gradient(135deg, ${meta.color} 0%, ${meta.accent}bb 100%)`,
         padding: isMobile ? '32px 20px 28px' : '48px 24px 40px',
         color: '#fff',
+        position: 'relative',
+        overflow: 'hidden',
       }}>
-        <div style={{ maxWidth: '1152px', margin: '0 auto', display: 'flex', alignItems: 'center', gap: isMobile ? '20px' : '48px' }}>
-          <div style={{ flex: 1 }}>
-            <Link href={`/${locale}`} style={{
-              color: 'rgba(255,255,255,0.65)', textDecoration: 'none', fontSize: '14px',
-              display: 'inline-flex', alignItems: 'center', gap: '6px', marginBottom: '16px',
-            }}>
-              ← {locale === 'fr' ? 'Accueil' : 'Home'}
-            </Link>
-            <h1 style={{
-              fontSize: isMobile ? '36px' : '52px',
-              fontWeight: '900', margin: '0 0 10px', letterSpacing: '-1px',
-              color: 'white', WebkitTextFillColor: 'white',
-            }}>{title}</h1>
-            <p style={{ fontSize: isMobile ? '14px' : '16px', opacity: 0.85, maxWidth: '540px', lineHeight: '1.65', margin: 0 }}>{desc}</p>
-          </div>
-          {/* SVG continent shape — hide on very small screens */}
-          {!isMobile && (
-            <div style={{ width: '140px', flexShrink: 0, opacity: 0.3 }}>
-              <img src={meta.svg} alt={title} style={{ width: '100%', filter: 'brightness(0) invert(1)' }} />
-            </div>
-          )}
+
+        {/* Text — zIndex 2, always above SVG */}
+        <div style={{ maxWidth: '1152px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
+          <Link href={`/${locale}`} style={{
+            color: 'rgba(255,255,255,0.65)', textDecoration: 'none', fontSize: '14px',
+            display: 'inline-flex', alignItems: 'center', gap: '6px', marginBottom: '16px',
+          }}>
+            ← {locale === 'fr' ? 'Accueil' : 'Home'}
+          </Link>
+          <h1 style={{
+            fontSize: isMobile ? '36px' : '52px',
+            fontWeight: '900', margin: '0 0 10px', letterSpacing: '-1px',
+            color: 'white', WebkitTextFillColor: 'white',
+          }}>{title}</h1>
+          <p style={{
+            fontSize: isMobile ? '14px' : '16px',
+            opacity: 0.85,
+            maxWidth: isMobile ? '68%' : '540px',
+            lineHeight: '1.65',
+            margin: 0,
+          }}>{desc}</p>
         </div>
+
+        {/* SVG watermark — per-continent position & size */}
+        <img
+          src={meta.svg}
+          alt=""
+          aria-hidden="true"
+          style={{
+            position: 'absolute',
+            bottom: isMobile ? meta.svgBottom : '-20%',
+            right: isMobile ? '-8%' : '-3%',
+            width: isMobile ? meta.svgWidth : '320px',
+            height: 'auto',
+            filter: 'brightness(0) invert(1)',
+            opacity: 0.13,
+            pointerEvents: 'none',
+            userSelect: 'none',
+            zIndex: 1,
+          }}
+        />
       </div>
 
       {/* ── Stats ── */}
@@ -449,28 +454,20 @@ export default function ContinentPage({ slug }) {
             placeholder={locale === 'fr' ? 'Rechercher un pays...' : 'Search a country...'}
             value={search}
             onChange={e => setSearch(e.target.value)}
-            style={{
-              padding: '10px 16px', borderRadius: '8px', border: '2px solid #e5e0d0',
-              fontSize: '14px', outline: 'none', flex: '1', minWidth: '140px',
-              backgroundColor: '#fff',
-            }}
+            style={{ padding: '10px 16px', borderRadius: '8px', border: '2px solid #e5e0d0', fontSize: '14px', outline: 'none', flex: '1', minWidth: '140px', backgroundColor: '#fff' }}
           />
           <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
             {['all', 'official', 'unofficial'].map(f => (
               <button key={f} onClick={() => setFilter(f)} style={{
-                padding: isMobile ? '8px 12px' : '10px 16px',
-                borderRadius: '8px', cursor: 'pointer',
+                padding: isMobile ? '8px 12px' : '10px 16px', borderRadius: '8px', cursor: 'pointer',
                 border: `2px solid ${filter === f ? meta.accent : '#e5e0d0'}`,
                 backgroundColor: filter === f ? meta.light : '#fff',
                 color: filter === f ? meta.color : '#666',
                 fontWeight: filter === f ? '700' : '400',
                 fontSize: isMobile ? '12px' : '13px',
-                transition: 'all 0.15s ease',
-                whiteSpace: 'nowrap',
+                transition: 'all 0.15s ease', whiteSpace: 'nowrap',
               }}>
-                {f === 'all'      ? (locale === 'fr' ? 'Tous'          : 'All') :
-                 f === 'official' ? (locale === 'fr' ? 'Officiels'     : 'Official') :
-                                    (locale === 'fr' ? 'Non-officiels' : 'Non-official')}
+                {f === 'all' ? (locale === 'fr' ? 'Tous' : 'All') : f === 'official' ? (locale === 'fr' ? 'Officiels' : 'Official') : (locale === 'fr' ? 'Non-officiels' : 'Non-official')}
               </button>
             ))}
           </div>
@@ -479,13 +476,7 @@ export default function ContinentPage({ slug }) {
 
       {/* ── Countries grid ── */}
       <div style={{ maxWidth: '1152px', margin: '0 auto', padding: isMobile ? '0 16px 48px' : '0 24px 60px' }}>
-        <CountriesGrid
-          countries={countries}
-          locale={locale}
-          accentColor={meta.accent}
-          search={search}
-          filter={filter}
-        />
+        <CountriesGrid countries={countries} locale={locale} accentColor={meta.accent} search={search} filter={filter} />
       </div>
     </main>
   )

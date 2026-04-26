@@ -5,19 +5,19 @@ import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import FlagImage from '@/components/FlagImage'
 import { useLocale } from 'next-intl'
- 
+
 const REGION_LABELS = { Africa: 'Afrique', Americas: 'Amériques', Asia: 'Asie', Europe: 'Europe', Oceania: 'Océanie' }
- 
+
 const CONTINENT_META = {
-  'europe':           { en: 'Europe',          fr: 'Europe',            slug: 'europe',           color: '#1a3a6b', accent: '#4a7fd4', emoji: '🇪🇺' },
-  'africa':           { en: 'Africa',          fr: 'Afrique',           slug: 'africa',           color: '#6b2a1a', accent: '#e07840', emoji: '🌍' },
-  'asia':             { en: 'Asia',            fr: 'Asie',              slug: 'asia',             color: '#1a5c3a', accent: '#4ab870', emoji: '🌏' },
-  'north-americas':   { en: 'North America',  fr: 'Amérique du Nord',  slug: 'north-americas',   color: '#3b0764', accent: '#a855d4', emoji: '🌎' },
-  'central-americas': { en: 'Central America',fr: 'Amérique centrale', slug: 'central-americas', color: '#581c87', accent: '#c084fc', emoji: '🌴' },
-  'south-americas':   { en: 'South America',  fr: 'Amérique du Sud',   slug: 'south-americas',   color: '#4a044e', accent: '#e879f9', emoji: '🌎' },
-  'oceania':          { en: 'Oceania',         fr: 'Océanie',           slug: 'oceania',          color: '#1a4a6b', accent: '#38b2d4', emoji: '🌊' },
+  'europe':           { en: 'Europe',          fr: 'Europe',            slug: 'europe',           color: '#1a3a6b', accent: '#4a7fd4', svg: '/europe.svg' },
+  'africa':           { en: 'Africa',          fr: 'Afrique',           slug: 'africa',           color: '#6b2a1a', accent: '#e07840', svg: '/africa.svg' },
+  'asia':             { en: 'Asia',            fr: 'Asie',              slug: 'asia',             color: '#1a5c3a', accent: '#4ab870', svg: '/asia.svg' },
+  'north-americas':   { en: 'North America',  fr: 'Amérique du Nord',  slug: 'north-americas',   color: '#3b0764', accent: '#a855d4', svg: '/north-america.svg' },
+  'central-americas': { en: 'Central America',fr: 'Amérique centrale', slug: 'central-americas', color: '#581c87', accent: '#c084fc', svg: '/central-america.svg' },
+  'south-americas':   { en: 'South America',  fr: 'Amérique du Sud',   slug: 'south-americas',   color: '#4a044e', accent: '#e879f9', svg: '/south-america.svg' },
+  'oceania':          { en: 'Oceania',         fr: 'Océanie',           slug: 'oceania',          color: '#1a4a6b', accent: '#38b2d4', svg: '/oceania.svg' },
 }
- 
+
 const REGION_TO_CONTINENT = {
   'Africa':   'africa',
   'Americas': 'north-americas',
@@ -25,18 +25,18 @@ const REGION_TO_CONTINENT = {
   'Europe':   'europe',
   'Oceania':  'oceania',
 }
- 
+
 // ── CountryFlagsSection ──────────────────────────────────────────────────────
 function CountryFlagsSection({ countryIso2 }) {
   const locale = useLocale()
   const t = (en, fr) => locale === 'fr' ? fr : en
- 
+
   const [regions, setRegions]     = useState([])
   const [cities, setCities]       = useState([])
   const [orgs, setOrgs]           = useState([])
   const [activeTab, setActiveTab] = useState('regions')
   const [loading, setLoading]     = useState(true)
- 
+
   useEffect(() => {
     if (!countryIso2) return
     const supabase = createClient()
@@ -68,17 +68,17 @@ function CountryFlagsSection({ countryIso2 }) {
           })
       })
   }, [countryIso2])
- 
+
   const tabs = [
     { key: 'regions', label: t('Regions', 'Régions'),            count: regions.length },
     { key: 'cities',  label: t('Cities', 'Villes'),              count: cities.length },
     { key: 'orgs',    label: t('Organisations', 'Organisations'), count: orgs.length },
   ].filter(tab => tab.count > 0)
- 
+
   if (!loading && tabs.length === 0) return null
- 
+
   const current = activeTab === 'regions' ? regions : activeTab === 'cities' ? cities : orgs
- 
+
   return (
     <section style={{ marginTop: '48px', fontFamily: 'var(--font-body, Arial)' }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px', flexWrap: 'wrap', gap: '12px' }}>
@@ -111,7 +111,7 @@ function CountryFlagsSection({ countryIso2 }) {
           </div>
         )}
       </div>
- 
+
       {loading ? (
         <div style={{ height: '120px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#94a3b8', fontSize: '14px' }}>
           {t('Loading...', 'Chargement...')}
@@ -138,7 +138,7 @@ function CountryFlagsSection({ countryIso2 }) {
     </section>
   )
 }
- 
+
 function SubFlagCard({ slug, name, parentName, imagePath }) {
   const [hovered, setHovered] = useState(false)
   return (
@@ -174,41 +174,69 @@ function SubFlagCard({ slug, name, parentName, imagePath }) {
     </div>
   )
 }
- 
+
 // ── ContinentNavModule ────────────────────────────────────────────────────────
 function ContinentNavModule({ currentContinent, locale }) {
   const t = (en, fr) => locale === 'fr' ? fr : en
   const continents = Object.values(CONTINENT_META)
- 
+  const [hovered, setHovered] = useState(null)
+
   return (
-    <section style={{ marginTop: '48px' }}>
+    <section style={{ marginTop: '48px', paddingBottom: '16px' }}>
       <h2 style={{ fontSize: '20px', fontWeight: '900', color: '#0B1F3B', margin: '0 0 16px', letterSpacing: '-0.5px' }}>
         {t('Browse by Continent', 'Naviguer par continent')}
       </h2>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '10px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))', gap: '10px' }}>
         {continents.map(c => {
           const isCurrent = c.slug === currentContinent
-          const label = locale === 'fr' ? c.fr : c.en
+          const isHovered = hovered === c.slug
+          const active    = isCurrent || isHovered
+          const label     = locale === 'fr' ? c.fr : c.en
           return (
             <Link key={c.slug} href={`/${locale}/continents/${c.slug}`} style={{ textDecoration: 'none' }}>
               <div
+                onMouseEnter={() => setHovered(c.slug)}
+                onMouseLeave={() => setHovered(null)}
                 style={{
-                  padding: '14px 16px', borderRadius: '12px',
-                  border: isCurrent ? `2px solid ${c.accent}` : '2px solid #e2e8f0',
-                  backgroundColor: isCurrent ? c.accent + '18' : 'white',
-                  cursor: 'pointer', transition: 'all 0.15s',
-                  display: 'flex', alignItems: 'center', gap: '10px',
+                  borderRadius: '12px', overflow: 'hidden',
+                  border: `2px solid ${active ? c.accent : '#e2e8f0'}`,
+                  transition: 'all 0.2s ease',
+                  transform: isHovered && !isCurrent ? 'translateY(-3px)' : 'none',
+                  boxShadow: active ? `0 6px 20px ${c.color}33` : 'none',
+                  cursor: 'pointer',
                 }}
-                onMouseEnter={e => { if (!isCurrent) { e.currentTarget.style.borderColor = c.accent; e.currentTarget.style.backgroundColor = c.accent + '10' } }}
-                onMouseLeave={e => { if (!isCurrent) { e.currentTarget.style.borderColor = '#e2e8f0'; e.currentTarget.style.backgroundColor = 'white' } }}
               >
-                <span style={{ fontSize: '20px', flexShrink: 0 }}>{c.emoji}</span>
-                <span style={{ fontSize: '13px', fontWeight: isCurrent ? '800' : '600', color: isCurrent ? c.color : '#0B1F3B', lineHeight: 1.2 }}>
-                  {label}
-                </span>
-                {isCurrent && (
-                  <span style={{ marginLeft: 'auto', width: '8px', height: '8px', borderRadius: '50%', backgroundColor: c.accent, flexShrink: 0 }} />
-                )}
+                <div style={{
+                  width: '100%', aspectRatio: '1/1',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  padding: '16px',
+                  backgroundColor: active ? c.color : '#f8f5ed',
+                  transition: 'background-color 0.2s ease',
+                }}>
+                  <img src={c.svg} alt={label} style={{
+                    width: '100%', height: '100%', objectFit: 'contain',
+                    filter: active ? 'brightness(0) invert(1)' : 'brightness(0) opacity(0.65)',
+                    transition: 'filter 0.2s ease',
+                  }} />
+                </div>
+                <div style={{
+                  padding: '8px 10px',
+                  backgroundColor: active ? c.color : 'white',
+                  transition: 'background-color 0.2s ease',
+                  display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                }}>
+                  <span style={{
+                    fontSize: '11px', fontWeight: '800',
+                    textTransform: 'uppercase', letterSpacing: '0.04em',
+                    color: active ? 'white' : '#0B1F3B',
+                    transition: 'color 0.2s ease', lineHeight: 1.3,
+                  }}>
+                    {label}
+                  </span>
+                  {isCurrent && (
+                    <span style={{ width: '7px', height: '7px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.8)', flexShrink: 0 }} />
+                  )}
+                </div>
               </div>
             </Link>
           )
@@ -217,16 +245,16 @@ function ContinentNavModule({ currentContinent, locale }) {
     </section>
   )
 }
- 
+
 // ── CountryDetailPage ────────────────────────────────────────────────────────
 export default function CountryDetailPage({ code }) {
   const locale = useLocale()
   const t = (en, fr) => locale === 'fr' ? fr : en
- 
+
   const [country, setCountry]                   = useState(null)
   const [loading, setLoading]                   = useState(true)
   const [relatedCountries, setRelatedCountries] = useState([])
- 
+
   useEffect(() => {
     if (!code) return
     const supabase = createClient()
@@ -268,7 +296,7 @@ export default function CountryDetailPage({ code }) {
         setLoading(false)
       })
   }, [code])
- 
+
   if (loading) {
     return (
       <div style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -276,7 +304,7 @@ export default function CountryDetailPage({ code }) {
       </div>
     )
   }
- 
+
   if (!country) {
     return (
       <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'Arial, sans-serif' }}>
@@ -290,14 +318,14 @@ export default function CountryDetailPage({ code }) {
       </div>
     )
   }
- 
-  const name    = locale === 'fr' ? country.fr : country.en
-  const capital = country.capital ? (locale === 'fr' ? country.capital.fr : country.capital.en) : '—'
-  const region  = locale === 'fr' ? REGION_LABELS[country.region] : country.region
+
+  const name          = locale === 'fr' ? country.fr : country.en
+  const capital       = country.capital ? (locale === 'fr' ? country.capital.fr : country.capital.en) : '—'
+  const region        = locale === 'fr' ? REGION_LABELS[country.region] : country.region
   const continentSlug = REGION_TO_CONTINENT[country.region] || null
- 
+
   const COLOR_HEX = { red: '#ef4444', blue: '#3b82f6', green: '#22c55e', yellow: '#eab308', white: '#e5e7eb', black: '#1f2937', orange: '#f97316', maroon: '#7f1d1d' }
- 
+
   function formatPop(n) {
     if (!n) return '—'
     if (n >= 1_000_000_000) return (n / 1_000_000_000).toFixed(2) + 'B'
@@ -305,20 +333,21 @@ export default function CountryDetailPage({ code }) {
     if (n >= 1_000) return (n / 1_000).toFixed(0) + 'K'
     return n.toString()
   }
- 
+
   const infoCards = [
     { label: t('Capital', 'Capitale'),         value: capital,                       icon: '🏙️' },
     { label: t('Region', 'Région'),             value: region,                        icon: '🌍' },
     { label: t('ISO Code', 'Code ISO'),         value: country.code.toUpperCase(),    icon: '🔤' },
     { label: t('Population', 'Population'),     value: formatPop(country.population), icon: '👥' },
-    ...(country.area_km2     ? [{ label: t('Area', 'Superficie'),       value: country.area_km2.toLocaleString() + ' km²',             icon: '📐' }] : []),
-    ...(country.adopted_year ? [{ label: t('Flag adopted', 'Adopté en'), value: country.adopted_year,                                   icon: '📅' }] : []),
-...(country.median_age ? [{ label: t('Median age', 'Âge médian'), value: country.median_age + (locale === 'fr' ? ' ans (2024)' : ' yr (2024)'), icon: '👤' }] : []),  ]
- 
+    ...(country.area_km2     ? [{ label: t('Area', 'Superficie'),        value: country.area_km2.toLocaleString() + ' km²',                           icon: '📐' }] : []),
+    ...(country.adopted_year ? [{ label: t('Flag adopted', 'Adopté en'), value: country.adopted_year,                                                  icon: '📅' }] : []),
+    ...(country.median_age   ? [{ label: t('Median age', 'Âge médian'),  value: country.median_age + (locale === 'fr' ? ' ans (2024)' : ' yr (2024)'), icon: '👤' }] : []),
+  ]
+
   return (
     <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: 'Arial, sans-serif' }}>
       <div style={{ maxWidth: '960px', margin: '0 auto', padding: '32px 24px' }}>
- 
+
         {/* Breadcrumb */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '24px', fontSize: '14px', color: '#94a3b8' }}>
           <Link href={`/${locale}/countries`} style={{ color: '#9EB7E5', textDecoration: 'none', fontWeight: '600' }}>
@@ -327,10 +356,10 @@ export default function CountryDetailPage({ code }) {
           <span>›</span>
           <span style={{ color: '#64748b', fontWeight: '500' }}>{name}</span>
         </div>
- 
+
         {/* Hero: flag + info */}
         <div style={{ display: 'flex', gap: '40px', alignItems: 'flex-start', flexWrap: 'wrap', marginBottom: '40px' }}>
- 
+
           {/* Flag */}
           <div style={{ flex: '0 0 auto', width: 'min(400px, 100%)', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 12px 40px rgba(0,0,0,0.14)', border: '1px solid #e2e8f0' }}>
             <img
@@ -339,14 +368,14 @@ export default function CountryDetailPage({ code }) {
               style={{ width: '100%', display: 'block', aspectRatio: '3/2', objectFit: 'contain', backgroundColor: '#f0ede4', padding: '12px' }}
             />
           </div>
- 
+
           {/* Info */}
           <div style={{ flex: 1, minWidth: '200px' }}>
             <h1 style={{ fontSize: '36px', fontWeight: '900', color: '#0B1F3B', margin: '0 0 4px', letterSpacing: '-1px' }}>
               {name}
             </h1>
             <p style={{ margin: '0 0 24px', fontSize: '15px', color: '#64748b' }}>{region}</p>
- 
+
             {/* Info cards */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '24px' }}>
               {infoCards.map((item, i) => (
@@ -356,7 +385,7 @@ export default function CountryDetailPage({ code }) {
                 </div>
               ))}
             </div>
- 
+
             {/* Colors */}
             {country.colors.length > 0 && (
               <div style={{ marginBottom: '16px' }}>
@@ -373,7 +402,7 @@ export default function CountryDetailPage({ code }) {
                 </div>
               </div>
             )}
- 
+
             {/* Symbols */}
             {country.symbols.length > 0 && (
               <div>
@@ -391,13 +420,10 @@ export default function CountryDetailPage({ code }) {
             )}
           </div>
         </div>
- 
+
         {/* Sub-national flags */}
         <CountryFlagsSection countryIso2={country.code} />
- 
-        {/* Continent navigation */}
-        <ContinentNavModule currentContinent={continentSlug} locale={locale} />
- 
+
         {/* Play games CTA */}
         <div style={{ backgroundColor: '#0B1F3B', borderRadius: '16px', padding: '24px 28px', marginTop: '48px', marginBottom: '40px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px' }}>
           <div>
@@ -413,10 +439,10 @@ export default function CountryDetailPage({ code }) {
             🏳️ {t('Play Flag Reveal', 'Jouer à Flag Reveal')}
           </Link>
         </div>
- 
+
         {/* Related countries */}
         {relatedCountries.length > 0 && (
-          <div>
+          <div style={{ marginBottom: '0' }}>
             <h2 style={{ fontSize: '20px', fontWeight: '900', color: '#0B1F3B', margin: '0 0 16px', letterSpacing: '-0.5px' }}>
               {t(`More from ${region}`, `Autres pays — ${region}`)}
             </h2>
@@ -442,7 +468,10 @@ export default function CountryDetailPage({ code }) {
             </div>
           </div>
         )}
- 
+
+        {/* Continent navigation — last section */}
+        <ContinentNavModule currentContinent={continentSlug} locale={locale} />
+
       </div>
     </div>
   )

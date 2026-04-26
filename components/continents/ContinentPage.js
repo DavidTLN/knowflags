@@ -4,7 +4,6 @@ import { useState, useMemo, useEffect } from 'react'
 import Link from 'next/link'
 import { useLocale } from 'next-intl'
 
-// ── Countries ──────────────────────────────────────────────────────────────────
 const ALL_COUNTRIES = [
   // EUROPE
   { code: 'al', en: 'Albania',                  fr: 'Albanie',            continent: 'europe',           population: 2842321,    medianAge: 36.9, official: true },
@@ -219,7 +218,6 @@ const ALL_COUNTRIES = [
   { code: 'vu', en: 'Vanuatu',                  fr: 'Vanuatu',            continent: 'oceania',          population: 307145,     medianAge: 22.0, official: true },
 ]
 
-// ── Config ─────────────────────────────────────────────────────────────────────
 const CONTINENT_META = {
   'europe':           { en: 'Europe',           fr: 'Europe',             color: '#1a3a6b', accent: '#4a7fd4', light: '#e8f0fa', svg: '/europe.svg',
     descEn: "The cradle of Western civilization, home to rich history, diverse cultures, and the world's oldest democracies.",
@@ -244,7 +242,6 @@ const CONTINENT_META = {
     descFr: "Une vaste région océanique englobant l'Australie, la Mélanésie, la Micronésie et la Polynésie." },
 }
 
-// ── Helpers ────────────────────────────────────────────────────────────────────
 function formatPop(n) {
   if (n >= 1_000_000_000) return (n / 1_000_000_000).toFixed(2) + 'B'
   if (n >= 1_000_000) return (n / 1_000_000).toFixed(1) + 'M'
@@ -274,19 +271,11 @@ function CountryCard({ country, locale, accentColor }) {
           <img src={`https://flagcdn.com/w320/${country.code}.png`} alt={name}
             style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" />
         </div>
-        <div style={{ padding: '10px 12px' }}>
-          <div style={{ fontWeight: '700', fontSize: '13px', color: '#0B1F3B', marginBottom: '4px' }}>{name}</div>
-          <div style={{ fontSize: '11px', color: '#888', display: 'flex', gap: '8px' }}>
-            <span>{formatPop(country.population)}</span>
-            <span>·</span>
-            <span>{country.medianAge} {locale === 'fr' ? 'ans' : 'yr'}</span>
-          </div>
+        <div style={{ padding: '8px 10px' }}>
+          <div style={{ fontWeight: '700', fontSize: '13px', color: '#0B1F3B', marginBottom: '2px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{name}</div>
+          <div style={{ fontSize: '11px', color: '#888' }}>{formatPop(country.population)}</div>
           {!country.official && (
-            <span style={{
-              display: 'inline-block', marginTop: '5px', fontSize: '10px',
-              padding: '2px 6px', borderRadius: '4px',
-              backgroundColor: '#f5e8fd', color: '#5c1a6b', fontWeight: '600',
-            }}>
+            <span style={{ display: 'inline-block', marginTop: '4px', fontSize: '10px', padding: '1px 6px', borderRadius: '4px', backgroundColor: '#f5e8fd', color: '#5c1a6b', fontWeight: '600' }}>
               {locale === 'fr' ? 'Non-officiel' : 'Non-official'}
             </span>
           )}
@@ -296,29 +285,42 @@ function CountryCard({ country, locale, accentColor }) {
   )
 }
 
-// ── StatsBar ───────────────────────────────────────────────────────────────────
-function StatsBar({ countries, meta, locale }) {
+// ── StatsBar — 2x2 on mobile, 4 cols on desktop ───────────────────────────────
+function StatsBar({ countries, meta, locale, isMobile }) {
   const official   = countries.filter(c => c.official).length
   const unofficial = countries.filter(c => !c.official).length
   const totalPop   = countries.reduce((s, c) => s + c.population, 0)
   const avgAge     = (countries.reduce((s, c) => s + c.medianAge, 0) / countries.length).toFixed(1)
+
+  const stats = [
+    { label: locale === 'fr' ? 'Population totale' : 'Total Population', value: formatPop(totalPop) },
+    { label: locale === 'fr' ? 'Pays officiels'    : 'Official Countries', value: official },
+    { label: locale === 'fr' ? 'Non-officiels'     : 'Non-official', value: unofficial },
+    { label: locale === 'fr' ? 'Âge médian moyen'  : 'Avg. Median Age', value: avgAge + (locale === 'fr' ? ' ans' : ' yr') },
+  ]
+
   return (
     <div style={{ backgroundColor: '#fff', borderBottom: '1px solid #e5e0d0' }}>
-      <div style={{ maxWidth: '1152px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)' }}>
-        {[
-          { label: locale === 'fr' ? 'Population totale' : 'Total Population', value: formatPop(totalPop) },
-          { label: locale === 'fr' ? 'Pays officiels'    : 'Official Countries', value: official },
-          { label: locale === 'fr' ? 'Non-officiels'     : 'Non-official', value: unofficial },
-          { label: locale === 'fr' ? 'Âge médian moyen'  : 'Avg. Median Age', value: avgAge + (locale === 'fr' ? ' ans' : ' yr') },
-        ].map((s, i) => (
-          <div key={i} style={{
-            padding: '20px 24px', textAlign: 'center',
-            borderRight: i < 3 ? '1px solid #e5e0d0' : 'none',
-          }}>
-            <div style={{ fontSize: '28px', fontWeight: '900', color: meta.color }}>{s.value}</div>
-            <div style={{ fontSize: '11px', color: '#888', marginTop: '4px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{s.label}</div>
-          </div>
-        ))}
+      <div style={{
+        maxWidth: '1152px', margin: '0 auto',
+        display: 'grid',
+        gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)',
+      }}>
+        {stats.map((s, i) => {
+          const isLastRow = isMobile ? i >= 2 : false
+          const isRightCol = isMobile ? i % 2 === 1 : i < 3
+          return (
+            <div key={i} style={{
+              padding: isMobile ? '16px 12px' : '20px 24px',
+              textAlign: 'center',
+              borderRight: isRightCol ? '1px solid #e5e0d0' : 'none',
+              borderBottom: isLastRow ? 'none' : (isMobile && i < 2 ? '1px solid #e5e0d0' : 'none'),
+            }}>
+              <div style={{ fontSize: isMobile ? '22px' : '28px', fontWeight: '900', color: meta.color, letterSpacing: '-0.5px' }}>{s.value}</div>
+              <div style={{ fontSize: isMobile ? '10px' : '11px', color: '#888', marginTop: '4px', textTransform: 'uppercase', letterSpacing: '0.05em', lineHeight: 1.3 }}>{s.label}</div>
+            </div>
+          )
+        })}
       </div>
     </div>
   )
@@ -344,9 +346,27 @@ function CountriesGrid({ countries, locale, accentColor, search, filter }) {
       {locale === 'fr' ? 'Aucun pays trouvé.' : 'No countries found.'}
     </div>
   )
+
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '14px' }}>
+    <div style={{
+      display: 'grid',
+      // Mobile: exactly 2 cols. Desktop: auto-fill with min 160px.
+      gridTemplateColumns: 'repeat(2, 1fr)',
+      gap: '12px',
+    }}
+    className="continent-grid">
       {filtered.map(c => <CountryCard key={c.code} country={c} locale={locale} accentColor={accentColor} />)}
+      <style>{`
+        @media (min-width: 640px) {
+          .continent-grid { grid-template-columns: repeat(3, 1fr) !important; }
+        }
+        @media (min-width: 900px) {
+          .continent-grid { grid-template-columns: repeat(4, 1fr) !important; }
+        }
+        @media (min-width: 1100px) {
+          .continent-grid { grid-template-columns: repeat(5, 1fr) !important; }
+        }
+      `}</style>
     </div>
   )
 }
@@ -356,10 +376,18 @@ export default function ContinentPage({ slug }) {
   const locale = useLocale()
   const [filter, setFilter] = useState('all')
   const [search, setSearch] = useState('')
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
     window.scrollTo({ top: 0 })
   }, [slug])
+
+  useEffect(() => {
+    function check() { setIsMobile(window.innerWidth < 768) }
+    check()
+    window.addEventListener('resize', check)
+    return () => window.removeEventListener('resize', check)
+  }, [])
 
   const meta      = CONTINENT_META[slug]
   const countries = useMemo(() => ALL_COUNTRIES.filter(c => c.continent === slug), [slug])
@@ -380,34 +408,42 @@ export default function ContinentPage({ slug }) {
   return (
     <main style={{ backgroundColor: '#F4F1E6', minHeight: '100vh' }}>
 
-      {/* Hero */}
+      {/* ── Hero ── */}
       <div style={{
         background: `linear-gradient(135deg, ${meta.color} 0%, ${meta.accent}bb 100%)`,
-        padding: '48px 24px 40px', color: '#fff',
+        padding: isMobile ? '32px 20px 28px' : '48px 24px 40px',
+        color: '#fff',
       }}>
-        <div style={{ maxWidth: '1152px', margin: '0 auto', display: 'flex', alignItems: 'center', gap: '48px' }}>
+        <div style={{ maxWidth: '1152px', margin: '0 auto', display: 'flex', alignItems: 'center', gap: isMobile ? '20px' : '48px' }}>
           <div style={{ flex: 1 }}>
             <Link href={`/${locale}`} style={{
               color: 'rgba(255,255,255,0.65)', textDecoration: 'none', fontSize: '14px',
-              display: 'inline-flex', alignItems: 'center', gap: '6px', marginBottom: '20px',
+              display: 'inline-flex', alignItems: 'center', gap: '6px', marginBottom: '16px',
             }}>
               ← {locale === 'fr' ? 'Accueil' : 'Home'}
             </Link>
-            <h1 style={{ fontSize: '52px', fontWeight: '900', margin: '0 0 12px', letterSpacing: '-1px', color: 'white', WebkitTextFillColor: 'white' }}>{title}</h1>
-            <p style={{ fontSize: '16px', opacity: 0.85, maxWidth: '540px', lineHeight: '1.65', margin: 0 }}>{desc}</p>
+            <h1 style={{
+              fontSize: isMobile ? '36px' : '52px',
+              fontWeight: '900', margin: '0 0 10px', letterSpacing: '-1px',
+              color: 'white', WebkitTextFillColor: 'white',
+            }}>{title}</h1>
+            <p style={{ fontSize: isMobile ? '14px' : '16px', opacity: 0.85, maxWidth: '540px', lineHeight: '1.65', margin: 0 }}>{desc}</p>
           </div>
-          <div style={{ width: '180px', flexShrink: 0, opacity: 0.3 }}>
-            <img src={meta.svg} alt={title} style={{ width: '100%', filter: 'brightness(0) invert(1)' }} />
-          </div>
+          {/* SVG continent shape — hide on very small screens */}
+          {!isMobile && (
+            <div style={{ width: '140px', flexShrink: 0, opacity: 0.3 }}>
+              <img src={meta.svg} alt={title} style={{ width: '100%', filter: 'brightness(0) invert(1)' }} />
+            </div>
+          )}
         </div>
       </div>
 
-      {/* Stats */}
-      <StatsBar countries={countries} meta={meta} locale={locale} />
+      {/* ── Stats ── */}
+      <StatsBar countries={countries} meta={meta} locale={locale} isMobile={isMobile} />
 
-      {/* Controls */}
-      <div style={{ maxWidth: '1152px', margin: '0 auto', padding: '32px 24px 0' }}>
-        <div style={{ display: 'flex', gap: '12px', marginBottom: '32px', flexWrap: 'wrap', alignItems: 'center' }}>
+      {/* ── Controls ── */}
+      <div style={{ maxWidth: '1152px', margin: '0 auto', padding: isMobile ? '20px 16px 0' : '32px 24px 0' }}>
+        <div style={{ display: 'flex', gap: '10px', marginBottom: '24px', flexWrap: 'wrap', alignItems: 'center' }}>
           <input
             type="text"
             placeholder={locale === 'fr' ? 'Rechercher un pays...' : 'Search a country...'}
@@ -415,28 +451,34 @@ export default function ContinentPage({ slug }) {
             onChange={e => setSearch(e.target.value)}
             style={{
               padding: '10px 16px', borderRadius: '8px', border: '2px solid #e5e0d0',
-              fontSize: '14px', outline: 'none', flex: '1', minWidth: '200px', backgroundColor: '#fff',
+              fontSize: '14px', outline: 'none', flex: '1', minWidth: '140px',
+              backgroundColor: '#fff',
             }}
           />
-          {['all', 'official', 'unofficial'].map(f => (
-            <button key={f} onClick={() => setFilter(f)} style={{
-              padding: '10px 16px', borderRadius: '8px', cursor: 'pointer',
-              border: `2px solid ${filter === f ? meta.accent : '#e5e0d0'}`,
-              backgroundColor: filter === f ? meta.light : '#fff',
-              color: filter === f ? meta.color : '#666',
-              fontWeight: filter === f ? '700' : '400',
-              fontSize: '13px', transition: 'all 0.15s ease',
-            }}>
-              {f === 'all'      ? (locale === 'fr' ? 'Tous'          : 'All') :
-               f === 'official' ? (locale === 'fr' ? 'Officiels'     : 'Official') :
-                                  (locale === 'fr' ? 'Non-officiels' : 'Non-official')}
-            </button>
-          ))}
+          <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+            {['all', 'official', 'unofficial'].map(f => (
+              <button key={f} onClick={() => setFilter(f)} style={{
+                padding: isMobile ? '8px 12px' : '10px 16px',
+                borderRadius: '8px', cursor: 'pointer',
+                border: `2px solid ${filter === f ? meta.accent : '#e5e0d0'}`,
+                backgroundColor: filter === f ? meta.light : '#fff',
+                color: filter === f ? meta.color : '#666',
+                fontWeight: filter === f ? '700' : '400',
+                fontSize: isMobile ? '12px' : '13px',
+                transition: 'all 0.15s ease',
+                whiteSpace: 'nowrap',
+              }}>
+                {f === 'all'      ? (locale === 'fr' ? 'Tous'          : 'All') :
+                 f === 'official' ? (locale === 'fr' ? 'Officiels'     : 'Official') :
+                                    (locale === 'fr' ? 'Non-officiels' : 'Non-official')}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* Countries */}
-      <div style={{ maxWidth: '1152px', margin: '0 auto', padding: '0 24px 60px' }}>
+      {/* ── Countries grid ── */}
+      <div style={{ maxWidth: '1152px', margin: '0 auto', padding: isMobile ? '0 16px 48px' : '0 24px 60px' }}>
         <CountriesGrid
           countries={countries}
           locale={locale}

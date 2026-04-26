@@ -183,41 +183,22 @@ const COUNTRIES = [
   { id: 548, code: 'vu', en: 'Vanuatu',               fr: 'Vanuatu',                area: 12189   },
   { id: 882, code: 'ws', en: 'Samoa',                 fr: 'Samoa',                  area: 2831    },
   { id: 776, code: 'to', en: 'Tonga',                 fr: 'Tonga',                  area: 747     },
-  { id: 384, code: 'ci', en: "Côte d'Ivoire",    fr: "Côte d'Ivoire",      area: 322463   },
+  { id: 384, code: 'ci', en: "Côte d'Ivoire",         fr: "Côte d'Ivoire",          area: 322463  },
 ]
 
-
 const CONTINENTS = [
-  {
-    id: 'continent-africa', code: 'continent', type: 'continent',
-    en: 'Africa', fr: 'Afrique', area: 30370000,
-    memberIds: [12,24,72,108,120,132,140,148,174,178,180,204,226,231,232,262,266,270,288,324,384,404,426,430,434,450,454,466,478,504,508,516,562,566,624,646,678,686,690,694,706,710,716,728,729,748,768,788,800,818,834,854,894]
-  },
-  {
-    id: 'continent-europe', code: 'continent', type: 'continent',
-    en: 'Europe', fr: 'Europe', area: 10530000,
-    memberIds: [8,20,40,56,70,100,112,191,196,203,208,233,246,250,276,300,348,352,372,380,428,440,442,470,498,499,528,578,616,620,642,643,688,703,705,724,752,756,804,807,826]
-  },
-  {
-    id: 'continent-asia', code: 'continent', type: 'continent',
-    en: 'Asia', fr: 'Asie', area: 44580000,
-    memberIds: [4,31,48,50,51,64,96,104,116,156,158,268,275,356,360,364,368,376,392,398,400,408,410,414,417,418,422,458,462,496,512,524,586,608,634,682,702,704,760,762,764,784,792,795,887,158]
-  },
-  {
-    id: 'continent-north-america', code: 'continent', type: 'continent',
-    en: 'North America', fr: 'Amérique du Nord', area: 24710000,
-    memberIds: [84,124,188,192,214,222,320,332,340,388,484,558,591,840,780,328]
-  },
-  {
-    id: 'continent-south-america', code: 'continent', type: 'continent',
-    en: 'South America', fr: 'Amérique du Sud', area: 17840000,
-    memberIds: [32,68,76,152,170,218,328,600,604,740,858,862]
-  },
-  {
-    id: 'continent-oceania', code: 'continent', type: 'continent',
-    en: 'Oceania', fr: 'Océanie', area: 8510000,
-    memberIds: [36,90,242,548,554,598,776,882]
-  },
+  { id: 'continent-africa', code: 'continent', type: 'continent', en: 'Africa', fr: 'Afrique', area: 30370000,
+    memberIds: [12,24,72,108,120,132,140,148,174,178,180,204,226,231,232,262,266,270,288,324,384,404,426,430,434,450,454,466,478,504,508,516,562,566,624,646,678,686,690,694,706,710,716,728,729,748,768,788,800,818,834,854,894] },
+  { id: 'continent-europe', code: 'continent', type: 'continent', en: 'Europe', fr: 'Europe', area: 10530000,
+    memberIds: [8,20,40,56,70,100,112,191,196,203,208,233,246,250,276,300,348,352,372,380,428,440,442,470,498,499,528,578,616,620,642,643,688,703,705,724,752,756,804,807,826] },
+  { id: 'continent-asia', code: 'continent', type: 'continent', en: 'Asia', fr: 'Asie', area: 44580000,
+    memberIds: [4,31,48,50,51,64,96,104,116,156,158,268,275,356,360,364,368,376,392,398,400,408,410,414,417,418,422,458,462,496,512,524,586,608,634,682,702,704,760,762,764,784,792,795,887] },
+  { id: 'continent-north-america', code: 'continent', type: 'continent', en: 'North America', fr: 'Amérique du Nord', area: 24710000,
+    memberIds: [84,124,188,192,214,222,320,332,340,388,484,558,591,840,780,328] },
+  { id: 'continent-south-america', code: 'continent', type: 'continent', en: 'South America', fr: 'Amérique du Sud', area: 17840000,
+    memberIds: [32,68,76,152,170,218,328,600,604,740,858,862] },
+  { id: 'continent-oceania', code: 'continent', type: 'continent', en: 'Oceania', fr: 'Océanie', area: 8510000,
+    memberIds: [36,90,242,548,554,598,776,882] },
 ]
 
 const COLORS = ['#E63946','#2196F3','#4CAF50','#FF9800','#9C27B0','#00BCD4','#FF5722','#3F51B5']
@@ -226,6 +207,7 @@ function formatArea(km2) {
   if (km2 >= 1000000) return `${(km2/1000000).toFixed(2)}M km²`
   return `${km2.toLocaleString()} km²`
 }
+
 function mercatorScale(latOrig, latDest) {
   const r = Math.PI / 180
   const co = Math.cos(latOrig * r)
@@ -233,28 +215,10 @@ function mercatorScale(latOrig, latDest) {
   return cd === 0 ? 1 : co / cd
 }
 
-// ── Build a D3 projection matching the current Leaflet view ─────────────────
-function buildProj(map) {
-  const sz = map.getSize()
-  const c  = map.getCenter()
-  const z  = map.getZoom()
-  return d3.geoMercator()
-    .scale((256 / (2 * Math.PI)) * Math.pow(2, z))
-    .center([c.lng, c.lat])
-    .translate([sz.x / 2, sz.y / 2])
-}
-
-// Returns centroid of the largest polygon in a feature (handles multipolygon countries)
-// Uses d3.geoArea (steradians) instead of bounding box to correctly handle
-// countries crossing the antimeridian (Russia, USA, Fiji, etc.)
 function getLargestPolygonCentroid(feature) {
   if (!feature) return [0, 0]
-  if (feature.geometry.type === 'Polygon') {
-    return d3.geoCentroid(feature)
-  }
-  // MultiPolygon — find largest sub-polygon by spherical area
-  let largest = null
-  let largestArea = 0
+  if (feature.geometry.type === 'Polygon') return d3.geoCentroid(feature)
+  let largest = null, largestArea = 0
   for (const coords of feature.geometry.coordinates) {
     const poly = { type: 'Feature', geometry: { type: 'Polygon', coordinates: coords } }
     const area = d3.geoArea(poly)
@@ -263,9 +227,7 @@ function getLargestPolygonCentroid(feature) {
   return largest ? d3.geoCentroid(largest) : d3.geoCentroid(feature)
 }
 
-// ── Rotation Dial — interactive SVG arc ──────────────────────────────────────
 function RotationDial({ rotation, color, onChange }) {
-  const dialRef = useRef(null)
   const dragging = useRef(false)
 
   function getAngleFromEvent(e, rect) {
@@ -279,130 +241,115 @@ function RotationDial({ rotation, color, onChange }) {
   function onPointerDown(e) {
     dragging.current = true
     e.currentTarget.setPointerCapture(e.pointerId)
-    const angle = getAngleFromEvent(e, e.currentTarget.getBoundingClientRect())
-    onChange(angle)
+    onChange(getAngleFromEvent(e, e.currentTarget.getBoundingClientRect()))
   }
   function onPointerMove(e) {
     if (!dragging.current) return
-    const angle = getAngleFromEvent(e, e.currentTarget.getBoundingClientRect())
-    onChange(angle)
+    onChange(getAngleFromEvent(e, e.currentTarget.getBoundingClientRect()))
   }
   function onPointerUp() { dragging.current = false }
 
-  const r = 22
-  const cx = 28, cy = 28
+  const r = 22, cx = 28, cy = 28
   const rad = ((rotation - 90) * Math.PI) / 180
-  const nx = cx + r * Math.cos(rad)
-  const ny = cy + r * Math.sin(rad)
-
-  // Arc for the rotation amount
+  const nx = cx + r * Math.cos(rad), ny = cy + r * Math.sin(rad)
   const arcRad = (rotation * Math.PI) / 180
   const arcX = cx + r * Math.cos(-Math.PI / 2 + arcRad)
   const arcY = cy + r * Math.sin(-Math.PI / 2 + arcRad)
   const largeArc = rotation > 180 ? 1 : 0
 
   return (
-    <svg ref={dialRef} width="56" height="56" viewBox="0 0 56 56"
+    <svg width="56" height="56" viewBox="0 0 56 56"
       style={{ cursor: 'pointer', userSelect: 'none', touchAction: 'none' }}
       onPointerDown={onPointerDown} onPointerMove={onPointerMove} onPointerUp={onPointerUp}>
-
-      {/* Track circle */}
       <circle cx={cx} cy={cy} r={r} fill="none" stroke="rgba(255,255,255,0.12)" strokeWidth="4" />
-
-      {/* Colored arc showing rotation amount */}
       {rotation > 0 && (
-        <path
-          d={`M ${cx} ${cy - r} A ${r} ${r} 0 ${largeArc} 1 ${arcX} ${arcY}`}
-          fill="none" stroke={color} strokeWidth="4" strokeLinecap="round" opacity="0.7"
-        />
+        <path d={`M ${cx} ${cy - r} A ${r} ${r} 0 ${largeArc} 1 ${arcX} ${arcY}`}
+          fill="none" stroke={color} strokeWidth="4" strokeLinecap="round" opacity="0.7" />
       )}
-
-      {/* North indicator (fixed red dot at top) */}
       <circle cx={cx} cy={cy - r} r="3" fill="#ef4444" />
-
-      {/* Handle — rotates with the country */}
       <circle cx={nx} cy={ny} r="5" fill={color} stroke="white" strokeWidth="1.5" />
-
-      {/* Center dot */}
       <circle cx={cx} cy={cy} r="2.5" fill="rgba(255,255,255,0.3)" />
     </svg>
   )
+}
+
+// D-pad button style
+const dpadBtnStyle = {
+  width: 40, height: 40, borderRadius: 10,
+  backgroundColor: 'rgba(11,31,59,0.88)',
+  border: '1px solid rgba(255,255,255,0.25)',
+  color: 'white', fontSize: 18, fontWeight: 700,
+  cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center',
+  backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)',
+  boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
+  userSelect: 'none', touchAction: 'manipulation',
 }
 
 export default function TrueSizeMap() {
   const locale = useLocale()
   const t = (en, fr) => locale === 'fr' ? fr : en
 
-  const mapDivRef   = useRef(null)  // leaflet target div
-  const mapRef      = useRef(null)
-  const featuresRef = useRef(null)  // topojson features cache
-  const svgRef      = useRef(null)  // SVG element inside Leaflet pane
-  const topoRef             = useRef(null)  // raw topojson world data (for merge)
-  const continentFeaturesRef = useRef({})   // pre-computed merged continent features
-  const drag        = useRef({ on: false, id: null, x: 0, y: 0 })
+  const mapDivRef            = useRef(null)
+  const mapRef               = useRef(null)
+  const featuresRef          = useRef(null)
+  const svgRef               = useRef(null)
+  const topoRef              = useRef(null)
+  const continentFeaturesRef = useRef({})
+  const drag                 = useRef({ on: false, id: null, x: 0, y: 0 })
 
-  const [loaded, setLoaded]               = useState(false)
-  const [overlays, setOverlays]           = useState([])
+  const [loaded, setLoaded]             = useState(false)
+  const [overlays, setOverlays]         = useState([])
   const ovRef = useRef([])
   ovRef.current = overlays
 
-  const [search, setSearch]               = useState('')
-  const [showDropdown, setShowDropdown]   = useState(false)
-  const [suggestions, setSuggestions]     = useState([])
+  const [search, setSearch]             = useState('')
+  const [showDropdown, setShowDropdown] = useState(false)
+  const [suggestions, setSuggestions]   = useState([])
   const colorIdx = useRef(0)
-  const [showTutorial, setShowTutorial]   = useState(false)
-  const [tutStep, setTutStep]             = useState(0)
-  const [selectedId, setSelectedId]       = useState(null)  // which overlay is selected for rotation
+  const [showTutorial, setShowTutorial] = useState(false)
+  const [tutStep, setTutStep]           = useState(0)
+  const [selectedId, setSelectedId]     = useState(null)
+  const [isMobile, setIsMobile]         = useState(false)
+
+  useEffect(() => {
+    function check() { setIsMobile(window.innerWidth < 768) }
+    check()
+    window.addEventListener('resize', check)
+    return () => window.removeEventListener('resize', check)
+  }, [])
 
   const sortedCountries = [
     ...CONTINENTS.map(c => ({ ...c, _isContinent: true })),
     ...COUNTRIES.filter((c, i, a) => a.findIndex(x => x.id === c.id) === i),
   ].sort((a, b) => (locale === 'fr' ? a.fr : a.en).localeCompare(locale === 'fr' ? b.fr : b.en))
 
-  // ── Projection helper: geo coords → Leaflet pixel point ─────────────────────
-  // We use Leaflet's own latLngToContainerPoint — no D3 projection needed!
-  // This is always accurate regardless of zoom/pan.
-
-  // ── Draw all overlays into the SVG pane ──────────────────────────────────────
   const draw = useCallback((forcedOverlays) => {
     const map = mapRef.current
     const svg = svgRef.current
     if (!map || !svg || !featuresRef.current) return
 
     const ovList = forcedOverlays || ovRef.current
-
-    // Remove old paths
     while (svg.firstChild) svg.removeChild(svg.firstChild)
 
-    // Resize SVG to match map
     const sz = map.getSize()
     svg.setAttribute('width',  sz.x)
     svg.setAttribute('height', sz.y)
     svg.style.width  = sz.x + 'px'
     svg.style.height = sz.y + 'px'
 
-    // Build a D3 projection aligned with Leaflet's current view.
-    // IMPORTANT: use rotate+translate only, never .center() — .center() is
-    // syntactic sugar that modifies translate internally, making it impossible
-    // to compose projections correctly for the shifted overlay.
     const c = map.getCenter()
     const z = map.getZoom()
-    const scale = (256 / (2 * Math.PI)) * Math.pow(2, z)
-
-    // Convert Leaflet center to raw Mercator translate offset
+    const scale  = (256 / (2 * Math.PI)) * Math.pow(2, z)
     const lngRad = c.lng * Math.PI / 180
     const latRad = c.lat * Math.PI / 180
-    const mercX  = lngRad                         // raw Mercator x
-    const mercY  = -Math.log(Math.tan(Math.PI / 4 + latRad / 2))  // raw Mercator y
+    const mercX  = lngRad
+    const mercY  = -Math.log(Math.tan(Math.PI / 4 + latRad / 2))
 
-    // proj maps geo → pixel without using .center()
     const proj = d3.geoMercator()
       .scale(scale)
       .translate([sz.x / 2 - scale * mercX, sz.y / 2 - scale * mercY])
       .center([0, 0])
 
-
-    // ── Country name labels ──────────────────────────────────────────────────
     const z0 = map.getZoom()
     const minArea = z0 <= 2 ? 800000 : z0 <= 3 ? 200000 : z0 <= 4 ? 50000 : z0 <= 5 ? 10000 : 0
     COUNTRIES.forEach(country => {
@@ -413,9 +360,8 @@ export default function TrueSizeMap() {
       const [px, py] = proj(centroid)
       if (px < -10 || px > sz.x + 10 || py < -10 || py > sz.y + 10) return
 
-      const label = (locale === 'fr' ? country.fr : country.en).toUpperCase()
+      const label    = (locale === 'fr' ? country.fr : country.en).toUpperCase()
       const fontSize = country.area > 5000000 ? 10 : country.area > 1000000 ? 9 : country.area > 200000 ? 8 : 7
-
       const text = document.createElementNS('http://www.w3.org/2000/svg', 'text')
       text.setAttribute('x', String(px))
       text.setAttribute('y', String(py))
@@ -445,19 +391,14 @@ export default function TrueSizeMap() {
       }
       if (!feature) return
 
-      // Scale factor for Mercator distortion at destination latitude
       const r  = Math.PI / 180
       const co = Math.cos(ov.origLat * r)
       const cd = Math.cos(Math.max(-75, Math.min(75, ov.destLat)) * r)
       const sc = cd === 0 ? 1 : co / cd
 
-      // Where the country's centroid lands on screen (origin position)
       const [ox, oy] = proj([ov.origLon, ov.origLat])
-      // Where we want it to appear (destination position)
       const [dx, dy] = proj([ov.destLon, ov.destLat])
 
-      // The shifted projection: same scale*sc, translate adjusted so
-      // the country centroid moves from (ox,oy) to (dx,dy)
       const shiftedProj = d3.geoMercator()
         .scale(scale * sc)
         .translate([
@@ -468,7 +409,6 @@ export default function TrueSizeMap() {
 
       const pathGen = d3.geoPath().projection(shiftedProj)
 
-      // Fill path — pointerEvents 'fill' means only filled area is clickable (not empty inside)
       const fill = document.createElementNS('http://www.w3.org/2000/svg', 'path')
       fill.setAttribute('d', pathGen(feature) || '')
       fill.setAttribute('fill', ov.color)
@@ -477,14 +417,12 @@ export default function TrueSizeMap() {
       fill.setAttribute('stroke-width', '2')
       fill.setAttribute('stroke-opacity', '0.9')
       fill.setAttribute('data-id', String(ov.id))
-      // Apply rotation transform centered on destination pixel
       if (ov.rotation && ov.rotation !== 0) {
         fill.setAttribute('transform', `rotate(${ov.rotation}, ${dx}, ${dy})`)
       }
       fill.style.cursor = 'grab'
       fill.style.pointerEvents = 'all'
       fill.style.touchAction = 'none'
-      fill.style.cursor = 'grab'
       if (dragHandlers.current) {
         fill.addEventListener('pointerdown', dragHandlers.current.onPointerDown)
         fill.addEventListener('mouseenter', () => { svg.style.cursor = 'grab' })
@@ -492,7 +430,6 @@ export default function TrueSizeMap() {
       }
       svg.appendChild(fill)
 
-      // Label at centroid of largest polygon (avoids DOM-TOM pulling centroid)
       const centroid = getLargestPolygonCentroid(feature)
       const [lx, ly] = shiftedProj(centroid)
       if (lx > 0 && lx < sz.x && ly > 0 && ly < sz.y) {
@@ -520,11 +457,10 @@ export default function TrueSizeMap() {
   const drawRef = useRef(draw)
   useEffect(() => { drawRef.current = draw }, [draw])
 
-  // Redraw when overlays change
   useEffect(() => {
     if (!loaded) return
-    const t = setTimeout(() => drawRef.current(), 16)
-    return () => clearTimeout(t)
+    const timer = setTimeout(() => drawRef.current(), 16)
+    return () => clearTimeout(timer)
   }, [overlays, loaded])
 
   // ── Init Leaflet ─────────────────────────────────────────────────────────────
@@ -544,67 +480,45 @@ export default function TrueSizeMap() {
       })
       mapRef.current = map
 
-      // Base tiles without any labels — we draw our own in the SVG layer (FR/EN)
       Lf.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
         attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com">CARTO</a>',
         subdomains: 'abcd', maxZoom: 19,
       }).addTo(map)
-
-      // SVG is a React element in the JSX (ref={svgRef}), not inside Leaflet's DOM
 
       fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json')
         .then(r => r.json())
         .then(world => {
           topoRef.current = world
           featuresRef.current = topojson.feature(world, world.objects.countries).features
-          // Pre-compute continent features with robust merge
-          // topojson.merge() dissolves shared borders but may miss non-adjacent polygons.
-          // We combine merge() result with individual features for complete coverage.
           const allFeatures = topojson.feature(world, world.objects.countries).features
           const cf = {}
           CONTINENTS.forEach(cont => {
             const memberIdSet = new Set(cont.memberIds.map(String))
-            const memberGeoms = world.objects.countries.geometries
-              .filter(g => memberIdSet.has(String(g.id)))
+            const memberGeoms = world.objects.countries.geometries.filter(g => memberIdSet.has(String(g.id)))
             if (!memberGeoms.length) return
 
-            // Collect all coordinates from member countries
             const allCoords = []
             memberGeoms.forEach(g => {
               const feat = allFeatures.find(f => String(f.id) === String(g.id))
               if (!feat) return
-              if (feat.geometry.type === 'Polygon') {
-                allCoords.push(feat.geometry.coordinates)
-              } else if (feat.geometry.type === 'MultiPolygon') {
-                allCoords.push(...feat.geometry.coordinates)
-              }
+              if (feat.geometry.type === 'Polygon') allCoords.push(feat.geometry.coordinates)
+              else if (feat.geometry.type === 'MultiPolygon') allCoords.push(...feat.geometry.coordinates)
             })
 
-            // Try topojson.merge for dissolved borders, then supplement with any
-            // missing polygons (countries whose arcs aren't shared in the topology)
             try {
               const merged = topojson.merge(world, memberGeoms)
-              // merged may be Polygon or MultiPolygon
-              const mergedCoords = merged.type === 'Polygon'
-                ? [merged.coordinates]
-                : merged.coordinates
-
-              // Find polygons from allCoords that are NOT covered by merged result
-              // (i.e. countries that weren't topologically connected)
-              // We detect this by checking if any memberGeom produced 0 area in merge
+              const mergedCoords = merged.type === 'Polygon' ? [merged.coordinates] : merged.coordinates
               const mergedFeat = { type: 'Feature', geometry: merged }
               const missingCoords = []
               memberGeoms.forEach(g => {
                 const feat = allFeatures.find(f => String(f.id) === String(g.id))
                 if (!feat) return
                 const centroid = d3.geoCentroid(feat)
-                // Use d3.geoContains to check if centroid is inside merged shape
                 if (!d3.geoContains(mergedFeat, centroid)) {
                   if (feat.geometry.type === 'Polygon') missingCoords.push(feat.geometry.coordinates)
                   else if (feat.geometry.type === 'MultiPolygon') missingCoords.push(...feat.geometry.coordinates)
                 }
               })
-
               const finalCoords = [...mergedCoords, ...missingCoords]
               cf[cont.id] = {
                 type: 'Feature', id: cont.id, properties: {},
@@ -613,12 +527,7 @@ export default function TrueSizeMap() {
                   : { type: 'MultiPolygon', coordinates: finalCoords }
               }
             } catch(e) {
-              // Fallback: plain MultiPolygon without border dissolution
-              console.warn('merge failed for', cont.id, e)
-              cf[cont.id] = {
-                type: 'Feature', id: cont.id, properties: {},
-                geometry: { type: 'MultiPolygon', coordinates: allCoords }
-              }
+              cf[cont.id] = { type: 'Feature', id: cont.id, properties: {}, geometry: { type: 'MultiPolygon', coordinates: allCoords } }
             }
           })
           continentFeaturesRef.current = cf
@@ -634,6 +543,22 @@ export default function TrueSizeMap() {
   // ── Drag logic ───────────────────────────────────────────────────────────────
   const dragHandlers = useRef(null)
 
+  const buildProjFromMap = useCallback(() => {
+    const map = mapRef.current
+    if (!map) return null
+    const sz     = map.getSize()
+    const c      = map.getCenter()
+    const z      = map.getZoom()
+    const scale  = (256 / (2 * Math.PI)) * Math.pow(2, z)
+    const lngRad = c.lng * Math.PI / 180
+    const latRad = c.lat * Math.PI / 180
+    const mercY  = -Math.log(Math.tan(Math.PI / 4 + latRad / 2))
+    return d3.geoMercator()
+      .scale(scale)
+      .translate([sz.x / 2 - scale * lngRad, sz.y / 2 - scale * mercY])
+      .center([0, 0])
+  }, [])
+
   useEffect(() => {
     if (!loaded) return
     const map = mapRef.current
@@ -642,21 +567,6 @@ export default function TrueSizeMap() {
 
     svg.style.pointerEvents = 'none'
 
-    const buildProj = () => {
-      const sz     = map.getSize()
-      const c      = map.getCenter()
-      const z      = map.getZoom()
-      const scale  = (256 / (2 * Math.PI)) * Math.pow(2, z)
-      const lngRad = c.lng * Math.PI / 180
-      const latRad = c.lat * Math.PI / 180
-      const mercY  = -Math.log(Math.tan(Math.PI / 4 + latRad / 2))
-      return d3.geoMercator()
-        .scale(scale)
-        .translate([sz.x / 2 - scale * lngRad, sz.y / 2 - scale * mercY])
-        .center([0, 0])
-    }
-
-    // pointerdown on a path starts the drag
     const onPointerDown = (e) => {
       const id = Number(e.currentTarget.getAttribute('data-id'))
       e.preventDefault()
@@ -669,37 +579,31 @@ export default function TrueSizeMap() {
       map.doubleClickZoom.disable()
     }
 
-    // pointermove on document — always fires even when shape is redrawn
     const onDocPointerMove = (e) => {
       if (!drag.current.on) return
       e.preventDefault()
-
       const ov = ovRef.current.find(o => o.id === drag.current.id)
       if (!ov) return
 
-      const proj = buildProj()
+      const proj = buildProjFromMap()
+      if (!proj) return
       const [curPx, curPy] = proj([ov.destLon, ov.destLat])
-      const nc = proj.invert([
-        curPx + (e.clientX - drag.current.x),
-        curPy + (e.clientY - drag.current.y),
-      ])
+      const nc = proj.invert([curPx + (e.clientX - drag.current.x), curPy + (e.clientY - drag.current.y)])
       if (!nc) return
 
       drag.current.x = e.clientX
       drag.current.y = e.clientY
 
-      // Update ref directly for instant redraw, then sync state
       const updated = ovRef.current.map(o =>
         o.id === drag.current.id
           ? { ...o, destLon: nc[0], destLat: Math.max(-75, Math.min(75, nc[1])) }
           : o
       )
       ovRef.current = updated
-      drawRef.current(updated)           // draw immediately — no React state delay
-      setOverlays(updated)               // sync state for chips/% display
+      drawRef.current(updated)
+      setOverlays(updated)
     }
 
-    // pointerup on document
     const onDocPointerUp = () => {
       if (!drag.current.on) return
       drag.current.on = false
@@ -710,7 +614,6 @@ export default function TrueSizeMap() {
     }
 
     dragHandlers.current = { onPointerDown }
-
     document.addEventListener('pointermove', onDocPointerMove, { passive: false })
     document.addEventListener('pointerup',   onDocPointerUp)
 
@@ -722,7 +625,28 @@ export default function TrueSizeMap() {
       map.scrollWheelZoom.enable()
       map.doubleClickZoom.enable()
     }
-  }, [loaded])
+  }, [loaded, buildProjFromMap])
+
+  // ── Move overlay by pixels (mobile d-pad) ────────────────────────────────────
+  const moveOverlayByPixels = useCallback((id, dx, dy) => {
+    const proj = buildProjFromMap()
+    if (!proj) return
+    const ov = ovRef.current.find(o => o.id === id)
+    if (!ov) return
+
+    const [curPx, curPy] = proj([ov.destLon, ov.destLat])
+    const nc = proj.invert([curPx + dx, curPy + dy])
+    if (!nc) return
+
+    const updated = ovRef.current.map(o =>
+      o.id === id
+        ? { ...o, destLon: nc[0], destLat: Math.max(-75, Math.min(75, nc[1])) }
+        : o
+    )
+    ovRef.current = updated
+    drawRef.current(updated)
+    setOverlays(updated)
+  }, [buildProjFromMap])
 
   // ── Country management ────────────────────────────────────────────────────────
   const addCountry = useCallback((meta) => {
@@ -733,7 +657,6 @@ export default function TrueSizeMap() {
 
     let feature
     if (meta._isContinent) {
-      // Use pre-computed merged feature (borders dissolved)
       feature = continentFeaturesRef.current[meta.id]
       if (!feature) return
     } else {
@@ -754,11 +677,11 @@ export default function TrueSizeMap() {
     requestAnimationFrame(() => drawRef.current(nextOverlays))
   }, [])
 
-  const removeOverlay = useCallback((id) => setOverlays(p => p.filter(o => o.id !== id)), [])
-  const resetOverlay  = useCallback((id) => setOverlays(p => p.map(o =>
+  const removeOverlay  = useCallback((id) => setOverlays(p => p.filter(o => o.id !== id)), [])
+  const resetOverlay   = useCallback((id) => setOverlays(p => p.map(o =>
     o.id === id ? { ...o, destLon: o.origLon, destLat: o.origLat, rotation: 0 } : o
   )), [])
-  const rotateOverlay = useCallback((id, deg) => {
+  const rotateOverlay  = useCallback((id, deg) => {
     const updated = ovRef.current.map(o =>
       o.id === id ? { ...o, rotation: ((o.rotation || 0) + deg + 360) % 360 } : o
     )
@@ -767,7 +690,6 @@ export default function TrueSizeMap() {
     requestAnimationFrame(() => drawRef.current(updated))
   }, [])
 
-  // Search / dropdown
   useEffect(() => {
     if (!search.trim()) {
       setSuggestions(sortedCountries)
@@ -777,6 +699,7 @@ export default function TrueSizeMap() {
     }
   }, [search, locale])
 
+  const DPAD_STEP = 40
 
   return (
     <>
@@ -789,17 +712,14 @@ export default function TrueSizeMap() {
             🌍 {t('True Size Map', 'Vraie Taille des Pays')}
           </span>
 
-          {/* Search + dropdown */}
+          {/* Search */}
           <div style={{ position: 'relative', flex: '0 0 240px' }}>
             <input
               type="text"
               value={search}
               placeholder={t('Search or browse countries...', 'Rechercher ou parcourir...')}
               onChange={e => { setSearch(e.target.value); setShowDropdown(true) }}
-              onFocus={() => { 
-                console.log('[input focus] suggestions:', suggestions.length, 'loaded:', loaded)
-                setShowDropdown(true) 
-              }}
+              onFocus={() => setShowDropdown(true)}
               onBlur={() => setTimeout(() => setShowDropdown(false), 150)}
               onKeyDown={e => {
                 if (e.key === 'Enter' && suggestions.length > 0) { e.preventDefault(); addCountry(suggestions[0]) }
@@ -813,13 +733,13 @@ export default function TrueSizeMap() {
               <div style={{ position: 'absolute', top: '110%', left: 0, right: 0, backgroundColor: 'white', borderRadius: '10px', border: '1px solid #E2DDD5', boxShadow: '0 8px 24px rgba(0,0,0,0.12)', overflow: 'hidden', zIndex: 2000, maxHeight: '320px', overflowY: 'auto' }}>
                 {suggestions.map(s => (
                   <button key={s.id}
-                    onMouseDown={e => { e.preventDefault(); console.log('[btn click]', s.en); addCountry(s) }}
+                    onMouseDown={e => { e.preventDefault(); addCountry(s) }}
                     style={{ width: '100%', padding: '8px 12px', textAlign: 'left', border: 'none', borderBottom: '1px solid #F4F1E6', backgroundColor: 'transparent', fontSize: '13px', fontWeight: '600', color: '#0B1F3B', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px' }}
                     onMouseEnter={e => e.currentTarget.style.backgroundColor = '#F4F1E6'}
                     onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}>
                     {s._isContinent
                       ? <span style={{ fontSize: '16px', flexShrink: 0 }}>🌍</span>
-                      : <img src={`https://flagcdn.com/w40/${s.code}.png`} width="18" height="12" style={{ borderRadius: '2px', objectFit: 'cover', flexShrink: 0 }} />
+                      : <img src={`https://flagcdn.com/w40/${s.code}.png`} width="18" height="12" style={{ borderRadius: '2px', objectFit: 'cover', flexShrink: 0 }} alt="" />
                     }
                     {locale === 'fr' ? s.fr : s.en}
                     <span style={{ fontSize: '10px', color: '#8A8278', marginLeft: 'auto' }}>{formatArea(s.area)}</span>
@@ -843,14 +763,12 @@ export default function TrueSizeMap() {
                 <div key={o.id} style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', padding: '3px 8px 3px 5px', borderRadius: '99px', backgroundColor: o.color + '18', border: `1.5px solid ${o.color}` }}>
                   {o.meta._isContinent
                     ? <span style={{ fontSize: '14px' }}>🌍</span>
-                    : <img src={`https://flagcdn.com/w40/${o.meta.code}.png`} width="16" height="11" style={{ borderRadius: '2px', objectFit: 'cover' }} />
+                    : <img src={`https://flagcdn.com/w40/${o.meta.code}.png`} width="16" height="11" style={{ borderRadius: '2px', objectFit: 'cover' }} alt="" />
                   }
                   <span style={{ fontSize: '12px', fontWeight: '700', color: '#0B1F3B' }}>{locale === 'fr' ? o.meta.fr : o.meta.en}</span>
                   <span style={{ fontSize: '10px', color: '#8A8278' }}>{formatArea(o.meta.area)}</span>
                   {pct !== 0 && <span style={{ fontSize: '10px', fontWeight: '700', color: pct > 0 ? '#4CAF50' : '#E63946' }}>{pct > 0 ? `+${pct}%` : `${pct}%`}</span>}
-                  {/* Rotation indicator + select button */}
                   <button onClick={() => setSelectedId(selectedId === o.id ? null : o.id)}
-                    title={t('Rotate', 'Rotation')}
                     style={{ background: selectedId === o.id ? o.color + '30' : 'none', border: selectedId === o.id ? `1px solid ${o.color}60` : 'none', borderRadius: 5, cursor: 'pointer', color: selectedId === o.id ? o.color : '#94a3b8', fontSize: '12px', padding: '1px 4px', lineHeight: 1, display: 'flex', alignItems: 'center', gap: 2 }}>
                     ⟳{o.rotation ? ` ${Math.round(o.rotation)}°` : ''}
                   </button>
@@ -879,98 +797,102 @@ export default function TrueSizeMap() {
             ))}
           </div>
 
-          {loaded && overlays.length === 0 && (
-            <div style={{ position: 'absolute', bottom: 32, left: '50%', transform: 'translateX(-50%)', backgroundColor: 'rgba(11,31,59,0.85)', backdropFilter: 'blur(8px)', borderRadius: 12, padding: '10px 18px', color: 'white', fontSize: 13, zIndex: 999, pointerEvents: 'none', whiteSpace: 'nowrap' }}>
-              {t('Click the search bar → pick a country → drag to compare', 'Cliquez la recherche → choisissez un pays → glissez pour comparer')}
+          {/* ── Mobile D-pad — appears when an overlay is selected on mobile ── */}
+          {isMobile && selectedId && overlays.find(o => o.id === selectedId) && (
+            <div style={{
+              position: 'absolute', bottom: 200, right: 12, zIndex: 999,
+              display: 'grid',
+              gridTemplateColumns: '40px 40px 40px',
+              gridTemplateRows: '40px 40px 40px',
+              gap: '5px',
+            }}>
+              <div />
+              <button onClick={() => moveOverlayByPixels(selectedId, 0, -DPAD_STEP)} style={dpadBtnStyle}>↑</button>
+              <div />
+              <button onClick={() => moveOverlayByPixels(selectedId, -DPAD_STEP, 0)} style={dpadBtnStyle}>←</button>
+              <div style={{ width: 40, height: 40, borderRadius: 10, backgroundColor: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div style={{ width: 8, height: 8, borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.5)' }} />
+              </div>
+              <button onClick={() => moveOverlayByPixels(selectedId, DPAD_STEP, 0)} style={dpadBtnStyle}>→</button>
+              <div />
+              <button onClick={() => moveOverlayByPixels(selectedId, 0, DPAD_STEP)} style={dpadBtnStyle}>↓</button>
+              <div />
             </div>
           )}
 
-          {/* ── Rotation widget — appears when an overlay is selected ── */}
+          {loaded && overlays.length === 0 && (
+            <div style={{ position: 'absolute', bottom: 32, left: '50%', transform: 'translateX(-50%)', backgroundColor: 'rgba(11,31,59,0.85)', backdropFilter: 'blur(8px)', borderRadius: 12, padding: '10px 18px', color: 'white', fontSize: 13, zIndex: 999, pointerEvents: 'none', whiteSpace: 'nowrap' }}>
+              {isMobile
+                ? t('Search a country → tap to add → use arrows to move', 'Cherche un pays → ajoute-le → utilise les flèches pour déplacer')
+                : t('Click the search bar → pick a country → drag to compare', 'Cliquez la recherche → choisissez un pays → glissez pour comparer')}
+            </div>
+          )}
+
+          {/* ── Rotation widget ── */}
           {selectedId && overlays.find(o => o.id === selectedId) && (() => {
-            const ov = overlays.find(o => o.id === selectedId)
+            const ov  = overlays.find(o => o.id === selectedId)
             const rot = ov.rotation || 0
             return (
-              <div style={{
-                position: 'absolute', bottom: 20, left: '50%', transform: 'translateX(-50%)',
-                zIndex: 999, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8,
-              }}>
-                <div style={{
-                  backgroundColor: 'rgba(11,31,59,0.92)', backdropFilter: 'blur(12px)',
-                  borderRadius: 16, padding: '12px 16px',
-                  border: `1.5px solid ${ov.color}40`,
-                  display: 'flex', alignItems: 'center', gap: 12,
-                  boxShadow: `0 4px 24px rgba(0,0,0,0.3), 0 0 0 1px ${ov.color}30`,
-                }}>
-                  {/* Country flag + name */}
+              <div style={{ position: 'absolute', bottom: 20, left: '50%', transform: 'translateX(-50%)', zIndex: 999, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
+                <div style={{ backgroundColor: 'rgba(11,31,59,0.92)', backdropFilter: 'blur(12px)', borderRadius: 16, padding: '12px 16px', border: `1.5px solid ${ov.color}40`, display: 'flex', alignItems: 'center', gap: 12, boxShadow: `0 4px 24px rgba(0,0,0,0.3), 0 0 0 1px ${ov.color}30` }}>
+                  {/* Flag + name */}
                   <div style={{ display: 'flex', alignItems: 'center', gap: 7, paddingRight: 12, borderRight: '1px solid rgba(255,255,255,0.12)' }}>
                     {ov.meta._isContinent
                       ? <span style={{ fontSize: 16 }}>🌍</span>
-                      : <img src={`https://flagcdn.com/w40/${ov.meta.code}.png`} width="22" height="15" style={{ borderRadius: 3, objectFit: 'cover' }} />
+                      : <img src={`https://flagcdn.com/w40/${ov.meta.code}.png`} width="22" height="15" style={{ borderRadius: 3, objectFit: 'cover' }} alt="" />
                     }
                     <span style={{ fontSize: 12, fontWeight: 700, color: 'white' }}>{locale === 'fr' ? ov.meta.fr : ov.meta.en}</span>
                   </div>
 
-                  {/* Compass / rotation dial */}
+                  {/* Dial */}
                   <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 }}>
-                    <span style={{ fontSize: 9, fontWeight: 700, color: 'rgba(255,255,255,0.45)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
-                      {t('Rotate', 'Rotation')}
-                    </span>
-                    {/* Dial SVG — clickable/draggable arc */}
-                    <RotationDial
-                      rotation={rot}
-                      color={ov.color}
-                      onChange={deg => rotateOverlay(selectedId, deg - rot)}
-                    />
-                    <span style={{ fontSize: 11, fontWeight: 800, color: ov.color, minWidth: 36, textAlign: 'center' }}>
-                      {Math.round(rot)}°
-                    </span>
+                    <span style={{ fontSize: 9, fontWeight: 700, color: 'rgba(255,255,255,0.45)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>{t('Rotate', 'Rotation')}</span>
+                    <RotationDial rotation={rot} color={ov.color} onChange={deg => rotateOverlay(selectedId, deg - rot)} />
+                    <span style={{ fontSize: 11, fontWeight: 800, color: ov.color, minWidth: 36, textAlign: 'center' }}>{Math.round(rot)}°</span>
                   </div>
 
-                  {/* Quick rotation buttons */}
+                  {/* Quick buttons */}
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 4, paddingLeft: 12, borderLeft: '1px solid rgba(255,255,255,0.12)' }}>
                     <div style={{ display: 'flex', gap: 4 }}>
-                      {[
-                        { label: '↺ 15°', deg: -15 },
-                        { label: '↻ 15°', deg: +15 },
-                      ].map(btn => (
+                      {[{ label: '↺ 15°', deg: -15 }, { label: '↻ 15°', deg: +15 }].map(btn => (
                         <button key={btn.label} onClick={() => rotateOverlay(selectedId, btn.deg)}
                           style={{ padding: '5px 8px', backgroundColor: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: 7, color: 'white', fontSize: 11, fontWeight: 700, cursor: 'pointer', whiteSpace: 'nowrap' }}
                           onMouseEnter={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.18)'}
-                          onMouseLeave={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)'}
-                        >{btn.label}</button>
+                          onMouseLeave={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)'}>
+                          {btn.label}
+                        </button>
                       ))}
                     </div>
                     <div style={{ display: 'flex', gap: 4 }}>
-                      {[
-                        { label: '↺ 90°', deg: -90 },
-                        { label: '↻ 90°', deg: +90 },
-                      ].map(btn => (
+                      {[{ label: '↺ 90°', deg: -90 }, { label: '↻ 90°', deg: +90 }].map(btn => (
                         <button key={btn.label} onClick={() => rotateOverlay(selectedId, btn.deg)}
                           style={{ padding: '5px 8px', backgroundColor: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: 7, color: 'white', fontSize: 11, fontWeight: 700, cursor: 'pointer', whiteSpace: 'nowrap' }}
                           onMouseEnter={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.18)'}
-                          onMouseLeave={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)'}
-                        >{btn.label}</button>
+                          onMouseLeave={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)'}>
+                          {btn.label}
+                        </button>
                       ))}
                     </div>
                   </div>
 
-                  {/* Reset rotation + close */}
+                  {/* Reset + close */}
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 4, paddingLeft: 12, borderLeft: '1px solid rgba(255,255,255,0.12)' }}>
                     <button onClick={() => rotateOverlay(selectedId, -rot)}
-                      title={t('Reset rotation', 'Réinitialiser la rotation')}
                       style={{ padding: '5px 9px', backgroundColor: rot !== 0 ? `${ov.color}30` : 'rgba(255,255,255,0.06)', border: `1px solid ${rot !== 0 ? ov.color + '60' : 'rgba(255,255,255,0.12)'}`, borderRadius: 7, color: rot !== 0 ? ov.color : 'rgba(255,255,255,0.4)', fontSize: 13, cursor: 'pointer' }}
                       onMouseEnter={e => e.currentTarget.style.opacity = '0.7'}
-                      onMouseLeave={e => e.currentTarget.style.opacity = '1'}
-                    >↺ 0°</button>
+                      onMouseLeave={e => e.currentTarget.style.opacity = '1'}>
+                      ↺ 0°
+                    </button>
                     <button onClick={() => setSelectedId(null)}
                       style={{ padding: '5px 9px', backgroundColor: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 7, color: 'rgba(255,255,255,0.5)', fontSize: 12, cursor: 'pointer' }}
                       onMouseEnter={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.12)'}
-                      onMouseLeave={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.06)'}
-                    >✕ {t('Close', 'Fermer')}</button>
+                      onMouseLeave={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.06)'}>
+                      ✕ {t('Close', 'Fermer')}
+                    </button>
                   </div>
                 </div>
 
-                {/* Compass north indicator */}
+                {/* North indicator */}
                 <div style={{ display: 'flex', alignItems: 'center', gap: 5, opacity: 0.55 }}>
                   <svg width="10" height="10" viewBox="0 0 10 10">
                     <polygon points="5,0 6.5,5 5,4 3.5,5" fill="#ef4444" />
@@ -997,28 +919,27 @@ export default function TrueSizeMap() {
             <div style={{ padding: '28px 28px 20px', minHeight: 280, display: 'flex', flexDirection: 'column' }}>
               {tutStep === 0 && (<>
                 <h2 style={{ margin: '0 0 8px', fontSize: 24, fontWeight: 900, color: '#0B1F3B', textAlign: 'center' }}>{t('Browse or search countries', 'Parcourez ou cherchez un pays')}</h2>
-                <p style={{ margin: '0 0 16px', fontSize: 14, color: '#64748b', textAlign: 'center', lineHeight: 1.6 }}>{t('Click the search bar to see all countries, or type to filter. Press Enter to add the first result.', 'Cliquez la barre de recherche pour voir tous les pays, ou tapez pour filtrer.')}</p>
+                <p style={{ margin: '0 0 16px', fontSize: 14, color: '#64748b', textAlign: 'center', lineHeight: 1.6 }}>{t('Click the search bar to see all countries, or type to filter.', 'Cliquez la barre de recherche pour voir tous les pays.')}</p>
                 <div style={{ flex: 1, backgroundColor: '#F8F7F4', borderRadius: 14, padding: 16 }}>
                   <div style={{ backgroundColor: 'white', borderRadius: 10, padding: '10px 14px', border: '2px solid #9EB7E5', display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
                     <span style={{ color: '#94a3b8' }}>🔍</span><span style={{ fontSize: 14, color: '#94a3b8' }}>{t('Search or browse...', 'Rechercher ou parcourir...')}</span>
                   </div>
                   {[{code:'gl',name:t('Greenland','Groenland')},{code:'fr',name:t('France','France')},{code:'in',name:t('India','Inde')}].map((item,i) => (
                     <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '7px 10px', borderRadius: 8, backgroundColor: i===0?'#EEF4FF':'transparent' }}>
-                      <img src={`https://flagcdn.com/w40/${item.code}.png`} width="22" height="15" style={{ borderRadius: 3, objectFit: 'cover' }} />
+                      <img src={`https://flagcdn.com/w40/${item.code}.png`} width="22" height="15" style={{ borderRadius: 3, objectFit: 'cover' }} alt="" />
                       <span style={{ fontSize: 13, fontWeight: 600, color: '#0B1F3B' }}>{item.name}</span>
                     </div>
                   ))}
-                  <div style={{ textAlign: 'center', fontSize: 11, color: '#94a3b8', marginTop: 6 }}>...{t('130+ countries', '130+ pays')}</div>
                 </div>
               </>)}
               {tutStep === 1 && (<>
                 <h2 style={{ margin: '0 0 8px', fontSize: 24, fontWeight: 900, color: '#0B1F3B', textAlign: 'center' }}>{t('Drag and compare', 'Glissez et comparez')}</h2>
-                <p style={{ margin: '0 0 16px', fontSize: 14, color: '#64748b', textAlign: 'center', lineHeight: 1.6 }}>{t('Hover a country shape, then drag it anywhere. Moving toward the equator reveals its true size!', 'Survolez une forme, puis glissez-la. Vers l\u2019équateur = vraie taille !')}</p>
+                <p style={{ margin: '0 0 16px', fontSize: 14, color: '#64748b', textAlign: 'center', lineHeight: 1.6 }}>
+                  {isMobile
+                    ? t('Tap the ⟳ chip to select a country, then use the ↑↓←→ arrows to move it.', 'Tapez le chip ⟳ pour sélectionner un pays, puis utilisez les flèches ↑↓←→ pour le déplacer.')
+                    : t('Hover a country shape, then drag it anywhere. Moving toward the equator reveals its true size!', 'Survolez une forme, puis glissez-la. Vers l\'équateur = vraie taille !')}
+                </p>
                 <div style={{ flex: 1, backgroundColor: '#1a2f4a', borderRadius: 14, padding: 16, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 8 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-                    <div style={{ width: 8, height: 8, borderRadius: '50%', backgroundColor: '#4CAF50' }} />
-                    <span style={{ fontSize: 10, fontWeight: 800, color: 'rgba(255,255,255,0.7)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>{t('Greenland vs Africa', 'Groenland vs Afrique')}</span>
-                  </div>
                   <svg viewBox="0 0 200 170" style={{ width: '100%', maxWidth: 200 }}>
                     <path d="M80 20 Q105 15 125 25 Q145 35 148 55 Q152 75 145 95 Q140 115 135 130 Q125 150 110 158 Q95 165 82 158 Q68 150 60 135 Q50 118 48 98 Q44 75 50 55 Q58 35 80 20Z" fill="#E63946" fillOpacity="0.65" stroke="#E63946" strokeWidth="2"/>
                     <path d="M88 68 Q96 63 104 66 Q110 70 111 77 Q112 85 106 90 Q99 95 91 92 Q84 88 83 80 Q82 72 88 68Z" fill="#4CAF50" fillOpacity="0.85" stroke="#4CAF50" strokeWidth="1.5"/>
@@ -1027,12 +948,12 @@ export default function TrueSizeMap() {
                 </div>
               </>)}
               {tutStep === 2 && (<>
-                <h2 style={{ margin: '0 0 8px', fontSize: 24, fontWeight: 900, color: '#0B1F3B', textAlign: 'center' }}>{t('The Mercator effect', 'L\u2019effet Mercator')}</h2>
+                <h2 style={{ margin: '0 0 8px', fontSize: 24, fontWeight: 900, color: '#0B1F3B', textAlign: 'center' }}>{t('The Mercator effect', 'L\'effet Mercator')}</h2>
                 <p style={{ margin: '0 0 16px', fontSize: 14, color: '#64748b', textAlign: 'center', lineHeight: 1.6 }}>{t('Countries near the poles look much bigger than they really are. The chip shows the % difference!', 'Les pays proches des pôles semblent plus grands. Le badge montre la différence en % !')}</p>
                 <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 10, justifyContent: 'center' }}>
-                  {[{flag:'ru',name:t('Russia at 60°N','Russie à 60°N'),size:'100%',label:t('On map','Sur la carte'),color:'#E63946'},{flag:'ru',name:t('Russia at equator','Russie à l\u2019équateur'),size:'52%',label:t('True size','Vraie taille'),color:'#4CAF50'}].map((item,i) => (
+                  {[{flag:'ru',name:t('Russia at 60°N','Russie à 60°N'),size:'100%',label:t('On map','Sur la carte'),color:'#E63946'},{flag:'ru',name:t('Russia at equator','Russie à l\'équateur'),size:'52%',label:t('True size','Vraie taille'),color:'#4CAF50'}].map((item,i) => (
                     <div key={i} style={{ backgroundColor: '#F8F7F4', borderRadius: 10, padding: '12px 14px', display: 'flex', alignItems: 'center', gap: 12 }}>
-                      <img src={`https://flagcdn.com/w40/${item.flag}.png`} width="28" height="19" style={{ borderRadius: 3, objectFit: 'cover', flexShrink: 0 }} />
+                      <img src={`https://flagcdn.com/w40/${item.flag}.png`} width="28" height="19" style={{ borderRadius: 3, objectFit: 'cover', flexShrink: 0 }} alt="" />
                       <div style={{ flex: 1 }}>
                         <div style={{ fontSize: 12, fontWeight: 700, color: '#0B1F3B', marginBottom: 4 }}>{item.name}</div>
                         <div style={{ height: 8, borderRadius: 99, backgroundColor: item.color, width: item.size, opacity: 0.7 }} />

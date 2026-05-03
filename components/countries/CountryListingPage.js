@@ -5,16 +5,17 @@ import Link from 'next/link'
 import { useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-client'
 
+const REGIONS = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania']
 const REGION_LABELS = { Africa: 'Afrique', Americas: 'Amériques', Asia: 'Asie', Europe: 'Europe', Oceania: 'Océanie' }
 
 const CONTINENT_OPTIONS = [
-  { key: 'europe',           label: { en: 'Europe',          fr: 'Europe'            } },
-  { key: 'africa',           label: { en: 'Africa',          fr: 'Afrique'           } },
-  { key: 'asia',             label: { en: 'Asia',            fr: 'Asie'              } },
-  { key: 'north-americas',   label: { en: 'North America',   fr: 'Amérique du Nord'  } },
-  { key: 'central-americas', label: { en: 'Central America', fr: 'Amérique centrale' } },
-  { key: 'south-americas',   label: { en: 'South America',   fr: 'Amérique du Sud'   } },
-  { key: 'oceania',          label: { en: 'Oceania',         fr: 'Océanie'           } },
+  { key: 'europe',           label: { en: 'Europe',          fr: 'Europe'            }, emoji: '🇪🇺' },
+  { key: 'africa',           label: { en: 'Africa',          fr: 'Afrique'           }, emoji: '🌍' },
+  { key: 'asia',             label: { en: 'Asia',            fr: 'Asie'              }, emoji: '🌏' },
+  { key: 'north-americas',   label: { en: 'North America',   fr: 'Amérique du Nord'  }, emoji: '🌎' },
+  { key: 'central-americas', label: { en: 'Central America', fr: 'Amérique centrale' }, emoji: '🌴' },
+  { key: 'south-americas',   label: { en: 'South America',   fr: 'Amérique du Sud'   }, emoji: '🌎' },
+  { key: 'oceania',          label: { en: 'Oceania',         fr: 'Océanie'           }, emoji: '🌊' },
 ]
 
 const REGION_TO_CONTINENT = {
@@ -37,26 +38,26 @@ const COLOR_OPTIONS = [
 ]
 
 const SYMBOL_OPTIONS = [
-  { key: 'Star',         label: { en: 'Star',              fr: 'Étoile'             } },
-  { key: 'Cross',        label: { en: 'Cross',             fr: 'Croix'              } },
-  { key: 'Crescent',     label: { en: 'Crescent',          fr: 'Croissant'          } },
-  { key: 'Eagle',        label: { en: 'Eagle',             fr: 'Aigle'              } },
-  { key: 'Bird',         label: { en: 'Bird',              fr: 'Oiseau'             } },
-  { key: 'Sun',          label: { en: 'Sun',               fr: 'Soleil'             } },
-  { key: 'Coat of arms', label: { en: 'Coat of Arms',      fr: 'Blason'             } },
-  { key: 'Triangle',     label: { en: 'Triangle',          fr: 'Triangle'           } },
-  { key: 'Dragon',       label: { en: 'Dragon',            fr: 'Dragon'             } },
-  { key: 'Union Jack',   label: { en: 'Union Jack',        fr: 'Union Jack'         } },
-  { key: 'Animals',      label: { en: 'Animals',           fr: 'Animaux'            } },
-  { key: 'Tools',        label: { en: 'Tools',             fr: 'Outils'             } },
-  { key: 'Map',          label: { en: 'Geographic Map',    fr: 'Carte géographique' } },
-  { key: '__weapon',     label: { en: 'Any weapon',        fr: 'Arme (tout type)'   }, special: 'weapon'  },
-  { key: '__firearm',    label: { en: 'Firearm',           fr: 'Arme à feu'         }, special: 'firearm' },
-  { key: '__blade',      label: { en: 'Blade weapon',      fr: 'Arme blanche'       }, special: 'blade'   },
+  { key: 'Star',         label: { en: 'Star',           fr: 'Étoile'           } },
+  { key: 'Cross',        label: { en: 'Cross',          fr: 'Croix'            } },
+  { key: 'Crescent',     label: { en: 'Crescent',       fr: 'Croissant'        } },
+  { key: 'Eagle',        label: { en: 'Eagle',          fr: 'Aigle'            } },
+  { key: 'Bird',         label: { en: 'Bird',           fr: 'Oiseau'           } },
+  { key: 'Sun',          label: { en: 'Sun',            fr: 'Soleil'           } },
+  { key: 'Coat of arms', label: { en: 'Coat of Arms',   fr: 'Blason'           } },
+  { key: 'Triangle',     label: { en: 'Triangle',       fr: 'Triangle'         } },
+  { key: 'Dragon',       label: { en: 'Dragon',         fr: 'Dragon'           } },
+  { key: 'Union Jack',   label: { en: 'Union Jack',     fr: 'Union Jack'       } },
+  { key: 'Animals',      label: { en: 'Animals',        fr: 'Animaux'          } },
+  { key: 'Tools',        label: { en: 'Tools',          fr: 'Outils'           } },
+  { key: 'Map',          label: { en: 'Geographic Map', fr: 'Carte géographique' } },
+  { key: '__weapon',     label: { en: 'Any weapon',     fr: 'Arme (tout type)' }, special: 'weapon'  },
+  { key: '__firearm',    label: { en: 'Firearm',        fr: 'Arme à feu'       }, special: 'firearm' },
+  { key: '__blade',      label: { en: 'Blade weapon',   fr: 'Arme blanche'     }, special: 'blade'   },
 ]
 
-const FIREARM_SYMBOLS  = ['Gun', 'Rifle', 'Musket', 'Cannon', 'Firearms', 'Firearm']
-const BLADE_SYMBOLS    = ['Sword', 'Dagger', 'Machete', 'Spear', 'Trident', 'Knife', 'Saber', 'Axe', 'Bayonet', 'Lance', 'Khanjar']
+const FIREARM_SYMBOLS    = ['Gun', 'Rifle', 'Musket', 'Cannon', 'Firearms', 'Firearm']
+const BLADE_SYMBOLS      = ['Sword', 'Dagger', 'Machete', 'Spear', 'Trident', 'Knife', 'Saber', 'Axe', 'Bayonet', 'Lance', 'Khanjar']
 const ALL_WEAPON_SYMBOLS = [...FIREARM_SYMBOLS, ...BLADE_SYMBOLS]
 
 function matchesSymbolFilter(country, key) {
@@ -81,12 +82,12 @@ export default function CountryListingPage() {
   const [countriesLoading, setCountriesLoading] = useState(true)
   const [search, setSearch]                     = useState('')
   const [sortOrder, setSortOrder]               = useState('az')
+  const [activeRegions, setActiveRegions]       = useState([])
   const [activeColors, setActiveColors]         = useState([])
   const [activeSymbols, setActiveSymbols]       = useState([])
   const [activeRatios, setActiveRatios]         = useState([])
   const [activeShapes, setActiveShapes]         = useState([])
   const [activeContinents, setActiveContinents] = useState([])
-  const [officialFilter, setOfficialFilter]     = useState('all') // all | official | unofficial
   const [isMobile, setIsMobile]                 = useState(false)
   const [filtersOpen, setFiltersOpen]           = useState(false)
   const [openSections, setOpenSections]         = useState({})
@@ -100,8 +101,7 @@ export default function CountryListingPage() {
     Object.entries(freq).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).forEach(([ratio]) => {
       if (!seen.has(ratio)) {
         seen.add(ratio)
-        const label = ratio === '1:1.618' ? `${ratio} (φ)` : ratio
-        opts.push({ key: ratio, label: { en: label, fr: label } })
+        opts.push({ key: ratio, label: { en: ratio === '1:1.618' ? `${ratio} (φ)` : ratio, fr: ratio === '1:1.618' ? `${ratio} (φ)` : ratio } })
       }
     })
     return opts
@@ -111,23 +111,23 @@ export default function CountryListingPage() {
     const supabase = createClient()
     supabase
       .from('countries')
-      .select('iso_code, name_en, name_fr, region, colors, symbols, ratio, shape, has_weapons, has_blade, has_firearm, official')
+      .select('iso_code, name_en, name_fr, region, colors, symbols, ratio, shape, has_weapons, has_blade, has_firearm, last_flag_change')
       .order('name_en')
       .then(({ data }) => {
         if (data) setCountries(data.map(c => ({
-          code: c.iso_code,
-          en: c.name_en,
-          fr: c.name_fr,
-          region: c.region,
-          continent: REGION_TO_CONTINENT[c.region] || c.region?.toLowerCase() || '',
-          colors: c.colors || [],
-          symbols: c.symbols || [],
-          ratio: c.ratio,
-          shape: c.shape,
-          has_weapons: c.has_weapons || false,
-          has_blade:   c.has_blade   || false,
-          has_firearm: c.has_firearm || false,
-          official: c.official !== false, // default true if null
+          code:             c.iso_code,
+          en:               c.name_en,
+          fr:               c.name_fr,
+          region:           c.region,
+          continent:        REGION_TO_CONTINENT[c.region] || c.region?.toLowerCase() || '',
+          colors:           c.colors || [],
+          symbols:          c.symbols || [],
+          ratio:            c.ratio,
+          shape:            c.shape,
+          has_weapons:      c.has_weapons  || false,
+          has_blade:        c.has_blade    || false,
+          has_firearm:      c.has_firearm  || false,
+          last_flag_change: c.last_flag_change || null,
         })))
         setCountriesLoading(false)
       })
@@ -152,50 +152,32 @@ export default function CountryListingPage() {
       const q = search.trim().toLowerCase()
       list = list.filter(c => getName(c).toLowerCase().includes(q))
     }
-    if (activeContinents.length > 0) {
-      list = list.filter(c => activeContinents.includes(c.continent))
-    }
-    if (officialFilter === 'official')   list = list.filter(c => c.official)
-    if (officialFilter === 'unofficial') list = list.filter(c => !c.official)
-    if (activeColors.length > 0) {
-      list = list.filter(c => activeColors.every(col =>
-        c.colors.map(x => x.toLowerCase()).includes(col.toLowerCase())
-      ))
-    }
-    if (activeSymbols.length > 0) {
-      list = list.filter(c => activeSymbols.every(sym => matchesSymbolFilter(c, sym)))
-    }
-    if (activeRatios.length > 0) {
-      list = list.filter(c => activeRatios.includes(c.ratio))
-    }
-    if (activeShapes.length > 0) {
-      list = list.filter(c => activeShapes.includes(c.shape))
-    }
+    if (activeContinents.length > 0) list = list.filter(c => activeContinents.includes(c.continent))
+    if (activeRegions.length > 0)    list = list.filter(c => activeRegions.includes(c.region))
+    if (activeColors.length > 0)     list = list.filter(c => activeColors.every(col => c.colors.map(x => x.toLowerCase()).includes(col.toLowerCase())))
+    if (activeSymbols.length > 0)    list = list.filter(c => activeSymbols.every(sym => matchesSymbolFilter(c, sym)))
+    if (activeRatios.length > 0)     list = list.filter(c => activeRatios.includes(c.ratio))
+    if (activeShapes.length > 0)     list = list.filter(c => activeShapes.includes(c.shape))
     list.sort((a, b) => {
-      const na = getName(a); const nb = getName(b)
+      const na = getName(a), nb = getName(b)
       return sortOrder === 'az' ? na.localeCompare(nb) : nb.localeCompare(na)
     })
     return list
-  }, [countries, search, activeContinents, officialFilter, activeColors, activeSymbols, activeRatios, activeShapes, sortOrder, locale])
+  }, [countries, search, activeContinents, activeRegions, activeColors, activeSymbols, activeRatios, activeShapes, sortOrder, locale])
 
-  const hasFilters = activeContinents.length > 0 || officialFilter !== 'all' || activeColors.length > 0 || activeSymbols.length > 0 || activeRatios.length > 0 || activeShapes.length > 0 || search
+  const hasFilters = activeContinents.length > 0 || activeRegions.length > 0 || activeColors.length > 0 || activeSymbols.length > 0 || activeRatios.length > 0 || activeShapes.length > 0 || search
+  const activeFilterCount = [activeContinents, activeRegions, activeColors, activeSymbols, activeRatios, activeShapes].flat().length
 
   function clearAll() {
-    setSearch('')
-    setActiveContinents([])
-    setOfficialFilter('all')
-    setActiveColors([])
-    setActiveSymbols([])
-    setActiveRatios([])
-    setActiveShapes([])
+    setSearch(''); setActiveContinents([]); setActiveRegions([]); setActiveColors([]); setActiveSymbols([]); setActiveRatios([]); setActiveShapes([])
   }
 
   const chipStyle = (active) => ({
-    padding: '7px 14px', borderRadius: '99px', fontSize: '13px', fontWeight: '600',
-    cursor: 'pointer', whiteSpace: 'nowrap', transition: 'all 0.15s',
+    padding: '7px 14px', borderRadius: '99px', fontSize: '13px', fontWeight: '600', cursor: 'pointer',
     border: active ? '2px solid #0B1F3B' : '1.5px solid #e2e8f0',
     backgroundColor: active ? '#0B1F3B' : '#fafafa',
     color: active ? 'white' : '#475569',
+    transition: 'all 0.15s', whiteSpace: 'nowrap',
   })
 
   const FilterSection = ({ sectionKey, label, children }) => {
@@ -215,44 +197,143 @@ export default function CountryListingPage() {
     )
   }
 
-  // ── Reusable filter panels (shared mobile + desktop) ──────────────────────
-  const FiltersContent = () => (
-    <>
-      {/* Continent */}
-      <FilterSection sectionKey="continent" label={t('Continent', 'Continent')}>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-          {CONTINENT_OPTIONS.map(c => (
-            <button key={c.key} onClick={() => toggle(activeContinents, setActiveContinents, c.key)} style={chipStyle(activeContinents.includes(c.key))}>
+  // ── Country tile ─────────────────────────────────────────────────────────
+  const CountryTile = ({ country, desktop }) => {
+    const name = getName(country)
+    const flagSince = country.last_flag_change
+      ? new Date(country.last_flag_change).getFullYear()
+      : null
+
+    if (desktop) {
+      return (
+        <Link href={`/${locale}/countries/${country.code}`}
+          style={{ textDecoration: 'none', display: 'block', backgroundColor: 'white', borderRadius: '12px', overflow: 'hidden', border: '1px solid #e2e8f0', transition: 'transform 0.15s, box-shadow 0.15s', cursor: 'pointer' }}
+          onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.10)' }}
+          onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none' }}
+        >
+          <div style={{ aspectRatio: '3/2', overflow: 'hidden', backgroundColor: '#f0ede4', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <img src={`https://flagcdn.com/w320/${country.code}.png`} alt={name} loading="lazy"
+              style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', padding: '6px' }} />
+          </div>
+          <div style={{ padding: '10px 14px', textAlign: 'center' }}>
+            <p style={{ margin: 0, fontSize: '14px', fontWeight: '700', color: '#0B1F3B', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{name}</p>
+            {flagSince
+              ? <p style={{ margin: '4px 0 0', fontSize: '11px', color: '#64748b', fontWeight: '600' }}>🗓 {t(`Since ${flagSince}`, `Depuis ${flagSince}`)}</p>
+              : <p style={{ margin: '4px 0 0', fontSize: '11px', color: '#94a3b8' }}>{locale === 'fr' ? REGION_LABELS[country.region] : country.region}</p>
+            }
+          </div>
+        </Link>
+      )
+    }
+
+    return (
+      <a href={`/${locale}/countries/${country.code}`}
+        style={{ textDecoration: 'none', display: 'block', backgroundColor: 'white', borderRadius: '10px', overflow: 'hidden', border: '1px solid #e2e8f0' }}>
+        <div style={{ aspectRatio: '3/2', backgroundColor: '#f0ede4', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <img src={`https://flagcdn.com/w160/${country.code}.png`} alt={name} loading="lazy"
+            style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', padding: '5px' }} />
+        </div>
+        <div style={{ padding: '8px 10px', textAlign: 'center' }}>
+          <p style={{ margin: 0, fontSize: '12px', fontWeight: '700', color: '#0B1F3B', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{name}</p>
+          {flagSince
+            ? <p style={{ margin: '3px 0 0', fontSize: '10px', color: '#64748b', fontWeight: '600' }}>🗓 {t(`Since ${flagSince}`, `Depuis ${flagSince}`)}</p>
+            : <p style={{ margin: '2px 0 0', fontSize: '10px', color: '#94a3b8' }}>{locale === 'fr' ? REGION_LABELS[country.region] : country.region}</p>
+          }
+        </div>
+      </a>
+    )
+  }
+
+  // ── Continent filter ──────────────────────────────────────────────────────
+  const ContinentFilter = () => (
+    <FilterSection sectionKey="continent" label={t('Continent', 'Continent')}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+        {CONTINENT_OPTIONS.map(c => {
+          const active = activeContinents.includes(c.key)
+          return (
+            <button key={c.key} onClick={() => toggle(activeContinents, setActiveContinents, c.key)}
+              style={{ ...chipStyle(active), display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <span style={{ fontSize: '14px' }}>{c.emoji}</span>
               {c.label[locale] || c.label.en}
             </button>
-          ))}
-        </div>
-      </FilterSection>
+          )
+        })}
+      </div>
+    </FilterSection>
+  )
 
-      {/* Official */}
-      <FilterSection sectionKey="official" label={t('Status', 'Statut')}>
+  // ── Ratio filter ──────────────────────────────────────────────────────────
+  const RatioFilter = ({ mobile }) => (
+    <FilterSection sectionKey="ratio" label={t('Ratio', 'Ratio')}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+        {RATIO_OPTIONS.map(r => {
+          const active = activeRatios.includes(r.key)
+          const parts = r.key.replace(' (Pennant)', '').replace(' (Pennon)', '').split(':')
+          const rw = parseFloat(parts[1]); const rh = parseFloat(parts[0])
+          const maxDim = 40
+          const svgW = Math.round(maxDim * (rw / Math.max(rw, rh)))
+          const svgH = Math.round(maxDim * (rh / Math.max(rw, rh)))
+          return (
+            <button key={r.key} onClick={() => toggle(activeRatios, setActiveRatios, r.key)}
+              style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', padding: '10px 14px', borderRadius: '10px', fontSize: '12px', fontWeight: '700', cursor: 'pointer', border: active ? '2px solid #0B1F3B' : '1.5px solid #ddd', backgroundColor: active ? '#0B1F3B' : 'white', color: active ? 'white' : '#64748b', transition: 'all 0.15s', minWidth: '52px' }}>
+              <svg viewBox={`0 0 ${svgW} ${svgH}`} width={svgW} height={svgH} style={{ display: 'block' }}>
+                <rect x="0.5" y="0.5" width={svgW - 1} height={svgH - 1} rx="1.5"
+                  fill={active ? 'rgba(255,255,255,0.25)' : '#e2e8f0'}
+                  stroke={active ? 'rgba(255,255,255,0.8)' : '#94a3b8'} strokeWidth="1.2" />
+              </svg>
+              {r.label[locale] || r.label.en}
+            </button>
+          )
+        })}
+      </div>
+    </FilterSection>
+  )
+
+  // ── Shape filter ──────────────────────────────────────────────────────────
+  const ShapeFilter = () => (
+    <FilterSection sectionKey="shape" label={t('Shape', 'Forme')}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+        {SHAPE_OPTIONS.map(s => {
+          const active = activeShapes.includes(s.key)
+          const fill   = active ? 'rgba(255,255,255,0.25)' : '#e2e8f0'
+          const stroke = active ? 'rgba(255,255,255,0.8)'  : '#94a3b8'
+          const icons  = {
+            rectangle: <svg viewBox="0 0 36 24" width="36" height="24" style={{ display: 'block' }}><rect x="0.5" y="0.5" width="35" height="23" rx="2" fill={fill} stroke={stroke} strokeWidth="1.2" /></svg>,
+            square:    <svg viewBox="0 0 24 24" width="24" height="24" style={{ display: 'block' }}><rect x="0.5" y="0.5" width="23" height="23" rx="2" fill={fill} stroke={stroke} strokeWidth="1.2" /></svg>,
+            pennant:   <svg viewBox="0 0 36 28" width="36" height="28" style={{ display: 'block' }}><polygon points="1,1 1,27 35,14" fill={fill} stroke={stroke} strokeWidth="1.2" strokeLinejoin="round" /></svg>,
+          }
+          return (
+            <button key={s.key} onClick={() => toggle(activeShapes, setActiveShapes, s.key)}
+              style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', padding: '10px 14px', borderRadius: '10px', fontSize: '12px', fontWeight: '700', cursor: 'pointer', border: active ? '2px solid #0B1F3B' : '1.5px solid #ddd', backgroundColor: active ? '#0B1F3B' : 'white', color: active ? 'white' : '#64748b', transition: 'all 0.15s', minWidth: '64px' }}>
+              {icons[s.key]}
+              {s.label[locale] || s.label.en}
+            </button>
+          )
+        })}
+      </div>
+    </FilterSection>
+  )
+
+  // ── All filter sections ───────────────────────────────────────────────────
+  const AllFilters = () => (
+    <>
+      <ContinentFilter />
+      <FilterSection sectionKey="region" label={t('Region', 'Région')}>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-          {[
-            { key: 'all',        label: { en: 'All',          fr: 'Tous'          } },
-            { key: 'official',   label: { en: 'Official',     fr: 'Officiels'     } },
-            { key: 'unofficial', label: { en: 'Non-official', fr: 'Non-officiels' } },
-          ].map(o => (
-            <button key={o.key} onClick={() => setOfficialFilter(o.key)} style={chipStyle(officialFilter === o.key)}>
-              {o.label[locale]}
+          {REGIONS.map(r => (
+            <button key={r} onClick={() => toggle(activeRegions, setActiveRegions, r)} style={chipStyle(activeRegions.includes(r))}>
+              {locale === 'fr' ? REGION_LABELS[r] : r}
             </button>
           ))}
         </div>
       </FilterSection>
-
-      {/* Colors */}
       <FilterSection sectionKey="colors" label={t('Colors present', 'Couleurs présentes')}>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
           {COLOR_OPTIONS.map(c => {
             const active = activeColors.includes(c.key)
             return (
               <button key={c.key} onClick={() => toggle(activeColors, setActiveColors, c.key)}
-                style={{ display: 'flex', alignItems: 'center', gap: '7px', padding: '7px 14px', borderRadius: '99px', fontSize: '13px', fontWeight: '600', cursor: 'pointer', transition: 'all 0.15s',
-                  border: active ? '2px solid #0B1F3B' : '1.5px solid #e2e8f0', backgroundColor: active ? '#0B1F3B' : '#fafafa', color: active ? 'white' : '#475569' }}>
+                style={{ display: 'flex', alignItems: 'center', gap: '7px', padding: '7px 14px', borderRadius: '99px', fontSize: '13px', fontWeight: '600', cursor: 'pointer', border: active ? '2px solid #0B1F3B' : '1.5px solid #e2e8f0', backgroundColor: active ? '#0B1F3B' : '#fafafa', color: active ? 'white' : '#475569', transition: 'all 0.15s' }}>
                 <span style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: c.hex, flexShrink: 0, border: c.border ? '1px solid #ccc' : 'none' }} />
                 {c.label[locale] || c.label.en}
               </button>
@@ -260,8 +341,6 @@ export default function CountryListingPage() {
           })}
         </div>
       </FilterSection>
-
-      {/* Symbols */}
       <FilterSection sectionKey="symbols" label={t('Symbols', 'Symboles')}>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
           {SYMBOL_OPTIONS.map(s => (
@@ -271,73 +350,19 @@ export default function CountryListingPage() {
           ))}
         </div>
       </FilterSection>
-
-      {/* Ratio */}
-      <FilterSection sectionKey="ratio" label={t('Ratio', 'Ratio')}>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-          {RATIO_OPTIONS.map(r => {
-            const active = activeRatios.includes(r.key)
-            const parts = r.key.replace(' (Pennant)','').replace(' (Pennon)','').split(':')
-            const rw = parseFloat(parts[1]); const rh = parseFloat(parts[0])
-            const maxDim = 40
-            const svgW = Math.round(maxDim * (rw / Math.max(rw, rh)))
-            const svgH = Math.round(maxDim * (rh / Math.max(rw, rh)))
-            const isPennant = r.key.includes('4:3')
-            return (
-              <button key={r.key} onClick={() => toggle(activeRatios, setActiveRatios, r.key)}
-                style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', padding: '10px 14px', borderRadius: '10px', fontSize: '12px', fontWeight: '700', cursor: 'pointer', transition: 'all 0.15s', minWidth: '52px',
-                  border: active ? '2px solid #0B1F3B' : '1.5px solid #ddd', backgroundColor: active ? '#0B1F3B' : 'white', color: active ? 'white' : '#64748b' }}>
-                <svg viewBox={`0 0 ${svgW} ${svgH}`} width={svgW} height={svgH} style={{ display: 'block' }}>
-                  {isPennant
-                    ? <polygon points={`1,1 1,${svgH-1} ${svgW-1},${Math.round(svgH/2)}`} fill={active ? 'rgba(255,255,255,0.25)' : '#e2e8f0'} stroke={active ? 'rgba(255,255,255,0.8)' : '#94a3b8'} strokeWidth="1.2" strokeLinejoin="round"/>
-                    : <rect x="0.5" y="0.5" width={svgW-1} height={svgH-1} rx="1.5" fill={active ? 'rgba(255,255,255,0.25)' : '#e2e8f0'} stroke={active ? 'rgba(255,255,255,0.8)' : '#94a3b8'} strokeWidth="1.2"/>
-                  }
-                </svg>
-                {r.label[locale] || r.label.en}
-              </button>
-            )
-          })}
-        </div>
-      </FilterSection>
-
-      {/* Shape */}
-      <FilterSection sectionKey="shape" label={t('Shape', 'Forme')}>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-          {SHAPE_OPTIONS.map(s => {
-            const active = activeShapes.includes(s.key)
-            const fill = active ? 'rgba(255,255,255,0.25)' : '#e2e8f0'
-            const stroke = active ? 'rgba(255,255,255,0.8)' : '#94a3b8'
-            const shapeIcon = {
-              rectangle: <svg viewBox="0 0 36 24" width="36" height="24" style={{display:'block'}}><rect x="0.5" y="0.5" width="35" height="23" rx="2" fill={fill} stroke={stroke} strokeWidth="1.2"/></svg>,
-              square:    <svg viewBox="0 0 24 24" width="24" height="24" style={{display:'block'}}><rect x="0.5" y="0.5" width="23" height="23" rx="2" fill={fill} stroke={stroke} strokeWidth="1.2"/></svg>,
-              pennant:   <svg viewBox="0 0 36 28" width="36" height="28" style={{display:'block'}}><polygon points="1,1 1,27 35,14" fill={fill} stroke={stroke} strokeWidth="1.2" strokeLinejoin="round"/></svg>,
-            }[s.key]
-            return (
-              <button key={s.key} onClick={() => toggle(activeShapes, setActiveShapes, s.key)}
-                style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', padding: '10px 14px', borderRadius: '10px', fontSize: '12px', fontWeight: '700', cursor: 'pointer', transition: 'all 0.15s', minWidth: '64px',
-                  border: active ? '2px solid #0B1F3B' : '1.5px solid #ddd', backgroundColor: active ? '#0B1F3B' : 'white', color: active ? 'white' : '#64748b' }}>
-                {shapeIcon}
-                {s.label[locale] || s.label.en}
-              </button>
-            )
-          })}
-        </div>
-      </FilterSection>
+      <RatioFilter />
+      <ShapeFilter />
     </>
   )
 
-  if (countriesLoading) {
-    return (
-      <div style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <p style={{ color: '#8A8278', fontSize: '16px' }}>{locale === 'fr' ? 'Chargement...' : 'Loading countries...'}</p>
-      </div>
-    )
-  }
-
-  const activeFilterCount = [activeContinents, activeColors, activeSymbols, activeRatios, activeShapes].flat().length + (officialFilter !== 'all' ? 1 : 0)
+  if (countriesLoading) return (
+    <div style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <p style={{ color: '#8A8278', fontSize: '16px' }}>{t('Loading countries...', 'Chargement...')}</p>
+    </div>
+  )
 
   return (
-    <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: "var(--font-body), system-ui, sans-serif" }}>
+    <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: 'var(--font-body), system-ui, sans-serif' }}>
       <div style={{ maxWidth: '1400px', margin: '0 auto', padding: isMobile ? '20px 16px' : '40px 32px' }}>
 
         {/* Header */}
@@ -365,8 +390,7 @@ export default function CountryListingPage() {
                     style={{ width: '100%', padding: '11px 14px 11px 38px', borderRadius: '10px', border: '1.5px solid #ddd', backgroundColor: 'white', fontSize: '15px', color: '#0B1F3B', outline: 'none', boxSizing: 'border-box' }} />
                 </div>
                 <button onClick={() => setFiltersOpen(true)}
-                  style={{ display: 'flex', alignItems: 'center', gap: '7px', padding: '0 18px', borderRadius: '10px', height: '46px', cursor: 'pointer', flexShrink: 0, whiteSpace: 'nowrap', fontWeight: '700', fontSize: '14px', transition: 'all 0.15s',
-                    border: hasFilters ? '2px solid #0B1F3B' : '1.5px solid #ddd', backgroundColor: hasFilters ? '#0B1F3B' : 'white', color: hasFilters ? 'white' : '#475569' }}>
+                  style={{ display: 'flex', alignItems: 'center', gap: '7px', padding: '0 18px', borderRadius: '10px', border: hasFilters ? '2px solid #0B1F3B' : '1.5px solid #ddd', backgroundColor: hasFilters ? '#0B1F3B' : 'white', color: hasFilters ? 'white' : '#475569', fontWeight: '700', fontSize: '14px', cursor: 'pointer', flexShrink: 0, height: '46px' }}>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
                     <line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="11" y1="18" x2="13" y2="18"/>
                   </svg>
@@ -411,18 +435,15 @@ export default function CountryListingPage() {
                     </button>
                   </div>
                   <div style={{ flex: 1, overflowY: 'auto', padding: '20px 20px 0' }}>
-                    <FiltersContent />
+                    <AllFilters />
                   </div>
                   <div style={{ padding: '16px 20px', borderTop: '1px solid #f0f0f0', flexShrink: 0, backgroundColor: 'white' }}>
                     {hasFilters && (
-                      <button onClick={clearAll} style={{ width: '100%', padding: '10px', marginBottom: '10px', backgroundColor: '#fee2e2', color: '#dc2626', border: '1.5px solid #fca5a5', borderRadius: '10px', cursor: 'pointer', fontWeight: '700', fontSize: '14px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px' }}>
-                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
-                          <line x1="1" y1="1" x2="11" y2="11"/><line x1="11" y1="1" x2="1" y2="11"/>
-                        </svg>
+                      <button onClick={clearAll} style={{ width: '100%', padding: '10px', marginBottom: '10px', backgroundColor: '#fee2e2', color: '#dc2626', border: '1.5px solid #fca5a5', borderRadius: '10px', cursor: 'pointer', fontWeight: '700', fontSize: '14px' }}>
                         {t('Clear filters', 'Effacer les filtres')}
                       </button>
                     )}
-                    <button onClick={() => setFiltersOpen(false)} style={{ width: '100%', padding: '14px', backgroundColor: '#0B1F3B', color: 'white', border: 'none', borderRadius: '12px', cursor: 'pointer', fontWeight: '800', fontSize: '16px', letterSpacing: '-0.3px' }}>
+                    <button onClick={() => setFiltersOpen(false)} style={{ width: '100%', padding: '14px', backgroundColor: '#0B1F3B', color: 'white', border: 'none', borderRadius: '12px', cursor: 'pointer', fontWeight: '800', fontSize: '16px' }}>
                       {t('Apply', 'Appliquer')} — {filtered.length} {filtered.length === 1 ? t('country', 'pays') : t('countries', 'pays')}
                     </button>
                   </div>
@@ -430,7 +451,6 @@ export default function CountryListingPage() {
               </div>
             )}
 
-            {/* Mobile grid */}
             {filtered.length === 0 ? (
               <div style={{ textAlign: 'center', padding: '48px 0', color: '#94a3b8' }}>
                 <div style={{ fontSize: '40px', marginBottom: '10px' }}>🔍</div>
@@ -438,24 +458,7 @@ export default function CountryListingPage() {
               </div>
             ) : (
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px' }}>
-                {filtered.map(country => (
-                  <a key={country.code} href={`/${locale}/countries/${country.code}`}
-                    style={{ textDecoration: 'none', display: 'block', backgroundColor: 'white', borderRadius: '10px', overflow: 'hidden', border: '1px solid #e2e8f0' }}>
-                    <div style={{ aspectRatio: '3/2', backgroundColor: '#f0ede4', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                      <img src={`https://flagcdn.com/w160/${country.code}.png`} alt={getName(country)} loading="lazy"
-                        style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', padding: '5px' }} />
-                    </div>
-                    <div style={{ padding: '8px 10px' }}>
-                      <p style={{ margin: 0, fontSize: '12px', fontWeight: '700', color: '#0B1F3B', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{getName(country)}</p>
-                      <p style={{ margin: '2px 0 0', fontSize: '10px', color: '#94a3b8' }}>{locale === 'fr' ? REGION_LABELS[country.region] : country.region}</p>
-                      {!country.official && (
-                        <span style={{ display: 'inline-block', marginTop: '3px', fontSize: '9px', padding: '1px 5px', borderRadius: '4px', backgroundColor: '#f5e8fd', color: '#5c1a6b', fontWeight: '600' }}>
-                          {t('Non-official', 'Non-officiel')}
-                        </span>
-                      )}
-                    </div>
-                  </a>
-                ))}
+                {filtered.map(country => <CountryTile key={country.code} country={country} desktop={false} />)}
               </div>
             )}
           </div>
@@ -466,10 +469,10 @@ export default function CountryListingPage() {
           <div style={{ display: 'flex', gap: '32px', alignItems: 'flex-start' }}>
 
             {/* Sidebar */}
-            <div style={{ width: 'min(300px, 100%)', flexShrink: 0, position: 'sticky', top: '76px', alignSelf: 'flex-start', backgroundColor: 'white', borderRadius: '14px', border: '1px solid #e2e8f0', padding: '24px 20px', maxHeight: 'calc(100vh - 100px)', overflowY: 'auto' }}>
+            <div style={{ width: 'min(340px, 100%)', flexShrink: 0, position: 'sticky', top: '76px', alignSelf: 'flex-start', backgroundColor: 'white', borderRadius: '14px', border: '1px solid #e2e8f0', padding: '24px 20px', maxHeight: 'calc(100vh - 100px)', overflowY: 'auto' }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '8px', marginBottom: '20px', paddingBottom: '16px', borderBottom: '1px solid #f0f0f0' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                  <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#0B1F3B', color: 'white', fontWeight: '900', fontSize: '20px', borderRadius: '10px', padding: '4px 14px', letterSpacing: '-0.5px', minWidth: '52px' }}>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#0B1F3B', color: 'white', fontWeight: '900', fontSize: '20px', borderRadius: '10px', padding: '4px 14px', minWidth: '52px' }}>
                     {filtered.length}
                   </span>
                   <span style={{ fontSize: '13px', color: '#64748b', fontWeight: '500' }}>
@@ -477,7 +480,7 @@ export default function CountryListingPage() {
                   </span>
                 </div>
                 {hasFilters && (
-                  <button onClick={clearAll} style={{ display: 'flex', alignItems: 'center', gap: '5px', padding: '7px 12px', backgroundColor: '#fee2e2', color: '#dc2626', border: '1.5px solid #fca5a5', borderRadius: '8px', cursor: 'pointer', fontWeight: '700', fontSize: '12px', whiteSpace: 'nowrap', flexShrink: 0 }}>
+                  <button onClick={clearAll} style={{ display: 'flex', alignItems: 'center', gap: '5px', padding: '7px 12px', backgroundColor: '#fee2e2', color: '#dc2626', border: '1.5px solid #fca5a5', borderRadius: '8px', cursor: 'pointer', fontWeight: '700', fontSize: '12px' }}>
                     <svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
                       <line x1="1" y1="1" x2="10" y2="10"/><line x1="10" y1="1" x2="1" y2="10"/>
                     </svg>
@@ -485,7 +488,7 @@ export default function CountryListingPage() {
                   </button>
                 )}
               </div>
-              <FiltersContent />
+              <AllFilters />
             </div>
 
             {/* Right column */}
@@ -513,34 +516,11 @@ export default function CountryListingPage() {
                 </div>
               ) : (
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '16px' }}>
-                  {filtered.map(country => (
-                    <Link key={country.code} href={`/${locale}/countries/${country.code}`}
-                      style={{ textDecoration: 'none', display: 'block', backgroundColor: 'white', borderRadius: '12px', overflow: 'hidden', border: '1px solid #e2e8f0', transition: 'transform 0.15s, box-shadow 0.15s', cursor: 'pointer' }}
-                      onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.10)' }}
-                      onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none' }}
-                    >
-                      <div style={{ aspectRatio: '3/2', overflow: 'hidden', backgroundColor: '#f0ede4', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <img src={`https://flagcdn.com/w320/${country.code}.png`} alt={getName(country)} loading="lazy"
-                          style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', padding: '6px' }} />
-                      </div>
-                      <div style={{ padding: '12px 14px' }}>
-                        <p style={{ margin: 0, fontSize: '14px', fontWeight: '700', color: '#0B1F3B', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                          {getName(country)}
-                        </p>
-                        <p style={{ margin: '3px 0 0', fontSize: '12px', color: '#94a3b8' }}>
-                          {locale === 'fr' ? REGION_LABELS[country.region] : country.region}
-                        </p>
-                        {!country.official && (
-                          <span style={{ display: 'inline-block', marginTop: '4px', fontSize: '10px', padding: '2px 6px', borderRadius: '4px', backgroundColor: '#f5e8fd', color: '#5c1a6b', fontWeight: '600' }}>
-                            {t('Non-official', 'Non-officiel')}
-                          </span>
-                        )}
-                      </div>
-                    </Link>
-                  ))}
+                  {filtered.map(country => <CountryTile key={country.code} country={country} desktop={true} />)}
                 </div>
               )}
             </div>
+
           </div>
         )}
 

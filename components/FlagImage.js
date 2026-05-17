@@ -128,6 +128,7 @@ async function fetchWikimediaUrl(slug) {
  * 4. Acronym badge
  */
 export default function FlagImage({ slug, prefix = '/flags/regions', name, acronym, color = '#0B1F3B', width = 120, height = 80, style = {} }) {
+  console.log('FlagImage prefix:', prefix, 'slug:', slug)
   const candidates = [`${prefix}/${slug}.svg`, `${prefix}/${slug}.png`]
   const [tryIndex, setTryIndex] = useState(0)
   const [wikiUrl, setWikiUrl]   = useState(null)

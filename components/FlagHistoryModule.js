@@ -5,17 +5,19 @@ import { createClient } from '@/lib/supabase-client'
 import { useLocale } from 'next-intl'
 
 // ── Image resolution ──────────────────────────────────────────
-// Priority: 1) image_url from DB  2) /flags/history/{iso}-{year}.{ext}  3) placeholder
+// Priority: 1) image_url from DB  2) /flags/history/{iso}-{year}[-{n}].{ext}  3) placeholder
+// Duplicate years use numbering: fr-1815-1.png, fr-1815-2.png
 const EXTENSIONS = ['png', 'svg', 'jpg', 'jpeg', 'webp']
 
-function getLocalPath(isoCode, dateStart) {
+function getLocalPath(isoCode, dateStart, duplicateIndex) {
   if (!isoCode || !dateStart) return null
   const year = new Date(dateStart).getFullYear()
-  return `/flags/history/${isoCode}-${year}`
+  const suffix = duplicateIndex != null ? `-${duplicateIndex}` : ''
+  return `/flags/history/${isoCode}-${year}${suffix}`
 }
 
-function FlagImage({ imageUrl, isoCode, dateStart, alt, style }) {
-  const localBase = getLocalPath(isoCode, dateStart)
+function FlagImage({ imageUrl, isoCode, dateStart, duplicateIndex, alt, style }) {
+  const localBase = getLocalPath(isoCode, dateStart, duplicateIndex)
   const [src, setSrc] = useState(imageUrl || (localBase ? `${localBase}.png` : null))
   const [extIndex, setExtIndex] = useState(0)
   const [failed, setFailed] = useState(false)
@@ -24,7 +26,7 @@ function FlagImage({ imageUrl, isoCode, dateStart, alt, style }) {
     setSrc(imageUrl || (localBase ? `${localBase}.png` : null))
     setExtIndex(0)
     setFailed(false)
-  }, [imageUrl, isoCode, dateStart])
+  }, [imageUrl, isoCode, dateStart, duplicateIndex])
 
   function handleError() {
     // If we were trying image_url, fall back to local
@@ -86,8 +88,23 @@ export default function FlagHistoryModule({ countryCode, countryName }) {
       .order('date_start', { ascending: true, nullsFirst: true })
       .then(({ data, error }) => {
         if (!error && data && data.length > 0) {
-          setFlags(data)
-          const current = data.find(f => !f.date_end) ?? data[data.length - 1]
+          // Compute duplicate year indexes for local image naming
+          const yearCount = {}
+          const withIndex = data.map(flag => {
+            const year = flag.date_start ? new Date(flag.date_start).getFullYear() : null
+            if (year == null) return { ...flag, _dupIndex: null }
+            yearCount[year] = (yearCount[year] || 0) + 1
+            return { ...flag, _yearKey: year, _dupCount: yearCount[year] }
+          })
+          // Second pass: assign index only if year appears more than once
+          const yearTotal = {}
+          withIndex.forEach(f => { if (f._yearKey) yearTotal[f._yearKey] = (yearTotal[f._yearKey] || 0) + 1 })
+          const flagsWithIndex = withIndex.map(f => ({
+            ...f,
+            _dupIndex: f._yearKey && yearTotal[f._yearKey] > 1 ? f._dupCount : null,
+          }))
+          setFlags(flagsWithIndex)
+          const current = flagsWithIndex.find(f => !f.date_end) ?? flagsWithIndex[flagsWithIndex.length - 1]
           setSelected(current)
         }
         setLoading(false)
@@ -127,6 +144,7 @@ export default function FlagHistoryModule({ countryCode, countryName }) {
                 imageUrl={selected.image_url}
                 isoCode={countryCode}
                 dateStart={selected.date_start}
+                duplicateIndex={selected._dupIndex}
                 alt={label(selected)}
                 style={{ maxWidth: '100%', maxHeight: '140px', objectFit: 'contain', borderRadius: '4px', boxShadow: '0 2px 12px rgba(0,0,0,0.15)' }}
               />
@@ -156,7 +174,7 @@ export default function FlagHistoryModule({ countryCode, countryName }) {
         <div style={{ flex: 1, minWidth: '200px' }}>
           <div style={{ position: 'relative' }}>
             <div style={{
-              position: 'absolute', left: '20px', top: '24px',
+              position: 'absolute', left: '27px', top: '28px',
               bottom: '24px', width: '2px',
               backgroundColor: '#e2e8f0',
               zIndex: 0,
@@ -169,7 +187,7 @@ export default function FlagHistoryModule({ countryCode, countryName }) {
                 <div key={flag.id} onClick={() => setSelected(flag)}
                   style={{ display: 'flex', alignItems: 'flex-start', gap: '16px', marginBottom: i < flags.length - 1 ? '16px' : '0', cursor: 'pointer', position: 'relative', zIndex: 1 }}>
                   <div style={{
-                    width: '42px', height: '42px', flexShrink: 0, borderRadius: '50%',
+                    width: '56px', height: '56px', flexShrink: 0, borderRadius: '50%',
                     border: `3px solid ${isSelected ? '#0B1F3B' : isCurrent ? '#22c55e' : '#e2e8f0'}`,
                     backgroundColor: isSelected ? '#0B1F3B' : isCurrent ? '#dcfce7' : 'white',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -180,8 +198,9 @@ export default function FlagHistoryModule({ countryCode, countryName }) {
                       imageUrl={flag.image_url}
                       isoCode={countryCode}
                       dateStart={flag.date_start}
+                      duplicateIndex={flag._dupIndex}
                       alt={lbl}
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }}
                     />
                   </div>
                   <div style={{

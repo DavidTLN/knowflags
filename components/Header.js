@@ -7,20 +7,30 @@ import { useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-client'
 
 const GAMES = [
-  { key: 'flag-reveal',  icon: '🏳️', en: 'FlagReveal',  fr: 'FlagReveal',  descEn: 'Uncover the flag tile by tile',        descFr: 'Révèle le drapeau tuile par tuile' },
-  { key: 'flag-quiz',    icon: '❓',  en: 'FlagQuiz',    fr: 'FlagQuiz',    descEn: 'Multiple choice flag challenge',        descFr: 'Quel est ce drapeau ?' },
-  { key: 'capital-city', icon: '🏙️', en: 'CapitalClue', fr: 'CapitalClue', descEn: 'Match the capital to its country',     descFr: 'Trouve la capitale du pays' },
-  { key: 'flag-drawing', icon: '✏️', en: 'FlagDrawer',  fr: 'FlagDrawer',  descEn: 'Can you draw it from memory?',         descFr: 'Sauras-tu le dessiner de mémoire ?' },
-  { key: 'flag-ranker',  icon: '🏆', en: 'FlagRanker',  fr: 'FlagRanker',  descEn: 'Rank countries by area, GDP and more', descFr: 'Classe les pays par superficie, PIB...' },
-  { key: 'flag-clue',    icon: '🔍', en: 'FlagClue',    fr: 'FlagClue',    descEn: 'Guess the country from fun facts',     descFr: 'Devine le pays grâce à des anecdotes' },
+  { key: 'flag-reveal',  icon: '🏳️',  en: 'FlagReveal',    fr: 'FlagReveal',    descEn: 'Uncover the flag tile by tile',           descFr: 'Révèle le drapeau tuile par tuile' },
+  { key: 'flag-quiz',    icon: '❓',   en: 'FlagQuiz',      fr: 'FlagQuiz',      descEn: 'Multiple choice flag challenge',           descFr: 'Quel est ce drapeau ?' },
+  { key: 'capital-city', icon: '🏙️',  en: 'CapitalClue',   fr: 'CapitalClue',   descEn: 'Match the capital to its country',        descFr: 'Trouve la capitale du pays' },
+  { key: 'flag-drawing', icon: '✏️',  en: 'FlagDrawer',    fr: 'FlagDrawer',    descEn: 'Can you draw it from memory?',            descFr: 'Sauras-tu le dessiner de mémoire ?' },
+  { key: 'flag-ranker',  icon: '🏆',  en: 'FlagRanker',    fr: 'FlagRanker',    descEn: 'Rank countries by area, GDP and more',    descFr: 'Classe les pays par superficie, PIB...' },
+  { key: 'flag-clue',    icon: '🔍',  en: 'FlagClue',      fr: 'FlagClue',      descEn: 'Guess the country from fun facts',        descFr: 'Devine le pays grâce à des anecdotes' },
+  // TODO: polish before release
+  // { key: 'past-flag',    icon: '🏛️',  en: 'Past Flag',     fr: 'Past Flag',     descEn: 'Guess the country from a historical flag', descFr: 'Trouve le pays depuis un drapeau historique' },
+  // { key: 'subflag-quiz', icon: '🗺️',  en: 'SubFlag Quiz',  fr: 'SubFlag Quiz',  descEn: 'Regional flag → find the country',        descFr: 'Drapeau régional → trouver le pays' },
+  // { key: 'gartic-phone', icon: '🎨',  en: 'Flag Phone',    fr: 'Flag Phone',    descEn: 'Describe, draw, and guess flags',         descFr: 'Décris, dessine et devine les drapeaux' },
+  // { key: 'qui-est-ce',   icon: '🕵️', en: 'Qui est-ce?',   fr: 'Qui est-ce ?',  descEn: 'Yes/no questions to find the country',    descFr: 'Questions oui/non pour trouver le pays' },
+  // { key: 'imposteur',    icon: '🔎',  en: 'Impostor Flag', fr: 'Drapeau Imposteur', descEn: 'Find the flag that doesn\'t belong',  descFr: 'Trouvez le drapeau qui n\'appartient pas au groupe' },
 ]
 
 const FLAGS_MENU = [
-  { href: 'countries',       icon: '🌍', en: 'Country Flags',   fr: 'Drapeaux des Pays',    descEn: 'All countries of the world',         descFr: 'Tous les drapeaux du monde' },
-  { href: 'flags/regions',   icon: '🗺️', en: 'Regions & States',fr: 'Régions & États',      descEn: 'Provinces, cantons, Bundesländer…',  descFr: 'Provinces, cantons, Bundesländer…' },
-  { href: 'flags/cities',    icon: '🏙️', en: 'City Flags',      fr: 'Drapeaux des Villes',  descEn: 'Major cities around the world',      descFr: 'Grandes villes du monde entier' },
-  { href: 'organisations',   icon: '🏛️', en: 'Organisations',   fr: 'Organisations',        descEn: 'UN, EU, NATO, FIFA and more',        descFr: 'ONU, UE, OTAN, FIFA et plus' },
+  { href: 'countries',     icon: '🌍', en: 'Country Flags',  fr: 'Drapeaux des Pays',   descEn: 'All countries of the world',        descFr: 'Tous les drapeaux du monde' },
+  { href: 'flags/regions', icon: '🗺️', en: 'Regions & States',fr: 'Régions & États',    descEn: 'Provinces, cantons, Bundesländer…', descFr: 'Provinces, cantons, Bundesländer…' },
+  { href: 'flags/cities',  icon: '🏙️', en: 'City Flags',     fr: 'Drapeaux des Villes', descEn: 'Major cities around the world',     descFr: 'Grandes villes du monde entier' },
+  { href: 'organisations', icon: '🏛️', en: 'Organisations',  fr: 'Organisations',       descEn: 'UN, EU, NATO, FIFA and more',       descFr: 'ONU, UE, OTAN, FIFA et plus' },
 ]
+
+// Split games into two columns for desktop dropdown
+const GAMES_COL1 = GAMES.slice(0, 6)
+const GAMES_COL2 = GAMES.slice(6)
 
 function Chevron({ open }) {
   return (
@@ -43,15 +53,15 @@ export default function Header() {
   const pathname = usePathname()
   const router   = useRouter()
 
-  const [menuOpen,    setMenuOpen]    = useState(false)
-  const [gamesOpen,   setGamesOpen]   = useState(false)
-  const [flagsOpen,   setFlagsOpen]   = useState(false)
-  const [user,        setUser]        = useState(null)
-  const [avatarOpen,  setAvatarOpen]  = useState(false)
+  const [menuOpen,   setMenuOpen]   = useState(false)
+  const [gamesOpen,  setGamesOpen]  = useState(false)
+  const [flagsOpen,  setFlagsOpen]  = useState(false)
+  const [user,       setUser]       = useState(null)
+  const [avatarOpen, setAvatarOpen] = useState(false)
 
   // Mobile accordion state
-  const [mFlagsOpen,  setMFlagsOpen]  = useState(false)
-  const [mGamesOpen,  setMGamesOpen]  = useState(false)
+  const [mFlagsOpen, setMFlagsOpen] = useState(false)
+  const [mGamesOpen, setMGamesOpen] = useState(false)
 
   const gamesRef  = useRef(null)
   const flagsRef  = useRef(null)
@@ -74,7 +84,6 @@ export default function Header() {
     return () => document.removeEventListener('mousedown', handleClick)
   }, [])
 
-  // Lock body scroll when drawer open
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
@@ -120,7 +129,6 @@ export default function Header() {
     padding: '6px 2px', transition: 'color 0.15s', whiteSpace: 'nowrap',
   })
 
-  // ── Mobile accordion section ──────────────────────────────────────────────
   const AccordionSection = ({ icon, label, isOpen, onToggle, children }) => (
     <div style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
       <button onClick={onToggle}
@@ -139,6 +147,24 @@ export default function Header() {
     </div>
   )
 
+  const GameItem = ({ game, onClick }) => (
+    <div
+      onClick={onClick}
+      style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 12px', borderRadius: '10px', cursor: game.soon ? 'default' : 'pointer', transition: 'background 0.12s' }}
+      onMouseEnter={e => { if (!game.soon) e.currentTarget.style.backgroundColor = '#f0f4ff' }}
+      onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'transparent' }}
+    >
+      <span style={{ fontSize: '20px', width: '28px', textAlign: 'center', flexShrink: 0 }}>{game.icon}</span>
+      <div style={{ flex: 1, minWidth: 0 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <span style={{ fontSize: '13px', fontWeight: '700', color: game.soon ? '#94a3b8' : '#0B1F3B' }}>{t(game.en, game.fr)}</span>
+          {game.soon && <span style={{ fontSize: '10px', fontWeight: '700', color: '#806D40', backgroundColor: '#fef3c7', padding: '1px 6px', borderRadius: '99px' }}>{t('Soon', 'Bientôt')}</span>}
+        </div>
+        <p style={{ margin: 0, fontSize: '11px', color: '#94a3b8', marginTop: '1px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{t(game.descEn, game.descFr)}</p>
+      </div>
+    </div>
+  )
+
   return (
     <header style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, backgroundColor: '#0B1F3B', boxShadow: '0 2px 16px rgba(0,0,0,0.25)' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 16px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '16px', minWidth: 0 }}>
@@ -148,7 +174,7 @@ export default function Header() {
           <img src='/logo.png' alt='KnowFlags' style={{ height: '42px', width: 'auto', display: 'block' }} />
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1px' }}>
             <span style={{ fontSize: '18px', fontWeight: '900', color: '#ffffff', letterSpacing: '-0.3px', lineHeight: 1 }}>KnowFlags</span>
-            <span style={{ fontSize: '9px', fontWeight: '600', letterSpacing: '1.5px', color: '#FEB12F', lineHeight: 1, marginTop: '4px', display: 'block' }}>
+            <span style={{ fontSize: '9px', fontWeight: '600', letterSpacing: '1.5px', color: '#FEB12F', lineHeight: 1, marginTop: '4px', display: 'block' }} className="logo-tagline">
               Learn. Play. Explore.
             </span>
           </div>
@@ -156,6 +182,8 @@ export default function Header() {
 
         {/* Desktop nav */}
         <nav style={{ display: 'flex', alignItems: 'center', gap: '28px', flex: 1, justifyContent: 'center' }} className="desktop-nav">
+
+          {/* Flags dropdown */}
           <div ref={flagsRef} style={{ position: 'relative' }}>
             <button onClick={() => { setFlagsOpen(o => !o); setGamesOpen(false) }} style={dropdownBtnStyle(isActive(`/${locale}/countries`))}>
               {t('Flags', 'Drapeaux')}<Chevron open={flagsOpen} />
@@ -180,29 +208,39 @@ export default function Header() {
             )}
           </div>
 
+          {/* Games dropdown — 2 columns for 11 games */}
           <div ref={gamesRef} style={{ position: 'relative' }}>
             <button onClick={() => { setGamesOpen(o => !o); setFlagsOpen(false) }} style={dropdownBtnStyle(isActive(`/${locale}/games`))}>
               {t('Games', 'Jeux')}<Chevron open={gamesOpen} />
             </button>
             {gamesOpen && (
-              <DropdownPanel width={280}>
-                <div style={{ padding: '8px' }}>
-                  {GAMES.map(game => (
-                    <div key={game.key}
-                      onClick={() => { if (!game.soon) { router.push(`/${locale}/games/${game.key}`); setGamesOpen(false) } }}
-                      style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '11px 12px', borderRadius: '10px', cursor: game.soon ? 'default' : 'pointer', transition: 'background 0.12s' }}
-                      onMouseEnter={e => { if (!game.soon) e.currentTarget.style.backgroundColor = '#f0f4ff' }}
-                      onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'transparent' }}>
-                      <span style={{ fontSize: '22px', width: '32px', textAlign: 'center', flexShrink: 0 }}>{game.icon}</span>
-                      <div style={{ flex: 1, minWidth: 0 }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                          <span style={{ fontSize: '14px', fontWeight: '700', color: game.soon ? '#94a3b8' : '#0B1F3B' }}>{t(game.en, game.fr)}</span>
-                          {game.soon && <span style={{ fontSize: '10px', fontWeight: '700', color: '#806D40', backgroundColor: '#fef3c7', padding: '1px 6px', borderRadius: '99px' }}>{t('Soon', 'Bientôt')}</span>}
-                        </div>
-                        <p style={{ margin: 0, fontSize: '12px', color: '#94a3b8', marginTop: '1px' }}>{t(game.descEn, game.descFr)}</p>
+              <DropdownPanel width={560}>
+                <div style={{ padding: '8px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0' }}>
+                  {/* Col 1 */}
+                  <div style={{ borderRight: '1px solid #f0f0f0' }}>
+                    {GAMES_COL1.map(game => (
+                      <GameItem key={game.key} game={game} onClick={() => { if (!game.soon) { router.push(`/${locale}/games/${game.key}`); setGamesOpen(false) } }} />
+                    ))}
+                  </div>
+                  {/* Col 2 */}
+                  <div>
+                    {GAMES_COL2.map(game => (
+                      <GameItem key={game.key} game={game} onClick={() => { if (!game.soon) { router.push(`/${locale}/games/${game.key}`); setGamesOpen(false) } }} />
+                    ))}
+                    {/* Leaderboard link in col 2 */}
+                    <div
+                      onClick={() => { router.push(`/${locale}/leaderboard`); setGamesOpen(false) }}
+                      style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 12px', borderRadius: '10px', cursor: 'pointer', transition: 'background 0.12s' }}
+                      onMouseEnter={e => e.currentTarget.style.backgroundColor = '#f0f4ff'}
+                      onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}
+                    >
+                      <span style={{ fontSize: '20px', width: '28px', textAlign: 'center', flexShrink: 0 }}>🏆</span>
+                      <div>
+                        <div style={{ fontSize: '13px', fontWeight: '700', color: '#0B1F3B' }}>{t('Leaderboard', 'Classement')}</div>
+                        <p style={{ margin: 0, fontSize: '11px', color: '#94a3b8', marginTop: '1px' }}>{t('Global rankings', 'Classement mondial')}</p>
                       </div>
                     </div>
-                  ))}
+                  </div>
                 </div>
                 <div style={{ borderTop: '1px solid #f0f0f0', padding: '10px 16px' }}>
                   <Link href={`/${locale}/games`} onClick={() => setGamesOpen(false)} style={{ fontSize: '13px', color: '#9EB7E5', textDecoration: 'none', fontWeight: '600' }}>
@@ -244,6 +282,12 @@ export default function Header() {
                       onMouseEnter={e => e.currentTarget.style.backgroundColor = '#f8f8f8'}
                       onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}>
                       {t('My Profile', 'Mon Profil')}
+                    </Link>
+                    <Link href={`/${locale}/leaderboard`} onClick={() => setAvatarOpen(false)}
+                      style={{ display: 'block', padding: '11px 16px', fontSize: '14px', color: '#0B1F3B', textDecoration: 'none', fontWeight: '500' }}
+                      onMouseEnter={e => e.currentTarget.style.backgroundColor = '#f8f8f8'}
+                      onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}>
+                      🏆 {t('Leaderboard', 'Classement')}
                     </Link>
                     <button onClick={() => { switchLocale(); setAvatarOpen(false) }}
                       style={{ width: '100%', textAlign: 'left', padding: '11px 16px', fontSize: '14px', color: '#0B1F3B', background: 'none', border: 'none', borderTop: '1px solid #f0f0f0', cursor: 'pointer', fontWeight: '500', display: 'flex', alignItems: 'center', gap: '10px' }}
@@ -297,30 +341,12 @@ export default function Header() {
       {/* ── Mobile drawer ── */}
       {menuOpen && (
         <>
-          {/* Semi-transparent backdrop — click to close */}
-          <div
-            onClick={closeDrawer}
-            style={{ position: 'fixed', inset: 0, top: '60px', backgroundColor: 'rgba(0,0,0,0.45)', backdropFilter: 'blur(2px)', zIndex: 998 }}
-          />
-
-          {/* Drawer panel — leaves ~15% gap on the left */}
-          <div style={{
-            position: 'fixed', top: '60px', right: 0, bottom: 0,
-            width: '85vw', maxWidth: '360px',
-            backgroundColor: '#0B1F3B',
-            zIndex: 999,
-            overflowY: 'auto',
-            boxShadow: '-8px 0 32px rgba(0,0,0,0.35)',
-            display: 'flex', flexDirection: 'column',
-          }}>
+          <div onClick={closeDrawer} style={{ position: 'fixed', inset: 0, top: '60px', backgroundColor: 'rgba(0,0,0,0.45)', backdropFilter: 'blur(2px)', zIndex: 998 }} />
+          <div style={{ position: 'fixed', top: '60px', right: 0, bottom: 0, width: '85vw', maxWidth: '360px', backgroundColor: '#0B1F3B', zIndex: 999, overflowY: 'auto', boxShadow: '-8px 0 32px rgba(0,0,0,0.35)', display: 'flex', flexDirection: 'column' }}>
             <div style={{ padding: '8px 20px 32px', flex: 1 }}>
 
               {/* Flags accordion */}
-              <AccordionSection
-                icon="🌍"
-                label={t('Flags', 'Drapeaux')}
-                isOpen={mFlagsOpen}
-                onToggle={() => setMFlagsOpen(o => !o)}>
+              <AccordionSection icon="🌍" label={t('Flags', 'Drapeaux')} isOpen={mFlagsOpen} onToggle={() => setMFlagsOpen(o => !o)}>
                 {FLAGS_MENU.map(item => (
                   <Link key={item.href} href={`/${locale}/${item.href}`} onClick={closeDrawer}
                     style={{ fontSize: '15px', color: '#9EB7E5', textDecoration: 'none', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '10px' }}>
@@ -331,11 +357,7 @@ export default function Header() {
               </AccordionSection>
 
               {/* Games accordion */}
-              <AccordionSection
-                icon="🎮"
-                label={t('Games', 'Jeux')}
-                isOpen={mGamesOpen}
-                onToggle={() => setMGamesOpen(o => !o)}>
+              <AccordionSection icon="🎮" label={t('Games', 'Jeux')} isOpen={mGamesOpen} onToggle={() => setMGamesOpen(o => !o)}>
                 {GAMES.map(game => (
                   <div key={game.key}
                     onClick={() => { if (!game.soon) { router.push(`/${locale}/games/${game.key}`); closeDrawer() } }}
@@ -345,6 +367,12 @@ export default function Header() {
                     {game.soon && <span style={{ fontSize: '10px', color: '#806D40', backgroundColor: '#fef3c7', padding: '1px 6px', borderRadius: '99px', fontWeight: '700' }}>{t('Soon', 'Bientôt')}</span>}
                   </div>
                 ))}
+                {/* Leaderboard */}
+                <div onClick={() => { router.push(`/${locale}/leaderboard`); closeDrawer() }}
+                  style={{ display: 'flex', alignItems: 'center', gap: '10px', cursor: 'pointer' }}>
+                  <span style={{ fontSize: '18px', width: '24px', textAlign: 'center' }}>🏆</span>
+                  <span style={{ fontSize: '15px', color: '#9EB7E5', fontWeight: '600' }}>{t('Leaderboard', 'Classement')}</span>
+                </div>
                 <Link href={`/${locale}/games`} onClick={closeDrawer}
                   style={{ fontSize: '13px', color: '#FEB12F', textDecoration: 'none', fontWeight: '600', marginTop: '4px' }}>
                   {t('All games →', 'Tous les jeux →')}
@@ -365,7 +393,6 @@ export default function Header() {
                 </Link>
               </div>
 
-              {/* Submit CTA */}
               <Link href={`/${locale}/submit`} onClick={closeDrawer}
                 style={{ display: 'block', marginTop: '16px', padding: '12px', textAlign: 'center', fontSize: '15px', fontWeight: '700', color: '#FEB12F', backgroundColor: 'rgba(254,177,47,0.12)', border: '1.5px solid rgba(254,177,47,0.35)', borderRadius: '10px', textDecoration: 'none' }}>
                 {t('+ Submit a Flag', '+ Soumettre un drapeau')}

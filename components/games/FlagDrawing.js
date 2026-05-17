@@ -4,7 +4,6 @@ import { useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-client'
 
 // ─── Flag definitions — MINIMAL: only name + ratio + hasEmblem ───────────────
-// All colors, zones, guides are AUTO-DETECTED from flagcdn images at runtime
 const FLAG_DEFS = {
   fr: { en: 'France',      fr: 'France',       ratio: 1.5,    hasEmblem: false },
   de: { en: 'Germany',     fr: 'Allemagne',     ratio: 5/3,    hasEmblem: false },
@@ -50,47 +49,68 @@ const MAX_LIVES = 3
 const SCREEN = { SETUP: 'setup', PLAYING: 'playing', RESULT: 'result', GAMEOVER: 'gameover' }
 const TOOL = { FILL: 'fill', BRUSH: 'brush', ERASER: 'eraser' }
 
-// ─── Auto color extraction via k-means on flagcdn image ──────────────────────
-function extractDominantColors(imageData, W, H, k = 8) {
+// ─── Color extraction — k-means++ for reliable palette ───────────────────────
+function extractDominantColors(imageData, W, H) {
   const data = imageData.data
-  // Sample every 4th pixel for speed
+
+  // Sample pixels evenly across the image (skip every 12px for speed)
   const samples = []
-  for (let i = 0; i < data.length; i += 16) {
+  for (let i = 0; i < data.length; i += 48) {
     const r = data[i], g = data[i+1], b = data[i+2], a = data[i+3]
-    if (a < 200) continue // skip transparent
+    if (a < 200) continue
     samples.push([r, g, b])
   }
   if (samples.length === 0) return []
 
-  // Simple k-means, 10 iterations
-  let centroids = samples.slice(0, k).map(s => [...s])
-  for (let iter = 0; iter < 12; iter++) {
-    const clusters = Array.from({length: k}, () => [])
+  // k-means++ initialization: first centroid random, then pick farthest from existing ones
+  const K = 8
+  const centroids = []
+  centroids.push([...samples[Math.floor(samples.length / 2)]])
+  while (centroids.length < K) {
+    // For each sample, find distance to nearest centroid
+    let maxD = -1, best = 0
+    for (let si = 0; si < samples.length; si += 4) {  // stride for speed
+      const [r, g, b] = samples[si]
+      let minD = Infinity
+      for (const [cr, cg, cb] of centroids) {
+        const d = (r-cr)**2 + (g-cg)**2 + (b-cb)**2
+        if (d < minD) minD = d
+      }
+      if (minD > maxD) { maxD = minD; best = si }
+    }
+    centroids.push([...samples[best]])
+  }
+
+  // k-means iterations
+  for (let iter = 0; iter < 15; iter++) {
+    const clusters = Array.from({length: K}, () => [])
     for (const [r, g, b] of samples) {
       let best = 0, bestD = Infinity
-      for (let ci = 0; ci < k; ci++) {
+      for (let ci = 0; ci < K; ci++) {
         const [cr, cg, cb] = centroids[ci]
         const d = (r-cr)**2 + (g-cg)**2 + (b-cb)**2
         if (d < bestD) { bestD = d; best = ci }
       }
       clusters[best].push([r, g, b])
     }
-    for (let ci = 0; ci < k; ci++) {
+    let changed = false
+    for (let ci = 0; ci < K; ci++) {
       if (clusters[ci].length === 0) continue
       const n = clusters[ci].length
-      centroids[ci] = [
-        Math.round(clusters[ci].reduce((s,c) => s+c[0], 0) / n),
-        Math.round(clusters[ci].reduce((s,c) => s+c[1], 0) / n),
-        Math.round(clusters[ci].reduce((s,c) => s+c[2], 0) / n),
-      ]
+      const nr = Math.round(clusters[ci].reduce((s,c) => s+c[0], 0) / n)
+      const ng = Math.round(clusters[ci].reduce((s,c) => s+c[1], 0) / n)
+      const nb = Math.round(clusters[ci].reduce((s,c) => s+c[2], 0) / n)
+      if (nr !== centroids[ci][0] || ng !== centroids[ci][1] || nb !== centroids[ci][2]) changed = true
+      centroids[ci] = [nr, ng, nb]
     }
+    if (!changed) break
   }
 
-  // Count cluster sizes and sort by frequency
-  const counts = Array(k).fill(0)
+  // Count cluster sizes
+  const counts = Array(K).fill(0)
   for (const [r, g, b] of samples) {
     let best = 0, bestD = Infinity
-    for (let ci = 0; ci < k; ci++) {
+    for (let ci = 0; ci < K; ci++) {
       const [cr, cg, cb] = centroids[ci]
       const d = (r-cr)**2 + (g-cg)**2 + (b-cb)**2
       if (d < bestD) { bestD = d; best = ci }
@@ -100,8 +120,15 @@ function extractDominantColors(imageData, W, H, k = 8) {
 
   return centroids
     .map(([r, g, b], i) => ({ r, g, b, count: counts[i], hex: rgbToHex(r, g, b) }))
-    .filter(c => c.count > samples.length * 0.02) // at least 2% of pixels
+    .filter(c => c.count > samples.length * 0.015)  // at least 1.5% of pixels
     .sort((a, b) => b.count - a.count)
+    // Deduplicate: keep only colours far enough apart (distance >= 25)
+    .filter((c, i, arr) => {
+      for (let j = 0; j < i; j++) {
+        if (colorDistance(arr[j].r, arr[j].g, arr[j].b, c.r, c.g, c.b) < 25) return false
+      }
+      return true
+    })
     .slice(0, 6)
 }
 
@@ -120,180 +147,10 @@ function colorDistance(r1, g1, b1, r2, g2, b2) {
   return Math.sqrt((r1-r2)**2 + (g1-g2)**2 + (b1-b2)**2)
 }
 
-// Make a color slightly more saturated/vibrant for UI display
-function vibrantHex(hex) {
-  let [r, g, b] = hexToRgb(hex)
-  // Convert to HSL, boost saturation, convert back
-  r /= 255; g /= 255; b /= 255
-  const max = Math.max(r,g,b), min = Math.min(r,g,b)
-  let h, s, l = (max+min)/2
-  if (max === min) { h = s = 0 }
-  else {
-    const d = max - min
-    s = l > 0.5 ? d/(2-max-min) : d/(max+min)
-    switch(max) {
-      case r: h = ((g-b)/d + (g<b?6:0))/6; break
-      case g: h = ((b-r)/d + 2)/6; break
-      default: h = ((r-g)/d + 4)/6
-    }
-  }
-  s = Math.min(1, s * 1.3) // boost saturation 30%
-  // HSL back to RGB
-  const hue2rgb = (p, q, t) => {
-    if (t < 0) t += 1; if (t > 1) t -= 1
-    if (t < 1/6) return p + (q-p)*6*t
-    if (t < 1/2) return q
-    if (t < 2/3) return p + (q-p)*(2/3-t)*6
-    return p
-  }
-  let nr, ng, nb
-  if (s === 0) { nr = ng = nb = l }
-  else {
-    const q = l < 0.5 ? l*(1+s) : l+s-l*s
-    const p = 2*l - q
-    nr = hue2rgb(p, q, h+1/3)
-    ng = hue2rgb(p, q, h)
-    nb = hue2rgb(p, q, h-1/3)
-  }
-  return rgbToHex(Math.round(nr*255), Math.round(ng*255), Math.round(nb*255))
-}
 
-// ─── Color segmentation → thick boundary lines ───────────────────────────────
-// Step 1: quantize every pixel to its nearest dominant color (from k-means result)
-// Step 2: find pixels where neighbors belong to a different segment → boundary
-// Step 3: dilate boundaries by BORDER_RADIUS pixels → thick walls the fill can't cross
 
-const BORDER_RADIUS = 3  // px thickness of guide lines — must be >= 3 to block flood fill
 
-function buildSegmentMap(imageData, W, H, centroids) {
-  // Assign each pixel to its nearest centroid
-  const src = imageData.data
-  const seg = new Uint8Array(W * H)
-  for (let i = 0; i < W * H; i++) {
-    const r = src[i*4], g = src[i*4+1], b = src[i*4+2]
-    let best = 0, bestD = Infinity
-    for (let ci = 0; ci < centroids.length; ci++) {
-      const [cr, cg, cb] = centroids[ci]
-      const d = (r-cr)**2 + (g-cg)**2 + (b-cb)**2
-      if (d < bestD) { bestD = d; best = ci }
-    }
-    seg[i] = best
-  }
-  return seg
-}
 
-function buildBoundaryMap(seg, W, H) {
-  // Mark pixels where any neighbor has a different segment
-  const boundary = new Uint8Array(W * H)
-  for (let y = 1; y < H-1; y++) {
-    for (let x = 1; x < W-1; x++) {
-      const s = seg[y*W+x]
-      if (seg[y*W+x+1] !== s || seg[y*W+x-1] !== s ||
-          seg[(y+1)*W+x] !== s || seg[(y-1)*W+x] !== s) {
-        boundary[y*W+x] = 1
-      }
-    }
-  }
-  return boundary
-}
-
-function dilateBoundary(boundary, W, H, radius) {
-  // Expand each boundary pixel by radius in all directions
-  const dilated = new Uint8Array(W * H)
-  for (let y = 0; y < H; y++) {
-    for (let x = 0; x < W; x++) {
-      if (!boundary[y*W+x]) continue
-      for (let dy = -radius; dy <= radius; dy++) {
-        for (let dx = -radius; dx <= radius; dx++) {
-          const nx = x+dx, ny = y+dy
-          if (nx >= 0 && nx < W && ny >= 0 && ny < H) {
-            dilated[ny*W+nx] = 1
-          }
-        }
-      }
-    }
-  }
-  return dilated
-}
-
-// Build guide canvas: white background + thick dark borders between color zones
-function buildGuideCanvas(ctx, imageData, W, H, centroids) {
-  // Get raw centroid arrays for segmentation
-  const centroidArrays = centroids.map(c => [c.r, c.g, c.b])
-  const seg = buildSegmentMap(imageData, W, H, centroidArrays)
-  const boundary = buildBoundaryMap(seg, W, H)
-  const thick = dilateBoundary(boundary, W, H, BORDER_RADIUS)
-
-  // Write to canvas: white everywhere, dark navy on boundary
-  const out = ctx.createImageData(W, H)
-  const d = out.data
-  for (let i = 0; i < W * H; i++) {
-    if (thick[i]) {
-      d[i*4]=15; d[i*4+1]=30; d[i*4+2]=60; d[i*4+3]=255
-    } else {
-      d[i*4]=255; d[i*4+1]=255; d[i*4+2]=255; d[i*4+3]=255
-    }
-  }
-  ctx.putImageData(out, 0, 0)
-  return thick // return for use in emblem masking
-}
-
-// ─── Emblem detection — find the "complex" center region ─────────────────────
-// Returns { x, y, w, h } as fractions 0-1, or null for simple flags
-function detectEmblemRegion(imageData, W, H) {
-  // Divide flag into a grid of cells, measure color variance per cell
-  const cols = 12, rows = 8
-  const cw = W / cols, ch = H / rows
-  const variance = []
-
-  for (let row = 0; row < rows; row++) {
-    for (let col = 0; col < cols; col++) {
-      const x0 = Math.round(col * cw), y0 = Math.round(row * ch)
-      const x1 = Math.round((col+1) * cw), y1 = Math.round((row+1) * ch)
-      let rSum=0, gSum=0, bSum=0, n=0
-      const pixels = []
-      for (let y = y0; y < y1; y++) {
-        for (let x = x0; x < x1; x++) {
-          const i = (y*W+x)*4
-          const r=imageData.data[i], g=imageData.data[i+1], b=imageData.data[i+2]
-          rSum+=r; gSum+=g; bSum+=b; n++
-          pixels.push([r,g,b])
-        }
-      }
-      if (n === 0) { variance.push(0); continue }
-      const mr=rSum/n, mg=gSum/n, mb=bSum/n
-      const v = pixels.reduce((s,[r,g,b]) => s + (r-mr)**2 + (g-mg)**2 + (b-mb)**2, 0) / n
-      variance.push(v)
-    }
-  }
-
-  // Find the bounding box of high-variance cells (likely emblem area)
-  const maxV = Math.max(...variance)
-  const threshold = maxV * 0.3
-  const highV = variance.map(v => v > threshold)
-
-  let minCol=cols, maxCol=0, minRow=rows, maxRow=0
-  for (let row = 0; row < rows; row++) {
-    for (let col = 0; col < cols; col++) {
-      if (highV[row*cols+col]) {
-        minCol = Math.min(minCol, col)
-        maxCol = Math.max(maxCol, col)
-        minRow = Math.min(minRow, row)
-        maxRow = Math.max(maxRow, row)
-      }
-    }
-  }
-
-  if (maxCol <= minCol || maxRow <= minRow) return null
-
-  // Add some padding
-  return {
-    x: Math.max(0, (minCol - 0.5) / cols),
-    y: Math.max(0, (minRow - 0.5) / rows),
-    w: Math.min(1, (maxCol - minCol + 2) / cols),
-    h: Math.min(1, (maxRow - minRow + 2) / rows),
-  }
-}
 
 // ─── Flood fill ───────────────────────────────────────────────────────────────
 function floodFill(imageData, W, H, startX, startY, fillHex) {
@@ -303,8 +160,6 @@ function floodFill(imageData, W, H, startX, startY, fillHex) {
   const si = idx(startX, startY)
   const tr = d[si], tg = d[si+1], tb = d[si+2]
 
-  // Don't fill dark guide pixels or same color
-  if (tr + tg + tb < 120) return
   if (colorDistance(tr,tg,tb, fr,fg,fb) < 8) return
 
   const stack = [[startX, startY]]
@@ -317,22 +172,20 @@ function floodFill(imageData, W, H, startX, startY, fillHex) {
     if (visited[vi]) continue
     const pi = vi * 4
     const r = d[pi], g = d[pi+1], b = d[pi+2]
-    if (r + g + b < 120) continue // dark border
-    if (colorDistance(r,g,b, tr,tg,tb) > 45) continue // different zone
+    if (colorDistance(r,g,b, tr,tg,tb) > 45) continue
     visited[vi] = 1
     d[pi] = fr; d[pi+1] = fg; d[pi+2] = fb; d[pi+3] = 255
     stack.push([x+1,y],[x-1,y],[x,y+1],[x,y-1])
   }
 }
 
-// ─── Comparison — pixel similarity with tolerance ─────────────────────────────
+// ─── Comparison ───────────────────────────────────────────────────────────────
 function comparePixels(drawData, refData) {
   const len = drawData.data.length
   let total = 0, counted = 0
   const TOLERANCE = 50
   for (let i = 0; i < len; i += 4) {
     const r1=drawData.data[i], g1=drawData.data[i+1], b1=drawData.data[i+2]
-    if (r1+g1+b1 < 120) continue // skip guide lines
     const r2=refData.data[i], g2=refData.data[i+1], b2=refData.data[i+2]
     const d = colorDistance(r1,g1,b1,r2,g2,b2)
     total += Math.max(0, d - TOLERANCE) / 441.67
@@ -366,7 +219,6 @@ export default function FlagDrawingV2() {
   const [difficulty, setDifficulty] = useState('easy')
   const [isMobile, setIsMobile] = useState(false)
 
-  // Game state
   const [lives, setLives] = useState(MAX_LIVES)
   const [streak, setStreak] = useState(0)
   const [totalScore, setTotalScore] = useState(0)
@@ -376,20 +228,17 @@ export default function FlagDrawingV2() {
   const [history, setHistory] = useState([])
   const [snapshotUrl, setSnapshotUrl] = useState(null)
 
-  // Drawing state
   const [activeTool, setActiveTool] = useState(TOOL.FILL)
   const [activeColor, setActiveColor] = useState('#CE1126')
   const [brushSize, setBrushSize] = useState(8)
   const [isDrawing, setIsDrawing] = useState(false)
   const [lineStart, setLineStart] = useState(null)
-  const [customColor, setCustomColor] = useState('#CE1126')  // for custom color picker
+  const [customColor, setCustomColor] = useState('#CE1126')
 
-  // Stats per difficulty from Supabase
   const [user, setUser] = useState(null)
-  const [diffStats, setDiffStats] = useState({})  // { easy: { best_score, flags_drawn }, ... }
+  const [diffStats, setDiffStats] = useState({})
 
-  // Auto-extracted per-flag state
-  const [palette, setPalette] = useState([]) // [{hex, label}]
+  const [palette, setPalette] = useState([])
   const [flagLoading, setFlagLoading] = useState(false)
 
   const drawingCanvasRef = useRef(null)
@@ -398,14 +247,16 @@ export default function FlagDrawingV2() {
   const queueRef = useRef([])
   const livesRef = useRef(MAX_LIVES)
   const streakRef = useRef(0)
-  const undoStack = useRef([])  // array of ImageData snapshots
-  const [undoCount, setUndoCount] = useState(0)  // triggers re-render when stack changes
+  const undoStack = useRef([])
+  const [undoCount, setUndoCount] = useState(0)
+  const [showShapesDrawer, setShowShapesDrawer] = useState(false)
+  // showShapesDrawer kept for desktop compat but unused on mobile now
 
   const cfg = {
-    easy:    { showLines: true,  showName: true  },
-    medium:  { showLines: true,  showName: false },
-    hard:    { showLines: false, showName: false },
-    extreme: { showLines: false, showName: false },
+    easy:    { showName: true  },
+    medium:  { showName: false },
+    hard:    { showName: false },
+    extreme: { showName: false },
   }[difficulty]
 
   useEffect(() => {
@@ -415,7 +266,6 @@ export default function FlagDrawingV2() {
     return () => window.removeEventListener('resize', check)
   }, [])
 
-  // ── Ctrl+Z / Cmd+Z keyboard shortcut ──────────────────────────────────────
   useEffect(() => {
     function handleKey(e) {
       if ((e.ctrlKey || e.metaKey) && e.key === 'z' && !e.shiftKey) {
@@ -427,7 +277,6 @@ export default function FlagDrawingV2() {
     return () => window.removeEventListener('keydown', handleKey)
   }, [])
 
-  // ── Auth + difficulty stats ────────────────────────────────────────────────
   useEffect(() => {
     const supabase = createClient()
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -458,7 +307,6 @@ export default function FlagDrawingV2() {
       setDiffStats(map)
     }
   }
-
 
   async function logScore(score) {
     if (!score || score <= 0) return
@@ -491,7 +339,6 @@ export default function FlagDrawingV2() {
     setDiffStats(prev => ({ ...prev, [diff]: { best: score } }))
   }
 
-  // ── Load flag: fetch from flagcdn, extract colors + edges ──────────────────
   const loadFlag = useCallback((key) => {
     setCurrentKey(key)
     setScore(null)
@@ -507,7 +354,6 @@ export default function FlagDrawingV2() {
     const W = CANVAS_W
     const H = Math.round(W / def.ratio)
 
-    // Resize canvases
     for (const ref of [drawingCanvasRef, overlayCanvasRef, refCanvasRef]) {
       if (ref.current) { ref.current.width = W; ref.current.height = H }
     }
@@ -515,56 +361,33 @@ export default function FlagDrawingV2() {
     const img = new Image()
     img.crossOrigin = 'anonymous'
     img.onload = () => {
-      // ── 1. Draw real flag into ref canvas (ground truth for comparison) ──
       const refCtx = refCanvasRef.current?.getContext('2d')
       if (refCtx) {
         refCtx.clearRect(0, 0, W, H)
         refCtx.drawImage(img, 0, 0, W, H)
       }
 
-      // ── 2. Extract dominant colors from flag image ──
       const colorCanvas = document.createElement('canvas')
       colorCanvas.width = W; colorCanvas.height = H
       const colorCtx = colorCanvas.getContext('2d')
       colorCtx.drawImage(img, 0, 0, W, H)
       const imgData = colorCtx.getImageData(0, 0, W, H)
       const extracted = extractDominantColors(imgData, W, H)
-      const newPalette = extracted.map((c, i) => ({
-        hex: vibrantHex(c.hex),
-        rawHex: c.hex,
-        label: `Color ${i+1}`,
+      // Use raw hex directly — vibrantHex over-saturates yellows into orange etc.
+      const newPalette = extracted.map((c) => ({
+        hex: c.hex,
+        label: '',
       }))
       setPalette(newPalette)
       if (newPalette.length > 0) setActiveColor(newPalette[0].hex)
 
-      // ── 3. Set up drawing canvas ──
       const drawCtx = drawingCanvasRef.current?.getContext('2d')
       if (!drawCtx) { setFlagLoading(false); return }
 
-      if (cfg.showLines) {
-        // Build guide canvas from color segmentation — thick boundaries block flood fill
-        // Pass raw centroid data (not vibrant) for accurate segmentation
-        buildGuideCanvas(drawCtx, imgData, W, H, extracted)
-      } else {
-        drawCtx.fillStyle = '#FFFFFF'
-        drawCtx.fillRect(0, 0, W, H)
-      }
+      // Always start with a blank white canvas
+      drawCtx.fillStyle = '#FFFFFF'
+      drawCtx.fillRect(0, 0, W, H)
 
-      if (def.hasEmblem) {
-        // Detect and stamp the emblem region from the real flag at full opacity
-        const emblemRegion = detectEmblemRegion(imgData, W, H)
-        if (emblemRegion) {
-          const { x, y, w, h } = emblemRegion
-          drawCtx.save()
-          drawCtx.beginPath()
-          drawCtx.rect(Math.round(x*W), Math.round(y*H), Math.round(w*W), Math.round(h*H))
-          drawCtx.clip()
-          drawCtx.drawImage(img, 0, 0, W, H)
-          drawCtx.restore()
-        }
-      }
-
-      // Clear overlay (used only for brush preview)
       const ov = overlayCanvasRef.current
       if (ov) ov.getContext('2d').clearRect(0, 0, W, H)
 
@@ -604,13 +427,12 @@ export default function FlagDrawingV2() {
     loadFlag(currentKey)
   }
 
-  // ── Undo helpers ──────────────────────────────────────────────────────────
   function saveUndo() {
     const canvas = drawingCanvasRef.current
     if (!canvas) return
     const ctx = canvas.getContext('2d')
     const snapshot = ctx.getImageData(0, 0, canvas.width, canvas.height)
-    undoStack.current = [...undoStack.current.slice(-19), snapshot]  // max 20 steps
+    undoStack.current = [...undoStack.current.slice(-19), snapshot]
     setUndoCount(undoStack.current.length)
   }
 
@@ -625,11 +447,10 @@ export default function FlagDrawingV2() {
     setUndoCount(undoStack.current.length)
   }
 
-  // ── Pre-made shape stamps ─────────────────────────────────────────────────
   function stampShape(shape) {
     const canvas = drawingCanvasRef.current
     if (!canvas) return
-    saveUndo()  // save before stamping so it can be undone
+    saveUndo()
     const ctx = canvas.getContext('2d')
     const W = canvas.width
     const H = canvas.height
@@ -637,6 +458,7 @@ export default function FlagDrawingV2() {
     ctx.strokeStyle = activeColor
 
     switch (shape) {
+      // ── Bandes horizontales (tiers) ──
       case 'h-stripe-top':
         ctx.fillRect(0, 0, W, Math.round(H / 3))
         break
@@ -646,6 +468,7 @@ export default function FlagDrawingV2() {
       case 'h-stripe-bot':
         ctx.fillRect(0, Math.round(2 * H / 3), W, Math.round(H / 3))
         break
+      // ── Bandes verticales (tiers) ──
       case 'v-stripe-left':
         ctx.fillRect(0, 0, Math.round(W / 3), H)
         break
@@ -655,20 +478,48 @@ export default function FlagDrawingV2() {
       case 'v-stripe-right':
         ctx.fillRect(Math.round(2 * W / 3), 0, Math.round(W / 3), H)
         break
-      case 'circle': {
-        const cx = W / 2, cy = H / 2
-        const r = Math.round(Math.min(W, H) * 0.22)
-        ctx.beginPath()
-        ctx.arc(cx, cy, r, 0, Math.PI * 2)
-        ctx.fill()
+      // ── Moitiés ──
+      case 'left-half':
+        ctx.fillRect(0, 0, Math.round(W / 2), H)
         break
-      }
+      case 'right-half':
+        ctx.fillRect(Math.round(W / 2), 0, Math.round(W / 2), H)
+        break
+      case 'top-half':
+        ctx.fillRect(0, 0, W, Math.round(H / 2))
+        break
+      case 'bottom-half':
+        ctx.fillRect(0, Math.round(H / 2), W, Math.round(H / 2))
+        break
+      // ── Bandes centrales (croix) ──
       case 'cross-h':
         ctx.fillRect(0, Math.round(H * 0.38), W, Math.round(H * 0.24))
         break
       case 'cross-v':
         ctx.fillRect(Math.round(W * 0.38), 0, Math.round(W * 0.24), H)
         break
+      // ── Croix nordique (barre verticale décalée à 2/5 gauche) ──
+      case 'cross-nordic': {
+        const armW = Math.round(Math.min(W, H) * 0.18)
+        const vx = Math.round(W * 0.38) - Math.round(armW / 2)  // décalée vers la gauche
+        const hy = Math.round(H / 2) - Math.round(armW / 2)
+        ctx.fillRect(0, hy, W, armW)           // barre horizontale pleine largeur
+        ctx.fillRect(vx, 0, armW, H)           // barre verticale décalée gauche
+        break
+      }
+      // ── Croix grecque (centrée, épaisseur ~20%) ──
+      case 'cross-greek': {
+        const arm = Math.round(Math.min(W, H) * 0.20)
+        const cx = Math.round((W - arm) / 2)
+        const cy = Math.round((H - arm) / 2)
+        const size = Math.round(Math.min(W, H) * 0.6)
+        const ox = Math.round((W - size) / 2)
+        const oy = Math.round((H - size) / 2)
+        ctx.fillRect(ox, cy, size, arm)
+        ctx.fillRect(cx, oy, arm, size)
+        break
+      }
+      // ── Diagonales ──
       case 'diag-left': {
         ctx.lineWidth = Math.round(Math.min(W, H) * 0.18)
         ctx.lineCap = 'square'
@@ -687,16 +538,69 @@ export default function FlagDrawingV2() {
         ctx.stroke()
         break
       }
-      case 'left-half':
-        ctx.fillRect(0, 0, Math.round(W / 2), H)
+      // ── Saltire (croix de Saint-André) ──
+      case 'saltire': {
+        ctx.lineWidth = Math.round(Math.min(W, H) * 0.18)
+        ctx.lineCap = 'square'
+        ctx.beginPath()
+        ctx.moveTo(0, 0); ctx.lineTo(W, H)
+        ctx.moveTo(W, 0); ctx.lineTo(0, H)
+        ctx.stroke()
         break
-      case 'top-half':
-        ctx.fillRect(0, 0, W, Math.round(H / 2))
+      }
+      // ── Triangles ──
+      case 'tri-left': {
+        ctx.beginPath()
+        ctx.moveTo(0, 0); ctx.lineTo(Math.round(W / 2), Math.round(H / 2)); ctx.lineTo(0, H)
+        ctx.closePath(); ctx.fill()
         break
+      }
+      case 'tri-right': {
+        ctx.beginPath()
+        ctx.moveTo(W, 0); ctx.lineTo(Math.round(W / 2), Math.round(H / 2)); ctx.lineTo(W, H)
+        ctx.closePath(); ctx.fill()
+        break
+      }
+      case 'tri-top': {
+        ctx.beginPath()
+        ctx.moveTo(0, 0); ctx.lineTo(W, 0); ctx.lineTo(Math.round(W / 2), Math.round(H / 2))
+        ctx.closePath(); ctx.fill()
+        break
+      }
+      case 'tri-bot': {
+        ctx.beginPath()
+        ctx.moveTo(0, H); ctx.lineTo(W, H); ctx.lineTo(Math.round(W / 2), Math.round(H / 2))
+        ctx.closePath(); ctx.fill()
+        break
+      }
+      // ── Chevron gauche (triangle depuis le bord gauche, ~40% de largeur) ──
+      case 'chevron-left': {
+        const tip = Math.round(W * 0.42)
+        ctx.beginPath()
+        ctx.moveTo(0, 0); ctx.lineTo(tip, Math.round(H / 2)); ctx.lineTo(0, H)
+        ctx.closePath(); ctx.fill()
+        break
+      }
+      // ── Cercles ──
+      case 'circle': {
+        const r = Math.round(Math.min(W, H) * 0.22)
+        ctx.beginPath()
+        ctx.arc(Math.round(W / 2), Math.round(H / 2), r, 0, Math.PI * 2)
+        ctx.fill()
+        break
+      }
+      case 'circle-sm': {
+        const r = Math.round(Math.min(W, H) * 0.13)
+        ctx.beginPath()
+        ctx.arc(Math.round(W / 2), Math.round(H / 2), r, 0, Math.PI * 2)
+        ctx.fill()
+        break
+      }
       default:
         break
     }
   }
+
   function validate() {
     const drawCanvas = drawingCanvasRef.current
     const refCanvas = refCanvasRef.current
@@ -740,7 +644,6 @@ export default function FlagDrawingV2() {
     setScreen(SCREEN.RESULT)
   }
 
-  // ── Canvas interaction ────────────────────────────────────────────────────
   function getPos(e, canvas) {
     const rect = canvas.getBoundingClientRect()
     const sx = canvas.width / rect.width
@@ -756,8 +659,6 @@ export default function FlagDrawingV2() {
     const canvas = drawingCanvasRef.current
     const pos = getPos(e, canvas)
     setIsDrawing(true)
-
-    // Save snapshot before any action
     saveUndo()
 
     if (activeTool === TOOL.FILL) {
@@ -819,7 +720,6 @@ export default function FlagDrawingV2() {
     if (ov) ov.getContext('2d').clearRect(0, 0, ov.width, ov.height)
   }
 
-  // ── Styles ────────────────────────────────────────────────────────────────
   const colors = {
     bg: '#F4F1E6',
     navy: '#0B1F3B',
@@ -837,58 +737,67 @@ export default function FlagDrawingV2() {
   // ── SETUP screen ──────────────────────────────────────────────────────────
   if (screen === SCREEN.SETUP) {
     return (
-      <div style={{ minHeight: '100dvh', background: colors.bg, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', fontFamily: "'Roboto', sans-serif" }}>
-        <div style={{ background: colors.card, borderRadius: '20px', padding: '40px', maxWidth: '480px', width: '100%', boxShadow: '0 8px 32px rgba(11,31,59,0.12)' }}>
-          <div style={{ textAlign: 'center', marginBottom: '32px' }}>
-            <div style={{ fontSize: '48px', marginBottom: '12px' }}>🎨</div>
-            <h1 style={{ fontSize: '28px', fontWeight: '800', color: colors.navy, margin: 0, fontFamily: "'Roboto Slab', serif" }}>
-              {t('Flag Drawing', 'Dessin de drapeaux')}
-              <span style={{ fontSize: '12px', background: colors.navy, color: '#FFF', borderRadius: '6px', padding: '2px 8px', marginLeft: '10px', verticalAlign: 'middle', fontFamily: "'Roboto', sans-serif", fontWeight: 600 }}>v2</span>
-            </h1>
-            <p style={{ color: colors.muted, fontSize: '14px', marginTop: '8px' }}>
+      <div style={{ height: 'calc(100dvh - 60px)', background: '#FFFFFF', display: 'flex', flexDirection: 'column', fontFamily: "'Roboto', sans-serif" }}>
+
+        {/* Scrollable content */}
+        <div style={{ flex: 1, overflowY: 'auto', padding: '24px 20px 8px' }}>
+          {/* Header */}
+          <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+            <div style={{ fontSize: '36px', lineHeight: 1, marginBottom: '8px' }}>🎨</div>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+              <h1 style={{ fontSize: '22px', fontWeight: '800', color: colors.navy, margin: 0, fontFamily: "'Roboto Slab', serif" }}>
+                {t('Flag Drawing', 'Dessin de drapeaux')}
+              </h1>
+              <span style={{ fontSize: '11px', background: colors.navy, color: '#FFF', borderRadius: '5px', padding: '2px 7px', fontFamily: "'Roboto', sans-serif", fontWeight: 600 }}>v2</span>
+            </div>
+            <p style={{ color: colors.muted, fontSize: '13px', marginTop: '5px', marginBottom: 0 }}>
               {t('Colors auto-extracted from real flags', 'Couleurs extraites automatiquement des vrais drapeaux')}
             </p>
           </div>
 
-          <div style={{ marginBottom: '28px' }}>
-            <p style={{ fontSize: '13px', fontWeight: '700', color: colors.navy, marginBottom: '10px', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
-              {t('Difficulty', 'Difficulté')}
-            </p>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
-              {[
-                { key: 'easy',    icon: '🟢', en: 'Easy',    fr: 'Facile',    descEn: 'Lines + flag name shown', descFr: 'Lignes + nom du drapeau' },
-                { key: 'medium',  icon: '🟡', en: 'Medium',  fr: 'Moyen',     descEn: 'Guide lines only',        descFr: 'Lignes guides seulement' },
-                { key: 'hard',    icon: '🟠', en: 'Hard',    fr: 'Difficile', descEn: 'Blank canvas, no name',   descFr: 'Toile vierge, sans nom' },
-                { key: 'extreme', icon: '🔴', en: 'Extreme', fr: 'Extrême',   descEn: 'Blank canvas, ×3 pts',    descFr: 'Toile vierge, ×3 pts' },
-              ].map(d => {
-                const best = diffStats[d.key]?.best
-                return (
-                  <button key={d.key} onClick={() => setDifficulty(d.key)} style={{
-                    padding: '14px', borderRadius: '12px', border: difficulty === d.key ? `2px solid ${colors.navy}` : `2px solid ${colors.border}`,
-                    background: difficulty === d.key ? colors.navy : '#FAFAF7',
-                    color: difficulty === d.key ? '#FFF' : colors.navy,
-                    cursor: 'pointer', textAlign: 'left', transition: 'all 0.15s',
-                  }}>
-                    <div style={{ fontSize: '18px', marginBottom: '4px' }}>{d.icon}</div>
-                    <div style={{ fontWeight: '700', fontSize: '14px' }}>{locale === 'fr' ? d.fr : d.en}</div>
-                    <div style={{ fontSize: '11px', opacity: 0.7, marginTop: '2px' }}>{locale === 'fr' ? d.descFr : d.descEn}</div>
-                    {best > 0 && (
-                      <div style={{ marginTop: '6px', fontSize: '11px', fontWeight: '700', color: difficulty === d.key ? 'rgba(255,255,255,0.7)' : colors.muted }}>
-                        ⭐ {t('Best:', 'Meilleur :')} {best}
-                      </div>
-                    )}
-                  </button>
-                )
-              })}
-            </div>
-          </div>
+          <p style={{ fontSize: '12px', fontWeight: '700', color: colors.navy, marginBottom: '10px', marginTop: 0, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+            {t('Difficulty', 'Difficulté')}
+          </p>
 
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+            {[
+              { key: 'easy',    icon: '🟢', en: 'Easy',    fr: 'Facile',    descEn: 'Colors shown + name', descFr: 'Couleurs + nom' },
+              { key: 'medium',  icon: '🟡', en: 'Medium',  fr: 'Moyen',     descEn: 'Blank, no name',      descFr: 'Vierge, sans nom' },
+              { key: 'hard',    icon: '🟠', en: 'Hard',    fr: 'Difficile', descEn: 'Blank, no name',      descFr: 'Vierge, sans nom' },
+              { key: 'extreme', icon: '🔴', en: 'Extreme', fr: 'Extrême',   descEn: 'Blank, ×3 pts',       descFr: 'Vierge, ×3 pts' },
+            ].map(d => {
+              const best = diffStats[d.key]?.best
+              const selected = difficulty === d.key
+              return (
+                <button key={d.key} onClick={() => setDifficulty(d.key)} style={{
+                  padding: '14px', borderRadius: '14px',
+                  border: selected ? `2px solid ${colors.navy}` : `2px solid ${colors.border}`,
+                  background: selected ? colors.navy : colors.bg,
+                  color: selected ? '#FFF' : colors.navy,
+                  cursor: 'pointer', textAlign: 'left', transition: 'all 0.15s',
+                }}>
+                  <div style={{ fontSize: '20px', marginBottom: '6px' }}>{d.icon}</div>
+                  <div style={{ fontWeight: '700', fontSize: '15px' }}>{locale === 'fr' ? d.fr : d.en}</div>
+                  <div style={{ fontSize: '12px', opacity: 0.7, marginTop: '3px' }}>{locale === 'fr' ? d.descFr : d.descEn}</div>
+                  {best > 0 && (
+                    <div style={{ fontSize: '11px', fontWeight: '700', marginTop: '4px', color: selected ? 'rgba(255,255,255,0.7)' : colors.muted }}>
+                      ⭐ {best}
+                    </div>
+                  )}
+                </button>
+              )
+            })}
+          </div>
+        </div>
+
+        {/* Sticky start button */}
+        <div style={{ padding: '12px 20px', paddingBottom: 'max(12px, env(safe-area-inset-bottom))', background: '#FFFFFF', borderTop: `1px solid ${colors.border}` }}>
           <button onClick={startGame} style={{
-            width: '100%', padding: '16px', borderRadius: '12px', border: 'none',
+            width: '100%', padding: '16px', borderRadius: '14px', border: 'none',
             background: colors.navy, color: '#FFF', fontSize: '16px', fontWeight: '700',
             cursor: 'pointer', fontFamily: "'Roboto', sans-serif",
           }}>
-            {t('Start', 'Commencer')} →
+            {t('Start', 'Commencer')}
           </button>
         </div>
       </div>
@@ -898,12 +807,176 @@ export default function FlagDrawingV2() {
   // ── PLAYING screen ────────────────────────────────────────────────────────
   if (screen === SCREEN.PLAYING) {
     const canvasH = def ? Math.round(CANVAS_W / def.ratio) : 320
-    const canvasDisplayW = isMobile ? Math.min(CANVAS_W, window.innerWidth - 32) : CANVAS_W
+    const canvasDisplayW = isMobile ? Math.min(CANVAS_W, window.innerWidth - 24) : CANVAS_W
     const canvasDisplayH = def ? Math.round(canvasDisplayW / def.ratio) : 320
 
+    const SHAPES = [
+      // ── Rectangles / bandes ──
+      { key: 'h-stripe-top',      label: '▬ Haut',       labelEn: '▬ Top'          },
+      { key: 'h-stripe-mid',      label: '▬ Milieu',     labelEn: '▬ Middle'       },
+      { key: 'h-stripe-bot',      label: '▬ Bas',        labelEn: '▬ Bottom'       },
+      { key: 'v-stripe-left',     label: '◼ Gauche',     labelEn: '◼ Left'         },
+      { key: 'v-stripe-mid',      label: '◼ Centre',     labelEn: '◼ Center'       },
+      { key: 'v-stripe-right',    label: '◼ Droite',     labelEn: '◼ Right'        },
+      { key: 'left-half',         label: '◧ ½ Gauche',   labelEn: '◧ Left half'    },
+      { key: 'right-half',        label: '◨ ½ Droite',   labelEn: '◨ Right half'   },
+      { key: 'top-half',          label: '⬒ ½ Haut',     labelEn: '⬒ Top half'     },
+      { key: 'bottom-half',       label: '⬓ ½ Bas',      labelEn: '⬓ Bottom half'  },
+      // ── Croix ──
+      { key: 'cross-h',           label: '— Bande H',    labelEn: '— H-Band'       },
+      { key: 'cross-v',           label: '| Bande V',    labelEn: '| V-Band'       },
+      { key: 'cross-nordic',      label: '✛ Croix Nord', labelEn: '✛ Nordic cross' },
+      { key: 'cross-greek',       label: '✚ Croix Gr',   labelEn: '✚ Greek cross'  },
+      // ── Diagonales ──
+      { key: 'diag-left',         label: '╲ Diag ╲',     labelEn: '╲ Diag ╲'      },
+      { key: 'diag-right',        label: '╱ Diag ╱',     labelEn: '╱ Diag ╱'      },
+      { key: 'saltire',           label: '✕ Saltire',    labelEn: '✕ Saltire'      },
+      // ── Triangles ──
+      { key: 'tri-left',          label: '◀ Tri G',      labelEn: '◀ Left tri'     },
+      { key: 'tri-right',         label: '▶ Tri D',      labelEn: '▶ Right tri'    },
+      { key: 'tri-top',           label: '▲ Tri H',      labelEn: '▲ Top tri'      },
+      { key: 'tri-bot',           label: '▼ Tri B',      labelEn: '▼ Bottom tri'   },
+      { key: 'chevron-left',      label: '❮ Chevron',    labelEn: '❮ Chevron'      },
+      // ── Cercle ──
+      { key: 'circle',            label: '⭕ Cercle',     labelEn: '⭕ Circle'       },
+      { key: 'circle-sm',         label: '🔵 Cercle S',  labelEn: '🔵 Small circle' },
+    ]
+
+    if (isMobile) {
+      return (
+        <div style={{ height: 'calc(100dvh - 60px)', background: colors.bg, fontFamily: "'Roboto', sans-serif", display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+          <div style={{ background: colors.card, borderBottom: `1px solid ${colors.border}`, padding: '7px 12px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexShrink: 0 }}>
+            <div style={{ display: 'flex', gap: '3px' }}>
+              {Array.from({length: MAX_LIVES}).map((_, i) => (
+                <span key={i} style={{ fontSize: '18px', opacity: i < lives ? 1 : 0.2 }}>❤️</span>
+              ))}
+            </div>
+            {cfg.showName && flagName && (
+              <span style={{ fontSize: '15px', fontWeight: '800', color: colors.navy, fontFamily: "'Roboto Slab', serif" }}>{flagName}</span>
+            )}
+            <div style={{ background: colors.navy, color: '#FFF', borderRadius: '99px', padding: '4px 10px', fontSize: '12px', fontWeight: '700' }}>
+              {streak > 1 ? `🔥${streak} · ` : ''}⭐{totalScore}
+            </div>
+          </div>
+
+          <div style={{ flex: 1, minHeight: 0, position: 'relative', margin: '8px 12px 0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div style={{ position: 'relative', width: '100%', paddingBottom: `${100 / (def?.ratio ?? 1.5)}%` }}>
+              <canvas ref={drawingCanvasRef} width={CANVAS_W} height={canvasH}
+                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', borderRadius: '10px', border: `2px solid ${colors.border}`, touchAction: 'none', cursor: 'crosshair' }}
+                onMouseDown={handleDown} onMouseMove={handleMove} onMouseUp={handleUp}
+                onTouchStart={handleDown} onTouchMove={handleMove} onTouchEnd={handleUp}
+              />
+              <canvas ref={overlayCanvasRef} width={CANVAS_W} height={canvasH}
+                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', borderRadius: '10px', pointerEvents: 'none' }}
+              />
+              {flagLoading && (
+                <div style={{ position: 'absolute', inset: 0, background: 'rgba(244,241,230,0.9)', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '10px' }}>
+                  <span style={{ fontSize: '13px', color: colors.muted, fontWeight: 600 }}>{t('Analyzing…', 'Analyse…')}</span>
+                </div>
+              )}
+            </div>
+          </div>
+
+          <div style={{ flexShrink: 0, background: colors.card, borderTop: `1px solid ${colors.border}`, padding: '8px 14px 10px' }}>
+
+            {/* ── Shapes row — scrollable ── */}
+            <div style={{ fontSize: '10px', fontWeight: '700', color: colors.muted, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '5px' }}>
+              {t('Shapes', 'Formes')}
+            </div>
+            <div style={{ display: 'flex', gap: '6px', overflowX: 'auto', paddingBottom: '8px', WebkitOverflowScrolling: 'touch', scrollbarWidth: 'none' }}>
+              {SHAPES.map(s => (
+                <button key={s.key} onClick={() => stampShape(s.key)} style={{
+                  flexShrink: 0, padding: '5px 10px', borderRadius: '8px',
+                  border: `1.5px solid ${colors.border}`, background: '#FAFAF7',
+                  cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '5px',
+                  fontSize: '11px', fontWeight: '700', color: colors.navy, whiteSpace: 'nowrap',
+                }}>
+                  <span style={{ width: '10px', height: '10px', background: activeColor, borderRadius: '2px', flexShrink: 0, border: '1px solid rgba(0,0,0,0.15)', display: 'inline-block' }} />
+                  {locale === 'fr' ? s.label : s.labelEn}
+                </button>
+              ))}
+            </div>
+
+            {/* ── Colours row ── */}
+            <div style={{ display: 'flex', gap: '7px', alignItems: 'center', marginBottom: '8px' }}>
+              {palette.map(c => (
+                <button key={c.hex} onClick={() => { setActiveColor(c.hex); setActiveTool(TOOL.FILL) }} style={{
+                  width: '36px', height: '36px', borderRadius: '9px', background: c.hex, flexShrink: 0,
+                  border: activeColor === c.hex ? `3px solid ${colors.navy}` : '1.5px solid rgba(0,0,0,0.15)',
+                  cursor: 'pointer',
+                  boxShadow: activeColor === c.hex ? `0 0 0 2px white, 0 0 0 4px ${colors.navy}` : 'none',
+                  transition: 'all 0.12s',
+                }} />
+              ))}
+              <div style={{ position: 'relative', flexShrink: 0 }}>
+                <input type="color" value={customColor}
+                  onChange={e => { setCustomColor(e.target.value); setActiveColor(e.target.value); setActiveTool(TOOL.FILL) }}
+                  style={{ width: '36px', height: '36px', borderRadius: '9px', border: `1.5px solid rgba(0,0,0,0.15)`, cursor: 'pointer', padding: '2px', background: customColor, opacity: 0, position: 'absolute', inset: 0 }}
+                />
+                <div style={{ width: '36px', height: '36px', borderRadius: '9px', background: customColor, border: activeColor === customColor && !palette.find(p => p.hex === customColor) ? `3px solid ${colors.navy}` : '1.5px solid rgba(0,0,0,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none' }}>
+                  <span style={{ fontSize: '14px', color: 'white', fontWeight: '800', textShadow: '0 1px 2px rgba(0,0,0,0.5)' }}>+</span>
+                </div>
+              </div>
+              {(activeTool === TOOL.BRUSH || activeTool === TOOL.ERASER) && (
+                <input type="range" min="2" max="24" value={brushSize} onChange={e => setBrushSize(+e.target.value)} style={{ flex: 1 }} />
+              )}
+            </div>
+
+            {/* ── Tools row ── */}
+            <div style={{ display: 'flex', gap: '6px', alignItems: 'stretch' }}>
+              {[
+                { key: TOOL.FILL,   icon: '🪣', label: t('Fill', 'Fill') },
+                { key: TOOL.BRUSH,  icon: '✏️', label: t('Brush', 'Pinceau') },
+                { key: TOOL.ERASER, icon: '🧹', label: t('Erase', 'Effacer') },
+              ].map(tool => (
+                <button key={tool.key} onClick={() => setActiveTool(tool.key)} style={{
+                  flex: 1, padding: '6px 4px', borderRadius: '10px', flexShrink: 0,
+                  border: activeTool === tool.key ? `2px solid ${colors.navy}` : `1.5px solid ${colors.border}`,
+                  background: activeTool === tool.key ? colors.navy : '#FAFAF7',
+                  cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px',
+                }}>
+                  <span style={{ fontSize: '18px', lineHeight: 1 }}>{tool.icon}</span>
+                  <span style={{ fontSize: '10px', fontWeight: '700', color: activeTool === tool.key ? 'white' : colors.muted }}>{tool.label}</span>
+                </button>
+              ))}
+              <button onClick={undo} disabled={undoCount === 0} style={{
+                flex: 1, padding: '6px 4px', borderRadius: '10px',
+                border: `1.5px solid ${undoCount > 0 ? '#9EB7E5' : colors.border}`,
+                background: undoCount > 0 ? '#EEF4FF' : '#FAFAF7',
+                cursor: undoCount > 0 ? 'pointer' : 'not-allowed',
+                display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px',
+              }}>
+                <span style={{ fontSize: '18px', lineHeight: 1, color: undoCount > 0 ? colors.navy : '#B0A89E' }}>↩</span>
+                <span style={{ fontSize: '10px', fontWeight: '700', color: undoCount > 0 ? colors.navy : '#B0A89E' }}>Undo</span>
+              </button>
+              <button onClick={retryFlag} style={{
+                flex: 1, padding: '6px 4px', borderRadius: '10px',
+                border: `1.5px solid ${colors.border}`, background: '#FAFAF7',
+                cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px',
+              }}>
+                <span style={{ fontSize: '18px', lineHeight: 1, color: colors.navy }}>↺</span>
+                <span style={{ fontSize: '10px', fontWeight: '700', color: colors.muted }}>Reset</span>
+              </button>
+              <button onClick={validate} disabled={flagLoading} style={{
+                flex: 2, padding: '6px 8px', borderRadius: '10px', border: 'none',
+                background: flagLoading ? colors.border : colors.navy,
+                color: '#FFF', cursor: flagLoading ? 'default' : 'pointer',
+                display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px',
+              }}>
+                <span style={{ fontSize: '18px', lineHeight: 1 }}>✓</span>
+                <span style={{ fontSize: '10px', fontWeight: '700', color: 'rgba(255,255,255,0.9)' }}>{t('Validate', 'Valider')}</span>
+              </button>
+            </div>
+          </div>
+
+          <canvas ref={refCanvasRef} style={{ display: 'none' }} />
+        </div>
+      )
+    }
+
+    // ── DESKTOP ──
     return (
-      <div style={{ minHeight: '100dvh', background: colors.bg, fontFamily: "'Roboto', sans-serif", paddingBottom: '32px' }}>
-        {/* Header */}
+      <div style={{ minHeight: 'calc(100dvh - 60px)', background: colors.bg, fontFamily: "'Roboto', sans-serif", paddingBottom: '32px' }}>
         <div style={{ background: colors.card, borderBottom: `1px solid ${colors.border}`, padding: '12px 20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <div style={{ display: 'flex', gap: '6px' }}>
             {Array.from({length: MAX_LIVES}).map((_, i) => (
@@ -912,29 +985,18 @@ export default function FlagDrawingV2() {
           </div>
           <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
             {streak > 1 && <span style={{ fontSize: '13px', fontWeight: '700', color: '#E65C00' }}>🔥 {streak}</span>}
-            <div style={{ background: colors.navy, color: '#FFF', borderRadius: '20px', padding: '6px 14px', fontSize: '14px', fontWeight: '700' }}>
-              ⭐ {totalScore}
-            </div>
+            <div style={{ background: colors.navy, color: '#FFF', borderRadius: '20px', padding: '6px 14px', fontSize: '14px', fontWeight: '700' }}>⭐ {totalScore}</div>
           </div>
         </div>
-
         <div style={{ maxWidth: '560px', margin: '0 auto', padding: '16px' }}>
-          {/* Flag name */}
           {cfg.showName && flagName && (
             <div style={{ textAlign: 'center', marginBottom: '12px' }}>
               <h2 style={{ fontSize: '22px', fontWeight: '800', color: colors.navy, margin: 0, fontFamily: "'Roboto Slab', serif" }}>{flagName}</h2>
             </div>
           )}
-
-          {/* Canvas area */}
-          <div style={{ position: 'relative', borderRadius: '12px', overflow: 'hidden', border: `2px solid ${colors.border}`, marginBottom: '16px',
-            width: canvasDisplayW, height: canvasDisplayH, margin: '0 auto 16px',
-            boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
-            cursor: activeTool === TOOL.FILL ? 'crosshair' : activeTool === TOOL.ERASER ? 'cell' : 'default',
-            touchAction: 'none',
-          }}>
+          <div style={{ position: 'relative', borderRadius: '12px', overflow: 'hidden', border: `2px solid ${colors.border}`, width: CANVAS_W, margin: '0 auto 16px', cursor: activeTool === TOOL.FILL ? 'crosshair' : 'default', touchAction: 'none' }}>
             <canvas ref={drawingCanvasRef} width={CANVAS_W} height={canvasH}
-              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+              style={{ display: 'block', width: '100%' }}
               onMouseDown={handleDown} onMouseMove={handleMove} onMouseUp={handleUp}
               onTouchStart={handleDown} onTouchMove={handleMove} onTouchEnd={handleUp}
             />
@@ -942,138 +1004,54 @@ export default function FlagDrawingV2() {
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none' }}
             />
             {flagLoading && (
-              <div style={{ position: 'absolute', inset: 0, background: 'rgba(244,241,230,0.85)', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '10px' }}>
-                <div style={{ fontSize: '13px', color: colors.muted, fontWeight: 600 }}>
-                  {t('Analyzing flag…', 'Analyse du drapeau…')}
-                </div>
+              <div style={{ position: 'absolute', inset: 0, background: 'rgba(244,241,230,0.85)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <span style={{ fontSize: '13px', color: colors.muted, fontWeight: 600 }}>{t('Analyzing flag…', 'Analyse du drapeau…')}</span>
               </div>
             )}
           </div>
-
-          {/* Auto-extracted palette + custom color */}
           {palette.length > 0 && (
             <div style={{ background: colors.card, borderRadius: '12px', padding: '12px 16px', marginBottom: '12px', border: `1px solid ${colors.border}` }}>
-              <div style={{ fontSize: '11px', fontWeight: '700', color: colors.muted, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '10px' }}>
-                {t('Flag colors', 'Couleurs du drapeau')}
-              </div>
+              <div style={{ fontSize: '11px', fontWeight: '700', color: colors.muted, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '10px' }}>{t('Flag colors', 'Couleurs du drapeau')}</div>
               <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', alignItems: 'center' }}>
                 {palette.map(c => (
-                  <button key={c.hex} onClick={() => { setActiveColor(c.hex); setActiveTool(TOOL.FILL) }} style={{
-                    width: '40px', height: '40px', borderRadius: '8px',
-                    background: c.hex, border: activeColor === c.hex ? `3px solid ${colors.navy}` : '2px solid rgba(0,0,0,0.15)',
-                    cursor: 'pointer', boxShadow: activeColor === c.hex ? `0 0 0 2px ${colors.bg}, 0 0 0 4px ${colors.navy}` : 'none',
-                    transition: 'all 0.12s', transform: activeColor === c.hex ? 'scale(1.15)' : 'scale(1)',
-                  }} />
+                  <button key={c.hex} onClick={() => { setActiveColor(c.hex); setActiveTool(TOOL.FILL) }} style={{ width: '40px', height: '40px', borderRadius: '8px', background: c.hex, border: activeColor === c.hex ? `3px solid ${colors.navy}` : '2px solid rgba(0,0,0,0.15)', cursor: 'pointer', transform: activeColor === c.hex ? 'scale(1.15)' : 'scale(1)', transition: 'all 0.12s' }} />
                 ))}
-                {/* Custom color picker */}
-                <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
-                  <input
-                    type="color"
-                    value={customColor}
-                    onChange={e => { setCustomColor(e.target.value); setActiveColor(e.target.value); setActiveTool(TOOL.FILL) }}
-                    style={{ width: '40px', height: '40px', borderRadius: '8px', border: activeColor === customColor && !palette.find(p => p.hex === customColor) ? `3px solid ${colors.navy}` : '2px solid rgba(0,0,0,0.15)', cursor: 'pointer', padding: '2px', background: 'none' }}
-                    title={t('Custom color', 'Couleur personnalisée')}
-                  />
-                  <span style={{ fontSize: '10px', color: colors.muted, marginLeft: '4px', fontWeight: 600 }}>+</span>
-                </div>
+                <input type="color" value={customColor} onChange={e => { setCustomColor(e.target.value); setActiveColor(e.target.value); setActiveTool(TOOL.FILL) }} style={{ width: '40px', height: '40px', borderRadius: '8px', border: '2px solid rgba(0,0,0,0.15)', cursor: 'pointer', padding: '2px', background: 'none' }} />
               </div>
             </div>
           )}
-
-          {/* Tools */}
           <div style={{ background: colors.card, borderRadius: '12px', padding: '12px 16px', marginBottom: '12px', border: `1px solid ${colors.border}` }}>
             <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-              {[
-                { key: TOOL.FILL,   icon: '🪣', label: t('Fill','Remplir')  },
-                { key: TOOL.BRUSH,  icon: '✏️', label: t('Brush','Pinceau') },
-                { key: TOOL.ERASER, icon: '🧹', label: t('Erase','Effacer') },
-              ].map(tool => (
-                <button key={tool.key} onClick={() => setActiveTool(tool.key)} style={{
-                  padding: '8px 14px', borderRadius: '8px', border: activeTool === tool.key ? `2px solid ${colors.navy}` : `2px solid ${colors.border}`,
-                  background: activeTool === tool.key ? colors.navy : '#FAFAF7',
-                  color: activeTool === tool.key ? '#FFF' : colors.navy,
-                  fontWeight: '700', fontSize: '13px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px',
-                }}>
-                  <span>{tool.icon}</span>
-                  {!isMobile && <span>{tool.label}</span>}
+              {[{key:TOOL.FILL,icon:'🪣',label:t('Fill','Remplir')},{key:TOOL.BRUSH,icon:'✏️',label:t('Brush','Pinceau')},{key:TOOL.ERASER,icon:'🧹',label:t('Erase','Effacer')}].map(tool => (
+                <button key={tool.key} onClick={() => setActiveTool(tool.key)} style={{ padding: '8px 14px', borderRadius: '8px', border: activeTool===tool.key?`2px solid ${colors.navy}`:`2px solid ${colors.border}`, background: activeTool===tool.key?colors.navy:'#FAFAF7', color: activeTool===tool.key?'#FFF':colors.navy, fontWeight:'700', fontSize:'13px', cursor:'pointer', display:'flex', alignItems:'center', gap:'6px' }}>
+                  <span>{tool.icon}</span><span>{tool.label}</span>
                 </button>
               ))}
-              {(activeTool === TOOL.BRUSH || activeTool === TOOL.ERASER) && (
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginLeft: 'auto' }}>
-                  <span style={{ fontSize: '12px', color: colors.muted }}>Size</span>
-                  <input type="range" min="2" max="30" value={brushSize} onChange={e => setBrushSize(+e.target.value)} style={{ width: '80px' }} />
-                  <span style={{ fontSize: '12px', fontWeight: 700, color: colors.navy, minWidth: '20px' }}>{brushSize}</span>
+              {(activeTool===TOOL.BRUSH||activeTool===TOOL.ERASER) && (
+                <div style={{ display:'flex', alignItems:'center', gap:'8px', marginLeft:'auto' }}>
+                  <input type="range" min="2" max="30" value={brushSize} onChange={e => setBrushSize(+e.target.value)} style={{ width:'80px' }} />
+                  <span style={{ fontSize:'12px', fontWeight:700, color:colors.navy }}>{brushSize}</span>
                 </div>
               )}
             </div>
           </div>
-
-          {/* Shape stamps */}
           <div style={{ background: colors.card, borderRadius: '12px', padding: '12px 16px', marginBottom: '12px', border: `1px solid ${colors.border}` }}>
-            <div style={{ fontSize: '11px', fontWeight: '700', color: colors.muted, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '8px' }}>
-              {t('Shapes (stamped with current color)', 'Formes (couleur active)')}
-            </div>
+            <div style={{ fontSize: '11px', fontWeight: '700', color: colors.muted, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '8px' }}>{t('Shapes', 'Formes')}</div>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-              {[
-                { key: 'h-stripe-top',  label: '▬ Top',        labelFr: '▬ Haut'        },
-                { key: 'h-stripe-mid',  label: '▬ Middle',     labelFr: '▬ Milieu'       },
-                { key: 'h-stripe-bot',  label: '▬ Bottom',     labelFr: '▬ Bas'          },
-                { key: 'v-stripe-left', label: '◼ Left',        labelFr: '◼ Gauche'      },
-                { key: 'v-stripe-mid',  label: '◼ Center',     labelFr: '◼ Centre'      },
-                { key: 'v-stripe-right',label: '◼ Right',      labelFr: '◼ Droite'      },
-                { key: 'left-half',     label: '◧ Left half',  labelFr: '◧ Moitié G'    },
-                { key: 'top-half',      label: '⬒ Top half',   labelFr: '⬒ Moitié H'    },
-                { key: 'circle',        label: '⭕ Circle',     labelFr: '⭕ Cercle'      },
-                { key: 'cross-h',       label: '— H-Cross',    labelFr: '— Croix H'     },
-                { key: 'cross-v',       label: '| V-Cross',    labelFr: '| Croix V'     },
-                { key: 'diag-left',     label: '╲ Diag',       labelFr: '╲ Diag'        },
-                { key: 'diag-right',    label: '╱ Diag',       labelFr: '╱ Diag'        },
-              ].map(s => (
-                <button key={s.key} onClick={() => stampShape(s.key)} style={{
-                  padding: '5px 10px', borderRadius: '7px', border: `1.5px solid ${colors.border}`,
-                  background: '#FAFAF7', color: colors.navy, fontSize: '11px', fontWeight: '600',
-                  cursor: 'pointer', whiteSpace: 'nowrap', transition: 'all 0.1s',
-                  display: 'flex', alignItems: 'center', gap: '4px',
-                }}
-                  onMouseEnter={e => { e.currentTarget.style.background = colors.navy; e.currentTarget.style.color = '#FFF' }}
-                  onMouseLeave={e => { e.currentTarget.style.background = '#FAFAF7'; e.currentTarget.style.color = colors.navy }}>
-                  <span style={{ display: 'inline-block', width: '14px', height: '14px', background: activeColor, borderRadius: '2px', flexShrink: 0, border: '1px solid rgba(0,0,0,0.1)' }} />
-                  {locale === 'fr' ? s.labelFr : s.label}
+              {SHAPES.map(s => (
+                <button key={s.key} onClick={() => stampShape(s.key)} style={{ padding: '5px 10px', borderRadius: '7px', border: `1.5px solid ${colors.border}`, background: '#FAFAF7', color: colors.navy, fontSize: '11px', fontWeight: '600', cursor: 'pointer', whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: '4px' }}
+                  onMouseEnter={e => { e.currentTarget.style.background=colors.navy; e.currentTarget.style.color='#FFF' }}
+                  onMouseLeave={e => { e.currentTarget.style.background='#FAFAF7'; e.currentTarget.style.color=colors.navy }}>
+                  <span style={{ width:'14px', height:'14px', background:activeColor, borderRadius:'2px', flexShrink:0, border:'1px solid rgba(0,0,0,0.1)', display:'inline-block' }} />
+                  {locale === 'fr' ? s.label : s.labelEn}
                 </button>
               ))}
             </div>
           </div>
-
-          {/* Action buttons */}
           <div style={{ display: 'flex', gap: '10px' }}>
-            <button onClick={retryFlag} title={t('Reset all', 'Tout réinitialiser')} style={{
-              flex: 1, padding: '12px', borderRadius: '10px', border: `2px solid ${colors.border}`,
-              background: '#FAFAF7', color: colors.navy, fontWeight: '700', fontSize: '14px', cursor: 'pointer',
-            }}>
-              {t('Reset', 'Reset')} ↺
-            </button>
-            <button
-              onClick={undo}
-              disabled={undoCount === 0}
-              title={t('Undo last action', 'Annuler la dernière action')}
-              style={{
-                flex: 1, padding: '12px', borderRadius: '10px',
-                border: `2px solid ${undoCount > 0 ? '#9EB7E5' : colors.border}`,
-                background: undoCount > 0 ? '#EEF4FF' : '#FAFAF7',
-                color: undoCount > 0 ? '#0B1F3B' : '#B0A89E',
-                fontWeight: '700', fontSize: '14px',
-                cursor: undoCount > 0 ? 'pointer' : 'not-allowed',
-                transition: 'all 0.15s',
-              }}>
-              ↩ {t('Undo', 'Annuler')}
-            </button>
-            <button onClick={validate} disabled={flagLoading} style={{
-              flex: 2, padding: '12px', borderRadius: '10px', border: 'none',
-              background: flagLoading ? colors.border : colors.navy,
-              color: '#FFF', fontWeight: '700', fontSize: '14px', cursor: flagLoading ? 'default' : 'pointer',
-            }}>
-              {t('Validate', 'Valider')} ✓
-            </button>
+            <button onClick={retryFlag} style={{ flex:1, padding:'12px', borderRadius:'10px', border:`2px solid ${colors.border}`, background:'#FAFAF7', color:colors.navy, fontWeight:'700', fontSize:'14px', cursor:'pointer' }}>{t('Reset','Reset')} ↺</button>
+            <button onClick={undo} disabled={undoCount===0} style={{ flex:1, padding:'12px', borderRadius:'10px', border:`2px solid ${undoCount>0?'#9EB7E5':colors.border}`, background:undoCount>0?'#EEF4FF':'#FAFAF7', color:undoCount>0?'#0B1F3B':'#B0A89E', fontWeight:'700', fontSize:'14px', cursor:undoCount>0?'pointer':'not-allowed' }}>↩ {t('Undo','Annuler')}</button>
+            <button onClick={validate} disabled={flagLoading} style={{ flex:2, padding:'12px', borderRadius:'10px', border:'none', background:flagLoading?colors.border:colors.navy, color:'#FFF', fontWeight:'700', fontSize:'14px', cursor:flagLoading?'default':'pointer' }}>{t('Validate','Valider')} ✓</button>
           </div>
         </div>
         <canvas ref={refCanvasRef} style={{ display: 'none' }} />
@@ -1088,9 +1066,8 @@ export default function FlagDrawingV2() {
     const canvasH = def ? Math.round(CANVAS_W / def.ratio) : 320
 
     return (
-      <div style={{ minHeight: '100dvh', background: colors.bg, fontFamily: "'Roboto', sans-serif", padding: '24px 16px' }}>
+      <div style={{ minHeight: '100vh', background: colors.bg, fontFamily: "'Roboto', sans-serif", padding: '24px 16px' }}>
         <div style={{ maxWidth: '560px', margin: '0 auto' }}>
-          {/* Score card */}
           <div style={{ background: colors.card, borderRadius: '20px', padding: '32px', textAlign: 'center', marginBottom: '20px', boxShadow: '0 4px 20px rgba(11,31,59,0.1)' }}>
             <div style={{ fontSize: '44px', marginBottom: '8px' }}>{score >= 90 ? '🏆' : score >= 70 ? '🎯' : '💪'}</div>
             <h2 style={{ fontSize: '24px', fontWeight: '800', color: colors.navy, margin: '0 0 8px', fontFamily: "'Roboto Slab', serif" }}>{flagName}</h2>
@@ -1105,7 +1082,6 @@ export default function FlagDrawingV2() {
             </div>
           </div>
 
-          {/* Side by side */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '16px' }}>
             {[
               { label: t('YOUR DRAWING', 'VOTRE DESSIN'), src: snapshotUrl, isImg: true },
@@ -1118,7 +1094,6 @@ export default function FlagDrawingV2() {
             ))}
           </div>
 
-          {/* Actions */}
           <div style={{ display: 'flex', gap: '10px' }}>
             {!passed && lives > 0 && (
               <button onClick={() => { setScore(null); setScreen(SCREEN.PLAYING); retryFlag() }} style={{
@@ -1143,7 +1118,7 @@ export default function FlagDrawingV2() {
   // ── GAMEOVER screen ───────────────────────────────────────────────────────
   const passed = history.filter(h => h.passed).length
   return (
-    <div style={{ minHeight: '100dvh', background: colors.bg, fontFamily: "'Roboto', sans-serif", display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px' }}>
+    <div style={{ minHeight: '100vh', background: colors.bg, fontFamily: "'Roboto', sans-serif", display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px' }}>
       <div style={{ background: colors.card, borderRadius: '20px', padding: '40px', maxWidth: '480px', width: '100%', textAlign: 'center', boxShadow: '0 8px 32px rgba(11,31,59,0.12)' }}>
         <div style={{ fontSize: '52px', marginBottom: '16px' }}>🏁</div>
         <h2 style={{ fontSize: '28px', fontWeight: '800', color: colors.navy, margin: '0 0 8px', fontFamily: "'Roboto Slab', serif" }}>
@@ -1154,7 +1129,6 @@ export default function FlagDrawingV2() {
           {passed}/{history.length} {t('flags validated', 'drapeaux validés')}
         </div>
 
-        {/* History */}
         {history.length > 0 && (
           <div style={{ maxHeight: '220px', overflowY: 'auto', marginBottom: '24px', textAlign: 'left' }}>
             {history.map((h, i) => {

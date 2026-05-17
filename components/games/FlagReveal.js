@@ -747,7 +747,7 @@ export default function FlagReveal() {
 
   if (countriesLoading) {
     return (
-      <div style={{ backgroundColor: '#0B1F3B', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div style={{ backgroundColor: '#0B1F3B', height: 'calc(100dvh - 60px)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <div style={{ textAlign: 'center', color: 'white' }}>
           <div style={{ fontSize: '32px', marginBottom: '12px' }}>🏳️</div>
           <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '14px' }}>
@@ -761,7 +761,7 @@ export default function FlagReveal() {
   // ── SETUP SCREEN ────────────────────────────────────────────────────────
   if (!difficulty) {
     return (
-      <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px 16px', fontFamily: 'var(--font-body)' }}>
+      <div style={{ backgroundColor: '#F4F1E6', height: 'calc(100dvh - 60px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px 16px', fontFamily: 'var(--font-body)', overflow: 'hidden' }}>
         <div style={{ width: '100%', maxWidth: '420px' }}>
           <div style={{ textAlign: 'center', marginBottom: '36px' }}>
             <div style={{ fontSize: '48px', marginBottom: '12px' }}>🏳️</div>
@@ -818,7 +818,7 @@ export default function FlagReveal() {
   if (isMobile) {
     // ── MOBILE: Full-screen app layout ─────────────────────────────────────
     return (
-      <div style={{ backgroundColor: '#F4F1E6', height: 'calc(100dvh - 60px)', display: 'flex', flexDirection: 'column', fontFamily: 'var(--font-body)', overflow: 'hidden', position: 'relative', touchAction: 'manipulation' }}>
+      <div style={{ backgroundColor: '#F4F1E6', height: 'calc(100dvh - 60px)', display: 'flex', flexDirection: 'column', fontFamily: 'var(--font-body)', overflow: 'hidden', position: 'relative' }}>
 
         {/* Title row */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '8px 12px 0', flexShrink: 0 }}>
@@ -944,7 +944,7 @@ export default function FlagReveal() {
 
   // ── DESKTOP layout ──────────────────────────────────────────────────────────
   return (
-    <div style={{ backgroundColor: '#F4F1E6', height: 'calc(100dvh - 60px)', overflow: 'hidden', fontFamily: 'var(--font-body)', display: 'flex', flexDirection: 'column' }}>
+    <div style={{ backgroundColor: '#F4F1E6', height: 'calc(100vh - 60px)', overflow: 'hidden', fontFamily: 'var(--font-body)', display: 'flex', flexDirection: 'column' }}>
       <div style={{ maxWidth: '1100px', width: '100%', margin: '0 auto', padding: '12px 24px', flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0 }}>
 
         {/* Top bar */}

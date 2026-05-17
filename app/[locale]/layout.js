@@ -90,7 +90,7 @@ export default async function RootLayout({ children, params }) {
         />
 
         {/* ── STEP 1 : GTM Consent Mode defaults (must be FIRST) ── */}
-        <Script id="gtm-consent-default" strategy="beforeInteractive" dangerouslySetInnerHTML={{__html: `
+        <script dangerouslySetInnerHTML={{__html: `
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('consent', 'default', {

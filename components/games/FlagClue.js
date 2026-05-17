@@ -27,6 +27,7 @@ export default function FlagClue() {
 
   const [screen, setScreen]       = useState('intro')
   const [mode, setMode]           = useState(null)
+  const [pendingMode, setPendingMode] = useState('clue2flag')
   const [countries, setCountries] = useState([])
   const [facts, setFacts]         = useState({})
   const [loading, setLoading]     = useState(true)
@@ -170,7 +171,6 @@ export default function FlagClue() {
     }
   }
 
-
   async function logScore(score) {
     if (!score || score <= 0) return
     try {
@@ -187,65 +187,84 @@ export default function FlagClue() {
   }
 
   // ── INTRO ──────────────────────────────────────────────────────────────────
-  if (screen === 'intro') return (
-    <div style={S.page}>
-      <div style={S.card}>
-        {loading ? (
-          <div style={{ padding: '40px', textAlign: 'center' }}>
-            <div style={{ fontSize: '36px', marginBottom: '12px' }}>🔍</div>
-            <div style={{ fontSize: '15px', color: '#64748b' }}>{t('Loading facts...', 'Chargement des anecdotes...')}</div>
-          </div>
-        ) : (
-          <>
-            <div style={{ fontSize: '48px', marginBottom: '12px' }}>🔍</div>
-            <h1 style={S.title}>FlagClue</h1>
-            <p style={{ fontSize: '14px', color: '#64748b', margin: '0 0 28px', lineHeight: 1.6 }}>
-              {t('Test your knowledge of flags and countries through fun facts!', 'Testez vos connaissances sur les drapeaux et pays grâce à des anecdotes !')}
-            </p>
+  if (screen === 'intro') {
+    const MODES = [
+      { id: 'clue2flag', icon: '💡', en: 'Clue → Country', fr: 'Anecdote → Pays', color: '#8b5cf6',
+        descEn: 'Read a fact. Guess the country — flag stays hidden until you answer!',
+        descFr: "Lisez une anecdote. Devinez le pays — le drapeau reste masqué jusqu'à votre réponse !" },
+      { id: 'flag2clue', icon: '🏳️', en: 'Country → Clue', fr: 'Pays → Anecdote', color: '#0ea5e9',
+        descEn: 'See a country name and flag. Which of the 4 facts is true?',
+        descFr: "Voyez un nom de pays et son drapeau. Quelle anecdote est vraie ?" },
+    ]
+    return (
+      <div style={{ backgroundColor: '#F4F1E6', height: 'calc(100dvh - 60px)', fontFamily: 'var(--font-body, system-ui)', display: 'flex', flexDirection: 'column' }}>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '28px' }}>
-              {[
-                { id: 'clue2flag', icon: '💡', en: 'Clue → Country', fr: 'Anecdote → Pays',
-                  descEn: 'Read a fact. Guess the country — flag stays hidden until you answer!',
-                  descFr: "Lisez une anecdote. Devinez le pays — le drapeau reste masqué jusqu'à votre réponse !" },
-                { id: 'flag2clue', icon: '🏳️', en: 'Country → Clue', fr: 'Pays → Anecdote',
-                  descEn: 'See a country name and flag. Which of the 4 facts is true?',
-                  descFr: "Voyez un nom de pays et son drapeau. Quelle anecdote est vraie ?" },
-              ].map(m => (
-                <button key={m.id} onClick={() => startGame(m.id)}
-                  style={{ ...S.modeBtn, borderColor: m.id === 'clue2flag' ? '#8b5cf6' : '#0ea5e9' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flex: 1 }}>
-                    <span style={{ fontSize: '26px' }}>{m.icon}</span>
-                    <div style={{ textAlign: 'left' }}>
-                      <div style={{ fontSize: '15px', fontWeight: '800', color: '#0B1F3B' }}>{locale === 'fr' ? m.fr : m.en}</div>
-                      <div style={{ fontSize: '12px', color: '#64748b', marginTop: '2px', lineHeight: 1.4 }}>{locale === 'fr' ? m.descFr : m.descEn}</div>
-                    </div>
-                  </div>
-                  <div style={{ width: '28px', height: '28px', borderRadius: '7px', backgroundColor: m.id === 'clue2flag' ? '#8b5cf6' : '#0ea5e9', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '12px', flexShrink: 0 }}>▶</div>
-                </button>
-              ))}
-            </div>
-
-            <div style={S.rulesBox}>
-              <div style={{ fontSize: '11px', fontWeight: '800', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: '8px' }}>
-                {t('Rules', 'Règles')}
+        {/* Scrollable content */}
+        <div style={{ flex: 1, overflowY: 'auto', padding: '24px 16px 8px' }}>
+          <div style={{ maxWidth: '480px', margin: '0 auto' }}>
+            {loading ? (
+              <div style={{ padding: '60px', textAlign: 'center' }}>
+                <div style={{ fontSize: '36px', marginBottom: '12px' }}>🔍</div>
+                <div style={{ fontSize: '15px', color: '#64748b' }}>{t('Loading facts...', 'Chargement des anecdotes...')}</div>
               </div>
-              {[
-                { icon: '⏱️', en: `${TIMER_SECS}s per question — faster = more points`, fr: `${TIMER_SECS}s par question — plus rapide = plus de points` },
-                { icon: '❤️', en: `${MAX_LIVES} lives — wrong answer or timeout costs 1`, fr: `${MAX_LIVES} vies — mauvaise réponse ou timeout = −1 vie` },
-                { icon: '🔥', en: 'Build streaks for bonus points', fr: 'Enchaînez les bonnes réponses pour des bonus' },
-                { icon: '🙈', en: 'Clue mode: no flag shown until you answer!', fr: 'Mode anecdote : drapeau masqué jusqu\'à votre réponse !' },
-              ].map((r, i) => (
-                <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12px', color: '#475569', padding: '3px 0' }}>
-                  <span>{r.icon}</span><span>{locale === 'fr' ? r.fr : r.en}</span>
+            ) : (
+              <>
+                <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+                  <div style={{ fontSize: '44px', marginBottom: '8px' }}>🔍</div>
+                  <h1 style={{ fontSize: '26px', fontWeight: '900', color: '#0B1F3B', margin: '0 0 6px', letterSpacing: '-1px' }}>FlagClue</h1>
+                  <p style={{ fontSize: '13px', color: '#64748b', margin: 0, lineHeight: 1.6 }}>
+                    {t('Test your knowledge of flags and countries through fun facts!', 'Testez vos connaissances sur les drapeaux et pays grâce à des anecdotes !')}
+                  </p>
                 </div>
-              ))}
-            </div>
-          </>
+
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '16px' }}>
+                  {MODES.map(m => (
+                    <button key={m.id} onClick={() => setPendingMode(m.id)}
+                      style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '14px 16px', borderRadius: '14px', border: `2px solid ${pendingMode === m.id ? m.color : '#e2e8f0'}`, backgroundColor: pendingMode === m.id ? `${m.color}15` : 'white', cursor: 'pointer', transition: 'all 0.15s' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flex: 1 }}>
+                        <span style={{ fontSize: '26px' }}>{m.icon}</span>
+                        <div style={{ textAlign: 'left' }}>
+                          <div style={{ fontSize: '15px', fontWeight: '800', color: '#0B1F3B' }}>{locale === 'fr' ? m.fr : m.en}</div>
+                          <div style={{ fontSize: '12px', color: '#64748b', marginTop: '2px', lineHeight: 1.4 }}>{locale === 'fr' ? m.descFr : m.descEn}</div>
+                        </div>
+                      </div>
+                      <div style={{ width: '28px', height: '28px', borderRadius: '7px', backgroundColor: pendingMode === m.id ? m.color : '#e2e8f0', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '12px', flexShrink: 0 }}>▶</div>
+                    </button>
+                  ))}
+                </div>
+
+                <div style={{ backgroundColor: 'white', borderRadius: '12px', border: '1px solid #e2e8f0', padding: '14px 16px' }}>
+                  <div style={{ fontSize: '11px', fontWeight: '800', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: '8px' }}>
+                    {t('Rules', 'Règles')}
+                  </div>
+                  {[
+                    { icon: '⏱️', en: `${TIMER_SECS}s per question — faster = more points`, fr: `${TIMER_SECS}s par question — plus rapide = plus de points` },
+                    { icon: '❤️', en: `${MAX_LIVES} lives — wrong answer or timeout costs 1`, fr: `${MAX_LIVES} vies — mauvaise réponse ou timeout = −1 vie` },
+                    { icon: '🔥', en: 'Build streaks for bonus points', fr: 'Enchaînez les bonnes réponses pour des bonus' },
+                    { icon: '🙈', en: 'Clue mode: no flag shown until you answer!', fr: "Mode anecdote : drapeau masqué jusqu'à votre réponse !" },
+                  ].map((r, i) => (
+                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12px', color: '#475569', padding: '3px 0' }}>
+                      <span>{r.icon}</span><span>{locale === 'fr' ? r.fr : r.en}</span>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+
+        {/* Sticky start button */}
+        {!loading && (
+          <div style={{ padding: '12px 16px', paddingBottom: 'max(12px, env(safe-area-inset-bottom))', background: '#F4F1E6', borderTop: '1px solid #e2e8f0' }}>
+            <button onClick={() => startGame(pendingMode)}
+              style={{ width: '100%', padding: '16px', borderRadius: '14px', backgroundColor: '#0B1F3B', color: 'white', fontSize: '16px', fontWeight: '900', border: 'none', cursor: 'pointer', letterSpacing: '-0.3px' }}>
+              {t('Start Game', 'Lancer le jeu')}
+            </button>
+          </div>
         )}
       </div>
-    </div>
-  )
+    )
+  }
 
   // ── GAME OVER ──────────────────────────────────────────────────────────────
   if (screen === 'gameover') {
@@ -260,7 +279,6 @@ export default function FlagClue() {
           <h1 style={S.title}>{t('Game Over!', 'Partie terminée !')}</h1>
           <div style={{ fontSize: '52px', fontWeight: '900', color: '#0B1F3B', margin: '16px 0 4px', letterSpacing: '-2px' }}>{score.toLocaleString()}</div>
           <div style={{ fontSize: '14px', color: '#94a3b8', marginBottom: '20px' }}>pts</div>
-
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px', marginBottom: '28px' }}>
             {[
               { label: t('Correct', 'Correctes'), value: `${correct}/${total}` },
@@ -273,7 +291,6 @@ export default function FlagClue() {
               </div>
             ))}
           </div>
-
           <div style={{ maxHeight: '180px', overflowY: 'auto', marginBottom: '24px', display: 'flex', flexDirection: 'column', gap: '5px' }}>
             {[...history].reverse().slice(0, 8).map((h, i) => (
               <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '5px 10px', backgroundColor: h.correct ? '#f0fdf4' : '#fef2f2', borderRadius: '8px', border: `1px solid ${h.correct ? '#bbf7d0' : '#fecaca'}` }}>
@@ -286,7 +303,6 @@ export default function FlagClue() {
               </div>
             ))}
           </div>
-
           <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <button onClick={() => setScreen('intro')} style={S.btnSec}>{t('Change mode', 'Changer de mode')}</button>
             <button onClick={() => startGame(mode)} style={S.btn}>{t('Play again', 'Rejouer')}</button>
@@ -306,8 +322,6 @@ export default function FlagClue() {
   return (
     <div style={S.page}>
       <div style={{ maxWidth: '640px', margin: '0 auto', padding: '0 16px' }}>
-
-        {/* HUD */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px', gap: '8px', flexWrap: 'wrap' }}>
           <div style={{ display: 'flex', gap: '4px' }}>
             {Array.from({ length: MAX_LIVES }).map((_, i) => (
@@ -323,13 +337,9 @@ export default function FlagClue() {
             </div>
           )}
         </div>
-
-        {/* Timer bar */}
         <div style={{ height: '5px', backgroundColor: '#e2e8f0', borderRadius: '3px', marginBottom: '20px', overflow: 'hidden' }}>
           <div style={{ height: '100%', width: `${timerPct}%`, backgroundColor: timerColor, borderRadius: '3px', transition: 'width 1s linear, background-color 0.3s' }} />
         </div>
-
-        {/* Question card */}
         <div style={{ backgroundColor: 'white', borderRadius: '16px', border: '1px solid #e2e8f0', padding: '20px', marginBottom: '16px', boxShadow: '0 2px 12px rgba(0,0,0,0.06)' }}>
           {isClueMode ? (
             <>
@@ -339,25 +349,15 @@ export default function FlagClue() {
               <div style={{ fontSize: '16px', color: '#0B1F3B', lineHeight: 1.7, fontStyle: 'italic', borderLeft: '3px solid #8b5cf6', paddingLeft: '14px' }}>
                 "{locale === 'fr' ? question.fact.fact_fr : question.fact.fact_en}"
               </div>
-
-              {/* FLAG REVEAL — only after answer */}
               {answered && (
                 <div style={{ marginTop: '16px', display: 'flex', alignItems: 'center', gap: '12px', padding: '12px 14px', backgroundColor: answered === 'correct' ? '#f0fdf4' : '#fef2f2', borderRadius: '10px', border: `1px solid ${answered === 'correct' ? '#bbf7d0' : '#fecaca'}` }}>
-                  <img
-                    src={`https://flagcdn.com/w160/${question.correct.iso_code}.png`}
-                    alt=""
-                    style={{ height: '44px', borderRadius: '6px', objectFit: 'cover', border: '1px solid rgba(0,0,0,0.08)', boxShadow: '0 2px 6px rgba(0,0,0,0.1)', flexShrink: 0 }}
-                  />
+                  <img src={`https://flagcdn.com/w160/${question.correct.iso_code}.png`} alt="" style={{ height: '44px', borderRadius: '6px', objectFit: 'cover', border: '1px solid rgba(0,0,0,0.08)', boxShadow: '0 2px 6px rgba(0,0,0,0.1)', flexShrink: 0 }} />
                   <div>
                     <div style={{ fontSize: '15px', fontWeight: '900', color: '#0B1F3B' }}>
                       {locale === 'fr' ? question.correct.name_fr : question.correct.name_en}
                     </div>
                     <div style={{ fontSize: '12px', color: '#64748b', marginTop: '2px' }}>
-                      {answered === 'correct'
-                        ? t('✅ Correct!', '✅ Correct !')
-                        : answered === 'timeout'
-                        ? t('⏱️ Time\'s up!', '⏱️ Temps écoulé !')
-                        : t('❌ That was the answer', '❌ C\'était la bonne réponse')}
+                      {answered === 'correct' ? t('✅ Correct!', '✅ Correct !') : answered === 'timeout' ? t("⏱️ Time's up!", '⏱️ Temps écoulé !') : t('❌ That was the answer', '❌ C\'était la bonne réponse')}
                     </div>
                   </div>
                 </div>
@@ -369,56 +369,33 @@ export default function FlagClue() {
                 🏳️ {t('Which fact is true about this country?', 'Quelle anecdote est vraie sur ce pays ?')}
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-                <img
-                  src={`https://flagcdn.com/w160/${question.correct.iso_code}.png`}
-                  alt={question.correct.name_en}
-                  style={{ height: '52px', borderRadius: '6px', objectFit: 'cover', border: '1px solid #e2e8f0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', flexShrink: 0 }}
-                />
+                <img src={`https://flagcdn.com/w160/${question.correct.iso_code}.png`} alt={question.correct.name_en} style={{ height: '52px', borderRadius: '6px', objectFit: 'cover', border: '1px solid #e2e8f0', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', flexShrink: 0 }} />
                 <div style={{ fontSize: '20px', fontWeight: '900', color: '#0B1F3B' }}>
                   {locale === 'fr' ? question.correct.name_fr : question.correct.name_en}
                 </div>
               </div>
             </>
           )}
-
-          <div style={{ textAlign: 'right', marginTop: '12px', fontSize: '13px', fontWeight: '700', color: timerColor }}>
-            {timer}s
-          </div>
+          <div style={{ textAlign: 'right', marginTop: '12px', fontSize: '13px', fontWeight: '700', color: timerColor }}>{timer}s</div>
         </div>
-
-        {/* Options */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
           {question.options.map((opt, i) => {
-            const isThis = isClueMode
-              ? opt.iso_code === question.correct.iso_code
-              : opt === question.correctFact
-
+            const isThis = isClueMode ? opt.iso_code === question.correct.iso_code : opt === question.correctFact
             let bg = 'white', border = '#e2e8f0', color = '#0B1F3B'
-
             if (answered) {
-              if (isThis) {
-                bg = '#f0fdf4'; border = '#22c55e'; color = '#15803d'
-              } else {
-                bg = 'white'; border = '#e2e8f0'; color = '#94a3b8'
-              }
+              if (isThis) { bg = '#f0fdf4'; border = '#22c55e'; color = '#15803d' }
+              else { bg = 'white'; border = '#e2e8f0'; color = '#94a3b8' }
             }
-
             return (
-              <button key={i} onClick={() => handleAnswer(opt)}
-                disabled={!!answered}
+              <button key={i} onClick={() => handleAnswer(opt)} disabled={!!answered}
                 style={{ padding: '12px 16px', borderRadius: '12px', border: `2px solid ${border}`, backgroundColor: bg, color, fontSize: isClueMode ? '14px' : '13px', fontWeight: '700', cursor: answered ? 'default' : 'pointer', textAlign: 'left', transition: 'all 0.15s', lineHeight: 1.5 }}>
-                {isClueMode ? (
-                  /* CLUE MODE: show country name only — NO flag image */
-                  <span>{locale === 'fr' ? opt.name_fr : opt.name_en}</span>
-                ) : (
-                  <span>"{locale === 'fr' ? opt.fact_fr : opt.fact_en}"</span>
-                )}
+                {isClueMode
+                  ? <span>{locale === 'fr' ? opt.name_fr : opt.name_en}</span>
+                  : <span>"{locale === 'fr' ? opt.fact_fr : opt.fact_en}"</span>}
               </button>
             )
           })}
         </div>
-
-        {/* Points */}
         {lastPts !== null && answered === 'correct' && (
           <div style={{ textAlign: 'center', marginTop: '12px', fontSize: '20px', fontWeight: '900', color: '#22c55e', animation: 'fadeUp 1s ease forwards' }}>
             +{lastPts} pts
@@ -440,7 +417,6 @@ const S = {
   card:    { maxWidth: '480px', margin: '0 auto', backgroundColor: 'white', borderRadius: '20px', border: '1px solid #e2e8f0', padding: '36px 32px', textAlign: 'center', boxShadow: '0 8px 32px rgba(0,0,0,0.07)' },
   title:   { fontSize: '28px', fontWeight: '900', color: '#0B1F3B', margin: '0 0 8px', letterSpacing: '-1px' },
   modeBtn: { width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '14px 16px', borderRadius: '14px', border: '2px solid', backgroundColor: 'white', cursor: 'pointer', transition: 'all 0.15s' },
-  rulesBox:{ backgroundColor: '#F8F7F4', borderRadius: '12px', padding: '14px 16px', textAlign: 'left', marginTop: '4px' },
   btn:     { backgroundColor: '#0B1F3B', color: 'white', border: 'none', borderRadius: '12px', padding: '12px 24px', fontSize: '14px', fontWeight: '800', cursor: 'pointer' },
   btnSec:  { backgroundColor: 'white', color: '#0B1F3B', border: '2px solid #0B1F3B', borderRadius: '12px', padding: '10px 20px', fontSize: '13px', fontWeight: '800', cursor: 'pointer' },
 }

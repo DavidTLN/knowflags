@@ -75,8 +75,9 @@ export default function FlagRanker() {
   const [allCountries, setAllCountries] = useState([])
   const [dataLoading, setDataLoading]   = useState(true)
   const [isMobile, setIsMobile]         = useState(false)
-  // Mobile tap-to-place: null or slotIdx waiting for a flag tap
   const [selectedSlot, setSelectedSlot] = useState(null)
+  // track selected mode before starting (for sticky button)
+  const [pendingMode, setPendingMode]   = useState('maximize')
 
   useEffect(() => {
     function check() { setIsMobile(window.innerWidth < 768) }
@@ -122,7 +123,6 @@ export default function FlagRanker() {
     else { computeResults(next) }
   }
 
-  // Mobile: tap slot to select it, then tap flag to place
   function handleSlotTap(slotIdx) {
     if (placements[slotIdx]) return
     if (isMobile) {
@@ -149,7 +149,6 @@ export default function FlagRanker() {
     const iv = setInterval(() => { step++; setRevealStep(step); if (step >= res.length) clearInterval(iv) }, 500)
   }
 
-  // Open mode reorder
   function openDrop(targetIdx) {
     if (openDragIdx === null || openDragIdx === targetIdx) return
     const next = [...openOrder]
@@ -181,7 +180,6 @@ export default function FlagRanker() {
     let step = 0
     const iv = setInterval(() => { step++; setRevealStep(step); if (step >= res.length) clearInterval(iv) }, 500)
   }
-
 
   async function logScore(score) {
     if (!score || score <= 0) return
@@ -226,44 +224,92 @@ export default function FlagRanker() {
   )
 
   // ── INTRO ──────────────────────────────────────────────────────────────
-  if (screen === 'intro') return (
-    <div style={S.page}>
-      <div style={S.card}>
-        <div style={{ fontSize: '52px', marginBottom: '12px' }}>🏆</div>
-        <h1 style={S.title}>FlagRanker</h1>
-        <p style={{ fontSize: '14px', color: '#64748b', margin: '0 0 28px' }}>
-          {t('5 flags · 2 rounds · Based on real world data', '5 drapeaux · 2 manches · Données mondiales réelles')}
-        </p>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-          {[
-            { id: 'maximize', icon: '📈', en: 'Maximize', fr: 'Maximiser', color: '#22c55e',
-              descEn: 'Place flags to get the HIGHEST score.',
-              descFr: 'Place les drapeaux pour obtenir le PLUS GRAND score.' },
-            { id: 'minimize', icon: '📉', en: 'Minimize', fr: 'Minimiser', color: '#3b82f6',
-              descEn: 'Place flags to get the LOWEST score.',
-              descFr: 'Place les drapeaux pour obtenir le PLUS PETIT score.' },
-            { id: 'open', icon: '🔓', en: 'Open', fr: 'Ouvert', color: '#f59e0b',
-              descEn: 'See all 5 flags + 1 attribute. Rank them, then validate.',
-              descFr: 'Vois les 5 drapeaux + 1 attribut. Classe-les, puis valide.' },
-          ].map(m => (
-            <button key={m.id} onClick={() => startGame(m.id)} style={{ ...S.modeBtn, borderColor: m.color }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flex: 1 }}>
-                <span style={{ fontSize: '26px' }}>{m.icon}</span>
-                <div style={{ textAlign: 'left' }}>
-                  <div style={{ fontSize: '16px', fontWeight: '800', color: '#0B1F3B' }}>{locale === 'fr' ? m.fr : m.en}</div>
-                  <div style={{ fontSize: '12px', color: '#64748b', marginTop: '2px', lineHeight: 1.4 }}>{locale === 'fr' ? m.descFr : m.descEn}</div>
-                </div>
-              </div>
-              <div style={{ width: '28px', height: '28px', borderRadius: '7px', backgroundColor: m.color, display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '12px', flexShrink: 0 }}>▶</div>
+  if (screen === 'intro') {
+    const MODES = [
+      { id: 'maximize', icon: '📈', en: 'Maximize', fr: 'Maximiser', color: '#22c55e',
+        descEn: 'Place flags to get the HIGHEST score.',
+        descFr: 'Place les drapeaux pour obtenir le PLUS GRAND score.' },
+      { id: 'minimize', icon: '📉', en: 'Minimize', fr: 'Minimiser', color: '#3b82f6',
+        descEn: 'Place flags to get the LOWEST score.',
+        descFr: 'Place les drapeaux pour obtenir le PLUS PETIT score.' },
+      { id: 'open', icon: '🔓', en: 'Open', fr: 'Ouvert', color: '#f59e0b',
+        descEn: 'See all 5 flags + 1 attribute. Rank them, then validate.',
+        descFr: 'Vois les 5 drapeaux + 1 attribut. Classe-les, puis valide.' },
+    ]
+    return (
+      <div style={{ backgroundColor: '#F4F1E6', height: 'calc(100dvh - 60px)', fontFamily: 'var(--font-body, system-ui)', display: 'flex', flexDirection: 'column' }}>
+
+        {/* Scrollable content */}
+        <div style={{ flex: 1, overflowY: 'auto', padding: '24px 16px 8px' }}>
+          <div style={{ maxWidth: '480px', margin: '0 auto', textAlign: 'center' }}>
+            <div style={{ fontSize: '48px', marginBottom: '8px' }}>🏆</div>
+            <h1 style={{ fontSize: '26px', fontWeight: '900', color: '#0B1F3B', margin: '0 0 6px', letterSpacing: '-1px' }}>FlagRanker</h1>
+            <p style={{ fontSize: '13px', color: '#64748b', margin: '0 0 20px' }}>
+              {t('5 flags · 2 rounds · Based on real world data', '5 drapeaux · 2 manches · Données mondiales réelles')}
+            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '12px' }}>
+              {MODES.map(m => (
+                <button key={m.id} onClick={() => setPendingMode(m.id)}
+                  style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '14px 16px', borderRadius: '14px', border: `2px solid ${pendingMode === m.id ? m.color : '#e2e8f0'}`, backgroundColor: pendingMode === m.id ? `${m.color}15` : 'white', cursor: 'pointer', transition: 'all 0.15s' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flex: 1 }}>
+                    <span style={{ fontSize: '26px' }}>{m.icon}</span>
+                    <div style={{ textAlign: 'left' }}>
+                      <div style={{ fontSize: '16px', fontWeight: '800', color: '#0B1F3B' }}>{locale === 'fr' ? m.fr : m.en}</div>
+                      <div style={{ fontSize: '12px', color: '#64748b', marginTop: '2px', lineHeight: 1.4 }}>{locale === 'fr' ? m.descFr : m.descEn}</div>
+                    </div>
+                  </div>
+                  <div style={{ width: '28px', height: '28px', borderRadius: '7px', backgroundColor: pendingMode === m.id ? m.color : '#e2e8f0', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '12px', flexShrink: 0 }}>▶</div>
+                </button>
+              ))}
+            </div>
+            <button onClick={() => setShowHelp(true)} style={{ background: 'none', border: 'none', color: '#9EB7E5', fontSize: '13px', fontWeight: '700', cursor: 'pointer', textDecoration: 'underline' }}>
+              ❓ {t('How to play', 'Comment jouer ?')}
             </button>
-          ))}
+          </div>
         </div>
-        <button onClick={() => setShowHelp(true)} style={{ background: 'none', border: 'none', color: '#9EB7E5', fontSize: '13px', fontWeight: '700', cursor: 'pointer', marginTop: '4px', textDecoration: 'underline' }}>
-          ❓ {t('How to play', 'Comment jouer ?')}
-        </button>
+
+        {/* Sticky start button */}
+        <div style={{ padding: '12px 16px', paddingBottom: 'max(12px, env(safe-area-inset-bottom))', background: '#F4F1E6', borderTop: '1px solid #e2e8f0' }}>
+          <button onClick={() => startGame(pendingMode)}
+            style={{ width: '100%', padding: '16px', borderRadius: '14px', backgroundColor: '#0B1F3B', color: 'white', fontSize: '16px', fontWeight: '900', border: 'none', cursor: 'pointer', letterSpacing: '-0.3px' }}>
+            {t('Start Game', 'Lancer le jeu')}
+          </button>
+        </div>
+
+        {/* Help modal */}
+        {showHelp && (
+          <div style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.55)', zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}
+            onClick={() => setShowHelp(false)}>
+            <div style={{ backgroundColor: 'white', borderRadius: '20px', padding: '32px 28px', maxWidth: '440px', width: '100%', boxShadow: '0 24px 64px rgba(0,0,0,0.2)' }}
+              onClick={e => e.stopPropagation()}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+                <h2 style={{ fontSize: '20px', fontWeight: '900', color: '#0B1F3B', margin: 0 }}>❓ {t('How to play', 'Comment jouer')}</h2>
+                <button onClick={() => setShowHelp(false)} style={{ background: 'none', border: 'none', fontSize: '20px', cursor: 'pointer', color: '#94a3b8' }}>✕</button>
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                {[
+                  { icon: '🏳️', en: 'A flag appears with an attribute. Place it in the matching slot.', fr: 'Un drapeau apparaît avec un attribut. Placez-le dans le bon slot.' },
+                  { icon: '📱', en: 'On mobile: tap a slot to select it, then tap the flag to place it.', fr: 'Sur mobile : tape un slot pour le sélectionner, puis tape le drapeau.' },
+                  { icon: '🖥️', en: 'On desktop: drag and drop the flag directly into a slot.', fr: 'Sur desktop : glisse-dépose le drapeau dans un slot.' },
+                  { icon: '📈', en: 'Maximize: place flags with extreme values (rank #1 = 100 pts).', fr: 'Maximiser : place les drapeaux aux valeurs extrêmes.' },
+                  { icon: '📉', en: 'Minimize: place flags with average values.', fr: 'Minimiser : place les drapeaux aux valeurs moyennes.' },
+                  { icon: '🔓', en: 'Open: rank all 5 flags for a single attribute using ↑↓ on mobile.', fr: 'Ouvert : classe les 5 drapeaux avec ↑↓ sur mobile.' },
+                ].map((item, i) => (
+                  <div key={i} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
+                    <span style={{ fontSize: '20px', flexShrink: 0 }}>{item.icon}</span>
+                    <p style={{ margin: 0, fontSize: '13px', color: '#475569', lineHeight: 1.6 }}>{locale === 'fr' ? item.fr : item.en}</p>
+                  </div>
+                ))}
+              </div>
+              <button onClick={() => setShowHelp(false)} style={{ ...S.btn, width: '100%', marginTop: '24px', padding: '12px' }}>
+                {t('Got it!', 'Compris !')}
+              </button>
+            </div>
+          </div>
+        )}
       </div>
-    </div>
-  )
+    )
+  }
 
   // ── END ────────────────────────────────────────────────────────────────
   if (screen === 'end') {
@@ -360,8 +406,6 @@ export default function FlagRanker() {
             <div style={{ fontSize: '10px', color: '#9EB7E5' }}>total</div>
           </div>
         </div>
-
-        {/* Attribute banner */}
         <div style={{ backgroundColor: '#0B1F3B', borderRadius: '12px', padding: '12px 16px', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '12px' }}>
           <span style={{ fontSize: '26px' }}>{openAttr?.icon}</span>
           <div>
@@ -369,19 +413,16 @@ export default function FlagRanker() {
             <div style={{ fontSize: '15px', fontWeight: '800', color: 'white', marginTop: '2px' }}>{openAttr ? (locale === 'fr' ? openAttr.fr : openAttr.en) : ''}</div>
           </div>
         </div>
-
         <div style={{ fontSize: '12px', color: '#64748b', marginBottom: '12px', textAlign: 'center' }}>
           {isMobile
             ? t('#1 = highest value · use ↑↓ to reorder', '#1 = valeur la plus haute · utilisez ↑↓ pour réordonner')
             : t('#1 = highest value · drag to reorder', '#1 = valeur la plus haute · glisse pour réordonner')}
         </div>
-
         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '20px' }}>
           {openOrder.map((code, idx) => {
             const country = countries.find(c => c.code === code)
             if (!country) return null
             const isOver = dragOver === idx
-
             return (
               <div key={code}
                 draggable={!isMobile}
@@ -433,28 +474,15 @@ export default function FlagRanker() {
             <div style={{ fontSize: '10px', color: '#9EB7E5' }}>total</div>
           </div>
         </div>
-
-        {/* Progress bar */}
         <div style={{ display: 'flex', gap: '6px', marginBottom: '22px' }}>
           {[0,1,2,3,4].map(i => <div key={i} style={{ flex: 1, height: '5px', borderRadius: '3px', backgroundColor: i < currentIdx ? '#0B1F3B' : i === currentIdx ? '#9EB7E5' : '#e2e8f0', transition: 'all 0.3s' }} />)}
         </div>
 
         {isMobile ? (
-          /* ── MOBILE LAYOUT: stacked ── */
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-
-            {/* Current flag — tap to place when a slot is selected */}
             <div>
               <div style={S.panelLabel}>{t('Current flag', 'Drapeau actuel')}</div>
-              <div
-                onClick={handleFlagTapMobile}
-                style={{
-                  ...S.flagCard,
-                  cursor: selectedSlot !== null ? 'pointer' : 'default',
-                  border: selectedSlot !== null ? '2px solid #9EB7E5' : '1px solid #e2e8f0',
-                  boxShadow: selectedSlot !== null ? '0 0 0 3px rgba(158,183,229,0.3)' : '0 2px 12px rgba(0,0,0,0.08)',
-                  transition: 'all 0.15s',
-                }}>
+              <div onClick={handleFlagTapMobile} style={{ ...S.flagCard, cursor: selectedSlot !== null ? 'pointer' : 'default', border: selectedSlot !== null ? '2px solid #9EB7E5' : '1px solid #e2e8f0', boxShadow: selectedSlot !== null ? '0 0 0 3px rgba(158,183,229,0.3)' : '0 2px 12px rgba(0,0,0,0.08)', transition: 'all 0.15s' }}>
                 <img src={`https://flagcdn.com/w320/${currentCountry?.code}.png`} alt={currentCountry?.en} style={S.flagImg} />
                 <div style={{ padding: '10px 12px 12px' }}>
                   <div style={{ fontSize: '13px', fontWeight: '800', color: '#0B1F3B' }}>{currentCountry ? (locale === 'fr' ? currentCountry.fr : currentCountry.en) : ''}</div>
@@ -466,8 +494,6 @@ export default function FlagRanker() {
                 </div>
               </div>
             </div>
-
-            {/* Slots — tap to select */}
             <div>
               <div style={S.panelLabel}>
                 {selectedSlot !== null
@@ -476,17 +502,15 @@ export default function FlagRanker() {
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                 {attrs.map((attr, slotIdx) => {
-                  const placed   = placements[slotIdx]
+                  const placed = placements[slotIdx]
                   const isSelected = selectedSlot === slotIdx
-                  const taken    = !!placed
+                  const taken = !!placed
                   return (
-                    <div key={slotIdx}
-                      onClick={() => handleSlotTap(slotIdx)}
+                    <div key={slotIdx} onClick={() => handleSlotTap(slotIdx)}
                       style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '10px 12px', borderRadius: '12px', minHeight: '58px', cursor: taken ? 'default' : 'pointer', transition: 'all 0.12s',
                         border: taken ? '2px solid #0B1F3B' : isSelected ? '2px solid #9EB7E5' : '2px solid #e2e8f0',
                         backgroundColor: taken ? '#0B1F3B' : isSelected ? '#EFF6FF' : 'white',
-                        boxShadow: isSelected ? '0 0 0 3px rgba(158,183,229,0.25)' : 'none',
-                      }}>
+                        boxShadow: isSelected ? '0 0 0 3px rgba(158,183,229,0.25)' : 'none' }}>
                       <div style={{ width: '30px', height: '30px', borderRadius: '7px', backgroundColor: taken ? 'rgba(255,255,255,0.15)' : isSelected ? '#BFDBFE' : '#f1f5f9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '11px', fontWeight: '900', color: taken ? 'white' : '#0B1F3B', flexShrink: 0 }}>#{slotIdx+1}</div>
                       {taken ? (
                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1 }}>
@@ -514,9 +538,7 @@ export default function FlagRanker() {
             </div>
           </div>
         ) : (
-          /* ── DESKTOP LAYOUT: side by side ── */
           <div style={{ display: 'flex', gap: '18px', alignItems: 'flex-start', flexWrap: 'wrap' }}>
-            {/* Left — current flag */}
             <div style={{ width: '190px', flexShrink: 0 }}>
               <div style={S.panelLabel}>{t('Drag this flag', 'Glisse ce drapeau')}</div>
               <div draggable onDragStart={() => setDragging(true)} onDragEnd={() => { setDragging(false); setDragOver(null) }}
@@ -542,8 +564,6 @@ export default function FlagRanker() {
                 </div>
               )}
             </div>
-
-            {/* Right — slots */}
             <div style={{ flex: 1, minWidth: '260px' }}>
               <div style={S.panelLabel}>
                 {isMin ? t('Slot 1 = lowest rank scores best', 'Slot 1 = rang le plus bas = meilleur') : t('Slot 1 = best attribute score', 'Slot 1 = meilleur score attribut')}
@@ -588,38 +608,6 @@ export default function FlagRanker() {
           </div>
         )}
       </div>
-
-      {/* Help modal */}
-      {showHelp && (
-        <div style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.55)', zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}
-          onClick={() => setShowHelp(false)}>
-          <div style={{ backgroundColor: 'white', borderRadius: '20px', padding: '32px 28px', maxWidth: '440px', width: '100%', boxShadow: '0 24px 64px rgba(0,0,0,0.2)' }}
-            onClick={e => e.stopPropagation()}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-              <h2 style={{ fontSize: '20px', fontWeight: '900', color: '#0B1F3B', margin: 0 }}>❓ {t('How to play', 'Comment jouer')}</h2>
-              <button onClick={() => setShowHelp(false)} style={{ background: 'none', border: 'none', fontSize: '20px', cursor: 'pointer', color: '#94a3b8' }}>✕</button>
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-              {[
-                { icon: '🏳️', en: 'A flag appears with an attribute. Place it in the matching slot.', fr: 'Un drapeau apparaît avec un attribut. Placez-le dans le bon slot.' },
-                { icon: '📱', en: 'On mobile: tap a slot to select it, then tap the flag to place it.', fr: 'Sur mobile : tape un slot pour le sélectionner, puis tape le drapeau.' },
-                { icon: '🖥️', en: 'On desktop: drag and drop the flag directly into a slot.', fr: 'Sur desktop : glisse-dépose le drapeau dans un slot.' },
-                { icon: '📈', en: 'Maximize: place flags with extreme values (rank #1 = 100 pts).', fr: 'Maximiser : place les drapeaux aux valeurs extrêmes.' },
-                { icon: '📉', en: 'Minimize: place flags with average values.', fr: 'Minimiser : place les drapeaux aux valeurs moyennes.' },
-                { icon: '🔓', en: 'Open: rank all 5 flags for a single attribute using ↑↓ on mobile.', fr: 'Ouvert : classe les 5 drapeaux avec ↑↓ sur mobile.' },
-              ].map((item, i) => (
-                <div key={i} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
-                  <span style={{ fontSize: '20px', flexShrink: 0 }}>{item.icon}</span>
-                  <p style={{ margin: 0, fontSize: '13px', color: '#475569', lineHeight: 1.6 }}>{locale === 'fr' ? item.fr : item.en}</p>
-                </div>
-              ))}
-            </div>
-            <button onClick={() => setShowHelp(false)} style={{ ...S.btn, width: '100%', marginTop: '24px', padding: '12px' }}>
-              {t('Got it!', 'Compris !')}
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   )
 }
@@ -628,10 +616,9 @@ const S = {
   page:       { minHeight: '100vh', backgroundColor: '#F4F1E6', fontFamily: 'var(--font-body, system-ui)', paddingTop: '28px', paddingBottom: '48px' },
   card:       { maxWidth: '480px', margin: '0 auto', backgroundColor: 'white', borderRadius: '20px', border: '1px solid #e2e8f0', padding: '36px 32px', textAlign: 'center', boxShadow: '0 8px 32px rgba(0,0,0,0.07)' },
   title:      { fontSize: '28px', fontWeight: '900', color: '#0B1F3B', margin: '0 0 8px', letterSpacing: '-1px' },
-  modeBtn:    { width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '14px 16px', borderRadius: '14px', border: '2px solid', backgroundColor: 'white', cursor: 'pointer', transition: 'all 0.15s' },
   header:     { display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: '16px', gap: '12px' },
   roundLabel: { fontSize: '11px', fontWeight: '700', color: '#9EB7E5', textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: '3px' },
-  pageTitle:  { fontSize: isMobile => isMobile ? '18px' : '22px', fontWeight: '900', color: '#0B1F3B', margin: 0, letterSpacing: '-0.5px' },
+  pageTitle:  { fontSize: '22px', fontWeight: '900', color: '#0B1F3B', margin: 0, letterSpacing: '-0.5px' },
   scorePill:  { backgroundColor: '#0B1F3B', borderRadius: '12px', padding: '10px 14px', textAlign: 'center', flexShrink: 0 },
   panelLabel: { fontSize: '10px', fontWeight: '800', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: '8px' },
   flagCard:   { backgroundColor: 'white', borderRadius: '12px', border: '1px solid #e2e8f0', overflow: 'hidden', userSelect: 'none' },

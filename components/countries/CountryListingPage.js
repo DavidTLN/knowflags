@@ -4,6 +4,7 @@ import { useState, useMemo, useEffect } from 'react'
 import Link from 'next/link'
 import { useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-client'
+import Footer from '@/components/Footer'
 
 const REGIONS = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania']
 const REGION_LABELS = { Africa: 'Afrique', Americas: 'Amériques', Asia: 'Asie', Europe: 'Europe', Oceania: 'Océanie' }
@@ -218,7 +219,7 @@ export default function CountryListingPage() {
           <div style={{ padding: '10px 14px', textAlign: 'center' }}>
             <p style={{ margin: 0, fontSize: '14px', fontWeight: '700', color: '#0B1F3B', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{name}</p>
             {flagSince
-              ? <span style={{ display: 'inline-flex', alignItems: 'center', marginTop: '5px', fontSize: '11px', fontWeight: '500', backgroundColor: '#E6F1FB', color: '#185FA5', padding: '2px 8px', borderRadius: '99px' }}>{t(`since ${flagSince}`, `depuis ${flagSince}`)}</span>
+              ? <p style={{ margin: '4px 0 0', fontSize: '11px', color: '#64748b', fontWeight: '600' }}>🗓 {t(`Since ${flagSince}`, `Depuis ${flagSince}`)}</p>
               : <p style={{ margin: '4px 0 0', fontSize: '11px', color: '#94a3b8' }}>{locale === 'fr' ? REGION_LABELS[country.region] : country.region}</p>
             }
           </div>
@@ -236,7 +237,7 @@ export default function CountryListingPage() {
         <div style={{ padding: '8px 10px', textAlign: 'center' }}>
           <p style={{ margin: 0, fontSize: '12px', fontWeight: '700', color: '#0B1F3B', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{name}</p>
           {flagSince
-            ? <span style={{ display: 'inline-flex', alignItems: 'center', marginTop: '4px', fontSize: '10px', fontWeight: '500', backgroundColor: '#E6F1FB', color: '#185FA5', padding: '2px 7px', borderRadius: '99px' }}>{t(`since ${flagSince}`, `depuis ${flagSince}`)}</span>
+            ? <p style={{ margin: '3px 0 0', fontSize: '10px', color: '#64748b', fontWeight: '600' }}>🗓 {t(`Since ${flagSince}`, `Depuis ${flagSince}`)}</p>
             : <p style={{ margin: '2px 0 0', fontSize: '10px', color: '#94a3b8' }}>{locale === 'fr' ? REGION_LABELS[country.region] : country.region}</p>
           }
         </div>
@@ -362,6 +363,7 @@ export default function CountryListingPage() {
   )
 
   return (
+    <>
     <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: 'var(--font-body), system-ui, sans-serif' }}>
       <div style={{ maxWidth: '1400px', margin: '0 auto', padding: isMobile ? '20px 16px' : '40px 32px' }}>
 
@@ -526,5 +528,7 @@ export default function CountryListingPage() {
 
       </div>
     </div>
+    <Footer />
+  </>
   )
 }

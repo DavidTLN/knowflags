@@ -181,6 +181,9 @@ export default function GarticPhoneGame() {
       const supabase = createClient()
       const { data: { user } } = await supabase.auth.getUser()
       if (!user) return
+      await supabase.from('game_scores_log').insert({
+        user_id: user.id, game: 'gartic-phone', score: finalScore, played_at: new Date().toISOString(),
+      })
       await supabase.from('game_scores').insert({
         user_id: user.id, game: 'gartic-phone', score: finalScore,
         details: { rounds: TOTAL_ROUNDS }

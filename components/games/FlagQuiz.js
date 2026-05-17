@@ -116,6 +116,7 @@ export default function FlagQuiz() {
   async function quitGame() {
     stopSessionTimer()
     await saveScore(scoreRef.current, bestStreak)
+    await logScore(scoreRef.current)
     await saveStats(
       history.filter(h => h.isCorrect).length,
       history.length,
@@ -148,6 +149,22 @@ export default function FlagQuiz() {
         streak_current: 0,
       })
     }
+  }
+
+
+  async function logScore(score) {
+    if (!score || score <= 0) return
+    try {
+      const supabase = createClient()
+      const { data: { user } } = await supabase.auth.getUser()
+      if (!user) return
+      await supabase.from('game_scores_log').insert({
+        user_id:   user.id,
+        game:      'flag-quiz',
+        score:     score,
+        played_at: new Date().toISOString(),
+      })
+    } catch (e) { console.error('logScore error:', e) }
   }
 
   async function saveScore(finalScore, bestStreakVal) {
@@ -536,7 +553,7 @@ export default function FlagQuiz() {
 
     if (isMobile) {
       return (
-        <div style={{ backgroundColor: '#0B1F3B', minHeight: '100dvh', fontFamily: 'var(--font-body)', display: 'flex', flexDirection: 'column', padding: '16px 14px 24px' }}>
+        <div style={{ backgroundColor: '#0B1F3B', minHeight: '100dvh', fontFamily: 'var(--font-body)', display: 'flex', flexDirection: 'column', padding: '16px 14px env(safe-area-inset-bottom, 24px)' }}>
           {hud}
           {timerBar}
           {/* Stimulus */}
@@ -606,7 +623,7 @@ export default function FlagQuiz() {
     const wrong = history.filter(h => !h.isCorrect)
 
     return (
-      <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: "var(--font-body)", padding: '32px 16px 60px' }}>
+      <div style={{ backgroundColor: '#F4F1E6', minHeight: '100dvh', fontFamily: "var(--font-body)", padding: '32px 16px 60px' }}>
         <div style={{ maxWidth: '520px', margin: '0 auto' }}>
 
           <div style={{ textAlign: 'center', marginBottom: '28px' }}>

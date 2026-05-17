@@ -1,6 +1,7 @@
 'use client'
 import { useLocale } from 'next-intl'
 import Link from 'next/link'
+import Footer from '@/components/Footer'
 
 // DISCOURSE_URL: Set this env var to your Discourse instance URL
 // e.g. NEXT_PUBLIC_DISCOURSE_URL=https://community.knowflags.com
@@ -18,6 +19,7 @@ export default function CommunityPage() {
   ]
 
   return (
+    <>
     <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: 'Arial, sans-serif' }}>
       <div style={{ maxWidth: '860px', margin: '0 auto', padding: '48px 24px' }}>
 
@@ -109,5 +111,7 @@ export default function CommunityPage() {
 
       </div>
     </div>
+    <Footer />
+  </>
   )
 }

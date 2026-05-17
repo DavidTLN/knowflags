@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-client'
 import FlagImage from '@/components/FlagImage'
+import Footer from '@/components/Footer'
 
 const CONTINENTS = ['Europe', 'North America', 'South America', 'Asia', 'Africa', 'Oceania']
 const CONTINENT_FR = { Europe: 'Europe', 'North America': 'Amerique du Nord', 'South America': 'Amerique du Sud', Asia: 'Asie', Africa: 'Afrique', Oceania: 'Oceanie' }
@@ -191,6 +192,7 @@ export default function CitiesPage() {
   }
 
   return (
+    <>
     <div style={{ minHeight: '100vh', backgroundColor: '#F4F1E6', paddingTop: '60px', fontFamily: 'var(--font-body)' }}>
 
       <div style={{ backgroundColor: '#0B1F3B', padding: '40px 24px 32px' }}>
@@ -354,5 +356,7 @@ export default function CitiesPage() {
         </div>
       </div>
     </div>
+    <Footer />
+  </>
   )
 }

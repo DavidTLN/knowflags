@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-client'
+import Footer from '@/components/Footer'
 
 // ── Palette ───────────────────────────────────────────────────────────────────
 const C = {
@@ -309,6 +310,7 @@ export default function ProfilePage() {
 
   // ── Render ─────────────────────────────────────────────────
   return (
+    <>
     <div style={{ backgroundColor: C.bg, minHeight: '100vh', fontFamily: "var(--font-body)" }}>
 
       {/* ── Hero header ─────────────────────────── */}
@@ -753,5 +755,7 @@ export default function ProfilePage() {
         )}
       </div>
     </div>
+    <Footer />
+  </>
   )
 }

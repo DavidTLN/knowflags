@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-client'
 import Link from 'next/link'
+import Footer from '@/components/Footer'
 
 const GAMES = [
   { key: 'all',          en: 'All games',    fr: 'Tous les jeux' },
@@ -137,7 +138,16 @@ function LeaderboardRow({ entry, rank, isMe, game, locale }) {
           : <span style={{ fontSize: '14px', fontWeight: '700', color: '#94a3b8' }}>#{rank}</span>
         }
       </div>
-      <Avatar name={displayName} size={38} />
+      <div style={{ position: 'relative', flexShrink: 0 }}>
+        <Avatar name={displayName} size={38} />
+        {entry.country && (
+          <img
+            src={`https://flagcdn.com/w20/${entry.country.toLowerCase()}.png`}
+            alt={entry.country}
+            style={{ position: 'absolute', bottom: '-2px', right: '-4px', width: '16px', height: '11px', objectFit: 'contain', borderRadius: '2px', border: '1px solid white', boxShadow: '0 1px 3px rgba(0,0,0,0.2)' }}
+          />
+        )}
+      </div>
       <div style={{ flex: 1, minWidth: 0 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
           <span style={{ fontSize: '14px', fontWeight: '700', color: '#0B1F3B', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{displayName}</span>
@@ -228,6 +238,7 @@ export default function LeaderboardPage() {
   const isCurrent = isCurrentPeriod(activeTab, periodKey)
 
   return (
+    <>
     <div style={{ minHeight: '100vh', backgroundColor: '#F4F1E6', fontFamily: 'var(--font-body), system-ui, sans-serif' }}>
       <style>{`@keyframes spin { to { transform: rotate(360deg) } }`}</style>
 
@@ -426,5 +437,7 @@ export default function LeaderboardPage() {
 
       </div>
     </div>
+    <Footer />
+  </>
   )
 }

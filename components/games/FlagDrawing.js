@@ -459,6 +459,22 @@ export default function FlagDrawingV2() {
     }
   }
 
+
+  async function logScore(score) {
+    if (!score || score <= 0) return
+    try {
+      const supabase = createClient()
+      const { data: { user } } = await supabase.auth.getUser()
+      if (!user) return
+      await supabase.from('game_scores_log').insert({
+        user_id:   user.id,
+        game:      'flag-drawing',
+        score:     score,
+        played_at: new Date().toISOString(),
+      })
+    } catch (e) { console.error('logScore error:', e) }
+  }
+
   async function saveDiffScore(diff, score) {
     if (!user || score === 0) return
     const supabase = createClient()
@@ -471,6 +487,7 @@ export default function FlagDrawingV2() {
       best_streak: score,
       updated_at: new Date().toISOString(),
     }, { onConflict: 'user_id,mode' })
+    await logScore(score)
     setDiffStats(prev => ({ ...prev, [diff]: { best: score } }))
   }
 
@@ -820,7 +837,7 @@ export default function FlagDrawingV2() {
   // ── SETUP screen ──────────────────────────────────────────────────────────
   if (screen === SCREEN.SETUP) {
     return (
-      <div style={{ minHeight: '100vh', background: colors.bg, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', fontFamily: "'Roboto', sans-serif" }}>
+      <div style={{ minHeight: '100dvh', background: colors.bg, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', fontFamily: "'Roboto', sans-serif" }}>
         <div style={{ background: colors.card, borderRadius: '20px', padding: '40px', maxWidth: '480px', width: '100%', boxShadow: '0 8px 32px rgba(11,31,59,0.12)' }}>
           <div style={{ textAlign: 'center', marginBottom: '32px' }}>
             <div style={{ fontSize: '48px', marginBottom: '12px' }}>🎨</div>
@@ -885,7 +902,7 @@ export default function FlagDrawingV2() {
     const canvasDisplayH = def ? Math.round(canvasDisplayW / def.ratio) : 320
 
     return (
-      <div style={{ minHeight: '100vh', background: colors.bg, fontFamily: "'Roboto', sans-serif", paddingBottom: '32px' }}>
+      <div style={{ minHeight: '100dvh', background: colors.bg, fontFamily: "'Roboto', sans-serif", paddingBottom: '32px' }}>
         {/* Header */}
         <div style={{ background: colors.card, borderBottom: `1px solid ${colors.border}`, padding: '12px 20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <div style={{ display: 'flex', gap: '6px' }}>
@@ -1071,7 +1088,7 @@ export default function FlagDrawingV2() {
     const canvasH = def ? Math.round(CANVAS_W / def.ratio) : 320
 
     return (
-      <div style={{ minHeight: '100vh', background: colors.bg, fontFamily: "'Roboto', sans-serif", padding: '24px 16px' }}>
+      <div style={{ minHeight: '100dvh', background: colors.bg, fontFamily: "'Roboto', sans-serif", padding: '24px 16px' }}>
         <div style={{ maxWidth: '560px', margin: '0 auto' }}>
           {/* Score card */}
           <div style={{ background: colors.card, borderRadius: '20px', padding: '32px', textAlign: 'center', marginBottom: '20px', boxShadow: '0 4px 20px rgba(11,31,59,0.1)' }}>
@@ -1126,7 +1143,7 @@ export default function FlagDrawingV2() {
   // ── GAMEOVER screen ───────────────────────────────────────────────────────
   const passed = history.filter(h => h.passed).length
   return (
-    <div style={{ minHeight: '100vh', background: colors.bg, fontFamily: "'Roboto', sans-serif", display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px' }}>
+    <div style={{ minHeight: '100dvh', background: colors.bg, fontFamily: "'Roboto', sans-serif", display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px' }}>
       <div style={{ background: colors.card, borderRadius: '20px', padding: '40px', maxWidth: '480px', width: '100%', textAlign: 'center', boxShadow: '0 8px 32px rgba(11,31,59,0.12)' }}>
         <div style={{ fontSize: '52px', marginBottom: '16px' }}>🏁</div>
         <h2 style={{ fontSize: '28px', fontWeight: '800', color: colors.navy, margin: '0 0 8px', fontFamily: "'Roboto Slab', serif" }}>

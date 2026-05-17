@@ -8,6 +8,7 @@ import { useState, useEffect } from 'react'
 import FlagImage from '@/components/FlagImage'
 import FlagHistoryModule from '@/components/FlagHistoryModule'
 import { useLocale } from 'next-intl'
+import Footer from '@/components/Footer'
 
 const REGION_LABELS = { Africa: 'Afrique', Americas: 'Amériques', Asia: 'Asie', Europe: 'Europe', Oceania: 'Océanie' }
 
@@ -43,18 +44,24 @@ function CountryFlagsSection({ countryIso2 }) {
     if (!countryIso2) return
     const supabase = createClient()
     supabase
-      .from('subnational_flags')
-      .select('id, slug, name_en, name_fr, type, image_path, sort_order')
-      .eq('iso_code', countryIso2.toLowerCase()).order('sort_order').limit(50)
-      .then(({ data }) => {
-        const all = data ?? []
-        const r = all.filter(f => f.type === 'region')
-        const c = all.filter(f => f.type === 'city')
-        const o = all.filter(f => f.type === 'organisation')
-        setRegions(r); setCities(c); setOrgs(o)
-        if (r.length === 0 && c.length > 0) setActiveTab('cities')
-        else if (r.length === 0 && o.length > 0) setActiveTab('orgs')
-        setLoading(false)
+      .from('flag_taxonomy').select('id')
+      .eq('flag_type', 'country').eq('metadata->>iso2', countryIso2.toLowerCase()).single()
+      .then(({ data: country }) => {
+        if (!country) { setLoading(false); return }
+        supabase
+          .from('flag_taxonomy')
+          .select('id, slug, name_en, name_fr, flag_type, image_path, sort_order, parent:parent_id(name_en, name_fr)')
+          .eq('country_id', country.id).neq('id', country.id).order('sort_order')
+          .then(({ data }) => {
+            const all = data ?? []
+            const r = all.filter(f => f.flag_type === 'region')
+            const c = all.filter(f => f.flag_type === 'city')
+            const o = all.filter(f => f.flag_type === 'organisation')
+            setRegions(r); setCities(c); setOrgs(o)
+            if (r.length === 0 && c.length > 0) setActiveTab('cities')
+            else if (r.length === 0 && o.length > 0) setActiveTab('orgs')
+            setLoading(false)
+          })
       })
   }, [countryIso2])
 
@@ -106,9 +113,9 @@ function CountryFlagsSection({ countryIso2 }) {
                 <div style={{ height: '120px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '12px' }}>
                   <FlagImage slug={flag.slug} prefix={flag.image_path?.includes?.('/cities/') ? '/flags/cities' : '/flags/regions'} name={name} color="#0B1F3B" width={150} height={96} />
                 </div>
-                <div style={{ padding: '8px 10px', textAlign: 'center' }}>
-                  <p style={{ margin: 0, fontSize: '12px', fontWeight: '700', color: '#0B1F3B', lineHeight: 1.3, textAlign: 'center' }}>{name}</p>
-                  {parentName && <p style={{ margin: '2px 0 0', fontSize: '10px', color: '#94a3b8', textAlign: 'center' }}>{parentName}</p>}
+                <div style={{ padding: '8px 10px' }}>
+                  <div style={{ fontSize: '12px', fontWeight: '700', color: '#0B1F3B', lineHeight: 1.3, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{name}</div>
+                  {parentName && <div style={{ fontSize: '10px', color: '#94a3b8', marginTop: '2px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{parentName}</div>}
                 </div>
               </div>
             )
@@ -246,6 +253,7 @@ export default function CountryDetailPage({ code }) {
   ]
 
   return (
+    <>
     <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: 'Arial, sans-serif' }}>
       <div style={{ maxWidth: '960px', margin: '0 auto', padding: '32px 24px' }}>
 
@@ -360,5 +368,7 @@ export default function CountryDetailPage({ code }) {
 
       </div>
     </div>
+    <Footer />
+  </>
   )
 }

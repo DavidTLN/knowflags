@@ -135,6 +135,9 @@ export default function PastFlagGame() {
       const supabase = createClient()
       const { data: { user } } = await supabase.auth.getUser()
       if (!user) return
+      await supabase.from('game_scores_log').insert({
+        user_id: user.id, game: 'past-flag', score, played_at: new Date().toISOString(),
+      })
       await supabase.from('game_scores').insert({
         user_id: user.id,
         game: 'past-flag',

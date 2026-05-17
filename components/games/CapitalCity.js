@@ -181,6 +181,22 @@ export default function CapitalCity() {
     }
   }
 
+
+  async function logScore(score) {
+    if (!score || score <= 0) return
+    try {
+      const supabase = createClient()
+      const { data: { user } } = await supabase.auth.getUser()
+      if (!user) return
+      await supabase.from('game_scores_log').insert({
+        user_id:   user.id,
+        game:      'capital-city',
+        score:     score,
+        played_at: new Date().toISOString(),
+      })
+    } catch (e) { console.error('logScore error:', e) }
+  }
+
   async function saveBestScore(newStreak) {
     if (!user) return
     const key = scoreKey(questionMode, answerMode)
@@ -679,7 +695,7 @@ export default function CapitalCity() {
 
     if (isMobile) {
       return (
-        <div style={{ backgroundColor: '#0B1F3B', minHeight: '100dvh', fontFamily: 'var(--font-body)', display: 'flex', flexDirection: 'column', padding: '16px 14px 24px' }}>
+        <div style={{ backgroundColor: '#0B1F3B', minHeight: '100dvh', fontFamily: 'var(--font-body)', display: 'flex', flexDirection: 'column', padding: '16px 14px env(safe-area-inset-bottom, 24px)' }}>
           {hud}
           {timerBar}
           {questionLabel}
@@ -690,7 +706,7 @@ export default function CapitalCity() {
     }
 
     return (
-      <div style={{ backgroundColor: '#0B1F3B', minHeight: '100vh', fontFamily: 'var(--font-body)', padding: '12px 24px 24px' }}>
+      <div style={{ backgroundColor: '#0B1F3B', minHeight: '100dvh', fontFamily: 'var(--font-body)', padding: '12px 24px 24px' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
             <h1 style={{ fontSize: '22px', fontWeight: '900', color: 'white', margin: 0, letterSpacing: '-0.5px' }}>
@@ -721,7 +737,7 @@ export default function CapitalCity() {
     const wrong   = history.filter(h => !h.isCorrect)
 
     return (
-      <div style={{ backgroundColor: C.cream, minHeight: '100vh', fontFamily: 'var(--font-body)', padding: '32px 16px 60px' }}>
+      <div style={{ backgroundColor: C.cream, minHeight: '100dvh', fontFamily: 'var(--font-body)', padding: '32px 16px 60px' }}>
         <div style={{ maxWidth: '520px', margin: '0 auto' }}>
 
           <div style={{ textAlign: 'center', marginBottom: '28px' }}>

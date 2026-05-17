@@ -162,11 +162,28 @@ export default function FlagClue() {
       setAnswered('wrong')
       setHistory(h => [...h, { correct: false, country: question.correct, pts: 0 }])
       if (livesRef.current <= 0) {
+        logScore(scoreRef.current)
         setTimeout(() => setScreen('gameover'), 1800)
       } else {
         setTimeout(() => nextQuestion(mode), 2200)
       }
     }
+  }
+
+
+  async function logScore(score) {
+    if (!score || score <= 0) return
+    try {
+      const supabase = createClient()
+      const { data: { user } } = await supabase.auth.getUser()
+      if (!user) return
+      await supabase.from('game_scores_log').insert({
+        user_id:   user.id,
+        game:      'flag-clue',
+        score:     score,
+        played_at: new Date().toISOString(),
+      })
+    } catch (e) { console.error('logScore error:', e) }
   }
 
   // ── INTRO ──────────────────────────────────────────────────────────────────

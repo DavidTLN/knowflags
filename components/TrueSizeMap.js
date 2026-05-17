@@ -571,7 +571,9 @@ export default function TrueSizeMap() {
       const id = Number(e.currentTarget.getAttribute('data-id'))
       e.preventDefault()
       e.stopPropagation()
-      drag.current = { on: true, id, x: e.clientX, y: e.clientY }
+      const clientX = e.clientX ?? e.touches?.[0]?.clientX ?? 0
+      const clientY = e.clientY ?? e.touches?.[0]?.clientY ?? 0
+      drag.current = { on: true, id, x: clientX, y: clientY }
       setSelectedId(id)
       svg.style.cursor = 'grabbing'
       map.dragging.disable()
@@ -587,12 +589,14 @@ export default function TrueSizeMap() {
 
       const proj = buildProjFromMap()
       if (!proj) return
+      const clientX = e.clientX ?? e.touches?.[0]?.clientX ?? drag.current.x
+      const clientY = e.clientY ?? e.touches?.[0]?.clientY ?? drag.current.y
       const [curPx, curPy] = proj([ov.destLon, ov.destLat])
-      const nc = proj.invert([curPx + (e.clientX - drag.current.x), curPy + (e.clientY - drag.current.y)])
+      const nc = proj.invert([curPx + (clientX - drag.current.x), curPy + (clientY - drag.current.y)])
       if (!nc) return
 
-      drag.current.x = e.clientX
-      drag.current.y = e.clientY
+      drag.current.x = clientX
+      drag.current.y = clientY
 
       const updated = ovRef.current.map(o =>
         o.id === drag.current.id
@@ -616,11 +620,15 @@ export default function TrueSizeMap() {
     dragHandlers.current = { onPointerDown }
     document.addEventListener('pointermove', onDocPointerMove, { passive: false })
     document.addEventListener('pointerup',   onDocPointerUp)
+    document.addEventListener('touchmove',   onDocPointerMove, { passive: false })
+    document.addEventListener('touchend',    onDocPointerUp)
 
     return () => {
       dragHandlers.current = null
       document.removeEventListener('pointermove', onDocPointerMove)
       document.removeEventListener('pointerup',   onDocPointerUp)
+      document.removeEventListener('touchmove',   onDocPointerMove)
+      document.removeEventListener('touchend',    onDocPointerUp)
       map.dragging.enable()
       map.scrollWheelZoom.enable()
       map.doubleClickZoom.enable()
@@ -704,7 +712,7 @@ export default function TrueSizeMap() {
   return (
     <>
       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-      <div style={{ display: 'flex', flexDirection: 'column', height: 'calc(100vh - 60px)', fontFamily: 'var(--font-body)', overflow: 'hidden' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', height: 'calc(100dvh - 60px)', fontFamily: 'var(--font-body)', overflow: 'hidden' }}>
 
         {/* ── Top bar ── */}
         <div style={{ flexShrink: 0, backgroundColor: 'white', borderBottom: '1px solid #E2DDD5', padding: '8px 16px', display: 'flex', gap: '10px', alignItems: 'center', flexWrap: 'wrap', zIndex: 1000, boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>

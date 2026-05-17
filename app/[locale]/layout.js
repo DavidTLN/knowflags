@@ -33,7 +33,7 @@ export const metadata = {
     siteName: 'KnowFlags',
     images: [
       {
-        url: '/og-image.png', // à créer : image 1200×630px dans /public
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'KnowFlags — Explore the World Through Flags',
@@ -60,19 +60,14 @@ export const viewport = {
   maximumScale: 1,
 }
 
-// JSON-LD structured data — logo visible sur Google
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'KnowFlags',
   url: 'https://knowflags.com',
   description: 'Discover, explore and learn about flags from around the world.',
-  logo: 'https://knowflags.com/logo.png', // à placer dans /public/logo.png (min 112×112px)
-  sameAs: [
-    // Ajoute ici tes réseaux sociaux si tu en as
-    // 'https://twitter.com/knowflags',
-    // 'https://instagram.com/knowflags',
-  ],
+  logo: 'https://knowflags.com/logo.png',
+  sameAs: [],
 }
 
 export default async function RootLayout({ children, params }) {
@@ -88,18 +83,49 @@ export default async function RootLayout({ children, params }) {
           img, video, canvas { max-width: 100%; }
         `}</style>
 
-        {/* JSON-LD — structured data pour Google */}
+        {/* JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
 
-        {/* Google Tag Manager */}
-        <Script id="gtm-script" strategy="afterInteractive" dangerouslySetInnerHTML={{__html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-W6DS4C7M');`}} />
-        {/* End Google Tag Manager */}
+        {/* ── STEP 1 : GTM Consent Mode defaults (must be FIRST) ── */}
+        <Script id="gtm-consent-default" strategy="beforeInteractive" dangerouslySetInnerHTML={{__html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('consent', 'default', {
+            'ad_storage':              'denied',
+            'ad_user_data':            'denied',
+            'ad_personalization':      'denied',
+            'analytics_storage':       'denied',
+            'functionality_storage':   'denied',
+            'personalization_storage': 'denied',
+            'security_storage':        'granted',
+            'wait_for_update':         500,
+          });
+          gtag('set', 'ads_data_redaction', true);
+          gtag('set', 'url_passthrough', true);
+        `}} />
+
+        {/* ── STEP 2 : Cookiebot CMP (before GTM, signals consent to GTM) ── */}
+        <Script
+          id="cookiebot"
+          src="https://consent.cookiebot.com/uc.js"
+          data-cbid="6b85d18d-21c9-47ff-a2a6-36665635891e"
+          data-blockingmode="auto"
+          data-gtm="GTM-W6DS4C7M"
+          strategy="beforeInteractive"
+        />
+
+        {/* ── STEP 3 : Google Tag Manager ── */}
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{__html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-W6DS4C7M');`}}
+        />
       </head>
       <body style={{ paddingTop: "60px" }}>
-        {/* Google Tag Manager (noscript) */}
+        {/* GTM noscript fallback */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-W6DS4C7M"
@@ -108,7 +134,6 @@ export default async function RootLayout({ children, params }) {
             style={{display: 'none', visibility: 'hidden'}}
           />
         </noscript>
-        {/* End Google Tag Manager (noscript) */}
 
         <NextIntlClientProvider messages={messages}>
           <Header />

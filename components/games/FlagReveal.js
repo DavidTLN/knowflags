@@ -212,9 +212,26 @@ export default function FlagReveal() {
     }, { onConflict: 'user_id,mode' })
   }
 
+
+  async function logScore(score) {
+    if (!score || score <= 0) return
+    try {
+      const supabase = createClient()
+      const { data: { user } } = await supabase.auth.getUser()
+      if (!user) return
+      await supabase.from('game_scores_log').insert({
+        user_id:   user.id,
+        game:      'flag-reveal',
+        score:     score,
+        played_at: new Date().toISOString(),
+      })
+    } catch (e) { console.error('logScore error:', e) }
+  }
+
   function endGame() {
     stopSessionTimer()
     saveScore(scoreRef.current)
+    logScore(scoreRef.current)
     setGameState('gameover')
     saveStats(false, 0)
   }
@@ -801,7 +818,7 @@ export default function FlagReveal() {
   if (isMobile) {
     // ── MOBILE: Full-screen app layout ─────────────────────────────────────
     return (
-      <div style={{ backgroundColor: '#F4F1E6', height: 'calc(100dvh - 60px)', display: 'flex', flexDirection: 'column', fontFamily: 'var(--font-body)', overflow: 'hidden', position: 'relative' }}>
+      <div style={{ backgroundColor: '#F4F1E6', height: 'calc(100dvh - 60px)', display: 'flex', flexDirection: 'column', fontFamily: 'var(--font-body)', overflow: 'hidden', position: 'relative', touchAction: 'manipulation' }}>
 
         {/* Title row */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '8px 12px 0', flexShrink: 0 }}>
@@ -927,7 +944,7 @@ export default function FlagReveal() {
 
   // ── DESKTOP layout ──────────────────────────────────────────────────────────
   return (
-    <div style={{ backgroundColor: '#F4F1E6', height: 'calc(100vh - 60px)', overflow: 'hidden', fontFamily: 'var(--font-body)', display: 'flex', flexDirection: 'column' }}>
+    <div style={{ backgroundColor: '#F4F1E6', height: 'calc(100dvh - 60px)', overflow: 'hidden', fontFamily: 'var(--font-body)', display: 'flex', flexDirection: 'column' }}>
       <div style={{ maxWidth: '1100px', width: '100%', margin: '0 auto', padding: '12px 24px', flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0 }}>
 
         {/* Top bar */}

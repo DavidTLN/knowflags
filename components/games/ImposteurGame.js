@@ -155,6 +155,9 @@ export default function ImposteurGame() {
       const supabase = createClient()
       const { data: { user } } = await supabase.auth.getUser()
       if (!user) return
+      await supabase.from('game_scores_log').insert({
+        user_id: user.id, game: 'imposteur', score, played_at: new Date().toISOString(),
+      })
       await supabase.from('game_scores').insert({
         user_id: user.id, game: 'imposteur', score,
         details: { streak: bestStreak, rounds: rounds.length }

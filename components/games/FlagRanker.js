@@ -182,6 +182,22 @@ export default function FlagRanker() {
     const iv = setInterval(() => { step++; setRevealStep(step); if (step >= res.length) clearInterval(iv) }, 500)
   }
 
+
+  async function logScore(score) {
+    if (!score || score <= 0) return
+    try {
+      const supabase = createClient()
+      const { data: { user } } = await supabase.auth.getUser()
+      if (!user) return
+      await supabase.from('game_scores_log').insert({
+        user_id:   user.id,
+        game:      'flag-ranker',
+        score:     score,
+        played_at: new Date().toISOString(),
+      })
+    } catch (e) { console.error('logScore error:', e) }
+  }
+
   function finishReveal() {
     const nt = totalScore + roundScore
     setTotalScore(nt)

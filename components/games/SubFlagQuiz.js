@@ -102,6 +102,9 @@ export default function SubFlagQuiz() {
       const supabase = createClient()
       const { data: { user } } = await supabase.auth.getUser()
       if (!user) return
+      await supabase.from('game_scores_log').insert({
+        user_id: user.id, game: 'subflag-quiz', score, played_at: new Date().toISOString(),
+      })
       await supabase.from('game_scores').insert({
         user_id: user.id, game: 'subflag-quiz', score,
         details: { streak: bestStreak, rounds: TOTAL_ROUNDS }

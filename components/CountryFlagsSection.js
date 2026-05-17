@@ -126,14 +126,10 @@ function SmallFlagCard({ flag, locale, showParent }) {
           height={65}
         />
       </div>
-      <div style={{ padding: '8px 10px', textAlign: 'center' }}>
-        <div style={{ fontSize: '12px', fontWeight: '700', color: '#0B1F3B', lineHeight: 1.3, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-          {name}
-        </div>
+      <div style={{ padding: '8px 10px', textAlign: 'center', width: '100%' }}>
+        <p style={{ margin: 0, fontSize: '12px', fontWeight: '700', color: '#0B1F3B', lineHeight: 1.3, textAlign: 'center', overflow: 'hidden', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{name}</p>
         {parentName && (
-          <div style={{ fontSize: '10px', color: '#94a3b8', marginTop: '2px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-            {parentName}
-          </div>
+          <p style={{ margin: '2px 0 0', fontSize: '10px', color: '#94a3b8', textAlign: 'center', overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis' }}>{parentName}</p>
         )}
       </div>
     </div>

@@ -44,7 +44,7 @@ function CountryFlagsSection({ countryIso2 }) {
     const supabase = createClient()
     supabase
       .from('subnational_flags')
-      .select('id, slug, name_en, name_fr, type, image_path, sort_order')
+      .select('id, slug, name_en, name_fr, type, image_path, sort_order, parent:parent_id(name_en, name_fr)')
       .eq('iso_code', countryIso2.toLowerCase()).order('sort_order').limit(50)
       .then(({ data }) => {
         const all = data ?? []

@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { useLocale } from 'next-intl'
-import Link from 'next/link'
 import { createClient } from '@/lib/supabase-client'
 
 function formatTime(secs) {
@@ -63,6 +62,7 @@ export default function FlagQuiz() {
   const scoreRef = useRef(0)
   const [elapsed, setElapsed] = useState(0)
   const [showQuitTip, setShowQuitTip] = useState(false)
+  const [showQuitConfirm, setShowQuitConfirm] = useState(false)
   const sessionTimerRef = useRef(null)
   const sessionStartRef = useRef(null)
   const [lastPts, setLastPts] = useState(null)
@@ -78,7 +78,11 @@ export default function FlagQuiz() {
     if (!document.getElementById('flagquiz-anim')) {
       const style = document.createElement('style')
       style.id = 'flagquiz-anim'
-      style.textContent = '@keyframes floatUp { 0% { opacity:1; transform:translateX(-50%) translateY(0); } 100% { opacity:0; transform:translateX(-50%) translateY(-28px); } }'
+      style.textContent = `
+        @keyframes floatUp { 0% { opacity:1; transform:translateX(-50%) translateY(0); } 100% { opacity:0; transform:translateX(-50%) translateY(-32px); } }
+        @keyframes popIn { 0% { transform:scale(0.92); opacity:0; } 100% { transform:scale(1); opacity:1; } }
+        @keyframes slideUp { 0% { transform:translateY(10px); opacity:0; } 100% { transform:translateY(0); opacity:1; } }
+      `
       document.head.appendChild(style)
     }
   }, [])
@@ -249,12 +253,8 @@ export default function FlagQuiz() {
   if (screen === SCREEN.SETUP) {
     return (
       <div style={{ backgroundColor: '#F4F1E6', height: 'calc(100dvh - 60px)', fontFamily: 'var(--font-body)', display: 'flex', flexDirection: 'column' }}>
-
-        {/* Scrollable content */}
         <div style={{ flex: 1, overflowY: 'auto', padding: '16px 16px 8px' }}>
           <div style={{ width: '100%', maxWidth: '440px', margin: '0 auto' }}>
-
-            {/* Header */}
             <div style={{ textAlign: 'center', marginBottom: '12px' }}>
               <div style={{ fontSize: '40px', marginBottom: '8px' }}>🎯</div>
               <h1 style={{ margin: '0 0 5px', fontSize: '26px', fontWeight: '900', color: '#0B1F3B', letterSpacing: '-1px' }}>
@@ -264,8 +264,6 @@ export default function FlagQuiz() {
                 {t('3 lives · infinite questions · beat your streak', '3 vies · questions infinies · bats ton record')}
               </p>
             </div>
-
-            {/* Mode */}
             <div style={{ backgroundColor: 'white', borderRadius: '14px', border: '1px solid #e2e8f0', padding: '14px', marginBottom: '10px' }}>
               <p style={{ margin: '0 0 8px', fontSize: '11px', fontWeight: '800', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.8px' }}>
                 {t('Game mode', 'Mode de jeu')}
@@ -293,8 +291,6 @@ export default function FlagQuiz() {
                 ))}
               </div>
             </div>
-
-            {/* Region */}
             <div style={{ backgroundColor: 'white', borderRadius: '14px', border: '1px solid #e2e8f0', padding: '14px' }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
                 <p style={{ margin: 0, fontSize: '11px', fontWeight: '800', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.8px' }}>
@@ -318,11 +314,8 @@ export default function FlagQuiz() {
                 })}
               </div>
             </div>
-
           </div>
         </div>
-
-        {/* Sticky start button */}
         <div style={{ padding: '12px 16px', paddingBottom: 'max(12px, env(safe-area-inset-bottom))', background: '#F4F1E6', borderTop: '1px solid #e2e8f0' }}>
           <button onClick={startGame}
             style={{ width: '100%', padding: '16px', backgroundColor: '#0B1F3B', color: 'white', border: 'none', borderRadius: '14px', fontSize: '16px', fontWeight: '900', cursor: 'pointer', letterSpacing: '-0.3px' }}>
@@ -346,21 +339,33 @@ export default function FlagQuiz() {
         {options.map((opt, idx) => {
           const isCorrectOpt = opt.code === correct.code
           const isSelected = answered?.selected?.code === opt.code
-          let bg = 'rgba(255,255,255,0.08)', borderColor = 'rgba(255,255,255,0.12)', color = 'white', opacity = 1
+          let bg = 'rgba(255,255,255,0.07)', borderColor = 'rgba(255,255,255,0.1)', color = 'white', opacity = 1
           if (isAnswered) {
-            if (isCorrectOpt)    { bg = 'rgba(74,222,128,0.15)'; borderColor = '#4ade80'; color = '#4ade80' }
-            else if (isSelected) { bg = 'rgba(248,113,113,0.15)'; borderColor = '#f87171'; color = '#f87171' }
-            else                 { opacity = 0.35 }
+            if (isCorrectOpt)    { bg = 'rgba(74,222,128,0.18)'; borderColor = '#4ade80'; color = '#4ade80' }
+            else if (isSelected) { bg = 'rgba(248,113,113,0.18)'; borderColor = '#f87171'; color = '#f87171' }
+            else                 { opacity = 0.3 }
           }
           return (
             <button key={opt.code} onClick={() => !isAnswered && handleAnswer(opt)} disabled={isAnswered}
-              style={{ padding: '12px 14px', borderRadius: '12px', border: `2px solid ${borderColor}`, backgroundColor: bg, color, fontWeight: '700', fontSize: '15px', cursor: isAnswered ? 'default' : 'pointer', textAlign: 'left', display: 'flex', alignItems: 'center', gap: '10px', opacity, transition: 'all 0.10s', WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation', userSelect: 'none' }}>
-              <span style={{ width: '26px', height: '26px', borderRadius: '50%', flexShrink: 0, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px', fontWeight: '900', backgroundColor: isAnswered && isCorrectOpt ? '#4ade80' : isAnswered && isSelected ? '#f87171' : 'rgba(255,255,255,0.15)', color: isAnswered && (isCorrectOpt || isSelected) ? '#0B1F3B' : 'white' }}>
-                {String.fromCharCode(65 + idx)}
+              style={{
+                padding: '14px 16px', borderRadius: '14px',
+                border: `2px solid ${borderColor}`,
+                backgroundColor: bg, color, fontWeight: '700', fontSize: '16px',
+                cursor: isAnswered ? 'default' : 'pointer',
+                textAlign: 'left', display: 'flex', alignItems: 'center', gap: '12px',
+                opacity, transition: 'all 0.12s',
+                WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation', userSelect: 'none',
+              }}>
+              <span style={{
+                width: '28px', height: '28px', borderRadius: '8px', flexShrink: 0,
+                display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                fontSize: '12px', fontWeight: '900',
+                backgroundColor: isAnswered && isCorrectOpt ? '#4ade80' : isAnswered && isSelected ? '#f87171' : 'rgba(255,255,255,0.12)',
+                color: isAnswered && (isCorrectOpt || isSelected) ? '#0B1F3B' : 'rgba(255,255,255,0.7)',
+              }}>
+                {isAnswered && isCorrectOpt ? '✓' : isAnswered && isSelected ? '✗' : String.fromCharCode(65 + idx)}
               </span>
-              <span style={{ flex: 1 }}>{getName(opt)}</span>
-              {isAnswered && isCorrectOpt && <span>✓</span>}
-              {isAnswered && isSelected && !isCorrectOpt && <span>✗</span>}
+              <span style={{ flex: 1, lineHeight: 1.3 }}>{getName(opt)}</span>
             </button>
           )
         })}
@@ -370,25 +375,32 @@ export default function FlagQuiz() {
         {options.map(opt => {
           const isCorrectOpt = opt.code === correct.code
           const isSelected = answered?.selected?.code === opt.code
-          let borderColor = 'rgba(255,255,255,0.12)', borderWidth = '2px', overlayBg = 'transparent'
+          let borderColor = 'rgba(255,255,255,0.1)', borderWidth = '2px', overlayBg = 'transparent'
           if (isAnswered) {
             if (isCorrectOpt)    { borderColor = '#4ade80'; borderWidth = '3px' }
             else if (isSelected) { borderColor = '#f87171'; borderWidth = '3px' }
-            else                 { overlayBg = 'rgba(11,31,59,0.6)' }
+            else                 { overlayBg = 'rgba(11,31,59,0.65)' }
           }
           return (
             <button key={opt.code} onClick={() => !isAnswered && handleAnswer(opt)} disabled={isAnswered}
-              style={{ position: 'relative', aspectRatio: '3/2', borderRadius: '12px', border: `${borderWidth} solid ${borderColor}`, overflow: 'hidden', cursor: isAnswered ? 'default' : 'pointer', padding: 0, backgroundColor: '#1a2a40', transition: 'all 0.10s', WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}>
-              <img src={`https://flagcdn.com/w320/${opt.code}.png`} alt={getName(opt)} style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', padding: '6px' }} />
+              style={{
+                position: 'relative', aspectRatio: '3/2', borderRadius: '14px',
+                border: `${borderWidth} solid ${borderColor}`,
+                overflow: 'hidden', cursor: isAnswered ? 'default' : 'pointer',
+                padding: 0, backgroundColor: '#1a2a40',
+                transition: 'all 0.12s',
+                WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation',
+              }}>
+              <img src={`https://flagcdn.com/w320/${opt.code}.png`} alt={getName(opt)} style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', padding: '8px' }} />
               {isAnswered && overlayBg !== 'transparent' && <div style={{ position: 'absolute', inset: 0, backgroundColor: overlayBg }} />}
               {isAnswered && (isCorrectOpt || isSelected) && (
-                <div style={{ position: 'absolute', top: '7px', right: '7px', width: '24px', height: '24px', borderRadius: '50%', backgroundColor: isCorrectOpt ? '#4ade80' : '#f87171', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <span style={{ color: '#0B1F3B', fontSize: '12px', fontWeight: '900' }}>{isCorrectOpt ? '✓' : '✗'}</span>
+                <div style={{ position: 'absolute', top: '8px', right: '8px', width: '26px', height: '26px', borderRadius: '50%', backgroundColor: isCorrectOpt ? '#4ade80' : '#f87171', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <span style={{ color: '#0B1F3B', fontSize: '13px', fontWeight: '900' }}>{isCorrectOpt ? '✓' : '✗'}</span>
                 </div>
               )}
               {isAnswered && (
-                <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '4px 7px', background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%)' }}>
-                  <span style={{ fontSize: '10px', fontWeight: '700', color: isCorrectOpt ? '#4ade80' : isSelected ? '#f87171' : 'rgba(255,255,255,0.6)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', display: 'block' }}>{getName(opt)}</span>
+                <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '5px 8px', background: 'linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 100%)' }}>
+                  <span style={{ fontSize: '10px', fontWeight: '700', color: isCorrectOpt ? '#4ade80' : isSelected ? '#f87171' : 'rgba(255,255,255,0.5)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', display: 'block' }}>{getName(opt)}</span>
                 </div>
               )}
             </button>
@@ -397,6 +409,179 @@ export default function FlagQuiz() {
       </div>
     )
 
+    // ── MOBILE layout ──────────────────────────────────────────────────────
+    if (isMobile) {
+      return (
+        <div style={{
+          backgroundColor: '#0B1F3B',
+          height: 'calc(100dvh - 60px)',
+          fontFamily: 'var(--font-body)',
+          display: 'flex', flexDirection: 'column',
+          overflow: 'hidden',
+        }}>
+          {/* ── Top bar: lives · timer · score · quit ── */}
+          <div style={{
+            display: 'flex', alignItems: 'center',
+            padding: '10px 14px 6px',
+            gap: '8px', flexShrink: 0,
+          }}>
+            {/* Lives */}
+            <div style={{ display: 'flex', gap: '3px' }}>
+              {Array.from({ length: MAX_LIVES }).map((_, i) => (
+                <svg key={i} width="18" height="18" viewBox="0 0 24 24" fill={i < lives ? '#ef4444' : 'rgba(255,255,255,0.15)'}>
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+              ))}
+            </div>
+
+            {/* Spacer */}
+            <div style={{ flex: 1 }} />
+
+            {/* Streak — only when active */}
+            {streak > 0 && (
+              <div style={{ backgroundColor: 'rgba(254,177,47,0.15)', border: '1px solid rgba(254,177,47,0.3)', borderRadius: '20px', padding: '3px 10px', fontSize: '13px', fontWeight: '800', color: '#FEB12F', display: 'flex', alignItems: 'center', gap: '3px' }}>
+                🔥 {streak}
+              </div>
+            )}
+
+            {/* Score */}
+            <div style={{ position: 'relative' }}>
+              <div style={{ backgroundColor: 'rgba(74,222,128,0.12)', border: '1px solid rgba(74,222,128,0.2)', borderRadius: '20px', padding: '3px 12px', fontSize: '14px', fontWeight: '900', color: '#4ade80' }}>
+                {score.toLocaleString()}
+              </div>
+              {lastPts && (
+                <span style={{ position: 'absolute', top: '-20px', left: '50%', fontSize: '13px', fontWeight: '900', color: '#4ade80', animation: 'floatUp 1.5s ease-out forwards', whiteSpace: 'nowrap', pointerEvents: 'none' }}>
+                  +{lastPts}
+                </span>
+              )}
+            </div>
+
+            {/* Timer */}
+            <div style={{ backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '20px', padding: '3px 12px', fontSize: '14px', fontWeight: '900', color: timerColor, minWidth: '44px', textAlign: 'center', fontVariantNumeric: 'tabular-nums' }}>
+              {timer}s
+            </div>
+
+            {/* Quit */}
+            <button onClick={() => setShowQuitConfirm(true)} style={{ width: '30px', height: '30px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', fontSize: '14px', color: 'rgba(255,255,255,0.6)' }}>
+              ✕
+            </button>
+          </div>
+
+          {/* ── Timer bar ── */}
+          <div style={{ height: '3px', backgroundColor: 'rgba(255,255,255,0.08)', flexShrink: 0, margin: '0 14px' }}>
+            <div style={{ height: '100%', width: `${timerPct}%`, backgroundColor: timerColor, transition: 'width 1s linear, background-color 0.3s', borderRadius: '99px' }} />
+          </div>
+
+          {/* ── Question label ── */}
+          <div style={{ padding: '10px 14px 6px', flexShrink: 0 }}>
+            <p style={{ margin: 0, fontSize: '11px', fontWeight: '700', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', letterSpacing: '1px' }}>
+              {qMode === 'name' ? t('Which country?', 'Quel pays ?') : t('Which flag?', 'Quel drapeau ?')}
+            </p>
+          </div>
+
+          {/* ── Stimulus — flag or country name, with feedback overlay ── */}
+          <div style={{ flex: '0 0 auto', padding: '0 14px 10px', flexShrink: 0 }}>
+            {qMode === 'name' ? (
+              <div style={{
+                position: 'relative',
+                width: '100%', aspectRatio: '16/9',
+                backgroundColor: '#1a2a40', borderRadius: '16px',
+                overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                boxShadow: isAnswered
+                  ? `0 0 0 3px ${isCorrectAnswer ? '#4ade80' : '#f87171'}, 0 4px 24px rgba(0,0,0,0.3)`
+                  : '0 4px 24px rgba(0,0,0,0.3)',
+                transition: 'box-shadow 0.15s',
+                animation: 'popIn 0.2s ease',
+              }}>
+                <img src={`https://flagcdn.com/w640/${correct.code}.png`} alt="?" style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', padding: '16px' }} />
+                {/* Feedback overlay */}
+                {isAnswered && (
+                  <div style={{
+                    position: 'absolute', inset: 0,
+                    backgroundColor: isCorrectAnswer ? 'rgba(74,222,128,0.15)' : 'rgba(248,113,113,0.15)',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    animation: 'popIn 0.15s ease',
+                  }}>
+                    <div style={{
+                      backgroundColor: 'rgba(0,0,0,0.45)',
+                      borderRadius: '12px', padding: '8px 18px',
+                    }}>
+                      <span style={{ fontSize: '14px', fontWeight: '800', color: isCorrectAnswer ? '#4ade80' : '#f87171' }}>
+                        {answered.selected === null
+                          ? t("Time's up!", 'Temps écoulé !')
+                          : isCorrectAnswer
+                          ? (streak > 1 ? `${t('Correct!', 'Correct !')} 🔥×${streak}` : t('Correct!', 'Correct !'))
+                          : `${t('It was', "C'était")} ${getName(correct)}`}
+                      </span>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div style={{
+                position: 'relative',
+                width: '100%', padding: '20px 24px',
+                backgroundColor: isAnswered
+                  ? (isCorrectAnswer ? 'rgba(74,222,128,0.1)' : 'rgba(248,113,113,0.1)')
+                  : 'rgba(255,255,255,0.06)',
+                borderRadius: '16px',
+                border: `1px solid ${isAnswered ? (isCorrectAnswer ? 'rgba(74,222,128,0.4)' : 'rgba(248,113,113,0.4)') : 'rgba(255,255,255,0.08)'}`,
+                display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px',
+                boxShadow: '0 4px 24px rgba(0,0,0,0.2)',
+                transition: 'all 0.15s',
+                animation: 'popIn 0.2s ease',
+              }}>
+                {isAnswered && (
+                  <div style={{ textAlign: 'center' }}>
+                    <span style={{ fontSize: '28px', fontWeight: '900', color: 'white', letterSpacing: '-0.5px' }}>{getName(correct)}</span>
+                    {isAnswered && !isCorrectAnswer && answered.selected !== null && (
+                      <div style={{ fontSize: '12px', color: '#f87171', fontWeight: '700', marginTop: '4px' }}>
+                        {t('It was', "C'était")} {getName(correct)}
+                      </div>
+                    )}
+                  </div>
+                )}
+                {!isAnswered && (
+                  <span style={{ fontSize: '28px', fontWeight: '900', color: 'white', letterSpacing: '-0.5px', textAlign: 'center' }}>{getName(correct)}</span>
+                )}
+              </div>
+            )}
+          </div>
+
+          {/* ── Answer options ── */}
+          <div style={{ flex: 1, padding: '0 14px', paddingBottom: 'max(14px, env(safe-area-inset-bottom))', overflowY: 'auto' }}>
+            {renderOptions()}
+          </div>
+
+          {/* ── Quit confirm bottom sheet ── */}
+          {showQuitConfirm && (
+            <div style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.6)', zIndex: 100, display: 'flex', alignItems: 'flex-end' }}>
+              <div style={{ width: '100%', backgroundColor: 'white', borderRadius: '20px 20px 0 0', padding: '24px 20px', paddingBottom: 'max(24px, env(safe-area-inset-bottom))' }}>
+                <div style={{ width: '36px', height: '4px', backgroundColor: '#e2e8f0', borderRadius: '99px', margin: '0 auto 20px' }} />
+                <h3 style={{ margin: '0 0 8px', fontSize: '20px', fontWeight: '900', color: '#0B1F3B', textAlign: 'center' }}>
+                  {t('Quit the game?', 'Quitter la partie ?')}
+                </h3>
+                <p style={{ margin: '0 0 24px', fontSize: '14px', color: '#64748b', lineHeight: 1.6, textAlign: 'center' }}>
+                  {t(`Your score of ${score.toLocaleString()} pts will be saved.`, `Ton score de ${score.toLocaleString()} pts sera sauvegardé.`)}
+                </p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  <button onClick={() => { setShowQuitConfirm(false); quitGame() }}
+                    style={{ width: '100%', padding: '16px', backgroundColor: '#ef4444', color: 'white', border: 'none', borderRadius: '14px', fontSize: '16px', fontWeight: '900', cursor: 'pointer' }}>
+                    {t('Quit & save', 'Quitter et sauvegarder')}
+                  </button>
+                  <button onClick={() => setShowQuitConfirm(false)}
+                    style={{ width: '100%', padding: '13px', backgroundColor: 'transparent', color: '#0B1F3B', border: '1.5px solid #e2e8f0', borderRadius: '14px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
+                    {t('Keep playing', 'Continuer à jouer')}
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      )
+    }
+
+    // ── DESKTOP layout ────────────────────────────────────────────────────
     const hud = (
       <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
         <div style={{ backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '12px', padding: '8px 14px', textAlign: 'center' }}>
@@ -431,7 +616,7 @@ export default function FlagQuiz() {
           )}
         </div>
         <div style={{ position: 'relative' }}>
-          <button onClick={quitGame} onMouseEnter={() => setShowQuitTip(true)} onMouseLeave={() => setShowQuitTip(false)}
+          <button onClick={() => setShowQuitConfirm(true)} onMouseEnter={() => setShowQuitTip(true)} onMouseLeave={() => setShowQuitTip(false)}
             style={{ padding: '8px 12px', backgroundColor: 'transparent', color: '#ef4444', border: '1.5px solid rgba(239,68,68,0.4)', borderRadius: '10px', fontSize: '13px', fontWeight: '600', cursor: 'pointer', whiteSpace: 'nowrap' }}>
             🚪
           </button>
@@ -471,29 +656,6 @@ export default function FlagQuiz() {
       </p>
     )
 
-    if (isMobile) {
-      return (
-        <div style={{ backgroundColor: '#0B1F3B', minHeight: '100dvh', fontFamily: 'var(--font-body)', display: 'flex', flexDirection: 'column', padding: '16px 14px 24px' }}>
-          {hud}
-          {timerBar}
-          <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
-            {qMode === 'name' ? (
-              <div style={{ width: '100%', maxWidth: '340px', aspectRatio: '3/2', backgroundColor: '#1a2a40', borderRadius: '16px', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '12px', boxShadow: '0 8px 32px rgba(0,0,0,0.3)' }}>
-                <img src={`https://flagcdn.com/w640/${correct.code}.png`} alt="?" style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }} />
-              </div>
-            ) : (
-              <div style={{ backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '18px', padding: '24px 36px', boxShadow: '0 8px 32px rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.1)' }}>
-                <span style={{ fontSize: '32px', fontWeight: '900', color: 'white', letterSpacing: '-0.5px' }}>{getName(correct)}</span>
-              </div>
-            )}
-          </div>
-          {feedback}
-          {questionLabel}
-          {renderOptions()}
-        </div>
-      )
-    }
-
     return (
       <div style={{ backgroundColor: '#0B1F3B', minHeight: 'calc(100dvh - 60px)', fontFamily: 'var(--font-body)', padding: '24px 24px 40px' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
@@ -520,6 +682,29 @@ export default function FlagQuiz() {
               {renderOptions()}
             </div>
           </div>
+
+          {/* Desktop quit confirm modal */}
+          {showQuitConfirm && (
+            <div style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(11,31,59,0.7)', backdropFilter: 'blur(4px)', zIndex: 100, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px' }}>
+              <div style={{ backgroundColor: 'white', borderRadius: '20px', padding: '28px', maxWidth: '380px', width: '100%', textAlign: 'center', boxShadow: '0 24px 60px rgba(0,0,0,0.2)' }}>
+                <div style={{ fontSize: '36px', marginBottom: '12px' }}>🚪</div>
+                <h3 style={{ margin: '0 0 8px', fontSize: '20px', fontWeight: '900', color: '#0B1F3B' }}>
+                  {t('Quit the game?', 'Quitter la partie ?')}
+                </h3>
+                <p style={{ margin: '0 0 24px', fontSize: '14px', color: '#64748b', lineHeight: 1.6 }}>
+                  {t(`Your score of ${score.toLocaleString()} pts will be saved.`, `Ton score de ${score.toLocaleString()} pts sera sauvegardé.`)}
+                </p>
+                <div style={{ display: 'flex', gap: '10px' }}>
+                  <button onClick={() => setShowQuitConfirm(false)} style={{ flex: 1, padding: '12px', backgroundColor: '#F4F1E6', color: '#0B1F3B', border: '1px solid #e2e8f0', borderRadius: '12px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
+                    {t('Keep playing', 'Continuer')}
+                  </button>
+                  <button onClick={() => { setShowQuitConfirm(false); quitGame() }} style={{ flex: 1, padding: '12px', backgroundColor: '#ef4444', color: 'white', border: 'none', borderRadius: '12px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
+                    {t('Quit', 'Quitter')}
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     )
@@ -533,54 +718,87 @@ export default function FlagQuiz() {
     const wrong = history.filter(h => !h.isCorrect)
 
     return (
-      <div style={{ backgroundColor: '#F4F1E6', minHeight: 'calc(100dvh - 60px)', fontFamily: 'var(--font-body)', padding: '32px 16px 60px' }}>
-        <div style={{ maxWidth: '520px', margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: '28px' }}>
-            <div style={{ fontSize: '52px', marginBottom: '10px' }}>{pct >= 80 ? '🏆' : pct >= 50 ? '🎯' : '💪'}</div>
-            <h2 style={{ margin: '0 0 4px', fontSize: '26px', fontWeight: '900', color: '#0B1F3B' }}>{t('Game Over', 'Partie terminée')}</h2>
-            <p style={{ margin: 0, color: '#64748b', fontSize: '14px' }}>{total} {t('questions', 'questions')}</p>
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '10px', marginBottom: '20px' }}>
-            {[
-              { label: t('Correct', 'Corrects'),            value: correct,                           color: '#426A5A', bg: '#f0fdf4' },
-              { label: t('Best streak', 'Meilleure série'), value: `🔥 ${bestStreak}`,                color: '#806D40', bg: '#fefce8' },
-              { label: t('Score', 'Score'),                 value: `${pct}%`,                         color: '#0B1F3B', bg: 'white' },
-              { label: t('Total Points', 'Points totaux'),  value: `⭐ ${bestScore.toLocaleString()}`, color: '#166534', bg: '#f0fdf4' },
-            ].map((s, i) => (
-              <div key={i} style={{ backgroundColor: s.bg, borderRadius: '10px', border: '1px solid #e2e8f0', padding: '14px 10px', textAlign: 'center' }}>
-                <div style={{ fontSize: '20px', fontWeight: '900', color: s.color }}>{s.value}</div>
-                <div style={{ fontSize: '10px', fontWeight: '700', color: '#94a3b8', marginTop: '3px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{s.label}</div>
-              </div>
-            ))}
-          </div>
-          {wrong.length > 0 && (
-            <div style={{ backgroundColor: 'white', borderRadius: '14px', border: '1px solid #e2e8f0', padding: '18px', marginBottom: '20px' }}>
-              <p style={{ margin: '0 0 14px', fontSize: '12px', fontWeight: '800', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.8px' }}>
-                {t('Missed', 'Manqués')} ({wrong.length})
+      <div style={{
+        backgroundColor: '#F4F1E6',
+        height: 'calc(100dvh - 60px)',
+        fontFamily: 'var(--font-body)',
+        display: 'flex', flexDirection: 'column',
+        overflow: 'hidden',
+      }}>
+
+        {/* ── Fixed: header + stats ── */}
+        <div style={{ flexShrink: 0, padding: '20px 16px 0' }}>
+          <div style={{ maxWidth: '520px', margin: '0 auto' }}>
+
+            {/* Header */}
+            <div style={{ textAlign: 'center', marginBottom: '16px' }}>
+              <h2 style={{ margin: '0 0 2px', fontSize: '22px', fontWeight: '900', color: '#0B1F3B', letterSpacing: '-0.5px' }}>
+                {t('Game Over', 'Partie terminée')}
+              </h2>
+              <p style={{ margin: 0, color: '#94a3b8', fontSize: '13px' }}>
+                {total} {t('questions', 'questions')}
               </p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                {wrong.map((h, i) => (
-                  <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '9px 11px', backgroundColor: '#fafafa', borderRadius: '8px', border: '1px solid #f0f0f0' }}>
-                    <img src={`https://flagcdn.com/w80/${h.question.correct.code}.png`} alt="" style={{ width: '44px', height: '30px', objectFit: 'contain', borderRadius: '4px', backgroundColor: '#e8e4d9', flexShrink: 0, padding: '2px' }} />
-                    <div style={{ flex: 1, minWidth: 0 }}>
-                      <div style={{ fontSize: '13px', fontWeight: '700', color: '#0B1F3B' }}>{getName(h.question.correct)}</div>
-                      <div style={{ fontSize: '11px', color: h.selected ? '#dc2626' : '#f59e0b', marginTop: '1px' }}>
-                        {h.selected ? `${t('You said:', 'Ta réponse :')} ${getName(h.selected)}` : `⏱ ${t('No answer', 'Temps écoulé')}`}
+            </div>
+
+            {/* Stats grid */}
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginBottom: '12px' }}>
+              {[
+                { label: t('Correct', 'Corrects'),            value: correct,                           color: '#426A5A', bg: '#f0fdf4', border: '#bbf7d0' },
+                { label: t('Best streak', 'Meilleure série'), value: `🔥 ${bestStreak}`,                color: '#806D40', bg: '#fefce8', border: '#fde68a' },
+                { label: t('Score', 'Score'),                 value: `${pct}%`,                         color: '#0B1F3B', bg: 'white',   border: '#e2e8f0' },
+                { label: t('Total Points', 'Points totaux'),  value: `⭐ ${bestScore.toLocaleString()}`, color: '#166534', bg: '#f0fdf4', border: '#bbf7d0' },
+              ].map((s, i) => (
+                <div key={i} style={{ backgroundColor: s.bg, borderRadius: '14px', border: `1px solid ${s.border}`, padding: '14px 12px', textAlign: 'center' }}>
+                  <div style={{ fontSize: '20px', fontWeight: '900', color: s.color, letterSpacing: '-0.5px' }}>{s.value}</div>
+                  <div style={{ fontSize: '10px', fontWeight: '700', color: '#94a3b8', marginTop: '4px', textTransform: 'uppercase', letterSpacing: '0.6px' }}>{s.label}</div>
+                </div>
+              ))}
+            </div>
+
+          </div>
+        </div>
+
+        {/* ── Scrollable: missed answers only ── */}
+        {wrong.length > 0 && (
+          <div style={{ flex: 1, minHeight: 0, padding: '0 16px', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+            <div style={{ maxWidth: '520px', margin: '0 auto', width: '100%', flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', backgroundColor: 'white', borderRadius: '14px', border: '1px solid #e2e8f0', overflow: 'hidden' }}>
+              <div style={{ padding: '12px 16px 8px', borderBottom: '1px solid #f1f5f9', flexShrink: 0 }}>
+                <p style={{ margin: 0, fontSize: '11px', fontWeight: '800', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.8px' }}>
+                  {t('Missed', 'Manqués')} ({wrong.length})
+                </p>
+              </div>
+              <div style={{ flex: 1, overflowY: 'auto', padding: '8px 12px' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                  {wrong.map((h, i) => (
+                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '10px 8px', borderRadius: '10px', backgroundColor: i % 2 === 0 ? '#fafafa' : 'white' }}>
+                      <img src={`https://flagcdn.com/w80/${h.question.correct.code}.png`} alt=""
+                        style={{ width: '40px', height: '27px', objectFit: 'contain', borderRadius: '4px', backgroundColor: '#e8e4d9', flexShrink: 0, padding: '2px', border: '1px solid #e2e8f0' }} />
+                      <div style={{ flex: 1, minWidth: 0 }}>
+                        <div style={{ fontSize: '13px', fontWeight: '700', color: '#0B1F3B', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                          {getName(h.question.correct)}
+                        </div>
+                        <div style={{ fontSize: '11px', color: h.selected ? '#dc2626' : '#f59e0b', marginTop: '1px' }}>
+                          {h.selected
+                            ? `${t('You said:', 'Ta réponse :')} ${getName(h.selected)}`
+                            : `⏱ ${t('No answer', 'Temps écoulé')}`}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
-          )}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            <button onClick={startGame} style={{ width: '100%', padding: '15px', backgroundColor: '#0B1F3B', color: 'white', border: 'none', borderRadius: '10px', fontSize: '16px', fontWeight: '900', cursor: 'pointer' }}>
-              {t('Play Again', 'Rejouer')} 🔄
-            </button>
-            <button onClick={() => setScreen(SCREEN.SETUP)} style={{ width: '100%', padding: '13px', backgroundColor: 'white', color: '#0B1F3B', border: '1.5px solid #e2e8f0', borderRadius: '10px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
-              {t('Change settings', 'Modifier les réglages')}
-            </button>
           </div>
+        )}
+
+        {/* ── Sticky buttons ── */}
+        <div style={{ flexShrink: 0, padding: '12px 16px', paddingBottom: 'max(12px, env(safe-area-inset-bottom))', background: '#F4F1E6', borderTop: '1px solid #e2e8f0', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <button onClick={startGame} style={{ width: '100%', padding: '16px', backgroundColor: '#0B1F3B', color: 'white', border: 'none', borderRadius: '14px', fontSize: '16px', fontWeight: '900', cursor: 'pointer', letterSpacing: '-0.3px' }}>
+            {t('Play Again', 'Rejouer')}
+          </button>
+          <button onClick={() => setScreen(SCREEN.SETUP)} style={{ width: '100%', padding: '13px', backgroundColor: 'transparent', color: '#0B1F3B', border: '1.5px solid #cbd5e1', borderRadius: '14px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
+            {t('Change settings', 'Modifier les réglages')}
+          </button>
         </div>
       </div>
     )

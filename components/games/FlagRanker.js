@@ -72,6 +72,7 @@ export default function FlagRanker() {
   const [dragging, setDragging]         = useState(false)
   const [openDragIdx, setOpenDragIdx]   = useState(null)
   const [showHelp, setShowHelp]         = useState(false)
+  const [showQuitConfirm, setShowQuitConfirm] = useState(false)
   const [allCountries, setAllCountries] = useState([])
   const [dataLoading, setDataLoading]   = useState(true)
   const [isMobile, setIsMobile]         = useState(false)
@@ -315,18 +316,37 @@ export default function FlagRanker() {
   if (screen === 'end') {
     const max  = 1000
     const pct  = isMin ? Math.round((1 - totalScore / max) * 100) : Math.round((totalScore / max) * 100)
-    const grade = pct >= 90 ? '🏆' : pct >= 70 ? '🥇' : pct >= 50 ? '🥈' : pct >= 30 ? '🥉' : '🎯'
     return (
-      <div style={S.page}>
-        <div style={S.card}>
-          <div style={{ fontSize: '56px', marginBottom: '12px' }}>{grade}</div>
-          <h1 style={S.title}>{t('Game Over!', 'Partie terminée !')}</h1>
-          <div style={{ fontSize: '52px', fontWeight: '900', color: '#0B1F3B', margin: '16px 0 4px', letterSpacing: '-2px' }}>{totalScore}</div>
-          <div style={{ fontSize: '14px', color: '#94a3b8', marginBottom: '28px' }}>/ {max} pts ({pct}%)</div>
-          <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <button onClick={() => setScreen('intro')} style={S.btnSec}>{t('Change mode', 'Changer de mode')}</button>
-            <button onClick={() => startGame(mode)} style={S.btn}>{t('Play again', 'Rejouer')}</button>
+      <div style={{ backgroundColor: '#F4F1E6', height: 'calc(100dvh - 60px)', fontFamily: 'var(--font-body, system-ui)', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+        <div style={{ flexShrink: 0, padding: '20px 16px 0' }}>
+          <div style={{ maxWidth: '480px', margin: '0 auto' }}>
+            <div style={{ textAlign: 'center', marginBottom: '16px' }}>
+              <h2 style={{ margin: '0 0 2px', fontSize: '22px', fontWeight: '900', color: '#0B1F3B', letterSpacing: '-0.5px' }}>{t('Game Over!', 'Partie terminée !')}</h2>
+              <p style={{ margin: 0, color: '#94a3b8', fontSize: '13px' }}>
+                {locale === 'fr' ? mode === 'maximize' ? 'Maximiser' : mode === 'minimize' ? 'Minimiser' : 'Ouvert' : mode === 'maximize' ? 'Maximize' : mode === 'minimize' ? 'Minimize' : 'Open'}
+              </p>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+              {[
+                { label: 'Score',                               value: `⭐ ${totalScore}`, color: '#0B1F3B', bg: 'white',   border: '#e2e8f0' },
+                { label: `/ ${max} pts`,                        value: `${pct}%`,         color: pct >= 70 ? '#166534' : '#806D40', bg: pct >= 70 ? '#f0fdf4' : '#fefce8', border: pct >= 70 ? '#bbf7d0' : '#fde68a' },
+              ].map((s, i) => (
+                <div key={i} style={{ backgroundColor: s.bg, borderRadius: '14px', border: `1px solid ${s.border}`, padding: '20px 12px', textAlign: 'center' }}>
+                  <div style={{ fontSize: '24px', fontWeight: '900', color: s.color }}>{s.value}</div>
+                  <div style={{ fontSize: '10px', fontWeight: '700', color: '#94a3b8', marginTop: '4px', textTransform: 'uppercase', letterSpacing: '0.6px' }}>{s.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
+        </div>
+        <div style={{ flex: 1 }} />
+        <div style={{ flexShrink: 0, padding: '12px 16px', paddingBottom: 'max(12px, env(safe-area-inset-bottom))', background: '#F4F1E6', borderTop: '1px solid #e2e8f0', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <button onClick={() => startGame(mode)} style={{ width: '100%', padding: '16px', backgroundColor: '#0B1F3B', color: 'white', border: 'none', borderRadius: '14px', fontSize: '16px', fontWeight: '900', cursor: 'pointer' }}>
+            {t('Play again', 'Rejouer')}
+          </button>
+          <button onClick={() => setScreen('intro')} style={{ width: '100%', padding: '13px', backgroundColor: 'transparent', color: '#0B1F3B', border: '1.5px solid #cbd5e1', borderRadius: '14px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
+            {t('Change mode', 'Changer de mode')}
+          </button>
         </div>
       </div>
     )
@@ -349,16 +369,19 @@ export default function FlagRanker() {
 
   // ── REVEAL ─────────────────────────────────────────────────────────────
   if (screen === 'reveal') return (
-    <div style={S.page}>
+    <div style={{ backgroundColor: '#F4F1E6', minHeight: 'calc(100dvh - 60px)', fontFamily: 'var(--font-body, system-ui)', paddingTop: '20px', paddingBottom: '32px' }}>
       <div style={{ maxWidth: '680px', margin: '0 auto', padding: '0 16px' }}>
         <div style={S.header}>
           <div>
             <div style={S.roundLabel}>{t(`Round ${round}`, `Manche ${round}`)}</div>
             <h2 style={S.pageTitle}>{t('Results', 'Résultats')}</h2>
           </div>
-          <div style={S.scorePill}>
-            <div style={{ fontSize: '22px', fontWeight: '900', color: 'white', letterSpacing: '-0.5px' }}>{roundScore}</div>
-            <div style={{ fontSize: '10px', color: '#9EB7E5' }}>pts</div>
+          <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+            <div style={S.scorePill}>
+              <div style={{ fontSize: '22px', fontWeight: '900', color: 'white', letterSpacing: '-0.5px' }}>{roundScore}</div>
+              <div style={{ fontSize: '10px', color: '#9EB7E5' }}>pts</div>
+            </div>
+            <button onClick={() => setShowQuitConfirm(true)} style={{ width: '32px', height: '32px', borderRadius: '50%', backgroundColor: 'rgba(11,31,59,0.08)', border: '1px solid #e2e8f0', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', fontSize: '13px', color: '#94a3b8' }}>✕</button>
           </div>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '28px' }}>
@@ -389,21 +412,49 @@ export default function FlagRanker() {
           </div>
         )}
       </div>
+
+      {/* Quit confirm bottom sheet */}
+      {showQuitConfirm && (
+        <div style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.6)', zIndex: 100, display: 'flex', alignItems: 'flex-end' }}>
+          <div style={{ width: '100%', backgroundColor: 'white', borderRadius: '20px 20px 0 0', padding: '24px 20px', paddingBottom: 'max(24px, env(safe-area-inset-bottom))' }}>
+            <div style={{ width: '36px', height: '4px', backgroundColor: '#e2e8f0', borderRadius: '99px', margin: '0 auto 20px' }} />
+            <h3 style={{ margin: '0 0 8px', fontSize: '20px', fontWeight: '900', color: '#0B1F3B', textAlign: 'center' }}>
+              {t('Quit the game?', 'Quitter la partie ?')}
+            </h3>
+            <p style={{ margin: '0 0 24px', fontSize: '14px', color: '#64748b', lineHeight: 1.6, textAlign: 'center' }}>
+              {t(`Your score of ${totalScore} pts will be saved.`, `Ton score de ${totalScore} pts sera sauvegardé.`)}
+            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              <button onClick={() => { setShowQuitConfirm(false); setScreen('end') }}
+                style={{ width: '100%', padding: '16px', backgroundColor: '#ef4444', color: 'white', border: 'none', borderRadius: '14px', fontSize: '16px', fontWeight: '900', cursor: 'pointer' }}>
+                {t('Quit & save', 'Quitter et sauvegarder')}
+              </button>
+              <button onClick={() => setShowQuitConfirm(false)}
+                style={{ width: '100%', padding: '13px', backgroundColor: 'transparent', color: '#0B1F3B', border: '1.5px solid #e2e8f0', borderRadius: '14px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
+                {t('Keep playing', 'Continuer à jouer')}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 
   // ── PLAYING — OPEN ─────────────────────────────────────────────────────
   if (screen === 'playing' && mode === 'open') return (
-    <div style={S.page}>
+    <div style={{ backgroundColor: '#F4F1E6', minHeight: 'calc(100dvh - 60px)', fontFamily: 'var(--font-body, system-ui)', paddingTop: '20px', paddingBottom: '32px' }}>
       <div style={{ maxWidth: '560px', margin: '0 auto', padding: '0 16px' }}>
         <div style={S.header}>
           <div>
             <div style={S.roundLabel}>{t(`Round ${round}`, `Manche ${round}`)}</div>
             <h2 style={S.pageTitle}>{t('Rank all 5 flags', 'Classe les 5 drapeaux')}</h2>
           </div>
-          <div style={S.scorePill}>
-            <div style={{ fontSize: '20px', fontWeight: '900', color: 'white' }}>{totalScore}</div>
-            <div style={{ fontSize: '10px', color: '#9EB7E5' }}>total</div>
+          <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+            <div style={S.scorePill}>
+              <div style={{ fontSize: '20px', fontWeight: '900', color: 'white' }}>{totalScore}</div>
+              <div style={{ fontSize: '10px', color: '#9EB7E5' }}>total</div>
+            </div>
+            <button onClick={() => setShowQuitConfirm(true)} style={{ width: '32px', height: '32px', borderRadius: '50%', backgroundColor: 'rgba(11,31,59,0.08)', border: '1px solid #e2e8f0', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', fontSize: '13px', color: '#94a3b8' }}>✕</button>
           </div>
         </div>
         <div style={{ backgroundColor: '#0B1F3B', borderRadius: '12px', padding: '12px 16px', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '12px' }}>
@@ -453,12 +504,37 @@ export default function FlagRanker() {
           ✓ {t('Validate ranking', 'Valider le classement')}
         </button>
       </div>
+
+      {/* Quit confirm bottom sheet */}
+      {showQuitConfirm && (
+        <div style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.6)', zIndex: 100, display: 'flex', alignItems: 'flex-end' }}>
+          <div style={{ width: '100%', backgroundColor: 'white', borderRadius: '20px 20px 0 0', padding: '24px 20px', paddingBottom: 'max(24px, env(safe-area-inset-bottom))' }}>
+            <div style={{ width: '36px', height: '4px', backgroundColor: '#e2e8f0', borderRadius: '99px', margin: '0 auto 20px' }} />
+            <h3 style={{ margin: '0 0 8px', fontSize: '20px', fontWeight: '900', color: '#0B1F3B', textAlign: 'center' }}>
+              {t('Quit the game?', 'Quitter la partie ?')}
+            </h3>
+            <p style={{ margin: '0 0 24px', fontSize: '14px', color: '#64748b', lineHeight: 1.6, textAlign: 'center' }}>
+              {t(`Your score of ${totalScore} pts will be saved.`, `Ton score de ${totalScore} pts sera sauvegardé.`)}
+            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              <button onClick={() => { setShowQuitConfirm(false); setScreen('end') }}
+                style={{ width: '100%', padding: '16px', backgroundColor: '#ef4444', color: 'white', border: 'none', borderRadius: '14px', fontSize: '16px', fontWeight: '900', cursor: 'pointer' }}>
+                {t('Quit & save', 'Quitter et sauvegarder')}
+              </button>
+              <button onClick={() => setShowQuitConfirm(false)}
+                style={{ width: '100%', padding: '13px', backgroundColor: 'transparent', color: '#0B1F3B', border: '1.5px solid #e2e8f0', borderRadius: '14px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
+                {t('Keep playing', 'Continuer à jouer')}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 
   // ── PLAYING — MINIMIZE / MAXIMIZE ──────────────────────────────────────
   return (
-    <div style={S.page}>
+    <div style={{ backgroundColor: '#F4F1E6', minHeight: 'calc(100dvh - 60px)', fontFamily: 'var(--font-body, system-ui)', paddingTop: '20px', paddingBottom: '32px' }}>
       <div style={{ maxWidth: '860px', margin: '0 auto', padding: '0 16px' }}>
         <div style={S.header}>
           <div>
@@ -469,9 +545,12 @@ export default function FlagRanker() {
                 : t('Drag & drop the flag in a slot', 'Glisse-dépose le drapeau dans un slot')}
             </h2>
           </div>
-          <div style={S.scorePill}>
-            <div style={{ fontSize: '20px', fontWeight: '900', color: 'white', letterSpacing: '-0.5px' }}>{totalScore}</div>
-            <div style={{ fontSize: '10px', color: '#9EB7E5' }}>total</div>
+          <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+            <div style={S.scorePill}>
+              <div style={{ fontSize: '20px', fontWeight: '900', color: 'white', letterSpacing: '-0.5px' }}>{totalScore}</div>
+              <div style={{ fontSize: '10px', color: '#9EB7E5' }}>total</div>
+            </div>
+            <button onClick={() => setShowQuitConfirm(true)} style={{ width: '32px', height: '32px', borderRadius: '50%', backgroundColor: 'rgba(11,31,59,0.08)', border: '1px solid #e2e8f0', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', fontSize: '13px', color: '#94a3b8' }}>✕</button>
           </div>
         </div>
         <div style={{ display: 'flex', gap: '6px', marginBottom: '22px' }}>
@@ -608,6 +687,31 @@ export default function FlagRanker() {
           </div>
         )}
       </div>
+
+      {/* Quit confirm bottom sheet */}
+      {showQuitConfirm && (
+        <div style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.6)', zIndex: 100, display: 'flex', alignItems: 'flex-end' }}>
+          <div style={{ width: '100%', backgroundColor: 'white', borderRadius: '20px 20px 0 0', padding: '24px 20px', paddingBottom: 'max(24px, env(safe-area-inset-bottom))' }}>
+            <div style={{ width: '36px', height: '4px', backgroundColor: '#e2e8f0', borderRadius: '99px', margin: '0 auto 20px' }} />
+            <h3 style={{ margin: '0 0 8px', fontSize: '20px', fontWeight: '900', color: '#0B1F3B', textAlign: 'center' }}>
+              {t('Quit the game?', 'Quitter la partie ?')}
+            </h3>
+            <p style={{ margin: '0 0 24px', fontSize: '14px', color: '#64748b', lineHeight: 1.6, textAlign: 'center' }}>
+              {t(`Your score of ${totalScore} pts will be saved.`, `Ton score de ${totalScore} pts sera sauvegardé.`)}
+            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              <button onClick={() => { setShowQuitConfirm(false); setScreen('end') }}
+                style={{ width: '100%', padding: '16px', backgroundColor: '#ef4444', color: 'white', border: 'none', borderRadius: '14px', fontSize: '16px', fontWeight: '900', cursor: 'pointer' }}>
+                {t('Quit & save', 'Quitter et sauvegarder')}
+              </button>
+              <button onClick={() => setShowQuitConfirm(false)}
+                style={{ width: '100%', padding: '13px', backgroundColor: 'transparent', color: '#0B1F3B', border: '1.5px solid #e2e8f0', borderRadius: '14px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
+                {t('Keep playing', 'Continuer à jouer')}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

@@ -251,6 +251,7 @@ export default function FlagDrawingV2() {
   const [undoCount, setUndoCount] = useState(0)
   const [showShapesDrawer, setShowShapesDrawer] = useState(false)
   // showShapesDrawer kept for desktop compat but unused on mobile now
+  const [showQuitConfirm, setShowQuitConfirm] = useState(false)
 
   const cfg = {
     easy:    { showName: true  },
@@ -337,6 +338,11 @@ export default function FlagDrawingV2() {
     }, { onConflict: 'user_id,mode' })
     await logScore(score)
     setDiffStats(prev => ({ ...prev, [diff]: { best: score } }))
+  }
+
+  async function quitGame() {
+    await saveDiffScore(difficulty, totalScore)
+    setScreen(SCREEN.GAMEOVER)
   }
 
   const loadFlag = useCallback((key) => {
@@ -845,18 +851,25 @@ export default function FlagDrawingV2() {
     if (isMobile) {
       return (
         <div style={{ height: 'calc(100dvh - 60px)', background: colors.bg, fontFamily: "'Roboto', sans-serif", display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-          <div style={{ background: colors.card, borderBottom: `1px solid ${colors.border}`, padding: '7px 12px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexShrink: 0 }}>
-            <div style={{ display: 'flex', gap: '3px' }}>
+          <div style={{ background: colors.card, borderBottom: `1px solid ${colors.border}`, padding: '8px 14px', display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
+            {/* Lives */}
+            <div style={{ display: 'flex', gap: '2px' }}>
               {Array.from({length: MAX_LIVES}).map((_, i) => (
-                <span key={i} style={{ fontSize: '18px', opacity: i < lives ? 1 : 0.2 }}>❤️</span>
+                <span key={i} style={{ fontSize: '16px', opacity: i < lives ? 1 : 0.2 }}>❤️</span>
               ))}
             </div>
+            {/* Flag name */}
             {cfg.showName && flagName && (
-              <span style={{ fontSize: '15px', fontWeight: '800', color: colors.navy, fontFamily: "'Roboto Slab', serif" }}>{flagName}</span>
+              <span style={{ flex: 1, fontSize: '14px', fontWeight: '800', color: colors.navy, textAlign: 'center', fontFamily: "'Roboto Slab', serif", whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{flagName}</span>
             )}
-            <div style={{ background: colors.navy, color: '#FFF', borderRadius: '99px', padding: '4px 10px', fontSize: '12px', fontWeight: '700' }}>
-              {streak > 1 ? `🔥${streak} · ` : ''}⭐{totalScore}
+            {(!cfg.showName || !flagName) && <div style={{ flex: 1 }} />}
+            {/* Streak + score */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              {streak > 1 && <span style={{ fontSize: '12px', fontWeight: '800', color: '#E65C00' }}>🔥{streak}</span>}
+              <div style={{ background: colors.navy, color: '#FFF', borderRadius: '99px', padding: '3px 10px', fontSize: '12px', fontWeight: '700' }}>⭐{totalScore}</div>
             </div>
+            {/* Quit button */}
+            <button onClick={() => setShowQuitConfirm(true)} style={{ width: '28px', height: '28px', borderRadius: '50%', backgroundColor: 'rgba(11,31,59,0.08)', border: '1px solid rgba(11,31,59,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', fontSize: '12px', color: colors.muted, flexShrink: 0 }}>✕</button>
           </div>
 
           <div style={{ flex: 1, minHeight: 0, position: 'relative', margin: '8px 12px 0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -970,6 +983,31 @@ export default function FlagDrawingV2() {
           </div>
 
           <canvas ref={refCanvasRef} style={{ display: 'none' }} />
+
+          {/* Quit confirm bottom sheet */}
+          {showQuitConfirm && (
+            <div style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.6)', zIndex: 100, display: 'flex', alignItems: 'flex-end' }}>
+              <div style={{ width: '100%', backgroundColor: 'white', borderRadius: '20px 20px 0 0', padding: '24px 20px', paddingBottom: 'max(24px, env(safe-area-inset-bottom))' }}>
+                <div style={{ width: '36px', height: '4px', backgroundColor: colors.border, borderRadius: '99px', margin: '0 auto 20px' }} />
+                <h3 style={{ margin: '0 0 8px', fontSize: '20px', fontWeight: '900', color: colors.navy, textAlign: 'center' }}>
+                  {t('Quit the game?', 'Quitter la partie ?')}
+                </h3>
+                <p style={{ margin: '0 0 24px', fontSize: '14px', color: colors.muted, lineHeight: 1.6, textAlign: 'center' }}>
+                  {t(`Your score of ${totalScore} pts will be saved.`, `Ton score de ${totalScore} pts sera sauvegardé.`)}
+                </p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  <button onClick={() => { setShowQuitConfirm(false); quitGame() }}
+                    style={{ width: '100%', padding: '16px', backgroundColor: '#ef4444', color: 'white', border: 'none', borderRadius: '14px', fontSize: '16px', fontWeight: '900', cursor: 'pointer' }}>
+                    {t('Quit & save', 'Quitter et sauvegarder')}
+                  </button>
+                  <button onClick={() => setShowQuitConfirm(false)}
+                    style={{ width: '100%', padding: '13px', backgroundColor: 'transparent', color: colors.navy, border: `1.5px solid ${colors.border}`, borderRadius: '14px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
+                    {t('Keep drawing', 'Continuer à dessiner')}
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       )
     }
@@ -1063,51 +1101,51 @@ export default function FlagDrawingV2() {
   if (screen === SCREEN.RESULT) {
     const passed = score >= 70
     const scoreColor = score >= 90 ? '#16a34a' : score >= 70 ? '#ca8a04' : '#dc2626'
-    const canvasH = def ? Math.round(CANVAS_W / def.ratio) : 320
 
     return (
-      <div style={{ minHeight: '100vh', background: colors.bg, fontFamily: "'Roboto', sans-serif", padding: '24px 16px' }}>
-        <div style={{ maxWidth: '560px', margin: '0 auto' }}>
-          <div style={{ background: colors.card, borderRadius: '20px', padding: '32px', textAlign: 'center', marginBottom: '20px', boxShadow: '0 4px 20px rgba(11,31,59,0.1)' }}>
-            <div style={{ fontSize: '44px', marginBottom: '8px' }}>{score >= 90 ? '🏆' : score >= 70 ? '🎯' : '💪'}</div>
-            <h2 style={{ fontSize: '24px', fontWeight: '800', color: colors.navy, margin: '0 0 8px', fontFamily: "'Roboto Slab', serif" }}>{flagName}</h2>
-            <div style={{ fontSize: '52px', fontWeight: '900', color: scoreColor, lineHeight: 1 }}>{score}%</div>
-            {passed && lastPts && (
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: colors.navy, color: '#FFF', borderRadius: '20px', padding: '8px 18px', marginTop: '12px', fontWeight: '700', fontSize: '15px' }}>
-                ⭐ +{lastPts} pts
+      <div style={{ backgroundColor: colors.bg, height: 'calc(100dvh - 60px)', fontFamily: "'Roboto', sans-serif", display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+
+        {/* Fixed header */}
+        <div style={{ flexShrink: 0, padding: '20px 16px 0' }}>
+          <div style={{ maxWidth: '560px', margin: '0 auto' }}>
+            <div style={{ textAlign: 'center', marginBottom: '16px' }}>
+              <h2 style={{ margin: '0 0 4px', fontSize: '22px', fontWeight: '800', color: colors.navy, fontFamily: "'Roboto Slab', serif" }}>{flagName}</h2>
+              <div style={{ fontSize: '48px', fontWeight: '900', color: scoreColor, lineHeight: 1 }}>{score}%</div>
+              {passed && lastPts && (
+                <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', background: colors.navy, color: '#FFF', borderRadius: '20px', padding: '6px 14px', marginTop: '8px', fontWeight: '700', fontSize: '14px' }}>
+                  ⭐ +{lastPts} pts
+                </div>
+              )}
+              <div style={{ fontSize: '13px', color: colors.muted, marginTop: '8px' }}>
+                {passed ? t('Great job! Flag validated ✓', 'Bravo ! Drapeau validé ✓') : t('Keep trying! Aim for 70%+', 'Continue ! Vise 70%+')}
               </div>
-            )}
-            <div style={{ fontSize: '14px', color: colors.muted, marginTop: '10px' }}>
-              {passed ? t('Great job! Flag validated ✓', 'Bravo ! Drapeau validé ✓') : t('Keep trying! Aim for 70%+', 'Continue ! Vise 70%+')}
+            </div>
+
+            {/* Side by side comparison */}
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginBottom: '12px' }}>
+              {[
+                { label: t('YOUR DRAWING', 'VOTRE DESSIN'), src: snapshotUrl },
+                { label: t('REAL FLAG', 'VRAI DRAPEAU'), src: `https://flagcdn.com/w320/${currentKey}.png` },
+              ].map((panel, i) => (
+                <div key={i}>
+                  <div style={{ fontSize: '10px', fontWeight: '700', color: colors.muted, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '5px' }}>{panel.label}</div>
+                  <img src={panel.src} alt={panel.label} style={{ width: '100%', borderRadius: '10px', border: `2px solid ${colors.border}`, display: 'block' }} />
+                </div>
+              ))}
             </div>
           </div>
+        </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '16px' }}>
-            {[
-              { label: t('YOUR DRAWING', 'VOTRE DESSIN'), src: snapshotUrl, isImg: true },
-              { label: t('REAL FLAG', 'VRAI DRAPEAU'), src: `https://flagcdn.com/w320/${currentKey}.png`, isImg: true },
-            ].map((panel, i) => (
-              <div key={i}>
-                <div style={{ fontSize: '11px', fontWeight: '700', color: colors.muted, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '6px' }}>{panel.label}</div>
-                <img src={panel.src} alt={panel.label} style={{ width: '100%', borderRadius: '10px', border: `2px solid ${colors.border}`, display: 'block' }} />
-              </div>
-            ))}
-          </div>
-
-          <div style={{ display: 'flex', gap: '10px' }}>
+        {/* Sticky buttons */}
+        <div style={{ flexShrink: 0, marginTop: 'auto', padding: '12px 16px', paddingBottom: 'max(12px, env(safe-area-inset-bottom))', background: colors.bg, borderTop: `1px solid ${colors.border}`, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div style={{ maxWidth: '560px', margin: '0 auto', width: '100%', display: 'flex', gap: '10px' }}>
             {!passed && lives > 0 && (
-              <button onClick={() => { setScore(null); setScreen(SCREEN.PLAYING); retryFlag() }} style={{
-                flex: 1, padding: '14px', borderRadius: '12px', border: `2px solid ${colors.border}`,
-                background: '#FAFAF7', color: colors.navy, fontWeight: '700', fontSize: '15px', cursor: 'pointer',
-              }}>
+              <button onClick={() => { setScore(null); setScreen(SCREEN.PLAYING); retryFlag() }} style={{ flex: 1, padding: '14px', borderRadius: '14px', border: `2px solid ${colors.border}`, background: '#FAFAF7', color: colors.navy, fontWeight: '700', fontSize: '15px', cursor: 'pointer' }}>
                 {t('Retry', 'Réessayer')} ↺
               </button>
             )}
-            <button onClick={nextFlag} style={{
-              flex: 2, padding: '14px', borderRadius: '12px', border: 'none',
-              background: colors.navy, color: '#FFF', fontWeight: '700', fontSize: '15px', cursor: 'pointer',
-            }}>
-              {t('Next flag', 'Drapeau suivant')} →
+            <button onClick={nextFlag} style={{ flex: 2, padding: '14px', borderRadius: '14px', border: 'none', background: colors.navy, color: '#FFF', fontWeight: '700', fontSize: '15px', cursor: 'pointer' }}>
+              {t('Next flag', 'Drapeau suivant')}
             </button>
           </div>
         </div>
@@ -1116,41 +1154,71 @@ export default function FlagDrawingV2() {
   }
 
   // ── GAMEOVER screen ───────────────────────────────────────────────────────
-  const passed = history.filter(h => h.passed).length
+  const passedCount = history.filter(h => h.passed).length
   return (
-    <div style={{ minHeight: '100vh', background: colors.bg, fontFamily: "'Roboto', sans-serif", display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px' }}>
-      <div style={{ background: colors.card, borderRadius: '20px', padding: '40px', maxWidth: '480px', width: '100%', textAlign: 'center', boxShadow: '0 8px 32px rgba(11,31,59,0.12)' }}>
-        <div style={{ fontSize: '52px', marginBottom: '16px' }}>🏁</div>
-        <h2 style={{ fontSize: '28px', fontWeight: '800', color: colors.navy, margin: '0 0 8px', fontFamily: "'Roboto Slab', serif" }}>
-          {t('Game Over', 'Partie terminée')}
-        </h2>
-        <div style={{ fontSize: '42px', fontWeight: '900', color: colors.navy, margin: '8px 0' }}>⭐ {totalScore}</div>
-        <div style={{ color: colors.muted, fontSize: '15px', marginBottom: '28px' }}>
-          {passed}/{history.length} {t('flags validated', 'drapeaux validés')}
-        </div>
+    <div style={{ backgroundColor: colors.bg, height: 'calc(100dvh - 60px)', fontFamily: "'Roboto', sans-serif", display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
 
-        {history.length > 0 && (
-          <div style={{ maxHeight: '220px', overflowY: 'auto', marginBottom: '24px', textAlign: 'left' }}>
-            {history.map((h, i) => {
-              const hDef = FLAG_DEFS[h.key]
-              const hName = hDef ? (locale === 'fr' ? hDef.fr : hDef.en) : h.key
-              return (
-                <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '8px 0', borderBottom: `1px solid ${colors.border}` }}>
-                  <img src={`https://flagcdn.com/w80/${h.key}.png`} alt="" style={{ width: '36px', height: '24px', objectFit: 'contain', borderRadius: '3px', border: `1px solid ${colors.border}` }} />
-                  <span style={{ flex: 1, fontSize: '13px', fontWeight: '600', color: colors.navy }}>{hName}</span>
-                  <span style={{ fontSize: '13px', fontWeight: '700', color: h.passed ? '#16a34a' : '#dc2626' }}>{h.score}%</span>
-                  {h.passed && <span style={{ fontSize: '12px', color: colors.muted }}>+{h.pts}</span>}
-                </div>
-              )
-            })}
+      {/* Fixed: header + stats */}
+      <div style={{ flexShrink: 0, padding: '20px 16px 0' }}>
+        <div style={{ maxWidth: '480px', margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: '16px' }}>
+            <h2 style={{ margin: '0 0 2px', fontSize: '22px', fontWeight: '900', color: colors.navy, letterSpacing: '-0.5px', fontFamily: "'Roboto Slab', serif" }}>
+              {t('Game Over', 'Partie terminée')}
+            </h2>
+            <p style={{ margin: 0, color: colors.muted, fontSize: '13px' }}>
+              {passedCount}/{history.length} {t('flags validated', 'drapeaux validés')}
+            </p>
           </div>
-        )}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginBottom: '12px' }}>
+            {[
+              { label: t('Score', 'Score'),                 value: `⭐ ${totalScore}`,    color: colors.navy, bg: colors.card, border: colors.border },
+              { label: t('Validated', 'Validés'),           value: `${passedCount}/${history.length}`, color: passedCount > 0 ? '#16a34a' : colors.muted, bg: passedCount > 0 ? '#f0fdf4' : colors.card, border: passedCount > 0 ? '#bbf7d0' : colors.border },
+              { label: t('Best streak', 'Meilleure série'), value: `🔥 ${streak}`,        color: '#806D40', bg: '#fefce8', border: '#fde68a' },
+              { label: t('Difficulty', 'Difficulté'),       value: difficulty,             color: colors.navy, bg: colors.card, border: colors.border },
+            ].map((s, i) => (
+              <div key={i} style={{ backgroundColor: s.bg, borderRadius: '14px', border: `1px solid ${s.border}`, padding: '14px 12px', textAlign: 'center' }}>
+                <div style={{ fontSize: '18px', fontWeight: '900', color: s.color, letterSpacing: '-0.3px', textTransform: i === 3 ? 'capitalize' : 'none' }}>{s.value}</div>
+                <div style={{ fontSize: '10px', fontWeight: '700', color: colors.muted, marginTop: '4px', textTransform: 'uppercase', letterSpacing: '0.6px' }}>{s.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
-        <button onClick={() => setScreen(SCREEN.SETUP)} style={{
-          width: '100%', padding: '16px', borderRadius: '12px', border: 'none',
-          background: colors.navy, color: '#FFF', fontSize: '16px', fontWeight: '700',
-          cursor: 'pointer', fontFamily: "'Roboto', sans-serif",
-        }}>
+      {/* Scrollable: history */}
+      {history.length > 0 && (
+        <div style={{ flex: 1, minHeight: 0, padding: '0 16px', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+          <div style={{ maxWidth: '480px', margin: '0 auto', width: '100%', flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', backgroundColor: colors.card, borderRadius: '14px', border: `1px solid ${colors.border}`, overflow: 'hidden' }}>
+            <div style={{ padding: '12px 16px 8px', borderBottom: `1px solid ${colors.border}`, flexShrink: 0 }}>
+              <p style={{ margin: 0, fontSize: '11px', fontWeight: '800', color: colors.muted, textTransform: 'uppercase', letterSpacing: '0.8px' }}>
+                {t('History', 'Historique')}
+              </p>
+            </div>
+            <div style={{ flex: 1, overflowY: 'auto', padding: '8px 12px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                {history.map((h, i) => {
+                  const hDef = FLAG_DEFS[h.key]
+                  const hName = hDef ? (locale === 'fr' ? hDef.fr : hDef.en) : h.key
+                  return (
+                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '10px 8px', borderRadius: '10px', backgroundColor: i % 2 === 0 ? '#fafafa' : 'white' }}>
+                      <img src={`https://flagcdn.com/w80/${h.key}.png`} alt="" style={{ width: '40px', height: '27px', objectFit: 'contain', borderRadius: '4px', backgroundColor: '#e8e4d9', flexShrink: 0, padding: '2px', border: `1px solid ${colors.border}` }} />
+                      <div style={{ flex: 1, minWidth: 0 }}>
+                        <div style={{ fontSize: '13px', fontWeight: '700', color: colors.navy, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{hName}</div>
+                        <div style={{ fontSize: '11px', color: h.passed ? '#16a34a' : '#dc2626', marginTop: '1px' }}>{h.score}%{h.passed && h.pts ? ` · +${h.pts} pts` : ''}</div>
+                      </div>
+                      <span style={{ fontSize: '14px' }}>{h.passed ? '✅' : '❌'}</span>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Sticky buttons */}
+      <div style={{ flexShrink: 0, padding: '12px 16px', paddingBottom: 'max(12px, env(safe-area-inset-bottom))', background: colors.bg, borderTop: `1px solid ${colors.border}`, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+        <button onClick={() => setScreen(SCREEN.SETUP)} style={{ width: '100%', padding: '16px', borderRadius: '14px', border: 'none', background: colors.navy, color: '#FFF', fontSize: '16px', fontWeight: '700', cursor: 'pointer', fontFamily: "'Roboto', sans-serif" }}>
           {t('Play again', 'Rejouer')}
         </button>
       </div>

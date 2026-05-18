@@ -570,26 +570,92 @@ export default function FlagReveal() {
 
         {/* Bottom panel */}
         <div style={{ flexShrink: 0, backgroundColor: 'white', borderRadius: '20px 20px 0 0', padding: '10px 12px 12px', display: 'flex', flexDirection: 'column', gap: '7px', boxShadow: '0 -4px 20px rgba(0,0,0,0.08)' }}>
+
+          {/* Current input display + suggestions */}
           <div style={{ position: 'relative' }}>
-            <input ref={inputRef} type="text" value={input}
-              onChange={e => handleInputChange(e.target.value)}
-              onKeyDown={handleKeyDown}
-              placeholder={gameState === 'playing' ? t('placeholder') : ''}
-              disabled={gameState !== 'playing'}
-              autoComplete="off"
-              style={{ width: '100%', padding: '11px 14px', borderRadius: '12px', border: '2px solid #E2DDD5', backgroundColor: gameState === 'playing' ? 'white' : '#F4F1E6', color: '#0B1F3B', fontSize: '15px', outline: 'none', boxSizing: 'border-box' }} />
+            {/* Typed word display */}
+            <div style={{ padding: '9px 14px', borderRadius: '12px', border: '2px solid #E2DDD5', backgroundColor: gameState === 'playing' ? 'white' : '#F4F1E6', minHeight: '42px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+              <span style={{ fontSize: '15px', fontWeight: '600', color: input ? '#0B1F3B' : '#B0A89E', letterSpacing: '0.5px' }}>
+                {input || (gameState === 'playing' ? (locale === 'fr' ? 'Tape un pays…' : 'Type a country…') : '')}
+              </span>
+              {input.length > 0 && gameState === 'playing' && (
+                <button onClick={() => { setInput(''); setSuggestions([]); suggestionsRef.current = [] }}
+                  style={{ background: '#E2DDD5', border: 'none', borderRadius: '50%', width: '20px', height: '20px', cursor: 'pointer', fontSize: '10px', color: '#8A8278', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>✕</button>
+              )}
+            </div>
+
+            {/* Suggestions — above keyboard */}
             {suggestions.length > 0 && gameState === 'playing' && (
               <div style={{ position: 'absolute', bottom: '110%', left: 0, right: 0, backgroundColor: 'white', borderRadius: '12px', border: '1px solid #E2DDD5', boxShadow: '0 -8px 24px rgba(0,0,0,0.12)', overflow: 'hidden', zIndex: 20, marginBottom: '4px' }}>
                 {suggestions.map((f, i) => (
                   <button key={f.code} onMouseDown={e => { e.preventDefault(); handleGuess(f) }}
-                    style={{ width: '100%', padding: '12px 16px', textAlign: 'left', backgroundColor: i === activeIdx ? '#dbeafe' : 'transparent', border: 'none', borderBottom: '1px solid #f0f0f0', fontSize: '15px', fontWeight: '600', color: '#0B1F3B', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    {difficulty === 'easy' && <img src={'https://flagcdn.com/w40/'+f.code+'.png'} width="28" height="18" style={{ borderRadius: '2px', objectFit: 'cover' }} />}
-                    {getName(f)}
+                    style={{ width: '100%', padding: '11px 14px', textAlign: 'left', backgroundColor: i === activeIdx ? '#dbeafe' : 'transparent', border: 'none', borderBottom: i < suggestions.length - 1 ? '1px solid #f0f0f0' : 'none', fontSize: '14px', fontWeight: '600', color: '#0B1F3B', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                    {difficulty === 'easy' && <img src={'https://flagcdn.com/w40/'+f.code+'.png'} width="26" height="17" style={{ borderRadius: '2px', objectFit: 'cover', flexShrink: 0 }} />}
+                    <span style={{ flex: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{getName(f)}</span>
                   </button>
                 ))}
               </div>
             )}
           </div>
+
+          {/* A–Z keyboard grid */}
+          {gameState === 'playing' && (() => {
+            const rows = [
+              ['A','B','C','D','E','F','G'],
+              ['H','I','J','K','L','M','N'],
+              ['O','P','Q','R','S','T','U'],
+              ['V','W','X','Y','Z','←'],
+            ]
+            return (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                {rows.map((row, ri) => (
+                  <div key={ri} style={{ display: 'flex', gap: '4px' }}>
+                    {row.map(key => {
+                      const isBack = key === '←'
+                      return (
+                        <button key={key}
+                          onMouseDown={e => {
+                            e.preventDefault()
+                            if (isBack) {
+                              const next = input.slice(0, -1)
+                              setInput(next)
+                              if (next.length < 2) { setSuggestions([]); suggestionsRef.current = []; setActiveIdx(0); activeIdxRef.current = 0; return }
+                              const filtered = flags.filter(f => normalize(getName(f)).includes(normalize(next)) && !guesses.find(g => g.code === f.code)).slice(0, 6)
+                              setSuggestions(filtered); suggestionsRef.current = filtered; setActiveIdx(0); activeIdxRef.current = 0
+                            } else {
+                              const next = input + key
+                              setInput(next)
+                              if (next.length < 2) { setSuggestions([]); suggestionsRef.current = []; return }
+                              const filtered = flags.filter(f => normalize(getName(f)).includes(normalize(next)) && !guesses.find(g => g.code === f.code)).slice(0, 6)
+                              setSuggestions(filtered); suggestionsRef.current = filtered; setActiveIdx(0); activeIdxRef.current = 0
+                            }
+                          }}
+                          style={{
+                            flex: isBack ? 1.5 : 1,
+                            padding: '9px 2px',
+                            borderRadius: '8px',
+                            border: '1px solid #E2DDD5',
+                            backgroundColor: isBack ? '#F4F1E6' : 'white',
+                            color: isBack ? '#8A8278' : '#0B1F3B',
+                            fontSize: isBack ? '14px' : '13px',
+                            fontWeight: '700',
+                            cursor: 'pointer',
+                            textAlign: 'center',
+                            WebkitTapHighlightColor: 'transparent',
+                            touchAction: 'manipulation',
+                            userSelect: 'none',
+                          }}>
+                          {key}
+                        </button>
+                      )
+                    })}
+                  </div>
+                ))}
+              </div>
+            )
+          })()}
+
+          {/* Guess chips */}
           <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
             {guesses.map((g, i) => (
               <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '4px', padding: '4px 8px', borderRadius: '99px', backgroundColor: g.correct ? '#f0fdf4' : '#fff1f2', border: '1px solid '+(g.correct ? '#86efac' : '#fca5a5') }}>
@@ -601,7 +667,9 @@ export default function FlagReveal() {
               <div key={'e'+i} style={{ width: '36px', height: '26px', borderRadius: '99px', backgroundColor: '#E2DDD5' }} />
             ))}
           </div>
+
           {factBlock}
+
           <div style={{ display: 'flex', gap: '8px' }}>
             <button onClick={() => setHowToPlayOpen(true)} style={{ padding: '8px 12px', background: '#F4F1E6', border: '1px solid #E2DDD5', borderRadius: '10px', color: '#8A8278', cursor: 'pointer', fontSize: '11px', fontWeight: '700', whiteSpace: 'nowrap' }}>
               {t('howToPlay')}

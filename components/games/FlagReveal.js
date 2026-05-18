@@ -351,9 +351,9 @@ export default function FlagReveal() {
   const emptyRows = Math.max(0, MAX_GUESSES - guesses.length)
 
   const canvasBlock = (
-    <div style={{ position: 'relative', lineHeight: 0 }}>
+    <div style={{ position: 'relative', lineHeight: 0, flex: 1, minHeight: 0 }}>
       <canvas ref={canvasRef} width={CANVAS_W} height={CANVAS_H}
-        style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '10px', border: '1px solid #E2DDD5', display: 'block', backgroundColor: '#e8e4dc' }} />
+        style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', borderRadius: '10px', border: '1px solid #E2DDD5', backgroundColor: '#e8e4dc' }} />
       {gameState !== 'playing' && (
         <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(0,0,0,0.55)', borderRadius: '10px' }}>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', textAlign: 'center' }}>
@@ -564,8 +564,21 @@ export default function FlagReveal() {
         </div>
 
         {/* Flag */}
-        <div style={{ flex: 1, minHeight: 0, position: 'relative', margin: '0 12px', display: 'flex', flexDirection: 'column' }}>
+        <div style={{ flex: 1, minHeight: 0, margin: '0 12px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
           {canvasBlock}
+
+          {/* Guess chips — just below the canvas */}
+          <div style={{ display: 'flex', gap: '5px', flexWrap: 'wrap', flexShrink: 0 }}>
+            {guesses.map((g, i) => (
+              <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '4px', padding: '3px 8px', borderRadius: '99px', backgroundColor: g.correct ? '#f0fdf4' : '#fff1f2', border: '1px solid '+(g.correct ? '#86efac' : '#fca5a5') }}>
+                <img src={'https://flagcdn.com/w40/'+g.code+'.png'} width="18" height="12" style={{ borderRadius: '2px', objectFit: 'cover' }} />
+                <span style={{ fontSize: '11px', fontWeight: '700', color: g.correct ? '#166534' : '#991b1b' }}>{g.similarity}%</span>
+              </div>
+            ))}
+            {Array.from({ length: emptyRows }).map((_, i) => (
+              <div key={'e'+i} style={{ width: '32px', height: '22px', borderRadius: '99px', backgroundColor: '#E2DDD5' }} />
+            ))}
+          </div>
         </div>
 
         {/* Bottom panel */}
@@ -598,19 +611,27 @@ export default function FlagReveal() {
             )}
           </div>
 
-          {/* A–Z keyboard grid */}
+          {/* AZERTY / QWERTY keyboard */}
           {gameState === 'playing' && (() => {
-            const rows = [
-              ['A','B','C','D','E','F','G'],
-              ['H','I','J','K','L','M','N'],
-              ['O','P','Q','R','S','T','U'],
-              ['V','W','X','Y','Z','←'],
-            ]
+            const isAzerty = locale === 'fr'
+            const rows = isAzerty
+              ? [
+                  { keys: ['A','Z','E','R','T','Y','U','I','O','P'], offset: 0 },
+                  { keys: ['Q','S','D','F','G','H','J','K','L','M'], offset: 0.5 },
+                  { keys: ['W','X','C','V','B','N','←'],             offset: 1.5 },
+                ]
+              : [
+                  { keys: ['Q','W','E','R','T','Y','U','I','O','P'], offset: 0 },
+                  { keys: ['A','S','D','F','G','H','J','K','L'],     offset: 0.5 },
+                  { keys: ['Z','X','C','V','B','N','M','←'],         offset: 1 },
+                ]
+            const KEY_W = 30   // approx key width in px — used for offset calculation
+            const GAP   = 4
             return (
               <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                {rows.map((row, ri) => (
-                  <div key={ri} style={{ display: 'flex', gap: '4px' }}>
-                    {row.map(key => {
+                {rows.map(({ keys, offset }, ri) => (
+                  <div key={ri} style={{ display: 'flex', gap: `${GAP}px`, paddingLeft: `${offset * (KEY_W + GAP)}px` }}>
+                    {keys.map(key => {
                       const isBack = key === '←'
                       return (
                         <button key={key}
@@ -631,8 +652,9 @@ export default function FlagReveal() {
                             }
                           }}
                           style={{
-                            flex: isBack ? 1.5 : 1,
-                            padding: '9px 2px',
+                            width: isBack ? `${KEY_W * 2 + GAP}px` : `${KEY_W}px`,
+                            flexShrink: 0,
+                            padding: '9px 0',
                             borderRadius: '8px',
                             border: '1px solid #E2DDD5',
                             backgroundColor: isBack ? '#F4F1E6' : 'white',
@@ -654,19 +676,6 @@ export default function FlagReveal() {
               </div>
             )
           })()}
-
-          {/* Guess chips */}
-          <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
-            {guesses.map((g, i) => (
-              <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '4px', padding: '4px 8px', borderRadius: '99px', backgroundColor: g.correct ? '#f0fdf4' : '#fff1f2', border: '1px solid '+(g.correct ? '#86efac' : '#fca5a5') }}>
-                <img src={'https://flagcdn.com/w40/'+g.code+'.png'} width="20" height="13" style={{ borderRadius: '2px', objectFit: 'cover' }} />
-                <span style={{ fontSize: '11px', fontWeight: '700', color: g.correct ? '#166534' : '#991b1b' }}>{g.similarity}%</span>
-              </div>
-            ))}
-            {Array.from({ length: emptyRows }).map((_, i) => (
-              <div key={'e'+i} style={{ width: '36px', height: '26px', borderRadius: '99px', backgroundColor: '#E2DDD5' }} />
-            ))}
-          </div>
 
           {factBlock}
 

@@ -524,7 +524,7 @@ export default function FlagReveal() {
           </span>
         </div>
 
-        <div style={{ flex: '0 0 8px' }} />
+        <div style={{ flex: '0 0 4px' }} />
 
         {/* HUD pills */}
         <div style={{ display: 'flex', alignItems: 'stretch', gap: '5px', padding: '0 12px 6px', flexShrink: 0, overflowX: 'auto' }}>
@@ -582,7 +582,7 @@ export default function FlagReveal() {
         </div>
 
         {/* Bottom panel */}
-        <div style={{ flexShrink: 0, backgroundColor: 'white', borderRadius: '20px 20px 0 0', padding: '10px 12px 12px', display: 'flex', flexDirection: 'column', gap: '7px', boxShadow: '0 -4px 20px rgba(0,0,0,0.08)' }}>
+        <div style={{ flexShrink: 0, backgroundColor: 'white', borderRadius: '20px 20px 0 0', padding: '8px 12px 10px', display: 'flex', flexDirection: 'column', gap: '6px', boxShadow: '0 -4px 20px rgba(0,0,0,0.08)' }}>
 
           {/* Current input display + suggestions */}
           <div style={{ position: 'relative' }}>
@@ -625,12 +625,13 @@ export default function FlagReveal() {
                   { keys: ['A','S','D','F','G','H','J','K','L'],     offset: 0.5 },
                   { keys: ['Z','X','C','V','B','N','M','←'],         offset: 1 },
                 ]
-            const KEY_W = 30   // approx key width in px — used for offset calculation
-            const GAP   = 4
+            // Row 1 always has 10 keys — use it as reference for key width
+            // total width = 10 keys + 9 gaps; offset unit = 1 key + 1 gap
+            const GAP = 4
             return (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: `${GAP}px` }}>
                 {rows.map(({ keys, offset }, ri) => (
-                  <div key={ri} style={{ display: 'flex', gap: `${GAP}px`, paddingLeft: `${offset * (KEY_W + GAP)}px` }}>
+                  <div key={ri} style={{ display: 'flex', gap: `${GAP}px`, paddingLeft: `calc(${offset} * (10% - ${GAP * 0.9}px))` }}>
                     {keys.map(key => {
                       const isBack = key === '←'
                       return (
@@ -652,14 +653,14 @@ export default function FlagReveal() {
                             }
                           }}
                           style={{
-                            width: isBack ? `${KEY_W * 2 + GAP}px` : `${KEY_W}px`,
-                            flexShrink: 0,
-                            padding: '9px 0',
+                            flex: isBack ? 1.5 : 1,
+                            marginLeft: isBack ? 'auto' : 0,
+                            padding: '11px 0',
                             borderRadius: '8px',
                             border: '1px solid #E2DDD5',
-                            backgroundColor: isBack ? '#F4F1E6' : 'white',
-                            color: isBack ? '#8A8278' : '#0B1F3B',
-                            fontSize: isBack ? '14px' : '13px',
+                            backgroundColor: isBack ? '#E2DDD5' : 'white',
+                            color: isBack ? '#64748b' : '#0B1F3B',
+                            fontSize: '15px',
                             fontWeight: '700',
                             cursor: 'pointer',
                             textAlign: 'center',

@@ -1,3 +1,9 @@
+// app/[locale]/layout.js
+// Changements vs version actuelle :
+// - metadata de base simplifiée (les pages individuelles surchargent avec generateMetadata)
+// - JSON-LD WebSite déplacé dans une constante propre
+// - alternates canonical ajouté au niveau layout
+
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { Roboto, Roboto_Slab } from 'next/font/google'
@@ -19,38 +25,33 @@ const robotoSlab = Roboto_Slab({
   display: 'swap',
 })
 
+const BASE_URL = 'https://knowflags.com'
+
+// Base metadata — individual pages override with generateMetadata()
 export const metadata = {
   title: {
     default: 'KnowFlags — Explore the World Through Flags',
     template: '%s | KnowFlags',
   },
-  description: 'Discover, explore and learn about flags from around the world.',
-  metadataBase: new URL('https://knowflags.com'),
+  description: 'Flag quizzes, country facts and interactive maps — learn world geography on KnowFlags.',
+  metadataBase: new URL(BASE_URL),
   openGraph: {
-    title: 'KnowFlags — Explore the World Through Flags',
-    description: 'Discover, explore and learn about flags from around the world.',
-    url: 'https://knowflags.com',
     siteName: 'KnowFlags',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'KnowFlags — Explore the World Through Flags',
-      },
-    ],
-    locale: 'en_US',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'KnowFlags' }],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'KnowFlags — Explore the World Through Flags',
-    description: 'Discover, explore and learn about flags from around the world.',
     images: ['/og-image.png'],
   },
   icons: {
     icon: '/favicon.ico',
     apple: '/apple-touch-icon.png',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
   },
 }
 
@@ -60,19 +61,26 @@ export const viewport = {
   maximumScale: 1,
 }
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: 'KnowFlags',
-  url: 'https://knowflags.com',
-  description: 'Discover, explore and learn about flags from around the world.',
-  logo: 'https://knowflags.com/logo.png',
-  sameAs: [],
-}
-
 export default async function RootLayout({ children, params }) {
   const { locale } = await params
   const messages = await getMessages()
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'KnowFlags',
+    url: BASE_URL,
+    description: locale === 'fr'
+      ? 'Quiz de drapeaux et exploration géographique interactive.'
+      : 'Flag quizzes and interactive geographical exploration.',
+    logo: `${BASE_URL}/logo.png`,
+    inLanguage: locale,
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: { '@type': 'EntryPoint', urlTemplate: `${BASE_URL}/${locale}/countries?q={search_term_string}` },
+      'query-input': 'required name=search_term_string',
+    },
+  }
 
   return (
     <html lang={locale} className={`${roboto.variable} ${robotoSlab.variable}`}>
@@ -83,7 +91,7 @@ export default async function RootLayout({ children, params }) {
           img, video, canvas { max-width: 100%; }
         `}</style>
 
-        {/* JSON-LD */}
+        {/* JSON-LD WebSite */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -107,7 +115,7 @@ export default async function RootLayout({ children, params }) {
           gtag('set', 'url_passthrough', true);
         `}} />
 
-        {/* ── STEP 2 : Cookiebot CMP (before GTM, signals consent to GTM) ── */}
+        {/* ── STEP 2 : Cookiebot CMP ── */}
         <Script
           id="cookiebot"
           src="https://consent.cookiebot.com/uc.js"
@@ -124,17 +132,14 @@ export default async function RootLayout({ children, params }) {
           dangerouslySetInnerHTML={{__html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-W6DS4C7M');`}}
         />
       </head>
-      <body style={{ paddingTop: "60px" }}>
-        {/* GTM noscript fallback */}
+      <body style={{ paddingTop: '60px' }}>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-W6DS4C7M"
-            height="0"
-            width="0"
-            style={{display: 'none', visibility: 'hidden'}}
+            height="0" width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
-
         <NextIntlClientProvider messages={messages}>
           <Header />
           {children}

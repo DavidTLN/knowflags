@@ -1,7 +1,5 @@
 'use client'
 
-'use client'
-
 import { createClient } from '@/lib/supabase-client'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
@@ -161,6 +159,51 @@ function ContinentNavModule({ currentContinent, locale }) {
   )
 }
 
+// ── FlagHero — smart flag with uploaded image fallback ───────────────────────
+function FlagHero({ countryCode, countryName }) {
+  const [src, setSrc] = useState(null)
+  const [loaded, setLoaded] = useState(false)
+
+  useEffect(() => {
+    if (!countryCode) return
+    const supabase = createClient()
+    // Check country_flag_history for uploaded image first
+    supabase
+      .from('country_flag_history')
+      .select('image_url')
+      .eq('iso_code', countryCode.toUpperCase())
+      .is('date_end', null)
+      .order('date_start', { ascending: false })
+      .limit(1)
+      .single()
+      .then(({ data }) => {
+        if (data?.image_url) {
+          setSrc(data.image_url)
+        } else {
+          setSrc(`https://flagcdn.com/w640/${countryCode.toLowerCase()}.png`)
+        }
+        setLoaded(true)
+      })
+      .catch(() => {
+        setSrc(`https://flagcdn.com/w640/${countryCode.toLowerCase()}.png`)
+        setLoaded(true)
+      })
+  }, [countryCode])
+
+  if (!loaded) return (
+    <div style={{ width: '100%', aspectRatio: '3/2', backgroundColor: '#f0ede4', borderRadius: '16px' }} />
+  )
+
+  return (
+    <img
+      src={src}
+      alt={countryName}
+      onError={() => setSrc(`https://flagcdn.com/w640/${countryCode.toLowerCase()}.png`)}
+      style={{ width: '100%', display: 'block', aspectRatio: '3/2', objectFit: 'contain', backgroundColor: '#f0ede4', padding: '12px' }}
+    />
+  )
+}
+
 // ── CountryDetailPage ────────────────────────────────────────────────────────
 export default function CountryDetailPage({ code }) {
   const locale = useLocale()
@@ -212,7 +255,6 @@ export default function CountryDetailPage({ code }) {
   if (!country) return (
     <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <div style={{ textAlign: 'center' }}>
-        <div style={{ fontSize: '64px', marginBottom: '16px' }}>🏳️</div>
         <h1 style={{ color: '#0B1F3B', fontWeight: '900', fontSize: '24px' }}>{t('Country not found', 'Pays introuvable')}</h1>
         <Link href={`/${locale}/countries`} style={{ color: '#9EB7E5', textDecoration: 'none', fontWeight: '600' }}>
           ← {t('Back to all countries', 'Retour aux pays')}
@@ -269,8 +311,7 @@ export default function CountryDetailPage({ code }) {
         {/* Hero */}
         <div style={{ display: 'flex', gap: '40px', alignItems: 'flex-start', flexWrap: 'wrap', marginBottom: '40px' }}>
           <div style={{ flex: '0 0 auto', width: 'min(400px, 100%)', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 12px 40px rgba(0,0,0,0.14)', border: '1px solid #e2e8f0' }}>
-            <img src={`https://flagcdn.com/w640/${country.code}.png`} alt={name}
-              style={{ width: '100%', display: 'block', aspectRatio: '3/2', objectFit: 'contain', backgroundColor: '#f0ede4', padding: '12px' }} />
+            <FlagHero countryCode={country.code} countryName={name} />
           </div>
 
           <div style={{ flex: 1, minWidth: '200px' }}>
@@ -321,6 +362,7 @@ export default function CountryDetailPage({ code }) {
 
         {/* Flag history timeline */}
         <FlagHistoryModule countryCode={country.code} countryName={name} />
+
         {/* Sub-national flags */}
         <CountryFlagsSection countryIso2={country.code} />
 
@@ -331,7 +373,7 @@ export default function CountryDetailPage({ code }) {
             <p style={{ margin: 0, fontSize: '14px', color: '#9EB7E5' }}>{t('Can you recognize this flag in Flag Reveal?', 'Reconnaîtrez-vous ce drapeau dans Flag Reveal ?')}</p>
           </div>
           <Link href={`/${locale}/games/flag-reveal`} style={{ backgroundColor: '#9EB7E5', color: '#0B1F3B', padding: '12px 24px', borderRadius: '10px', textDecoration: 'none', fontWeight: '700', fontSize: '15px', flexShrink: 0 }}>
-            🏳️ {t('Play Flag Reveal', 'Jouer à Flag Reveal')}
+            {t('Play Flag Reveal', 'Jouer à Flag Reveal')}
           </Link>
         </div>
 

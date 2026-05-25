@@ -54,18 +54,29 @@ function ErmineMark({ size = 28, color = C.blue }) {
 }
 
 const BADGES = [
-  { id: 'first_game',    icon: '🎮', en: 'First Game',     fr: 'Première Partie',  en_d: 'Played your first game',         fr_d: 'Première partie jouée',          condition: s => s.total_games >= 1   },
-  { id: 'streak_5',      icon: '🔥', en: 'On Fire',        fr: 'En Feu',           en_d: '5-game win streak',              fr_d: 'Série de 5 victoires',           condition: s => s.best_streak >= 5   },
-  { id: 'streak_10',     icon: '💥', en: 'Unstoppable',    fr: 'Inarrêtable',      en_d: '10-game win streak',             fr_d: 'Série de 10 victoires',          condition: s => s.best_streak >= 10  },
-  { id: 'flags_10',      icon: '🏳️', en: 'Flag Collector', fr: 'Collectionneur',   en_d: '10 flags mastered',              fr_d: '10 drapeaux maîtrisés',          condition: s => s.mastered >= 10     },
-  { id: 'flags_50',      icon: '🌍', en: 'World Explorer', fr: 'Explorateur',      en_d: '50 flags mastered',              fr_d: '50 drapeaux maîtrisés',          condition: s => s.mastered >= 50     },
-  { id: 'flags_100',     icon: '🌐', en: 'Vexillologist',  fr: 'Vexillologue',     en_d: '100 flags mastered',             fr_d: '100 drapeaux maîtrisés',         condition: s => s.mastered >= 100    },
-  { id: 'games_50',      icon: '🎯', en: 'Dedicated',      fr: 'Assidu',           en_d: '50 games played',                fr_d: '50 parties jouées',              condition: s => s.total_games >= 50  },
-  { id: 'games_100',     icon: '🏆', en: 'Champion',       fr: 'Champion',         en_d: '100 games played',               fr_d: '100 parties jouées',             condition: s => s.total_games >= 100 },
-  { id: 'artist',        icon: '🎨', en: 'Artist',         fr: 'Artiste',          en_d: 'Drew a flag with 90%+ accuracy', fr_d: 'Dessiné un drapeau à 90%+',      condition: s => s.best_drawing >= 90 },
-  { id: 'perfectionist', icon: '✨', en: 'Perfectionist',  fr: 'Perfectionniste',  en_d: 'Drew a flag with 100% accuracy', fr_d: 'Dessiné un drapeau à 100%',      condition: s => s.best_drawing >= 100},
-  { id: 'scholar',       icon: '📚', en: 'Scholar',        fr: 'Érudit',           en_d: 'Played all 3 game types',        fr_d: 'Joué aux 3 types de jeux',       condition: s => s.games_per_type >= 3},
-  { id: 'polyglot',      icon: '🗣️', en: 'Polyglot',       fr: 'Polyglotte',       en_d: 'Used the app in both languages', fr_d: 'Utilisé les deux langues',       condition: s => s.used_both_locales  },
+  { id: 'first_game',    icon: '🎮', en: 'First Game',       fr: 'Première Partie',    en_d: 'Played your first game',          fr_d: 'Première partie jouée',            condition: s => s.total_games >= 1        },
+  { id: 'streak_5',      icon: '🔥', en: 'On Fire',          fr: 'En Feu',             en_d: '5-game win streak',               fr_d: 'Série de 5 victoires',             condition: s => s.best_streak >= 5        },
+  { id: 'streak_10',     icon: '💥', en: 'Unstoppable',      fr: 'Inarrêtable',        en_d: '10-game win streak',              fr_d: 'Série de 10 victoires',            condition: s => s.best_streak >= 10       },
+  { id: 'flags_10',      icon: '🏳️', en: 'Flag Collector',   fr: 'Collectionneur',     en_d: '10 flags mastered',               fr_d: '10 drapeaux maîtrisés',            condition: s => s.mastered >= 10          },
+  { id: 'flags_50',      icon: '🌍', en: 'World Explorer',   fr: 'Explorateur',        en_d: '50 flags mastered',               fr_d: '50 drapeaux maîtrisés',            condition: s => s.mastered >= 50          },
+  { id: 'flags_100',     icon: '🌐', en: 'Vexillologist',    fr: 'Vexillologue',       en_d: '100 flags mastered',              fr_d: '100 drapeaux maîtrisés',           condition: s => s.mastered >= 100         },
+  { id: 'games_50',      icon: '🎯', en: 'Dedicated',        fr: 'Assidu',             en_d: '50 games played',                 fr_d: '50 parties jouées',                condition: s => s.total_games >= 50       },
+  { id: 'games_100',     icon: '🏆', en: 'Champion',         fr: 'Champion',           en_d: '100 games played',                fr_d: '100 parties jouées',               condition: s => s.total_games >= 100      },
+  { id: 'artist',        icon: '🎨', en: 'Artist',           fr: 'Artiste',            en_d: 'Drew a flag with 90%+ accuracy',  fr_d: 'Dessiné un drapeau à 90%+',        condition: s => s.best_drawing >= 90      },
+  { id: 'perfectionist', icon: '✨', en: 'Perfectionist',    fr: 'Perfectionniste',    en_d: 'Drew a flag with 100% accuracy',  fr_d: 'Dessiné un drapeau à 100%',        condition: s => s.best_drawing >= 100     },
+  { id: 'scholar',       icon: '📚', en: 'Scholar',          fr: 'Érudit',             en_d: 'Played all 3 game types',         fr_d: 'Joué aux 3 types de jeux',         condition: s => s.games_per_type >= 3     },
+  { id: 'polyglot',      icon: '🗣️', en: 'Polyglot',         fr: 'Polyglotte',         en_d: 'Used the app in both languages',  fr_d: 'Utilisé les deux langues',         condition: s => s.used_both_locales       },
+  // Contributor badges
+  { id: 'submitted_1',   icon: '📤', en: 'First Submission',  fr: 'Première Soumission', en_d: 'Submitted your first flag',      fr_d: 'Première soumission de drapeau',   condition: s => s.submitted >= 1          },
+  { id: 'submitted_5',   icon: '📬', en: 'Contributor',       fr: 'Contributeur',        en_d: '5 flags submitted',              fr_d: '5 drapeaux soumis',                condition: s => s.submitted >= 5          },
+  { id: 'submitted_10',  icon: '📦', en: 'Active Contributor',fr: 'Contributeur Actif',  en_d: '10 flags submitted',             fr_d: '10 drapeaux soumis',               condition: s => s.submitted >= 10         },
+  { id: 'submitted_25',  icon: '🗂️', en: 'Archivist',         fr: 'Archiviste',          en_d: '25 flags submitted',             fr_d: '25 drapeaux soumis',               condition: s => s.submitted >= 25         },
+  { id: 'submitted_50',  icon: '🏛️', en: 'Vexillographer',    fr: 'Vexillographe',       en_d: '50 flags submitted',             fr_d: '50 drapeaux soumis',               condition: s => s.submitted >= 50         },
+  { id: 'accepted_1',    icon: '✅', en: 'Verified',          fr: 'Vérifié',             en_d: 'First flag accepted',            fr_d: 'Premier drapeau accepté',          condition: s => s.accepted >= 1           },
+  { id: 'accepted_5',    icon: '🌟', en: 'Trusted Source',    fr: 'Source Fiable',       en_d: '5 flags accepted',               fr_d: '5 drapeaux acceptés',              condition: s => s.accepted >= 5           },
+  { id: 'accepted_10',   icon: '💎', en: 'Expert',            fr: 'Expert',              en_d: '10 flags accepted',              fr_d: '10 drapeaux acceptés',             condition: s => s.accepted >= 10          },
+  { id: 'accepted_25',   icon: '🏅', en: 'Master Contributor',fr: 'Maître Contributeur', en_d: '25 flags accepted',              fr_d: '25 drapeaux acceptés',             condition: s => s.accepted >= 25          },
+  { id: 'accepted_50',   icon: '👑', en: 'Flag Legend',       fr: 'Légende des Drapeaux',en_d: '50 flags accepted',              fr_d: '50 drapeaux acceptés',             condition: s => s.accepted >= 50          },
 ]
 
 const GAMES_META = {
@@ -164,22 +175,26 @@ export default function ProfilePage() {
   const [saveMsg, setSaveMsg]       = useState('')
   const [avatarBusy, setAvatarBusy] = useState(false)
   const [gameScores, setGameScores] = useState([])
+  const [submissions, setSubmissions] = useState([])
   const fileRef = useRef(null)
 
   useEffect(() => {
     const supabase = createClient()
     async function load(uid) {
-      const [pR, sR, hR, gR] = await Promise.all([
+      const [pR, sR, hR, gR, subR] = await Promise.all([
         supabase.from('profiles').select('*').eq('user_id', uid).single(),
         supabase.from('player_stats').select('*').eq('user_id', uid),
         supabase.from('game_scores_log').select('*').eq('user_id', uid)
           .order('played_at', { ascending: false }).limit(200),
         supabase.from('game_scores').select('*').eq('user_id', uid),
+        supabase.from('submissions').select('id, status, created_at, label_en, flag_type, entity_code')
+          .eq('user_id', uid).order('created_at', { ascending: false }),
       ])
       if (pR.data) setProfile(pR.data)
       if (sR.data) setStats(sR.data)
       if (hR.data) setHistory(hR.data)
       if (gR.data) setGameScores(gR.data)
+      if (subR.data) setSubmissions(subR.data)
       setLoading(false)
     }
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -201,6 +216,11 @@ export default function ProfilePage() {
   const masteredArr   = [] // no per-flag data available from game_scores_log
   const toLearn       = []
 
+  const submittedCount = submissions.length
+  const acceptedCount  = submissions.filter(s => s.status === 'accepted').length
+  const pendingCount   = submissions.filter(s => s.status === 'pending').length
+  const rejectedCount  = submissions.filter(s => s.status === 'rejected').length
+
   const agg = {
     total_games: totalGames,
     best_streak: bestStreak,
@@ -208,6 +228,8 @@ export default function ProfilePage() {
     used_both_locales: false,
     best_drawing: bestDrawing,
     games_per_type: gamesPerType,
+    submitted: submittedCount,
+    accepted:  acceptedCount,
   }
 
   const unlocked = BADGES.filter(b => b.condition(agg))
@@ -262,12 +284,13 @@ export default function ProfilePage() {
   }
 
   const TABS = [
-    { id: 'overview', en: 'Overview',  fr: 'Résumé'     },
-    { id: 'games',    en: 'Games',     fr: 'Jeux'       },
-    { id: 'history',  en: 'History',   fr: 'Historique' },
-    { id: 'flags',    en: 'Flags',     fr: 'Drapeaux'   },
-    { id: 'badges',   en: 'Badges',    fr: 'Badges'     },
-    { id: 'settings', en: 'Settings',  fr: 'Paramètres' },
+    { id: 'overview',     en: 'Overview',     fr: 'Résumé'       },
+    { id: 'games',        en: 'Games',        fr: 'Jeux'         },
+    { id: 'history',      en: 'History',      fr: 'Historique'   },
+    { id: 'flags',        en: 'Flags',        fr: 'Drapeaux'     },
+    { id: 'badges',       en: 'Badges',       fr: 'Badges'       },
+    { id: 'submissions',  en: 'Submissions',  fr: 'Soumissions'  },
+    { id: 'settings',     en: 'Settings',     fr: 'Paramètres'   },
   ]
 
   if (loading) return (
@@ -345,12 +368,14 @@ export default function ProfilePage() {
         {activeTab === 'overview' && (<>
           <SectionTitle>{t('Your Stats', 'Vos statistiques')}</SectionTitle>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(130px, 1fr))', gap: '11px', marginBottom: '36px' }}>
-            <StatCard icon="🎮" value={totalGames}                          label={t('Games', 'Parties')}          accent={C.navy}  />
-            <StatCard icon="🔥" value={curStreak}                           label={t('Streak', 'Série actuelle')}  accent="#e07c3a" />
-            <StatCard icon="💥" value={bestStreak}                          label={t('Best streak', 'Meilleure')}  accent="#e07c3a" />
-            <StatCard icon="✅" value={masteredCount}                       label={t('Flags found', 'Trouvés')}    accent={C.green} />
-            <StatCard icon="⭐" value={totalScore.toLocaleString()}         label={t('Score', 'Score total')}      accent={C.gold}  />
-            <StatCard icon="🏅" value={`${unlocked.length}/${BADGES.length}`} label={t('Badges', 'Badges')}       accent={C.blue}  />
+            <StatCard icon="🎮" value={totalGames}                             label={t('Games', 'Parties')}          accent={C.navy}  />
+            <StatCard icon="🔥" value={curStreak}                              label={t('Streak', 'Série actuelle')}  accent="#e07c3a" />
+            <StatCard icon="💥" value={bestStreak}                             label={t('Best streak', 'Meilleure')}  accent="#e07c3a" />
+            <StatCard icon="✅" value={masteredCount}                          label={t('Flags found', 'Trouvés')}    accent={C.green} />
+            <StatCard icon="⭐" value={totalScore.toLocaleString()}            label={t('Score', 'Score total')}      accent={C.gold}  />
+            <StatCard icon="🏅" value={`${unlocked.length}/${BADGES.length}`} label={t('Badges', 'Badges')}          accent={C.blue}  />
+            <StatCard icon="📤" value={submittedCount}                         label={t('Submitted', 'Soumis')}       accent="#7c3aed" />
+            <StatCard icon="✔️" value={acceptedCount}                          label={t('Accepted', 'Acceptés')}      accent={C.green} />
           </div>
 
           <SectionTitle>{t('By Game', 'Par jeu')}</SectionTitle>
@@ -549,6 +574,56 @@ export default function ProfilePage() {
               </div>
             ))}
           </div>
+        </>)}
+
+        {/* SUBMISSIONS */}
+        {activeTab === 'submissions' && (<>
+          <SectionTitle>🏳️ {t('My Flag Submissions', 'Mes soumissions de drapeaux')}</SectionTitle>
+
+          {/* Stats row */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px', marginBottom: '24px' }}>
+            <div style={{ backgroundColor: '#fefce8', borderRadius: '12px', padding: '14px 16px', border: '1px solid #fde68a', textAlign: 'center' }}>
+              <div style={{ fontSize: '22px', fontWeight: '900', color: '#854d0e' }}>{pendingCount}</div>
+              <div style={{ fontSize: '11px', fontWeight: '700', color: '#92400e', textTransform: 'uppercase', marginTop: '2px' }}>{t('Pending', 'En attente')}</div>
+            </div>
+            <div style={{ backgroundColor: '#f0fdf4', borderRadius: '12px', padding: '14px 16px', border: '1px solid #bbf7d0', textAlign: 'center' }}>
+              <div style={{ fontSize: '22px', fontWeight: '900', color: '#166534' }}>{acceptedCount}</div>
+              <div style={{ fontSize: '11px', fontWeight: '700', color: '#166534', textTransform: 'uppercase', marginTop: '2px' }}>{t('Accepted', 'Acceptés')}</div>
+            </div>
+            <div style={{ backgroundColor: '#fef2f2', borderRadius: '12px', padding: '14px 16px', border: '1px solid #fecaca', textAlign: 'center' }}>
+              <div style={{ fontSize: '22px', fontWeight: '900', color: '#991b1b' }}>{rejectedCount}</div>
+              <div style={{ fontSize: '11px', fontWeight: '700', color: '#991b1b', textTransform: 'uppercase', marginTop: '2px' }}>{t('Rejected', 'Refusés')}</div>
+            </div>
+          </div>
+
+          {submissions.length === 0 ? (
+            <div style={{ textAlign: 'center', padding: '48px 0', color: C.muted }}>
+              <div style={{ fontSize: '42px', marginBottom: '12px' }}>🏳️</div>
+              <div style={{ fontSize: '14px' }}>{t('No submissions yet. Click "+ Submit" to contribute a flag!', 'Aucune soumission. Cliquez sur "+ Soumettre" pour contribuer !')}</div>
+            </div>
+          ) : (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              {submissions.map(s => {
+                const statusColor = s.status === 'accepted' ? { bg: '#f0fdf4', color: '#166534', border: '#bbf7d0' }
+                  : s.status === 'rejected' ? { bg: '#fef2f2', color: '#991b1b', border: '#fecaca' }
+                  : { bg: '#fefce8', color: '#854d0e', border: '#fde68a' }
+                return (
+                  <div key={s.id} style={{ backgroundColor: C.white, borderRadius: '12px', padding: '12px 16px', border: `1px solid ${C.border}`, display: 'flex', alignItems: 'center', gap: '12px' }}>
+                    <span style={{ fontSize: '20px' }}>
+                      {s.flag_type === 'country' ? '🌍' : s.flag_type === 'region' ? '🗺️' : s.flag_type === 'city' ? '🏙️' : s.flag_type === 'organisation' ? '🏛️' : '📜'}
+                    </span>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ fontSize: '13px', fontWeight: '700', color: C.navy }}>{s.label_en || '—'}</div>
+                      <div style={{ fontSize: '11px', color: C.muted }}>{s.flag_type} · {s.entity_code} · {new Date(s.created_at).toLocaleDateString()}</div>
+                    </div>
+                    <span style={{ padding: '3px 10px', borderRadius: '99px', fontSize: '11px', fontWeight: '700', backgroundColor: statusColor.bg, color: statusColor.color, border: `1px solid ${statusColor.border}` }}>
+                      {s.status}
+                    </span>
+                  </div>
+                )
+              })}
+            </div>
+          )}
         </>)}
 
         {/* SETTINGS */}

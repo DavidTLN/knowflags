@@ -1,4 +1,4 @@
-// app/[locale]/countries/[code]/page.js
+// DESTINATION: app/[locale]/countries/[code]/page.js
 import { createClient } from '@/lib/supabase-server'
 import CountryDetailPage from '@/components/countries/CountryDetailPage'
 
@@ -9,11 +9,11 @@ export async function generateMetadata({ params }) {
   const isFr = locale === 'fr'
 
   try {
-    const supabase = createClient()
+    const supabase = await createClient()
     const { data: country } = await supabase
       .from('countries')
       .select('name_en, name_fr, region, capital')
-      .eq('iso_code', code.toUpperCase())
+      .eq('iso_code', code.toLowerCase())
       .single()
 
     if (!country) throw new Error('not found')
@@ -23,12 +23,12 @@ export async function generateMetadata({ params }) {
     const region  = country.region  || ''
 
     const title = isFr
-      ? `Drapeau de ${name} — histoire, couleurs et signification`
-      : `${name} Flag — History, Colors & Meaning`
+      ? `Drapeau de ${name} — histoire, couleurs et signification | KnowFlags`
+      : `${name} Flag — History, Colors & Meaning | KnowFlags`
 
     const description = isFr
-      ? `Découvrez le drapeau de ${name}${capital ? `, capitale ${capital}` : ''}. Histoire, symbolisme des couleurs, faits et anecdotes sur ${name}.`
-      : `Explore the flag of ${name}${capital ? `, capital ${capital}` : ''}. History, color symbolism, facts and trivia about ${name}.`
+      ? `Découvrez le drapeau de ${name}${capital ? `, capitale ${capital}` : ''}${region ? `, ${region}` : ''}. Histoire, symbolisme des couleurs et faits sur ${name}.`
+      : `Explore the flag of ${name}${capital ? `, capital ${capital}` : ''}${region ? `, ${region}` : ''}. History, color symbolism and facts about ${name}.`
 
     const flagImageUrl = `https://flagcdn.com/w640/${code.toLowerCase()}.png`
     const pageUrl = `${BASE_URL}/${locale}/countries/${code.toLowerCase()}`
@@ -36,22 +36,13 @@ export async function generateMetadata({ params }) {
     return {
       title,
       description,
-      alternates: {
-        canonical: pageUrl,
-      },
+      alternates: { canonical: pageUrl },
       openGraph: {
         title,
         description,
         url: pageUrl,
         siteName: 'KnowFlags',
-        images: [
-          {
-            url: flagImageUrl,
-            width: 640,
-            height: 427,
-            alt: isFr ? `Drapeau de ${name}` : `Flag of ${name}`,
-          },
-        ],
+        images: [{ url: flagImageUrl, width: 640, height: 427, alt: isFr ? `Drapeau de ${name}` : `Flag of ${name}` }],
         locale: isFr ? 'fr_FR' : 'en_US',
         type: 'article',
       },
@@ -76,14 +67,13 @@ export default async function Page({ params }) {
   const { code, locale } = await params
   const isFr = locale === 'fr'
 
-  // JSON-LD structured data
   let jsonLd = null
   try {
-    const supabase = createClient()
+    const supabase = await createClient()
     const { data: country } = await supabase
       .from('countries')
       .select('name_en, name_fr, region, capital, population, area_km2')
-      .eq('iso_code', code.toUpperCase())
+      .eq('iso_code', code.toLowerCase())
       .single()
 
     if (country) {
@@ -108,7 +98,7 @@ export default async function Page({ params }) {
         about: {
           '@type': 'Country',
           name,
-          ...(country.capital   && { containsPlace: { '@type': 'City', name: country.capital } }),
+          ...(country.capital    && { containsPlace: { '@type': 'City', name: country.capital } }),
           ...(country.population && { population: country.population }),
         },
       }

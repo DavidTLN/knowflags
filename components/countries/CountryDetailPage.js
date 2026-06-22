@@ -7,6 +7,9 @@ import FlagImage from '@/components/FlagImage'
 import FlagHistoryModule from '@/components/FlagHistoryModule'
 import { useLocale } from 'next-intl'
 import Footer from '@/components/Footer'
+import { CollectionsProvider } from '@/components/collections/CollectionsContext'
+import CollectionControls from '@/components/collections/CollectionControls'
+import FavoriteHeart from '@/components/collections/FavoriteHeart'
 
 const REGION_LABELS = { Africa: 'Afrique', Americas: 'Amériques', Asia: 'Asie', Europe: 'Europe', Oceania: 'Océanie' }
 
@@ -107,7 +110,10 @@ function CountryFlagsSection({ countryIso2 }) {
             const name = locale === 'fr' ? flag.name_fr : flag.name_en
             const parentName = flag.parent ? (locale === 'fr' ? flag.parent.name_fr : flag.parent.name_en) : null
             return (
-              <div key={flag.slug} style={{ backgroundColor: 'white', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 1px 6px rgba(0,0,0,0.06)', border: '1px solid #F0EEE8' }}>
+              <div key={flag.slug} style={{ position: 'relative', backgroundColor: 'white', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 1px 6px rgba(0,0,0,0.06)', border: '1px solid #F0EEE8' }}>
+                <div style={{ position: 'absolute', top: '8px', right: '8px', zIndex: 2 }}>
+                  <FavoriteHeart entityType={flag.flag_type} entityCode={flag.slug} countryCode={countryIso2} size={28} />
+                </div>
                 <div style={{ height: '120px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '12px' }}>
                   <FlagImage slug={flag.slug} prefix={flag.image_path?.includes?.('/cities/') ? '/flags/cities' : '/flags/regions'} name={name} color="#0B1F3B" width={150} height={96} />
                 </div>
@@ -295,7 +301,7 @@ export default function CountryDetailPage({ code }) {
   ]
 
   return (
-    <>
+    <CollectionsProvider>
     <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: 'Arial, sans-serif' }}>
       <div style={{ maxWidth: '960px', margin: '0 auto', padding: '32px 24px' }}>
 
@@ -316,7 +322,11 @@ export default function CountryDetailPage({ code }) {
 
           <div style={{ flex: 1, minWidth: '200px' }}>
             <h1 style={{ fontSize: '36px', fontWeight: '900', color: '#0B1F3B', margin: '0 0 4px', letterSpacing: '-1px' }}>{name}</h1>
-            <p style={{ margin: '0 0 24px', fontSize: '15px', color: '#64748b' }}>{region}</p>
+            <p style={{ margin: '0 0 16px', fontSize: '15px', color: '#64748b' }}>{region}</p>
+
+            <div style={{ marginBottom: '24px' }}>
+              <CollectionControls entityType="country" entityCode={country.code} countryCode={country.code} name={name} />
+            </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '24px' }}>
               {infoCards.map((item, i) => (
@@ -411,6 +421,6 @@ export default function CountryDetailPage({ code }) {
       </div>
     </div>
     <Footer />
-  </>
+  </CollectionsProvider>
   )
 }

@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import { useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-client'
 import Footer from '@/components/Footer'
+import ProfileCollections from '@/components/collections/ProfileCollections'
 
 const C = {
   navy:   '#0B1F3B',
@@ -288,6 +289,7 @@ export default function ProfilePage() {
     { id: 'games',        en: 'Games',        fr: 'Jeux'         },
     { id: 'history',      en: 'History',      fr: 'Historique'   },
     { id: 'flags',        en: 'Flags',        fr: 'Drapeaux'     },
+    { id: 'collections',  en: 'Collections',  fr: 'Collections'  },
     { id: 'badges',       en: 'Badges',       fr: 'Badges'       },
     { id: 'submissions',  en: 'Submissions',  fr: 'Soumissions'  },
     { id: 'settings',     en: 'Settings',     fr: 'Paramètres'   },
@@ -543,6 +545,12 @@ export default function ProfilePage() {
               {t('Per-flag detail coming soon.', 'Détail par drapeau bientôt disponible.')}
             </div>
           </div>
+        </>)}
+
+        {/* COLLECTIONS */}
+        {activeTab === 'collections' && (<>
+          <SectionTitle>{t('My Collections', 'Mes collections')}</SectionTitle>
+          <ProfileCollections userId={user.id} />
         </>)}
 
         {/* BADGES */}

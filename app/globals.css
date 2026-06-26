@@ -1,63 +1,244 @@
-/* ── Reset ───────────────────────────────────────────────────────────────── */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* =============================================================================
+   KnowFlags — Global Styles + Design Tokens
+   Source of truth: Design_System_for_KnowFlags (theme.css) + KnowFlags conventions
+   No @import — compatible with Tailwind/PostCSS/Turbopack
+   ============================================================================= */
+
+:root {
+
+  /* ── Brand Colors (from official DS theme.css) ───────────────────────────── */
+  --color-navy:        #16324F;   /* Primary — trust, authority                */
+  --color-navy-light:  #1E4976;   /* Hover states                              */
+  --color-navy-dark:   #0F1923;   /* Pressed, deep text                        */
+
+  --color-gold:        #F4B400;   /* Accent — badges, achievements             */
+  --color-gold-dark:   #92400E;   /* Gold text on light backgrounds            */
+
+  --color-red:         #D62828;   /* Destructive, alerts, flag red             */
+  --color-red-light:   #FEE2E2;   /* Red tint backgrounds                      */
+
+  --color-green:       #16A34A;   /* Success, tags, educational labels         */
+  --color-green-light: #DCFCE7;   /* Green tint backgrounds                    */
+
+  --color-blue:        #2563EB;   /* Info, links                               */
+  --color-blue-light:  #DBEAFE;   /* Blue tint backgrounds                     */
+
+  /* ── Neutrals ────────────────────────────────────────────────────────────── */
+  --color-bg:          #F4F1E6;   /* Page background — warm beige (KnowFlags)  */
+  --color-bg-alt:      #FAFAF7;   /* Near-white for cards/inputs               */
+  --color-surface:     #FFFFFF;   /* Cards, modals, panels                     */
+  --color-secondary:   #EEF2F7;   /* Secondary bg, chips inactive              */
+  --color-chrome:      #16324F;   /* Header & Footer — navy                    */
+
+  --color-border:      rgba(22, 50, 79, 0.12);  /* Default borders             */
+  --color-border-solid: #E2DDD5;  /* Solid borders for beige context           */
+
+  --color-text:        #0F1923;   /* Body text — near black                    */
+  --color-text-muted:  #6B7280;   /* Captions, secondary text                  */
+  --color-text-light:  #9CA3AF;   /* Placeholders, tertiary                    */
+
+  /* ── Semantic ────────────────────────────────────────────────────────────── */
+  --color-success:     #16A34A;
+  --color-warning:     #D97706;
+  --color-error:       #DC2626;
+  --color-info:        #2563EB;
+  --color-success-bg:  #DCFCE7;
+  --color-warning-bg:  #FEF3C7;
+  --color-error-bg:    #FEE2E2;
+  --color-info-bg:     #DBEAFE;
+
+  /* ── Typography — Sizes ──────────────────────────────────────────────────── */
+  --text-xs:   11px;
+  --text-sm:   13px;
+  --text-base: 15px;
+  --text-md:   16px;
+  --text-lg:   18px;
+  --text-xl:   22px;
+  --text-2xl:  28px;
+  --text-3xl:  36px;
+  --text-4xl:  48px;
+
+  /* ── Typography — Weights ────────────────────────────────────────────────── */
+  --fw-light:     300;
+  --fw-regular:   400;
+  --fw-medium:    500;
+  --fw-semibold:  600;
+  --fw-bold:      700;
+  --fw-extrabold: 800;
+  --fw-black:     900;
+
+  /* ── Typography — Line Heights ───────────────────────────────────────────── */
+  --lh-tight:   1.2;
+  --lh-snug:    1.4;
+  --lh-normal:  1.6;
+  --lh-relaxed: 1.7;
+
+  /* ── Typography — Letter Spacing ─────────────────────────────────────────── */
+  --ls-tight:  -0.02em;
+  --ls-normal:  0em;
+  --ls-wide:    0.04em;
+  --ls-wider:   0.08em;
+  --ls-widest:  0.15em;
+
+  /* ── Spacing ─────────────────────────────────────────────────────────────── */
+  --space-1:  4px;   --space-2:  8px;   --space-3:  12px;
+  --space-4:  16px;  --space-5:  20px;  --space-6:  24px;
+  --space-8:  32px;  --space-10: 40px;  --space-12: 48px;
+  --space-16: 64px;  --space-20: 80px;
+
+  /* ── Border Radius ───────────────────────────────────────────────────────── */
+  --radius-sm:   6px;
+  --radius-md:   10px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-2xl:  20px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ─────────────────────────────────────────────────────────────── */
+  --shadow-xs:  0 1px 3px rgba(22,50,79,0.06);
+  --shadow-sm:  0 2px 8px rgba(22,50,79,0.08);
+  --shadow-md:  0 4px 16px rgba(22,50,79,0.10);
+  --shadow-lg:  0 8px 32px rgba(22,50,79,0.12);
+  --shadow-xl:  0 16px 48px rgba(22,50,79,0.18);
+  --shadow-2xl: 0 24px 64px rgba(22,50,79,0.22);
+
+  /* ── Transitions ─────────────────────────────────────────────────────────── */
+  --transition-fast:   0.12s ease;
+  --transition-base:   0.2s ease;
+  --transition-slow:   0.3s ease;
+  --transition-spring: 0.28s cubic-bezier(0.32, 0.72, 0, 1);
+
+  /* ── Layout ──────────────────────────────────────────────────────────────── */
+  --max-width:           1152px;
+  --max-width-wide:      1400px;
+  --header-height:       60px;
+  --page-padding-x:      24px;
+  --page-padding-mobile: 16px;
+
+  /* ── Z-Index ─────────────────────────────────────────────────────────────── */
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-modal:    500;
+  --z-loader:   9999;
 }
 
-/* ── Base ────────────────────────────────────────────────────────────────── */
-html {
-  overflow-x: clip; /* use clip instead of hidden — does not break position:sticky */
-}
+/* ── Reset ────────────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { overflow-x: clip; }
 
 body {
   overflow-x: hidden;
   max-width: 100vw;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-body, 'Inter', system-ui, -apple-system, sans-serif);
+  font-size: var(--text-base);
+  line-height: var(--lh-normal);
+  color: var(--color-text);
+  background-color: var(--color-bg);
 }
 
-body {
-  font-family: var(--font-body), 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
-  font-size: 15px;
-  line-height: 1.6;
-  color: #0B1F3B;
-  background-color: #F7F5EF;
-}
-
-/* ── Typography ──────────────────────────────────────────────────────────── */
+/* ── Typography ───────────────────────────────────────────────────────────── */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display), 'Segoe UI', Georgia, serif;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-  color: #0B1F3B;
+  font-family: var(--font-display, 'Inter', system-ui, -apple-system, sans-serif);
+  font-weight: var(--fw-black);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  color: var(--color-navy);
 }
-
 h1 { font-size: clamp(28px, 5vw, 48px); }
 h2 { font-size: clamp(22px, 3.5vw, 32px); }
 h3 { font-size: clamp(18px, 2.5vw, 24px); }
-h4 { font-size: 18px; }
+h4 { font-size: var(--text-lg); }
 
-p {
-  font-family: var(--font-body), 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
-  line-height: 1.7;
-}
-
-/* ── Links ───────────────────────────────────────────────────────────────── */
-a { color: inherit; text-decoration: none; }
-
-/* ── Media ───────────────────────────────────────────────────────────────── */
+p  { line-height: var(--lh-relaxed); }
+a  { color: inherit; text-decoration: none; }
 img, video, canvas { max-width: 100%; display: block; }
+input, textarea, select, button { font-family: inherit; font-size: inherit; }
 
-/* ── Forms ───────────────────────────────────────────────────────────────── */
-input, textarea, select, button {
-  font-family: var(--font-body), 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
-  font-size: inherit;
-}
-
-/* ── Scrollbar ───────────────────────────────────────────────────────────── */
+/* ── Scrollbar ────────────────────────────────────────────────────────────── */
 ::-webkit-scrollbar       { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: #E2DDD5; border-radius: 99px; }
-::-webkit-scrollbar-thumb:hover { background: #8A8278; }
+::-webkit-scrollbar-thumb { background: var(--color-border-solid); border-radius: var(--radius-full); }
+::-webkit-scrollbar-thumb:hover { background: var(--color-text-muted); }
+
+/* ── PageLoader keyframes ─────────────────────────────────────────────────── */
+@keyframes kf-card-in {
+  from { opacity: 0; transform: scale(0.7); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes kf-triangle-in {
+  from { opacity: 0; transform: translateX(-100%); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes kf-circle-in {
+  from { opacity: 0; transform: translate(-50%, -50%) scale(0); }
+  to   { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+@keyframes kf-pulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1);    opacity: 1; }
+  50%       { transform: translate(-50%, -50%) scale(1.18); opacity: 0.8; }
+}
+@keyframes kf-fade-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes kf-progress {
+  0%   { width: 0%;  margin-left: 0%; }
+  50%  { width: 60%; margin-left: 20%; }
+  100% { width: 0%;  margin-left: 100%; }
+}
+
+/* ── Utility classes ──────────────────────────────────────────────────────── */
+.kf-section        { padding: var(--space-12) var(--page-padding-x); background-color: var(--color-bg); }
+.kf-section--white { background-color: var(--color-surface); }
+.kf-container      { max-width: var(--max-width); margin: 0 auto; }
+
+.kf-card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+.kf-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+
+.kf-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 14px; border-radius: var(--radius-full);
+  font-size: var(--text-sm); font-weight: var(--fw-semibold);
+  cursor: pointer; border: 1.5px solid var(--color-border-solid);
+  background-color: var(--color-secondary); color: var(--color-text-muted);
+  transition: all var(--transition-fast); white-space: nowrap;
+}
+.kf-chip--active { border-color: var(--color-navy); background-color: var(--color-navy); color: white; }
+
+.kf-badge {
+  display: inline-flex; align-items: center;
+  padding: 3px 8px; border-radius: var(--radius-full);
+  font-size: var(--text-xs); font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-wide); text-transform: uppercase;
+}
+.kf-badge--gold   { background-color: #FEF3C7; color: #92400E; }
+.kf-badge--green  { background-color: var(--color-green-light); color: var(--color-green); }
+.kf-badge--navy   { background-color: var(--color-secondary); color: var(--color-navy); }
+.kf-badge--red    { background-color: var(--color-red-light); color: var(--color-red); }
+
+.kf-input {
+  width: 100%; padding: 11px 14px; border-radius: var(--radius-md);
+  border: 1.5px solid var(--color-border-solid); background-color: var(--color-surface);
+  font-size: var(--text-sm); color: var(--color-text); outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+.kf-input:focus { border-color: var(--color-navy); box-shadow: 0 0 0 3px rgba(22,50,79,0.12); }
+.kf-input::placeholder { color: var(--color-text-light); }
+
+/* ── Responsive helpers ───────────────────────────────────────────────────── */
+@media (max-width: 767px) {
+  .kf-section { padding: var(--space-8) var(--page-padding-mobile); }
+  .kf-hide-mobile { display: none !important; }
+}
+@media (min-width: 768px) {
+  .kf-hide-desktop { display: none !important; }
+}

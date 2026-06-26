@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-client'
+import PageLoader from '@/components/PageLoader'
 
 const ATTRIBUTES = [
   { key: 'area',       icon: '🗺️',  higher_wins: true,  en: 'Largest area',            fr: 'Plus grande superficie',         format: v => (v/1000).toFixed(0)+'k km²' },
@@ -213,16 +214,7 @@ export default function FlagRanker() {
   const currentAttr    = attrs[currentIdx]
 
   // ── LOADING ────────────────────────────────────────────────────────────
-  if (dataLoading) return (
-    <div style={S.page}>
-      <div style={{ ...S.card, padding: '60px 32px' }}>
-        <div style={{ fontSize: '40px', marginBottom: '16px' }}>🌍</div>
-        <div style={{ fontSize: '16px', fontWeight: '700', color: '#0B1F3B' }}>
-          {t('Loading country data...', 'Chargement des données pays...')}
-        </div>
-      </div>
-    </div>
-  )
+  if (dataLoading) return <PageLoader label={t('Loading country data…', 'Chargement des données pays…')} />
 
   // ── INTRO ──────────────────────────────────────────────────────────────
   if (screen === 'intro') {

@@ -1,43 +1,41 @@
 // app/[locale]/layout.js
-// Changements vs version actuelle :
-// - metadata de base simplifiée (les pages individuelles surchargent avec generateMetadata)
-// - JSON-LD WebSite déplacé dans une constante propre
-// - alternates canonical ajouté au niveau layout
 
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
-import { Roboto, Roboto_Slab } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import Header from '@/components/Header'
 import Script from 'next/script'
 import '../globals.css'
 
-const roboto = Roboto({
+// ── Inter — variable font, all weights in one request ─────────────────────────
+const inter = Inter({
   subsets: ['latin'],
-  weight: ['400', '500', '700'],
   variable: '--font-body',
   display: 'swap',
 })
 
-const robotoSlab = Roboto_Slab({
+// ── Inter for display as well — same family, heavier weights ─────────────────
+// We use Inter for both body and display to match the official DS.
+// --font-display is kept as a separate variable so heading components
+// can optionally differ if the DS evolves.
+const interDisplay = Inter({
   subsets: ['latin'],
-  weight: ['400', '600', '700'],
   variable: '--font-display',
   display: 'swap',
 })
 
 const BASE_URL = 'https://knowflags.com'
 
-// Base metadata — individual pages override with generateMetadata()
 export const metadata = {
   title: {
-    default: 'KnowFlags — Explore the World Through Flags',
-    template: '%s | KnowFlags',
+    default:  'Knowflags — Explore the World Through Flags',
+    template: '%s | Knowflags',
   },
-  description: 'Flag quizzes, country facts and interactive maps — learn world geography on KnowFlags.',
+  description: 'Flag quizzes, country facts and interactive maps — learn world geography on Knowflags.',
   metadataBase: new URL(BASE_URL),
   openGraph: {
-    siteName: 'KnowFlags',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'KnowFlags' }],
+    siteName: 'Knowflags',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Knowflags' }],
     type: 'website',
   },
   twitter: {
@@ -45,8 +43,12 @@ export const metadata = {
     images: ['/og-image.png'],
   },
   icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: '32x32' },
+    ],
+    shortcut: '/favicon.svg',
+    apple:    '/apple-touch-icon.png',
   },
   robots: {
     index: true,
@@ -56,7 +58,7 @@ export const metadata = {
 }
 
 export const viewport = {
-  width: 'device-width',
+  width:        'device-width',
   initialScale: 1,
   maximumScale: 1,
 }
@@ -67,37 +69,37 @@ export default async function RootLayout({ children, params }) {
 
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'KnowFlags',
-    url: BASE_URL,
+    '@type':    'WebSite',
+    name:        'Knowflags',
+    url:         BASE_URL,
+    logo:        `${BASE_URL}/logo.svg`,
     description: locale === 'fr'
       ? 'Quiz de drapeaux et exploration géographique interactive.'
       : 'Flag quizzes and interactive geographical exploration.',
-    logo: `${BASE_URL}/logo.png`,
     inLanguage: locale,
     potentialAction: {
-      '@type': 'SearchAction',
-      target: { '@type': 'EntryPoint', urlTemplate: `${BASE_URL}/${locale}/countries?q={search_term_string}` },
+      '@type':  'SearchAction',
+      target:   { '@type': 'EntryPoint', urlTemplate: `${BASE_URL}/${locale}/countries?q={search_term_string}` },
       'query-input': 'required name=search_term_string',
     },
   }
 
   return (
-    <html lang={locale} className={`${roboto.variable} ${robotoSlab.variable}`}>
+    <html lang={locale} className={`${inter.variable} ${interDisplay.variable}`}>
       <head>
         <style>{`
           *, *::before, *::after { box-sizing: border-box; }
-          html { overflow-x: clip; } body { overflow-x: clip; max-width: 100vw; }
+          html { overflow-x: clip; }
+          body { overflow-x: clip; max-width: 100vw; }
           img, video, canvas { max-width: 100%; }
         `}</style>
 
-        {/* JSON-LD WebSite */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
 
-        {/* ── STEP 1 : GTM Consent Mode defaults (must be FIRST) ── */}
+        {/* GTM Consent Mode defaults */}
         <script dangerouslySetInnerHTML={{__html: `
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -115,7 +117,7 @@ export default async function RootLayout({ children, params }) {
           gtag('set', 'url_passthrough', true);
         `}} />
 
-        {/* ── STEP 2 : Cookiebot CMP ── */}
+        {/* Cookiebot CMP */}
         <Script
           id="cookiebot"
           src="https://consent.cookiebot.com/uc.js"
@@ -125,7 +127,7 @@ export default async function RootLayout({ children, params }) {
           strategy="beforeInteractive"
         />
 
-        {/* ── STEP 3 : Google Tag Manager ── */}
+        {/* Google Tag Manager */}
         <Script
           id="gtm-script"
           strategy="afterInteractive"

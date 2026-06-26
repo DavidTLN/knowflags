@@ -8,18 +8,17 @@ export default function TrueSizeModule() {
   const t = (en, fr) => locale === 'fr' ? fr : en
 
   return (
-    <section style={{
-      maxWidth: '1200px',
-      margin: '0 auto',
-      padding: '0 24px 80px',  // bottom padding adds space before footer
-    }}>
+    <section style={{ backgroundColor: '#FFFFFF' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '64px 24px 80px' }}>
       <div style={{
-        background: 'linear-gradient(135deg, #0B1F3B 0%, #1a3a5c 60%, #0d4a4a 100%)',
-        borderRadius: '24px',
+        // DS: flat navy → navyDark, no off-DS teal
+        background: 'linear-gradient(135deg, #16324F 0%, #0F1923 100%)',
+        borderRadius: '20px',                 // DS 2xl
         overflow: 'hidden',
         display: 'flex',
         flexDirection: 'row',
         minHeight: '340px',
+        boxShadow: '0 16px 48px rgba(22,50,79,0.18)',  // DS shadow xl
       }}
         className="truesize-module"
       >
@@ -35,7 +34,7 @@ export default function TrueSizeModule() {
         >
           <img
             src="/true-size-hero.png"
-            alt="Countries compared in true size on a map"
+            alt={t('Countries compared in true size on a map', 'Pays comparés à leur taille réelle sur une carte')}
             style={{
               width: '100%',
               height: '100%',
@@ -44,36 +43,20 @@ export default function TrueSizeModule() {
               display: 'block',
             }}
           />
-          {/* Gradient fade on the right edge to blend into the dark card */}
+          {/* Gradient fade on the right edge to blend into the navy card */}
           <div style={{
             position: 'absolute',
             top: 0, right: 0, bottom: 0,
             width: '80px',
-            background: 'linear-gradient(to right, transparent, #1a3a5c)',
+            background: 'linear-gradient(to right, transparent, #16324F)',
           }} />
           {/* Bottom gradient */}
           <div style={{
             position: 'absolute',
             bottom: 0, left: 0, right: 0,
             height: '60px',
-            background: 'linear-gradient(to top, rgba(11,31,59,0.6), transparent)',
+            background: 'linear-gradient(to top, rgba(15,25,35,0.6), transparent)',
           }} />
-
-          {/* Badges */}
-          <div style={{
-            position: 'absolute',
-            bottom: '16px',
-            left: '16px',
-            display: 'flex',
-            gap: '6px',
-          }}>
-            <span style={{ fontSize: '9px', fontWeight: '800', letterSpacing: '0.1em', padding: '3px 8px', borderRadius: '99px', backgroundColor: 'rgba(158,183,229,0.25)', border: '1px solid rgba(158,183,229,0.5)', color: '#9EB7E5', textTransform: 'uppercase' }}>
-              {t('Interactive', 'Interactif')}
-            </span>
-            <span style={{ fontSize: '9px', fontWeight: '800', letterSpacing: '0.1em', padding: '3px 8px', borderRadius: '99px', backgroundColor: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', color: 'rgba(255,255,255,0.7)', textTransform: 'uppercase' }}>
-              {t('Free', 'Gratuit')}
-            </span>
-          </div>
         </div>
 
         {/* Right: content */}
@@ -83,24 +66,25 @@ export default function TrueSizeModule() {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
-          gap: '20px',
+          gap: '18px',
         }}
           className="truesize-content-side"
         >
-          {/* Label */}
-          <div style={{
-            display: 'inline-flex',
+          {/* Overline — DS pattern: bar + uppercase gold label, no emoji */}
+          <p style={{
+            display: 'flex',
             alignItems: 'center',
-            gap: '6px',
+            gap: '8px',
+            margin: 0,
             fontSize: '11px',
             fontWeight: '800',
-            letterSpacing: '0.12em',
+            letterSpacing: '0.15em',
             textTransform: 'uppercase',
-            color: '#FEB12F',
+            color: '#F4B400',
           }}>
-            <span>🗺️</span>
+            <span style={{ display: 'inline-block', width: '20px', height: '2px', backgroundColor: '#F4B400', borderRadius: '2px' }} />
             {t('True Size Map', 'Carte Taille Réelle')}
-          </div>
+          </p>
 
           {/* Title */}
           <h2 style={{
@@ -112,8 +96,8 @@ export default function TrueSizeModule() {
             letterSpacing: '-0.8px',
           }}>
             {t(
-              <>How big <em style={{ fontStyle: 'normal', color: '#9EB7E5' }}>really</em> is Russia?</>,
-              <>C'est quoi la vraie taille de la <em style={{ fontStyle: 'normal', color: '#9EB7E5' }}>Russie</em> ?</>
+              <>How big <em style={{ fontStyle: 'normal', color: '#F4B400' }}>really</em> is China?</>,
+              <>C&apos;est quoi la vraie taille de la <em style={{ fontStyle: 'normal', color: '#F4B400' }}>Chine</em> ?</>
             )}
           </h2>
 
@@ -121,9 +105,9 @@ export default function TrueSizeModule() {
           <p style={{
             margin: 0,
             fontSize: '15px',
-            color: 'rgba(255,255,255,0.65)',
-            lineHeight: 1.75,
-            maxWidth: '360px',
+            color: 'rgba(255,255,255,0.6)',
+            lineHeight: 1.7,
+            maxWidth: '380px',
           }}>
             {t(
               "Most world maps distort the size of countries. Our interactive tool lets you drag any country and compare its true size anywhere on the globe — no more Mercator lies.",
@@ -131,44 +115,34 @@ export default function TrueSizeModule() {
             )}
           </p>
 
-          {/* Stats row */}
-          <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap' }}>
-            {[
-              { value: '195', label: t('Countries', 'Pays') },
-              { value: '100%', label: t('Accurate', 'Précis') },
-              { value: t('Free', 'Gratuit'), label: t('Always', 'Toujours') },
-            ].map((s, i) => (
-              <div key={i}>
-                <div style={{ fontSize: '20px', fontWeight: '900', color: 'white', lineHeight: 1 }}>{s.value}</div>
-                <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.45)', marginTop: '3px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.06em' }}>{s.label}</div>
-              </div>
-            ))}
-          </div>
-
-          {/* CTA */}
+          {/* CTA — white on navy, DS radius 10px, SVG arrow */}
           <div>
             <Link href={`/${locale}/true-size`} style={{
               display: 'inline-flex',
               alignItems: 'center',
               gap: '8px',
               backgroundColor: 'white',
-              color: '#0B1F3B',
+              color: '#16324F',
               padding: '13px 24px',
-              borderRadius: '12px',
+              borderRadius: '10px',
               textDecoration: 'none',
               fontSize: '14px',
-              fontWeight: '800',
+              fontWeight: '700',
               letterSpacing: '-0.2px',
-              transition: 'all 0.2s',
+              boxShadow: '0 2px 8px rgba(22,50,79,0.08)',
+              transition: 'background-color 0.15s ease',
             }}
-              onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#9EB7E5' }}
+              onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#F4F1E6' }}
               onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'white' }}
             >
               {t('Explore the map', 'Explorer la carte')}
-              <span style={{ fontSize: '16px' }}>→</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
             </Link>
           </div>
         </div>
+      </div>
       </div>
 
       <style>{`

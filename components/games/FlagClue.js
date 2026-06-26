@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-client'
+import PageLoader from '@/components/PageLoader'
 
 const MAX_LIVES    = 3
 const TIMER_SECS   = 15
@@ -181,10 +182,7 @@ export default function FlagClue() {
         <div style={{ flex: 1, overflowY: 'auto', padding: '24px 16px 8px' }}>
           <div style={{ maxWidth: '480px', margin: '0 auto' }}>
             {loading ? (
-              <div style={{ padding: '60px', textAlign: 'center' }}>
-                <div style={{ fontSize: '36px', marginBottom: '12px' }}>🔍</div>
-                <div style={{ fontSize: '15px', color: '#64748b' }}>{t('Loading facts...', 'Chargement des anecdotes...')}</div>
-              </div>
+              <PageLoader inline label={t('Loading facts…', 'Chargement des anecdotes…')} />
             ) : (
               <>
                 <div style={{ textAlign: 'center', marginBottom: '20px' }}>

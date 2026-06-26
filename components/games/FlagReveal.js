@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-client'
+import PageLoader from '@/components/PageLoader'
 
 function normalize(str) {
   return str.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
@@ -396,14 +397,7 @@ export default function FlagReveal() {
   )
 
   // ── LOADING ──────────────────────────────────────────────────────────────────
-  if (countriesLoading) return (
-    <div style={{ backgroundColor: '#0B1F3B', height: 'calc(100dvh - 60px)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <div style={{ textAlign: 'center', color: 'white' }}>
-        <div style={{ fontSize: '32px', marginBottom: '12px' }}>🏳️</div>
-        <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '14px' }}>{locale === 'fr' ? 'Chargement des drapeaux...' : 'Loading flags...'}</p>
-      </div>
-    </div>
-  )
+  if (countriesLoading) return <PageLoader label={locale === 'fr' ? 'Chargement des drapeaux…' : 'Loading flags…'} />
 
   // ── SETUP ────────────────────────────────────────────────────────────────────
   if (!difficulty) return (

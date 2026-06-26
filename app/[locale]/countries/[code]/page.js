@@ -93,7 +93,7 @@ export default async function Page({ params }) {
           '@type': 'Organization',
           name: 'KnowFlags',
           url: BASE_URL,
-          logo: { '@type': 'ImageObject', url: `${BASE_URL}/logo.png` },
+          logo: { '@type': 'ImageObject', url: `${BASE_URL}/logo.svg` },
         },
         about: {
           '@type': 'Country',

@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-client'
+import PageLoader from '@/components/PageLoader'
 
 const MAX_LIVES     = 3
 const POINTS_CORRECT  = 50
@@ -271,14 +272,7 @@ export default function CapitalCity() {
   const C = { navy: '#0B1F3B', cream: '#F4F1E6', green: '#426A5A', red: '#C0392B', border: '#E2DDD5', muted: '#8A8278' }
 
   // ── LOADING ────────────────────────────────────────────────────────────────
-  if (countriesLoading) return (
-    <div style={{ backgroundColor: '#0B1F3B', height: 'calc(100dvh - 60px)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <div style={{ textAlign: 'center', color: 'white' }}>
-        <div style={{ fontSize: '32px', marginBottom: '12px' }}>🏙️</div>
-        <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '14px' }}>{locale === 'fr' ? 'Chargement...' : 'Loading...'}</p>
-      </div>
-    </div>
-  )
+  if (countriesLoading) return <PageLoader label={locale === 'fr' ? 'Chargement…' : 'Loading…'} />
 
   // ── SETUP ──────────────────────────────────────────────────────────────────
   if (screen === SCREEN.SETUP) return (

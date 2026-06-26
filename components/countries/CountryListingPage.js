@@ -5,56 +5,71 @@ import Link from 'next/link'
 import { useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-client'
 import Footer from '@/components/Footer'
+import PageLoader from '@/components/PageLoader'
+
+// ── DS Tokens ─────────────────────────────────────────────────────────────────
+const DS = {
+  navy:    '#16324F',
+  bg:      '#F4F1E6',   // Page — warm beige   // Page background — white
+  bgAlt:   '#FAFAF7',
+  surface: '#FFFFFF',   // Cards — white   // Card/bloc — beige
+  surfaceAlt: '#FAFAF7', // Inputs — near white
+  border:  '#E2DDD5',
+  muted:   '#6B7280',
+  light:   '#9CA3AF',
+}
 
 const REGIONS = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania']
 const REGION_LABELS = { Africa: 'Afrique', Americas: 'Amériques', Asia: 'Asie', Europe: 'Europe', Oceania: 'Océanie' }
 
 const CONTINENT_OPTIONS = [
-  { key: 'europe',           label: { en: 'Europe',          fr: 'Europe'            }, emoji: '🇪🇺' },
-  { key: 'africa',           label: { en: 'Africa',          fr: 'Afrique'           }, emoji: '🌍' },
-  { key: 'asia',             label: { en: 'Asia',            fr: 'Asie'              }, emoji: '🌏' },
-  { key: 'north-americas',   label: { en: 'North America',   fr: 'Amérique du Nord'  }, emoji: '🌎' },
-  { key: 'central-americas', label: { en: 'Central America', fr: 'Amérique centrale' }, emoji: '🌴' },
-  { key: 'south-americas',   label: { en: 'South America',   fr: 'Amérique du Sud'   }, emoji: '🌎' },
-  { key: 'oceania',          label: { en: 'Oceania',         fr: 'Océanie'           }, emoji: '🌊' },
+  { key: 'europe',           label: { en: 'Europe',          fr: 'Europe'            } },
+  { key: 'africa',           label: { en: 'Africa',          fr: 'Afrique'           } },
+  { key: 'asia',             label: { en: 'Asia',            fr: 'Asie'              } },
+  { key: 'north-americas',   label: { en: 'North America',   fr: 'Amérique du Nord'  } },
+  { key: 'central-americas', label: { en: 'Central America', fr: 'Amérique centrale' } },
+  { key: 'south-americas',   label: { en: 'South America',   fr: 'Amérique du Sud'   } },
+  { key: 'oceania',          label: { en: 'Oceania',         fr: 'Océanie'           } },
 ]
 
 const REGION_TO_CONTINENT = {
-  'Africa':   'africa',
-  'Americas': 'north-americas',
-  'Asia':     'asia',
-  'Europe':   'europe',
-  'Oceania':  'oceania',
+  'Africa': 'africa', 'Americas': 'north-americas',
+  'Asia': 'asia', 'Europe': 'europe', 'Oceania': 'oceania',
 }
+
+const COUNTRY_CONTINENT = {
+  ad: 'europe', ae: 'asia', af: 'asia', ag: 'central-americas', al: 'europe', am: 'asia', ao: 'africa', ar: 'south-americas', at: 'europe', au: 'oceania', az: 'asia', ba: 'europe', bb: 'central-americas', bd: 'asia', be: 'europe', bf: 'africa', bg: 'europe', bh: 'asia', bi: 'africa', bj: 'africa', bn: 'asia', bo: 'south-americas', br: 'south-americas', bs: 'central-americas', bt: 'asia', bw: 'africa', by: 'europe', bz: 'central-americas', ca: 'north-americas', cd: 'africa', cf: 'africa', cg: 'africa', ch: 'europe', ci: 'africa', cl: 'south-americas', cm: 'africa', cn: 'asia', co: 'south-americas', cr: 'central-americas', cu: 'central-americas', cv: 'africa', cy: 'europe', cz: 'europe', de: 'europe', dj: 'africa', dk: 'europe', dm: 'central-americas', do: 'central-americas', dz: 'africa', ec: 'south-americas', ee: 'europe', eg: 'africa', er: 'africa', es: 'europe', et: 'africa', fi: 'europe', fj: 'oceania', fm: 'oceania', fr: 'europe', ga: 'africa', gb: 'europe', gd: 'central-americas', ge: 'asia', gh: 'africa', gl: 'north-americas', gm: 'africa', gn: 'africa', gq: 'africa', gr: 'europe', gt: 'central-americas', gw: 'africa', gy: 'south-americas', hn: 'central-americas', hr: 'europe', ht: 'central-americas', hu: 'europe', id: 'asia', ie: 'europe', il: 'asia', in: 'asia', iq: 'asia', ir: 'asia', is: 'europe', it: 'europe', jm: 'central-americas', jo: 'asia', jp: 'asia', ke: 'africa', kg: 'asia', kh: 'asia', ki: 'oceania', km: 'africa', kn: 'central-americas', kp: 'asia', kr: 'asia', kw: 'asia', kz: 'asia', la: 'asia', lb: 'asia', lc: 'central-americas', li: 'europe', lk: 'asia', lr: 'africa', ls: 'africa', lt: 'europe', lu: 'europe', lv: 'europe', ly: 'africa', ma: 'africa', mc: 'europe', md: 'europe', me: 'europe', mg: 'africa', mh: 'oceania', mk: 'europe', ml: 'africa', mm: 'asia', mn: 'asia', mr: 'africa', mt: 'europe', mu: 'africa', mv: 'asia', mw: 'africa', mx: 'north-americas', my: 'asia', mz: 'africa', na: 'africa', ne: 'africa', ng: 'africa', ni: 'central-americas', nl: 'europe', no: 'europe', np: 'asia', nr: 'oceania', nz: 'oceania', om: 'asia', pa: 'central-americas', pe: 'south-americas', pg: 'oceania', ph: 'asia', pk: 'asia', pl: 'europe', ps: 'asia', pt: 'europe', pw: 'oceania', py: 'south-americas', qa: 'asia', ro: 'europe', rs: 'europe', ru: 'europe', rw: 'africa', sa: 'asia', sb: 'oceania', sc: 'africa', sd: 'africa', se: 'europe', sg: 'asia', si: 'europe', sk: 'europe', sl: 'africa', sm: 'europe', sn: 'africa', so: 'africa', sr: 'south-americas', ss: 'africa', st: 'africa', sv: 'central-americas', sy: 'asia', sz: 'africa', td: 'africa', tg: 'africa', th: 'asia', tj: 'asia', tl: 'asia', tm: 'asia', tn: 'africa', to: 'oceania', tr: 'asia', tt: 'central-americas', tv: 'oceania', tw: 'asia', tz: 'africa', ua: 'europe', ug: 'africa', us: 'north-americas', uy: 'south-americas', uz: 'asia', va: 'europe', vc: 'central-americas', ve: 'south-americas', vn: 'asia', vu: 'oceania', ws: 'oceania', xk: 'europe', ye: 'asia', za: 'africa', zm: 'africa', zw: 'africa'
+}
+
 
 const COLOR_OPTIONS = [
   { key: 'red',    label: { en: 'Red',    fr: 'Rouge'  }, hex: '#ef4444' },
   { key: 'blue',   label: { en: 'Blue',   fr: 'Bleu'   }, hex: '#3b82f6' },
   { key: 'green',  label: { en: 'Green',  fr: 'Vert'   }, hex: '#22c55e' },
   { key: 'yellow', label: { en: 'Yellow', fr: 'Jaune'  }, hex: '#eab308' },
-  { key: 'white',  label: { en: 'White',  fr: 'Blanc'  }, hex: '#e5e7eb', border: true },
+  { key: 'white',  label: { en: 'White',  fr: 'Blanc'  }, hex: '#E2DDD5', border: true },
   { key: 'black',  label: { en: 'Black',  fr: 'Noir'   }, hex: '#1f2937' },
   { key: 'orange', label: { en: 'Orange', fr: 'Orange' }, hex: '#f97316' },
   { key: 'purple', label: { en: 'Purple', fr: 'Violet' }, hex: '#7c3aed' },
 ]
 
 const SYMBOL_OPTIONS = [
-  { key: 'Star',         label: { en: 'Star',           fr: 'Étoile'           } },
-  { key: 'Cross',        label: { en: 'Cross',          fr: 'Croix'            } },
-  { key: 'Crescent',     label: { en: 'Crescent',       fr: 'Croissant'        } },
-  { key: 'Eagle',        label: { en: 'Eagle',          fr: 'Aigle'            } },
-  { key: 'Bird',         label: { en: 'Bird',           fr: 'Oiseau'           } },
-  { key: 'Sun',          label: { en: 'Sun',            fr: 'Soleil'           } },
-  { key: 'Coat of arms', label: { en: 'Coat of Arms',   fr: 'Blason'           } },
-  { key: 'Triangle',     label: { en: 'Triangle',       fr: 'Triangle'         } },
-  { key: 'Dragon',       label: { en: 'Dragon',         fr: 'Dragon'           } },
-  { key: 'Union Jack',   label: { en: 'Union Jack',     fr: 'Union Jack'       } },
-  { key: 'Animals',      label: { en: 'Animals',        fr: 'Animaux'          } },
-  { key: 'Tools',        label: { en: 'Tools',          fr: 'Outils'           } },
+  { key: 'Star',         label: { en: 'Star',           fr: 'Étoile'             } },
+  { key: 'Cross',        label: { en: 'Cross',          fr: 'Croix'              } },
+  { key: 'Crescent',     label: { en: 'Crescent',       fr: 'Croissant'          } },
+  { key: 'Eagle',        label: { en: 'Eagle',          fr: 'Aigle'              } },
+  { key: 'Bird',         label: { en: 'Bird',           fr: 'Oiseau'             } },
+  { key: 'Sun',          label: { en: 'Sun',            fr: 'Soleil'             } },
+  { key: 'Coat of arms', label: { en: 'Coat of Arms',   fr: 'Blason'             } },
+  { key: 'Triangle',     label: { en: 'Triangle',       fr: 'Triangle'           } },
+  { key: 'Dragon',       label: { en: 'Dragon',         fr: 'Dragon'             } },
+  { key: 'Union Jack',   label: { en: 'Union Jack',     fr: 'Union Jack'         } },
+  { key: 'Animals',      label: { en: 'Animals',        fr: 'Animaux'            } },
+  { key: 'Tools',        label: { en: 'Tools',          fr: 'Outils'             } },
   { key: 'Map',          label: { en: 'Geographic Map', fr: 'Carte géographique' } },
-  { key: '__weapon',     label: { en: 'Any weapon',     fr: 'Arme (tout type)' }, special: 'weapon'  },
-  { key: '__firearm',    label: { en: 'Firearm',        fr: 'Arme à feu'       }, special: 'firearm' },
-  { key: '__blade',      label: { en: 'Blade weapon',   fr: 'Arme blanche'     }, special: 'blade'   },
+  { key: '__weapon',     label: { en: 'Any weapon',     fr: 'Arme (tout type)'   }, special: 'weapon'  },
+  { key: '__firearm',    label: { en: 'Firearm',        fr: 'Arme à feu'         }, special: 'firearm' },
+  { key: '__blade',      label: { en: 'Blade weapon',   fr: 'Arme blanche'       }, special: 'blade'   },
 ]
 
 const FIREARM_SYMBOLS    = ['Gun', 'Rifle', 'Musket', 'Cannon', 'Firearms', 'Firearm']
@@ -75,6 +90,16 @@ const SHAPE_OPTIONS = [
   { key: 'pennant',   label: { en: 'Pennant',   fr: 'Pennon'    } },
 ]
 
+// ── Calendar icon SVG ─────────────────────────────────────────────────────────
+const CalIcon = ({ size = 10 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
+    style={{ display: 'inline', verticalAlign: 'middle', marginRight: '3px' }}>
+    <rect x="3" y="4" width="18" height="18" rx="2"/>
+    <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>
+    <line x1="3" y1="10" x2="21" y2="10"/>
+  </svg>
+)
+
 export default function CountryListingPage() {
   const locale = useLocale()
   const t = (en, fr) => locale === 'fr' ? fr : en
@@ -92,12 +117,11 @@ export default function CountryListingPage() {
   const [isMobile, setIsMobile]                 = useState(false)
   const [filtersOpen, setFiltersOpen]           = useState(false)
   const [openSections, setOpenSections]         = useState({})
+
   const toggleSection = (key) => setOpenSections(prev => ({ ...prev, [key]: !prev[key] }))
 
   const RATIO_OPTIONS = useMemo(() => {
-    const seen = new Set()
-    const opts = []
-    const freq = {}
+    const seen = new Set(); const opts = []; const freq = {}
     countries.forEach(c => { if (c.ratio) freq[c.ratio] = (freq[c.ratio] || 0) + 1 })
     Object.entries(freq).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).forEach(([ratio]) => {
       if (!seen.has(ratio)) {
@@ -116,18 +140,11 @@ export default function CountryListingPage() {
       .order('name_en')
       .then(({ data }) => {
         if (data) setCountries(data.map(c => ({
-          code:             c.iso_code,
-          en:               c.name_en,
-          fr:               c.name_fr,
-          region:           c.region,
-          continent:        REGION_TO_CONTINENT[c.region] || c.region?.toLowerCase() || '',
-          colors:           c.colors || [],
-          symbols:          c.symbols || [],
-          ratio:            c.ratio,
-          shape:            c.shape,
-          has_weapons:      c.has_weapons  || false,
-          has_blade:        c.has_blade    || false,
-          has_firearm:      c.has_firearm  || false,
+          code: c.iso_code, en: c.name_en, fr: c.name_fr, region: c.region,
+          continent: COUNTRY_CONTINENT[c.iso_code?.toLowerCase()] || REGION_TO_CONTINENT[c.region] || c.region?.toLowerCase() || '',
+          colors: c.colors || [], symbols: c.symbols || [],
+          ratio: c.ratio, shape: c.shape,
+          has_weapons: c.has_weapons || false, has_blade: c.has_blade || false, has_firearm: c.has_firearm || false,
           last_flag_change: c.last_flag_change || null,
         })))
         setCountriesLoading(false)
@@ -166,30 +183,32 @@ export default function CountryListingPage() {
     return list
   }, [countries, search, activeContinents, activeRegions, activeColors, activeSymbols, activeRatios, activeShapes, sortOrder, locale])
 
-  const hasFilters = activeContinents.length > 0 || activeRegions.length > 0 || activeColors.length > 0 || activeSymbols.length > 0 || activeRatios.length > 0 || activeShapes.length > 0 || search
+  const hasFilters = activeContinents.length > 0 || activeRegions.length > 0 || activeColors.length > 0 || activeSymbols.length > 0 || activeRatios.length > 0 || activeShapes.length > 0 || !!search
   const activeFilterCount = [activeContinents, activeRegions, activeColors, activeSymbols, activeRatios, activeShapes].flat().length
 
   function clearAll() {
     setSearch(''); setActiveContinents([]); setActiveRegions([]); setActiveColors([]); setActiveSymbols([]); setActiveRatios([]); setActiveShapes([])
   }
 
+  // ── Chip helper ───────────────────────────────────────────────────────────
   const chipStyle = (active) => ({
-    padding: '7px 14px', borderRadius: '99px', fontSize: '13px', fontWeight: '600', cursor: 'pointer',
-    border: active ? '2px solid #0B1F3B' : '1.5px solid #e2e8f0',
-    backgroundColor: active ? '#0B1F3B' : '#fafafa',
-    color: active ? 'white' : '#475569',
-    transition: 'all 0.15s', whiteSpace: 'nowrap',
+    padding: '7px 14px', borderRadius: '9999px', fontSize: '13px', fontWeight: '600',
+    cursor: 'pointer', transition: 'all 0.15s', whiteSpace: 'nowrap', lineHeight: 1,
+    border: active ? `2px solid ${DS.navy}` : `1.5px solid ${DS.border}`,
+    backgroundColor: active ? DS.navy : DS.bgAlt,
+    color: active ? 'white' : DS.muted,
   })
 
+  // ── Filter accordion section ──────────────────────────────────────────────
   const FilterSection = ({ sectionKey, label, children }) => {
     const isOpen = openSections[sectionKey]
     return (
-      <div style={{ marginBottom: '4px', borderBottom: '1px solid #f0f0f0' }}>
+      <div style={{ marginBottom: '4px', borderBottom: `1px solid ${DS.border}` }}>
         <button onClick={() => toggleSection(sectionKey)}
           style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 0', background: 'none', border: 'none', cursor: 'pointer' }}>
-          <span style={{ fontSize: '11px', fontWeight: '800', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.8px' }}>{label}</span>
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#94a3b8" strokeWidth="2.2" strokeLinecap="round"
-            style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }}>
+          <span style={{ fontSize: '11px', fontWeight: '800', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.8px' }}>{label}</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke={DS.muted} strokeWidth="2.2" strokeLinecap="round"
+            style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s', flexShrink: 0 }}>
             <polyline points="2,4 7,10 12,4"/>
           </svg>
         </button>
@@ -198,29 +217,27 @@ export default function CountryListingPage() {
     )
   }
 
-  // ── Country tile ─────────────────────────────────────────────────────────
+  // ── Country tile ──────────────────────────────────────────────────────────
   const CountryTile = ({ country, desktop }) => {
     const name = getName(country)
-    const flagSince = country.last_flag_change
-      ? new Date(country.last_flag_change).getFullYear()
-      : null
+    const flagSince = country.last_flag_change ? new Date(country.last_flag_change).getFullYear() : null
 
     if (desktop) {
       return (
         <Link href={`/${locale}/countries/${country.code}`}
-          style={{ textDecoration: 'none', display: 'block', backgroundColor: 'white', borderRadius: '12px', overflow: 'hidden', border: '1px solid #e2e8f0', transition: 'transform 0.15s, box-shadow 0.15s', cursor: 'pointer' }}
-          onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.10)' }}
+          style={{ textDecoration: 'none', display: 'block', backgroundColor: DS.surface, borderRadius: '12px', overflow: 'hidden', border: `1px solid ${DS.border}`, transition: 'transform 0.15s, box-shadow 0.15s', cursor: 'pointer' }}
+          onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 8px 24px rgba(11,31,59,0.12)' }}
           onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none' }}
         >
-          <div style={{ aspectRatio: '3/2', overflow: 'hidden', backgroundColor: '#f0ede4', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{ aspectRatio: '3/2', overflow: 'hidden', backgroundColor: DS.bg, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <img src={`https://flagcdn.com/w320/${country.code}.png`} alt={name} loading="lazy"
               style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', padding: '6px' }} />
           </div>
           <div style={{ padding: '10px 14px', textAlign: 'center' }}>
-            <p style={{ margin: 0, fontSize: '14px', fontWeight: '700', color: '#0B1F3B', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{name}</p>
+            <p style={{ margin: 0, fontSize: '14px', fontWeight: '700', color: DS.navy, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{name}</p>
             {flagSince
-              ? <p style={{ margin: '4px 0 0', fontSize: '11px', color: '#64748b', fontWeight: '600' }}>🗓 {t(`Since ${flagSince}`, `Depuis ${flagSince}`)}</p>
-              : <p style={{ margin: '4px 0 0', fontSize: '11px', color: '#94a3b8' }}>{locale === 'fr' ? REGION_LABELS[country.region] : country.region}</p>
+              ? <p style={{ margin: '4px 0 0', fontSize: '11px', color: DS.muted, fontWeight: '600' }}><CalIcon /> {t(`Since ${flagSince}`, `Depuis ${flagSince}`)}</p>
+              : <p style={{ margin: '4px 0 0', fontSize: '11px', color: DS.light }}>{locale === 'fr' ? REGION_LABELS[country.region] : country.region}</p>
             }
           </div>
         </Link>
@@ -229,97 +246,35 @@ export default function CountryListingPage() {
 
     return (
       <a href={`/${locale}/countries/${country.code}`}
-        style={{ textDecoration: 'none', display: 'block', backgroundColor: 'white', borderRadius: '10px', overflow: 'hidden', border: '1px solid #e2e8f0' }}>
-        <div style={{ aspectRatio: '3/2', backgroundColor: '#f0ede4', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        style={{ textDecoration: 'none', display: 'block', backgroundColor: DS.surface, borderRadius: '10px', overflow: 'hidden', border: `1px solid ${DS.border}` }}>
+        <div style={{ aspectRatio: '3/2', backgroundColor: DS.bg, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <img src={`https://flagcdn.com/w160/${country.code}.png`} alt={name} loading="lazy"
             style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', padding: '5px' }} />
         </div>
         <div style={{ padding: '8px 10px', textAlign: 'center' }}>
-          <p style={{ margin: 0, fontSize: '12px', fontWeight: '700', color: '#0B1F3B', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{name}</p>
+          <p style={{ margin: 0, fontSize: '12px', fontWeight: '700', color: DS.navy, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{name}</p>
           {flagSince
-            ? <p style={{ margin: '3px 0 0', fontSize: '10px', color: '#64748b', fontWeight: '600' }}>🗓 {t(`Since ${flagSince}`, `Depuis ${flagSince}`)}</p>
-            : <p style={{ margin: '2px 0 0', fontSize: '10px', color: '#94a3b8' }}>{locale === 'fr' ? REGION_LABELS[country.region] : country.region}</p>
+            ? <p style={{ margin: '3px 0 0', fontSize: '10px', color: DS.muted, fontWeight: '600' }}><CalIcon size={9} /> {t(`Since ${flagSince}`, `Depuis ${flagSince}`)}</p>
+            : <p style={{ margin: '2px 0 0', fontSize: '10px', color: DS.light }}>{locale === 'fr' ? REGION_LABELS[country.region] : country.region}</p>
           }
         </div>
       </a>
     )
   }
 
-  // ── Continent filter ──────────────────────────────────────────────────────
-  const ContinentFilter = () => (
-    <FilterSection sectionKey="continent" label={t('Continent', 'Continent')}>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-        {CONTINENT_OPTIONS.map(c => {
-          const active = activeContinents.includes(c.key)
-          return (
-            <button key={c.key} onClick={() => toggle(activeContinents, setActiveContinents, c.key)}
-              style={{ ...chipStyle(active), display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <span style={{ fontSize: '14px' }}>{c.emoji}</span>
+  // ── Filter content ────────────────────────────────────────────────────────
+  const FilterContent = () => (
+    <>
+      <FilterSection sectionKey="continents" label={t('Continent', 'Continent')}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+          {CONTINENT_OPTIONS.map(c => (
+            <button key={c.key} onClick={() => toggle(activeContinents, setActiveContinents, c.key)} style={chipStyle(activeContinents.includes(c.key))}>
               {c.label[locale] || c.label.en}
             </button>
-          )
-        })}
-      </div>
-    </FilterSection>
-  )
-
-  // ── Ratio filter ──────────────────────────────────────────────────────────
-  const RatioFilter = ({ mobile }) => (
-    <FilterSection sectionKey="ratio" label={t('Ratio', 'Ratio')}>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-        {RATIO_OPTIONS.map(r => {
-          const active = activeRatios.includes(r.key)
-          const parts = r.key.replace(' (Pennant)', '').replace(' (Pennon)', '').split(':')
-          const rw = parseFloat(parts[1]); const rh = parseFloat(parts[0])
-          const maxDim = 40
-          const svgW = Math.round(maxDim * (rw / Math.max(rw, rh)))
-          const svgH = Math.round(maxDim * (rh / Math.max(rw, rh)))
-          return (
-            <button key={r.key} onClick={() => toggle(activeRatios, setActiveRatios, r.key)}
-              style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', padding: '10px 14px', borderRadius: '10px', fontSize: '12px', fontWeight: '700', cursor: 'pointer', border: active ? '2px solid #0B1F3B' : '1.5px solid #ddd', backgroundColor: active ? '#0B1F3B' : 'white', color: active ? 'white' : '#64748b', transition: 'all 0.15s', minWidth: '52px' }}>
-              <svg viewBox={`0 0 ${svgW} ${svgH}`} width={svgW} height={svgH} style={{ display: 'block' }}>
-                <rect x="0.5" y="0.5" width={svgW - 1} height={svgH - 1} rx="1.5"
-                  fill={active ? 'rgba(255,255,255,0.25)' : '#e2e8f0'}
-                  stroke={active ? 'rgba(255,255,255,0.8)' : '#94a3b8'} strokeWidth="1.2" />
-              </svg>
-              {r.label[locale] || r.label.en}
-            </button>
-          )
-        })}
-      </div>
-    </FilterSection>
-  )
-
-  // ── Shape filter ──────────────────────────────────────────────────────────
-  const ShapeFilter = () => (
-    <FilterSection sectionKey="shape" label={t('Shape', 'Forme')}>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-        {SHAPE_OPTIONS.map(s => {
-          const active = activeShapes.includes(s.key)
-          const fill   = active ? 'rgba(255,255,255,0.25)' : '#e2e8f0'
-          const stroke = active ? 'rgba(255,255,255,0.8)'  : '#94a3b8'
-          const icons  = {
-            rectangle: <svg viewBox="0 0 36 24" width="36" height="24" style={{ display: 'block' }}><rect x="0.5" y="0.5" width="35" height="23" rx="2" fill={fill} stroke={stroke} strokeWidth="1.2" /></svg>,
-            square:    <svg viewBox="0 0 24 24" width="24" height="24" style={{ display: 'block' }}><rect x="0.5" y="0.5" width="23" height="23" rx="2" fill={fill} stroke={stroke} strokeWidth="1.2" /></svg>,
-            pennant:   <svg viewBox="0 0 36 28" width="36" height="28" style={{ display: 'block' }}><polygon points="1,1 1,27 35,14" fill={fill} stroke={stroke} strokeWidth="1.2" strokeLinejoin="round" /></svg>,
-          }
-          return (
-            <button key={s.key} onClick={() => toggle(activeShapes, setActiveShapes, s.key)}
-              style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', padding: '10px 14px', borderRadius: '10px', fontSize: '12px', fontWeight: '700', cursor: 'pointer', border: active ? '2px solid #0B1F3B' : '1.5px solid #ddd', backgroundColor: active ? '#0B1F3B' : 'white', color: active ? 'white' : '#64748b', transition: 'all 0.15s', minWidth: '64px' }}>
-              {icons[s.key]}
-              {s.label[locale] || s.label.en}
-            </button>
-          )
-        })}
-      </div>
-    </FilterSection>
-  )
-
-  // ── All filter sections ───────────────────────────────────────────────────
-  const AllFilters = () => (
-    <>
-      <ContinentFilter />
-      <FilterSection sectionKey="region" label={t('Region', 'Région')}>
+          ))}
+        </div>
+      </FilterSection>
+      <FilterSection sectionKey="regions" label={t('Region', 'Région')}>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
           {REGIONS.map(r => (
             <button key={r} onClick={() => toggle(activeRegions, setActiveRegions, r)} style={chipStyle(activeRegions.includes(r))}>
@@ -334,8 +289,11 @@ export default function CountryListingPage() {
             const active = activeColors.includes(c.key)
             return (
               <button key={c.key} onClick={() => toggle(activeColors, setActiveColors, c.key)}
-                style={{ display: 'flex', alignItems: 'center', gap: '7px', padding: '7px 14px', borderRadius: '99px', fontSize: '13px', fontWeight: '600', cursor: 'pointer', border: active ? '2px solid #0B1F3B' : '1.5px solid #e2e8f0', backgroundColor: active ? '#0B1F3B' : '#fafafa', color: active ? 'white' : '#475569', transition: 'all 0.15s' }}>
-                <span style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: c.hex, flexShrink: 0, border: c.border ? '1px solid #ccc' : 'none' }} />
+                style={{ display: 'flex', alignItems: 'center', gap: '7px', padding: '7px 14px', borderRadius: '9999px', fontSize: '13px', fontWeight: '600', cursor: 'pointer', transition: 'all 0.15s',
+                  border: active ? `2px solid ${DS.navy}` : `1.5px solid ${DS.border}`,
+                  backgroundColor: active ? DS.navy : DS.bgAlt, color: active ? 'white' : DS.muted,
+                }}>
+                <span style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: c.hex, flexShrink: 0, border: c.border ? `1px solid ${DS.border}` : 'none' }} />
                 {c.label[locale] || c.label.en}
               </button>
             )
@@ -351,68 +309,108 @@ export default function CountryListingPage() {
           ))}
         </div>
       </FilterSection>
-      <RatioFilter />
-      <ShapeFilter />
+      <FilterSection sectionKey="ratio" label={t('Proportions', 'Proportions')}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+          {RATIO_OPTIONS.map(r => {
+            const active = activeRatios.includes(r.key)
+            const parts = r.key.split(':').map(parseFloat)
+            const aspect = (parts.length === 2 && parts[0] > 0 && parts[1] > 0) ? parts[1] / parts[0] : 1
+            const boxH = 13
+            const boxW = Math.max(8, Math.min(40, Math.round(boxH * aspect)))
+            return (
+              <button key={r.key} onClick={() => toggle(activeRatios, setActiveRatios, r.key)}
+                style={{ ...chipStyle(active), display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                <span aria-hidden="true" style={{
+                  display: 'inline-block', width: `${boxW}px`, height: `${boxH}px`,
+                  borderRadius: '2px', flexShrink: 0,
+                  border: active ? '1.5px solid rgba(255,255,255,0.85)' : `1.5px solid ${DS.light}`,
+                  backgroundColor: active ? 'rgba(255,255,255,0.2)' : DS.surface,
+                }} />
+                {r.label[locale] || r.label.en}
+              </button>
+            )
+          })}
+        </div>
+      </FilterSection>
+      <FilterSection sectionKey="shape" label={t('Shape', 'Forme')}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+          {SHAPE_OPTIONS.map(s => {
+            const active = activeShapes.includes(s.key)
+            const stroke = active ? 'rgba(255,255,255,0.85)' : DS.light
+            const fill = active ? 'rgba(255,255,255,0.2)' : DS.surface
+            const shapeSvg = s.key === 'square'
+              ? <rect x="3.5" y="0.5" width="13" height="13" rx="1.5" fill={fill} stroke={stroke} strokeWidth="1.5" />
+              : s.key === 'pennant'
+                ? <polygon points="1,0.5 20,7 1,13.5" fill={fill} stroke={stroke} strokeWidth="1.5" strokeLinejoin="round" />
+                : <rect x="1" y="0.5" width="20" height="13" rx="1.5" fill={fill} stroke={stroke} strokeWidth="1.5" />
+            return (
+              <button key={s.key} onClick={() => toggle(activeShapes, setActiveShapes, s.key)}
+                style={{ ...chipStyle(active), display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                <svg width="22" height="14" viewBox="0 0 22 14" style={{ flexShrink: 0, overflow: 'visible' }} aria-hidden="true">{shapeSvg}</svg>
+                {s.label[locale] || s.label.en}
+              </button>
+            )
+          })}
+        </div>
+      </FilterSection>
     </>
   )
 
-  if (countriesLoading) return (
-    <div style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <p style={{ color: '#8A8278', fontSize: '16px' }}>{t('Loading countries...', 'Chargement...')}</p>
-    </div>
-  )
+  // ── Loading ───────────────────────────────────────────────────────────────
+  if (countriesLoading) return <PageLoader label={t('Loading countries...', 'Chargement...')} />
 
   return (
     <>
-    <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: 'var(--font-body), system-ui, sans-serif' }}>
+    <div style={{ backgroundColor: DS.bg, minHeight: '100vh', fontFamily: 'var(--font-body), system-ui, sans-serif' }}>
       <div style={{ maxWidth: '1400px', margin: '0 auto', padding: isMobile ? '20px 16px' : '40px 32px' }}>
 
-        {/* Header */}
+        {/* Page title */}
         <div style={{ marginBottom: '20px' }}>
-          <h1 style={{ fontSize: isMobile ? '28px' : '40px', fontWeight: '900', color: '#0B1F3B', margin: '0 0 4px', letterSpacing: '-1px' }}>
+          <h1 style={{ fontSize: isMobile ? '28px' : '40px', fontWeight: '900', color: DS.navy, margin: '0 0 4px', letterSpacing: '-1px' }}>
             {t('Country Flags', 'Drapeaux des pays')}
           </h1>
-          <p style={{ margin: 0, fontSize: '14px', color: '#64748b' }}>
+          <p style={{ margin: 0, fontSize: '14px', color: DS.muted }}>
             {countries.length} {t('countries', 'pays')}
           </p>
         </div>
 
-        {/* ── MOBILE ── */}
+        {/* ══ MOBILE ══════════════════════════════════════════════════════════ */}
         {isMobile && (
           <div>
-            <div style={{ position: 'sticky', top: '60px', zIndex: 40, backgroundColor: '#F4F1E6', paddingBottom: '12px', paddingTop: '4px' }}>
+            {/* Sticky search bar */}
+            <div style={{ position: 'sticky', top: '60px', zIndex: 40, backgroundColor: DS.bg, paddingBottom: '12px', paddingTop: '4px' }}>
               <div style={{ display: 'flex', gap: '10px' }}>
                 <div style={{ position: 'relative', flex: 1 }}>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" strokeWidth="2" strokeLinecap="round"
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={DS.light} strokeWidth="2" strokeLinecap="round"
                     style={{ position: 'absolute', left: '13px', top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }}>
                     <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
                   </svg>
                   <input type="text" value={search} onChange={e => setSearch(e.target.value)}
                     placeholder={t('Search a country…', 'Rechercher un pays…')}
-                    style={{ width: '100%', padding: '11px 14px 11px 38px', borderRadius: '10px', border: '1.5px solid #ddd', backgroundColor: 'white', fontSize: '15px', color: '#0B1F3B', outline: 'none', boxSizing: 'border-box' }} />
+                    style={{ width: '100%', padding: '11px 14px 11px 38px', borderRadius: '10px', border: `1.5px solid ${DS.border}`, backgroundColor: DS.surface, fontSize: '15px', color: DS.navy, outline: 'none', boxSizing: 'border-box' }} />
                 </div>
                 <button onClick={() => setFiltersOpen(true)}
-                  style={{ display: 'flex', alignItems: 'center', gap: '7px', padding: '0 18px', borderRadius: '10px', border: hasFilters ? '2px solid #0B1F3B' : '1.5px solid #ddd', backgroundColor: hasFilters ? '#0B1F3B' : 'white', color: hasFilters ? 'white' : '#475569', fontWeight: '700', fontSize: '14px', cursor: 'pointer', flexShrink: 0, height: '46px' }}>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-                    <line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="11" y1="18" x2="13" y2="18"/>
+                  style={{ display: 'flex', alignItems: 'center', gap: '7px', padding: '0 18px', borderRadius: '10px',
+                    border: hasFilters ? `2px solid ${DS.navy}` : `1.5px solid ${DS.border}`,
+                    backgroundColor: hasFilters ? DS.navy : DS.surface,
+                    color: hasFilters ? 'white' : DS.muted,
+                    cursor: 'pointer', whiteSpace: 'nowrap', fontSize: '14px', fontWeight: '700',
+                  }}>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
+                    <line x1="4" y1="6" x2="20" y2="6"/><line x1="7" y1="12" x2="17" y2="12"/><line x1="10" y1="18" x2="14" y2="18"/>
                   </svg>
                   {t('Filters', 'Filtres')}
-                  {hasFilters && (
-                    <span style={{ backgroundColor: '#9EB7E5', color: '#0B1F3B', borderRadius: '99px', fontSize: '11px', fontWeight: '900', padding: '1px 7px' }}>
+                  {activeFilterCount > 0 && (
+                    <span style={{ backgroundColor: hasFilters ? 'rgba(255,255,255,0.25)' : DS.navy, color: 'white', borderRadius: '9999px', fontSize: '11px', fontWeight: '900', padding: '1px 6px' }}>
                       {activeFilterCount}
                     </span>
                   )}
                 </button>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '10px' }}>
-                <p style={{ margin: 0, fontSize: '13px', color: '#64748b', fontWeight: '500' }}>
-                  <span style={{ fontWeight: '900', color: '#0B1F3B' }}>{filtered.length}</span> {t('countries', 'pays')}
-                  {hasFilters && (
-                    <button onClick={clearAll} style={{ marginLeft: '10px', fontSize: '12px', color: '#dc2626', background: 'none', border: 'none', cursor: 'pointer', fontWeight: '700', textDecoration: 'underline', padding: 0 }}>
-                      {t('Clear', 'Effacer')}
-                    </button>
-                  )}
-                </p>
+                <span style={{ fontSize: '13px', color: DS.muted, fontWeight: '500' }}>
+                  {filtered.length} {filtered.length === 1 ? t('country', 'pays') : t('countries', 'pays')}
+                </span>
                 <div style={{ display: 'flex', gap: '6px' }}>
                   <button onClick={() => setSortOrder('az')} style={{ ...chipStyle(sortOrder === 'az'), padding: '5px 12px', fontSize: '12px' }}>A→Z</button>
                   <button onClick={() => setSortOrder('za')} style={{ ...chipStyle(sortOrder === 'za'), padding: '5px 12px', fontSize: '12px' }}>Z→A</button>
@@ -420,41 +418,44 @@ export default function CountryListingPage() {
               </div>
             </div>
 
-            {/* Mobile filter panel */}
+            {/* Mobile filter drawer */}
             {filtersOpen && (
               <div style={{ position: 'fixed', inset: 0, zIndex: 200 }}>
                 <div onClick={() => setFiltersOpen(false)} style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(2px)' }} />
-                <div style={{ position: 'absolute', top: 0, right: 0, bottom: 0, width: 'min(85vw, 360px)', backgroundColor: 'white', display: 'flex', flexDirection: 'column', boxShadow: '-8px 0 32px rgba(0,0,0,0.18)' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px 20px 16px', borderBottom: '1px solid #f0f0f0', flexShrink: 0 }}>
+                <div style={{ position: 'absolute', top: 0, right: 0, bottom: 0, width: 'min(85vw, 360px)', backgroundColor: DS.surface, display: 'flex', flexDirection: 'column', boxShadow: '-8px 0 32px rgba(11,31,59,0.18)' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px 20px 16px', borderBottom: `1px solid ${DS.border}`, flexShrink: 0 }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                      <h2 style={{ margin: 0, fontSize: '18px', fontWeight: '900', color: '#0B1F3B' }}>{t('Filters', 'Filtres')}</h2>
-                      {hasFilters && <span style={{ backgroundColor: '#0B1F3B', color: 'white', borderRadius: '99px', fontSize: '11px', fontWeight: '900', padding: '2px 8px' }}>{activeFilterCount}</span>}
+                      <h2 style={{ margin: 0, fontSize: '18px', fontWeight: '900', color: DS.navy }}>{t('Filters', 'Filtres')}</h2>
+                      {hasFilters && <span style={{ backgroundColor: DS.navy, color: 'white', borderRadius: '9999px', fontSize: '11px', fontWeight: '900', padding: '2px 8px' }}>{activeFilterCount}</span>}
                     </div>
-                    <button onClick={() => setFiltersOpen(false)} style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '6px', color: '#64748b' }}>
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-                        <line x1="3" y1="3" x2="17" y2="17"/><line x1="17" y1="3" x2="3" y2="17"/>
+                    <button onClick={() => setFiltersOpen(false)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: DS.muted, padding: '4px' }}>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
+                        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
                       </svg>
                     </button>
                   </div>
-                  <div style={{ flex: 1, overflowY: 'auto', padding: '20px 20px 0' }}>
-                    <AllFilters />
+                  <div style={{ flex: 1, overflowY: 'auto', padding: '12px 20px' }}>
+                    <FilterContent />
                   </div>
-                  <div style={{ padding: '16px 20px', borderTop: '1px solid #f0f0f0', flexShrink: 0, backgroundColor: 'white' }}>
+                  <div style={{ padding: '16px 20px', borderTop: `1px solid ${DS.border}`, flexShrink: 0, display: 'flex', gap: '10px' }}>
                     {hasFilters && (
-                      <button onClick={clearAll} style={{ width: '100%', padding: '10px', marginBottom: '10px', backgroundColor: '#fee2e2', color: '#dc2626', border: '1.5px solid #fca5a5', borderRadius: '10px', cursor: 'pointer', fontWeight: '700', fontSize: '14px' }}>
-                        {t('Clear filters', 'Effacer les filtres')}
+                      <button onClick={() => { clearAll(); setFiltersOpen(false) }}
+                        style={{ flex: 1, padding: '13px', borderRadius: '10px', border: `1.5px solid ${DS.border}`, backgroundColor: 'transparent', color: DS.muted, fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
+                        {t('Clear all', 'Tout effacer')}
                       </button>
                     )}
-                    <button onClick={() => setFiltersOpen(false)} style={{ width: '100%', padding: '14px', backgroundColor: '#0B1F3B', color: 'white', border: 'none', borderRadius: '12px', cursor: 'pointer', fontWeight: '800', fontSize: '16px' }}>
-                      {t('Apply', 'Appliquer')} — {filtered.length} {filtered.length === 1 ? t('country', 'pays') : t('countries', 'pays')}
+                    <button onClick={() => setFiltersOpen(false)}
+                      style={{ flex: 2, padding: '13px', borderRadius: '10px', border: 'none', backgroundColor: DS.navy, color: 'white', fontSize: '14px', fontWeight: '800', cursor: 'pointer' }}>
+                      {t(`Show ${filtered.length} flags`, `Voir ${filtered.length} drapeaux`)}
                     </button>
                   </div>
                 </div>
               </div>
             )}
 
+            {/* Flag grid */}
             {filtered.length === 0 ? (
-              <div style={{ textAlign: 'center', padding: '48px 0', color: '#94a3b8' }}>
+              <div style={{ textAlign: 'center', padding: '48px 0', color: DS.light }}>
                 <div style={{ fontSize: '40px', marginBottom: '10px' }}>🔍</div>
                 <p style={{ fontSize: '15px', fontWeight: '600' }}>{t('No countries match', 'Aucun pays ne correspond')}</p>
               </div>
@@ -466,53 +467,52 @@ export default function CountryListingPage() {
           </div>
         )}
 
-        {/* ── DESKTOP ── */}
+        {/* ══ DESKTOP ══════════════════════════════════════════════════════════ */}
         {!isMobile && (
           <div style={{ display: 'flex', gap: '32px', alignItems: 'flex-start' }}>
 
             {/* Sidebar */}
-            <div style={{ width: 'min(340px, 100%)', flexShrink: 0, position: 'sticky', top: '76px', alignSelf: 'flex-start', backgroundColor: 'white', borderRadius: '14px', border: '1px solid #e2e8f0', padding: '24px 20px', maxHeight: 'calc(100vh - 100px)', overflowY: 'auto' }}>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '8px', marginBottom: '20px', paddingBottom: '16px', borderBottom: '1px solid #f0f0f0' }}>
+            <div style={{ width: 'min(340px, 100%)', flexShrink: 0, position: 'sticky', top: '76px', alignSelf: 'flex-start', backgroundColor: DS.surface, borderRadius: '14px', border: `1px solid ${DS.border}`, padding: '24px 20px', maxHeight: 'calc(100vh - 100px)', overflowY: 'auto' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '8px', marginBottom: '20px', paddingBottom: '16px', borderBottom: `1px solid ${DS.border}` }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                  <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#0B1F3B', color: 'white', fontWeight: '900', fontSize: '20px', borderRadius: '10px', padding: '4px 14px', minWidth: '52px' }}>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', backgroundColor: DS.navy, color: 'white', fontWeight: '900', fontSize: '20px', borderRadius: '10px', padding: '4px 14px', minWidth: '52px' }}>
                     {filtered.length}
                   </span>
-                  <span style={{ fontSize: '13px', color: '#64748b', fontWeight: '500' }}>
+                  <span style={{ fontSize: '13px', color: DS.muted, fontWeight: '500' }}>
                     {filtered.length === 1 ? t('country', 'pays') : t('countries', 'pays')}
                   </span>
                 </div>
                 {hasFilters && (
-                  <button onClick={clearAll} style={{ display: 'flex', alignItems: 'center', gap: '5px', padding: '7px 12px', backgroundColor: '#fee2e2', color: '#dc2626', border: '1.5px solid #fca5a5', borderRadius: '8px', cursor: 'pointer', fontWeight: '700', fontSize: '12px' }}>
-                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
-                      <line x1="1" y1="1" x2="10" y2="10"/><line x1="10" y1="1" x2="1" y2="10"/>
-                    </svg>
-                    {t('Clear', 'Effacer')}
+                  <button onClick={clearAll} style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '12px', color: DS.muted, fontWeight: '600', textDecoration: 'underline' }}>
+                    {t('Clear all', 'Tout effacer')}
                   </button>
                 )}
               </div>
-              <AllFilters />
-            </div>
 
-            {/* Right column */}
-            <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', gap: '16px' }}>
-              <div style={{ display: 'flex', gap: '12px' }}>
-                <div style={{ position: 'relative', flex: 1 }}>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" strokeWidth="2" strokeLinecap="round"
-                    style={{ position: 'absolute', left: '14px', top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }}>
-                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                  </svg>
-                  <input type="text" value={search} onChange={e => setSearch(e.target.value)}
-                    placeholder={t('Search a country…', 'Rechercher un pays…')}
-                    style={{ width: '100%', padding: '11px 16px 11px 40px', borderRadius: '10px', border: '1.5px solid #ddd', backgroundColor: 'white', fontSize: '15px', color: '#0B1F3B', outline: 'none', boxSizing: 'border-box' }} />
-                </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
-                  <button onClick={() => setSortOrder('az')} style={chipStyle(sortOrder === 'az')}>A → Z</button>
-                  <button onClick={() => setSortOrder('za')} style={chipStyle(sortOrder === 'za')}>Z → A</button>
-                </div>
+              {/* Search */}
+              <div style={{ position: 'relative', marginBottom: '16px' }}>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke={DS.light} strokeWidth="2" strokeLinecap="round"
+                  style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }}>
+                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+                <input type="text" value={search} onChange={e => setSearch(e.target.value)}
+                  placeholder={t('Search…', 'Rechercher…')}
+                  style={{ width: '100%', padding: '10px 14px 10px 36px', borderRadius: '10px', border: `1.5px solid ${DS.border}`, backgroundColor: DS.bgAlt, fontSize: '14px', color: DS.navy, outline: 'none', boxSizing: 'border-box' }} />
               </div>
 
+              {/* Sort */}
+              <div style={{ display: 'flex', gap: '6px', marginBottom: '16px' }}>
+                <button onClick={() => setSortOrder('az')} style={{ ...chipStyle(sortOrder === 'az'), padding: '6px 14px', fontSize: '12px', flex: 1, justifyContent: 'center' }}>A→Z</button>
+                <button onClick={() => setSortOrder('za')} style={{ ...chipStyle(sortOrder === 'za'), padding: '6px 14px', fontSize: '12px', flex: 1, justifyContent: 'center' }}>Z→A</button>
+              </div>
+
+              <FilterContent />
+            </div>
+
+            {/* Grid */}
+            <div style={{ flex: 1, minWidth: 0 }}>
               {filtered.length === 0 ? (
-                <div style={{ textAlign: 'center', padding: '64px 0', color: '#94a3b8' }}>
+                <div style={{ textAlign: 'center', padding: '64px 0', color: DS.light }}>
                   <div style={{ fontSize: '48px', marginBottom: '12px' }}>🔍</div>
                   <p style={{ fontSize: '16px', fontWeight: '600' }}>{t('No countries match your filters', 'Aucun pays ne correspond aux filtres')}</p>
                 </div>
@@ -529,6 +529,6 @@ export default function CountryListingPage() {
       </div>
     </div>
     <Footer />
-  </>
+    </>
   )
 }

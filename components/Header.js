@@ -11,15 +11,9 @@ const GAMES = [
   { key: 'flag-reveal',  en: 'FlagReveal',  fr: 'FlagReveal',  descEn: 'Uncover the flag tile by tile',        descFr: 'Révèle le drapeau tuile par tuile' },
   { key: 'flag-quiz',    en: 'FlagQuiz',    fr: 'FlagQuiz',    descEn: 'Multiple choice flag challenge',        descFr: 'Quel est ce drapeau ?' },
   { key: 'capital-city', en: 'CapitalClue', fr: 'CapitalClue', descEn: 'Match the capital to its country',     descFr: 'Trouve la capitale du pays' },
-  { key: 'flag-drawing', en: 'FlagDrawer',  fr: 'FlagDrawer',  descEn: 'Can you draw it from memory?',          descFr: 'Sauras-tu le dessiner de mémoire ?' },
+  { key: 'flag-drawing', en: 'FlagDrawer',  fr: 'FlagDrawer',  descEn: 'Can you draw it from memory?',         descFr: 'Sauras-tu le dessiner de mémoire ?' },
   { key: 'flag-ranker',  en: 'FlagRanker',  fr: 'FlagRanker',  descEn: 'Rank countries by area, GDP and more', descFr: 'Classe les pays par superficie, PIB...' },
-  { key: 'flag-clue',    en: 'FlagClue',    fr: 'FlagClue',    descEn: 'Guess the country from fun facts',      descFr: 'Devine le pays grâce à des anecdotes' },
-  // TODO: polish before release
-  // { key: 'past-flag',    en: 'Past Flag',     fr: 'Past Flag',     descEn: 'Guess the country from a historical flag', descFr: 'Trouve le pays depuis un drapeau historique' },
-  // { key: 'subflag-quiz', en: 'SubFlag Quiz',  fr: 'SubFlag Quiz',  descEn: 'Regional flag → find the country',        descFr: 'Drapeau régional → trouver le pays' },
-  // { key: 'gartic-phone', en: 'Flag Phone',    fr: 'Flag Phone',    descEn: 'Describe, draw, and guess flags',         descFr: 'Décris, dessine et devine les drapeaux' },
-  // { key: 'qui-est-ce',   en: 'Qui est-ce?',   fr: 'Qui est-ce ?',  descEn: 'Yes/no questions to find the country',    descFr: 'Questions oui/non pour trouver le pays' },
-  // { key: 'imposteur',    en: 'Impostor Flag', fr: 'Drapeau Imposteur', descEn: 'Find the flag that doesn\'t belong',  descFr: 'Trouvez le drapeau qui n\'appartient pas au groupe' },
+  { key: 'flag-clue',    en: 'FlagClue',    fr: 'FlagClue',    descEn: 'Guess the country from fun facts',     descFr: 'Devine le pays grâce à des anecdotes' },
 ]
 
 const FLAGS_MENU = [
@@ -29,13 +23,10 @@ const FLAGS_MENU = [
   { href: 'organisations', en: 'Organisations',    fr: 'Organisations',       descEn: 'UN, EU, NATO, FIFA and more',       descFr: 'ONU, UE, OTAN, FIFA et plus' },
 ]
 
-const GAMES_COL1 = GAMES.slice(0, 6)
-const GAMES_COL2 = GAMES.slice(6)
+const GAMES_COL1 = GAMES.slice(0, 3)
+const GAMES_COL2 = GAMES.slice(3)
 
-/* ----------------------------------------------------------------------
-   Line icons — fines, 1.5px stroke, héritent de currentColor.
-   Utilisées uniquement sur les catégories principales du drawer mobile.
----------------------------------------------------------------------- */
+/* ── Line icons ──────────────────────────────────────────────────────────── */
 const ICON_PROPS = {
   width: 20, height: 20, viewBox: '0 0 24 24', fill: 'none',
   stroke: 'currentColor', strokeWidth: 1.6, strokeLinecap: 'round', strokeLinejoin: 'round',
@@ -91,9 +82,37 @@ function Chevron({ open }) {
 }
 
 const DropdownPanel = ({ children, width = 280 }) => (
-  <div style={{ position: 'absolute', top: 'calc(100% + 14px)', left: '50%', transform: 'translateX(-50%)', width: `${width}px`, backgroundColor: 'white', borderRadius: '14px', boxShadow: '0 16px 48px rgba(0,0,0,0.18)', overflow: 'hidden', zIndex: 200 }}>
-    <div style={{ position: 'absolute', top: '-6px', left: '50%', transform: 'translateX(-50%) rotate(45deg)', width: '12px', height: '12px', backgroundColor: 'white', boxShadow: '-2px -2px 4px rgba(0,0,0,0.06)', zIndex: -1 }} />
+  <div style={{
+    position: 'absolute', top: 'calc(100% + 14px)', left: '50%', transform: 'translateX(-50%)',
+    width: `${width}px`, backgroundColor: '#FFFFFF', borderRadius: '14px',
+    boxShadow: '0 16px 48px rgba(0,0,0,0.18)', overflow: 'hidden', zIndex: 200,
+  }}>
+    <div style={{
+      position: 'absolute', top: '-6px', left: '50%', transform: 'translateX(-50%) rotate(45deg)',
+      width: '12px', height: '12px', backgroundColor: '#FFFFFF',
+      boxShadow: '-2px -2px 4px rgba(0,0,0,0.06)', zIndex: -1,
+    }} />
     {children}
+  </div>
+)
+
+const GameItem = ({ game, onClick }) => (
+  <div onClick={onClick}
+    style={{
+      display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 12px',
+      borderRadius: '10px', cursor: game.soon ? 'default' : 'pointer',
+      transition: 'background 0.12s',
+    }}
+    onMouseEnter={e => { if (!game.soon) e.currentTarget.style.backgroundColor = '#EEF2F7' }}
+    onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'transparent' }}>
+    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: game.soon ? '#9CA3AF' : '#9EB7E5', flexShrink: 0 }} />
+    <div style={{ flex: 1, minWidth: 0 }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+        <span style={{ fontSize: '13px', fontWeight: '700', color: game.soon ? '#6B7280' : '#16324F' }}>{game.en}</span>
+        {game.soon && <span style={{ fontSize: '10px', fontWeight: '700', color: '#92400E', backgroundColor: '#fef3c7', padding: '1px 6px', borderRadius: '99px' }}>Soon</span>}
+      </div>
+      <p style={{ margin: 0, fontSize: '11px', color: '#6B7280', marginTop: '1px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{game.descEn}</p>
+    </div>
   </div>
 )
 
@@ -102,20 +121,27 @@ export default function Header() {
   const pathname = usePathname()
   const router   = useRouter()
 
-  const [menuOpen,     setMenuOpen]     = useState(false)
-  const [drawerIn,     setDrawerIn]     = useState(false)   // pilote l'animation slide/fade
-  const [gamesOpen,    setGamesOpen]    = useState(false)
-  const [flagsOpen,    setFlagsOpen]    = useState(false)
-  const [user,         setUser]         = useState(null)
-  const [avatarOpen,   setAvatarOpen]   = useState(false)
-  const [submitOpen,   setSubmitOpen]   = useState(false)
-
-  const [flagsPanel, setFlagsPanel] = useState(false)   // sous-panneau Flags glissant
-  const [gamesPanel, setGamesPanel] = useState(false)   // sous-panneau Games glissant
+  const [menuOpen,   setMenuOpen]   = useState(false)
+  const [drawerIn,   setDrawerIn]   = useState(false)
+  const [gamesOpen,  setGamesOpen]  = useState(false)
+  const [flagsOpen,  setFlagsOpen]  = useState(false)
+  const [user,       setUser]       = useState(null)
+  const [avatarOpen, setAvatarOpen] = useState(false)
+  const [submitOpen, setSubmitOpen] = useState(false)
+  const [flagsPanel, setFlagsPanel] = useState(false)
+  const [gamesPanel, setGamesPanel] = useState(false)
+  const [scrolled,   setScrolled]   = useState(false)
 
   const gamesRef  = useRef(null)
   const flagsRef  = useRef(null)
   const avatarRef = useRef(null)
+
+  useEffect(() => {
+    function onScroll() { setScrolled(window.scrollY > 8) }
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   useEffect(() => {
     const supabase = createClient()
@@ -139,7 +165,6 @@ export default function Header() {
     return () => { document.body.style.overflow = '' }
   }, [menuOpen])
 
-  // Déclenche l'animation d'entrée une frame après le montage du drawer
   useEffect(() => {
     if (menuOpen) {
       const id = requestAnimationFrame(() => setDrawerIn(true))
@@ -150,86 +175,49 @@ export default function Header() {
 
   const t = (en, fr) => locale === 'fr' ? fr : en
 
-  async function handleSignOut() {
-    const supabase = createClient()
-    await supabase.auth.signOut()
-    setAvatarOpen(false)
-    router.refresh()
-  }
-
-  function switchLocale() {
-    const next = locale === 'en' ? 'fr' : 'en'
-    const segments = pathname.split('/')
-    segments[1] = next
-    router.push(segments.join('/'))
-  }
-
-  // Ferme le drawer avec l'animation de sortie, puis démonte
   function closeDrawer() {
     setDrawerIn(false)
-    setTimeout(() => {
-      setMenuOpen(false)
-      setFlagsPanel(false)
-      setGamesPanel(false)
-    }, 240)
+    setTimeout(() => { setMenuOpen(false); setFlagsPanel(false); setGamesPanel(false) }, 280)
   }
 
   function openSubmit() {
     closeDrawer()
-    setSubmitOpen(true)
+    setTimeout(() => setSubmitOpen(true), menuOpen ? 300 : 0)
   }
 
-  const initials = user?.email?.[0]?.toUpperCase() ?? '?'
-  function isActive(href) { return pathname.startsWith(href) }
+  const isActive = (href) => pathname === href || pathname.startsWith(href + '/')
 
   const navLinkStyle = (active) => ({
-    fontSize: '15px', fontWeight: active ? '700' : '500',
-    color: active ? '#9EB7E5' : '#F4F1E6', textDecoration: 'none',
-    padding: '6px 2px', borderBottom: active ? '2px solid #9EB7E5' : '2px solid transparent',
-    transition: 'color 0.15s, border-color 0.15s', whiteSpace: 'nowrap',
+    fontSize: '14px', fontWeight: active ? '700' : '500',
+    color: active ? '#FFFFFF' : 'rgba(255,255,255,0.7)',
+    textDecoration: 'none', whiteSpace: 'nowrap',
+    transition: 'color 0.15s',
+    padding: '4px 0',
+    borderBottom: active ? '2px solid #F4B400' : '2px solid transparent',
   })
 
   const dropdownBtnStyle = (active) => ({
-    fontSize: '15px', fontWeight: active ? '700' : '500',
-    color: active ? '#9EB7E5' : '#F4F1E6', background: 'none', border: 'none',
-    borderBottom: active ? '2px solid #9EB7E5' : '2px solid transparent',
-    cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '5px',
-    padding: '6px 2px', transition: 'color 0.15s', whiteSpace: 'nowrap',
+    background: 'none', border: 'none', cursor: 'pointer',
+    display: 'flex', alignItems: 'center', gap: '5px',
+    fontSize: '14px', fontWeight: active ? '700' : '500',
+    color: active ? '#FFFFFF' : 'rgba(255,255,255,0.7)',
+    padding: '4px 0',
+    borderBottom: active ? '2px solid #F4B400' : '2px solid transparent',
+    transition: 'color 0.15s',
   })
-
-  const GameItem = ({ game, onClick }) => (
-    <div onClick={onClick}
-      style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 12px', borderRadius: '10px', cursor: game.soon ? 'default' : 'pointer', transition: 'background 0.12s' }}
-      onMouseEnter={e => { if (!game.soon) e.currentTarget.style.backgroundColor = '#f0f4ff' }}
-      onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'transparent' }}>
-      <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: game.soon ? '#cbd5e1' : '#9EB7E5', flexShrink: 0 }} />
-      <div style={{ flex: 1, minWidth: 0 }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-          <span style={{ fontSize: '13px', fontWeight: '700', color: game.soon ? '#94a3b8' : '#0B1F3B' }}>{t(game.en, game.fr)}</span>
-          {game.soon && <span style={{ fontSize: '10px', fontWeight: '700', color: '#806D40', backgroundColor: '#fef3c7', padding: '1px 6px', borderRadius: '99px' }}>{t('Soon', 'Bientôt')}</span>}
-        </div>
-        <p style={{ margin: 0, fontSize: '11px', color: '#94a3b8', marginTop: '1px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{t(game.descEn, game.descFr)}</p>
-      </div>
-    </div>
-  )
 
   return (
     <>
-      <header style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, backgroundColor: '#0B1F3B', boxShadow: '0 2px 16px rgba(0,0,0,0.25)' }}>
+      <header style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, backgroundColor: '#0B1F3B', borderBottom: '1px solid rgba(255,255,255,0.08)', boxShadow: scrolled ? '0 4px 16px rgba(22,50,79,0.16)' : '0 1px 3px rgba(22,50,79,0.06)', transition: 'box-shadow 0.2s ease' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 16px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '16px', minWidth: 0 }}>
 
-          {/* Logo */}
+          {/* ── Logo ── */}
           <Link href={`/${locale}`} style={{ textDecoration: 'none', flexShrink: 0, display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <img src='/logo.png' alt='KnowFlags' style={{ height: '42px', width: 'auto', display: 'block' }} />
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1px' }}>
-              <span style={{ fontSize: '18px', fontWeight: '900', color: '#ffffff', letterSpacing: '-0.3px', lineHeight: 1 }}>KnowFlags</span>
-              <span style={{ fontSize: '9px', fontWeight: '600', letterSpacing: '1.5px', color: '#FEB12F', lineHeight: 1, marginTop: '4px', display: 'block' }} className="logo-tagline">
-                Learn. Play. Explore.
-              </span>
-            </div>
+            <img src='/logo.svg' alt='Knowflags' style={{ height: '38px', width: 'auto', display: 'block', borderRadius: '10px' }} />
+            <span style={{ fontSize: '18px', fontWeight: '900', color: '#FFFFFF', letterSpacing: '-0.3px', lineHeight: 1 }} className="logo-wordmark">Knowflags</span>
           </Link>
 
-          {/* Desktop nav */}
+          {/* ── Desktop nav ── */}
           <nav style={{ display: 'flex', alignItems: 'center', gap: '28px', flex: 1, justifyContent: 'center' }} className="desktop-nav">
 
             {/* Flags dropdown */}
@@ -243,12 +231,12 @@ export default function Header() {
                     {FLAGS_MENU.map(item => (
                       <div key={item.href} onClick={() => { router.push(`/${locale}/${item.href}`); setFlagsOpen(false) }}
                         style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '11px 12px', borderRadius: '10px', cursor: 'pointer', transition: 'background 0.12s' }}
-                        onMouseEnter={e => e.currentTarget.style.backgroundColor = '#f0f4ff'}
+                        onMouseEnter={e => e.currentTarget.style.backgroundColor = '#EEF2F7'}
                         onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}>
                         <span style={{ width: '7px', height: '7px', borderRadius: '50%', backgroundColor: '#9EB7E5', flexShrink: 0 }} />
                         <div>
-                          <div style={{ fontSize: '13px', fontWeight: '700', color: '#0B1F3B' }}>{t(item.en, item.fr)}</div>
-                          <p style={{ margin: 0, fontSize: '11px', color: '#94a3b8', marginTop: '1px' }}>{t(item.descEn, item.descFr)}</p>
+                          <div style={{ fontSize: '13px', fontWeight: '700', color: '#16324F' }}>{t(item.en, item.fr)}</div>
+                          <p style={{ margin: 0, fontSize: '11px', color: '#6B7280', marginTop: '1px' }}>{t(item.descEn, item.descFr)}</p>
                         </div>
                       </div>
                     ))}
@@ -276,12 +264,12 @@ export default function Header() {
                       ))}
                       <div onClick={() => { router.push(`/${locale}/leaderboard`); setGamesOpen(false) }}
                         style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 12px', borderRadius: '10px', cursor: 'pointer', transition: 'background 0.12s' }}
-                        onMouseEnter={e => e.currentTarget.style.backgroundColor = '#f0f4ff'}
+                        onMouseEnter={e => e.currentTarget.style.backgroundColor = '#EEF2F7'}
                         onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}>
-                        <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FEB12F', flexShrink: 0 }} />
+                        <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#F4B400', flexShrink: 0 }} />
                         <div>
-                          <div style={{ fontSize: '13px', fontWeight: '700', color: '#0B1F3B' }}>{t('Leaderboard', 'Classement')}</div>
-                          <p style={{ margin: 0, fontSize: '11px', color: '#94a3b8', marginTop: '1px' }}>{t('Global rankings', 'Classement mondial')}</p>
+                          <div style={{ fontSize: '13px', fontWeight: '700', color: '#16324F' }}>{t('Leaderboard', 'Classement')}</div>
+                          <p style={{ margin: 0, fontSize: '11px', color: '#6B7280', marginTop: '1px' }}>{t('Global rankings', 'Classement mondial')}</p>
                         </div>
                       </div>
                     </div>
@@ -299,72 +287,83 @@ export default function Header() {
             <Link href={`/${locale}/true-size`} style={navLinkStyle(isActive(`/${locale}/true-size`))}>{t('True Size Map', 'Carte Taille Réelle')}</Link>
           </nav>
 
-          {/* Right side */}
+          {/* ── Right side ── */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
 
-            {/* Submit button — opens modal */}
+            {/* Submit button */}
             <button
               onClick={openSubmit}
-              style={{ fontSize: '13px', fontWeight: '700', color: '#FEB12F', background: 'rgba(254,177,47,0.12)', border: '1.5px solid rgba(254,177,47,0.35)', borderRadius: '8px', padding: '6px 13px', cursor: 'pointer', whiteSpace: 'nowrap', transition: 'background 0.15s' }}
+              style={{ fontSize: '13px', fontWeight: '700', color: '#92400E', background: '#FEF3C7', border: '1.5px solid #F4B400', borderRadius: '10px', padding: '6px 14px', cursor: 'pointer', whiteSpace: 'nowrap', transition: 'background 0.15s' }}
               className="submit-btn desktop-right"
-              onMouseEnter={e => e.currentTarget.style.background = 'rgba(254,177,47,0.22)'}
-              onMouseLeave={e => e.currentTarget.style.background = 'rgba(254,177,47,0.12)'}>
+              onMouseEnter={e => e.currentTarget.style.background = '#FDE68A'}
+              onMouseLeave={e => e.currentTarget.style.background = '#FEF3C7'}>
               {t('+ Submit', '+ Soumettre')}
             </button>
 
+            {/* Auth / avatar */}
             <div className="desktop-right">
               {user ? (
                 <div ref={avatarRef} style={{ position: 'relative' }}>
                   <button onClick={() => setAvatarOpen(o => !o)}
-                    style={{ width: '34px', height: '34px', borderRadius: '50%', backgroundColor: '#426A5A', border: 'none', color: 'white', fontWeight: '700', fontSize: '14px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    {initials}
+                    style={{ width: '36px', height: '36px', borderRadius: '50%', backgroundColor: '#9EB7E5', border: '2px solid rgba(158,183,229,0.4)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
+                    {user.user_metadata?.avatar_url
+                      ? <img src={user.user_metadata.avatar_url} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                      : <span style={{ fontSize: '14px', fontWeight: '800', color: '#16324F' }}>{(user.email?.[0] || '?').toUpperCase()}</span>
+                    }
                   </button>
                   {avatarOpen && (
-                    <div style={{ position: 'absolute', top: 'calc(100% + 8px)', right: 0, backgroundColor: 'white', borderRadius: '12px', boxShadow: '0 8px 32px rgba(0,0,0,0.16)', overflow: 'hidden', minWidth: '200px', zIndex: 200 }}>
-                      <div style={{ padding: '12px 16px', borderBottom: '1px solid #f0f0f0' }}>
-                        <p style={{ margin: 0, fontSize: '12px', color: '#94a3b8' }}>{user.email}</p>
-                      </div>
+                    <div style={{ position: 'absolute', top: 'calc(100% + 10px)', right: 0, backgroundColor: '#FFFFFF', borderRadius: '12px', boxShadow: '0 12px 36px rgba(0,0,0,0.16)', overflow: 'hidden', width: '180px', zIndex: 200 }}>
                       <Link href={`/${locale}/profile`} onClick={() => setAvatarOpen(false)}
-                        style={{ display: 'block', padding: '11px 16px', fontSize: '14px', color: '#0B1F3B', textDecoration: 'none', fontWeight: '500' }}
+                        style={{ display: 'block', padding: '12px 16px', fontSize: '13px', fontWeight: '600', color: '#16324F', textDecoration: 'none', borderBottom: '1px solid #f0f0f0' }}
                         onMouseEnter={e => e.currentTarget.style.backgroundColor = '#f8f8f8'}
                         onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}>
-                        {t('My Profile', 'Mon Profil')}
+                        {t('My Profile', 'Mon profil')}
                       </Link>
-                      <Link href={`/${locale}/leaderboard`} onClick={() => setAvatarOpen(false)}
-                        style={{ display: 'block', padding: '11px 16px', fontSize: '14px', color: '#0B1F3B', textDecoration: 'none', fontWeight: '500' }}
-                        onMouseEnter={e => e.currentTarget.style.backgroundColor = '#f8f8f8'}
+                      {user.user_metadata?.is_admin && (
+                        <Link href={`/${locale}/admin/submissions`} onClick={() => setAvatarOpen(false)}
+                          style={{ display: 'block', padding: '12px 16px', fontSize: '13px', fontWeight: '600', color: '#16324F', textDecoration: 'none', borderBottom: '1px solid #f0f0f0' }}
+                          onMouseEnter={e => e.currentTarget.style.backgroundColor = '#f8f8f8'}
+                          onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}>
+                          Admin
+                        </Link>
+                      )}
+                      <button onClick={async () => { const s = createClient(); await s.auth.signOut(); setAvatarOpen(false); setUser(null) }}
+                        style={{ display: 'block', width: '100%', textAlign: 'left', padding: '12px 16px', fontSize: '13px', fontWeight: '600', color: '#D62828', background: 'none', border: 'none', cursor: 'pointer' }}
+                        onMouseEnter={e => e.currentTarget.style.backgroundColor = '#fef2f2'}
                         onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}>
-                        {t('Leaderboard', 'Classement')}
-                      </Link>
-                      <button onClick={() => { switchLocale(); setAvatarOpen(false) }}
-                        style={{ width: '100%', textAlign: 'left', padding: '11px 16px', fontSize: '14px', color: '#0B1F3B', background: 'none', border: 'none', borderTop: '1px solid #f0f0f0', cursor: 'pointer', fontWeight: '500', display: 'flex', alignItems: 'center', gap: '10px' }}
-                        onMouseEnter={e => e.currentTarget.style.backgroundColor = '#f8f8f8'}
-                        onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}>
-                        {locale === 'en'
-                          ? <><svg width="20" height="13" viewBox="0 0 3 2" style={{ borderRadius: '2px', flexShrink: 0 }}><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ED2939"/></svg> Passer en français</>
-                          : <><svg width="20" height="13" viewBox="0 0 60 40" style={{ borderRadius: '2px', flexShrink: 0 }}><rect width="60" height="40" fill="#012169"/><line x1="0" y1="0" x2="60" y2="40" stroke="#fff" strokeWidth="8"/><line x1="60" y1="0" x2="0" y2="40" stroke="#fff" strokeWidth="8"/><line x1="0" y1="0" x2="60" y2="40" stroke="#C8102E" strokeWidth="4"/><line x1="60" y1="0" x2="0" y2="40" stroke="#C8102E" strokeWidth="4"/><rect x="0" y="15" width="60" height="10" fill="#fff"/><rect x="25" y="0" width="10" height="40" fill="#fff"/><rect x="0" y="17" width="60" height="6" fill="#C8102E"/><rect x="27" y="0" width="6" height="40" fill="#C8102E"/></svg> Switch to English</>
-                        }
-                      </button>
-                      <button onClick={handleSignOut}
-                        style={{ width: '100%', textAlign: 'left', padding: '11px 16px', fontSize: '14px', color: '#ef4444', background: 'none', border: 'none', borderTop: '1px solid #f0f0f0', cursor: 'pointer', fontWeight: '500' }}>
-                        {t('Sign out', 'Déconnexion')}
+                        {t('Sign out', 'Se déconnecter')}
                       </button>
                     </div>
                   )}
                 </div>
               ) : (
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                  <button onClick={switchLocale}
-                    style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '34px', height: '34px', background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '7px', padding: '0', cursor: 'pointer', overflow: 'hidden', flexShrink: 0 }}
-                    onMouseEnter={e => e.currentTarget.style.background = 'rgba(255,255,255,0.18)'}
-                    onMouseLeave={e => e.currentTarget.style.background = 'rgba(255,255,255,0.08)'}>
-                    {locale === 'en'
-                      ? <svg width="24" height="16" viewBox="0 0 3 2" style={{ display: 'block' }}><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ED2939"/></svg>
-                      : <svg width="24" height="16" viewBox="0 0 60 40" style={{ display: 'block' }}><rect width="60" height="40" fill="#012169"/><line x1="0" y1="0" x2="60" y2="40" stroke="#fff" strokeWidth="8"/><line x1="60" y1="0" x2="0" y2="40" stroke="#fff" strokeWidth="8"/><line x1="0" y1="0" x2="60" y2="40" stroke="#C8102E" strokeWidth="4"/><line x1="60" y1="0" x2="0" y2="40" stroke="#C8102E" strokeWidth="4"/><rect x="0" y="15" width="60" height="10" fill="#fff"/><rect x="25" y="0" width="10" height="40" fill="#fff"/><rect x="0" y="17" width="60" height="6" fill="#C8102E"/><rect x="27" y="0" width="6" height="40" fill="#C8102E"/></svg>
-                    }
-                  </button>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  {/* Language switcher */}
+                  {(() => {
+                    const active = locale === 'fr'
+                    return (
+                      <button onClick={() => router.push(pathname.replace(`/${locale}`, active ? '/en' : '/fr'))}
+                        style={{
+                          display: 'flex', alignItems: 'center', gap: '5px', padding: '5px 10px',
+                          borderRadius: '8px', cursor: 'pointer',
+                          background: active ? '#9EB7E5' : '#FBFAF6',
+                          border: active ? '1px solid #9EB7E5' : '1px solid #C9C0AD',
+                          transition: 'background 0.15s',
+                        }}
+                        onMouseEnter={e => { if (!active) e.currentTarget.style.background = '#F1EEE4' }}
+                        onMouseLeave={e => { if (!active) e.currentTarget.style.background = '#FBFAF6' }}>
+                        {active
+                          ? <svg width="18" height="12" viewBox="0 0 3 2" style={{ borderRadius: '2px', flexShrink: 0 }}><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ED2939"/></svg>
+                          : <svg width="18" height="12" viewBox="0 0 60 40" style={{ borderRadius: '2px', flexShrink: 0 }}><rect width="60" height="40" fill="#012169"/><line x1="0" y1="0" x2="60" y2="40" stroke="#fff" strokeWidth="8"/><line x1="60" y1="0" x2="0" y2="40" stroke="#fff" strokeWidth="8"/><line x1="0" y1="0" x2="60" y2="40" stroke="#C8102E" strokeWidth="4"/><line x1="60" y1="0" x2="0" y2="40" stroke="#C8102E" strokeWidth="4"/><rect x="0" y="15" width="60" height="10" fill="#fff"/><rect x="25" y="0" width="10" height="40" fill="#fff"/><rect x="0" y="17" width="60" height="6" fill="#C8102E"/><rect x="27" y="0" width="6" height="40" fill="#C8102E"/></svg>
+                        }
+                        <span style={{ fontSize: '12px', fontWeight: '700', color: active ? '#16324F' : '#5A5446', letterSpacing: '0.4px' }}>
+                          {active ? 'FR' : 'EN'}
+                        </span>
+                      </button>
+                    )
+                  })()}
                   <Link href={`/${locale}/auth/login`}
-                    style={{ fontSize: '14px', fontWeight: '600', color: '#0B1F3B', backgroundColor: '#9EB7E5', padding: '7px 16px', borderRadius: '8px', textDecoration: 'none' }}>
+                    style={{ fontSize: '14px', fontWeight: '600', color: '#FFFFFF', backgroundColor: '#16324F', padding: '7px 16px', borderRadius: '8px', textDecoration: 'none' }}>
                     {t('Sign in', 'Connexion')}
                   </Link>
                 </div>
@@ -373,7 +372,7 @@ export default function Header() {
 
             {/* Burger */}
             <button onClick={() => menuOpen ? closeDrawer() : setMenuOpen(true)}
-              style={{ display: 'none', background: 'none', border: 'none', cursor: 'pointer', padding: '4px', color: 'white' }}
+              style={{ display: 'none', background: 'none', border: 'none', cursor: 'pointer', padding: '4px', color: '#FFFFFF' }}
               className="burger-btn" aria-label="Menu">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
                 {menuOpen
@@ -385,181 +384,128 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Mobile drawer */}
+        {/* ── Mobile drawer ── */}
         {menuOpen && (
           <>
             <div onClick={closeDrawer}
               style={{ position: 'fixed', inset: 0, top: '60px', backgroundColor: 'rgba(7,16,33,0.55)', backdropFilter: 'blur(3px)', WebkitBackdropFilter: 'blur(3px)', zIndex: 998, opacity: drawerIn ? 1 : 0, transition: 'opacity 0.24s ease' }} />
-            <div
-              style={{ position: 'fixed', top: '60px', right: 0, bottom: 0, width: '86vw', maxWidth: '352px', backgroundColor: '#F4F1E6', zIndex: 999, overflow: 'hidden', boxShadow: '-12px 0 40px rgba(0,0,0,0.3)', transform: drawerIn ? 'translateX(0)' : 'translateX(105%)', transition: 'transform 0.28s cubic-bezier(0.32, 0.72, 0, 1)' }}>
+            <div style={{ position: 'fixed', top: '60px', right: 0, bottom: 0, width: '86vw', maxWidth: '352px', backgroundColor: '#FFFFFF', zIndex: 999, overflow: 'hidden', boxShadow: '-12px 0 40px rgba(0,0,0,0.3)', transform: drawerIn ? 'translateX(0)' : 'translateX(105%)', transition: 'transform 0.28s cubic-bezier(0.32, 0.72, 0, 1)' }}>
 
-              {/* Track horizontal : 3 panneaux côte à côte (principal / Flags / Games) */}
+              {/* 3-panel horizontal track */}
               <div style={{ display: 'flex', width: '300%', height: '100%', transform: flagsPanel ? 'translateX(-33.3333%)' : gamesPanel ? 'translateX(-66.6666%)' : 'translateX(0)', transition: 'transform 0.3s cubic-bezier(0.32, 0.72, 0, 1)' }}>
 
-                {/* ---------- Panneau principal ---------- */}
+                {/* ── Panel principal ── */}
                 <div style={{ width: '33.3333%', height: '100%', overflowY: 'auto', flexShrink: 0, display: 'flex', flexDirection: 'column' }}>
                   <div style={{ padding: '14px 18px 24px', flex: 1, display: 'flex', flexDirection: 'column' }}>
-
-                    {/* Navigation */}
                     <div>
-
-                      {/* Flags — ouvre le sous-panneau */}
                       <button onClick={() => setFlagsPanel(true)}
                         style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '17px 2px', background: 'none', border: 'none', borderBottom: '1px solid #E2DDD5', cursor: 'pointer' }}>
                         <span style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
                           <span style={{ color: '#5B7BB5', display: 'flex' }}><IconFlags width={22} height={22} /></span>
-                          <span style={{ fontSize: '16.5px', fontWeight: '600', color: '#0B1F3B', letterSpacing: '-0.1px' }}>{t('Flags', 'Drapeaux')}</span>
+                          <span style={{ fontSize: '16.5px', fontWeight: '600', color: '#16324F', letterSpacing: '-0.1px' }}>{t('Flags', 'Drapeaux')}</span>
                         </span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A89F8E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M9 6l6 6-6 6" />
-                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 6l6 6-6 6" /></svg>
                       </button>
 
-                      {/* Games — ouvre le sous-panneau */}
                       <button onClick={() => setGamesPanel(true)}
                         style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '17px 2px', background: 'none', border: 'none', borderBottom: '1px solid #E2DDD5', cursor: 'pointer' }}>
                         <span style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
                           <span style={{ color: '#5B7BB5', display: 'flex' }}><IconGames width={22} height={22} /></span>
-                          <span style={{ fontSize: '16.5px', fontWeight: '600', color: '#0B1F3B', letterSpacing: '-0.1px' }}>{t('Games', 'Jeux')}</span>
+                          <span style={{ fontSize: '16.5px', fontWeight: '600', color: '#16324F', letterSpacing: '-0.1px' }}>{t('Games', 'Jeux')}</span>
                         </span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A89F8E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M9 6l6 6-6 6" />
-                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 6l6 6-6 6" /></svg>
                       </button>
 
-                      {/* Blog — lien direct */}
                       <Link href={`/${locale}/blog`} onClick={closeDrawer}
-                        style={{ display: 'flex', alignItems: 'center', gap: '14px', padding: '17px 2px', fontSize: '16.5px', color: '#0B1F3B', textDecoration: 'none', fontWeight: '600', borderBottom: '1px solid #E2DDD5', letterSpacing: '-0.1px' }}>
+                        style={{ display: 'flex', alignItems: 'center', gap: '14px', padding: '17px 2px', fontSize: '16.5px', color: '#16324F', textDecoration: 'none', fontWeight: '600', borderBottom: '1px solid #E2DDD5', letterSpacing: '-0.1px' }}>
                         <span style={{ color: '#5B7BB5', display: 'flex' }}><IconBlog width={22} height={22} /></span>
                         {t('Blog', 'Blog')}
                       </Link>
 
-                      {/* True Size — lien direct */}
                       <Link href={`/${locale}/true-size`} onClick={closeDrawer}
-                        style={{ display: 'flex', alignItems: 'center', gap: '14px', padding: '17px 2px', fontSize: '16.5px', color: '#0B1F3B', textDecoration: 'none', fontWeight: '600', borderBottom: '1px solid #E2DDD5', letterSpacing: '-0.1px' }}>
+                        style={{ display: 'flex', alignItems: 'center', gap: '14px', padding: '17px 2px', fontSize: '16.5px', color: '#16324F', textDecoration: 'none', fontWeight: '600', borderBottom: '1px solid #E2DDD5', letterSpacing: '-0.1px' }}>
                         <span style={{ color: '#5B7BB5', display: 'flex' }}><IconGlobe width={22} height={22} /></span>
                         {t('True Size Map', 'Carte Taille Réelle')}
                       </Link>
                     </div>
 
-                    {/* Submit — bouton discret, après la navigation */}
-                    <button onClick={openSubmit}
-                      style={{ width: '100%', marginTop: '16px', padding: '11px', fontSize: '13.5px', fontWeight: '700', color: '#9A6D11', backgroundColor: 'transparent', border: '1px solid #D8C28A', borderRadius: '10px', cursor: 'pointer', transition: 'background 0.15s' }}
-                      onMouseEnter={e => e.currentTarget.style.background = 'rgba(254,177,47,0.12)'}
-                      onMouseLeave={e => e.currentTarget.style.background = 'transparent'}>
-                      {t('+ Submit a Flag', '+ Soumettre un drapeau')}
-                    </button>
-
-                    {/* Espace flexible — pousse la carte compte vers le bas */}
-                    <div style={{ flex: 1, minHeight: '12px' }} />
-
-                    {/* Carte compte */}
-                    <div style={{ backgroundColor: 'rgba(11,31,59,0.07)', border: '1px solid #D6CFC0', borderRadius: '14px', padding: '16px', display: 'flex', flexDirection: 'column' }}>
+                    {/* Account card */}
+                    <div style={{ marginTop: 'auto', paddingTop: '20px' }}>
                       {user ? (
-                        <>
-                          {/* Identité */}
-                          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', paddingBottom: '14px' }}>
-                            <div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: '#426A5A', color: 'white', fontWeight: '700', fontSize: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                              {initials}
+                        <div style={{ border: '1.5px solid #E2DDD5', borderRadius: '14px', padding: '14px 16px' }}>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
+                            <div style={{ width: '38px', height: '38px', borderRadius: '50%', backgroundColor: '#9EB7E5', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', flexShrink: 0 }}>
+                              {user.user_metadata?.avatar_url
+                                ? <img src={user.user_metadata.avatar_url} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                : <span style={{ fontSize: '15px', fontWeight: '800', color: '#16324F' }}>{(user.email?.[0] || '?').toUpperCase()}</span>
+                              }
                             </div>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '7px' }}>
-                              <span style={{ width: '7px', height: '7px', borderRadius: '50%', backgroundColor: '#3E9E6E', flexShrink: 0, boxShadow: '0 0 0 3px rgba(62,158,110,0.16)' }} />
-                              <span style={{ fontSize: '13.5px', fontWeight: '700', color: '#0B1F3B', letterSpacing: '0.1px' }}>{t('Signed in', 'Connecté')}</span>
+                            <div style={{ minWidth: 0 }}>
+                              <p style={{ margin: 0, fontSize: '13px', fontWeight: '700', color: '#16324F', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                                {user.user_metadata?.username || user.email?.split('@')[0] || 'Player'}
+                              </p>
+                              <p style={{ margin: 0, fontSize: '11px', color: '#6B7280', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{user.email}</p>
                             </div>
                           </div>
-                          {/* Actions compte */}
-                          <Link href={`/${locale}/profile`} onClick={closeDrawer}
-                            style={{ padding: '12px 8px 11px', fontSize: '15.5px', color: '#2C4360', textDecoration: 'none', fontWeight: '600', borderTop: '1px solid #D6CFC0' }}>
-                            {t('My Profile', 'Mon Profil')}
-                          </Link>
-                          <Link href={`/${locale}/games`} onClick={closeDrawer}
-                            style={{ padding: '11px 8px', fontSize: '15.5px', color: '#2C4360', textDecoration: 'none', fontWeight: '600', borderTop: '1px solid #D6CFC0' }}>
-                            {t('My Games Stats', 'Mes statistiques de jeu')}
-                          </Link>
-                          {/* Déconnexion — bouton discret, en dernier */}
-                          <button onClick={() => { handleSignOut(); closeDrawer() }}
-                            style={{ width: '100%', marginTop: '12px', padding: '9px', fontSize: '13px', fontWeight: '600', color: '#C0392B', backgroundColor: 'transparent', border: '1px solid #E3C4BF', borderRadius: '9px', cursor: 'pointer', transition: 'background 0.15s' }}
-                            onMouseEnter={e => e.currentTarget.style.background = 'rgba(192,57,43,0.08)'}
-                            onMouseLeave={e => e.currentTarget.style.background = 'transparent'}>
-                            {t('Sign out', 'Déconnexion')}
-                          </button>
-                        </>
+                          <div style={{ display: 'flex', gap: '8px' }}>
+                            <Link href={`/${locale}/profile`} onClick={closeDrawer}
+                              style={{ flex: 1, padding: '9px', textAlign: 'center', borderRadius: '9px', border: '1.5px solid #E2DDD5', fontSize: '13px', fontWeight: '700', color: '#16324F', textDecoration: 'none', backgroundColor: '#FFFFFF' }}>
+                              {t('Profile', 'Profil')}
+                            </Link>
+                            <button onClick={async () => { const s = createClient(); await s.auth.signOut(); setUser(null); closeDrawer() }}
+                              style={{ flex: 1, padding: '9px', borderRadius: '9px', border: '1.5px solid #E2DDD5', fontSize: '13px', fontWeight: '700', color: '#6B7280', backgroundColor: '#FFFFFF', cursor: 'pointer' }}>
+                              {t('Sign out', 'Déconnexion')}
+                            </button>
+                          </div>
+                        </div>
                       ) : (
-                        <>
-                          <div style={{ display: 'flex', alignItems: 'center', gap: '9px', paddingBottom: '14px' }}>
-                            <span style={{ width: '7px', height: '7px', borderRadius: '50%', backgroundColor: '#A89F8E', flexShrink: 0 }} />
-                            <span style={{ fontSize: '13.5px', fontWeight: '600', color: '#6E6555', letterSpacing: '0.1px' }}>{t('Not signed in', 'Non connecté')}</span>
-                          </div>
+                        <div style={{ display: 'flex', gap: '8px' }}>
+                          {/* Language switcher */}
+                          {[{ code: 'fr', label: 'FR' }, { code: 'en', label: 'EN' }].map(({ code, label }) => {
+                            const active = locale === code
+                            return (
+                              <button key={code}
+                                onClick={() => { router.push(pathname.replace(`/${locale}`, `/${code}`)); closeDrawer() }}
+                                style={{
+                                  display: 'flex', alignItems: 'center', gap: '6px', padding: '8px 14px',
+                                  borderRadius: '10px', cursor: 'pointer', flex: 1, justifyContent: 'center',
+                                  background: active ? '#9EB7E5' : '#FBFAF6',
+                                  border: active ? '1px solid #9EB7E5' : '1px solid #C9C0AD',
+                                  boxShadow: active ? 'none' : '0 1px 2px rgba(11,31,59,0.06)',
+                                  transition: 'background 0.15s',
+                                }}
+                                onMouseEnter={e => { if (!active) e.currentTarget.style.background = '#F1EEE4' }}
+                                onMouseLeave={e => { if (!active) e.currentTarget.style.background = '#FBFAF6' }}>
+                                {code === 'fr'
+                                  ? <svg width="18" height="12" viewBox="0 0 3 2" style={{ borderRadius: '2px', flexShrink: 0 }}><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ED2939"/></svg>
+                                  : <svg width="18" height="12" viewBox="0 0 60 40" style={{ borderRadius: '2px', flexShrink: 0 }}><rect width="60" height="40" fill="#012169"/><line x1="0" y1="0" x2="60" y2="40" stroke="#fff" strokeWidth="8"/><line x1="60" y1="0" x2="0" y2="40" stroke="#fff" strokeWidth="8"/><line x1="0" y1="0" x2="60" y2="40" stroke="#C8102E" strokeWidth="4"/><line x1="60" y1="0" x2="0" y2="40" stroke="#C8102E" strokeWidth="4"/><rect x="0" y="15" width="60" height="10" fill="#fff"/><rect x="25" y="0" width="10" height="40" fill="#fff"/><rect x="0" y="17" width="60" height="6" fill="#C8102E"/><rect x="27" y="0" width="6" height="40" fill="#C8102E"/></svg>
+                                }
+                                <span style={{ fontSize: '12px', fontWeight: '700', color: active ? '#16324F' : '#5A5446', letterSpacing: '0.4px' }}>{label}</span>
+                              </button>
+                            )
+                          })}
                           <Link href={`/${locale}/auth/login`} onClick={closeDrawer}
-                            style={{ display: 'block', padding: '12px', textAlign: 'center', fontSize: '14.5px', fontWeight: '700', color: '#F4F1E6', backgroundColor: '#0B1F3B', borderRadius: '10px', textDecoration: 'none' }}>
+                            style={{ flex: 2, padding: '9px', textAlign: 'center', borderRadius: '10px', fontSize: '14px', fontWeight: '700', color: '#16324F', backgroundColor: '#9EB7E5', textDecoration: 'none' }}>
                             {t('Sign in', 'Connexion')}
                           </Link>
-                        </>
+                        </div>
                       )}
-                    </div>
-                  </div>
-
-                  {/* Pied — sélecteur de langue FR / EN */}
-                  <div style={{ padding: '12px 18px 20px', display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '6px' }}>
-                    <span style={{ fontSize: '9.5px', fontWeight: '700', color: '#9A917F', letterSpacing: '1.2px', textTransform: 'uppercase' }}>
-                      {locale === 'en' ? 'Language' : 'Langue'}
-                    </span>
-                    <div style={{ display: 'flex', gap: '8px' }}>
-                      {/* FR */}
-                      {(() => {
-                        const active = locale === 'fr'
-                        return (
-                          <button onClick={() => { if (!active) { switchLocale(); closeDrawer() } }}
-                            style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '6px 11px', borderRadius: '8px',
-                              cursor: active ? 'default' : 'pointer',
-                              background: active ? '#9EB7E5' : '#FBFAF6',
-                              border: active ? '1px solid #9EB7E5' : '1px solid #C9C0AD',
-                              boxShadow: active ? 'none' : '0 1px 2px rgba(11,31,59,0.06)',
-                              transition: 'background 0.15s' }}
-                            onMouseEnter={e => { if (!active) e.currentTarget.style.background = '#F1EEE4' }}
-                            onMouseLeave={e => { if (!active) e.currentTarget.style.background = '#FBFAF6' }}>
-                            <svg width="18" height="12" viewBox="0 0 3 2" style={{ borderRadius: '2px', flexShrink: 0 }}><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ED2939"/></svg>
-                            <span style={{ fontSize: '12px', fontWeight: '700', color: active ? '#0B1F3B' : '#5A5446', letterSpacing: '0.4px' }}>FR</span>
-                          </button>
-                        )
-                      })()}
-                      {/* EN */}
-                      {(() => {
-                        const active = locale === 'en'
-                        return (
-                          <button onClick={() => { if (!active) { switchLocale(); closeDrawer() } }}
-                            style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '6px 11px', borderRadius: '8px',
-                              cursor: active ? 'default' : 'pointer',
-                              background: active ? '#9EB7E5' : '#FBFAF6',
-                              border: active ? '1px solid #9EB7E5' : '1px solid #C9C0AD',
-                              boxShadow: active ? 'none' : '0 1px 2px rgba(11,31,59,0.06)',
-                              transition: 'background 0.15s' }}
-                            onMouseEnter={e => { if (!active) e.currentTarget.style.background = '#F1EEE4' }}
-                            onMouseLeave={e => { if (!active) e.currentTarget.style.background = '#FBFAF6' }}>
-                            <svg width="18" height="12" viewBox="0 0 60 40" style={{ borderRadius: '2px', flexShrink: 0 }}><rect width="60" height="40" fill="#012169"/><line x1="0" y1="0" x2="60" y2="40" stroke="#fff" strokeWidth="8"/><line x1="60" y1="0" x2="0" y2="40" stroke="#fff" strokeWidth="8"/><line x1="0" y1="0" x2="60" y2="40" stroke="#C8102E" strokeWidth="4"/><line x1="60" y1="0" x2="0" y2="40" stroke="#C8102E" strokeWidth="4"/><rect x="0" y="15" width="60" height="10" fill="#fff"/><rect x="25" y="0" width="10" height="40" fill="#fff"/><rect x="0" y="17" width="60" height="6" fill="#C8102E"/><rect x="27" y="0" width="6" height="40" fill="#C8102E"/></svg>
-                            <span style={{ fontSize: '12px', fontWeight: '700', color: active ? '#0B1F3B' : '#5A5446', letterSpacing: '0.4px' }}>EN</span>
-                          </button>
-                        )
-                      })()}
                     </div>
                   </div>
                 </div>
 
-                {/* ---------- Sous-panneau Flags ---------- */}
+                {/* ── Sous-panneau Flags ── */}
                 <div style={{ width: '33.3333%', height: '100%', overflowY: 'auto', flexShrink: 0 }}>
                   <div style={{ padding: '14px 18px 36px' }}>
                     <button onClick={() => setFlagsPanel(false)}
                       style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '12px 2px 16px', background: 'none', border: 'none', cursor: 'pointer', width: '100%' }}>
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B7BB5" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M15 18l-6-6 6-6" />
-                      </svg>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B7BB5" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6" /></svg>
                       <span style={{ fontSize: '13px', fontWeight: '700', color: '#5B7BB5', textTransform: 'uppercase', letterSpacing: '0.6px' }}>{t('Flags', 'Drapeaux')}</span>
                     </button>
-
                     <div style={{ borderTop: '1px solid #E2DDD5' }}>
                       {FLAGS_MENU.map(item => (
                         <Link key={item.href} href={`/${locale}/${item.href}`} onClick={closeDrawer}
-                          style={{ display: 'block', padding: '15px 2px', fontSize: '16px', fontWeight: '500', color: '#0B1F3B', textDecoration: 'none', borderBottom: '1px solid #E2DDD5' }}>
+                          style={{ display: 'block', padding: '15px 2px', fontSize: '16px', fontWeight: '500', color: '#16324F', textDecoration: 'none', borderBottom: '1px solid #E2DDD5' }}>
                           {t(item.en, item.fr)}
                         </Link>
                       ))}
@@ -567,34 +513,30 @@ export default function Header() {
                   </div>
                 </div>
 
-                {/* ---------- Sous-panneau Games ---------- */}
+                {/* ── Sous-panneau Games ── */}
                 <div style={{ width: '33.3333%', height: '100%', overflowY: 'auto', flexShrink: 0 }}>
                   <div style={{ padding: '14px 18px 36px' }}>
                     <button onClick={() => setGamesPanel(false)}
                       style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '12px 2px 16px', background: 'none', border: 'none', cursor: 'pointer', width: '100%' }}>
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B7BB5" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M15 18l-6-6 6-6" />
-                      </svg>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B7BB5" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6" /></svg>
                       <span style={{ fontSize: '13px', fontWeight: '700', color: '#5B7BB5', textTransform: 'uppercase', letterSpacing: '0.6px' }}>{t('Games', 'Jeux')}</span>
                     </button>
-
                     <div style={{ borderTop: '1px solid #E2DDD5' }}>
                       {GAMES.map(game => (
                         <span key={game.key}
                           onClick={() => { if (!game.soon) { router.push(`/${locale}/games/${game.key}`); closeDrawer() } }}
-                          style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '15px 2px', fontSize: '16px', fontWeight: '500', borderBottom: '1px solid #E2DDD5', cursor: game.soon ? 'default' : 'pointer', color: game.soon ? '#A89F8E' : '#0B1F3B' }}>
+                          style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '15px 2px', fontSize: '16px', fontWeight: '500', borderBottom: '1px solid #E2DDD5', cursor: game.soon ? 'default' : 'pointer', color: game.soon ? '#9CA3AF' : '#16324F' }}>
                           {t(game.en, game.fr)}
-                          {game.soon && <span style={{ fontSize: '10px', color: '#806D40', backgroundColor: '#fef3c7', padding: '1px 6px', borderRadius: '99px', fontWeight: '700' }}>{t('Soon', 'Bientôt')}</span>}
+                          {game.soon && <span style={{ fontSize: '10px', color: '#92400E', backgroundColor: '#fef3c7', padding: '1px 6px', borderRadius: '99px', fontWeight: '700' }}>{t('Soon', 'Bientôt')}</span>}
                         </span>
                       ))}
                       <span onClick={() => { router.push(`/${locale}/leaderboard`); closeDrawer() }}
-                        style={{ display: 'block', padding: '15px 2px', fontSize: '16px', fontWeight: '500', color: '#0B1F3B', borderBottom: '1px solid #E2DDD5', cursor: 'pointer' }}>
+                        style={{ display: 'block', padding: '15px 2px', fontSize: '16px', fontWeight: '500', color: '#16324F', borderBottom: '1px solid #E2DDD5', cursor: 'pointer' }}>
                         {t('Leaderboard', 'Classement')}
                       </span>
                     </div>
-
                     <Link href={`/${locale}/games`} onClick={closeDrawer}
-                      style={{ display: 'inline-block', marginTop: '16px', fontSize: '13px', color: '#B07D14', textDecoration: 'none', fontWeight: '700' }}>
+                      style={{ display: 'inline-block', marginTop: '16px', fontSize: '13px', color: '#92400E', textDecoration: 'none', fontWeight: '700' }}>
                       {t('View all games →', 'Voir tous les jeux →')}
                     </Link>
                   </div>
@@ -608,17 +550,15 @@ export default function Header() {
         <style>{`
           header { overflow: visible; }
           @media (max-width: 768px) {
-            .desktop-nav   { display: none !important; }
-            .desktop-right { display: none !important; }
-            .burger-btn    { display: flex !important; }
-          }
-          @media (max-width: 380px) {
-            .logo-tagline  { display: none !important; }
+            .desktop-nav    { display: none !important; }
+            .desktop-right  { display: none !important; }
+            .burger-btn     { display: flex !important; }
+            .logo-wordmark  { font-size: 22px !important; }
           }
         `}</style>
       </header>
 
-      {/* Flag Submit Modal — rendered outside header to avoid z-index issues */}
+      {/* Flag Submit Modal */}
       {submitOpen && (
         <FlagSubmitModal onClose={() => setSubmitOpen(false)} />
       )}

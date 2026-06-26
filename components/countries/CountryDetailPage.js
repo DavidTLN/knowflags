@@ -3,40 +3,43 @@
 import { createClient } from '@/lib/supabase-client'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
-import FlagImage from '@/components/FlagImage'
 import FlagHistoryModule from '@/components/FlagHistoryModule'
 import { useLocale } from 'next-intl'
 import Footer from '@/components/Footer'
+import PageLoader from '@/components/PageLoader'
 
-const REGION_LABELS = { Africa: 'Afrique', Americas: 'Amériques', Asia: 'Asie', Europe: 'Europe', Oceania: 'Océanie' }
-
-const CONTINENT_META = {
-  'europe':           { en: 'Europe',          fr: 'Europe',            slug: 'europe',           color: '#1a3a6b', accent: '#4a7fd4', svg: '/europe.svg' },
-  'africa':           { en: 'Africa',          fr: 'Afrique',           slug: 'africa',           color: '#6b2a1a', accent: '#e07840', svg: '/africa.svg' },
-  'asia':             { en: 'Asia',            fr: 'Asie',              slug: 'asia',             color: '#1a5c3a', accent: '#4ab870', svg: '/asia.svg' },
-  'north-americas':   { en: 'North America',  fr: 'Amérique du Nord',  slug: 'north-americas',   color: '#3b0764', accent: '#a855d4', svg: '/north-america.svg' },
-  'central-americas': { en: 'Central America',fr: 'Amérique centrale', slug: 'central-americas', color: '#581c87', accent: '#c084fc', svg: '/central-america.svg' },
-  'south-americas':   { en: 'South America',  fr: 'Amérique du Sud',   slug: 'south-americas',   color: '#4a044e', accent: '#e879f9', svg: '/south-america.svg' },
-  'oceania':          { en: 'Oceania',         fr: 'Océanie',           slug: 'oceania',          color: '#1a4a6b', accent: '#38b2d4', svg: '/oceania.svg' },
+// ── DS Tokens ─────────────────────────────────────────────────────────────────
+const DS = {
+  navy:    '#16324F',
+  bg:      '#F4F1E6',   // Page — warm beige   // Page background — white
+  bgAlt:   '#FAFAF7',
+  surface: '#FFFFFF',   // Cards — white   // Card/bloc — beige
+  surfaceAlt: '#FAFAF7', // Inputs — near white
+  border:  '#E2DDD5',
+  muted:   '#6B7280',
+  light:   '#9CA3AF',
+  steel:   '#9EB7E5',
+  gold:    '#F4B400',
+  green:   '#16A34A',
 }
 
-const REGION_TO_CONTINENT = {
-  'Africa':   'africa',
-  'Americas': 'north-americas',
-  'Asia':     'asia',
-  'Europe':   'europe',
-  'Oceania':  'oceania',
+const REGION_LABELS    = { Africa: 'Afrique', Americas: 'Amériques', Asia: 'Asie', Europe: 'Europe', Oceania: 'Océanie' }
+const REGION_TO_CONTINENT = { Africa: 'africa', Americas: 'north-americas', Asia: 'asia', Europe: 'europe', Oceania: 'oceania' }
+
+const COLOR_HEX = {
+  red: '#D62828', blue: '#2563EB', green: '#16A34A', yellow: '#CA8A04',
+  white: '#E5E7EB', black: '#1F2937', orange: '#EA580C', purple: '#7C3AED',
+  maroon: '#7F1D1D', gold: '#B45309', brown: '#92400E', pink: '#DB2777',
 }
 
-// ── CountryFlagsSection ──────────────────────────────────────────────────────
+// ── CountryFlagsSection (sub-national) ──────────────────────────────────────
 function CountryFlagsSection({ countryIso2 }) {
   const locale = useLocale()
   const t = (en, fr) => locale === 'fr' ? fr : en
-  const [regions, setRegions]     = useState([])
-  const [cities, setCities]       = useState([])
-  const [orgs, setOrgs]           = useState([])
+  const [regions, setRegions] = useState([])
+  const [cities,  setCities]  = useState([])
   const [activeTab, setActiveTab] = useState('regions')
-  const [loading, setLoading]     = useState(true)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     if (!countryIso2) return
@@ -52,106 +55,50 @@ function CountryFlagsSection({ countryIso2 }) {
           .eq('country_id', country.id).neq('id', country.id).order('sort_order')
           .then(({ data }) => {
             const all = data ?? []
-            const r = all.filter(f => f.flag_type === 'region')
-            const c = all.filter(f => f.flag_type === 'city')
-            const o = all.filter(f => f.flag_type === 'organisation')
-            setRegions(r); setCities(c); setOrgs(o)
-            if (r.length === 0 && c.length > 0) setActiveTab('cities')
-            else if (r.length === 0 && o.length > 0) setActiveTab('orgs')
+            setRegions(all.filter(f => f.flag_type === 'region'))
+            setCities(all.filter(f => f.flag_type === 'city'))
             setLoading(false)
           })
       })
   }, [countryIso2])
 
-  const tabs = [
-    { key: 'regions', label: t('Regions', 'Régions'),            count: regions.length },
-    { key: 'cities',  label: t('Cities', 'Villes'),              count: cities.length },
-    { key: 'orgs',    label: t('Organisations', 'Organisations'), count: orgs.length },
-  ].filter(tab => tab.count > 0)
-
-  if (!loading && tabs.length === 0) return null
-  const current = activeTab === 'regions' ? regions : activeTab === 'cities' ? cities : orgs
+  const items = activeTab === 'regions' ? regions : cities
+  if (loading || (regions.length === 0 && cities.length === 0)) return null
 
   return (
-    <section style={{ marginTop: '48px' }}>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px', flexWrap: 'wrap', gap: '12px' }}>
-        <h2 style={{ margin: 0, fontSize: '22px', fontWeight: '900', color: '#0B1F3B' }}>
-          {t('Sub-national Flags', 'Drapeaux Infranationaux')}
+    <section style={{ padding: '0 0 8px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
+        <h2 style={{ margin: 0, fontSize: '20px', fontWeight: '900', color: DS.navy, letterSpacing: '-0.3px' }}>
+          {t('Subnational Flags', 'Drapeaux régionaux')}
         </h2>
-        {tabs.length > 1 && (
-          <div style={{ display: 'flex', gap: '4px', backgroundColor: '#F4F1E6', borderRadius: '10px', padding: '4px' }}>
-            {tabs.map(tab => (
-              <button key={tab.key} onClick={() => setActiveTab(tab.key)} style={{
-                padding: '6px 14px', borderRadius: '7px', border: 'none', cursor: 'pointer', fontSize: '13px', fontWeight: '600',
-                backgroundColor: activeTab === tab.key ? 'white' : 'transparent',
-                color: activeTab === tab.key ? '#0B1F3B' : '#8A8278',
-                boxShadow: activeTab === tab.key ? '0 1px 4px rgba(0,0,0,0.1)' : 'none',
-                transition: 'all 0.15s', display: 'flex', alignItems: 'center', gap: '6px',
-              }}>
-                {tab.label}
-                <span style={{ fontSize: '10px', fontWeight: '700', borderRadius: '99px', padding: '1px 6px', backgroundColor: activeTab === tab.key ? '#0B1F3B' : '#E2DDD5', color: activeTab === tab.key ? 'white' : '#8A8278' }}>
-                  {tab.count}
-                </span>
+        {regions.length > 0 && cities.length > 0 && (
+          <div style={{ display: 'flex', gap: '6px' }}>
+            {[['regions', t('Regions','Régions')], ['cities', t('Cities','Villes')]].map(([tab, label]) => (
+              <button key={tab} onClick={() => setActiveTab(tab)}
+                style={{ padding: '5px 12px', borderRadius: '99px', fontSize: '12px', fontWeight: '700', border: `1.5px solid ${activeTab === tab ? DS.navy : DS.border}`, backgroundColor: activeTab === tab ? DS.navy : 'transparent', color: activeTab === tab ? 'white' : DS.muted, cursor: 'pointer' }}>
+                {label}
               </button>
             ))}
           </div>
         )}
       </div>
-      {loading ? (
-        <div style={{ height: '120px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#94a3b8', fontSize: '14px' }}>
-          {t('Loading...', 'Chargement...')}
-        </div>
-      ) : (
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(180px, calc(50% - 7px)), 1fr))', gap: '14px' }}>
-          {current.map(flag => {
-            const name = locale === 'fr' ? flag.name_fr : flag.name_en
-            const parentName = flag.parent ? (locale === 'fr' ? flag.parent.name_fr : flag.parent.name_en) : null
-            return (
-              <div key={flag.slug} style={{ backgroundColor: 'white', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 1px 6px rgba(0,0,0,0.06)', border: '1px solid #F0EEE8' }}>
-                <div style={{ height: '120px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '12px' }}>
-                  <FlagImage slug={flag.slug} prefix={flag.image_path?.includes?.('/cities/') ? '/flags/cities' : '/flags/regions'} name={name} color="#0B1F3B" width={150} height={96} />
-                </div>
-                <div style={{ padding: '8px 10px' }}>
-                  <div style={{ fontSize: '12px', fontWeight: '700', color: '#0B1F3B', lineHeight: 1.3, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{name}</div>
-                  {parentName && <div style={{ fontSize: '10px', color: '#94a3b8', marginTop: '2px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{parentName}</div>}
-                </div>
-              </div>
-            )
-          })}
-        </div>
-      )}
-    </section>
-  )
-}
-
-// ── ContinentNavModule ────────────────────────────────────────────────────────
-function ContinentNavModule({ currentContinent, locale }) {
-  const t = (en, fr) => locale === 'fr' ? fr : en
-  const [hovered, setHovered] = useState(null)
-
-  return (
-    <section style={{ marginTop: '48px', paddingBottom: '16px' }}>
-      <h2 style={{ fontSize: '20px', fontWeight: '900', color: '#0B1F3B', margin: '0 0 16px', letterSpacing: '-0.5px' }}>
-        {t('Browse by Continent', 'Naviguer par continent')}
-      </h2>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))', gap: '10px' }}>
-        {Object.values(CONTINENT_META).map(c => {
-          const isCurrent = c.slug === currentContinent
-          const isHovered = hovered === c.slug
-          const active    = isCurrent || isHovered
-          const label     = locale === 'fr' ? c.fr : c.en
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(130px, 1fr))', gap: '10px' }}>
+        {items.slice(0, 12).map(f => {
+          const fname = locale === 'fr' ? f.name_fr : f.name_en
+          const imgSrc = f.image_path
+            ? `https://flagcdn.com/w160/${f.slug}.png`
+            : `https://flagcdn.com/w160/${countryIso2.toLowerCase()}-${f.slug?.split('-').pop()}.png`
           return (
-            <Link key={c.slug} href={`/${locale}/continents/${c.slug}`} style={{ textDecoration: 'none' }}>
-              <div onMouseEnter={() => setHovered(c.slug)} onMouseLeave={() => setHovered(null)} style={{ borderRadius: '12px', overflow: 'hidden', border: `2px solid ${active ? c.accent : '#e2e8f0'}`, transition: 'all 0.2s ease', transform: isHovered && !isCurrent ? 'translateY(-3px)' : 'none', boxShadow: active ? `0 6px 20px ${c.color}33` : 'none', cursor: 'pointer' }}>
-                <div style={{ width: '100%', aspectRatio: '1/1', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '16px', backgroundColor: active ? c.color : '#f8f5ed', transition: 'background-color 0.2s ease' }}>
-                  <img src={c.svg} alt={label} style={{ width: '100%', height: '100%', objectFit: 'contain', filter: active ? 'brightness(0) invert(1)' : 'brightness(0) opacity(0.65)', transition: 'filter 0.2s ease' }} />
-                </div>
-                <div style={{ padding: '8px 10px', backgroundColor: active ? c.color : 'white', transition: 'background-color 0.2s ease', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                  <span style={{ fontSize: '11px', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.04em', color: active ? 'white' : '#0B1F3B', transition: 'color 0.2s ease', lineHeight: 1.3 }}>{label}</span>
-                  {isCurrent && <span style={{ width: '7px', height: '7px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.8)', flexShrink: 0 }} />}
-                </div>
+            <div key={f.id} style={{ backgroundColor: DS.surface, borderRadius: '10px', overflow: 'hidden', border: `1px solid ${DS.border}` }}>
+              <div style={{ aspectRatio: '3/2', backgroundColor: DS.bg, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <img src={imgSrc} alt={fname} loading="lazy"
+                  style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '4px' }}
+                  onError={e => { e.target.style.display = 'none' }} />
               </div>
-            </Link>
+              <div style={{ padding: '6px 8px' }}>
+                <p style={{ margin: 0, fontSize: '11px', fontWeight: '700', color: DS.navy, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{fname}</p>
+              </div>
+            </div>
           )
         })}
       </div>
@@ -159,7 +106,7 @@ function ContinentNavModule({ currentContinent, locale }) {
   )
 }
 
-// ── FlagHero — smart flag with uploaded image fallback ───────────────────────
+// ── FlagHero ─────────────────────────────────────────────────────────────────
 function FlagHero({ countryCode, countryName }) {
   const [src, setSrc] = useState(null)
   const [loaded, setLoaded] = useState(false)
@@ -167,21 +114,11 @@ function FlagHero({ countryCode, countryName }) {
   useEffect(() => {
     if (!countryCode) return
     const supabase = createClient()
-    // Check country_flag_history for uploaded image first
-    supabase
-      .from('country_flag_history')
-      .select('image_url')
-      .eq('iso_code', countryCode.toUpperCase())
-      .is('date_end', null)
-      .order('date_start', { ascending: false })
-      .limit(1)
-      .single()
+    supabase.from('country_flag_history').select('image_url')
+      .eq('iso_code', countryCode.toUpperCase()).is('date_end', null)
+      .order('date_start', { ascending: false }).limit(1).single()
       .then(({ data }) => {
-        if (data?.image_url) {
-          setSrc(data.image_url)
-        } else {
-          setSrc(`https://flagcdn.com/w640/${countryCode.toLowerCase()}.png`)
-        }
+        setSrc(data?.image_url || `https://flagcdn.com/w640/${countryCode.toLowerCase()}.png`)
         setLoaded(true)
       })
       .catch(() => {
@@ -191,7 +128,7 @@ function FlagHero({ countryCode, countryName }) {
   }, [countryCode])
 
   if (!loaded) return (
-    <div style={{ width: '100%', aspectRatio: '3/2', backgroundColor: '#f0ede4', borderRadius: '16px' }} />
+    <div style={{ width: '100%', aspectRatio: '3/2', backgroundColor: DS.bg }} />
   )
 
   return (
@@ -199,28 +136,172 @@ function FlagHero({ countryCode, countryName }) {
       src={src}
       alt={countryName}
       onError={() => setSrc(`https://flagcdn.com/w640/${countryCode.toLowerCase()}.png`)}
-      style={{ width: '100%', display: 'block', aspectRatio: '3/2', objectFit: 'contain', backgroundColor: '#f0ede4', padding: '12px' }}
+      style={{ width: '100%', display: 'block', aspectRatio: '3/2', objectFit: 'contain', backgroundColor: DS.bg, padding: '16px' }}
     />
   )
 }
 
-// ── CountryDetailPage ────────────────────────────────────────────────────────
+// ── ContinentNavModule ────────────────────────────────────────────────────────
+// Uses the same grid pattern as CategoryGrid (homepage) — no scroll, multi-line
+function ContinentNavModule({ currentContinent, locale }) {
+  const CONTINENTS = [
+    { slug: 'europe',           en: 'Europe',          fr: 'Europe',          count: 44, color: '#1a3a6b', accent: '#4a7fd4', light: '#EBF1FB', svg: '/europe.svg' },
+    { slug: 'africa',           en: 'Africa',          fr: 'Afrique',         count: 54, color: '#6b2a1a', accent: '#e07840', light: '#FDF0E8', svg: '/africa.svg' },
+    { slug: 'asia',             en: 'Asia',            fr: 'Asie',            count: 48, color: '#1a5c3a', accent: '#4ab870', light: '#E8F5EE', svg: '/asia.svg'   },
+    { slug: 'north-americas',   en: 'North America',   fr: 'Amér. du Nord',  count: 4,  color: '#3b0764', accent: '#a855d4', light: '#F5E8FD', svg: '/north-america.svg' },
+    { slug: 'central-americas', en: 'Central America', fr: 'Amér. centrale', count: 20, color: '#581c87', accent: '#c084fc', light: '#F3E8FF', svg: '/central-america.svg' },
+    { slug: 'south-americas',   en: 'South America',   fr: 'Amér. du Sud',   count: 12, color: '#4a044e', accent: '#e879f9', light: '#FDF4FF', svg: '/south-america.svg' },
+    { slug: 'oceania',          en: 'Oceania',         fr: 'Océanie',        count: 14, color: '#1a4a6b', accent: '#38b2d4', light: '#E8F6FC', svg: '/oceania.svg' },
+  ]
+
+  return (
+    <section>
+      <h2 style={{ margin: '0 0 14px', fontSize: '18px', fontWeight: '900', color: DS.navy, letterSpacing: '-0.3px' }}>
+        {locale === 'fr' ? 'Explorer par continent' : 'Browse by Continent'}
+      </h2>
+      {/* 4-col grid on mobile → 2 rows (4+3), 7-col on desktop → 1 row */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '8px' }}>
+        {CONTINENTS.map(c => {
+          const active = c.slug === currentContinent
+          return (
+            <ContinentTile key={c.slug} c={c} active={active} locale={locale} />
+          )
+        })}
+      </div>
+    </section>
+  )
+}
+
+function ContinentTile({ c, active, locale }) {
+  const [hovered, setHovered] = useState(false)
+  const isHighlighted = active || hovered
+  const title = locale === 'fr' ? c.fr : c.en
+
+  return (
+    <Link href={`/${locale}/continents/${c.slug}`} style={{ textDecoration: 'none', display: 'block' }}>
+      <div
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        style={{
+          position: 'relative',
+          width: '100%',
+          paddingBottom: '100%',
+          borderRadius: '12px',
+          overflow: 'hidden',
+          border: `2px solid ${isHighlighted ? c.accent : DS.border}`,
+          backgroundColor: isHighlighted ? c.color : c.light,
+          transition: 'all 0.2s ease',
+          transform: hovered && !active ? 'translateY(-2px)' : 'none',
+          boxShadow: isHighlighted ? '0 6px 20px rgba(11,31,59,0.18)' : '0 1px 3px rgba(11,31,59,0.06)',
+          cursor: 'pointer',
+        }}
+      >
+        <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column' }}>
+          <div style={{ flex: 1, minHeight: 0, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '10px 10px 4px' }}>
+            <img
+              src={c.svg}
+              alt={title}
+              style={{
+                width: '70%', maxHeight: '100%', objectFit: 'contain',
+                opacity: isHighlighted ? 0.22 : 0.6,
+                filter: isHighlighted ? 'brightness(0) invert(1)' : 'brightness(0) opacity(0.5)',
+                transition: 'all 0.2s ease',
+              }}
+            />
+          </div>
+          <div style={{
+            flexShrink: 0,
+            minHeight: '34px',
+            padding: '4px 8px 7px',
+            borderTop: `1px solid ${isHighlighted ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)'}`,
+            display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: '3px',
+          }}>
+            <span style={{
+              fontSize: '9px', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.04em',
+              color: isHighlighted ? 'white' : c.color,
+              transition: 'color 0.2s ease', lineHeight: 1.25, flex: 1,
+            }}>
+              {title}
+            </span>
+            {active && (
+              <span style={{
+                width: '6px', height: '6px', borderRadius: '50%', flexShrink: 0,
+                backgroundColor: 'rgba(255,255,255,0.7)',
+              }} />
+            )}
+          </div>
+        </div>
+      </div>
+    </Link>
+  )
+}
+
+// ── Section wrapper ───────────────────────────────────────────────────────────
+function Section({ title, children }) {
+  return (
+    <section style={{ backgroundColor: DS.surface, borderRadius: '16px', border: `1px solid ${DS.border}`, padding: '20px', overflow: 'hidden' }}>
+      {title && (
+        <h2 style={{ margin: '0 0 16px', fontSize: '17px', fontWeight: '900', color: DS.navy, letterSpacing: '-0.2px' }}>
+          {title}
+        </h2>
+      )}
+      {children}
+    </section>
+  )
+}
+
+// ── Fact/Did you know card ────────────────────────────────────────────────────
+function DidYouKnow({ facts }) {
+  const [idx, setIdx] = useState(0)
+  if (!facts || facts.length === 0) return null
+  const fact = facts[idx]
+  return (
+    <div style={{ backgroundColor: '#EFF6FF', border: `1px solid ${DS.steel}`, borderLeft: `4px solid ${DS.steel}`, borderRadius: '12px', padding: '16px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '10px' }}>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={DS.steel} strokeWidth="2.2" strokeLinecap="round">
+          <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        <span style={{ fontSize: '11px', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.1em', color: '#1D4ED8' }}>
+          Did you know?
+        </span>
+      </div>
+      <p style={{ margin: 0, fontSize: '14px', color: '#1E3A5F', lineHeight: 1.6 }}>{fact}</p>
+      {facts.length > 1 && (
+        <button onClick={() => setIdx((idx + 1) % facts.length)}
+          style={{ marginTop: '10px', background: 'none', border: 'none', cursor: 'pointer', fontSize: '12px', fontWeight: '700', color: '#2563EB', padding: 0 }}>
+          Next fact →
+        </button>
+      )}
+    </div>
+  )
+}
+
+// ── Main Component ────────────────────────────────────────────────────────────
 export default function CountryDetailPage({ code }) {
   const locale = useLocale()
   const t = (en, fr) => locale === 'fr' ? fr : en
 
-  const [country, setCountry]                   = useState(null)
-  const [loading, setLoading]                   = useState(true)
-  const [relatedCountries, setRelatedCountries] = useState([])
+  const [country, setCountry]           = useState(null)
+  const [loading, setLoading]           = useState(true)
+  const [relatedCountries, setRelated]  = useState([])
+  const [facts, setFacts]               = useState([])
+  const [isMobile, setIsMobile]         = useState(false)
+
+  useEffect(() => {
+    function check() { setIsMobile(window.innerWidth < 768) }
+    check()
+    window.addEventListener('resize', check)
+    return () => window.removeEventListener('resize', check)
+  }, [])
 
   useEffect(() => {
     if (!code) return
     const supabase = createClient()
-    supabase
-      .from('countries')
+
+    // Country data
+    supabase.from('countries')
       .select('iso_code, name_en, name_fr, region, capital, capital_fr, colors, symbols, ratio, shape, population, area_km2, adopted_year, median_age, last_flag_change')
-      .eq('iso_code', code.toLowerCase())
-      .single()
+      .eq('iso_code', code.toLowerCase()).single()
       .then(({ data }) => {
         if (data) {
           setCountry({
@@ -237,43 +318,49 @@ export default function CountryDetailPage({ code }) {
             median_age:       data.median_age,
             last_flag_change: data.last_flag_change,
           })
+          // Related countries
           supabase.from('countries').select('iso_code, name_en, name_fr').eq('region', data.region).neq('iso_code', data.iso_code)
             .then(({ data: rel }) => {
-              if (rel) setRelatedCountries([...rel].sort(() => Math.random() - 0.5).slice(0, 6).map(r => ({ code: r.iso_code, en: r.name_en, fr: r.name_fr })))
+              if (rel) setRelated([...rel].sort(() => Math.random() - 0.5).slice(0, 6).map(r => ({ code: r.iso_code, en: r.name_en, fr: r.name_fr })))
             })
         }
         setLoading(false)
       })
-  }, [code])
 
-  if (loading) return (
-    <div style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <p style={{ color: '#8A8278', fontSize: '16px' }}>{t('Loading...', 'Chargement...')}</p>
-    </div>
-  )
+    // Country facts
+    supabase.from('country_facts')
+      .select('fact_en, fact_fr, category')
+      .eq('country_code', code.toLowerCase())
+      .then(({ data }) => {
+        if (data && data.length > 0) {
+          setFacts(data.map(f => locale === 'fr' ? f.fact_fr : f.fact_en).filter(Boolean))
+        }
+      })
+  }, [code, locale])
+
+  if (loading) return <PageLoader label={t('Loading...', 'Chargement...')} />
 
   if (!country) return (
-    <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <div style={{ textAlign: 'center' }}>
-        <h1 style={{ color: '#0B1F3B', fontWeight: '900', fontSize: '24px' }}>{t('Country not found', 'Pays introuvable')}</h1>
-        <Link href={`/${locale}/countries`} style={{ color: '#9EB7E5', textDecoration: 'none', fontWeight: '600' }}>
+    <div style={{ backgroundColor: DS.bg, minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div style={{ textAlign: 'center', padding: '24px' }}>
+        <h1 style={{ color: DS.navy, fontWeight: '900', fontSize: '24px', marginBottom: '12px' }}>{t('Country not found', 'Pays introuvable')}</h1>
+        <Link href={`/${locale}/countries`} style={{ color: DS.steel, textDecoration: 'none', fontWeight: '600' }}>
           ← {t('Back to all countries', 'Retour aux pays')}
         </Link>
       </div>
     </div>
   )
 
-  const name          = locale === 'fr' ? country.fr : country.en
-  const capital       = country.capital ? (locale === 'fr' ? country.capital.fr : country.capital.en) : '—'
-  const region        = locale === 'fr' ? REGION_LABELS[country.region] : country.region
+  const name         = locale === 'fr' ? country.fr : country.en
+  const capital      = country.capital ? (locale === 'fr' ? country.capital.fr : country.capital.en) : '—'
+  const region       = locale === 'fr' ? REGION_LABELS[country.region] : country.region
   const continentSlug = REGION_TO_CONTINENT[country.region] || null
-  const COLOR_HEX     = { red: '#ef4444', blue: '#3b82f6', green: '#22c55e', yellow: '#eab308', white: '#e5e7eb', black: '#1f2937', orange: '#f97316', maroon: '#7f1d1d' }
 
   function formatPop(n) {
     if (!n) return '—'
     if (n >= 1_000_000_000) return (n / 1_000_000_000).toFixed(2) + 'B'
-    if (n >= 1_000_000) return (n / 1_000_000).toFixed(1) + 'M'
-    if (n >= 1_000) return (n / 1_000).toFixed(0) + 'K'
+    if (n >= 1_000_000)     return (n / 1_000_000).toFixed(1) + 'M'
+    if (n >= 1_000)         return (n / 1_000).toFixed(0) + 'K'
     return n.toString()
   }
 
@@ -284,133 +371,322 @@ export default function CountryDetailPage({ code }) {
     return `${year} (${years} ${locale === 'fr' ? 'ans' : 'yrs'})`
   }
 
-  const infoCards = [
-    { label: t('Capital', 'Capitale'),          value: capital,                        icon: '🏙️' },
-    { label: t('Region', 'Région'),              value: region,                         icon: '🌍' },
-    { label: t('ISO Code', 'Code ISO'),          value: country.code.toUpperCase(),     icon: '🔤' },
-    { label: t('Population', 'Population'),      value: formatPop(country.population),  icon: '👥' },
-    ...(country.area_km2         ? [{ label: t('Area', 'Superficie'),         value: country.area_km2.toLocaleString() + ' km²',                            icon: '📐' }] : []),
-    ...(country.last_flag_change ? [{ label: t('Flag since', 'Drapeau depuis'), value: formatFlagSince(country.last_flag_change),                            icon: '🗓️' }] : []),
-    ...(country.median_age       ? [{ label: t('Median age', 'Âge médian'),   value: country.median_age + (locale === 'fr' ? ' ans (2024)' : ' yr (2024)'), icon: '👤' }] : []),
-  ]
+  const quickFacts = [
+    { label: t('Capital',      'Capitale'),      value: capital,                                  },
+    { label: t('Population',   'Population'),    value: formatPop(country.population),            },
+    { label: t('Adoption date','Date adoption'), value: formatFlagSince(country.last_flag_change) },
+    { label: t('Aspect ratio', 'Proportions'),   value: country.ratio || '—'                      },
+    ...(country.area_km2   ? [{ label: t('Area', 'Superficie'), value: country.area_km2.toLocaleString() + ' km²' }] : []),
+    ...(country.median_age ? [{ label: t('Median age','Âge médian'), value: country.median_age + (locale === 'fr' ? ' ans' : ' yrs') }] : []),
+  ].filter(f => f.value && f.value !== '—')
 
-  return (
-    <>
-    <div style={{ backgroundColor: '#F4F1E6', minHeight: '100vh', fontFamily: 'Arial, sans-serif' }}>
-      <div style={{ maxWidth: '960px', margin: '0 auto', padding: '32px 24px' }}>
+  // ── MOBILE layout ──────────────────────────────────────────────────────────
+  if (isMobile) {
+    return (
+      <>
+      <div style={{ backgroundColor: DS.bg, minHeight: '100vh', fontFamily: 'var(--font-body, system-ui)' }}>
 
-        {/* Breadcrumb */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '24px', fontSize: '14px', color: '#94a3b8' }}>
-          <Link href={`/${locale}/countries`} style={{ color: '#9EB7E5', textDecoration: 'none', fontWeight: '600' }}>
-            {t('Country Flags', 'Drapeaux · Pays')}
-          </Link>
-          <span>›</span>
-          <span style={{ color: '#64748b', fontWeight: '500' }}>{name}</span>
+        {/* ── Breadcrumb — above flag, near header ── */}
+        <div style={{ padding: '12px 16px 8px', backgroundColor: DS.bg }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px', color: DS.muted }}>
+            <Link href={`/${locale}/countries`} style={{ color: DS.steel, textDecoration: 'none', fontWeight: '600' }}>
+              {t('Flags', 'Drapeaux')}
+            </Link>
+            <span style={{ color: DS.muted }}>›</span>
+            <Link href={`/${locale}/continents/${continentSlug || ''}`} style={{ color: DS.steel, textDecoration: 'none', fontWeight: '600' }}>
+              {region}
+            </Link>
+          </div>
         </div>
 
-        {/* Hero */}
-        <div style={{ display: 'flex', gap: '40px', alignItems: 'flex-start', flexWrap: 'wrap', marginBottom: '40px' }}>
-          <div style={{ flex: '0 0 auto', width: 'min(400px, 100%)', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 12px 40px rgba(0,0,0,0.14)', border: '1px solid #e2e8f0' }}>
+        {/* ── Flag hero — full width ── */}
+        <div style={{ backgroundColor: DS.surface, borderTop: `1px solid ${DS.border}`, borderBottom: `1px solid ${DS.border}` }}>
+          <FlagHero countryCode={country.code} countryName={name} />
+        </div>
+
+        {/* ── Country name ── */}
+        <div style={{ padding: '20px 16px 0' }}>
+          <h1 style={{ margin: '0 0 2px', fontSize: '30px', fontWeight: '900', color: DS.navy, letterSpacing: '-0.8px', lineHeight: 1.1 }}>{name}</h1>
+          {country.en !== country.fr && locale === 'fr' && (
+            <p style={{ margin: '0 0 8px', fontSize: '14px', color: DS.muted, fontStyle: 'italic' }}>{country.en}</p>
+          )}
+          <p style={{ margin: '0 0 4px', fontSize: '14px', color: DS.muted }}>{region}</p>
+        </div>
+
+        {/* ── Page content — spaced sections ── */}
+        <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+
+          {/* Quick Facts */}
+          {quickFacts.length > 0 && (
+            <Section title={t('Quick Facts', 'Chiffres clés')}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0', borderRadius: '8px', overflow: 'hidden', border: `1px solid ${DS.border}` }}>
+                {quickFacts.map((item, i) => (
+                  <div key={i} style={{
+                    padding: '12px 14px',
+                    borderRight: i % 2 === 0 ? `1px solid ${DS.border}` : 'none',
+                    borderBottom: i < quickFacts.length - 2 ? `1px solid ${DS.border}` : 'none',
+                    backgroundColor: DS.surface,
+                  }}>
+                    <p style={{ margin: '0 0 3px', fontSize: '10px', fontWeight: '700', color: DS.light, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{item.label}</p>
+                    <p style={{ margin: 0, fontSize: '14px', fontWeight: '700', color: DS.navy, lineHeight: 1.3 }}>{item.value}</p>
+                  </div>
+                ))}
+              </div>
+            </Section>
+          )}
+
+          {/* Colors + Symbols — Symbolism section */}
+          {(country.colors.length > 0 || country.symbols.length > 0) && (
+            <Section title={t('Symbolism', 'Symbolisme')}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                {country.colors.length > 0 && (
+                  <div>
+                    <p style={{ margin: '0 0 10px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                      {t('Colors', 'Couleurs')}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {country.colors.map(c => (
+                        <div key={c} style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 12px', backgroundColor: DS.bg, borderRadius: '10px', border: `1px solid ${DS.border}` }}>
+                          <div style={{ width: '32px', height: '32px', borderRadius: '8px', backgroundColor: COLOR_HEX[c] || '#ccc', border: c === 'white' ? `1.5px solid ${DS.border}` : 'none', flexShrink: 0 }} />
+                          <span style={{ fontSize: '14px', fontWeight: '700', color: DS.navy }}>
+                            {c.charAt(0).toUpperCase() + c.slice(1)}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {country.symbols.length > 0 && (
+                  <div>
+                    <p style={{ margin: '0 0 10px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                      {t('Symbols', 'Symboles')}
+                    </p>
+                    <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                      {country.symbols.map(s => (
+                        <span key={s} style={{ padding: '6px 14px', backgroundColor: DS.navy, color: 'white', borderRadius: '99px', fontSize: '13px', fontWeight: '600' }}>
+                          {s.charAt(0).toUpperCase() + s.slice(1)}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </Section>
+          )}
+
+          {/* Did you know */}
+          {facts.length > 0 && <DidYouKnow facts={facts} />}
+
+          {/* Historical Timeline */}
+          <FlagHistoryModule countryCode={country.code} countryName={name} />
+
+          {/* Sub-national flags */}
+          <div style={{ backgroundColor: DS.surface, borderRadius: '16px', border: `1px solid ${DS.border}`, padding: '20px' }}>
+            <CountryFlagsSection countryIso2={country.code} />
+          </div>
+
+          {/* CTA — Test your knowledge */}
+          <Link href={`/${locale}/games/flag-reveal`} style={{ textDecoration: 'none', display: 'block' }}>
+            <div style={{ backgroundColor: DS.navy, borderRadius: '16px', padding: '20px', display: 'flex', alignItems: 'center', gap: '16px' }}>
+              <div style={{ flex: 1 }}>
+                <h3 style={{ margin: '0 0 4px', fontSize: '17px', fontWeight: '900', color: 'white', letterSpacing: '-0.2px' }}>
+                  {t('Test your knowledge!', 'Testez vos connaissances !')}
+                </h3>
+                <p style={{ margin: 0, fontSize: '13px', color: DS.steel, lineHeight: 1.4 }}>
+                  {t('Can you recognize this flag?', 'Reconnaissez-vous ce drapeau ?')}
+                </p>
+              </div>
+              <div style={{ backgroundColor: DS.steel, borderRadius: '10px', padding: '10px 16px', flexShrink: 0 }}>
+                <span style={{ fontSize: '13px', fontWeight: '800', color: DS.navy }}>
+                  {t('Play', 'Jouer')}
+                </span>
+              </div>
+            </div>
+          </Link>
+
+          {/* Related flags */}
+          {relatedCountries.length > 0 && (
+            <Section title={t(`More from ${region}`, `Autres pays — ${region}`)}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }}>
+                {relatedCountries.map(c => {
+                  const cName = locale === 'fr' ? c.fr : c.en
+                  return (
+                    <Link key={c.code} href={`/${locale}/countries/${c.code}`}
+                      style={{ textDecoration: 'none', display: 'block', backgroundColor: DS.bg, borderRadius: '10px', overflow: 'hidden', border: `1px solid ${DS.border}` }}>
+                      <div style={{ aspectRatio: '3/2', backgroundColor: DS.bg }}>
+                        <img src={`https://flagcdn.com/w160/${c.code}.png`} alt={cName} loading="lazy"
+                          style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '4px' }} />
+                      </div>
+                      <div style={{ padding: '6px 8px' }}>
+                        <p style={{ margin: 0, fontSize: '11px', fontWeight: '700', color: DS.navy, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{cName}</p>
+                      </div>
+                    </Link>
+                  )
+                })}
+              </div>
+            </Section>
+          )}
+
+          {/* Continent nav */}
+          <ContinentNavModule currentContinent={continentSlug} locale={locale} />
+
+        </div>
+      </div>
+      <Footer />
+      </>
+    )
+  }
+
+  // ── DESKTOP layout — matches mobile card-based design ────────────────────
+  return (
+    <>
+    <div style={{ backgroundColor: DS.bg, minHeight: '100vh', fontFamily: 'var(--font-body, system-ui)' }}>
+      <div style={{ maxWidth: '900px', margin: '0 auto', padding: '24px 24px 48px' }}>
+
+        {/* Breadcrumb */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '20px', fontSize: '13px', color: DS.muted }}>
+          <Link href={`/${locale}/countries`} style={{ color: DS.steel, textDecoration: 'none', fontWeight: '600' }}>
+            {t('Flags', 'Drapeaux')}
+          </Link>
+          <span>›</span>
+          <Link href={`/${locale}/continents/${continentSlug || ''}`} style={{ color: DS.steel, textDecoration: 'none', fontWeight: '600' }}>{region}</Link>
+          <span>›</span>
+          <span style={{ color: DS.navy, fontWeight: '600' }}>{name}</span>
+        </div>
+
+        {/* ── Hero row: flag left, title + quick facts right ── */}
+        <div style={{ display: 'flex', gap: '32px', alignItems: 'flex-start', marginBottom: '24px' }}>
+
+          {/* Flag card */}
+          <div style={{ flex: '0 0 auto', width: 'min(360px, 44%)', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 8px 32px rgba(22,50,79,0.12)', border: `1px solid ${DS.border}`, backgroundColor: DS.surface }}>
             <FlagHero countryCode={country.code} countryName={name} />
           </div>
 
-          <div style={{ flex: 1, minWidth: '200px' }}>
-            <h1 style={{ fontSize: '36px', fontWeight: '900', color: '#0B1F3B', margin: '0 0 4px', letterSpacing: '-1px' }}>{name}</h1>
-            <p style={{ margin: '0 0 24px', fontSize: '15px', color: '#64748b' }}>{region}</p>
-
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '24px' }}>
-              {infoCards.map((item, i) => (
-                <div key={i} style={{ backgroundColor: 'white', borderRadius: '12px', padding: '14px 16px', border: '1px solid #e2e8f0' }}>
-                  <p style={{ margin: '0 0 2px', fontSize: '11px', color: '#94a3b8', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{item.label}</p>
-                  <p style={{ margin: 0, fontSize: '15px', fontWeight: '700', color: '#0B1F3B' }}>{item.icon} {item.value}</p>
-                </div>
-              ))}
+          {/* Title + facts */}
+          <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <div>
+              <h1 style={{ fontSize: '36px', fontWeight: '900', color: DS.navy, margin: '0 0 4px', letterSpacing: '-1px' }}>{name}</h1>
+              {country.en !== country.fr && locale === 'fr' && (
+                <p style={{ margin: '0 0 4px', fontSize: '14px', color: DS.muted, fontStyle: 'italic' }}>{country.en}</p>
+              )}
+              <p style={{ margin: 0, fontSize: '14px', color: DS.muted }}>{region}</p>
             </div>
 
-            {country.colors.length > 0 && (
-              <div style={{ marginBottom: '16px' }}>
-                <p style={{ margin: '0 0 10px', fontSize: '12px', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                  {t('Flag Colors', 'Couleurs du drapeau')}
-                </p>
-                <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-                  {country.colors.map(c => (
-                    <div key={c} style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '4px 12px', backgroundColor: 'white', borderRadius: '99px', border: '1px solid #e2e8f0', fontSize: '13px', color: '#0B1F3B', fontWeight: '600' }}>
-                      <span style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: COLOR_HEX[c] || '#ccc', border: c === 'white' ? '1px solid #ccc' : 'none', flexShrink: 0 }} />
-                      {c.charAt(0).toUpperCase() + c.slice(1)}
+            {/* Quick Facts card */}
+            {quickFacts.length > 0 && (
+              <Section title={t('Quick Facts', 'Chiffres clés')}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0', borderRadius: '8px', overflow: 'hidden', border: `1px solid ${DS.border}` }}>
+                  {quickFacts.map((item, i) => (
+                    <div key={i} style={{
+                      padding: '12px 16px',
+                      backgroundColor: DS.surface,
+                      borderRight: i % 2 === 0 ? `1px solid ${DS.border}` : 'none',
+                      borderBottom: i < quickFacts.length - 2 ? `1px solid ${DS.border}` : 'none',
+                    }}>
+                      <p style={{ margin: '0 0 3px', fontSize: '10px', fontWeight: '700', color: DS.light, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{item.label}</p>
+                      <p style={{ margin: 0, fontSize: '14px', fontWeight: '700', color: DS.navy }}>{item.value}</p>
                     </div>
                   ))}
                 </div>
-              </div>
-            )}
-
-            {country.symbols.length > 0 && (
-              <div>
-                <p style={{ margin: '0 0 10px', fontSize: '12px', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                  {t('Symbols', 'Symboles')}
-                </p>
-                <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-                  {country.symbols.map(s => (
-                    <span key={s} style={{ padding: '4px 12px', backgroundColor: '#0B1F3B', color: 'white', borderRadius: '99px', fontSize: '12px', fontWeight: '600' }}>
-                      {s.charAt(0).toUpperCase() + s.slice(1)}
-                    </span>
-                  ))}
-                </div>
-              </div>
+              </Section>
             )}
           </div>
         </div>
 
-        {/* Flag history timeline */}
-        <FlagHistoryModule countryCode={country.code} countryName={name} />
+        {/* ── Content sections — same card pattern as mobile ── */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
 
-        {/* Sub-national flags */}
-        <CountryFlagsSection countryIso2={country.code} />
+          {/* Symbolism */}
+          {(country.colors.length > 0 || country.symbols.length > 0) && (
+            <Section title={t('Symbolism', 'Symbolisme')}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                {country.colors.length > 0 && (
+                  <div>
+                    <p style={{ margin: '0 0 10px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                      {t('Flag Colors', 'Couleurs du drapeau')}
+                    </p>
+                    <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                      {country.colors.map(col => (
+                        <div key={col} style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '7px 14px', backgroundColor: DS.bg, borderRadius: '99px', border: `1px solid ${DS.border}`, fontSize: '13px', fontWeight: '600', color: DS.navy }}>
+                          <span style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: COLOR_HEX[col] || '#ccc', border: col === 'white' ? `1px solid ${DS.border}` : 'none', flexShrink: 0 }} />
+                          {col.charAt(0).toUpperCase() + col.slice(1)}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {country.symbols.length > 0 && (
+                  <div>
+                    <p style={{ margin: '0 0 10px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                      {t('Symbols', 'Symboles')}
+                    </p>
+                    <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                      {country.symbols.map(s => (
+                        <span key={s} style={{ padding: '6px 14px', backgroundColor: DS.navy, color: 'white', borderRadius: '99px', fontSize: '13px', fontWeight: '600' }}>
+                          {s.charAt(0).toUpperCase() + s.slice(1)}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </Section>
+          )}
 
-        {/* CTA */}
-        <div style={{ backgroundColor: '#0B1F3B', borderRadius: '16px', padding: '24px 28px', marginTop: '48px', marginBottom: '40px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px' }}>
-          <div>
-            <h2 style={{ margin: '0 0 4px', fontSize: '20px', fontWeight: '900', color: 'white' }}>{t('Test your knowledge!', 'Testez vos connaissances !')}</h2>
-            <p style={{ margin: 0, fontSize: '14px', color: '#9EB7E5' }}>{t('Can you recognize this flag in Flag Reveal?', 'Reconnaîtrez-vous ce drapeau dans Flag Reveal ?')}</p>
+          {/* Did you know */}
+          {facts.length > 0 && <DidYouKnow facts={facts} />}
+
+          {/* Historical Timeline */}
+          <FlagHistoryModule countryCode={country.code} countryName={name} />
+
+          {/* Sub-national flags */}
+          <div style={{ backgroundColor: DS.surface, borderRadius: '16px', border: `1px solid ${DS.border}`, padding: '20px' }}>
+            <CountryFlagsSection countryIso2={country.code} />
           </div>
-          <Link href={`/${locale}/games/flag-reveal`} style={{ backgroundColor: '#9EB7E5', color: '#0B1F3B', padding: '12px 24px', borderRadius: '10px', textDecoration: 'none', fontWeight: '700', fontSize: '15px', flexShrink: 0 }}>
-            {t('Play Flag Reveal', 'Jouer à Flag Reveal')}
-          </Link>
-        </div>
 
-        {/* Related countries */}
-        {relatedCountries.length > 0 && (
-          <div style={{ marginBottom: '0' }}>
-            <h2 style={{ fontSize: '20px', fontWeight: '900', color: '#0B1F3B', margin: '0 0 16px', letterSpacing: '-0.5px' }}>
-              {t(`More from ${region}`, `Autres pays — ${region}`)}
-            </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '12px' }}>
-              {relatedCountries.map(c => {
-                const cName = locale === 'fr' ? c.fr : c.en
-                return (
-                  <Link key={c.code} href={`/${locale}/countries/${c.code}`}
-                    style={{ textDecoration: 'none', display: 'block', backgroundColor: 'white', borderRadius: '10px', overflow: 'hidden', border: '1px solid #e2e8f0', transition: 'transform 0.15s, box-shadow 0.15s' }}
-                    onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 8px 20px rgba(0,0,0,0.10)' }}
-                    onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none' }}
-                  >
-                    <div style={{ aspectRatio: '3/2', overflow: 'hidden', backgroundColor: '#f0ede4', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                      <img src={`https://flagcdn.com/w160/${c.code}.png`} alt={cName} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', padding: '6px' }} />
-                    </div>
-                    <div style={{ padding: '8px 10px' }}>
-                      <p style={{ margin: 0, fontSize: '12px', fontWeight: '700', color: '#0B1F3B', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{cName}</p>
-                    </div>
-                  </Link>
-                )
-              })}
+          {/* CTA */}
+          <div style={{ backgroundColor: DS.navy, borderRadius: '16px', padding: '24px 28px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px' }}>
+            <div>
+              <h2 style={{ margin: '0 0 4px', fontSize: '20px', fontWeight: '900', color: 'white' }}>{t('Test your knowledge!', 'Testez vos connaissances !')}</h2>
+              <p style={{ margin: 0, fontSize: '14px', color: DS.steel }}>{t('Can you recognize this flag in Flag Reveal?', 'Reconnaîtrez-vous ce drapeau dans Flag Reveal ?')}</p>
             </div>
+            <Link href={`/${locale}/games/flag-reveal`} style={{ backgroundColor: DS.steel, color: DS.navy, padding: '12px 24px', borderRadius: '10px', textDecoration: 'none', fontWeight: '700', fontSize: '15px', flexShrink: 0 }}>
+              {t('Play Flag Reveal', 'Jouer à Flag Reveal')}
+            </Link>
           </div>
-        )}
 
-        {/* Continent nav */}
-        <ContinentNavModule currentContinent={continentSlug} locale={locale} />
+          {/* Related countries */}
+          {relatedCountries.length > 0 && (
+            <Section title={t(`More from ${region}`, `Autres pays — ${region}`)}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '12px' }}>
+                {relatedCountries.map(rc => {
+                  const cName = locale === 'fr' ? rc.fr : rc.en
+                  return (
+                    <Link key={rc.code} href={`/${locale}/countries/${rc.code}`}
+                      style={{ textDecoration: 'none', display: 'block', backgroundColor: DS.surface, borderRadius: '10px', overflow: 'hidden', border: `1px solid ${DS.border}`, transition: 'transform 0.15s, box-shadow 0.15s' }}
+                      onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 8px 20px rgba(22,50,79,0.10)' }}
+                      onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none' }}
+                    >
+                      <div style={{ aspectRatio: '3/2', backgroundColor: DS.bg }}>
+                        <img src={`https://flagcdn.com/w160/${rc.code}.png`} alt={cName} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '6px' }} />
+                      </div>
+                      <div style={{ padding: '8px 10px' }}>
+                        <p style={{ margin: 0, fontSize: '12px', fontWeight: '700', color: DS.navy, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{cName}</p>
+                      </div>
+                    </Link>
+                  )
+                })}
+              </div>
+            </Section>
+          )}
 
+          {/* Continent nav */}
+          <ContinentNavModule currentContinent={continentSlug} locale={locale} />
+
+        </div>
       </div>
     </div>
     <Footer />
-  </>
+    </>
   )
 }

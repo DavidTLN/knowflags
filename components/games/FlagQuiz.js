@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-client'
+import PageLoader from '@/components/PageLoader'
 
 function formatTime(secs) {
   const m = Math.floor(secs / 60).toString().padStart(2, '0')
@@ -239,14 +240,7 @@ export default function FlagQuiz() {
 
   // ── LOADING ────────────────────────────────────────────────────────────────
   if (countriesLoading) {
-    return (
-      <div style={{ backgroundColor: '#0B1F3B', height: 'calc(100dvh - 60px)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <div style={{ textAlign: 'center', color: 'white' }}>
-          <div style={{ fontSize: '32px', marginBottom: '12px' }}>❓</div>
-          <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '14px' }}>{locale === 'fr' ? 'Chargement...' : 'Loading...'}</p>
-        </div>
-      </div>
-    )
+    return <PageLoader label={locale === 'fr' ? 'Chargement…' : 'Loading…'} />
   }
 
   // ── SETUP SCREEN ───────────────────────────────────────────────────────────

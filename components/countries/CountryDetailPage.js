@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import FlagHistoryModule from '@/components/FlagHistoryModule'
 import { useLocale } from 'next-intl'
+import { labelColor, labelSymbol, labelShape } from '@/lib/flagSymbolsFr'
 import Footer from '@/components/Footer'
 import PageLoader from '@/components/PageLoader'
 
@@ -85,15 +86,17 @@ function CountryFlagsSection({ countryIso2 }) {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(130px, 1fr))', gap: '10px' }}>
         {items.slice(0, 12).map(f => {
           const fname = locale === 'fr' ? f.name_fr : f.name_en
-          const imgSrc = f.image_path
-            ? `https://flagcdn.com/w160/${f.slug}.png`
-            : `https://flagcdn.com/w160/${countryIso2.toLowerCase()}-${f.slug?.split('-').pop()}.png`
           return (
             <div key={f.id} style={{ backgroundColor: DS.surface, borderRadius: '10px', overflow: 'hidden', border: `1px solid ${DS.border}` }}>
               <div style={{ aspectRatio: '3/2', backgroundColor: DS.bg, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <img src={imgSrc} alt={fname} loading="lazy"
+                {f.image_path && <img src={f.image_path} alt={fname} loading="lazy"
                   style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '4px' }}
-                  onError={e => { e.target.style.display = 'none' }} />
+                  onError={e => {
+                    const img = e.currentTarget
+                    if (img.dataset.tried !== '1' && /\.svg$/i.test(img.src)) { img.dataset.tried = '1'; img.src = img.src.replace(/\.svg$/i, '.png') }
+                    else if (img.dataset.tried !== '1' && /\.png$/i.test(img.src)) { img.dataset.tried = '1'; img.src = img.src.replace(/\.png$/i, '.svg') }
+                    else { img.style.display = 'none' }
+                  }} />}
               </div>
               <div style={{ padding: '6px 8px' }}>
                 <p style={{ margin: 0, fontSize: '11px', fontWeight: '700', color: DS.navy, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{fname}</p>
@@ -107,9 +110,11 @@ function CountryFlagsSection({ countryIso2 }) {
 }
 
 // ── FlagHero ─────────────────────────────────────────────────────────────────
-function FlagHero({ countryCode, countryName }) {
+function FlagHero({ countryCode, countryName, locale }) {
+  const t = (en, fr) => locale === 'fr' ? fr : en
   const [src, setSrc] = useState(null)
   const [loaded, setLoaded] = useState(false)
+  const [hover, setHover] = useState(false)
 
   useEffect(() => {
     if (!countryCode) return
@@ -127,17 +132,50 @@ function FlagHero({ countryCode, countryName }) {
       })
   }, [countryCode])
 
+  async function downloadPng() {
+    const url = `https://flagcdn.com/w1280/${countryCode.toLowerCase()}.png`
+    try {
+      const res = await fetch(url)
+      const blob = await res.blob()
+      const obj = URL.createObjectURL(blob)
+      const a = document.createElement('a')
+      a.href = obj
+      a.download = `flag-${countryCode.toLowerCase()}.png`
+      document.body.appendChild(a)
+      a.click()
+      a.remove()
+      URL.revokeObjectURL(obj)
+    } catch {
+      window.open(url, '_blank', 'noopener')
+    }
+  }
+
   if (!loaded) return (
     <div style={{ width: '100%', aspectRatio: '3/2', backgroundColor: DS.bg }} />
   )
 
   return (
-    <img
-      src={src}
-      alt={countryName}
-      onError={() => setSrc(`https://flagcdn.com/w640/${countryCode.toLowerCase()}.png`)}
-      style={{ width: '100%', display: 'block', aspectRatio: '3/2', objectFit: 'contain', backgroundColor: DS.bg, padding: '16px' }}
-    />
+    <>
+      <img
+        src={src}
+        alt={countryName}
+        onError={() => setSrc(`https://flagcdn.com/w640/${countryCode.toLowerCase()}.png`)}
+        style={{ width: '100%', display: 'block', aspectRatio: '3/2', objectFit: 'contain', backgroundColor: DS.bg, padding: '16px' }}
+      />
+      <button
+        onClick={downloadPng}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+        style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', padding: '11px 16px', border: 'none', borderTop: `1px solid ${DS.border}`, backgroundColor: hover ? DS.bg : DS.surface, color: DS.navy, fontSize: '13px', fontWeight: '600', cursor: 'pointer', transition: 'background-color 0.12s ease' }}
+      >
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        {t('Download PNG image', 'Télécharger l’image PNG')}
+      </button>
+    </>
   )
 }
 
@@ -237,21 +275,135 @@ function ContinentTile({ c, active, locale }) {
 }
 
 // ── Section wrapper ───────────────────────────────────────────────────────────
-function Section({ title, children }) {
+function Section({ title, subtitle, children }) {
   return (
     <section style={{ backgroundColor: DS.surface, borderRadius: '16px', border: `1px solid ${DS.border}`, padding: '20px', overflow: 'hidden' }}>
       {title && (
-        <h2 style={{ margin: '0 0 16px', fontSize: '17px', fontWeight: '900', color: DS.navy, letterSpacing: '-0.2px' }}>
+        <h2 style={{ margin: subtitle ? '0 0 2px' : '0 0 16px', fontSize: '17px', fontWeight: '900', color: DS.navy, letterSpacing: '-0.2px' }}>
           {title}
         </h2>
+      )}
+      {subtitle && (
+        <p style={{ margin: '0 0 16px', fontSize: '13px', fontStyle: 'italic', color: DS.muted, lineHeight: 1.5 }}>
+          {subtitle}
+        </p>
       )}
       {children}
     </section>
   )
 }
 
+// ── Flag etiquette card ───────────────────────────────────────────────────────
+const ETIQUETTE_COMMON_EN = [
+  'Keep the flag clean and never let it touch the ground.',
+  'Never fly a torn or faded flag — repair or replace it.',
+  'Illuminate the flag if it stays up at night.',
+  'Never use the flag as clothing, packaging or advertising.',
+  'Dispose of a worn flag respectfully, not in the trash.',
+]
+const ETIQUETTE_COMMON_FR = [
+  'Garder le drapeau propre et ne jamais le laisser toucher le sol.',
+  'Ne jamais hisser un drapeau déchiré ou délavé — le réparer ou le remplacer.',
+  'Éclairer le drapeau s\u2019il reste hissé la nuit.',
+  'Ne jamais l\u2019utiliser comme vêtement, emballage ou publicité.',
+  'Se débarrasser d\u2019un drapeau usé de façon respectueuse, pas à la poubelle.',
+]
+
+function EtiquetteList({ items }) {
+  return (
+    <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+      {items.map((r, i) => (
+        <li key={i} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start', marginBottom: '8px' }}>
+          <span style={{ marginTop: '7px', width: '6px', height: '6px', borderRadius: '50%', backgroundColor: DS.steel, flexShrink: 0 }} />
+          <span style={{ fontSize: '14px', color: DS.navy, lineHeight: 1.55 }}>{r}</span>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+function FlagEtiquette({ country, locale }) {
+  const t = (en, fr) => locale === 'fr' ? fr : en
+  const common = locale === 'fr' ? ETIQUETTE_COMMON_FR : ETIQUETTE_COMMON_EN
+  const specific = (locale === 'fr' ? (country.etiquette_fr || country.etiquette_en) : (country.etiquette_en || country.etiquette_fr)) || []
+  const overline = { margin: '0 0 10px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }
+  return (
+    <Section title={t('Flag etiquette', "Règles d'utilisation des drapeaux")} subtitle={t('How the flag should be used and displayed with respect.', 'Comment utiliser et afficher le drapeau avec respect.')}>
+      {specific.length > 0 && (
+        <div style={{ marginBottom: '18px' }}>
+          <p style={overline}>{t('Specific rules', 'Règles spécifiques')} — {locale === 'fr' ? country.fr : country.en}</p>
+          <EtiquetteList items={specific} />
+        </div>
+      )}
+      <div>
+        <p style={overline}>{t('Common conventions', 'Conventions courantes')}</p>
+        <EtiquetteList items={common} />
+      </div>
+    </Section>
+  )
+}
+
+// ── Design / Specifications card ──────────────────────────────────────────────
+function DesignSpecs({ country, locale }) {
+  const t = (en, fr) => locale === 'fr' ? fr : en
+  const colors = country.colors || []
+  const symbols = country.symbols || []
+  const spec = locale === 'fr' ? (country.spec_fr || country.spec_en) : (country.spec_en || country.spec_fr)
+  const facts = [country.ratio && { label: t('Proportions', 'Proportions'), value: country.ratio }, country.shape && { label: t('Shape', 'Forme'), value: labelShape(country.shape, locale) }].filter(Boolean)
+  if (!facts.length && !colors.length && !symbols.length && !spec) return null
+  return (
+    <Section title={t('Design & Specifications', 'Conception & spécifications')} subtitle={t('Technical reference to reproduce the flag faithfully.', 'Référence technique pour reproduire fidèlement le drapeau.')}>
+      {facts.length > 0 && (
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0', borderRadius: '8px', overflow: 'hidden', border: `1px solid ${DS.border}`, marginBottom: (colors.length || symbols.length || spec) ? '16px' : 0 }}>
+          {facts.map((item, i) => (
+            <div key={i} style={{ padding: '12px 14px', backgroundColor: DS.surface, borderRight: i % 2 === 0 && i < facts.length - 1 ? `1px solid ${DS.border}` : 'none' }}>
+              <p style={{ margin: '0 0 3px', fontSize: '10px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{item.label}</p>
+              <p style={{ margin: 0, fontSize: '14px', fontWeight: '700', color: DS.navy }}>{item.value}</p>
+            </div>
+          ))}
+        </div>
+      )}
+      {colors.length > 0 && (
+        <div style={{ marginBottom: (symbols.length || spec) ? '16px' : 0 }}>
+          <p style={{ margin: '0 0 10px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{t('Colors & hex codes', 'Couleurs & codes hexa')}</p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+            {colors.map(c => {
+              const hex = COLOR_HEX[String(c).toLowerCase()] || '#cccccc'
+              return (
+                <div key={c} style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '8px 10px', backgroundColor: DS.bg, borderRadius: '8px', border: `1px solid ${DS.border}` }}>
+                  <span style={{ width: '24px', height: '24px', borderRadius: '6px', backgroundColor: hex, border: String(c).toLowerCase() === 'white' ? `1px solid ${DS.border}` : 'none', flexShrink: 0 }} />
+                  <span style={{ fontSize: '13px', fontWeight: '700', color: DS.navy, flex: 1 }}>{labelColor(c, locale)}</span>
+                  <code style={{ fontSize: '12px', fontFamily: 'monospace', color: DS.muted, textTransform: 'uppercase' }}>{hex}</code>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      )}
+      {symbols.length > 0 && (
+        <div style={{ marginBottom: spec ? '16px' : 0 }}>
+          <p style={{ margin: '0 0 10px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{t('Elements', 'Éléments')}</p>
+          <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+            {symbols.map(sy => (
+              <span key={sy} style={{ padding: '6px 12px', backgroundColor: DS.bg, border: `1px solid ${DS.border}`, borderRadius: '99px', fontSize: '13px', fontWeight: '600', color: DS.navy }}>{labelSymbol(sy, locale)}</span>
+            ))}
+          </div>
+        </div>
+      )}
+      {spec && (
+        <div>
+          <p style={{ margin: '0 0 8px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{t('Specifications', 'Spécifications')}</p>
+          <p style={{ margin: 0, fontSize: '13px', color: DS.navy, lineHeight: 1.7, whiteSpace: 'pre-line' }}>{spec}</p>
+        </div>
+      )}
+    </Section>
+  )
+}
+
 // ── Fact/Did you know card ────────────────────────────────────────────────────
 function DidYouKnow({ facts }) {
+  const locale = useLocale()
+  const t = (en, fr) => locale === 'fr' ? fr : en
   const [idx, setIdx] = useState(0)
   if (!facts || facts.length === 0) return null
   const fact = facts[idx]
@@ -262,14 +414,14 @@ function DidYouKnow({ facts }) {
           <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
         </svg>
         <span style={{ fontSize: '11px', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.1em', color: '#1D4ED8' }}>
-          Did you know?
+          {t('Did you know?', 'Le saviez-vous ?')}
         </span>
       </div>
       <p style={{ margin: 0, fontSize: '14px', color: '#1E3A5F', lineHeight: 1.6 }}>{fact}</p>
       {facts.length > 1 && (
         <button onClick={() => setIdx((idx + 1) % facts.length)}
           style={{ marginTop: '10px', background: 'none', border: 'none', cursor: 'pointer', fontSize: '12px', fontWeight: '700', color: '#2563EB', padding: 0 }}>
-          Next fact →
+          {t('Next fact →', 'Anecdote suivante →')}
         </button>
       )}
     </div>
@@ -300,7 +452,7 @@ export default function CountryDetailPage({ code }) {
 
     // Country data
     supabase.from('countries')
-      .select('iso_code, name_en, name_fr, region, capital, capital_fr, colors, symbols, ratio, shape, population, area_km2, adopted_year, median_age, last_flag_change')
+      .select('iso_code, name_en, name_fr, region, capital, capital_fr, colors, symbols, ratio, shape, population, area_km2, adopted_year, median_age, last_flag_change, spec_en, spec_fr, etiquette_en, etiquette_fr')
       .eq('iso_code', code.toLowerCase()).single()
       .then(({ data }) => {
         if (data) {
@@ -317,6 +469,12 @@ export default function CountryDetailPage({ code }) {
             adopted_year:     data.adopted_year,
             median_age:       data.median_age,
             last_flag_change: data.last_flag_change,
+            ratio:            data.ratio,
+            shape:            data.shape,
+            spec_en:          data.spec_en,
+            spec_fr:          data.spec_fr,
+            etiquette_en:     data.etiquette_en || [],
+            etiquette_fr:     data.etiquette_fr || [],
           })
           // Related countries
           supabase.from('countries').select('iso_code, name_en, name_fr').eq('region', data.region).neq('iso_code', data.iso_code)
@@ -401,15 +559,12 @@ export default function CountryDetailPage({ code }) {
 
         {/* ── Flag hero — full width ── */}
         <div style={{ backgroundColor: DS.surface, borderTop: `1px solid ${DS.border}`, borderBottom: `1px solid ${DS.border}` }}>
-          <FlagHero countryCode={country.code} countryName={name} />
+          <FlagHero countryCode={country.code} countryName={name} locale={locale} />
         </div>
 
         {/* ── Country name ── */}
         <div style={{ padding: '20px 16px 0' }}>
-          <h1 style={{ margin: '0 0 2px', fontSize: '30px', fontWeight: '900', color: DS.navy, letterSpacing: '-0.8px', lineHeight: 1.1 }}>{name}</h1>
-          {country.en !== country.fr && locale === 'fr' && (
-            <p style={{ margin: '0 0 8px', fontSize: '14px', color: DS.muted, fontStyle: 'italic' }}>{country.en}</p>
-          )}
+          <h1 style={{ margin: '0 0 1px', fontSize: '30px', fontWeight: '900', color: DS.navy, letterSpacing: '-0.8px', lineHeight: 1.1 }}>{name}</h1>
           <p style={{ margin: '0 0 4px', fontSize: '14px', color: DS.muted }}>{region}</p>
         </div>
 
@@ -437,7 +592,7 @@ export default function CountryDetailPage({ code }) {
 
           {/* Colors + Symbols — Symbolism section */}
           {(country.colors.length > 0 || country.symbols.length > 0) && (
-            <Section title={t('Symbolism', 'Symbolisme')}>
+            <Section title={t('Symbolism', 'Symbolisme')} subtitle={t('What the colors and emblems on the flag represent.', 'Ce que représentent les couleurs et emblèmes du drapeau.')}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 {country.colors.length > 0 && (
                   <div>
@@ -449,7 +604,7 @@ export default function CountryDetailPage({ code }) {
                         <div key={c} style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 12px', backgroundColor: DS.bg, borderRadius: '10px', border: `1px solid ${DS.border}` }}>
                           <div style={{ width: '32px', height: '32px', borderRadius: '8px', backgroundColor: COLOR_HEX[c] || '#ccc', border: c === 'white' ? `1.5px solid ${DS.border}` : 'none', flexShrink: 0 }} />
                           <span style={{ fontSize: '14px', fontWeight: '700', color: DS.navy }}>
-                            {c.charAt(0).toUpperCase() + c.slice(1)}
+                            {labelColor(c, locale)}
                           </span>
                         </div>
                       ))}
@@ -464,7 +619,7 @@ export default function CountryDetailPage({ code }) {
                     <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
                       {country.symbols.map(s => (
                         <span key={s} style={{ padding: '6px 14px', backgroundColor: DS.navy, color: 'white', borderRadius: '99px', fontSize: '13px', fontWeight: '600' }}>
-                          {s.charAt(0).toUpperCase() + s.slice(1)}
+                          {labelSymbol(s, locale)}
                         </span>
                       ))}
                     </div>
@@ -473,6 +628,12 @@ export default function CountryDetailPage({ code }) {
               </div>
             </Section>
           )}
+
+          {/* Design & specifications */}
+          <DesignSpecs country={country} locale={locale} />
+
+          {/* Flag etiquette */}
+          <FlagEtiquette country={country} locale={locale} />
 
           {/* Did you know */}
           {facts.length > 0 && <DidYouKnow facts={facts} />}
@@ -559,16 +720,13 @@ export default function CountryDetailPage({ code }) {
 
           {/* Flag card */}
           <div style={{ flex: '0 0 auto', width: 'min(360px, 44%)', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 8px 32px rgba(22,50,79,0.12)', border: `1px solid ${DS.border}`, backgroundColor: DS.surface }}>
-            <FlagHero countryCode={country.code} countryName={name} />
+            <FlagHero countryCode={country.code} countryName={name} locale={locale} />
           </div>
 
           {/* Title + facts */}
           <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', gap: '16px' }}>
             <div>
-              <h1 style={{ fontSize: '36px', fontWeight: '900', color: DS.navy, margin: '0 0 4px', letterSpacing: '-1px' }}>{name}</h1>
-              {country.en !== country.fr && locale === 'fr' && (
-                <p style={{ margin: '0 0 4px', fontSize: '14px', color: DS.muted, fontStyle: 'italic' }}>{country.en}</p>
-              )}
+              <h1 style={{ fontSize: '36px', fontWeight: '900', color: DS.navy, margin: '0 0 1px', letterSpacing: '-1px' }}>{name}</h1>
               <p style={{ margin: 0, fontSize: '14px', color: DS.muted }}>{region}</p>
             </div>
 
@@ -598,7 +756,7 @@ export default function CountryDetailPage({ code }) {
 
           {/* Symbolism */}
           {(country.colors.length > 0 || country.symbols.length > 0) && (
-            <Section title={t('Symbolism', 'Symbolisme')}>
+            <Section title={t('Symbolism', 'Symbolisme')} subtitle={t('What the colors and emblems on the flag represent.', 'Ce que représentent les couleurs et emblèmes du drapeau.')}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 {country.colors.length > 0 && (
                   <div>
@@ -609,7 +767,7 @@ export default function CountryDetailPage({ code }) {
                       {country.colors.map(col => (
                         <div key={col} style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '7px 14px', backgroundColor: DS.bg, borderRadius: '99px', border: `1px solid ${DS.border}`, fontSize: '13px', fontWeight: '600', color: DS.navy }}>
                           <span style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: COLOR_HEX[col] || '#ccc', border: col === 'white' ? `1px solid ${DS.border}` : 'none', flexShrink: 0 }} />
-                          {col.charAt(0).toUpperCase() + col.slice(1)}
+                          {labelColor(col, locale)}
                         </div>
                       ))}
                     </div>
@@ -623,7 +781,7 @@ export default function CountryDetailPage({ code }) {
                     <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
                       {country.symbols.map(s => (
                         <span key={s} style={{ padding: '6px 14px', backgroundColor: DS.navy, color: 'white', borderRadius: '99px', fontSize: '13px', fontWeight: '600' }}>
-                          {s.charAt(0).toUpperCase() + s.slice(1)}
+                          {labelSymbol(s, locale)}
                         </span>
                       ))}
                     </div>
@@ -632,6 +790,12 @@ export default function CountryDetailPage({ code }) {
               </div>
             </Section>
           )}
+
+          {/* Design & specifications */}
+          <DesignSpecs country={country} locale={locale} />
+
+          {/* Flag etiquette */}
+          <FlagEtiquette country={country} locale={locale} />
 
           {/* Did you know */}
           {facts.length > 0 && <DidYouKnow facts={facts} />}

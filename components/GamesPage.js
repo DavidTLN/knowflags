@@ -65,6 +65,16 @@ const GAMES = [
     color: '#ec4899',
     difficulty: 'medium',
   },
+  {
+    key: 'flag-locator',
+    icon: '📍',
+    en: 'Flag Locator',
+    fr: 'Flag Locator',
+    descEn: 'Find the country on the map',
+    descFr: 'Trouve le pays sur la carte',
+    color: '#3360B1',
+    difficulty: 'medium',
+  },
 ]
 
 const COMING_SOON = [

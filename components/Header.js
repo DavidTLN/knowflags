@@ -14,6 +14,7 @@ const GAMES = [
   { key: 'flag-drawing', en: 'FlagDrawer',  fr: 'FlagDrawer',  descEn: 'Can you draw it from memory?',         descFr: 'Sauras-tu le dessiner de mémoire ?' },
   { key: 'flag-ranker',  en: 'FlagRanker',  fr: 'FlagRanker',  descEn: 'Rank countries by area, GDP and more', descFr: 'Classe les pays par superficie, PIB...' },
   { key: 'flag-clue',    en: 'FlagClue',    fr: 'FlagClue',    descEn: 'Guess the country from fun facts',     descFr: 'Devine le pays grâce à des anecdotes' },
+  { key: 'flag-locator', en: 'FlagLocator', fr: 'FlagLocator', descEn: 'Find the country on the map',        descFr: 'Trouve le pays sur la carte' },
 ]
 
 const FLAGS_MENU = [
@@ -116,6 +117,70 @@ const GameItem = ({ game, onClick }) => (
   </div>
 )
 
+function FlagFR() { return (<svg width="18" height="12" viewBox="0 0 3 2" style={{ borderRadius: '2px', flexShrink: 0 }}><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ED2939"/></svg>) }
+function FlagGB() { return (<svg width="18" height="12" viewBox="0 0 60 40" style={{ borderRadius: '2px', flexShrink: 0 }}><rect width="60" height="40" fill="#012169"/><line x1="0" y1="0" x2="60" y2="40" stroke="#fff" strokeWidth="8"/><line x1="60" y1="0" x2="0" y2="40" stroke="#fff" strokeWidth="8"/><line x1="0" y1="0" x2="60" y2="40" stroke="#C8102E" strokeWidth="4"/><line x1="60" y1="0" x2="0" y2="40" stroke="#C8102E" strokeWidth="4"/><rect x="0" y="15" width="60" height="10" fill="#fff"/><rect x="25" y="0" width="10" height="40" fill="#fff"/><rect x="0" y="17" width="60" height="6" fill="#C8102E"/><rect x="27" y="0" width="6" height="40" fill="#C8102E"/></svg>) }
+
+// Desktop language selector — click opens a dropdown; outside click closes
+function LangToggle({ locale, pathname, router }) {
+  const [open, setOpen] = useState(false)
+  const ref = useRef(null)
+  useEffect(() => {
+    function onDoc(e) { if (ref.current && !ref.current.contains(e.target)) setOpen(false) }
+    document.addEventListener('mousedown', onDoc)
+    return () => document.removeEventListener('mousedown', onDoc)
+  }, [])
+  const LANGS = [{ code: 'fr', label: 'Français', short: 'FR' }, { code: 'en', label: 'English', short: 'EN' }]
+  const current = locale === 'fr' ? LANGS[0] : LANGS[1]
+  function choose(code) { setOpen(false); if (code !== locale) router.push(pathname.replace(`/${locale}`, `/${code}`)) }
+  return (
+    <div ref={ref} style={{ position: 'relative' }}>
+      <button onClick={() => setOpen(o => !o)} aria-haspopup="listbox" aria-expanded={open}
+        style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '6px 10px', borderRadius: '8px', cursor: 'pointer', background: open ? 'rgba(255,255,255,0.20)' : 'rgba(255,255,255,0.10)', border: '1px solid rgba(255,255,255,0.22)', transition: 'background 0.15s' }}
+        onMouseEnter={e => { if (!open) e.currentTarget.style.background = 'rgba(255,255,255,0.20)' }}
+        onMouseLeave={e => { if (!open) e.currentTarget.style.background = 'rgba(255,255,255,0.10)' }}>
+        {locale === 'fr' ? <FlagFR /> : <FlagGB />}
+        <span style={{ fontSize: '12px', fontWeight: '700', color: '#FFFFFF', letterSpacing: '0.4px' }}>{current.short}</span>
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ transform: open ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s', opacity: 0.85 }}><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      {open && (
+        <div role="listbox" style={{ position: 'absolute', top: 'calc(100% + 8px)', right: 0, backgroundColor: '#FFFFFF', borderRadius: '10px', boxShadow: '0 12px 36px rgba(0,0,0,0.18)', overflow: 'hidden', width: '168px', zIndex: 200, border: '1px solid #E2DDD5' }}>
+          {LANGS.map(l => {
+            const isCur = l.code === locale
+            return (
+              <button key={l.code} role="option" aria-selected={isCur} onClick={() => choose(l.code)}
+                style={{ display: 'flex', alignItems: 'center', gap: '10px', width: '100%', padding: '10px 12px', background: isCur ? '#F4F1E6' : 'transparent', border: 'none', cursor: 'pointer', textAlign: 'left' }}
+                onMouseEnter={e => { if (!isCur) e.currentTarget.style.background = '#F6F6F4' }}
+                onMouseLeave={e => { if (!isCur) e.currentTarget.style.background = 'transparent' }}>
+                {l.code === 'fr' ? <FlagFR /> : <FlagGB />}
+                <span style={{ fontSize: '13px', fontWeight: isCur ? '700' : '600', color: '#16324F' }}>{l.label}</span>
+                {isCur && <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16A34A" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: 'auto' }}><path d="M20 6L9 17l-5-5"/></svg>}
+              </button>
+            )
+          })}
+        </div>
+      )}
+    </div>
+  )
+}
+
+// Mobile language buttons — always visible in the drawer
+function LangButtonsMobile({ locale, pathname, router, closeDrawer }) {
+  return (
+    <div style={{ display: 'flex', gap: '8px', marginBottom: '12px' }}>
+      {[{ code: 'fr', label: 'FR' }, { code: 'en', label: 'EN' }].map(({ code, label }) => {
+        const active = locale === code
+        return (
+          <button key={code} onClick={() => { router.push(pathname.replace(`/${locale}`, `/${code}`)); closeDrawer() }}
+            style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '9px 14px', borderRadius: '10px', cursor: 'pointer', flex: 1, justifyContent: 'center', background: active ? '#9EB7E5' : '#FFFFFF', border: active ? '1px solid #9EB7E5' : '1px solid #E2DDD5', transition: 'background 0.15s' }}>
+            {code === 'fr' ? <FlagFR /> : <FlagGB />}
+            <span style={{ fontSize: '12px', fontWeight: '700', color: active ? '#16324F' : '#5A5446', letterSpacing: '0.4px' }}>{label}</span>
+          </button>
+        )
+      })}
+    </div>
+  )
+}
+
 export default function Header() {
   const locale   = useLocale()
   const pathname = usePathname()
@@ -209,16 +274,16 @@ export default function Header() {
   return (
     <>
       <header style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, backgroundColor: '#0B1F3B', borderBottom: '1px solid rgba(255,255,255,0.08)', boxShadow: scrolled ? '0 4px 16px rgba(22,50,79,0.16)' : '0 1px 3px rgba(22,50,79,0.06)', transition: 'box-shadow 0.2s ease' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 16px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '16px', minWidth: 0 }}>
+        <div style={{ position: 'relative', padding: '0 20px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '16px', minWidth: 0 }}>
 
           {/* ── Logo ── */}
           <Link href={`/${locale}`} style={{ textDecoration: 'none', flexShrink: 0, display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <img src='/logo.svg' alt='Knowflags' style={{ height: '38px', width: 'auto', display: 'block', borderRadius: '10px' }} />
-            <span style={{ fontSize: '18px', fontWeight: '900', color: '#FFFFFF', letterSpacing: '-0.3px', lineHeight: 1 }} className="logo-wordmark">Knowflags</span>
+            <img src='/logo-square.svg' alt='Knowflags' className="logo-img" style={{ height: '32px', width: '32px', display: 'block', borderRadius: '8px' }} />
+            <span style={{ fontSize: '28px', fontWeight: '900', color: '#FFFFFF', letterSpacing: '-0.5px', lineHeight: 1 }} className="logo-wordmark">Knowflags</span>
           </Link>
 
           {/* ── Desktop nav ── */}
-          <nav style={{ display: 'flex', alignItems: 'center', gap: '28px', flex: 1, justifyContent: 'center' }} className="desktop-nav">
+          <nav style={{ display: 'flex', alignItems: 'center', gap: '28px', position: 'absolute', left: '50%', transform: 'translateX(-50%)' }} className="desktop-nav">
 
             {/* Flags dropdown */}
             <div ref={flagsRef} style={{ position: 'relative' }}>
@@ -301,7 +366,8 @@ export default function Header() {
             </button>
 
             {/* Auth / avatar */}
-            <div className="desktop-right">
+            <div className="desktop-right" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <LangToggle locale={locale} pathname={pathname} router={router} />
               {user ? (
                 <div ref={avatarRef} style={{ position: 'relative' }}>
                   <button onClick={() => setAvatarOpen(o => !o)}
@@ -338,30 +404,7 @@ export default function Header() {
                 </div>
               ) : (
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  {/* Language switcher */}
-                  {(() => {
-                    const active = locale === 'fr'
-                    return (
-                      <button onClick={() => router.push(pathname.replace(`/${locale}`, active ? '/en' : '/fr'))}
-                        style={{
-                          display: 'flex', alignItems: 'center', gap: '5px', padding: '5px 10px',
-                          borderRadius: '8px', cursor: 'pointer',
-                          background: active ? '#9EB7E5' : '#FBFAF6',
-                          border: active ? '1px solid #9EB7E5' : '1px solid #C9C0AD',
-                          transition: 'background 0.15s',
-                        }}
-                        onMouseEnter={e => { if (!active) e.currentTarget.style.background = '#F1EEE4' }}
-                        onMouseLeave={e => { if (!active) e.currentTarget.style.background = '#FBFAF6' }}>
-                        {active
-                          ? <svg width="18" height="12" viewBox="0 0 3 2" style={{ borderRadius: '2px', flexShrink: 0 }}><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ED2939"/></svg>
-                          : <svg width="18" height="12" viewBox="0 0 60 40" style={{ borderRadius: '2px', flexShrink: 0 }}><rect width="60" height="40" fill="#012169"/><line x1="0" y1="0" x2="60" y2="40" stroke="#fff" strokeWidth="8"/><line x1="60" y1="0" x2="0" y2="40" stroke="#fff" strokeWidth="8"/><line x1="0" y1="0" x2="60" y2="40" stroke="#C8102E" strokeWidth="4"/><line x1="60" y1="0" x2="0" y2="40" stroke="#C8102E" strokeWidth="4"/><rect x="0" y="15" width="60" height="10" fill="#fff"/><rect x="25" y="0" width="10" height="40" fill="#fff"/><rect x="0" y="17" width="60" height="6" fill="#C8102E"/><rect x="27" y="0" width="6" height="40" fill="#C8102E"/></svg>
-                        }
-                        <span style={{ fontSize: '12px', fontWeight: '700', color: active ? '#16324F' : '#5A5446', letterSpacing: '0.4px' }}>
-                          {active ? 'FR' : 'EN'}
-                        </span>
-                      </button>
-                    )
-                  })()}
+                  
                   <Link href={`/${locale}/auth/login`}
                     style={{ fontSize: '14px', fontWeight: '600', color: '#FFFFFF', backgroundColor: '#16324F', padding: '7px 16px', borderRadius: '8px', textDecoration: 'none' }}>
                     {t('Sign in', 'Connexion')}
@@ -431,6 +474,7 @@ export default function Header() {
 
                     {/* Account card */}
                     <div style={{ marginTop: 'auto', paddingTop: '20px' }}>
+                      <LangButtonsMobile locale={locale} pathname={pathname} router={router} closeDrawer={closeDrawer} />
                       {user ? (
                         <div style={{ border: '1.5px solid #E2DDD5', borderRadius: '14px', padding: '14px 16px' }}>
                           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
@@ -460,30 +504,6 @@ export default function Header() {
                         </div>
                       ) : (
                         <div style={{ display: 'flex', gap: '8px' }}>
-                          {/* Language switcher */}
-                          {[{ code: 'fr', label: 'FR' }, { code: 'en', label: 'EN' }].map(({ code, label }) => {
-                            const active = locale === code
-                            return (
-                              <button key={code}
-                                onClick={() => { router.push(pathname.replace(`/${locale}`, `/${code}`)); closeDrawer() }}
-                                style={{
-                                  display: 'flex', alignItems: 'center', gap: '6px', padding: '8px 14px',
-                                  borderRadius: '10px', cursor: 'pointer', flex: 1, justifyContent: 'center',
-                                  background: active ? '#9EB7E5' : '#FBFAF6',
-                                  border: active ? '1px solid #9EB7E5' : '1px solid #C9C0AD',
-                                  boxShadow: active ? 'none' : '0 1px 2px rgba(11,31,59,0.06)',
-                                  transition: 'background 0.15s',
-                                }}
-                                onMouseEnter={e => { if (!active) e.currentTarget.style.background = '#F1EEE4' }}
-                                onMouseLeave={e => { if (!active) e.currentTarget.style.background = '#FBFAF6' }}>
-                                {code === 'fr'
-                                  ? <svg width="18" height="12" viewBox="0 0 3 2" style={{ borderRadius: '2px', flexShrink: 0 }}><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ED2939"/></svg>
-                                  : <svg width="18" height="12" viewBox="0 0 60 40" style={{ borderRadius: '2px', flexShrink: 0 }}><rect width="60" height="40" fill="#012169"/><line x1="0" y1="0" x2="60" y2="40" stroke="#fff" strokeWidth="8"/><line x1="60" y1="0" x2="0" y2="40" stroke="#fff" strokeWidth="8"/><line x1="0" y1="0" x2="60" y2="40" stroke="#C8102E" strokeWidth="4"/><line x1="60" y1="0" x2="0" y2="40" stroke="#C8102E" strokeWidth="4"/><rect x="0" y="15" width="60" height="10" fill="#fff"/><rect x="25" y="0" width="10" height="40" fill="#fff"/><rect x="0" y="17" width="60" height="6" fill="#C8102E"/><rect x="27" y="0" width="6" height="40" fill="#C8102E"/></svg>
-                                }
-                                <span style={{ fontSize: '12px', fontWeight: '700', color: active ? '#16324F' : '#5A5446', letterSpacing: '0.4px' }}>{label}</span>
-                              </button>
-                            )
-                          })}
                           <Link href={`/${locale}/auth/login`} onClick={closeDrawer}
                             style={{ flex: 2, padding: '9px', textAlign: 'center', borderRadius: '10px', fontSize: '14px', fontWeight: '700', color: '#16324F', backgroundColor: '#9EB7E5', textDecoration: 'none' }}>
                             {t('Sign in', 'Connexion')}
@@ -553,7 +573,8 @@ export default function Header() {
             .desktop-nav    { display: none !important; }
             .desktop-right  { display: none !important; }
             .burger-btn     { display: flex !important; }
-            .logo-wordmark  { font-size: 22px !important; }
+            .logo-wordmark  { font-size: 30px !important; }
+            .logo-img       { height: 34px !important; width: 34px !important; }
           }
         `}</style>
       </header>

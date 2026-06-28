@@ -15,6 +15,7 @@ const GAMES = [
   { key: 'flag-drawing', en: 'Flag Drawer',  fr: 'Flag Drawer' },
   { key: 'flag-ranker',  en: 'Flag Ranker',  fr: 'Flag Ranker' },
   { key: 'flag-clue',    en: 'Flag Clue',    fr: 'Flag Clue' },
+  { key: 'flag-locator', en: 'Flag Locator', fr: 'Flag Locator' },
 ]
 
 const MEDALS = ['🥇', '🥈', '🥉']

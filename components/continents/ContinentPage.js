@@ -282,9 +282,9 @@ function CountryCard({ country, locale, accentColor }) {
           cursor: 'pointer',
         }}
       >
-        <div style={{ width: '100%', aspectRatio: '3/2', overflow: 'hidden', backgroundColor: '#f8f5ed' }}>
+        <div style={{ width: '100%', aspectRatio: '3/2', overflow: 'hidden', backgroundColor: '#f8f5ed', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <img src={`https://flagcdn.com/w320/${country.code}.png`} alt={name}
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" />
+            style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', padding: '6px' }} loading="lazy" />
         </div>
         <div style={{ padding: '8px 10px' }}>
           <div style={{ fontWeight: '700', fontSize: '13px', color: '#0B1F3B', marginBottom: '2px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{name}</div>

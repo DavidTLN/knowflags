@@ -84,6 +84,7 @@ const GAMES_META = {
   'flag-quiz':    { icon: '❓',  en: 'Flag Quiz',    fr: 'Quiz Drapeaux',     color: C.green,   href: 'flag-quiz'    },
   'capital-city': { icon: '🏙️', en: 'Capital City', fr: 'Capitale',          color: '#e07c3a', href: 'capital-city' },
   'flag-drawing': { icon: '✏️', en: 'Flag Drawing', fr: 'Dessin du Drapeau', color: C.gold,    href: 'flag-drawing' },
+  'flag-locator': { icon: '📍', en: 'Flag Locator', fr: 'Localise le Pays', color: C.blue,    href: 'flag-locator' },
 }
 
 const CAPITAL_MODES = {

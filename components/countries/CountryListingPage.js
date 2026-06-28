@@ -136,7 +136,7 @@ export default function CountryListingPage() {
     const supabase = createClient()
     supabase
       .from('countries')
-      .select('iso_code, name_en, name_fr, region, colors, symbols, ratio, shape, has_weapons, has_blade, has_firearm, last_flag_change')
+      .select('iso_code, name_en, name_fr, region, colors, symbols, ratio, shape, has_weapons, has_blade, has_firearm, adopted_year, last_flag_change')
       .order('name_en')
       .then(({ data }) => {
         if (data) setCountries(data.map(c => ({
@@ -145,6 +145,7 @@ export default function CountryListingPage() {
           colors: c.colors || [], symbols: c.symbols || [],
           ratio: c.ratio, shape: c.shape,
           has_weapons: c.has_weapons || false, has_blade: c.has_blade || false, has_firearm: c.has_firearm || false,
+          adopted_year: c.adopted_year ?? null,
           last_flag_change: c.last_flag_change || null,
         })))
         setCountriesLoading(false)
@@ -220,7 +221,7 @@ export default function CountryListingPage() {
   // ── Country tile ──────────────────────────────────────────────────────────
   const CountryTile = ({ country, desktop }) => {
     const name = getName(country)
-    const flagSince = country.last_flag_change ? new Date(country.last_flag_change).getFullYear() : null
+    const flagSince = country.adopted_year || (country.last_flag_change ? new Date(country.last_flag_change).getFullYear() : null)
 
     if (desktop) {
       return (

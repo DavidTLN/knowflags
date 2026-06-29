@@ -11,7 +11,7 @@ import Link from 'next/link'
 // Round 3: Given the drawing → guess the country
 // Scoring based on final guess accuracy
 
-const COLORS = ['#000000','#ffffff','#ef4444','#f97316','#eab308','#22c55e','#3b82f6','#8b5cf6','#ec4899','#0B1F3B','#9EB7E5','#14b8a6']
+const COLORS = ['#000000','#ffffff','#ef4444','#f97316','#eab308','#22c55e','#3b82f6','#8b5cf6','#ec4899','#16324F','#9EB7E5','#14b8a6']
 const BRUSH_SIZES = [2, 5, 10, 20]
 
 export default function GarticPhoneGame() {
@@ -193,16 +193,16 @@ export default function GarticPhoneGame() {
 
   if (loading) return (
     <div style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#F4F1E6' }}>
-      <p style={{ color: '#0B1F3B', fontWeight: '700' }}>{t('Loading…', 'Chargement…')}</p>
+      <p style={{ color: '#16324F', fontWeight: '700' }}>{t('Loading…', 'Chargement…')}</p>
     </div>
   )
 
   if (phase === 'intro') return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#F4F1E6', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px' }}>
+    <div style={{ minHeight: '100dvh', backgroundColor: '#F4F1E6', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', paddingTop: 'max(24px, env(safe-area-inset-top))', paddingBottom: 'max(24px, env(safe-area-inset-bottom))' }}>
       <div style={{ maxWidth: '480px', width: '100%', textAlign: 'center' }}>
         <div style={{ fontSize: '64px', marginBottom: '16px' }}>🎨</div>
-        <h1 style={{ fontSize: '32px', fontWeight: '900', color: '#0B1F3B', margin: '0 0 12px' }}>Flag Phone</h1>
-        <p style={{ fontSize: '15px', color: '#64748b', margin: '0 0 32px', lineHeight: 1.6 }}>
+        <h1 style={{ fontSize: '32px', fontWeight: '900', color: '#16324F', margin: '0 0 12px' }}>Flag Phone</h1>
+        <p style={{ fontSize: '15px', color: '#6B7280', margin: '0 0 32px', lineHeight: 1.6 }}>
           {t(
             'Inspired by Gartic Phone. Describe a flag → draw from the description → guess the country!',
             'Inspiré de Gartic Phone. Décrivez un drapeau → dessinez depuis la description → devinez le pays !'
@@ -217,13 +217,13 @@ export default function GarticPhoneGame() {
             <div key={i} style={{ display: 'flex', gap: '12px', marginBottom: i < 2 ? '16px' : 0 }}>
               <span style={{ fontSize: '24px', flexShrink: 0 }}>{icon}</span>
               <div>
-                <div style={{ fontWeight: '800', fontSize: '14px', color: '#0B1F3B' }}>{step}</div>
-                <div style={{ fontSize: '13px', color: '#64748b' }}>{desc}</div>
+                <div style={{ fontWeight: '800', fontSize: '14px', color: '#16324F' }}>{step}</div>
+                <div style={{ fontSize: '13px', color: '#6B7280' }}>{desc}</div>
               </div>
             </div>
           ))}
         </div>
-        <button onClick={startGame} style={{ width: '100%', padding: '16px', backgroundColor: '#0B1F3B', color: 'white', border: 'none', borderRadius: '12px', fontSize: '18px', fontWeight: '800', cursor: 'pointer' }}>
+        <button onClick={startGame} style={{ width: '100%', padding: '16px', backgroundColor: '#16324F', color: 'white', border: 'none', borderRadius: '12px', fontSize: '18px', fontWeight: '800', cursor: 'pointer' }}>
           {t('Start', 'Commencer')}
         </button>
       </div>
@@ -231,21 +231,21 @@ export default function GarticPhoneGame() {
   )
 
   if (phase === 'result') return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#F4F1E6', padding: '24px' }}>
+    <div style={{ minHeight: '100dvh', backgroundColor: '#F4F1E6', padding: '24px' }}>
       <div style={{ maxWidth: '600px', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: '32px' }}>
           <div style={{ fontSize: '64px', marginBottom: '16px' }}>🎨</div>
-          <h1 style={{ fontSize: '28px', fontWeight: '900', color: '#0B1F3B' }}>{t('Flag Phone — Results', 'Flag Phone — Résultats')}</h1>
+          <h1 style={{ fontSize: '28px', fontWeight: '900', color: '#16324F' }}>{t('Flag Phone — Results', 'Flag Phone — Résultats')}</h1>
           <p style={{ fontSize: '40px', fontWeight: '900', color: '#4a7fd4', margin: '12px 0' }}>{totalScore} pts</p>
-          <p style={{ fontSize: '16px', color: '#64748b' }}>{results.filter(r => r.isCorrect).length}/{TOTAL_ROUNDS} {t('correct', 'corrects')}</p>
+          <p style={{ fontSize: '16px', color: '#6B7280' }}>{results.filter(r => r.isCorrect).length}/{TOTAL_ROUNDS} {t('correct', 'corrects')}</p>
         </div>
 
         {results.map((r, i) => (
-          <div key={i} style={{ backgroundColor: 'white', borderRadius: '16px', padding: '20px', marginBottom: '16px', border: `2px solid ${r.isCorrect ? '#22c55e' : '#e2e8f0'}` }}>
+          <div key={i} style={{ backgroundColor: 'white', borderRadius: '16px', padding: '20px', marginBottom: '16px', border: `2px solid ${r.isCorrect ? '#22c55e' : '#E2DDD5'}` }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
               <span style={{ fontSize: '20px' }}>{r.isCorrect ? '✅' : '❌'}</span>
               <div>
-                <div style={{ fontWeight: '800', color: '#0B1F3B' }}>{locale === 'fr' ? r.country.name_fr : r.country.name_en}</div>
+                <div style={{ fontWeight: '800', color: '#16324F' }}>{locale === 'fr' ? r.country.name_fr : r.country.name_en}</div>
                 <div style={{ fontSize: '12px', color: r.isCorrect ? '#22c55e' : '#ef4444', fontWeight: '700' }}>
                   {r.isCorrect ? `+${r.pts} pts` : t(`You guessed: ${r.guess || 'nothing'}`, `Votre réponse : ${r.guess || 'rien'}`)}
                 </div>
@@ -254,22 +254,22 @@ export default function GarticPhoneGame() {
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
               <div>
-                <p style={{ fontSize: '11px', color: '#94a3b8', fontWeight: '700', textTransform: 'uppercase', marginBottom: '6px' }}>{t('Your description', 'Votre description')}</p>
-                <p style={{ fontSize: '13px', color: '#475569', lineHeight: 1.5, backgroundColor: '#f8f5ed', borderRadius: '8px', padding: '10px', margin: 0 }}>{r.description}</p>
+                <p style={{ fontSize: '11px', color: '#9CA3AF', fontWeight: '700', textTransform: 'uppercase', marginBottom: '6px' }}>{t('Your description', 'Votre description')}</p>
+                <p style={{ fontSize: '13px', color: '#6B7280', lineHeight: 1.5, backgroundColor: '#f8f5ed', borderRadius: '8px', padding: '10px', margin: 0 }}>{r.description}</p>
               </div>
               <div>
-                <p style={{ fontSize: '11px', color: '#94a3b8', fontWeight: '700', textTransform: 'uppercase', marginBottom: '6px' }}>{t('Your drawing', 'Votre dessin')}</p>
-                <img src={r.drawingUrl} alt="drawing" style={{ width: '100%', borderRadius: '8px', border: '1px solid #e2e8f0' }} />
+                <p style={{ fontSize: '11px', color: '#9CA3AF', fontWeight: '700', textTransform: 'uppercase', marginBottom: '6px' }}>{t('Your drawing', 'Votre dessin')}</p>
+                <img src={r.drawingUrl} alt="drawing" style={{ width: '100%', borderRadius: '8px', border: '1px solid #E2DDD5' }} />
               </div>
             </div>
           </div>
         ))}
 
         <div style={{ display: 'flex', gap: '12px', marginTop: '24px' }}>
-          <button onClick={startGame} style={{ flex: 1, padding: '14px', backgroundColor: '#0B1F3B', color: 'white', border: 'none', borderRadius: '12px', fontSize: '16px', fontWeight: '800', cursor: 'pointer' }}>
+          <button onClick={startGame} style={{ flex: 1, padding: '14px', backgroundColor: '#16324F', color: 'white', border: 'none', borderRadius: '12px', fontSize: '16px', fontWeight: '800', cursor: 'pointer' }}>
             {t('Play again', 'Rejouer')}
           </button>
-          <Link href={`/${locale}/games`} style={{ flex: 1, padding: '14px', backgroundColor: 'white', color: '#0B1F3B', border: '2px solid #0B1F3B', borderRadius: '12px', fontSize: '16px', fontWeight: '800', textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <Link href={`/${locale}/games`} style={{ flex: 1, padding: '14px', backgroundColor: 'white', color: '#16324F', border: '2px solid #16324F', borderRadius: '12px', fontSize: '16px', fontWeight: '800', textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             {t('Games', 'Jeux')}
           </Link>
         </div>
@@ -279,8 +279,8 @@ export default function GarticPhoneGame() {
 
   // ── DESCRIBE PHASE ──
   if (phase === 'describe') return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#F4F1E6', display: 'flex', flexDirection: 'column' }}>
-      <div style={{ backgroundColor: '#0B1F3B', padding: '12px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+    <div style={{ minHeight: '100dvh', backgroundColor: '#F4F1E6', display: 'flex', flexDirection: 'column' }}>
+      <div style={{ backgroundColor: '#16324F', padding: '12px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <Link href={`/${locale}/games`} style={{ color: 'rgba(255,255,255,0.6)', fontSize: '14px', textDecoration: 'none' }}>← {t('Games', 'Jeux')}</Link>
         <span style={{ color: 'white', fontWeight: '900' }}>🎨 Flag Phone</span>
         <span style={{ color: '#9EB7E5', fontSize: '13px' }}>{round + 1}/{TOTAL_ROUNDS}</span>
@@ -293,7 +293,7 @@ export default function GarticPhoneGame() {
 
         {country && (
           <div style={{ backgroundColor: 'white', borderRadius: '20px', padding: '24px', boxShadow: '0 8px 32px rgba(0,0,0,0.08)', width: '100%', maxWidth: '480px', textAlign: 'center' }}>
-            <p style={{ fontSize: '12px', color: '#94a3b8', marginBottom: '12px', fontWeight: '600' }}>
+            <p style={{ fontSize: '12px', color: '#9CA3AF', marginBottom: '12px', fontWeight: '600' }}>
               {t('Memorize this flag, then describe it. You won\'t see it in the next step!', 'Mémorisez ce drapeau, puis décrivez-le. Vous ne le verrez plus à l\'étape suivante !')}
             </p>
             <img
@@ -306,12 +306,12 @@ export default function GarticPhoneGame() {
               onChange={e => setDescription(e.target.value)}
               placeholder={t('Describe the flag: colors, shapes, symbols…', 'Décrivez le drapeau : couleurs, formes, symboles…')}
               rows={4}
-              style={{ width: '100%', padding: '12px', borderRadius: '10px', border: '2px solid #e2e8f0', fontSize: '14px', outline: 'none', resize: 'none', boxSizing: 'border-box', lineHeight: 1.6 }}
+              style={{ width: '100%', padding: '12px', borderRadius: '10px', border: '2px solid #E2DDD5', fontSize: '14px', outline: 'none', resize: 'none', boxSizing: 'border-box', lineHeight: 1.6 }}
             />
           </div>
         )}
 
-        <button onClick={submitDescription} disabled={!description.trim()} style={{ width: '100%', maxWidth: '480px', padding: '16px', backgroundColor: description.trim() ? '#0B1F3B' : '#e2e8f0', color: description.trim() ? 'white' : '#94a3b8', border: 'none', borderRadius: '12px', fontSize: '16px', fontWeight: '800', cursor: description.trim() ? 'pointer' : 'default' }}>
+        <button onClick={submitDescription} disabled={!description.trim()} style={{ width: '100%', maxWidth: '480px', padding: '16px', backgroundColor: description.trim() ? '#16324F' : '#E2DDD5', color: description.trim() ? 'white' : '#9CA3AF', border: 'none', borderRadius: '12px', fontSize: '16px', fontWeight: '800', cursor: description.trim() ? 'pointer' : 'default' }}>
           {t('Next: Draw →', 'Suivant : Dessiner →')}
         </button>
       </div>
@@ -320,52 +320,52 @@ export default function GarticPhoneGame() {
 
   // ── DRAW PHASE ──
   if (phase === 'draw') return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#F4F1E6', display: 'flex', flexDirection: 'column' }}>
-      <div style={{ backgroundColor: '#0B1F3B', padding: '12px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+    <div style={{ minHeight: '100dvh', backgroundColor: '#F4F1E6', display: 'flex', flexDirection: 'column' }}>
+      <div style={{ backgroundColor: '#16324F', padding: '12px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: '14px' }}>Flag Phone</span>
         <span style={{ color: 'white', fontWeight: '900' }}>✏️ {t('Draw', 'Dessiner')}</span>
         <span style={{ color: '#9EB7E5', fontSize: '13px' }}>{round + 1}/{TOTAL_ROUNDS}</span>
       </div>
 
-      <div style={{ backgroundColor: '#f8f5ed', padding: '12px 24px', borderBottom: '1px solid #e2e8f0' }}>
-        <p style={{ margin: 0, fontSize: '14px', color: '#475569', fontStyle: 'italic', textAlign: 'center' }}>
+      <div style={{ backgroundColor: '#f8f5ed', padding: '12px 24px', borderBottom: '1px solid #E2DDD5' }}>
+        <p style={{ margin: 0, fontSize: '14px', color: '#6B7280', fontStyle: 'italic', textAlign: 'center' }}>
           "{description}"
         </p>
       </div>
 
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '16px', gap: '12px' }}>
         {/* Toolbar */}
-        <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', justifyContent: 'center', backgroundColor: 'white', borderRadius: '12px', padding: '10px 14px', border: '1px solid #e2e8f0', maxWidth: '520px', width: '100%' }}>
+        <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', justifyContent: 'center', backgroundColor: 'white', borderRadius: '12px', padding: '10px 14px', border: '1px solid #E2DDD5', maxWidth: '520px', width: '100%' }}>
           {/* Colors */}
           <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
             {COLORS.map(c => (
               <button key={c} onClick={() => { setColor(c); setTool('pen') }}
-                style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: c, border: color === c && tool === 'pen' ? '3px solid #4a7fd4' : '2px solid #e2e8f0', cursor: 'pointer', padding: 0, flexShrink: 0 }} />
+                style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: c, border: color === c && tool === 'pen' ? '3px solid #4a7fd4' : '2px solid #E2DDD5', cursor: 'pointer', padding: 0, flexShrink: 0 }} />
             ))}
           </div>
-          <div style={{ width: '1px', backgroundColor: '#e2e8f0' }} />
+          <div style={{ width: '1px', backgroundColor: '#E2DDD5' }} />
           {/* Brush sizes */}
           <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}>
             {BRUSH_SIZES.map(s => (
               <button key={s} onClick={() => { setBrushSize(s); setTool('pen') }}
-                style={{ width: `${s * 1.8 + 16}px`, height: `${s * 1.8 + 16}px`, borderRadius: '50%', backgroundColor: brushSize === s && tool === 'pen' ? '#0B1F3B' : '#f1f5f9', border: '2px solid #e2e8f0', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0 }}>
-                <div style={{ width: s, height: s, borderRadius: '50%', backgroundColor: brushSize === s && tool === 'pen' ? 'white' : '#94a3b8' }} />
+                style={{ width: `${s * 1.8 + 16}px`, height: `${s * 1.8 + 16}px`, borderRadius: '50%', backgroundColor: brushSize === s && tool === 'pen' ? '#16324F' : '#f1f5f9', border: '2px solid #E2DDD5', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0 }}>
+                <div style={{ width: s, height: s, borderRadius: '50%', backgroundColor: brushSize === s && tool === 'pen' ? 'white' : '#9CA3AF' }} />
               </button>
             ))}
           </div>
-          <div style={{ width: '1px', backgroundColor: '#e2e8f0' }} />
+          <div style={{ width: '1px', backgroundColor: '#E2DDD5' }} />
           <button onClick={() => setTool(tool === 'eraser' ? 'pen' : 'eraser')}
-            style={{ padding: '4px 10px', borderRadius: '8px', border: `2px solid ${tool === 'eraser' ? '#ef4444' : '#e2e8f0'}`, backgroundColor: tool === 'eraser' ? '#fee2e2' : 'white', cursor: 'pointer', fontSize: '16px' }}>
+            style={{ padding: '4px 10px', borderRadius: '8px', border: `2px solid ${tool === 'eraser' ? '#ef4444' : '#E2DDD5'}`, backgroundColor: tool === 'eraser' ? '#fee2e2' : 'white', cursor: 'pointer', fontSize: '16px' }}>
             🧹
           </button>
           <button onClick={clearCanvas}
-            style={{ padding: '4px 10px', borderRadius: '8px', border: '2px solid #e2e8f0', backgroundColor: 'white', cursor: 'pointer', fontSize: '12px', fontWeight: '700', color: '#64748b' }}>
+            style={{ padding: '4px 10px', borderRadius: '8px', border: '2px solid #E2DDD5', backgroundColor: 'white', cursor: 'pointer', fontSize: '12px', fontWeight: '700', color: '#6B7280' }}>
             {t('Clear', 'Effacer')}
           </button>
         </div>
 
         {/* Canvas */}
-        <div style={{ backgroundColor: 'white', borderRadius: '12px', border: '2px solid #e2e8f0', overflow: 'hidden', maxWidth: '520px', width: '100%', touchAction: 'none' }}>
+        <div style={{ backgroundColor: 'white', borderRadius: '12px', border: '2px solid #E2DDD5', overflow: 'hidden', maxWidth: '520px', width: '100%', touchAction: 'none' }}>
           <canvas
             ref={canvasRef}
             width={520}
@@ -381,7 +381,7 @@ export default function GarticPhoneGame() {
           />
         </div>
 
-        <button onClick={submitDrawing} style={{ width: '100%', maxWidth: '520px', padding: '16px', backgroundColor: '#0B1F3B', color: 'white', border: 'none', borderRadius: '12px', fontSize: '16px', fontWeight: '800', cursor: 'pointer' }}>
+        <button onClick={submitDrawing} style={{ width: '100%', maxWidth: '520px', padding: '16px', backgroundColor: '#16324F', color: 'white', border: 'none', borderRadius: '12px', fontSize: '16px', fontWeight: '800', cursor: 'pointer' }}>
           {t('Next: Guess →', 'Suivant : Deviner →')}
         </button>
       </div>
@@ -390,8 +390,8 @@ export default function GarticPhoneGame() {
 
   // ── GUESS PHASE ──
   if (phase === 'guess') return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#F4F1E6', display: 'flex', flexDirection: 'column' }}>
-      <div style={{ backgroundColor: '#0B1F3B', padding: '12px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+    <div style={{ minHeight: '100dvh', backgroundColor: '#F4F1E6', display: 'flex', flexDirection: 'column' }}>
+      <div style={{ backgroundColor: '#16324F', padding: '12px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: '14px' }}>Flag Phone</span>
         <span style={{ color: 'white', fontWeight: '900' }}>🎯 {t('Guess', 'Deviner')}</span>
         <span style={{ color: '#9EB7E5', fontSize: '13px' }}>{round + 1}/{TOTAL_ROUNDS}</span>
@@ -413,10 +413,10 @@ export default function GarticPhoneGame() {
             onChange={e => setGuess(e.target.value)}
             onKeyDown={e => e.key === 'Enter' && guess.trim() && submitGuess()}
             placeholder={t('Country name…', 'Nom du pays…')}
-            style={{ width: '100%', padding: '14px', borderRadius: '10px', border: '2px solid #e2e8f0', fontSize: '16px', outline: 'none', marginBottom: '12px', boxSizing: 'border-box' }}
+            style={{ width: '100%', padding: '14px', borderRadius: '10px', border: '2px solid #E2DDD5', fontSize: '16px', outline: 'none', marginBottom: '12px', boxSizing: 'border-box' }}
             autoFocus
           />
-          <button onClick={submitGuess} disabled={!guess.trim()} style={{ width: '100%', padding: '16px', backgroundColor: guess.trim() ? '#0B1F3B' : '#e2e8f0', color: guess.trim() ? 'white' : '#94a3b8', border: 'none', borderRadius: '12px', fontSize: '16px', fontWeight: '800', cursor: guess.trim() ? 'pointer' : 'default' }}>
+          <button onClick={submitGuess} disabled={!guess.trim()} style={{ width: '100%', padding: '16px', backgroundColor: guess.trim() ? '#16324F' : '#E2DDD5', color: guess.trim() ? 'white' : '#9CA3AF', border: 'none', borderRadius: '12px', fontSize: '16px', fontWeight: '800', cursor: guess.trim() ? 'pointer' : 'default' }}>
             {t('Submit guess', 'Soumettre ma réponse')}
           </button>
         </div>

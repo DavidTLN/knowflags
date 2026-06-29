@@ -379,7 +379,7 @@ export default function CountryListingPage() {
         {isMobile && (
           <div>
             {/* Sticky search bar */}
-            <div style={{ position: 'sticky', top: '60px', zIndex: 40, backgroundColor: DS.bg, paddingBottom: '12px', paddingTop: '4px' }}>
+            <div style={{ position: 'sticky', top: '60px', zIndex: 40, backgroundColor: DS.bg, paddingBottom: '12px', paddingTop: '16px' }}>
               <div style={{ display: 'flex', gap: '10px' }}>
                 <div style={{ position: 'relative', flex: 1 }}>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={DS.light} strokeWidth="2" strokeLinecap="round"

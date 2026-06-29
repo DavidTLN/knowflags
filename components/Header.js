@@ -8,13 +8,18 @@ import { createClient } from '@/lib/supabase-client'
 import FlagSubmitModal from '@/components/FlagSubmitModal'
 
 const GAMES = [
-  { key: 'flag-reveal',  en: 'FlagReveal',  fr: 'FlagReveal',  descEn: 'Uncover the flag tile by tile',        descFr: 'Révèle le drapeau tuile par tuile' },
-  { key: 'flag-quiz',    en: 'FlagQuiz',    fr: 'FlagQuiz',    descEn: 'Multiple choice flag challenge',        descFr: 'Quel est ce drapeau ?' },
-  { key: 'capital-city', en: 'CapitalClue', fr: 'CapitalClue', descEn: 'Match the capital to its country',     descFr: 'Trouve la capitale du pays' },
-  { key: 'flag-drawing', en: 'FlagDrawer',  fr: 'FlagDrawer',  descEn: 'Can you draw it from memory?',         descFr: 'Sauras-tu le dessiner de mémoire ?' },
-  { key: 'flag-ranker',  en: 'FlagRanker',  fr: 'FlagRanker',  descEn: 'Rank countries by area, GDP and more', descFr: 'Classe les pays par superficie, PIB...' },
-  { key: 'flag-clue',    en: 'FlagClue',    fr: 'FlagClue',    descEn: 'Guess the country from fun facts',     descFr: 'Devine le pays grâce à des anecdotes' },
-  { key: 'flag-locator', en: 'FlagLocator', fr: 'FlagLocator', descEn: 'Find the country on the map',        descFr: 'Trouve le pays sur la carte' },
+  { key: 'flag-reveal',  en: 'FlagReveal',  fr: 'FlagReveal',  descEn: 'Uncover the flag tile by tile',           descFr: 'Révèle le drapeau tuile par tuile' },
+  { key: 'flag-quiz',    en: 'FlagQuiz',    fr: 'FlagQuiz',    descEn: 'Multiple choice flag challenge',          descFr: 'Quel est ce drapeau ?' },
+  { key: 'capital-city', en: 'CapitalClue', fr: 'CapitalClue', descEn: 'Match the capital to its country',        descFr: 'Trouve la capitale du pays' },
+  { key: 'flag-drawing', en: 'FlagDraw',    fr: 'FlagDraw',    descEn: 'Can you draw it from memory?',            descFr: 'Sauras-tu le dessiner de mémoire ?' },
+  { key: 'flag-ranker',  en: 'FlagRank',    fr: 'FlagRank',    descEn: 'Rank countries by area, GDP and more',    descFr: 'Classe les pays par superficie, PIB...' },
+  { key: 'flag-clue',    en: 'FlagClue',    fr: 'FlagClue',    descEn: 'Guess the country from fun facts',        descFr: 'Devine le pays grâce à des anecdotes' },
+  { key: 'flag-locator', en: 'FlagLocator', fr: 'FlagLocator', descEn: 'Find the country on the map',             descFr: 'Trouve le pays sur la carte' },
+  { key: 'past-flag',    en: 'PastFlag',    fr: 'PastFlag',    descEn: 'Guess the country from a historical flag', descFr: 'Trouve le pays via un drapeau historique' },
+  { key: 'subflag-quiz', en: 'SubFlagQuiz', fr: 'SubFlagQuiz', descEn: 'Regional flag, find the country',         descFr: 'Drapeau régional, trouve le pays' },
+  { key: 'gartic-phone', en: 'FlagPhone',   fr: 'FlagPhone',   descEn: 'Describe, draw and guess flags',          descFr: 'Décris, dessine et devine les drapeaux' },
+  { key: 'qui-est-ce',   en: 'Guess Who',   fr: 'Qui est-ce ?', descEn: 'Yes/no questions to find the country',   descFr: 'Questions oui/non pour trouver le pays' },
+  { key: 'imposteur',    en: 'Impostor',    fr: 'Imposteur',   descEn: "Find the flag that doesn't belong",       descFr: "Trouve l'imposteur parmi les drapeaux" },
 ]
 
 const FLAGS_MENU = [
@@ -24,8 +29,8 @@ const FLAGS_MENU = [
   { href: 'organisations', en: 'Organisations',    fr: 'Organisations',       descEn: 'UN, EU, NATO, FIFA and more',       descFr: 'ONU, UE, OTAN, FIFA et plus' },
 ]
 
-const GAMES_COL1 = GAMES.slice(0, 3)
-const GAMES_COL2 = GAMES.slice(3)
+const GAMES_COL1 = GAMES.slice(0, 6)
+const GAMES_COL2 = GAMES.slice(6)
 
 /* ── Line icons ──────────────────────────────────────────────────────────── */
 const ICON_PROPS = {
@@ -97,7 +102,7 @@ const DropdownPanel = ({ children, width = 280 }) => (
   </div>
 )
 
-const GameItem = ({ game, onClick }) => (
+const GameItem = ({ game, onClick, locale }) => (
   <div onClick={onClick}
     style={{
       display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 12px',
@@ -109,10 +114,10 @@ const GameItem = ({ game, onClick }) => (
     <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: game.soon ? '#9CA3AF' : '#9EB7E5', flexShrink: 0 }} />
     <div style={{ flex: 1, minWidth: 0 }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-        <span style={{ fontSize: '13px', fontWeight: '700', color: game.soon ? '#6B7280' : '#16324F' }}>{game.en}</span>
-        {game.soon && <span style={{ fontSize: '10px', fontWeight: '700', color: '#92400E', backgroundColor: '#fef3c7', padding: '1px 6px', borderRadius: '99px' }}>Soon</span>}
+        <span style={{ fontSize: '13px', fontWeight: '700', color: game.soon ? '#6B7280' : '#16324F' }}>{locale === 'fr' ? game.fr : game.en}</span>
+        {game.soon && <span style={{ fontSize: '10px', fontWeight: '700', color: '#92400E', backgroundColor: '#fef3c7', padding: '1px 6px', borderRadius: '99px' }}>{locale === 'fr' ? 'Bientôt' : 'Soon'}</span>}
       </div>
-      <p style={{ margin: 0, fontSize: '11px', color: '#6B7280', marginTop: '1px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{game.descEn}</p>
+      <p style={{ margin: 0, fontSize: '11px', color: '#6B7280', marginTop: '1px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{locale === 'fr' ? game.descFr : game.descEn}</p>
     </div>
   </div>
 )
@@ -320,12 +325,12 @@ export default function Header() {
                   <div style={{ padding: '8px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0' }}>
                     <div style={{ borderRight: '1px solid #f0f0f0' }}>
                       {GAMES_COL1.map(game => (
-                        <GameItem key={game.key} game={game} onClick={() => { if (!game.soon) { router.push(`/${locale}/games/${game.key}`); setGamesOpen(false) } }} />
+                        <GameItem key={game.key} game={game} locale={locale} onClick={() => { if (!game.soon) { router.push(`/${locale}/games/${game.key}`); setGamesOpen(false) } }} />
                       ))}
                     </div>
                     <div>
                       {GAMES_COL2.map(game => (
-                        <GameItem key={game.key} game={game} onClick={() => { if (!game.soon) { router.push(`/${locale}/games/${game.key}`); setGamesOpen(false) } }} />
+                        <GameItem key={game.key} game={game} locale={locale} onClick={() => { if (!game.soon) { router.push(`/${locale}/games/${game.key}`); setGamesOpen(false) } }} />
                       ))}
                       <div onClick={() => { router.push(`/${locale}/leaderboard`); setGamesOpen(false) }}
                         style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 12px', borderRadius: '10px', cursor: 'pointer', transition: 'background 0.12s' }}
@@ -427,12 +432,25 @@ export default function Header() {
           </div>
         </div>
 
+
+        <style>{`
+          header { overflow: visible; }
+          @media (max-width: 768px) {
+            .desktop-nav    { display: none !important; }
+            .desktop-right  { display: none !important; }
+            .burger-btn     { display: flex !important; }
+            .logo-wordmark  { font-size: 30px !important; }
+            .logo-img       { height: 34px !important; width: 34px !important; }
+          }
+        `}</style>
+      </header>
+
         {/* ── Mobile drawer ── */}
         {menuOpen && (
           <>
             <div onClick={closeDrawer}
-              style={{ position: 'fixed', inset: 0, top: '60px', backgroundColor: 'rgba(7,16,33,0.55)', backdropFilter: 'blur(3px)', WebkitBackdropFilter: 'blur(3px)', zIndex: 998, opacity: drawerIn ? 1 : 0, transition: 'opacity 0.24s ease' }} />
-            <div style={{ position: 'fixed', top: '60px', right: 0, bottom: 0, width: '86vw', maxWidth: '352px', backgroundColor: '#FFFFFF', zIndex: 999, overflow: 'hidden', boxShadow: '-12px 0 40px rgba(0,0,0,0.3)', transform: drawerIn ? 'translateX(0)' : 'translateX(105%)', transition: 'transform 0.28s cubic-bezier(0.32, 0.72, 0, 1)' }}>
+              style={{ position: 'fixed', inset: 0, top: '60px', backgroundColor: 'rgba(7,16,33,0.55)', backdropFilter: 'blur(3px)', WebkitBackdropFilter: 'blur(3px)', zIndex: 3000, opacity: drawerIn ? 1 : 0, transition: 'opacity 0.24s ease' }} />
+            <div style={{ position: 'fixed', top: '60px', right: 0, bottom: 0, width: '86vw', maxWidth: '352px', backgroundColor: '#FFFFFF', zIndex: 3001, overflow: 'hidden', boxShadow: '-12px 0 40px rgba(0,0,0,0.3)', transform: drawerIn ? 'translateX(0)' : 'translateX(105%)', transition: 'transform 0.28s cubic-bezier(0.32, 0.72, 0, 1)' }}>
 
               {/* 3-panel horizontal track */}
               <div style={{ display: 'flex', width: '300%', height: '100%', transform: flagsPanel ? 'translateX(-33.3333%)' : gamesPanel ? 'translateX(-66.6666%)' : 'translateX(0)', transition: 'transform 0.3s cubic-bezier(0.32, 0.72, 0, 1)' }}>
@@ -566,18 +584,6 @@ export default function Header() {
             </div>
           </>
         )}
-
-        <style>{`
-          header { overflow: visible; }
-          @media (max-width: 768px) {
-            .desktop-nav    { display: none !important; }
-            .desktop-right  { display: none !important; }
-            .burger-btn     { display: flex !important; }
-            .logo-wordmark  { font-size: 30px !important; }
-            .logo-img       { height: 34px !important; width: 34px !important; }
-          }
-        `}</style>
-      </header>
 
       {/* Flag Submit Modal */}
       {submitOpen && (

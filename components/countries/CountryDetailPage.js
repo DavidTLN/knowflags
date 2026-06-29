@@ -344,17 +344,95 @@ function FlagEtiquette({ country, locale }) {
 }
 
 // ── Design / Specifications card ──────────────────────────────────────────────
+// Real flag-symbol glyphs (SVG), white on the navy chip. Falls back to a letter if unknown.
+function symbolGlyph(name) {
+  const k = String(name || '').toLowerCase().trim()
+  const has = (...arr) => arr.some(w => k.includes(w))
+  const wrap = (children, opts = {}) => (
+    <svg width="17" height="17" viewBox="0 0 24 24" fill={opts.fill || 'none'} stroke={opts.stroke || 'currentColor'} strokeWidth={opts.sw || 2} strokeLinecap="round" strokeLinejoin="round">{children}</svg>
+  )
+  if (has('crescent', 'moon'))                       return wrap(<path d="M16 3a9 9 0 1 0 0 18 7 7 0 1 1 0-18z" fill="currentColor" stroke="none" />)
+  if (has('star'))                                   return wrap(<polygon points="12,2.5 14.6,9 21.5,9.2 16,13.4 18,20.2 12,16.2 6,20.2 8,13.4 2.5,9.2 9.4,9" fill="currentColor" stroke="none" />)
+  if (has('sun'))                                    return wrap(<><circle cx="12" cy="12" r="4" fill="currentColor" stroke="none" /><line x1="12" y1="2" x2="12" y2="5" /><line x1="12" y1="19" x2="12" y2="22" /><line x1="2" y1="12" x2="5" y2="12" /><line x1="19" y1="12" x2="22" y2="12" /><line x1="5" y1="5" x2="7" y2="7" /><line x1="17" y1="17" x2="19" y2="19" /><line x1="19" y1="5" x2="17" y2="7" /><line x1="7" y1="17" x2="5" y2="19" /></>)
+  if (has('cross'))                                  return wrap(<path d="M10 4h4v6h6v4h-6v6h-4v-6H4v-4h6z" fill="currentColor" stroke="none" />)
+  if (has('triangle'))                               return wrap(<polygon points="12,4 21,20 3,20" fill="currentColor" stroke="none" />)
+  if (has('diamond', 'lozenge'))                     return wrap(<path d="M12 3l9 9-9 9-9-9z" fill="currentColor" stroke="none" />)
+  if (has('circle', 'disc', 'disk', 'roundel'))      return wrap(<circle cx="12" cy="12" r="8" fill="currentColor" stroke="none" />)
+  if (has('square', 'canton'))                       return wrap(<rect x="5" y="5" width="14" height="14" rx="1.5" fill="currentColor" stroke="none" />)
+  if (has('sword', 'sabre', 'saber', 'scimitar'))    return wrap(<><line x1="6" y1="18" x2="18" y2="6" /><line x1="17" y1="4" x2="20" y2="7" /><line x1="13.5" y1="6.5" x2="17.5" y2="10.5" /><line x1="5" y1="17" x2="7" y2="19" /></>)
+  if (has('shield', 'arms', 'crest', 'escutcheon'))  return wrap(<path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z" />)
+  if (has('anchor'))                                 return wrap(<><circle cx="12" cy="5" r="2" /><line x1="12" y1="7" x2="12" y2="21" /><path d="M5 13a7 7 0 0 0 14 0" /><line x1="8.5" y1="11" x2="15.5" y2="11" /></>)
+  if (has('key'))                                    return wrap(<><circle cx="8" cy="8" r="3.5" /><line x1="10.5" y1="10.5" x2="20" y2="20" /><line x1="17" y1="17" x2="19" y2="15" /><line x1="14" y1="14" x2="16" y2="12" /></>)
+  if (has('cedar', 'tree', 'palm'))                  return wrap(<><path d="M12 3l4 6h-3l3.5 5h-3l3.5 5H7l3.5-5h-3L11 9H8z" fill="currentColor" stroke="none" /><line x1="12" y1="19" x2="12" y2="22" /></>)
+  if (has('leaf', 'maple'))                          return wrap(<><path d="M5 19c0-9 7-14 14-14 0 9-5 14-14 14z" /><line x1="6" y1="18" x2="14" y2="10" /></>)
+  if (has('eagle', 'bird', 'dove', 'falcon'))        return wrap(<path d="M3 9c4 0 6 4 9 4s5-4 9-4c-3 4-5 8-9 8S6 13 3 9z" />)
+  if (has('stripe', 'band', 'bar'))                  return wrap(<><line x1="4" y1="8" x2="20" y2="8" /><line x1="4" y1="12" x2="20" y2="12" /><line x1="4" y1="16" x2="20" y2="16" /></>, { sw: 2.4 })
+  if (has('chevron'))                                return wrap(<path d="M4 16l8-7 8 7" />, { sw: 2.4 })
+  if (has('shahada', 'inscription', 'script', 'calligraph', 'text', 'arabic', 'quran', 'takbir'))
+                                                     return wrap(<><line x1="4" y1="8" x2="20" y2="8" /><line x1="4" y1="12" x2="15" y2="12" /><line x1="4" y1="16" x2="18" y2="16" /></>, { sw: 2.2 })
+  return null
+}
+
 function DesignSpecs({ country, locale }) {
   const t = (en, fr) => locale === 'fr' ? fr : en
   const colors = country.colors || []
   const symbols = country.symbols || []
+  const colorMeanings = country.color_meanings || {}
+  const symbolMeanings = country.symbol_meanings || {}
   const spec = locale === 'fr' ? (country.spec_fr || country.spec_en) : (country.spec_en || country.spec_fr)
   const facts = [country.ratio && { label: t('Proportions', 'Proportions'), value: country.ratio }, country.shape && { label: t('Shape', 'Forme'), value: labelShape(country.shape, locale) }].filter(Boolean)
+
+  const [open, setOpen] = useState(() => new Set())
+  const toggle = (key) => setOpen(prev => {
+    const next = new Set(prev)
+    if (next.has(key)) next.delete(key); else next.add(key)
+    return next
+  })
+  const meaningOf = (map, key) => {
+    const m = map && map[key]
+    if (!m) return null
+    return locale === 'fr' ? (m.fr || m.en) : (m.en || m.fr)
+  }
+  const plusBtn = (isOpen) => (
+    <span aria-hidden="true" style={{ width: '26px', height: '26px', borderRadius: '8px', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: isOpen ? DS.navy : DS.surface, border: `1px solid ${isOpen ? DS.navy : DS.border}`, color: isOpen ? '#fff' : DS.navy, transition: 'all 0.18s ease' }}>
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" style={{ transform: isOpen ? 'rotate(45deg)' : 'none', transition: 'transform 0.18s ease' }}>
+        <line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" />
+      </svg>
+    </span>
+  )
+  const disclosure = (key, meaning, headerInner) => {
+    const isOpen = open.has(key)
+    const clickable = !!meaning
+    return (
+      <div key={key} style={{ backgroundColor: DS.bg, borderRadius: '10px', border: `1px solid ${isOpen ? DS.navy + '55' : DS.border}`, overflow: 'hidden', transition: 'border-color 0.18s ease' }}>
+        <div
+          role={clickable ? 'button' : undefined}
+          tabIndex={clickable ? 0 : undefined}
+          aria-expanded={clickable ? isOpen : undefined}
+          onClick={clickable ? () => toggle(key) : undefined}
+          onKeyDown={clickable ? (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(key) } } : undefined}
+          style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '9px 12px', minHeight: '44px', boxSizing: 'border-box', cursor: clickable ? 'pointer' : 'default' }}
+        >
+          {headerInner}
+          {clickable && plusBtn(isOpen)}
+        </div>
+        {clickable && (
+          <div style={{ maxHeight: isOpen ? '360px' : '0', opacity: isOpen ? 1 : 0, transition: 'max-height 0.28s ease, opacity 0.2s ease', overflow: 'hidden' }}>
+            <p style={{ margin: 0, padding: '0 14px 13px 54px', fontSize: '13px', color: DS.navy, lineHeight: 1.6 }}>{meaning}</p>
+          </div>
+        )}
+      </div>
+    )
+  }
+
   if (!facts.length && !colors.length && !symbols.length && !spec) return null
   return (
-    <Section title={t('Design & Specifications', 'Conception & spécifications')} subtitle={t('Technical reference to reproduce the flag faithfully.', 'Référence technique pour reproduire fidèlement le drapeau.')}>
+    <Section
+      title={t('Design & Symbolism', 'Conception et Symbolisme')}
+      subtitle={t('Specs plus what each color and emblem means on this flag — tap an element to reveal its meaning.', 'Les spécifications et la signification de chaque couleur et emblème sur ce drapeau — touchez un élément pour révéler son sens.')}
+    >
       {facts.length > 0 && (
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0', borderRadius: '8px', overflow: 'hidden', border: `1px solid ${DS.border}`, marginBottom: (colors.length || symbols.length || spec) ? '16px' : 0 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0', borderRadius: '10px', overflow: 'hidden', border: `1px solid ${DS.border}`, marginBottom: (colors.length || symbols.length || spec) ? '18px' : 0 }}>
           {facts.map((item, i) => (
             <div key={i} style={{ padding: '12px 14px', backgroundColor: DS.surface, borderRight: i % 2 === 0 && i < facts.length - 1 ? `1px solid ${DS.border}` : 'none' }}>
               <p style={{ margin: '0 0 3px', fontSize: '10px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{item.label}</p>
@@ -363,36 +441,49 @@ function DesignSpecs({ country, locale }) {
           ))}
         </div>
       )}
+
       {colors.length > 0 && (
-        <div style={{ marginBottom: (symbols.length || spec) ? '16px' : 0 }}>
-          <p style={{ margin: '0 0 10px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{t('Colors & hex codes', 'Couleurs & codes hexa')}</p>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+        <div style={{ marginBottom: (symbols.length || spec) ? '18px' : 0 }}>
+          <p style={{ margin: '0 0 10px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{t('Colors', 'Couleurs')}</p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             {colors.map(c => {
               const hex = COLOR_HEX[String(c).toLowerCase()] || '#cccccc'
-              return (
-                <div key={c} style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '8px 10px', backgroundColor: DS.bg, borderRadius: '8px', border: `1px solid ${DS.border}` }}>
-                  <span style={{ width: '24px', height: '24px', borderRadius: '6px', backgroundColor: hex, border: String(c).toLowerCase() === 'white' ? `1px solid ${DS.border}` : 'none', flexShrink: 0 }} />
-                  <span style={{ fontSize: '13px', fontWeight: '700', color: DS.navy, flex: 1 }}>{labelColor(c, locale)}</span>
-                  <code style={{ fontSize: '12px', fontFamily: 'monospace', color: DS.muted, textTransform: 'uppercase' }}>{hex}</code>
-                </div>
+              const header = (
+                <>
+                  <span style={{ width: '30px', height: '30px', borderRadius: '8px', backgroundColor: hex, border: String(c).toLowerCase() === 'white' ? `1px solid ${DS.border}` : 'none', flexShrink: 0 }} />
+                  <span style={{ flex: 1, minWidth: 0, display: 'flex', alignItems: 'baseline', gap: '8px', flexWrap: 'wrap' }}>
+                    <span style={{ fontSize: '14px', fontWeight: '700', color: DS.navy }}>{labelColor(c, locale)}</span>
+                    <code style={{ fontSize: '11px', fontFamily: 'monospace', color: DS.muted, textTransform: 'uppercase' }}>{hex}</code>
+                  </span>
+                </>
               )
+              return disclosure('c:' + c, meaningOf(colorMeanings, c), header)
             })}
           </div>
         </div>
       )}
+
       {symbols.length > 0 && (
-        <div style={{ marginBottom: spec ? '16px' : 0 }}>
-          <p style={{ margin: '0 0 10px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{t('Elements', 'Éléments')}</p>
-          <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-            {symbols.map(sy => (
-              <span key={sy} style={{ padding: '6px 12px', backgroundColor: DS.bg, border: `1px solid ${DS.border}`, borderRadius: '99px', fontSize: '13px', fontWeight: '600', color: DS.navy }}>{labelSymbol(sy, locale)}</span>
-            ))}
+        <div style={{ marginBottom: spec ? '18px' : 0 }}>
+          <p style={{ margin: '0 0 10px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{t('Symbols & elements', 'Symboles & éléments')}</p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            {symbols.map(sy => {
+              const label = labelSymbol(sy, locale)
+              const header = (
+                <>
+                  <span style={{ width: '30px', height: '30px', borderRadius: '8px', backgroundColor: DS.navy, color: '#fff', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px', fontWeight: '800' }}>{symbolGlyph(sy) || String(label).charAt(0).toUpperCase()}</span>
+                  <span style={{ fontSize: '14px', fontWeight: '700', color: DS.navy, flex: 1 }}>{label}</span>
+                </>
+              )
+              return disclosure('s:' + sy, meaningOf(symbolMeanings, sy), header)
+            })}
           </div>
         </div>
       )}
+
       {spec && (
-        <div>
-          <p style={{ margin: '0 0 8px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{t('Specifications', 'Spécifications')}</p>
+        <div style={{ borderTop: `1px solid ${DS.border}`, paddingTop: '14px' }}>
+          <p style={{ margin: '0 0 8px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{t('Construction details', 'Détails de construction')}</p>
           <p style={{ margin: 0, fontSize: '13px', color: DS.navy, lineHeight: 1.7, whiteSpace: 'pre-line' }}>{spec}</p>
         </div>
       )}
@@ -452,7 +543,7 @@ export default function CountryDetailPage({ code }) {
 
     // Country data
     supabase.from('countries')
-      .select('iso_code, name_en, name_fr, region, capital, capital_fr, colors, symbols, ratio, shape, population, area_km2, adopted_year, median_age, last_flag_change, spec_en, spec_fr, etiquette_en, etiquette_fr')
+      .select('iso_code, name_en, name_fr, region, capital, capital_fr, colors, symbols, ratio, shape, population, area_km2, adopted_year, median_age, last_flag_change, spec_en, spec_fr, etiquette_en, etiquette_fr, color_meanings, symbol_meanings')
       .eq('iso_code', code.toLowerCase()).single()
       .then(({ data }) => {
         if (data) {
@@ -475,6 +566,8 @@ export default function CountryDetailPage({ code }) {
             spec_fr:          data.spec_fr,
             etiquette_en:     data.etiquette_en || [],
             etiquette_fr:     data.etiquette_fr || [],
+            color_meanings:   data.color_meanings || {},
+            symbol_meanings:  data.symbol_meanings || {},
           })
           // Related countries
           supabase.from('countries').select('iso_code, name_en, name_fr').eq('region', data.region).neq('iso_code', data.iso_code)
@@ -590,46 +683,7 @@ export default function CountryDetailPage({ code }) {
             </Section>
           )}
 
-          {/* Colors + Symbols — Symbolism section */}
-          {(country.colors.length > 0 || country.symbols.length > 0) && (
-            <Section title={t('Symbolism', 'Symbolisme')} subtitle={t('What the colors and emblems on the flag represent.', 'Ce que représentent les couleurs et emblèmes du drapeau.')}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                {country.colors.length > 0 && (
-                  <div>
-                    <p style={{ margin: '0 0 10px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
-                      {t('Colors', 'Couleurs')}
-                    </p>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                      {country.colors.map(c => (
-                        <div key={c} style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 12px', backgroundColor: DS.bg, borderRadius: '10px', border: `1px solid ${DS.border}` }}>
-                          <div style={{ width: '32px', height: '32px', borderRadius: '8px', backgroundColor: COLOR_HEX[c] || '#ccc', border: c === 'white' ? `1.5px solid ${DS.border}` : 'none', flexShrink: 0 }} />
-                          <span style={{ fontSize: '14px', fontWeight: '700', color: DS.navy }}>
-                            {labelColor(c, locale)}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-                {country.symbols.length > 0 && (
-                  <div>
-                    <p style={{ margin: '0 0 10px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
-                      {t('Symbols', 'Symboles')}
-                    </p>
-                    <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-                      {country.symbols.map(s => (
-                        <span key={s} style={{ padding: '6px 14px', backgroundColor: DS.navy, color: 'white', borderRadius: '99px', fontSize: '13px', fontWeight: '600' }}>
-                          {labelSymbol(s, locale)}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            </Section>
-          )}
-
-          {/* Design & specifications */}
+          {/* Design & Symbolism (merged section) */}
           <DesignSpecs country={country} locale={locale} />
 
           {/* Flag etiquette */}
@@ -754,44 +808,7 @@ export default function CountryDetailPage({ code }) {
         {/* ── Content sections — same card pattern as mobile ── */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
 
-          {/* Symbolism */}
-          {(country.colors.length > 0 || country.symbols.length > 0) && (
-            <Section title={t('Symbolism', 'Symbolisme')} subtitle={t('What the colors and emblems on the flag represent.', 'Ce que représentent les couleurs et emblèmes du drapeau.')}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                {country.colors.length > 0 && (
-                  <div>
-                    <p style={{ margin: '0 0 10px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
-                      {t('Flag Colors', 'Couleurs du drapeau')}
-                    </p>
-                    <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-                      {country.colors.map(col => (
-                        <div key={col} style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '7px 14px', backgroundColor: DS.bg, borderRadius: '99px', border: `1px solid ${DS.border}`, fontSize: '13px', fontWeight: '600', color: DS.navy }}>
-                          <span style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: COLOR_HEX[col] || '#ccc', border: col === 'white' ? `1px solid ${DS.border}` : 'none', flexShrink: 0 }} />
-                          {labelColor(col, locale)}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-                {country.symbols.length > 0 && (
-                  <div>
-                    <p style={{ margin: '0 0 10px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
-                      {t('Symbols', 'Symboles')}
-                    </p>
-                    <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-                      {country.symbols.map(s => (
-                        <span key={s} style={{ padding: '6px 14px', backgroundColor: DS.navy, color: 'white', borderRadius: '99px', fontSize: '13px', fontWeight: '600' }}>
-                          {labelSymbol(s, locale)}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            </Section>
-          )}
-
-          {/* Design & specifications */}
+          {/* Design & Symbolism (merged section) */}
           <DesignSpecs country={country} locale={locale} />
 
           {/* Flag etiquette */}

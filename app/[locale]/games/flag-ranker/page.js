@@ -7,8 +7,8 @@ export async function generateMetadata({ params }) {
   const { locale } = await params
   const isFr = locale === 'fr'
   const title = isFr
-    ? 'Flag Ranker — Classe les Drapeaux | KnowFlags'
-    : 'Flag Ranker — Rank the Flags | KnowFlags'
+    ? 'Flag Rank — Classe les Drapeaux | KnowFlags'
+    : 'Flag Rank — Rank the Flags | KnowFlags'
   const description = isFr
     ? 'Classez les pays par population, superficie ou PIB — juste avec leur drapeau.'
     : 'Rank countries by population, area or GDP — just from their flag.'
@@ -32,7 +32,7 @@ export default async function FlagRankerPage({ params }) {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Game',
-    name: 'Flag Ranker',
+    name: 'Flag Rank',
     description: locale === 'fr'
       ? 'Classez les drapeaux selon des critères géographiques.'
       : 'Rank flags by geographical criteria.',

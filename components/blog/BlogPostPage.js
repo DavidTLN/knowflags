@@ -105,7 +105,7 @@ export default function BlogPostPage({ post }) {
       </div>
 
       {/* Hero */}
-      <div style={{ maxWidth: '760px', margin: '0 auto', padding: '32px 24px 0' }}>
+      <div style={{ maxWidth: '760px', margin: '0 auto', padding: '16px 24px 0' }}>
         {/* Tags */}
         {post.tags?.length > 0 && (
           <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '16px' }}>
@@ -117,20 +117,9 @@ export default function BlogPostPage({ post }) {
           </div>
         )}
 
-        {/* Title */}
-        <h1 style={{ fontSize: 'clamp(26px, 4vw, 40px)', fontWeight: '900', color: '#0B1F3B', margin: '0 0 16px', letterSpacing: '-1px', lineHeight: 1.2, fontFamily: 'var(--font-display)' }}>
-          {post.title}
-        </h1>
-
-        {/* Meta */}
-        <div style={{ display: 'flex', gap: '16px', fontSize: '13px', color: '#8A8278', marginBottom: '28px', flexWrap: 'wrap', alignItems: 'center' }}>
-          {formattedDate && <span>📅 {formattedDate}</span>}
-          {post.readingTime && <span>⏱ {post.readingTime} min {t('read', 'de lecture')}</span>}
-        </div>
-
         {/* Cover image */}
         {post.coverImage && (
-          <div style={{ marginBottom: '36px', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 8px 32px rgba(11,31,59,0.1)' }}>
+          <div style={{ marginBottom: '20px', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 8px 32px rgba(11,31,59,0.1)' }}>
             <img
               src={post.coverImage}
               alt={post.coverAlt || post.title}
@@ -138,6 +127,12 @@ export default function BlogPostPage({ post }) {
             />
           </div>
         )}
+
+        {/* Meta (under image) */}
+        <div style={{ display: 'flex', gap: '16px', fontSize: '13px', color: '#8A8278', marginBottom: '8px', flexWrap: 'wrap', alignItems: 'center' }}>
+          {formattedDate && <span>📅 {formattedDate}</span>}
+          {post.readingTime && <span>⏱ {post.readingTime} min {t('read', 'de lecture')}</span>}
+        </div>
 
         {/* Excerpt */}
         {post.excerpt && (

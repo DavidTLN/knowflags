@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import GameIcon from '@/components/games/GameIcon'
 import { useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-client'
 import PageLoader from '@/components/PageLoader'
@@ -44,6 +45,9 @@ function shuffle(arr) {
   }
   return a
 }
+
+const MAX_ROUNDS = 5
+const ROUND_MAX  = 500   // 5 placements x 100 pts
 
 function pickRound(allC) {
   if (!allC || allC.length < 5) return { countries: [], attrs: [] }
@@ -201,6 +205,11 @@ export default function FlagRanker() {
   function finishReveal() {
     const nt = totalScore + roundScore
     setTotalScore(nt)
+    if (round >= MAX_ROUNDS) {
+      logScore(nt)
+      setScreen('end')
+      return
+    }
     setScreen('roundflash')
     setTimeout(() => {
       setRound(r => r + 1)
@@ -236,22 +245,22 @@ export default function FlagRanker() {
         <div style={{ flex: 1, overflowY: 'auto', padding: '24px 16px 8px' }}>
           <div style={{ maxWidth: '480px', margin: '0 auto', textAlign: 'center' }}>
             <div style={{ fontSize: '48px', marginBottom: '8px' }}>🏆</div>
-            <h1 style={{ fontSize: '26px', fontWeight: '900', color: '#0B1F3B', margin: '0 0 6px', letterSpacing: '-1px' }}>FlagRanker</h1>
-            <p style={{ fontSize: '13px', color: '#64748b', margin: '0 0 20px' }}>
-              {t('5 flags · 2 rounds · Based on real world data', '5 drapeaux · 2 manches · Données mondiales réelles')}
+            <h1 style={{ fontSize: '26px', fontWeight: '900', color: '#16324F', margin: '0 0 6px', letterSpacing: '-1px' }}>FlagRanker</h1>
+            <p style={{ fontSize: '13px', color: '#6B7280', margin: '0 0 20px' }}>
+              {t('5 flags · 5 rounds · Based on real world data', '5 drapeaux · 5 manches · Données mondiales réelles')}
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '12px' }}>
               {MODES.map(m => (
                 <button key={m.id} onClick={() => setPendingMode(m.id)}
-                  style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '14px 16px', borderRadius: '14px', border: `2px solid ${pendingMode === m.id ? m.color : '#e2e8f0'}`, backgroundColor: pendingMode === m.id ? `${m.color}15` : 'white', cursor: 'pointer', transition: 'all 0.15s' }}>
+                  style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '14px 16px', borderRadius: '14px', border: `2px solid ${pendingMode === m.id ? m.color : '#E2DDD5'}`, backgroundColor: pendingMode === m.id ? `${m.color}15` : 'white', cursor: 'pointer', transition: 'all 0.15s' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flex: 1 }}>
                     <span style={{ fontSize: '26px' }}>{m.icon}</span>
                     <div style={{ textAlign: 'left' }}>
-                      <div style={{ fontSize: '16px', fontWeight: '800', color: '#0B1F3B' }}>{locale === 'fr' ? m.fr : m.en}</div>
-                      <div style={{ fontSize: '12px', color: '#64748b', marginTop: '2px', lineHeight: 1.4 }}>{locale === 'fr' ? m.descFr : m.descEn}</div>
+                      <div style={{ fontSize: '16px', fontWeight: '800', color: '#16324F' }}>{locale === 'fr' ? m.fr : m.en}</div>
+                      <div style={{ fontSize: '12px', color: '#6B7280', marginTop: '2px', lineHeight: 1.4 }}>{locale === 'fr' ? m.descFr : m.descEn}</div>
                     </div>
                   </div>
-                  <div style={{ width: '28px', height: '28px', borderRadius: '7px', backgroundColor: pendingMode === m.id ? m.color : '#e2e8f0', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '12px', flexShrink: 0 }}>▶</div>
+                  <div style={{ width: '28px', height: '28px', borderRadius: '7px', backgroundColor: pendingMode === m.id ? m.color : '#E2DDD5', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '12px', flexShrink: 0 }}>▶</div>
                 </button>
               ))}
             </div>
@@ -262,9 +271,9 @@ export default function FlagRanker() {
         </div>
 
         {/* Sticky start button */}
-        <div style={{ padding: '12px 16px', paddingBottom: 'max(12px, env(safe-area-inset-bottom))', background: '#F4F1E6', borderTop: '1px solid #e2e8f0' }}>
+        <div style={{ padding: '12px 16px', paddingBottom: 'max(12px, env(safe-area-inset-bottom))', background: '#F4F1E6', borderTop: '1px solid #E2DDD5' }}>
           <button onClick={() => startGame(pendingMode)}
-            style={{ width: '100%', padding: '16px', borderRadius: '14px', backgroundColor: '#0B1F3B', color: 'white', fontSize: '16px', fontWeight: '900', border: 'none', cursor: 'pointer', letterSpacing: '-0.3px' }}>
+            style={{ width: '100%', padding: '16px', borderRadius: '14px', backgroundColor: '#16324F', color: 'white', fontSize: '16px', fontWeight: '900', border: 'none', cursor: 'pointer', letterSpacing: '-0.3px' }}>
             {t('Start Game', 'Lancer le jeu')}
           </button>
         </div>
@@ -276,8 +285,8 @@ export default function FlagRanker() {
             <div style={{ backgroundColor: 'white', borderRadius: '20px', padding: '32px 28px', maxWidth: '440px', width: '100%', boxShadow: '0 24px 64px rgba(0,0,0,0.2)' }}
               onClick={e => e.stopPropagation()}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-                <h2 style={{ fontSize: '20px', fontWeight: '900', color: '#0B1F3B', margin: 0 }}>❓ {t('How to play', 'Comment jouer')}</h2>
-                <button onClick={() => setShowHelp(false)} style={{ background: 'none', border: 'none', fontSize: '20px', cursor: 'pointer', color: '#94a3b8' }}>✕</button>
+                <h2 style={{ fontSize: '20px', fontWeight: '900', color: '#16324F', margin: 0 }}>❓ {t('How to play', 'Comment jouer')}</h2>
+                <button onClick={() => setShowHelp(false)} aria-label="Fermer" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#9CA3AF', display: 'flex', alignItems: 'center' }}><GameIcon name="close" size={19} color="#9CA3AF" /></button>
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                 {[
@@ -290,7 +299,7 @@ export default function FlagRanker() {
                 ].map((item, i) => (
                   <div key={i} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
                     <span style={{ fontSize: '20px', flexShrink: 0 }}>{item.icon}</span>
-                    <p style={{ margin: 0, fontSize: '13px', color: '#475569', lineHeight: 1.6 }}>{locale === 'fr' ? item.fr : item.en}</p>
+                    <p style={{ margin: 0, fontSize: '13px', color: '#6B7280', lineHeight: 1.6 }}>{locale === 'fr' ? item.fr : item.en}</p>
                   </div>
                 ))}
               </div>
@@ -306,37 +315,37 @@ export default function FlagRanker() {
 
   // ── END ────────────────────────────────────────────────────────────────
   if (screen === 'end') {
-    const max  = 1000
+    const max  = MAX_ROUNDS * ROUND_MAX
     const pct  = isMin ? Math.round((1 - totalScore / max) * 100) : Math.round((totalScore / max) * 100)
     return (
       <div style={{ backgroundColor: '#F4F1E6', height: 'calc(100dvh - 60px)', fontFamily: 'var(--font-body, system-ui)', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
         <div style={{ flexShrink: 0, padding: '20px 16px 0' }}>
           <div style={{ maxWidth: '480px', margin: '0 auto' }}>
             <div style={{ textAlign: 'center', marginBottom: '16px' }}>
-              <h2 style={{ margin: '0 0 2px', fontSize: '22px', fontWeight: '900', color: '#0B1F3B', letterSpacing: '-0.5px' }}>{t('Game Over!', 'Partie terminée !')}</h2>
-              <p style={{ margin: 0, color: '#94a3b8', fontSize: '13px' }}>
+              <h2 style={{ margin: '0 0 2px', fontSize: '22px', fontWeight: '900', color: '#16324F', letterSpacing: '-0.5px' }}>{t('Game Over!', 'Partie terminée !')}</h2>
+              <p style={{ margin: 0, color: '#9CA3AF', fontSize: '13px' }}>
                 {locale === 'fr' ? mode === 'maximize' ? 'Maximiser' : mode === 'minimize' ? 'Minimiser' : 'Ouvert' : mode === 'maximize' ? 'Maximize' : mode === 'minimize' ? 'Minimize' : 'Open'}
               </p>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
               {[
-                { label: 'Score',                               value: `⭐ ${totalScore}`, color: '#0B1F3B', bg: 'white',   border: '#e2e8f0' },
-                { label: `/ ${max} pts`,                        value: `${pct}%`,         color: pct >= 70 ? '#166534' : '#806D40', bg: pct >= 70 ? '#f0fdf4' : '#fefce8', border: pct >= 70 ? '#bbf7d0' : '#fde68a' },
+                { label: `Score / ${max}`,                      value: `${totalScore}`,   color: '#16324F', bg: 'white',   border: '#E2DDD5' },
+                { label: t('Accuracy', 'Précision'),            value: `${pct}%`,         color: pct >= 70 ? '#166534' : '#806D40', bg: pct >= 70 ? '#f0fdf4' : '#fefce8', border: pct >= 70 ? '#bbf7d0' : '#fde68a' },
               ].map((s, i) => (
                 <div key={i} style={{ backgroundColor: s.bg, borderRadius: '14px', border: `1px solid ${s.border}`, padding: '20px 12px', textAlign: 'center' }}>
                   <div style={{ fontSize: '24px', fontWeight: '900', color: s.color }}>{s.value}</div>
-                  <div style={{ fontSize: '10px', fontWeight: '700', color: '#94a3b8', marginTop: '4px', textTransform: 'uppercase', letterSpacing: '0.6px' }}>{s.label}</div>
+                  <div style={{ fontSize: '10px', fontWeight: '700', color: '#9CA3AF', marginTop: '4px', textTransform: 'uppercase', letterSpacing: '0.6px' }}>{s.label}</div>
                 </div>
               ))}
             </div>
           </div>
         </div>
         <div style={{ flex: 1 }} />
-        <div style={{ flexShrink: 0, padding: '12px 16px', paddingBottom: 'max(12px, env(safe-area-inset-bottom))', background: '#F4F1E6', borderTop: '1px solid #e2e8f0', display: 'flex', flexDirection: 'column', gap: '8px' }}>
-          <button onClick={() => startGame(mode)} style={{ width: '100%', padding: '16px', backgroundColor: '#0B1F3B', color: 'white', border: 'none', borderRadius: '14px', fontSize: '16px', fontWeight: '900', cursor: 'pointer' }}>
+        <div style={{ flexShrink: 0, padding: '12px 16px', paddingBottom: 'max(12px, env(safe-area-inset-bottom))', background: '#F4F1E6', borderTop: '1px solid #E2DDD5', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <button onClick={() => startGame(mode)} style={{ width: '100%', padding: '16px', backgroundColor: '#16324F', color: 'white', border: 'none', borderRadius: '14px', fontSize: '16px', fontWeight: '900', cursor: 'pointer' }}>
             {t('Play again', 'Rejouer')}
           </button>
-          <button onClick={() => setScreen('intro')} style={{ width: '100%', padding: '13px', backgroundColor: 'transparent', color: '#0B1F3B', border: '1.5px solid #cbd5e1', borderRadius: '14px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
+          <button onClick={() => setScreen('intro')} style={{ width: '100%', padding: '13px', backgroundColor: 'transparent', color: '#16324F', border: '1.5px solid #cbd5e1', borderRadius: '14px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
             {t('Change mode', 'Changer de mode')}
           </button>
         </div>
@@ -346,7 +355,7 @@ export default function FlagRanker() {
 
   // ── ROUND FLASH ────────────────────────────────────────────────────────
   if (screen === 'roundflash') return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#0B1F3B', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    <div style={{ minHeight: '100dvh', backgroundColor: '#16324F', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <div style={{ textAlign: 'center' }}>
         <div style={{ fontSize: '14px', fontWeight: '700', color: '#9EB7E5', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '12px' }}>
           {t('Get ready', 'Prépare-toi')}
@@ -365,15 +374,15 @@ export default function FlagRanker() {
       <div style={{ maxWidth: '680px', margin: '0 auto', padding: '0 16px' }}>
         <div style={S.header}>
           <div>
-            <div style={S.roundLabel}>{t(`Round ${round}`, `Manche ${round}`)}</div>
+            <div style={S.roundLabel}>{t(`Round ${round}/${MAX_ROUNDS}`, `Manche ${round}/${MAX_ROUNDS}`)}</div>
             <h2 style={S.pageTitle}>{t('Results', 'Résultats')}</h2>
           </div>
           <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
             <div style={S.scorePill}>
-              <div style={{ fontSize: '22px', fontWeight: '900', color: 'white', letterSpacing: '-0.5px' }}>{roundScore}</div>
-              <div style={{ fontSize: '10px', color: '#9EB7E5' }}>pts</div>
+              <div style={{ fontSize: '22px', fontWeight: '900', color: 'white', letterSpacing: '-0.5px' }}>+{roundScore}</div>
+              <div style={{ fontSize: '10px', color: '#9EB7E5' }}>{t('this round', 'cette manche')}</div>
             </div>
-            <button onClick={() => setShowQuitConfirm(true)} style={{ width: '32px', height: '32px', borderRadius: '50%', backgroundColor: 'rgba(11,31,59,0.08)', border: '1px solid #e2e8f0', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', fontSize: '13px', color: '#94a3b8' }}>✕</button>
+            <button onClick={() => setShowQuitConfirm(true)} aria-label="Quitter" style={{ width: '36px', height: '36px', borderRadius: '50%', backgroundColor: 'rgba(11,31,59,0.08)', border: '1px solid #E2DDD5', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', color: '#9CA3AF' }}><GameIcon name="close" size={17} color="#9CA3AF" /></button>
           </div>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '28px' }}>
@@ -386,9 +395,9 @@ export default function FlagRanker() {
               <div key={i} style={{ ...S.resultCard, opacity: revealed ? 1 : 0, transform: revealed ? 'translateY(0)' : 'translateY(12px)', transition: 'all 0.35s ease', borderLeftColor: color }}>
                 <img src={`https://flagcdn.com/w80/${r.country.code}.png`} style={S.resultFlag} alt="" />
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ fontWeight: '800', fontSize: '14px', color: '#0B1F3B' }}>{locale === 'fr' ? r.country.fr : r.country.en}</div>
-                  <div style={{ fontSize: '11px', color: '#94a3b8', marginTop: '2px' }}>{r.attr.icon} {locale === 'fr' ? r.attr.fr : r.attr.en}</div>
-                  <div style={{ fontSize: '11px', color: '#64748b', marginTop: '3px' }}>
+                  <div style={{ fontWeight: '800', fontSize: '14px', color: '#16324F' }}>{locale === 'fr' ? r.country.fr : r.country.en}</div>
+                  <div style={{ fontSize: '11px', color: '#9CA3AF', marginTop: '2px' }}>{r.attr.icon} {locale === 'fr' ? r.attr.fr : r.attr.en}</div>
+                  <div style={{ fontSize: '11px', color: '#6B7280', marginTop: '3px' }}>
                     {t('Value', 'Valeur')}: <strong>{r.attr.format(r.country[r.attr.key])}</strong>
                     {' · '}{t('World rank', 'Rang mondial')}: <strong>#{r.worldRank}/195</strong>
                   </div>
@@ -400,7 +409,7 @@ export default function FlagRanker() {
         </div>
         {revealStep >= results.length && (
           <div style={{ textAlign: 'center' }}>
-            <button onClick={finishReveal} style={S.btn}>{t('Next Round →', 'Manche suivante →')}</button>
+            <button onClick={finishReveal} style={S.btn}>{round >= MAX_ROUNDS ? t('See results →', 'Voir le résultat →') : t('Next Round →', 'Manche suivante →')}</button>
           </div>
         )}
       </div>
@@ -409,20 +418,20 @@ export default function FlagRanker() {
       {showQuitConfirm && (
         <div style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.6)', zIndex: 100, display: 'flex', alignItems: 'flex-end' }}>
           <div style={{ width: '100%', backgroundColor: 'white', borderRadius: '20px 20px 0 0', padding: '24px 20px', paddingBottom: 'max(24px, env(safe-area-inset-bottom))' }}>
-            <div style={{ width: '36px', height: '4px', backgroundColor: '#e2e8f0', borderRadius: '99px', margin: '0 auto 20px' }} />
-            <h3 style={{ margin: '0 0 8px', fontSize: '20px', fontWeight: '900', color: '#0B1F3B', textAlign: 'center' }}>
+            <div style={{ width: '36px', height: '4px', backgroundColor: '#E2DDD5', borderRadius: '99px', margin: '0 auto 20px' }} />
+            <h3 style={{ margin: '0 0 8px', fontSize: '20px', fontWeight: '900', color: '#16324F', textAlign: 'center' }}>
               {t('Quit the game?', 'Quitter la partie ?')}
             </h3>
-            <p style={{ margin: '0 0 24px', fontSize: '14px', color: '#64748b', lineHeight: 1.6, textAlign: 'center' }}>
+            <p style={{ margin: '0 0 24px', fontSize: '14px', color: '#6B7280', lineHeight: 1.6, textAlign: 'center' }}>
               {t(`Your score of ${totalScore} pts will be saved.`, `Ton score de ${totalScore} pts sera sauvegardé.`)}
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              <button onClick={() => { setShowQuitConfirm(false); setScreen('end') }}
+              <button onClick={() => { setShowQuitConfirm(false); logScore(totalScore); setScreen('end') }}
                 style={{ width: '100%', padding: '16px', backgroundColor: '#ef4444', color: 'white', border: 'none', borderRadius: '14px', fontSize: '16px', fontWeight: '900', cursor: 'pointer' }}>
                 {t('Quit & save', 'Quitter et sauvegarder')}
               </button>
               <button onClick={() => setShowQuitConfirm(false)}
-                style={{ width: '100%', padding: '13px', backgroundColor: 'transparent', color: '#0B1F3B', border: '1.5px solid #e2e8f0', borderRadius: '14px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
+                style={{ width: '100%', padding: '13px', backgroundColor: 'transparent', color: '#16324F', border: '1.5px solid #E2DDD5', borderRadius: '14px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
                 {t('Keep playing', 'Continuer à jouer')}
               </button>
             </div>
@@ -438,7 +447,7 @@ export default function FlagRanker() {
       <div style={{ maxWidth: '560px', margin: '0 auto', padding: '0 16px' }}>
         <div style={S.header}>
           <div>
-            <div style={S.roundLabel}>{t(`Round ${round}`, `Manche ${round}`)}</div>
+            <div style={S.roundLabel}>{t(`Round ${round}/${MAX_ROUNDS}`, `Manche ${round}/${MAX_ROUNDS}`)}</div>
             <h2 style={S.pageTitle}>{t('Rank all 5 flags', 'Classe les 5 drapeaux')}</h2>
           </div>
           <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
@@ -446,17 +455,17 @@ export default function FlagRanker() {
               <div style={{ fontSize: '20px', fontWeight: '900', color: 'white' }}>{totalScore}</div>
               <div style={{ fontSize: '10px', color: '#9EB7E5' }}>total</div>
             </div>
-            <button onClick={() => setShowQuitConfirm(true)} style={{ width: '32px', height: '32px', borderRadius: '50%', backgroundColor: 'rgba(11,31,59,0.08)', border: '1px solid #e2e8f0', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', fontSize: '13px', color: '#94a3b8' }}>✕</button>
+            <button onClick={() => setShowQuitConfirm(true)} aria-label="Quitter" style={{ width: '36px', height: '36px', borderRadius: '50%', backgroundColor: 'rgba(11,31,59,0.08)', border: '1px solid #E2DDD5', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', color: '#9CA3AF' }}><GameIcon name="close" size={17} color="#9CA3AF" /></button>
           </div>
         </div>
-        <div style={{ backgroundColor: '#0B1F3B', borderRadius: '12px', padding: '12px 16px', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '12px' }}>
+        <div style={{ backgroundColor: '#16324F', borderRadius: '12px', padding: '12px 16px', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '12px' }}>
           <span style={{ fontSize: '26px' }}>{openAttr?.icon}</span>
           <div>
             <div style={{ fontSize: '10px', color: '#9EB7E5', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.8px' }}>{t('Attribute', 'Attribut')}</div>
             <div style={{ fontSize: '15px', fontWeight: '800', color: 'white', marginTop: '2px' }}>{openAttr ? (locale === 'fr' ? openAttr.fr : openAttr.en) : ''}</div>
           </div>
         </div>
-        <div style={{ fontSize: '12px', color: '#64748b', marginBottom: '12px', textAlign: 'center' }}>
+        <div style={{ fontSize: '12px', color: '#6B7280', marginBottom: '12px', textAlign: 'center' }}>
           {isMobile
             ? t('#1 = highest value · use ↑↓ to reorder', '#1 = valeur la plus haute · utilisez ↑↓ pour réordonner')
             : t('#1 = highest value · drag to reorder', '#1 = valeur la plus haute · glisse pour réordonner')}
@@ -474,26 +483,26 @@ export default function FlagRanker() {
                 onDragLeave={() => !isMobile && setDragOver(null)}
                 onDrop={() => !isMobile && openDrop(idx)}
                 onDragEnd={() => { !isMobile && setOpenDragIdx(null); !isMobile && setDragOver(null) }}
-                style={{ display: 'flex', alignItems: 'center', gap: '10px', backgroundColor: isOver ? '#EFF6FF' : 'white', border: `2px solid ${isOver ? '#3b82f6' : '#e2e8f0'}`, borderRadius: '12px', padding: '10px 14px', cursor: isMobile ? 'default' : 'grab', userSelect: 'none', opacity: openDragIdx === idx ? 0.6 : 1, transition: 'all 0.12s' }}>
-                <span style={{ fontSize: '15px', fontWeight: '900', color: '#0B1F3B', minWidth: '26px' }}>#{idx+1}</span>
+                style={{ display: 'flex', alignItems: 'center', gap: '10px', backgroundColor: isOver ? '#EFF6FF' : 'white', border: `2px solid ${isOver ? '#3b82f6' : '#E2DDD5'}`, borderRadius: '12px', padding: '10px 14px', cursor: isMobile ? 'default' : 'grab', userSelect: 'none', opacity: openDragIdx === idx ? 0.6 : 1, transition: 'all 0.12s' }}>
+                <span style={{ fontSize: '15px', fontWeight: '900', color: '#16324F', minWidth: '26px' }}>#{idx+1}</span>
                 <img src={`https://flagcdn.com/w80/${code}.png`} style={{ height: '30px', borderRadius: '3px', objectFit: 'cover' }} alt="" />
-                <span style={{ fontSize: '14px', fontWeight: '700', color: '#0B1F3B', flex: 1 }}>{locale === 'fr' ? country.fr : country.en}</span>
+                <span style={{ fontSize: '14px', fontWeight: '700', color: '#16324F', flex: 1 }}>{locale === 'fr' ? country.fr : country.en}</span>
                 {isMobile ? (
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '3px' }}>
                     <button onClick={() => moveOpenItem(idx, -1)} disabled={idx === 0}
-                      style={{ width: '30px', height: '24px', backgroundColor: idx === 0 ? '#f1f5f9' : '#0B1F3B', color: idx === 0 ? '#cbd5e1' : 'white', border: 'none', borderRadius: '6px', cursor: idx === 0 ? 'default' : 'pointer', fontSize: '13px', fontWeight: '900', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>↑</button>
+                      style={{ width: '30px', height: '24px', backgroundColor: idx === 0 ? '#f1f5f9' : '#16324F', color: idx === 0 ? '#cbd5e1' : 'white', border: 'none', borderRadius: '6px', cursor: idx === 0 ? 'default' : 'pointer', fontSize: '13px', fontWeight: '900', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>↑</button>
                     <button onClick={() => moveOpenItem(idx, +1)} disabled={idx === openOrder.length - 1}
-                      style={{ width: '30px', height: '24px', backgroundColor: idx === openOrder.length - 1 ? '#f1f5f9' : '#0B1F3B', color: idx === openOrder.length - 1 ? '#cbd5e1' : 'white', border: 'none', borderRadius: '6px', cursor: idx === openOrder.length - 1 ? 'default' : 'pointer', fontSize: '13px', fontWeight: '900', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>↓</button>
+                      style={{ width: '30px', height: '24px', backgroundColor: idx === openOrder.length - 1 ? '#f1f5f9' : '#16324F', color: idx === openOrder.length - 1 ? '#cbd5e1' : 'white', border: 'none', borderRadius: '6px', cursor: idx === openOrder.length - 1 ? 'default' : 'pointer', fontSize: '13px', fontWeight: '900', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>↓</button>
                   </div>
                 ) : (
-                  <span style={{ color: '#94a3b8', fontSize: '16px' }}>⠿</span>
+                  <span style={{ color: '#9CA3AF', fontSize: '16px' }}>⠿</span>
                 )}
               </div>
             )
           })}
         </div>
-        <button onClick={submitOpen} style={{ ...S.btn, width: '100%', padding: '14px' }}>
-          ✓ {t('Validate ranking', 'Valider le classement')}
+        <button onClick={submitOpen} style={{ ...S.btn, width: '100%', padding: '14px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+          <GameIcon name="check" size={17} color="currentColor" strokeWidth={2.6} /> {t('Validate ranking', 'Valider le classement')}
         </button>
       </div>
 
@@ -501,20 +510,20 @@ export default function FlagRanker() {
       {showQuitConfirm && (
         <div style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.6)', zIndex: 100, display: 'flex', alignItems: 'flex-end' }}>
           <div style={{ width: '100%', backgroundColor: 'white', borderRadius: '20px 20px 0 0', padding: '24px 20px', paddingBottom: 'max(24px, env(safe-area-inset-bottom))' }}>
-            <div style={{ width: '36px', height: '4px', backgroundColor: '#e2e8f0', borderRadius: '99px', margin: '0 auto 20px' }} />
-            <h3 style={{ margin: '0 0 8px', fontSize: '20px', fontWeight: '900', color: '#0B1F3B', textAlign: 'center' }}>
+            <div style={{ width: '36px', height: '4px', backgroundColor: '#E2DDD5', borderRadius: '99px', margin: '0 auto 20px' }} />
+            <h3 style={{ margin: '0 0 8px', fontSize: '20px', fontWeight: '900', color: '#16324F', textAlign: 'center' }}>
               {t('Quit the game?', 'Quitter la partie ?')}
             </h3>
-            <p style={{ margin: '0 0 24px', fontSize: '14px', color: '#64748b', lineHeight: 1.6, textAlign: 'center' }}>
+            <p style={{ margin: '0 0 24px', fontSize: '14px', color: '#6B7280', lineHeight: 1.6, textAlign: 'center' }}>
               {t(`Your score of ${totalScore} pts will be saved.`, `Ton score de ${totalScore} pts sera sauvegardé.`)}
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              <button onClick={() => { setShowQuitConfirm(false); setScreen('end') }}
+              <button onClick={() => { setShowQuitConfirm(false); logScore(totalScore); setScreen('end') }}
                 style={{ width: '100%', padding: '16px', backgroundColor: '#ef4444', color: 'white', border: 'none', borderRadius: '14px', fontSize: '16px', fontWeight: '900', cursor: 'pointer' }}>
                 {t('Quit & save', 'Quitter et sauvegarder')}
               </button>
               <button onClick={() => setShowQuitConfirm(false)}
-                style={{ width: '100%', padding: '13px', backgroundColor: 'transparent', color: '#0B1F3B', border: '1.5px solid #e2e8f0', borderRadius: '14px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
+                style={{ width: '100%', padding: '13px', backgroundColor: 'transparent', color: '#16324F', border: '1.5px solid #E2DDD5', borderRadius: '14px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
                 {t('Keep playing', 'Continuer à jouer')}
               </button>
             </div>
@@ -530,7 +539,7 @@ export default function FlagRanker() {
       <div style={{ maxWidth: '860px', margin: '0 auto', padding: '0 16px' }}>
         <div style={S.header}>
           <div>
-            <div style={S.roundLabel}>{isMin ? '📉' : '📈'} {t(`Round ${round} · ${currentIdx+1}/5`, `Manche ${round} · ${currentIdx+1}/5`)}</div>
+            <div style={S.roundLabel}>{isMin ? '📉' : '📈'} {t(`Round ${round}/${MAX_ROUNDS} · ${currentIdx+1}/5`, `Manche ${round}/${MAX_ROUNDS} · ${currentIdx+1}/5`)}</div>
             <h2 style={S.pageTitle}>
               {isMobile
                 ? t('Tap a slot, then tap the flag', 'Tape un slot, puis le drapeau')
@@ -542,24 +551,24 @@ export default function FlagRanker() {
               <div style={{ fontSize: '20px', fontWeight: '900', color: 'white', letterSpacing: '-0.5px' }}>{totalScore}</div>
               <div style={{ fontSize: '10px', color: '#9EB7E5' }}>total</div>
             </div>
-            <button onClick={() => setShowQuitConfirm(true)} style={{ width: '32px', height: '32px', borderRadius: '50%', backgroundColor: 'rgba(11,31,59,0.08)', border: '1px solid #e2e8f0', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', fontSize: '13px', color: '#94a3b8' }}>✕</button>
+            <button onClick={() => setShowQuitConfirm(true)} aria-label="Quitter" style={{ width: '36px', height: '36px', borderRadius: '50%', backgroundColor: 'rgba(11,31,59,0.08)', border: '1px solid #E2DDD5', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', color: '#9CA3AF' }}><GameIcon name="close" size={17} color="#9CA3AF" /></button>
           </div>
         </div>
         <div style={{ display: 'flex', gap: '6px', marginBottom: '22px' }}>
-          {[0,1,2,3,4].map(i => <div key={i} style={{ flex: 1, height: '5px', borderRadius: '3px', backgroundColor: i < currentIdx ? '#0B1F3B' : i === currentIdx ? '#9EB7E5' : '#e2e8f0', transition: 'all 0.3s' }} />)}
+          {[0,1,2,3,4].map(i => <div key={i} style={{ flex: 1, height: '5px', borderRadius: '3px', backgroundColor: i < currentIdx ? '#16324F' : i === currentIdx ? '#9EB7E5' : '#E2DDD5', transition: 'all 0.3s' }} />)}
         </div>
 
         {isMobile ? (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             <div>
               <div style={S.panelLabel}>{t('Current flag', 'Drapeau actuel')}</div>
-              <div onClick={handleFlagTapMobile} style={{ ...S.flagCard, cursor: selectedSlot !== null ? 'pointer' : 'default', border: selectedSlot !== null ? '2px solid #9EB7E5' : '1px solid #e2e8f0', boxShadow: selectedSlot !== null ? '0 0 0 3px rgba(158,183,229,0.3)' : '0 2px 12px rgba(0,0,0,0.08)', transition: 'all 0.15s' }}>
+              <div onClick={handleFlagTapMobile} style={{ ...S.flagCard, cursor: selectedSlot !== null ? 'pointer' : 'default', border: selectedSlot !== null ? '2px solid #9EB7E5' : '1px solid #E2DDD5', boxShadow: selectedSlot !== null ? '0 0 0 3px rgba(158,183,229,0.3)' : '0 2px 12px rgba(0,0,0,0.08)', transition: 'all 0.15s' }}>
                 <img src={`https://flagcdn.com/w320/${currentCountry?.code}.png`} alt={currentCountry?.en} style={S.flagImg} />
                 <div style={{ padding: '10px 12px 12px' }}>
-                  <div style={{ fontSize: '13px', fontWeight: '800', color: '#0B1F3B' }}>{currentCountry ? (locale === 'fr' ? currentCountry.fr : currentCountry.en) : ''}</div>
+                  <div style={{ fontSize: '13px', fontWeight: '800', color: '#16324F' }}>{currentCountry ? (locale === 'fr' ? currentCountry.fr : currentCountry.en) : ''}</div>
                   {selectedSlot !== null && (
-                    <div style={{ fontSize: '11px', color: '#9EB7E5', marginTop: '4px', fontWeight: '700' }}>
-                      👆 {t(`Tap to place in slot #${selectedSlot + 1}`, `Tape pour placer dans le slot #${selectedSlot + 1}`)}
+                    <div style={{ fontSize: '11px', color: '#9EB7E5', marginTop: '4px', fontWeight: '700', display: 'flex', alignItems: 'center', gap: '5px' }}>
+                      <GameIcon name="target" size={13} color="#9EB7E5" /> {t(`Tap to place in slot #${selectedSlot + 1}`, `Tape pour placer dans le slot #${selectedSlot + 1}`)}
                     </div>
                   )}
                 </div>
@@ -579,10 +588,10 @@ export default function FlagRanker() {
                   return (
                     <div key={slotIdx} onClick={() => handleSlotTap(slotIdx)}
                       style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '10px 12px', borderRadius: '12px', minHeight: '58px', cursor: taken ? 'default' : 'pointer', transition: 'all 0.12s',
-                        border: taken ? '2px solid #0B1F3B' : isSelected ? '2px solid #9EB7E5' : '2px solid #e2e8f0',
-                        backgroundColor: taken ? '#0B1F3B' : isSelected ? '#EFF6FF' : 'white',
+                        border: taken ? '2px solid #16324F' : isSelected ? '2px solid #9EB7E5' : '2px solid #E2DDD5',
+                        backgroundColor: taken ? '#16324F' : isSelected ? '#EFF6FF' : 'white',
                         boxShadow: isSelected ? '0 0 0 3px rgba(158,183,229,0.25)' : 'none' }}>
-                      <div style={{ width: '30px', height: '30px', borderRadius: '7px', backgroundColor: taken ? 'rgba(255,255,255,0.15)' : isSelected ? '#BFDBFE' : '#f1f5f9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '11px', fontWeight: '900', color: taken ? 'white' : '#0B1F3B', flexShrink: 0 }}>#{slotIdx+1}</div>
+                      <div style={{ width: '30px', height: '30px', borderRadius: '7px', backgroundColor: taken ? 'rgba(255,255,255,0.15)' : isSelected ? '#BFDBFE' : '#f1f5f9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '11px', fontWeight: '900', color: taken ? 'white' : '#16324F', flexShrink: 0 }}>#{slotIdx+1}</div>
                       {taken ? (
                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1 }}>
                           <img src={`https://flagcdn.com/w80/${placed.country.code}.png`} style={{ height: '26px', borderRadius: '3px', objectFit: 'cover' }} alt="" />
@@ -595,8 +604,8 @@ export default function FlagRanker() {
                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1 }}>
                           <span style={{ fontSize: '17px' }}>{attr.icon}</span>
                           <div>
-                            <div style={{ fontSize: '12px', fontWeight: '700', color: isSelected ? '#1d4ed8' : '#0B1F3B' }}>{locale === 'fr' ? attr.fr : attr.en}</div>
-                            <div style={{ fontSize: '10px', color: isSelected ? '#3b82f6' : '#94a3b8', marginTop: '1px' }}>
+                            <div style={{ fontSize: '12px', fontWeight: '700', color: isSelected ? '#1d4ed8' : '#16324F' }}>{locale === 'fr' ? attr.fr : attr.en}</div>
+                            <div style={{ fontSize: '10px', color: isSelected ? '#3b82f6' : '#9CA3AF', marginTop: '1px' }}>
                               {isSelected ? t('Now tap the flag ↑', 'Tape le drapeau ↑') : t('Tap to select', 'Tape pour sélectionner')}
                             </div>
                           </div>
@@ -616,7 +625,7 @@ export default function FlagRanker() {
                 style={{ ...S.flagCard, cursor: 'grab', opacity: dragging ? 0.5 : 1, transform: dragging ? 'scale(0.95) rotate(-1deg)' : 'scale(1)', transition: 'all 0.15s', boxShadow: dragging ? '0 20px 48px rgba(0,0,0,0.2)' : '0 2px 12px rgba(0,0,0,0.08)' }}>
                 <img src={`https://flagcdn.com/w320/${currentCountry?.code}.png`} alt={currentCountry?.en} style={S.flagImg} draggable={false} />
                 <div style={{ padding: '10px 12px 12px' }}>
-                  <div style={{ fontSize: '13px', fontWeight: '800', color: '#0B1F3B' }}>{currentCountry ? (locale === 'fr' ? currentCountry.fr : currentCountry.en) : ''}</div>
+                  <div style={{ fontSize: '13px', fontWeight: '800', color: '#16324F' }}>{currentCountry ? (locale === 'fr' ? currentCountry.fr : currentCountry.en) : ''}</div>
                 </div>
               </div>
               {Object.keys(placements).length > 0 && (
@@ -624,10 +633,10 @@ export default function FlagRanker() {
                   <div style={S.panelLabel}>{t('Placed', 'Placés')}</div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                     {Object.entries(placements).map(([slot, { country, attr }]) => (
-                      <div key={slot} style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '5px 8px', backgroundColor: 'white', borderRadius: '7px', border: '1px solid #e2e8f0' }}>
-                        <span style={{ fontSize: '10px', fontWeight: '900', color: '#0B1F3B', minWidth: '14px' }}>#{+slot+1}</span>
+                      <div key={slot} style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '5px 8px', backgroundColor: 'white', borderRadius: '7px', border: '1px solid #E2DDD5' }}>
+                        <span style={{ fontSize: '10px', fontWeight: '900', color: '#16324F', minWidth: '14px' }}>#{+slot+1}</span>
                         <img src={`https://flagcdn.com/w40/${country.code}.png`} style={{ height: '13px', borderRadius: '2px' }} alt="" />
-                        <span style={{ fontSize: '10px', color: '#475569', flex: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{locale === 'fr' ? country.fr : country.en}</span>
+                        <span style={{ fontSize: '10px', color: '#6B7280', flex: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{locale === 'fr' ? country.fr : country.en}</span>
                         <span style={{ fontSize: '11px' }}>{attr.icon}</span>
                       </div>
                     ))}
@@ -650,10 +659,10 @@ export default function FlagRanker() {
                       onDragLeave={() => setDragOver(null)}
                       onDrop={e => { e.preventDefault(); setDragOver(null); if (!taken) handleSlotDrop(slotIdx) }}
                       style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '10px 12px', borderRadius: '12px', minHeight: '58px',
-                        border: `2px solid ${taken ? '#0B1F3B' : isOver ? '#9EB7E5' : '#e2e8f0'}`,
-                        backgroundColor: taken ? '#0B1F3B' : isOver ? '#EFF6FF' : 'white',
+                        border: `2px solid ${taken ? '#16324F' : isOver ? '#9EB7E5' : '#E2DDD5'}`,
+                        backgroundColor: taken ? '#16324F' : isOver ? '#EFF6FF' : 'white',
                         transform: isOver && !taken ? 'scale(1.01)' : 'scale(1)', transition: 'all 0.12s' }}>
-                      <div style={{ width: '30px', height: '30px', borderRadius: '7px', backgroundColor: taken ? 'rgba(255,255,255,0.15)' : isOver ? '#BFDBFE' : '#f1f5f9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '11px', fontWeight: '900', color: taken ? 'white' : '#0B1F3B', flexShrink: 0 }}>#{slotIdx+1}</div>
+                      <div style={{ width: '30px', height: '30px', borderRadius: '7px', backgroundColor: taken ? 'rgba(255,255,255,0.15)' : isOver ? '#BFDBFE' : '#f1f5f9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '11px', fontWeight: '900', color: taken ? 'white' : '#16324F', flexShrink: 0 }}>#{slotIdx+1}</div>
                       {taken ? (
                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1 }}>
                           <img src={`https://flagcdn.com/w80/${placed.country.code}.png`} style={{ height: '26px', borderRadius: '3px', objectFit: 'cover' }} alt="" />
@@ -666,8 +675,8 @@ export default function FlagRanker() {
                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1 }}>
                           <span style={{ fontSize: '17px' }}>{attr.icon}</span>
                           <div>
-                            <div style={{ fontSize: '12px', fontWeight: '700', color: '#0B1F3B' }}>{locale === 'fr' ? attr.fr : attr.en}</div>
-                            <div style={{ fontSize: '10px', color: isOver ? '#3b82f6' : '#94a3b8', marginTop: '1px' }}>{isOver ? t('Drop here!', 'Dépose ici !') : t('Drag & drop the flag here', 'Glisse-dépose le drapeau ici')}</div>
+                            <div style={{ fontSize: '12px', fontWeight: '700', color: '#16324F' }}>{locale === 'fr' ? attr.fr : attr.en}</div>
+                            <div style={{ fontSize: '10px', color: isOver ? '#3b82f6' : '#9CA3AF', marginTop: '1px' }}>{isOver ? t('Drop here!', 'Dépose ici !') : t('Drag & drop the flag here', 'Glisse-dépose le drapeau ici')}</div>
                           </div>
                         </div>
                       )}
@@ -684,20 +693,20 @@ export default function FlagRanker() {
       {showQuitConfirm && (
         <div style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.6)', zIndex: 100, display: 'flex', alignItems: 'flex-end' }}>
           <div style={{ width: '100%', backgroundColor: 'white', borderRadius: '20px 20px 0 0', padding: '24px 20px', paddingBottom: 'max(24px, env(safe-area-inset-bottom))' }}>
-            <div style={{ width: '36px', height: '4px', backgroundColor: '#e2e8f0', borderRadius: '99px', margin: '0 auto 20px' }} />
-            <h3 style={{ margin: '0 0 8px', fontSize: '20px', fontWeight: '900', color: '#0B1F3B', textAlign: 'center' }}>
+            <div style={{ width: '36px', height: '4px', backgroundColor: '#E2DDD5', borderRadius: '99px', margin: '0 auto 20px' }} />
+            <h3 style={{ margin: '0 0 8px', fontSize: '20px', fontWeight: '900', color: '#16324F', textAlign: 'center' }}>
               {t('Quit the game?', 'Quitter la partie ?')}
             </h3>
-            <p style={{ margin: '0 0 24px', fontSize: '14px', color: '#64748b', lineHeight: 1.6, textAlign: 'center' }}>
+            <p style={{ margin: '0 0 24px', fontSize: '14px', color: '#6B7280', lineHeight: 1.6, textAlign: 'center' }}>
               {t(`Your score of ${totalScore} pts will be saved.`, `Ton score de ${totalScore} pts sera sauvegardé.`)}
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              <button onClick={() => { setShowQuitConfirm(false); setScreen('end') }}
+              <button onClick={() => { setShowQuitConfirm(false); logScore(totalScore); setScreen('end') }}
                 style={{ width: '100%', padding: '16px', backgroundColor: '#ef4444', color: 'white', border: 'none', borderRadius: '14px', fontSize: '16px', fontWeight: '900', cursor: 'pointer' }}>
                 {t('Quit & save', 'Quitter et sauvegarder')}
               </button>
               <button onClick={() => setShowQuitConfirm(false)}
-                style={{ width: '100%', padding: '13px', backgroundColor: 'transparent', color: '#0B1F3B', border: '1.5px solid #e2e8f0', borderRadius: '14px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
+                style={{ width: '100%', padding: '13px', backgroundColor: 'transparent', color: '#16324F', border: '1.5px solid #E2DDD5', borderRadius: '14px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
                 {t('Keep playing', 'Continuer à jouer')}
               </button>
             </div>
@@ -709,19 +718,19 @@ export default function FlagRanker() {
 }
 
 const S = {
-  page:       { minHeight: '100vh', backgroundColor: '#F4F1E6', fontFamily: 'var(--font-body, system-ui)', paddingTop: '28px', paddingBottom: '48px' },
-  card:       { maxWidth: '480px', margin: '0 auto', backgroundColor: 'white', borderRadius: '20px', border: '1px solid #e2e8f0', padding: '36px 32px', textAlign: 'center', boxShadow: '0 8px 32px rgba(0,0,0,0.07)' },
-  title:      { fontSize: '28px', fontWeight: '900', color: '#0B1F3B', margin: '0 0 8px', letterSpacing: '-1px' },
+  page:       { minHeight: '100dvh', backgroundColor: '#F4F1E6', fontFamily: 'var(--font-body, system-ui)', paddingTop: '28px', paddingBottom: '48px' },
+  card:       { maxWidth: '480px', margin: '0 auto', backgroundColor: 'white', borderRadius: '20px', border: '1px solid #E2DDD5', padding: '36px 32px', textAlign: 'center', boxShadow: '0 8px 32px rgba(0,0,0,0.07)' },
+  title:      { fontSize: '28px', fontWeight: '900', color: '#16324F', margin: '0 0 8px', letterSpacing: '-1px' },
   header:     { display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: '16px', gap: '12px' },
   roundLabel: { fontSize: '11px', fontWeight: '700', color: '#9EB7E5', textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: '3px' },
-  pageTitle:  { fontSize: '22px', fontWeight: '900', color: '#0B1F3B', margin: 0, letterSpacing: '-0.5px' },
-  scorePill:  { backgroundColor: '#0B1F3B', borderRadius: '12px', padding: '10px 14px', textAlign: 'center', flexShrink: 0 },
-  panelLabel: { fontSize: '10px', fontWeight: '800', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: '8px' },
-  flagCard:   { backgroundColor: 'white', borderRadius: '12px', border: '1px solid #e2e8f0', overflow: 'hidden', userSelect: 'none' },
-  flagImg:    { width: '100%', aspectRatio: '3/2', objectFit: 'contain', display: 'block', backgroundColor: '#f0ede4', padding: '6px' },
-  resultCard: { backgroundColor: 'white', borderRadius: '12px', border: '1px solid #e2e8f0', borderLeft: '4px solid', padding: '12px 14px', display: 'flex', alignItems: 'center', gap: '12px' },
+  pageTitle:  { fontSize: '22px', fontWeight: '900', color: '#16324F', margin: 0, letterSpacing: '-0.5px' },
+  scorePill:  { backgroundColor: '#16324F', borderRadius: '12px', padding: '10px 14px', textAlign: 'center', flexShrink: 0 },
+  panelLabel: { fontSize: '10px', fontWeight: '800', color: '#9CA3AF', textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: '8px' },
+  flagCard:   { backgroundColor: 'white', borderRadius: '12px', border: '1px solid #E2DDD5', overflow: 'hidden', userSelect: 'none' },
+  flagImg:    { width: '100%', aspectRatio: '3/2', objectFit: 'contain', display: 'block', backgroundColor: '#F4F1E6', padding: '6px' },
+  resultCard: { backgroundColor: 'white', borderRadius: '12px', border: '1px solid #E2DDD5', borderLeft: '4px solid', padding: '12px 14px', display: 'flex', alignItems: 'center', gap: '12px' },
   resultFlag: { height: '30px', borderRadius: '3px', objectFit: 'cover', flexShrink: 0 },
   ptsBadge:   { borderRadius: '7px', padding: '5px 10px', fontSize: '13px', fontWeight: '900', color: 'white', flexShrink: 0 },
-  btn:        { backgroundColor: '#0B1F3B', color: 'white', border: 'none', borderRadius: '12px', padding: '13px 28px', fontSize: '15px', fontWeight: '800', cursor: 'pointer', letterSpacing: '-0.3px' },
-  btnSec:     { backgroundColor: 'white', color: '#0B1F3B', border: '2px solid #0B1F3B', borderRadius: '12px', padding: '11px 22px', fontSize: '14px', fontWeight: '800', cursor: 'pointer' },
+  btn:        { backgroundColor: '#16324F', color: 'white', border: 'none', borderRadius: '12px', padding: '13px 28px', fontSize: '15px', fontWeight: '800', cursor: 'pointer', letterSpacing: '-0.3px' },
+  btnSec:     { backgroundColor: 'white', color: '#16324F', border: '2px solid #16324F', borderRadius: '12px', padding: '11px 22px', fontSize: '14px', fontWeight: '800', cursor: 'pointer' },
 }

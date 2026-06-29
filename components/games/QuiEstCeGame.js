@@ -165,18 +165,18 @@ export default function QuiEstCeGame() {
 
   if (loading) return (
     <div style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#F4F1E6' }}>
-      <p style={{ color: '#0B1F3B', fontWeight: '700' }}>{t('Loading…', 'Chargement…')}</p>
+      <p style={{ color: '#16324F', fontWeight: '700' }}>{t('Loading…', 'Chargement…')}</p>
     </div>
   )
 
   if (phase === 'intro') return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#F4F1E6', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px' }}>
+    <div style={{ minHeight: '100dvh', backgroundColor: '#F4F1E6', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', paddingTop: 'max(24px, env(safe-area-inset-top))', paddingBottom: 'max(24px, env(safe-area-inset-bottom))' }}>
       <div style={{ maxWidth: '480px', width: '100%', textAlign: 'center' }}>
         <div style={{ fontSize: '64px', marginBottom: '16px' }}>🕵️</div>
-        <h1 style={{ fontSize: '32px', fontWeight: '900', color: '#0B1F3B', margin: '0 0 12px' }}>
+        <h1 style={{ fontSize: '32px', fontWeight: '900', color: '#16324F', margin: '0 0 12px' }}>
           {t('Qui est-ce?', 'Qui est-ce ?')}
         </h1>
-        <p style={{ fontSize: '16px', color: '#64748b', margin: '0 0 32px', lineHeight: 1.6 }}>
+        <p style={{ fontSize: '16px', color: '#6B7280', margin: '0 0 32px', lineHeight: 1.6 }}>
           {t(
             'A secret country is chosen. Ask yes/no questions to narrow it down, then guess!',
             'Un pays secret est choisi. Posez des questions oui/non pour le trouver, puis devinez !'
@@ -185,18 +185,18 @@ export default function QuiEstCeGame() {
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '20px', marginBottom: '32px', textAlign: 'left' }}>
           <div style={{ display: 'flex', gap: '12px', marginBottom: '12px' }}>
             <span style={{ fontSize: '20px' }}>❓</span>
-            <span style={{ fontSize: '14px', color: '#475569' }}>{t(`Up to ${maxQuestions} questions`, `Jusqu'à ${maxQuestions} questions`)}</span>
+            <span style={{ fontSize: '14px', color: '#6B7280' }}>{t(`Up to ${maxQuestions} questions`, `Jusqu'à ${maxQuestions} questions`)}</span>
           </div>
           <div style={{ display: 'flex', gap: '12px', marginBottom: '12px' }}>
             <span style={{ fontSize: '20px' }}>🌍</span>
-            <span style={{ fontSize: '14px', color: '#475569' }}>{t(`${allCountries.length} possible countries`, `${allCountries.length} pays possibles`)}</span>
+            <span style={{ fontSize: '14px', color: '#6B7280' }}>{t(`${allCountries.length} possible countries`, `${allCountries.length} pays possibles`)}</span>
           </div>
           <div style={{ display: 'flex', gap: '12px' }}>
             <span style={{ fontSize: '20px' }}>🤖</span>
-            <span style={{ fontSize: '14px', color: '#475569' }}>{t('Smart questions narrow down options', 'Les questions intelligentes réduisent les options')}</span>
+            <span style={{ fontSize: '14px', color: '#6B7280' }}>{t('Smart questions narrow down options', 'Les questions intelligentes réduisent les options')}</span>
           </div>
         </div>
-        <button onClick={startGame} style={{ width: '100%', padding: '16px', backgroundColor: '#0B1F3B', color: 'white', border: 'none', borderRadius: '12px', fontSize: '18px', fontWeight: '800', cursor: 'pointer' }}>
+        <button onClick={startGame} style={{ width: '100%', padding: '16px', backgroundColor: '#16324F', color: 'white', border: 'none', borderRadius: '12px', fontSize: '18px', fontWeight: '800', cursor: 'pointer' }}>
           {t('Start', 'Commencer')}
         </button>
       </div>
@@ -204,12 +204,12 @@ export default function QuiEstCeGame() {
   )
 
   if (phase === 'result') return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#F4F1E6', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px' }}>
+    <div style={{ minHeight: '100dvh', backgroundColor: '#F4F1E6', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', paddingTop: 'max(24px, env(safe-area-inset-top))', paddingBottom: 'max(24px, env(safe-area-inset-bottom))' }}>
       <div style={{ maxWidth: '480px', width: '100%', textAlign: 'center' }}>
         <div style={{ fontSize: '64px', marginBottom: '16px' }}>
           {result?.isCorrect ? '🎉' : '😔'}
         </div>
-        <h1 style={{ fontSize: '28px', fontWeight: '900', color: '#0B1F3B', margin: '0 0 16px' }}>
+        <h1 style={{ fontSize: '28px', fontWeight: '900', color: '#16324F', margin: '0 0 16px' }}>
           {result?.isCorrect ? t('Correct!', 'Correct !') : t('Not quite…', 'Pas tout à fait…')}
         </h1>
         {result?.target && (
@@ -219,20 +219,20 @@ export default function QuiEstCeGame() {
               alt={result.target.name_en}
               style={{ maxWidth: '200px', borderRadius: '8px', boxShadow: '0 4px 16px rgba(0,0,0,0.1)', marginBottom: '16px' }}
             />
-            <p style={{ fontSize: '22px', fontWeight: '900', color: '#0B1F3B', margin: 0 }}>
+            <p style={{ fontSize: '22px', fontWeight: '900', color: '#16324F', margin: 0 }}>
               {locale === 'fr' ? result.target.name_fr : result.target.name_en}
             </p>
-            <p style={{ fontSize: '14px', color: '#64748b', margin: '4px 0 0' }}>
+            <p style={{ fontSize: '14px', color: '#6B7280', margin: '4px 0 0' }}>
               {t(`Found in ${history.length} questions`, `Trouvé en ${history.length} questions`)}
               {' · '}{remaining.length} {t('countries left', 'pays restants')}
             </p>
           </div>
         )}
         <div style={{ display: 'flex', gap: '12px' }}>
-          <button onClick={startGame} style={{ flex: 1, padding: '14px', backgroundColor: '#0B1F3B', color: 'white', border: 'none', borderRadius: '12px', fontSize: '16px', fontWeight: '800', cursor: 'pointer' }}>
+          <button onClick={startGame} style={{ flex: 1, padding: '14px', backgroundColor: '#16324F', color: 'white', border: 'none', borderRadius: '12px', fontSize: '16px', fontWeight: '800', cursor: 'pointer' }}>
             {t('Play again', 'Rejouer')}
           </button>
-          <Link href={`/${locale}/games`} style={{ flex: 1, padding: '14px', backgroundColor: 'white', color: '#0B1F3B', border: '2px solid #0B1F3B', borderRadius: '12px', fontSize: '16px', fontWeight: '800', textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <Link href={`/${locale}/games`} style={{ flex: 1, padding: '14px', backgroundColor: 'white', color: '#16324F', border: '2px solid #16324F', borderRadius: '12px', fontSize: '16px', fontWeight: '800', textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             {t('Games', 'Jeux')}
           </Link>
         </div>
@@ -241,8 +241,8 @@ export default function QuiEstCeGame() {
   )
 
   return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#F4F1E6', display: 'flex', flexDirection: 'column' }}>
-      <div style={{ backgroundColor: '#0B1F3B', padding: '12px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+    <div style={{ minHeight: '100dvh', backgroundColor: '#F4F1E6', display: 'flex', flexDirection: 'column' }}>
+      <div style={{ backgroundColor: '#16324F', padding: '12px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <Link href={`/${locale}/games`} style={{ color: 'rgba(255,255,255,0.6)', fontSize: '14px', textDecoration: 'none' }}>← {t('Games', 'Jeux')}</Link>
         <span style={{ color: 'white', fontWeight: '900', fontSize: '16px' }}>🕵️ {t('Qui est-ce?', 'Qui est-ce ?')}</span>
         <span style={{ color: '#9EB7E5', fontSize: '13px', fontWeight: '600' }}>{remaining.length} {t('left', 'restants')}</span>
@@ -253,14 +253,14 @@ export default function QuiEstCeGame() {
         {/* Progress */}
         <div style={{ width: '100%', maxWidth: '480px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '6px' }}>
-            <span style={{ fontSize: '12px', color: '#64748b', fontWeight: '600' }}>
+            <span style={{ fontSize: '12px', color: '#6B7280', fontWeight: '600' }}>
               {t(`Question ${history.length + 1}`, `Question ${history.length + 1}`)}
             </span>
-            <span style={{ fontSize: '12px', color: '#64748b', fontWeight: '600' }}>
+            <span style={{ fontSize: '12px', color: '#6B7280', fontWeight: '600' }}>
               {remaining.length} {t('countries remaining', 'pays restants')}
             </span>
           </div>
-          <div style={{ height: '6px', backgroundColor: '#e2e8f0', borderRadius: '99px', overflow: 'hidden' }}>
+          <div style={{ height: '6px', backgroundColor: '#E2DDD5', borderRadius: '99px', overflow: 'hidden' }}>
             <div style={{ height: '100%', backgroundColor: '#4a7fd4', borderRadius: '99px', width: `${((maxQuestions - remaining.length) / maxQuestions) * 100}%`, transition: 'width 0.3s' }} />
           </div>
         </div>
@@ -271,7 +271,7 @@ export default function QuiEstCeGame() {
             {history.slice(-3).map((h, i) => (
               <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '8px 12px', backgroundColor: 'white', borderRadius: '10px', fontSize: '13px', opacity: 0.7 + (i * 0.15) }}>
                 <span>{h.answer === 'yes' ? '✅' : '❌'}</span>
-                <span style={{ flex: 1, color: '#475569' }}>{h.q.text}</span>
+                <span style={{ flex: 1, color: '#6B7280' }}>{h.q.text}</span>
                 <span style={{ fontWeight: '700', color: h.answer === 'yes' ? '#22c55e' : '#ef4444' }}>{h.answer === 'yes' ? t('Yes', 'Oui') : t('No', 'Non')}</span>
               </div>
             ))}
@@ -281,10 +281,10 @@ export default function QuiEstCeGame() {
         {/* Current question or guess mode */}
         {!guessMode && currentQ ? (
           <div style={{ backgroundColor: 'white', borderRadius: '20px', padding: '32px 24px', boxShadow: '0 8px 32px rgba(0,0,0,0.08)', width: '100%', maxWidth: '480px', textAlign: 'center' }}>
-            <p style={{ fontSize: '11px', color: '#94a3b8', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: '700' }}>
+            <p style={{ fontSize: '11px', color: '#9CA3AF', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: '700' }}>
               {t('Question', 'Question')} {history.length + 1}
             </p>
-            <p style={{ fontSize: '20px', fontWeight: '800', color: '#0B1F3B', margin: '0 0 32px', lineHeight: 1.4 }}>
+            <p style={{ fontSize: '20px', fontWeight: '800', color: '#16324F', margin: '0 0 32px', lineHeight: 1.4 }}>
               {currentQ.text}
             </p>
             <div style={{ display: 'flex', gap: '16px' }}>
@@ -295,13 +295,13 @@ export default function QuiEstCeGame() {
                 ❌ {t('No', 'Non')}
               </button>
             </div>
-            <button onClick={skipToGuess} style={{ marginTop: '16px', background: 'none', border: 'none', fontSize: '13px', color: '#94a3b8', cursor: 'pointer', textDecoration: 'underline' }}>
+            <button onClick={skipToGuess} style={{ marginTop: '16px', background: 'none', border: 'none', fontSize: '13px', color: '#9CA3AF', cursor: 'pointer', textDecoration: 'underline' }}>
               {t('I already know → Guess now', 'Je sais déjà → Deviner maintenant')}
             </button>
           </div>
         ) : (
           <div style={{ backgroundColor: 'white', borderRadius: '20px', padding: '32px 24px', boxShadow: '0 8px 32px rgba(0,0,0,0.08)', width: '100%', maxWidth: '480px', textAlign: 'center' }}>
-            <p style={{ fontSize: '20px', fontWeight: '800', color: '#0B1F3B', margin: '0 0 8px' }}>
+            <p style={{ fontSize: '20px', fontWeight: '800', color: '#16324F', margin: '0 0 8px' }}>
               {remaining.length === 1
                 ? t(`Is it ${locale === 'fr' ? remaining[0]?.name_fr : remaining[0]?.name_en}?`, `Est-ce ${locale === 'fr' ? remaining[0]?.name_fr : remaining[0]?.name_en} ?`)
                 : t('What country is it?', 'Quel est ce pays ?')}
@@ -309,7 +309,7 @@ export default function QuiEstCeGame() {
             {remaining.length === 1 && (
               <img src={`https://flagcdn.com/w160/${remaining[0]?.iso_code}.png`} alt="" style={{ maxWidth: '120px', borderRadius: '6px', margin: '12px auto 16px', display: 'block', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }} />
             )}
-            <p style={{ fontSize: '13px', color: '#94a3b8', margin: '0 0 20px' }}>
+            <p style={{ fontSize: '13px', color: '#9CA3AF', margin: '0 0 20px' }}>
               {remaining.length > 1 && `${remaining.length} ${t('possible countries left', 'pays possibles restants')}`}
             </p>
             <input
@@ -318,21 +318,21 @@ export default function QuiEstCeGame() {
               onChange={e => setGuess(e.target.value)}
               onKeyDown={e => e.key === 'Enter' && guess.trim() && handleGuess()}
               placeholder={t('Type country name…', 'Nom du pays…')}
-              style={{ width: '100%', padding: '14px', borderRadius: '10px', border: '2px solid #e2e8f0', fontSize: '16px', outline: 'none', marginBottom: '16px', boxSizing: 'border-box' }}
+              style={{ width: '100%', padding: '14px', borderRadius: '10px', border: '2px solid #E2DDD5', fontSize: '16px', outline: 'none', marginBottom: '16px', boxSizing: 'border-box' }}
               autoFocus
             />
             {remaining.length <= 5 && remaining.length > 1 && (
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '16px', justifyContent: 'center' }}>
                 {remaining.map(c => (
                   <button key={c.iso_code} onClick={() => { setGuess(locale === 'fr' ? c.name_fr : c.name_en) }}
-                    style={{ padding: '6px 12px', borderRadius: '99px', border: '1.5px solid #e2e8f0', backgroundColor: 'white', fontSize: '12px', fontWeight: '600', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    style={{ padding: '6px 12px', borderRadius: '99px', border: '1.5px solid #E2DDD5', backgroundColor: 'white', fontSize: '12px', fontWeight: '600', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px' }}>
                     <img src={`https://flagcdn.com/w20/${c.iso_code}.png`} alt="" style={{ width: '16px', height: '11px', objectFit: 'contain' }} />
                     {locale === 'fr' ? c.name_fr : c.name_en}
                   </button>
                 ))}
               </div>
             )}
-            <button onClick={handleGuess} disabled={!guess.trim()} style={{ width: '100%', padding: '14px', backgroundColor: guess.trim() ? '#0B1F3B' : '#e2e8f0', color: guess.trim() ? 'white' : '#94a3b8', border: 'none', borderRadius: '12px', fontSize: '16px', fontWeight: '800', cursor: guess.trim() ? 'pointer' : 'default' }}>
+            <button onClick={handleGuess} disabled={!guess.trim()} style={{ width: '100%', padding: '14px', backgroundColor: guess.trim() ? '#16324F' : '#E2DDD5', color: guess.trim() ? 'white' : '#9CA3AF', border: 'none', borderRadius: '12px', fontSize: '16px', fontWeight: '800', cursor: guess.trim() ? 'pointer' : 'default' }}>
               {t('Guess!', 'Deviner !')}
             </button>
           </div>

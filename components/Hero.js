@@ -140,7 +140,7 @@ export default function Hero() {
                   transition: 'box-shadow 0.2s ease, transform 0.2s ease',
                   transform: imgHover ? 'translateY(-4px)' : 'translateY(0)',
                 }}>
-                <img src={imageUrl} alt={name} style={{ width: '100%', aspectRatio: '3/2', objectFit: 'cover', display: 'block' }} />
+                <img src={imageUrl} alt={name} style={{ width: '100%', aspectRatio: '3/2', objectFit: 'contain', display: 'block', padding: '14px', boxSizing: 'border-box' }} />
               </div>
             </Link>
 

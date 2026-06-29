@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef, useCallback } from 'react'
+import GameIcon from '@/components/games/GameIcon'
 import { useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-client'
 import PageLoader from '@/components/PageLoader'
@@ -251,15 +252,15 @@ export default function FlagQuiz() {
           <div style={{ width: '100%', maxWidth: '440px', margin: '0 auto' }}>
             <div style={{ textAlign: 'center', marginBottom: '12px' }}>
               <div style={{ fontSize: '40px', marginBottom: '8px' }}>🎯</div>
-              <h1 style={{ margin: '0 0 5px', fontSize: '26px', fontWeight: '900', color: '#0B1F3B', letterSpacing: '-1px' }}>
+              <h1 style={{ margin: '0 0 5px', fontSize: '26px', fontWeight: '900', color: '#16324F', letterSpacing: '-1px' }}>
                 {t('Flag Quiz', 'Quiz Drapeaux')}
               </h1>
-              <p style={{ margin: 0, color: '#64748b', fontSize: '14px' }}>
+              <p style={{ margin: 0, color: '#6B7280', fontSize: '14px' }}>
                 {t('3 lives · infinite questions · beat your streak', '3 vies · questions infinies · bats ton record')}
               </p>
             </div>
-            <div style={{ backgroundColor: 'white', borderRadius: '14px', border: '1px solid #e2e8f0', padding: '14px', marginBottom: '10px' }}>
-              <p style={{ margin: '0 0 8px', fontSize: '11px', fontWeight: '800', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.8px' }}>
+            <div style={{ backgroundColor: 'white', borderRadius: '14px', border: '1px solid #E2DDD5', padding: '14px', marginBottom: '10px' }}>
+              <p style={{ margin: '0 0 8px', fontSize: '11px', fontWeight: '800', color: '#9CA3AF', textTransform: 'uppercase', letterSpacing: '0.8px' }}>
                 {t('Game mode', 'Mode de jeu')}
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
@@ -269,29 +270,29 @@ export default function FlagQuiz() {
                   { key: 'both', icon: '🔀', label: t('Mixed', 'Mixte'), desc: t('Both modes alternating randomly', 'Les deux modes en alternance') },
                 ].map(m => (
                   <button key={m.key} onClick={() => setMode(m.key)}
-                    style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 12px', borderRadius: '10px', border: mode === m.key ? '2px solid #0B1F3B' : '1.5px solid #e2e8f0', backgroundColor: mode === m.key ? '#0B1F3B' : 'white', cursor: 'pointer', textAlign: 'left', transition: 'all 0.15s' }}>
+                    style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 12px', borderRadius: '10px', border: mode === m.key ? '2px solid #16324F' : '1.5px solid #E2DDD5', backgroundColor: mode === m.key ? '#16324F' : 'white', cursor: 'pointer', textAlign: 'left', transition: 'all 0.15s' }}>
                     <span style={{ fontSize: '20px' }}>{m.icon}</span>
                     <div style={{ flex: 1 }}>
-                      <div style={{ fontWeight: '800', fontSize: '14px', color: mode === m.key ? 'white' : '#0B1F3B' }}>{m.label}</div>
-                      <div style={{ fontSize: '12px', color: mode === m.key ? 'rgba(255,255,255,0.6)' : '#94a3b8', marginTop: '1px' }}>{m.desc}</div>
+                      <div style={{ fontWeight: '800', fontSize: '14px', color: mode === m.key ? 'white' : '#16324F' }}>{m.label}</div>
+                      <div style={{ fontSize: '12px', color: mode === m.key ? 'rgba(255,255,255,0.6)' : '#9CA3AF', marginTop: '1px' }}>{m.desc}</div>
                     </div>
                     {mode === m.key && (
                       <svg style={{ flexShrink: 0 }} width="16" height="16" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="8" fill="#9EB7E5"/>
-                        <polyline points="3.5,8 6.5,11 12.5,5" stroke="#0B1F3B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <polyline points="3.5,8 6.5,11 12.5,5" stroke="#16324F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     )}
                   </button>
                 ))}
               </div>
             </div>
-            <div style={{ backgroundColor: 'white', borderRadius: '14px', border: '1px solid #e2e8f0', padding: '14px' }}>
+            <div style={{ backgroundColor: 'white', borderRadius: '14px', border: '1px solid #E2DDD5', padding: '14px' }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                <p style={{ margin: 0, fontSize: '11px', fontWeight: '800', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.8px' }}>
+                <p style={{ margin: 0, fontSize: '11px', fontWeight: '800', color: '#9CA3AF', textTransform: 'uppercase', letterSpacing: '0.8px' }}>
                   {t('Region', 'Région')}
                 </p>
                 {regionFilter.length > 0 && (
-                  <button onClick={() => setRegionFilter([])} style={{ fontSize: '12px', color: '#94a3b8', background: 'none', border: 'none', cursor: 'pointer', padding: 0, fontWeight: '600' }}>
+                  <button onClick={() => setRegionFilter([])} style={{ fontSize: '12px', color: '#9CA3AF', background: 'none', border: 'none', cursor: 'pointer', padding: 0, fontWeight: '600' }}>
                     {t('All', 'Tout')}
                   </button>
                 )}
@@ -301,7 +302,7 @@ export default function FlagQuiz() {
                   const active = regionFilter.includes(r)
                   return (
                     <button key={r} onClick={() => setRegionFilter(prev => active ? prev.filter(x => x !== r) : [...prev, r])}
-                      style={{ padding: '7px 14px', borderRadius: '99px', fontSize: '13px', fontWeight: '700', cursor: 'pointer', border: active ? '2px solid #0B1F3B' : '1.5px solid #e2e8f0', backgroundColor: active ? '#0B1F3B' : '#fafafa', color: active ? 'white' : '#475569', transition: 'all 0.15s' }}>
+                      style={{ padding: '7px 14px', borderRadius: '99px', fontSize: '13px', fontWeight: '700', cursor: 'pointer', border: active ? '2px solid #16324F' : '1.5px solid #E2DDD5', backgroundColor: active ? '#16324F' : '#FAFAF7', color: active ? 'white' : '#6B7280', transition: 'all 0.15s' }}>
                       {t(r, REGION_LABELS[r])}
                     </button>
                   )
@@ -310,9 +311,9 @@ export default function FlagQuiz() {
             </div>
           </div>
         </div>
-        <div style={{ padding: '12px 16px', paddingBottom: 'max(12px, env(safe-area-inset-bottom))', background: '#F4F1E6', borderTop: '1px solid #e2e8f0' }}>
+        <div style={{ padding: '12px 16px', paddingBottom: 'max(12px, env(safe-area-inset-bottom))', background: '#F4F1E6', borderTop: '1px solid #E2DDD5' }}>
           <button onClick={startGame}
-            style={{ width: '100%', padding: '16px', backgroundColor: '#0B1F3B', color: 'white', border: 'none', borderRadius: '14px', fontSize: '16px', fontWeight: '900', cursor: 'pointer', letterSpacing: '-0.3px' }}>
+            style={{ width: '100%', padding: '16px', backgroundColor: '#16324F', color: 'white', border: 'none', borderRadius: '14px', fontSize: '16px', fontWeight: '900', cursor: 'pointer', letterSpacing: '-0.3px' }}>
             {t('Start Quiz', 'Lancer le quiz')}
           </button>
         </div>
@@ -325,7 +326,7 @@ export default function FlagQuiz() {
     const { correct, options, mode: qMode } = question
     const isAnswered = answered !== null
     const timerPct = (timer / TIMER_SECONDS) * 100
-    const timerColor = timer > 6 ? '#4ade80' : timer > 3 ? '#FEB12F' : '#f87171'
+    const timerColor = timer > 6 ? '#4ade80' : timer > 3 ? '#F4B400' : '#f87171'
     const isCorrectAnswer = answered?.selected?.code === correct.code
 
     const renderOptions = () => qMode === 'name' ? (
@@ -355,9 +356,9 @@ export default function FlagQuiz() {
                 display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
                 fontSize: '12px', fontWeight: '900',
                 backgroundColor: isAnswered && isCorrectOpt ? '#4ade80' : isAnswered && isSelected ? '#f87171' : 'rgba(255,255,255,0.12)',
-                color: isAnswered && (isCorrectOpt || isSelected) ? '#0B1F3B' : 'rgba(255,255,255,0.7)',
+                color: isAnswered && (isCorrectOpt || isSelected) ? '#16324F' : 'rgba(255,255,255,0.7)',
               }}>
-                {isAnswered && isCorrectOpt ? '✓' : isAnswered && isSelected ? '✗' : String.fromCharCode(65 + idx)}
+                {isAnswered && isCorrectOpt ? <GameIcon name="check" size={15} color="currentColor" strokeWidth={2.6} /> : isAnswered && isSelected ? <GameIcon name="wrong" size={15} color="currentColor" /> : String.fromCharCode(65 + idx)}
               </span>
               <span style={{ flex: 1, lineHeight: 1.3 }}>{getName(opt)}</span>
             </button>
@@ -389,7 +390,7 @@ export default function FlagQuiz() {
               {isAnswered && overlayBg !== 'transparent' && <div style={{ position: 'absolute', inset: 0, backgroundColor: overlayBg }} />}
               {isAnswered && (isCorrectOpt || isSelected) && (
                 <div style={{ position: 'absolute', top: '8px', right: '8px', width: '26px', height: '26px', borderRadius: '50%', backgroundColor: isCorrectOpt ? '#4ade80' : '#f87171', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <span style={{ color: '#0B1F3B', fontSize: '13px', fontWeight: '900' }}>{isCorrectOpt ? '✓' : '✗'}</span>
+                  <span style={{ color: '#16324F', display: 'inline-flex' }}>{isCorrectOpt ? <GameIcon name="check" size={14} color="#16A34A" strokeWidth={2.6} /> : <GameIcon name="wrong" size={14} color="#D62828" />}</span>
                 </div>
               )}
               {isAnswered && (
@@ -407,7 +408,7 @@ export default function FlagQuiz() {
     if (isMobile) {
       return (
         <div style={{
-          backgroundColor: '#0B1F3B',
+          backgroundColor: '#16324F',
           height: 'calc(100dvh - 60px)',
           fontFamily: 'var(--font-body)',
           display: 'flex', flexDirection: 'column',
@@ -433,8 +434,8 @@ export default function FlagQuiz() {
 
             {/* Streak — only when active */}
             {streak > 0 && (
-              <div style={{ backgroundColor: 'rgba(254,177,47,0.15)', border: '1px solid rgba(254,177,47,0.3)', borderRadius: '20px', padding: '3px 10px', fontSize: '13px', fontWeight: '800', color: '#FEB12F', display: 'flex', alignItems: 'center', gap: '3px' }}>
-                🔥 {streak}
+              <div style={{ backgroundColor: 'rgba(254,177,47,0.15)', border: '1px solid rgba(254,177,47,0.3)', borderRadius: '20px', padding: '3px 10px', fontSize: '13px', fontWeight: '800', color: '#F4B400', display: 'flex', alignItems: 'center', gap: '3px' }}>
+                <GameIcon name="flame" filled size={13} color="#F4B400" /> {streak}
               </div>
             )}
 
@@ -456,8 +457,8 @@ export default function FlagQuiz() {
             </div>
 
             {/* Quit */}
-            <button onClick={() => setShowQuitConfirm(true)} style={{ width: '30px', height: '30px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', fontSize: '14px', color: 'rgba(255,255,255,0.6)' }}>
-              ✕
+            <button onClick={() => setShowQuitConfirm(true)} style={{ width: '30px', height: '30px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', color: 'rgba(255,255,255,0.6)' }}>
+              <GameIcon name="close" size={17} color="rgba(255,255,255,0.7)" />
             </button>
           </div>
 
@@ -551,11 +552,11 @@ export default function FlagQuiz() {
           {showQuitConfirm && (
             <div style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.6)', zIndex: 100, display: 'flex', alignItems: 'flex-end' }}>
               <div style={{ width: '100%', backgroundColor: 'white', borderRadius: '20px 20px 0 0', padding: '24px 20px', paddingBottom: 'max(24px, env(safe-area-inset-bottom))' }}>
-                <div style={{ width: '36px', height: '4px', backgroundColor: '#e2e8f0', borderRadius: '99px', margin: '0 auto 20px' }} />
-                <h3 style={{ margin: '0 0 8px', fontSize: '20px', fontWeight: '900', color: '#0B1F3B', textAlign: 'center' }}>
+                <div style={{ width: '36px', height: '4px', backgroundColor: '#E2DDD5', borderRadius: '99px', margin: '0 auto 20px' }} />
+                <h3 style={{ margin: '0 0 8px', fontSize: '20px', fontWeight: '900', color: '#16324F', textAlign: 'center' }}>
                   {t('Quit the game?', 'Quitter la partie ?')}
                 </h3>
-                <p style={{ margin: '0 0 24px', fontSize: '14px', color: '#64748b', lineHeight: 1.6, textAlign: 'center' }}>
+                <p style={{ margin: '0 0 24px', fontSize: '14px', color: '#6B7280', lineHeight: 1.6, textAlign: 'center' }}>
                   {t(`Your score of ${score.toLocaleString()} pts will be saved.`, `Ton score de ${score.toLocaleString()} pts sera sauvegardé.`)}
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
@@ -564,7 +565,7 @@ export default function FlagQuiz() {
                     {t('Quit & save', 'Quitter et sauvegarder')}
                   </button>
                   <button onClick={() => setShowQuitConfirm(false)}
-                    style={{ width: '100%', padding: '13px', backgroundColor: 'transparent', color: '#0B1F3B', border: '1.5px solid #e2e8f0', borderRadius: '14px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
+                    style={{ width: '100%', padding: '13px', backgroundColor: 'transparent', color: '#16324F', border: '1.5px solid #E2DDD5', borderRadius: '14px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
                     {t('Keep playing', 'Continuer à jouer')}
                   </button>
                 </div>
@@ -593,12 +594,12 @@ export default function FlagQuiz() {
           <div style={{ fontSize: '18px', fontWeight: '900', color: timerColor, fontVariantNumeric: 'tabular-nums', lineHeight: 1 }}>{timer}s</div>
         </div>
         <div style={{ backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '12px', padding: '8px 14px', textAlign: 'center' }}>
-          <div style={{ fontSize: '10px', fontWeight: '700', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.07em' }}>⏱</div>
+          <div style={{ display: 'flex', justifyContent: 'center', color: 'rgba(255,255,255,0.5)' }}><GameIcon name="clock" size={12} color="rgba(255,255,255,0.5)" /></div>
           <div style={{ fontSize: '16px', fontWeight: '900', color: 'white', fontVariantNumeric: 'tabular-nums', lineHeight: 1 }}>{formatTime(elapsed)}</div>
         </div>
         <div style={{ backgroundColor: streak > 0 ? 'rgba(254,177,47,0.15)' : 'rgba(255,255,255,0.08)', borderRadius: '12px', padding: '8px 14px', textAlign: 'center', border: streak > 0 ? '1px solid rgba(254,177,47,0.3)' : 'none' }}>
           <div style={{ fontSize: '10px', fontWeight: '700', color: streak > 0 ? 'rgba(254,177,47,0.7)' : 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.07em' }}>Streak</div>
-          <div style={{ fontSize: '18px', fontWeight: '900', color: streak > 0 ? '#FEB12F' : 'rgba(255,255,255,0.3)', lineHeight: 1 }}>🔥 {streak}</div>
+          <div style={{ fontSize: '18px', fontWeight: '900', color: streak > 0 ? '#F4B400' : 'rgba(255,255,255,0.3)', lineHeight: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '4px' }}><GameIcon name="flame" filled size={15} />{streak}</div>
         </div>
         <div style={{ position: 'relative', backgroundColor: 'rgba(74,222,128,0.12)', borderRadius: '12px', padding: '8px 14px', textAlign: 'center', border: '1px solid rgba(74,222,128,0.25)' }}>
           <div style={{ fontSize: '10px', fontWeight: '700', color: 'rgba(74,222,128,0.7)', textTransform: 'uppercase', letterSpacing: '0.07em' }}>Score</div>
@@ -611,8 +612,8 @@ export default function FlagQuiz() {
         </div>
         <div style={{ position: 'relative' }}>
           <button onClick={() => setShowQuitConfirm(true)} onMouseEnter={() => setShowQuitTip(true)} onMouseLeave={() => setShowQuitTip(false)}
-            style={{ padding: '8px 12px', backgroundColor: 'transparent', color: '#ef4444', border: '1.5px solid rgba(239,68,68,0.4)', borderRadius: '10px', fontSize: '13px', fontWeight: '600', cursor: 'pointer', whiteSpace: 'nowrap' }}>
-            🚪
+            style={{ padding: '8px 12px', backgroundColor: 'transparent', color: '#ef4444', border: '1.5px solid rgba(239,68,68,0.4)', borderRadius: '10px', fontSize: '13px', fontWeight: '600', cursor: 'pointer', whiteSpace: 'nowrap', display: 'flex', alignItems: 'center' }}>
+            <GameIcon name="close" size={16} color="#ef4444" />
           </button>
           {showQuitTip && (
             <div style={{ position: 'absolute', top: '110%', right: 0, backgroundColor: '#1e293b', color: 'white', fontSize: '12px', padding: '8px 12px', borderRadius: '8px', whiteSpace: 'nowrap', zIndex: 50, pointerEvents: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.2)' }}>
@@ -634,11 +635,11 @@ export default function FlagQuiz() {
       <div style={{ marginBottom: '12px' }}>
         <div style={{ padding: '10px 14px', borderRadius: '10px', backgroundColor: isCorrectAnswer ? 'rgba(74,222,128,0.15)' : 'rgba(248,113,113,0.15)', border: `1px solid ${isCorrectAnswer ? '#4ade80' : '#f87171'}`, textAlign: 'center' }}>
           {answered.selected === null ? (
-            <span style={{ fontWeight: '800', fontSize: '13px', color: '#f87171' }}>⏱ {t("Time's up!", 'Temps écoulé !')} — {getName(correct)}</span>
+            <span style={{ fontWeight: '800', fontSize: '13px', color: '#f87171', display: 'inline-flex', alignItems: 'center', gap: '5px' }}><GameIcon name="clock" size={14} color="#f87171" />{t("Time's up!", 'Temps écoulé !')} — {getName(correct)}</span>
           ) : isCorrectAnswer ? (
-            <span style={{ fontWeight: '800', fontSize: '13px', color: '#4ade80' }}>✓ {t('Correct!', 'Correct !')} {streak > 1 ? `🔥 ×${streak}` : ''}</span>
+            <span style={{ fontWeight: '800', fontSize: '13px', color: '#4ade80', display: 'inline-flex', alignItems: 'center', gap: '5px' }}><GameIcon name="check" size={14} color="#4ade80" strokeWidth={2.6} />{t('Correct!', 'Correct !')} {streak > 1 ? `×${streak}` : ''}</span>
           ) : (
-            <span style={{ fontWeight: '800', fontSize: '13px', color: '#f87171' }}>✗ {t('It was', "C'était")} {getName(correct)}</span>
+            <span style={{ fontWeight: '800', fontSize: '13px', color: '#f87171', display: 'inline-flex', alignItems: 'center', gap: '5px' }}><GameIcon name="wrong" size={14} color="#f87171" />{t('It was', "C'était")} {getName(correct)}</span>
           )}
         </div>
       </div>
@@ -651,7 +652,7 @@ export default function FlagQuiz() {
     )
 
     return (
-      <div style={{ backgroundColor: '#0B1F3B', minHeight: 'calc(100dvh - 60px)', fontFamily: 'var(--font-body)', padding: '24px 24px 40px' }}>
+      <div style={{ backgroundColor: '#16324F', minHeight: 'calc(100dvh - 60px)', fontFamily: 'var(--font-body)', padding: '24px 24px 40px' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
             <h1 style={{ fontSize: '28px', fontWeight: '900', color: 'white', margin: 0, letterSpacing: '-1px' }}>❓ {t('Flag Quiz', 'Quiz Drapeaux')}</h1>
@@ -682,14 +683,14 @@ export default function FlagQuiz() {
             <div style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(11,31,59,0.7)', backdropFilter: 'blur(4px)', zIndex: 100, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px' }}>
               <div style={{ backgroundColor: 'white', borderRadius: '20px', padding: '28px', maxWidth: '380px', width: '100%', textAlign: 'center', boxShadow: '0 24px 60px rgba(0,0,0,0.2)' }}>
                 <div style={{ fontSize: '36px', marginBottom: '12px' }}>🚪</div>
-                <h3 style={{ margin: '0 0 8px', fontSize: '20px', fontWeight: '900', color: '#0B1F3B' }}>
+                <h3 style={{ margin: '0 0 8px', fontSize: '20px', fontWeight: '900', color: '#16324F' }}>
                   {t('Quit the game?', 'Quitter la partie ?')}
                 </h3>
-                <p style={{ margin: '0 0 24px', fontSize: '14px', color: '#64748b', lineHeight: 1.6 }}>
+                <p style={{ margin: '0 0 24px', fontSize: '14px', color: '#6B7280', lineHeight: 1.6 }}>
                   {t(`Your score of ${score.toLocaleString()} pts will be saved.`, `Ton score de ${score.toLocaleString()} pts sera sauvegardé.`)}
                 </p>
                 <div style={{ display: 'flex', gap: '10px' }}>
-                  <button onClick={() => setShowQuitConfirm(false)} style={{ flex: 1, padding: '12px', backgroundColor: '#F4F1E6', color: '#0B1F3B', border: '1px solid #e2e8f0', borderRadius: '12px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
+                  <button onClick={() => setShowQuitConfirm(false)} style={{ flex: 1, padding: '12px', backgroundColor: '#F4F1E6', color: '#16324F', border: '1px solid #E2DDD5', borderRadius: '12px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
                     {t('Keep playing', 'Continuer')}
                   </button>
                   <button onClick={() => { setShowQuitConfirm(false); quitGame() }} style={{ flex: 1, padding: '12px', backgroundColor: '#ef4444', color: 'white', border: 'none', borderRadius: '12px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
@@ -726,10 +727,10 @@ export default function FlagQuiz() {
 
             {/* Header */}
             <div style={{ textAlign: 'center', marginBottom: '16px' }}>
-              <h2 style={{ margin: '0 0 2px', fontSize: '22px', fontWeight: '900', color: '#0B1F3B', letterSpacing: '-0.5px' }}>
+              <h2 style={{ margin: '0 0 2px', fontSize: '22px', fontWeight: '900', color: '#16324F', letterSpacing: '-0.5px' }}>
                 {t('Game Over', 'Partie terminée')}
               </h2>
-              <p style={{ margin: 0, color: '#94a3b8', fontSize: '13px' }}>
+              <p style={{ margin: 0, color: '#9CA3AF', fontSize: '13px' }}>
                 {total} {t('questions', 'questions')}
               </p>
             </div>
@@ -739,12 +740,12 @@ export default function FlagQuiz() {
               {[
                 { label: t('Correct', 'Corrects'),            value: correct,                           color: '#426A5A', bg: '#f0fdf4', border: '#bbf7d0' },
                 { label: t('Best streak', 'Meilleure série'), value: `🔥 ${bestStreak}`,                color: '#806D40', bg: '#fefce8', border: '#fde68a' },
-                { label: t('Score', 'Score'),                 value: `${pct}%`,                         color: '#0B1F3B', bg: 'white',   border: '#e2e8f0' },
+                { label: t('Score', 'Score'),                 value: `${pct}%`,                         color: '#16324F', bg: 'white',   border: '#E2DDD5' },
                 { label: t('Total Points', 'Points totaux'),  value: `⭐ ${bestScore.toLocaleString()}`, color: '#166534', bg: '#f0fdf4', border: '#bbf7d0' },
               ].map((s, i) => (
                 <div key={i} style={{ backgroundColor: s.bg, borderRadius: '14px', border: `1px solid ${s.border}`, padding: '14px 12px', textAlign: 'center' }}>
                   <div style={{ fontSize: '20px', fontWeight: '900', color: s.color, letterSpacing: '-0.5px' }}>{s.value}</div>
-                  <div style={{ fontSize: '10px', fontWeight: '700', color: '#94a3b8', marginTop: '4px', textTransform: 'uppercase', letterSpacing: '0.6px' }}>{s.label}</div>
+                  <div style={{ fontSize: '10px', fontWeight: '700', color: '#9CA3AF', marginTop: '4px', textTransform: 'uppercase', letterSpacing: '0.6px' }}>{s.label}</div>
                 </div>
               ))}
             </div>
@@ -755,20 +756,20 @@ export default function FlagQuiz() {
         {/* ── Scrollable: missed answers only ── */}
         {wrong.length > 0 && (
           <div style={{ flex: 1, minHeight: 0, padding: '0 16px', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
-            <div style={{ maxWidth: '520px', margin: '0 auto', width: '100%', flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', backgroundColor: 'white', borderRadius: '14px', border: '1px solid #e2e8f0', overflow: 'hidden' }}>
+            <div style={{ maxWidth: '520px', margin: '0 auto', width: '100%', flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', backgroundColor: 'white', borderRadius: '14px', border: '1px solid #E2DDD5', overflow: 'hidden' }}>
               <div style={{ padding: '12px 16px 8px', borderBottom: '1px solid #f1f5f9', flexShrink: 0 }}>
-                <p style={{ margin: 0, fontSize: '11px', fontWeight: '800', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.8px' }}>
+                <p style={{ margin: 0, fontSize: '11px', fontWeight: '800', color: '#9CA3AF', textTransform: 'uppercase', letterSpacing: '0.8px' }}>
                   {t('Missed', 'Manqués')} ({wrong.length})
                 </p>
               </div>
               <div style={{ flex: 1, overflowY: 'auto', padding: '8px 12px' }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                   {wrong.map((h, i) => (
-                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '10px 8px', borderRadius: '10px', backgroundColor: i % 2 === 0 ? '#fafafa' : 'white' }}>
+                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '10px 8px', borderRadius: '10px', backgroundColor: i % 2 === 0 ? '#FAFAF7' : 'white' }}>
                       <img src={`https://flagcdn.com/w80/${h.question.correct.code}.png`} alt=""
-                        style={{ width: '40px', height: '27px', objectFit: 'contain', borderRadius: '4px', backgroundColor: '#e8e4d9', flexShrink: 0, padding: '2px', border: '1px solid #e2e8f0' }} />
+                        style={{ width: '40px', height: '27px', objectFit: 'contain', borderRadius: '4px', backgroundColor: '#e8e4d9', flexShrink: 0, padding: '2px', border: '1px solid #E2DDD5' }} />
                       <div style={{ flex: 1, minWidth: 0 }}>
-                        <div style={{ fontSize: '13px', fontWeight: '700', color: '#0B1F3B', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                        <div style={{ fontSize: '13px', fontWeight: '700', color: '#16324F', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                           {getName(h.question.correct)}
                         </div>
                         <div style={{ fontSize: '11px', color: h.selected ? '#dc2626' : '#f59e0b', marginTop: '1px' }}>
@@ -786,11 +787,11 @@ export default function FlagQuiz() {
         )}
 
         {/* ── Sticky buttons ── */}
-        <div style={{ flexShrink: 0, padding: '12px 16px', paddingBottom: 'max(12px, env(safe-area-inset-bottom))', background: '#F4F1E6', borderTop: '1px solid #e2e8f0', display: 'flex', flexDirection: 'column', gap: '8px' }}>
-          <button onClick={startGame} style={{ width: '100%', padding: '16px', backgroundColor: '#0B1F3B', color: 'white', border: 'none', borderRadius: '14px', fontSize: '16px', fontWeight: '900', cursor: 'pointer', letterSpacing: '-0.3px' }}>
+        <div style={{ flexShrink: 0, padding: '12px 16px', paddingBottom: 'max(12px, env(safe-area-inset-bottom))', background: '#F4F1E6', borderTop: '1px solid #E2DDD5', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <button onClick={startGame} style={{ width: '100%', padding: '16px', backgroundColor: '#16324F', color: 'white', border: 'none', borderRadius: '14px', fontSize: '16px', fontWeight: '900', cursor: 'pointer', letterSpacing: '-0.3px' }}>
             {t('Play Again', 'Rejouer')}
           </button>
-          <button onClick={() => setScreen(SCREEN.SETUP)} style={{ width: '100%', padding: '13px', backgroundColor: 'transparent', color: '#0B1F3B', border: '1.5px solid #cbd5e1', borderRadius: '14px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
+          <button onClick={() => setScreen(SCREEN.SETUP)} style={{ width: '100%', padding: '13px', backgroundColor: 'transparent', color: '#16324F', border: '1.5px solid #cbd5e1', borderRadius: '14px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
             {t('Change settings', 'Modifier les réglages')}
           </button>
         </div>

@@ -6,9 +6,15 @@ import { useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-client'
 import FlagImage from '@/components/FlagImage'
 import Footer from '@/components/Footer'
+import PageLoader from '@/components/PageLoader'
 
 const CONTINENTS = ['Europe', 'North America', 'South America', 'Asia', 'Africa', 'Oceania']
 const CONTINENT_FR = { Europe: 'Europe', 'North America': 'Amerique du Nord', 'South America': 'Amerique du Sud', Asia: 'Asie', Africa: 'Afrique', Oceania: 'Oceanie' }
+
+const DS = {
+  navy: '#16324F', bg: '#F4F1E6', bgAlt: '#FAFAF7', surface: '#FFFFFF',
+  border: '#E2DDD5', muted: '#6B7280', light: '#9CA3AF',
+}
 
 const COLOR_OPTIONS = [
   { key: 'red',    label: { en: 'Red',    fr: 'Rouge'  }, hex: '#ef4444' },
@@ -106,6 +112,7 @@ export default function CitiesPage() {
   const [openSections, setOpenSections] = useState({ continent: false, country: false, region: false, colors: false, symbols: false, ratio: false, shape: false })
 
   const [search, setSearch]                   = useState('')
+  const [sortOrder, setSortOrder]             = useState('az')
   const [activeCountry, setActiveCountry]     = useState('all')
   const [activeContinent, setActiveContinent] = useState('all')
   const [activeRegion, setActiveRegion]       = useState('all')
@@ -176,8 +183,13 @@ export default function CitiesPage() {
     if (activeSymbols.length > 0) list = list.filter(f => activeSymbols.every(s => ((f.metadata && f.metadata.symbols) || []).includes(s)))
     if (activeRatios.length > 0) list = list.filter(f => activeRatios.includes(f.metadata && f.metadata.ratio))
     if (activeShapes.length > 0) list = list.filter(f => activeShapes.includes(f.metadata && f.metadata.shape))
+    list.sort((a, b) => {
+      const na = (locale === 'fr' ? a.name_fr : a.name_en) || ''
+      const nb = (locale === 'fr' ? b.name_fr : b.name_en) || ''
+      return sortOrder === 'az' ? na.localeCompare(nb) : nb.localeCompare(na)
+    })
     return list
-  }, [flags, search, activeContinent, activeCountry, activeRegion, activeColors, activeSymbols, activeRatios, activeShapes, locale])
+  }, [flags, search, activeContinent, activeCountry, activeRegion, activeColors, activeSymbols, activeRatios, activeShapes, sortOrder, locale])
 
   const hasFilters = !!(search || activeContinent !== 'all' || activeCountry !== 'all' || activeRegion !== 'all' || activeColors.length || activeSymbols.length || activeRatios.length || activeShapes.length)
 
@@ -191,172 +203,267 @@ export default function CitiesPage() {
     setActiveColors([]); setActiveSymbols([]); setActiveRatios([]); setActiveShapes([])
   }
 
+  // ── Chip + filter helpers (aligned with country page) ──────────────────────
+  const chipStyle = (active) => ({
+    padding: '7px 14px', borderRadius: '9999px', fontSize: '13px', fontWeight: '600',
+    cursor: 'pointer', transition: 'all 0.15s', whiteSpace: 'nowrap', lineHeight: 1,
+    border: active ? `2px solid ${DS.navy}` : `1.5px solid ${DS.border}`,
+    backgroundColor: active ? DS.navy : DS.bgAlt,
+    color: active ? 'white' : DS.muted,
+  })
+
+  const FSection = ({ sectionKey, label, children }) => {
+    const isOpen = openSections[sectionKey]
+    return (
+      <div style={{ marginBottom: '4px', borderBottom: `1px solid ${DS.border}` }}>
+        <button onClick={() => toggleSection(sectionKey)}
+          style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 0', background: 'none', border: 'none', cursor: 'pointer' }}>
+          <span style={{ fontSize: '11px', fontWeight: '800', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.8px' }}>{label}</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke={DS.muted} strokeWidth="2.2" strokeLinecap="round"
+            style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s', flexShrink: 0 }}>
+            <polyline points="2,4 7,10 12,4"/>
+          </svg>
+        </button>
+        {isOpen && <div style={{ paddingBottom: '16px' }}>{children}</div>}
+      </div>
+    )
+  }
+
+  const FilterContent = () => (
+    <>
+      <FSection sectionKey="continent" label={t('Continent', 'Continent')}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+          {CONTINENTS.map(c => (
+            <button key={c} onClick={() => setActiveContinent(p => p === c ? 'all' : c)} style={chipStyle(activeContinent === c)}>
+              {locale === 'fr' ? CONTINENT_FR[c] : c}
+            </button>
+          ))}
+        </div>
+      </FSection>
+      <FSection sectionKey="country" label={t('Country', 'Pays')}>
+        <div style={{ maxHeight: '220px', overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '2px', width: '100%' }}>
+          {countries.map(c => (
+            <button key={c.slug} onClick={() => { setActiveCountry(p => p === c.slug ? 'all' : c.slug); setActiveRegion('all') }}
+              style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '6px 8px', borderRadius: '7px', border: 'none', cursor: 'pointer', textAlign: 'left', fontSize: '13px', fontWeight: '600', backgroundColor: activeCountry === c.slug ? DS.bgAlt : 'transparent', color: activeCountry === c.slug ? DS.navy : DS.muted, transition: 'background 0.12s' }}>
+              {c.image_path && <img src={c.image_path} width="20" height="14" style={{ borderRadius: '2px', objectFit: 'cover', flexShrink: 0 }} onError={e => { e.currentTarget.style.display = 'none' }} />}
+              {locale === 'fr' ? c.name_fr : c.name_en}
+            </button>
+          ))}
+        </div>
+      </FSection>
+      {regions.length > 0 && (
+        <FSection sectionKey="region" label={t('Region', 'Région')}>
+          <div style={{ maxHeight: '200px', overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '2px', width: '100%' }}>
+            {regions.map(r => (
+              <button key={r.slug} onClick={() => setActiveRegion(p => p === r.slug ? 'all' : r.slug)}
+                style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '6px 8px', borderRadius: '7px', border: 'none', cursor: 'pointer', textAlign: 'left', fontSize: '13px', fontWeight: '600', backgroundColor: activeRegion === r.slug ? DS.bgAlt : 'transparent', color: activeRegion === r.slug ? DS.navy : DS.muted, transition: 'background 0.12s' }}>
+                {locale === 'fr' ? r.name_fr : r.name_en}
+              </button>
+            ))}
+          </div>
+        </FSection>
+      )}
+      <FSection sectionKey="colors" label={t('Colors present', 'Couleurs présentes')}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+          {COLOR_OPTIONS.map(col => {
+            const active = activeColors.includes(col.key)
+            return (
+              <button key={col.key} onClick={() => toggle(activeColors, setActiveColors, col.key)}
+                style={{ display: 'flex', alignItems: 'center', gap: '7px', padding: '7px 14px', borderRadius: '9999px', fontSize: '13px', fontWeight: '600', cursor: 'pointer', transition: 'all 0.15s', border: active ? `2px solid ${DS.navy}` : `1.5px solid ${DS.border}`, backgroundColor: active ? DS.navy : DS.bgAlt, color: active ? 'white' : DS.muted }}>
+                <span style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: col.hex, flexShrink: 0, border: col.border ? `1px solid ${DS.border}` : 'none' }} />
+                {locale === 'fr' ? col.label.fr : col.label.en}
+              </button>
+            )
+          })}
+        </div>
+      </FSection>
+      <FSection sectionKey="symbols" label={t('Symbols', 'Symboles')}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+          {SYMBOL_OPTIONS.map(sy => (
+            <button key={sy.key} onClick={() => toggle(activeSymbols, setActiveSymbols, sy.key)} style={chipStyle(activeSymbols.includes(sy.key))}>
+              {locale === 'fr' ? sy.label.fr : sy.label.en}
+            </button>
+          ))}
+        </div>
+      </FSection>
+      {ratioOptions.length > 0 && (
+        <FSection sectionKey="ratio" label={t('Proportions', 'Proportions')}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+            {ratioOptions.map(r => (
+              <button key={r.key} onClick={() => toggle(activeRatios, setActiveRatios, r.key)} style={chipStyle(activeRatios.includes(r.key))}>
+                {r.label}
+              </button>
+            ))}
+          </div>
+        </FSection>
+      )}
+      <FSection sectionKey="shape" label={t('Shape', 'Forme')}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+          {SHAPE_OPTIONS.map(sh => (
+            <button key={sh.key} onClick={() => toggle(activeShapes, setActiveShapes, sh.key)} style={chipStyle(activeShapes.includes(sh.key))}>
+              {locale === 'fr' ? sh.label.fr : sh.label.en}
+            </button>
+          ))}
+        </div>
+      </FSection>
+    </>
+  )
+
+  if (loading) return <PageLoader label={t('Loading...', 'Chargement...')} />
+
+  const grid = (cols) => (
+    filtered.length === 0 ? (
+      <div style={{ textAlign: 'center', padding: '48px 0', color: DS.light }}>
+        <div style={{ fontSize: '40px', marginBottom: '10px' }}>🔍</div>
+        <p style={{ fontSize: '15px', fontWeight: '600' }}>{t('No cities match your filters', 'Aucune ville ne correspond aux filtres')}</p>
+      </div>
+    ) : (
+      <div style={{ display: 'grid', gridTemplateColumns: `repeat(${cols}, 1fr)`, gap: cols === 2 ? '12px' : '16px' }}>
+        {filtered.map(flag => {
+          const name = locale === 'fr' ? flag.name_fr : flag.name_en
+          const regionName = flag.parent ? (locale === 'fr' ? flag.parent.name_fr : flag.parent.name_en) : null
+          const countryName = flag.country ? (locale === 'fr' ? flag.country.name_fr : flag.country.name_en) : ''
+          return <CityCard key={flag.slug} flag={flag} name={name} regionName={regionName} countryName={countryName} />
+        })}
+      </div>
+    )
+  )
+
   return (
     <>
-    <div style={{ minHeight: '100vh', backgroundColor: '#F4F1E6', paddingTop: '60px', fontFamily: 'var(--font-body)' }}>
+    <div style={{ backgroundColor: DS.bg, minHeight: '100vh', fontFamily: 'var(--font-body), system-ui, sans-serif' }}>
+      <div style={{ maxWidth: '1400px', margin: '0 auto', padding: isMobile ? '20px 16px' : '40px 32px' }}>
 
-      <div style={{ backgroundColor: '#0B1F3B', padding: '40px 24px 32px' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{ display: 'flex', gap: '8px', alignItems: 'center', marginBottom: '8px' }}>
-            <Link href={"/" + locale + "/countries"} style={{ fontSize: '13px', color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>{t('Flags', 'Drapeaux')}</Link>
-            <span style={{ color: 'rgba(255,255,255,0.3)' }}>{">"}</span>
-            <span style={{ fontSize: '13px', color: '#9EB7E5', fontWeight: '600' }}>{t('Cities', 'Villes')}</span>
-          </div>
-          <h1 style={{ margin: '0 0 8px', fontSize: '32px', fontWeight: '900', color: 'white', fontFamily: 'var(--font-display)' }}>
-            {t('City Flags', 'Drapeaux des Villes')}
+        <div style={{ marginBottom: '20px' }}>
+          <h1 style={{ fontSize: isMobile ? '28px' : '40px', fontWeight: '900', color: DS.navy, margin: '0 0 4px', letterSpacing: '-1px' }}>
+            {t('City Flags', 'Drapeaux des villes')}
           </h1>
-          <p style={{ margin: 0, fontSize: '15px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6 }}>
-            {t('Official flags of major cities around the world.', 'Drapeaux officiels des grandes villes du monde entier.')}
+          <p style={{ margin: 0, fontSize: '14px', color: DS.muted }}>
+            {filtered.length} {t('cities', 'villes')}
           </p>
-          <div style={{ marginTop: '20px', display: 'flex', alignItems: 'center', gap: '16px' }}>
-            <span style={{ fontSize: '22px', fontWeight: '900', color: '#9EB7E5' }}>{filtered.length}</span>
-            <span style={{ fontSize: '11px', color: 'rgba(255,255,255,0.45)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
-              {t('Cities', 'Villes')}{hasFilters ? ' ' + t('matching', 'correspondantes') : ''}
-            </span>
-            {hasFilters && (
-              <button onClick={clearAll} style={{ fontSize: '12px', color: '#9EB7E5', background: 'none', border: '1px solid rgba(158,183,229,0.3)', borderRadius: '99px', padding: '3px 10px', cursor: 'pointer', fontWeight: '600' }}>
-                {t('Clear filters', 'Effacer les filtres')}
-              </button>
-            )}
-          </div>
         </div>
-      </div>
 
-      {isMobile && (
-        <div style={{ backgroundColor: 'white', borderBottom: '1px solid #E2DDD5', padding: '10px 16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <button onClick={() => setFiltersOpen(o => !o)}
-            style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '8px 16px', backgroundColor: '#0B1F3B', color: 'white', border: 'none', borderRadius: '8px', fontWeight: '700', fontSize: '13px', cursor: 'pointer' }}>
-            {t('Filters', 'Filtres')}
-            {activeCount > 0 && <span style={{ backgroundColor: '#9EB7E5', color: '#0B1F3B', borderRadius: '99px', padding: '1px 7px', fontSize: '11px', fontWeight: '800' }}>{activeCount}</span>}
-          </button>
-          <span style={{ fontSize: '13px', color: '#8A8278' }}>{filtered.length} {t('results', 'resultats')}</span>
-        </div>
-      )}
-
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '24px 16px', display: 'flex', gap: '32px', alignItems: 'flex-start' }}>
-
-        {(!isMobile || filtersOpen) && (
-          <aside style={{ width: isMobile ? '100%' : 'min(340px, 100%)', flexShrink: 0, position: isMobile ? 'static' : 'sticky', top: '76px', alignSelf: 'flex-start', backgroundColor: 'white', borderRadius: '14px', border: '1px solid #e2e8f0', padding: '24px 20px', maxHeight: 'calc(100vh - 100px)', overflowY: 'auto', flexShrink: 0 }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '8px', marginBottom: '20px', paddingBottom: '16px', borderBottom: '1px solid #f0f0f0' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#0B1F3B', color: 'white', fontWeight: '900', fontSize: '20px', borderRadius: '10px', padding: '4px 14px', letterSpacing: '-0.5px', minWidth: '52px' }}>
-                  {filtered.length}
-                </span>
-                <span style={{ fontSize: '13px', color: '#64748b', fontWeight: '500' }}>{t('results', 'résultats')}</span>
-              </div>
-              {hasFilters && (
-                <button onClick={clearAll}
-                  style={{ display: 'flex', alignItems: 'center', gap: '5px', padding: '7px 12px', backgroundColor: '#fee2e2', color: '#dc2626', border: '1.5px solid #fca5a5', borderRadius: '8px', cursor: 'pointer', fontWeight: '700', fontSize: '12px', whiteSpace: 'nowrap', flexShrink: 0 }}>
-                  <svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
-                    <line x1="1" y1="1" x2="10" y2="10"/><line x1="10" y1="1" x2="1" y2="10"/>
+        {isMobile && (
+          <div>
+            <div style={{ position: 'sticky', top: '60px', zIndex: 40, backgroundColor: DS.bg, paddingBottom: '12px', paddingTop: '16px' }}>
+              <div style={{ display: 'flex', gap: '10px' }}>
+                <div style={{ position: 'relative', flex: 1 }}>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={DS.light} strokeWidth="2" strokeLinecap="round"
+                    style={{ position: 'absolute', left: '13px', top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }}>
+                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
                   </svg>
-                  {t('Clear', 'Effacer')}
-                </button>
-              )}
-            </div>
-
-            <div style={{ marginBottom: '16px' }}>
-              <input type="text" value={search} onChange={e => setSearch(e.target.value)}
-                placeholder={t('Search cities...', 'Rechercher...')}
-                style={{ width: '100%', padding: '11px 14px', borderRadius: '10px', border: '1.5px solid #ddd', backgroundColor: 'white', fontSize: '15px', color: '#0B1F3B', outline: 'none', boxSizing: 'border-box' }} />
-            </div>
-
-            <FilterSection title={t('Continent', 'Continent')} open={openSections.continent} onToggle={() => toggleSection('continent')}>
-              {CONTINENTS.map(c => (
-                <FilterChip key={c} active={activeContinent === c} onClick={() => setActiveContinent(p => p === c ? 'all' : c)}>
-                  {locale === 'fr' ? CONTINENT_FR[c] : c}
-                </FilterChip>
-              ))}
-            </FilterSection>
-
-            <FilterSection title={t('Country', 'Pays')} open={openSections.country} onToggle={() => toggleSection('country')}>
-              <div style={{ maxHeight: '200px', overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '2px', width: '100%' }}>
-                {countries.map(c => (
-                  <button key={c.slug} onClick={() => { setActiveCountry(p => p === c.slug ? 'all' : c.slug); setActiveRegion('all') }}
-                    style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '6px 8px', borderRadius: '7px', border: 'none', cursor: 'pointer', textAlign: 'left', fontSize: '13px', fontWeight: '600', backgroundColor: activeCountry === c.slug ? '#EEF4FF' : 'transparent', color: activeCountry === c.slug ? '#0B1F3B' : '#555', transition: 'background 0.12s' }}>
-                    {c.image_path && <img src={c.image_path} width="20" height="14" style={{ borderRadius: '2px', objectFit: 'cover', flexShrink: 0 }} />}
-                    {locale === 'fr' ? c.name_fr : c.name_en}
-                  </button>
-                ))}
-              </div>
-            </FilterSection>
-
-            {regions.length > 0 && (
-              <FilterSection title={t('Region / State', 'Region / Etat')} open={openSections.region} onToggle={() => toggleSection('region')}>
-                <div style={{ maxHeight: '160px', overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '2px', width: '100%' }}>
-                  {regions.map(r => (
-                    <button key={r.slug} onClick={() => setActiveRegion(p => p === r.slug ? 'all' : r.slug)}
-                      style={{ padding: '6px 8px', borderRadius: '7px', border: 'none', cursor: 'pointer', textAlign: 'left', fontSize: '13px', fontWeight: '600', backgroundColor: activeRegion === r.slug ? '#EEF4FF' : 'transparent', color: activeRegion === r.slug ? '#0B1F3B' : '#555', transition: 'background 0.12s' }}>
-                      {locale === 'fr' ? r.name_fr : r.name_en}
-                    </button>
-                  ))}
+                  <input type="text" value={search} onChange={e => setSearch(e.target.value)}
+                    placeholder={t('Search a city…', 'Rechercher une ville…')}
+                    style={{ width: '100%', padding: '11px 14px 11px 38px', borderRadius: '10px', border: `1.5px solid ${DS.border}`, backgroundColor: DS.surface, fontSize: '15px', color: DS.navy, outline: 'none', boxSizing: 'border-box' }} />
                 </div>
-              </FilterSection>
-            )}
-
-            <FilterSection title={t('Colors', 'Couleurs')} open={openSections.colors} onToggle={() => toggleSection('colors')}>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                {COLOR_OPTIONS.map(col => (
-                  <button key={col.key} onClick={() => toggle(activeColors, setActiveColors, col.key)}
-                    title={locale === 'fr' ? col.label.fr : col.label.en}
-                    style={{ width: '28px', height: '28px', borderRadius: '50%', backgroundColor: col.hex, border: activeColors.includes(col.key) ? '3px solid #0B1F3B' : col.border ? '1.5px solid #E2DDD5' : '2px solid transparent', cursor: 'pointer', outline: activeColors.includes(col.key) ? '2px solid #9EB7E5' : 'none', outlineOffset: '1px', transition: 'all 0.12s' }} />
-                ))}
+                <button onClick={() => setFiltersOpen(true)}
+                  style={{ display: 'flex', alignItems: 'center', gap: '7px', padding: '0 18px', borderRadius: '10px', border: hasFilters ? `2px solid ${DS.navy}` : `1.5px solid ${DS.border}`, backgroundColor: hasFilters ? DS.navy : DS.surface, color: hasFilters ? 'white' : DS.muted, cursor: 'pointer', whiteSpace: 'nowrap', fontSize: '14px', fontWeight: '700' }}>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
+                    <line x1="4" y1="6" x2="20" y2="6"/><line x1="7" y1="12" x2="17" y2="12"/><line x1="10" y1="18" x2="14" y2="18"/>
+                  </svg>
+                  {t('Filters', 'Filtres')}
+                  {activeCount > 0 && (
+                    <span style={{ backgroundColor: hasFilters ? 'rgba(255,255,255,0.25)' : DS.navy, color: 'white', borderRadius: '9999px', fontSize: '11px', fontWeight: '900', padding: '1px 6px' }}>
+                      {activeCount}
+                    </span>
+                  )}
+                </button>
               </div>
-            </FilterSection>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '10px' }}>
+                <span style={{ fontSize: '13px', color: DS.muted, fontWeight: '500' }}>
+                  {filtered.length} {t('cities', 'villes')}
+                </span>
+                <div style={{ display: 'flex', gap: '6px' }}>
+                  <button onClick={() => setSortOrder('az')} style={{ ...chipStyle(sortOrder === 'az'), padding: '5px 12px', fontSize: '12px' }}>A→Z</button>
+                  <button onClick={() => setSortOrder('za')} style={{ ...chipStyle(sortOrder === 'za'), padding: '5px 12px', fontSize: '12px' }}>Z→A</button>
+                </div>
+              </div>
+            </div>
 
-            <FilterSection title={t('Symbols', 'Symboles')} open={openSections.symbols} onToggle={() => toggleSection('symbols')}>
-              {SYMBOL_OPTIONS.map(s => (
-                <FilterChip key={s.key} active={activeSymbols.includes(s.key)} onClick={() => toggle(activeSymbols, setActiveSymbols, s.key)}>
-                  {locale === 'fr' ? s.label.fr : s.label.en}
-                </FilterChip>
-              ))}
-            </FilterSection>
-
-            {ratioOptions.length > 0 && (
-              <FilterSection title={t('Ratio', 'Ratio')} open={openSections.ratio} onToggle={() => toggleSection('ratio')}>
-                {ratioOptions.map(r => (
-                  <FilterChip key={r.key} active={activeRatios.includes(r.key)} onClick={() => toggle(activeRatios, setActiveRatios, r.key)}>
-                    {r.label}
-                  </FilterChip>
-                ))}
-              </FilterSection>
+            {filtersOpen && (
+              <div style={{ position: 'fixed', inset: 0, zIndex: 200 }}>
+                <div onClick={() => setFiltersOpen(false)} style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(2px)' }} />
+                <div style={{ position: 'absolute', top: 0, right: 0, bottom: 0, width: 'min(85vw, 360px)', backgroundColor: DS.surface, display: 'flex', flexDirection: 'column', boxShadow: '-8px 0 32px rgba(11,31,59,0.18)' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px 20px 16px', borderBottom: `1px solid ${DS.border}`, flexShrink: 0 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                      <h2 style={{ margin: 0, fontSize: '18px', fontWeight: '900', color: DS.navy }}>{t('Filters', 'Filtres')}</h2>
+                      {hasFilters && <span style={{ backgroundColor: DS.navy, color: 'white', borderRadius: '9999px', fontSize: '11px', fontWeight: '900', padding: '2px 8px' }}>{activeCount}</span>}
+                    </div>
+                    <button onClick={() => setFiltersOpen(false)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: DS.muted, padding: '4px' }}>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
+                        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <div style={{ flex: 1, overflowY: 'auto', padding: '12px 20px' }}>
+                    <FilterContent />
+                  </div>
+                  <div style={{ padding: '16px 20px', borderTop: `1px solid ${DS.border}`, flexShrink: 0, display: 'flex', gap: '10px' }}>
+                    {hasFilters && (
+                      <button onClick={() => { clearAll(); setFiltersOpen(false) }}
+                        style={{ flex: 1, padding: '13px', borderRadius: '10px', border: `1.5px solid ${DS.border}`, backgroundColor: 'transparent', color: DS.muted, fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
+                        {t('Clear all', 'Tout effacer')}
+                      </button>
+                    )}
+                    <button onClick={() => setFiltersOpen(false)}
+                      style={{ flex: 2, padding: '13px', borderRadius: '10px', border: 'none', backgroundColor: DS.navy, color: 'white', fontSize: '14px', fontWeight: '800', cursor: 'pointer' }}>
+                      {t(`Show ${filtered.length} flags`, `Voir ${filtered.length} drapeaux`)}
+                    </button>
+                  </div>
+                </div>
+              </div>
             )}
 
-            <FilterSection title={t('Shape', 'Forme')} open={openSections.shape} onToggle={() => toggleSection('shape')}>
-              {SHAPE_OPTIONS.map(s => (
-                <FilterChip key={s.key} active={activeShapes.includes(s.key)} onClick={() => toggle(activeShapes, setActiveShapes, s.key)}>
-                  {locale === 'fr' ? s.label.fr : s.label.en}
-                </FilterChip>
-              ))}
-            </FilterSection>
-          </aside>
+            {grid(2)}
+          </div>
         )}
 
-        <div style={{ flex: 1, minWidth: 0 }}>
-          {loading ? (
-            <div style={{ textAlign: 'center', color: '#94a3b8', padding: '80px 0', fontSize: '15px' }}>{t('Loading...', 'Chargement...')}</div>
-          ) : filtered.length === 0 ? (
-            <div style={{ textAlign: 'center', padding: '80px 0' }}>
-              <div style={{ fontSize: '40px', marginBottom: '12px' }}>🔍</div>
-              <p style={{ color: '#8A8278', fontSize: '15px', fontWeight: '600' }}>{t('No cities match your filters.', 'Aucune ville ne correspond a vos filtres.')}</p>
-              <button onClick={clearAll} style={{ marginTop: '12px', padding: '8px 20px', backgroundColor: '#0B1F3B', color: 'white', border: 'none', borderRadius: '8px', fontWeight: '700', fontSize: '13px', cursor: 'pointer' }}>
-                {t('Clear filters', 'Effacer les filtres')}
-              </button>
+        {!isMobile && (
+          <div style={{ display: 'flex', gap: '32px', alignItems: 'flex-start' }}>
+            <div style={{ width: 'min(340px, 100%)', flexShrink: 0, position: 'sticky', top: '76px', alignSelf: 'flex-start', backgroundColor: DS.surface, borderRadius: '14px', border: `1px solid ${DS.border}`, padding: '24px 20px', maxHeight: 'calc(100vh - 100px)', overflowY: 'auto' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '8px', marginBottom: '20px', paddingBottom: '16px', borderBottom: `1px solid ${DS.border}` }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', backgroundColor: DS.navy, color: 'white', fontWeight: '900', fontSize: '20px', borderRadius: '10px', padding: '4px 14px', minWidth: '52px' }}>
+                    {filtered.length}
+                  </span>
+                  <span style={{ fontSize: '13px', color: DS.muted, fontWeight: '500' }}>
+                    {t('cities', 'villes')}
+                  </span>
+                </div>
+                {hasFilters && (
+                  <button onClick={clearAll} style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '12px', color: DS.muted, fontWeight: '600', textDecoration: 'underline' }}>
+                    {t('Clear all', 'Tout effacer')}
+                  </button>
+                )}
+              </div>
+
+              <div style={{ position: 'relative', marginBottom: '16px' }}>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke={DS.light} strokeWidth="2" strokeLinecap="round"
+                  style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }}>
+                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+                <input type="text" value={search} onChange={e => setSearch(e.target.value)}
+                  placeholder={t('Search…', 'Rechercher…')}
+                  style={{ width: '100%', padding: '10px 14px 10px 36px', borderRadius: '10px', border: `1.5px solid ${DS.border}`, backgroundColor: DS.bgAlt, fontSize: '14px', color: DS.navy, outline: 'none', boxSizing: 'border-box' }} />
+              </div>
+
+              <div style={{ display: 'flex', gap: '6px', marginBottom: '16px' }}>
+                <button onClick={() => setSortOrder('az')} style={{ ...chipStyle(sortOrder === 'az'), padding: '6px 14px', fontSize: '12px', flex: 1, justifyContent: 'center' }}>A→Z</button>
+                <button onClick={() => setSortOrder('za')} style={{ ...chipStyle(sortOrder === 'za'), padding: '6px 14px', fontSize: '12px', flex: 1, justifyContent: 'center' }}>Z→A</button>
+              </div>
+
+              <FilterContent />
             </div>
-          ) : (
-            <div style={{ display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)', gap: '16px' }}>
-              {filtered.map(flag => {
-                const name = locale === 'fr' ? flag.name_fr : flag.name_en
-                const regionName = flag.parent ? (locale === 'fr' ? flag.parent.name_fr : flag.parent.name_en) : null
-                const countryName = flag.country ? (locale === 'fr' ? flag.country.name_fr : flag.country.name_en) : null
-                return <CityCard key={flag.slug} flag={flag} name={name} regionName={regionName} countryName={countryName} />
-              })}
+
+            <div style={{ flex: 1, minWidth: 0 }}>
+              {grid(4)}
             </div>
-          )}
-        </div>
+          </div>
+        )}
+
       </div>
     </div>
     <Footer />
-  </>
+    </>
   )
 }

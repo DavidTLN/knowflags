@@ -7,8 +7,8 @@ export async function generateMetadata({ params }) {
   const { locale } = await params
   const isFr = locale === 'fr'
   const title = isFr
-    ? 'Dessine le Drapeau | KnowFlags'
-    : 'Flag Drawing | KnowFlags'
+    ? 'Flag Draw | KnowFlags'
+    : 'Flag Draw | KnowFlags'
   const description = isFr
     ? 'Reproduis des drapeaux du monde à la main. Couleurs extraites automatiquement, score de similarité.'
     : 'Reproduce world flags by hand. Auto-extracted colors, similarity score.'
@@ -32,7 +32,7 @@ export default async function FlagDrawingPage({ params }) {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Game',
-    name: locale === 'fr' ? 'Dessine le Drapeau' : 'Flag Drawing',
+    name: 'Flag Draw',
     description: locale === 'fr'
       ? 'Reproduis des drapeaux à la main.'
       : 'Reproduce flags by hand.',

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef, useCallback } from 'react'
+import GameIcon from '@/components/games/GameIcon'
 import { useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-client'
 import PageLoader from '@/components/PageLoader'
@@ -269,7 +270,7 @@ export default function CapitalCity() {
     }
   }
 
-  const C = { navy: '#0B1F3B', cream: '#F4F1E6', green: '#426A5A', red: '#C0392B', border: '#E2DDD5', muted: '#8A8278' }
+  const C = { navy: '#16324F', cream: '#F4F1E6', green: '#426A5A', red: '#C0392B', border: '#E2DDD5', muted: '#6B7280' }
 
   // ── LOADING ────────────────────────────────────────────────────────────────
   if (countriesLoading) return <PageLoader label={locale === 'fr' ? 'Chargement…' : 'Loading…'} />
@@ -345,7 +346,7 @@ export default function CapitalCity() {
   if (screen === SCREEN.PLAYING && question) {
     const isAnswered = answered !== null
     const timerPct   = (timer / TIMER_SECONDS) * 100
-    const timerColor = timer > 8 ? '#4ade80' : timer > 4 ? '#FEB12F' : '#f87171'
+    const timerColor = timer > 8 ? '#4ade80' : timer > 4 ? '#F4B400' : '#f87171'
     const isCapitalFlag = question.qMode === 'capital-flag'
     const isCorrect  = answered?.isCorrect
 
@@ -387,7 +388,7 @@ export default function CapitalCity() {
                 disabled={isAnswered} autoFocus
                 style={{ flex: 1, padding: '14px 16px', borderRadius: '12px', border: `2px solid ${typeResult === 'correct' ? '#4ade80' : typeResult === 'wrong' ? '#f87171' : 'rgba(255,255,255,0.15)'}`, fontSize: '15px', outline: 'none', backgroundColor: typeResult === 'correct' ? 'rgba(74,222,128,0.1)' : typeResult === 'wrong' ? 'rgba(248,113,113,0.1)' : 'rgba(255,255,255,0.08)', color: 'white', fontWeight: '600' }} />
               <button onClick={handleTypeSubmit} disabled={isAnswered || !typeInput.trim()}
-                style={{ padding: '14px 20px', borderRadius: '12px', backgroundColor: '#9EB7E5', color: '#0B1F3B', border: 'none', fontSize: '14px', fontWeight: '800', cursor: isAnswered || !typeInput.trim() ? 'not-allowed' : 'pointer', opacity: isAnswered || !typeInput.trim() ? 0.5 : 1 }}>
+                style={{ padding: '14px 20px', borderRadius: '12px', backgroundColor: '#9EB7E5', color: '#16324F', border: 'none', fontSize: '14px', fontWeight: '800', cursor: isAnswered || !typeInput.trim() ? 'not-allowed' : 'pointer', opacity: isAnswered || !typeInput.trim() ? 0.5 : 1 }}>
                 {t('Go', 'OK')}
               </button>
             </div>
@@ -399,8 +400,8 @@ export default function CapitalCity() {
           </div>
         )}
         {isAnswered && answered.isCorrect && (
-          <div style={{ marginTop: '12px', textAlign: 'center', fontSize: '15px', fontWeight: '700', color: '#4ade80' }}>
-            ✓ {t('Correct!', 'Correct !')} 🔥 {streakRef.current}
+          <div style={{ marginTop: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', fontSize: '15px', fontWeight: '700', color: '#4ade80' }}>
+            <GameIcon name="check" size={16} color="#4ade80" strokeWidth={2.6} /> {t('Correct!', 'Correct !')} <GameIcon name="flame" filled size={15} color="#4ade80" /> {streakRef.current}
           </div>
         )}
       </>
@@ -409,7 +410,7 @@ export default function CapitalCity() {
     // ── MOBILE ──────────────────────────────────────────────────────────────
     if (isMobile) {
       return (
-        <div style={{ backgroundColor: '#0B1F3B', height: 'calc(100dvh - 60px)', fontFamily: 'var(--font-body)', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+        <div style={{ backgroundColor: '#16324F', height: 'calc(100dvh - 60px)', fontFamily: 'var(--font-body)', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
 
           {/* Top bar */}
           <div style={{ display: 'flex', alignItems: 'center', padding: '10px 14px 6px', gap: '8px', flexShrink: 0 }}>
@@ -422,7 +423,7 @@ export default function CapitalCity() {
             </div>
             <div style={{ flex: 1 }} />
             {streak > 0 && (
-              <div style={{ backgroundColor: 'rgba(254,177,47,0.15)', border: '1px solid rgba(254,177,47,0.3)', borderRadius: '20px', padding: '3px 10px', fontSize: '13px', fontWeight: '800', color: '#FEB12F' }}>🔥 {streak}</div>
+              <div style={{ backgroundColor: 'rgba(254,177,47,0.15)', border: '1px solid rgba(254,177,47,0.3)', borderRadius: '20px', padding: '3px 10px', fontSize: '13px', fontWeight: '800', color: '#F4B400', display: 'inline-flex', alignItems: 'center', gap: '3px' }}><GameIcon name="flame" filled size={13} />{streak}</div>
             )}
             <div style={{ position: 'relative' }}>
               <div style={{ backgroundColor: 'rgba(74,222,128,0.12)', border: '1px solid rgba(74,222,128,0.2)', borderRadius: '20px', padding: '3px 12px', fontSize: '14px', fontWeight: '900', color: '#4ade80' }}>
@@ -437,7 +438,7 @@ export default function CapitalCity() {
             <div style={{ backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '20px', padding: '3px 12px', fontSize: '14px', fontWeight: '900', color: timerColor, minWidth: '44px', textAlign: 'center', fontVariantNumeric: 'tabular-nums' }}>
               {timer}s
             </div>
-            <button onClick={() => setShowQuitConfirm(true)} style={{ width: '30px', height: '30px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', fontSize: '14px', color: 'rgba(255,255,255,0.6)' }}>✕</button>
+            <button onClick={() => setShowQuitConfirm(true)} aria-label="Quitter" style={{ width: '36px', height: '36px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', color: 'rgba(255,255,255,0.6)' }}><GameIcon name="close" size={17} color="rgba(255,255,255,0.7)" /></button>
           </div>
 
           {/* Timer bar */}
@@ -489,11 +490,11 @@ export default function CapitalCity() {
           {showQuitConfirm && (
             <div style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.6)', zIndex: 100, display: 'flex', alignItems: 'flex-end' }}>
               <div style={{ width: '100%', backgroundColor: 'white', borderRadius: '20px 20px 0 0', padding: '24px 20px', paddingBottom: 'max(24px, env(safe-area-inset-bottom))' }}>
-                <div style={{ width: '36px', height: '4px', backgroundColor: '#e2e8f0', borderRadius: '99px', margin: '0 auto 20px' }} />
-                <h3 style={{ margin: '0 0 8px', fontSize: '20px', fontWeight: '900', color: '#0B1F3B', textAlign: 'center' }}>
+                <div style={{ width: '36px', height: '4px', backgroundColor: '#E2DDD5', borderRadius: '99px', margin: '0 auto 20px' }} />
+                <h3 style={{ margin: '0 0 8px', fontSize: '20px', fontWeight: '900', color: '#16324F', textAlign: 'center' }}>
                   {t('Quit the game?', 'Quitter la partie ?')}
                 </h3>
-                <p style={{ margin: '0 0 24px', fontSize: '14px', color: '#64748b', lineHeight: 1.6, textAlign: 'center' }}>
+                <p style={{ margin: '0 0 24px', fontSize: '14px', color: '#6B7280', lineHeight: 1.6, textAlign: 'center' }}>
                   {t(`Your score of ${score.toLocaleString()} pts will be saved.`, `Ton score de ${score.toLocaleString()} pts sera sauvegardé.`)}
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
@@ -502,7 +503,7 @@ export default function CapitalCity() {
                     {t('Quit & save', 'Quitter et sauvegarder')}
                   </button>
                   <button onClick={() => setShowQuitConfirm(false)}
-                    style={{ width: '100%', padding: '13px', backgroundColor: 'transparent', color: '#0B1F3B', border: '1.5px solid #e2e8f0', borderRadius: '14px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
+                    style={{ width: '100%', padding: '13px', backgroundColor: 'transparent', color: '#16324F', border: '1.5px solid #E2DDD5', borderRadius: '14px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
                     {t('Keep playing', 'Continuer à jouer')}
                   </button>
                 </div>
@@ -528,7 +529,7 @@ export default function CapitalCity() {
         </div>
         <div style={{ backgroundColor: streak > 0 ? 'rgba(254,177,47,0.15)' : 'rgba(255,255,255,0.08)', borderRadius: '12px', padding: '8px 14px', textAlign: 'center', border: streak > 0 ? '1px solid rgba(254,177,47,0.3)' : 'none' }}>
           <div style={{ fontSize: '10px', fontWeight: '700', color: streak > 0 ? 'rgba(254,177,47,0.7)' : 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.07em' }}>Streak</div>
-          <div style={{ fontSize: '18px', fontWeight: '900', color: streak > 0 ? '#FEB12F' : 'rgba(255,255,255,0.3)', lineHeight: 1 }}>🔥 {streak}</div>
+          <div style={{ fontSize: '18px', fontWeight: '900', color: streak > 0 ? '#F4B400' : 'rgba(255,255,255,0.3)', lineHeight: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '4px' }}><GameIcon name="flame" filled size={15} />{streak}</div>
         </div>
         <div style={{ position: 'relative', backgroundColor: 'rgba(74,222,128,0.12)', borderRadius: '12px', padding: '8px 14px', textAlign: 'center', border: '1px solid rgba(74,222,128,0.25)' }}>
           <div style={{ fontSize: '10px', fontWeight: '700', color: 'rgba(74,222,128,0.7)', textTransform: 'uppercase', letterSpacing: '0.07em' }}>Score</div>
@@ -540,13 +541,13 @@ export default function CapitalCity() {
           )}
         </div>
         <div style={{ backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '12px', padding: '8px 14px', textAlign: 'center' }}>
-          <div style={{ fontSize: '10px', fontWeight: '700', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.07em' }}>⏱</div>
+          <div style={{ display: 'flex', justifyContent: 'center', color: 'rgba(255,255,255,0.5)' }}><GameIcon name="clock" size={12} color="rgba(255,255,255,0.5)" /></div>
           <div style={{ fontSize: '16px', fontWeight: '900', color: 'white', fontVariantNumeric: 'tabular-nums', lineHeight: 1 }}>{formatTime(elapsed)}</div>
         </div>
         <div style={{ position: 'relative' }}>
           <button onClick={() => setShowQuitConfirm(true)} onMouseEnter={() => setShowQuitTip(true)} onMouseLeave={() => setShowQuitTip(false)}
-            style={{ padding: '8px 14px', backgroundColor: 'transparent', color: '#ef4444', border: '1.5px solid #fecaca', borderRadius: '10px', fontSize: '13px', fontWeight: '600', cursor: 'pointer', whiteSpace: 'nowrap' }}>
-            🚪 {locale === 'fr' ? 'Quitter' : 'Quit'}
+            style={{ padding: '8px 14px', backgroundColor: 'transparent', color: '#ef4444', border: '1.5px solid #fecaca', borderRadius: '10px', fontSize: '13px', fontWeight: '600', cursor: 'pointer', whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <GameIcon name="close" size={15} color="#ef4444" /> {locale === 'fr' ? 'Quitter' : 'Quit'}
           </button>
           {showQuitTip && (
             <div style={{ position: 'absolute', bottom: '110%', right: 0, backgroundColor: '#1e293b', color: 'white', fontSize: '12px', padding: '8px 12px', borderRadius: '8px', whiteSpace: 'nowrap', zIndex: 50, pointerEvents: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.2)' }}>
@@ -576,7 +577,7 @@ export default function CapitalCity() {
     )
 
     return (
-      <div style={{ backgroundColor: '#0B1F3B', minHeight: 'calc(100dvh - 60px)', fontFamily: 'var(--font-body)', padding: '12px 24px 24px' }}>
+      <div style={{ backgroundColor: '#16324F', minHeight: 'calc(100dvh - 60px)', fontFamily: 'var(--font-body)', padding: '12px 24px 24px' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
             <h1 style={{ fontSize: '22px', fontWeight: '900', color: 'white', margin: 0, letterSpacing: '-0.5px' }}>🏙️ {t('Capital City', 'Capitale')}</h1>
@@ -599,14 +600,14 @@ export default function CapitalCity() {
           <div style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(11,31,59,0.7)', backdropFilter: 'blur(4px)', zIndex: 100, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px' }}>
             <div style={{ backgroundColor: 'white', borderRadius: '20px', padding: '28px', maxWidth: '380px', width: '100%', textAlign: 'center', boxShadow: '0 24px 60px rgba(0,0,0,0.2)' }}>
               <div style={{ fontSize: '36px', marginBottom: '12px' }}>🚪</div>
-              <h3 style={{ margin: '0 0 8px', fontSize: '20px', fontWeight: '900', color: '#0B1F3B' }}>
+              <h3 style={{ margin: '0 0 8px', fontSize: '20px', fontWeight: '900', color: '#16324F' }}>
                 {t('Quit the game?', 'Quitter la partie ?')}
               </h3>
-              <p style={{ margin: '0 0 24px', fontSize: '14px', color: '#64748b', lineHeight: 1.6 }}>
+              <p style={{ margin: '0 0 24px', fontSize: '14px', color: '#6B7280', lineHeight: 1.6 }}>
                 {t(`Your score of ${score.toLocaleString()} pts will be saved.`, `Ton score de ${score.toLocaleString()} pts sera sauvegardé.`)}
               </p>
               <div style={{ display: 'flex', gap: '10px' }}>
-                <button onClick={() => setShowQuitConfirm(false)} style={{ flex: 1, padding: '12px', backgroundColor: '#F4F1E6', color: '#0B1F3B', border: '1px solid #e2e8f0', borderRadius: '12px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
+                <button onClick={() => setShowQuitConfirm(false)} style={{ flex: 1, padding: '12px', backgroundColor: '#F4F1E6', color: '#16324F', border: '1px solid #E2DDD5', borderRadius: '12px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
                   {t('Keep playing', 'Continuer')}
                 </button>
                 <button onClick={() => { setShowQuitConfirm(false); quitGame() }} style={{ flex: 1, padding: '12px', backgroundColor: '#ef4444', color: 'white', border: 'none', borderRadius: '12px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
@@ -641,7 +642,7 @@ export default function CapitalCity() {
               {[
                 { label: t('Correct', 'Corrects'),            value: `${correct}/${total}`,          color: C.green,   bg: '#f0fdf4', border: '#bbf7d0' },
                 { label: t('Best streak', 'Meilleure série'), value: `🔥 ${bestStreak}`,             color: '#806D40', bg: '#fefce8', border: '#fde68a' },
-                { label: t('Accuracy', 'Précision'),          value: `${pct}%`,                      color: C.navy,    bg: 'white',   border: '#e2e8f0' },
+                { label: t('Accuracy', 'Précision'),          value: `${pct}%`,                      color: C.navy,    bg: 'white',   border: '#E2DDD5' },
                 { label: t('Score', 'Score'),                 value: `⭐ ${score.toLocaleString()}`, color: C.green,   bg: '#f0fdf4', border: '#bbf7d0' },
               ].map((s, i) => (
                 <div key={i} style={{ backgroundColor: s.bg, borderRadius: '14px', border: `1px solid ${s.border}`, padding: '14px 12px', textAlign: 'center' }}>
@@ -665,7 +666,7 @@ export default function CapitalCity() {
               <div style={{ flex: 1, overflowY: 'auto', padding: '8px 12px' }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                   {wrong.map((h, i) => (
-                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '10px 8px', borderRadius: '10px', backgroundColor: i % 2 === 0 ? '#fafafa' : 'white' }}>
+                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '10px 8px', borderRadius: '10px', backgroundColor: i % 2 === 0 ? '#FAFAF7' : 'white' }}>
                       <img src={`https://flagcdn.com/w80/${h.question.correct.code}.png`} alt="" style={{ width: '40px', height: '27px', objectFit: 'contain', borderRadius: '4px', backgroundColor: '#e8e4d9', flexShrink: 0, padding: '2px', border: `1px solid ${C.border}` }} />
                       <div style={{ flex: 1, minWidth: 0 }}>
                         <div style={{ fontSize: '13px', fontWeight: '700', color: C.navy, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{getName(h.question.correct)}</div>

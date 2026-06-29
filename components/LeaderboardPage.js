@@ -12,8 +12,8 @@ const GAMES = [
   { key: 'flag-quiz',    en: 'Flag Quiz',    fr: 'Flag Quiz' },
   { key: 'past-flag',    en: 'Past Flag',    fr: 'Past Flag' },
   { key: 'capital-clue', en: 'Capital Clue', fr: 'Capital Clue' },
-  { key: 'flag-drawing', en: 'Flag Drawer',  fr: 'Flag Drawer' },
-  { key: 'flag-ranker',  en: 'Flag Ranker',  fr: 'Flag Ranker' },
+  { key: 'flag-drawing', en: 'Flag Draw',    fr: 'Flag Draw' },
+  { key: 'flag-ranker',  en: 'Flag Rank',    fr: 'Flag Rank' },
   { key: 'flag-clue',    en: 'Flag Clue',    fr: 'Flag Clue' },
   { key: 'flag-locator', en: 'Flag Locator', fr: 'Flag Locator' },
 ]

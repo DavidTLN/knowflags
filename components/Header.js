@@ -17,10 +17,12 @@ const GAMES = [
   { key: 'flag-locator', en: 'FlagLocator', fr: 'FlagLocator', descEn: 'Find the country on the map',             descFr: 'Trouve le pays sur la carte' },
   { key: 'past-flag',    en: 'PastFlag',    fr: 'PastFlag',    descEn: 'Guess the country from a historical flag', descFr: 'Trouve le pays via un drapeau historique' },
   { key: 'subflag-quiz', en: 'SubFlagQuiz', fr: 'SubFlagQuiz', descEn: 'Regional flag, find the country',         descFr: 'Drapeau régional, trouve le pays' },
-  { key: 'gartic-phone', en: 'FlagPhone',   fr: 'FlagPhone',   descEn: 'Describe, draw and guess flags',          descFr: 'Décris, dessine et devine les drapeaux' },
-  { key: 'qui-est-ce',   en: 'Guess Who',   fr: 'Qui est-ce ?', descEn: 'Yes/no questions to find the country',   descFr: 'Questions oui/non pour trouver le pays' },
-  { key: 'imposteur',    en: 'Impostor',    fr: 'Imposteur',   descEn: "Find the flag that doesn't belong",       descFr: "Trouve l'imposteur parmi les drapeaux" },
+  { key: 'gartic-phone', en: 'FlagPhone',   fr: 'FlagPhone',   descEn: 'Describe, draw and guess flags',          descFr: 'Décris, dessine et devine les drapeaux', ready: false },
+  { key: 'qui-est-ce',   en: 'Guess Who',   fr: 'Qui est-ce ?', descEn: 'Yes/no questions to find the country',   descFr: 'Questions oui/non pour trouver le pays', ready: false },
+  { key: 'imposteur',    en: 'Impostor',    fr: 'Imposteur',   descEn: "Find the flag that doesn't belong",       descFr: "Trouve l'imposteur parmi les drapeaux", ready: false },
 ]
+
+const VISIBLE_GAMES = GAMES.filter(g => g.ready !== false)
 
 const FLAGS_MENU = [
   { href: 'countries',     en: 'Country Flags',    fr: 'Drapeaux des Pays',   descEn: 'All countries of the world',        descFr: 'Tous les drapeaux du monde' },
@@ -29,8 +31,9 @@ const FLAGS_MENU = [
   { href: 'organisations', en: 'Organisations',    fr: 'Organisations',       descEn: 'UN, EU, NATO, FIFA and more',       descFr: 'ONU, UE, OTAN, FIFA et plus' },
 ]
 
-const GAMES_COL1 = GAMES.slice(0, 6)
-const GAMES_COL2 = GAMES.slice(6)
+const GAMES_SPLIT = Math.ceil(VISIBLE_GAMES.length / 2)
+const GAMES_COL1 = VISIBLE_GAMES.slice(0, GAMES_SPLIT)
+const GAMES_COL2 = VISIBLE_GAMES.slice(GAMES_SPLIT)
 
 /* ── Line icons ──────────────────────────────────────────────────────────── */
 const ICON_PROPS = {
@@ -560,7 +563,7 @@ export default function Header() {
                       <span style={{ fontSize: '13px', fontWeight: '700', color: '#5B7BB5', textTransform: 'uppercase', letterSpacing: '0.6px' }}>{t('Games', 'Jeux')}</span>
                     </button>
                     <div style={{ borderTop: '1px solid #E2DDD5' }}>
-                      {GAMES.map(game => (
+                      {VISIBLE_GAMES.map(game => (
                         <span key={game.key}
                           onClick={() => { if (!game.soon) { router.push(`/${locale}/games/${game.key}`); closeDrawer() } }}
                           style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '15px 2px', fontSize: '16px', fontWeight: '500', borderBottom: '1px solid #E2DDD5', cursor: game.soon ? 'default' : 'pointer', color: game.soon ? '#9CA3AF' : '#16324F' }}>

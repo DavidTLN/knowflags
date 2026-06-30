@@ -21,9 +21,9 @@ const GAMES = [
   { key: 'flag-drawing', icon: '✏️',  en: 'Flag Draw',    fr: 'Flag Draw',    descEn: 'Can you draw it from memory?',         descFr: 'Sauras-tu le dessiner de mémoire ?',         color: '#7C3AED', difficulty: 'hard'   },
   { key: 'past-flag',    icon: '🏛️', en: 'Past Flag',    fr: 'Past Flag',    descEn: 'Guess the country from a historical flag', descFr: 'Trouve le pays via un drapeau historique', color: '#0EA5E9', difficulty: 'medium' },
   { key: 'subflag-quiz', icon: '🗺️', en: 'SubFlag Quiz', fr: 'SubFlag Quiz', descEn: 'Regional flag, find the country',      descFr: 'Drapeau régional, trouve le pays',           color: '#14B8A6', difficulty: 'hard'   },
-  { key: 'gartic-phone', icon: '🎨',  en: 'Flag Phone',   fr: 'Flag Phone',   descEn: 'Describe, draw and guess flags',       descFr: 'Décris, dessine et devine les drapeaux',     color: '#F43F5E', difficulty: 'easy'   },
-  { key: 'qui-est-ce',   icon: '🕵️', en: 'Guess Who',    fr: 'Qui est-ce ?', descEn: 'Yes/no questions to find the country', descFr: 'Questions oui/non pour trouver le pays',     color: '#8B5CF6', difficulty: 'medium' },
-  { key: 'imposteur',    icon: '🔎',  en: 'Impostor',     fr: 'Imposteur',    descEn: "Find the flag that doesn't belong",    descFr: "Trouve l'imposteur parmi les drapeaux",       color: '#F59E0B', difficulty: 'medium' },
+  { key: 'gartic-phone', icon: '🎨',  en: 'Flag Phone',   fr: 'Flag Phone',   descEn: 'Describe, draw and guess flags',       descFr: 'Décris, dessine et devine les drapeaux',     color: '#F43F5E', difficulty: 'easy',   ready: false },
+  { key: 'qui-est-ce',   icon: '🕵️', en: 'Guess Who',    fr: 'Qui est-ce ?', descEn: 'Yes/no questions to find the country', descFr: 'Questions oui/non pour trouver le pays',     color: '#8B5CF6', difficulty: 'medium', ready: false },
+  { key: 'imposteur',    icon: '🔎',  en: 'Impostor',     fr: 'Imposteur',    descEn: "Find the flag that doesn't belong",    descFr: "Trouve l'imposteur parmi les drapeaux",       color: '#F59E0B', difficulty: 'medium', ready: false },
 ]
 
 const COMING_SOON = []
@@ -159,7 +159,7 @@ export default function GamesPage() {
             </span>
           </h2>
           <div style={gridStyle}>
-            {GAMES.map(game => (
+            {GAMES.filter(g => g.ready !== false).map(game => (
               <GameCard key={game.key} game={game} locale={locale} coming={false} />
             ))}
           </div>

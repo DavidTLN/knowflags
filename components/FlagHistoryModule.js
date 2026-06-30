@@ -174,7 +174,7 @@ export default function FlagHistoryModule({ countryCode, countryName }) {
         <div style={{ flex: 1, minWidth: '200px' }}>
           <div style={{ position: 'relative' }}>
             <div style={{
-              position: 'absolute', left: '27px', top: '28px',
+              position: 'absolute', left: '31px', top: '23px',
               bottom: '24px', width: '2px',
               backgroundColor: '#e2e8f0',
               zIndex: 0,
@@ -187,12 +187,13 @@ export default function FlagHistoryModule({ countryCode, countryName }) {
                 <div key={flag.id} onClick={() => setSelected(flag)}
                   style={{ display: 'flex', alignItems: 'flex-start', gap: '16px', marginBottom: i < flags.length - 1 ? '16px' : '0', cursor: 'pointer', position: 'relative', zIndex: 1 }}>
                   <div style={{
-                    width: '56px', height: '56px', flexShrink: 0, borderRadius: '50%',
-                    border: `3px solid ${isSelected ? '#0B1F3B' : isCurrent ? '#22c55e' : '#e2e8f0'}`,
-                    backgroundColor: isSelected ? '#0B1F3B' : isCurrent ? '#dcfce7' : 'white',
+                    width: '64px', height: '46px', flexShrink: 0, boxSizing: 'border-box',
+                    borderRadius: '9px', padding: '3px',
+                    border: `2px solid ${isSelected ? '#0B1F3B' : isCurrent ? '#22c55e' : '#e2e8f0'}`,
+                    backgroundColor: '#ffffff',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                     overflow: 'hidden', transition: 'all 0.15s',
-                    boxShadow: isSelected ? '0 0 0 4px rgba(11,31,59,0.12)' : 'none',
+                    boxShadow: isSelected ? '0 0 0 4px rgba(11,31,59,0.12)' : '0 1px 3px rgba(11,31,59,0.06)',
                   }}>
                     <FlagImage
                       imageUrl={flag.image_url}
@@ -200,7 +201,7 @@ export default function FlagHistoryModule({ countryCode, countryName }) {
                       dateStart={flag.date_start}
                       duplicateIndex={flag._dupIndex}
                       alt={lbl}
-                      style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }}
+                      style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '4px', display: 'block' }}
                     />
                   </div>
                   <div style={{

@@ -180,8 +180,16 @@ function FlagHero({ countryCode, countryName, locale }) {
 }
 
 // ── ContinentNavModule ────────────────────────────────────────────────────────
-// Uses the same grid pattern as CategoryGrid (homepage) — no scroll, multi-line
+// Mirrors CategoryGrid (homepage): green overline + title, 2-col mobile / 7-col desktop big tiles
 function ContinentNavModule({ currentContinent, locale }) {
+  const [isMobile, setIsMobile] = useState(false)
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768)
+    check()
+    window.addEventListener('resize', check)
+    return () => window.removeEventListener('resize', check)
+  }, [])
+
   const CONTINENTS = [
     { slug: 'europe',           en: 'Europe',          fr: 'Europe',          count: 44, color: '#1a3a6b', accent: '#4a7fd4', light: '#EBF1FB', svg: '/europe.svg' },
     { slug: 'africa',           en: 'Africa',          fr: 'Afrique',         count: 54, color: '#6b2a1a', accent: '#e07840', light: '#FDF0E8', svg: '/africa.svg' },
@@ -193,18 +201,21 @@ function ContinentNavModule({ currentContinent, locale }) {
   ]
 
   return (
-    <section>
-      <h2 style={{ margin: '0 0 14px', fontSize: '18px', fontWeight: '900', color: DS.navy, letterSpacing: '-0.3px' }}>
-        {locale === 'fr' ? 'Explorer par continent' : 'Browse by Continent'}
-      </h2>
-      {/* 4-col grid on mobile → 2 rows (4+3), 7-col on desktop → 1 row */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '8px' }}>
-        {CONTINENTS.map(c => {
-          const active = c.slug === currentContinent
-          return (
-            <ContinentTile key={c.slug} c={c} active={active} locale={locale} />
-          )
-        })}
+    <section style={{ marginTop: isMobile ? '8px' : '12px' }}>
+      <div style={{ marginBottom: isMobile ? '16px' : '20px' }}>
+        <h2 style={{ margin: 0, fontSize: isMobile ? '22px' : '28px', fontWeight: '900', color: '#16324F', letterSpacing: '-0.02em' }}>
+          {locale === 'fr' ? 'Explorer par continent' : 'Browse by Continent'}
+        </h2>
+      </div>
+
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: isMobile ? 'repeat(3, 1fr)' : 'repeat(7, 1fr)',
+        gap: isMobile ? '10px' : '14px',
+      }}>
+        {CONTINENTS.map(c => (
+          <ContinentTile key={c.slug} c={c} active={c.slug === currentContinent} locale={locale} />
+        ))}
       </div>
     </section>
   )
@@ -224,51 +235,56 @@ function ContinentTile({ c, active, locale }) {
           position: 'relative',
           width: '100%',
           paddingBottom: '100%',
-          borderRadius: '12px',
+          borderRadius: '14px',
           overflow: 'hidden',
-          border: `2px solid ${isHighlighted ? c.accent : DS.border}`,
+          border: `2px solid ${isHighlighted ? c.accent : '#E2DDD5'}`,
           backgroundColor: isHighlighted ? c.color : c.light,
           transition: 'all 0.2s ease',
           transform: hovered && !active ? 'translateY(-2px)' : 'none',
-          boxShadow: isHighlighted ? '0 6px 20px rgba(11,31,59,0.18)' : '0 1px 3px rgba(11,31,59,0.06)',
+          boxShadow: isHighlighted ? '0 8px 24px rgba(11,31,59,0.18)' : '0 1px 4px rgba(11,31,59,0.06)',
           cursor: 'pointer',
         }}
       >
         <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column' }}>
-          <div style={{ flex: 1, minHeight: 0, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '10px 10px 4px' }}>
+          <div style={{ flex: 1, minHeight: 0, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '14px 14px 6px' }}>
             <img
               src={c.svg}
               alt={title}
               style={{
-                width: '70%', maxHeight: '100%', objectFit: 'contain',
-                opacity: isHighlighted ? 0.22 : 0.6,
-                filter: isHighlighted ? 'brightness(0) invert(1)' : 'brightness(0) opacity(0.5)',
+                width: '72%', maxHeight: '100%', objectFit: 'contain',
+                opacity: isHighlighted ? 0.22 : 0.62,
+                filter: isHighlighted ? 'brightness(0) invert(1)' : 'brightness(0) opacity(0.55)',
                 transition: 'all 0.2s ease',
               }}
             />
           </div>
           <div style={{
             flexShrink: 0,
-            minHeight: '34px',
-            padding: '4px 8px 7px',
+            minHeight: '40px',
+            padding: '6px 10px 9px',
             borderTop: `1px solid ${isHighlighted ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)'}`,
-            display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: '3px',
+            display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: '5px',
           }}>
             <span style={{
-              fontSize: '9px', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.04em',
+              fontSize: '12px', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.03em',
               color: isHighlighted ? 'white' : c.color,
-              transition: 'color 0.2s ease', lineHeight: 1.25, flex: 1,
+              transition: 'color 0.2s ease', lineHeight: 1.2, flex: 1,
             }}>
               {title}
             </span>
-            {active && (
-              <span style={{
-                width: '6px', height: '6px', borderRadius: '50%', flexShrink: 0,
-                backgroundColor: 'rgba(255,255,255,0.7)',
-              }} />
-            )}
+            <span style={{
+              fontSize: '9px', fontWeight: '700', padding: '2px 6px', borderRadius: '999px', flexShrink: 0,
+              backgroundColor: isHighlighted ? 'rgba(255,255,255,0.18)' : 'rgba(255,255,255,0.85)',
+              color: isHighlighted ? 'white' : c.color,
+              transition: 'all 0.2s ease',
+            }}>
+              {c.count}
+            </span>
           </div>
         </div>
+        {active && (
+          <div style={{ position: 'absolute', top: '10px', right: '10px', width: '7px', height: '7px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.85)' }} />
+        )}
       </div>
     </Link>
   )
@@ -351,25 +367,45 @@ function symbolGlyph(name) {
   const wrap = (children, opts = {}) => (
     <svg width="17" height="17" viewBox="0 0 24 24" fill={opts.fill || 'none'} stroke={opts.stroke || 'currentColor'} strokeWidth={opts.sw || 2} strokeLinecap="round" strokeLinejoin="round">{children}</svg>
   )
+  if (has('david'))                                  return wrap(<><polygon points="12,3 18.5,18 5.5,18" fill="none" /><polygon points="12,21 5.5,6 18.5,6" fill="none" /></>, { sw: 1.7 })
   if (has('crescent', 'moon'))                       return wrap(<path d="M16 3a9 9 0 1 0 0 18 7 7 0 1 1 0-18z" fill="currentColor" stroke="none" />)
   if (has('star'))                                   return wrap(<polygon points="12,2.5 14.6,9 21.5,9.2 16,13.4 18,20.2 12,16.2 6,20.2 8,13.4 2.5,9.2 9.4,9" fill="currentColor" stroke="none" />)
   if (has('sun'))                                    return wrap(<><circle cx="12" cy="12" r="4" fill="currentColor" stroke="none" /><line x1="12" y1="2" x2="12" y2="5" /><line x1="12" y1="19" x2="12" y2="22" /><line x1="2" y1="12" x2="5" y2="12" /><line x1="19" y1="12" x2="22" y2="12" /><line x1="5" y1="5" x2="7" y2="7" /><line x1="17" y1="17" x2="19" y2="19" /><line x1="19" y1="5" x2="17" y2="7" /><line x1="7" y1="17" x2="5" y2="19" /></>)
+  if (has('crown', 'tiara'))                         return wrap(<><path d="M4 17l1.2-8 4 4L12 6l2.8 7 4-4 1.2 8z" fill="currentColor" stroke="none" /><rect x="4" y="17.5" width="16" height="2.6" rx="1" fill="currentColor" stroke="none" /></>)
   if (has('cross'))                                  return wrap(<path d="M10 4h4v6h6v4h-6v6h-4v-6H4v-4h6z" fill="currentColor" stroke="none" />)
   if (has('triangle'))                               return wrap(<polygon points="12,4 21,20 3,20" fill="currentColor" stroke="none" />)
   if (has('diamond', 'lozenge'))                     return wrap(<path d="M12 3l9 9-9 9-9-9z" fill="currentColor" stroke="none" />)
-  if (has('circle', 'disc', 'disk', 'roundel'))      return wrap(<circle cx="12" cy="12" r="8" fill="currentColor" stroke="none" />)
-  if (has('square', 'canton'))                       return wrap(<rect x="5" y="5" width="14" height="14" rx="1.5" fill="currentColor" stroke="none" />)
-  if (has('sword', 'sabre', 'saber', 'scimitar'))    return wrap(<><line x1="6" y1="18" x2="18" y2="6" /><line x1="17" y1="4" x2="20" y2="7" /><line x1="13.5" y1="6.5" x2="17.5" y2="10.5" /><line x1="5" y1="17" x2="7" y2="19" /></>)
-  if (has('shield', 'arms', 'crest', 'escutcheon'))  return wrap(<path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z" />)
+  if (has('wheel'))                                  return wrap(<><circle cx="12" cy="12" r="8.5" /><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none" /><line x1="12" y1="3.5" x2="12" y2="20.5" /><line x1="3.5" y1="12" x2="20.5" y2="12" /><line x1="6" y1="6" x2="18" y2="18" /><line x1="18" y1="6" x2="6" y2="18" /></>, { sw: 1.4 })
+  if (has('armillary', 'sphere', 'globe'))           return wrap(<><circle cx="12" cy="12" r="8.5" /><ellipse cx="12" cy="12" rx="3.4" ry="8.5" /><line x1="3.5" y1="12" x2="20.5" y2="12" /><line x1="12" y1="3.5" x2="12" y2="20.5" /></>, { sw: 1.4 })
+  if (has('wreath', 'laurel'))                       return wrap(<g fill="none"><path d="M12 21c-3.5-2-5.5-6-5.5-10 0-2 .4-3.5 1.2-5" /><path d="M12 21c3.5-2 5.5-6 5.5-10 0-2-.4-3.5-1.2-5" /></g>, { sw: 1.8 })
+  if (has('olive', 'branch', 'fern', 'leaves', 'leaf', 'maple'))
+                                                     return wrap(<><path d="M5 19c0-9 7-14 14-14 0 9-5 14-14 14z" /><line x1="6" y1="18" x2="14" y2="10" /></>)
+  if (has('cedar', 'tree', 'palm'))                  return wrap(<><path d="M12 3l4 6h-3l3.5 5h-3l3.5 5H7l3.5-5h-3L11 9H8z" fill="currentColor" stroke="none" /><line x1="12" y1="19" x2="12" y2="22" /></>)
+  if (has('mountain', 'volcano'))                    return wrap(<path d="M3 19l5-9 3 4 3-6 7 11z" fill="currentColor" stroke="none" />)
+  if (has('snake', 'serpent'))                       return wrap(<path d="M17 5c-3 0-3 3-5 3S9 5 6 5 4 8 7 9s5 1 5 4-3 3-5 3" fill="none" />)
+  if (has('trident'))                                return wrap(<><line x1="12" y1="8" x2="12" y2="21" /><path d="M7 5v3.5M12 4v4.5M17 5v3.5" /><path d="M7 8.5a5 5 0 0 0 10 0" /></>)
+  if (has('ship', 'boat', 'vessel'))                 return wrap(<><path d="M4 14h16l-2.2 5H6.2z" fill="currentColor" stroke="none" /><line x1="12" y1="3" x2="12" y2="14" /><path d="M12.5 4.5l5 2-5 2z" fill="currentColor" stroke="none" /></>)
+  if (has('mosque'))                                 return wrap(<><path d="M6 20v-6a6 6 0 0 1 12 0v6" /><path d="M12 3.5c1.2.9 1.2 2.6 0 3.5-1.2-.9-1.2-2.6 0-3.5z" fill="currentColor" stroke="none" /><line x1="4.5" y1="20" x2="19.5" y2="20" /></>)
+  if (has('book', 'bible', 'scroll', 'koran'))       return wrap(<><path d="M12 6.5C10.5 5.2 8 5 6 5v12c2 0 4.5.2 6 1.5" /><path d="M12 6.5C13.5 5.2 16 5 18 5v12c-2 0-4.5.2-6 1.5" /></>)
+  if (has('shahada', 'inscription', 'script', 'calligraph', 'text', 'arabic', 'takbir'))
+                                                     return wrap(<><line x1="4" y1="8" x2="20" y2="8" /><line x1="4" y1="12" x2="15" y2="12" /><line x1="4" y1="16" x2="18" y2="16" /></>, { sw: 2.2 })
+  if (has('wave', 'sea'))                            return wrap(<g fill="none"><path d="M3 9c2-2 4-2 6 0s4 2 6 0 4-2 6 0" /><path d="M3 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0" /></g>)
+  if (has('gear', 'cog'))                            return wrap(<><circle cx="12" cy="12" r="3.2" /><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.5 5.5l2 2M16.5 16.5l2 2M18.5 5.5l-2 2M7.5 16.5l-2 2" /></>, { sw: 1.8 })
   if (has('anchor'))                                 return wrap(<><circle cx="12" cy="5" r="2" /><line x1="12" y1="7" x2="12" y2="21" /><path d="M5 13a7 7 0 0 0 14 0" /><line x1="8.5" y1="11" x2="15.5" y2="11" /></>)
   if (has('key'))                                    return wrap(<><circle cx="8" cy="8" r="3.5" /><line x1="10.5" y1="10.5" x2="20" y2="20" /><line x1="17" y1="17" x2="19" y2="15" /><line x1="14" y1="14" x2="16" y2="12" /></>)
-  if (has('cedar', 'tree', 'palm'))                  return wrap(<><path d="M12 3l4 6h-3l3.5 5h-3l3.5 5H7l3.5-5h-3L11 9H8z" fill="currentColor" stroke="none" /><line x1="12" y1="19" x2="12" y2="22" /></>)
-  if (has('leaf', 'maple'))                          return wrap(<><path d="M5 19c0-9 7-14 14-14 0 9-5 14-14 14z" /><line x1="6" y1="18" x2="14" y2="10" /></>)
-  if (has('eagle', 'bird', 'dove', 'falcon'))        return wrap(<path d="M3 9c4 0 6 4 9 4s5-4 9-4c-3 4-5 8-9 8S6 13 3 9z" />)
+  if (has('arrow'))                                  return wrap(<><line x1="5" y1="19" x2="19" y2="5" /><path d="M11 5h8v8" /></>)
+  if (has('sword', 'sabre', 'saber', 'scimitar', 'dagger', 'khanjar', 'machete', 'spear', 'lance', 'blade', 'knife'))
+                                                     return wrap(<><line x1="6" y1="18" x2="18" y2="6" /><line x1="17" y1="4" x2="20" y2="7" /><line x1="13.5" y1="6.5" x2="17.5" y2="10.5" /><line x1="5" y1="17" x2="7" y2="19" /></>)
+  if (has('shield', 'arms', 'crest', 'escutcheon', 'emblem'))
+                                                     return wrap(<path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z" />)
+  if (has('circle', 'disc', 'disk', 'roundel'))      return wrap(<circle cx="12" cy="12" r="8" fill="currentColor" stroke="none" />)
+  if (has('square', 'canton'))                       return wrap(<rect x="5" y="5" width="14" height="14" rx="1.5" fill="currentColor" stroke="none" />)
   if (has('stripe', 'band', 'bar'))                  return wrap(<><line x1="4" y1="8" x2="20" y2="8" /><line x1="4" y1="12" x2="20" y2="12" /><line x1="4" y1="16" x2="20" y2="16" /></>, { sw: 2.4 })
   if (has('chevron'))                                return wrap(<path d="M4 16l8-7 8 7" />, { sw: 2.4 })
-  if (has('shahada', 'inscription', 'script', 'calligraph', 'text', 'arabic', 'quran', 'takbir'))
-                                                     return wrap(<><line x1="4" y1="8" x2="20" y2="8" /><line x1="4" y1="12" x2="15" y2="12" /><line x1="4" y1="16" x2="18" y2="16" /></>, { sw: 2.2 })
+  if (has('eagle', 'bird', 'dove', 'falcon', 'condor', 'crane', 'parrot', 'phoenix', 'quetzal', 'owl', 'hawk'))
+                                                     return wrap(<path d="M3 9c4 0 6 4 9 4s5-4 9-4c-3 4-5 8-9 8S6 13 3 9z" />)
+  if (has('lion', 'horse', 'llama', 'animal', 'mammal', 'cattle', 'bull', 'elephant', 'leopard'))
+                                                     return wrap(<g fill="currentColor" stroke="none"><circle cx="7.5" cy="10" r="1.7" /><circle cx="11" cy="8" r="1.8" /><circle cx="15" cy="8" r="1.8" /><circle cx="16.5" cy="11" r="1.7" /><path d="M12 11.5c2.8 0 5 1.8 5 4 0 1.7-1.6 2.5-5 2.5s-5-.8-5-2.5c0-2.2 2.2-4 5-4z" /></g>)
   return null
 }
 
@@ -379,6 +415,8 @@ function DesignSpecs({ country, locale }) {
   const symbols = country.symbols || []
   const colorMeanings = country.color_meanings || {}
   const symbolMeanings = country.symbol_meanings || {}
+  const displaySymbols = Array.isArray(country.display_symbols) ? country.display_symbols : []
+  const hasDisplaySymbols = displaySymbols.length > 0
   const spec = locale === 'fr' ? (country.spec_fr || country.spec_en) : (country.spec_en || country.spec_fr)
   const facts = [country.ratio && { label: t('Proportions', 'Proportions'), value: country.ratio }, country.shape && { label: t('Shape', 'Forme'), value: labelShape(country.shape, locale) }].filter(Boolean)
 
@@ -425,14 +463,14 @@ function DesignSpecs({ country, locale }) {
     )
   }
 
-  if (!facts.length && !colors.length && !symbols.length && !spec) return null
+  if (!facts.length && !colors.length && !symbols.length && !displaySymbols.length && !spec) return null
   return (
     <Section
       title={t('Design & Symbolism', 'Conception et Symbolisme')}
       subtitle={t('Specs plus what each color and emblem means on this flag — tap an element to reveal its meaning.', 'Les spécifications et la signification de chaque couleur et emblème sur ce drapeau — touchez un élément pour révéler son sens.')}
     >
       {facts.length > 0 && (
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0', borderRadius: '10px', overflow: 'hidden', border: `1px solid ${DS.border}`, marginBottom: (colors.length || symbols.length || spec) ? '18px' : 0 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0', borderRadius: '10px', overflow: 'hidden', border: `1px solid ${DS.border}`, marginBottom: (colors.length || symbols.length || hasDisplaySymbols || spec) ? '18px' : 0 }}>
           {facts.map((item, i) => (
             <div key={i} style={{ padding: '12px 14px', backgroundColor: DS.surface, borderRight: i % 2 === 0 && i < facts.length - 1 ? `1px solid ${DS.border}` : 'none' }}>
               <p style={{ margin: '0 0 3px', fontSize: '10px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{item.label}</p>
@@ -443,7 +481,7 @@ function DesignSpecs({ country, locale }) {
       )}
 
       {colors.length > 0 && (
-        <div style={{ marginBottom: (symbols.length || spec) ? '18px' : 0 }}>
+        <div style={{ marginBottom: (symbols.length || hasDisplaySymbols || spec) ? '18px' : 0 }}>
           <p style={{ margin: '0 0 10px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{t('Colors', 'Couleurs')}</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             {colors.map(c => {
@@ -463,20 +501,32 @@ function DesignSpecs({ country, locale }) {
         </div>
       )}
 
-      {symbols.length > 0 && (
+      {(hasDisplaySymbols ? displaySymbols.length > 0 : symbols.length > 0) && (
         <div style={{ marginBottom: spec ? '18px' : 0 }}>
           <p style={{ margin: '0 0 10px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{t('Symbols & elements', 'Symboles & éléments')}</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            {symbols.map(sy => {
-              const label = labelSymbol(sy, locale)
-              const header = (
-                <>
-                  <span style={{ width: '30px', height: '30px', borderRadius: '8px', backgroundColor: DS.navy, color: '#fff', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px', fontWeight: '800' }}>{symbolGlyph(sy) || String(label).charAt(0).toUpperCase()}</span>
-                  <span style={{ fontSize: '14px', fontWeight: '700', color: DS.navy, flex: 1 }}>{label}</span>
-                </>
-              )
-              return disclosure('s:' + sy, meaningOf(symbolMeanings, sy), header)
-            })}
+            {hasDisplaySymbols
+              ? displaySymbols.map((d, i) => {
+                  const label = locale === 'fr' ? (d.fr || d.en) : (d.en || d.fr)
+                  const meaning = d.meaning ? (locale === 'fr' ? (d.meaning.fr || d.meaning.en) : (d.meaning.en || d.meaning.fr)) : null
+                  const header = (
+                    <>
+                      <span style={{ width: '30px', height: '30px', borderRadius: '8px', backgroundColor: DS.navy, color: '#fff', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px', fontWeight: '800' }}>{symbolGlyph(d.glyph || label) || String(label).charAt(0).toUpperCase()}</span>
+                      <span style={{ fontSize: '14px', fontWeight: '700', color: DS.navy, flex: 1 }}>{label}</span>
+                    </>
+                  )
+                  return disclosure('d:' + i, meaning, header)
+                })
+              : symbols.map(sy => {
+                  const label = labelSymbol(sy, locale)
+                  const header = (
+                    <>
+                      <span style={{ width: '30px', height: '30px', borderRadius: '8px', backgroundColor: DS.navy, color: '#fff', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px', fontWeight: '800' }}>{symbolGlyph(sy) || String(label).charAt(0).toUpperCase()}</span>
+                      <span style={{ fontSize: '14px', fontWeight: '700', color: DS.navy, flex: 1 }}>{label}</span>
+                    </>
+                  )
+                  return disclosure('s:' + sy, meaningOf(symbolMeanings, sy), header)
+                })}
           </div>
         </div>
       )}
@@ -543,7 +593,7 @@ export default function CountryDetailPage({ code }) {
 
     // Country data
     supabase.from('countries')
-      .select('iso_code, name_en, name_fr, region, capital, capital_fr, colors, symbols, ratio, shape, population, area_km2, adopted_year, median_age, last_flag_change, spec_en, spec_fr, etiquette_en, etiquette_fr, color_meanings, symbol_meanings')
+      .select('iso_code, name_en, name_fr, region, capital, capital_fr, colors, symbols, ratio, shape, population, area_km2, adopted_year, median_age, last_flag_change, spec_en, spec_fr, etiquette_en, etiquette_fr, color_meanings, symbol_meanings, display_symbols')
       .eq('iso_code', code.toLowerCase()).single()
       .then(({ data }) => {
         if (data) {
@@ -568,6 +618,7 @@ export default function CountryDetailPage({ code }) {
             etiquette_fr:     data.etiquette_fr || [],
             color_meanings:   data.color_meanings || {},
             symbol_meanings:  data.symbol_meanings || {},
+            display_symbols:  data.display_symbols || [],
           })
           // Related countries
           supabase.from('countries').select('iso_code, name_en, name_fr').eq('region', data.region).neq('iso_code', data.iso_code)
@@ -622,12 +673,19 @@ export default function CountryDetailPage({ code }) {
     return `${year} (${years} ${locale === 'fr' ? 'ans' : 'yrs'})`
   }
 
+  const density = (country.population && country.area_km2)
+    ? (country.population / country.area_km2)
+    : null
+  const densityValue = density === null
+    ? null
+    : (density < 1 ? '< 1' : Math.round(density).toLocaleString()) + (locale === 'fr' ? ' hab./km²' : ' /km²')
+
   const quickFacts = [
     { label: t('Capital',      'Capitale'),      value: capital,                                  },
     { label: t('Population',   'Population'),    value: formatPop(country.population),            },
+    ...(country.area_km2 ? [{ label: t('Area', 'Superficie'), value: country.area_km2.toLocaleString() + ' km²' }] : []),
+    ...(densityValue ? [{ label: t('Density', 'Densité'), value: densityValue }] : []),
     { label: t('Adoption date','Date adoption'), value: formatFlagSince(country.last_flag_change) },
-    { label: t('Aspect ratio', 'Proportions'),   value: country.ratio || '—'                      },
-    ...(country.area_km2   ? [{ label: t('Area', 'Superficie'), value: country.area_km2.toLocaleString() + ' km²' }] : []),
     ...(country.median_age ? [{ label: t('Median age','Âge médian'), value: country.median_age + (locale === 'fr' ? ' ans' : ' yrs') }] : []),
   ].filter(f => f.value && f.value !== '—')
 

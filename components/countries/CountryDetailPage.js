@@ -418,6 +418,7 @@ function DesignSpecs({ country, locale }) {
   const displaySymbols = Array.isArray(country.display_symbols) ? country.display_symbols : []
   const hasDisplaySymbols = displaySymbols.length > 0
   const spec = locale === 'fr' ? (country.spec_fr || country.spec_en) : (country.spec_en || country.spec_fr)
+  const designer = locale === 'fr' ? (country.designer_fr || country.designer_en) : (country.designer_en || country.designer_fr)
   const facts = [country.ratio && { label: t('Proportions', 'Proportions'), value: country.ratio }, country.shape && { label: t('Shape', 'Forme'), value: labelShape(country.shape, locale) }].filter(Boolean)
 
   const [open, setOpen] = useState(() => new Set())
@@ -463,7 +464,7 @@ function DesignSpecs({ country, locale }) {
     )
   }
 
-  if (!facts.length && !colors.length && !symbols.length && !displaySymbols.length && !spec) return null
+  if (!facts.length && !colors.length && !symbols.length && !displaySymbols.length && !spec && !designer) return null
   return (
     <Section
       title={t('Design & Symbolism', 'Conception et Symbolisme')}
@@ -537,6 +538,13 @@ function DesignSpecs({ country, locale }) {
           <p style={{ margin: 0, fontSize: '13px', color: DS.navy, lineHeight: 1.7, whiteSpace: 'pre-line' }}>{spec}</p>
         </div>
       )}
+
+      {designer && (
+        <div style={{ borderTop: `1px solid ${DS.border}`, marginTop: '16px', paddingTop: '14px', display: 'flex', alignItems: 'baseline', gap: '8px', flexWrap: 'wrap' }}>
+          <span style={{ fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em', whiteSpace: 'nowrap' }}>{t('Designed by', 'Conçu par')}</span>
+          <span style={{ fontSize: '13px', fontWeight: '600', color: DS.navy, lineHeight: 1.5 }}>{designer}</span>
+        </div>
+      )}
     </Section>
   )
 }
@@ -593,7 +601,7 @@ export default function CountryDetailPage({ code }) {
 
     // Country data
     supabase.from('countries')
-      .select('iso_code, name_en, name_fr, region, capital, capital_fr, colors, symbols, ratio, shape, population, area_km2, adopted_year, median_age, last_flag_change, spec_en, spec_fr, etiquette_en, etiquette_fr, color_meanings, symbol_meanings, display_symbols')
+      .select('iso_code, name_en, name_fr, region, capital, capital_fr, colors, symbols, ratio, shape, population, area_km2, adopted_year, median_age, last_flag_change, spec_en, spec_fr, etiquette_en, etiquette_fr, color_meanings, symbol_meanings, display_symbols, designer_en, designer_fr, adopted_note_fr, adopted_note_en, adopted_detail_fr, adopted_detail_en')
       .eq('iso_code', code.toLowerCase()).single()
       .then(({ data }) => {
         if (data) {
@@ -614,6 +622,12 @@ export default function CountryDetailPage({ code }) {
             shape:            data.shape,
             spec_en:          data.spec_en,
             spec_fr:          data.spec_fr,
+            designer_en:      data.designer_en,
+            designer_fr:      data.designer_fr,
+            adopted_note_fr:  data.adopted_note_fr,
+            adopted_note_en:  data.adopted_note_en,
+            adopted_detail_fr: data.adopted_detail_fr,
+            adopted_detail_en: data.adopted_detail_en,
             etiquette_en:     data.etiquette_en || [],
             etiquette_fr:     data.etiquette_fr || [],
             color_meanings:   data.color_meanings || {},
@@ -666,11 +680,39 @@ export default function CountryDetailPage({ code }) {
     return n.toString()
   }
 
+  // Auto-updating age relative to the CURRENT year
+  function yearsLabel(n) {
+    if (locale === 'fr') return `${n} ${n <= 1 ? 'an' : 'ans'}`
+    return `${n} ${n <= 1 ? 'year' : 'years'}`
+  }
+  // " (X ans)" suffix from a year, recomputed every year. Empty if no year.
+  function yearsSuffix(year) {
+    return year ? ` (${yearsLabel(new Date().getFullYear() - year)})` : ''
+  }
   function formatFlagSince(dateStr) {
     if (!dateStr) return null
-    const year  = new Date(dateStr).getFullYear()
-    const years = new Date().getFullYear() - year
-    return `${year} (${years} ${locale === 'fr' ? 'ans' : 'yrs'})`
+    const year = new Date(dateStr).getFullYear()
+    return `${year}${yearsSuffix(year)}`
+  }
+  // Replace {{since:YYYY}} tokens with a live age (e.g. 81 ans), recomputed every year
+  function expandSince(str) {
+    return str.replace(/\{\{since:(\d{1,4})\}\}/g, (_, y) => yearsLabel(new Date().getFullYear() - parseInt(y, 10)))
+  }
+  // Render a Quick-Fact value: bullet list when flagged and multi-part (" · "), else plain text
+  function renderFactValue(item) {
+    const value = item.value
+    if (typeof value !== 'string') return value
+    if (item.bullets && value.includes(' · ')) {
+      const parts = value.split(' · ')
+      return (
+        <ul style={{ margin: 0, paddingLeft: '15px' }}>
+          {parts.map((p, idx) => (
+            <li key={idx} style={{ marginBottom: idx < parts.length - 1 ? '3px' : 0 }}>{expandSince(p)}</li>
+          ))}
+        </ul>
+      )
+    }
+    return expandSince(value)
   }
 
   const density = (country.population && country.area_km2)
@@ -680,12 +722,29 @@ export default function CountryDetailPage({ code }) {
     ? null
     : (density < 1 ? '< 1' : Math.round(density).toLocaleString()) + (locale === 'fr' ? ' hab./km²' : ' /km²')
 
+  const adoptedNote   = locale === 'fr' ? country.adopted_note_fr   : country.adopted_note_en
+  const adoptedDetail = locale === 'fr' ? country.adopted_detail_fr : country.adopted_detail_en
+  // Detail-page adoption value. A live "(X ans)" is appended for EVERY country (recomputed each year);
+  // the only exception is a self-contained detail override, which carries its own {{since}} tokens.
+  let adoptionValue
+  if (adoptedDetail) {
+    adoptionValue = adoptedDetail
+  } else if (country.adopted_year && adoptedNote) {
+    adoptionValue = `${country.adopted_year}${yearsSuffix(country.adopted_year)} ${adoptedNote}`
+  } else if (country.last_flag_change) {
+    adoptionValue = formatFlagSince(country.last_flag_change)
+  } else if (country.adopted_year) {
+    adoptionValue = `${country.adopted_year}${yearsSuffix(country.adopted_year)}`
+  } else {
+    adoptionValue = null
+  }
+
   const quickFacts = [
     { label: t('Capital',      'Capitale'),      value: capital,                                  },
     { label: t('Population',   'Population'),    value: formatPop(country.population),            },
     ...(country.area_km2 ? [{ label: t('Area', 'Superficie'), value: country.area_km2.toLocaleString() + ' km²' }] : []),
     ...(densityValue ? [{ label: t('Density', 'Densité'), value: densityValue }] : []),
-    { label: t('Adoption date','Date adoption'), value: formatFlagSince(country.last_flag_change) },
+    { label: t('Adoption date','Date adoption'), value: adoptionValue, bullets: true },
     ...(country.median_age ? [{ label: t('Median age','Âge médian'), value: country.median_age + (locale === 'fr' ? ' ans' : ' yrs') }] : []),
   ].filter(f => f.value && f.value !== '—')
 
@@ -734,7 +793,7 @@ export default function CountryDetailPage({ code }) {
                     backgroundColor: DS.surface,
                   }}>
                     <p style={{ margin: '0 0 3px', fontSize: '10px', fontWeight: '700', color: DS.light, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{item.label}</p>
-                    <p style={{ margin: 0, fontSize: '14px', fontWeight: '700', color: DS.navy, lineHeight: 1.3 }}>{item.value}</p>
+                    <div style={{ margin: 0, fontSize: '14px', fontWeight: '700', color: DS.navy, lineHeight: 1.3 }}>{renderFactValue(item)}</div>
                   </div>
                 ))}
               </div>
@@ -854,7 +913,7 @@ export default function CountryDetailPage({ code }) {
                       borderBottom: i < quickFacts.length - 2 ? `1px solid ${DS.border}` : 'none',
                     }}>
                       <p style={{ margin: '0 0 3px', fontSize: '10px', fontWeight: '700', color: DS.light, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{item.label}</p>
-                      <p style={{ margin: 0, fontSize: '14px', fontWeight: '700', color: DS.navy }}>{item.value}</p>
+                      <div style={{ margin: 0, fontSize: '14px', fontWeight: '700', color: DS.navy }}>{renderFactValue(item)}</div>
                     </div>
                   ))}
                 </div>

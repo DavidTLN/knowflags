@@ -165,7 +165,7 @@ function FlagHero({ countryCode, countryName, locale, flagUrl }) {
         src={src}
         alt={countryName}
         onError={() => setSrc(`https://flagcdn.com/w640/${countryCode.toLowerCase()}.png`)}
-        style={{ width: '100%', display: 'block', aspectRatio: '3/2', objectFit: 'contain', backgroundColor: 'rgba(22,50,79,0.16)', padding: '16px', boxShadow: 'inset 0 0 0 1px rgba(22,50,79,0.10)' }}
+        style={{ width: '100%', display: 'block', aspectRatio: '3/2', objectFit: 'contain', backgroundColor: DS.bg, padding: '16px' }}
       />
       <button
         onClick={downloadPng}

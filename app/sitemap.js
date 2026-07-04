@@ -32,6 +32,7 @@ export default async function sitemap() {
     ...urls('/organisations', 0.7, 'monthly'),
     ...urls('/true-size', 0.6, 'monthly'),
     ...urls('/leaderboard', 0.5, 'daily'),
+    ...urls('/blog', 0.7, 'weekly'),
     ...CONTINENTS.flatMap(slug => urls(`/continents/${slug}`, 0.8, 'weekly')),
     ...GAMES.flatMap(game => urls(`/games/${game}`, 0.8, 'monthly')),
   ]
@@ -39,17 +40,20 @@ export default async function sitemap() {
   // ── Dynamic country pages ──────────────────────────────────────────────────
   let countryPages = []
   try {
-    const supabase = createClient()
-    const { data: countries } = await supabase
+    // createClient() is async → must be awaited, otherwise `.from` is undefined
+    const supabase = await createClient()
+    const { data: countries, error } = await supabase
       .from('countries')
-      .select('iso_code, updated_at')
+      .select('iso_code')            // `updated_at` does not exist on countries
       .order('iso_code')
+
+    if (error) throw error
 
     if (countries) {
       countryPages = countries.flatMap(c =>
         LOCALES.map(locale => ({
           url: `${BASE_URL}/${locale}/countries/${c.iso_code.toLowerCase()}`,
-          lastModified: c.updated_at ? new Date(c.updated_at) : new Date(),
+          lastModified: new Date(),
           changeFrequency: 'monthly',
           priority: 0.85,
         }))

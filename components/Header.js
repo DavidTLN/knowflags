@@ -6,6 +6,7 @@ import { usePathname, useRouter } from 'next/navigation'
 import { useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-client'
 import FlagSubmitModal from '@/components/FlagSubmitModal'
+import GlobalSearch from '@/components/GlobalSearch'
 
 const GAMES = [
   { key: 'flag-reveal',  en: 'FlagReveal',  fr: 'FlagReveal',  descEn: 'Uncover the flag tile by tile',           descFr: 'Révèle le drapeau tuile par tuile' },
@@ -362,6 +363,9 @@ export default function Header() {
 
           {/* ── Right side ── */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
+
+            {/* Global search (desktop input / mobile icon+overlay) */}
+            <GlobalSearch />
 
             {/* Submit button */}
             <button

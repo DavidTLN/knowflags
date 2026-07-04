@@ -139,7 +139,7 @@ export default function FlagHistoryModule({ countryCode, countryName }) {
             overflow: 'hidden',
             boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
           }}>
-            <div style={{ backgroundColor: '#f8f5ed', padding: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '160px' }}>
+            <div style={{ backgroundColor: 'rgba(22,50,79,0.12)', padding: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '160px' }}>
               <FlagImage
                 imageUrl={selected.image_url}
                 isoCode={countryCode}
@@ -190,7 +190,7 @@ export default function FlagHistoryModule({ countryCode, countryName }) {
                     width: '64px', height: '46px', flexShrink: 0, boxSizing: 'border-box',
                     borderRadius: '9px', padding: '3px',
                     border: `2px solid ${isSelected ? '#0B1F3B' : isCurrent ? '#22c55e' : '#e2e8f0'}`,
-                    backgroundColor: '#ffffff',
+                    backgroundColor: 'rgba(22,50,79,0.14)',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                     overflow: 'hidden', transition: 'all 0.15s',
                     boxShadow: isSelected ? '0 0 0 4px rgba(11,31,59,0.12)' : '0 1px 3px rgba(11,31,59,0.06)',

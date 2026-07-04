@@ -136,7 +136,7 @@ export default function CountryListingPage() {
     const supabase = createClient()
     supabase
       .from('countries')
-      .select('iso_code, name_en, name_fr, region, colors, symbols, ratio, shape, has_weapons, has_blade, has_firearm, adopted_year, last_flag_change')
+      .select('iso_code, name_en, name_fr, region, colors, symbols, ratio, shape, has_weapons, has_blade, has_firearm, adopted_year, last_flag_change, flag_url')
       .order('name_en')
       .then(({ data }) => {
         if (data) setCountries(data.map(c => ({
@@ -147,6 +147,7 @@ export default function CountryListingPage() {
           has_weapons: c.has_weapons || false, has_blade: c.has_blade || false, has_firearm: c.has_firearm || false,
           adopted_year: c.adopted_year ?? null,
           last_flag_change: c.last_flag_change || null,
+          flagUrl: c.flag_url || null,
         })))
         setCountriesLoading(false)
       })
@@ -231,7 +232,7 @@ export default function CountryListingPage() {
           onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none' }}
         >
           <div style={{ aspectRatio: '3/2', overflow: 'hidden', backgroundColor: DS.bg, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <img src={`https://flagcdn.com/w320/${country.code}.png`} alt={name} loading="lazy"
+            <img src={country.flagUrl || `https://flagcdn.com/w320/${country.code}.png`} alt={name} loading="lazy"
               style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', padding: '6px' }} />
           </div>
           <div style={{ padding: '10px 14px', textAlign: 'center' }}>
@@ -249,7 +250,7 @@ export default function CountryListingPage() {
       <a href={`/${locale}/countries/${country.code}`}
         style={{ textDecoration: 'none', display: 'block', backgroundColor: DS.surface, borderRadius: '10px', overflow: 'hidden', border: `1px solid ${DS.border}` }}>
         <div style={{ aspectRatio: '3/2', backgroundColor: DS.bg, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <img src={`https://flagcdn.com/w160/${country.code}.png`} alt={name} loading="lazy"
+          <img src={country.flagUrl || `https://flagcdn.com/w160/${country.code}.png`} alt={name} loading="lazy"
             style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', padding: '5px' }} />
         </div>
         <div style={{ padding: '8px 10px', textAlign: 'center' }}>

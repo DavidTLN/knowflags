@@ -37,9 +37,17 @@ export default function AdminSubmissionsList({ submissions, locale }) {
               🏳️ {t('Flag Submissions', 'Soumissions de drapeaux')}
             </h1>
           </div>
-          <Link href={`/${locale}`} style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>
-            ← {t('Back to site', 'Retour au site')}
-          </Link>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '18px' }}>
+            <Link href={`/${locale}/admin`} style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontWeight: '700' }}>
+              {t('Hub', 'Accueil')}
+            </Link>
+            <Link href={`/${locale}/admin/reports`} style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontWeight: '700' }}>
+              {t('Reports', 'Signalements')}
+            </Link>
+            <Link href={`/${locale}`} style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>
+              ← {t('Back to site', 'Retour au site')}
+            </Link>
+          </div>
         </div>
       </div>
 

@@ -8,6 +8,7 @@ import { useLocale } from 'next-intl'
 import { labelColor, labelSymbol, labelShape } from '@/lib/flagSymbolsFr'
 import Footer from '@/components/Footer'
 import PageLoader from '@/components/PageLoader'
+import ReportModal from '@/components/ReportModal'
 
 // ── DS Tokens ─────────────────────────────────────────────────────────────────
 const DS = {
@@ -110,7 +111,7 @@ function CountryFlagsSection({ countryIso2 }) {
 }
 
 // ── FlagHero ─────────────────────────────────────────────────────────────────
-function FlagHero({ countryCode, countryName, locale }) {
+function FlagHero({ countryCode, countryName, locale, flagUrl }) {
   const t = (en, fr) => locale === 'fr' ? fr : en
   const [src, setSrc] = useState(null)
   const [loaded, setLoaded] = useState(false)
@@ -118,6 +119,9 @@ function FlagHero({ countryCode, countryName, locale }) {
 
   useEffect(() => {
     if (!countryCode) return
+    // 1) explicit override on the country (flag_url) wins everywhere
+    if (flagUrl) { setSrc(flagUrl); setLoaded(true); return }
+    // 2) otherwise the current flag-history entry, 3) else flagcdn
     const supabase = createClient()
     supabase.from('country_flag_history').select('image_url')
       .eq('iso_code', countryCode.toUpperCase()).is('date_end', null)
@@ -130,17 +134,18 @@ function FlagHero({ countryCode, countryName, locale }) {
         setSrc(`https://flagcdn.com/w640/${countryCode.toLowerCase()}.png`)
         setLoaded(true)
       })
-  }, [countryCode])
+  }, [countryCode, flagUrl])
 
   async function downloadPng() {
-    const url = `https://flagcdn.com/w1280/${countryCode.toLowerCase()}.png`
+    const url = flagUrl || `https://flagcdn.com/w1280/${countryCode.toLowerCase()}.png`
+    const ext = flagUrl && flagUrl.toLowerCase().endsWith('.svg') ? 'svg' : 'png'
     try {
       const res = await fetch(url)
       const blob = await res.blob()
       const obj = URL.createObjectURL(blob)
       const a = document.createElement('a')
       a.href = obj
-      a.download = `flag-${countryCode.toLowerCase()}.png`
+      a.download = `flag-${countryCode.toLowerCase()}.${ext}`
       document.body.appendChild(a)
       a.click()
       a.remove()
@@ -365,10 +370,10 @@ function symbolGlyph(name) {
   const k = String(name || '').toLowerCase().trim()
   const has = (...arr) => arr.some(w => k.includes(w))
   const wrap = (children, opts = {}) => (
-    <svg width="17" height="17" viewBox="0 0 24 24" fill={opts.fill || 'none'} stroke={opts.stroke || 'currentColor'} strokeWidth={opts.sw || 2} strokeLinecap="round" strokeLinejoin="round">{children}</svg>
+    <svg width="22" height="22" viewBox="0 0 24 24" fill={opts.fill || 'none'} stroke={opts.stroke || 'currentColor'} strokeWidth={opts.sw || 2} strokeLinecap="round" strokeLinejoin="round">{children}</svg>
   )
   if (has('david'))                                  return wrap(<><polygon points="12,3 18.5,18 5.5,18" fill="none" /><polygon points="12,21 5.5,6 18.5,6" fill="none" /></>, { sw: 1.7 })
-  if (has('crescent', 'moon'))                       return wrap(<path d="M16 3a9 9 0 1 0 0 18 7 7 0 1 1 0-18z" fill="currentColor" stroke="none" />)
+  if (has('crescent', 'moon'))                       return wrap(<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor" stroke="none" />)
   if (has('star'))                                   return wrap(<polygon points="12,2.5 14.6,9 21.5,9.2 16,13.4 18,20.2 12,16.2 6,20.2 8,13.4 2.5,9.2 9.4,9" fill="currentColor" stroke="none" />)
   if (has('sun'))                                    return wrap(<><circle cx="12" cy="12" r="4" fill="currentColor" stroke="none" /><line x1="12" y1="2" x2="12" y2="5" /><line x1="12" y1="19" x2="12" y2="22" /><line x1="2" y1="12" x2="5" y2="12" /><line x1="19" y1="12" x2="22" y2="12" /><line x1="5" y1="5" x2="7" y2="7" /><line x1="17" y1="17" x2="19" y2="19" /><line x1="19" y1="5" x2="17" y2="7" /><line x1="7" y1="17" x2="5" y2="19" /></>)
   if (has('crown', 'tiara'))                         return wrap(<><path d="M4 17l1.2-8 4 4L12 6l2.8 7 4-4 1.2 8z" fill="currentColor" stroke="none" /><rect x="4" y="17.5" width="16" height="2.6" rx="1" fill="currentColor" stroke="none" /></>)
@@ -407,6 +412,41 @@ function symbolGlyph(name) {
   if (has('lion', 'horse', 'llama', 'animal', 'mammal', 'cattle', 'bull', 'elephant', 'leopard'))
                                                      return wrap(<g fill="currentColor" stroke="none"><circle cx="7.5" cy="10" r="1.7" /><circle cx="11" cy="8" r="1.8" /><circle cx="15" cy="8" r="1.8" /><circle cx="16.5" cy="11" r="1.7" /><path d="M12 11.5c2.8 0 5 1.8 5 4 0 1.7-1.6 2.5-5 2.5s-5-.8-5-2.5c0-2.2 2.2-4 5-4z" /></g>)
   return null
+}
+
+// slugify a symbol name → file-name fragment (e.g. "Coat of arms" → "coat-of-arms")
+function symbolSlug(name) {
+  return String(name || '').toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+}
+
+// Symbol icon: a custom uploaded icon (/flags/symbols/{slug}.svg|png, forced white on the navy tile),
+// falling back to the generated glyph, then the first letter.
+function SymbolBadge({ slug, fallback }) {
+  const exts = ['svg', 'png']
+  const [idx, setIdx] = useState(0)
+  const src = slug && idx < exts.length ? `/flags/symbols/${slug}.${exts[idx]}` : null
+  return (
+    <span style={{ width: '40px', height: '40px', borderRadius: '10px', backgroundColor: DS.navy, color: '#fff', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '17px', fontWeight: '800' }}>
+      {src
+        ? <img src={src} alt="" onError={() => setIdx(i => i + 1)} style={{ width: '30px', height: '30px', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
+        : fallback}
+    </span>
+  )
+}
+
+// Optional construction sheet: /flags/construction/{iso}-construction.svg — self-hides if the file is absent.
+function ConstructionSheet({ iso, locale }) {
+  const t = (en, fr) => locale === 'fr' ? fr : en
+  const [ok, setOk] = useState(true)
+  if (!iso || !ok) return null
+  return (
+    <div style={{ borderTop: `1px solid ${DS.border}`, marginTop: '16px', paddingTop: '14px' }}>
+      <p style={{ margin: '0 0 10px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{t('Construction sheet', 'Planche de construction')}</p>
+      <div style={{ border: `1px solid ${DS.border}`, borderRadius: '10px', overflow: 'hidden', backgroundColor: '#FAFAF7' }}>
+        <img src={`/flags/construction/${iso}-construction.svg`} alt={t('Construction sheet', 'Planche de construction')} onError={() => setOk(false)} style={{ width: '100%', display: 'block' }} />
+      </div>
+    </div>
+  )
 }
 
 function DesignSpecs({ country, locale }) {
@@ -489,7 +529,7 @@ function DesignSpecs({ country, locale }) {
               const hex = COLOR_HEX[String(c).toLowerCase()] || '#cccccc'
               const header = (
                 <>
-                  <span style={{ width: '30px', height: '30px', borderRadius: '8px', backgroundColor: hex, border: String(c).toLowerCase() === 'white' ? `1px solid ${DS.border}` : 'none', flexShrink: 0 }} />
+                  <span style={{ width: '40px', height: '40px', borderRadius: '10px', backgroundColor: hex, border: String(c).toLowerCase() === 'white' ? `1px solid ${DS.border}` : 'none', flexShrink: 0 }} />
                   <span style={{ flex: 1, minWidth: 0, display: 'flex', alignItems: 'baseline', gap: '8px', flexWrap: 'wrap' }}>
                     <span style={{ fontSize: '14px', fontWeight: '700', color: DS.navy }}>{labelColor(c, locale)}</span>
                     <code style={{ fontSize: '11px', fontFamily: 'monospace', color: DS.muted, textTransform: 'uppercase' }}>{hex}</code>
@@ -510,9 +550,10 @@ function DesignSpecs({ country, locale }) {
               ? displaySymbols.map((d, i) => {
                   const label = locale === 'fr' ? (d.fr || d.en) : (d.en || d.fr)
                   const meaning = d.meaning ? (locale === 'fr' ? (d.meaning.fr || d.meaning.en) : (d.meaning.en || d.meaning.fr)) : null
+                  const slug = d.icon || `${country.code}-${symbolSlug(d.glyph || label)}`
                   const header = (
                     <>
-                      <span style={{ width: '30px', height: '30px', borderRadius: '8px', backgroundColor: DS.navy, color: '#fff', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px', fontWeight: '800' }}>{symbolGlyph(d.glyph || label) || String(label).charAt(0).toUpperCase()}</span>
+                      <SymbolBadge slug={slug} fallback={symbolGlyph(d.glyph || label) || String(label).charAt(0).toUpperCase()} />
                       <span style={{ fontSize: '14px', fontWeight: '700', color: DS.navy, flex: 1 }}>{label}</span>
                     </>
                   )
@@ -522,7 +563,7 @@ function DesignSpecs({ country, locale }) {
                   const label = labelSymbol(sy, locale)
                   const header = (
                     <>
-                      <span style={{ width: '30px', height: '30px', borderRadius: '8px', backgroundColor: DS.navy, color: '#fff', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px', fontWeight: '800' }}>{symbolGlyph(sy) || String(label).charAt(0).toUpperCase()}</span>
+                      <SymbolBadge slug={`${country.code}-${symbolSlug(sy)}`} fallback={symbolGlyph(sy) || String(label).charAt(0).toUpperCase()} />
                       <span style={{ fontSize: '14px', fontWeight: '700', color: DS.navy, flex: 1 }}>{label}</span>
                     </>
                   )
@@ -545,6 +586,8 @@ function DesignSpecs({ country, locale }) {
           <span style={{ fontSize: '13px', fontWeight: '600', color: DS.navy, lineHeight: 1.5 }}>{designer}</span>
         </div>
       )}
+
+      <ConstructionSheet iso={country.code} locale={locale} />
     </Section>
   )
 }
@@ -587,6 +630,7 @@ export default function CountryDetailPage({ code }) {
   const [relatedCountries, setRelated]  = useState([])
   const [facts, setFacts]               = useState([])
   const [isMobile, setIsMobile]         = useState(false)
+  const [reportOpen, setReportOpen]     = useState(false)
 
   useEffect(() => {
     function check() { setIsMobile(window.innerWidth < 768) }
@@ -601,7 +645,7 @@ export default function CountryDetailPage({ code }) {
 
     // Country data
     supabase.from('countries')
-      .select('iso_code, name_en, name_fr, region, capital, capital_fr, colors, symbols, ratio, shape, population, area_km2, adopted_year, median_age, last_flag_change, spec_en, spec_fr, etiquette_en, etiquette_fr, color_meanings, symbol_meanings, display_symbols, designer_en, designer_fr, adopted_note_fr, adopted_note_en, adopted_detail_fr, adopted_detail_en')
+      .select('iso_code, name_en, name_fr, region, capital, capital_fr, colors, symbols, ratio, shape, population, area_km2, adopted_year, median_age, last_flag_change, spec_en, spec_fr, etiquette_en, etiquette_fr, color_meanings, symbol_meanings, display_symbols, designer_en, designer_fr, adopted_note_fr, adopted_note_en, adopted_detail_fr, adopted_detail_en, flag_url')
       .eq('iso_code', code.toLowerCase()).single()
       .then(({ data }) => {
         if (data) {
@@ -628,6 +672,7 @@ export default function CountryDetailPage({ code }) {
             adopted_note_en:  data.adopted_note_en,
             adopted_detail_fr: data.adopted_detail_fr,
             adopted_detail_en: data.adopted_detail_en,
+            flag_url: data.flag_url,
             etiquette_en:     data.etiquette_en || [],
             etiquette_fr:     data.etiquette_fr || [],
             color_meanings:   data.color_meanings || {},
@@ -769,13 +814,20 @@ export default function CountryDetailPage({ code }) {
 
         {/* ── Flag hero — full width ── */}
         <div style={{ backgroundColor: DS.surface, borderTop: `1px solid ${DS.border}`, borderBottom: `1px solid ${DS.border}` }}>
-          <FlagHero countryCode={country.code} countryName={name} locale={locale} />
+          <FlagHero countryCode={country.code} countryName={name} locale={locale} flagUrl={country.flag_url} />
         </div>
 
         {/* ── Country name ── */}
-        <div style={{ padding: '20px 16px 0' }}>
-          <h1 style={{ margin: '0 0 1px', fontSize: '30px', fontWeight: '900', color: DS.navy, letterSpacing: '-0.8px', lineHeight: 1.1 }}>{name}</h1>
-          <p style={{ margin: '0 0 4px', fontSize: '14px', color: DS.muted }}>{region}</p>
+        <div style={{ padding: '20px 16px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '12px' }}>
+          <div style={{ minWidth: 0 }}>
+            <h1 style={{ margin: '0 0 1px', fontSize: '30px', fontWeight: '900', color: DS.navy, letterSpacing: '-0.8px', lineHeight: 1.1 }}>{name}</h1>
+            <p style={{ margin: '0 0 4px', fontSize: '14px', color: DS.muted }}>{region}</p>
+          </div>
+          <button onClick={() => setReportOpen(true)} aria-label={t('Report an issue', 'Signaler un problème')}
+            style={{ flexShrink: 0, minHeight: '44px', display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '0 14px', borderRadius: '10px', backgroundColor: 'transparent', color: DS.navy, border: `1.5px solid ${DS.border}`, fontSize: '13px', fontWeight: '600', cursor: 'pointer', whiteSpace: 'nowrap' }}>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+            {t('Report', 'Signaler')}
+          </button>
         </div>
 
         {/* ── Page content — spaced sections ── */}
@@ -865,6 +917,7 @@ export default function CountryDetailPage({ code }) {
         </div>
       </div>
       <Footer />
+      {reportOpen && <ReportModal countryCode={country.code} countryName={name} onClose={() => setReportOpen(false)} />}
       </>
     )
   }
@@ -891,14 +944,23 @@ export default function CountryDetailPage({ code }) {
 
           {/* Flag card */}
           <div style={{ flex: '0 0 auto', width: 'min(360px, 44%)', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 8px 32px rgba(22,50,79,0.12)', border: `1px solid ${DS.border}`, backgroundColor: DS.surface }}>
-            <FlagHero countryCode={country.code} countryName={name} locale={locale} />
+            <FlagHero countryCode={country.code} countryName={name} locale={locale} flagUrl={country.flag_url} />
           </div>
 
           {/* Title + facts */}
           <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            <div>
-              <h1 style={{ fontSize: '36px', fontWeight: '900', color: DS.navy, margin: '0 0 1px', letterSpacing: '-1px' }}>{name}</h1>
-              <p style={{ margin: 0, fontSize: '14px', color: DS.muted }}>{region}</p>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '16px' }}>
+              <div style={{ minWidth: 0 }}>
+                <h1 style={{ fontSize: '36px', fontWeight: '900', color: DS.navy, margin: '0 0 1px', letterSpacing: '-1px' }}>{name}</h1>
+                <p style={{ margin: 0, fontSize: '14px', color: DS.muted }}>{region}</p>
+              </div>
+              <button onClick={() => setReportOpen(true)}
+                onMouseEnter={e => { e.currentTarget.style.backgroundColor = DS.bgAlt }}
+                onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'transparent' }}
+                style={{ flexShrink: 0, display: 'inline-flex', alignItems: 'center', gap: '7px', padding: '9px 16px', borderRadius: '10px', backgroundColor: 'transparent', color: DS.navy, border: `1.5px solid ${DS.border}`, fontSize: '13px', fontWeight: '600', cursor: 'pointer', whiteSpace: 'nowrap', transition: 'background-color 0.12s ease' }}>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                {t('Report an issue', 'Signaler un problème')}
+              </button>
             </div>
 
             {/* Quick Facts card */}
@@ -985,6 +1047,7 @@ export default function CountryDetailPage({ code }) {
       </div>
     </div>
     <Footer />
+    {reportOpen && <ReportModal countryCode={country.code} countryName={name} onClose={() => setReportOpen(false)} />}
     </>
   )
 }

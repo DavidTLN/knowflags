@@ -124,7 +124,7 @@ function FlagHero({ countryCode, countryName, locale, flagUrl }) {
     // 2) otherwise the current flag-history entry, 3) else flagcdn
     const supabase = createClient()
     supabase.from('country_flag_history').select('image_url')
-      .eq('iso_code', countryCode.toUpperCase()).is('date_end', null)
+      .eq('iso_code', countryCode.toLowerCase()).is('date_end', null)
       .order('date_start', { ascending: false }).limit(1).single()
       .then(({ data }) => {
         setSrc(data?.image_url || `https://flagcdn.com/w640/${countryCode.toLowerCase()}.png`)
@@ -165,7 +165,7 @@ function FlagHero({ countryCode, countryName, locale, flagUrl }) {
         src={src}
         alt={countryName}
         onError={() => setSrc(`https://flagcdn.com/w640/${countryCode.toLowerCase()}.png`)}
-        style={{ width: '100%', display: 'block', aspectRatio: '3/2', objectFit: 'contain', backgroundColor: DS.bg, padding: '16px' }}
+        style={{ width: '100%', display: 'block', aspectRatio: '3/2', objectFit: 'contain', backgroundColor: 'rgba(22,50,79,0.16)', padding: '16px', boxShadow: 'inset 0 0 0 1px rgba(22,50,79,0.10)' }}
       />
       <button
         onClick={downloadPng}
@@ -434,16 +434,29 @@ function SymbolBadge({ slug, fallback }) {
   )
 }
 
-// Optional construction sheet: /flags/construction/{iso}-construction.svg — self-hides if the file is absent.
+// Optional construction sheet: /flags/construction/{iso}-construction-{locale}.svg
+// Shows the current locale, falls back to the other language, then self-hides if neither file exists.
 function ConstructionSheet({ iso, locale }) {
   const t = (en, fr) => locale === 'fr' ? fr : en
+  const primary = locale === 'fr' ? 'fr' : 'en'
+  const secondary = primary === 'fr' ? 'en' : 'fr'
+  const candidates = [
+    `/flags/construction/${iso}-construction-${primary}.svg`,
+    `/flags/construction/${iso}-construction-${secondary}.svg`,
+  ]
+  const [i, setI] = useState(0)
   const [ok, setOk] = useState(true)
   if (!iso || !ok) return null
   return (
     <div style={{ borderTop: `1px solid ${DS.border}`, marginTop: '16px', paddingTop: '14px' }}>
       <p style={{ margin: '0 0 10px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{t('Construction sheet', 'Planche de construction')}</p>
       <div style={{ border: `1px solid ${DS.border}`, borderRadius: '10px', overflow: 'hidden', backgroundColor: '#FAFAF7' }}>
-        <img src={`/flags/construction/${iso}-construction.svg`} alt={t('Construction sheet', 'Planche de construction')} onError={() => setOk(false)} style={{ width: '100%', display: 'block' }} />
+        <img
+          src={candidates[i]}
+          alt={t('Construction sheet', 'Planche de construction')}
+          onError={() => (i + 1 < candidates.length ? setI(i + 1) : setOk(false))}
+          style={{ width: '100%', display: 'block' }}
+        />
       </div>
     </div>
   )
@@ -526,7 +539,7 @@ function DesignSpecs({ country, locale }) {
           <p style={{ margin: '0 0 10px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{t('Colors', 'Couleurs')}</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             {colors.map(c => {
-              const hex = COLOR_HEX[String(c).toLowerCase()] || '#cccccc'
+              const hex = colorMeanings[String(c).toLowerCase()]?.hex || COLOR_HEX[String(c).toLowerCase()] || '#cccccc'
               const header = (
                 <>
                   <span style={{ width: '40px', height: '40px', borderRadius: '10px', backgroundColor: hex, border: String(c).toLowerCase() === 'white' ? `1px solid ${DS.border}` : 'none', flexShrink: 0 }} />

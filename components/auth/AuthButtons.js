@@ -1,15 +1,17 @@
 'use client'
 
 import { createClient } from '@/lib/supabase-client'
+import { useLocale } from 'next-intl'
 
 export default function AuthButtons() {
   const supabase = createClient()
+  const locale = useLocale()
 
   async function signInWithGoogle() {
     await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: `${window.location.origin}/auth/callback`
+        redirectTo: `${window.location.origin}/${locale}/auth/callback`
       }
     })
   }
@@ -18,7 +20,7 @@ export default function AuthButtons() {
     await supabase.auth.signInWithOAuth({
       provider: 'github',
       options: {
-        redirectTo: `${window.location.origin}/auth/callback`
+        redirectTo: `${window.location.origin}/${locale}/auth/callback`
       }
     })
   }

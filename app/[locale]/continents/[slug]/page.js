@@ -30,7 +30,14 @@ export async function generateMetadata({ params }) {
   return {
     title,
     description,
-    alternates: { canonical: `${BASE_URL}/${locale}/continents/${slug}` },
+    alternates: {
+      canonical: `${BASE_URL}/${locale}/continents/${slug}`,
+      languages: {
+        en: `${BASE_URL}/en/continents/${slug}`,
+        fr: `${BASE_URL}/fr/continents/${slug}`,
+        'x-default': `${BASE_URL}/en/continents/${slug}`,
+      },
+    },
     openGraph: {
       title,
       description,

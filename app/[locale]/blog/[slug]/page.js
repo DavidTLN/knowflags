@@ -21,6 +21,14 @@ export async function generateMetadata({ params }) {
     return {
       title: post.title,
       description: post.excerpt,
+      alternates: {
+        canonical: `https://knowflags.com/${locale}/blog/${slug}`,
+        languages: {
+          en: `https://knowflags.com/en/blog/${slug}`,
+          fr: `https://knowflags.com/fr/blog/${slug}`,
+          'x-default': `https://knowflags.com/en/blog/${slug}`,
+        },
+      },
       openGraph: {
         title: post.title,
         description: post.excerpt,

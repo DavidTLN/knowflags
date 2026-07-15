@@ -15,7 +15,14 @@ export async function generateMetadata({ params }) {
   return {
     title,
     description,
-    alternates: { canonical: `${BASE_URL}/${locale}/games/capital-city` },
+    alternates: {
+      canonical: `${BASE_URL}/${locale}/games/capital-city`,
+      languages: {
+        en: `${BASE_URL}/en/games/capital-city`,
+        fr: `${BASE_URL}/fr/games/capital-city`,
+        'x-default': `${BASE_URL}/en/games/capital-city`,
+      },
+    },
     openGraph: {
       title,
       description,

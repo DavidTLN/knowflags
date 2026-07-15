@@ -1,0 +1,296 @@
+diff --git a/app/[locale]/blog/[slug]/page.js b/app/[locale]/blog/[slug]/page.js
+index 1e97b63..6a94a69 100644
+--- a/app/[locale]/blog/[slug]/page.js
++++ b/app/[locale]/blog/[slug]/page.js
+@@ -21,6 +21,14 @@ export async function generateMetadata({ params }) {
+     return {
+       title: post.title,
+       description: post.excerpt,
++      alternates: {
++        canonical: `https://knowflags.com/${locale}/blog/${slug}`,
++        languages: {
++          en: `https://knowflags.com/en/blog/${slug}`,
++          fr: `https://knowflags.com/fr/blog/${slug}`,
++          'x-default': `https://knowflags.com/en/blog/${slug}`,
++        },
++      },
+       openGraph: {
+         title: post.title,
+         description: post.excerpt,
+diff --git a/app/[locale]/continents/[slug]/page.js b/app/[locale]/continents/[slug]/page.js
+index a04dfe1..9d6434d 100644
+--- a/app/[locale]/continents/[slug]/page.js
++++ b/app/[locale]/continents/[slug]/page.js
+@@ -30,7 +30,14 @@ export async function generateMetadata({ params }) {
+   return {
+     title,
+     description,
+-    alternates: { canonical: `${BASE_URL}/${locale}/continents/${slug}` },
++    alternates: {
++      canonical: `${BASE_URL}/${locale}/continents/${slug}`,
++      languages: {
++        en: `${BASE_URL}/en/continents/${slug}`,
++        fr: `${BASE_URL}/fr/continents/${slug}`,
++        'x-default': `${BASE_URL}/en/continents/${slug}`,
++      },
++    },
+     openGraph: {
+       title,
+       description,
+diff --git a/app/[locale]/countries/[code]/page.js b/app/[locale]/countries/[code]/page.js
+index fc02598..f77af4c 100644
+--- a/app/[locale]/countries/[code]/page.js
++++ b/app/[locale]/countries/[code]/page.js
+@@ -36,7 +36,14 @@ export async function generateMetadata({ params }) {
+     return {
+       title,
+       description,
+-      alternates: { canonical: pageUrl },
++      alternates: {
++        canonical: pageUrl,
++        languages: {
++          en: `${BASE_URL}/en/countries/${code.toLowerCase()}`,
++          fr: `${BASE_URL}/fr/countries/${code.toLowerCase()}`,
++          'x-default': `${BASE_URL}/en/countries/${code.toLowerCase()}`,
++        },
++      },
+       openGraph: {
+         title,
+         description,
+@@ -68,6 +75,7 @@ export default async function Page({ params }) {
+   const isFr = locale === 'fr'
+ 
+   let jsonLd = null
++  let breadcrumbLd = null
+   try {
+     const supabase = await createClient()
+     const { data: country } = await supabase
+@@ -102,6 +110,15 @@ export default async function Page({ params }) {
+           ...(country.population && { population: country.population }),
+         },
+       }
++      breadcrumbLd = {
++        '@context': 'https://schema.org',
++        '@type': 'BreadcrumbList',
++        itemListElement: [
++          { '@type': 'ListItem', position: 1, name: 'KnowFlags', item: `${BASE_URL}/${locale}` },
++          { '@type': 'ListItem', position: 2, name: isFr ? 'Drapeaux' : 'Flags', item: `${BASE_URL}/${locale}/countries` },
++          { '@type': 'ListItem', position: 3, name, item: `${BASE_URL}/${locale}/countries/${code.toLowerCase()}` },
++        ],
++      }
+     }
+   } catch { /* noop */ }
+ 
+@@ -113,6 +130,12 @@ export default async function Page({ params }) {
+           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+         />
+       )}
++      {breadcrumbLd && (
++        <script
++          type="application/ld+json"
++          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
++        />
++      )}
+       <CountryDetailPage code={code} />
+     </>
+   )
+diff --git a/app/[locale]/countries/page.js b/app/[locale]/countries/page.js
+index a5908e3..1321e9e 100644
+--- a/app/[locale]/countries/page.js
++++ b/app/[locale]/countries/page.js
+@@ -18,7 +18,14 @@ export async function generateMetadata({ params }) {
+   return {
+     title,
+     description,
+-    alternates: { canonical: `${BASE_URL}/${locale}/countries` },
++    alternates: {
++      canonical: `${BASE_URL}/${locale}/countries`,
++      languages: {
++        en: `${BASE_URL}/en/countries`,
++        fr: `${BASE_URL}/fr/countries`,
++        'x-default': `${BASE_URL}/en/countries`,
++      },
++    },
+     openGraph: {
+       title,
+       description,
+diff --git a/app/[locale]/games/capital-city/page.js b/app/[locale]/games/capital-city/page.js
+index 164637b..20b0f8b 100644
+--- a/app/[locale]/games/capital-city/page.js
++++ b/app/[locale]/games/capital-city/page.js
+@@ -15,7 +15,14 @@ export async function generateMetadata({ params }) {
+   return {
+     title,
+     description,
+-    alternates: { canonical: `${BASE_URL}/${locale}/games/capital-city` },
++    alternates: {
++      canonical: `${BASE_URL}/${locale}/games/capital-city`,
++      languages: {
++        en: `${BASE_URL}/en/games/capital-city`,
++        fr: `${BASE_URL}/fr/games/capital-city`,
++        'x-default': `${BASE_URL}/en/games/capital-city`,
++      },
++    },
+     openGraph: {
+       title,
+       description,
+diff --git a/app/[locale]/games/flag-clue/page.js b/app/[locale]/games/flag-clue/page.js
+index acfa870..ad870e0 100644
+--- a/app/[locale]/games/flag-clue/page.js
++++ b/app/[locale]/games/flag-clue/page.js
+@@ -15,7 +15,14 @@ export async function generateMetadata({ params }) {
+   return {
+     title,
+     description,
+-    alternates: { canonical: `${BASE_URL}/${locale}/games/flag-clue` },
++    alternates: {
++      canonical: `${BASE_URL}/${locale}/games/flag-clue`,
++      languages: {
++        en: `${BASE_URL}/en/games/flag-clue`,
++        fr: `${BASE_URL}/fr/games/flag-clue`,
++        'x-default': `${BASE_URL}/en/games/flag-clue`,
++      },
++    },
+     openGraph: {
+       title,
+       description,
+diff --git a/app/[locale]/games/flag-drawing/page.js b/app/[locale]/games/flag-drawing/page.js
+index 0968bac..9f4d916 100644
+--- a/app/[locale]/games/flag-drawing/page.js
++++ b/app/[locale]/games/flag-drawing/page.js
+@@ -15,7 +15,14 @@ export async function generateMetadata({ params }) {
+   return {
+     title,
+     description,
+-    alternates: { canonical: `${BASE_URL}/${locale}/games/flag-drawing` },
++    alternates: {
++      canonical: `${BASE_URL}/${locale}/games/flag-drawing`,
++      languages: {
++        en: `${BASE_URL}/en/games/flag-drawing`,
++        fr: `${BASE_URL}/fr/games/flag-drawing`,
++        'x-default': `${BASE_URL}/en/games/flag-drawing`,
++      },
++    },
+     openGraph: {
+       title,
+       description,
+diff --git a/app/[locale]/games/flag-locator/page.js b/app/[locale]/games/flag-locator/page.js
+index 502da07..c40f61f 100644
+--- a/app/[locale]/games/flag-locator/page.js
++++ b/app/[locale]/games/flag-locator/page.js
+@@ -14,7 +14,14 @@ export async function generateMetadata({ params }) {
+     : 'See a flag, click the right country on the map. Fastest with fewest errors wins.'
+   return {
+     title, description,
+-    alternates: { canonical: `${BASE_URL}/${locale}/games/flag-locator` },
++    alternates: {
++      canonical: `${BASE_URL}/${locale}/games/flag-locator`,
++      languages: {
++        en: `${BASE_URL}/en/games/flag-locator`,
++        fr: `${BASE_URL}/fr/games/flag-locator`,
++        'x-default': `${BASE_URL}/en/games/flag-locator`,
++      },
++    },
+     openGraph: {
+       title, description,
+       url: `${BASE_URL}/${locale}/games/flag-locator`,
+diff --git a/app/[locale]/games/flag-quiz/page.js b/app/[locale]/games/flag-quiz/page.js
+index 9744b16..7b714e0 100644
+--- a/app/[locale]/games/flag-quiz/page.js
++++ b/app/[locale]/games/flag-quiz/page.js
+@@ -15,7 +15,14 @@ export async function generateMetadata({ params }) {
+   return {
+     title,
+     description,
+-    alternates: { canonical: `${BASE_URL}/${locale}/games/flag-quiz` },
++    alternates: {
++      canonical: `${BASE_URL}/${locale}/games/flag-quiz`,
++      languages: {
++        en: `${BASE_URL}/en/games/flag-quiz`,
++        fr: `${BASE_URL}/fr/games/flag-quiz`,
++        'x-default': `${BASE_URL}/en/games/flag-quiz`,
++      },
++    },
+     openGraph: {
+       title,
+       description,
+diff --git a/app/[locale]/games/flag-ranker/page.js b/app/[locale]/games/flag-ranker/page.js
+index 127b4e9..04416d4 100644
+--- a/app/[locale]/games/flag-ranker/page.js
++++ b/app/[locale]/games/flag-ranker/page.js
+@@ -15,7 +15,14 @@ export async function generateMetadata({ params }) {
+   return {
+     title,
+     description,
+-    alternates: { canonical: `${BASE_URL}/${locale}/games/flag-ranker` },
++    alternates: {
++      canonical: `${BASE_URL}/${locale}/games/flag-ranker`,
++      languages: {
++        en: `${BASE_URL}/en/games/flag-ranker`,
++        fr: `${BASE_URL}/fr/games/flag-ranker`,
++        'x-default': `${BASE_URL}/en/games/flag-ranker`,
++      },
++    },
+     openGraph: {
+       title,
+       description,
+diff --git a/app/[locale]/games/flag-reveal/page.js b/app/[locale]/games/flag-reveal/page.js
+index 476c17b..415ac2c 100644
+--- a/app/[locale]/games/flag-reveal/page.js
++++ b/app/[locale]/games/flag-reveal/page.js
+@@ -15,7 +15,14 @@ export async function generateMetadata({ params }) {
+   return {
+     title,
+     description,
+-    alternates: { canonical: `${BASE_URL}/${locale}/games/flag-reveal` },
++    alternates: {
++      canonical: `${BASE_URL}/${locale}/games/flag-reveal`,
++      languages: {
++        en: `${BASE_URL}/en/games/flag-reveal`,
++        fr: `${BASE_URL}/fr/games/flag-reveal`,
++        'x-default': `${BASE_URL}/en/games/flag-reveal`,
++      },
++    },
+     openGraph: {
+       title,
+       description,
+diff --git a/app/[locale]/games/page.js b/app/[locale]/games/page.js
+index 3105809..d2098cc 100644
+--- a/app/[locale]/games/page.js
++++ b/app/[locale]/games/page.js
+@@ -18,7 +18,14 @@ export async function generateMetadata({ params }) {
+   return {
+     title,
+     description,
+-    alternates: { canonical: `${BASE_URL}/${locale}/games` },
++    alternates: {
++      canonical: `${BASE_URL}/${locale}/games`,
++      languages: {
++        en: `${BASE_URL}/en/games`,
++        fr: `${BASE_URL}/fr/games`,
++        'x-default': `${BASE_URL}/en/games`,
++      },
++    },
+     openGraph: {
+       title,
+       description,
+diff --git a/app/[locale]/page.js b/app/[locale]/page.js
+index ddbef7b..00e0e7d 100644
+--- a/app/[locale]/page.js
++++ b/app/[locale]/page.js
+@@ -21,7 +21,14 @@ export async function generateMetadata({ params }) {
+   return {
+     title,
+     description,
+-    alternates: { canonical: url },
++    alternates: {
++      canonical: url,
++      languages: {
++        en: `${BASE_URL}/en`,
++        fr: `${BASE_URL}/fr`,
++        'x-default': `${BASE_URL}/en`,
++      },
++    },
+     openGraph: {
+       title,
+       description,

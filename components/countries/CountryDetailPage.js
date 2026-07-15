@@ -116,28 +116,32 @@ function FlagHero({ countryCode, countryName, locale, flagUrl }) {
   const [src, setSrc] = useState(null)
   const [loaded, setLoaded] = useState(false)
   const [hover, setHover] = useState(false)
+  const [isCdn, setIsCdn] = useState(false)
+  const iso = (countryCode || '').toLowerCase()
+  const cdn = (w) => `https://flagcdn.com/w${w}/${iso}.webp`
 
   useEffect(() => {
     if (!countryCode) return
     // 1) explicit override on the country (flag_url) wins everywhere
-    if (flagUrl) { setSrc(flagUrl); setLoaded(true); return }
+    if (flagUrl) { setSrc(flagUrl); setIsCdn(false); setLoaded(true); return }
     // 2) otherwise the current flag-history entry, 3) else flagcdn
     const supabase = createClient()
     supabase.from('country_flag_history').select('image_url')
       .eq('iso_code', countryCode.toLowerCase()).is('date_end', null)
       .order('date_start', { ascending: false }).limit(1).single()
       .then(({ data }) => {
-        setSrc(data?.image_url || `https://flagcdn.com/w640/${countryCode.toLowerCase()}.png`)
+        if (data?.image_url) { setSrc(data.image_url); setIsCdn(false) }
+        else { setSrc(cdn(2560)); setIsCdn(true) }
         setLoaded(true)
       })
       .catch(() => {
-        setSrc(`https://flagcdn.com/w640/${countryCode.toLowerCase()}.png`)
+        setSrc(cdn(2560)); setIsCdn(true)
         setLoaded(true)
       })
   }, [countryCode, flagUrl])
 
   async function downloadPng() {
-    const url = flagUrl || `https://flagcdn.com/w1280/${countryCode.toLowerCase()}.png`
+    const url = flagUrl || `https://flagcdn.com/w2560/${countryCode.toLowerCase()}.png`
     const ext = flagUrl && flagUrl.toLowerCase().endsWith('.svg') ? 'svg' : 'png'
     try {
       const res = await fetch(url)
@@ -160,27 +164,28 @@ function FlagHero({ countryCode, countryName, locale, flagUrl }) {
   )
 
   return (
-    <>
+    <div style={{ position: 'relative', width: '100%' }}>
       <img
         src={src}
         alt={countryName}
-        onError={() => setSrc(`https://flagcdn.com/w640/${countryCode.toLowerCase()}.png`)}
+        onError={() => { setSrc(cdn(2560)); setIsCdn(true) }}
         style={{ width: '100%', display: 'block', aspectRatio: '3/2', objectFit: 'contain', backgroundColor: DS.bg, padding: '16px' }}
       />
       <button
         onClick={downloadPng}
+        aria-label={t('Download flag', 'Télécharger le drapeau')}
+        title={t('Download flag', 'Télécharger le drapeau')}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
-        style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', padding: '11px 16px', border: 'none', borderTop: `1px solid ${DS.border}`, backgroundColor: hover ? DS.bg : DS.surface, color: DS.navy, fontSize: '13px', fontWeight: '600', cursor: 'pointer', transition: 'background-color 0.12s ease' }}
+        style={{ position: 'absolute', top: '10px', right: '10px', width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '10px', border: `1px solid ${DS.border}`, backgroundColor: hover ? DS.surface : 'rgba(255,255,255,0.82)', backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)', color: DS.navy, cursor: 'pointer', boxShadow: '0 1px 3px rgba(22,50,79,0.10)', transition: 'background-color 0.12s ease' }}
       >
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
           <polyline points="7 10 12 15 17 10"/>
           <line x1="12" y1="15" x2="12" y2="3"/>
         </svg>
-        {t('Download PNG image', 'Télécharger l’image PNG')}
       </button>
-    </>
+    </div>
   )
 }
 
@@ -825,11 +830,6 @@ export default function CountryDetailPage({ code }) {
           </div>
         </div>
 
-        {/* ── Flag hero — full width ── */}
-        <div style={{ backgroundColor: DS.surface, borderTop: `1px solid ${DS.border}`, borderBottom: `1px solid ${DS.border}` }}>
-          <FlagHero countryCode={country.code} countryName={name} locale={locale} flagUrl={country.flag_url} />
-        </div>
-
         {/* ── Country name ── */}
         <div style={{ padding: '20px 16px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '12px' }}>
           <div style={{ minWidth: 0 }}>
@@ -841,6 +841,11 @@ export default function CountryDetailPage({ code }) {
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
             {t('Report', 'Signaler')}
           </button>
+        </div>
+
+        {/* ── Flag hero — full width ── */}
+        <div style={{ backgroundColor: DS.surface, borderTop: `1px solid ${DS.border}`, borderBottom: `1px solid ${DS.border}` }}>
+          <FlagHero countryCode={country.code} countryName={name} locale={locale} flagUrl={country.flag_url} />
         </div>
 
         {/* ── Page content — spaced sections ── */}
@@ -939,7 +944,7 @@ export default function CountryDetailPage({ code }) {
   return (
     <>
     <div style={{ backgroundColor: DS.bg, minHeight: '100vh', fontFamily: 'var(--font-body, system-ui)' }}>
-      <div style={{ maxWidth: '900px', margin: '0 auto', padding: '24px 24px 48px' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '24px 24px 48px' }}>
 
         {/* Breadcrumb */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '20px', fontSize: '13px', color: DS.muted }}>
@@ -952,49 +957,51 @@ export default function CountryDetailPage({ code }) {
           <span style={{ color: DS.navy, fontWeight: '600' }}>{name}</span>
         </div>
 
-        {/* ── Hero row: flag left, title + quick facts right ── */}
-        <div style={{ display: 'flex', gap: '32px', alignItems: 'flex-start', marginBottom: '24px' }}>
+        {/* ── Title banner — full width ── */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: '16px', marginBottom: '20px', flexWrap: 'wrap' }}>
+          <div style={{ minWidth: 0 }}>
+            <h1 style={{ fontSize: '36px', fontWeight: '900', color: DS.navy, margin: '0 0 2px', letterSpacing: '-1px' }}>{name}</h1>
+            <p style={{ margin: 0, fontSize: '15px', color: DS.muted }}>
+              {region}
+            </p>
+          </div>
+          <button onClick={() => setReportOpen(true)}
+            onMouseEnter={e => { e.currentTarget.style.backgroundColor = DS.bgAlt }}
+            onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'transparent' }}
+            style={{ flexShrink: 0, display: 'inline-flex', alignItems: 'center', gap: '7px', padding: '9px 16px', borderRadius: '10px', backgroundColor: 'transparent', color: DS.navy, border: `1.5px solid ${DS.border}`, fontSize: '13px', fontWeight: '600', cursor: 'pointer', whiteSpace: 'nowrap', transition: 'background-color 0.12s ease' }}>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+            {t('Report an issue', 'Signaler un probl\u00e8me')}
+          </button>
+        </div>
+
+        {/* ── Hero row: flag + quick facts (aligned heights) ── */}
+        <div style={{ display: 'flex', gap: '24px', alignItems: 'stretch', marginBottom: '24px', flexWrap: 'wrap' }}>
 
           {/* Flag card */}
-          <div style={{ flex: '0 0 auto', width: 'min(360px, 44%)', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 8px 32px rgba(22,50,79,0.12)', border: `1px solid ${DS.border}`, backgroundColor: DS.surface }}>
+          <div style={{ flex: '1 1 380px', maxWidth: '440px', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 8px 32px rgba(22,50,79,0.12)', border: `1px solid ${DS.border}`, backgroundColor: DS.surface, display: 'flex', alignItems: 'center' }}>
             <FlagHero countryCode={country.code} countryName={name} locale={locale} flagUrl={country.flag_url} />
           </div>
 
-          {/* Title + facts */}
-          <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '16px' }}>
-              <div style={{ minWidth: 0 }}>
-                <h1 style={{ fontSize: '36px', fontWeight: '900', color: DS.navy, margin: '0 0 1px', letterSpacing: '-1px' }}>{name}</h1>
-                <p style={{ margin: 0, fontSize: '14px', color: DS.muted }}>{region}</p>
+          {/* Quick Facts card */}
+          {quickFacts.length > 0 && (
+            <div style={{ flex: '1 1 360px', minWidth: 0, backgroundColor: DS.surface, borderRadius: '16px', border: `1px solid ${DS.border}`, boxShadow: '0 2px 8px rgba(22,50,79,0.08)', padding: '20px', display: 'flex', flexDirection: 'column' }}>
+              <p style={{ margin: '0 0 14px', fontSize: '18px', fontWeight: '800', color: DS.navy, letterSpacing: '-0.01em' }}>{t('Quick Facts', 'Chiffres cl\u00e9s')}</p>
+              <div style={{ flex: 1, display: 'grid', gridTemplateColumns: '1fr 1fr', gridAutoRows: '1fr', borderRadius: '10px', overflow: 'hidden', border: `1px solid ${DS.border}` }}>
+                {quickFacts.map((item, i) => (
+                  <div key={i} style={{
+                    padding: '14px 16px',
+                    display: 'flex', flexDirection: 'column', justifyContent: 'center',
+                    backgroundColor: DS.surface,
+                    borderRight: i % 2 === 0 ? `1px solid ${DS.border}` : 'none',
+                    borderBottom: i < quickFacts.length - 2 ? `1px solid ${DS.border}` : 'none',
+                  }}>
+                    <p style={{ margin: '0 0 3px', fontSize: '10px', fontWeight: '700', color: DS.light, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{item.label}</p>
+                    <div style={{ margin: 0, fontSize: '15px', fontWeight: '700', color: DS.navy }}>{renderFactValue(item)}</div>
+                  </div>
+                ))}
               </div>
-              <button onClick={() => setReportOpen(true)}
-                onMouseEnter={e => { e.currentTarget.style.backgroundColor = DS.bgAlt }}
-                onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'transparent' }}
-                style={{ flexShrink: 0, display: 'inline-flex', alignItems: 'center', gap: '7px', padding: '9px 16px', borderRadius: '10px', backgroundColor: 'transparent', color: DS.navy, border: `1.5px solid ${DS.border}`, fontSize: '13px', fontWeight: '600', cursor: 'pointer', whiteSpace: 'nowrap', transition: 'background-color 0.12s ease' }}>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
-                {t('Report an issue', 'Signaler un problème')}
-              </button>
             </div>
-
-            {/* Quick Facts card */}
-            {quickFacts.length > 0 && (
-              <Section title={t('Quick Facts', 'Chiffres clés')}>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0', borderRadius: '8px', overflow: 'hidden', border: `1px solid ${DS.border}` }}>
-                  {quickFacts.map((item, i) => (
-                    <div key={i} style={{
-                      padding: '12px 16px',
-                      backgroundColor: DS.surface,
-                      borderRight: i % 2 === 0 ? `1px solid ${DS.border}` : 'none',
-                      borderBottom: i < quickFacts.length - 2 ? `1px solid ${DS.border}` : 'none',
-                    }}>
-                      <p style={{ margin: '0 0 3px', fontSize: '10px', fontWeight: '700', color: DS.light, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{item.label}</p>
-                      <div style={{ margin: 0, fontSize: '14px', fontWeight: '700', color: DS.navy }}>{renderFactValue(item)}</div>
-                    </div>
-                  ))}
-                </div>
-              </Section>
-            )}
-          </div>
+          )}
         </div>
 
         {/* ── Content sections — same card pattern as mobile ── */}

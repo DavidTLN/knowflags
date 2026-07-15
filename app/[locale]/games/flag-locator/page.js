@@ -14,7 +14,14 @@ export async function generateMetadata({ params }) {
     : 'See a flag, click the right country on the map. Fastest with fewest errors wins.'
   return {
     title, description,
-    alternates: { canonical: `${BASE_URL}/${locale}/games/flag-locator` },
+    alternates: {
+      canonical: `${BASE_URL}/${locale}/games/flag-locator`,
+      languages: {
+        en: `${BASE_URL}/en/games/flag-locator`,
+        fr: `${BASE_URL}/fr/games/flag-locator`,
+        'x-default': `${BASE_URL}/en/games/flag-locator`,
+      },
+    },
     openGraph: {
       title, description,
       url: `${BASE_URL}/${locale}/games/flag-locator`,

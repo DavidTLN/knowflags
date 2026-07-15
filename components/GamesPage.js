@@ -21,7 +21,7 @@ const GAME_ICON = {
 const GAMES = [
   { key: 'flag-reveal',  icon: '🏳️', en: 'Flag Reveal',  fr: 'Flag Reveal',  descEn: 'Uncover the flag tile by tile',        descFr: 'Révèle le drapeau tuile par tuile',          color: '#2563EB', difficulty: 'easy'   },
   { key: 'flag-quiz',    icon: '❓',  en: 'Flag Quiz',    fr: 'Flag Quiz',    descEn: 'Multiple choice flag challenge',       descFr: 'Quel est ce drapeau ?',                     color: '#16A34A', difficulty: 'easy'   },
-  { key: 'capital-city', icon: '🏙️', en: 'Capital Clue', fr: 'Capital Clue', descEn: 'Match the capital to its country',     descFr: 'Trouve la capitale du pays',                 color: '#EA580C', difficulty: 'medium' },
+  { key: 'capital-city', icon: '🏙️', en: 'Capital2Flag', fr: 'Capital2Flag', descEn: 'Match the capital to its country',     descFr: 'Trouve la capitale du pays',                 color: '#EA580C', difficulty: 'medium' },
   { key: 'flag-clue',    icon: '🔍',  en: 'Flag Clue',    fr: 'Flag Clue',    descEn: 'Guess the country from fun facts',     descFr: 'Devine le pays grâce à des anecdotes',       color: '#DB2777', difficulty: 'medium' },
   { key: 'flag-ranker',  icon: '🏆',  en: 'Flag Rank',    fr: 'Flag Rank',    descEn: 'Rank countries by area, GDP and more', descFr: 'Classe les pays par superficie, PIB…',       color: '#F4B400', difficulty: 'medium' },
   { key: 'flag-locator', icon: '📍',  en: 'Flag Locator', fr: 'Flag Locator', descEn: 'Find the country on the map',          descFr: 'Trouve le pays sur la carte',                color: '#2563EB', difficulty: 'medium' },
@@ -33,6 +33,7 @@ const GAMES = [
   { key: 'imposteur',    icon: '🔎',  en: 'Impostor',     fr: 'Imposteur',    descEn: "Find the flag that doesn't belong",    descFr: "Trouve l'imposteur parmi les drapeaux",       color: '#F59E0B', difficulty: 'medium', ready: false },
 ]
 
+const HIDDEN_GAMES = ['past-flag', 'subflag-quiz']
 const COMING_SOON = []
 
 const DIFFICULTY = {
@@ -162,11 +163,11 @@ export default function GamesPage() {
           <h2 style={{ fontSize: isMobile ? '20px' : '22px', fontWeight: '900', color: DS.navy, margin: '0 0 18px', letterSpacing: '-0.5px', display: 'flex', alignItems: 'center', gap: '10px' }}>
             {t('All games', 'Tous les jeux')}
             <span style={{ fontSize: '13px', fontWeight: '800', backgroundColor: DS.greenBg, color: DS.green, padding: '2px 10px', borderRadius: '99px' }}>
-              {GAMES.length}
+              {GAMES.filter(g => g.ready !== false && !HIDDEN_GAMES.includes(g.key)).length}
             </span>
           </h2>
           <div style={gridStyle}>
-            {GAMES.filter(g => g.ready !== false).map(game => (
+            {GAMES.filter(g => g.ready !== false && !HIDDEN_GAMES.includes(g.key)).map(game => (
               <GameCard key={game.key} game={game} locale={locale} coming={false} />
             ))}
           </div>

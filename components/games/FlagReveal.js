@@ -353,7 +353,7 @@ export default function FlagReveal() {
   const emptyRows = Math.max(0, MAX_GUESSES - guesses.length)
 
   const canvasBlock = (
-    <div style={{ position: 'relative', lineHeight: 0, flex: 1, minHeight: 0 }}>
+    <div style={{ position: 'relative', lineHeight: 0, ...(isMobile ? { flex: 1, minHeight: 0 } : { width: '100%', aspectRatio: '3 / 2' }) }}>
       <canvas ref={canvasRef} width={CANVAS_W} height={CANVAS_H}
         style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', borderRadius: '10px', border: '1px solid #E2DDD5', backgroundColor: '#e8e4dc' }} />
       {gameState !== 'playing' && (
@@ -513,7 +513,7 @@ export default function FlagReveal() {
 
         {/* Title row */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '8px 12px 0', flexShrink: 0 }}>
-          <span style={{ fontSize: '16px', fontWeight: '900', color: '#16324F' }}>{t('title')}</span>
+          <span style={{ fontSize: '18px', fontWeight: '900', color: '#16324F' }}>{t('title')}</span>
           <span style={{ fontSize: '10px', fontWeight: '700', padding: '2px 8px', borderRadius: '99px', backgroundColor: difficulty === 'easy' ? 'rgba(74,222,128,0.15)' : 'rgba(254,177,47,0.15)', color: difficulty === 'easy' ? '#4ade80' : '#F4B400', border: `1px solid ${difficulty === 'easy' ? 'rgba(74,222,128,0.3)' : 'rgba(254,177,47,0.3)'}` }}>
             {difficulty === 'easy' ? (locale === 'fr' ? 'Entraînement' : 'Training') : 'Normal'}
           </span>
@@ -523,28 +523,28 @@ export default function FlagReveal() {
 
         {/* HUD pills */}
         <div style={{ display: 'flex', alignItems: 'stretch', gap: '5px', padding: '0 12px 6px', flexShrink: 0, overflowX: 'auto' }}>
-          <div style={{ backgroundColor: 'white', borderRadius: '10px', padding: '4px 10px', textAlign: 'center', border: '1px solid #E2DDD5', display: 'flex', flexDirection: 'column', justifyContent: 'center', flexShrink: 0 }}>
-            <div style={{ fontSize: '9px', fontWeight: '700', color: '#6B7280', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '2px' }}>{locale === 'fr' ? 'Vies' : 'Lives'}</div>
+          <div style={{ backgroundColor: 'white', borderRadius: '10px', padding: '7px 12px', textAlign: 'center', border: '1px solid #E2DDD5', display: 'flex', flexDirection: 'column', justifyContent: 'center', flexShrink: 0 }}>
+            <div style={{ fontSize: '11px', fontWeight: '700', color: '#6B7280', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '2px' }}>{locale === 'fr' ? 'Vies' : 'Lives'}</div>
             <div style={{ display: 'flex', gap: '2px', justifyContent: 'center' }}>
               {Array.from({ length: MAX_LIVES }).map((_, i) => (
-                <svg key={i} width="12" height="12" viewBox="0 0 24 24" fill={i < lives ? '#ef4444' : '#E2DDD5'}>
+                <svg key={i} width="15" height="15" viewBox="0 0 24 24" fill={i < lives ? '#ef4444' : '#E2DDD5'}>
                   <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                 </svg>
               ))}
             </div>
           </div>
-          <div style={{ backgroundColor: 'white', borderRadius: '10px', padding: '4px 10px', textAlign: 'center', border: '1px solid #E2DDD5', display: 'flex', flexDirection: 'column', justifyContent: 'center', flexShrink: 0 }}>
-            <div style={{ fontSize: '9px', fontWeight: '700', color: '#6B7280', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '2px' }}>Time</div>
-            <div style={{ fontSize: '13px', fontWeight: '900', color: '#16324F', fontVariantNumeric: 'tabular-nums' }}>{formatTime(elapsed)}</div>
+          <div style={{ backgroundColor: 'white', borderRadius: '10px', padding: '7px 12px', textAlign: 'center', border: '1px solid #E2DDD5', display: 'flex', flexDirection: 'column', justifyContent: 'center', flexShrink: 0 }}>
+            <div style={{ fontSize: '11px', fontWeight: '700', color: '#6B7280', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '2px' }}>Time</div>
+            <div style={{ fontSize: '15px', fontWeight: '900', color: '#16324F', fontVariantNumeric: 'tabular-nums' }}>{formatTime(elapsed)}</div>
           </div>
-          <div style={{ backgroundColor: streak > 0 ? 'rgba(254,177,47,0.12)' : 'white', borderRadius: '10px', padding: '4px 10px', textAlign: 'center', border: `1px solid ${streak > 0 ? 'rgba(254,177,47,0.3)' : '#E2DDD5'}`, display: 'flex', flexDirection: 'column', justifyContent: 'center', flexShrink: 0 }}>
-            <div style={{ fontSize: '9px', fontWeight: '700', color: streak > 0 ? 'rgba(254,177,47,0.8)' : '#6B7280', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '2px' }}>Streak</div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '3px', fontSize: '13px', fontWeight: '900', color: streak > 0 ? '#F4B400' : '#CBD5E1' }}><GameIcon name="flame" filled size={13} />{streak}</div>
+          <div style={{ backgroundColor: streak > 0 ? 'rgba(254,177,47,0.12)' : 'white', borderRadius: '10px', padding: '7px 12px', textAlign: 'center', border: `1px solid ${streak > 0 ? 'rgba(254,177,47,0.3)' : '#E2DDD5'}`, display: 'flex', flexDirection: 'column', justifyContent: 'center', flexShrink: 0 }}>
+            <div style={{ fontSize: '11px', fontWeight: '700', color: streak > 0 ? 'rgba(254,177,47,0.8)' : '#6B7280', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '2px' }}>Streak</div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '3px', fontSize: '15px', fontWeight: '900', color: streak > 0 ? '#F4B400' : '#CBD5E1' }}><GameIcon name="flame" filled size={15} />{streak}</div>
           </div>
           {difficulty !== 'easy' && (
-            <div style={{ position: 'relative', backgroundColor: 'rgba(74,222,128,0.1)', borderRadius: '10px', padding: '4px 10px', textAlign: 'center', border: '1px solid rgba(74,222,128,0.3)', display: 'flex', flexDirection: 'column', justifyContent: 'center', flexShrink: 0 }}>
-              <div style={{ fontSize: '9px', fontWeight: '700', color: 'rgba(74,222,128,0.8)', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '2px' }}>Score</div>
-              <div style={{ fontSize: '13px', fontWeight: '900', color: '#16a34a', whiteSpace: 'nowrap' }}>{score} pts</div>
+            <div style={{ position: 'relative', backgroundColor: 'rgba(74,222,128,0.1)', borderRadius: '10px', padding: '7px 12px', textAlign: 'center', border: '1px solid rgba(74,222,128,0.3)', display: 'flex', flexDirection: 'column', justifyContent: 'center', flexShrink: 0 }}>
+              <div style={{ fontSize: '11px', fontWeight: '700', color: 'rgba(74,222,128,0.8)', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '2px' }}>Score</div>
+              <div style={{ fontSize: '15px', fontWeight: '900', color: '#16a34a', whiteSpace: 'nowrap' }}>{score} pts</div>
               {lastPts && (
                 <span style={{ position: 'absolute', top: '-16px', left: '50%', transform: 'translateX(-50%)', fontSize: '11px', fontWeight: '900', color: '#4ade80', animation: 'floatUp 1.5s ease-out forwards', whiteSpace: 'nowrap', pointerEvents: 'none' }}>+{lastPts}</span>
               )}
@@ -552,9 +552,9 @@ export default function FlagReveal() {
           )}
           {/* Quit button — opens confirm modal */}
           <button onClick={() => setShowQuitConfirm(true)}
-            style={{ backgroundColor: 'rgba(239,68,68,0.08)', borderRadius: '10px', padding: '4px 10px', textAlign: 'center', border: '1px solid rgba(239,68,68,0.3)', cursor: 'pointer', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', flexShrink: 0 }}>
-            <div style={{ fontSize: '9px', fontWeight: '700', color: '#ef4444', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '2px' }}>{locale === 'fr' ? 'Quitter' : 'Quit'}</div>
-            <GameIcon name="close" size={16} color="currentColor" />
+            style={{ backgroundColor: 'rgba(239,68,68,0.08)', borderRadius: '10px', padding: '7px 12px', textAlign: 'center', border: '1px solid rgba(239,68,68,0.3)', cursor: 'pointer', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', flexShrink: 0 }}>
+            <div style={{ fontSize: '11px', fontWeight: '700', color: '#ef4444', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '2px' }}>{locale === 'fr' ? 'Quitter' : 'Quit'}</div>
+            <GameIcon name="close" size={18} color="currentColor" />
           </button>
         </div>
 
@@ -565,13 +565,13 @@ export default function FlagReveal() {
           {/* Guess chips — just below the canvas */}
           <div style={{ display: 'flex', gap: '5px', flexWrap: 'wrap', flexShrink: 0 }}>
             {guesses.map((g, i) => (
-              <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '4px', padding: '3px 8px', borderRadius: '99px', backgroundColor: g.correct ? '#f0fdf4' : '#fff1f2', border: '1px solid '+(g.correct ? '#86efac' : '#fca5a5') }}>
-                <img src={'https://flagcdn.com/w40/'+g.code+'.png'} width="18" height="12" style={{ borderRadius: '2px', objectFit: 'cover' }} />
-                <span style={{ fontSize: '11px', fontWeight: '700', color: g.correct ? '#166534' : '#991b1b' }}>{g.similarity}%</span>
+              <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '5px 11px', borderRadius: '99px', backgroundColor: g.correct ? '#f0fdf4' : '#fff1f2', border: '1px solid '+(g.correct ? '#86efac' : '#fca5a5') }}>
+                <img src={'https://flagcdn.com/w40/'+g.code+'.png'} width="26" height="17" style={{ borderRadius: '3px', objectFit: 'cover' }} />
+                <span style={{ fontSize: '13px', fontWeight: '800', color: g.correct ? '#166534' : '#991b1b' }}>{g.similarity}%</span>
               </div>
             ))}
             {Array.from({ length: emptyRows }).map((_, i) => (
-              <div key={'e'+i} style={{ width: '32px', height: '22px', borderRadius: '99px', backgroundColor: '#E2DDD5' }} />
+              <div key={'e'+i} style={{ width: '44px', height: '28px', borderRadius: '99px', backgroundColor: '#E2DDD5' }} />
             ))}
           </div>
         </div>
@@ -650,12 +650,12 @@ export default function FlagReveal() {
                           style={{
                             flex: isBack ? 1.5 : 1,
                             marginLeft: isBack ? 'auto' : 0,
-                            padding: '11px 0',
+                            padding: '15px 0',
                             borderRadius: '8px',
                             border: '1px solid #E2DDD5',
                             backgroundColor: isBack ? '#E2DDD5' : 'white',
                             color: isBack ? '#6B7280' : '#16324F',
-                            fontSize: '15px',
+                            fontSize: '17px',
                             fontWeight: '700',
                             cursor: 'pointer',
                             textAlign: 'center',
@@ -778,7 +778,9 @@ export default function FlagReveal() {
         </div>
 
         <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-start', flex: 1, minHeight: 0 }}>
-          <div style={{ flex: 1, minWidth: 0, minHeight: 0, display: 'flex', flexDirection: 'column' }}>{canvasBlock}</div>
+          <div style={{ flex: 1, minWidth: 0, minHeight: 0, display: 'flex', flexDirection: 'column' }}>
+            <div style={{ width: '100%', maxWidth: 600, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '14px' }}>{canvasBlock}{factBlock}</div>
+          </div>
           <div style={{ width: '300px', flexShrink: 0, backgroundColor: 'white', borderRadius: '18px', padding: '18px', display: 'flex', flexDirection: 'column', gap: '14px', border: '1px solid #E2DDD5', boxShadow: '0 2px 12px rgba(0,0,0,0.06)' }}>
             <div style={{ position: 'relative' }}>
               <input ref={inputRef} type="text" value={input}
@@ -815,7 +817,6 @@ export default function FlagReveal() {
             <button onClick={() => setHowToPlayOpen(true)} style={{ width: '100%', padding: '10px 16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: '#16324F', border: 'none', borderRadius: '10px', color: 'white', cursor: 'pointer', fontSize: '13px', fontWeight: '700' }}>
               <span>{t('howToPlay')}</span><span style={{ fontSize: '12px', opacity: 0.7 }}>→</span>
             </button>
-            {factBlock}
             <div style={{ marginTop: '4px' }}>{actionButton}</div>
           </div>
         </div>

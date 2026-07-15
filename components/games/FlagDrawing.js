@@ -3,6 +3,7 @@ import { useState, useRef, useEffect, useCallback } from 'react'
 import GameIcon from '@/components/games/GameIcon'
 import { useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-client'
+import FlagTemplateBuilder, { renderDesignToCanvas } from '@/components/games/flagdraw/FlagTemplateBuilder'
 
 // ─── Flag definitions — MINIMAL: only name + ratio + hasEmblem ───────────────
 const FLAG_DEFS = {
@@ -201,7 +202,8 @@ function comparePixels(drawData, refData, hasEmblem = false) {
   const B = 10                                  // block size → spatial tolerance
   const gw = Math.max(1, Math.round(W / B))
   const gh = Math.max(1, Math.round(H / B))
-  const DE_MAX = 45                             // ΔE beyond which a cell scores 0
+  const FORGIVE = 24                            // ΔE en-dessous = même couleur (nuance) -> plein crédit
+  const DE_SPAN = 60                            // au-delà de FORGIVE, descente jusqu'à 0 sur DE_SPAN
   let acc = 0, totalW = 0
   for (let gy = 0; gy < gh; gy++) {
     const y0 = Math.floor(gy*H/gh), y1 = Math.floor((gy+1)*H/gh)
@@ -220,7 +222,7 @@ function comparePixels(drawData, refData, hasEmblem = false) {
       const l1 = srgbToLab(r1/n, g1/n, b1/n)
       const l2 = srgbToLab(r2/n, g2/n, b2/n)
       const dE = Math.sqrt((l1[0]-l2[0])**2 + (l1[1]-l2[1])**2 + (l1[2]-l2[2])**2)
-      const sim = Math.max(0, 1 - dE / DE_MAX)
+      const sim = dE <= FORGIVE ? 1 : Math.max(0, 1 - (dE - FORGIVE) / DE_SPAN)
       // Emblem flags: the central emblem is unreasonable to draw by hand → weight it down
       let w = 1
       if (hasEmblem) {
@@ -284,6 +286,8 @@ export default function FlagDrawingV2() {
   const drawingCanvasRef = useRef(null)
   const overlayCanvasRef = useRef(null)
   const refCanvasRef = useRef(null)
+  const refDataRef = useRef(null)   // ImageData du vrai drapeau (indépendant du canvas monté)
+  const refDimsRef = useRef(null)
   const queueRef = useRef([])
   const livesRef = useRef(MAX_LIVES)
   const streakRef = useRef(0)
@@ -382,7 +386,7 @@ export default function FlagDrawingV2() {
 
   async function quitGame() {
     await saveDiffScore(difficulty, totalScore)
-    setScreen(SCREEN.GAMEOVER)
+    setScreen(SCREEN.SETUP)
   }
 
   const loadFlag = useCallback((key) => {
@@ -418,6 +422,8 @@ export default function FlagDrawingV2() {
       const colorCtx = colorCanvas.getContext('2d')
       colorCtx.drawImage(img, 0, 0, W, H)
       const imgData = colorCtx.getImageData(0, 0, W, H)
+      refDataRef.current = imgData
+      refDimsRef.current = { W, H }
       const extracted = extractDominantColors(imgData, W, H)
       // Use raw hex directly — vibrantHex over-saturates yellows into orange etc.
       const newPalette = extracted.map((c) => ({
@@ -661,8 +667,12 @@ export default function FlagDrawingV2() {
     const refData = refCtx.getImageData(0, 0, W, H)
 
     const sim = comparePixels(drawData, refData, FLAG_DEFS[currentKey]?.hasEmblem)
-    setScore(sim)
+    finishRound(sim, snap)
+  }
 
+  // Logique de score commune (dessin libre ET gabarit)
+  function finishRound(sim, snap) {
+    setScore(sim)
     const passed = sim >= 55
     const pts = passed ? calcPoints(sim, streakRef.current, difficulty) : 0
     let newTotal = totalScore
@@ -688,6 +698,19 @@ export default function FlagDrawingV2() {
     setHistory(prev => [...prev, { key: currentKey, score: sim, passed, pts }])
     setSnapshotUrl(snap)
     setScreen(SCREEN.RESULT)
+  }
+
+  // Validation en mode gabarit : on rasterise le design puis on compare au vrai drapeau
+  function handleTemplateValidate(design) {
+    const refData = refDataRef.current, dims = refDimsRef.current
+    if (!refData || !dims) return
+    const { W, H } = dims
+    const tmp = document.createElement('canvas')
+    tmp.width = W; tmp.height = H
+    renderDesignToCanvas(tmp, design, null)
+    const drawData = tmp.getContext('2d').getImageData(0, 0, W, H)
+    const sim = comparePixels(drawData, refData, FLAG_DEFS[currentKey]?.hasEmblem)
+    finishRound(sim, tmp.toDataURL('image/png'))
   }
 
   function getPos(e, canvas) {
@@ -781,6 +804,20 @@ export default function FlagDrawingV2() {
   const flagName = def ? (locale === 'fr' ? def.fr : def.en) : ''
 
   // ── SETUP screen ──────────────────────────────────────────────────────────
+  const quitModal = showQuitConfirm ? (
+    <div style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.6)', zIndex: 200, display: 'flex', alignItems: 'flex-end' }}>
+      <div style={{ width: '100%', backgroundColor: 'white', borderRadius: '20px 20px 0 0', padding: '24px 20px', paddingBottom: 'max(24px, env(safe-area-inset-bottom))' }}>
+        <div style={{ width: '36px', height: '4px', backgroundColor: colors.border, borderRadius: '99px', margin: '0 auto 20px' }} />
+        <h3 style={{ margin: '0 0 8px', fontSize: '20px', fontWeight: '900', color: colors.navy, textAlign: 'center' }}>{t('Quit the game?', 'Quitter la partie ?')}</h3>
+        <p style={{ margin: '0 0 24px', fontSize: '14px', color: colors.muted, lineHeight: 1.6, textAlign: 'center' }}>{t(`Your score of ${totalScore} pts will be saved.`, `Ton score de ${totalScore} pts sera sauvegardé.`)}</p>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', maxWidth: '420px', margin: '0 auto' }}>
+          <button onClick={() => { setShowQuitConfirm(false); quitGame() }} style={{ width: '100%', padding: '16px', backgroundColor: colors.navy, color: 'white', border: 'none', borderRadius: '14px', fontSize: '16px', fontWeight: '900', cursor: 'pointer' }}>{t('Quit & save', 'Quitter et sauvegarder')}</button>
+          <button onClick={() => setShowQuitConfirm(false)} style={{ width: '100%', padding: '13px', backgroundColor: 'transparent', color: colors.navy, border: `1.5px solid ${colors.border}`, borderRadius: '14px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>{t('Keep playing', 'Continuer')}</button>
+        </div>
+      </div>
+    </div>
+  ) : null
+
   if (screen === SCREEN.SETUP) {
     return (
       <div style={{ height: 'calc(100dvh - 60px)', background: '#FFFFFF', display: 'flex', flexDirection: 'column', fontFamily: 'var(--font-body), system-ui, sans-serif' }}>
@@ -807,11 +844,11 @@ export default function FlagDrawingV2() {
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
             {[
-              { key: 'easy',    icon: '🟢', en: 'Easy',    fr: 'Facile',    descEn: 'Colors shown + name', descFr: 'Couleurs + nom' },
-              { key: 'medium',  icon: '🟡', en: 'Medium',  fr: 'Moyen',     descEn: 'Blank, no name',      descFr: 'Vierge, sans nom' },
-              { key: 'hard',    icon: '🟠', en: 'Hard',    fr: 'Difficile', descEn: 'Blank, no name',      descFr: 'Vierge, sans nom' },
-              { key: 'extreme', icon: '🔴', en: 'Extreme', fr: 'Extrême',   descEn: 'Blank, ×3 pts',       descFr: 'Vierge, ×3 pts' },
-            ].map(d => {
+              { key: 'easy',    icon: '🟢', en: 'Easy',    fr: 'Facile',    descEn: 'Template + auto symbol', descFr: 'Gabarit + symbole auto' },
+              { key: 'medium',  icon: '🟡', en: 'Medium',  fr: 'Moyen',     descEn: 'Template to color',   descFr: 'Gabarit à colorier' },
+              { key: 'hard',    icon: '🟠', en: 'Hard',    fr: 'Difficile', descEn: 'Template, no help',   descFr: 'Gabarit, sans aide' },
+              { key: 'extreme', icon: '🔴', en: 'Extreme', fr: 'Extrême',   descEn: 'Freehand, ×3 pts',    descFr: 'Dessin libre, ×3 pts' },
+            ].filter(d => d.key !== 'extreme').map(d => {
               const best = diffStats[d.key]?.best
               const selected = difficulty === d.key
               return (
@@ -852,6 +889,14 @@ export default function FlagDrawingV2() {
 
   // ── PLAYING screen ────────────────────────────────────────────────────────
   if (screen === SCREEN.PLAYING) {
+    if (difficulty !== 'extreme') {
+      return (
+        <>
+          <FlagTemplateBuilder key={currentKey} locale={locale} countryName={flagName} symbolUrl={null} onValidate={handleTemplateValidate} onQuit={() => setShowQuitConfirm(true)} />
+          {quitModal}
+        </>
+      )
+    }
     const canvasH = def ? Math.round(CANVAS_W / def.ratio) : 320
     const canvasDisplayW = isMobile ? Math.min(CANVAS_W, window.innerWidth - 24) : CANVAS_W
     const canvasDisplayH = def ? Math.round(canvasDisplayW / def.ratio) : 320

@@ -9,13 +9,13 @@ import FlagSubmitModal from '@/components/FlagSubmitModal'
 import GlobalSearch from '@/components/GlobalSearch'
 
 const GAMES = [
-  { key: 'flag-reveal',  en: 'FlagReveal',  fr: 'FlagReveal',  descEn: 'Uncover the flag tile by tile',           descFr: 'Révèle le drapeau tuile par tuile' },
-  { key: 'flag-quiz',    en: 'FlagQuiz',    fr: 'FlagQuiz',    descEn: 'Multiple choice flag challenge',          descFr: 'Quel est ce drapeau ?' },
-  { key: 'capital-city', en: 'CapitalClue', fr: 'CapitalClue', descEn: 'Match the capital to its country',        descFr: 'Trouve la capitale du pays' },
-  { key: 'flag-drawing', en: 'FlagDraw',    fr: 'FlagDraw',    descEn: 'Can you draw it from memory?',            descFr: 'Sauras-tu le dessiner de mémoire ?' },
-  { key: 'flag-ranker',  en: 'FlagRank',    fr: 'FlagRank',    descEn: 'Rank countries by area, GDP and more',    descFr: 'Classe les pays par superficie, PIB...' },
-  { key: 'flag-clue',    en: 'FlagClue',    fr: 'FlagClue',    descEn: 'Guess the country from fun facts',        descFr: 'Devine le pays grâce à des anecdotes' },
-  { key: 'flag-locator', en: 'FlagLocator', fr: 'FlagLocator', descEn: 'Find the country on the map',             descFr: 'Trouve le pays sur la carte' },
+  { key: 'flag-reveal',  en: 'Reveal the flag',  fr: 'Révèle le drapeau',  descEn: 'Uncover the flag tile by tile',           descFr: 'Révèle le drapeau tuile par tuile' },
+  { key: 'flag-quiz',    en: 'Flag Quiz',    fr: 'Quiz Drapeau',    descEn: 'Multiple choice flag challenge',          descFr: 'Quel est ce drapeau ?' },
+  { key: 'capital-city', en: 'Capital2Flag', fr: 'Capital2Flag', descEn: 'Match the capital to its country',        descFr: 'Trouve la capitale du pays' },
+  { key: 'flag-drawing', en: 'Draw the flag',    fr: 'Dessine le drapeau',    descEn: 'Can you draw it from memory?',            descFr: 'Sauras-tu le dessiner de mémoire ?' },
+  { key: 'flag-ranker',  en: 'Flag Rank',    fr: 'Flag Rank',    descEn: 'Rank countries by area, GDP and more',    descFr: 'Classe les pays par superficie, PIB...' },
+  { key: 'flag-clue',    en: 'Clue2flag',    fr: 'Clue2flag',    descEn: 'Guess the country from fun facts',        descFr: 'Devine le pays grâce à des anecdotes' },
+  { key: 'flag-locator', en: 'Flag on Map', fr: 'Drapeaux sur carte', descEn: 'Find the country on the map',             descFr: 'Trouve le pays sur la carte' },
   { key: 'past-flag',    en: 'PastFlag',    fr: 'PastFlag',    descEn: 'Guess the country from a historical flag', descFr: 'Trouve le pays via un drapeau historique' },
   { key: 'subflag-quiz', en: 'SubFlagQuiz', fr: 'SubFlagQuiz', descEn: 'Regional flag, find the country',         descFr: 'Drapeau régional, trouve le pays' },
   { key: 'gartic-phone', en: 'FlagPhone',   fr: 'FlagPhone',   descEn: 'Describe, draw and guess flags',          descFr: 'Décris, dessine et devine les drapeaux', ready: false },
@@ -23,7 +23,7 @@ const GAMES = [
   { key: 'imposteur',    en: 'Impostor',    fr: 'Imposteur',   descEn: "Find the flag that doesn't belong",       descFr: "Trouve l'imposteur parmi les drapeaux", ready: false },
 ]
 
-const VISIBLE_GAMES = GAMES.filter(g => g.ready !== false)
+const VISIBLE_GAMES = GAMES.filter(g => g.ready !== false && !['past-flag', 'subflag-quiz'].includes(g.key))
 
 const FLAGS_MENU = [
   { href: 'countries',                 en: 'Country Flags',         fr: 'Drapeaux des Pays',      descEn: 'All countries of the world',        descFr: 'Tous les drapeaux du monde' },

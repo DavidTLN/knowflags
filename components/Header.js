@@ -26,7 +26,8 @@ const GAMES = [
 const VISIBLE_GAMES = GAMES.filter(g => g.ready !== false)
 
 const FLAGS_MENU = [
-  { href: 'countries',     en: 'Country Flags',    fr: 'Drapeaux des Pays',   descEn: 'All countries of the world',        descFr: 'Tous les drapeaux du monde' },
+  { href: 'countries',                 en: 'Country Flags',         fr: 'Drapeaux des Pays',      descEn: 'All countries of the world',        descFr: 'Tous les drapeaux du monde' },
+  { href: 'countries?type=territories', en: 'Nations & Territories', fr: 'Nations et territoires', descEn: 'Constituent countries, territories, autonomous regions', descFr: 'Nations constitutives, territoires, régions autonomes' },
   { href: 'flags/regions', en: 'Regions & States', fr: 'Régions & États',     descEn: 'Provinces, cantons, Bundesländer…', descFr: 'Provinces, cantons, Bundesländer…' },
   { href: 'flags/cities',  en: 'City Flags',       fr: 'Drapeaux des Villes', descEn: 'Major cities around the world',     descFr: 'Grandes villes du monde entier' },
   { href: 'organisations', en: 'Organisations',    fr: 'Organisations',       descEn: 'UN, EU, NATO, FIFA and more',       descFr: 'ONU, UE, OTAN, FIFA et plus' },
@@ -495,6 +496,12 @@ export default function Header() {
                         <span style={{ color: '#5B7BB5', display: 'flex' }}><IconGlobe width={22} height={22} /></span>
                         {t('True Size Map', 'Carte Taille Réelle')}
                       </Link>
+
+                      <button onClick={openSubmit}
+                        style={{ width: '100%', display: 'flex', alignItems: 'center', gap: '14px', padding: '17px 2px', fontSize: '16.5px', color: '#16324F', background: 'none', border: 'none', borderBottom: '1px solid #E2DDD5', fontWeight: '600', letterSpacing: '-0.1px', cursor: 'pointer', textAlign: 'left' }}>
+                        <span style={{ color: '#5B7BB5', display: 'flex', fontSize: '22px', lineHeight: 1, width: '22px', justifyContent: 'center' }}>+</span>
+                        {t('Submit a flag', 'Proposer un drapeau')}
+                      </button>
                     </div>
 
                     {/* Account card */}

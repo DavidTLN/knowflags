@@ -78,10 +78,10 @@ function FilterChip({ active, onClick, children }) {
   )
 }
 
-function CityCard({ flag, name, regionName, countryName }) {
+function CityCard({ flag, name, regionName, countryName, locale }) {
   return (
-    <div
-      style={{ display: 'block', backgroundColor: 'white', borderRadius: '12px', overflow: 'hidden', border: '1px solid #e2e8f0', transition: 'transform 0.15s, box-shadow 0.15s', cursor: 'pointer' }}
+    <Link href={`/${locale}/flags/cities/${flag.slug}`}
+      style={{ display: 'block', textDecoration: 'none', backgroundColor: 'white', borderRadius: '12px', overflow: 'hidden', border: '1px solid #e2e8f0', transition: 'transform 0.15s, box-shadow 0.15s', cursor: 'pointer' }}
       onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.10)' }}
       onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none' }}
     >
@@ -97,7 +97,7 @@ function CityCard({ flag, name, regionName, countryName }) {
           <p style={{ margin: 0, fontSize: '12px', color: '#94a3b8' }}>{regionName ? regionName + ', ' + countryName : countryName}</p>
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
 
@@ -323,7 +323,7 @@ export default function CitiesPage() {
           const name = locale === 'fr' ? flag.name_fr : flag.name_en
           const regionName = flag.parent ? (locale === 'fr' ? flag.parent.name_fr : flag.parent.name_en) : null
           const countryName = flag.country ? (locale === 'fr' ? flag.country.name_fr : flag.country.name_en) : ''
-          return <CityCard key={flag.slug} flag={flag} name={name} regionName={regionName} countryName={countryName} />
+          return <CityCard key={flag.slug} flag={flag} name={name} regionName={regionName} countryName={countryName} locale={locale} />
         })}
       </div>
     )

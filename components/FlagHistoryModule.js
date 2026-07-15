@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { createClient } from '@/lib/supabase-client'
 import { useLocale } from 'next-intl'
 
@@ -77,6 +77,20 @@ export default function FlagHistoryModule({ countryCode, countryName }) {
   const [flags, setFlags]       = useState([])
   const [loading, setLoading]   = useState(true)
   const [selected, setSelected] = useState(null)
+  const [isMobile, setIsMobile] = useState(false)
+  const previewRef = useRef(null)
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 767px)')
+    const on = () => setIsMobile(mq.matches)
+    on(); mq.addEventListener('change', on)
+    return () => mq.removeEventListener('change', on)
+  }, [])
+  const pick = (flag) => {
+    setSelected(flag)
+    if (window.matchMedia('(max-width: 767px)').matches) {
+      setTimeout(() => previewRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 60)
+    }
+  }
 
   useEffect(() => {
     if (!countryCode) return
@@ -132,8 +146,9 @@ export default function FlagHistoryModule({ countryCode, countryName }) {
 
         {/* Selected flag preview */}
         {selected && (
-          <div style={{
+          <div ref={previewRef} style={{
             flex: '0 0 auto', width: 'min(280px, 100%)',
+            position: isMobile ? 'static' : 'sticky', top: isMobile ? 'auto' : '76px', alignSelf: 'flex-start',
             backgroundColor: 'white', borderRadius: '16px',
             border: '1px solid #e2e8f0',
             overflow: 'hidden',
@@ -184,7 +199,7 @@ export default function FlagHistoryModule({ countryCode, countryName }) {
               const isCurrent  = !flag.date_end
               const lbl        = label(flag)
               return (
-                <div key={flag.id} onClick={() => setSelected(flag)}
+                <div key={flag.id} onClick={() => pick(flag)}
                   style={{ display: 'flex', alignItems: 'flex-start', gap: '16px', marginBottom: i < flags.length - 1 ? '16px' : '0', cursor: 'pointer', position: 'relative', zIndex: 1 }}>
                   <div style={{
                     width: '64px', height: '46px', flexShrink: 0, boxSizing: 'border-box',

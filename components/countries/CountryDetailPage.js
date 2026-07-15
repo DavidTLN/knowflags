@@ -649,6 +649,7 @@ export default function CountryDetailPage({ code }) {
   const [facts, setFacts]               = useState([])
   const [isMobile, setIsMobile]         = useState(false)
   const [reportOpen, setReportOpen]     = useState(false)
+  const [children, setChildren]         = useState([])
 
   useEffect(() => {
     function check() { setIsMobile(window.innerWidth < 768) }
@@ -663,7 +664,7 @@ export default function CountryDetailPage({ code }) {
 
     // Country data
     supabase.from('countries')
-      .select('iso_code, name_en, name_fr, region, capital, capital_fr, colors, symbols, ratio, shape, population, area_km2, adopted_year, median_age, last_flag_change, spec_en, spec_fr, etiquette_en, etiquette_fr, color_meanings, symbol_meanings, display_symbols, designer_en, designer_fr, adopted_note_fr, adopted_note_en, adopted_detail_fr, adopted_detail_en, flag_url')
+      .select('iso_code, name_en, name_fr, region, capital, capital_fr, colors, symbols, ratio, shape, population, area_km2, adopted_year, median_age, last_flag_change, spec_en, spec_fr, etiquette_en, etiquette_fr, color_meanings, symbol_meanings, display_symbols, designer_en, designer_fr, adopted_note_fr, adopted_note_en, adopted_detail_fr, adopted_detail_en, flag_url, entity_type, parent_iso, sovereignty_note_en, sovereignty_note_fr')
       .eq('iso_code', code.toLowerCase()).single()
       .then(({ data }) => {
         if (data) {
@@ -696,11 +697,20 @@ export default function CountryDetailPage({ code }) {
             color_meanings:   data.color_meanings || {},
             symbol_meanings:  data.symbol_meanings || {},
             display_symbols:  data.display_symbols || [],
+            entityType:       data.entity_type,
+            parentIso:        data.parent_iso,
+            sovNoteEn:        data.sovereignty_note_en,
+            sovNoteFr:        data.sovereignty_note_fr,
           })
           // Related countries
-          supabase.from('countries').select('iso_code, name_en, name_fr').eq('region', data.region).neq('iso_code', data.iso_code)
+          supabase.from('countries').select('iso_code, name_en, name_fr').eq('region', data.region).eq('entity_type', 'sovereign').neq('iso_code', data.iso_code)
             .then(({ data: rel }) => {
               if (rel) setRelated([...rel].sort(() => Math.random() - 0.5).slice(0, 6).map(r => ({ code: r.iso_code, en: r.name_en, fr: r.name_fr })))
+            })
+          // Constituent / child entities (shown on the parent page)
+          supabase.from('countries').select('iso_code, name_en, name_fr').eq('parent_iso', data.iso_code).order('iso_code')
+            .then(({ data: kids }) => {
+              if (kids && kids.length) setChildren(kids.map(k => ({ code: k.iso_code, en: k.name_en, fr: k.name_fr })))
             })
         }
         setLoading(false)
@@ -734,6 +744,40 @@ export default function CountryDetailPage({ code }) {
   const capital      = country.capital ? (locale === 'fr' ? country.capital.fr : country.capital.en) : '—'
   const region       = locale === 'fr' ? REGION_LABELS[country.region] : country.region
   const continentSlug = REGION_TO_CONTINENT[country.region] || null
+
+  const sovNote = country.entityType && country.entityType !== 'sovereign'
+    ? (locale === 'fr' ? country.sovNoteFr : country.sovNoteEn)
+    : null
+  const badgePillStyle = { display: 'inline-flex', alignItems: 'center', gap: '6px', marginTop: '8px', padding: '5px 12px', borderRadius: '9999px', backgroundColor: DS.secondary, color: DS.navy, fontSize: '12px', fontWeight: '600', textDecoration: 'none', border: `1px solid ${DS.border}`, width: 'fit-content' }
+  const statusBadge = sovNote ? (
+    country.parentIso ? (
+      <Link href={`/${locale}/countries/${country.parentIso}`} style={badgePillStyle}>
+        {sovNote}<span aria-hidden="true">→</span>
+      </Link>
+    ) : (
+      <span style={badgePillStyle}>{sovNote}</span>
+    )
+  ) : null
+  const childrenSection = children.length > 0 ? (
+    <Section title={t('Constituent countries', 'Nations constitutives')}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '12px' }}>
+        {children.map(ch => {
+          const cName = locale === 'fr' ? ch.fr : ch.en
+          return (
+            <Link key={ch.code} href={`/${locale}/countries/${ch.code}`}
+              style={{ textDecoration: 'none', display: 'block', backgroundColor: DS.surface, borderRadius: '10px', overflow: 'hidden', border: `1px solid ${DS.border}` }}>
+              <div style={{ aspectRatio: '3/2', backgroundColor: DS.bg }}>
+                <img src={`https://flagcdn.com/w160/${ch.code}.png`} alt={cName} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '6px' }} />
+              </div>
+              <div style={{ padding: '8px 10px' }}>
+                <p style={{ margin: 0, fontSize: '12px', fontWeight: '700', color: DS.navy, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{cName}</p>
+              </div>
+            </Link>
+          )
+        })}
+      </div>
+    </Section>
+  ) : null
 
   function formatPop(n) {
     if (!n) return '—'
@@ -835,6 +879,7 @@ export default function CountryDetailPage({ code }) {
           <div style={{ minWidth: 0 }}>
             <h1 style={{ margin: '0 0 1px', fontSize: '30px', fontWeight: '900', color: DS.navy, letterSpacing: '-0.8px', lineHeight: 1.1 }}>{name}</h1>
             <p style={{ margin: '0 0 4px', fontSize: '14px', color: DS.muted }}>{region}</p>
+            {statusBadge}
           </div>
           <button onClick={() => setReportOpen(true)} aria-label={t('Report an issue', 'Signaler un problème')}
             style={{ flexShrink: 0, minHeight: '44px', display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '0 14px', borderRadius: '10px', backgroundColor: 'transparent', color: DS.navy, border: `1.5px solid ${DS.border}`, fontSize: '13px', fontWeight: '600', cursor: 'pointer', whiteSpace: 'nowrap' }}>
@@ -869,6 +914,8 @@ export default function CountryDetailPage({ code }) {
               </div>
             </Section>
           )}
+
+          {childrenSection}
 
           {/* Design & Symbolism (merged section) */}
           <DesignSpecs country={country} locale={locale} />
@@ -964,6 +1011,7 @@ export default function CountryDetailPage({ code }) {
             <p style={{ margin: 0, fontSize: '15px', color: DS.muted }}>
               {region}
             </p>
+            {statusBadge}
           </div>
           <button onClick={() => setReportOpen(true)}
             onMouseEnter={e => { e.currentTarget.style.backgroundColor = DS.bgAlt }}
@@ -1006,6 +1054,8 @@ export default function CountryDetailPage({ code }) {
 
         {/* ── Content sections — same card pattern as mobile ── */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+
+          {childrenSection}
 
           {/* Design & Symbolism (merged section) */}
           <DesignSpecs country={country} locale={locale} />

@@ -571,6 +571,7 @@ export default function TrueSizeMap() {
       const id = Number(e.currentTarget.getAttribute('data-id'))
       e.preventDefault()
       e.stopPropagation()
+      try { e.currentTarget.setPointerCapture?.(e.pointerId) } catch {}
       const clientX = e.clientX ?? e.touches?.[0]?.clientX ?? 0
       const clientY = e.clientY ?? e.touches?.[0]?.clientY ?? 0
       drag.current = { on: true, id, x: clientX, y: clientY }
@@ -579,6 +580,7 @@ export default function TrueSizeMap() {
       map.dragging.disable()
       map.scrollWheelZoom.disable()
       map.doubleClickZoom.disable()
+      try { map.getContainer().style.touchAction = 'none' } catch {}
     }
 
     const onDocPointerMove = (e) => {
@@ -615,20 +617,19 @@ export default function TrueSizeMap() {
       map.dragging.enable()
       map.scrollWheelZoom.enable()
       map.doubleClickZoom.enable()
+      try { map.getContainer().style.touchAction = 'none' } catch {}
     }
 
     dragHandlers.current = { onPointerDown }
     document.addEventListener('pointermove', onDocPointerMove, { passive: false })
     document.addEventListener('pointerup',   onDocPointerUp)
-    document.addEventListener('touchmove',   onDocPointerMove, { passive: false })
-    document.addEventListener('touchend',    onDocPointerUp)
+    document.addEventListener('pointercancel', onDocPointerUp)
 
     return () => {
       dragHandlers.current = null
       document.removeEventListener('pointermove', onDocPointerMove)
       document.removeEventListener('pointerup',   onDocPointerUp)
-      document.removeEventListener('touchmove',   onDocPointerMove)
-      document.removeEventListener('touchend',    onDocPointerUp)
+      document.removeEventListener('pointercancel', onDocPointerUp)
       map.dragging.enable()
       map.scrollWheelZoom.enable()
       map.doubleClickZoom.enable()

@@ -117,6 +117,7 @@ export default function CountryListingPage() {
   const [isMobile, setIsMobile]                 = useState(false)
   const [filtersOpen, setFiltersOpen]           = useState(false)
   const [openSections, setOpenSections]         = useState({})
+  const [entityView, setEntityView]             = useState('sovereign')
 
   const toggleSection = (key) => setOpenSections(prev => ({ ...prev, [key]: !prev[key] }))
 
@@ -136,7 +137,7 @@ export default function CountryListingPage() {
     const supabase = createClient()
     supabase
       .from('countries')
-      .select('iso_code, name_en, name_fr, region, colors, symbols, ratio, shape, has_weapons, has_blade, has_firearm, adopted_year, last_flag_change, flag_url')
+      .select('iso_code, name_en, name_fr, region, colors, symbols, ratio, shape, has_weapons, has_blade, has_firearm, adopted_year, last_flag_change, flag_url, entity_type, parent_iso')
       .order('name_en')
       .then(({ data }) => {
         if (data) setCountries(data.map(c => ({
@@ -148,6 +149,7 @@ export default function CountryListingPage() {
           adopted_year: c.adopted_year ?? null,
           last_flag_change: c.last_flag_change || null,
           flagUrl: c.flag_url || null,
+          entityType: c.entity_type || 'sovereign',
         })))
         setCountriesLoading(false)
       })
@@ -160,6 +162,11 @@ export default function CountryListingPage() {
     return () => window.removeEventListener('resize', check)
   }, [])
 
+  useEffect(() => {
+    const p = new URLSearchParams(window.location.search).get('type')
+    setEntityView(p === 'territories' ? 'territories' : 'sovereign')
+  }, [])
+
   const getName = (c) => locale === 'fr' ? c.fr : c.en
 
   function toggle(arr, setter, val) {
@@ -167,7 +174,9 @@ export default function CountryListingPage() {
   }
 
   const filtered = useMemo(() => {
-    let list = [...countries]
+    let list = countries.filter(c => entityView === 'territories'
+      ? (c.entityType && c.entityType !== 'sovereign')
+      : (!c.entityType || c.entityType === 'sovereign'))
     if (search.trim()) {
       const q = search.trim().toLowerCase()
       list = list.filter(c => getName(c).toLowerCase().includes(q))
@@ -183,7 +192,7 @@ export default function CountryListingPage() {
       return sortOrder === 'az' ? na.localeCompare(nb) : nb.localeCompare(na)
     })
     return list
-  }, [countries, search, activeContinents, activeRegions, activeColors, activeSymbols, activeRatios, activeShapes, sortOrder, locale])
+  }, [countries, entityView, search, activeContinents, activeRegions, activeColors, activeSymbols, activeRatios, activeShapes, sortOrder, locale])
 
   const hasFilters = activeContinents.length > 0 || activeRegions.length > 0 || activeColors.length > 0 || activeSymbols.length > 0 || activeRatios.length > 0 || activeShapes.length > 0 || !!search
   const activeFilterCount = [activeContinents, activeRegions, activeColors, activeSymbols, activeRatios, activeShapes].flat().length
@@ -367,13 +376,26 @@ export default function CountryListingPage() {
       <div style={{ maxWidth: '1400px', margin: '0 auto', padding: isMobile ? '20px 16px' : '40px 32px' }}>
 
         {/* Page title */}
-        <div style={{ marginBottom: '20px' }}>
+        <div style={{ marginBottom: '16px' }}>
           <h1 style={{ fontSize: isMobile ? '28px' : '40px', fontWeight: '900', color: DS.navy, margin: '0 0 4px', letterSpacing: '-1px' }}>
-            {t('Country Flags', 'Drapeaux des pays')}
+            {entityView === 'territories' ? t('Nations & Territories', 'Nations et territoires') : t('Country Flags', 'Drapeaux des pays')}
           </h1>
           <p style={{ margin: 0, fontSize: '14px', color: DS.muted }}>
-            {countries.length} {t('countries', 'pays')}
+            {filtered.length} {t('flags', 'drapeaux')}
           </p>
+        </div>
+
+        {/* Type switch */}
+        <div style={{ display: 'flex', gap: '8px', marginBottom: '20px', flexWrap: 'wrap' }}>
+          {[['sovereign', t('Countries', 'Pays')], ['territories', t('Nations & territories', 'Nations et territoires')]].map(([val, label]) => (
+            <button key={val} onClick={() => setEntityView(val)}
+              style={{ padding: '7px 16px', borderRadius: '9999px', fontSize: '13px', fontWeight: '600', cursor: 'pointer', whiteSpace: 'nowrap',
+                border: entityView === val ? `2px solid ${DS.navy}` : `1.5px solid ${DS.border}`,
+                backgroundColor: entityView === val ? DS.navy : DS.surface,
+                color: entityView === val ? 'white' : DS.muted, transition: 'all 0.15s' }}>
+              {label}
+            </button>
+          ))}
         </div>
 
         {/* ══ MOBILE ══════════════════════════════════════════════════════════ */}

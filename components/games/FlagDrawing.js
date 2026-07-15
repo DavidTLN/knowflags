@@ -181,25 +181,64 @@ function floodFill(imageData, W, H, startX, startY, fillHex) {
 }
 
 // ─── Comparison ───────────────────────────────────────────────────────────────
-function comparePixels(drawData, refData) {
-  const len = drawData.data.length
-  let total = 0, counted = 0
-  const TOLERANCE = 50
-  for (let i = 0; i < len; i += 4) {
-    const r1=drawData.data[i], g1=drawData.data[i+1], b1=drawData.data[i+2]
-    const r2=refData.data[i], g2=refData.data[i+1], b2=refData.data[i+2]
-    const d = colorDistance(r1,g1,b1,r2,g2,b2)
-    total += Math.max(0, d - TOLERANCE) / 441.67
-    counted++
+// ─── Comparison — downscaled grid + CIELAB ΔE (spatially tolerant, perceptual) ─
+function srgbToLab(r, g, b) {
+  let R = r/255, G = g/255, B = b/255
+  R = R > 0.04045 ? ((R+0.055)/1.055)**2.4 : R/12.92
+  G = G > 0.04045 ? ((G+0.055)/1.055)**2.4 : G/12.92
+  B = B > 0.04045 ? ((B+0.055)/1.055)**2.4 : B/12.92
+  let X = (R*0.4124 + G*0.3576 + B*0.1805) / 0.95047
+  let Y = (R*0.2126 + G*0.7152 + B*0.0722)
+  let Z = (R*0.0193 + G*0.1192 + B*0.9505) / 1.08883
+  const f = t => t > 0.008856 ? Math.cbrt(t) : (7.787*t + 16/116)
+  const fx = f(X), fy = f(Y), fz = f(Z)
+  return [116*fy - 16, 500*(fx-fy), 200*(fy-fz)]
+}
+
+function comparePixels(drawData, refData, hasEmblem = false) {
+  const W = drawData.width, H = drawData.height
+  const d1 = drawData.data, d2 = refData.data
+  const B = 10                                  // block size → spatial tolerance
+  const gw = Math.max(1, Math.round(W / B))
+  const gh = Math.max(1, Math.round(H / B))
+  const DE_MAX = 45                             // ΔE beyond which a cell scores 0
+  let acc = 0, totalW = 0
+  for (let gy = 0; gy < gh; gy++) {
+    const y0 = Math.floor(gy*H/gh), y1 = Math.floor((gy+1)*H/gh)
+    for (let gx = 0; gx < gw; gx++) {
+      const x0 = Math.floor(gx*W/gw), x1 = Math.floor((gx+1)*W/gw)
+      let r1=0,g1=0,b1=0,r2=0,g2=0,b2=0,n=0
+      for (let y=y0; y<y1; y++) {
+        for (let x=x0; x<x1; x++) {
+          const i = (y*W+x)*4
+          r1+=d1[i]; g1+=d1[i+1]; b1+=d1[i+2]
+          r2+=d2[i]; g2+=d2[i+1]; b2+=d2[i+2]
+          n++
+        }
+      }
+      if (n === 0) continue
+      const l1 = srgbToLab(r1/n, g1/n, b1/n)
+      const l2 = srgbToLab(r2/n, g2/n, b2/n)
+      const dE = Math.sqrt((l1[0]-l2[0])**2 + (l1[1]-l2[1])**2 + (l1[2]-l2[2])**2)
+      const sim = Math.max(0, 1 - dE / DE_MAX)
+      // Emblem flags: the central emblem is unreasonable to draw by hand → weight it down
+      let w = 1
+      if (hasEmblem) {
+        const cx = (gx+0.5)/gw, cy = (gy+0.5)/gh
+        if (Math.abs(cx-0.5) < 0.22 && Math.abs(cy-0.5) < 0.30) w = 0.35
+      }
+      acc += sim * w
+      totalW += w
+    }
   }
-  if (counted === 0) return 0
-  return Math.min(100, Math.round((1 - total/counted) * 100))
+  if (totalW === 0) return 0
+  return Math.min(100, Math.round((acc / totalW) * 100))
 }
 
 // ─── Score formula ────────────────────────────────────────────────────────────
 const DIFF_MULT = { easy: 1, medium: 1.5, hard: 2, extreme: 3 }
 function calcPoints(pct, streak, diff) {
-  return Math.round(100 * (pct/100)**2 * Math.pow(1.1, streak) * (DIFF_MULT[diff]||1))
+  return Math.round(100 * (pct/100)**1.5 * Math.pow(1.1, streak) * (DIFF_MULT[diff]||1))
 }
 
 function shuffle(arr) {
@@ -256,9 +295,9 @@ export default function FlagDrawingV2() {
 
   const cfg = {
     easy:    { showName: true,  ghost: true  },
-    medium:  { showName: false, ghost: false },
-    hard:    { showName: false, ghost: false },
-    extreme: { showName: false, ghost: false },
+    medium:  { showName: true,  ghost: false },
+    hard:    { showName: true,  ghost: false },
+    extreme: { showName: true,  ghost: false },
   }[difficulty]
 
   useEffect(() => {
@@ -621,7 +660,7 @@ export default function FlagDrawingV2() {
     const drawData = drawCtx.getImageData(0, 0, W, H)
     const refData = refCtx.getImageData(0, 0, W, H)
 
-    const sim = comparePixels(drawData, refData)
+    const sim = comparePixels(drawData, refData, FLAG_DEFS[currentKey]?.hasEmblem)
     setScore(sim)
 
     const passed = sim >= 55

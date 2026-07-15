@@ -190,6 +190,8 @@ export default function FlagSubmitModal({ onClose, defaultCountry = '' }) {
   const [newNameFr,   setNewNameFr]   = useState('')
   const [newCapital,  setNewCapital]  = useState('')
   const [newRegion,   setNewRegion]   = useState('')
+  const [newEntityType, setNewEntityType] = useState('sovereign')
+  const [newParentIso,  setNewParentIso]  = useState('')
   const [newOrgType,  setNewOrgType]  = useState('intergovernmental')
   const [newFounded,  setNewFounded]  = useState('')
   const [newWebsite,  setNewWebsite]  = useState('')
@@ -357,6 +359,8 @@ export default function FlagSubmitModal({ onClose, defaultCountry = '' }) {
           new_name_fr:       newNameFr   || null,
           new_capital:       newCapital  || null,
           new_region:        newRegion   || null,
+          new_entity_type:   newEntityType || 'sovereign',
+          new_parent_iso:    (newEntityType === 'constituent_country' || newEntityType === 'dependent_territory' || newEntityType === 'autonomous_region') ? (newParentIso || null) : null,
           new_org_type:      newOrgType  || null,
           new_founded:       newFounded  || null,
           new_website:       newWebsite  || null,
@@ -476,6 +480,22 @@ export default function FlagSubmitModal({ onClose, defaultCountry = '' }) {
                       <div><label style={LABEL}>{t('Name FR', 'Nom FR')}</label><input value={newNameFr} onChange={e => setNewNameFr(e.target.value)} style={INPUT} /></div>
                     </div>
                     <div><label style={LABEL}>{t('Capital', 'Capitale')}</label><input value={newCapital} onChange={e => setNewCapital(e.target.value)} style={INPUT} /></div>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+                      <div><label style={LABEL}>{t('Type', 'Type')}</label>
+                        <select value={newEntityType} onChange={e => { setNewEntityType(e.target.value); if (e.target.value === 'sovereign' || e.target.value === 'partially_recognized') setNewParentIso('') }} style={{ ...INPUT, appearance: 'none' }}>
+                          <option value="sovereign">{t('Sovereign country', 'Pays souverain')}</option>
+                          <option value="constituent_country">{t('Constituent country', 'Nation constitutive')}</option>
+                          <option value="dependent_territory">{t('Dependent territory', 'Territoire dépendant')}</option>
+                          <option value="autonomous_region">{t('Autonomous region', 'Région autonome')}</option>
+                          <option value="partially_recognized">{t('Limited recognition', 'Reconnaissance limitée')}</option>
+                        </select>
+                      </div>
+                      {(newEntityType === 'constituent_country' || newEntityType === 'dependent_territory' || newEntityType === 'autonomous_region') && (
+                        <div><label style={LABEL}>{t('Parent country', 'Pays parent')} *</label>
+                          <CountryPicker value={newParentIso} onChange={setNewParentIso} countries={countries} locale={locale} placeholder={t('Choose…', 'Choisir…')} allowNew={false} />
+                        </div>
+                      )}
+                    </div>
                   </div>
                 )}
               </>)}

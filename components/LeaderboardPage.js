@@ -155,7 +155,7 @@ function LeaderboardRow({ entry, rank, isMe, game, locale }) {
           {isMe && <span style={{ fontSize: '10px', backgroundColor: '#4a7fd4', color: 'white', padding: '1px 6px', borderRadius: '99px', fontWeight: '700', flexShrink: 0 }}>{t('You', 'Vous')}</span>}
         </div>
         {game === 'all' && entry.game && <div style={{ fontSize: '11px', color: '#94a3b8', marginTop: '1px' }}>{gameLabel}</div>}
-        <div style={{ fontSize: '11px', color: '#cbd5e1', marginTop: '1px' }}>{entry.games_played} {entry.games_played === 1 ? t('game', 'partie') : t('games', 'parties')}</div>
+        {entry.played_at && <div style={{ fontSize: '11px', color: '#cbd5e1', marginTop: '1px' }}>{new Date(entry.played_at).toLocaleDateString(locale === 'fr' ? 'fr-FR' : 'en-US', { day: 'numeric', month: 'short', year: 'numeric' })}</div>}
       </div>
       <div style={{ textAlign: 'right', flexShrink: 0 }}>
         <div style={{ fontSize: '20px', fontWeight: '900', color: rank === 1 ? '#d97706' : '#0B1F3B', lineHeight: 1 }}>{(entry.score || 0).toLocaleString()}</div>
@@ -169,8 +169,8 @@ export default function LeaderboardPage() {
   const locale = useLocale()
   const t = (en, fr) => locale === 'fr' ? fr : en
 
-  const [activeTab, setActiveTab] = useState('week')
-  const [periodKey, setPeriodKey] = useState(() => getCurrentPeriodKey('week'))
+  const [activeTab, setActiveTab] = useState('alltime')
+  const [periodKey, setPeriodKey] = useState(() => getCurrentPeriodKey('alltime'))
   const [game, setGame]           = useState('all')
   const [entries, setEntries]     = useState([])
   const [loading, setLoading]     = useState(true)

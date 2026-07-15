@@ -4,11 +4,18 @@ import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import Footer from '@/components/Footer'
 import { useLocale } from 'next-intl'
+import GameIcon from '@/components/games/GameIcon'
 
 const DS = {
   navy: '#16324F', navyDark: '#0F1923', bg: '#F4F1E6', surface: '#FFFFFF',
   border: '#E2DDD5', muted: '#6B7280', light: '#9CA3AF', gold: '#F4B400',
   green: '#16A34A', greenBg: '#DCFCE7', steel: '#9EB7E5',
+}
+
+const GAME_ICON = {
+  'flag-reveal': 'eye', 'flag-quiz': 'bulb', 'capital-city': 'pin', 'flag-clue': 'search',
+  'flag-ranker': 'trophy', 'flag-locator': 'target', 'flag-drawing': 'brush', 'past-flag': 'clock',
+  'subflag-quiz': 'sparkle', 'gartic-phone': 'brush', 'qui-est-ce': 'search', 'imposteur': 'search',
 }
 
 const GAMES = [
@@ -29,9 +36,9 @@ const GAMES = [
 const COMING_SOON = []
 
 const DIFFICULTY = {
-  easy:   { bg: '#DCFCE7', text: '#166534', label: { en: 'Easy', fr: 'Facile' } },
+  easy:   { bg: '#DCFCE7', text: '#16A34A', label: { en: 'Easy', fr: 'Facile' } },
   medium: { bg: '#FEF3C7', text: '#92400E', label: { en: 'Medium', fr: 'Moyen' } },
-  hard:   { bg: '#FEE2E2', text: '#991B1B', label: { en: 'Hard', fr: 'Difficile' } },
+  hard:   { bg: '#FEE2E2', text: '#D62828', label: { en: 'Hard', fr: 'Difficile' } },
 }
 
 function GameCard({ game, locale, coming }) {
@@ -52,10 +59,10 @@ function GameCard({ game, locale, coming }) {
       <div style={{ padding: '18px', display: 'flex', flexDirection: 'column', flex: 1 }}>
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: '12px', gap: '8px' }}>
           <span style={{
-            fontSize: '26px', lineHeight: 1, width: '52px', height: '52px', flexShrink: 0,
+            width: '52px', height: '52px', flexShrink: 0,
             borderRadius: '14px', display: 'flex', alignItems: 'center', justifyContent: 'center',
             backgroundColor: (game.color || DS.navy) + '14',
-          }}>{game.icon}</span>
+          }}><GameIcon name={GAME_ICON[game.key] || 'sparkle'} size={24} color={game.color || DS.navy} strokeWidth={2} /></span>
           <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
             {coming && (
               <span style={{ fontSize: '10px', fontWeight: '700', backgroundColor: '#EEF2F7', color: DS.muted, padding: '3px 9px', borderRadius: '99px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
@@ -73,12 +80,12 @@ function GameCard({ game, locale, coming }) {
         <h3 style={{ margin: '0 0 5px', fontSize: '17px', fontWeight: '800', color: DS.navy, letterSpacing: '-0.3px' }}>
           {t(game.en, game.fr)}
         </h3>
-        <p style={{ margin: 0, fontSize: '13px', color: DS.muted, lineHeight: 1.5, flex: 1 }}>
+        <p style={{ margin: 0, fontSize: '13px', color: DS.muted, lineHeight: 1.5, minHeight: '39px', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
           {t(game.descEn, game.descFr)}
         </p>
 
         {!coming && (
-          <div style={{ marginTop: '16px', display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '13px', fontWeight: '800', color: game.color || DS.navy }}>
+          <div style={{ marginTop: 'auto', paddingTop: '16px', display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '13px', fontWeight: '800', color: game.color || DS.navy }}>
             {t('Play now', 'Jouer')}
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <line x1="4" y1="12" x2="19" y2="12" /><polyline points="13 6 19 12 13 18" />
@@ -113,7 +120,7 @@ export default function GamesPage() {
     display: 'grid',
     gridTemplateColumns: isMobile ? '1fr 1fr' : 'repeat(auto-fill, minmax(250px, 1fr))',
     gap: isMobile ? '12px' : '16px',
-    gridAutoRows: '1fr',
+    alignItems: 'stretch',
   }
 
   return (

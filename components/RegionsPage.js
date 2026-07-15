@@ -88,10 +88,10 @@ function FlagCard({ flag, name, parentName }) {
       <div style={{ aspectRatio: '3/2', overflow: 'hidden', backgroundColor: '#f0ede4', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <FlagImage slug={flag.slug} prefix="/flags/regions" name={name} acronym={flag.metadata && flag.metadata.abbr} color="#0B1F3B" style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '6px' }} />
       </div>
-      <div style={{ padding: '12px 14px' }}>
+      <div style={{ padding: '12px 14px', textAlign: 'center' }}>
         <p style={{ margin: 0, fontSize: '14px', fontWeight: '700', color: '#0B1F3B', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{name}</p>
         {parentName && (
-          <div style={{ display: 'flex', alignItems: 'center', gap: '4px', marginTop: '3px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '4px', marginTop: '3px' }}>
             {flag.parent && flag.parent.image_path && (
               <img src={flag.parent.image_path} width="14" height="10" style={{ borderRadius: '2px', objectFit: 'cover', flexShrink: 0 }} />
             )}

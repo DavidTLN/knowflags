@@ -13,6 +13,8 @@ const NEUTRAL = '#E8E6DF'
 const STROKE = 'rgba(22,50,79,0.28)'
 const DS = { navy: '#16324F', border: 'rgba(22,50,79,0.12)', borderSolid: '#E2DDD5', muted: '#6B7280', gold: '#F4B400', bg: '#F4F1E6', surface: '#FFFFFF', bgAlt: '#FAFAF7' }
 const PALETTE = ['#D62828', '#2563EB', '#16A34A', '#F4C400', '#FFFFFF', '#111827', '#EA580C', '#6B21A8']
+const RATIOS = [['3:2', '3 / 2'], ['2:1', '2 / 1'], ['5:3', '5 / 3'], ['4:3', '4 / 3'], ['1:1', '1 / 1']]
+const SYMBOL_COLORS = ['#D62828', '#FFFFFF', '#F4B400', '#16A34A', '#2563EB', '#111827']
 
 const pts = (arr) => arr.map(p => `${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(' ')
 const rect = (x, y, w, h) => ({ type: 'rect', x, y, w, h })
@@ -190,10 +192,10 @@ function Shape({ shape, fill, onClick, thumb }) {
   if (shape.type === 'path') return <path d={shape.d} {...common} />
   return <polygon points={pts(shape.points)} {...common} />
 }
-function StructureSVG({ structure, options, colors, onFill, thumb, symbol, symbolUrl }) {
+function StructureSVG({ structure, options, colors, onFill, thumb, symbol, symbolUrl, aspect, symbolColor }) {
   const regions = useMemo(() => structure.regions(options), [structure, options])
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} width="100%" style={{ display: 'block', borderRadius: thumb ? 4 : 10, border: thumb ? 'none' : `2px solid ${DS.borderSolid}`, background: NEUTRAL }}>
+    <svg viewBox={`0 0 ${W} ${H}`} width="100%" preserveAspectRatio={aspect ? 'none' : undefined} style={{ display: 'block', ...(aspect ? { aspectRatio: aspect } : {}), borderRadius: thumb ? 4 : 10, border: thumb ? 'none' : `2px solid ${DS.borderSolid}`, background: NEUTRAL }}>
       {regions.map((rg, i) => {
         const neutral = thumb ? ['#DAD8D0', '#C9C7BE', '#BCBAB0', '#ADABA1'][i % 4] : NEUTRAL
         const fill = colors?.[rg.id] || neutral
@@ -201,12 +203,12 @@ function StructureSVG({ structure, options, colors, onFill, thumb, symbol, symbo
       })}
       {!thumb && symbol && (symbolUrl
         ? <image href={symbolUrl} x={symbol.x - symbol.size / 2} y={symbol.y - symbol.size / 2} width={symbol.size} height={symbol.size} preserveAspectRatio="xMidYMid meet" />
-        : <polygon points={pts(starPts(symbol.x, symbol.y, symbol.size / 2))} fill={DS.gold} stroke="rgba(0,0,0,0.25)" strokeWidth="1" />)}
+        : <polygon points={pts(starPts(symbol.x, symbol.y, symbol.size / 2))} fill={symbolColor || DS.gold} stroke="rgba(0,0,0,0.25)" strokeWidth="1" />)}
     </svg>
   )
 }
 
-export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'France', symbolUrl = null, onChange, onValidate, onQuit }) {
+export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'France', symbolUrl = null, onChange, onValidate, onQuit, ratioChoices = RATIOS, showRatio = true, symbolColor = '#F4B400', symbolAuto = false, symbolPickColor = false }) {
   const t = (en, fr) => (locale === 'fr' ? fr : en)
   const isMobile = useMobile()
   const [structureId, setStructureId] = useState('bands')
@@ -215,8 +217,11 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
   const [colors, setColors] = useState({})
   const [active, setActive] = useState(PALETTE[0])
   const [custom, setCustom] = useState('#0055A4')
-  const [showSymbol, setShowSymbol] = useState(false)
+  const [showSymbol, setShowSymbol] = useState(symbolAuto)
+  const [symColor, setSymColor] = useState(symbolColor)
+  const [ratio, setRatio] = useState(ratioChoices[0] ? ratioChoices[0][1] : '3 / 2')
   const symbol = showSymbol ? symbolAnchor(structureId, options) : null
+  const symFill = symbolPickColor ? symColor : symbolColor
 
   function pickStructure(id) { const no = defaultOpts(byId(id)); setStructureId(id); setOptions(no); setColors({}); onChange?.({ structureId: id, options: no, colors: {}, symbol: showSymbol }) }
   function setOption(key, val) { const next = { ...options, [key]: val }; setOptions(next); setColors({}); onChange?.({ structureId, options: next, colors: {}, symbol: showSymbol }) }
@@ -224,7 +229,7 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
 
   const SW = isMobile ? 40 : 30
   const chip = (val, label, isOn, on) => (
-    <button key={String(val)} onClick={on} style={{ padding: isMobile ? '8px 14px' : '6px 12px', borderRadius: 8, fontSize: isMobile ? 13 : 12, fontWeight: 700, cursor: 'pointer', whiteSpace: 'nowrap', flexShrink: 0, border: isOn ? `2px solid ${DS.navy}` : `1.5px solid ${DS.borderSolid}`, background: isOn ? DS.navy : DS.bgAlt, color: isOn ? '#fff' : DS.navy }}>{label}</button>
+    <button key={String(val)} onClick={on} style={{ padding: isMobile ? '10px 16px' : '6px 12px', borderRadius: 8, fontSize: isMobile ? 14 : 12, fontWeight: 700, cursor: 'pointer', whiteSpace: 'nowrap', flexShrink: 0, border: isOn ? `2px solid ${DS.navy}` : `1.5px solid ${DS.borderSolid}`, background: isOn ? DS.navy : DS.bgAlt, color: isOn ? '#fff' : DS.navy }}>{label}</button>
   )
 
   const nameText = (
@@ -240,7 +245,7 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
   const nameHeader = (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>{nameText}{quitBtn}</div>
   )
-  const canvasEl = <StructureSVG structure={structure} options={options} colors={colors} onFill={fill} symbol={symbol} symbolUrl={symbolUrl} />
+  const canvasEl = <StructureSVG structure={structure} options={options} colors={colors} onFill={fill} symbol={symbol} symbolUrl={symbolUrl} symbolColor={symFill} aspect={ratio} />
   const swatchBase = isMobile ? { flex: 1, minWidth: 0, aspectRatio: '1' } : { width: SW, height: SW }
   const paletteEl = (
     <div style={{ display: 'flex', gap: 6, flexWrap: isMobile ? 'nowrap' : 'wrap', alignItems: 'center' }}>
@@ -251,10 +256,13 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
       </span>
     </div>
   )
+  const ratioSection = (
+    <div style={{ display: 'flex', gap: 5, flexWrap: 'wrap' }}>{ratioChoices.map(([lbl, val]) => chip(val, lbl, ratio === val, () => setRatio(val)))}</div>
+  )
   const templateThumb = (s, big) => (
-    <button key={s.id} onClick={() => pickStructure(s.id)} style={{ flexShrink: 0, width: big ? 88 : '100%', scrollSnapAlign: 'start', padding: big ? 4 : 3, borderRadius: 8, cursor: 'pointer', background: DS.bgAlt, border: structureId === s.id ? `2px solid ${DS.navy}` : `1px solid ${DS.borderSolid}` }}>
+    <button key={s.id} onClick={() => pickStructure(s.id)} style={{ flexShrink: 0, width: big ? 104 : '100%', scrollSnapAlign: 'start', padding: big ? 5 : 3, borderRadius: 8, cursor: 'pointer', background: DS.bgAlt, border: structureId === s.id ? `2px solid ${DS.navy}` : `1px solid ${DS.borderSolid}` }}>
       <StructureSVG structure={s} options={defaultOpts(s)} colors={{}} thumb />
-      <div style={{ fontSize: big ? 11 : 9, fontWeight: 600, color: structureId === s.id ? DS.navy : DS.muted, marginTop: big ? 4 : 3, textAlign: 'center', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{s.label[locale] || s.label.en}</div>
+      <div style={{ fontSize: big ? 13 : 9, fontWeight: 600, color: structureId === s.id ? DS.navy : DS.muted, marginTop: big ? 4 : 3, textAlign: 'center', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{s.label[locale] || s.label.en}</div>
     </button>
   )
   const OPT_ROWS = 3, OPT_ROW_H = 36, OPT_GAP = 7
@@ -272,13 +280,18 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
       ))}
     </div>
   )
-  const symbolRow = (
-    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+  const symbolRow = symbolAuto ? null : (
+    <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
       <span style={{ fontSize: 12, color: DS.muted, minWidth: 78, flexShrink: 0 }}>{t('Symbol', 'Symbole')}</span>
-      <button onClick={() => { const v = !showSymbol; setShowSymbol(v); onChange?.({ structureId, options, colors, symbol: v }) }} style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 7, padding: 11, borderRadius: 10, border: showSymbol ? `2px solid ${DS.navy}` : `1.5px solid ${DS.borderSolid}`, background: DS.surface, color: DS.navy, fontWeight: 700, fontSize: 13, cursor: 'pointer' }}>
+      <button onClick={() => { const v = !showSymbol; setShowSymbol(v); onChange?.({ structureId, options, colors, symbol: v }) }} style={{ flex: symbolPickColor ? '1 1 140px' : 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 7, padding: 11, borderRadius: 10, border: showSymbol ? `2px solid ${DS.navy}` : `1.5px solid ${DS.borderSolid}`, background: DS.surface, color: DS.navy, fontWeight: 700, fontSize: 13, cursor: 'pointer' }}>
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l1.9 5.8H20l-4.9 3.6 1.9 5.8L12 14.6 7 18.2l1.9-5.8L4 8.8h6.1z"/></svg>
         {showSymbol ? t('Remove symbol', 'Retirer le symbole') : t('Add a symbol', 'Ajouter un symbole')}
       </button>
+      {symbolPickColor && (
+        <div style={{ display: 'flex', gap: 4 }}>
+          {SYMBOL_COLORS.map(c => <button key={c} onClick={() => setSymColor(c)} aria-label={c} style={{ width: 26, height: 26, borderRadius: 6, background: c, cursor: 'pointer', border: c === '#FFFFFF' ? '1px solid rgba(0,0,0,0.15)' : 'none', outline: symColor === c ? `2px solid ${DS.navy}` : 'none', outlineOffset: 1 }} />)}
+        </div>
+      )}
     </div>
   )
   const clearBtn = (
@@ -296,10 +309,10 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
       <div style={{ position: 'fixed', top: 60, left: 0, right: 0, bottom: 0, zIndex: 5, display: 'flex', flexDirection: 'column', background: DS.bg, overflow: 'hidden', fontFamily: 'var(--font-body, system-ui)' }}>
         <div style={{ padding: '10px 14px 2px', flexShrink: 0 }}>{nameHeader}</div>
         <div style={{ flex: 1, minHeight: 0, padding: '4px 12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <div style={{ width: '100%', maxWidth: 480 }}>{canvasEl}</div>
+          <div style={{ width: '100%', maxWidth: 520 }}>{canvasEl}</div>
         </div>
-        <div style={{ flexShrink: 0, background: DS.surface, borderTop: `1px solid ${DS.border}`, padding: '10px 14px calc(12px + env(safe-area-inset-bottom))', display: 'flex', flexDirection: 'column', gap: 9, boxShadow: '0 -4px 16px rgba(22,50,79,0.06)' }}>
-          {paletteEl}
+        <div style={{ flexShrink: 0, background: DS.surface, borderTop: `1px solid ${DS.border}`, padding: '10px 14px calc(12px + env(safe-area-inset-bottom))', display: 'flex', flexDirection: 'column', gap: 10, boxShadow: '0 -4px 16px rgba(22,50,79,0.06)' }}>
+          {showRatio && (<div style={{ display: 'flex', alignItems: 'center', gap: 8 }}><span style={{ fontSize: 13, color: DS.muted, minWidth: 52, flexShrink: 0 }}>{t('Ratio', 'Ratio')}</span>{ratioSection}</div>)}
           <div style={{ position: 'relative' }}>
             <div style={{ display: 'flex', gap: 8, overflowX: 'auto', paddingBottom: 2, scrollbarWidth: 'none', scrollSnapType: 'x proximity', WebkitOverflowScrolling: 'touch' }}>{STRUCTURES.map(s => templateThumb(s, true))}</div>
             <div style={{ position: 'absolute', top: 0, left: 0, bottom: 2, width: 18, pointerEvents: 'none', background: `linear-gradient(to left, transparent, ${DS.surface})` }} />
@@ -309,35 +322,39 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
           </div>
           {optionsEl}
           {symbolRow}
+          {paletteEl}
           <div style={{ display: 'flex', gap: 8 }}>{clearBtn}{validateBtn}</div>
         </div>
       </div>
     )
   }
 
-  // ── DESKTOP : 3 colonnes (drapeau+couleur / gabarit / options+symbole) ──
+  // ── DESKTOP : Ratio en haut, 3 colonnes égales (Gabarit / Options / Drapeau+Couleur) ──
   return (
     <div style={{ background: DS.bg, borderRadius: 14, padding: 14, fontFamily: 'var(--font-body, system-ui)' }}>
       <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 10 }}>{quitBtn}</div>
-      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,0.78fr) minmax(0,1.3fr) minmax(0,0.92fr)', gap: 12, alignItems: 'stretch' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: showRatio ? '0.62fr 1.35fr 1fr 1.1fr' : '1.35fr 1fr 1.1fr', gap: 12, alignItems: 'stretch' }}>
 
-        {/* Col 1 : drapeau + couleur (bloc à part, sous le drapeau) */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 10, height: '100%' }}>
-          <div style={{ background: DS.surface, border: `1px solid ${DS.border}`, borderRadius: 12, padding: 14, display: 'flex', flexDirection: 'column' }}>
-            <div style={{ marginBottom: 10 }}>{nameText}</div>
-            <div style={{ width: '100%', maxWidth: 230, margin: '0 auto' }}>{canvasEl}</div>
-            <p style={{ margin: '8px 0 0', fontSize: 12, color: DS.muted, textAlign: 'center' }}>{t('Pick a color, then tap the zones.', 'Choisis une couleur, puis tape les zones.')}</p>
-          </div>
-          {card(<>{label(t('Active color', 'Couleur active'))}{paletteEl}</>)}
-        </div>
+        {/* Col Ratio (moyen / difficile) */}
+        {showRatio && card(<>{label(t('Ratio', 'Ratio'))}{ratioSection}</>)}
 
-        {/* Col 2 : gabarit */}
-        {card(<>{label(t('Template', 'Gabarit'))}<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(74px, 1fr))', gap: 5 }}>{STRUCTURES.map(s => templateThumb(s, false))}</div></>)}
+        {/* Col Gabarit (4 par ligne) */}
+        {card(<>{label(t('Template', 'Gabarit'))}<div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 5 }}>{STRUCTURES.map(s => templateThumb(s, false))}</div></>)}
 
-        {/* Col 3 : options (symbole inclus) + actions */}
+        {/* Col 2 : Options (symbole inclus) + actions */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, height: '100%' }}>
           {card(<>{label(t('Options', 'Options'))}{optionsEl}<div style={{ marginTop: 10 }}>{symbolRow}</div></>)}
           <div style={{ display: 'flex', gap: 8 }}>{clearBtn}{validateBtn}</div>
+        </div>
+
+        {/* Col 3 : Drapeau puis Couleur */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10, height: '100%' }}>
+          <div style={{ background: DS.surface, border: `1px solid ${DS.border}`, borderRadius: 12, padding: 14, display: 'flex', flexDirection: 'column' }}>
+            <div style={{ marginBottom: 10 }}>{nameText}</div>
+            <div style={{ width: '100%', maxWidth: 260, margin: '0 auto' }}>{canvasEl}</div>
+            <p style={{ margin: '8px 0 0', fontSize: 12, color: DS.muted, textAlign: 'center' }}>{t('Pick a color, then tap the zones.', 'Choisis une couleur, puis tape les zones.')}</p>
+          </div>
+          {card(<>{label(t('Active color', 'Couleur active'))}{paletteEl}</>)}
         </div>
       </div>
     </div>

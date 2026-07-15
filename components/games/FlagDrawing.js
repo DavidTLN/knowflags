@@ -46,6 +46,26 @@ const FLAG_DEFS = {
 }
 
 const FLAG_KEYS = Object.keys(FLAG_DEFS)
+
+// ratio numérique (W/H) -> libellé "W:H" (plus proche ratio de drapeau connu)
+function ratioLabel(r) {
+  const cands = [[1,1],[5,4],[4,3],[7,5],[3,2],[8,5],[5,3],[7,4],[9,5],[19,10],[2,1],[2,3],[3,5],[5,8],[1,2],[11,20],[28,37]]
+  let best = cands[0], bd = Infinity
+  for (const [w,h] of cands) { const d = Math.abs(w/h - r); if (d < bd) { bd = d; best = [w,h] } }
+  return best[0] + ':' + best[1]
+}
+function _shuf(a){ const b=a.slice(); for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]]} return b }
+// ensemble des ratios connus des drapeaux (pour le mode difficile)
+const ALL_RATIOS = (() => {
+  const seen = new Map()
+  for (const k of FLAG_KEYS) {
+    const r = FLAG_DEFS[k] && FLAG_DEFS[k].ratio
+    if (!r) continue
+    const lbl = ratioLabel(r)
+    if (!seen.has(lbl)) seen.set(lbl, [lbl, r])
+  }
+  return Array.from(seen.values()).sort((a, b) => a[1] - b[1])
+})()
 const CANVAS_W = 480
 const MAX_LIVES = 5
 const SCREEN = { SETUP: 'setup', PLAYING: 'playing', RESULT: 'result', GAMEOVER: 'gameover' }
@@ -890,9 +910,26 @@ export default function FlagDrawingV2() {
   // ── PLAYING screen ────────────────────────────────────────────────────────
   if (screen === SCREEN.PLAYING) {
     if (difficulty !== 'extreme') {
+      const tR = (FLAG_DEFS[currentKey] && FLAG_DEFS[currentKey].ratio) || 1.5
+      const tLbl = ratioLabel(tR)
+      let ratioChoices, showRatio
+      if (difficulty === 'easy') {
+        showRatio = false
+        ratioChoices = [[tLbl, tR]]
+      } else if (difficulty === 'medium') {
+        showRatio = true
+        const others = _shuf(ALL_RATIOS.filter(([l]) => l !== tLbl)).slice(0, 3)
+        ratioChoices = _shuf([[tLbl, tR], ...others])
+      } else {
+        showRatio = true
+        ratioChoices = ALL_RATIOS
+      }
       return (
         <>
-          <FlagTemplateBuilder key={currentKey} locale={locale} countryName={flagName} symbolUrl={null} onValidate={handleTemplateValidate} onQuit={() => setShowQuitConfirm(true)} />
+          <FlagTemplateBuilder key={currentKey} locale={locale} countryName={flagName} symbolUrl={null}
+            ratioChoices={ratioChoices} showRatio={showRatio}
+            symbolAuto={difficulty === 'easy'} symbolPickColor={difficulty === 'hard'} symbolColor={'#F4B400'}
+            onValidate={handleTemplateValidate} onQuit={() => setShowQuitConfirm(true)} />
           {quitModal}
         </>
       )

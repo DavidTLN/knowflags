@@ -255,7 +255,7 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
 
   const SW = isMobile ? 40 : 30
   const chip = (val, label, isOn, on) => (
-    <button key={String(val)} onClick={on} style={{ padding: isMobile ? '10px 16px' : '6px 12px', borderRadius: 8, fontSize: isMobile ? 14 : 12, fontWeight: 700, cursor: 'pointer', whiteSpace: 'nowrap', flexShrink: 0, border: isOn ? `2px solid ${DS.navy}` : `1.5px solid ${DS.borderSolid}`, background: isOn ? DS.navy : DS.bgAlt, color: isOn ? '#fff' : DS.navy }}>{label}</button>
+    <button key={String(val)} onClick={on} style={{ padding: isMobile ? '7px 13px' : '6px 12px', borderRadius: 8, fontSize: isMobile ? 13 : 12, fontWeight: 700, cursor: 'pointer', whiteSpace: 'nowrap', flexShrink: 0, border: isOn ? `2px solid ${DS.navy}` : `1.5px solid ${DS.borderSolid}`, background: isOn ? DS.navy : DS.bgAlt, color: isOn ? '#fff' : DS.navy }}>{label}</button>
   )
 
   const nameText = (
@@ -286,12 +286,12 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
     <div style={{ display: 'flex', gap: 5, ...(isMobile ? { flexWrap: 'nowrap', overflowX: 'auto', flex: 1, minWidth: 0, scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch', paddingBottom: 2 } : { flexWrap: 'wrap' }) }}>{ratioChoices.map(([lbl, val]) => chip(val, lbl, ratio === val, () => setRatio(val)))}</div>
   )
   const templateThumb = (s, big) => (
-    <button key={s.id} onClick={() => pickStructure(s.id)} style={{ flexShrink: 0, width: big ? 104 : '100%', scrollSnapAlign: 'start', padding: big ? 5 : 3, borderRadius: 8, cursor: 'pointer', background: DS.bgAlt, border: structureId === s.id ? `2px solid ${DS.navy}` : `1px solid ${DS.borderSolid}` }}>
+    <button key={s.id} onClick={() => pickStructure(s.id)} style={{ flexShrink: 0, width: big ? 88 : '100%', scrollSnapAlign: 'start', padding: big ? 4 : 3, borderRadius: 8, cursor: 'pointer', background: DS.bgAlt, border: structureId === s.id ? `2px solid ${DS.navy}` : `1px solid ${DS.borderSolid}` }}>
       <StructureSVG structure={s} options={defaultOpts(s)} colors={{}} thumb />
-      <div style={{ fontSize: big ? 13 : 9, fontWeight: 600, color: structureId === s.id ? DS.navy : DS.muted, marginTop: big ? 4 : 3, textAlign: 'center', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{s.label[locale] || s.label.en}</div>
+      <div style={{ fontSize: big ? 12 : 9, fontWeight: 600, color: structureId === s.id ? DS.navy : DS.muted, marginTop: big ? 4 : 3, textAlign: 'center', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{s.label[locale] || s.label.en}</div>
     </button>
   )
-  const OPT_ROWS = 3, OPT_ROW_H = isMobile ? 46 : 34, OPT_GAP = 7
+  const OPT_ROWS = 3, OPT_ROW_H = isMobile ? 40 : 34, OPT_GAP = 7
   const optEntries = Object.entries(structure.options)
   const optionsEl = (
     <div style={{ display: 'flex', flexDirection: 'column', gap: OPT_GAP, height: OPT_ROWS * OPT_ROW_H + (OPT_ROWS - 1) * OPT_GAP }}>
@@ -309,7 +309,7 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
   const symbolRow = (!hasSymbol || symbolAuto) ? null : (
     <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
       <span style={{ fontSize: 12, color: DS.muted, minWidth: 78, flexShrink: 0 }}>{t('Symbol', 'Symbole')}</span>
-      <button onClick={() => { const v = !showSymbol; setShowSymbol(v); onChange?.({ structureId, options, colors, symbol: v }) }} style={{ flex: symbolPickColor ? '1 1 140px' : 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 7, padding: 11, borderRadius: 10, border: showSymbol ? `2px solid ${DS.navy}` : `1.5px solid ${DS.borderSolid}`, background: DS.surface, color: DS.navy, fontWeight: 700, fontSize: 13, cursor: 'pointer' }}>
+      <button onClick={() => { const v = !showSymbol; setShowSymbol(v); onChange?.({ structureId, options, colors, symbol: v }) }} style={{ flex: symbolPickColor ? '1 1 140px' : 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 7, padding: 9, borderRadius: 10, border: showSymbol ? `2px solid ${DS.navy}` : `1.5px solid ${DS.borderSolid}`, background: DS.surface, color: DS.navy, fontWeight: 700, fontSize: 13, cursor: 'pointer' }}>
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l1.9 5.8H20l-4.9 3.6 1.9 5.8L12 14.6 7 18.2l1.9-5.8L4 8.8h6.1z"/></svg>
         {showSymbol ? t('Remove symbol', 'Retirer le symbole') : t('Add a symbol', 'Ajouter un symbole')}
       </button>

@@ -1070,10 +1070,10 @@ export default function FlagDrawingV2() {
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
             {[
               { key: 'easy',    icon: '🟢', en: 'Easy',    fr: 'Facile',    descEn: 'Template + auto symbol', descFr: 'Gabarit + symbole auto' },
-              { key: 'medium',  icon: '🟡', en: 'Medium',  fr: 'Moyen',     descEn: 'Template to color',   descFr: 'Gabarit à colorier' },
+              { key: 'medium',  icon: '🟡', en: 'Normal',  fr: 'Normal',    descEn: 'Template to color',   descFr: 'Gabarit à colorier' },
               { key: 'hard',    icon: '🟠', en: 'Hard',    fr: 'Difficile', descEn: 'Template, no help',   descFr: 'Gabarit, sans aide' },
               { key: 'extreme', icon: '🔴', en: 'Extreme', fr: 'Extrême',   descEn: 'Freehand, ×3 pts',    descFr: 'Dessin libre, ×3 pts' },
-            ].filter(d => d.key !== 'extreme').map(d => {
+            ].filter(d => d.key !== 'extreme' && d.key !== 'easy').map(d => {
               const best = diffStats[d.key]?.best
               const selected = difficulty === d.key
               return (

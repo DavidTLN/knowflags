@@ -6,7 +6,7 @@
  * Mobile = app-mode plein écran sans scroll, gros éléments tapables.
  */
 
-import { useMemo, useState, useEffect } from 'react'
+import { useMemo, useState, useEffect, useId } from 'react'
 
 const W = 300, H = 200
 const NEUTRAL = '#E8E6DF'
@@ -194,22 +194,43 @@ function Shape({ shape, fill, onClick, thumb }) {
   return <polygon points={pts(shape.points)} {...common} />
 }
 function StructureSVG({ structure, options, colors, onFill, thumb, symbol, symbolUrl, aspect, symbolColor }) {
+  const clipId = useId()
   const regions = useMemo(() => structure.regions(options), [structure, options])
-  const svgEl = (
-    <svg viewBox={`0 0 ${W} ${H}`} width={aspect ? undefined : '100%'} preserveAspectRatio={aspect ? 'none' : undefined} style={{ display: 'block', ...(aspect ? { aspectRatio: aspect, maxWidth: '100%', maxHeight: '100%', width: 'auto', height: 'auto' } : {}), borderRadius: thumb ? 4 : 10, border: thumb ? 'none' : `2px solid ${DS.borderSolid}`, background: NEUTRAL }}>
+
+  // Mode canvas : drapeau au ratio r, CONTENU (meet) dans sa zone -> jamais de débordement, la zone ne bouge pas
+  if (aspect) {
+    const r = typeof aspect === 'number' ? aspect : (() => { const p = String(aspect).split('/'); return parseFloat(p[0]) / parseFloat(p[1] || '1') })()
+    const vh = Math.max(1, Math.round(W / (r || 1.5)))
+    const sy = vh / H
+    return (
+      <svg viewBox={`0 0 ${W} ${vh}`} preserveAspectRatio="xMidYMid meet" width="100%" height="100%" style={{ display: 'block' }}>
+        <defs><clipPath id={clipId}><rect x="0" y="0" width={W} height={vh} rx="8" /></clipPath></defs>
+        <g clipPath={`url(#${clipId})`}>
+          <rect x="0" y="0" width={W} height={vh} fill={NEUTRAL} />
+          <g transform={`scale(1 ${sy})`}>
+            {regions.map((rg) => {
+              const fill = colors?.[rg.id] || NEUTRAL
+              return <g key={rg.id}>{rg.shapes.map((sh, j) => <Shape key={j} shape={sh} fill={fill} onClick={onFill ? () => onFill(rg.id) : undefined} />)}</g>
+            })}
+          </g>
+          {symbol && (symbolUrl
+            ? <image href={symbolUrl} x={symbol.x - symbol.size / 2} y={symbol.y * sy - symbol.size / 2} width={symbol.size} height={symbol.size} preserveAspectRatio="xMidYMid meet" />
+            : <polygon points={pts(starPts(symbol.x, symbol.y * sy, symbol.size / 2))} fill={symbolColor || DS.gold} stroke="rgba(0,0,0,0.25)" strokeWidth="1" />)}
+        </g>
+        <rect x="1" y="1" width={W - 2} height={vh - 2} rx="8" fill="none" stroke={DS.borderSolid} strokeWidth="2" />
+      </svg>
+    )
+  }
+
+  // Mode vignette / défaut
+  return (
+    <svg viewBox={`0 0 ${W} ${H}`} width="100%" style={{ display: 'block', borderRadius: thumb ? 4 : 10, border: thumb ? 'none' : `2px solid ${DS.borderSolid}`, background: NEUTRAL }}>
       {regions.map((rg, i) => {
         const neutral = thumb ? ['#DAD8D0', '#C9C7BE', '#BCBAB0', '#ADABA1'][i % 4] : NEUTRAL
         const fill = colors?.[rg.id] || neutral
         return <g key={rg.id}>{rg.shapes.map((sh, j) => <Shape key={j} shape={sh} fill={fill} thumb={thumb} onClick={onFill ? () => onFill(rg.id) : undefined} />)}</g>
       })}
-      {!thumb && symbol && (symbolUrl
-        ? <image href={symbolUrl} x={symbol.x - symbol.size / 2} y={symbol.y - symbol.size / 2} width={symbol.size} height={symbol.size} preserveAspectRatio="xMidYMid meet" />
-        : <polygon points={pts(starPts(symbol.x, symbol.y, symbol.size / 2))} fill={symbolColor || DS.gold} stroke="rgba(0,0,0,0.25)" strokeWidth="1" />)}
     </svg>
-  )
-  if (!aspect) return svgEl
-  return (
-    <div style={{ width: '100%', aspectRatio: ZONE_ASPECT, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{svgEl}</div>
   )
 }
 
@@ -270,14 +291,14 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
       <div style={{ fontSize: big ? 13 : 9, fontWeight: 600, color: structureId === s.id ? DS.navy : DS.muted, marginTop: big ? 4 : 3, textAlign: 'center', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{s.label[locale] || s.label.en}</div>
     </button>
   )
-  const OPT_ROWS = 3, OPT_ROW_H = 36, OPT_GAP = 7
+  const OPT_ROWS = 3, OPT_ROW_H = isMobile ? 46 : 34, OPT_GAP = 7
   const optEntries = Object.entries(structure.options)
   const optionsEl = (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: OPT_GAP, height: OPT_ROWS * OPT_ROW_H + (OPT_ROWS - 1) * OPT_GAP, overflow: 'hidden' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: OPT_GAP, height: OPT_ROWS * OPT_ROW_H + (OPT_ROWS - 1) * OPT_GAP }}>
       {optEntries.map(([key, opt]) => (
         <div key={key} style={{ display: 'flex', alignItems: 'center', gap: 8, height: OPT_ROW_H, flexShrink: 0 }}>
           <span style={{ fontSize: 12, color: DS.muted, minWidth: 78, flexShrink: 0 }}>{opt.label[locale] || opt.label.en}</span>
-          <div style={{ display: 'flex', gap: 5, flexWrap: 'nowrap', overflowX: 'auto', scrollbarWidth: 'none' }}>{opt.choices.map(([val, label]) => chip(val, label, String(options[key]) === String(val), () => setOption(key, val)))}</div>
+          <div style={{ display: 'flex', gap: 5, flexWrap: 'nowrap', overflowX: 'auto', scrollbarWidth: 'none', flex: 1, minWidth: 0 }}>{opt.choices.map(([val, label]) => chip(val, label, String(options[key]) === String(val), () => setOption(key, val)))}</div>
         </div>
       ))}
       {Array.from({ length: Math.max(0, OPT_ROWS - optEntries.length) }).map((_, i) => (
@@ -313,8 +334,8 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
     return (
       <div style={{ position: 'fixed', top: 60, left: 0, right: 0, bottom: 0, zIndex: 5, display: 'flex', flexDirection: 'column', background: DS.bg, overflow: 'hidden', fontFamily: 'var(--font-body, system-ui)' }}>
         <div style={{ flexShrink: 0, padding: '10px 14px 0' }}>{nameHeader}</div>
-        <div style={{ flex: 1, minHeight: 110, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '8px 14px' }}><div style={{ width: '100%', maxWidth: 380 }}>{canvasEl}</div></div>
-        <div style={{ flexShrink: 0, maxHeight: '46vh', overflowY: 'auto', WebkitOverflowScrolling: 'touch', background: DS.surface, borderTop: `1px solid ${DS.border}`, padding: '12px 14px', display: 'flex', flexDirection: 'column', gap: 10 }}>
+        <div style={{ flex: 1, minHeight: 90, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '8px 14px' }}><div style={{ width: '100%', height: '100%', maxWidth: 460 }}>{canvasEl}</div></div>
+        <div style={{ flexShrink: 0, background: DS.surface, borderTop: `1px solid ${DS.border}`, padding: '12px 14px', display: 'flex', flexDirection: 'column', gap: 10 }}>
           {showRatio && (<div style={{ display: 'flex', alignItems: 'center', gap: 8 }}><span style={{ fontSize: 13, color: DS.muted, minWidth: 52, flexShrink: 0 }}>{t('Ratio', 'Ratio')}</span>{ratioSection}</div>)}
           <div style={{ position: 'relative' }}>
             <div style={{ display: 'flex', gap: 8, overflowX: 'auto', paddingBottom: 2, scrollbarWidth: 'none', scrollSnapType: 'x proximity', WebkitOverflowScrolling: 'touch' }}>{STRUCTURES.map(s => templateThumb(s, true))}</div>
@@ -354,7 +375,7 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, height: '100%' }}>
           <div style={{ background: DS.surface, border: `1px solid ${DS.border}`, borderRadius: 12, padding: 14, display: 'flex', flexDirection: 'column' }}>
             <div style={{ marginBottom: 10 }}>{nameText}</div>
-            <div style={{ width: '100%', maxWidth: 260, margin: '0 auto' }}>{canvasEl}</div>
+            <div style={{ width: '100%', maxWidth: 260, margin: '0 auto', aspectRatio: ZONE_ASPECT }}>{canvasEl}</div>
             <p style={{ margin: '8px 0 0', fontSize: 12, color: DS.muted, textAlign: 'center' }}>{t('Pick a color, then tap the zones.', 'Choisis une couleur, puis tape les zones.')}</p>
           </div>
           {card(<>{label(t('Active color', 'Couleur active'))}{paletteEl}</>)}

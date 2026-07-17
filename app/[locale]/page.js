@@ -75,8 +75,8 @@ export default async function Home({ params }) {
       <main>
         <Hero />
         <CategoryGrid />
-        <LatestArticles posts={latestPosts} locale={locale} />
         <TrueSizeModule />
+        <LatestArticles posts={latestPosts} locale={locale} />
         <Footer />
       </main>
     </>

@@ -469,6 +469,20 @@ export default function FlagDrawingV2() {
   const t = (en, fr) => locale === 'fr' ? fr : en
 
   const [screen, setScreen] = useState(SCREEN.SETUP)
+  const screenRef = useRef(SCREEN.SETUP)
+  useEffect(() => { screenRef.current = screen }, [screen])
+  // Bouton/geste retour : revenir à la sélection de difficulté au lieu de quitter la page
+  useEffect(() => {
+    window.history.pushState({ kfGuard: true }, '')
+    const onPop = () => {
+      if (screenRef.current !== SCREEN.SETUP) {
+        setScreen(SCREEN.SETUP)
+        window.history.pushState({ kfGuard: true }, '')
+      }
+    }
+    window.addEventListener('popstate', onPop)
+    return () => window.removeEventListener('popstate', onPop)
+  }, [])
   const [difficulty, setDifficulty] = useState('easy')
   const [isMobile, setIsMobile] = useState(false)
 

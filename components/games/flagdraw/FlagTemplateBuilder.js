@@ -292,7 +292,7 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l1.9 5.8H20l-4.9 3.6 1.9 5.8L12 14.6 7 18.2l1.9-5.8L4 8.8h6.1z"/></svg>
         {showSymbol ? t('Remove symbol', 'Retirer le symbole') : t('Add a symbol', 'Ajouter un symbole')}
       </button>
-      {symbolPickColor && (
+      {symbolPickColor && showSymbol && (
         <div style={{ display: 'flex', gap: 4 }}>
           {SYMBOL_COLORS.map(c => <button key={c} onClick={() => setSymColor(c)} aria-label={c} style={{ width: 26, height: 26, borderRadius: 6, background: c, cursor: 'pointer', border: c === '#FFFFFF' ? '1px solid rgba(0,0,0,0.15)' : 'none', outline: symColor === c ? `2px solid ${DS.navy}` : 'none', outlineOffset: 1 }} />)}
         </div>

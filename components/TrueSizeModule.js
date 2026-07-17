@@ -6,7 +6,7 @@ import { useLocale } from 'next-intl'
 
 export default function TrueSizeModule() {
   const locale = useLocale()
-  const t = (en, fr) => locale === 'fr' ? fr : en
+  const t = (en, fr) => (locale === 'fr' ? fr : en)
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
@@ -17,16 +17,16 @@ export default function TrueSizeModule() {
   }, [])
 
   return (
-    <section style={{ backgroundColor: '#FFFFFF', padding: isMobile ? '40px 16px' : '72px 24px' }}>
+    <section style={{ backgroundColor: '#FFFFFF', padding: isMobile ? '32px 16px' : '48px 24px' }}>
       <div style={{
         maxWidth: '1152px', margin: '0 auto',
         display: 'grid',
-        gridTemplateColumns: isMobile ? '1fr' : '1fr 1.05fr',
-        gap: isMobile ? '28px' : '56px',
+        gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
+        gap: isMobile ? '22px' : '52px',
         alignItems: 'center',
       }}>
 
-        {/* Text — left */}
+        {/* Text */}
         <div>
           <p style={{
             margin: '0 0 10px', fontSize: '11px', fontWeight: '800', textTransform: 'uppercase',
@@ -37,26 +37,45 @@ export default function TrueSizeModule() {
             {t('True Size Map', 'Carte taille réelle')}
           </p>
 
-          <h2 style={{ margin: '0 0 16px', fontSize: isMobile ? '26px' : '36px', fontWeight: '900', color: '#16324F', letterSpacing: '-0.02em', lineHeight: 1.1 }}>
+          <h2 style={{
+            margin: '0 0 12px', fontSize: isMobile ? '25px' : '32px', fontWeight: '900',
+            color: '#16324F', letterSpacing: '-0.02em', lineHeight: 1.15,
+          }}>
             {t('How big is China, really?', "C'est quoi la vraie taille de la Chine ?")}
           </h2>
 
-          <p style={{ margin: '0 0 24px', fontSize: '15px', color: '#6B7280', lineHeight: 1.7, maxWidth: '460px' }}>
+          <p style={{ margin: '0 0 18px', fontSize: '15px', color: '#6B7280', lineHeight: 1.6, maxWidth: '460px' }}>
             {t(
-              "Most world maps distort the size of countries. Our interactive tool lets you drag any country and compare its true size anywhere on the globe — no more Mercator lies.",
-              "La plupart des cartes déforment la taille des pays. Notre outil interactif te permet de déplacer n'importe quel pays pour comparer sa vraie taille sur le globe — fini les mensonges de Mercator."
+              'Most world maps distort country sizes. Drag any country across the globe and compare its true size — no more Mercator lies.',
+              "La plupart des cartes déforment la taille des pays. Déplace n'importe quel pays sur le globe pour comparer sa vraie taille — fini les mensonges de Mercator."
             )}
           </p>
 
+          {/* Points clés */}
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '22px' }}>
+            {[
+              t('Drag & drop', 'Glisser-déposer'),
+              t('Real areas', 'Surfaces réelles'),
+              t('197 countries', '197 pays'),
+            ].map((label) => (
+              <span key={label} style={{
+                fontSize: '12px', fontWeight: '600', color: '#16324F',
+                backgroundColor: '#EEF2F7', padding: '5px 11px', borderRadius: '9999px',
+              }}>
+                {label}
+              </span>
+            ))}
+          </div>
+
           <Link href={`/${locale}/true-size`} style={{
             display: 'inline-flex', alignItems: 'center', gap: '8px',
-            backgroundColor: '#16324F', color: 'white',
-            padding: '13px 24px', borderRadius: '10px', textDecoration: 'none',
-            fontSize: '14px', fontWeight: '700', letterSpacing: '-0.2px',
+            backgroundColor: '#16324F', color: '#FFFFFF',
+            padding: '12px 22px', borderRadius: '10px', textDecoration: 'none',
+            fontSize: '14px', fontWeight: '700',
             boxShadow: '0 2px 8px rgba(22,50,79,0.08)', transition: 'background-color 0.15s ease',
           }}
-            onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#1E4976' }}
-            onMouseLeave={e => { e.currentTarget.style.backgroundColor = '#16324F' }}
+            onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#1E4976' }}
+            onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = '#16324F' }}
           >
             {t('Explore the map', 'Explorer la carte')}
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
@@ -65,12 +84,40 @@ export default function TrueSizeModule() {
           </Link>
         </div>
 
-        {/* Image — right */}
-        <div>
+        {/* Image sur fond texturé (graticule de carte) */}
+        <div style={{
+          order: isMobile ? -1 : 0,
+          position: 'relative', overflow: 'hidden',
+          borderRadius: '20px', border: '1px solid rgba(22,50,79,0.10)',
+          background: 'radial-gradient(120% 120% at 72% 22%, #E9EFF7 0%, #F4F1E6 68%)',
+          padding: isMobile ? '16px' : '24px',
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+        }}>
+          {/* grille type carte, estompée sur les bords */}
+          <div aria-hidden="true" style={{
+            position: 'absolute', inset: 0,
+            backgroundImage: 'linear-gradient(rgba(22,50,79,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(22,50,79,0.06) 1px, transparent 1px)',
+            backgroundSize: '30px 30px',
+            WebkitMaskImage: 'radial-gradient(circle at center, #000 55%, transparent 100%)',
+            maskImage: 'radial-gradient(circle at center, #000 55%, transparent 100%)',
+          }} />
+          {/* halo doux */}
+          <div aria-hidden="true" style={{
+            position: 'absolute', top: '-30%', right: '-20%', width: '70%', height: '70%',
+            background: 'radial-gradient(circle, rgba(158,183,229,0.35), transparent 70%)',
+            filter: 'blur(8px)',
+          }} />
           <img
             src="/true-size-hero.png"
-            alt={t('Countries compared in true size on a map', 'Pays comparés à leur taille réelle sur une carte')}
-            style={{ width: '100%', height: 'auto', display: 'block' }}
+            alt={t('Countries compared at their true size on a map', 'Pays comparés à leur taille réelle sur une carte')}
+            loading="lazy"
+            style={{
+              position: 'relative', zIndex: 1,
+              width: '100%', height: 'auto', maxHeight: isMobile ? '200px' : '270px',
+              objectFit: 'contain', display: 'block',
+              borderRadius: '10px',
+              filter: 'drop-shadow(0 8px 20px rgba(22,50,79,0.18))',
+            }}
           />
         </div>
 

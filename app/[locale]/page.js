@@ -2,6 +2,8 @@
 import Hero from '@/components/Hero'
 import CategoryGrid from '@/components/CategoryGrid'
 import TrueSizeModule from '@/components/TrueSizeModule'
+import LatestArticles from '@/components/LatestArticles'
+import { getAllPosts } from '@/lib/contentful'
 import Footer from '@/components/Footer'
 
 const BASE_URL = 'https://knowflags.com'
@@ -46,6 +48,9 @@ export default async function Home({ params }) {
   const { locale } = await params
   const isFr = locale === 'fr'
 
+  let latestPosts = []
+  try { latestPosts = (await getAllPosts(locale)).slice(0, 5) } catch { latestPosts = [] }
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
@@ -70,6 +75,7 @@ export default async function Home({ params }) {
       <main>
         <Hero />
         <CategoryGrid />
+        <LatestArticles posts={latestPosts} locale={locale} />
         <TrueSizeModule />
         <Footer />
       </main>

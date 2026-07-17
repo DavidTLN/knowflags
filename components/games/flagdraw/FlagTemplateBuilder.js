@@ -15,6 +15,7 @@ const DS = { navy: '#16324F', border: 'rgba(22,50,79,0.12)', borderSolid: '#E2DD
 const PALETTE = ['#D62828', '#2563EB', '#16A34A', '#F4C400', '#FFFFFF', '#111827', '#EA580C', '#6B21A8']
 const RATIOS = [['3:2', '3 / 2'], ['2:1', '2 / 1'], ['5:3', '5 / 3'], ['4:3', '4 / 3'], ['1:1', '1 / 1']]
 const SYMBOL_COLORS = ['#D62828', '#FFFFFF', '#F4B400', '#16A34A', '#2563EB', '#111827']
+const ZONE_ASPECT = '3 / 2'   // zone de drapeau de taille fixe ; seul le drapeau varie dedans
 
 const pts = (arr) => arr.map(p => `${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(' ')
 const rect = (x, y, w, h) => ({ type: 'rect', x, y, w, h })
@@ -160,7 +161,7 @@ const STRUCTURES = [
   { id: 'nepal', label: { en: 'Nepal', fr: 'Népal' },
     options: {},
     regions: () => {
-      const outer = [[24, 12], [92, 12], [150, 66], [70, 96], [162, 156], [24, 190]]
+      const outer = [[12, 10], [188, 96], [110, 110], [290, 168], [12, 190]]
       const cx = outer.reduce((a, p) => a + p[0], 0) / outer.length
       const cy = outer.reduce((a, p) => a + p[1], 0) / outer.length
       const inner = outer.map(([x, y]) => [cx + (x - cx) * 0.82, cy + (y - cy) * 0.82])
@@ -194,8 +195,8 @@ function Shape({ shape, fill, onClick, thumb }) {
 }
 function StructureSVG({ structure, options, colors, onFill, thumb, symbol, symbolUrl, aspect, symbolColor }) {
   const regions = useMemo(() => structure.regions(options), [structure, options])
-  return (
-    <svg viewBox={`0 0 ${W} ${H}`} width="100%" preserveAspectRatio={aspect ? 'none' : undefined} style={{ display: 'block', ...(aspect ? { aspectRatio: aspect } : {}), borderRadius: thumb ? 4 : 10, border: thumb ? 'none' : `2px solid ${DS.borderSolid}`, background: NEUTRAL }}>
+  const svgEl = (
+    <svg viewBox={`0 0 ${W} ${H}`} width={aspect ? undefined : '100%'} preserveAspectRatio={aspect ? 'none' : undefined} style={{ display: 'block', ...(aspect ? { aspectRatio: aspect, maxWidth: '100%', maxHeight: '100%', width: 'auto', height: 'auto' } : {}), borderRadius: thumb ? 4 : 10, border: thumb ? 'none' : `2px solid ${DS.borderSolid}`, background: NEUTRAL }}>
       {regions.map((rg, i) => {
         const neutral = thumb ? ['#DAD8D0', '#C9C7BE', '#BCBAB0', '#ADABA1'][i % 4] : NEUTRAL
         const fill = colors?.[rg.id] || neutral
@@ -206,9 +207,13 @@ function StructureSVG({ structure, options, colors, onFill, thumb, symbol, symbo
         : <polygon points={pts(starPts(symbol.x, symbol.y, symbol.size / 2))} fill={symbolColor || DS.gold} stroke="rgba(0,0,0,0.25)" strokeWidth="1" />)}
     </svg>
   )
+  if (!aspect) return svgEl
+  return (
+    <div style={{ width: '100%', aspectRatio: ZONE_ASPECT, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{svgEl}</div>
+  )
 }
 
-export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'France', symbolUrl = null, onChange, onValidate, onQuit, ratioChoices = RATIOS, showRatio = true, symbolColor = '#F4B400', symbolAuto = false, symbolPickColor = false }) {
+export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'France', symbolUrl = null, onChange, onValidate, onQuit, ratioChoices = RATIOS, showRatio = true, symbolColor = '#F4B400', symbolAuto = false, symbolPickColor = false, hasSymbol = true }) {
   const t = (en, fr) => (locale === 'fr' ? fr : en)
   const isMobile = useMobile()
   const [structureId, setStructureId] = useState('bands')
@@ -217,7 +222,7 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
   const [colors, setColors] = useState({})
   const [active, setActive] = useState(PALETTE[0])
   const [custom, setCustom] = useState('#0055A4')
-  const [showSymbol, setShowSymbol] = useState(symbolAuto)
+  const [showSymbol, setShowSymbol] = useState(symbolAuto && hasSymbol)
   const [symColor, setSymColor] = useState(symbolColor)
   const [ratio, setRatio] = useState(ratioChoices[0] ? ratioChoices[0][1] : '3 / 2')
   const symbol = showSymbol ? symbolAnchor(structureId, options) : null
@@ -257,7 +262,7 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
     </div>
   )
   const ratioSection = (
-    <div style={{ display: 'flex', gap: 5, flexWrap: 'wrap' }}>{ratioChoices.map(([lbl, val]) => chip(val, lbl, ratio === val, () => setRatio(val)))}</div>
+    <div style={{ display: 'flex', gap: 5, ...(isMobile ? { flexWrap: 'nowrap', overflowX: 'auto', flex: 1, minWidth: 0, scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch', paddingBottom: 2 } : { flexWrap: 'wrap' }) }}>{ratioChoices.map(([lbl, val]) => chip(val, lbl, ratio === val, () => setRatio(val)))}</div>
   )
   const templateThumb = (s, big) => (
     <button key={s.id} onClick={() => pickStructure(s.id)} style={{ flexShrink: 0, width: big ? 104 : '100%', scrollSnapAlign: 'start', padding: big ? 5 : 3, borderRadius: 8, cursor: 'pointer', background: DS.bgAlt, border: structureId === s.id ? `2px solid ${DS.navy}` : `1px solid ${DS.borderSolid}` }}>
@@ -280,7 +285,7 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
       ))}
     </div>
   )
-  const symbolRow = symbolAuto ? null : (
+  const symbolRow = (!hasSymbol || symbolAuto) ? null : (
     <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
       <span style={{ fontSize: 12, color: DS.muted, minWidth: 78, flexShrink: 0 }}>{t('Symbol', 'Symbole')}</span>
       <button onClick={() => { const v = !showSymbol; setShowSymbol(v); onChange?.({ structureId, options, colors, symbol: v }) }} style={{ flex: symbolPickColor ? '1 1 140px' : 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 7, padding: 11, borderRadius: 10, border: showSymbol ? `2px solid ${DS.navy}` : `1.5px solid ${DS.borderSolid}`, background: DS.surface, color: DS.navy, fontWeight: 700, fontSize: 13, cursor: 'pointer' }}>
@@ -307,11 +312,9 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
   if (isMobile) {
     return (
       <div style={{ position: 'fixed', top: 60, left: 0, right: 0, bottom: 0, zIndex: 5, display: 'flex', flexDirection: 'column', background: DS.bg, overflow: 'hidden', fontFamily: 'var(--font-body, system-ui)' }}>
-        <div style={{ padding: '10px 14px 2px', flexShrink: 0 }}>{nameHeader}</div>
-        <div style={{ flex: 1, minHeight: 0, padding: '4px 12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <div style={{ width: '100%', maxWidth: 520 }}>{canvasEl}</div>
-        </div>
-        <div style={{ flexShrink: 0, background: DS.surface, borderTop: `1px solid ${DS.border}`, padding: '10px 14px calc(12px + env(safe-area-inset-bottom))', display: 'flex', flexDirection: 'column', gap: 10, boxShadow: '0 -4px 16px rgba(22,50,79,0.06)' }}>
+        <div style={{ flexShrink: 0, padding: '10px 14px 0' }}>{nameHeader}</div>
+        <div style={{ flex: 1, minHeight: 110, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '8px 14px' }}><div style={{ width: '100%', maxWidth: 380 }}>{canvasEl}</div></div>
+        <div style={{ flexShrink: 0, maxHeight: '46vh', overflowY: 'auto', WebkitOverflowScrolling: 'touch', background: DS.surface, borderTop: `1px solid ${DS.border}`, padding: '12px 14px', display: 'flex', flexDirection: 'column', gap: 10 }}>
           {showRatio && (<div style={{ display: 'flex', alignItems: 'center', gap: 8 }}><span style={{ fontSize: 13, color: DS.muted, minWidth: 52, flexShrink: 0 }}>{t('Ratio', 'Ratio')}</span>{ratioSection}</div>)}
           <div style={{ position: 'relative' }}>
             <div style={{ display: 'flex', gap: 8, overflowX: 'auto', paddingBottom: 2, scrollbarWidth: 'none', scrollSnapType: 'x proximity', WebkitOverflowScrolling: 'touch' }}>{STRUCTURES.map(s => templateThumb(s, true))}</div>
@@ -323,8 +326,8 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
           {optionsEl}
           {symbolRow}
           {paletteEl}
-          <div style={{ display: 'flex', gap: 8 }}>{clearBtn}{validateBtn}</div>
         </div>
+        <div style={{ flexShrink: 0, background: DS.surface, borderTop: `1px solid ${DS.border}`, padding: '10px 14px calc(12px + env(safe-area-inset-bottom))', display: 'flex', gap: 8, boxShadow: '0 -4px 16px rgba(22,50,79,0.06)' }}>{clearBtn}{validateBtn}</div>
       </div>
     )
   }

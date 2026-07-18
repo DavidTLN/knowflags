@@ -3,8 +3,9 @@ import Hero from '@/components/Hero'
 import CategoryGrid from '@/components/CategoryGrid'
 import TrueSizeModule from '@/components/TrueSizeModule'
 import LatestArticles from '@/components/LatestArticles'
-import { getAllPosts } from '@/lib/contentful'
 import Footer from '@/components/Footer'
+import { getAllPosts } from '@/lib/contentful'
+import { pageAlternates } from '@/lib/seo'
 
 const BASE_URL = 'https://knowflags.com'
 
@@ -23,14 +24,7 @@ export async function generateMetadata({ params }) {
   return {
     title,
     description,
-    alternates: {
-      canonical: url,
-      languages: {
-        en: `${BASE_URL}/en`,
-        fr: `${BASE_URL}/fr`,
-        'x-default': `${BASE_URL}/en`,
-      },
-    },
+    alternates: pageAlternates(locale, ''),
     openGraph: {
       title,
       description,

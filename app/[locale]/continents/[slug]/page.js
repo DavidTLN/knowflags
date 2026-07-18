@@ -1,6 +1,7 @@
 // app/[locale]/continents/[slug]/page.js
 
 import ContinentPage from '@/components/continents/ContinentPage'
+import { pageAlternates } from '@/lib/seo'
 
 const BASE_URL = 'https://knowflags.com'
 
@@ -30,14 +31,7 @@ export async function generateMetadata({ params }) {
   return {
     title,
     description,
-    alternates: {
-      canonical: `${BASE_URL}/${locale}/continents/${slug}`,
-      languages: {
-        en: `${BASE_URL}/en/continents/${slug}`,
-        fr: `${BASE_URL}/fr/continents/${slug}`,
-        'x-default': `${BASE_URL}/en/continents/${slug}`,
-      },
-    },
+    alternates: pageAlternates(locale, `/continents/${slug}`),
     openGraph: {
       title,
       description,

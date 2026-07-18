@@ -1,6 +1,7 @@
-// DESTINATION: app/[locale]/countries/[code]/page.js
+// app/[locale]/countries/[code]/page.js
 import { createClient } from '@/lib/supabase-server'
 import CountryDetailPage from '@/components/countries/CountryDetailPage'
+import { pageAlternates } from '@/lib/seo'
 
 const BASE_URL = 'https://knowflags.com'
 
@@ -36,14 +37,7 @@ export async function generateMetadata({ params }) {
     return {
       title,
       description,
-      alternates: {
-        canonical: pageUrl,
-        languages: {
-          en: `${BASE_URL}/en/countries/${code.toLowerCase()}`,
-          fr: `${BASE_URL}/fr/countries/${code.toLowerCase()}`,
-          'x-default': `${BASE_URL}/en/countries/${code.toLowerCase()}`,
-        },
-      },
+      alternates: pageAlternates(locale, `/countries/${code.toLowerCase()}`),
       openGraph: {
         title,
         description,
@@ -66,6 +60,7 @@ export async function generateMetadata({ params }) {
       description: isFr
         ? 'Découvrez les drapeaux du monde entier sur KnowFlags.'
         : 'Discover flags from around the world on KnowFlags.',
+      alternates: pageAlternates(locale, `/countries/${code.toLowerCase()}`),
     }
   }
 }
@@ -75,7 +70,6 @@ export default async function Page({ params }) {
   const isFr = locale === 'fr'
 
   let jsonLd = null
-  let breadcrumbLd = null
   try {
     const supabase = await createClient()
     const { data: country } = await supabase
@@ -110,15 +104,6 @@ export default async function Page({ params }) {
           ...(country.population && { population: country.population }),
         },
       }
-      breadcrumbLd = {
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'KnowFlags', item: `${BASE_URL}/${locale}` },
-          { '@type': 'ListItem', position: 2, name: isFr ? 'Drapeaux' : 'Flags', item: `${BASE_URL}/${locale}/countries` },
-          { '@type': 'ListItem', position: 3, name, item: `${BASE_URL}/${locale}/countries/${code.toLowerCase()}` },
-        ],
-      }
     }
   } catch { /* noop */ }
 
@@ -128,12 +113,6 @@ export default async function Page({ params }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      )}
-      {breadcrumbLd && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
         />
       )}
       <CountryDetailPage code={code} />

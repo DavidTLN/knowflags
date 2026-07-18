@@ -1,6 +1,7 @@
 // app/[locale]/games/page.js
 
 import GamesPage from '@/components/GamesPage'
+import { pageAlternates } from '@/lib/seo'
 
 const BASE_URL = 'https://knowflags.com'
 
@@ -18,14 +19,7 @@ export async function generateMetadata({ params }) {
   return {
     title,
     description,
-    alternates: {
-      canonical: `${BASE_URL}/${locale}/games`,
-      languages: {
-        en: `${BASE_URL}/en/games`,
-        fr: `${BASE_URL}/fr/games`,
-        'x-default': `${BASE_URL}/en/games`,
-      },
-    },
+    alternates: pageAlternates(locale, '/games'),
     openGraph: {
       title,
       description,

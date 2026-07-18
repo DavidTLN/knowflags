@@ -81,20 +81,29 @@ function FilterChip({ active, onClick, children }) {
 function CityCard({ flag, name, regionName, countryName, locale }) {
   return (
     <Link href={`/${locale}/flags/cities/${flag.slug}`}
-      style={{ display: 'block', textDecoration: 'none', backgroundColor: 'white', borderRadius: '12px', overflow: 'hidden', border: '1px solid #e2e8f0', transition: 'transform 0.15s, box-shadow 0.15s', cursor: 'pointer' }}
+      style={{ display: 'flex', flexDirection: 'column', height: '100%', textDecoration: 'none', backgroundColor: 'white', borderRadius: '12px', overflow: 'hidden', border: '1px solid #e2e8f0', transition: 'transform 0.15s, box-shadow 0.15s', cursor: 'pointer' }}
       onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.10)' }}
       onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none' }}
     >
-      <div style={{ aspectRatio: '3/2', overflow: 'hidden', backgroundColor: '#f0ede4', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div style={{ aspectRatio: '3/2', overflow: 'hidden', backgroundColor: '#f0ede4', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
         <FlagImage slug={flag.slug} prefix="/flags/cities" name={name} color="#0B1F3B" style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '6px' }} />
       </div>
-      <div style={{ padding: '12px 14px' }}>
-        <p style={{ margin: 0, fontSize: '14px', fontWeight: '700', color: '#0B1F3B', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{name}</p>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '4px', marginTop: '3px' }}>
+
+      {/* ── bloc texte centré ── */}
+      <div style={{ padding: '12px 14px', textAlign: 'center', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <p style={{ margin: 0, fontSize: '14px', fontWeight: '700', color: '#0B1F3B', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+          {name}
+        </p>
+        <div style={{
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          gap: '4px', marginTop: '3px', minHeight: '32px',
+        }}>
           {flag.country && flag.country.image_path && (
             <img src={flag.country.image_path} width="14" height="10" style={{ borderRadius: '2px', objectFit: 'cover', flexShrink: 0 }} />
           )}
-          <p style={{ margin: 0, fontSize: '12px', color: '#94a3b8' }}>{regionName ? regionName + ', ' + countryName : countryName}</p>
+          <p style={{ margin: 0, fontSize: '12px', color: '#94a3b8', textAlign: 'center', lineHeight: 1.35 }}>
+            {regionName ? regionName + ', ' + countryName : countryName}
+          </p>
         </div>
       </div>
     </Link>
@@ -318,7 +327,7 @@ export default function CitiesPage() {
         <p style={{ fontSize: '15px', fontWeight: '600' }}>{t('No cities match your filters', 'Aucune ville ne correspond aux filtres')}</p>
       </div>
     ) : (
-      <div style={{ display: 'grid', gridTemplateColumns: `repeat(${cols}, 1fr)`, gap: cols === 2 ? '12px' : '16px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`, gap: cols === 2 ? '12px' : '16px', alignItems: 'stretch', gridAutoRows: '1fr' }}>
         {filtered.map(flag => {
           const name = locale === 'fr' ? flag.name_fr : flag.name_en
           const regionName = flag.parent ? (locale === 'fr' ? flag.parent.name_fr : flag.parent.name_en) : null

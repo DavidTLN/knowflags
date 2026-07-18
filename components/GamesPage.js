@@ -50,14 +50,16 @@ function GameCard({ game, locale, coming }) {
     <div style={{
       backgroundColor: DS.surface, borderRadius: '16px', border: `1px solid ${DS.border}`,
       overflow: 'hidden', opacity: coming ? 0.6 : 1, cursor: coming ? 'default' : 'pointer',
-      height: '100%', display: 'flex', flexDirection: 'column',
+      // --- taille harmonisée ---
+      width: '100%', minWidth: 0, height: '100%',
+      display: 'flex', flexDirection: 'column',
       boxShadow: '0 1px 3px rgba(22,50,79,0.06)', transition: 'transform 0.15s ease, box-shadow 0.15s ease',
     }}
       onMouseEnter={e => { if (!coming) { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 12px 32px rgba(22,50,79,0.12)' } }}
       onMouseLeave={e => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.boxShadow = '0 1px 3px rgba(22,50,79,0.06)' }}
     >
-      <div style={{ height: '5px', backgroundColor: game.color || DS.border }} />
-      <div style={{ padding: '18px', display: 'flex', flexDirection: 'column', flex: 1 }}>
+      <div style={{ height: '5px', flexShrink: 0, backgroundColor: game.color || DS.border }} />
+      <div style={{ padding: '18px', display: 'flex', flexDirection: 'column', flex: 1, minWidth: 0 }}>
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: '12px', gap: '8px' }}>
           <span style={{
             width: '52px', height: '52px', flexShrink: 0,
@@ -66,22 +68,29 @@ function GameCard({ game, locale, coming }) {
           }}><GameIcon name={GAME_ICON[game.key] || 'sparkle'} size={24} color={game.color || DS.navy} strokeWidth={2} /></span>
           <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
             {coming && (
-              <span style={{ fontSize: '10px', fontWeight: '700', backgroundColor: '#EEF2F7', color: DS.muted, padding: '3px 9px', borderRadius: '99px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+              <span style={{ fontSize: '10px', fontWeight: '700', backgroundColor: '#EEF2F7', color: DS.muted, padding: '3px 9px', borderRadius: '99px', textTransform: 'uppercase', letterSpacing: '0.04em', whiteSpace: 'nowrap' }}>
                 {t('Coming soon', 'Bientôt')}
               </span>
             )}
             {diff && !coming && (
-              <span style={{ fontSize: '10px', fontWeight: '700', backgroundColor: diff.bg, color: diff.text, padding: '3px 9px', borderRadius: '99px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+              <span style={{ fontSize: '10px', fontWeight: '700', backgroundColor: diff.bg, color: diff.text, padding: '3px 9px', borderRadius: '99px', textTransform: 'uppercase', letterSpacing: '0.04em', whiteSpace: 'nowrap' }}>
                 {t(diff.label.en, diff.label.fr)}
               </span>
             )}
           </div>
         </div>
 
-        <h3 style={{ margin: '0 0 5px', fontSize: '17px', fontWeight: '800', color: DS.navy, letterSpacing: '-0.3px' }}>
+        <h3 style={{
+          margin: '0 0 5px', fontSize: '17px', fontWeight: '800', color: DS.navy, letterSpacing: '-0.3px',
+          minHeight: '22px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+        }}>
           {t(game.en, game.fr)}
         </h3>
-        <p style={{ margin: 0, fontSize: '13px', color: DS.muted, lineHeight: 1.5, minHeight: '39px', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+        <p style={{
+          margin: 0, fontSize: '13px', color: DS.muted, lineHeight: 1.5,
+          height: '39px', minHeight: '39px',
+          display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden',
+        }}>
           {t(game.descEn, game.descFr)}
         </p>
 
@@ -97,9 +106,18 @@ function GameCard({ game, locale, coming }) {
     </div>
   )
 
-  if (coming) return inner
+  if (coming) {
+    return <div style={{ display: 'flex', minWidth: 0, width: '100%' }}>{inner}</div>
+  }
   return (
-    <Link href={`/${locale}/games/${game.key}`} style={{ textDecoration: 'none', display: 'flex', alignSelf: 'stretch' }}>
+    <Link
+      href={`/${locale}/games/${game.key}`}
+      style={{
+        textDecoration: 'none', display: 'flex',
+        // --- verrouille la cellule de grille ---
+        width: '100%', minWidth: 0, alignSelf: 'stretch',
+      }}
+    >
       {inner}
     </Link>
   )
@@ -109,9 +127,17 @@ export default function GamesPage() {
   const locale = useLocale()
   const t = (en, fr) => locale === 'fr' ? fr : en
   const [isMobile, setIsMobile] = useState(false)
+  const [cols, setCols] = useState(4)
 
   useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 768)
+    const check = () => {
+      const w = window.innerWidth
+      setIsMobile(w < 768)
+      // nombre de colonnes explicite -> toutes les tuiles ont la même largeur
+      if (w < 768) setCols(2)
+      else if (w < 1024) setCols(3)
+      else setCols(4)
+    }
     check()
     window.addEventListener('resize', check)
     return () => window.removeEventListener('resize', check)
@@ -119,9 +145,10 @@ export default function GamesPage() {
 
   const gridStyle = {
     display: 'grid',
-    gridTemplateColumns: isMobile ? '1fr 1fr' : 'repeat(auto-fill, minmax(250px, 1fr))',
+    gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`,
     gap: isMobile ? '12px' : '16px',
     alignItems: 'stretch',
+    gridAutoRows: '1fr', // toutes les rangées ont la même hauteur
   }
 
   return (

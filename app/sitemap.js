@@ -1,80 +1,138 @@
 // app/sitemap.js
+//
+// Served at https://knowflags.com/sitemap.xml
+// Submit that URL in Google Search Console once deployed.
+
 import { createClient } from '@/lib/supabase-server'
-import { getAllSlugs } from '@/lib/contentful'
 
-export const revalidate = 3600 // régénère le sitemap toutes les heures
+const BASE = 'https://knowflags.com'
+const LOCALES = ['en', 'fr']
 
-const BASE_URL = 'https://knowflags.com'
-const LOCALES  = ['en', 'fr']
-const CONTINENTS = ['africa', 'americas', 'asia', 'europe', 'oceania']
+// Regenerate the sitemap once a day.
+export const revalidate = 86400
 
-const GAMES = [
-  'flag-quiz',
-  'flag-reveal',
-  'flag-clue',
-  'flag-drawing',
-  'flag-ranker',
-  'capital-city',
+// Build the hreflang alternates block for one path.
+function alt(path) {
+  return {
+    languages: {
+      en: `${BASE}/en${path}`,
+      fr: `${BASE}/fr${path}`,
+    },
+  }
+}
+
+const STATIC_PATHS = [
+  { path: '',                  priority: 1.0,  changeFrequency: 'weekly'  },
+  { path: '/countries',        priority: 0.9,  changeFrequency: 'weekly'  },
+  { path: '/blog',             priority: 0.8,  changeFrequency: 'weekly'  },
+  { path: '/games',            priority: 0.7,  changeFrequency: 'monthly' },
+  { path: '/flags/cities',     priority: 0.6,  changeFrequency: 'monthly' },
+  { path: '/flags/regions',    priority: 0.6,  changeFrequency: 'monthly' },
+  { path: '/organisations',    priority: 0.6,  changeFrequency: 'monthly' },
+  { path: '/true-size',        priority: 0.5,  changeFrequency: 'monthly' },
+  { path: '/leaderboard',      priority: 0.4,  changeFrequency: 'daily'   },
 ]
 
-// Une entrée par locale, avec les alternates hreflang (toutes les versions
-// linguistiques du même chemin). `path` = chemin SANS locale, ex '' | '/countries'.
-function urls(path, priority = 0.7, changefreq = 'weekly', lastModified = new Date()) {
-  const languages = Object.fromEntries(LOCALES.map(l => [l, `${BASE_URL}/${l}${path}`]))
-  return LOCALES.map(locale => ({
-    url: `${BASE_URL}/${locale}${path}`,
-    lastModified,
-    changeFrequency: changefreq,
-    priority,
-    alternates: { languages },
-  }))
+const CONTINENT_SLUGS = [
+  'europe', 'africa', 'asia',
+  'north-americas', 'central-americas', 'south-americas', 'oceania',
+]
+
+async function safe(fn, fallback) {
+  try { return await fn() } catch { return fallback }
 }
 
 export default async function sitemap() {
-  // ── Pages statiques ─────────────────────────────────────────────────────────
-  // NB : home = urls('') → produit /en et /fr SANS slash final (pas /en/).
-  const staticPages = [
-    ...urls('', 1.0, 'daily'),
-    ...urls('/countries', 0.9, 'weekly'),
-    ...urls('/games', 0.9, 'weekly'),
-    ...urls('/organisations', 0.7, 'monthly'),
-    ...urls('/true-size', 0.6, 'monthly'),
-    ...urls('/leaderboard', 0.5, 'daily'),
-    ...urls('/blog', 0.6, 'weekly'),
-    ...CONTINENTS.flatMap(slug => urls(`/continents/${slug}`, 0.8, 'weekly')),
-    ...GAMES.flatMap(game => urls(`/games/${game}`, 0.8, 'monthly')),
-  ]
+  const now = new Date()
+  const entries = []
 
-  // ── Pages pays (dynamique Supabase) ─────────────────────────────────────────
-  let countryPages = []
-  try {
-    const supabase = await createClient()
-    const { data: countries } = await supabase
+  // ── Static pages ──────────────────────────────────────────────────────────
+  for (const locale of LOCALES) {
+    for (const s of STATIC_PATHS) {
+      entries.push({
+        url: `${BASE}/${locale}${s.path}`,
+        lastModified: now,
+        changeFrequency: s.changeFrequency,
+        priority: s.priority,
+        alternates: alt(s.path),
+      })
+    }
+    for (const slug of CONTINENT_SLUGS) {
+      entries.push({
+        url: `${BASE}/${locale}/continents/${slug}`,
+        lastModified: now,
+        changeFrequency: 'monthly',
+        priority: 0.7,
+        alternates: alt(`/continents/${slug}`),
+      })
+    }
+  }
+
+  // ── Countries ─────────────────────────────────────────────────────────────
+  const countries = await safe(async () => {
+    const supabase = createClient()
+    const { data } = await supabase
       .from('countries')
-      .select('iso_code')
-      .order('iso_code')
+      .select('iso_code, last_flag_change')
+    return data || []
+  }, [])
 
-    if (countries) {
-      countryPages = countries.flatMap(c =>
-        urls(`/countries/${c.iso_code.toLowerCase()}`, 0.85, 'monthly')
-      )
+  for (const locale of LOCALES) {
+    for (const c of countries) {
+      const path = `/countries/${c.iso_code}`
+      entries.push({
+        url: `${BASE}/${locale}${path}`,
+        lastModified: c.last_flag_change ? new Date(c.last_flag_change) : now,
+        changeFrequency: 'monthly',
+        priority: 0.8,
+        alternates: alt(path),
+      })
     }
-  } catch (e) {
-    console.error('sitemap: failed to fetch countries', e)
   }
 
-  // ── Articles de blog (dynamique Contentful) ─────────────────────────────────
-  let blogPages = []
-  try {
-    const slugs = await getAllSlugs()
-    if (Array.isArray(slugs)) {
-      blogPages = slugs.flatMap(slug =>
-        urls(`/blog/${slug}`, 0.7, 'monthly')
-      )
+  // ── City flags ────────────────────────────────────────────────────────────
+  // NOTE: only cities. There is no /flags/regions/[slug] route, so region
+  // slugs must NOT be listed here — they would all return 404.
+  const cityFlags = await safe(async () => {
+    const supabase = createClient()
+    const { data } = await supabase
+      .from('flag_taxonomy')
+      .select('slug')
+      .eq('flag_type', 'city')
+    return data || []
+  }, [])
+
+  for (const locale of LOCALES) {
+    for (const f of cityFlags) {
+      const path = `/flags/cities/${f.slug}`
+      entries.push({
+        url: `${BASE}/${locale}${path}`,
+        lastModified: now,
+        changeFrequency: 'monthly',
+        priority: 0.5,
+        alternates: alt(path),
+      })
     }
-  } catch (e) {
-    console.error('sitemap: failed to fetch blog slugs', e)
   }
 
-  return [...staticPages, ...countryPages, ...blogPages]
+  // ── Blog posts ────────────────────────────────────────────────────────────
+  const slugs = await safe(async () => {
+    const { getAllSlugs } = await import('@/lib/contentful')
+    return (await getAllSlugs()) || []
+  }, [])
+
+  for (const locale of LOCALES) {
+    for (const slug of slugs) {
+      const path = `/blog/${slug}`
+      entries.push({
+        url: `${BASE}/${locale}${path}`,
+        lastModified: now,
+        changeFrequency: 'monthly',
+        priority: 0.7,
+        alternates: alt(path),
+      })
+    }
+  }
+
+  return entries
 }

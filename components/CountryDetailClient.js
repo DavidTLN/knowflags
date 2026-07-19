@@ -7,7 +7,6 @@ import FlagHistoryModule from '@/components/FlagHistoryModule'
 import { useLocale } from 'next-intl'
 import { labelColor, labelSymbol, labelShape } from '@/lib/flagSymbolsFr'
 import Footer from '@/components/Footer'
-import PageLoader from '@/components/PageLoader'
 import ReportModal from '@/components/ReportModal'
 
 // ── DS Tokens ─────────────────────────────────────────────────────────────────
@@ -661,17 +660,12 @@ function DidYouKnow({ facts }) {
 }
 
 // ── Main Component ────────────────────────────────────────────────────────────
-export default function CountryDetailPage({ code }) {
+export default function CountryDetailClient({ country, facts = [], relatedCountries = [], childEntities = [] }) {
   const locale = useLocale()
   const t = (en, fr) => locale === 'fr' ? fr : en
 
-  const [country, setCountry]           = useState(null)
-  const [loading, setLoading]           = useState(true)
-  const [relatedCountries, setRelated]  = useState([])
-  const [facts, setFacts]               = useState([])
-  const [isMobile, setIsMobile]         = useState(false)
-  const [reportOpen, setReportOpen]     = useState(false)
-  const [children, setChildren]         = useState([])
+  const [isMobile, setIsMobile]     = useState(false)
+  const [reportOpen, setReportOpen] = useState(false)
 
   useEffect(() => {
     function check() { setIsMobile(window.innerWidth < 768) }
@@ -679,78 +673,6 @@ export default function CountryDetailPage({ code }) {
     window.addEventListener('resize', check)
     return () => window.removeEventListener('resize', check)
   }, [])
-
-  useEffect(() => {
-    if (!code) return
-    const supabase = createClient()
-
-    // Country data
-    supabase.from('countries')
-      .select('iso_code, name_en, name_fr, region, capital, capital_fr, colors, symbols, ratio, ratios, shape, population, area_km2, adopted_year, median_age, last_flag_change, spec_en, spec_fr, etiquette_en, etiquette_fr, color_meanings, symbol_meanings, display_symbols, designer_en, designer_fr, adopted_note_fr, adopted_note_en, adopted_detail_fr, adopted_detail_en, flag_url, entity_type, parent_iso, sovereignty_note_en, sovereignty_note_fr')
-      .eq('iso_code', code.toLowerCase()).single()
-      .then(({ data }) => {
-        if (data) {
-          setCountry({
-            code:             data.iso_code,
-            en:               data.name_en,
-            fr:               data.name_fr,
-            region:           data.region,
-            capital:          { en: data.capital, fr: data.capital_fr || data.capital },
-            colors:           data.colors || [],
-            symbols:          data.symbols || [],
-            population:       data.population,
-            area_km2:         data.area_km2,
-            adopted_year:     data.adopted_year,
-            median_age:       data.median_age,
-            last_flag_change: data.last_flag_change,
-            ratio:            data.ratio,
-            ratios:           data.ratios || null,
-            shape:            data.shape,
-            spec_en:          data.spec_en,
-            spec_fr:          data.spec_fr,
-            designer_en:      data.designer_en,
-            designer_fr:      data.designer_fr,
-            adopted_note_fr:  data.adopted_note_fr,
-            adopted_note_en:  data.adopted_note_en,
-            adopted_detail_fr: data.adopted_detail_fr,
-            adopted_detail_en: data.adopted_detail_en,
-            flag_url: data.flag_url,
-            etiquette_en:     data.etiquette_en || [],
-            etiquette_fr:     data.etiquette_fr || [],
-            color_meanings:   data.color_meanings || {},
-            symbol_meanings:  data.symbol_meanings || {},
-            display_symbols:  data.display_symbols || [],
-            entityType:       data.entity_type,
-            parentIso:        data.parent_iso,
-            sovNoteEn:        data.sovereignty_note_en,
-            sovNoteFr:        data.sovereignty_note_fr,
-          })
-          // Related countries
-          supabase.from('countries').select('iso_code, name_en, name_fr').eq('region', data.region).eq('entity_type', 'sovereign').neq('iso_code', data.iso_code)
-            .then(({ data: rel }) => {
-              if (rel) setRelated([...rel].sort(() => Math.random() - 0.5).slice(0, 6).map(r => ({ code: r.iso_code, en: r.name_en, fr: r.name_fr })))
-            })
-          // Constituent / child entities (shown on the parent page)
-          supabase.from('countries').select('iso_code, name_en, name_fr').eq('parent_iso', data.iso_code).order('iso_code')
-            .then(({ data: kids }) => {
-              if (kids && kids.length) setChildren(kids.map(k => ({ code: k.iso_code, en: k.name_en, fr: k.name_fr })))
-            })
-        }
-        setLoading(false)
-      })
-
-    // Country facts
-    supabase.from('country_facts')
-      .select('fact_en, fact_fr, category')
-      .eq('country_code', code.toLowerCase())
-      .then(({ data }) => {
-        if (data && data.length > 0) {
-          setFacts(data.map(f => locale === 'fr' ? f.fact_fr : f.fact_en).filter(Boolean))
-        }
-      })
-  }, [code, locale])
-
-  if (loading) return <PageLoader label={t('Loading...', 'Chargement...')} />
 
   if (!country) return (
     <div style={{ backgroundColor: DS.bg, minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -781,10 +703,10 @@ export default function CountryDetailPage({ code }) {
       <span style={badgePillStyle}>{sovNote}</span>
     )
   ) : null
-  const childrenSection = children.length > 0 ? (
+  const childrenSection = childEntities.length > 0 ? (
     <Section title={t('Constituent countries', 'Nations constitutives')}>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '12px' }}>
-        {children.map(ch => {
+        {childEntities.map(ch => {
           const cName = locale === 'fr' ? ch.fr : ch.en
           return (
             <Link key={ch.code} href={`/${locale}/countries/${ch.code}`}

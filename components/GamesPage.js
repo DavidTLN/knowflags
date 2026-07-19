@@ -1,9 +1,12 @@
-'use client'
+// components/GamesPage.js
+//
+// SERVER Component — no 'use client'.
+// The game list is static data, so nothing needs to run in the browser:
+// responsiveness and hover are handled in CSS instead of useState/useEffect.
+// Result: complete HTML, no layout flash on mobile, zero JS for this page.
 
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
 import Footer from '@/components/Footer'
-import { useLocale } from 'next-intl'
 import GameIcon from '@/components/games/GameIcon'
 
 const DS = {
@@ -42,60 +45,90 @@ const DIFFICULTY = {
   hard:   { bg: '#FEE2E2', text: '#D62828', label: { en: 'Hard', fr: 'Difficile' } },
 }
 
+// ── All responsive + hover behaviour, no JavaScript ──────────────────────────
+const CSS = `
+.kf-games-wrap { min-height: 100dvh; background-color: ${DS.bg}; font-family: var(--font-body), system-ui, sans-serif; }
+.kf-games-hero { background-color: ${DS.navy}; padding: 48px 24px 40px; }
+.kf-games-inner { max-width: 1100px; margin: 0 auto; }
+.kf-games-body { max-width: 1100px; margin: 0 auto; padding: 40px 24px; }
+
+.kf-games-eyebrow { margin: 0 0 8px; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: ${DS.steel}; display: flex; align-items: center; gap: 8px; }
+.kf-games-eyebrow span { display: inline-block; width: 20px; height: 2px; background-color: ${DS.steel}; border-radius: 2px; }
+.kf-games-h1 { margin: 0 0 10px; font-size: 40px; font-weight: 900; color: #fff; letter-spacing: -1px; }
+.kf-games-lead { margin: 0 0 22px; font-size: 16px; color: rgba(255,255,255,0.65); max-width: 520px; line-height: 1.6; }
+.kf-games-h2 { font-size: 22px; font-weight: 900; color: ${DS.navy}; margin: 0 0 18px; letter-spacing: -0.5px; display: flex; align-items: center; gap: 10px; }
+
+.kf-btn-ghost { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; background-color: rgba(255,255,255,0.1); border: 1.5px solid rgba(255,255,255,0.22); color: #fff; border-radius: 10px; font-size: 14px; font-weight: 700; text-decoration: none; transition: background 0.15s; }
+.kf-btn-ghost:hover { background-color: rgba(255,255,255,0.18); }
+
+/* Equal-width columns, equal-height rows */
+.kf-games-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; align-items: stretch; grid-auto-rows: 1fr; }
+
+.kf-card-link { text-decoration: none; display: flex; width: 100%; min-width: 0; align-self: stretch; }
+.kf-card { background-color: ${DS.surface}; border-radius: 16px; border: 1px solid ${DS.border}; overflow: hidden; width: 100%; min-width: 0; height: 100%; display: flex; flex-direction: column; box-shadow: 0 1px 3px rgba(22,50,79,0.06); transition: transform 0.15s ease, box-shadow 0.15s ease; }
+.kf-card-link:hover .kf-card { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(22,50,79,0.12); }
+.kf-card.is-coming { opacity: 0.6; cursor: default; }
+.kf-card-bar { height: 5px; flex-shrink: 0; }
+.kf-card-body { padding: 18px; display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.kf-card-title { margin: 0 0 5px; font-size: 17px; font-weight: 800; color: ${DS.navy}; letter-spacing: -0.3px; min-height: 22px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.kf-card-desc { margin: 0; font-size: 13px; color: ${DS.muted}; line-height: 1.5; height: 39px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.kf-card-cta { margin-top: auto; padding-top: 16px; display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 800; }
+.kf-badge { font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 99px; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; }
+
+.kf-cta { margin-top: 44px; background-color: ${DS.navy}; border-radius: 16px; padding: 28px 32px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+.kf-cta h2 { margin: 0 0 4px; font-size: 20px; font-weight: 900; color: #fff; }
+
+@media (max-width: 1023px) {
+  .kf-games-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 767px) {
+  .kf-games-hero { padding: 28px 16px 24px; }
+  .kf-games-body { padding: 28px 16px 40px; }
+  .kf-games-h1 { font-size: 30px; }
+  .kf-games-lead { font-size: 14px; }
+  .kf-games-h2 { font-size: 20px; }
+  .kf-games-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .kf-cta { padding: 22px 20px; }
+  .kf-cta h2 { font-size: 18px; }
+}
+`
+
 function GameCard({ game, locale, coming }) {
-  const t = (en, fr) => locale === 'fr' ? fr : en
+  const t = (en, fr) => (locale === 'fr' ? fr : en)
   const diff = game.difficulty ? DIFFICULTY[game.difficulty] : null
+  const color = game.color || DS.navy
 
   const inner = (
-    <div style={{
-      backgroundColor: DS.surface, borderRadius: '16px', border: `1px solid ${DS.border}`,
-      overflow: 'hidden', opacity: coming ? 0.6 : 1, cursor: coming ? 'default' : 'pointer',
-      // --- taille harmonisée ---
-      width: '100%', minWidth: 0, height: '100%',
-      display: 'flex', flexDirection: 'column',
-      boxShadow: '0 1px 3px rgba(22,50,79,0.06)', transition: 'transform 0.15s ease, box-shadow 0.15s ease',
-    }}
-      onMouseEnter={e => { if (!coming) { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 12px 32px rgba(22,50,79,0.12)' } }}
-      onMouseLeave={e => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.boxShadow = '0 1px 3px rgba(22,50,79,0.06)' }}
-    >
-      <div style={{ height: '5px', flexShrink: 0, backgroundColor: game.color || DS.border }} />
-      <div style={{ padding: '18px', display: 'flex', flexDirection: 'column', flex: 1, minWidth: 0 }}>
+    <div className={`kf-card${coming ? ' is-coming' : ''}`}>
+      <div className="kf-card-bar" style={{ backgroundColor: game.color || DS.border }} />
+      <div className="kf-card-body">
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: '12px', gap: '8px' }}>
           <span style={{
-            width: '52px', height: '52px', flexShrink: 0,
-            borderRadius: '14px', display: 'flex', alignItems: 'center', justifyContent: 'center',
-            backgroundColor: (game.color || DS.navy) + '14',
-          }}><GameIcon name={GAME_ICON[game.key] || 'sparkle'} size={24} color={game.color || DS.navy} strokeWidth={2} /></span>
+            width: '52px', height: '52px', flexShrink: 0, borderRadius: '14px',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            backgroundColor: color + '14',
+          }}>
+            <GameIcon name={GAME_ICON[game.key] || 'sparkle'} size={24} color={color} strokeWidth={2} />
+          </span>
           <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
             {coming && (
-              <span style={{ fontSize: '10px', fontWeight: '700', backgroundColor: '#EEF2F7', color: DS.muted, padding: '3px 9px', borderRadius: '99px', textTransform: 'uppercase', letterSpacing: '0.04em', whiteSpace: 'nowrap' }}>
+              <span className="kf-badge" style={{ backgroundColor: '#EEF2F7', color: DS.muted }}>
                 {t('Coming soon', 'Bientôt')}
               </span>
             )}
             {diff && !coming && (
-              <span style={{ fontSize: '10px', fontWeight: '700', backgroundColor: diff.bg, color: diff.text, padding: '3px 9px', borderRadius: '99px', textTransform: 'uppercase', letterSpacing: '0.04em', whiteSpace: 'nowrap' }}>
+              <span className="kf-badge" style={{ backgroundColor: diff.bg, color: diff.text }}>
                 {t(diff.label.en, diff.label.fr)}
               </span>
             )}
           </div>
         </div>
 
-        <h3 style={{
-          margin: '0 0 5px', fontSize: '17px', fontWeight: '800', color: DS.navy, letterSpacing: '-0.3px',
-          minHeight: '22px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
-        }}>
-          {t(game.en, game.fr)}
-        </h3>
-        <p style={{
-          margin: 0, fontSize: '13px', color: DS.muted, lineHeight: 1.5,
-          height: '39px', minHeight: '39px',
-          display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden',
-        }}>
-          {t(game.descEn, game.descFr)}
-        </p>
+        <h3 className="kf-card-title">{t(game.en, game.fr)}</h3>
+        <p className="kf-card-desc">{t(game.descEn, game.descFr)}</p>
 
         {!coming && (
-          <div style={{ marginTop: 'auto', paddingTop: '16px', display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '13px', fontWeight: '800', color: game.color || DS.navy }}>
+          <div className="kf-card-cta" style={{ color }}>
             {t('Play now', 'Jouer')}
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <line x1="4" y1="12" x2="19" y2="12" /><polyline points="13 6 19 12 13 18" />
@@ -106,136 +139,99 @@ function GameCard({ game, locale, coming }) {
     </div>
   )
 
-  if (coming) {
-    return <div style={{ display: 'flex', minWidth: 0, width: '100%' }}>{inner}</div>
-  }
+  if (coming) return <div className="kf-card-link">{inner}</div>
+
   return (
-    <Link
-      href={`/${locale}/games/${game.key}`}
-      style={{
-        textDecoration: 'none', display: 'flex',
-        // --- verrouille la cellule de grille ---
-        width: '100%', minWidth: 0, alignSelf: 'stretch',
-      }}
-    >
+    <Link href={`/${locale}/games/${game.key}`} className="kf-card-link">
       {inner}
     </Link>
   )
 }
 
-export default function GamesPage() {
-  const locale = useLocale()
-  const t = (en, fr) => locale === 'fr' ? fr : en
-  const [isMobile, setIsMobile] = useState(false)
-  const [cols, setCols] = useState(4)
-
-  useEffect(() => {
-    const check = () => {
-      const w = window.innerWidth
-      setIsMobile(w < 768)
-      // nombre de colonnes explicite -> toutes les tuiles ont la même largeur
-      if (w < 768) setCols(2)
-      else if (w < 1024) setCols(3)
-      else setCols(4)
-    }
-    check()
-    window.addEventListener('resize', check)
-    return () => window.removeEventListener('resize', check)
-  }, [])
-
-  const gridStyle = {
-    display: 'grid',
-    gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`,
-    gap: isMobile ? '12px' : '16px',
-    alignItems: 'stretch',
-    gridAutoRows: '1fr', // toutes les rangées ont la même hauteur
-  }
+export default function GamesPage({ locale = 'en' }) {
+  const t = (en, fr) => (locale === 'fr' ? fr : en)
+  const available = GAMES.filter(g => g.ready !== false && !HIDDEN_GAMES.includes(g.key))
 
   return (
     <>
-    <div style={{ minHeight: '100dvh', backgroundColor: DS.bg, fontFamily: 'var(--font-body), system-ui, sans-serif' }}>
+      <style dangerouslySetInnerHTML={{ __html: CSS }} />
 
-      {/* Hero */}
-      <div style={{ backgroundColor: DS.navy, padding: isMobile ? '28px 16px 24px' : '48px 24px 40px' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-          <p style={{ margin: '0 0 8px', fontSize: '11px', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.15em', color: DS.steel, display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <span style={{ display: 'inline-block', width: '20px', height: '2px', backgroundColor: DS.steel, borderRadius: '2px' }} />
-            {t('Play & learn', 'Joue et apprends')}
-          </p>
-          <h1 style={{ margin: '0 0 10px', fontSize: isMobile ? '30px' : '40px', fontWeight: '900', color: 'white', letterSpacing: '-1px' }}>
-            {t('Games', 'Jeux')}
-          </h1>
-          <p style={{ margin: '0 0 22px', fontSize: isMobile ? '14px' : '16px', color: 'rgba(255,255,255,0.65)', maxWidth: '520px', lineHeight: 1.6 }}>
-            {t(
-              'Test your knowledge of world flags. Play, earn points and climb the leaderboard.',
-              'Teste tes connaissances sur les drapeaux du monde. Joue, gagne des points et grimpe au classement.'
-            )}
-          </p>
-          <Link href={`/${locale}/leaderboard`}
-            style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 18px', backgroundColor: 'rgba(255,255,255,0.1)', border: '1.5px solid rgba(255,255,255,0.22)', color: 'white', borderRadius: '10px', fontSize: '14px', fontWeight: '700', textDecoration: 'none', transition: 'background 0.15s' }}
-            onMouseEnter={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.18)'}
-            onMouseLeave={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.1)'}>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M7 4h10v5a5 5 0 0 1-10 0V4z" /><path d="M7 5H4v2a3 3 0 0 0 3 3M17 5h3v2a3 3 0 0 1-3 3" /><line x1="12" y1="14" x2="12" y2="18" /><path d="M8.5 21h7M9.5 21v-3h5v3" />
-            </svg>
-            {t('View leaderboard', 'Voir le classement')}
-          </Link>
-        </div>
-      </div>
+      <div className="kf-games-wrap">
 
-      <div style={{ maxWidth: '1100px', margin: '0 auto', padding: isMobile ? '28px 16px 40px' : '40px 24px' }}>
-
-        {/* Available games */}
-        <div style={{ marginBottom: COMING_SOON.length > 0 ? '44px' : '0' }}>
-          <h2 style={{ fontSize: isMobile ? '20px' : '22px', fontWeight: '900', color: DS.navy, margin: '0 0 18px', letterSpacing: '-0.5px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-            {t('All games', 'Tous les jeux')}
-            <span style={{ fontSize: '13px', fontWeight: '800', backgroundColor: DS.greenBg, color: DS.green, padding: '2px 10px', borderRadius: '99px' }}>
-              {GAMES.filter(g => g.ready !== false && !HIDDEN_GAMES.includes(g.key)).length}
-            </span>
-          </h2>
-          <div style={gridStyle}>
-            {GAMES.filter(g => g.ready !== false && !HIDDEN_GAMES.includes(g.key)).map(game => (
-              <GameCard key={game.key} game={game} locale={locale} coming={false} />
-            ))}
+        {/* Hero */}
+        <div className="kf-games-hero">
+          <div className="kf-games-inner">
+            <p className="kf-games-eyebrow">
+              <span />
+              {t('Play & learn', 'Joue et apprends')}
+            </p>
+            <h1 className="kf-games-h1">{t('Games', 'Jeux')}</h1>
+            <p className="kf-games-lead">
+              {t(
+                'Test your knowledge of world flags. Play, earn points and climb the leaderboard.',
+                'Teste tes connaissances sur les drapeaux du monde. Joue, gagne des points et grimpe au classement.'
+              )}
+            </p>
+            <Link href={`/${locale}/leaderboard`} className="kf-btn-ghost">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M7 4h10v5a5 5 0 0 1-10 0V4z" /><path d="M7 5H4v2a3 3 0 0 0 3 3M17 5h3v2a3 3 0 0 1-3 3" /><line x1="12" y1="14" x2="12" y2="18" /><path d="M8.5 21h7M9.5 21v-3h5v3" />
+              </svg>
+              {t('View leaderboard', 'Voir le classement')}
+            </Link>
           </div>
         </div>
 
-        {/* Coming soon (only if any) */}
-        {COMING_SOON.length > 0 && (
-          <div>
-            <h2 style={{ fontSize: isMobile ? '20px' : '22px', fontWeight: '900', color: DS.navy, margin: '0 0 18px', letterSpacing: '-0.5px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-              {t('Coming soon', 'Bientôt disponibles')}
-              <span style={{ fontSize: '13px', fontWeight: '800', backgroundColor: '#EEF2F7', color: DS.muted, padding: '2px 10px', borderRadius: '99px' }}>
-                {COMING_SOON.length}
+        <div className="kf-games-body">
+
+          {/* Available games */}
+          <div style={{ marginBottom: COMING_SOON.length > 0 ? '44px' : 0 }}>
+            <h2 className="kf-games-h2">
+              {t('All games', 'Tous les jeux')}
+              <span style={{ fontSize: '13px', fontWeight: '800', backgroundColor: DS.greenBg, color: DS.green, padding: '2px 10px', borderRadius: '99px' }}>
+                {available.length}
               </span>
             </h2>
-            <div style={gridStyle}>
-              {COMING_SOON.map(game => (
-                <GameCard key={game.key} game={game} locale={locale} coming={true} />
+            <div className="kf-games-grid">
+              {available.map(game => (
+                <GameCard key={game.key} game={game} locale={locale} coming={false} />
               ))}
             </div>
           </div>
-        )}
 
-        {/* Leaderboard CTA */}
-        <div style={{ marginTop: '44px', backgroundColor: DS.navy, borderRadius: '16px', padding: isMobile ? '22px 20px' : '28px 32px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px' }}>
-          <div>
-            <h2 style={{ margin: '0 0 4px', fontSize: isMobile ? '18px' : '20px', fontWeight: '900', color: 'white' }}>
-              {t('Global leaderboard', 'Classement mondial')}
-            </h2>
-            <p style={{ margin: 0, fontSize: '14px', color: DS.steel }}>
-              {t('Weekly, monthly and all-time rankings', 'Classements hebdomadaires, mensuels et de tous les temps')}
-            </p>
+          {/* Coming soon (only if any) */}
+          {COMING_SOON.length > 0 && (
+            <div>
+              <h2 className="kf-games-h2">
+                {t('Coming soon', 'Bientôt disponibles')}
+                <span style={{ fontSize: '13px', fontWeight: '800', backgroundColor: '#EEF2F7', color: DS.muted, padding: '2px 10px', borderRadius: '99px' }}>
+                  {COMING_SOON.length}
+                </span>
+              </h2>
+              <div className="kf-games-grid">
+                {COMING_SOON.map(game => (
+                  <GameCard key={game.key} game={game} locale={locale} coming={true} />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Leaderboard CTA */}
+          <div className="kf-cta">
+            <div>
+              <h2>{t('Global leaderboard', 'Classement mondial')}</h2>
+              <p style={{ margin: 0, fontSize: '14px', color: DS.steel }}>
+                {t('Weekly, monthly and all-time rankings', 'Classements hebdomadaires, mensuels et de tous les temps')}
+              </p>
+            </div>
+            <Link href={`/${locale}/leaderboard`}
+              style={{ padding: '12px 24px', backgroundColor: DS.steel, color: DS.navy, borderRadius: '10px', fontWeight: '800', fontSize: '15px', textDecoration: 'none', flexShrink: 0 }}>
+              {t('View rankings', 'Voir le classement')}
+            </Link>
           </div>
-          <Link href={`/${locale}/leaderboard`}
-            style={{ padding: '12px 24px', backgroundColor: DS.steel, color: DS.navy, borderRadius: '10px', fontWeight: '800', fontSize: '15px', textDecoration: 'none', flexShrink: 0 }}>
-            {t('View rankings', 'Voir le classement')}
-          </Link>
-        </div>
 
+        </div>
       </div>
-    </div>
-    <Footer />
-  </>
+      <Footer />
+    </>
   )
 }

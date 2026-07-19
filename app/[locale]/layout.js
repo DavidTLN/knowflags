@@ -26,16 +26,19 @@ const interDisplay = Inter({
 
 const BASE_URL = 'https://knowflags.com'
 
+// Bump this when the favicon files change — forces browsers to drop the cached icon.
+const ICON_VERSION = '2'
+
 export const metadata = {
   title: {
-    default:  'Knowflags — Explore the World Through Flags',
-    template: '%s | Knowflags',
+    default:  'KnowFlags — Explore the World Through Flags',
+    template: '%s | KnowFlags',
   },
-  description: 'Flag quizzes, country facts and interactive maps — learn world geography on Knowflags.',
+  description: 'Flag quizzes, country facts and interactive maps — learn world geography on KnowFlags.',
   metadataBase: new URL(BASE_URL),
   openGraph: {
-    siteName: 'Knowflags',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Knowflags' }],
+    siteName: 'KnowFlags',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'KnowFlags' }],
     type: 'website',
   },
   twitter: {
@@ -44,11 +47,11 @@ export const metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/favicon.ico', sizes: '32x32' },
+      { url: `/favicon.svg?v=${ICON_VERSION}`, type: 'image/svg+xml' },
+      { url: `/favicon.ico?v=${ICON_VERSION}`, sizes: '32x32' },
     ],
-    shortcut: '/favicon.svg',
-    apple:    '/apple-touch-icon.png',
+    shortcut: `/favicon.svg?v=${ICON_VERSION}`,
+    apple:    `/apple-touch-icon.png?v=${ICON_VERSION}`,
   },
   robots: {
     index: true,
@@ -70,7 +73,7 @@ export default async function RootLayout({ children, params }) {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type':    'WebSite',
-    name:        'Knowflags',
+    name:        'KnowFlags',
     url:         BASE_URL,
     logo:        `${BASE_URL}/logo.svg`,
     description: locale === 'fr'

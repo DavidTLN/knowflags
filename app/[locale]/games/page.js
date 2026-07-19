@@ -10,8 +10,8 @@ export async function generateMetadata({ params }) {
   const isFr = locale === 'fr'
 
   const title = isFr
-    ? 'Jeux de Drapeaux — Quiz, Dessin, Révélation | KnowFlags'
-    : 'Flag Games — Quiz, Drawing, Reveal & More | KnowFlags'
+    ? 'Jeux de Drapeaux — Quiz, Dessin, Révélation'
+    : 'Flag Games — Quiz, Drawing, Reveal & More'
   const description = isFr
     ? 'Découvrez tous nos jeux de drapeaux : quiz, dessin, devinettes, capitales et classements. Apprenez la géographie en jouant.'
     : 'Explore all our flag games: quiz, drawing, clues, capitals and rankings. Learn geography while playing.'
@@ -32,6 +32,7 @@ export async function generateMetadata({ params }) {
   }
 }
 
-export default function Page() {
-  return <GamesPage />
+export default async function Page({ params }) {
+  const { locale } = await params
+  return <GamesPage locale={locale} />
 }

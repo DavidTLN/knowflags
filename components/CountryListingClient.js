@@ -3,9 +3,7 @@
 import { useState, useMemo, useEffect } from 'react'
 import Link from 'next/link'
 import { useLocale } from 'next-intl'
-import { createClient } from '@/lib/supabase-client'
 import Footer from '@/components/Footer'
-import PageLoader from '@/components/PageLoader'
 
 // ── DS Tokens ─────────────────────────────────────────────────────────────────
 const DS = {
@@ -109,12 +107,23 @@ const CalIcon = ({ size = 10 }) => (
   </svg>
 )
 
-export default function CountryListingPage() {
+export default function CountryListingClient({ rows = [] }) {
   const locale = useLocale()
   const t = (en, fr) => locale === 'fr' ? fr : en
 
-  const [countries, setCountries]               = useState([])
-  const [countriesLoading, setCountriesLoading] = useState(true)
+  // Rows come from the server (already in the initial HTML); shape them here.
+  const countries = useMemo(() => (rows || []).map(c => ({
+    code: c.iso_code, en: c.name_en, fr: c.name_fr, region: c.region,
+    continent: COUNTRY_CONTINENT[c.iso_code?.toLowerCase()] || REGION_TO_CONTINENT[c.region] || c.region?.toLowerCase() || '',
+    colors: c.colors || [], symbols: c.symbols || [],
+    ratio: c.ratio, ratios: c.ratios || null, shape: c.shape,
+    has_weapons: c.has_weapons || false, has_blade: c.has_blade || false, has_firearm: c.has_firearm || false,
+    adopted_year: c.adopted_year ?? null,
+    last_flag_change: c.last_flag_change || null,
+    flagUrl: c.flag_url || null,
+    entityType: c.entity_type || 'sovereign',
+  })), [rows])
+
   const [search, setSearch]                     = useState('')
   const [sortOrder, setSortOrder]               = useState('az')
   const [activeRegions, setActiveRegions]       = useState([])
@@ -143,28 +152,6 @@ export default function CountryListingPage() {
     })
     return opts
   }, [countries])
-
-  useEffect(() => {
-    const supabase = createClient()
-    supabase
-      .from('countries')
-      .select('iso_code, name_en, name_fr, region, colors, symbols, ratio, ratios, shape, has_weapons, has_blade, has_firearm, adopted_year, last_flag_change, flag_url, entity_type, parent_iso')
-      .order('name_en')
-      .then(({ data }) => {
-        if (data) setCountries(data.map(c => ({
-          code: c.iso_code, en: c.name_en, fr: c.name_fr, region: c.region,
-          continent: COUNTRY_CONTINENT[c.iso_code?.toLowerCase()] || REGION_TO_CONTINENT[c.region] || c.region?.toLowerCase() || '',
-          colors: c.colors || [], symbols: c.symbols || [],
-          ratio: c.ratio, ratios: c.ratios || null, shape: c.shape,
-          has_weapons: c.has_weapons || false, has_blade: c.has_blade || false, has_firearm: c.has_firearm || false,
-          adopted_year: c.adopted_year ?? null,
-          last_flag_change: c.last_flag_change || null,
-          flagUrl: c.flag_url || null,
-          entityType: c.entity_type || 'sovereign',
-        })))
-        setCountriesLoading(false)
-      })
-  }, [])
 
   useEffect(() => {
     function check() { setIsMobile(window.innerWidth < 1024) }
@@ -378,9 +365,6 @@ export default function CountryListingPage() {
       </FilterSection>
     </>
   )
-
-  // ── Loading ───────────────────────────────────────────────────────────────
-  if (countriesLoading) return <PageLoader label={t('Loading countries...', 'Chargement...')} />
 
   return (
     <>

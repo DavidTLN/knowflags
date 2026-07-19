@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <path id="star" d="M0,-31 L6.96,-9.58 L29.49,-9.58 L11.26,3.66 L18.22,25.08 L0,11.84 L-18.22,25.08 L-11.26,3.66 L-29.49,-9.58 L-6.96,-9.58 Z"/>
+    <clipPath id="flag">
+      <rect width="800" height="400"/>
+    </clipPath>
+  </defs>
+  <g fill="#FFFFFF" clip-path="url(#flag)">
+    <use href="#star" x="141"   y="0"/>
+    <use href="#star" x="190.5" y="49.5"/>
+    <use href="#star" x="240"   y="99"/>
+    <use href="#star" x="289.5" y="148.5"/>
+    <use href="#star" x="339"   y="198"/>
+    <use href="#star" x="388.5" y="247.5"/>
+    <use href="#star" x="438"   y="297"/>
+    <use href="#star" x="487.5" y="346.5"/>
+    <use href="#star" x="537"   y="396"/>
+  </g>
+</svg>

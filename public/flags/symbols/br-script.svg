@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 504" width="720" height="504">
+  <defs>
+    <clipPath id="disc">
+      <circle cx="360" cy="252" r="126"/>
+    </clipPath>
+    <path id="textline" d="M247.4,215.8 A291,291 0 0 1 473.2,279.5"/>
+  </defs>
+  <g clip-path="url(#disc)">
+    <circle cx="288" cy="504" r="297" fill="none" stroke="#FFFFFF" stroke-width="18"/>
+  </g>
+  <text font-family="Helvetica, Arial, sans-serif" font-size="16.5" fill="#009B3A" letter-spacing="0">
+    <textPath href="#textline" startOffset="0" textLength="241.4" lengthAdjust="spacing">ORDEM E PROGRESSO</textPath>
+  </text>
+</svg>

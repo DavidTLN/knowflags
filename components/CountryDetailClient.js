@@ -589,7 +589,7 @@ function DesignSpecs({ country, locale }) {
               ? displaySymbols.map((d, i) => {
                   const label = locale === 'fr' ? (d.fr || d.en) : (d.en || d.fr)
                   const meaning = d.meaning ? (locale === 'fr' ? (d.meaning.fr || d.meaning.en) : (d.meaning.en || d.meaning.fr)) : null
-                  const slug = d.icon || `${country.code}-${symbolSlug(d.glyph || label)}`
+                  const slug = d.icon === null ? null : (d.icon || `${country.code}-${symbolSlug(d.glyph || label)}`)
                   const header = (
                     <>
                       <SymbolBadge slug={slug} fallback={symbolGlyph(d.glyph || label) || String(label).charAt(0).toUpperCase()} />

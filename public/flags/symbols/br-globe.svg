@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 504" width="720" height="504">
+  <defs>
+    <path id="s" d="M0,-1 L0.2245,-0.309 L0.9511,-0.309 L0.3633,0.118 L0.5878,0.809 L0,0.382 L-0.5878,0.809 L-0.3633,0.118 L-0.9511,-0.309 L-0.2245,-0.309 Z"/>
+  </defs>
+  <circle cx="360" cy="252" r="126" fill="#312783"/>
+  <g fill="#FFFFFF">
+    <use href="#s" transform="translate(257.0,229.2) scale(5.4)"/>
+    <use href="#s" transform="translate(268.1,282.2) scale(5.4)"/>
+    <use href="#s" transform="translate(309.3,318.7) scale(5.4)"/>
+    <use href="#s" transform="translate(359.9,308.4) scale(5.4)"/>
+    <use href="#s" transform="translate(398.9,212.8) scale(5.4)"/>
+    <use href="#s" transform="translate(448.1,296.0) scale(5.4)"/>
+    <use href="#s" transform="translate(252.7,293.5) scale(4.5)"/>
+    <use href="#s" transform="translate(294.3,294.8) scale(4.5)"/>
+    <use href="#s" transform="translate(311.9,256.9) scale(4.5)"/>
+    <use href="#s" transform="translate(359.9,272.1) scale(4.5)"/>
+    <use href="#s" transform="translate(374.4,283.4) scale(4.5)"/>
+    <use href="#s" transform="translate(397.6,336.7) scale(4.5)"/>
+    <use href="#s" transform="translate(422.9,333.7) scale(4.5)"/>
+    <use href="#s" transform="translate(445.6,317.3) scale(4.5)"/>
+    <use href="#s" transform="translate(453.3,307.2) scale(4.5)"/>
+    <use href="#s" transform="translate(290.6,307.2) scale(3.6)"/>
+    <use href="#s" transform="translate(347.2,283.4) scale(3.6)"/>
+    <use href="#s" transform="translate(387.6,322.5) scale(3.6)"/>
+    <use href="#s" transform="translate(394.2,245.5) scale(3.6)"/>
+    <use href="#s" transform="translate(408.4,325.6) scale(3.6)"/>
+    <use href="#s" transform="translate(422.4,321.3) scale(3.6)"/>
+    <use href="#s" transform="translate(422.8,346.3) scale(3.6)"/>
+    <use href="#s" transform="translate(435.5,323.7) scale(3.6)"/>
+    <use href="#s" transform="translate(465.6,297.3) scale(3.6)"/>
+    <use href="#s" transform="translate(280.5,274.5) scale(2.52)"/>
+    <use href="#s" transform="translate(353.5,292.2) scale(2.52)"/>
+    <use href="#s" transform="translate(359.9,350.5) scale(1.8)"/>
+  </g>
+</svg>

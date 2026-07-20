@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import Link from 'next/link'
 import { useLocale } from 'next-intl'
 
@@ -96,6 +96,14 @@ export default function BlogListPage({ posts }) {
 
   const [search,          setSearch]          = useState('')
   const [activeTag,       setActiveTag]        = useState(null)
+  const [isMobile,        setIsMobile]         = useState(false)
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768)
+    check()
+    window.addEventListener('resize', check)
+    return () => window.removeEventListener('resize', check)
+  }, [])
 
   // Derive tags
   const tags = useMemo(() => [...new Set(posts.flatMap(p => p.tags ?? []))].slice(0, 12), [posts])
@@ -173,21 +181,33 @@ export default function BlogListPage({ posts }) {
           </div>
         )}
 
-        {/* Featured article */}
+        {/* Featured article — responsive : 2 colonnes desktop, empilé mobile */}
         {featured && (
           <Link href={`/${locale}/blog/${featured.slug}`} style={{ textDecoration: 'none', display: 'block', marginBottom: '40px' }}>
             <article style={{
-              backgroundColor: '#fff', borderRadius: '20px', overflow: 'hidden',
-              border: '2px solid #E2DDD5', display: 'grid',
-              gridTemplateColumns: featured.coverImage ? '1fr 1fr' : '1fr',
+              backgroundColor: '#fff',
+              borderRadius: '20px',
+              overflow: 'hidden',
+              border: '2px solid #E2DDD5',
+              display: 'grid',
+              gridTemplateColumns: isMobile ? '1fr' : (featured.coverImage ? '1fr 1fr' : '1fr'),
             }}>
               {featured.coverImage && (
-                <div style={{ overflow: 'hidden', minHeight: '280px' }}>
-                  <img src={featured.coverImage} alt={featured.coverAlt}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <div style={{
+                  overflow: 'hidden',
+                  ...(isMobile
+                    ? { width: '100%', aspectRatio: '16/9' }
+                    : { minHeight: '280px' }
+                  ),
+                }}>
+                  <img
+                    src={featured.coverImage}
+                    alt={featured.coverAlt}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                  />
                 </div>
               )}
-              <div style={{ padding: '36px' }}>
+              <div style={{ padding: isMobile ? '24px 20px' : '36px' }}>
                 <div style={{ display: 'flex', gap: '8px', marginBottom: '14px' }}>
                   <span style={{ fontSize: '11px', fontWeight: '800', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#fff', backgroundColor: '#FEB12F', padding: '4px 10px', borderRadius: '99px' }}>
                     ✨ {t('Featured', 'À la une')}

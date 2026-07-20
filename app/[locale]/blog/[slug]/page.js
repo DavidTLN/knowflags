@@ -1,26 +1,54 @@
-// app/[locale]/blog/page.js
+// app/[locale]/blog/[slug]/page.js
 
-import BlogListPage from '@/components/blog/BlogListPage'
-import { getAllPosts } from '@/lib/contentful'
+import { notFound } from 'next/navigation'
+import BlogPostPage from '@/components/blog/BlogPostPage'
+import { getPostBySlug, getAllSlugs } from '@/lib/contentful'
 
 const BASE_URL = 'https://knowflags.com'
 
-export const revalidate = 60 // ISR — refresh every 60s after a new publish
+export const revalidate = 60 // ISR — même cadence que la liste
 
-// The listing page had no metadata at all: no title, no description,
-// no canonical and no hreflang.
+// ── Génération statique des slugs connus ──────────────────────────────────
+// Next.js pré-génère chaque article au build, et l'ISR (revalidate: 60)
+// s'occupe des articles ajoutés/modifiés après.
+export async function generateStaticParams() {
+  try {
+    const slugs = await getAllSlugs()
+    // Un article existe potentiellement en EN et en FR — on génère les 2 variantes.
+    return slugs.flatMap(slug => [
+      { locale: 'en', slug },
+      { locale: 'fr', slug },
+    ])
+  } catch (err) {
+    console.error('generateStaticParams (blog) error:', err?.message)
+    return []
+  }
+}
+
+// ── Metadata SEO ──────────────────────────────────────────────────────────
 export async function generateMetadata({ params }) {
-  const { locale } = await params
+  const { locale, slug } = await params
   const isFr = locale === 'fr'
 
-  const title = isFr
-    ? 'Blog — Drapeaux, vexillologie et géographie'
-    : 'Blog — Flags, vexillology and geography'
-  const description = isFr
-    ? "Articles sur les drapeaux du monde : histoire, symbolique, anecdotes et vexillologie. Comprendre ce que racontent les drapeaux."
-    : 'Articles about the flags of the world: history, symbolism, stories and vexillology. Understand what flags actually say.'
+  let post = null
+  try {
+    post = await getPostBySlug(slug, locale)
+  } catch (err) {
+    console.error('generateMetadata (blog post) error:', err?.message)
+  }
 
-  const url = `${BASE_URL}/${locale}/blog`
+  if (!post) {
+    return {
+      title: isFr ? 'Article introuvable — KnowFlags' : 'Article not found — KnowFlags',
+      robots: { index: false, follow: false },
+    }
+  }
+
+  const url = `${BASE_URL}/${locale}/blog/${slug}`
+  const title = `${post.title} — KnowFlags`
+  const description = post.excerpt || (isFr
+    ? 'Article du blog KnowFlags sur les drapeaux et la vexillologie.'
+    : 'KnowFlags blog post about flags and vexillology.')
 
   return {
     title,
@@ -28,53 +56,67 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical: url,
       languages: {
-        en: `${BASE_URL}/en/blog`,
-        fr: `${BASE_URL}/fr/blog`,
-        'x-default': `${BASE_URL}/en/blog`,
+        en: `${BASE_URL}/en/blog/${slug}`,
+        fr: `${BASE_URL}/fr/blog/${slug}`,
+        'x-default': `${BASE_URL}/en/blog/${slug}`,
       },
     },
     openGraph: {
-      type: 'website',
-      title,
+      type: 'article',
+      title: post.title,
       description,
       url,
       siteName: 'KnowFlags',
       locale: isFr ? 'fr_FR' : 'en_US',
-      images: [{ url: '/og-image.png', width: 1200, height: 630, alt: title }],
+      publishedTime: post.publishedAt,
+      modifiedTime: post.updatedAt || post.publishedAt,
+      tags: post.tags,
+      images: post.coverImage
+        ? [{ url: post.coverImage, alt: post.coverAlt || post.title }]
+        : [{ url: '/og-image.png', width: 1200, height: 630, alt: post.title }],
     },
-    twitter: { card: 'summary_large_image' },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description,
+      images: post.coverImage ? [post.coverImage] : ['/og-image.png'],
+    },
   }
 }
 
-export default async function BlogPage({ params }) {
-  const { locale } = await params
+// ── Page ───────────────────────────────────────────────────────────────────
+export default async function BlogArticlePage({ params }) {
+  const { locale, slug } = await params
 
-  let posts = []
+  let post = null
   try {
-    posts = await getAllPosts(locale)
+    post = await getPostBySlug(slug, locale)
   } catch (err) {
-    console.error('Contentful error:', err?.message)
+    console.error('BlogArticlePage error:', err?.message)
   }
 
-  const url = `${BASE_URL}/${locale}/blog`
+  if (!post) notFound()
 
-  // Blog structured data — helps Google associate the posts with the section.
+  const url = `${BASE_URL}/${locale}/blog/${slug}`
+
+  // JSON-LD BlogPosting — cohérent avec le JSON-LD Blog déjà présent sur la liste.
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Blog',
-    name: 'KnowFlags Blog',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
     url,
     inLanguage: locale,
-    blogPost: (posts || []).slice(0, 20).map(p => ({
-      '@type': 'BlogPosting',
-      headline: p.title,
-      description: p.excerpt,
-      url: `${BASE_URL}/${locale}/blog/${p.slug}`,
-      ...(p.coverImage ? { image: [p.coverImage] } : {}),
-      ...(p.publishedAt || p.date || p.publishDate
-        ? { datePublished: p.publishedAt || p.date || p.publishDate }
-        : {}),
-    })),
+    ...(post.coverImage ? { image: [post.coverImage] } : {}),
+    ...(post.publishedAt ? { datePublished: post.publishedAt } : {}),
+    ...(post.updatedAt ? { dateModified: post.updatedAt } : {}),
+    ...(post.tags?.length ? { keywords: post.tags.join(', ') } : {}),
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    publisher: {
+      '@type': 'Organization',
+      name: 'KnowFlags',
+      url: BASE_URL,
+    },
   }
 
   return (
@@ -83,7 +125,7 @@ export default async function BlogPage({ params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <BlogListPage posts={posts} />
+      <BlogPostPage post={post} />
     </>
   )
 }

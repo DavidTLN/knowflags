@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 const WIKI_FLAG_SLUGS = {
   'france-ile-de-france': 'Flag_of_Île-de-France',
@@ -98,73 +98,100 @@ const WIKI_FLAG_SLUGS = {
   'cologne': 'Flag_of_Cologne', 'frankfurt': 'Flag_of_Frankfurt', 'dresden': 'Flag_of_Dresden',
 }
 
-const wikiCache = {}
+// Cache : { url } si résolu (url peut être null si Wikimedia n'a pas d'image),
+// ou { promise } si la requête est en cours (déduplique les fetch simultanés).
+const wikiCache = new Map()
 
 async function fetchWikimediaUrl(slug) {
-  if (wikiCache[slug] !== undefined) return wikiCache[slug]
+  const cached = wikiCache.get(slug)
+  if (cached) {
+    if ('url' in cached) return cached.url
+    if ('promise' in cached) return cached.promise
+  }
+
   const wikiSlug = WIKI_FLAG_SLUGS[slug]
-  if (!wikiSlug) { wikiCache[slug] = null; return null }
-  try {
-    const res = await fetch(
-      `https://en.wikipedia.org/api/rest_v1/page/summary/${wikiSlug}`,
-      { headers: { 'Api-User-Agent': 'KnowFlags/1.0' } }
-    )
-    if (!res.ok) { wikiCache[slug] = null; return null }
-    const data = await res.json()
-    const url = data?.thumbnail?.source ?? data?.originalimage?.source ?? null
-    wikiCache[slug] = url
-    return url
-  } catch {
-    wikiCache[slug] = null
+  if (!wikiSlug) {
+    wikiCache.set(slug, { url: null })
     return null
   }
+
+  const promise = (async () => {
+    try {
+      const res = await fetch(
+        `https://en.wikipedia.org/api/rest_v1/page/summary/${wikiSlug}`,
+        { headers: { 'Api-User-Agent': 'KnowFlags/1.0' } }
+      )
+      if (!res.ok) return null
+      const data = await res.json()
+      return data?.thumbnail?.source ?? data?.originalimage?.source ?? null
+    } catch {
+      return null
+    }
+  })()
+
+  wikiCache.set(slug, { promise })
+  const url = await promise
+  wikiCache.set(slug, { url })
+  return url
 }
 
 /**
  * FlagImage — smart flag with automatic fallback chain:
- * 1. /public/{prefix}/{slug}.svg
- * 2. /public/{prefix}/{slug}.png
- * 3. Wikimedia REST API
- * 4. Acronym badge
+ *   1. /public/{prefix}/{slug}.svg
+ *   2. /public/{prefix}/{slug}.png
+ *   3. Wikimedia REST API
+ *   4. Acronym badge
+ *
+ * Uses an explicit state machine to avoid render loops.
  */
-export default function FlagImage({ slug, prefix = '/flags/regions', name, acronym, color = '#0B1F3B', width = 120, height = 80, style = {} }) {
-  const candidates = [`${prefix}/${slug}.svg`, `${prefix}/${slug}.png`]
-  const [tryIndex, setTryIndex] = useState(0)
-  const [wikiUrl, setWikiUrl]   = useState(null)
-  const [showBadge, setShowBadge] = useState(false)
+export default function FlagImage({
+  slug, prefix = '/flags/regions', name, acronym,
+  color = '#0B1F3B', width = 120, height = 80, style = {},
+}) {
+  // Une machine à états simple : on avance étape par étape, jamais en arrière.
+  // 'svg' → 'png' → 'wiki-loading' → 'wiki' (ou 'badge') → 'badge'
+  const [step, setStep]       = useState('svg')
+  const [wikiUrl, setWikiUrl] = useState(null)
 
+  // Ref pour ignorer les réponses obsolètes si le slug change en cours de fetch.
+  const currentSlugRef = useRef(slug)
+
+  // Reset propre à chaque changement de slug.
   useEffect(() => {
-    setTryIndex(0)
-    setShowBadge(false)
+    currentSlugRef.current = slug
+    setStep('svg')
     setWikiUrl(null)
-    if (slug) {
-      fetchWikimediaUrl(slug).then(url => setWikiUrl(url))
-    }
   }, [slug, prefix])
 
+  // Chargement Wikimedia UNIQUEMENT quand on atteint l'étape 'wiki-loading'.
+  // Plus de fetch parallèle inutile au montage.
+  useEffect(() => {
+    if (step !== 'wiki-loading' || !slug) return
+    let cancelled = false
+    fetchWikimediaUrl(slug).then(url => {
+      if (cancelled || currentSlugRef.current !== slug) return
+      if (url) {
+        setWikiUrl(url)
+        setStep('wiki')
+      } else {
+        setStep('badge')
+      }
+    })
+    return () => { cancelled = true }
+  }, [step, slug])
+
+  // Handler d'erreur : avance d'une étape, jamais de boucle.
   const handleError = () => {
-    const next = tryIndex + 1
-    if (next < candidates.length) {
-      setTryIndex(next)
-    } else if (wikiUrl) {
-      setTryIndex(candidates.length) // signal: use wikiUrl
-    } else {
-      // wiki may still be loading — wait
-      const poll = setInterval(() => {
-        if (wikiCache[slug] !== undefined) {
-          clearInterval(poll)
-          wikiCache[slug] ? setTryIndex(candidates.length) : setShowBadge(true)
-          if (wikiCache[slug]) setWikiUrl(wikiCache[slug])
-        }
-      }, 80)
-      // timeout after 5s
-      setTimeout(() => { clearInterval(poll); setShowBadge(true) }, 5000)
-    }
+    setStep(prev => {
+      if (prev === 'svg')  return 'png'
+      if (prev === 'png')  return 'wiki-loading'
+      if (prev === 'wiki') return 'badge'
+      return prev
+    })
   }
 
-  const currentSrc = tryIndex < candidates.length ? candidates[tryIndex] : wikiUrl
-
-  if (showBadge || !slug || (!currentSrc && tryIndex >= candidates.length)) {
+  // Badge fallback final (ou pas de slug).
+  if (step === 'badge' || !slug) {
     return (
       <div style={{
         width, height, display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -178,10 +205,32 @@ export default function FlagImage({ slug, prefix = '/flags/regions', name, acron
     )
   }
 
+  // Pendant la résolution Wikimedia, on garde le rendu du .png qui vient d'échouer
+  // caché : on affiche une div vide de la même taille pour éviter le flash.
+  if (step === 'wiki-loading') {
+    return (
+      <div style={{
+        width, height, backgroundColor: `${color}0A`,
+        borderRadius: '6px', flexShrink: 0, ...style,
+      }} />
+    )
+  }
+
+  const src =
+    step === 'svg'  ? `${prefix}/${slug}.svg`
+  : step === 'png'  ? `${prefix}/${slug}.png`
+  : step === 'wiki' ? wikiUrl
+  : null
+
+  if (!src) {
+    // Sécurité : ne devrait pas arriver, mais on tombe sur le badge.
+    return null
+  }
+
   return (
     <img
-      key={currentSrc}
-      src={currentSrc}
+      key={src}
+      src={src}
       alt={name || slug}
       onError={handleError}
       style={{ width, height, objectFit: 'contain', filter: 'drop-shadow(0 1px 4px rgba(0,0,0,0.12))', display: 'block', ...style }}

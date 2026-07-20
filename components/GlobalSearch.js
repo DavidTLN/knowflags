@@ -165,30 +165,78 @@ export default function GlobalSearch() {
   )
 
   // ── Mobile: icon button → top overlay ──────────────────────────────────────
+  // IMPORTANT iOS : l'input reste MONTÉ en permanence (juste caché quand fermé)
+  // et le focus() est appelé de manière STRICTEMENT SYNCHRONE dans le geste tap,
+  // sans setTimeout, pour que iOS Safari lève le clavier natif au premier tap.
   if (isMobile) {
+    const openMobile = () => {
+      // Focus AVANT le setState, dans le même tick que le tap utilisateur.
+      // iOS n'ouvre le clavier que si focus() est appelé de façon synchrone
+      // depuis un vrai geste utilisateur — pas depuis un useEffect ou un setTimeout.
+      inputRef.current?.focus()
+      setMobileOpen(true)
+    }
+
     return (
       <>
-        <button aria-label={t('Search', 'Rechercher')} onClick={() => { setMobileOpen(true); setTimeout(() => inputRef.current?.focus(), 30) }}
+        <button
+          aria-label={t('Search', 'Rechercher')}
+          onMouseDown={(e) => e.preventDefault()}  // évite que le bouton "vole" le focus au geste
+          onClick={openMobile}
           style={{ width: 40, height: 40, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'transparent', border: 'none', cursor: 'pointer', borderRadius: '10px' }}>
           <SearchIcon size={20} color="#FFFFFF" />
         </button>
-        {mobileOpen && (
-          <>
-            <div onClick={reset} style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(15,25,35,0.35)', zIndex: 1200 }} />
-            <div style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1300, backgroundColor: C.navy, padding: '10px 12px' }}>
-              <div ref={boxRef} style={{ position: 'relative' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', backgroundColor: C.surface, borderRadius: '10px', padding: '0 12px' }}>
-                  <SearchIcon />
-                  <input ref={inputRef} value={q} onChange={e => setQ(e.target.value)} onKeyDown={onKeyDown}
-                    placeholder={t('Search a country or article…', 'Rechercher un pays ou un article…')}
-                    style={{ flex: 1, border: 'none', outline: 'none', padding: '12px 0', fontSize: '15px', color: C.text, backgroundColor: 'transparent' }} />
-                  <button onClick={reset} style={{ background: 'transparent', border: 'none', color: C.muted, fontSize: '14px', fontWeight: 600, cursor: 'pointer' }}>{t('Cancel', 'Annuler')}</button>
-                </div>
-                {showPanel && <div style={{ marginTop: '8px' }}><Panel /></div>}
-              </div>
+
+        {/* Overlay + input toujours montés dans le DOM, visibilité contrôlée par mobileOpen */}
+        <div
+          onClick={reset}
+          style={{
+            position: 'fixed', inset: 0, backgroundColor: 'rgba(15,25,35,0.35)', zIndex: 1200,
+            opacity: mobileOpen ? 1 : 0,
+            visibility: mobileOpen ? 'visible' : 'hidden',
+            transition: 'opacity 0.18s ease',
+            pointerEvents: mobileOpen ? 'auto' : 'none',
+          }}
+        />
+        <div
+          style={{
+            position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1300,
+            backgroundColor: C.navy, padding: '10px 12px',
+            transform: mobileOpen ? 'translateY(0)' : 'translateY(-100%)',
+            transition: 'transform 0.2s ease',
+            pointerEvents: mobileOpen ? 'auto' : 'none',
+          }}
+          aria-hidden={!mobileOpen}
+        >
+          <div ref={boxRef} style={{ position: 'relative' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', backgroundColor: C.surface, borderRadius: '10px', padding: '0 12px' }}>
+              <SearchIcon />
+              <input
+                ref={inputRef}
+                value={q}
+                onChange={e => setQ(e.target.value)}
+                onKeyDown={onKeyDown}
+                type="search"
+                enterKeyHint="search"
+                autoComplete="off"
+                autoCorrect="off"
+                autoCapitalize="off"
+                spellCheck={false}
+                // tabIndex négatif quand fermé pour ne pas être atteignable au clavier
+                tabIndex={mobileOpen ? 0 : -1}
+                placeholder={t('Search a country or article…', 'Rechercher un pays ou un article…')}
+                style={{ flex: 1, border: 'none', outline: 'none', padding: '12px 0', fontSize: '16px', color: C.text, backgroundColor: 'transparent' }}
+              />
+              <button
+                onMouseDown={(e) => e.preventDefault()}
+                onClick={reset}
+                style={{ background: 'transparent', border: 'none', color: C.muted, fontSize: '14px', fontWeight: 600, cursor: 'pointer' }}>
+                {t('Cancel', 'Annuler')}
+              </button>
             </div>
-          </>
-        )}
+            {showPanel && <div style={{ marginTop: '8px' }}><Panel /></div>}
+          </div>
+        </div>
       </>
     )
   }

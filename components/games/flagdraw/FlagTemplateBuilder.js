@@ -13,7 +13,23 @@ const NEUTRAL = '#E8E6DF'
 const STROKE = 'rgba(22,50,79,0.28)'
 const DS = { navy: '#16324F', border: 'rgba(22,50,79,0.12)', borderSolid: '#E2DDD5', muted: '#6B7280', gold: '#F4B400', bg: '#F4F1E6', surface: '#FFFFFF', bgAlt: '#FAFAF7' }
 const PALETTE = ['#D62828', '#2563EB', '#16A34A', '#F4C400', '#FFFFFF', '#111827', '#EA580C', '#6B21A8']
-const RATIOS = [['3:2', '3 / 2'], ['2:1', '2 / 1'], ['5:3', '5 / 3'], ['4:3', '4 / 3'], ['1:1', '1 / 1']]
+// Ratios de drapeaux nationaux, du plus large au plus étroit.
+// Couvre tous les ratios réellement utilisés dans le monde.
+// - 28:11  Qatar (le plus allongé)
+// - 2:1    Royaume-Uni, Canada, Australie, Nouvelle-Zélande
+// - 19:10  Danemark, Norvège, Islande, Finlande
+// - 7:4    Iran
+// - 5:3    Allemagne, Estonie, Argentine, Chine
+// - 8:5    Suède
+// - 11:7   États-Unis
+// - 3:2    France, Italie, Espagne, Belgique (le plus commun mondialement)
+// - 7:5    Croatie, Pologne
+// - 4:3    Saint-Marin
+// - 14:11  Guinée-Bissau
+// - 1:1    Suisse, Vatican (carrés)
+// - 5:6    Népal (approximation rationnelle du ratio irrationnel ≈ 1:1.219)
+// - 3:4    Format portrait
+const RATIOS = [['28:11', '28 / 11'], ['2:1', '2 / 1'], ['19:10', '19 / 10'], ['7:4', '7 / 4'], ['5:3', '5 / 3'], ['8:5', '8 / 5'], ['11:7', '11 / 7'], ['3:2', '3 / 2'], ['7:5', '7 / 5'], ['4:3', '4 / 3'], ['14:11', '14 / 11'], ['1:1', '1 / 1'], ['5:6', '5 / 6'], ['3:4', '3 / 4']]
 const SYMBOL_COLORS = ['#D62828', '#FFFFFF', '#F4B400', '#16A34A', '#2563EB', '#111827']
 const ZONE_ASPECT = '3 / 2'   // zone de drapeau de taille fixe ; seul le drapeau varie dedans
 
@@ -158,13 +174,67 @@ const STRUCTURES = [
       { id: 'hoist', shapes: [poly([[0, 32], [96, 100], [0, 168]])] },
       { id: 'ypall', shapes: [{ type: 'path', d: 'M0 0 L128 88 L300 88 L300 112 L128 112 L0 200 L0 168 L96 100 L0 32 Z' }] },
     ] },
-  { id: 'nepal', label: { en: 'Nepal', fr: 'Népal' },
+  { id: 'double-pennant', label: { en: 'Double-pennant', fr: 'Double fanion' },
     options: {},
     regions: () => {
-      const outer = [[12, 10], [188, 96], [110, 110], [290, 168], [12, 190]]
-      const cx = outer.reduce((a, p) => a + p[0], 0) / outer.length
-      const cy = outer.reduce((a, p) => a + p[1], 0) / outer.length
-      const inner = outer.map(([x, y]) => [cx + (x - cx) * 0.82, cy + (y - cy) * 0.82])
+      // Vraie silhouette du drapeau népalais selon la Constitution du Népal
+      // (Article 5, Schedule 1).
+      //
+      // Approche : on définit la silhouette rouge (inner), puis on calcule
+      // la silhouette bleue extérieure (outer) par offset perpendiculaire
+      // vers l'EXTÉRIEUR de chaque arête. La silhouette bleue déborde de la
+      // silhouette rouge de BORDER pixels tout autour. Le SVG parent utilise
+      // un viewBox élargi pour cette forme afin de tout inclure sans clip.
+      //
+      // Construction officielle en unités où AB = 1 :
+      //   C = (0, 4/3)           haut-gauche du hoist
+      //   G = (1, √2/2)          pointe fanion supérieur
+      //   E = (1 - √2/2, √2/2)   creux central
+      //   B = (1, 0)             pointe fanion inférieur
+      //   A = (0, 0)             bas-gauche du hoist
+      //
+      // Mise à l'échelle : AB = H × 3/4 = 150, hauteur du drapeau = 200.
+      const AB = H * 3 / 4                                 // 150
+      const SQRT2 = Math.SQRT2
+      const BORDER = 14                                    // épaisseur bordure bleue
+
+      // Silhouette rouge (5 sommets, sens horaire en SVG)
+      const inner = [
+        [0,  0],                                            // C
+        [AB, H - AB * SQRT2 / 2],                           // G
+        [AB * (1 - SQRT2 / 2), H - AB * SQRT2 / 2],         // E
+        [AB, H],                                            // B
+        [0,  H],                                            // A
+      ]
+
+      // Silhouette bleue : offset perpendiculaire vers l'extérieur.
+      // Pour un polygone parcouru dans le sens horaire (repère SVG),
+      // la normale extérieure d'une arête P1→P2 est (dy, -dx) normalisée.
+      const outer = (() => {
+        const n = inner.length
+        // Étape 1 : calculer les lignes des arêtes décalées vers l'extérieur.
+        const edges = []
+        for (let i = 0; i < n; i++) {
+          const p1 = inner[i], p2 = inner[(i + 1) % n]
+          const dx = p2[0] - p1[0], dy = p2[1] - p1[1]
+          const L = Math.hypot(dx, dy)
+          const nx = dy / L, ny = -dx / L                   // normale extérieure
+          // Ligne décalée : ax + by = c avec (a, b) = (nx, ny)
+          const c = nx * (p1[0] + nx * BORDER) + ny * (p1[1] + ny * BORDER)
+          edges.push([nx, ny, c])
+        }
+        // Étape 2 : intersecter les arêtes adjacentes pour trouver les sommets.
+        const res = []
+        for (let i = 0; i < n; i++) {
+          const [a1, b1, c1] = edges[(i - 1 + n) % n]
+          const [a2, b2, c2] = edges[i]
+          const det = a1 * b2 - a2 * b1
+          if (Math.abs(det) < 1e-9) { res.push(inner[i]); continue }
+          res.push([(c1 * b2 - c2 * b1) / det, (a1 * c2 - a2 * c1) / det])
+        }
+        return res
+      })()
+
       return [{ id: 'border', shapes: [poly(outer)] }, { id: 'field', shapes: [poly(inner)] }]
     } },
 ]
@@ -174,7 +244,7 @@ const defaultOpts = (s) => Object.fromEntries(Object.entries(s.options).map(([k,
 function symbolAnchor(id, o) {
   if (id === 'triangle') { const d = { S: 0.28, M: 0.42, L: 0.58 }[o.depth] * W; return { x: d * 0.36, y: H / 2, size: 46 } }
   if (id === 'vband') { const bw = { S: 0.22, M: 0.30, L: 0.40 }[o.width] * W; return { x: bw / 2, y: H / 2, size: 40 } }
-  if (id === 'nepal') return { x: 60, y: 52, size: 24 }
+  if (id === 'double-pennant') return { x: 60, y: 52, size: 24 }
   if (id === 'canton' || (id === 'plain' && o.canton !== 'none')) return { x: W / 2, y: H / 2, size: 58 }
   if (id === 'rhombus') return { x: W / 2, y: H / 2, size: 66 }
   return { x: W / 2, y: H / 2, size: 60 }
@@ -197,16 +267,33 @@ function StructureSVG({ structure, options, colors, onFill, thumb, symbol, symbo
   const clipId = useId()
   const regions = useMemo(() => structure.regions(options), [structure, options])
 
+  // Le drapeau népalais est le seul non-rectangulaire : on masque le fond
+  // et le contour du canvas pour n'afficher que sa silhouette. De plus, sa
+  // bordure bleue déborde du canvas W×H standard — on utilise donc un viewBox
+  // élargi pour l'inclure entièrement.
+  const isNonRect = structure.id === 'double-pennant'
+  // viewBox pour le drapeau népalais : englobe la silhouette bleue (offset
+  // extérieur de ~14px sur les côtés obliques, ~27px au sommet C, ~14px à la base)
+  // avec 2px de marge de sécurité tout autour.
+  const npVB = { x: -16, y: -29, w: 212, h: 245 }
+
   // Mode canvas : drapeau au ratio r, CONTENU (meet) dans sa zone -> jamais de débordement, la zone ne bouge pas
   if (aspect) {
     const r = typeof aspect === 'number' ? aspect : (() => { const p = String(aspect).split('/'); return parseFloat(p[0]) / parseFloat(p[1] || '1') })()
     const vh = Math.max(1, Math.round(W / (r || 1.5)))
     const sy = vh / H
+    // Pour double-pennant, on utilise un viewBox élargi qui englobe la bordure
+    // débordante ET qui respecte la hauteur ajustée au ratio (vh).
+    // Le viewBox garde la même marge extérieure (16px à gauche, 29px en haut,
+    // et 2px symétriques verticalement) mais adapte sa hauteur totale à vh.
+    const vb = isNonRect
+      ? `${npVB.x} ${npVB.y} ${npVB.w} ${vh - npVB.y * 2}`
+      : `0 0 ${W} ${vh}`
     return (
-      <svg viewBox={`0 0 ${W} ${vh}`} preserveAspectRatio="xMidYMid meet" width="100%" height="100%" style={{ display: 'block' }}>
+      <svg viewBox={vb} preserveAspectRatio="xMidYMid meet" width="100%" height="100%" style={{ display: 'block' }}>
         <defs><clipPath id={clipId}><rect x="0" y="0" width={W} height={vh} rx="8" /></clipPath></defs>
-        <g clipPath={`url(#${clipId})`}>
-          <rect x="0" y="0" width={W} height={vh} fill={NEUTRAL} />
+        <g clipPath={isNonRect ? undefined : `url(#${clipId})`}>
+          {!isNonRect && <rect x="0" y="0" width={W} height={vh} fill={NEUTRAL} />}
           <g transform={`scale(1 ${sy})`}>
             {regions.map((rg) => {
               const fill = colors?.[rg.id] || NEUTRAL
@@ -217,14 +304,15 @@ function StructureSVG({ structure, options, colors, onFill, thumb, symbol, symbo
             ? <image href={symbolUrl} x={symbol.x - symbol.size / 2} y={symbol.y * sy - symbol.size / 2} width={symbol.size} height={symbol.size} preserveAspectRatio="xMidYMid meet" />
             : <polygon points={pts(starPts(symbol.x, symbol.y * sy, symbol.size / 2))} fill={symbolColor || DS.gold} stroke="rgba(0,0,0,0.25)" strokeWidth="1" />)}
         </g>
-        <rect x="1" y="1" width={W - 2} height={vh - 2} rx="8" fill="none" stroke={DS.borderSolid} strokeWidth="2" />
+        {!isNonRect && <rect x="1" y="1" width={W - 2} height={vh - 2} rx="8" fill="none" stroke={DS.borderSolid} strokeWidth="2" />}
       </svg>
     )
   }
 
   // Mode vignette / défaut
+  const vbDefault = isNonRect ? `${npVB.x} ${npVB.y} ${npVB.w} ${npVB.h}` : `0 0 ${W} ${H}`
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} width="100%" style={{ display: 'block', borderRadius: thumb ? 4 : 10, border: thumb ? 'none' : `2px solid ${DS.borderSolid}`, background: NEUTRAL }}>
+    <svg viewBox={vbDefault} preserveAspectRatio="xMidYMid meet" width="100%" style={{ display: 'block', borderRadius: thumb ? 4 : 10, border: (thumb || isNonRect) ? 'none' : `2px solid ${DS.borderSolid}`, background: isNonRect ? 'transparent' : NEUTRAL }}>
       {regions.map((rg, i) => {
         const neutral = thumb ? ['#DAD8D0', '#C9C7BE', '#BCBAB0', '#ADABA1'][i % 4] : NEUTRAL
         const fill = colors?.[rg.id] || neutral

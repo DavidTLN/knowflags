@@ -295,7 +295,7 @@ export default function TrueSizeMap() {
   const svgRef               = useRef(null)
   const topoRef              = useRef(null)
   const continentFeaturesRef = useRef({})
-  const drag                 = useRef({ on: false, id: null, x: 0, y: 0 })
+  const drag                 = useRef({ on: false, id: null, x: 0, y: 0, pointerId: null })
 
   const [loaded, setLoaded]             = useState(false)
   const [overlays, setOverlays]         = useState([])
@@ -422,8 +422,15 @@ export default function TrueSizeMap() {
       }
       fill.style.cursor = 'grab'
       fill.style.pointerEvents = 'all'
+      // CRUCIAL : touch-action:none dès la création du path, pas au pointerdown.
+      // C'est ce qui empêche Android d'interpréter le geste comme un scroll de carte
+      // pendant les premiers pixels de mouvement.
       fill.style.touchAction = 'none'
+      fill.setAttribute('touch-action', 'none')
       if (dragHandlers.current) {
+        // touchstart avec passive:false permet de preventDefault et de gagner le geste
+        // AVANT que Leaflet ou le navigateur ne le réclament.
+        fill.addEventListener('touchstart', dragHandlers.current.onTouchStart, { passive: false })
         fill.addEventListener('pointerdown', dragHandlers.current.onPointerDown)
         fill.addEventListener('mouseenter', () => { svg.style.cursor = 'grab' })
         fill.addEventListener('mouseleave', () => { if (!drag.current.on) svg.style.cursor = '' })
@@ -566,33 +573,58 @@ export default function TrueSizeMap() {
     if (!map || !svg) return
 
     svg.style.pointerEvents = 'none'
+    // Le SVG parent doit aussi être en touch-action:none pour que la décision
+    // d'Android ne remonte pas au conteneur.
+    svg.style.touchAction = 'none'
+    svg.setAttribute('touch-action', 'none')
 
-    const onPointerDown = (e) => {
-      const id = Number(e.currentTarget.getAttribute('data-id'))
-      e.preventDefault()
-      e.stopPropagation()
-      try { e.currentTarget.setPointerCapture?.(e.pointerId) } catch {}
-      const clientX = e.clientX ?? e.touches?.[0]?.clientX ?? 0
-      const clientY = e.clientY ?? e.touches?.[0]?.clientY ?? 0
-      drag.current = { on: true, id, x: clientX, y: clientY }
+    const startDrag = (id, clientX, clientY, pointerId) => {
+      drag.current = { on: true, id, x: clientX, y: clientY, pointerId: pointerId ?? null }
       setSelectedId(id)
       svg.style.cursor = 'grabbing'
+      // Bloquer Leaflet TOUT DE SUITE : dragging, zoom, tap.
       map.dragging.disable()
       map.scrollWheelZoom.disable()
       map.doubleClickZoom.disable()
+      if (map.tap) map.tap.disable()  // handler tap mobile de Leaflet
       try { map.getContainer().style.touchAction = 'none' } catch {}
     }
 
-    const onDocPointerMove = (e) => {
-      if (!drag.current.on) return
+    // Handler touch : appelé AVANT pointerdown sur Android, avec preventDefault
+    // pour empêcher Android de démarrer un scroll de la carte.
+    const onTouchStart = (e) => {
+      const id = Number(e.currentTarget.getAttribute('data-id'))
+      if (!id) return
+      // preventDefault dans un touchstart non-passif = on gagne le geste.
       e.preventDefault()
+      e.stopPropagation()
+      const touch = e.touches[0]
+      if (!touch) return
+      startDrag(id, touch.clientX, touch.clientY, null)
+    }
+
+    const onPointerDown = (e) => {
+      const id = Number(e.currentTarget.getAttribute('data-id'))
+      if (!id) return
+      e.preventDefault()
+      e.stopPropagation()
+      // Si drag déjà démarré par touchstart, on ignore le pointerdown redondant
+      // (Android envoie les deux pour un touch).
+      if (drag.current.on && drag.current.id === id) return
+      startDrag(id, e.clientX, e.clientY, e.pointerId)
+    }
+
+    // Move : on écoute à la fois pointermove ET touchmove pour couvrir tous les
+    // navigateurs Android (certains n'émettent pas pointermove après un touchstart
+    // qui a fait preventDefault).
+    const applyMove = (clientX, clientY) => {
+      if (!drag.current.on) return
       const ov = ovRef.current.find(o => o.id === drag.current.id)
       if (!ov) return
 
       const proj = buildProjFromMap()
       if (!proj) return
-      const clientX = e.clientX ?? e.touches?.[0]?.clientX ?? drag.current.x
-      const clientY = e.clientY ?? e.touches?.[0]?.clientY ?? drag.current.y
+
       const [curPx, curPy] = proj([ov.destLon, ov.destLat])
       const nc = proj.invert([curPx + (clientX - drag.current.x), curPy + (clientY - drag.current.y)])
       if (!nc) return
@@ -610,29 +642,56 @@ export default function TrueSizeMap() {
       setOverlays(updated)
     }
 
-    const onDocPointerUp = () => {
+    const onDocPointerMove = (e) => {
+      if (!drag.current.on) return
+      e.preventDefault()
+      applyMove(e.clientX, e.clientY)
+    }
+
+    const onDocTouchMove = (e) => {
+      if (!drag.current.on) return
+      e.preventDefault()
+      const touch = e.touches[0]
+      if (!touch) return
+      applyMove(touch.clientX, touch.clientY)
+    }
+
+    const endDrag = () => {
       if (!drag.current.on) return
       drag.current.on = false
+      drag.current.pointerId = null
       svg.style.cursor = ''
       map.dragging.enable()
       map.scrollWheelZoom.enable()
       map.doubleClickZoom.enable()
-      try { map.getContainer().style.touchAction = 'none' } catch {}
+      if (map.tap) map.tap.enable()
     }
 
-    dragHandlers.current = { onPointerDown }
+    const onDocPointerUp = () => endDrag()
+    const onDocTouchEnd  = () => endDrag()
+
+    dragHandlers.current = { onPointerDown, onTouchStart }
+
+    // Écouteurs globaux non-passifs pour pouvoir preventDefault sur touchmove.
     document.addEventListener('pointermove', onDocPointerMove, { passive: false })
     document.addEventListener('pointerup',   onDocPointerUp)
     document.addEventListener('pointercancel', onDocPointerUp)
+    document.addEventListener('touchmove',   onDocTouchMove,  { passive: false })
+    document.addEventListener('touchend',    onDocTouchEnd)
+    document.addEventListener('touchcancel', onDocTouchEnd)
 
     return () => {
       dragHandlers.current = null
       document.removeEventListener('pointermove', onDocPointerMove)
       document.removeEventListener('pointerup',   onDocPointerUp)
       document.removeEventListener('pointercancel', onDocPointerUp)
+      document.removeEventListener('touchmove',   onDocTouchMove)
+      document.removeEventListener('touchend',    onDocTouchEnd)
+      document.removeEventListener('touchcancel', onDocTouchEnd)
       map.dragging.enable()
       map.scrollWheelZoom.enable()
       map.doubleClickZoom.enable()
+      if (map.tap) map.tap.enable()
     }
   }, [loaded, buildProjFromMap])
 

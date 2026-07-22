@@ -1,6 +1,2 @@
-﻿km-crescent-stars
-ir-takbir
-kz-sun-eagle
-ki-frigatebird
+﻿ki-frigatebird
 ki-sun
-pe-coat-of-arms

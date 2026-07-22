@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="206.2500 61.7500 187.5000 100.2500" width="1125.00" height="601.50">
+<defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:black;stroke-width:0.15;stroke-miterlimit:22.9256}
+    .str1 {stroke:black;stroke-width:0.46;stroke-miterlimit:22.9256}
+    .fil1 {fill:#f8d000}
+    .fil3 {fill:none}
+    .fil4 {fill:black}
+    .fil5 {fill:none;fill-rule:nonzero}
+   ]]>
+   </style>
+ </defs><clipPath id="horizon" clipPathUnits="userSpaceOnUse"><rect x="200" y="55" width="200" height="107"/></clipPath><g clip-path="url(#horizon)" fill="#f8d000" stroke="black" stroke-width="0.46" stroke-miterlimit="22.9256">
+    <g id="rays_6">
+      <g id="rays_2" transform="rotate(-84.706,300,156)">
+        <path id="wavy" d="M290.63,105.87 A 50,50 0 0,1 300,66 A 50,50 0 0,0 309.37,105.87" transform="rotate(13.4,300,156)"/>
+        <path id="straight" d="M290.63,105.87 300,63 309.37,105.87"/>
+      </g>
+      <use xlink:href="#rays_2" transform="rotate(21.18,300,156)"/>
+      <use xlink:href="#rays_2" transform="rotate(42.35,300,156)"/>
+    </g>
+    <use xlink:href="#rays_6" transform="rotate(63.53,300,156)"/>
+    <use xlink:href="#rays_6" transform="rotate(127.06,300,156)"/>
+    <circle cx="300" cy="156" r="51"/>
+  </g>
+      
+</svg>

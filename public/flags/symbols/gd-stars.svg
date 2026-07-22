@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="131.4375 1.5000 237.1250 293.2812" width="948.50" height="1173.12">
+<defs><path id="a" d="m150 259.5-11.462 35.276 30.007-21.802h-37.091l30.007 21.802z"/></defs>
+<use xlink:href="#a" fill="#fcd116"/>
+<use xlink:href="#a" x="100" fill="#fcd116"/>
+<use xlink:href="#a" x="200" fill="#fcd116"/>
+<use xlink:href="#a" x="200" y="-258" fill="#fcd116"/>
+<use xlink:href="#a" x="100" y="-258" fill="#fcd116"/>
+<use xlink:href="#a" y="-258" fill="#fcd116"/>
+</svg>

@@ -403,6 +403,8 @@ function symbolGlyph(name) {
   if (has('snake', 'serpent'))                       return wrap(<path d="M17 5c-3 0-3 3-5 3S9 5 6 5 4 8 7 9s5 1 5 4-3 3-5 3" fill="none" />)
   if (has('trident'))                                return wrap(<><line x1="12" y1="8" x2="12" y2="21" /><path d="M7 5v3.5M12 4v4.5M17 5v3.5" /><path d="M7 8.5a5 5 0 0 0 10 0" /></>)
   if (has('ship', 'boat', 'vessel'))                 return wrap(<><path d="M4 14h16l-2.2 5H6.2z" fill="currentColor" stroke="none" /><line x1="12" y1="3" x2="12" y2="14" /><path d="M12.5 4.5l5 2-5 2z" fill="currentColor" stroke="none" /></>)
+  if (has('temple', 'angkor', 'pagoda', 'shrine'))    return wrap(<><path d="M12 3l7 4H5z" fill="currentColor" stroke="none" /><path d="M7 7v10M12 7v10M17 7v10" /><rect x="4" y="17" width="16" height="3" rx="1" fill="currentColor" stroke="none" /></>)
+  if (has('map', 'island', 'outline', 'territory'))  return wrap(<path d="M4 7l5-2 6 2 5-2v12l-5 2-6-2-5 2z" />)
   if (has('mosque'))                                 return wrap(<><path d="M6 20v-6a6 6 0 0 1 12 0v6" /><path d="M12 3.5c1.2.9 1.2 2.6 0 3.5-1.2-.9-1.2-2.6 0-3.5z" fill="currentColor" stroke="none" /><line x1="4.5" y1="20" x2="19.5" y2="20" /></>)
   if (has('book', 'bible', 'scroll', 'koran'))       return wrap(<><path d="M12 6.5C10.5 5.2 8 5 6 5v12c2 0 4.5.2 6 1.5" /><path d="M12 6.5C13.5 5.2 16 5 18 5v12c-2 0-4.5.2-6 1.5" /></>)
   if (has('shahada', 'inscription', 'script', 'calligraph', 'text', 'arabic', 'takbir'))
@@ -434,14 +436,38 @@ function symbolSlug(name) {
 
 // Symbol icon: a custom uploaded icon (/flags/symbols/{slug}.svg|png, forced white on the navy tile),
 // falling back to the generated glyph, then the first letter.
-function SymbolBadge({ slug, fallback }) {
+// keepColor: render the artwork as-is on a light tile instead of forcing it
+// white on navy. Set "color": true on a display_symbols entry to opt in —
+// useful for artwork that loses its meaning as a silhouette (Lebanon's cedar,
+// a multi-coloured coat of arms).
+// size   : tile side in px — grows when the disclosure is open
+// keepColor: show the artwork as-is on a light tile instead of a white
+//            silhouette on navy. Detailed emblems also fill more of the tile.
+function SymbolBadge({ slug, fallback, keepColor = true, size = 40 }) {
   const exts = ['svg', 'png']
   const [idx, setIdx] = useState(0)
   const src = slug && idx < exts.length ? `/flags/symbols/${slug}.${exts[idx]}` : null
+  const inner = Math.round(size * (keepColor ? 0.92 : 0.78))
   return (
-    <span style={{ width: '40px', height: '40px', borderRadius: '10px', backgroundColor: DS.navy, color: '#fff', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '17px', fontWeight: '800' }}>
+    <span style={{
+      width: `${size}px`, height: `${size}px`, flexShrink: 0,
+      borderRadius: `${Math.max(10, Math.round(size * 0.22))}px`,
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      fontSize: `${Math.round(size * 0.42)}px`, fontWeight: '800',
+      backgroundColor: keepColor ? '#F4F1E8' : DS.navy,
+      color: keepColor ? DS.navy : '#fff',
+      border: keepColor ? `1px solid ${DS.border}` : 'none',
+      transition: 'width 0.22s ease, height 0.22s ease, border-radius 0.22s ease',
+    }}>
       {src
-        ? <img src={src} alt="" onError={() => setIdx(i => i + 1)} style={{ width: '30px', height: '30px', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
+        ? <img src={src} alt="" onError={() => setIdx(i => i + 1)}
+            style={{ width: `${inner}px`, height: `${inner}px`, objectFit: 'contain',
+                     transition: 'width 0.22s ease, height 0.22s ease',
+                     // Safety net: a light or white artwork would vanish on the
+                     // cream tile, so give it a faint outline.
+                     filter: keepColor
+                       ? 'drop-shadow(0 0 1px rgba(22,50,79,0.55))'
+                       : 'brightness(0) invert(1)' }} />
         : fallback}
     </span>
   )
@@ -508,14 +534,22 @@ function DesignSpecs({ country, locale }) {
     if (!m) return null
     return locale === 'fr' ? (m.fr || m.en) : (m.en || m.fr)
   }
+  // "+" when collapsed, "−" when expanded. marginTop keeps it on the same line
+  // as the title whatever the badge size, so the button never moves.
   const plusBtn = (isOpen) => (
-    <span aria-hidden="true" style={{ width: '26px', height: '26px', borderRadius: '8px', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: isOpen ? DS.navy : DS.surface, border: `1px solid ${isOpen ? DS.navy : DS.border}`, color: isOpen ? '#fff' : DS.navy, transition: 'all 0.18s ease' }}>
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" style={{ transform: isOpen ? 'rotate(45deg)' : 'none', transition: 'transform 0.18s ease' }}>
-        <line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" />
+    <span aria-hidden="true" style={{ width: '26px', height: '26px', borderRadius: '8px', flexShrink: 0, marginTop: '7px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: isOpen ? DS.navy : DS.surface, border: `1px solid ${isOpen ? DS.navy : DS.border}`, color: isOpen ? '#fff' : DS.navy, transition: 'background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease' }}>
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round">
+        <line x1="5" y1="12" x2="19" y2="12" />
+        {!isOpen && <line x1="12" y1="5" x2="12" y2="19" />}
       </svg>
     </span>
   )
-  const disclosure = (key, meaning, headerInner) => {
+  // Layout: [badge] [title / definition] [+ button].
+  // Title and definition share one column so they stay left-aligned on the
+  // same edge, and that edge follows the badge width as it grows.
+  const OPEN_SIZE = 108
+  const SHUT_SIZE = 40
+  const disclosure = (key, meaning, renderBadge, labelNode) => {
     const isOpen = open.has(key)
     const clickable = !!meaning
     return (
@@ -526,16 +560,19 @@ function DesignSpecs({ country, locale }) {
           aria-expanded={clickable ? isOpen : undefined}
           onClick={clickable ? () => toggle(key) : undefined}
           onKeyDown={clickable ? (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(key) } } : undefined}
-          style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '9px 12px', minHeight: '44px', boxSizing: 'border-box', cursor: clickable ? 'pointer' : 'default' }}
+          style={{ display: 'flex', alignItems: 'flex-start', gap: '14px', padding: '9px 12px', minHeight: '44px', boxSizing: 'border-box', cursor: clickable ? 'pointer' : 'default' }}
         >
-          {headerInner}
+          {typeof renderBadge === 'function' ? renderBadge(isOpen) : renderBadge}
+          <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center', minHeight: `${SHUT_SIZE}px` }}>
+            {labelNode}
+            {clickable && (
+              <div style={{ maxHeight: isOpen ? '460px' : '0', opacity: isOpen ? 1 : 0, transition: 'max-height 0.28s ease, opacity 0.2s ease', overflow: 'hidden' }}>
+                <p style={{ margin: '3px 0 0', fontSize: '13px', color: DS.navy, lineHeight: 1.6 }}>{meaning}</p>
+              </div>
+            )}
+          </div>
           {clickable && plusBtn(isOpen)}
         </div>
-        {clickable && (
-          <div style={{ maxHeight: isOpen ? '360px' : '0', opacity: isOpen ? 1 : 0, transition: 'max-height 0.28s ease, opacity 0.2s ease', overflow: 'hidden' }}>
-            <p style={{ margin: 0, padding: '0 14px 13px 54px', fontSize: '13px', color: DS.navy, lineHeight: 1.6 }}>{meaning}</p>
-          </div>
-        )}
       </div>
     )
   }
@@ -566,16 +603,21 @@ function DesignSpecs({ country, locale }) {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             {colors.map(c => {
               const hex = colorMeanings[String(c).toLowerCase()]?.hex || COLOR_HEX[String(c).toLowerCase()] || '#cccccc'
-              const header = (
-                <>
-                  <span style={{ width: '40px', height: '40px', borderRadius: '10px', backgroundColor: hex, border: String(c).toLowerCase() === 'white' ? `1px solid ${DS.border}` : 'none', flexShrink: 0 }} />
-                  <span style={{ flex: 1, minWidth: 0, display: 'flex', alignItems: 'baseline', gap: '8px', flexWrap: 'wrap' }}>
-                    <span style={{ fontSize: '14px', fontWeight: '700', color: DS.navy }}>{labelColor(c, locale)}</span>
-                    <code style={{ fontSize: '11px', fontFamily: 'monospace', color: DS.muted, textTransform: 'uppercase' }}>{hex}</code>
-                  </span>
-                </>
+              const badge = (isOpen) => (
+                <span style={{
+                  width: `${isOpen ? OPEN_SIZE : SHUT_SIZE}px`, height: `${isOpen ? OPEN_SIZE : SHUT_SIZE}px`,
+                  borderRadius: isOpen ? '18px' : '10px', backgroundColor: hex, flexShrink: 0,
+                  border: String(c).toLowerCase() === 'white' ? `1px solid ${DS.border}` : 'none',
+                  transition: 'width 0.22s ease, height 0.22s ease, border-radius 0.22s ease',
+                }} />
               )
-              return disclosure('c:' + c, meaningOf(colorMeanings, c), header)
+              const labelNode = (
+                <span style={{ display: 'flex', alignItems: 'baseline', gap: '8px', flexWrap: 'wrap' }}>
+                  <span style={{ fontSize: '14px', fontWeight: '700', color: DS.navy }}>{labelColor(c, locale)}</span>
+                  <code style={{ fontSize: '11px', fontFamily: 'monospace', color: DS.muted, textTransform: 'uppercase' }}>{hex}</code>
+                </span>
+              )
+              return disclosure('c:' + c, meaningOf(colorMeanings, c), badge, labelNode)
             })}
           </div>
         </div>
@@ -589,24 +631,28 @@ function DesignSpecs({ country, locale }) {
               ? displaySymbols.map((d, i) => {
                   const label = locale === 'fr' ? (d.fr || d.en) : (d.en || d.fr)
                   const meaning = d.meaning ? (locale === 'fr' ? (d.meaning.fr || d.meaning.en) : (d.meaning.en || d.meaning.fr)) : null
-                  const slug = d.icon === null ? null : (d.icon || `${country.code}-${symbolSlug(d.glyph || label)}`)
-                  const header = (
-                    <>
-                      <SymbolBadge slug={slug} fallback={symbolGlyph(d.glyph || label) || String(label).charAt(0).toUpperCase()} />
-                      <span style={{ fontSize: '14px', fontWeight: '700', color: DS.navy, flex: 1 }}>{label}</span>
-                    </>
+                  // "icon": null -> use the drawn glyph, never look for a file
+                  const slug = d.icon === null
+                    ? null
+                    : (d.icon || `${country.code}-${symbolSlug(d.glyph || label)}`)
+                  // Artwork keeps its own colours by default. "color": false
+                  // forces the white-on-navy silhouette — required for shared
+                  // files such as nordic-cross, whose seven countries do not
+                  // share the same colours.
+                  const inColour = d.color !== false
+                  const badge = (isOpen) => (
+                    <SymbolBadge slug={slug} keepColor={inColour} size={isOpen ? OPEN_SIZE : SHUT_SIZE} fallback={symbolGlyph(d.glyph || label) || String(label).charAt(0).toUpperCase()} />
                   )
-                  return disclosure('d:' + i, meaning, header)
+                  const labelNode = <span style={{ fontSize: '14px', fontWeight: '700', color: DS.navy }}>{label}</span>
+                  return disclosure('d:' + i, meaning, badge, labelNode)
                 })
               : symbols.map(sy => {
                   const label = labelSymbol(sy, locale)
-                  const header = (
-                    <>
-                      <SymbolBadge slug={`${country.code}-${symbolSlug(sy)}`} fallback={symbolGlyph(sy) || String(label).charAt(0).toUpperCase()} />
-                      <span style={{ fontSize: '14px', fontWeight: '700', color: DS.navy, flex: 1 }}>{label}</span>
-                    </>
+                  const badge = (isOpen) => (
+                    <SymbolBadge slug={`${country.code}-${symbolSlug(sy)}`} keepColor={true} size={isOpen ? OPEN_SIZE : SHUT_SIZE} fallback={symbolGlyph(sy) || String(label).charAt(0).toUpperCase()} />
                   )
-                  return disclosure('s:' + sy, meaningOf(symbolMeanings, sy), header)
+                  const labelNode = <span style={{ fontSize: '14px', fontWeight: '700', color: DS.navy }}>{label}</span>
+                  return disclosure('s:' + sy, meaningOf(symbolMeanings, sy), badge, labelNode)
                 })}
           </div>
         </div>

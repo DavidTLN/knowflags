@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="391.35846"
+   height="513.56805"
+   viewBox="0 0 9245.8435 12133.046"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="ZZ1.svg">
+  <metadata
+     id="metadata23">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1280"
+     inkscape:window-height="1004"
+     id="namedview21"
+     showgrid="false"
+     inkscape:zoom="1.0429825"
+     inkscape:cx="392.04481"
+     inkscape:cy="315.23201"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs6">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 320 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="1280 : 320 : 1"
+       inkscape:persp3d-origin="640 : 213.33333 : 1"
+       id="perspective25" />
+    <polygon
+       points="3.9049537,8.1087198 0,4 -3.9049537,8.1087198 -3.1273259,2.4939592 -8.7743512,2.0026884 -3.8997116,-0.89008374 -7.0364833,-5.6114082 -1.735535,-3.6038755 0,-9 0,-9 1.735535,-3.6038755 7.0364833,-5.6114082 3.8997116,-0.89008374 8.7743512,2.0026884 3.1273259,2.4939592 "
+       id="Star7" />
+    <polygon
+       points="-5.2900673,7.2811529 -3.8042261,1.236068 -8.5595086,-2.7811529 -2.351141,-3.236068 0,-9 0,-9 2.351141,-3.236068 8.5595086,-2.7811529 3.8042261,1.236068 5.2900673,7.2811529 0,4 "
+       id="Star5" />
+  </defs>
+  <use
+     transform="matrix(120,0,0,120,4832.9218,11160)"
+     id="Star_Alpha_Crucis"
+     style="fill:#00247d;fill-opacity:1"
+     xlink:href="#Star7"
+     x="0"
+     y="0"
+     width="30240"
+     height="15120" />
+  <use
+     transform="matrix(120,0,0,120,1052.9218,5175)"
+     id="Star_Beta_Crucis"
+     style="fill:#00247d;fill-opacity:1"
+     xlink:href="#Star7"
+     x="0"
+     y="0"
+     width="30240"
+     height="15120" />
+  <use
+     transform="matrix(120,0,0,120,4832.9218,1080)"
+     id="Star_Gamma_Crucis"
+     style="fill:#00247d;fill-opacity:1"
+     xlink:href="#Star7"
+     x="0"
+     y="0"
+     width="30240"
+     height="15120" />
+  <use
+     transform="matrix(120,0,0,120,8192.9218,4167)"
+     id="Star_Delta_Crucis"
+     style="fill:#00247d;fill-opacity:1"
+     xlink:href="#Star7"
+     x="0"
+     y="0"
+     width="30240"
+     height="15120" />
+  <use
+     transform="matrix(70,0,0,70,6344.9218,6750)"
+     id="Star_Epsilon_Crucis"
+     style="fill:#00247d;fill-opacity:1"
+     xlink:href="#Star5"
+     x="0"
+     y="0"
+     width="30240"
+     height="15120" />
+</svg>

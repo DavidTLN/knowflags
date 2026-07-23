@@ -407,7 +407,7 @@ function srgbToLab(r, g, b) {
   return [116*fy - 16, 500*(fx-fy), 200*(fy-fz)]
 }
 
-function comparePixels(drawData, refData, hasEmblem = false) {
+function comparePixels(drawData, refData, hasEmblem = false, emblemWeight = 0.35) {
   const W = drawData.width, H = drawData.height
   const d1 = drawData.data, d2 = refData.data
   const B = 10                                  // block size → spatial tolerance
@@ -438,7 +438,7 @@ function comparePixels(drawData, refData, hasEmblem = false) {
       let w = 1
       if (hasEmblem) {
         const cx = (gx+0.5)/gw, cy = (gy+0.5)/gh
-        if (Math.abs(cx-0.5) < 0.22 && Math.abs(cy-0.5) < 0.30) w = 0.35
+        if (Math.abs(cx-0.5) < 0.22 && Math.abs(cy-0.5) < 0.30) w = emblemWeight
       }
       acc += sim * w
       totalW += w
@@ -464,6 +464,69 @@ function shuffle(arr) {
 }
 
 // ─── Component ────────────────────────────────────────────────────────────────
+
+// ─── Symboles par pays : code ISO -> fichier dans /public/flags/symbols ───────
+// Reflète display_symbols en base. Seul le symbole principal (le plus
+// reconnaissable) est utilisé pour le jeu de dessin.
+const SYMBOL_FILES = {
+  af: 'af-shahada', al: 'al-eagle', dz: 'dz-crescent-star', ad: 'ad-coat-of-arms',
+  ao: 'ao-emblem', sa: 'sa-shahada', ar: 'ar-sun-of-may', au: 'au-commonwealth-star',
+  az: 'az-crescent-star', bz: 'bz-coat-of-arms', bt: 'bt-druk', by: 'by-ornament',
+  bo: 'bo-coat-of-arms', br: 'br-globe', bn: 'bn-emblem', kh: 'kh-angkor-wat',
+  ca: 'ca-maple-leaf', cv: 'cv-stars', cn: 'cn-stars', cy: 'cy-map',
+  km: 'km-crescent-stars', kr: 'kr-taegeuk', cr: 'cr-coat-of-arms', hr: 'hr-coat-of-arms',
+  dm: 'dm-parrot', eg: 'eg-eagle', ec: 'ec-coat-of-arms', er: 'er-wreath',
+  es: 'es-coat-of-arms', sz: 'sz-shield', et: 'et-emblem', fj: 'fj-shield',
+  ge: 'ge-crosses', gd: 'gd-nutmeg', gt: 'gt-coat-of-arms', gq: 'gq-coat-of-arms',
+  ht: 'ht-coat-of-arms', mh: 'mh-star', in: 'in-chakra', iq: 'iq-takbir',
+  ir: 'ir-emblem', il: 'il-star-of-david', kz: 'kz-sun-eagle', ke: 'ke-emblem',
+  kg: 'kg-sun-tunduk', ki: 'ki-frigatebird', xk: 'xk-map', ls: 'ls-mokorotlo',
+  lb: 'lb-tree', ly: 'ly-crescent-star', li: 'li-crown', mk: 'mk-sun',
+  my: 'my-crescent-star', mw: 'mw-sun', mv: 'mv-crescent', mt: 'mt-george-cross',
+  ma: 'ma-pentagram', mr: 'mr-crescent-star', mx: 'mx-coat-of-arms', fm: 'fm-stars',
+  md: 'md-coat-of-arms', mn: 'mn-soyombo', me: 'me-coat-of-arms', mz: 'mz-emblem',
+  na: 'na-sun', nr: 'nr-star', np: 'np-sun', ni: 'ni-coat-of-arms',
+  nz: 'nz-southern-cross', om: 'om-khanjar', ug: 'ug-crane', pk: 'pk-crescent-star',
+  pg: 'pg-bird-of-paradise', py: 'py-coat-of-arms', pe: 'pe-coat-of-arms', ph: 'ph-sun',
+  pt: 'pt-armillary', do: 'do-coat-of-arms', rw: 'rw-sun', sm: 'sm-coat-of-arms',
+  vc: 'vc-diamonds', sv: 'sv-coat-of-arms', ws: 'ws-southern-cross', rs: 'rs-coat-of-arms',
+  sg: 'sg-crescent-stars', sk: 'sk-coat-of-arms', si: 'si-coat-of-arms', lk: 'lk-lion',
+  tj: 'tj-crown-stars', tw: 'tw-white-sun', tn: 'tn-crescent-star', tm: 'tm-guls',
+  tr: 'tr-crescent-star', uy: 'uy-sun-of-may', vu: 'vu-emblem', va: 'va-emblem',
+  zm: 'zm-eagle', zw: 'zw-bird',
+  // fichiers partages
+  gb: 'union-jack', tv: 'union-jack',
+  dk: 'nordic-cross', se: 'nordic-cross', no: 'nordic-cross', fi: 'nordic-cross',
+  is: 'nordic-cross', fo: 'nordic-cross',
+}
+
+const symbolFileUrl = (iso) => SYMBOL_FILES[iso] ? `/flags/symbols/${SYMBOL_FILES[iso]}.svg` : null
+
+// Region par pays, pour proposer des leurres coherents en difficile.
+const SYMBOL_REGION = {
+  europe: ['al','ad','hr','cy','es','ge','xk','li','mk','mt','md','me','pt','rs','sk','si','va','gb','dk','se','no','fi','is','fo'],
+  africa: ['ao','dz','cv','km','eg','er','sz','et','gq','ke','ls','ly','mw','ma','mr','mz','na','rw','zm','zw','ug'],
+  asia:   ['af','sa','bt','bn','kh','cn','in','iq','ir','il','kz','kg','lb','my','mv','mn','om','pk','kr','lk','tj','tw','tr'],
+  americas:['ar','bz','bo','br','ca','cr','dm','ec','gt','ht','mx','ni','py','pe','do','vc','sv','uy'],
+  oceania:['au','fj','mh','fm','nr','nz','pg','ws','ki','tv'],
+}
+const REGION_OF = (() => { const m = {}; for (const r in SYMBOL_REGION) for (const iso of SYMBOL_REGION[r]) m[iso] = r; return m })()
+
+// Jusqu'a `n` URLs de leurres : d'abord la meme region, puis complement aleatoire.
+function decoySymbolUrls(iso, n) {
+  const mine = REGION_OF[iso]
+  const sameRegion = _shuf((SYMBOL_REGION[mine] || []).filter(k => k !== iso && SYMBOL_FILES[k]))
+  const rest = _shuf(Object.keys(SYMBOL_FILES).filter(k => k !== iso && REGION_OF[k] !== mine))
+  const seen = new Set()
+  const out = []
+  for (const k of [...sameRegion, ...rest]) {
+    const url = symbolFileUrl(k)
+    if (url && !seen.has(url)) { seen.add(url); out.push(url) }
+    if (out.length >= n) break
+  }
+  return out
+}
+
 export default function FlagDrawingV2() {
   const locale = useLocale()
   const t = (en, fr) => locale === 'fr' ? fr : en
@@ -930,12 +993,24 @@ export default function FlagDrawingV2() {
     const refData = refDataRef.current, dims = refDimsRef.current
     if (!refData || !dims) return
     const { W, H } = dims
-    const tmp = document.createElement('canvas')
-    tmp.width = W; tmp.height = H
-    renderDesignToCanvas(tmp, design, null)
-    const drawData = tmp.getContext('2d').getImageData(0, 0, W, H)
-    const sim = comparePixels(drawData, refData, FLAG_DEFS[currentKey]?.hasEmblem)
-    finishRound(sim, tmp.toDataURL('image/png'))
+    // Le symbole doit etre dessine dans le rendu compare, sinon le placer
+    // n'aurait aucun effet sur le score.
+    const run = (symbolImg) => {
+      const tmp = document.createElement('canvas')
+      tmp.width = W; tmp.height = H
+      renderDesignToCanvas(tmp, design, symbolImg)
+      const drawData = tmp.getContext('2d').getImageData(0, 0, W, H)
+      // En mode gabarit le symbole est une vraie image : on pondere sa zone
+      // plus fortement qu'en dessin libre, pour que le placement compte.
+      const sim = comparePixels(drawData, refData, FLAG_DEFS[currentKey]?.hasEmblem, 0.7)
+      finishRound(sim, tmp.toDataURL('image/png'))
+    }
+    if (design.symbol && design.symbolUrl) {
+      const img = new Image()
+      img.onload = () => run(img)
+      img.onerror = () => run(null)
+      img.src = design.symbolUrl
+    } else run(null)
   }
 
   function getPos(e, canvas) {
@@ -1129,11 +1204,24 @@ export default function FlagDrawingV2() {
         showRatio = true
         ratioChoices = ALL_RATIOS
       }
+      const hasEmblem = !!(FLAG_DEFS[currentKey] && FLAG_DEFS[currentKey].hasEmblem)
+      const trueSymbolUrl = hasEmblem ? symbolFileUrl(currentKey) : null
+      // easy + medium : on montre le vrai symbole attendu.
+      // hard : palette (le vrai + des leurres regionaux), l'utilisateur choisit.
+      const symbolUrl = difficulty === 'hard' ? null : trueSymbolUrl
+      // La palette existe meme pour un drapeau sans embleme : sinon son absence
+      // revelerait a elle seule qu'il ne faut pas mettre de symbole.
+      const symbolChoices = difficulty === 'hard'
+        ? (trueSymbolUrl
+            ? _shuf([trueSymbolUrl, ...decoySymbolUrls(currentKey, 5)])
+            : decoySymbolUrls(currentKey, 6))
+        : null
       return (
         <>
-          <FlagTemplateBuilder key={currentKey} locale={locale} countryName={flagName} symbolUrl={null}
+          <FlagTemplateBuilder key={currentKey} locale={locale} countryName={flagName} symbolUrl={symbolUrl}
             ratioChoices={ratioChoices} showRatio={showRatio}
-            symbolAuto={difficulty === 'easy'} symbolPickColor={difficulty === 'hard'} symbolColor={'#F4B400'} hasSymbol={!!(FLAG_DEFS[currentKey] && FLAG_DEFS[currentKey].hasEmblem)}
+            symbolChoices={symbolChoices}
+            symbolAuto={difficulty === 'easy'} symbolPickColor={difficulty === 'hard'} symbolColor={'#F4B400'} hasSymbol={true}
             onValidate={handleTemplateValidate} onQuit={() => setShowQuitConfirm(true)} />
           {quitModal}
         </>

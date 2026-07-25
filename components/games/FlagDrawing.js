@@ -465,42 +465,46 @@ function shuffle(arr) {
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
-// ─── Symboles par pays : code ISO -> fichier dans /public/flags/symbols ───────
-// Reflète display_symbols en base. Seul le symbole principal (le plus
-// reconnaissable) est utilisé pour le jeu de dessin.
+// ─── Symboles par pays : code ISO -> fichiers dans /public/flags/symbols ─────
+// Reflete display_symbols en base. Un drapeau peut en porter plusieurs :
+// le perroquet ET les etoiles de la Dominique, le taegeuk ET les trigrammes.
 const SYMBOL_FILES = {
-  af: 'af-shahada', al: 'al-eagle', dz: 'dz-crescent-star', ad: 'ad-coat-of-arms',
-  ao: 'ao-emblem', sa: 'sa-shahada', ar: 'ar-sun-of-may', au: 'au-commonwealth-star',
-  az: 'az-crescent-star', bz: 'bz-coat-of-arms', bt: 'bt-druk', by: 'by-ornament',
-  bo: 'bo-coat-of-arms', br: 'br-globe', bn: 'bn-emblem', kh: 'kh-angkor-wat',
-  ca: 'ca-maple-leaf', cv: 'cv-stars', cn: 'cn-stars', cy: 'cy-map',
-  km: 'km-crescent-stars', kr: 'kr-taegeuk', cr: 'cr-coat-of-arms', hr: 'hr-coat-of-arms',
-  dm: 'dm-parrot', eg: 'eg-eagle', ec: 'ec-coat-of-arms', er: 'er-wreath',
-  es: 'es-coat-of-arms', sz: 'sz-shield', et: 'et-emblem', fj: 'fj-shield',
-  ge: 'ge-crosses', gd: 'gd-nutmeg', gt: 'gt-coat-of-arms', gq: 'gq-coat-of-arms',
-  ht: 'ht-coat-of-arms', mh: 'mh-star', in: 'in-chakra', iq: 'iq-takbir',
-  ir: 'ir-emblem', il: 'il-star-of-david', kz: 'kz-sun-eagle', ke: 'ke-emblem',
-  kg: 'kg-sun-tunduk', ki: 'ki-frigatebird', xk: 'xk-map', ls: 'ls-mokorotlo',
-  lb: 'lb-tree', ly: 'ly-crescent-star', li: 'li-crown', mk: 'mk-sun',
-  my: 'my-crescent-star', mw: 'mw-sun', mv: 'mv-crescent', mt: 'mt-george-cross',
-  ma: 'ma-pentagram', mr: 'mr-crescent-star', mx: 'mx-coat-of-arms', fm: 'fm-stars',
-  md: 'md-coat-of-arms', mn: 'mn-soyombo', me: 'me-coat-of-arms', mz: 'mz-emblem',
-  na: 'na-sun', nr: 'nr-star', np: 'np-sun', ni: 'ni-coat-of-arms',
-  nz: 'nz-southern-cross', om: 'om-khanjar', ug: 'ug-crane', pk: 'pk-crescent-star',
-  pg: 'pg-bird-of-paradise', py: 'py-coat-of-arms', pe: 'pe-coat-of-arms', ph: 'ph-sun',
-  pt: 'pt-armillary', do: 'do-coat-of-arms', rw: 'rw-sun', sm: 'sm-coat-of-arms',
-  vc: 'vc-diamonds', sv: 'sv-coat-of-arms', ws: 'ws-southern-cross', rs: 'rs-coat-of-arms',
-  sg: 'sg-crescent-stars', sk: 'sk-coat-of-arms', si: 'si-coat-of-arms', lk: 'lk-lion',
-  tj: 'tj-crown-stars', tw: 'tw-white-sun', tn: 'tn-crescent-star', tm: 'tm-guls',
-  tr: 'tr-crescent-star', uy: 'uy-sun-of-may', vu: 'vu-emblem', va: 'va-emblem',
-  zm: 'zm-eagle', zw: 'zw-bird',
-  // fichiers partages
-  gb: 'union-jack', tv: 'union-jack',
-  dk: 'nordic-cross', se: 'nordic-cross', no: 'nordic-cross', fi: 'nordic-cross',
-  is: 'nordic-cross', fo: 'nordic-cross',
+  af: ['af-shahada'], al: ['al-eagle'], dz: ['dz-crescent-star'], ad: ['ad-coat-of-arms'],
+  ao: ['ao-emblem'], sa: ['sa-shahada'], ar: ['ar-sun-of-may'],
+  au: ['union-jack', 'au-commonwealth-star', 'au-southern-cross'],
+  az: ['az-crescent-star'], bz: ['bz-coat-of-arms'], bt: ['bt-druk'], by: ['by-ornament'],
+  bo: ['bo-coat-of-arms'], br: ['br-globe'], bn: ['bn-emblem'], kh: ['kh-angkor-wat'],
+  ca: ['ca-maple-leaf'], cv: ['cv-stars'], cn: ['cn-stars'], cy: ['cy-map'],
+  km: ['km-crescent-stars'], kr: ['kr-taegeuk', 'kr-geon', 'kr-ri', 'kr-gam', 'kr-gon'],
+  cr: ['cr-coat-of-arms'], hr: ['hr-coat-of-arms'], dm: ['dm-parrot', 'dm-stars'],
+  eg: ['eg-eagle'], ec: ['ec-coat-of-arms'], er: ['er-wreath'], es: ['es-coat-of-arms'],
+  sz: ['sz-shield'], et: ['et-emblem'], fj: ['union-jack', 'fj-shield'],
+  ge: ['ge-crosses'], gd: ['gd-nutmeg', 'gd-stars'], gt: ['gt-coat-of-arms'],
+  gq: ['gq-coat-of-arms'], ht: ['ht-coat-of-arms'], mh: ['mh-star'], in: ['in-chakra'],
+  iq: ['iq-takbir'], ir: ['ir-emblem', 'ir-takbir'], il: ['il-star-of-david'],
+  kz: ['kz-sun-eagle', 'kz-ornament'], ke: ['ke-emblem'], kg: ['kg-sun-tunduk'],
+  ki: ['ki-frigatebird', 'ki-sun'], xk: ['xk-map'], ls: ['ls-mokorotlo'], lb: ['lb-tree'],
+  ly: ['ly-crescent-star'], li: ['li-crown'], mk: ['mk-sun'], my: ['my-crescent-star'],
+  mw: ['mw-sun'], mv: ['mv-crescent'], mt: ['mt-george-cross'], ma: ['ma-pentagram'],
+  mr: ['mr-crescent-star'], mx: ['mx-coat-of-arms'], fm: ['fm-stars'], md: ['md-coat-of-arms'],
+  mn: ['mn-soyombo'], me: ['me-coat-of-arms'], mz: ['mz-emblem'], na: ['na-sun'],
+  nr: ['nr-star'], np: ['np-sun', 'np-moon'], ni: ['ni-coat-of-arms'],
+  nz: ['union-jack', 'nz-southern-cross'], om: ['om-khanjar'], ug: ['ug-crane'],
+  pk: ['pk-crescent-star'], pg: ['pg-bird-of-paradise', 'pg-southern-cross'],
+  py: ['py-coat-of-arms'], pe: ['pe-coat-of-arms'], ph: ['ph-sun'],
+  pt: ['pt-armillary', 'pt-coat-of-arms'], do: ['do-coat-of-arms'], rw: ['rw-sun'],
+  sm: ['sm-coat-of-arms'], vc: ['vc-diamonds'], sv: ['sv-coat-of-arms'],
+  ws: ['ws-southern-cross'], rs: ['rs-coat-of-arms'], sg: ['sg-crescent-stars'],
+  sk: ['sk-coat-of-arms'], si: ['si-coat-of-arms'], lk: ['lk-lion'], tj: ['tj-crown-stars'],
+  tw: ['tw-white-sun'], tn: ['tn-crescent-star'], tm: ['tm-guls', 'tm-crescent-stars'],
+  tr: ['tr-crescent-star'], uy: ['uy-sun-of-may'], vu: ['vu-emblem'], va: ['va-emblem'],
+  zm: ['zm-eagle'], zw: ['zw-bird'],
+  gb: ['union-jack'], tv: ['union-jack'],
+  dk: ['nordic-cross'], se: ['nordic-cross'], no: ['nordic-cross'], fi: ['nordic-cross'],
+  is: ['nordic-cross'], fo: ['nordic-cross'],
 }
 
-const symbolFileUrl = (iso) => SYMBOL_FILES[iso] ? `/flags/symbols/${SYMBOL_FILES[iso]}.svg` : null
+const symbolFileUrls = (iso) => (SYMBOL_FILES[iso] || []).map(f => `/flags/symbols/${f}.svg`)
 
 // Region par pays, pour proposer des leurres coherents en difficile.
 const SYMBOL_REGION = {
@@ -517,11 +521,12 @@ function decoySymbolUrls(iso, n) {
   const mine = REGION_OF[iso]
   const sameRegion = _shuf((SYMBOL_REGION[mine] || []).filter(k => k !== iso && SYMBOL_FILES[k]))
   const rest = _shuf(Object.keys(SYMBOL_FILES).filter(k => k !== iso && REGION_OF[k] !== mine))
+  const mineUrls = new Set(symbolFileUrls(iso))
   const seen = new Set()
   const out = []
   for (const k of [...sameRegion, ...rest]) {
-    const url = symbolFileUrl(k)
-    if (url && !seen.has(url)) { seen.add(url); out.push(url) }
+    const url = symbolFileUrls(k)[0]
+    if (url && !seen.has(url) && !mineUrls.has(url)) { seen.add(url); out.push(url) }
     if (out.length >= n) break
   }
   return out
@@ -993,24 +998,29 @@ export default function FlagDrawingV2() {
     const refData = refDataRef.current, dims = refDimsRef.current
     if (!refData || !dims) return
     const { W, H } = dims
-    // Le symbole doit etre dessine dans le rendu compare, sinon le placer
-    // n'aurait aucun effet sur le score.
-    const run = (symbolImg) => {
+    // Tous les symboles poses doivent etre dessines dans le rendu compare,
+    // sinon les placer n'aurait aucun effet sur le score.
+    const run = (imgs) => {
       const tmp = document.createElement('canvas')
       tmp.width = W; tmp.height = H
-      renderDesignToCanvas(tmp, design, symbolImg)
+      renderDesignToCanvas(tmp, design, imgs)
       const drawData = tmp.getContext('2d').getImageData(0, 0, W, H)
-      // En mode gabarit le symbole est une vraie image : on pondere sa zone
-      // plus fortement qu'en dessin libre, pour que le placement compte.
+      // En mode gabarit les symboles sont de vraies images : on pondere leur
+      // zone plus fortement qu'en dessin libre, pour que le placement compte.
       const sim = comparePixels(drawData, refData, FLAG_DEFS[currentKey]?.hasEmblem, 0.7)
       finishRound(sim, tmp.toDataURL('image/png'))
     }
-    if (design.symbol && design.symbolUrl) {
+    const urls = [...new Set((design.symbols || []).map(sy => sy.url).filter(Boolean))]
+    if (urls.length === 0) { run({}); return }
+    const imgs = {}
+    let left = urls.length
+    const done = () => { if (--left === 0) run(imgs) }
+    urls.forEach((u) => {
       const img = new Image()
-      img.onload = () => run(img)
-      img.onerror = () => run(null)
-      img.src = design.symbolUrl
-    } else run(null)
+      img.onload = () => { imgs[u] = img; done() }
+      img.onerror = done
+      img.src = u
+    })
   }
 
   function getPos(e, canvas) {
@@ -1204,21 +1214,19 @@ export default function FlagDrawingV2() {
         showRatio = true
         ratioChoices = ALL_RATIOS
       }
-      const hasEmblem = !!(FLAG_DEFS[currentKey] && FLAG_DEFS[currentKey].hasEmblem)
-      const trueSymbolUrl = hasEmblem ? symbolFileUrl(currentKey) : null
-      // easy + medium : on montre le vrai symbole attendu.
-      // hard : palette (le vrai + des leurres regionaux), l'utilisateur choisit.
-      const symbolUrl = difficulty === 'hard' ? null : trueSymbolUrl
-      // La palette existe meme pour un drapeau sans embleme : sinon son absence
-      // revelerait a elle seule qu'il ne faut pas mettre de symbole.
+      // SYMBOL_FILES est la source de verite : le flag hasEmblem de FLAG_DEFS
+      // etait incomplet (Coree du Sud a false alors qu'elle a 5 symboles).
+      const trueSymbols = symbolFileUrls(currentKey)
+      // easy + medium : on propose les vrais symboles du pays.
+      // hard : les vrais noyes parmi des leurres regionaux, a reconnaitre.
+      // La palette existe meme sans embleme, sinon son absence revelerait
+      // a elle seule qu'il ne faut rien poser.
       const symbolChoices = difficulty === 'hard'
-        ? (trueSymbolUrl
-            ? _shuf([trueSymbolUrl, ...decoySymbolUrls(currentKey, 5)])
-            : decoySymbolUrls(currentKey, 6))
-        : null
+        ? _shuf([...trueSymbols, ...decoySymbolUrls(currentKey, Math.max(3, 6 - trueSymbols.length))])
+        : trueSymbols
       return (
         <>
-          <FlagTemplateBuilder key={currentKey} locale={locale} countryName={flagName} symbolUrl={symbolUrl}
+          <FlagTemplateBuilder key={currentKey} locale={locale} countryName={flagName}
             ratioChoices={ratioChoices} showRatio={showRatio}
             symbolChoices={symbolChoices}
             symbolAuto={difficulty === 'easy'} symbolPickColor={difficulty === 'hard'} symbolColor={'#F4B400'} hasSymbol={true}
@@ -1552,7 +1560,7 @@ export default function FlagDrawingV2() {
               ].map((panel, i) => (
                 <div key={i}>
                   <div style={{ fontSize: '10px', fontWeight: '700', color: colors.muted, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '5px' }}>{panel.label}</div>
-                  <img src={panel.src} alt={panel.label} style={{ width: '100%', borderRadius: '10px', border: `2px solid ${colors.border}`, display: 'block' }} />
+                  <img src={panel.src} alt={panel.label} style={{ width: '100%', height: 'auto', aspectRatio: String(FLAG_DEFS[currentKey]?.ratio || 1.5), objectFit: 'contain', borderRadius: '10px', border: `2px solid ${colors.border}`, display: 'block' }} />
                 </div>
               ))}
             </div>

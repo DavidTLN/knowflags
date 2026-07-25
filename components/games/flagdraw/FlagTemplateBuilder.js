@@ -326,10 +326,33 @@ function Shape({ shape, fill, onClick, thumb }) {
   if (shape.type === 'path') return <path d={shape.d} {...common} />
   return <polygon points={pts(shape.points)} {...common} />
 }
-function StructureSVG({ structure, options, colors, onFill, thumb, symbol, symbolUrl, aspect, symbolColor, symbolPos, onSymbolMove }) {
+// Proportions reelles de chaque fichier symbole (largeur / hauteur).
+// Sans cela les boites de selection resteraient carrees et les dessins
+// paraitraient etires des qu'ils ne le sont pas.
+function useImageAspects(urls) {
+  const [map, setMap] = useState({})
+  const key = (urls || []).filter(Boolean).join('|')
+  useEffect(() => {
+    let alive = true
+    const list = key ? key.split('|') : []
+    list.forEach((u) => {
+      const img = new Image()
+      img.onload = () => {
+        if (!alive || !img.naturalWidth || !img.naturalHeight) return
+        setMap((m) => (m[u] ? m : { ...m, [u]: img.naturalWidth / img.naturalHeight }))
+      }
+      img.src = u
+    })
+    return () => { alive = false }
+  }, [key])
+  return map
+}
+
+function StructureSVG({ structure, options, colors, onFill, thumb, anchor, symbols, selected, onSelect, aspect, symbolColor, onSymbolMove, onRemove }) {
   const clipId = useId()
   const svgRef = useRef(null)
   const dragRef = useRef(false)
+  const aspects = useImageAspects((symbols || []).map(sy => sy.url))
   const regions = useMemo(() => structure.regions(options), [structure, options])
 
   // Le drapeau népalais est le seul non-rectangulaire : on masque le fond
@@ -357,18 +380,27 @@ function StructureSVG({ structure, options, colors, onFill, thumb, symbol, symbo
     return (
       <svg ref={svgRef} viewBox={vb} preserveAspectRatio="xMidYMid meet" width="100%" height="100%" style={{ display: 'block', touchAction: onSymbolMove ? 'none' : undefined }}
         onPointerMove={onSymbolMove ? (e) => {
-          if (!dragRef.current || !svgRef.current || !symbol) return
+          if (!dragRef.current || !svgRef.current) return
+          const cur = (symbols || [])[selected]
+          if (!cur || !anchor) return
           const r = svgRef.current.getBoundingClientRect()
           const k = Math.min(r.width / W, r.height / vh)
           const ox = (r.width - W * k) / 2, oy = (r.height - vh * k) / 2
           const x = (e.clientX - r.left - ox) / k, y = (e.clientY - r.top - oy) / k
           if (dragRef.current === 'resize') {
             // Coin tire : la taille suit la distance au centre, ratio conserve.
-            const fx0 = (symbolPos && symbolPos.fx != null) ? symbolPos.fx : symbol.x / W
-            const fy0 = (symbolPos && symbolPos.fy != null) ? symbolPos.fy : symbol.y / H
-            const d = Math.max(Math.abs(x - fx0 * W), Math.abs(y - fy0 * vh))
-            const next = Math.max(14, Math.min(W * 0.85, d * 2))
-            onSymbolMove({ scale: next / symbol.size })
+            const s0 = anchor.size * (cur.scale || 1)
+            const ar = cur.url ? (aspects[cur.url] || 1) : 1
+            const w0 = ar >= 1 ? s0 : s0 * ar
+            const h0 = ar >= 1 ? s0 / ar : s0
+            const f = Math.max(Math.abs(x - cur.fx * W) / (w0 / 2 || 1), Math.abs(y - cur.fy * vh) / (h0 / 2 || 1))
+            const next = Math.max(14, Math.min(W * 0.85, s0 * f))
+            onSymbolMove({ scale: next / anchor.size })
+          } else if (dragRef.current === 'rotate') {
+            // Angle = direction du curseur autour du centre du symbole.
+            // 0 = poignee en haut, donc on decale de 90 degres.
+            const ang = Math.atan2(y - cur.fy * vh, x - cur.fx * W) * 180 / Math.PI + 90
+            onSymbolMove({ rot: ((Math.round(ang) % 360) + 360) % 360 })
           } else {
             onSymbolMove({ fx: Math.max(0, Math.min(1, x / W)), fy: Math.max(0, Math.min(1, y / vh)) })
           }
@@ -384,39 +416,56 @@ function StructureSVG({ structure, options, colors, onFill, thumb, symbol, symbo
               return <g key={rg.id}>{rg.shapes.map((sh, j) => <Shape key={j} shape={sh} fill={fill} onClick={onFill ? () => onFill(rg.id) : undefined} />)}</g>
             })}
           </g>
-          {symbol && (() => {
-            // Position et taille en fractions : survivent au changement de ratio.
-            const fx = (symbolPos && symbolPos.fx != null) ? symbolPos.fx : symbol.x / W
-            const fy = (symbolPos && symbolPos.fy != null) ? symbolPos.fy : symbol.y / H
-            const sc = (symbolPos && symbolPos.scale != null) ? symbolPos.scale : 1
-            const size = symbol.size * sc
-            const cx = fx * W, cy = fy * vh, h = size / 2
-            const draggable = !!onSymbolMove
+          {(symbols || []).map((sy, i) => {
+            const ar = sy.url ? (aspects[sy.url] || 1) : 1
+            const size = (anchor ? anchor.size : 60) * (sy.scale || 1)
+            const dw = sy.url ? (ar >= 1 ? size : size * ar) : size
+            const dh = sy.url ? (ar >= 1 ? size / ar : size) : size
+            const cx = sy.fx * W, cy = sy.fy * vh, hw = dw / 2, hh = dh / 2
+            const editable = !!onSymbolMove
+            const isSel = editable && i === selected
             const HS = 8
-            const corners = [[cx - h, cy - h], [cx + h, cy - h], [cx + h, cy + h], [cx - h, cy + h]]
+            const corners = [[cx - hw, cy - hh], [cx + hw, cy - hh], [cx + hw, cy + hh], [cx - hw, cy + hh]]
             return (
-              <g>
-                <g style={draggable ? { cursor: 'grab' } : undefined}
-                   onPointerDown={draggable ? (e) => { e.stopPropagation(); dragRef.current = 'move'; e.currentTarget.setPointerCapture?.(e.pointerId) } : undefined}>
-                  {symbolUrl
-                    ? <image href={symbolUrl} x={cx - h} y={cy - h} width={size} height={size} preserveAspectRatio="xMidYMid meet" style={{ pointerEvents: 'none' }} />
-                    : <polygon points={pts(starPts(cx, cy, h))} fill={symbolColor || DS.gold} stroke="rgba(0,0,0,0.25)" strokeWidth="1" style={{ pointerEvents: 'none' }} />}
-                  {draggable && <rect x={cx - h} y={cy - h} width={size} height={size} fill="transparent" />}
+              <g key={sy.key || i}>
+                <g transform={sy.rot ? `rotate(${sy.rot} ${cx} ${cy})` : undefined}
+                   style={editable ? { cursor: 'grab' } : undefined}
+                   onPointerDown={editable ? (e) => { e.stopPropagation(); onSelect?.(i); dragRef.current = 'move'; e.currentTarget.setPointerCapture?.(e.pointerId) } : undefined}>
+                  {sy.url
+                    ? <image href={sy.url} x={cx - hw} y={cy - hh} width={dw} height={dh} preserveAspectRatio="xMidYMid meet" style={{ pointerEvents: 'none' }} />
+                    : <polygon points={pts(starPts(cx, cy, size / 2))} fill={symbolColor || DS.gold} stroke="rgba(0,0,0,0.25)" strokeWidth="1" style={{ pointerEvents: 'none' }} />}
+                  {editable && <rect x={cx - hw} y={cy - hh} width={dw} height={dh} fill="transparent" />}
                 </g>
-                {draggable && (
-                  <g>
-                    <rect x={cx - h} y={cy - h} width={size} height={size} fill="none" stroke={DS.navy} strokeWidth="1" strokeDasharray="4 3" opacity="0.55" style={{ pointerEvents: 'none' }} />
-                    {corners.map(([hx, hy], i) => (
-                      <rect key={i} x={hx - HS / 2} y={hy - HS / 2} width={HS} height={HS} rx="1.5"
-                        fill={DS.surface} stroke={DS.navy} strokeWidth="1.5"
-                        style={{ cursor: (i === 0 || i === 2) ? 'nwse-resize' : 'nesw-resize' }}
-                        onPointerDown={(e) => { e.stopPropagation(); dragRef.current = 'resize'; e.currentTarget.setPointerCapture?.(e.pointerId) }} />
-                    ))}
-                  </g>
-                )}
+                {isSel && (() => {
+                  // Boutons flottants ancres au symbole (pattern editeur d'image).
+                  // Places au-dessus du cadre ; tailles en unites viewBox pour
+                  // rester lisibles et cliquables au doigt.
+                  const BR = 15, by = cy - hh - BR - 8
+                  const slots = [cx - BR * 2.4, cx, cx + BR * 2.4]
+                  const CtrlBtn = ({ x, onDown, danger, children }) => (
+                    <g style={{ cursor: 'pointer' }} onPointerDown={(e) => { e.stopPropagation(); onDown(e) }}>
+                      <circle cx={x} cy={by} r={BR} fill={danger ? (DS.danger || '#B23A3A') : DS.navy} stroke="#fff" strokeWidth="1.5" />
+                      <g transform={`translate(${x - 8} ${by - 8})`} style={{ pointerEvents: 'none' }} stroke="#fff" strokeWidth="1.8" fill="none" strokeLinecap="round" strokeLinejoin="round">{children}</g>
+                    </g>
+                  )
+                  return (
+                    <g>
+                      <rect x={cx - hw} y={cy - hh} width={dw} height={dh} fill="none" stroke={DS.navy} strokeWidth="1" strokeDasharray="4 3" opacity="0.6" style={{ pointerEvents: 'none' }} />
+                      {corners.map(([hx, hy], c) => (
+                        <rect key={c} x={hx - HS / 2} y={hy - HS / 2} width={HS} height={HS} rx="1.5"
+                          fill={DS.surface} stroke={DS.navy} strokeWidth="1.5"
+                          style={{ cursor: (c === 0 || c === 2) ? 'nwse-resize' : 'nesw-resize', touchAction: 'none' }}
+                          onPointerDown={(e) => { e.stopPropagation(); onSelect?.(i); dragRef.current = 'resize'; e.currentTarget.setPointerCapture?.(e.pointerId) }} />
+                      ))}
+                      <CtrlBtn x={slots[0]} onDown={(e) => { onSelect?.(i); dragRef.current = 'rotate'; e.currentTarget.setPointerCapture?.(e.pointerId) }}><path d="M2 8a6 6 0 1 1 1.8 4.3" /><path d="M2 13v-3h3" /></CtrlBtn>
+                      <CtrlBtn x={slots[1]} onDown={(e) => { onSelect?.(i); dragRef.current = 'move'; e.currentTarget.setPointerCapture?.(e.pointerId) }}><path d="M8 2v12M2 8h12M8 2 6 4M8 2l2 2M8 14l-2-2M8 14l2-2M2 8l2-2M2 8l2 2M14 8l-2-2M14 8l-2 2" /></CtrlBtn>
+                      <CtrlBtn x={slots[2]} onDown={() => onRemove?.(i)} danger><path d="M4 4l8 8M12 4l-8 8" /></CtrlBtn>
+                    </g>
+                  )
+                })()}
               </g>
             )
-          })()}
+          })}
         </g>
         {!isNonRect && <rect x="1" y="1" width={W - 2} height={vh - 2} rx="8" fill="none" stroke={DS.borderSolid} strokeWidth="2" />}
       </svg>
@@ -445,21 +494,52 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
   const [colors, setColors] = useState({})
   const [active, setActive] = useState(PALETTE[0])
   const [custom, setCustom] = useState('#0055A4')
-  const hasChoices0 = Array.isArray(symbolChoices) && symbolChoices.length > 0
-  const [showSymbol, setShowSymbol] = useState((symbolAuto || hasChoices0) && hasSymbol)
   const [symColor, setSymColor] = useState(symbolColor)
   const [ratio, setRatio] = useState(ratioChoices[0] ? ratioChoices[0][1] : '3 / 2')
-  const symbol = showSymbol ? symbolAnchor(structureId, options) : null
   const symFill = symbolPickColor ? symColor : symbolColor
-  // Mode difficile : palette de symboles, l'utilisateur choisit le bon.
-  const hasChoices = hasChoices0
-  const [pickedSymbol, setPickedSymbol] = useState(hasChoices ? null : symbolUrl)
-  const effectiveSymbolUrl = hasChoices ? pickedSymbol : symbolUrl
-  // Position du symbole choisie par glisser-deposer (fractions du drapeau).
-  const [symbolPos, setSymbolPos] = useState(null)
-  const payload = (over) => ({ structureId, options, colors, symbol: showSymbol, symbolUrl: effectiveSymbolUrl, symbolPos, symbolColor: symFill, ...over })
-  // patch partiel : { fx, fy } au deplacement, { scale } au redimensionnement
-  const moveSymbol = (patch) => { const next = { ...(symbolPos || {}), ...patch }; setSymbolPos(next); onChange?.(payload({ symbolPos: next })) }
+
+  // ── Symboles poses sur le drapeau ────────────────────────────────────────
+  // Un drapeau peut en porter plusieurs : le perroquet ET les etoiles de la
+  // Dominique, le taegeuk ET les quatre trigrammes coreens, etc.
+  // Chaque entree : { url, fx, fy, scale }. url === null -> etoile dessinee.
+  const offered = useMemo(() => {
+    // Vrais symboles du drapeau uniquement (sans l'etoile de repli).
+    return Array.isArray(symbolChoices) ? symbolChoices.filter(Boolean) : []
+  }, [symbolChoices])
+
+  const [placed, setPlaced] = useState(() => {
+    if (!symbolAuto) return []
+    const auto = Array.isArray(symbolChoices) ? symbolChoices.filter(Boolean) : []
+    const a = symbolAnchor(structureId, options)
+    return auto.map((url, i) => ({ url, fx: a.x / W, fy: a.y / H, scale: 1, key: 'a' + i }))
+  })
+  const [selected, setSelected] = useState(0)
+
+  const pushPlaced = (next, sel) => {
+    setPlaced(next)
+    if (sel !== undefined) setSelected(sel)
+    onChange?.(payload({ symbols: next }))
+  }
+  // Ajoute d'un coup tous les symboles du drapeau, disperses aleatoirement.
+  // Si le drapeau n'a aucun symbole, ajoute une etoile par defaut.
+  const addAllSymbols = () => {
+    const urls = offered.length ? offered : [null]
+    const rnd = (min, max) => min + Math.random() * (max - min)
+    const base = placed.length
+    const add = urls.map((url, i) => ({
+      url, fx: rnd(0.25, 0.75), fy: rnd(0.25, 0.75), scale: 1, rot: 0, key: 'k' + Date.now() + '_' + (base + i),
+    }))
+    const next = [...placed, ...add]
+    pushPlaced(next, next.length - 1)
+  }
+  // patch partiel sur le symbole selectionne : { fx, fy }, { scale } ou { rot }
+  const moveSymbol = (patch) => {
+    if (selected < 0 || selected >= placed.length) return
+    const next = placed.map((sy, i) => (i === selected ? { ...sy, ...patch } : sy))
+    pushPlaced(next)
+  }
+
+  const payload = (over) => ({ structureId, options, colors, symbols: placed, symbol: placed.length > 0, symbolColor: symFill, ...over })
 
   function pickStructure(id) { const no = defaultOpts(byId(id)); setStructureId(id); setOptions(no); setColors({}); onChange?.(payload({ structureId: id, options: no, colors: {} })) }
   function setOption(key, val) { const next = { ...options, [key]: val }; setOptions(next); setColors({}); onChange?.(payload({ options: next, colors: {} })) }
@@ -483,8 +563,10 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
   const nameHeader = (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>{nameText}{quitBtn}</div>
   )
-  const canvasEl = <StructureSVG structure={structure} options={options} colors={colors} onFill={fill} symbol={symbol} symbolUrl={effectiveSymbolUrl} symbolColor={symFill} aspect={ratio}
-    symbolPos={symbolPos} onSymbolMove={showSymbol ? moveSymbol : undefined} />
+  const canvasEl = <StructureSVG structure={structure} options={options} colors={colors} onFill={fill}
+    anchor={symbolAnchor(structureId, options)} symbols={placed} selected={selected} onSelect={setSelected}
+    symbolColor={symFill} aspect={ratio} onSymbolMove={moveSymbol}
+    onRemove={(i) => { setSelected(i); const next = placed.filter((_, k) => k !== i); pushPlaced(next, Math.max(0, next.length - 1)) }} />
   const swatchBase = isMobile ? { flex: 1, minWidth: 0, aspectRatio: '1' } : { width: SW, height: SW }
   const paletteEl = (
     <div style={{ display: 'flex', gap: 6, flexWrap: isMobile ? 'nowrap' : 'wrap', alignItems: 'center' }}>
@@ -519,29 +601,32 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
       ))}
     </div>
   )
-  const symbolRow = (!hasSymbol || symbolAuto) ? null : (
-    <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
-      <span style={{ fontSize: 12, color: DS.muted, minWidth: 78, flexShrink: 0 }}>{t('Symbol', 'Symbole')}</span>
-      <button onClick={() => { const v = !showSymbol; setShowSymbol(v); onChange?.(payload({ symbol: v })) }} style={{ flex: symbolPickColor ? '1 1 140px' : 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 7, padding: 9, borderRadius: 10, border: showSymbol ? `2px solid ${DS.navy}` : `1.5px solid ${DS.borderSolid}`, background: DS.surface, color: DS.navy, fontWeight: 700, fontSize: 13, cursor: 'pointer' }}>
-        {showSymbol ? t('Remove symbol', 'Retirer le symbole') : t('Add a symbol', 'Ajouter un symbole')}
-      </button>
-      {symbolPickColor && showSymbol && (
-        <div style={{ display: 'flex', gap: 4 }}>
-          {SYMBOL_COLORS.map(c => <button key={c} onClick={() => setSymColor(c)} aria-label={c} style={{ width: 26, height: 26, borderRadius: 6, background: c, cursor: 'pointer', border: c === '#FFFFFF' ? '1px solid rgba(0,0,0,0.15)' : 'none', outline: symColor === c ? `2px solid ${DS.navy}` : 'none', outlineOffset: 1 }} />)}
-        </div>
+  // Vignette d'un symbole (image ou etoile dessinee).
+
+  // Le bouton n'apparait que pour les drapeaux SANS symbole (ajoute une etoile),
+  // ou tant que rien n'a ete pose. Des que les symboles sont sur le drapeau,
+  // tout se pilote directement dessus via les poignees flottantes.
+  const noRealSymbols = offered.length === 0
+  const showAddButton = placed.length === 0
+  const symbolRow = !hasSymbol ? null : (
+    <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap', minHeight: 44 }}>
+      <span style={{ fontSize: 12, color: DS.muted, minWidth: 78, flexShrink: 0 }}>{t('Symbols', 'Symboles')}</span>
+      {showAddButton ? (
+        <button onClick={addAllSymbols}
+          style={{ display: 'flex', alignItems: 'center', gap: 7, padding: '10px 16px', borderRadius: 10,
+            border: `1.5px solid ${DS.borderSolid}`, background: DS.surface, color: DS.navy, fontWeight: 700, fontSize: 13, cursor: 'pointer' }}>
+          <span style={{ fontSize: 18, lineHeight: 1 }}>+</span>
+          {noRealSymbols ? t('Add a star', 'Ajouter une etoile') : t('Add symbols', 'Ajouter les symboles')}
+        </button>
+      ) : (
+        <span style={{ fontSize: 12, color: DS.muted, fontStyle: 'italic' }}>
+          {t('Adjust each symbol directly on the flag.', 'Ajuste chaque symbole directement sur le drapeau.')}
+        </span>
       )}
-      {hasChoices && showSymbol && (
-        <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', width: '100%' }}>
-          <span style={{ fontSize: 11, color: DS.muted, width: '100%' }}>{t('Pick the right symbol', 'Choisis le bon symbole')}</span>
-          {symbolChoices.map((url) => (
-            <button key={url} onClick={() => { setPickedSymbol(url); onChange?.(payload({ symbol: true, symbolUrl: url })) }}
-              style={{ width: 44, height: 44, borderRadius: 8, background: DS.surface, cursor: 'pointer', padding: 4,
-                border: pickedSymbol === url ? `2px solid ${DS.navy}` : `1.5px solid ${DS.borderSolid}`,
-                display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <img src={url} alt="" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
-            </button>
-          ))}
-        </div>
+      {/* Un drapeau sans symbole peut recevoir plusieurs etoiles */}
+      {!showAddButton && noRealSymbols && (
+        <button onClick={addAllSymbols} title={t('Add another star', 'Ajouter une autre etoile')}
+          style={{ width: 36, height: 36, borderRadius: 9, border: `1.5px solid ${DS.borderSolid}`, background: DS.surface, color: DS.navy, fontSize: 20, fontWeight: 700, cursor: 'pointer' }}>+</button>
       )}
     </div>
   )
@@ -561,7 +646,7 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
         <div style={{ flexShrink: 0, padding: '10px 14px 0' }}>{nameHeader}</div>
         <div style={{ flex: 1, minHeight: 90, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '8px 14px' }}>
           <div style={{ width: '100%', height: '100%', maxWidth: 460 }}>{canvasEl}</div>
-          {showSymbol && <p style={{ margin: '4px 0 0', fontSize: 11, color: DS.muted, textAlign: 'center', fontStyle: 'italic', flexShrink: 0 }}>{t('Drag the symbol, pull a corner to resize.', 'Glisse le symbole, tire un coin pour le redimensionner.')}</p>}
+          {placed.length > 0 && <p style={{ margin: '4px 0 0', fontSize: 11, color: DS.muted, textAlign: 'center', fontStyle: 'italic', flexShrink: 0 }}>{t('Tap a symbol to select it, then drag or use its buttons.', 'Touche un symbole pour le selectionner, puis glisse-le ou utilise les boutons.')}</p>}
         </div>
         <div style={{ flexShrink: 0, background: DS.surface, borderTop: `1px solid ${DS.border}`, padding: '12px 14px', display: 'flex', flexDirection: 'column', gap: 10 }}>
           {showRatio && (<div style={{ display: 'flex', alignItems: 'center', gap: 8 }}><span style={{ fontSize: 13, color: DS.muted, minWidth: 52, flexShrink: 0 }}>{t('Ratio', 'Ratio')}</span>{ratioSection}</div>)}
@@ -605,7 +690,7 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
             <div style={{ marginBottom: 10 }}>{nameText}</div>
             <div style={{ width: '100%', maxWidth: 260, margin: '0 auto', aspectRatio: ZONE_ASPECT }}>{canvasEl}</div>
             <p style={{ margin: '8px 0 0', fontSize: 12, color: DS.muted, textAlign: 'center' }}>{t('Pick a color, then tap the zones.', 'Choisis une couleur, puis tape les zones.')}</p>
-            {showSymbol && <p style={{ margin: '4px 0 0', fontSize: 11, color: DS.muted, textAlign: 'center', fontStyle: 'italic' }}>{t('Drag the symbol to place it, pull a corner to resize.', 'Glisse le symbole pour le placer, tire un coin pour le redimensionner.')}</p>}
+            {placed.length > 0 && <p style={{ margin: '4px 0 0', fontSize: 11, color: DS.muted, textAlign: 'center', fontStyle: 'italic' }}>{t('Tap a symbol to select it, then drag or use its buttons.', 'Touche un symbole pour le selectionner, puis glisse-le ou utilise les boutons.')}</p>}
           </div>
           {card(<>{label(t('Active color', 'Couleur active'))}{paletteEl}</>)}
         </div>
@@ -617,7 +702,7 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
 
 // Rasterise un design {structureId, options, colors, symbol} sur un <canvas>
 // (pour la comparaison au vrai drapeau via l'algo LAB de FlagDrawing).
-function renderDesignToCanvas(canvas, design, symbolImg) {
+function renderDesignToCanvas(canvas, design, symbolImgs) {
   const ctx = canvas.getContext('2d')
   if (!ctx) return
   ctx.clearRect(0, 0, canvas.width, canvas.height)
@@ -639,29 +724,33 @@ function renderDesignToCanvas(canvas, design, symbolImg) {
       ctx.fill()
     }
   }
-  // Le symbole est rasterise a la position choisie par le joueur, pour que le
-  // placement compte dans la comparaison au vrai drapeau.
-  if (design.symbol) {
+  // Tous les symboles poses sont rasterises a leur position et taille, pour
+  // que placement et dimension comptent dans la comparaison au vrai drapeau.
+  const list = Array.isArray(design.symbols) ? design.symbols : []
+  if (list.length) {
     const a = symbolAnchor(design.structureId, design.options || {})
-    const fx = (design.symbolPos && design.symbolPos.fx != null) ? design.symbolPos.fx : a.x / W
-    const fy = (design.symbolPos && design.symbolPos.fy != null) ? design.symbolPos.fy : a.y / H
-    const sc = (design.symbolPos && design.symbolPos.scale != null) ? design.symbolPos.scale : 1
-    const size = a.size * sc
-    const cx = fx * W, cy = fy * H
-    if (symbolImg) {
-      // Meme regle que preserveAspectRatio="xMidYMid meet" dans l'editeur :
-      // l'image est contenue dans le carre sans etre deformee.
-      const iw = symbolImg.naturalWidth || symbolImg.width || size
-      const ih = symbolImg.naturalHeight || symbolImg.height || size
-      const k = Math.min(size / iw, size / ih)
-      const dw = iw * k, dh = ih * k
-      try { ctx.drawImage(symbolImg, cx - dw / 2, cy - dh / 2, dw, dh) } catch {}
-    } else {
-      ctx.fillStyle = design.symbolColor || '#F4B400'
-      ctx.beginPath()
-      starPts(cx, cy, size / 2).forEach((pt, i) => (i ? ctx.lineTo(pt[0], pt[1]) : ctx.moveTo(pt[0], pt[1])))
-      ctx.closePath()
-      ctx.fill()
+    for (const sy of list) {
+      const size = a.size * (sy.scale || 1)
+      const cx = (sy.fx != null ? sy.fx : a.x / W) * W
+      const cy = (sy.fy != null ? sy.fy : a.y / H) * H
+      const img = sy.url && symbolImgs ? symbolImgs[sy.url] : null
+      const rot = (sy.rot || 0) * Math.PI / 180
+      if (rot) { ctx.save(); ctx.translate(cx, cy); ctx.rotate(rot); ctx.translate(-cx, -cy) }
+      if (img) {
+        // Meme regle que preserveAspectRatio="xMidYMid meet" dans l'editeur.
+        const iw = img.naturalWidth || img.width || size
+        const ih = img.naturalHeight || img.height || size
+        const k = Math.min(size / iw, size / ih)
+        const dw = iw * k, dh = ih * k
+        try { ctx.drawImage(img, cx - dw / 2, cy - dh / 2, dw, dh) } catch {}
+      } else if (!sy.url) {
+        ctx.fillStyle = design.symbolColor || '#F4B400'
+        ctx.beginPath()
+        starPts(cx, cy, size / 2).forEach((pt, i) => (i ? ctx.lineTo(pt[0], pt[1]) : ctx.moveTo(pt[0], pt[1])))
+        ctx.closePath()
+        ctx.fill()
+      }
+      if (rot) ctx.restore()
     }
   }
   ctx.restore()

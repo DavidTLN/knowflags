@@ -450,8 +450,20 @@ function comparePixels(drawData, refData, hasEmblem = false, emblemWeight = 0.35
 
 // ─── Score formula ────────────────────────────────────────────────────────────
 const DIFF_MULT = { easy: 1, medium: 1.5, hard: 2, extreme: 3 }
-function calcPoints(pct, streak, diff) {
-  return Math.round(100 * (pct/100)**1.5 * Math.pow(1.1, streak) * (DIFF_MULT[diff]||1))
+// Bonus de vitesse par paliers. Multiplicatif, et seulement si le dessin est
+// deja correct (>= 60%), pour qu'on ne farme pas des points en baclant vite.
+function timeBonus(seconds, pct) {
+  if (pct < 60) return 1
+  if (seconds < 5)  return 1.5
+  if (seconds < 10) return 1.3
+  if (seconds < 20) return 1.15
+  if (seconds < 40) return 1
+  return 0.9
+}
+function calcPoints(pct, streak, diff, seconds = null) {
+  const base = 100 * (pct/100)**1.5 * Math.pow(1.1, streak) * (DIFF_MULT[diff]||1)
+  const tb = seconds == null ? 1 : timeBonus(seconds, pct)
+  return Math.round(base * tb)
 }
 
 function shuffle(arr) {
@@ -472,7 +484,7 @@ const SYMBOL_FILES = {
   af: ['af-shahada'], al: ['al-eagle'], dz: ['dz-crescent-star'], ad: ['ad-coat-of-arms'],
   ao: ['ao-emblem'], sa: ['sa-shahada'], ar: ['ar-sun-of-may'],
   au: ['union-jack', 'au-commonwealth-star', 'au-southern-cross'],
-  az: ['az-crescent-star'], bz: ['bz-coat-of-arms'], bt: ['bt-druk'], by: ['by-ornament'],
+  az: ['az-crescent-star'], bb: ['bb-trident'], bz: ['bz-coat-of-arms'], bt: ['bt-druk'], by: ['by-ornament'],
   bo: ['bo-coat-of-arms'], br: ['br-globe'], bn: ['bn-emblem'], kh: ['kh-angkor-wat'],
   ca: ['ca-maple-leaf'], cv: ['cv-stars'], cn: ['cn-stars'], cy: ['cy-map'],
   km: ['km-crescent-stars'], kr: ['kr-taegeuk', 'kr-geon', 'kr-ri', 'kr-gam', 'kr-gon'],
@@ -504,7 +516,87 @@ const SYMBOL_FILES = {
   is: ['nordic-cross'], fo: ['nordic-cross'],
 }
 
+// Vrai si la couleur est claire (pour choisir un + fonce ou blanc dessus).
+// Petit nuancier maison, entierement controle : contrairement a
+// <input type="color">, il part TOUJOURS de la couleur passee en prop.
+function hexToHsl(hex) {
+  const h = (hex || '#000000').replace('#', '')
+  let r = parseInt(h.slice(0,2),16)/255, g = parseInt(h.slice(2,4),16)/255, b = parseInt(h.slice(4,6),16)/255
+  const mx = Math.max(r,g,b), mn = Math.min(r,g,b)
+  let hh = 0, ss = 0, ll = (mx+mn)/2
+  if (mx !== mn) {
+    const d = mx-mn
+    ss = ll > 0.5 ? d/(2-mx-mn) : d/(mx+mn)
+    if (mx === r) hh = ((g-b)/d + (g<b?6:0))
+    else if (mx === g) hh = (b-r)/d + 2
+    else hh = (r-g)/d + 4
+    hh *= 60
+  }
+  return { h: hh, s: ss*100, l: ll*100 }
+}
+function hslToHex(h, s, l) {
+  s/=100; l/=100
+  const c = (1-Math.abs(2*l-1))*s, x = c*(1-Math.abs((h/60)%2-1)), m = l-c/2
+  let r=0,g=0,b=0
+  if (h<60){r=c;g=x} else if (h<120){r=x;g=c} else if (h<180){g=c;b=x}
+  else if (h<240){g=x;b=c} else if (h<300){r=x;b=c} else {r=c;b=x}
+  const to = v => Math.round((v+m)*255).toString(16).padStart(2,'0')
+  return '#' + to(r)+to(g)+to(b)
+}
+
+function ColorPopover({ value, onChange, onClose, navy }) {
+  const init = hexToHsl(value)
+  const [h, setH] = useState(init.h)
+  const [sl, setSl] = useState({ s: init.s, l: init.l })
+  const areaRef = useRef(null)
+  const emit = (nh, ns, nl) => onChange(hslToHex(nh, ns, nl))
+  const pickSL = (e) => {
+    const r = areaRef.current.getBoundingClientRect()
+    const x = Math.max(0, Math.min(1, (e.clientX - r.left)/r.width))
+    const y = Math.max(0, Math.min(1, (e.clientY - r.top)/r.height))
+    const ns = x*100, nl = (1-y)*100
+    setSl({ s: ns, l: nl }); emit(h, ns, nl)
+  }
+  return (
+    <>
+      <div onClick={onClose} style={{ position: 'fixed', inset: 0, zIndex: 40 }} />
+      <div style={{ position: 'absolute', bottom: '48px', left: 0, zIndex: 41, width: 200, padding: 12, borderRadius: 12, background: '#fff', boxShadow: '0 8px 30px rgba(0,0,0,0.18)', border: '1px solid rgba(0,0,0,0.1)' }}>
+        <div ref={areaRef} onPointerDown={(e) => { e.currentTarget.setPointerCapture(e.pointerId); pickSL(e) }} onPointerMove={(e) => { if (e.buttons) pickSL(e) }}
+          style={{ position: 'relative', width: '100%', height: 120, borderRadius: 8, cursor: 'crosshair',
+            background: `linear-gradient(to top, #000, transparent), linear-gradient(to right, #fff, hsl(${h},100%,50%))` }}>
+          <div style={{ position: 'absolute', left: `${sl.s}%`, top: `${100-sl.l}%`, width: 12, height: 12, borderRadius: '50%', border: '2px solid #fff', boxShadow: '0 0 0 1px rgba(0,0,0,0.4)', transform: 'translate(-50%,-50%)', pointerEvents: 'none' }} />
+        </div>
+        <input type="range" min="0" max="360" value={h} onChange={(e) => { const nh = +e.target.value; setH(nh); emit(nh, sl.s, sl.l) }}
+          style={{ width: '100%', marginTop: 10, height: 12, borderRadius: 6, appearance: 'none', WebkitAppearance: 'none',
+            background: 'linear-gradient(to right, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00)' }} />
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginTop: 10 }}>
+          <div style={{ width: 28, height: 28, borderRadius: 6, background: value, border: '1px solid rgba(0,0,0,0.15)', flexShrink: 0 }} />
+          <span style={{ fontSize: 12, fontFamily: 'monospace', color: navy, textTransform: 'uppercase' }}>{value}</span>
+          <button onClick={onClose} style={{ marginLeft: 'auto', padding: '4px 10px', borderRadius: 6, border: 'none', background: navy, color: '#fff', fontSize: 12, fontWeight: 700, cursor: 'pointer' }}>OK</button>
+        </div>
+      </div>
+    </>
+  )
+}
+
+function isLight(hex) {
+  const h = (hex || '').replace('#', '')
+  if (h.length < 6) return true
+  const r = parseInt(h.slice(0,2),16), g = parseInt(h.slice(2,4),16), b = parseInt(h.slice(4,6),16)
+  return (0.299*r + 0.587*g + 0.114*b) > 160
+}
+
 const symbolFileUrls = (iso) => (SYMBOL_FILES[iso] || []).map(f => `/flags/symbols/${f}.svg`)
+
+// FlagCDN sert parfois un drapeau perime comme "actuel". Pour ces pays on
+// pointe vers une image locale a jour dans /public/flags/current/.
+// af : FlagCDN renvoie encore le tricolore a mosquee, l'actuel (2021) est
+// le drapeau blanc a chahada.
+const FLAG_OVERRIDE = {
+  af: '/flags/current/af.png',
+}
+const realFlagUrl = (iso, size = 'w320') => FLAG_OVERRIDE[iso] || `https://flagcdn.com/${size}/${iso}.png`
+
 
 // Region par pays, pour proposer des leurres coherents en difficile.
 const SYMBOL_REGION = {
@@ -569,6 +661,19 @@ export default function FlagDrawingV2() {
   const [isDrawing, setIsDrawing] = useState(false)
   const [lineStart, setLineStart] = useState(null)
   const [customColor, setCustomColor] = useState('#CE1126')
+  // Chrono du tour : demarre a l'apparition du drapeau, fige a la validation.
+  const roundStartRef = useRef(null)
+  const [elapsed, setElapsed] = useState(0)
+  const [roundSeconds, setRoundSeconds] = useState(null)
+  const [pickerOpen, setPickerOpen] = useState(false)
+
+  useEffect(() => {
+    if (screen !== SCREEN.PLAYING) return
+    const id = setInterval(() => {
+      if (roundStartRef.current) setElapsed((Date.now() - roundStartRef.current) / 1000)
+    }, 100)
+    return () => clearInterval(id)
+  }, [screen])
 
   const [user, setUser] = useState(null)
   const [diffStats, setDiffStats] = useState({})
@@ -687,6 +792,10 @@ export default function FlagDrawingV2() {
     setScore(null)
     setSnapshotUrl(null)
     setFlagLoading(true)
+    roundStartRef.current = null
+    setRoundSeconds(null)
+    setElapsed(0)
+    setPickerOpen(false)
     undoStack.current = []
     setUndoCount(0)
     setPalette([])
@@ -737,9 +846,10 @@ export default function FlagDrawingV2() {
       if (ov) ov.getContext('2d').clearRect(0, 0, W, H)
 
       setFlagLoading(false)
+      roundStartRef.current = Date.now()   // depart du chrono
     }
-    img.onerror = () => setFlagLoading(false)
-    img.src = `https://flagcdn.com/w320/${key}.png`
+    img.onerror = () => { setFlagLoading(false); roundStartRef.current = Date.now() }
+    img.src = realFlagUrl(key)
   }, [difficulty, cfg])
 
   function startGame() {
@@ -966,10 +1076,17 @@ export default function FlagDrawingV2() {
   // Logique de score commune (dessin libre ET gabarit)
   function finishRound(sim, snap) {
     setScore(sim)
+    // Fige le temps du tour (secondes) des la validation.
+    const secs = roundStartRef.current ? (Date.now() - roundStartRef.current) / 1000 : null
+    setRoundSeconds(secs)
+    const isTraining = difficulty === 'training'
     const passed = sim >= 55
-    const pts = passed ? calcPoints(sim, streakRef.current, difficulty) : 0
+    // En entraînement : pas de temps compté, pas de points, pas de vies.
+    const pts = (passed && !isTraining) ? calcPoints(sim, streakRef.current, difficulty, secs) : 0
     let newTotal = totalScore
-    if (passed) {
+    if (isTraining) {
+      // Rien à décompter : on montre juste le score de similarité.
+    } else if (passed) {
       newTotal = totalScore + pts
       setTotalScore(newTotal)
       streakRef.current++
@@ -1152,26 +1269,25 @@ export default function FlagDrawingV2() {
             {t('Difficulty', 'Difficulté')}
           </p>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr 1fr', gap: '10px' }}>
             {[
-              { key: 'easy',    icon: '🟢', en: 'Easy',    fr: 'Facile',    descEn: 'Template + auto symbol', descFr: 'Gabarit + symbole auto' },
+              { key: 'training', icon: '🎯', en: 'Training', fr: 'Entraînement', descEn: 'Retry freely, no timer', descFr: 'Réessayer, sans chrono' },
               { key: 'medium',  icon: '🟡', en: 'Normal',  fr: 'Normal',    descEn: 'Template to color',   descFr: 'Gabarit à colorier' },
               { key: 'hard',    icon: '🟠', en: 'Hard',    fr: 'Difficile', descEn: 'Template, no help',   descFr: 'Gabarit, sans aide' },
-              { key: 'extreme', icon: '🔴', en: 'Extreme', fr: 'Extrême',   descEn: 'Freehand, ×3 pts',    descFr: 'Dessin libre, ×3 pts' },
-            ].filter(d => d.key !== 'extreme' && d.key !== 'easy').map(d => {
+            ].map(d => {
               const best = diffStats[d.key]?.best
               const selected = difficulty === d.key
               return (
                 <button key={d.key} onClick={() => setDifficulty(d.key)} style={{
-                  padding: '14px', borderRadius: '14px',
+                  padding: '11px 12px', borderRadius: '12px',
                   border: selected ? `2px solid ${colors.navy}` : `2px solid ${colors.border}`,
                   background: selected ? colors.navy : colors.bg,
                   color: selected ? '#FFF' : colors.navy,
                   cursor: 'pointer', textAlign: 'left', transition: 'all 0.15s',
                 }}>
-                  <div style={{ fontSize: '20px', marginBottom: '6px' }}>{d.icon}</div>
-                  <div style={{ fontWeight: '700', fontSize: '15px' }}>{locale === 'fr' ? d.fr : d.en}</div>
-                  <div style={{ fontSize: '12px', opacity: 0.7, marginTop: '3px' }}>{locale === 'fr' ? d.descFr : d.descEn}</div>
+                  <div style={{ fontSize: '17px', marginBottom: '4px' }}>{d.icon}</div>
+                  <div style={{ fontWeight: '700', fontSize: '14px' }}>{locale === 'fr' ? d.fr : d.en}</div>
+                  <div style={{ fontSize: '11px', opacity: 0.7, marginTop: '2px', lineHeight: 1.25 }}>{locale === 'fr' ? d.descFr : d.descEn}</div>
                   {best > 0 && (
                     <div style={{ fontSize: '11px', fontWeight: '700', marginTop: '4px', color: selected ? 'rgba(255,255,255,0.7)' : colors.muted }}>
                       ⭐ {best}
@@ -1198,6 +1314,19 @@ export default function FlagDrawingV2() {
   }
 
   // ── PLAYING screen ────────────────────────────────────────────────────────
+  // Pastille chrono : verte sous 10s (bonus), neutre au-dela.
+  const timeBadge = (() => {
+    const secs = screen === SCREEN.RESULT && roundSeconds != null ? roundSeconds : elapsed
+    const shown = Math.floor(secs)
+    const bonusColor = secs < 5 ? '#1B8A3A' : secs < 10 ? '#3AA655' : secs < 20 ? '#B58A00' : colors.muted
+    return (
+      <div style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', background: 'rgba(11,31,59,0.06)', color: bonusColor, borderRadius: '99px', padding: '3px 9px', fontSize: '12px', fontWeight: '800', fontVariantNumeric: 'tabular-nums' }}>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round"><circle cx="12" cy="13" r="8" /><path d="M12 9v4l2 2M9 2h6" /></svg>
+        {shown}s
+      </div>
+    )
+  })()
+
   if (screen === SCREEN.PLAYING) {
     if (difficulty !== 'extreme') {
       const tR = (FLAG_DEFS[currentKey] && FLAG_DEFS[currentKey].ratio) || 1.5
@@ -1275,19 +1404,25 @@ export default function FlagDrawingV2() {
       return (
         <div style={{ height: 'calc(100dvh - 60px)', background: colors.bg, fontFamily: 'var(--font-body), system-ui, sans-serif', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
           <div style={{ background: colors.card, borderBottom: `1px solid ${colors.border}`, padding: '8px 14px', display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
-            {/* Lives */}
-            <div style={{ display: 'flex', gap: '2px' }}>
-              {Array.from({length: MAX_LIVES}).map((_, i) => (
-                <GameIcon key={i} name="heart" filled size={16} color="#D62828" style={{ opacity: i < lives ? 1 : 0.25 }} />
-              ))}
-            </div>
+            {/* Lives (masquées en entraînement) */}
+            {difficulty !== 'training' && (
+              <div style={{ display: 'flex', gap: '2px' }}>
+                {Array.from({length: MAX_LIVES}).map((_, i) => (
+                  <GameIcon key={i} name="heart" filled size={16} color="#D62828" style={{ opacity: i < lives ? 1 : 0.25 }} />
+                ))}
+              </div>
+            )}
+            {difficulty === 'training' && (
+              <span style={{ fontSize: '13px', fontWeight: '800', color: colors.navy }}>🎯 {t('Training', 'Entraînement')}</span>
+            )}
             {/* Flag name */}
             {cfg.showName && flagName && (
               <span style={{ flex: 1, fontSize: '14px', fontWeight: '800', color: colors.navy, textAlign: 'center', fontFamily: 'var(--font-display), system-ui, sans-serif', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{flagName}</span>
             )}
             {(!cfg.showName || !flagName) && <div style={{ flex: 1 }} />}
-            {/* Streak + score */}
+            {/* Chrono + streak + score */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              {difficulty !== 'training' && timeBadge}
               {streak > 1 && <span style={{ display: 'inline-flex', alignItems: 'center', gap: '2px', fontSize: '12px', fontWeight: '800', color: '#E65C00' }}><GameIcon name="flame" filled size={13} color="#E65C00" />{streak}</span>}
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', background: colors.navy, color: '#FFF', borderRadius: '99px', padding: '3px 10px', fontSize: '12px', fontWeight: '700' }}><GameIcon name="sparkle" filled size={12} color="#F4B400" />{totalScore}</div>
             </div>
@@ -1306,7 +1441,7 @@ export default function FlagDrawingV2() {
                 style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', borderRadius: '10px', pointerEvents: 'none' }}
               />
               {cfg.ghost && currentKey && !flagLoading && (
-                <img src={`https://flagcdn.com/w320/${currentKey}.png`} alt="" aria-hidden="true"
+                <img src={realFlagUrl(currentKey)} alt="" aria-hidden="true"
                   style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', borderRadius: '10px', opacity: 0.22, pointerEvents: 'none', objectFit: 'fill' }} />
               )}
               {flagLoading && (
@@ -1349,13 +1484,20 @@ export default function FlagDrawingV2() {
                 }} />
               ))}
               <div style={{ position: 'relative', flexShrink: 0 }}>
-                <input type="color" value={customColor}
-                  onChange={e => { setCustomColor(e.target.value); setActiveColor(e.target.value); setActiveTool(TOOL.FILL) }}
-                  style={{ width: '36px', height: '36px', borderRadius: '9px', border: `1.5px solid rgba(0,0,0,0.15)`, cursor: 'pointer', padding: '2px', background: customColor, opacity: 0, position: 'absolute', inset: 0 }}
-                />
-                <div style={{ width: '36px', height: '36px', borderRadius: '9px', background: customColor, border: activeColor === customColor && !palette.find(p => p.hex === customColor) ? `3px solid ${colors.navy}` : '1.5px solid rgba(0,0,0,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none' }}>
-                  <span style={{ fontSize: '14px', color: 'white', fontWeight: '800', textShadow: '0 1px 2px rgba(0,0,0,0.5)' }}>+</span>
-                </div>
+                {(() => {
+                  const isPreset = palette.some(pc => pc.hex.toLowerCase() === activeColor.toLowerCase())
+                  return (
+                    <label style={{ position: 'relative', width: '36px', height: '36px', display: 'block', cursor: 'pointer' }}>
+                      <input type="color" value={activeColor}
+                        onInput={e => { setCustomColor(e.target.value); setActiveColor(e.target.value); setActiveTool(TOOL.FILL) }}
+                        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: 0, cursor: 'pointer' }} />
+                      <div style={{ width: '36px', height: '36px', borderRadius: '9px', background: activeColor, border: !isPreset ? `3px solid ${colors.navy}` : '1.5px solid rgba(0,0,0,0.15)', boxShadow: !isPreset ? `0 0 0 2px white, 0 0 0 3px ${colors.navy}` : 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none' }}>
+                        <span style={{ fontSize: '14px', color: isLight(activeColor) ? '#333' : 'white', fontWeight: '800' }}>+</span>
+                      </div>
+                    </label>
+                  )
+                })()}
+
               </div>
               {(activeTool === TOOL.BRUSH || activeTool === TOOL.ERASER) && (
                 <input type="range" min="2" max="24" value={brushSize} onChange={e => setBrushSize(+e.target.value)} style={{ flex: 1 }} />
@@ -1449,6 +1591,7 @@ export default function FlagDrawingV2() {
             ))}
           </div>
           <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+            {difficulty !== 'training' && timeBadge}
             {streak > 1 && <span style={{ display: 'inline-flex', alignItems: 'center', gap: '3px', fontSize: '13px', fontWeight: '700', color: '#E65C00' }}><GameIcon name="flame" filled size={14} color="#E65C00" />{streak}</span>}
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', background: colors.navy, color: '#FFF', borderRadius: '20px', padding: '6px 14px', fontSize: '14px', fontWeight: '700' }}><GameIcon name="sparkle" filled size={14} color="#F4B400" />{totalScore}</div>
           </div>
@@ -1469,7 +1612,7 @@ export default function FlagDrawingV2() {
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none' }}
             />
             {cfg.ghost && currentKey && !flagLoading && (
-              <img src={`https://flagcdn.com/w320/${currentKey}.png`} alt="" aria-hidden="true"
+              <img src={realFlagUrl(currentKey)} alt="" aria-hidden="true"
                 style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', opacity: 0.22, pointerEvents: 'none', objectFit: 'fill' }} />
             )}
             {flagLoading && (
@@ -1485,7 +1628,22 @@ export default function FlagDrawingV2() {
                 {palette.map(c => (
                   <button key={c.hex} onClick={() => { setActiveColor(c.hex); setActiveTool(TOOL.FILL) }} style={{ width: '40px', height: '40px', borderRadius: '8px', background: c.hex, border: activeColor === c.hex ? `3px solid ${colors.navy}` : '2px solid rgba(0,0,0,0.15)', cursor: 'pointer', transform: activeColor === c.hex ? 'scale(1.15)' : 'scale(1)', transition: 'all 0.12s' }} />
                 ))}
-                <input type="color" value={customColor} onChange={e => { setCustomColor(e.target.value); setActiveColor(e.target.value); setActiveTool(TOOL.FILL) }} style={{ width: '40px', height: '40px', borderRadius: '8px', border: '2px solid rgba(0,0,0,0.15)', cursor: 'pointer', padding: '2px', background: 'none' }} />
+                {(() => {
+                  const isPreset = palette.some(pc => pc.hex.toLowerCase() === activeColor.toLowerCase())
+                  return (
+                    <label style={{ position: 'relative', width: '40px', height: '40px', flexShrink: 0, cursor: 'pointer' }}>
+                      <input type="color" value={activeColor}
+                        onInput={e => { setCustomColor(e.target.value); setActiveColor(e.target.value); setActiveTool(TOOL.FILL) }}
+                        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: 0, cursor: 'pointer' }} />
+                      <div style={{ width: '40px', height: '40px', borderRadius: '8px', background: activeColor,
+                        border: !isPreset ? `3px solid ${colors.navy}` : '2px solid rgba(0,0,0,0.15)',
+                        boxShadow: !isPreset ? `0 0 0 2px white, 0 0 0 4px ${colors.navy}` : 'none',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none' }}>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={isLight(activeColor) ? '#333' : '#fff'} strokeWidth="2.4" strokeLinecap="round"><path d="M12 5v14M5 12h14" /></svg>
+                      </div>
+                    </label>
+                  )
+                })()}
               </div>
             </div>
           )}
@@ -1543,8 +1701,18 @@ export default function FlagDrawingV2() {
               <h2 style={{ margin: '0 0 4px', fontSize: '22px', fontWeight: '800', color: colors.navy, fontFamily: 'var(--font-display), system-ui, sans-serif' }}>{flagName}</h2>
               <div style={{ fontSize: '48px', fontWeight: '900', color: scoreColor, lineHeight: 1 }}>{score}%</div>
               {passed && lastPts && (
-                <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', background: colors.navy, color: '#FFF', borderRadius: '20px', padding: '6px 14px', marginTop: '8px', fontWeight: '700', fontSize: '14px' }}>
-                  ⭐ +{lastPts} pts
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', marginTop: '8px' }}>
+                  <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', background: colors.navy, color: '#FFF', borderRadius: '20px', padding: '6px 14px', fontWeight: '700', fontSize: '14px' }}>
+                    ⭐ +{lastPts} pts
+                  </div>
+                  {roundSeconds != null && (
+                    <div style={{ fontSize: '12px', fontWeight: '700', color: roundSeconds < 20 && score >= 60 ? '#1B8A3A' : colors.muted }}>
+                      {t('Time', 'Temps')} : {roundSeconds.toFixed(1)}s
+                      {score >= 60 && roundSeconds < 5 && t(' · speed bonus ×1.5', ' · bonus vitesse ×1,5')}
+                      {score >= 60 && roundSeconds >= 5 && roundSeconds < 10 && t(' · speed bonus ×1.3', ' · bonus vitesse ×1,3')}
+                      {score >= 60 && roundSeconds >= 10 && roundSeconds < 20 && t(' · speed bonus ×1.15', ' · bonus vitesse ×1,15')}
+                    </div>
+                  )}
                 </div>
               )}
               <div style={{ fontSize: '13px', color: colors.muted, marginTop: '8px' }}>
@@ -1556,7 +1724,7 @@ export default function FlagDrawingV2() {
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginBottom: '12px' }}>
               {[
                 { label: t('YOUR DRAWING', 'VOTRE DESSIN'), src: snapshotUrl },
-                { label: t('REAL FLAG', 'VRAI DRAPEAU'), src: `https://flagcdn.com/w320/${currentKey}.png` },
+                { label: t('REAL FLAG', 'VRAI DRAPEAU'), src: realFlagUrl(currentKey) },
               ].map((panel, i) => (
                 <div key={i}>
                   <div style={{ fontSize: '10px', fontWeight: '700', color: colors.muted, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '5px' }}>{panel.label}</div>
@@ -1570,7 +1738,7 @@ export default function FlagDrawingV2() {
         {/* Sticky buttons */}
         <div style={{ flexShrink: 0, marginTop: 'auto', padding: '12px 16px', paddingBottom: 'max(12px, env(safe-area-inset-bottom))', background: colors.bg, borderTop: `1px solid ${colors.border}`, display: 'flex', flexDirection: 'column', gap: '8px' }}>
           <div style={{ maxWidth: '560px', margin: '0 auto', width: '100%', display: 'flex', gap: '10px' }}>
-            {!passed && lives > 0 && (
+            {difficulty === 'training' && (
               <button onClick={() => { setScore(null); setScreen(SCREEN.PLAYING); retryFlag() }} style={{ flex: 1, padding: '14px', borderRadius: '14px', border: `2px solid ${colors.border}`, background: '#FAFAF7', color: colors.navy, fontWeight: '700', fontSize: '15px', cursor: 'pointer' }}>
                 {t('Retry', 'Réessayer')} ↺
               </button>
@@ -1632,7 +1800,7 @@ export default function FlagDrawingV2() {
                   const hName = hDef ? (locale === 'fr' ? hDef.fr : hDef.en) : h.key
                   return (
                     <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '10px 8px', borderRadius: '10px', backgroundColor: i % 2 === 0 ? '#FAFAF7' : 'white' }}>
-                      <img src={`https://flagcdn.com/w80/${h.key}.png`} alt="" style={{ width: '40px', height: '27px', objectFit: 'contain', borderRadius: '4px', backgroundColor: '#e8e4d9', flexShrink: 0, padding: '2px', border: `1px solid ${colors.border}` }} />
+                      <img src={realFlagUrl(h.key, 'w80')} alt="" style={{ width: '40px', height: '27px', objectFit: 'contain', borderRadius: '4px', backgroundColor: '#e8e4d9', flexShrink: 0, padding: '2px', border: `1px solid ${colors.border}` }} />
                       <div style={{ flex: 1, minWidth: 0 }}>
                         <div style={{ fontSize: '13px', fontWeight: '700', color: colors.navy, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{hName}</div>
                         <div style={{ fontSize: '11px', color: h.passed ? '#16a34a' : '#dc2626', marginTop: '1px' }}>{h.score}%{h.passed && h.pts ? ` · +${h.pts} pts` : ''}</div>

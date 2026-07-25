@@ -532,6 +532,16 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
     const next = [...placed, ...add]
     pushPlaced(next, next.length - 1)
   }
+  // Pose UN symbole (clic sur une vignette de la barre, mode difficile).
+  // Rejouable : recliquer la meme vignette pose une copie supplementaire.
+  const addOneSymbol = (url) => {
+    const off = placed.length * 0.05
+    const next = [...placed, {
+      url, fx: Math.min(0.85, 0.4 + off), fy: Math.min(0.85, 0.4 + off), scale: 1, rot: 0,
+      key: 'k' + Date.now() + '_' + placed.length,
+    }]
+    pushPlaced(next, next.length - 1)
+  }
   // patch partiel sur le symbole selectionne : { fx, fy }, { scale } ou { rot }
   const moveSymbol = (patch) => {
     if (selected < 0 || selected >= placed.length) return
@@ -607,8 +617,37 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
   // ou tant que rien n'a ete pose. Des que les symboles sont sur le drapeau,
   // tout se pilote directement dessus via les poignees flottantes.
   const noRealSymbols = offered.length === 0
+  // Mode difficile (symbolPickColor) : barre de vignettes a reconnaitre.
+  // Normal : bouton "Ajouter les symboles" qui pose tout automatiquement.
+  const isHard = symbolPickColor
   const showAddButton = placed.length === 0
-  const symbolRow = !hasSymbol ? null : (
+
+  // Vignette d'un symbole (image ou etoile dessinee).
+  const symThumb = (url, sz = 22) => url
+    ? <img src={url} alt="" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+    : <svg width={sz} height={sz} viewBox="0 0 24 24"><polygon points="12,3 14,9.2 20.5,9.2 15.2,13 17.2,19.2 12,15.4 6.8,19.2 8.8,13 3.5,9.2 10,9.2" fill={DS.gold} /></svg>
+
+  const symbolRow = !hasSymbol ? null : isHard ? (
+    // ── Mode difficile : liste des symboles (vrais + leurres), a poser au clic ──
+    <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}>
+      <span style={{ fontSize: 12, color: DS.muted, minWidth: 78, flexShrink: 0, paddingTop: 8 }}>{t('Symbols', 'Symboles')}</span>
+      <div style={{ flex: 1, minWidth: 0 }}>
+        <p style={{ margin: '0 0 6px', fontSize: 11, color: DS.muted, fontStyle: 'italic' }}>
+          {t('Tap the right symbols to add them.', 'Touche les bons symboles pour les ajouter.')}
+        </p>
+        <div style={{ display: 'flex', gap: 6, overflowX: 'auto', paddingBottom: 4, WebkitOverflowScrolling: 'touch' }}>
+          {(offered.length ? offered : [null]).map((url, i) => (
+            <button key={(url || 'star') + i} onClick={() => addOneSymbol(url)} title={t('Add', 'Ajouter')}
+              style={{ width: 46, height: 46, flexShrink: 0, borderRadius: 8, background: DS.surface, cursor: 'pointer', padding: 5,
+                border: `1.5px solid ${DS.borderSolid}`, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              {symThumb(url)}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  ) : (
+    // ── Normal : un bouton qui pose tout, puis ajustement direct sur le drapeau ──
     <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap', minHeight: 44 }}>
       <span style={{ fontSize: 12, color: DS.muted, minWidth: 78, flexShrink: 0 }}>{t('Symbols', 'Symboles')}</span>
       {showAddButton ? (
@@ -623,7 +662,6 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
           {t('Adjust each symbol directly on the flag.', 'Ajuste chaque symbole directement sur le drapeau.')}
         </span>
       )}
-      {/* Un drapeau sans symbole peut recevoir plusieurs etoiles */}
       {!showAddButton && noRealSymbols && (
         <button onClick={addAllSymbols} title={t('Add another star', 'Ajouter une autre etoile')}
           style={{ width: 36, height: 36, borderRadius: 9, border: `1.5px solid ${DS.borderSolid}`, background: DS.surface, color: DS.navy, fontSize: 20, fontWeight: 700, cursor: 'pointer' }}>+</button>

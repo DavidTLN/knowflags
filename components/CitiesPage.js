@@ -3,10 +3,8 @@
 import { useState, useMemo, useEffect } from 'react'
 import Link from 'next/link'
 import { useLocale } from 'next-intl'
-import { createClient } from '@/lib/supabase-client'
 import FlagImage from '@/components/FlagImage'
 import Footer from '@/components/Footer'
-import PageLoader from '@/components/PageLoader'
 
 const CONTINENTS = ['Europe', 'North America', 'South America', 'Asia', 'Africa', 'Oceania']
 const CONTINENT_FR = { Europe: 'Europe', 'North America': 'Amerique du Nord', 'South America': 'Amerique du Sud', Asia: 'Asie', Africa: 'Afrique', Oceania: 'Oceanie' }
@@ -110,12 +108,10 @@ function CityCard({ flag, name, regionName, countryName, locale }) {
   )
 }
 
-export default function CitiesPage() {
+export default function CitiesPage({ flags = [] }) {
   const locale = useLocale()
   const t = (en, fr) => locale === 'fr' ? fr : en
 
-  const [flags, setFlags]       = useState([])
-  const [loading, setLoading]   = useState(true)
   const [isMobile, setIsMobile] = useState(false)
   const [filtersOpen, setFiltersOpen] = useState(false)
   const [openSections, setOpenSections] = useState({ continent: false, country: false, region: false, colors: false, symbols: false, ratio: false, shape: false })
@@ -138,16 +134,6 @@ export default function CitiesPage() {
     check()
     window.addEventListener('resize', check)
     return () => window.removeEventListener('resize', check)
-  }, [])
-
-  useEffect(() => {
-    const supabase = createClient()
-    supabase
-      .from('flag_taxonomy')
-      .select('id, slug, name_en, name_fr, image_path, sort_order, metadata, parent:parent_id(id, slug, name_en, name_fr), country:country_id(id, slug, name_en, name_fr, image_path, metadata)')
-      .eq('flag_type', 'city')
-      .order('sort_order')
-      .then(({ data }) => { setFlags(data || []); setLoading(false) })
   }, [])
 
   const countries = useMemo(() => {
@@ -317,8 +303,6 @@ export default function CitiesPage() {
       </FSection>
     </>
   )
-
-  if (loading) return <PageLoader label={t('Loading...', 'Chargement...')} />
 
   const grid = (cols) => (
     filtered.length === 0 ? (

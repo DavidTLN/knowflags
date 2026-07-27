@@ -489,13 +489,15 @@ function ConstructionSheet({ iso, locale }) {
   return (
     <div style={{ borderTop: `1px solid ${DS.border}`, marginTop: '16px', paddingTop: '14px' }}>
       <p style={{ margin: '0 0 10px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{t('Construction sheet', 'Planche de construction')}</p>
-      <div style={{ border: `1px solid ${DS.border}`, borderRadius: '10px', overflow: 'hidden', backgroundColor: '#FAFAF7' }}>
-        <img
-          src={candidates[i]}
-          alt={t('Construction sheet', 'Planche de construction')}
-          onError={() => (i + 1 < candidates.length ? setI(i + 1) : setOk(false))}
-          style={{ width: '100%', display: 'block' }}
-        />
+      <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+        <div style={{ border: `1px solid ${DS.border}`, borderRadius: '10px', backgroundColor: '#FAFAF7', width: '600px', maxWidth: '100%', padding: '12px', boxSizing: 'border-box' }}>
+          <img
+            src={candidates[i]}
+            alt={t('Construction sheet', 'Planche de construction')}
+            onError={() => (i + 1 < candidates.length ? setI(i + 1) : setOk(false))}
+            style={{ width: '100%', height: 'auto', display: 'block' }}
+          />
+        </div>
       </div>
     </div>
   )
@@ -706,7 +708,7 @@ function DidYouKnow({ facts }) {
 }
 
 // ── Main Component ────────────────────────────────────────────────────────────
-export default function CountryDetailClient({ country, facts = [], relatedCountries = [], childEntities = [] }) {
+export default function CountryDetailPage({ country, facts = [], relatedCountries = [], childEntities = [] }) {
   const locale = useLocale()
   const t = (en, fr) => locale === 'fr' ? fr : en
 

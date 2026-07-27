@@ -4,7 +4,7 @@
 // so every city name and link is in the initial HTML.
 
 import { createClient } from '@/lib/supabase-server'
-import CitiesClient from '@/components/CitiesClient'
+import CitiesPage from '@/components/CitiesPage'
 
 const BASE_URL = 'https://knowflags.com'
 
@@ -66,5 +66,5 @@ export default async function Page() {
     console.error('Supabase error (cities listing):', err?.message)
   }
 
-  return <CitiesClient flags={flags} />
+  return <CitiesPage flags={flags} />
 }

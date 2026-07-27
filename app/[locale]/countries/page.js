@@ -5,7 +5,7 @@
 // component keeps all of its filtering, sorting and search untouched.
 
 import { createClient } from '@/lib/supabase-server'
-import CountryListingClient from '@/components/CountryListingClient'
+import CountryListingPage from '@/components/CountryListingPage'
 
 const BASE_URL = 'https://knowflags.com'
 
@@ -63,5 +63,5 @@ export default async function Page() {
     console.error('Supabase error (countries listing):', err?.message)
   }
 
-  return <CountryListingClient rows={rows} />
+  return <CountryListingPage rows={rows} />
 }

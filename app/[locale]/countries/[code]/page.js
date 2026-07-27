@@ -6,7 +6,7 @@
 
 import { notFound } from 'next/navigation'
 import { createClient } from '@/lib/supabase-server'
-import CountryDetailClient from '@/components/CountryDetailClient'
+import CountryDetailPage from '@/components/CountryDetailPage'
 
 const BASE_URL = 'https://knowflags.com'
 
@@ -172,7 +172,7 @@ export default async function Page({ params }) {
     .map(k => ({ code: k.iso_code, en: k.name_en, fr: k.name_fr }))
 
   return (
-    <CountryDetailClient
+    <CountryDetailPage
       country={country}
       facts={facts}
       relatedCountries={relatedCountries}

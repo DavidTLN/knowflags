@@ -489,12 +489,12 @@ function ConstructionSheet({ iso, locale }) {
   return (
     <div style={{ borderTop: `1px solid ${DS.border}`, marginTop: '16px', paddingTop: '14px' }}>
       <p style={{ margin: '0 0 10px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{t('Construction sheet', 'Planche de construction')}</p>
-      <div style={{ border: `1px solid ${DS.border}`, borderRadius: '10px', overflow: 'hidden', backgroundColor: '#FAFAF7', maxWidth: '440px', margin: '0 auto', padding: '12px' }}>
+      <div style={{ border: `1px solid ${DS.border}`, borderRadius: '10px', backgroundColor: '#FAFAF7', maxWidth: '320px', margin: '0 auto', padding: '12px' }}>
         <img
           src={candidates[i]}
           alt={t('Construction sheet', 'Planche de construction')}
           onError={() => (i + 1 < candidates.length ? setI(i + 1) : setOk(false))}
-          style={{ width: '100%', height: 'auto', display: 'block' }}
+          style={{ width: '100%', maxWidth: '296px', height: 'auto', display: 'block', margin: '0 auto' }}
         />
       </div>
     </div>

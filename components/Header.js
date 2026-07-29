@@ -107,16 +107,16 @@ const DropdownPanel = ({ children, width = 280 }) => (
   </div>
 )
 
-const GameItem = ({ game, onClick, locale }) => (
+const GameItem = ({ game, onClick, locale, first }) => (
   <div onClick={onClick}
     style={{
       display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 12px',
       borderRadius: '10px', cursor: game.soon ? 'default' : 'pointer',
       transition: 'background 0.12s',
+      borderTop: first ? 'none' : '1px solid #F1F3F6',
     }}
     onMouseEnter={e => { if (!game.soon) e.currentTarget.style.backgroundColor = '#EEF2F7' }}
     onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'transparent' }}>
-    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: game.soon ? '#9CA3AF' : '#9EB7E5', flexShrink: 0 }} />
     <div style={{ flex: 1, minWidth: 0 }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
         <span style={{ fontSize: '13px', fontWeight: '700', color: game.soon ? '#6B7280' : '#16324F' }}>{locale === 'fr' ? game.fr : game.en}</span>
@@ -257,6 +257,13 @@ export default function Header() {
 
   function openSubmit() {
     closeDrawer()
+    // Bouton toujours visible, mais la soumission exige un compte :
+    // connecté -> ouvre l'interface de proposition ; invité -> page de connexion.
+    if (!user) {
+      const next = encodeURIComponent(`${pathname}?submit=1`)
+      router.push(`/${locale}/auth/login?next=${next}`)
+      return
+    }
     setTimeout(() => setSubmitOpen(true), menuOpen ? 300 : 0)
   }
 
@@ -292,8 +299,11 @@ export default function Header() {
             <span style={{ fontSize: '28px', fontWeight: '900', color: '#FFFFFF', letterSpacing: '-0.5px', lineHeight: 1 }} className="logo-wordmark">Knowflags</span>
           </Link>
 
+          {/* ── Séparateur logo / nav (desktop) ── */}
+          <div className="desktop-right" style={{ width: '1px', height: '26px', background: 'rgba(255,255,255,0.16)', flexShrink: 0, marginLeft: '18px' }} />
+
           {/* ── Desktop nav ── */}
-          <nav style={{ display: 'flex', alignItems: 'center', gap: '28px', position: 'absolute', left: '50%', transform: 'translateX(-50%)' }} className="desktop-nav">
+          <nav style={{ display: 'flex', alignItems: 'center', gap: '28px', marginLeft: '18px', marginRight: 'auto' }} className="desktop-nav">
 
             {/* Flags dropdown */}
             <div ref={flagsRef} style={{ position: 'relative' }}>
@@ -303,16 +313,14 @@ export default function Header() {
               {flagsOpen && (
                 <DropdownPanel width={300}>
                   <div style={{ padding: '8px' }}>
-                    {FLAGS_MENU.map(item => (
-                      <div key={item.href} onClick={() => { router.push(`/${locale}/${item.href}`); setFlagsOpen(false) }}
-                        style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '11px 12px', borderRadius: '10px', cursor: 'pointer', transition: 'background 0.12s' }}
+                    {FLAGS_MENU.map((item, idx) => (
+                      <div key={item.href}
+                        onClick={() => { router.push(`/${locale}/${item.href}`); setFlagsOpen(false) }}
+                        style={{ padding: '11px 12px', borderRadius: '10px', cursor: 'pointer', transition: 'background 0.12s', borderTop: idx === 0 ? 'none' : '1px solid #F1F3F6' }}
                         onMouseEnter={e => e.currentTarget.style.backgroundColor = '#EEF2F7'}
                         onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}>
-                        <span style={{ width: '7px', height: '7px', borderRadius: '50%', backgroundColor: '#9EB7E5', flexShrink: 0 }} />
-                        <div>
-                          <div style={{ fontSize: '13px', fontWeight: '700', color: '#16324F' }}>{t(item.en, item.fr)}</div>
-                          <p style={{ margin: 0, fontSize: '11px', color: '#6B7280', marginTop: '1px' }}>{t(item.descEn, item.descFr)}</p>
-                        </div>
+                        <div style={{ fontSize: '13px', fontWeight: '700', color: '#16324F' }}>{t(item.en, item.fr)}</div>
+                        <p style={{ margin: 0, fontSize: '11px', color: '#6B7280', marginTop: '1px' }}>{t(item.descEn, item.descFr)}</p>
                       </div>
                     ))}
                   </div>
@@ -329,19 +337,18 @@ export default function Header() {
                 <DropdownPanel width={560}>
                   <div style={{ padding: '8px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0' }}>
                     <div style={{ borderRight: '1px solid #f0f0f0' }}>
-                      {GAMES_COL1.map(game => (
-                        <GameItem key={game.key} game={game} locale={locale} onClick={() => { if (!game.soon) { router.push(`/${locale}/games/${game.key}`); setGamesOpen(false) } }} />
+                      {GAMES_COL1.map((game, idx) => (
+                        <GameItem key={game.key} game={game} locale={locale} first={idx === 0} onClick={() => { if (!game.soon) { router.push(`/${locale}/games/${game.key}`); setGamesOpen(false) } }} />
                       ))}
                     </div>
                     <div>
-                      {GAMES_COL2.map(game => (
-                        <GameItem key={game.key} game={game} locale={locale} onClick={() => { if (!game.soon) { router.push(`/${locale}/games/${game.key}`); setGamesOpen(false) } }} />
+                      {GAMES_COL2.map((game, idx) => (
+                        <GameItem key={game.key} game={game} locale={locale} first={idx === 0} onClick={() => { if (!game.soon) { router.push(`/${locale}/games/${game.key}`); setGamesOpen(false) } }} />
                       ))}
                       <div onClick={() => { router.push(`/${locale}/leaderboard`); setGamesOpen(false) }}
-                        style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 12px', borderRadius: '10px', cursor: 'pointer', transition: 'background 0.12s' }}
+                        style={{ padding: '10px 12px', borderRadius: '10px', cursor: 'pointer', transition: 'background 0.12s', borderTop: '1px solid #F1F3F6' }}
                         onMouseEnter={e => e.currentTarget.style.backgroundColor = '#EEF2F7'}
                         onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}>
-                        <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#F4B400', flexShrink: 0 }} />
                         <div>
                           <div style={{ fontSize: '13px', fontWeight: '700', color: '#16324F' }}>{t('Leaderboard', 'Classement')}</div>
                           <p style={{ margin: 0, fontSize: '11px', color: '#6B7280', marginTop: '1px' }}>{t('Global rankings', 'Classement mondial')}</p>
@@ -359,7 +366,7 @@ export default function Header() {
             </div>
 
             <Link href={`/${locale}/blog`} style={navLinkStyle(isActive(`/${locale}/blog`))}>{t('Blog', 'Blog')}</Link>
-            <Link href={`/${locale}/true-size`} style={navLinkStyle(isActive(`/${locale}/true-size`))}>{t('True Size Map', 'Carte Taille Réelle')}</Link>
+            <Link href={`/${locale}/true-size`} style={navLinkStyle(isActive(`/${locale}/true-size`))}>{t('Map', 'Carte')}</Link>
           </nav>
 
           {/* ── Right side ── */}
@@ -371,16 +378,18 @@ export default function Header() {
             {/* Submit button */}
             <button
               onClick={openSubmit}
-              style={{ fontSize: '13px', fontWeight: '700', color: '#92400E', background: '#FEF3C7', border: '1.5px solid #F4B400', borderRadius: '10px', padding: '6px 14px', cursor: 'pointer', whiteSpace: 'nowrap', transition: 'background 0.15s' }}
+              style={{ fontSize: '13px', fontWeight: '700', color: '#3A2A05', background: '#F4B400', border: 'none', borderRadius: '10px', padding: '7px 14px', cursor: 'pointer', whiteSpace: 'nowrap', transition: 'background 0.15s' }}
               className="submit-btn desktop-right"
-              onMouseEnter={e => e.currentTarget.style.background = '#FDE68A'}
-              onMouseLeave={e => e.currentTarget.style.background = '#FEF3C7'}>
-              {t('+ Submit', '+ Soumettre')}
+              onMouseEnter={e => e.currentTarget.style.background = '#E0A400'}
+              onMouseLeave={e => e.currentTarget.style.background = '#F4B400'}>
+              {t('Suggest flag', 'Proposer drapeau')}
             </button>
+
+            {/* Séparateur avant la zone compte (desktop) */}
+            <div className="desktop-right" style={{ width: '1px', height: '26px', background: 'rgba(255,255,255,0.16)', flexShrink: 0 }} />
 
             {/* Auth / avatar */}
             <div className="desktop-right" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <LangToggle locale={locale} pathname={pathname} router={router} />
               {user ? (
                 <div ref={avatarRef} style={{ position: 'relative' }}>
                   <button onClick={() => setAvatarOpen(o => !o)}
@@ -500,7 +509,7 @@ export default function Header() {
                       <button onClick={openSubmit}
                         style={{ width: '100%', display: 'flex', alignItems: 'center', gap: '14px', padding: '17px 2px', fontSize: '16.5px', color: '#16324F', background: 'none', border: 'none', borderBottom: '1px solid #E2DDD5', fontWeight: '600', letterSpacing: '-0.1px', cursor: 'pointer', textAlign: 'left' }}>
                         <span style={{ color: '#5B7BB5', display: 'flex', fontSize: '22px', lineHeight: 1, width: '22px', justifyContent: 'center' }}>+</span>
-                        {t('Submit a flag', 'Proposer un drapeau')}
+                        {t('Suggest flag', 'Proposer drapeau')}
                       </button>
                     </div>
 

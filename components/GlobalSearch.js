@@ -245,7 +245,7 @@ export default function GlobalSearch() {
   return (
     <div ref={boxRef} className="global-search" style={{ position: 'relative' }}>
       <div style={{
-        display: 'flex', alignItems: 'center', gap: '8px', width: '220px',
+        display: 'flex', alignItems: 'center', gap: '8px', width: '180px',
         backgroundColor: 'rgba(255,255,255,0.10)',
         border: '1px solid rgba(255,255,255,0.18)', borderRadius: '10px', padding: '0 12px',
         transition: 'background-color 0.12s',

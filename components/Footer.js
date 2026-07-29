@@ -1,9 +1,65 @@
 'use client'
 
+import { useState, useRef, useEffect } from 'react'
+import { usePathname, useRouter } from 'next/navigation'
 import { useLocale } from 'next-intl'
+
+// Drapeaux SVG (repris du header pour un style identique).
+function FlagFR() { return (<svg width="18" height="12" viewBox="0 0 3 2" style={{ borderRadius: '2px', flexShrink: 0 }}><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ED2939"/></svg>) }
+function FlagGB() { return (<svg width="18" height="12" viewBox="0 0 60 40" style={{ borderRadius: '2px', flexShrink: 0 }}><rect width="60" height="40" fill="#012169"/><line x1="0" y1="0" x2="60" y2="40" stroke="#fff" strokeWidth="8"/><line x1="60" y1="0" x2="0" y2="40" stroke="#fff" strokeWidth="8"/><line x1="0" y1="0" x2="60" y2="40" stroke="#C8102E" strokeWidth="4"/><line x1="60" y1="0" x2="0" y2="40" stroke="#C8102E" strokeWidth="4"/><rect x="0" y="15" width="60" height="10" fill="#fff"/><rect x="25" y="0" width="10" height="40" fill="#fff"/><rect x="0" y="17" width="60" height="6" fill="#C8102E"/><rect x="27" y="0" width="6" height="40" fill="#C8102E"/></svg>) }
+
+// Sélecteur de langue du footer : même style que le header (drapeau + fond
+// translucide + chevron), mais avec le nom complet de la langue.
+// La dropdown s'ouvre vers le haut puisqu'on est en bas de page.
+function FooterLang({ locale, pathname, router, t }) {
+  const [open, setOpen] = useState(false)
+  const ref = useRef(null)
+  useEffect(() => {
+    function onDoc(e) { if (ref.current && !ref.current.contains(e.target)) setOpen(false) }
+    document.addEventListener('mousedown', onDoc)
+    return () => document.removeEventListener('mousedown', onDoc)
+  }, [])
+  const LANGS = [{ code: 'fr', label: 'Français' }, { code: 'en', label: 'English' }]
+  const current = LANGS.find(l => l.code === locale) || LANGS[1]
+  function choose(code) { setOpen(false); if (code !== locale) router.push(pathname.replace(`/${locale}`, `/${code}`)) }
+  return (
+    <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+      <span style={{ fontSize: '12px', color: 'rgba(255,255,255,0.5)' }}>{t('Language:', 'Langue :')}</span>
+      <div ref={ref} style={{ position: 'relative' }}>
+        <button onClick={() => setOpen(o => !o)} aria-haspopup="listbox" aria-expanded={open}
+          style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '6px 10px', borderRadius: '8px', cursor: 'pointer', background: open ? 'rgba(255,255,255,0.20)' : 'rgba(255,255,255,0.10)', border: '1px solid rgba(255,255,255,0.22)', transition: 'background 0.15s' }}
+          onMouseEnter={e => { if (!open) e.currentTarget.style.background = 'rgba(255,255,255,0.20)' }}
+          onMouseLeave={e => { if (!open) e.currentTarget.style.background = 'rgba(255,255,255,0.10)' }}>
+          {locale === 'fr' ? <FlagFR /> : <FlagGB />}
+          <span style={{ fontSize: '12px', fontWeight: '700', color: '#FFFFFF' }}>{current.label}</span>
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ transform: open ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s', opacity: 0.85 }}><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        {open && (
+          <div role="listbox" style={{ position: 'absolute', bottom: 'calc(100% + 8px)', left: 0, backgroundColor: '#FFFFFF', borderRadius: '10px', boxShadow: '0 12px 36px rgba(0,0,0,0.25)', overflow: 'hidden', width: '168px', zIndex: 200, border: '1px solid #E2DDD5' }}>
+            {LANGS.map(l => {
+              const isCur = l.code === locale
+              return (
+                <button key={l.code} role="option" aria-selected={isCur} onClick={() => choose(l.code)}
+                  style={{ display: 'flex', alignItems: 'center', gap: '10px', width: '100%', padding: '10px 12px', background: isCur ? '#F4F1E6' : 'transparent', border: 'none', cursor: 'pointer', textAlign: 'left' }}
+                  onMouseEnter={e => { if (!isCur) e.currentTarget.style.background = '#F6F6F4' }}
+                  onMouseLeave={e => { if (!isCur) e.currentTarget.style.background = 'transparent' }}>
+                  {l.code === 'fr' ? <FlagFR /> : <FlagGB />}
+                  <span style={{ fontSize: '13px', fontWeight: isCur ? '700' : '600', color: '#16324F' }}>{l.label}</span>
+                  {isCur && <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16A34A" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: 'auto' }}><path d="M20 6L9 17l-5-5"/></svg>}
+                </button>
+              )
+            })}
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}
 
 export default function Footer() {
   const locale = useLocale()
+  const pathname = usePathname()
+  const router = useRouter()
   const t = (en, fr) => locale === 'fr' ? fr : en
 
   return (
@@ -30,6 +86,9 @@ export default function Footer() {
 
         {/* Right group — Ko-fi + social icons */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '14px', flexWrap: 'wrap' }}>
+
+          {/* Sélecteur de langue */}
+          <FooterLang locale={locale} pathname={pathname} router={router} t={t} />
 
           {/* Ko-fi — DS gold button */}
           <a

@@ -112,50 +112,34 @@ export default function LoginPage() {
     }}>
       <div style={{
         backgroundColor: 'white', borderRadius: '20px',
-        padding: '40px 36px', width: '100%', maxWidth: '420px',
+        padding: '32px 30px', width: '100%', maxWidth: '380px',
         boxShadow: '0 4px 32px rgba(11,31,59,0.10)',
       }}>
 
-        {/* Logo */}
-        <div style={{ textAlign: 'center', marginBottom: '28px' }}>
-          <div style={{
-            display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-            width: '52px', height: '52px', borderRadius: '14px',
-            backgroundColor: '#0B1F3B', marginBottom: '14px',
-          }}>
-            <span style={{ fontSize: '26px' }}>🏴</span>
-          </div>
-          <h1 style={{ fontSize: '22px', fontWeight: '800', color: '#0B1F3B', margin: '0 0 4px' }}>
+        {/* Titre — icône et « Bon retour » retirés, on garde la phrase de connexion */}
+        <div style={{ textAlign: 'center', marginBottom: '24px' }}>
+          <h1 style={{ fontSize: '20px', fontWeight: '800', color: '#0B1F3B', margin: 0 }}>
             {mode === 'forgot'
               ? (locale === 'fr' ? 'Réinitialiser le mot de passe' : 'Reset your password')
-              : tr(mode === 'signup' ? 'signup' : 'title', locale)}
+              : mode === 'signup'
+                ? tr('signup', locale)
+                : tr('subtitle', locale)}
           </h1>
-          <p style={{ fontSize: '14px', color: '#64748b', margin: 0 }}>
-            {mode === 'forgot'
-              ? (locale === 'fr' ? 'Entrez votre e-mail pour recevoir un lien.' : 'Enter your email to receive a reset link.')
-              : tr('subtitle', locale)}
-          </p>
+          {mode === 'forgot' && (
+            <p style={{ fontSize: '14px', color: '#64748b', margin: '6px 0 0' }}>
+              {locale === 'fr' ? 'Entrez votre e-mail pour recevoir un lien.' : 'Enter your email to receive a reset link.'}
+            </p>
+          )}
         </div>
 
-        {/* Google OAuth */}
-        {mode !== 'forgot' && (
+        {/* Social login masqué temporairement (OAuth non fonctionnel) */}
+        {false && mode !== 'forgot' && (
           <>
-            <button
-              onClick={handleGoogle}
-              style={{
-                width: '100%', display: 'flex', alignItems: 'center',
-                justifyContent: 'center', gap: '10px', padding: '11px 16px',
-                borderRadius: '10px', border: '1.5px solid #e2e8f0',
-                backgroundColor: 'white', color: '#0B1F3B',
-                fontSize: '15px', fontWeight: '600', cursor: 'pointer',
-              }}
-              onMouseOver={e => e.currentTarget.style.backgroundColor = '#f8fafc'}
-              onMouseOut={e => e.currentTarget.style.backgroundColor = 'white'}
-            >
+            <button onClick={handleGoogle}
+              style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', padding: '11px 16px', borderRadius: '10px', border: '1.5px solid #e2e8f0', backgroundColor: 'white', color: '#0B1F3B', fontSize: '15px', fontWeight: '600', cursor: 'pointer' }}>
               <GoogleIcon />
               {tr('google', locale)}
             </button>
-
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', margin: '20px 0' }}>
               <div style={{ flex: 1, height: '1px', backgroundColor: '#e2e8f0' }} />
               <span style={{ color: '#94a3b8', fontSize: '12px', fontWeight: '500' }}>{tr('or', locale)}</span>

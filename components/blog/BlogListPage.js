@@ -3,6 +3,7 @@
 import { useState, useMemo, useEffect } from 'react'
 import Link from 'next/link'
 import { useLocale } from 'next-intl'
+import Footer from '@/components/Footer'
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 function formatDate(dateStr, locale) {
@@ -238,6 +239,7 @@ export default function BlogListPage({ posts }) {
           </div>
         )}
       </div>
+      <Footer />
     </div>
   )
 }

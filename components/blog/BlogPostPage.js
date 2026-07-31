@@ -3,6 +3,7 @@
 import { useLocale } from 'next-intl'
 import Link from 'next/link'
 import RelatedPostsCarousel from '@/components/blog/RelatedPostsCarousel'
+import Footer from '@/components/Footer'
 
 // ── Design tokens ──────────────────────────────────────────────────────────
 const C = {
@@ -259,6 +260,7 @@ export default function BlogPostPage({ post, relatedPosts = [] }) {
           {t('Back to all articles', 'Retour à tous les articles')}
         </Link>
       </div>
+      <Footer />
     </div>
   )
 }

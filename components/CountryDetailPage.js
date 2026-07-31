@@ -76,7 +76,7 @@ function CountryFlagsSection({ countryIso2 }) {
   if (loading || (regions.length === 0 && cities.length === 0)) return null
 
   return (
-    <section style={{ padding: '0 0 8px' }}>
+    <section style={{ backgroundColor: DS.surface, borderRadius: '16px', border: `1px solid ${DS.border}`, padding: '20px' }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
         <h2 style={{ margin: 0, fontSize: '20px', fontWeight: '900', color: DS.navy, letterSpacing: '-0.3px' }}>
           {t('Subnational Flags', 'Drapeaux régionaux')}
@@ -362,7 +362,7 @@ function FlagEtiquette({ country, locale }) {
   const specific = (locale === 'fr' ? (country.etiquette_fr || country.etiquette_en) : (country.etiquette_en || country.etiquette_fr)) || []
   const overline = { margin: '0 0 10px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }
   return (
-    <Section title={t('Flag etiquette', "Règles d'utilisation des drapeaux")} subtitle={t('How the flag should be used and displayed with respect.', 'Comment utiliser et afficher le drapeau avec respect.')}>
+    <Section title={t('Etiquette & protocol', "Étiquette & protocole")} subtitle={t('How the flag should be used and displayed with respect.', 'Comment utiliser et afficher le drapeau avec respect.')}>
       {specific.length > 0 && (
         <div style={{ marginBottom: '18px' }}>
           <p style={overline}>{t('Specific rules', 'Règles spécifiques')} — {locale === 'fr' ? country.fr : country.en}</p>
@@ -846,6 +846,7 @@ export default function CountryDetailPage({ country, facts = [], relatedCountrie
     ...(densityValue ? [{ label: t('Density', 'Densité'), value: densityValue }] : []),
     { label: t('Adoption date','Date adoption'), value: adoptionValue, bullets: true },
     ...(country.median_age ? [{ label: t('Median age','Âge médian'), value: country.median_age + (locale === 'fr' ? ' ans' : ' yrs') }] : []),
+    ...(country.flag_name_local ? [{ label: t('Flag name', 'Nom du drapeau'), value: country.flag_name_local }] : []),
   ].filter(f => f.value && f.value !== '—')
 
   // ── MOBILE layout ──────────────────────────────────────────────────────────
@@ -922,10 +923,8 @@ export default function CountryDetailPage({ country, facts = [], relatedCountrie
           {/* Historical Timeline */}
           <FlagHistoryModule countryCode={country.code} countryName={name} />
 
-          {/* Sub-national flags */}
-          <div style={{ backgroundColor: DS.surface, borderRadius: '16px', border: `1px solid ${DS.border}`, padding: '20px' }}>
-            <CountryFlagsSection countryIso2={country.code} />
-          </div>
+          {/* Sub-national flags (self-contained card; renders nothing when empty) */}
+          <CountryFlagsSection countryIso2={country.code} />
 
           {/* CTA — Test your knowledge */}
           <Link href={`/${locale}/games/flag-reveal`} style={{ textDecoration: 'none', display: 'block' }}>
@@ -1016,10 +1015,10 @@ export default function CountryDetailPage({ country, facts = [], relatedCountrie
         </div>
 
         {/* ── Hero row: flag + quick facts (aligned heights) ── */}
-        <div style={{ display: 'flex', gap: '24px', alignItems: 'stretch', marginBottom: '24px', flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', gap: '24px', alignItems: 'flex-start', marginBottom: '24px', flexWrap: 'wrap' }}>
 
           {/* Flag card */}
-          <div style={{ flex: '1 1 380px', maxWidth: '440px', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 8px 32px rgba(22,50,79,0.12)', border: `1px solid ${DS.border}`, backgroundColor: DS.surface, display: 'flex', alignItems: 'center' }}>
+          <div style={{ flex: '1 1 380px', maxWidth: '440px', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 8px 32px rgba(22,50,79,0.12)', border: `1px solid ${DS.border}`, backgroundColor: DS.bg }}>
             <FlagHero countryCode={country.code} countryName={name} locale={locale} flagUrl={country.flag_url} />
           </div>
 
@@ -1027,7 +1026,7 @@ export default function CountryDetailPage({ country, facts = [], relatedCountrie
           {quickFacts.length > 0 && (
             <div style={{ flex: '1 1 360px', minWidth: 0, backgroundColor: DS.surface, borderRadius: '16px', border: `1px solid ${DS.border}`, boxShadow: '0 2px 8px rgba(22,50,79,0.08)', padding: '20px', display: 'flex', flexDirection: 'column' }}>
               <p style={{ margin: '0 0 14px', fontSize: '18px', fontWeight: '800', color: DS.navy, letterSpacing: '-0.01em' }}>{t('Quick Facts', 'Chiffres cl\u00e9s')}</p>
-              <div style={{ flex: 1, display: 'grid', gridTemplateColumns: '1fr 1fr', gridAutoRows: '1fr', borderRadius: '10px', overflow: 'hidden', border: `1px solid ${DS.border}` }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', borderRadius: '10px', overflow: 'hidden', border: `1px solid ${DS.border}` }}>
                 {quickFacts.map((item, i) => (
                   <div key={i} style={{
                     padding: '14px 16px',
@@ -1062,10 +1061,8 @@ export default function CountryDetailPage({ country, facts = [], relatedCountrie
           {/* Historical Timeline */}
           <FlagHistoryModule countryCode={country.code} countryName={name} />
 
-          {/* Sub-national flags */}
-          <div style={{ backgroundColor: DS.surface, borderRadius: '16px', border: `1px solid ${DS.border}`, padding: '20px' }}>
-            <CountryFlagsSection countryIso2={country.code} />
-          </div>
+          {/* Sub-national flags (self-contained card; renders nothing when empty) */}
+          <CountryFlagsSection countryIso2={country.code} />
 
           {/* CTA */}
           <div style={{ backgroundColor: DS.navy, borderRadius: '16px', padding: '24px 28px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px' }}>

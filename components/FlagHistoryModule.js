@@ -138,30 +138,33 @@ export default function FlagHistoryModule({ countryCode, countryName }) {
 
   return (
     <section style={{ marginTop: '48px' }}>
-      <h2 style={{ fontSize: '22px', fontWeight: '900', color: '#0B1F3B', margin: '0 0 20px', letterSpacing: '-0.5px' }}>
+      <h2 style={{ fontSize: '22px', fontWeight: '900', color: '#0B1F3B', margin: '0 0 4px', letterSpacing: '-0.5px' }}>
         {t('Flag Evolution', 'Évolution du drapeau')}
       </h2>
+      <p style={{ fontSize: '13px', color: '#64748b', margin: '0 0 20px' }}>
+        {t('Tap a flag to see its details.', 'Touchez un drapeau pour voir son détail.')}
+      </p>
 
       <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-start', flexWrap: 'wrap' }}>
 
         {/* Selected flag preview */}
         {selected && (
           <div ref={previewRef} style={{
-            flex: '0 0 auto', width: 'min(280px, 100%)',
+            flex: '0 0 auto', width: 'min(340px, 100%)',
             position: isMobile ? 'static' : 'sticky', top: isMobile ? 'auto' : '76px', alignSelf: 'flex-start',
             backgroundColor: 'white', borderRadius: '16px',
             border: '1px solid #e2e8f0',
             overflow: 'hidden',
             boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
           }}>
-            <div style={{ backgroundColor: 'rgba(22,50,79,0.12)', padding: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '160px' }}>
+            <div style={{ backgroundColor: 'rgba(22,50,79,0.12)', padding: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '200px' }}>
               <FlagImage
                 imageUrl={selected.image_url}
                 isoCode={countryCode}
                 dateStart={selected.date_start}
                 duplicateIndex={selected._dupIndex}
                 alt={label(selected)}
-                style={{ maxWidth: '100%', maxHeight: '140px', objectFit: 'contain', borderRadius: '4px', boxShadow: '0 2px 12px rgba(0,0,0,0.15)' }}
+                style={{ maxWidth: '100%', maxHeight: '180px', objectFit: 'contain', borderRadius: '4px', boxShadow: '0 2px 12px rgba(0,0,0,0.15)' }}
               />
             </div>
             <div style={{ padding: '14px 16px' }}>
@@ -189,7 +192,7 @@ export default function FlagHistoryModule({ countryCode, countryName }) {
         <div style={{ flex: 1, minWidth: '200px' }}>
           <div style={{ position: 'relative' }}>
             <div style={{
-              position: 'absolute', left: '31px', top: '23px',
+              position: 'absolute', left: '41px', top: '29px',
               bottom: '24px', width: '2px',
               backgroundColor: '#e2e8f0',
               zIndex: 0,
@@ -202,13 +205,14 @@ export default function FlagHistoryModule({ countryCode, countryName }) {
                 <div key={flag.id} onClick={() => pick(flag)}
                   style={{ display: 'flex', alignItems: 'flex-start', gap: '16px', marginBottom: i < flags.length - 1 ? '16px' : '0', cursor: 'pointer', position: 'relative', zIndex: 1 }}>
                   <div style={{
-                    width: '64px', height: '46px', flexShrink: 0, boxSizing: 'border-box',
-                    borderRadius: '9px', padding: '3px',
+                    width: '84px', height: '58px', flexShrink: 0, boxSizing: 'border-box',
+                    borderRadius: '10px', padding: '4px',
                     border: `2px solid ${isSelected ? '#0B1F3B' : isCurrent ? '#22c55e' : '#e2e8f0'}`,
                     backgroundColor: 'rgba(22,50,79,0.14)',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    overflow: 'hidden', transition: 'all 0.15s',
-                    boxShadow: isSelected ? '0 0 0 4px rgba(11,31,59,0.12)' : '0 1px 3px rgba(11,31,59,0.06)',
+                    overflow: 'hidden', transition: 'transform 0.18s ease, box-shadow 0.18s ease',
+                    transform: isSelected ? 'scale(1.08)' : 'scale(1)',
+                    boxShadow: isSelected ? '0 6px 18px rgba(11,31,59,0.28)' : '0 1px 3px rgba(11,31,59,0.06)',
                   }}>
                     <FlagImage
                       imageUrl={flag.image_url}
@@ -220,24 +224,27 @@ export default function FlagHistoryModule({ countryCode, countryName }) {
                     />
                   </div>
                   <div style={{
-                    flex: 1, backgroundColor: isSelected ? '#f8f5ed' : 'white',
-                    borderRadius: '12px', padding: '10px 14px',
+                    flex: 1,
+                    backgroundColor: isSelected ? '#0B1F3B' : 'white',
+                    borderRadius: '12px', padding: '11px 15px',
                     border: `1.5px solid ${isSelected ? '#0B1F3B' : '#e2e8f0'}`,
-                    transition: 'all 0.15s',
+                    boxShadow: isSelected ? '0 8px 24px rgba(11,31,59,0.22)' : '0 1px 2px rgba(11,31,59,0.04)',
+                    transform: isSelected ? 'translateX(4px)' : 'translateX(0)',
+                    transition: 'transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease',
                   }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
-                      <span style={{ fontSize: '13px', fontWeight: '700', color: '#0B1F3B' }}>{lbl}</span>
+                      <span style={{ fontSize: '13px', fontWeight: '700', color: isSelected ? '#FFFFFF' : '#0B1F3B' }}>{lbl}</span>
                       {isCurrent && (
-                        <span style={{ fontSize: '10px', fontWeight: '700', backgroundColor: '#dcfce7', color: '#166534', padding: '1px 6px', borderRadius: '99px' }}>
+                        <span style={{ fontSize: '10px', fontWeight: '700', backgroundColor: isSelected ? 'rgba(255,255,255,0.18)' : '#dcfce7', color: isSelected ? '#FFFFFF' : '#166534', padding: '1px 6px', borderRadius: '99px' }}>
                           {t('Current', 'Actuel')}
                         </span>
                       )}
                     </div>
-                    <div style={{ fontSize: '11px', color: '#94a3b8', marginTop: '2px' }}>
+                    <div style={{ fontSize: '11px', color: isSelected ? 'rgba(255,255,255,0.7)' : '#94a3b8', marginTop: '2px' }}>
                       {formatDateRange(flag.date_start, flag.date_end, locale)}
                     </div>
                     {flag.date_start && flag.date_end && (
-                      <div style={{ fontSize: '11px', color: '#cbd5e1', marginTop: '1px' }}>
+                      <div style={{ fontSize: '11px', color: isSelected ? 'rgba(255,255,255,0.45)' : '#cbd5e1', marginTop: '1px' }}>
                         {getDuration(flag.date_start, flag.date_end, locale)}
                       </div>
                     )}

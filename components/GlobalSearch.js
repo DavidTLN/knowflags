@@ -90,11 +90,18 @@ export default function GlobalSearch() {
   const go = useCallback((href) => { router.push(href); reset() }, [router, reset])
 
   function onKeyDown(e) {
-    if (!items.length && e.key !== 'Escape') return
+    // Entrée : si un résultat est surligné on y va, sinon on referme juste
+    // le clavier natif (blur) sans rien casser. Escape ferme aussi le clavier.
+    if (e.key === 'Enter') {
+      e.preventDefault()
+      if (active >= 0 && items[active]) go(items[active].href)
+      else inputRef.current?.blur()
+      return
+    }
+    if (e.key === 'Escape') { reset(); inputRef.current?.blur(); return }
+    if (!items.length) return
     if (e.key === 'ArrowDown') { e.preventDefault(); setActive(i => Math.min(i + 1, items.length - 1)) }
     else if (e.key === 'ArrowUp') { e.preventDefault(); setActive(i => Math.max(i - 1, 0)) }
-    else if (e.key === 'Enter') { if (active >= 0 && items[active]) go(items[active].href) }
-    else if (e.key === 'Escape') { reset(); inputRef.current?.blur() }
   }
 
   const showPanel = (isMobile ? mobileOpen : open) && q.trim().length >= 2

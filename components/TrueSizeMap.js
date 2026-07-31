@@ -302,6 +302,7 @@ export default function TrueSizeMap() {
   const ovRef = useRef([])
   ovRef.current = overlays
 
+  const searchInputRef                  = useRef(null)
   const [search, setSearch]             = useState('')
   const [showDropdown, setShowDropdown] = useState(false)
   const [suggestions, setSuggestions]   = useState([])
@@ -720,7 +721,7 @@ export default function TrueSizeMap() {
   const addCountry = useCallback((meta) => {
     if (!featuresRef.current) return
     if (ovRef.current.find(o => o.meta.id === meta.id)) {
-      setSearch(''); setShowDropdown(false); setSuggestions([]); return
+      setSearch(''); setShowDropdown(false); setSuggestions([]); searchInputRef.current?.blur(); return
     }
 
     let feature
@@ -742,6 +743,7 @@ export default function TrueSizeMap() {
     const nextOverlays = [...ovRef.current, newOverlay]
     setOverlays(nextOverlays)
     setSearch(''); setShowDropdown(false); setSuggestions([])
+    searchInputRef.current?.blur()
     requestAnimationFrame(() => drawRef.current(nextOverlays))
   }, [])
 
@@ -783,17 +785,20 @@ export default function TrueSizeMap() {
           {/* Search */}
           <div style={{ position: 'relative', flex: '0 0 240px' }}>
             <input
-              type="text"
+              ref={searchInputRef}
+              type="search"
+              enterKeyHint="search"
+              autoComplete="off"
               value={search}
               placeholder={t('Search or browse countries...', 'Rechercher ou parcourir...')}
               onChange={e => { setSearch(e.target.value); setShowDropdown(true) }}
               onFocus={() => setShowDropdown(true)}
               onBlur={() => setTimeout(() => setShowDropdown(false), 150)}
               onKeyDown={e => {
-                if (e.key === 'Enter' && suggestions.length > 0) { e.preventDefault(); addCountry(suggestions[0]) }
-                if (e.key === 'Escape') setShowDropdown(false)
+                if (e.key === 'Enter') { e.preventDefault(); if (suggestions.length > 0) addCountry(suggestions[0]); else e.currentTarget.blur() }
+                if (e.key === 'Escape') { setShowDropdown(false); e.currentTarget.blur() }
               }}
-              style={{ width: '100%', padding: '7px 12px', borderRadius: '8px', border: '2px solid #E2DDD5', fontSize: '13px', outline: 'none', boxSizing: 'border-box', backgroundColor: '#F8F7F4' }}
+              style={{ width: '100%', padding: '7px 12px', borderRadius: '8px', border: '2px solid #E2DDD5', fontSize: '16px', outline: 'none', boxSizing: 'border-box', backgroundColor: '#F8F7F4' }}
               onMouseEnter={e => e.target.style.borderColor = '#9EB7E5'}
               onMouseLeave={e => { if (document.activeElement !== e.target) e.target.style.borderColor = '#E2DDD5' }}
             />

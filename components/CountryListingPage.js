@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useMemo, useEffect } from 'react'
+import { useState, useMemo, useEffect, Suspense } from 'react'
+import { useRouter, usePathname, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { useLocale } from 'next-intl'
 import Footer from '@/components/Footer'
@@ -107,7 +108,7 @@ const CalIcon = ({ size = 10 }) => (
   </svg>
 )
 
-export default function CountryListingPage({ rows = [] }) {
+function CountryListingInner({ rows = [] }) {
   const locale = useLocale()
   const t = (en, fr) => locale === 'fr' ? fr : en
 
@@ -135,7 +136,19 @@ export default function CountryListingPage({ rows = [] }) {
   const [isMobile, setIsMobile]                 = useState(false)
   const [filtersOpen, setFiltersOpen]           = useState(false)
   const [openSections, setOpenSections]         = useState({})
-  const [entityView, setEntityView]             = useState('sovereign')
+  const router       = useRouter()
+  const pathname     = usePathname()
+  const searchParams = useSearchParams()
+  // L'URL est la source de vérité : ?type=territories -> territories, sinon sovereign
+  const entityView = searchParams.get('type') === 'territories' ? 'territories' : 'sovereign'
+  // Change d'onglet en mettant à jour l'URL (le composant se re-render via searchParams)
+  const setEntityView = (val) => {
+    const params = new URLSearchParams(searchParams.toString())
+    if (val === 'territories') params.set('type', 'territories')
+    else params.delete('type')
+    const qs = params.toString()
+    router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false })
+  }
 
   const toggleSection = (key) => setOpenSections(prev => ({ ...prev, [key]: !prev[key] }))
 
@@ -158,11 +171,6 @@ export default function CountryListingPage({ rows = [] }) {
     check()
     window.addEventListener('resize', check)
     return () => window.removeEventListener('resize', check)
-  }, [])
-
-  useEffect(() => {
-    const p = new URLSearchParams(window.location.search).get('type')
-    setEntityView(p === 'territories' ? 'territories' : 'sovereign')
   }, [])
 
   const getName = (c) => locale === 'fr' ? c.fr : c.en
@@ -550,5 +558,14 @@ export default function CountryListingPage({ rows = [] }) {
     </div>
     <Footer />
     </>
+  )
+}
+
+// useSearchParams exige une frontière Suspense : on enveloppe le composant.
+export default function CountryListingPage(props) {
+  return (
+    <Suspense fallback={null}>
+      <CountryListingInner {...props} />
+    </Suspense>
   )
 }

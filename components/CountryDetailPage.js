@@ -482,6 +482,8 @@ function ConstructionSheet({ iso, locale }) {
   const candidates = [
     `/flags/construction/${iso}-construction-${primary}.svg`,
     `/flags/construction/${iso}-construction-${secondary}.svg`,
+    `/flags/construction/${iso}-construction-${primary}.png`,
+    `/flags/construction/${iso}-construction-${secondary}.png`,
   ]
   const [i, setI] = useState(0)
   const [ok, setOk] = useState(true)

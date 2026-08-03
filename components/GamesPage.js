@@ -36,7 +36,7 @@ const GAMES = [
   { key: 'imposteur',    icon: '🔎',  en: 'Impostor',     fr: 'Imposteur',    descEn: "Find the flag that doesn't belong",    descFr: "Trouve l'imposteur parmi les drapeaux",       color: '#F59E0B', difficulty: 'medium', ready: false },
 ]
 
-const HIDDEN_GAMES = ['past-flag', 'subflag-quiz']
+const HIDDEN_GAMES = ['past-flag', 'subflag-quiz', 'capital-city', 'flag-clue']
 const COMING_SOON = []
 
 const DIFFICULTY = {

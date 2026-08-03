@@ -11,12 +11,18 @@ const GAMES = [
   { key: 'flag-reveal',  en: 'Flag Reveal',  fr: 'Flag Reveal' },
   { key: 'flag-quiz',    en: 'Flag Quiz',    fr: 'Flag Quiz' },
   { key: 'past-flag',    en: 'Past Flag',    fr: 'Past Flag' },
-  { key: 'capital-clue', en: 'Capital Clue', fr: 'Capital Clue' },
+  { key: 'capital-city', en: 'Capital2Flag', fr: 'Capital2Flag' },
   { key: 'flag-drawing', en: 'Flag Draw',    fr: 'Flag Draw' },
   { key: 'flag-ranker',  en: 'Flag Rank',    fr: 'Flag Rank' },
   { key: 'flag-clue',    en: 'Flag Clue',    fr: 'Flag Clue' },
   { key: 'flag-locator', en: 'Flag Locator', fr: 'Flag Locator' },
 ]
+
+// Jeux retires des menus : on les masque aussi du classement, filtres et lignes.
+// Retirer une cle ici les reaffiche, les scores restent en base dans tous les cas.
+const HIDDEN_GAMES = ['past-flag', 'subflag-quiz', 'capital-city', 'flag-clue']
+
+const VISIBLE_GAMES = GAMES.filter(g => !HIDDEN_GAMES.includes(g.key))
 
 const MEDALS = ['🥇', '🥈', '🥉']
 
@@ -220,9 +226,12 @@ export default function LeaderboardPage() {
       }
 
       if (!error && data) {
-        setEntries(data)
+        // En mode "tous les jeux" les lignes portent leur propre cle de jeu :
+        // on retire celles des jeux masques pour rester coherent avec les menus.
+        const visible = data.filter(e => !e.game || !HIDDEN_GAMES.includes(e.game))
+        setEntries(visible)
         if (myUserId) {
-          const myIdx = data.findIndex(e => e.user_id === myUserId)
+          const myIdx = visible.findIndex(e => e.user_id === myUserId)
           setMyRank(myIdx >= 0 ? myIdx + 1 : null)
         }
       } else {
@@ -366,7 +375,7 @@ export default function LeaderboardPage() {
         {/* Game filter pills */}
         <div style={{ marginBottom: '16px', overflowX: 'auto', paddingBottom: '4px' }}>
           <div style={{ display: 'flex', gap: '8px', minWidth: 'max-content' }}>
-            {GAMES.map(g => (
+            {VISIBLE_GAMES.map(g => (
               <button key={g.key} onClick={() => setGame(g.key)}
                 style={{ padding: '6px 14px', borderRadius: '99px', border: `1.5px solid ${game === g.key ? '#0B1F3B' : '#e2e8f0'}`, backgroundColor: game === g.key ? '#0B1F3B' : 'white', color: game === g.key ? 'white' : '#64748b', fontSize: '12px', fontWeight: '700', cursor: 'pointer', whiteSpace: 'nowrap', transition: 'all 0.15s' }}>
                 {t(g.en, g.fr)}

@@ -79,6 +79,10 @@ const BADGES = [
   { id: 'accepted_50',   icon: '👑', en: 'Flag Legend',       fr: 'Légende des Drapeaux',en_d: '50 flags accepted',              fr_d: '50 drapeaux acceptés',             condition: s => s.accepted >= 50          },
 ]
 
+// Jeux masques des menus : la carte de stats reste (archive du joueur) mais le
+// bouton Jouer disparait, sinon il renvoie vers un jeu introuvable ailleurs.
+const HIDDEN_GAMES = ['past-flag', 'subflag-quiz', 'capital-city', 'flag-clue']
+
 const GAMES_META = {
   'flag-reveal':  { icon: '🏳️', en: 'Flag Reveal',  fr: 'Révèle le Drapeau', color: C.blue,    href: 'flag-reveal'  },
   'flag-quiz':    { icon: '❓',  en: 'Flag Quiz',    fr: 'Quiz Drapeaux',     color: C.green,   href: 'flag-quiz'    },
@@ -462,7 +466,7 @@ export default function ProfilePage() {
                     <div style={{ flex: 1 }}>
                       <div style={{ fontSize: '16px', fontWeight: '800', color: C.navy }}>{t(meta.en, meta.fr)}</div>
                     </div>
-                    <a href={`/${locale}/games/${meta.href}`} style={{ fontSize: '12px', fontWeight: '700', color: meta.color, textDecoration: 'none', padding: '6px 12px', border: `1px solid ${meta.color}`, borderRadius: '99px' }}>
+                    <a href={HIDDEN_GAMES.includes(key) ? undefined : `/${locale}/games/${meta.href}`} style={{ display: HIDDEN_GAMES.includes(key) ? 'none' : 'inline-block', fontSize: '12px', fontWeight: '700', color: meta.color, textDecoration: 'none', padding: '6px 12px', border: `1px solid ${meta.color}`, borderRadius: '99px' }}>
                       {t('Play →', 'Jouer →')}
                     </a>
                   </div>

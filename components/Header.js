@@ -23,7 +23,11 @@ const GAMES = [
   { key: 'imposteur',    en: 'Impostor',    fr: 'Imposteur',   descEn: "Find the flag that doesn't belong",       descFr: "Trouve l'imposteur parmi les drapeaux", ready: false },
 ]
 
-const VISIBLE_GAMES = GAMES.filter(g => g.ready !== false && !['past-flag', 'subflag-quiz'].includes(g.key))
+// Jeux masques temporairement du menu. Retirer une cle de cette liste suffit a
+// le remettre en avant : rien n'est supprime, les routes restent accessibles.
+const HIDDEN_GAMES = ['past-flag', 'subflag-quiz', 'capital-city', 'flag-clue']
+
+const VISIBLE_GAMES = GAMES.filter(g => g.ready !== false && !HIDDEN_GAMES.includes(g.key))
 
 const FLAGS_MENU = [
   { href: 'countries',                 en: 'Country Flags',         fr: 'Drapeaux des Pays',      descEn: 'All countries of the world',        descFr: 'Tous les drapeaux du monde' },

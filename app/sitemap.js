@@ -92,6 +92,7 @@ const STATIC_PATHS = [
   { path: '/countries',     priority: 0.9, changeFrequency: 'weekly',  dated: 'countries' },
   { path: '/blog',          priority: 0.8, changeFrequency: 'weekly',  dated: 'blog' },
   { path: '/games',         priority: 0.7, changeFrequency: 'monthly', dated: null },
+  { path: '/forum',         priority: 0.7, changeFrequency: 'daily',   dated: 'forum' },
   { path: '/flags/cities',  priority: 0.6, changeFrequency: 'monthly', dated: 'cities' },
   { path: '/flags/regions', priority: 0.6, changeFrequency: 'monthly', dated: null },
   { path: '/organisations', priority: 0.6, changeFrequency: 'monthly', dated: null },
@@ -142,10 +143,45 @@ export default async function sitemap() {
     }))
   }, [])
 
+  // ── Forum : categories publiques ───────────────────────────────────────────
+  // Seules les sections visibles sans compte sont listees. Une section masquee
+  // ou reservee aux membres renverrait une page vide (ou un 403) au crawler.
+  const forumCategories = await safe(async () => {
+    if (!supabase) return []
+    const { data } = await supabase
+      .from('forum_categories')
+      .select('id, slug, updated_at, parent_id')
+      .eq('is_hidden', false)
+      .eq('min_role_to_view', 'public')
+      .order('position')
+    return data || []
+  }, [])
+
+  const publicCategoryIds = new Set(forumCategories.map(c => c.id))
+  const categorySlugById = {}
+  forumCategories.forEach(c => { categorySlugById[c.id] = c.slug })
+
+  // ── Forum : sujets ─────────────────────────────────────────────────────────
+  // La policy RLS `forum_topics_read` ne renvoie deja que les sujets approuves
+  // et non archives au client anonyme ; le filtre explicite documente l'intention
+  // et protege le sitemap si la policy evolue.
+  const forumTopics = await safe(async () => {
+    if (!supabase) return []
+    const { data } = await supabase
+      .from('forum_topics')
+      .select('slug, category_id, last_post_at, updated_at, created_at')
+      .eq('moderation', 'approved')
+      .neq('status', 'archived')
+      .order('last_post_at', { ascending: false })
+      .limit(5000)
+    return (data || []).filter(t => t.slug && publicCategoryIds.has(t.category_id))
+  }, [])
+
   // ── Dates agregees pour les pages d'index ──────────────────────────────────
   const countriesDate = newest(countries.map(c => c.updated_at))
   const citiesDate    = newest(cityFlags.map(f => f.updated_at))
   const blogDate      = newest(posts.map(p => p.date))
+  const forumDate     = newest(forumTopics.map(t => t.last_post_at || t.updated_at || t.created_at))
   const contentDate   = newest([countriesDate, citiesDate, blogDate])
 
   const AGGREGATES = {
@@ -153,6 +189,7 @@ export default async function sitemap() {
     countries: countriesDate,
     cities: citiesDate,
     blog: blogDate,
+    forum: forumDate,
   }
 
   const entries = []
@@ -203,6 +240,27 @@ export default async function sitemap() {
         priority: 0.7,
         changeFrequency: 'monthly',
         date: p.date,
+      }))
+    }
+
+    // Forum — sections
+    for (const c of forumCategories) {
+      if (!c.slug) continue
+      entries.push(entry(locale, `/forum/${c.slug}`, {
+        priority: 0.5,
+        changeFrequency: 'daily',
+        date: c.updated_at,
+      }))
+    }
+
+    // Forum — sujets
+    for (const tpc of forumTopics) {
+      const catSlug = categorySlugById[tpc.category_id]
+      if (!catSlug) continue
+      entries.push(entry(locale, `/forum/${catSlug}/${tpc.slug}`, {
+        priority: 0.4,
+        changeFrequency: 'weekly',
+        date: tpc.last_post_at || tpc.updated_at || tpc.created_at,
       }))
     }
   }

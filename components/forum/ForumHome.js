@@ -106,7 +106,14 @@ export default function ForumHome({ tree, locale }) {
             <span>›</span>
             <span style={{ color: '#9EB7E5' }}>Forum</span>
           </nav>
-          <h1 style={{ margin: '0 0 8px', fontSize: 'clamp(26px, 4vw, 40px)', fontWeight: 900, letterSpacing: '-0.02em' }}>Forum</h1>
+          <h1 style={{
+            /* couleur explicite : une regle globale sur h1 dans globals.css
+               bat l'heritage du color:'white' du hero et rendait le titre navy
+               sur navy, donc invisible */
+            color: '#FFFFFF',
+            margin: '0 0 8px', fontSize: 'clamp(26px, 4vw, 40px)',
+            fontWeight: 900, letterSpacing: '-0.02em',
+          }}>Forum</h1>
           <p style={{ margin: 0, fontSize: '15px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6, maxWidth: '540px' }}>
             {t('Discuss flags, geography, vexillology and world cultures with the community.',
                'Échangez sur les drapeaux, la géographie, la vexillologie et les cultures du monde.')}

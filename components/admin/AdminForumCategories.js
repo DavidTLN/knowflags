@@ -10,6 +10,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase-client'
+import AdminForumNav from '@/components/admin/AdminForumNav'
 
 const C = {
   navy: '#16324F', navyLight: '#1E4976', navyDark: '#0F1923',
@@ -513,6 +514,8 @@ export default function AdminForumCategories({ initialCategories, stats, locale 
         maxWidth: '960px', margin: '0 auto',
         padding: isMobile ? '24px 16px 64px' : '32px 24px 80px',
       }}>
+
+        <AdminForumNav locale={locale} active="structure" />
 
         {/* Barre d'actions */}
         <div style={{

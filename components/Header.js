@@ -365,7 +365,7 @@ export default function Header() {
                     </div>
                   </div>
                   <div style={{ borderTop: '1px solid #f0f0f0', padding: '10px 16px' }}>
-                    <Link href={`/${locale}/games`} onClick={() => setGamesOpen(false)} style={{ fontSize: '13px', color: '#9EB7E5', textDecoration: 'none', fontWeight: '600' }}>
+                    <Link href={`/${locale}/games`} onClick={() => setGamesOpen(false)} style={{ fontSize: '13px', color: '#16324F', textDecoration: 'none', fontWeight: '700' }}>
                       {t('View all games →', 'Voir tous les jeux →')}
                     </Link>
                   </div>

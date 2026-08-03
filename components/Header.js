@@ -73,6 +73,14 @@ function IconBlog(props) {
   )
 }
 
+function IconForum(props) {
+  return (
+    <svg {...ICON_PROPS} {...props}>
+      <path d="M4 5h11a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H9l-4 3v-3H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z" />
+    </svg>
+  )
+}
+
 function IconGlobe(props) {
   return (
     <svg {...ICON_PROPS} {...props}>
@@ -367,6 +375,7 @@ export default function Header() {
 
             <Link href={`/${locale}/blog`} style={navLinkStyle(isActive(`/${locale}/blog`))}>{t('Blog', 'Blog')}</Link>
             <Link href={`/${locale}/true-size`} style={navLinkStyle(isActive(`/${locale}/true-size`))}>{t('Map', 'Carte')}</Link>
+            <Link href={`/${locale}/forum`} style={navLinkStyle(isActive(`/${locale}/forum`))}>{t('Forum', 'Forum')}</Link>
           </nav>
 
           {/* ── Right side ── */}
@@ -504,6 +513,12 @@ export default function Header() {
                         style={{ display: 'flex', alignItems: 'center', gap: '14px', padding: '17px 2px', fontSize: '16.5px', color: '#16324F', textDecoration: 'none', fontWeight: '600', borderBottom: '1px solid #E2DDD5', letterSpacing: '-0.1px' }}>
                         <span style={{ color: '#5B7BB5', display: 'flex' }}><IconGlobe width={22} height={22} /></span>
                         {t('True Size Map', 'Carte Taille Réelle')}
+                      </Link>
+
+                      <Link href={`/${locale}/forum`} onClick={closeDrawer}
+                        style={{ display: 'flex', alignItems: 'center', gap: '14px', padding: '17px 2px', fontSize: '16.5px', color: '#16324F', textDecoration: 'none', fontWeight: '600', borderBottom: '1px solid #E2DDD5', letterSpacing: '-0.1px' }}>
+                        <span style={{ color: '#5B7BB5', display: 'flex' }}><IconForum width={22} height={22} /></span>
+                        {t('Forum', 'Forum')}
                       </Link>
 
                       <button onClick={openSubmit}

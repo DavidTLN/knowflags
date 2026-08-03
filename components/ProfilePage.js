@@ -177,6 +177,9 @@ export default function ProfilePage() {
   const [avatarBusy, setAvatarBusy] = useState(false)
   const [gameScores, setGameScores] = useState([])
   const [submissions, setSubmissions] = useState([])
+  const [forumStats, setForumStats]   = useState(null)
+  const [forumBadges, setForumBadges] = useState([])
+  const [forumTopics, setForumTopics] = useState([])
   const fileRef = useRef(null)
 
   useEffect(() => {
@@ -196,6 +199,18 @@ export default function ProfilePage() {
       if (hR.data) setHistory(hR.data)
       if (gR.data) setGameScores(gR.data)
       if (subR.data) setSubmissions(subR.data)
+
+      // ── Forum : stats, badges, derniers sujets ──
+      const [fsR, fbR, ftR] = await Promise.all([
+        supabase.from('forum_user_stats').select('*').eq('user_id', uid).maybeSingle(),
+        supabase.from('forum_user_badges').select('badge_id, awarded_at, forum_badges(slug, name_fr, name_en, icon, color)').eq('user_id', uid),
+        supabase.from('forum_topics').select('id, title, slug, category_id, reply_count, created_at, forum_categories(slug)')
+          .eq('author_id', uid).eq('moderation', 'approved').order('created_at', { ascending: false }).limit(5),
+      ])
+      if (fsR.data) setForumStats(fsR.data)
+      if (fbR.data) setForumBadges(fbR.data)
+      if (ftR.data) setForumTopics(ftR.data)
+
       setLoading(false)
     }
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -291,6 +306,7 @@ export default function ProfilePage() {
     { id: 'flags',        en: 'Flags',        fr: 'Drapeaux'     },
     { id: 'badges',       en: 'Badges',       fr: 'Badges'       },
     { id: 'submissions',  en: 'Submissions',  fr: 'Soumissions'  },
+    { id: 'forum',        en: 'Forum',        fr: 'Forum'        },
     { id: 'settings',     en: 'Settings',     fr: 'Paramètres'   },
   ]
 
@@ -621,6 +637,74 @@ export default function ProfilePage() {
                       {s.status}
                     </span>
                   </div>
+                )
+              })}
+            </div>
+          )}
+        </>)}
+
+        {/* FORUM */}
+        {activeTab === 'forum' && (<>
+          <SectionTitle>{t('Forum activity', 'Activité sur le forum')}</SectionTitle>
+
+          {/* Stats */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px', marginBottom: '24px' }}>
+            <div style={{ backgroundColor: C.white, borderRadius: '12px', padding: '16px', border: `1px solid ${C.border}`, textAlign: 'center' }}>
+              <div style={{ fontSize: '24px', fontWeight: '900', color: C.navy }}>{forumStats?.topic_count ?? 0}</div>
+              <div style={{ fontSize: '11px', fontWeight: '700', color: C.muted, textTransform: 'uppercase', marginTop: '2px' }}>{t('Topics', 'Sujets')}</div>
+            </div>
+            <div style={{ backgroundColor: C.white, borderRadius: '12px', padding: '16px', border: `1px solid ${C.border}`, textAlign: 'center' }}>
+              <div style={{ fontSize: '24px', fontWeight: '900', color: C.navy }}>{forumStats?.reply_count ?? 0}</div>
+              <div style={{ fontSize: '11px', fontWeight: '700', color: C.muted, textTransform: 'uppercase', marginTop: '2px' }}>{t('Replies', 'Réponses')}</div>
+            </div>
+            <div style={{ backgroundColor: C.white, borderRadius: '12px', padding: '16px', border: `1px solid ${C.border}`, textAlign: 'center' }}>
+              <div style={{ fontSize: '14px', fontWeight: '900', color: C.navy, marginTop: '4px' }}>
+                {forumStats?.forum_role === 'admin' ? t('Admin', 'Admin')
+                  : forumStats?.forum_role === 'moderator' ? t('Moderator', 'Modérateur')
+                  : profile?.is_admin ? t('Admin', 'Admin') : t('Member', 'Membre')}
+              </div>
+              <div style={{ fontSize: '11px', fontWeight: '700', color: C.muted, textTransform: 'uppercase', marginTop: '4px' }}>{t('Role', 'Rôle')}</div>
+            </div>
+          </div>
+
+          {/* Badges forum */}
+          {forumBadges.length > 0 && (
+            <div style={{ marginBottom: '24px' }}>
+              <div style={{ fontSize: '12px', fontWeight: '700', color: C.muted, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '10px' }}>{t('Forum badges', 'Badges du forum')}</div>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                {forumBadges.map(fb => {
+                  const b = fb.forum_badges || {}
+                  return (
+                    <div key={fb.badge_id} title={t(b.name_en, b.name_fr)}
+                      style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', backgroundColor: C.white, border: `1px solid ${C.border}`, borderRadius: '99px', padding: '6px 14px' }}>
+                      <span style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: b.color || C.blue }} />
+                      <span style={{ fontSize: '13px', fontWeight: '700', color: C.navy }}>{t(b.name_en, b.name_fr)}</span>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* Derniers sujets */}
+          <div style={{ fontSize: '12px', fontWeight: '700', color: C.muted, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '10px' }}>{t('Recent topics', 'Sujets récents')}</div>
+          {forumTopics.length === 0 ? (
+            <div style={{ textAlign: 'center', padding: '40px 0', color: C.muted, fontSize: '14px' }}>
+              {t('No topics started yet.', 'Aucun sujet créé pour le moment.')}
+            </div>
+          ) : (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              {forumTopics.map(tp => {
+                const catSlug = tp.forum_categories?.slug || ''
+                return (
+                  <a key={tp.id} href={`/${locale}/forum/${catSlug}/${tp.slug}`} style={{ textDecoration: 'none' }}>
+                    <div style={{ backgroundColor: C.white, borderRadius: '12px', padding: '12px 16px', border: `1px solid ${C.border}`, display: 'flex', alignItems: 'center', gap: '12px' }}>
+                      <div style={{ flex: 1, minWidth: 0 }}>
+                        <div style={{ fontSize: '13px', fontWeight: '700', color: C.navy, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{tp.title}</div>
+                        <div style={{ fontSize: '11px', color: C.muted }}>{new Date(tp.created_at).toLocaleDateString()} · {tp.reply_count || 0} {t('replies', 'réponses')}</div>
+                      </div>
+                    </div>
+                  </a>
                 )
               })}
             </div>

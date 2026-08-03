@@ -2,7 +2,7 @@
 
 import { createClient } from '@/lib/supabase-client'
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import FlagHistoryModule from '@/components/FlagHistoryModule'
 import { useLocale } from 'next-intl'
 import { labelColor, labelSymbol, labelShape } from '@/lib/flagSymbolsFr'
@@ -487,21 +487,160 @@ function ConstructionSheet({ iso, locale }) {
   ]
   const [i, setI] = useState(0)
   const [ok, setOk] = useState(true)
+  const [open, setOpen] = useState(false)
   if (!iso || !ok) return null
+  const src = candidates[i]
+  const label = t('Construction sheet', 'Planche de construction')
   return (
     <div style={{ borderTop: `1px solid ${DS.border}`, marginTop: '16px', paddingTop: '14px' }}>
-      <p style={{ margin: '0 0 10px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{t('Construction sheet', 'Planche de construction')}</p>
+      <p style={{ margin: '0 0 10px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{label}</p>
       <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-        <div style={{ border: `1px solid ${DS.border}`, borderRadius: '10px', backgroundColor: '#FAFAF7', width: '600px', maxWidth: '100%', padding: '12px', boxSizing: 'border-box' }}>
+        <button
+          onClick={() => setOpen(true)}
+          title={t('Click to enlarge', 'Cliquer pour agrandir')}
+          style={{ position: 'relative', border: `1px solid ${DS.border}`, borderRadius: '10px', backgroundColor: '#FAFAF7', width: '600px', maxWidth: '100%', padding: '12px', boxSizing: 'border-box', cursor: 'zoom-in', display: 'block' }}
+        >
           <img
-            src={candidates[i]}
-            alt={t('Construction sheet', 'Planche de construction')}
+            src={src}
+            alt={label}
             onError={() => (i + 1 < candidates.length ? setI(i + 1) : setOk(false))}
-            style={{ width: '100%', height: 'auto', display: 'block' }}
+            style={{ width: '100%', height: 'auto', display: 'block', pointerEvents: 'none' }}
           />
-        </div>
+          <span style={{ position: 'absolute', bottom: '10px', right: '10px', display: 'inline-flex', alignItems: 'center', gap: '5px', backgroundColor: 'rgba(22,50,79,0.85)', color: '#fff', fontSize: '11px', fontWeight: '600', padding: '4px 8px', borderRadius: '7px' }}>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg>
+            {t('Zoom', 'Agrandir')}
+          </span>
+        </button>
+      </div>
+      {open && <ConstructionLightbox src={src} label={label} onClose={() => setOpen(false)} closeLabel={t('Close', 'Fermer')} />}
+    </div>
+  )
+}
+
+// Lightbox zoomable : molette + boutons sur desktop, pinch natif sur mobile.
+// Ferme par croix, clic sur le fond, ou touche Échap.
+function ConstructionLightbox({ src, label, onClose, closeLabel }) {
+  const [scale, setScale] = useState(1)
+  const [pan, setPan] = useState({ x: 0, y: 0 })
+  const drag = useRef({ on: false, sx: 0, sy: 0, px: 0, py: 0 })
+  useEffect(() => {
+    function onKey(e) { if (e.key === 'Escape') onClose() }
+    document.addEventListener('keydown', onKey)
+    const prev = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => { document.removeEventListener('keydown', onKey); document.body.style.overflow = prev }
+  }, [onClose])
+  const clamp = (v) => Math.min(5, Math.max(1, v))
+  const setZoom = (v) => {
+    const nv = clamp(v)
+    setScale(nv)
+    if (nv === 1) setPan({ x: 0, y: 0 })   // recentre quand on revient à 1:1
+  }
+  // Pan à la souris quand on est zoomé (desktop)
+  const onDown = (e) => {
+    if (scale <= 1) return
+    e.preventDefault()
+    drag.current = { on: true, sx: e.clientX, sy: e.clientY, px: pan.x, py: pan.y }
+  }
+  const onMove = (e) => {
+    if (!drag.current.on) return
+    setPan({ x: drag.current.px + (e.clientX - drag.current.sx), y: drag.current.py + (e.clientY - drag.current.sy) })
+  }
+  const endDrag = () => { drag.current.on = false }
+  const zoomed = scale > 1
+  return (
+    <div
+      onClick={onClose}
+      onMouseMove={onMove}
+      onMouseUp={endDrag}
+      onMouseLeave={endDrag}
+      style={{ position: 'fixed', inset: 0, zIndex: 1000, backgroundColor: 'rgba(15,25,35,0.85)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px', backdropFilter: 'blur(2px)' }}
+    >
+      <button
+        onClick={onClose}
+        aria-label={closeLabel}
+        style={{ position: 'fixed', top: '16px', right: '16px', width: '44px', height: '44px', borderRadius: '50%', border: 'none', backgroundColor: 'rgba(255,255,255,0.16)', color: '#fff', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1002 }}
+      >
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+
+      <div onClick={e => e.stopPropagation()} style={{ position: 'fixed', bottom: '20px', left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: '8px', zIndex: 1002 }}>
+        {[['-', () => setZoom(scale - 0.5)], ['1:1', () => setZoom(1)], ['+', () => setZoom(scale + 0.5)]].map(([lbl, fn], k) => (
+          <button key={k} onClick={fn}
+            style={{ minWidth: '44px', height: '40px', padding: '0 12px', borderRadius: '10px', border: 'none', backgroundColor: 'rgba(255,255,255,0.18)', color: '#fff', fontSize: '15px', fontWeight: '700', cursor: 'pointer' }}>
+            {lbl}
+          </button>
+        ))}
+      </div>
+
+      {/* Zone image : plus grande sur desktop, pan à la souris quand zoomé, pinch natif sur mobile */}
+      <div
+        onClick={e => e.stopPropagation()}
+        onWheel={e => setZoom(scale - e.deltaY * 0.002)}
+        onMouseDown={onDown}
+        style={{ maxWidth: '95vw', maxHeight: '90vh', overflow: 'hidden', touchAction: 'pinch-zoom', borderRadius: '10px', cursor: zoomed ? (drag.current.on ? 'grabbing' : 'grab') : 'default' }}
+      >
+        <img
+          src={src}
+          alt={label}
+          draggable={false}
+          style={{ display: 'block', width: `${scale * 100}%`, maxWidth: scale === 1 ? '95vw' : 'none', height: 'auto', backgroundColor: '#FAFAF9', borderRadius: '10px', transform: `translate(${pan.x}px, ${pan.y}px)`, transition: drag.current.on ? 'none' : 'width 0.15s ease, transform 0.1s ease', userSelect: 'none' }}
+        />
       </div>
     </div>
+  )
+}
+
+// Module-level helpers for the Description block (adoption rendering).
+function ylabelG(n, locale) {
+  if (locale === 'fr') return `${n} ${n <= 1 ? 'an' : 'ans'}`
+  return `${n} ${n <= 1 ? 'year' : 'years'}`
+}
+function expandSinceG(str, locale) {
+  return str.replace(/\{\{since:(\d{1,4})\}\}/g, (_, y) => ylabelG(new Date().getFullYear() - parseInt(y, 10), locale))
+}
+// Render an adoption value: bullet list when multi-part (" · "), else plain text.
+function renderAdoptionValue(value, locale) {
+  if (typeof value !== 'string') return value
+  if (value.includes(' · ')) {
+    const parts = value.split(' · ')
+    return (
+      <ul style={{ margin: 0, paddingLeft: '15px' }}>
+        {parts.map((p, idx) => (
+          <li key={idx} style={{ marginBottom: idx < parts.length - 1 ? '3px' : 0 }}>{expandSinceG(p, locale)}</li>
+        ))}
+      </ul>
+    )
+  }
+  return expandSinceG(value, locale)
+}
+
+// Description block: adoption history + designer credit. Sits at the top of
+// the content column, before Design & Symbolism.
+function DescriptionBlock({ country, locale }) {
+  const t = (en, fr) => locale === 'fr' ? fr : en
+  const designer = locale === 'fr' ? (country.designer_fr || country.designer_en) : (country.designer_en || country.designer_fr)
+  const adoptedDetail = locale === 'fr' ? (country.adopted_detail_fr || country.adopted_detail_en) : (country.adopted_detail_en || country.adopted_detail_fr)
+  let adoption = null
+  if (adoptedDetail) adoption = renderAdoptionValue(adoptedDetail, locale)
+  else if (country.adopted_year) adoption = `${country.adopted_year} (${ylabelG(new Date().getFullYear() - country.adopted_year, locale)})`
+
+  if (!designer && !adoption) return null
+  return (
+    <Section title={t('Description', 'Description')}>
+      {adoption && (
+        <div style={{ marginBottom: designer ? '14px' : 0 }}>
+          <p style={{ margin: '0 0 6px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{t('Adoption', 'Adoption')}</p>
+          <div style={{ fontSize: '14px', fontWeight: '600', color: DS.navy, lineHeight: 1.6 }}>{adoption}</div>
+        </div>
+      )}
+      {designer && (
+        <div style={{ paddingTop: adoption ? '14px' : 0, borderTop: adoption ? `1px solid ${DS.border}` : 'none', display: 'flex', alignItems: 'baseline', gap: '8px', flexWrap: 'wrap' }}>
+          <span style={{ fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em', whiteSpace: 'nowrap' }}>{t('Designed by', 'Conçu par')}</span>
+          <span style={{ fontSize: '13px', fontWeight: '600', color: DS.navy, lineHeight: 1.5 }}>{designer}</span>
+        </div>
+      )}
+    </Section>
   )
 }
 
@@ -606,7 +745,9 @@ function DesignSpecs({ country, locale }) {
           <p style={{ margin: '0 0 10px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{t('Colors', 'Couleurs')}</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             {colors.map(c => {
-              const hex = colorMeanings[String(c).toLowerCase()]?.hex || COLOR_HEX[String(c).toLowerCase()] || '#cccccc'
+              const cm = colorMeanings[String(c).toLowerCase()] || {}
+              const hex = cm.hex || COLOR_HEX[String(c).toLowerCase()] || '#cccccc'
+              const pantone = cm.pantone || null
               const badge = (isOpen) => (
                 <span style={{
                   width: `${isOpen ? OPEN_SIZE : SHUT_SIZE}px`, height: `${isOpen ? OPEN_SIZE : SHUT_SIZE}px`,
@@ -618,7 +759,9 @@ function DesignSpecs({ country, locale }) {
               const labelNode = (
                 <span style={{ display: 'flex', alignItems: 'baseline', gap: '8px', flexWrap: 'wrap' }}>
                   <span style={{ fontSize: '14px', fontWeight: '700', color: DS.navy }}>{labelColor(c, locale)}</span>
-                  <code style={{ fontSize: '11px', fontFamily: 'monospace', color: DS.muted, textTransform: 'uppercase' }}>{hex}</code>
+                  <code style={{ fontSize: '11px', fontFamily: 'monospace', color: DS.muted, textTransform: 'uppercase' }}>
+                    {hex}{pantone ? ` · Pantone ${pantone}` : ''}
+                  </code>
                 </span>
               )
               return disclosure('c:' + c, meaningOf(colorMeanings, c), badge, labelNode)
@@ -662,21 +805,15 @@ function DesignSpecs({ country, locale }) {
         </div>
       )}
 
-      {spec && (
+      {(spec || country.code) && (
         <div style={{ borderTop: `1px solid ${DS.border}`, paddingTop: '14px' }}>
           <p style={{ margin: '0 0 8px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{t('Construction details', 'Détails de construction')}</p>
-          <p style={{ margin: 0, fontSize: '13px', color: DS.navy, lineHeight: 1.7, whiteSpace: 'pre-line' }}>{spec}</p>
+          {spec && (
+            <p style={{ margin: '0 0 14px', fontSize: '13px', color: DS.navy, lineHeight: 1.7, whiteSpace: 'pre-line' }}>{spec}</p>
+          )}
+          <ConstructionSheet iso={country.code} locale={locale} />
         </div>
       )}
-
-      {designer && (
-        <div style={{ borderTop: `1px solid ${DS.border}`, marginTop: '16px', paddingTop: '14px', display: 'flex', alignItems: 'baseline', gap: '8px', flexWrap: 'wrap' }}>
-          <span style={{ fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em', whiteSpace: 'nowrap' }}>{t('Designed by', 'Conçu par')}</span>
-          <span style={{ fontSize: '13px', fontWeight: '600', color: DS.navy, lineHeight: 1.5 }}>{designer}</span>
-        </div>
-      )}
-
-      <ConstructionSheet iso={country.code} locale={locale} />
     </Section>
   )
 }
@@ -846,7 +983,6 @@ export default function CountryDetailPage({ country, facts = [], relatedCountrie
     { label: t('Population',   'Population'),    value: formatPop(country.population),            },
     ...(country.area_km2 ? [{ label: t('Area', 'Superficie'), value: country.area_km2.toLocaleString() + ' km²' }] : []),
     ...(densityValue ? [{ label: t('Density', 'Densité'), value: densityValue }] : []),
-    { label: t('Adoption date','Date adoption'), value: adoptionValue, bullets: true },
     ...(country.median_age ? [{ label: t('Median age','Âge médian'), value: country.median_age + (locale === 'fr' ? ' ans' : ' yrs') }] : []),
     ...(country.flag_name_local ? [{ label: t('Flag name', 'Nom du drapeau'), value: country.flag_name_local }] : []),
   ].filter(f => f.value && f.value !== '—')
@@ -914,6 +1050,8 @@ export default function CountryDetailPage({ country, facts = [], relatedCountrie
           {childrenSection}
 
           {/* Design & Symbolism (merged section) */}
+          <DescriptionBlock country={country} locale={locale} />
+
           <DesignSpecs country={country} locale={locale} />
 
           {/* Flag etiquette */}
@@ -1052,6 +1190,8 @@ export default function CountryDetailPage({ country, facts = [], relatedCountrie
           {childrenSection}
 
           {/* Design & Symbolism (merged section) */}
+          <DescriptionBlock country={country} locale={locale} />
+
           <DesignSpecs country={country} locale={locale} />
 
           {/* Flag etiquette */}

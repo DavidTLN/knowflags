@@ -2,6 +2,7 @@
 import Hero from '@/components/Hero'
 import CategoryGrid from '@/components/CategoryGrid'
 import TrueSizeModule from '@/components/TrueSizeModule'
+import GamesModule from '@/components/GamesModule'
 import LatestArticles from '@/components/LatestArticles'
 import Footer from '@/components/Footer'
 import { getAllPosts } from '@/lib/contentful'
@@ -70,6 +71,7 @@ export default async function Home({ params }) {
         <Hero />
         <CategoryGrid />
         <TrueSizeModule />
+        <GamesModule locale={locale} />
         <LatestArticles posts={latestPosts} locale={locale} />
         <Footer />
       </main>

@@ -1,5 +1,17 @@
 'use client'
 
+// components/games/FlagLocator.js
+//
+// CHANGEMENT PRINCIPAL — selection en deux temps.
+// Avant, un tap validait immediatement : un doigt qui derape de trois pixels
+// sur un petit pays coutait une erreur sur trois, sans recours. Desormais un
+// tap SELECTIONNE (lisere dore), et rien n'est valide tant que le joueur n'a
+// pas confirme. Retoucher un autre pays deplace simplement la selection.
+//
+// Le nom du pays selectionne n'est affiche qu'en mode Normal : en Difficile et
+// Extreme toute la carte est cliquable, donc l'afficher reviendrait a donner la
+// reponse et permettrait de tatonner jusqu'a trouver.
+
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { useLocale } from 'next-intl'
 import * as d3 from 'd3'
@@ -24,6 +36,7 @@ const MAP = {
   stroke:      'rgba(15,25,35,0.55)',
   wrong:       '#D62828',
   reveal:      '#16A34A',
+  selected:    '#F4B400',           // pays choisi, en attente de validation
 }
 
 const COUNT_OPTIONS = [12, 24, 48, 'all']
@@ -64,18 +77,29 @@ export default function FlagLocator() {
   const [errors, setErrors]     = useState(0)
   const [elapsed, setElapsed]   = useState(0)
   const [revealCode, setRevealCode] = useState(null) // flash green on game over
+  const [selected, setSelected] = useState(null)     // pays choisi, non valide
 
   const foundSet   = useRef(new Set())
   const timerRef   = useRef(null)
   const svgRef     = useRef(null)
   const gRef       = useRef(null)
   const pathByCode = useRef({})       // code -> SVGPathElement
+  const nameByCode = useRef({})       // code -> nom issu du world-atlas (repli)
   const zoomRef    = useRef(null)
   const stateRef   = useRef({})       // latest game state for click handler
 
   const current = targets[idx] || null
+  // Le nom ne doit filtrer qu'en Normal (seuls les pays tires y sont cliquables).
+  const showName = mode === 'normal'
 
-  // ── Load world-atlas once ──────────────────────────────────────────────
+  function nameOf(code) {
+    if (!code) return ''
+    const d = COUNTRY_DATA[code]
+    const fromData = d ? (locale === 'fr' ? (d.fr || d.en) : (d.en || d.fr)) : null
+    return fromData || nameByCode.current[code] || String(code).toUpperCase()
+  }
+
+  // ── Load world-atlas once ───────────────────────────────────────────────
   useEffect(() => {
     let cancelled = false
     fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json')
@@ -90,7 +114,7 @@ export default function FlagLocator() {
     return () => { cancelled = true }
   }, [])
 
-  // ── Timer ──────────────────────────────────────────────────────────────
+  // ── Timer ───────────────────────────────────────────────────────────────
   const startTimer = useCallback(() => {
     clearInterval(timerRef.current)
     timerRef.current = setInterval(() => setElapsed(e => e + 1), 1000)
@@ -98,13 +122,14 @@ export default function FlagLocator() {
   const stopTimer = useCallback(() => clearInterval(timerRef.current), [])
   useEffect(() => () => clearInterval(timerRef.current), [])
 
-  // ── Start a game ─────────────────────────────────────────────────────────
+  // ── Start a game ────────────────────────────────────────────────────────
   function startGame() {
     const zoneCodes = codesForZone(zone).filter(c => COUNTRY_DATA[c])
     const n = count === 'all' ? zoneCodes.length : Math.min(count, zoneCodes.length)
     const picked = shuffle(zoneCodes).slice(0, n)
     foundSet.current = new Set()
-    setTargets(picked); setIdx(0); setFound([]); setErrors(0); setElapsed(0); setRevealCode(null)
+    setTargets(picked); setIdx(0); setFound([]); setErrors(0); setElapsed(0)
+    setRevealCode(null); setSelected(null)
     setScreen('playing')
     startTimer()
   }
@@ -115,6 +140,7 @@ export default function FlagLocator() {
     const svg = d3.select(svgRef.current)
     svg.selectAll('*').remove()
     pathByCode.current = {}
+    nameByCode.current = {}
 
     const wrap = svgRef.current.parentElement
     const W = wrap.clientWidth, H = wrap.clientHeight
@@ -138,18 +164,24 @@ export default function FlagLocator() {
 
     zoneFeatures.forEach(f => {
       const code = NUM_TO_CODE[parseInt(f.id)]
+      if (f.properties?.name) nameByCode.current[code] = f.properties.name
       const p = g.append('path')
         .attr('d', pathGen(f) || '')
         .attr('stroke', MAP.stroke)
-        .attr('stroke-width', 0.5)
+        .attr('stroke-width', 0.8)
+        .attr('stroke-linejoin', 'round')
         .attr('vector-effect', 'non-scaling-stroke')
         .style('cursor', 'default')
-        .on('click', (ev) => { ev.stopPropagation(); handleClick(code) })
+        // Un tap ne fait plus que selectionner : la validation est explicite.
+        .on('click', (ev) => { ev.stopPropagation(); setSelected(code) })
       pathByCode.current[code] = p.node()
     })
 
+    // Cliquer l'ocean annule la selection en cours.
+    svg.on('click', () => setSelected(null))
+
     // zoom / pan
-    const zoom = d3.zoom().scaleExtent([1, 9]).on('zoom', (ev) => {
+    const zoom = d3.zoom().scaleExtent([1, 12]).on('zoom', (ev) => {
       g.attr('transform', ev.transform)
     })
     zoomRef.current = zoom
@@ -164,7 +196,19 @@ export default function FlagLocator() {
     stateRef.current = { current, mode, targetsSet: new Set(targets), revealCode }
     recolor()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [current, mode, targets, found, revealCode, errors])
+  }, [current, mode, targets, found, revealCode, errors, selected])
+
+  // Clavier : Entree valide, Echap annule.
+  useEffect(() => {
+    if (screen !== 'playing') return
+    const onKey = (e) => {
+      if (e.key === 'Enter' && selected) { e.preventDefault(); validateSelection() }
+      if (e.key === 'Escape') setSelected(null)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [screen, selected, idx, errors, found, targets])
 
   // ── Recolor all paths based on state ─────────────────────────────────────
   function recolor() {
@@ -180,31 +224,37 @@ export default function FlagLocator() {
         clickable = mode === 'extreme'   // extreme: still clickable (no feedback)
       } else if (inPlay) { fill = MAP.selectable; clickable = true }
       else { fill = MAP.locked; clickable = false }
-      node.setAttribute('fill', fill)
+
+      // La selection prime visuellement : lisere dore epais, bien lisible
+      // meme sur un pays de quelques pixels.
+      const isSel = selected === code && !revealCode
+      node.setAttribute('fill', isSel ? MAP.selected : fill)
+      node.setAttribute('stroke', isSel ? DS.navyDark : MAP.stroke)
+      node.setAttribute('stroke-width', isSel ? 2.5 : 0.8)
       node.style.pointerEvents = clickable ? 'auto' : 'none'
       node.style.cursor = clickable ? 'pointer' : 'default'
     })
   }
 
-  // ── Click handling ───────────────────────────────────────────────────────
-  function handleClick(code) {
-    const st = stateRef.current
-    if (!st.current || screen !== 'playing') return
-    if (code === st.current) {
-      // correct
+  // ── Validation explicite ─────────────────────────────────────────────────
+  function validateSelection() {
+    const code = selected
+    if (!code || !current || screen !== 'playing') return
+    setSelected(null)
+
+    if (code === current) {
       foundSet.current.add(code)
       const nextFound = [...found, code]
       setFound(nextFound)
       flash(code, MAP.validated)
-      if (idx + 1 >= targets.length) endGame(nextFound, errors)   // all found
+      if (idx + 1 >= targets.length) endGame(nextFound, errors)
       else setIdx(i => i + 1)
     } else {
-      // wrong
       flash(code, MAP.wrong)
       const e = errors + 1
       setErrors(e)
       if (e >= MAX_ERRORS) {
-        setRevealCode(st.current)   // show the right answer
+        setRevealCode(current)
         setTimeout(() => endGame(found, e), 1400)
       }
     }
@@ -216,6 +266,17 @@ export default function FlagLocator() {
     const prev = node.getAttribute('fill')
     node.setAttribute('fill', color)
     setTimeout(() => { if (!revealCode) recolor(); else node.setAttribute('fill', prev) }, 350)
+  }
+
+  // ── Zoom pilote par boutons ──────────────────────────────────────────────
+  // Le pincement seul n'etait signale par rien, et restait delicat au doigt.
+  function zoomBy(k) {
+    if (!svgRef.current || !zoomRef.current) return
+    d3.select(svgRef.current).transition().duration(220).call(zoomRef.current.scaleBy, k)
+  }
+  function zoomReset() {
+    if (!svgRef.current || !zoomRef.current) return
+    d3.select(svgRef.current).transition().duration(300).call(zoomRef.current.transform, d3.zoomIdentity)
   }
 
   function endGame(foundList, errs) {
@@ -258,8 +319,8 @@ export default function FlagLocator() {
           </p>
           <h1 style={{ fontSize: '32px', fontWeight: 900, color: DS.navy, letterSpacing: '-0.02em', margin: '0 0 8px' }}>FlagLocator</h1>
           <p style={{ fontSize: '15px', color: DS.muted, lineHeight: 1.6, margin: '0 0 24px' }}>
-            {t('See a flag, click the right country on the map. Fastest with fewest errors wins.',
-               'Tu vois un drapeau, clique le bon pays sur la carte. Le plus rapide avec le moins d\u2019erreurs gagne.')}
+            {t('See a flag, tap the right country on the map, then confirm. Fastest with fewest errors wins.',
+               'Tu vois un drapeau, touche le bon pays sur la carte, puis valide. Le plus rapide avec le moins d\u2019erreurs gagne.')}
           </p>
 
           {/* Zone */}
@@ -341,7 +402,7 @@ export default function FlagLocator() {
   // PLAYING
   const flagCode = current
   return (
-    <div style={{ height: 'calc(100dvh - 60px)', display: 'flex', flexDirection: 'column', backgroundColor: MAP.navy, overflow: 'hidden', fontFamily: 'var(--font-body)', touchAction: 'none' }}>
+    <div style={{ height: 'calc(100dvh - 60px)', display: 'flex', flexDirection: 'column', backgroundColor: MAP.ocean, overflow: 'hidden', fontFamily: 'var(--font-body)', touchAction: 'none' }}>
       {/* Fixed top HUD: flag + counters */}
       <div style={{ flexShrink: 0, backgroundColor: DS.navyDark, color: '#fff', padding: '10px 14px', display: 'flex', alignItems: 'center', gap: '14px', boxShadow: '0 2px 12px rgba(0,0,0,0.3)', zIndex: 5 }}>
         <div style={{ width: '64px', height: '43px', flexShrink: 0, borderRadius: '6px', overflow: 'hidden', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -365,6 +426,7 @@ export default function FlagLocator() {
       {/* Map fills the rest */}
       <div style={{ flex: 1, position: 'relative', minHeight: 0, backgroundColor: MAP.ocean }}>
         <svg ref={svgRef} style={{ display: 'block', width: '100%', height: '100%', touchAction: 'none' }} />
+
         {/* Quit */}
         <button onClick={quitGame}
           style={{ position: 'absolute', top: '10px', right: '10px', padding: '7px 14px', borderRadius: '9999px',
@@ -372,6 +434,80 @@ export default function FlagLocator() {
                    border: 'none', cursor: 'pointer', zIndex: 6 }}>
           {t('Quit', 'Quitter')}
         </button>
+
+        {/* Commandes de zoom : le pincement seul n'etait annonce par rien. */}
+        <div style={{ position: 'absolute', top: '56px', right: '10px', display: 'flex', flexDirection: 'column', gap: '6px', zIndex: 6 }}>
+          {[
+            { label: '+', act: () => zoomBy(1.6), aria: t('Zoom in', 'Zoomer') },
+            { label: '−', act: () => zoomBy(1 / 1.6), aria: t('Zoom out', 'Dézoomer') },
+          ].map(b => (
+            <button key={b.label} onClick={b.act} aria-label={b.aria}
+              style={{ width: '44px', height: '44px', borderRadius: '12px', border: 'none', cursor: 'pointer',
+                       backgroundColor: 'rgba(255,255,255,0.92)', color: DS.navy, fontSize: '22px', fontWeight: 800,
+                       lineHeight: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              {b.label}
+            </button>
+          ))}
+          <button onClick={zoomReset} aria-label={t('Reset view', 'Recentrer')}
+            style={{ width: '44px', height: '44px', borderRadius: '12px', border: 'none', cursor: 'pointer',
+                     backgroundColor: 'rgba(255,255,255,0.92)', color: DS.navy,
+                     display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M3 9V5a2 2 0 0 1 2-2h4M21 9V5a2 2 0 0 0-2-2h-4M3 15v4a2 2 0 0 0 2 2h4M21 15v4a2 2 0 0 1-2 2h-4" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Barre de confirmation — rien n'est valide sans ce bouton. */}
+        {selected && (
+          <div style={{
+            position: 'absolute', left: '12px', right: '12px',
+            bottom: 'calc(12px + env(safe-area-inset-bottom))', zIndex: 7,
+            backgroundColor: DS.surface, borderRadius: '16px', padding: '12px 14px',
+            display: 'flex', alignItems: 'center', gap: '12px',
+            boxShadow: '0 16px 48px rgba(0,0,0,0.35)',
+          }}>
+            <span style={{
+              width: '14px', height: '14px', borderRadius: '4px', flexShrink: 0,
+              backgroundColor: MAP.selected, border: `1px solid ${DS.navyDark}`,
+            }} />
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <div style={{ fontSize: '10px', fontWeight: 800, letterSpacing: '0.1em', color: DS.muted, textTransform: 'uppercase' }}>
+                {t('Your pick', 'Ton choix')}
+              </div>
+              <div style={{ fontSize: '16px', fontWeight: 900, color: DS.navy, lineHeight: 1.2, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                {showName
+                  ? nameOf(selected)
+                  : t('Country selected', 'Pays sélectionné')}
+              </div>
+            </div>
+            <button onClick={() => setSelected(null)}
+              style={{ padding: '11px 16px', borderRadius: '12px', minHeight: '44px',
+                       border: `1.5px solid ${DS.border}`, backgroundColor: 'transparent',
+                       color: DS.navy, fontSize: '14px', fontWeight: 700, cursor: 'pointer' }}>
+              {t('Cancel', 'Annuler')}
+            </button>
+            <button onClick={validateSelection}
+              style={{ padding: '11px 20px', borderRadius: '12px', minHeight: '44px',
+                       border: 'none', backgroundColor: DS.navy, color: '#fff',
+                       fontSize: '14px', fontWeight: 800, cursor: 'pointer' }}>
+              {t('Confirm', 'Valider')}
+            </button>
+          </div>
+        )}
+
+        {/* Aide discrete tant que rien n'est selectionne. */}
+        {!selected && !revealCode && (
+          <div style={{
+            position: 'absolute', left: '50%', transform: 'translateX(-50%)',
+            bottom: 'calc(14px + env(safe-area-inset-bottom))', zIndex: 6,
+            backgroundColor: 'rgba(15,25,35,0.72)', color: 'rgba(255,255,255,0.9)',
+            padding: '7px 14px', borderRadius: '9999px', fontSize: '12px', fontWeight: 600,
+            whiteSpace: 'nowrap', pointerEvents: 'none',
+          }}>
+            {t('Tap a country, then confirm', 'Touche un pays, puis valide')}
+          </div>
+        )}
       </div>
     </div>
   )

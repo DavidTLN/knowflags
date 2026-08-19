@@ -6,6 +6,7 @@
 
 import { notFound } from 'next/navigation'
 import { createClient } from '@/lib/supabase-server'
+import { getPostsForCountry } from '@/lib/contentful'
 import CountryDetailPage from '@/components/CountryDetailPage'
 
 const BASE_URL = 'https://knowflags.com'
@@ -141,7 +142,7 @@ export default async function Page({ params }) {
   if (!country) notFound()
 
   // Everything else in parallel — all on the server, all in the initial HTML.
-  const [factsRes, relatedRes, childrenRes] = await Promise.all([
+  const [factsRes, relatedRes, childrenRes, relatedPosts] = await Promise.all([
     supabase
       .from('country_facts')
       .select('fact_en, fact_fr, category')
@@ -157,6 +158,7 @@ export default async function Page({ params }) {
       .select('iso_code, name_en, name_fr')
       .eq('parent_iso', country.code)
       .order('iso_code'),
+      getPostsForCountry(country.code, locale, 3),
   ])
 
   const facts = (factsRes.data || [])
@@ -177,6 +179,7 @@ export default async function Page({ params }) {
       facts={facts}
       relatedCountries={relatedCountries}
       childEntities={childEntities}
+      relatedPosts={relatedPosts}
     />
   )
 }

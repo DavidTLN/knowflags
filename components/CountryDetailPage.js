@@ -7,6 +7,7 @@ import FlagHistoryModule from '@/components/FlagHistoryModule'
 import { useLocale } from 'next-intl'
 import { labelColor, labelSymbol, labelShape } from '@/lib/flagSymbolsFr'
 import Footer from '@/components/Footer'
+import CountryRelatedPosts from '@/components/blog/CountryRelatedPosts'
 import ReportModal from '@/components/ReportModal'
 
 // ── DS Tokens ─────────────────────────────────────────────────────────────────
@@ -847,7 +848,7 @@ function DidYouKnow({ facts }) {
 }
 
 // ── Main Component ────────────────────────────────────────────────────────────
-export default function CountryDetailPage({ country, facts = [], relatedCountries = [], childEntities = [] }) {
+export default function CountryDetailPage({ country, facts = [], relatedCountries = [], childEntities = [], relatedPosts = [] }) {
   const locale = useLocale()
   const t = (en, fr) => locale === 'fr' ? fr : en
 
@@ -1111,6 +1112,11 @@ export default function CountryDetailPage({ country, facts = [], relatedCountrie
           {/* Continent nav */}
           <ContinentNavModule currentContinent={continentSlug} locale={locale} />
 
+          {/* Articles de blog lies : le bloc ne se rend pas si la liste est vide. */}
+          <div style={{ marginTop: '20px' }}>
+            <CountryRelatedPosts posts={relatedPosts} locale={locale} />
+          </div>
+
         </div>
       </div>
       <Footer />
@@ -1244,6 +1250,11 @@ export default function CountryDetailPage({ country, facts = [], relatedCountrie
 
           {/* Continent nav */}
           <ContinentNavModule currentContinent={continentSlug} locale={locale} />
+
+          {/* Articles de blog lies : le bloc ne se rend pas si la liste est vide. */}
+          <div style={{ marginTop: '20px' }}>
+            <CountryRelatedPosts posts={relatedPosts} locale={locale} />
+          </div>
 
         </div>
       </div>

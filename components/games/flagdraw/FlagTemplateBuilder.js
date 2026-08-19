@@ -424,7 +424,7 @@ function StructureSVG({ structure, options, colors, onFill, thumb, anchor, symbo
             const cx = sy.fx * W, cy = sy.fy * vh, hw = dw / 2, hh = dh / 2
             const editable = !!onSymbolMove
             const isSel = editable && i === selected
-            const HS = 8
+            const HS = 11, HIT = 30
             const corners = [[cx - hw, cy - hh], [cx + hw, cy - hh], [cx + hw, cy + hh], [cx - hw, cy + hh]]
             return (
               <g key={sy.key || i}>
@@ -440,7 +440,12 @@ function StructureSVG({ structure, options, colors, onFill, thumb, anchor, symbo
                   // Boutons flottants ancres au symbole (pattern editeur d'image).
                   // Places au-dessus du cadre ; tailles en unites viewBox pour
                   // rester lisibles et cliquables au doigt.
-                  const BR = 15, by = cy - hh - BR - 8
+                  const BR = 17
+                  // Boutons au-dessus par defaut, en dessous s'il n'y a plus la
+                  // place : sinon ils sortent du drapeau des que le symbole est
+                  // colle en haut, et deviennent inatteignables au doigt.
+                  const abv = cy - hh - BR - 8
+                  const by = (abv - BR < 0) ? Math.min(cy + hh + BR + 8, vh - BR - 2) : abv
                   const slots = [cx - BR * 2.4, cx, cx + BR * 2.4]
                   const CtrlBtn = ({ x, onDown, danger, children }) => (
                     <g style={{ cursor: 'pointer' }} onPointerDown={(e) => { e.stopPropagation(); onDown(e) }}>
@@ -452,10 +457,12 @@ function StructureSVG({ structure, options, colors, onFill, thumb, anchor, symbo
                     <g>
                       <rect x={cx - hw} y={cy - hh} width={dw} height={dh} fill="none" stroke={DS.navy} strokeWidth="1" strokeDasharray="4 3" opacity="0.6" style={{ pointerEvents: 'none' }} />
                       {corners.map(([hx, hy], c) => (
-                        <rect key={c} x={hx - HS / 2} y={hy - HS / 2} width={HS} height={HS} rx="1.5"
-                          fill={DS.surface} stroke={DS.navy} strokeWidth="1.5"
-                          style={{ cursor: (c === 0 || c === 2) ? 'nwse-resize' : 'nesw-resize', touchAction: 'none' }}
-                          onPointerDown={(e) => { e.stopPropagation(); onSelect?.(i); dragRef.current = 'resize'; e.currentTarget.setPointerCapture?.(e.pointerId) }} />
+                        <g key={c} style={{ cursor: (c === 0 || c === 2) ? 'nwse-resize' : 'nesw-resize', touchAction: 'none' }}
+                          onPointerDown={(e) => { e.stopPropagation(); onSelect?.(i); dragRef.current = 'resize'; e.currentTarget.setPointerCapture?.(e.pointerId) }}>
+                          <rect x={hx - HIT / 2} y={hy - HIT / 2} width={HIT} height={HIT} fill="transparent" />
+                          <rect x={hx - HS / 2} y={hy - HS / 2} width={HS} height={HS} rx="2"
+                            fill={DS.surface} stroke={DS.navy} strokeWidth="1.5" style={{ pointerEvents: 'none' }} />
+                        </g>
                       ))}
                       <CtrlBtn x={slots[0]} onDown={(e) => { onSelect?.(i); dragRef.current = 'rotate'; e.currentTarget.setPointerCapture?.(e.pointerId) }}><path d="M2 8a6 6 0 1 1 1.8 4.3" /><path d="M2 13v-3h3" /></CtrlBtn>
                       <CtrlBtn x={slots[1]} onDown={(e) => { onSelect?.(i); dragRef.current = 'move'; e.currentTarget.setPointerCapture?.(e.pointerId) }}><path d="M8 2v12M2 8h12M8 2 6 4M8 2l2 2M8 14l-2-2M8 14l2-2M2 8l2-2M2 8l2 2M14 8l-2-2M14 8l-2 2" /></CtrlBtn>
@@ -485,7 +492,7 @@ function StructureSVG({ structure, options, colors, onFill, thumb, anchor, symbo
   )
 }
 
-export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'France', symbolUrl = null, onChange, onValidate, onQuit, ratioChoices = RATIOS, showRatio = true, symbolColor = '#F4B400', symbolAuto = false, symbolPickColor = false, hasSymbol = true, symbolChoices = null }) {
+export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'France', symbolUrl = null, onChange, onValidate, onQuit, ratioChoices = RATIOS, showRatio = true, symbolColor = '#F4B400', symbolAuto = false, symbolPickColor = false, hasSymbol = true, symbolChoices = null, fallbackChoices = null }) {
   const t = (en, fr) => (locale === 'fr' ? fr : en)
   const isMobile = useMobile()
   const [structureId, setStructureId] = useState('bands')
@@ -523,7 +530,12 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
   // Ajoute d'un coup tous les symboles du drapeau, disperses aleatoirement.
   // Si le drapeau n'a aucun symbole, ajoute une etoile par defaut.
   const addAllSymbols = () => {
-    const urls = offered.length ? offered : [null]
+    // Drapeau sans symbole : on tire au hasard dans le vivier fourni par le jeu
+    // plutot que de reposer toujours la meme etoile.
+    const pick = fallbackChoices && fallbackChoices.length
+      ? [fallbackChoices[Math.floor(Math.random() * fallbackChoices.length)]]
+      : [null]
+    const urls = offered.length ? offered : pick
     const rnd = (min, max) => min + Math.random() * (max - min)
     const base = placed.length
     const add = urls.map((url, i) => ({
@@ -655,7 +667,7 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
           style={{ display: 'flex', alignItems: 'center', gap: 7, padding: '10px 16px', borderRadius: 10,
             border: `1.5px solid ${DS.borderSolid}`, background: DS.surface, color: DS.navy, fontWeight: 700, fontSize: 13, cursor: 'pointer' }}>
           <span style={{ fontSize: 18, lineHeight: 1 }}>+</span>
-          {noRealSymbols ? t('Add a star', 'Ajouter une etoile') : t('Add symbols', 'Ajouter les symboles')}
+          {noRealSymbols ? t('Add a symbol', 'Ajouter un symbole') : t('Add symbols', 'Ajouter les symboles')}
         </button>
       ) : (
         <span style={{ fontSize: 12, color: DS.muted, fontStyle: 'italic' }}>
@@ -663,7 +675,7 @@ export default function FlagTemplateBuilder({ locale = 'fr', countryName = 'Fran
         </span>
       )}
       {!showAddButton && noRealSymbols && (
-        <button onClick={addAllSymbols} title={t('Add another star', 'Ajouter une autre etoile')}
+        <button onClick={addAllSymbols} title={t('Add another symbol', 'Ajouter un autre symbole')}
           style={{ width: 36, height: 36, borderRadius: 9, border: `1.5px solid ${DS.borderSolid}`, background: DS.surface, color: DS.navy, fontSize: 20, fontWeight: 700, cursor: 'pointer' }}>+</button>
       )}
     </div>

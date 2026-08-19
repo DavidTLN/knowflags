@@ -1358,6 +1358,7 @@ export default function FlagDrawingV2() {
           <FlagTemplateBuilder key={currentKey} locale={locale} countryName={flagName}
             ratioChoices={ratioChoices} showRatio={showRatio}
             symbolChoices={symbolChoices}
+            fallbackChoices={decoySymbolUrls(currentKey, 8)}
             symbolAuto={difficulty === 'easy'} symbolPickColor={difficulty === 'hard'} symbolColor={'#F4B400'} hasSymbol={true}
             onValidate={handleTemplateValidate} onQuit={() => setShowQuitConfirm(true)} />
           {quitModal}

@@ -231,6 +231,9 @@ export default function FlagQuiz() {
           const finalStreak = Math.max(bestStreak, streakRef.current)
           await saveStats(correctCount, history.length + 1, finalStreak)
           await saveScore(scoreRef.current, finalStreak)
+          // Le classement lit game_scores_log : sans cette ligne, une partie perdue
+          // n'y apparaissait jamais, seul l'abandon volontaire etait journalise.
+          await logScore(scoreRef.current)
           setScreen(SCREEN.GAME_OVER)
         }, 1800)
         return

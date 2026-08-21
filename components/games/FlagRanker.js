@@ -202,11 +202,12 @@ export default function FlagRanker() {
     } catch (e) { console.error('logScore error:', e) }
   }
 
-  function finishReveal() {
+  async function finishReveal() {
     const nt = totalScore + roundScore
     setTotalScore(nt)
     if (round >= MAX_ROUNDS) {
-      logScore(nt)
+      // await : sinon setScreen part avant la fin de l'insertion.
+      await logScore(nt)
       setScreen('end')
       return
     }

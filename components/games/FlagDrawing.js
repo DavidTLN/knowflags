@@ -771,6 +771,10 @@ export default function FlagDrawingV2() {
     const supabase = createClient()
     const key = `flag_drawing_${diff}`
     const prev = diffStats[diff]?.best ?? 0
+    // Le journal enregistre CHAQUE partie, pas seulement les records : le
+    // classement lit game_scores_log, et le filtre ci-dessous ne concerne que
+    // le meilleur score personnel stocke dans game_scores.
+    await logScore(score)
     if (score <= prev) return
     await supabase.from('game_scores').upsert({
       user_id: user.id,
@@ -778,7 +782,6 @@ export default function FlagDrawingV2() {
       best_streak: score,
       updated_at: new Date().toISOString(),
     }, { onConflict: 'user_id,mode' })
-    await logScore(score)
     setDiffStats(prev => ({ ...prev, [diff]: { best: score } }))
   }
 

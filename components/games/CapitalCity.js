@@ -171,6 +171,9 @@ export default function CapitalCity() {
     const correctCount = history.filter(h => h.isCorrect).length
     await saveBestScore(Math.max(bestStreak, streakRef.current))
     await saveStats(correctCount, Math.max(bestStreak, streakRef.current))
+    // Sans cet appel, aucune partie n'atteignait le classement : logScore
+    // etait definie mais jamais utilisee.
+    await logScore(scoreRef.current)
     setScreen(SCREEN.GAME_OVER)
   }
 
@@ -239,6 +242,9 @@ export default function CapitalCity() {
           const finalBest = Math.max(bestStreak, streakRef.current)
           const correctCount = history.filter(h => h.isCorrect).length
           await saveBestScore(finalBest); await saveStats(correctCount, finalBest)
+          // Le classement lit game_scores_log : sans cet appel, une partie perdue
+          // n'y figurait jamais.
+          await logScore(scoreRef.current)
           setScreen(SCREEN.GAME_OVER)
         }, 2000); return
       }
@@ -263,6 +269,9 @@ export default function CapitalCity() {
           stopSessionTimer()
           const correctCount = history.filter(h => h.isCorrect).length
           await saveBestScore(bestStreak); await saveStats(correctCount, bestStreak)
+          // Le classement lit game_scores_log : sans cet appel, une partie perdue
+          // n'y figurait jamais.
+          await logScore(scoreRef.current)
           setScreen(SCREEN.GAME_OVER)
         }, 1200); return
       }

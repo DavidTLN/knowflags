@@ -295,6 +295,8 @@ export default function FlagLocator() {
       const { data: { user } } = await supabase.auth.getUser()
       if (!user) return
       const score = pct                                  // 0–100
+      // Une partie a zero trouve ne merite pas d'entrer au classement.
+      if (score <= 0) return
       await supabase.from('game_scores_log').insert({
         user_id: user.id, game: 'flag-locator', score, played_at: new Date().toISOString(),
       })

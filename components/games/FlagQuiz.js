@@ -5,6 +5,7 @@ import GameIcon from '@/components/games/GameIcon'
 import { useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-client'
 import PageLoader from '@/components/PageLoader'
+import GuestSaveCTA from '@/components/games/GuestSaveCTA'
 
 function formatTime(secs) {
   const m = Math.floor(secs / 60).toString().padStart(2, '0')
@@ -791,6 +792,8 @@ export default function FlagQuiz() {
 
         {/* ── Sticky buttons ── */}
         <div style={{ flexShrink: 0, padding: '12px 16px', paddingBottom: 'max(12px, env(safe-area-inset-bottom))', background: '#F4F1E6', borderTop: '1px solid #E2DDD5', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <GuestSaveCTA user={user} locale={locale} game="flag-quiz" mode="flag_quiz"
+            score={bestScore} bestStreak={bestStreak} correct={correct} played={total} label="Flag Quiz" />
           <button onClick={startGame} style={{ width: '100%', padding: '16px', backgroundColor: '#16324F', color: 'white', border: 'none', borderRadius: '14px', fontSize: '16px', fontWeight: '900', cursor: 'pointer', letterSpacing: '-0.3px' }}>
             {t('Play Again', 'Rejouer')}
           </button>

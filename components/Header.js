@@ -7,6 +7,7 @@ import { useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-client'
 import FlagSubmitModal from '@/components/FlagSubmitModal'
 import GlobalSearch from '@/components/GlobalSearch'
+import { switchLocale } from '@/lib/locale'
 
 const GAMES = [
   { key: 'flag-reveal',  en: 'Reveal the flag',  fr: 'Révèle le drapeau',  descEn: 'Uncover the flag tile by tile',           descFr: 'Révèle le drapeau tuile par tuile' },
@@ -153,7 +154,7 @@ function LangToggle({ locale, pathname, router }) {
   }, [])
   const LANGS = [{ code: 'fr', label: 'Français', short: 'FR' }, { code: 'en', label: 'English', short: 'EN' }]
   const current = locale === 'fr' ? LANGS[0] : LANGS[1]
-  function choose(code) { setOpen(false); if (code !== locale) router.push(pathname.replace(`/${locale}`, `/${code}`)) }
+  function choose(code) { setOpen(false); switchLocale({ pathname, router, from: locale, to: code }) }
   return (
     <div ref={ref} style={{ position: 'relative' }}>
       <button onClick={() => setOpen(o => !o)} aria-haspopup="listbox" aria-expanded={open}
@@ -192,7 +193,7 @@ function LangButtonsMobile({ locale, pathname, router, closeDrawer }) {
       {[{ code: 'fr', label: 'FR' }, { code: 'en', label: 'EN' }].map(({ code, label }) => {
         const active = locale === code
         return (
-          <button key={code} onClick={() => { router.push(pathname.replace(`/${locale}`, `/${code}`)); closeDrawer() }}
+          <button key={code} onClick={() => { switchLocale({ pathname, router, from: locale, to: code }); closeDrawer() }}
             style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '9px 14px', borderRadius: '10px', cursor: 'pointer', flex: 1, justifyContent: 'center', background: active ? '#9EB7E5' : '#FFFFFF', border: active ? '1px solid #9EB7E5' : '1px solid #E2DDD5', transition: 'background 0.15s' }}>
             {code === 'fr' ? <FlagFR /> : <FlagGB />}
             <span style={{ fontSize: '12px', fontWeight: '700', color: active ? '#16324F' : '#5A5446', letterSpacing: '0.4px' }}>{label}</span>

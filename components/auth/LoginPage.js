@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-client'
 
@@ -38,6 +38,12 @@ const tr = (key, locale) => T[key]?.[locale] ?? T[key]?.en ?? key
 export default function LoginPage() {
   const locale  = useLocale()
   const router  = useRouter()
+  // `next` ramene le joueur d'ou il venait (fin de partie, par exemple).
+  // On n'accepte qu'un chemin interne : une URL absolue permettrait de
+  // rediriger vers un site tiers depuis un lien forge.
+  const params  = useSearchParams()
+  const rawNext = params.get('next') || ''
+  const next    = rawNext.startsWith('/') && !rawNext.startsWith('//') ? rawNext : null
 
   const [mode, setMode]         = useState('signin')
   const [email, setEmail]       = useState('')
@@ -82,7 +88,7 @@ export default function LoginPage() {
             ? tr('errInvalid', locale)
             : tr('errGeneric', locale))
         } else {
-          router.push(`/${locale}`)
+          router.push(next || `/${locale}`)
         }
       }
     } catch (err) {

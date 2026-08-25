@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import { useLocale } from 'next-intl'
+import { switchLocale } from '@/lib/locale'
 
 // Drapeaux SVG (repris du header pour un style identique).
 function FlagFR() { return (<svg width="18" height="12" viewBox="0 0 3 2" style={{ borderRadius: '2px', flexShrink: 0 }}><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ED2939"/></svg>) }
@@ -21,7 +22,7 @@ function FooterLang({ locale, pathname, router, t }) {
   }, [])
   const LANGS = [{ code: 'fr', label: 'Français' }, { code: 'en', label: 'English' }]
   const current = LANGS.find(l => l.code === locale) || LANGS[1]
-  function choose(code) { setOpen(false); if (code !== locale) router.push(pathname.replace(`/${locale}`, `/${code}`)) }
+  function choose(code) { setOpen(false); switchLocale({ pathname, router, from: locale, to: code }) }
   return (
     <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
       <span style={{ fontSize: '12px', color: 'rgba(255,255,255,0.5)' }}>{t('Language:', 'Langue :')}</span>

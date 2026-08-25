@@ -5,6 +5,7 @@ import GameIcon from '@/components/games/GameIcon'
 import { useTranslations, useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-client'
 import PageLoader from '@/components/PageLoader'
+import GuestSaveCTA from '@/components/games/GuestSaveCTA'
 
 function normalize(str) {
   return str.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
@@ -493,6 +494,8 @@ export default function FlagReveal() {
 
         {/* Sticky buttons */}
         <div style={{ flexShrink: 0, padding: '12px 16px', paddingBottom: 'max(12px, env(safe-area-inset-bottom))', background: '#F4F1E6', borderTop: '1px solid #E2DDD5', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <GuestSaveCTA user={user} locale={locale} game="flag-reveal" mode="flag_reveal"
+            score={score} bestStreak={streak} correct={wonCount} played={total} label="Flag Reveal" />
           <button onClick={() => { setLives(MAX_LIVES); setStreak(0); scoreRef.current = 0; setScore(0); setElapsed(0); setGameHistory([]); startNewFlag(); setGameState('playing'); startSessionTimer() }}
             style={{ width: '100%', padding: '16px', backgroundColor: '#16324F', color: 'white', border: 'none', borderRadius: '14px', fontSize: '16px', fontWeight: '900', cursor: 'pointer', letterSpacing: '-0.3px' }}>
             {locale === 'fr' ? 'Rejouer' : 'Play Again'}

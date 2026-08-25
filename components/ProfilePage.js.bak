@@ -1,0 +1,866 @@
+'use client'
+
+import { usePathname, useRouter } from 'next/navigation'
+import { switchLocale } from '@/lib/locale'
+import { useState, useEffect, useRef } from 'react'
+import { useLocale } from 'next-intl'
+import { createClient } from '@/lib/supabase-client'
+import Footer from '@/components/Footer'
+
+const C = {
+  navy:   '#0B1F3B',
+  blue:   '#9EB7E5',
+  cream:  '#F4F1E6',
+  green:  '#426A5A',
+  gold:   '#806D40',
+  red:    '#C0392B',
+  bg:     '#F7F5EF',
+  border: '#E2DDD5',
+  muted:  '#8A8278',
+  white:  '#FFFFFF',
+}
+
+function ErmineMark({ size = 28, color = C.blue }) {
+  const s = size, w = s * 0.62, ox = (s - w) / 2
+  const headHW = w * 0.42, headTop = s * 0.01
+  const barY = s * 0.40, barH = s * 0.07, barW = w * 1.05
+  const dropW = w * 0.28, dropH = s * 0.30
+  const gapY = barY + barH + s * 0.03
+  const dxL = ox + w * 0.12, dxC = s / 2, dxR = ox + w * 0.88
+  const headBot = barY - s * 0.02
+  const headPath = [
+    `M ${dxC - headHW} ${headTop + headHW}`,
+    `Q ${dxC - headHW} ${headTop} ${dxC} ${headTop}`,
+    `Q ${dxC + headHW} ${headTop} ${dxC + headHW} ${headTop + headHW}`,
+    `L ${dxC + headHW} ${headBot - headHW * 0.5}`,
+    `Q ${dxC + headHW} ${headBot} ${dxC} ${headBot + s * 0.03}`,
+    `Q ${dxC - headHW} ${headBot} ${dxC - headHW} ${headBot - headHW * 0.5}`,
+    'Z'
+  ].join(' ')
+  function drop(cx, cy, dw, dh) {
+    const hw = dw / 2, r = hw
+    return [`M ${cx-hw} ${cy}`,`L ${cx-hw} ${cy+dh-r}`,
+            `Q ${cx-hw} ${cy+dh} ${cx} ${cy+dh}`,
+            `Q ${cx+hw} ${cy+dh} ${cx+hw} ${cy+dh-r}`,
+            `L ${cx+hw} ${cy}`,'Z'].join(' ')
+  }
+  return (
+    <svg width={s} height={s} viewBox={`0 0 ${s} ${s}`} fill="none" style={{ flexShrink: 0 }}>
+      <path d={headPath} fill={color}/>
+      <rect x={s/2-barW/2} y={barY} width={barW} height={barH} rx={barH/2} fill={color}/>
+      <path d={drop(dxL, gapY,        dropW,      dropH)}      fill={color}/>
+      <path d={drop(dxC, gapY+s*0.04, dropW*0.95, dropH*0.92)} fill={color}/>
+      <path d={drop(dxR, gapY,        dropW,      dropH)}      fill={color}/>
+    </svg>
+  )
+}
+
+const BADGES = [
+  { id: 'first_game',    icon: '🎮', en: 'First Game',       fr: 'Première Partie',    en_d: 'Played your first game',          fr_d: 'Première partie jouée',            condition: s => s.total_games >= 1        },
+  { id: 'streak_5',      icon: '🔥', en: 'On Fire',          fr: 'En Feu',             en_d: '5-game win streak',               fr_d: 'Série de 5 victoires',             condition: s => s.best_streak >= 5        },
+  { id: 'streak_10',     icon: '💥', en: 'Unstoppable',      fr: 'Inarrêtable',        en_d: '10-game win streak',              fr_d: 'Série de 10 victoires',            condition: s => s.best_streak >= 10       },
+  { id: 'flags_10',      icon: '🏳️', en: 'Flag Collector',   fr: 'Collectionneur',     en_d: '10 flags mastered',               fr_d: '10 drapeaux maîtrisés',            condition: s => s.mastered >= 10          },
+  { id: 'flags_50',      icon: '🌍', en: 'World Explorer',   fr: 'Explorateur',        en_d: '50 flags mastered',               fr_d: '50 drapeaux maîtrisés',            condition: s => s.mastered >= 50          },
+  { id: 'flags_100',     icon: '🌐', en: 'Vexillologist',    fr: 'Vexillologue',       en_d: '100 flags mastered',              fr_d: '100 drapeaux maîtrisés',           condition: s => s.mastered >= 100         },
+  { id: 'games_50',      icon: '🎯', en: 'Dedicated',        fr: 'Assidu',             en_d: '50 games played',                 fr_d: '50 parties jouées',                condition: s => s.total_games >= 50       },
+  { id: 'games_100',     icon: '🏆', en: 'Champion',         fr: 'Champion',           en_d: '100 games played',                fr_d: '100 parties jouées',               condition: s => s.total_games >= 100      },
+  { id: 'artist',        icon: '🎨', en: 'Artist',           fr: 'Artiste',            en_d: 'Drew a flag with 90%+ accuracy',  fr_d: 'Dessiné un drapeau à 90%+',        condition: s => s.best_drawing >= 90      },
+  { id: 'perfectionist', icon: '✨', en: 'Perfectionist',    fr: 'Perfectionniste',    en_d: 'Drew a flag with 100% accuracy',  fr_d: 'Dessiné un drapeau à 100%',        condition: s => s.best_drawing >= 100     },
+  { id: 'scholar',       icon: '📚', en: 'Scholar',          fr: 'Érudit',             en_d: 'Played all 3 game types',         fr_d: 'Joué aux 3 types de jeux',         condition: s => s.games_per_type >= 3     },
+  { id: 'polyglot',      icon: '🗣️', en: 'Polyglot',         fr: 'Polyglotte',         en_d: 'Used the app in both languages',  fr_d: 'Utilisé les deux langues',         condition: s => s.used_both_locales       },
+  // Contributor badges
+  { id: 'submitted_1',   icon: '📤', en: 'First Submission',  fr: 'Première Soumission', en_d: 'Submitted your first flag',      fr_d: 'Première soumission de drapeau',   condition: s => s.submitted >= 1          },
+  { id: 'submitted_5',   icon: '📬', en: 'Contributor',       fr: 'Contributeur',        en_d: '5 flags submitted',              fr_d: '5 drapeaux soumis',                condition: s => s.submitted >= 5          },
+  { id: 'submitted_10',  icon: '📦', en: 'Active Contributor',fr: 'Contributeur Actif',  en_d: '10 flags submitted',             fr_d: '10 drapeaux soumis',               condition: s => s.submitted >= 10         },
+  { id: 'submitted_25',  icon: '🗂️', en: 'Archivist',         fr: 'Archiviste',          en_d: '25 flags submitted',             fr_d: '25 drapeaux soumis',               condition: s => s.submitted >= 25         },
+  { id: 'submitted_50',  icon: '🏛️', en: 'Vexillographer',    fr: 'Vexillographe',       en_d: '50 flags submitted',             fr_d: '50 drapeaux soumis',               condition: s => s.submitted >= 50         },
+  { id: 'accepted_1',    icon: '✅', en: 'Verified',          fr: 'Vérifié',             en_d: 'First flag accepted',            fr_d: 'Premier drapeau accepté',          condition: s => s.accepted >= 1           },
+  { id: 'accepted_5',    icon: '🌟', en: 'Trusted Source',    fr: 'Source Fiable',       en_d: '5 flags accepted',               fr_d: '5 drapeaux acceptés',              condition: s => s.accepted >= 5           },
+  { id: 'accepted_10',   icon: '💎', en: 'Expert',            fr: 'Expert',              en_d: '10 flags accepted',              fr_d: '10 drapeaux acceptés',             condition: s => s.accepted >= 10          },
+  { id: 'accepted_25',   icon: '🏅', en: 'Master Contributor',fr: 'Maître Contributeur', en_d: '25 flags accepted',              fr_d: '25 drapeaux acceptés',             condition: s => s.accepted >= 25          },
+  { id: 'accepted_50',   icon: '👑', en: 'Flag Legend',       fr: 'Légende des Drapeaux',en_d: '50 flags accepted',              fr_d: '50 drapeaux acceptés',             condition: s => s.accepted >= 50          },
+]
+
+// Jeux masques des menus : la carte de stats reste (archive du joueur) mais le
+// bouton Jouer disparait, sinon il renvoie vers un jeu introuvable ailleurs.
+const HIDDEN_GAMES = ['past-flag', 'subflag-quiz', 'capital-city', 'flag-clue']
+
+const GAMES_META = {
+  'flag-reveal':  { icon: '🏳️', en: 'Flag Reveal',  fr: 'Révèle le Drapeau', color: C.blue,    href: 'flag-reveal'  },
+  'flag-quiz':    { icon: '❓',  en: 'Flag Quiz',    fr: 'Quiz Drapeaux',     color: C.green,   href: 'flag-quiz'    },
+  'capital-city': { icon: '🏙️', en: 'Capital City', fr: 'Capitale',          color: '#e07c3a', href: 'capital-city' },
+  'flag-drawing': { icon: '✏️', en: 'Flag Drawing', fr: 'Dessin du Drapeau', color: C.gold,    href: 'flag-drawing' },
+  'flag-locator': { icon: '📍', en: 'Flag Locator', fr: 'Localise le Pays', color: C.blue,    href: 'flag-locator' },
+}
+
+const CAPITAL_MODES = {
+  'capital_city_flag_mcq':  { en: 'Flag → Capital (MCQ)',     fr: 'Drapeau → Capitale (QCM)'    },
+  'capital_city_flag_type': { en: 'Flag → Capital (Type)',    fr: 'Drapeau → Capitale (Saisie)'  },
+  'capital_city_flag_both': { en: 'Flag → Capital (Mixed)',   fr: 'Drapeau → Capitale (Mixte)'   },
+  'capital_city_name_mcq':  { en: 'Country → Capital (MCQ)', fr: 'Pays → Capitale (QCM)'        },
+  'capital_city_name_type': { en: 'Country → Capital (Type)',fr: 'Pays → Capitale (Saisie)'     },
+  'capital_city_name_both': { en: 'Country → Capital (Mixed)',fr: 'Pays → Capitale (Mixte)'     },
+  'capital_city_both_mcq':  { en: 'Mixed → Capital (MCQ)',   fr: 'Mixte → Capitale (QCM)'       },
+  'capital_city_both_type': { en: 'Mixed → Capital (Type)',  fr: 'Mixte → Capitale (Saisie)'    },
+  'capital_city_both_both': { en: 'Mixed → Capital (Mixed)', fr: 'Mixte → Capitale (Mixte)'     },
+}
+
+function formatDuration(secs) {
+  if (!secs) return '—'
+  const m = Math.floor(secs / 60), s = secs % 60
+  return m > 0 ? `${m}m ${s}s` : `${s}s`
+}
+
+// Drapeaux SVG — memes traces que Header.js et Footer.js, pour un selecteur
+// de langue strictement identique sur toutes les surfaces du produit.
+function FlagFR() { return (<svg width="20" height="14" viewBox="0 0 3 2" style={{ borderRadius: '2px', flexShrink: 0 }}><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ED2939"/></svg>) }
+function FlagGB() { return (<svg width="20" height="14" viewBox="0 0 60 40" style={{ borderRadius: '2px', flexShrink: 0 }}><rect width="60" height="40" fill="#012169"/><line x1="0" y1="0" x2="60" y2="40" stroke="#fff" strokeWidth="8"/><line x1="60" y1="0" x2="0" y2="40" stroke="#fff" strokeWidth="8"/><line x1="0" y1="0" x2="60" y2="40" stroke="#C8102E" strokeWidth="4"/><line x1="60" y1="0" x2="0" y2="40" stroke="#C8102E" strokeWidth="4"/><rect x="0" y="15" width="60" height="10" fill="#fff"/><rect x="25" y="0" width="10" height="40" fill="#fff"/><rect x="0" y="17" width="60" height="6" fill="#C8102E"/><rect x="27" y="0" width="6" height="40" fill="#C8102E"/></svg>) }
+
+function Avatar({ username, avatarUrl, size = 80, onClick }) {
+  const initials = (username || '?').slice(0, 2).toUpperCase()
+  return (
+    <div onClick={onClick} style={{
+      width: size, height: size, borderRadius: '50%',
+      backgroundColor: C.navy, border: `3px solid ${C.blue}`,
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      cursor: onClick ? 'pointer' : 'default',
+      overflow: 'hidden', flexShrink: 0,
+      boxShadow: '0 4px 20px rgba(11,31,59,0.2)',
+      position: 'relative',
+    }}>
+      {avatarUrl
+        ? <img src={avatarUrl} alt={username} style={{ width: '100%', height: '100%', objectFit: 'cover' }}/>
+        : <span style={{ fontSize: size * 0.32, fontWeight: '800', color: C.blue, fontFamily: 'var(--font-display)' }}>{initials}</span>
+      }
+    </div>
+  )
+}
+
+function StatCard({ icon, value, label, accent }) {
+  return (
+    <div style={{ backgroundColor: C.white, borderRadius: '14px', padding: '20px 16px', border: `1px solid ${C.border}`, textAlign: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
+      <div style={{ fontSize: '24px', marginBottom: '6px' }}>{icon}</div>
+      <div style={{ fontSize: '26px', fontWeight: '800', color: accent || C.navy, fontFamily: 'var(--font-display)', lineHeight: 1, marginBottom: '5px' }}>{value ?? '—'}</div>
+      <div style={{ fontSize: '10px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '1px', color: C.muted }}>{label}</div>
+    </div>
+  )
+}
+
+function SectionTitle({ children }) {
+  return (
+    <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '18px' }}>
+      <div style={{ width: '4px', height: '20px', backgroundColor: C.blue, borderRadius: '2px', flexShrink: 0 }}/>
+      <h2 style={{ margin: 0, fontSize: '16px', fontWeight: '700', color: C.navy, fontFamily: 'var(--font-display)' }}>{children}</h2>
+    </div>
+  )
+}
+
+function FlagCell({ code, mastered }) {
+  return (
+    <div title={code.toUpperCase()} style={{
+      borderRadius: '5px', overflow: 'hidden',
+      border: mastered ? `2px solid ${C.green}` : `1px solid ${C.border}`,
+      opacity: mastered ? 1 : 0.35,
+      boxShadow: mastered ? '0 2px 8px rgba(66,106,90,0.2)' : 'none',
+      position: 'relative',
+    }}>
+      <img src={`https://flagcdn.com/w40/${code.toLowerCase()}.png`} alt={code}
+        style={{ width: '100%', display: 'block', aspectRatio: '3/2', objectFit: 'cover' }} />
+      {mastered && <div style={{ position: 'absolute', bottom: '1px', right: '2px', fontSize: '8px' }}>✅</div>}
+    </div>
+  )
+}
+
+export default function ProfilePage() {
+  const locale = useLocale()
+  const t = (en, fr) => locale === 'fr' ? fr : en
+
+  const pathname = usePathname()
+  const router   = useRouter()
+
+  const [user, setUser]             = useState(null)
+  const [profile, setProfile]       = useState(null)
+  const [stats, setStats]           = useState([])
+  const [history, setHistory]       = useState([])
+  const [loading, setLoading]       = useState(true)
+  const [activeTab, setActiveTab]   = useState('overview')
+  const [editing, setEditing]       = useState(false)
+  const [editForm, setEditForm]     = useState({ username: '', bio: '' })
+  const [saving, setSaving]         = useState(false)
+  const [saveMsg, setSaveMsg]       = useState('')
+  const [avatarBusy, setAvatarBusy] = useState(false)
+  const [gameScores, setGameScores] = useState([])
+  const [submissions, setSubmissions] = useState([])
+  const [forumStats, setForumStats]   = useState(null)
+  const [forumBadges, setForumBadges] = useState([])
+  const [forumTopics, setForumTopics] = useState([])
+  const fileRef = useRef(null)
+
+  useEffect(() => {
+    const supabase = createClient()
+    async function load(uid) {
+      const [pR, sR, hR, gR, subR] = await Promise.all([
+        supabase.from('profiles').select('*').eq('user_id', uid).single(),
+        supabase.from('player_stats').select('*').eq('user_id', uid),
+        supabase.from('game_scores_log').select('*').eq('user_id', uid)
+          .order('played_at', { ascending: false }).limit(200),
+        supabase.from('game_scores').select('*').eq('user_id', uid),
+        supabase.from('submissions').select('id, status, created_at, label_en, flag_type, entity_code')
+          .eq('user_id', uid).order('created_at', { ascending: false }),
+      ])
+      if (pR.data) setProfile(pR.data)
+      if (sR.data) setStats(sR.data)
+      if (hR.data) setHistory(hR.data)
+      if (gR.data) setGameScores(gR.data)
+      if (subR.data) setSubmissions(subR.data)
+
+      // ── Forum : stats, badges, derniers sujets ──
+      const [fsR, fbR, ftR] = await Promise.all([
+        supabase.from('forum_user_stats').select('*').eq('user_id', uid).maybeSingle(),
+        supabase.from('forum_user_badges').select('badge_id, awarded_at, forum_badges(slug, name_fr, name_en, icon, color)').eq('user_id', uid),
+        supabase.from('forum_topics').select('id, title, slug, category_id, reply_count, created_at, forum_categories(slug)')
+          .eq('author_id', uid).eq('moderation', 'approved').order('created_at', { ascending: false }).limit(5),
+      ])
+      if (fsR.data) setForumStats(fsR.data)
+      if (fbR.data) setForumBadges(fbR.data)
+      if (ftR.data) setForumTopics(ftR.data)
+
+      setLoading(false)
+    }
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session?.user) { setUser(session.user); load(session.user.id) }
+      else setLoading(false)
+    })
+  }, [])
+
+  const totalGames  = stats.reduce((a, s) => a + (s.games_played || 0), 0)
+  const totalScore  = stats.reduce((a, s) => a + (s.total_score  || 0), 0)
+  const bestStreak  = Math.max(0, ...stats.map(s => s.streak_best    || 0))
+  const curStreak   = Math.max(0, ...stats.map(s => s.streak_current || 0))
+  const bestDrawing = Math.max(0, ...stats.filter(s => s.game === 'flag-drawing').map(s => s.drawing_best_score || 0))
+  const gamesPerType = new Set(stats.filter(s => s.games_played > 0).map(s => s.game)).size
+  const totalFlags  = stats.reduce((a, s) => a + (s.flags_found || 0), 0)
+
+  // game_scores_log doesn't have flag_code/won — use player_stats for mastered count
+  const masteredCount = stats.reduce((a, s) => a + (s.flags_found || 0), 0)
+  const masteredArr   = [] // no per-flag data available from game_scores_log
+  const toLearn       = []
+
+  const submittedCount = submissions.length
+  const acceptedCount  = submissions.filter(s => s.status === 'accepted').length
+  const pendingCount   = submissions.filter(s => s.status === 'pending').length
+  const rejectedCount  = submissions.filter(s => s.status === 'rejected').length
+
+  const agg = {
+    total_games: totalGames,
+    best_streak: bestStreak,
+    mastered: masteredCount,
+    used_both_locales: false,
+    best_drawing: bestDrawing,
+    games_per_type: gamesPerType,
+    submitted: submittedCount,
+    accepted:  acceptedCount,
+  }
+
+  const unlocked = BADGES.filter(b => b.condition(agg))
+  const locked   = BADGES.filter(b => !b.condition(agg))
+
+  function startEdit() {
+    setEditForm({ username: profile?.username || '', bio: profile?.bio || '' })
+    setEditing(true)
+    setActiveTab('settings')
+  }
+
+  // ── saveProfile — only updates columns that exist in profiles ──
+  async function saveProfile() {
+    if (!user) return
+    setSaving(true)
+    setSaveMsg('')
+    const supabase = createClient()
+    const updates = {
+      username:   editForm.username.trim(),
+      bio:        editForm.bio.trim(),
+      updated_at: new Date().toISOString(),
+    }
+    const { error } = await supabase
+      .from('profiles')
+      .update(updates)
+      .eq('user_id', user.id)
+    if (!error) {
+      setProfile(p => ({ ...p, ...updates }))
+      setSaveMsg(t('Saved!', 'Enregistré !'))
+      setTimeout(() => { setSaveMsg(''); setEditing(false) }, 1500)
+    } else {
+      console.error('saveProfile error:', error)
+      setSaveMsg(t('Error saving. Please try again.', 'Erreur lors de la sauvegarde.'))
+    }
+    setSaving(false)
+  }
+
+  async function uploadAvatar(e) {
+    const file = e.target.files?.[0]
+    if (!file || !user) return
+    setAvatarBusy(true)
+    const supabase = createClient()
+    const ext  = file.name.split('.').pop()
+    const path = `avatars/${user.id}.${ext}`
+    const { error } = await supabase.storage.from('avatars').upload(path, file, { upsert: true })
+    if (!error) {
+      const { data } = supabase.storage.from('avatars').getPublicUrl(path)
+      await supabase.from('profiles').update({ avatar_url: data.publicUrl }).eq('user_id', user.id)
+      setProfile(p => ({ ...p, avatar_url: data.publicUrl }))
+    }
+    setAvatarBusy(false)
+  }
+
+  const TABS = [
+    { id: 'overview',     en: 'Overview',     fr: 'Résumé'       },
+    { id: 'games',        en: 'Games',        fr: 'Jeux'         },
+    { id: 'history',      en: 'History',      fr: 'Historique'   },
+    { id: 'flags',        en: 'Flags',        fr: 'Drapeaux'     },
+    { id: 'badges',       en: 'Badges',       fr: 'Badges'       },
+    { id: 'submissions',  en: 'Submissions',  fr: 'Soumissions'  },
+    { id: 'forum',        en: 'Forum',        fr: 'Forum'        },
+    { id: 'settings',     en: 'Settings',     fr: 'Paramètres'   },
+  ]
+
+  if (loading) return (
+    <div style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: C.bg }}>
+      <div style={{ textAlign: 'center' }}>
+        <ErmineMark size={48} color={C.blue}/>
+        <div style={{ marginTop: '16px', fontSize: '14px', color: C.muted, fontFamily: 'var(--font-display)' }}>
+          {t('Loading your profile…', 'Chargement de votre profil…')}
+        </div>
+      </div>
+    </div>
+  )
+
+  if (!user) return (
+    <div style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: C.bg, padding: '24px' }}>
+      <div style={{ textAlign: 'center', maxWidth: '320px' }}>
+        <ErmineMark size={56} color={C.navy}/>
+        <h2 style={{ marginTop: '20px', fontSize: '22px', fontWeight: '700', color: C.navy, fontFamily: 'var(--font-display)' }}>
+          {t('Sign in to see your profile', 'Connectez-vous pour voir votre profil')}
+        </h2>
+        <p style={{ color: C.muted, fontSize: '14px', lineHeight: '1.6', marginBottom: '20px' }}>
+          {t('Track your streaks, badges, and flag mastery.', 'Suivez vos séries, badges et drapeaux maîtrisés.')}
+        </p>
+        <a href={`/${locale}/login`} style={{ display: 'inline-block', padding: '12px 28px', backgroundColor: C.navy, color: C.cream, borderRadius: '10px', textDecoration: 'none', fontWeight: '700', fontSize: '14px' }}>
+          {t('Sign in', 'Se connecter')}
+        </a>
+      </div>
+    </div>
+  )
+
+  return (
+    <>
+    <div style={{ backgroundColor: C.bg, minHeight: '100vh', fontFamily: 'var(--font-body)' }}>
+
+      {/* Hero header */}
+      <div style={{ background: `linear-gradient(135deg, ${C.navy} 0%, #162d4a 100%)`, padding: '40px 24px 0' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <div style={{ display: 'flex', alignItems: 'flex-end', gap: '22px', marginBottom: '28px', flexWrap: 'wrap' }}>
+            <input type="file" ref={fileRef} accept="image/*" style={{ display: 'none' }} onChange={uploadAvatar}/>
+            <div style={{ position: 'relative', cursor: 'pointer' }} onClick={() => fileRef.current?.click()}>
+              <Avatar username={profile?.username} avatarUrl={profile?.avatar_url} size={84}/>
+              <div style={{ position: 'absolute', bottom: '-2px', right: '-2px', width: '24px', height: '24px', borderRadius: '50%', backgroundColor: C.blue, border: `2px solid ${C.navy}`, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '11px' }}>
+                {avatarBusy ? '⏳' : '✏️'}
+              </div>
+            </div>
+            <div style={{ flex: 1, minWidth: '180px' }}>
+              <div style={{ fontSize: '24px', fontWeight: '800', color: C.cream, fontFamily: 'var(--font-display)', letterSpacing: '-0.5px', lineHeight: 1.1 }}>
+                {profile?.username || user.email?.split('@')[0]}
+              </div>
+              <div style={{ fontSize: '12px', color: 'rgba(244,241,230,0.45)', marginTop: '4px' }}>{user.email}</div>
+              <div style={{ display: 'flex', gap: '7px', marginTop: '10px', flexWrap: 'wrap' }}>
+                <span style={{ fontSize: '11px', backgroundColor: 'rgba(224,124,58,0.2)', color: '#f0a060', padding: '3px 10px', borderRadius: '99px', fontWeight: '700' }}>🔥 ×{curStreak}</span>
+                <span style={{ fontSize: '11px', backgroundColor: 'rgba(66,106,90,0.25)', color: '#7ec4a7', padding: '3px 10px', borderRadius: '99px', fontWeight: '700' }}>✅ {masteredCount} {t('flags found', 'drapeaux trouvés')}</span>
+                <span style={{ fontSize: '11px', backgroundColor: 'rgba(128,109,64,0.25)', color: '#d4a96a', padding: '3px 10px', borderRadius: '99px', fontWeight: '700' }}>⭐ {totalScore.toLocaleString()} pts</span>
+              </div>
+            </div>
+            <button onClick={startEdit} style={{ padding: '8px 16px', backgroundColor: 'rgba(255,255,255,0.1)', color: C.cream, border: '1px solid rgba(255,255,255,0.18)', borderRadius: '9px', fontSize: '13px', fontWeight: '600', cursor: 'pointer', whiteSpace: 'nowrap' }}>
+              ✏️ {t('Edit profile', 'Modifier le profil')}
+            </button>
+          </div>
+          <div style={{ display: 'flex', overflowX: 'auto' }}>
+            {TABS.map(tab => (
+              <button key={tab.id} onClick={() => setActiveTab(tab.id)} style={{ padding: '11px 18px', border: 'none', background: 'transparent', fontSize: '13px', fontWeight: '600', cursor: 'pointer', whiteSpace: 'nowrap', color: activeTab === tab.id ? C.cream : 'rgba(244,241,230,0.4)', borderBottom: activeTab === tab.id ? `2px solid ${C.blue}` : '2px solid transparent', transition: 'all 0.15s' }}>
+                {t(tab.en, tab.fr)}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Content */}
+      <div style={{ maxWidth: '900px', margin: '0 auto', padding: '32px 24px' }}>
+
+        {/* OVERVIEW */}
+        {activeTab === 'overview' && (<>
+          <SectionTitle>{t('Your Stats', 'Vos statistiques')}</SectionTitle>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(130px, 1fr))', gap: '11px', marginBottom: '36px' }}>
+            <StatCard icon="🎮" value={totalGames}                             label={t('Games', 'Parties')}          accent={C.navy}  />
+            <StatCard icon="🔥" value={curStreak}                              label={t('Streak', 'Série actuelle')}  accent="#e07c3a" />
+            <StatCard icon="💥" value={bestStreak}                             label={t('Best streak', 'Meilleure')}  accent="#e07c3a" />
+            <StatCard icon="✅" value={masteredCount}                          label={t('Flags found', 'Trouvés')}    accent={C.green} />
+            <StatCard icon="⭐" value={totalScore.toLocaleString()}            label={t('Score', 'Score total')}      accent={C.gold}  />
+            <StatCard icon="🏅" value={`${unlocked.length}/${BADGES.length}`} label={t('Badges', 'Badges')}          accent={C.blue}  />
+            <StatCard icon="📤" value={submittedCount}                         label={t('Submitted', 'Soumis')}       accent="#7c3aed" />
+            <StatCard icon="✔️" value={acceptedCount}                          label={t('Accepted', 'Acceptés')}      accent={C.green} />
+          </div>
+
+          <SectionTitle>{t('By Game', 'Par jeu')}</SectionTitle>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '36px' }}>
+            {Object.entries(GAMES_META).map(([key, meta]) => {
+              const s = stats.find(x => x.game === key)
+              return (
+                <div key={key} style={{ backgroundColor: C.white, borderRadius: '13px', padding: '16px 20px', border: `1px solid ${C.border}`, display: 'flex', alignItems: 'center', gap: '14px', boxShadow: '0 2px 6px rgba(0,0,0,0.04)' }}>
+                  <span style={{ fontSize: '26px', width: '34px', textAlign: 'center', flexShrink: 0 }}>{meta.icon}</span>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ fontSize: '14px', fontWeight: '700', color: C.navy, marginBottom: '5px', fontFamily: 'var(--font-display)' }}>{t(meta.en, meta.fr)}</div>
+                    <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+                      {[
+                        [t('Games', 'Parties'),               s?.games_played || 0],
+                        [t('Flags found', 'Drapeaux'),         s?.flags_found  || 0],
+                        [t('Best streak', 'Meilleure série'),  s?.streak_best  || 0],
+                        ...(key === 'flag-drawing' ? [[t('Best accuracy', 'Meilleure précision'), `${s?.drawing_best_score || 0}%`]] : []),
+                      ].map(([lbl, val]) => (
+                        <span key={lbl} style={{ fontSize: '12px', color: C.muted }}>
+                          <span style={{ fontWeight: '700', color: meta.color }}>{val}</span> {lbl}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  {(s?.streak_current > 0) && (
+                    <span style={{ fontSize: '12px', backgroundColor: '#fff4e8', color: '#e07c3a', padding: '4px 10px', borderRadius: '99px', fontWeight: '700', flexShrink: 0 }}>🔥 ×{s.streak_current}</span>
+                  )}
+                </div>
+              )
+            })}
+          </div>
+
+          <SectionTitle>{t('Recent Activity', 'Activité récente')}</SectionTitle>
+          {history.length === 0
+            ? <div style={{ color: C.muted, fontSize: '14px', padding: '16px 0' }}>{t('No games played yet.', 'Aucune partie jouée.')}</div>
+            : (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                {history.slice(0, 15).map((h, i) => {
+                  const meta = GAMES_META[h.game] || {}
+                  const date = new Date(h.played_at).toLocaleDateString(locale === 'fr' ? 'fr-FR' : 'en-GB', { day: 'numeric', month: 'short' })
+                  return (
+                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '12px', backgroundColor: C.white, borderRadius: '9px', padding: '10px 14px', border: `1px solid ${C.border}` }}>
+                      <span style={{ fontSize: '22px', width: '32px', textAlign: 'center', flexShrink: 0 }}>{meta.icon || '🎮'}</span>
+                      <span style={{ fontSize: '12px', color: C.muted, flex: 1 }}>{t(meta.en, meta.fr) || h.game}</span>
+                      {h.score > 0 && <span style={{ fontSize: '12px', fontWeight: '700', color: C.gold }}>+{h.score} pts</span>}
+                      <span style={{ fontSize: '11px', color: C.muted, flexShrink: 0 }}>{date}</span>
+                    </div>
+                  )
+                })}
+              </div>
+            )
+          }
+        </>)}
+
+        {/* GAMES */}
+        {activeTab === 'games' && (<>
+          <SectionTitle>{t('Games Statistics', 'Statistiques par jeu')}</SectionTitle>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '36px' }}>
+            {Object.entries(GAMES_META).map(([key, meta]) => {
+              const s = stats.find(x => x.game === key)
+              const capitalModeScores = gameScores.filter(g => g.mode?.startsWith('capital_city_'))
+              const singleScore = gameScores.find(g => g.mode === key.replace('-', '_'))
+              return (
+                <div key={key} style={{ backgroundColor: C.white, borderRadius: '16px', border: `1px solid ${C.border}`, overflow: 'hidden', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
+                  <div style={{ backgroundColor: meta.color + '18', borderBottom: `1px solid ${C.border}`, padding: '14px 20px', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                    <span style={{ fontSize: '28px' }}>{meta.icon}</span>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ fontSize: '16px', fontWeight: '800', color: C.navy }}>{t(meta.en, meta.fr)}</div>
+                    </div>
+                    <a href={HIDDEN_GAMES.includes(key) ? undefined : `/${locale}/games/${meta.href}`} style={{ display: HIDDEN_GAMES.includes(key) ? 'none' : 'inline-block', fontSize: '12px', fontWeight: '700', color: meta.color, textDecoration: 'none', padding: '6px 12px', border: `1px solid ${meta.color}`, borderRadius: '99px' }}>
+                      {t('Play →', 'Jouer →')}
+                    </a>
+                  </div>
+                  {key !== 'capital-city' ? (
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1px', backgroundColor: C.border }}>
+                      {[
+                        { label: t('Games played', 'Parties jouées'),       value: s?.games_played || 0,            icon: '🎮' },
+                        { label: t('Best streak', 'Meilleure série'),        value: s?.streak_best  || 0,            icon: '🔥' },
+                        { label: t('Flags found', 'Drapeaux trouvés'),       value: s?.flags_found  || 0,            icon: '✅' },
+                        { label: t('Longest game', 'Partie la plus longue'), value: formatDuration(s?.longest_game), icon: '⏱' },
+                        ...(key === 'flag-reveal' || key === 'flag-quiz' ? [
+                          { label: t('Best score', 'Meilleur score'), value: singleScore?.best_streak ? `${singleScore.best_streak} pts` : '—', icon: '⭐' },
+                        ] : []),
+                        ...(key === 'flag-drawing' ? [
+                          { label: t('Best accuracy', 'Meilleure précision'), value: `${s?.drawing_best_score || 0}%`, icon: '🎨' },
+                        ] : []),
+                      ].map((item, i) => (
+                        <div key={i} style={{ backgroundColor: C.white, padding: '16px', textAlign: 'center' }}>
+                          <div style={{ fontSize: '18px', marginBottom: '4px' }}>{item.icon}</div>
+                          <div style={{ fontSize: '20px', fontWeight: '900', color: meta.color }}>{item.value}</div>
+                          <div style={{ fontSize: '11px', color: C.muted, marginTop: '2px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{item.label}</div>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div style={{ padding: '16px 20px' }}>
+                      {capitalModeScores.length === 0
+                        ? <p style={{ color: C.muted, fontSize: '14px', textAlign: 'center', margin: '12px 0' }}>{t('No games played yet', 'Aucune partie jouée')}</p>
+                        : (
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                            {capitalModeScores.map(gs => {
+                              const modeLabel = CAPITAL_MODES[gs.mode]
+                              return (
+                                <div key={gs.mode} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '10px 14px', backgroundColor: C.bg, borderRadius: '10px', border: `1px solid ${C.border}` }}>
+                                  <span style={{ fontSize: '13px', fontWeight: '600', color: C.navy }}>{modeLabel ? t(modeLabel.en, modeLabel.fr) : gs.mode}</span>
+                                  <span style={{ fontSize: '13px', color: C.muted }}>🔥 <strong style={{ color: '#e07c3a' }}>{gs.best_streak}</strong> {t('best streak', 'meilleure série')}</span>
+                                </div>
+                              )
+                            })}
+                          </div>
+                        )
+                      }
+                    </div>
+                  )}
+                </div>
+              )
+            })}
+          </div>
+        </>)}
+
+        {/* HISTORY */}
+        {activeTab === 'history' && (<>
+          <SectionTitle>{t(`Game History (${history.length} entries)`, `Historique (${history.length} entrées)`)}</SectionTitle>
+          {history.length === 0
+            ? <div style={{ color: C.muted, fontSize: '14px', padding: '16px 0' }}>{t('No games played yet.', 'Aucune partie jouée.')}</div>
+            : (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                {history.slice(0, 50).map((h, i) => {
+                  const meta = GAMES_META[h.game] || {}
+                  const d = new Date(h.played_at)
+                  const date = d.toLocaleDateString(locale === 'fr' ? 'fr-FR' : 'en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
+                  const time = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+                  return (
+                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '13px', backgroundColor: C.white, borderRadius: '10px', padding: '11px 15px', border: `1px solid ${C.border}` }}>
+                      <span style={{ fontSize: '22px', width: '32px', textAlign: 'center', flexShrink: 0 }}>{meta.icon || '🎮'}</span>
+                      <div style={{ flex: 1 }}>
+                        <div style={{ fontSize: '13px', fontWeight: '700', color: C.navy }}>{t(meta.en, meta.fr) || h.game}</div>
+                        <div style={{ fontSize: '11px', color: C.muted }}>{date} {time}</div>
+                      </div>
+                      {h.score > 0 && <span style={{ fontSize: '13px', fontWeight: '700', color: C.gold, flexShrink: 0 }}>+{h.score} pts</span>}
+                    </div>
+                  )
+                })}
+                {history.length > 50 && (
+                  <div style={{ textAlign: 'center', padding: '12px', fontSize: '13px', color: C.muted }}>
+                    {t(`Showing 50 of ${history.length} games`, `Affichage de 50 sur ${history.length} parties`)}
+                  </div>
+                )}
+              </div>
+            )
+          }
+        </>)}
+
+        {/* FLAGS */}
+        {activeTab === 'flags' && (<>
+          <SectionTitle>✅ {masteredCount} {t('flags found', 'drapeaux trouvés')}</SectionTitle>
+          <div style={{ padding: '48px 0', textAlign: 'center' }}>
+            <div style={{ fontSize: '42px', marginBottom: '14px' }}>🏳️</div>
+            <div style={{ fontSize: '15px', color: C.muted, marginBottom: '8px' }}>
+              {masteredCount > 0
+                ? t(`You've found ${masteredCount} flags across all games!`, `Tu as trouvé ${masteredCount} drapeaux dans tous les jeux !`)
+                : t('Play games to build your flag collection!', 'Jouez pour constituer votre collection de drapeaux !')}
+            </div>
+            <div style={{ fontSize: '12px', color: C.muted }}>
+              {t('Per-flag detail coming soon.', 'Détail par drapeau bientôt disponible.')}
+            </div>
+          </div>
+        </>)}
+
+        {/* BADGES */}
+        {activeTab === 'badges' && (<>
+          <SectionTitle>{t(`${unlocked.length} badge${unlocked.length !== 1 ? 's' : ''} unlocked`, `${unlocked.length} badge${unlocked.length !== 1 ? 's' : ''} débloqué${unlocked.length !== 1 ? 's' : ''}`)}</SectionTitle>
+          {unlocked.length === 0
+            ? <div style={{ color: C.muted, fontSize: '14px', marginBottom: '32px' }}>{t('No badges yet — keep playing!', 'Aucun badge — continuez à jouer !')}</div>
+            : <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '10px', marginBottom: '36px' }}>
+                {unlocked.map(b => (
+                  <div key={b.id} style={{ backgroundColor: C.white, borderRadius: '12px', padding: '16px', border: `1.5px solid ${C.green}`, boxShadow: '0 2px 8px rgba(66,106,90,0.1)', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                    <span style={{ fontSize: '26px', flexShrink: 0 }}>{b.icon}</span>
+                    <div>
+                      <div style={{ fontSize: '13px', fontWeight: '700', color: C.navy }}>{t(b.en, b.fr)}</div>
+                      <div style={{ fontSize: '11px', color: C.muted, marginTop: '2px' }}>{t(b.en_d, b.fr_d)}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+          }
+          <SectionTitle>{t('Locked badges', 'Badges verrouillés')}</SectionTitle>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '10px' }}>
+            {locked.map(b => (
+              <div key={b.id} style={{ backgroundColor: C.white, borderRadius: '12px', padding: '16px', border: `1px solid ${C.border}`, opacity: 0.45, display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <span style={{ fontSize: '26px', filter: 'grayscale(1)', flexShrink: 0 }}>{b.icon}</span>
+                <div>
+                  <div style={{ fontSize: '13px', fontWeight: '700', color: C.navy }}>{t(b.en, b.fr)}</div>
+                  <div style={{ fontSize: '11px', color: C.muted, marginTop: '2px' }}>{t(b.en_d, b.fr_d)}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </>)}
+
+        {/* SUBMISSIONS */}
+        {activeTab === 'submissions' && (<>
+          <SectionTitle>🏳️ {t('My Flag Submissions', 'Mes soumissions de drapeaux')}</SectionTitle>
+
+          {/* Stats row */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px', marginBottom: '24px' }}>
+            <div style={{ backgroundColor: '#fefce8', borderRadius: '12px', padding: '14px 16px', border: '1px solid #fde68a', textAlign: 'center' }}>
+              <div style={{ fontSize: '22px', fontWeight: '900', color: '#854d0e' }}>{pendingCount}</div>
+              <div style={{ fontSize: '11px', fontWeight: '700', color: '#92400e', textTransform: 'uppercase', marginTop: '2px' }}>{t('Pending', 'En attente')}</div>
+            </div>
+            <div style={{ backgroundColor: '#f0fdf4', borderRadius: '12px', padding: '14px 16px', border: '1px solid #bbf7d0', textAlign: 'center' }}>
+              <div style={{ fontSize: '22px', fontWeight: '900', color: '#166534' }}>{acceptedCount}</div>
+              <div style={{ fontSize: '11px', fontWeight: '700', color: '#166534', textTransform: 'uppercase', marginTop: '2px' }}>{t('Accepted', 'Acceptés')}</div>
+            </div>
+            <div style={{ backgroundColor: '#fef2f2', borderRadius: '12px', padding: '14px 16px', border: '1px solid #fecaca', textAlign: 'center' }}>
+              <div style={{ fontSize: '22px', fontWeight: '900', color: '#991b1b' }}>{rejectedCount}</div>
+              <div style={{ fontSize: '11px', fontWeight: '700', color: '#991b1b', textTransform: 'uppercase', marginTop: '2px' }}>{t('Rejected', 'Refusés')}</div>
+            </div>
+          </div>
+
+          {submissions.length === 0 ? (
+            <div style={{ textAlign: 'center', padding: '48px 0', color: C.muted }}>
+              <div style={{ fontSize: '42px', marginBottom: '12px' }}>🏳️</div>
+              <div style={{ fontSize: '14px' }}>{t('No submissions yet. Click "+ Submit" to contribute a flag!', 'Aucune soumission. Cliquez sur "+ Soumettre" pour contribuer !')}</div>
+            </div>
+          ) : (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              {submissions.map(s => {
+                const statusColor = s.status === 'accepted' ? { bg: '#f0fdf4', color: '#166534', border: '#bbf7d0' }
+                  : s.status === 'rejected' ? { bg: '#fef2f2', color: '#991b1b', border: '#fecaca' }
+                  : { bg: '#fefce8', color: '#854d0e', border: '#fde68a' }
+                return (
+                  <div key={s.id} style={{ backgroundColor: C.white, borderRadius: '12px', padding: '12px 16px', border: `1px solid ${C.border}`, display: 'flex', alignItems: 'center', gap: '12px' }}>
+                    <span style={{ fontSize: '20px' }}>
+                      {s.flag_type === 'country' ? '🌍' : s.flag_type === 'region' ? '🗺️' : s.flag_type === 'city' ? '🏙️' : s.flag_type === 'organisation' ? '🏛️' : '📜'}
+                    </span>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ fontSize: '13px', fontWeight: '700', color: C.navy }}>{s.label_en || '—'}</div>
+                      <div style={{ fontSize: '11px', color: C.muted }}>{s.flag_type} · {s.entity_code} · {new Date(s.created_at).toLocaleDateString()}</div>
+                    </div>
+                    <span style={{ padding: '3px 10px', borderRadius: '99px', fontSize: '11px', fontWeight: '700', backgroundColor: statusColor.bg, color: statusColor.color, border: `1px solid ${statusColor.border}` }}>
+                      {s.status}
+                    </span>
+                  </div>
+                )
+              })}
+            </div>
+          )}
+        </>)}
+
+        {/* FORUM */}
+        {activeTab === 'forum' && (<>
+          <SectionTitle>{t('Forum activity', 'Activité sur le forum')}</SectionTitle>
+
+          {/* Stats */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px', marginBottom: '24px' }}>
+            <div style={{ backgroundColor: C.white, borderRadius: '12px', padding: '16px', border: `1px solid ${C.border}`, textAlign: 'center' }}>
+              <div style={{ fontSize: '24px', fontWeight: '900', color: C.navy }}>{forumStats?.topic_count ?? 0}</div>
+              <div style={{ fontSize: '11px', fontWeight: '700', color: C.muted, textTransform: 'uppercase', marginTop: '2px' }}>{t('Topics', 'Sujets')}</div>
+            </div>
+            <div style={{ backgroundColor: C.white, borderRadius: '12px', padding: '16px', border: `1px solid ${C.border}`, textAlign: 'center' }}>
+              <div style={{ fontSize: '24px', fontWeight: '900', color: C.navy }}>{forumStats?.reply_count ?? 0}</div>
+              <div style={{ fontSize: '11px', fontWeight: '700', color: C.muted, textTransform: 'uppercase', marginTop: '2px' }}>{t('Replies', 'Réponses')}</div>
+            </div>
+            <div style={{ backgroundColor: C.white, borderRadius: '12px', padding: '16px', border: `1px solid ${C.border}`, textAlign: 'center' }}>
+              <div style={{ fontSize: '14px', fontWeight: '900', color: C.navy, marginTop: '4px' }}>
+                {forumStats?.forum_role === 'admin' ? t('Admin', 'Admin')
+                  : forumStats?.forum_role === 'moderator' ? t('Moderator', 'Modérateur')
+                  : profile?.is_admin ? t('Admin', 'Admin') : t('Member', 'Membre')}
+              </div>
+              <div style={{ fontSize: '11px', fontWeight: '700', color: C.muted, textTransform: 'uppercase', marginTop: '4px' }}>{t('Role', 'Rôle')}</div>
+            </div>
+          </div>
+
+          {/* Badges forum */}
+          {forumBadges.length > 0 && (
+            <div style={{ marginBottom: '24px' }}>
+              <div style={{ fontSize: '12px', fontWeight: '700', color: C.muted, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '10px' }}>{t('Forum badges', 'Badges du forum')}</div>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                {forumBadges.map(fb => {
+                  const b = fb.forum_badges || {}
+                  return (
+                    <div key={fb.badge_id} title={t(b.name_en, b.name_fr)}
+                      style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', backgroundColor: C.white, border: `1px solid ${C.border}`, borderRadius: '99px', padding: '6px 14px' }}>
+                      <span style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: b.color || C.blue }} />
+                      <span style={{ fontSize: '13px', fontWeight: '700', color: C.navy }}>{t(b.name_en, b.name_fr)}</span>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* Derniers sujets */}
+          <div style={{ fontSize: '12px', fontWeight: '700', color: C.muted, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '10px' }}>{t('Recent topics', 'Sujets récents')}</div>
+          {forumTopics.length === 0 ? (
+            <div style={{ textAlign: 'center', padding: '40px 0', color: C.muted, fontSize: '14px' }}>
+              {t('No topics started yet.', 'Aucun sujet créé pour le moment.')}
+            </div>
+          ) : (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              {forumTopics.map(tp => {
+                const catSlug = tp.forum_categories?.slug || ''
+                return (
+                  <a key={tp.id} href={`/${locale}/forum/${catSlug}/${tp.slug}`} style={{ textDecoration: 'none' }}>
+                    <div style={{ backgroundColor: C.white, borderRadius: '12px', padding: '12px 16px', border: `1px solid ${C.border}`, display: 'flex', alignItems: 'center', gap: '12px' }}>
+                      <div style={{ flex: 1, minWidth: 0 }}>
+                        <div style={{ fontSize: '13px', fontWeight: '700', color: C.navy, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{tp.title}</div>
+                        <div style={{ fontSize: '11px', color: C.muted }}>{new Date(tp.created_at).toLocaleDateString()} · {tp.reply_count || 0} {t('replies', 'réponses')}</div>
+                      </div>
+                    </div>
+                  </a>
+                )
+              })}
+            </div>
+          )}
+        </>)}
+
+        {/* SETTINGS */}
+        {activeTab === 'settings' && (
+          <div style={{ maxWidth: '480px' }}>
+            <SectionTitle>{t('Account Settings', 'Paramètres du compte')}</SectionTitle>
+
+            <div style={{ backgroundColor: C.white, borderRadius: '16px', border: `1px solid ${C.border}`, overflow: 'hidden', marginBottom: '20px' }}>
+
+              {/* Avatar */}
+              <div style={{ padding: '20px 22px', borderBottom: `1px solid ${C.border}`, display: 'flex', alignItems: 'center', gap: '14px' }}>
+                <Avatar username={profile?.username} avatarUrl={profile?.avatar_url} size={56}/>
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontSize: '13px', fontWeight: '700', color: C.navy, marginBottom: '2px' }}>{t('Profile picture', 'Photo de profil')}</div>
+                  <div style={{ fontSize: '11px', color: C.muted }}>{t('JPG or PNG, max 2MB', 'JPG ou PNG, max 2Mo')}</div>
+                </div>
+                <button onClick={() => fileRef.current?.click()} style={{ padding: '7px 14px', border: `1px solid ${C.border}`, borderRadius: '8px', fontSize: '12px', fontWeight: '600', cursor: 'pointer', backgroundColor: C.bg, color: C.navy }}>
+                  {avatarBusy ? '⏳' : t('Change', 'Changer')}
+                </button>
+              </div>
+
+              {/* Langue de l'interface — enregistree immediatement via switchLocale
+                  (cookie NEXT_LOCALE + profiles.locale), sans passer par Save. */}
+              <div style={{ padding: '20px 22px', borderBottom: `1px solid ${C.border}`, display: 'flex', alignItems: 'center', gap: '14px', flexWrap: 'wrap' }}>
+                <div style={{ flex: 1, minWidth: '180px' }}>
+                  <div style={{ fontSize: '13px', fontWeight: '700', color: C.navy, marginBottom: '2px' }}>
+                    {t('Interface language', "Langue de l'interface")}
+                  </div>
+                  <div style={{ fontSize: '11px', color: C.muted, lineHeight: 1.5 }}>
+                    {t('Saved to your account and applied on every device.',
+                       'Enregistrée sur votre compte et appliquée sur tous vos appareils.')}
+                  </div>
+                </div>
+
+                <div role="radiogroup" aria-label={t('Interface language', "Langue de l'interface")}
+                     style={{ display: 'flex', gap: '8px' }}>
+                  {[{ code: 'fr', label: 'Français' }, { code: 'en', label: 'English' }].map(({ code, label }) => {
+                    const active = locale === code
+                    return (
+                      <button
+                        key={code}
+                        role="radio"
+                        aria-checked={active}
+                        onClick={() => switchLocale({ pathname, router, from: locale, to: code })}
+                        style={{
+                          display: 'flex', alignItems: 'center', gap: '8px',
+                          minHeight: '44px', padding: '10px 16px',
+                          borderRadius: '10px', cursor: active ? 'default' : 'pointer',
+                          backgroundColor: active ? C.navy : C.bg,
+                          border: `1.5px solid ${active ? C.navy : C.border}`,
+                          fontSize: '13px', fontWeight: active ? '700' : '600',
+                          color: active ? C.white : C.navy,
+                          transition: 'all 0.15s ease',
+                        }}
+                        onMouseEnter={e => { if (!active) e.currentTarget.style.borderColor = C.navy }}
+                        onMouseLeave={e => { if (!active) e.currentTarget.style.borderColor = C.border }}
+                      >
+                        {code === 'fr' ? <FlagFR /> : <FlagGB />}
+                        <span>{label}</span>
+                        {active && (
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={C.blue}
+                               strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M20 6L9 17l-5-5"/>
+                          </svg>
+                        )}
+                      </button>
+                    )
+                  })}
+                </div>
+              </div>
+
+              {/* Username */}
+              <div style={{ padding: '20px 22px', borderBottom: `1px solid ${C.border}` }}>
+                <label style={{ display: 'block', fontSize: '13px', fontWeight: '700', color: C.navy, marginBottom: '8px' }}>
+                  {t('Username', "Nom d'utilisateur")}
+                </label>
+                <input
+                  value={editing ? editForm.username : (profile?.username || '')}
+                  onChange={e => setEditForm(f => ({ ...f, username: e.target.value }))}
+                  onFocus={() => !editing && startEdit()}
+                  placeholder={t('Your username', 'Votre nom')}
+                  style={{ width: '100%', boxSizing: 'border-box', padding: '9px 13px', borderRadius: '8px', border: `1.5px solid ${editing ? C.blue : C.border}`, fontSize: '14px', color: C.navy, backgroundColor: C.white, outline: 'none' }}
+                />
+              </div>
+
+              {/* Bio */}
+              <div style={{ padding: '20px 22px', borderBottom: `1px solid ${C.border}` }}>
+                <label style={{ display: 'block', fontSize: '13px', fontWeight: '700', color: C.navy, marginBottom: '8px' }}>Bio</label>
+                <textarea
+                  value={editing ? editForm.bio : (profile?.bio || '')}
+                  onChange={e => setEditForm(f => ({ ...f, bio: e.target.value }))}
+                  onFocus={() => !editing && startEdit()}
+                  placeholder={t('A short bio…', 'Une courte bio…')}
+                  rows={3}
+                  style={{ width: '100%', boxSizing: 'border-box', padding: '9px 13px', borderRadius: '8px', border: `1.5px solid ${editing ? C.blue : C.border}`, fontSize: '14px', color: C.navy, backgroundColor: C.white, outline: 'none', resize: 'vertical' }}
+                />
+              </div>
+
+              {/* Email read-only */}
+              <div style={{ padding: '20px 22px' }}>
+                <label style={{ display: 'block', fontSize: '13px', fontWeight: '700', color: C.navy, marginBottom: '8px' }}>Email</label>
+                <div style={{ padding: '9px 13px', borderRadius: '8px', border: `1px solid ${C.border}`, fontSize: '14px', color: C.muted, backgroundColor: C.bg }}>
+                  {user.email}
+                </div>
+                <div style={{ fontSize: '11px', color: C.muted, marginTop: '5px' }}>
+                  {t('Email cannot be changed here.', "L'email ne peut pas être modifié ici.")}
+                </div>
+              </div>
+            </div>
+
+            {/* Save button */}
+            {editing && (
+              <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginBottom: '32px' }}>
+                <button onClick={saveProfile} disabled={saving} style={{ padding: '11px 26px', backgroundColor: C.navy, color: C.cream, border: 'none', borderRadius: '10px', fontSize: '14px', fontWeight: '700', cursor: saving ? 'not-allowed' : 'pointer', opacity: saving ? 0.7 : 1 }}>
+                  {saving ? t('Saving…', 'Enregistrement…') : t('Save changes', 'Enregistrer')}
+                </button>
+                <button onClick={() => setEditing(false)} style={{ padding: '11px 18px', backgroundColor: 'transparent', color: C.muted, border: `1px solid ${C.border}`, borderRadius: '10px', fontSize: '14px', cursor: 'pointer' }}>
+                  {t('Cancel', 'Annuler')}
+                </button>
+                {saveMsg && <span style={{ fontSize: '13px', color: saveMsg.includes('Error') || saveMsg.includes('Erreur') ? C.red : C.green, fontWeight: '600' }}>{saveMsg}</span>}
+              </div>
+            )}
+
+            {/* Danger zone */}
+            <div style={{ padding: '18px 20px', borderRadius: '12px', border: '1px solid rgba(192,57,43,0.2)', backgroundColor: 'rgba(192,57,43,0.02)' }}>
+              <div style={{ fontSize: '12px', fontWeight: '700', color: C.red, marginBottom: '5px' }}>{t('Danger zone', 'Zone dangereuse')}</div>
+              <div style={{ fontSize: '12px', color: C.muted, marginBottom: '12px', lineHeight: '1.5' }}>
+                {t('Permanently deletes your account and all associated data.', 'Supprime définitivement votre compte et toutes vos données.')}
+              </div>
+              <button style={{ padding: '7px 14px', backgroundColor: 'transparent', color: C.red, border: `1px solid ${C.red}`, borderRadius: '7px', fontSize: '12px', fontWeight: '600', cursor: 'pointer' }}>
+                {t('Delete account', 'Supprimer le compte')}
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+    <Footer />
+    </>
+  )
+}

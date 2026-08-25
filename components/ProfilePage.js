@@ -1,5 +1,7 @@
 'use client'
 
+import { usePathname, useRouter } from 'next/navigation'
+import { switchLocale } from '@/lib/locale'
 import { useState, useEffect, useRef } from 'react'
 import { useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-client'
@@ -109,6 +111,11 @@ function formatDuration(secs) {
   return m > 0 ? `${m}m ${s}s` : `${s}s`
 }
 
+// Drapeaux SVG — memes traces que Header.js et Footer.js, pour un selecteur
+// de langue strictement identique sur toutes les surfaces du produit.
+function FlagFR() { return (<svg width="20" height="14" viewBox="0 0 3 2" style={{ borderRadius: '2px', flexShrink: 0 }}><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ED2939"/></svg>) }
+function FlagGB() { return (<svg width="20" height="14" viewBox="0 0 60 40" style={{ borderRadius: '2px', flexShrink: 0 }}><rect width="60" height="40" fill="#012169"/><line x1="0" y1="0" x2="60" y2="40" stroke="#fff" strokeWidth="8"/><line x1="60" y1="0" x2="0" y2="40" stroke="#fff" strokeWidth="8"/><line x1="0" y1="0" x2="60" y2="40" stroke="#C8102E" strokeWidth="4"/><line x1="60" y1="0" x2="0" y2="40" stroke="#C8102E" strokeWidth="4"/><rect x="0" y="15" width="60" height="10" fill="#fff"/><rect x="25" y="0" width="10" height="40" fill="#fff"/><rect x="0" y="17" width="60" height="6" fill="#C8102E"/><rect x="27" y="0" width="6" height="40" fill="#C8102E"/></svg>) }
+
 function Avatar({ username, avatarUrl, size = 80, onClick }) {
   const initials = (username || '?').slice(0, 2).toUpperCase()
   return (
@@ -167,6 +174,9 @@ function FlagCell({ code, mastered }) {
 export default function ProfilePage() {
   const locale = useLocale()
   const t = (en, fr) => locale === 'fr' ? fr : en
+
+  const pathname = usePathname()
+  const router   = useRouter()
 
   const [user, setUser]             = useState(null)
   const [profile, setProfile]       = useState(null)
@@ -732,6 +742,56 @@ export default function ProfilePage() {
                 <button onClick={() => fileRef.current?.click()} style={{ padding: '7px 14px', border: `1px solid ${C.border}`, borderRadius: '8px', fontSize: '12px', fontWeight: '600', cursor: 'pointer', backgroundColor: C.bg, color: C.navy }}>
                   {avatarBusy ? '⏳' : t('Change', 'Changer')}
                 </button>
+              </div>
+
+              {/* Langue de l'interface — enregistree immediatement via switchLocale
+                  (cookie NEXT_LOCALE + profiles.locale), sans passer par Save. */}
+              <div style={{ padding: '20px 22px', borderBottom: `1px solid ${C.border}`, display: 'flex', alignItems: 'center', gap: '14px', flexWrap: 'wrap' }}>
+                <div style={{ flex: 1, minWidth: '180px' }}>
+                  <div style={{ fontSize: '13px', fontWeight: '700', color: C.navy, marginBottom: '2px' }}>
+                    {t('Interface language', "Langue de l'interface")}
+                  </div>
+                  <div style={{ fontSize: '11px', color: C.muted, lineHeight: 1.5 }}>
+                    {t('Saved to your account and applied on every device.',
+                       'Enregistrée sur votre compte et appliquée sur tous vos appareils.')}
+                  </div>
+                </div>
+
+                <div role="radiogroup" aria-label={t('Interface language', "Langue de l'interface")}
+                     style={{ display: 'flex', gap: '8px' }}>
+                  {[{ code: 'fr', label: 'Français' }, { code: 'en', label: 'English' }].map(({ code, label }) => {
+                    const active = locale === code
+                    return (
+                      <button
+                        key={code}
+                        role="radio"
+                        aria-checked={active}
+                        onClick={() => switchLocale({ pathname, router, from: locale, to: code })}
+                        style={{
+                          display: 'flex', alignItems: 'center', gap: '8px',
+                          minHeight: '44px', padding: '10px 16px',
+                          borderRadius: '10px', cursor: active ? 'default' : 'pointer',
+                          backgroundColor: active ? C.navy : C.bg,
+                          border: `1.5px solid ${active ? C.navy : C.border}`,
+                          fontSize: '13px', fontWeight: active ? '700' : '600',
+                          color: active ? C.white : C.navy,
+                          transition: 'all 0.15s ease',
+                        }}
+                        onMouseEnter={e => { if (!active) e.currentTarget.style.borderColor = C.navy }}
+                        onMouseLeave={e => { if (!active) e.currentTarget.style.borderColor = C.border }}
+                      >
+                        {code === 'fr' ? <FlagFR /> : <FlagGB />}
+                        <span>{label}</span>
+                        {active && (
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={C.blue}
+                               strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M20 6L9 17l-5-5"/>
+                          </svg>
+                        )}
+                      </button>
+                    )
+                  })}
+                </div>
               </div>
 
               {/* Username */}

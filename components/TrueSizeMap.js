@@ -488,7 +488,11 @@ export default function TrueSizeMap() {
       })
       mapRef.current = map
 
-      Lf.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
+      const cartoKey = process.env.NEXT_PUBLIC_CARTO_KEY
+      const cartoUrl = 'https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png'
+        + (cartoKey ? '?key=' + cartoKey : '')
+
+      Lf.tileLayer(cartoUrl, {
         attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com">CARTO</a>',
         subdomains: 'abcd', maxZoom: 19,
       }).addTo(map)

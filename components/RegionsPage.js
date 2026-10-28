@@ -93,7 +93,7 @@ function FlagCard({ flag, name, parentName }) {
         {parentName && (
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '4px', marginTop: '3px' }}>
             {flag.parent && flag.parent.image_path && (
-              <img src={flag.parent.image_path} width="14" height="10" style={{ borderRadius: '2px', objectFit: 'cover', flexShrink: 0 }} />
+              <img loading="lazy" decoding="async" src={flag.parent.image_path} width="14" height="10" style={{ borderRadius: '2px', objectFit: 'cover', flexShrink: 0 }} />
             )}
             <p style={{ margin: 0, fontSize: '12px', color: '#94a3b8' }}>{parentName}</p>
           </div>
@@ -241,7 +241,7 @@ export default function RegionsPage() {
           {countries.map(c => (
             <button key={c.slug} onClick={() => setActiveCountry(p => p === c.slug ? 'all' : c.slug)}
               style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '6px 8px', borderRadius: '7px', border: 'none', cursor: 'pointer', textAlign: 'left', fontSize: '13px', fontWeight: '600', backgroundColor: activeCountry === c.slug ? DS.bgAlt : 'transparent', color: activeCountry === c.slug ? DS.navy : DS.muted, transition: 'background 0.12s' }}>
-              {c.image_path && <img src={c.image_path} width="20" height="14" style={{ borderRadius: '2px', objectFit: 'cover', flexShrink: 0 }} onError={e => { e.currentTarget.style.display = 'none' }} />}
+              {c.image_path && <img loading="lazy" decoding="async" src={c.image_path} width="20" height="14" style={{ borderRadius: '2px', objectFit: 'cover', flexShrink: 0 }} onError={e => { e.currentTarget.style.display = 'none' }} />}
               {locale === 'fr' ? c.name_fr : c.name_en}
             </button>
           ))}

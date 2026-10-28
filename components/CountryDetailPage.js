@@ -246,7 +246,7 @@ function ContinentTile({ c, active, locale }) {
   const title = locale === 'fr' ? c.fr : c.en
 
   return (
-    <Link href={`/${locale}/continents/${c.slug}`} style={{ textDecoration: 'none', display: 'block' }}>
+    <Link prefetch={false} href={`/${locale}/continents/${c.slug}`} style={{ textDecoration: 'none', display: 'block' }}>
       <div
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
@@ -866,7 +866,7 @@ export default function CountryDetailPage({ country, facts = [], relatedCountrie
     <div style={{ backgroundColor: DS.bg, minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <div style={{ textAlign: 'center', padding: '24px' }}>
         <h1 style={{ color: DS.navy, fontWeight: '900', fontSize: '24px', marginBottom: '12px' }}>{t('Country not found', 'Pays introuvable')}</h1>
-        <Link href={`/${locale}/countries`} style={{ color: DS.steel, textDecoration: 'none', fontWeight: '600' }}>
+        <Link prefetch={false} href={`/${locale}/countries`} style={{ color: DS.steel, textDecoration: 'none', fontWeight: '600' }}>
           ← {t('Back to all countries', 'Retour aux pays')}
         </Link>
       </div>
@@ -884,7 +884,7 @@ export default function CountryDetailPage({ country, facts = [], relatedCountrie
   const badgePillStyle = { display: 'inline-flex', alignItems: 'center', gap: '6px', marginTop: '8px', padding: '5px 12px', borderRadius: '9999px', backgroundColor: DS.secondary, color: DS.navy, fontSize: '12px', fontWeight: '600', textDecoration: 'none', border: `1px solid ${DS.border}`, width: 'fit-content' }
   const statusBadge = sovNote ? (
     country.parentIso ? (
-      <Link href={`/${locale}/countries/${country.parentIso}`} style={badgePillStyle}>
+      <Link prefetch={false} href={`/${locale}/countries/${country.parentIso}`} style={badgePillStyle}>
         {sovNote}<span aria-hidden="true">→</span>
       </Link>
     ) : (
@@ -897,7 +897,7 @@ export default function CountryDetailPage({ country, facts = [], relatedCountrie
         {childEntities.map(ch => {
           const cName = locale === 'fr' ? ch.fr : ch.en
           return (
-            <Link key={ch.code} href={`/${locale}/countries/${ch.code}`}
+            <Link prefetch={false} key={ch.code} href={`/${locale}/countries/${ch.code}`}
               style={{ textDecoration: 'none', display: 'block', backgroundColor: DS.surface, borderRadius: '10px', overflow: 'hidden', border: `1px solid ${DS.border}` }}>
               <div style={{ aspectRatio: '3/2', backgroundColor: DS.bg }}>
                 <img src={`https://flagcdn.com/w160/${ch.code}.png`} alt={cName} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '6px' }} />
@@ -997,11 +997,11 @@ export default function CountryDetailPage({ country, facts = [], relatedCountrie
         {/* ── Breadcrumb — above flag, near header ── */}
         <div style={{ padding: '12px 16px 8px', backgroundColor: DS.bg }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px', color: DS.muted }}>
-            <Link href={`/${locale}/countries`} style={{ color: DS.steel, textDecoration: 'none', fontWeight: '600' }}>
+            <Link prefetch={false} href={`/${locale}/countries`} style={{ color: DS.steel, textDecoration: 'none', fontWeight: '600' }}>
               {t('Flags', 'Drapeaux')}
             </Link>
             <span style={{ color: DS.muted }}>›</span>
-            <Link href={`/${locale}/continents/${continentSlug || ''}`} style={{ color: DS.steel, textDecoration: 'none', fontWeight: '600' }}>
+            <Link prefetch={false} href={`/${locale}/continents/${continentSlug || ''}`} style={{ color: DS.steel, textDecoration: 'none', fontWeight: '600' }}>
               {region}
             </Link>
           </div>
@@ -1068,7 +1068,7 @@ export default function CountryDetailPage({ country, facts = [], relatedCountrie
           <CountryFlagsSection countryIso2={country.code} />
 
           {/* CTA — Test your knowledge */}
-          <Link href={`/${locale}/games/flag-reveal`} style={{ textDecoration: 'none', display: 'block' }}>
+          <Link prefetch={false} href={`/${locale}/games/flag-reveal`} style={{ textDecoration: 'none', display: 'block' }}>
             <div style={{ backgroundColor: DS.navy, borderRadius: '16px', padding: '20px', display: 'flex', alignItems: 'center', gap: '16px' }}>
               <div style={{ flex: 1 }}>
                 <h3 style={{ margin: '0 0 4px', fontSize: '17px', fontWeight: '900', color: 'white', letterSpacing: '-0.2px' }}>
@@ -1093,7 +1093,7 @@ export default function CountryDetailPage({ country, facts = [], relatedCountrie
                 {relatedCountries.map(c => {
                   const cName = locale === 'fr' ? c.fr : c.en
                   return (
-                    <Link key={c.code} href={`/${locale}/countries/${c.code}`}
+                    <Link prefetch={false} key={c.code} href={`/${locale}/countries/${c.code}`}
                       style={{ textDecoration: 'none', display: 'block', backgroundColor: DS.bg, borderRadius: '10px', overflow: 'hidden', border: `1px solid ${DS.border}` }}>
                       <div style={{ aspectRatio: '3/2', backgroundColor: DS.bg }}>
                         <img src={`https://flagcdn.com/w160/${c.code}.png`} alt={cName} loading="lazy"
@@ -1133,11 +1133,11 @@ export default function CountryDetailPage({ country, facts = [], relatedCountrie
 
         {/* Breadcrumb */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '20px', fontSize: '13px', color: DS.muted }}>
-          <Link href={`/${locale}/countries`} style={{ color: DS.steel, textDecoration: 'none', fontWeight: '600' }}>
+          <Link prefetch={false} href={`/${locale}/countries`} style={{ color: DS.steel, textDecoration: 'none', fontWeight: '600' }}>
             {t('Flags', 'Drapeaux')}
           </Link>
           <span>›</span>
-          <Link href={`/${locale}/continents/${continentSlug || ''}`} style={{ color: DS.steel, textDecoration: 'none', fontWeight: '600' }}>{region}</Link>
+          <Link prefetch={false} href={`/${locale}/continents/${continentSlug || ''}`} style={{ color: DS.steel, textDecoration: 'none', fontWeight: '600' }}>{region}</Link>
           <span>›</span>
           <span style={{ color: DS.navy, fontWeight: '600' }}>{name}</span>
         </div>
@@ -1218,7 +1218,7 @@ export default function CountryDetailPage({ country, facts = [], relatedCountrie
               <h2 style={{ margin: '0 0 4px', fontSize: '20px', fontWeight: '900', color: 'white' }}>{t('Test your knowledge!', 'Testez vos connaissances !')}</h2>
               <p style={{ margin: 0, fontSize: '14px', color: DS.steel }}>{t('Can you recognize this flag in Flag Reveal?', 'Reconnaîtrez-vous ce drapeau dans Flag Reveal ?')}</p>
             </div>
-            <Link href={`/${locale}/games/flag-reveal`} style={{ backgroundColor: DS.steel, color: DS.navy, padding: '12px 24px', borderRadius: '10px', textDecoration: 'none', fontWeight: '700', fontSize: '15px', flexShrink: 0 }}>
+            <Link prefetch={false} href={`/${locale}/games/flag-reveal`} style={{ backgroundColor: DS.steel, color: DS.navy, padding: '12px 24px', borderRadius: '10px', textDecoration: 'none', fontWeight: '700', fontSize: '15px', flexShrink: 0 }}>
               {t('Play Flag Reveal', 'Jouer à Flag Reveal')}
             </Link>
           </div>
@@ -1230,7 +1230,7 @@ export default function CountryDetailPage({ country, facts = [], relatedCountrie
                 {relatedCountries.map(rc => {
                   const cName = locale === 'fr' ? rc.fr : rc.en
                   return (
-                    <Link key={rc.code} href={`/${locale}/countries/${rc.code}`}
+                    <Link prefetch={false} key={rc.code} href={`/${locale}/countries/${rc.code}`}
                       style={{ textDecoration: 'none', display: 'block', backgroundColor: DS.surface, borderRadius: '10px', overflow: 'hidden', border: `1px solid ${DS.border}`, transition: 'transform 0.15s, box-shadow 0.15s' }}
                       onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 8px 20px rgba(22,50,79,0.10)' }}
                       onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none' }}

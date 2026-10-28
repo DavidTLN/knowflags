@@ -67,7 +67,7 @@ export default function TrueSizeModule() {
             ))}
           </div>
 
-          <Link href={`/${locale}/true-size`} style={{
+          <Link prefetch={false} href={`/${locale}/true-size`} style={{
             display: 'inline-flex', alignItems: 'center', gap: '8px',
             backgroundColor: '#16324F', color: '#FFFFFF',
             padding: '12px 22px', borderRadius: '10px', textDecoration: 'none',

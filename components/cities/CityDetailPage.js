@@ -89,7 +89,7 @@ function SymbolBadge({ slug, fallback, size = 40 }) {
       transition: 'width 0.22s ease, height 0.22s ease, border-radius 0.22s ease',
     }}>
       {src
-        ? <img src={src} alt="" onError={() => setIdx(i => i + 1)}
+        ? <img loading="lazy" decoding="async" src={src} alt="" onError={() => setIdx(i => i + 1)}
             style={{ width: `${inner}px`, height: `${inner}px`, objectFit: 'contain',
                      filter: 'drop-shadow(0 0 1px rgba(22,50,79,0.55))' }} />
         : fallback}
@@ -164,7 +164,7 @@ function ConstructionSheet({ slug, locale }) {
       <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
         <button onClick={() => setOpen(true)} title={t('Click to enlarge', 'Cliquer pour agrandir')}
           style={{ position: 'relative', border: `1px solid ${DS.border}`, borderRadius: '10px', backgroundColor: DS.bgAlt, width: '600px', maxWidth: '100%', padding: '12px', boxSizing: 'border-box', cursor: 'zoom-in', display: 'block' }}>
-          <img src={src} alt={label}
+          <img loading="lazy" decoding="async" src={src} alt={label}
             onError={() => (i + 1 < candidates.length ? setI(i + 1) : setOk(false))}
             style={{ width: '100%', height: 'auto', display: 'block', pointerEvents: 'none' }} />
           <span style={{ position: 'absolute', bottom: '10px', right: '10px', display: 'inline-flex', alignItems: 'center', gap: '5px', backgroundColor: 'rgba(22,50,79,0.85)', color: '#fff', fontSize: '11px', fontWeight: '600', padding: '4px 8px', borderRadius: '7px' }}>
@@ -176,7 +176,7 @@ function ConstructionSheet({ slug, locale }) {
       {open && (
         <div onClick={() => setOpen(false)}
           style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(15,25,35,0.85)', zIndex: 1500, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', cursor: 'zoom-out' }}>
-          <img src={src} alt={label} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+          <img loading="lazy" decoding="async" src={src} alt={label} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
         </div>
       )}
     </div>
@@ -270,7 +270,7 @@ export default function CityDetailPage({ slug }) {
   if (notFound || !city) return (
     <div style={{ backgroundColor: DS.bg, minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: '12px', padding: '40px' }}>
       <p style={{ fontSize: '18px', fontWeight: '700', color: DS.navy }}>{t('City not found', 'Ville introuvable')}</p>
-      <Link href={`/${locale}/flags/cities`} style={{ color: DS.navyLight, fontWeight: '600' }}>{t('Back to city flags', 'Retour aux drapeaux de villes')}</Link>
+      <Link prefetch={false} href={`/${locale}/flags/cities`} style={{ color: DS.navyLight, fontWeight: '600' }}>{t('Back to city flags', 'Retour aux drapeaux de villes')}</Link>
     </div>
   )
 
@@ -315,9 +315,9 @@ export default function CityDetailPage({ slug }) {
 
   const breadcrumb = (
     <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: isMobile ? '12px' : '13px', color: DS.muted, flexWrap: 'wrap' }}>
-      <Link href={`/${locale}/countries`} style={{ color: DS.steel, textDecoration: 'none', fontWeight: '600' }}>{t('Flags', 'Drapeaux')}</Link>
+      <Link prefetch={false} href={`/${locale}/countries`} style={{ color: DS.steel, textDecoration: 'none', fontWeight: '600' }}>{t('Flags', 'Drapeaux')}</Link>
       <span>›</span>
-      <Link href={`/${locale}/flags/cities`} style={{ color: DS.steel, textDecoration: 'none', fontWeight: '600' }}>{t('Cities', 'Villes')}</Link>
+      <Link prefetch={false} href={`/${locale}/flags/cities`} style={{ color: DS.steel, textDecoration: 'none', fontWeight: '600' }}>{t('Cities', 'Villes')}</Link>
       <span>›</span>
       <span style={{ color: DS.navy, fontWeight: '600' }}>{name}</span>
     </div>
@@ -326,7 +326,7 @@ export default function CityDetailPage({ slug }) {
   const subtitle = (
     <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
       {countryIso && (
-        <img src={`https://flagcdn.com/w40/${countryIso}.png`} alt="" width={18} height={13}
+        <img loading="lazy" decoding="async" src={`https://flagcdn.com/w40/${countryIso}.png`} alt="" width={18} height={13}
           style={{ borderRadius: '2px', border: `1px solid ${DS.border}`, objectFit: 'cover' }} />
       )}
       {[countryName, parentName].filter(Boolean).join('   ·   ')}
@@ -388,7 +388,7 @@ export default function CityDetailPage({ slug }) {
       boxShadow: '0 1px 3px rgba(22,50,79,0.06)',
     }
     return href
-      ? <Link href={href} style={boxStyle}>{inner}</Link>
+      ? <Link prefetch={false} href={href} style={boxStyle}>{inner}</Link>
       : <div style={boxStyle}>{inner}</div>
   }
 
@@ -408,7 +408,7 @@ export default function CityDetailPage({ slug }) {
           t('Its country', 'Son pays'), countryName,
           <FlagSlot>
             {countryIso
-              ? <img src={`https://flagcdn.com/w160/${countryIso}.png`} alt="" style={SLOT_IMG} />
+              ? <img loading="lazy" decoding="async" src={`https://flagcdn.com/w160/${countryIso}.png`} alt="" style={SLOT_IMG} />
               : <FlagImage slug={country?.slug} prefix="/flags/countries" name={countryName}
                   color={DS.navy} width={SLOT.w} height={SLOT.h} style={SLOT_IMG} />}
           </FlagSlot>,
@@ -535,7 +535,7 @@ export default function CityDetailPage({ slug }) {
                 ? <FlagImage slug={tw.twin_slug} prefix="/flags/cities" name={twinName}
                     color={DS.navy} width={46} height={32} style={SLOT_IMG} />
                 : tw.twin_country_code
-                  ? <img src={`https://flagcdn.com/w80/${tw.twin_country_code}.png`} alt="" style={SLOT_IMG} />
+                  ? <img loading="lazy" decoding="async" src={`https://flagcdn.com/w80/${tw.twin_country_code}.png`} alt="" style={SLOT_IMG} />
                   : null}
             </FlagSlot>
           )
@@ -562,7 +562,7 @@ export default function CityDetailPage({ slug }) {
             textDecoration: 'none', color: 'inherit',
           }
           return href
-            ? <Link key={tw.id + tw.twin_name_en} href={href} style={box}>{inner}</Link>
+            ? <Link prefetch={false} key={tw.id + tw.twin_name_en} href={href} style={box}>{inner}</Link>
             : <div key={tw.id + tw.twin_name_en} style={box}>{inner}</div>
         })}
       </div>

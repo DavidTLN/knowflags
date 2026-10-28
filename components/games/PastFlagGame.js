@@ -164,7 +164,7 @@ export default function PastFlagGame() {
       <p style={{ color: '#16324F', fontSize: '18px', fontWeight: '700', textAlign: 'center', padding: '0 24px' }}>
         {t('Not enough historical flag data yet.', 'Pas encore assez de données historiques.')}
       </p>
-      <Link href={`/${locale}/games`} style={{ color: '#4a7fd4', fontWeight: '700' }}>{t('← Back to games', '← Retour aux jeux')}</Link>
+      <Link prefetch={false} href={`/${locale}/games`} style={{ color: '#4a7fd4', fontWeight: '700' }}>{t('← Back to games', '← Retour aux jeux')}</Link>
     </div>
   )
 
@@ -244,7 +244,7 @@ export default function PastFlagGame() {
           <button onClick={startGame} style={{ flex: 1, padding: '14px', backgroundColor: '#16324F', color: 'white', border: 'none', borderRadius: '12px', fontSize: '16px', fontWeight: '800', cursor: 'pointer' }}>
             {t('Play again', 'Rejouer')}
           </button>
-          <Link href={`/${locale}/games`} style={{ flex: 1, padding: '14px', backgroundColor: 'white', color: '#16324F', border: '2px solid #16324F', borderRadius: '12px', fontSize: '16px', fontWeight: '800', textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <Link prefetch={false} href={`/${locale}/games`} style={{ flex: 1, padding: '14px', backgroundColor: 'white', color: '#16324F', border: '2px solid #16324F', borderRadius: '12px', fontSize: '16px', fontWeight: '800', textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             {t('Games', 'Jeux')}
           </Link>
         </div>
@@ -261,7 +261,7 @@ export default function PastFlagGame() {
 
       {/* Header */}
       <div style={{ backgroundColor: '#16324F', padding: '12px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <Link href={`/${locale}/games`} style={{ color: 'rgba(255,255,255,0.6)', fontSize: '14px', textDecoration: 'none' }}>← {t('Games', 'Jeux')}</Link>
+        <Link prefetch={false} href={`/${locale}/games`} style={{ color: 'rgba(255,255,255,0.6)', fontSize: '14px', textDecoration: 'none' }}>← {t('Games', 'Jeux')}</Link>
         <span style={{ color: 'white', fontWeight: '900', fontSize: '16px' }}>Past Flag</span>
         <span style={{ color: '#9EB7E5', fontWeight: '700', fontSize: '16px' }}>{score} pts</span>
       </div>

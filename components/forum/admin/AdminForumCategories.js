@@ -271,7 +271,7 @@ export default function AdminForumCategories({ initialCategories, locale }) {
       <div style={{ backgroundColor: C.navy, padding: '28px 24px 24px', color: 'white' }}>
         <div style={{ maxWidth: '860px', margin: '0 auto' }}>
           <nav style={{ display: 'flex', gap: '8px', fontSize: '13px', color: 'rgba(255,255,255,0.5)', alignItems: 'center', marginBottom: '10px' }}>
-            <Link href={`/${locale}/forum`} style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Forum</Link>
+            <Link prefetch={false} href={`/${locale}/forum`} style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Forum</Link>
             <span>›</span><span style={{ color: '#9EB7E5' }}>{t('Administration', 'Administration')}</span>
           </nav>
           <h1 style={{ margin: 0, fontSize: 'clamp(22px, 3vw, 30px)', fontWeight: 900, letterSpacing: '-0.02em', color: '#fff' }}>{t('Forum structure', 'Structure du forum')}</h1>

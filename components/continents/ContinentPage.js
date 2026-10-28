@@ -269,7 +269,7 @@ function CountryCard({ country, locale, accentColor }) {
   const [hovered, setHovered] = useState(false)
   const name = locale === 'fr' ? country.fr : country.en
   return (
-    <Link href={`/${locale}/countries/${country.code}`} style={{ textDecoration: 'none' }}>
+    <Link prefetch={false} href={`/${locale}/countries/${country.code}`} style={{ textDecoration: 'none' }}>
       <div
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
@@ -380,7 +380,7 @@ export default function ContinentPage({ slug }) {
     <div style={{ padding: '80px 24px', textAlign: 'center', color: '#888' }}>
       <div style={{ fontSize: '48px', marginBottom: '16px' }}>🌍</div>
       <div style={{ fontSize: '20px', fontWeight: '700', color: '#0B1F3B' }}>Continent not found</div>
-      <Link href={`/${locale}`} style={{ color: '#4a7fd4', textDecoration: 'none', marginTop: '12px', display: 'inline-block' }}>
+      <Link prefetch={false} href={`/${locale}`} style={{ color: '#4a7fd4', textDecoration: 'none', marginTop: '12px', display: 'inline-block' }}>
         ← {locale === 'fr' ? "Retour à l'accueil" : 'Back to home'}
       </Link>
     </div>
@@ -403,7 +403,7 @@ export default function ContinentPage({ slug }) {
 
         {/* Text — zIndex 2, always above SVG */}
         <div style={{ maxWidth: '1152px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
-          <Link href={`/${locale}`} style={{
+          <Link prefetch={false} href={`/${locale}`} style={{
             color: 'rgba(255,255,255,0.65)', textDecoration: 'none', fontSize: '14px',
             display: 'inline-flex', alignItems: 'center', gap: '6px', marginBottom: '16px',
           }}>
@@ -424,7 +424,7 @@ export default function ContinentPage({ slug }) {
         </div>
 
         {/* SVG watermark — per-continent position & size */}
-        <img
+        <img loading="lazy" decoding="async"
           src={meta.svg}
           alt=""
           aria-hidden="true"

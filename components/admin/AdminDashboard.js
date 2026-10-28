@@ -100,7 +100,7 @@ export default function AdminDashboard({ locale, authed, isAdmin, email, pending
             </button>
 
             <div style={{ marginTop: '16px', textAlign: 'center' }}>
-              <Link href={`/${locale}`} style={{ fontSize: '13px', color: C.muted, textDecoration: 'none' }}>← {t('Back to site', 'Retour au site')}</Link>
+              <Link prefetch={false} href={`/${locale}`} style={{ fontSize: '13px', color: C.muted, textDecoration: 'none' }}>← {t('Back to site', 'Retour au site')}</Link>
             </div>
           </div>
         </div>
@@ -121,7 +121,7 @@ export default function AdminDashboard({ locale, authed, isAdmin, email, pending
           <button onClick={signOut} style={{ padding: '7px 14px', borderRadius: '9px', backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', border: 'none', fontSize: '13px', fontWeight: 600, cursor: 'pointer' }}>
             {t('Sign out', 'Déconnexion')}
           </button>
-          <Link href={`/${locale}`} style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>← {t('Site', 'Site')}</Link>
+          <Link prefetch={false} href={`/${locale}`} style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>← {t('Site', 'Site')}</Link>
         </div>
       </div>
     </div>
@@ -187,7 +187,7 @@ export default function AdminDashboard({ locale, authed, isAdmin, email, pending
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '16px' }}>
           {MENU.map(m => (
-            <Link key={m.href} href={m.href} style={{ textDecoration: 'none' }}>
+            <Link prefetch={false} key={m.href} href={m.href} style={{ textDecoration: 'none' }}>
               <div
                 style={{ backgroundColor: C.surface, borderRadius: '14px', border: `1px solid ${C.border}`, boxShadow: '0 2px 8px rgba(22,50,79,0.08)', padding: '20px', display: 'flex', flexDirection: 'column', gap: '12px', minHeight: '150px', transition: 'transform 0.15s ease, box-shadow 0.15s ease', cursor: 'pointer' }}
                 onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 8px 32px rgba(22,50,79,0.12)' }}

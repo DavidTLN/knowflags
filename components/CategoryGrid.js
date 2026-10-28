@@ -19,7 +19,7 @@ function ContinentCard({ cat, locale }) {
   const title = locale === 'fr' ? cat.fr : cat.en
 
   return (
-    <Link href={`/${locale}/continents/${cat.slug}`} style={{ textDecoration: 'none', display: 'block' }}>
+    <Link prefetch={false} href={`/${locale}/continents/${cat.slug}`} style={{ textDecoration: 'none', display: 'block' }}>
       <div
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
@@ -40,7 +40,7 @@ function ContinentCard({ cat, locale }) {
         <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column' }}>
           {/* SVG continent */}
           <div style={{ flex: 1, minHeight: 0, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px 20px 8px' }}>
-            <img
+            <img loading="lazy" decoding="async"
               src={cat.svg}
               alt={title}
               style={{

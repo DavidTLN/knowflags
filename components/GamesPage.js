@@ -142,7 +142,7 @@ function GameCard({ game, locale, coming }) {
   if (coming) return <div className="kf-card-link">{inner}</div>
 
   return (
-    <Link href={`/${locale}/games/${game.key}`} className="kf-card-link">
+    <Link prefetch={false} href={`/${locale}/games/${game.key}`} className="kf-card-link">
       {inner}
     </Link>
   )
@@ -172,7 +172,7 @@ export default function GamesPage({ locale = 'en' }) {
                 'Teste tes connaissances sur les drapeaux du monde. Joue, gagne des points et grimpe au classement.'
               )}
             </p>
-            <Link href={`/${locale}/leaderboard`} className="kf-btn-ghost">
+            <Link prefetch={false} href={`/${locale}/leaderboard`} className="kf-btn-ghost">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M7 4h10v5a5 5 0 0 1-10 0V4z" /><path d="M7 5H4v2a3 3 0 0 0 3 3M17 5h3v2a3 3 0 0 1-3 3" /><line x1="12" y1="14" x2="12" y2="18" /><path d="M8.5 21h7M9.5 21v-3h5v3" />
               </svg>
@@ -223,7 +223,7 @@ export default function GamesPage({ locale = 'en' }) {
                 {t('Weekly, monthly and all-time rankings', 'Classements hebdomadaires, mensuels et de tous les temps')}
               </p>
             </div>
-            <Link href={`/${locale}/leaderboard`}
+            <Link prefetch={false} href={`/${locale}/leaderboard`}
               style={{ padding: '12px 24px', backgroundColor: DS.steel, color: DS.navy, borderRadius: '10px', fontWeight: '800', fontSize: '15px', textDecoration: 'none', flexShrink: 0 }}>
               {t('View rankings', 'Voir le classement')}
             </Link>

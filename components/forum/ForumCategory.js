@@ -30,7 +30,7 @@ function initials(name) {
 
 function Avatar({ profile, size = 34 }) {
   if (profile?.avatar_url) {
-    return <img src={profile.avatar_url} alt="" style={{ width: size, height: size, borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
+    return <img loading="lazy" decoding="async" src={profile.avatar_url} alt="" style={{ width: size, height: size, borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
   }
   return (
     <span style={{
@@ -48,7 +48,7 @@ function TopicRow({ topic, locale, isLast }) {
   const pinned = topic.is_pinned
 
   return (
-    <Link
+    <Link prefetch={false}
       href={`/${locale}/forum/${topic._catSlug}/${topic.slug}`}
       style={{ textDecoration: 'none', color: 'inherit' }}
       onMouseEnter={() => setHover(true)}
@@ -134,8 +134,8 @@ export default function ForumCategory({ category, topics, stats, locale }) {
       <div style={{ backgroundColor: C.navy, padding: '32px 24px 28px', color: 'white' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <nav style={{ display: 'flex', gap: '8px', fontSize: '13px', color: 'rgba(255,255,255,0.5)', alignItems: 'center', marginBottom: '12px', flexWrap: 'wrap' }}>
-            <Link href={`/${locale}/forum`} style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Forum</Link>
-            {parentName && (<><span>›</span><Link href={`/${locale}/forum`} style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>{parentName}</Link></>)}
+            <Link prefetch={false} href={`/${locale}/forum`} style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Forum</Link>
+            {parentName && (<><span>›</span><Link prefetch={false} href={`/${locale}/forum`} style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>{parentName}</Link></>)}
             <span>›</span>
             <span style={{ color: '#9EB7E5' }}>{name}</span>
           </nav>
@@ -164,7 +164,7 @@ export default function ForumCategory({ category, topics, stats, locale }) {
           <p style={{ margin: 0, fontSize: '13px', color: C.muted }}>
             {rows.length} {rows.length === 1 ? t('topic', 'sujet') : t('topics', 'sujets')}
           </p>
-          <Link href={`/${locale}/forum/${category.slug}/new`} style={{ textDecoration: 'none' }}>
+          <Link prefetch={false} href={`/${locale}/forum/${category.slug}/new`} style={{ textDecoration: 'none' }}>
             <span style={{
               display: 'inline-flex', alignItems: 'center', gap: '7px',
               padding: '9px 16px', borderRadius: '10px',

@@ -373,7 +373,7 @@ export default function OrganisationsPage() {
       <div style={{ backgroundColor: '#0B1F3B', padding: '48px 24px 40px' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '10px' }}>
-            <Link href={`/${locale}/countries`}
+            <Link prefetch={false} href={`/${locale}/countries`}
               style={{ fontSize: '13px', color: 'rgba(255,255,255,0.5)', textDecoration: 'none', fontWeight: '500' }}>
               {t('Flags', 'Drapeaux')}
             </Link>
@@ -493,7 +493,7 @@ function OrgCard({ org, locale, t }) {
           backgroundColor: `${org.color}22`,
           display: 'flex', alignItems: 'center', justifyContent: 'center',
         }}>
-          <img
+          <img loading="lazy" decoding="async"
             src={`/flags/organisations/${org.key}.svg`}
             alt={`${name} flag`}
             style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }}

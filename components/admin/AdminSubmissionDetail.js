@@ -28,6 +28,7 @@ export default function AdminSubmissionDetail({ submission: s, locale }) {
   // Review state
   const [action,    setAction]    = useState(null)
   const [adminNote, setAdminNote] = useState('')
+  const [emailSent, setEmailSent] = useState(null)
   const [reviewing, setReviewing] = useState(false)
   const [done,      setDone]      = useState(false)
   const [reviewErr, setReviewErr] = useState('')
@@ -101,8 +102,9 @@ export default function AdminSubmissionDetail({ submission: s, locale }) {
       })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error || 'Unknown error')
+      setEmailSent(!!data.emailSent)
       setDone(true)
-      setTimeout(() => router.push(`/${locale}/admin/submissions`), 2000)
+      setTimeout(() => router.push(`/${locale}/admin/submissions`), 3000)
     } catch (e) { setReviewErr(e.message) }
     setReviewing(false)
   }
@@ -110,11 +112,19 @@ export default function AdminSubmissionDetail({ submission: s, locale }) {
   if (done) return (
     <div style={{ minHeight: '100vh', backgroundColor: C.bg, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <div style={{ textAlign: 'center' }}>
-        <div style={{ fontSize: '56px', marginBottom: '16px' }}>{action === 'accept' ? '✅' : '❌'}</div>
+        <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke={action === 'accept' ? '#16A34A' : '#D62828'} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" style={{ marginBottom: '16px' }} aria-hidden="true">
+          <circle cx="12" cy="12" r="10" />
+          <path d={action === 'accept' ? 'M8 12l3 3 5-6' : 'M15 9l-6 6M9 9l6 6'} />
+        </svg>
         <h2 style={{ color: C.navy, fontSize: '22px', fontWeight: '900' }}>
           {action === 'accept' ? t('Accepted!', 'Acceptée !') : t('Rejected.', 'Refusée.')}
         </h2>
-        <p style={{ color: C.muted }}>{t('Redirecting…', 'Redirection…')}</p>
+        <p style={{ color: C.muted, margin: '0 0 6px' }}>
+          {emailSent
+            ? t('The author has been notified by email.', "L'auteur a été prévenu par e-mail.")
+            : t('No email sent (RESEND_API_KEY missing or no address).', 'Aucun e-mail envoyé (RESEND_API_KEY absente ou adresse introuvable).')}
+        </p>
+        <p style={{ color: C.muted, margin: 0 }}>{t('Redirecting…', 'Redirection…')}</p>
       </div>
     </div>
   )
@@ -126,7 +136,7 @@ export default function AdminSubmissionDetail({ submission: s, locale }) {
 
       {/* Header */}
       <div style={{ backgroundColor: C.navy, padding: '20px 32px', display: 'flex', alignItems: 'center', gap: '16px' }}>
-        <Link href={`/${locale}/admin/submissions`} style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: '13px' }}>← {t('Back', 'Retour')}</Link>
+        <Link prefetch={false} href={`/${locale}/admin/submissions`} style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: '13px' }}>← {t('Back', 'Retour')}</Link>
         <h1 style={{ margin: 0, fontSize: '20px', fontWeight: '900', color: 'white', flex: 1 }}>{s.label_en || s.name || t('Submission', 'Soumission')}</h1>
         <span style={{ padding: '4px 12px', borderRadius: '99px', fontSize: '12px', fontWeight: '700',
           backgroundColor: s.status === 'pending' ? '#fefce8' : s.status === 'accepted' ? '#f0fdf4' : '#fef2f2',
@@ -348,7 +358,7 @@ export default function AdminSubmissionDetail({ submission: s, locale }) {
             <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
               <button onClick={handleSave} disabled={saving}
                 style={{ padding: '11px 24px', backgroundColor: C.navy, color: 'white', border: 'none', borderRadius: '10px', fontSize: '13px', fontWeight: '700', cursor: saving ? 'not-allowed' : 'pointer', opacity: saving ? 0.7 : 1 }}>
-                {saving ? t('Saving…', 'Enregistrement…') : t('💾 Save edits', '💾 Enregistrer')}
+                {saving ? t('Saving…', 'Enregistrement…') : t('Save edits', 'Enregistrer')}
               </button>
               {saveMsg && <span style={{ fontSize: '13px', color: C.green, fontWeight: '600' }}>{saveMsg}</span>}
               {saveErr && <span style={{ fontSize: '13px', color: C.red, fontWeight: '600' }}>{saveErr}</span>}
@@ -365,11 +375,11 @@ export default function AdminSubmissionDetail({ submission: s, locale }) {
               <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 <button onClick={() => setAction('accept')}
                   style={{ width: '100%', padding: '12px', borderRadius: '10px', border: `2px solid ${action === 'accept' ? '#16a34a' : C.border}`, backgroundColor: action === 'accept' ? '#f0fdf4' : 'white', color: action === 'accept' ? '#166534' : C.muted, fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
-                  ✅ {t('Accept', 'Accepter')}
+                  {t('Accept', 'Accepter')}
                 </button>
                 <button onClick={() => setAction('reject')}
                   style={{ width: '100%', padding: '12px', borderRadius: '10px', border: `2px solid ${action === 'reject' ? C.red : C.border}`, backgroundColor: action === 'reject' ? '#fef2f2' : 'white', color: action === 'reject' ? C.red : C.muted, fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
-                  ❌ {t('Reject', 'Refuser')}
+                  {t('Reject', 'Refuser')}
                 </button>
                 <div>
                   <label style={LABEL}>{action === 'reject' ? t('Reason (required)', 'Raison (obligatoire)') : t('Note (optional)', 'Note (optionnelle)')}</label>

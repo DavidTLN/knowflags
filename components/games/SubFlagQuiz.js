@@ -127,7 +127,7 @@ export default function SubFlagQuiz() {
       <p style={{ color: '#6B7280', fontSize: '14px' }}>
         {t('This game needs data in the subnational_flags table.', 'Ce jeu nécessite des données dans la table subnational_flags.')}
       </p>
-      <Link href={`/${locale}/games`} style={{ color: '#4a7fd4', fontWeight: '700' }}>← {t('Back to games', 'Retour aux jeux')}</Link>
+      <Link prefetch={false} href={`/${locale}/games`} style={{ color: '#4a7fd4', fontWeight: '700' }}>← {t('Back to games', 'Retour aux jeux')}</Link>
     </div>
   )
 
@@ -176,7 +176,7 @@ export default function SubFlagQuiz() {
           <button onClick={startGame} style={{ flex: 1, padding: '14px', backgroundColor: '#16324F', color: 'white', border: 'none', borderRadius: '12px', fontSize: '16px', fontWeight: '800', cursor: 'pointer' }}>
             {t('Play again', 'Rejouer')}
           </button>
-          <Link href={`/${locale}/games`} style={{ flex: 1, padding: '14px', backgroundColor: 'white', color: '#16324F', border: '2px solid #16324F', borderRadius: '12px', fontSize: '16px', fontWeight: '800', textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <Link prefetch={false} href={`/${locale}/games`} style={{ flex: 1, padding: '14px', backgroundColor: 'white', color: '#16324F', border: '2px solid #16324F', borderRadius: '12px', fontSize: '16px', fontWeight: '800', textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             {t('Games', 'Jeux')}
           </Link>
         </div>
@@ -190,7 +190,7 @@ export default function SubFlagQuiz() {
   return (
     <div style={{ minHeight: '100dvh', backgroundColor: '#F4F1E6', display: 'flex', flexDirection: 'column' }}>
       <div style={{ backgroundColor: '#16324F', padding: '12px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <Link href={`/${locale}/games`} style={{ color: 'rgba(255,255,255,0.6)', fontSize: '14px', textDecoration: 'none' }}>← {t('Games', 'Jeux')}</Link>
+        <Link prefetch={false} href={`/${locale}/games`} style={{ color: 'rgba(255,255,255,0.6)', fontSize: '14px', textDecoration: 'none' }}>← {t('Games', 'Jeux')}</Link>
         <span style={{ color: 'white', fontWeight: '900', fontSize: '16px' }}>SubFlag Quiz</span>
         <span style={{ color: '#9EB7E5', fontWeight: '700', fontSize: '16px' }}>{score} pts</span>
       </div>

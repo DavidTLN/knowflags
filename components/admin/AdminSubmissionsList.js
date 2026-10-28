@@ -15,8 +15,9 @@ const STATUS_COLORS = {
   rejected: { bg: '#fef2f2', color: '#991b1b', border: '#fecaca' },
 }
 
-const FLAG_TYPE_ICONS = {
-  country: '🌍', region: '🗺️', city: '🏙️', organisation: '🏛️', historic: '📜',
+const FLAG_TYPE_LABELS = {
+  country: { en: 'Country', fr: 'Pays' }, region: { en: 'Region', fr: 'Région' }, city: { en: 'City', fr: 'Ville' },
+  organisation: { en: 'Org', fr: 'Org' }, historic: { en: 'Historic', fr: 'Histo' },
 }
 
 export default function AdminSubmissionsList({ submissions, locale }) {
@@ -34,17 +35,17 @@ export default function AdminSubmissionsList({ submissions, locale }) {
           <div>
             <div style={{ fontSize: '12px', fontWeight: '700', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '4px' }}>Admin</div>
             <h1 style={{ margin: 0, fontSize: '24px', fontWeight: '900', color: 'white' }}>
-              🏳️ {t('Flag Submissions', 'Soumissions de drapeaux')}
+              {t('Flag Submissions', 'Soumissions de drapeaux')}
             </h1>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '18px' }}>
-            <Link href={`/${locale}/admin`} style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontWeight: '700' }}>
+            <Link prefetch={false} href={`/${locale}/admin`} style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontWeight: '700' }}>
               {t('Hub', 'Accueil')}
             </Link>
-            <Link href={`/${locale}/admin/reports`} style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontWeight: '700' }}>
+            <Link prefetch={false} href={`/${locale}/admin/reports`} style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontWeight: '700' }}>
               {t('Reports', 'Signalements')}
             </Link>
-            <Link href={`/${locale}`} style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>
+            <Link prefetch={false} href={`/${locale}`} style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>
               ← {t('Back to site', 'Retour au site')}
             </Link>
           </div>
@@ -87,9 +88,9 @@ export default function AdminSubmissionsList({ submissions, locale }) {
             {filtered.map(s => {
               const st = STATUS_COLORS[s.status] || STATUS_COLORS.pending
               return (
-                <Link key={s.id} href={`/${locale}/admin/submissions/${s.id}`} style={{ textDecoration: 'none' }}>
+                <Link prefetch={false} key={s.id} href={`/${locale}/admin/submissions/${s.id}`} style={{ textDecoration: 'none' }}>
                   <div style={{ backgroundColor: 'white', borderRadius: '14px', border: `1px solid ${C.border}`, padding: '16px 20px', display: 'flex', alignItems: 'center', gap: '16px', cursor: 'pointer', boxShadow: '0 1px 4px rgba(0,0,0,0.04)' }}>
-                    <span style={{ fontSize: '28px', flexShrink: 0 }}>{FLAG_TYPE_ICONS[s.flag_type] || '🏳️'}</span>
+                    <span style={{ flexShrink: 0, minWidth: '64px', textAlign: 'center', padding: '3px 8px', borderRadius: '9999px', fontSize: '11px', fontWeight: 600, textTransform: 'uppercase', backgroundColor: '#EEF2F7', color: '#16324F' }}>{FLAG_TYPE_LABELS[s.flag_type]?.[locale === 'fr' ? 'fr' : 'en'] || s.flag_type}</span>
                     <div style={{ flex: 1, minWidth: 0 }}>
                       <div style={{ fontSize: '15px', fontWeight: '800', color: C.navy, marginBottom: '3px' }}>
                         {s.label_en || s.name || '—'}

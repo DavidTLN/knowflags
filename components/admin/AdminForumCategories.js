@@ -484,7 +484,7 @@ export default function AdminForumCategories({ initialCategories, stats, locale 
         color: '#FFFFFF',
       }}>
         <div style={{ maxWidth: '960px', margin: '0 auto' }}>
-          <Link href={`/${locale}/admin`} style={{
+          <Link prefetch={false} href={`/${locale}/admin`} style={{
             display: 'inline-flex', alignItems: 'center', gap: '6px',
             fontSize: '13px', color: 'rgba(255,255,255,0.5)',
             textDecoration: 'none', marginBottom: '12px',

@@ -29,7 +29,7 @@ export default function AdminForumNav({ locale, active, badges = {} }) {
         const isActive = tab.key === active
         const count = badges[tab.key] || 0
         return (
-          <Link
+          <Link prefetch={false}
             key={tab.key}
             href={`/${locale}/admin/forum${tab.path}`}
             style={{

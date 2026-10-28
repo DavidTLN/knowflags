@@ -88,10 +88,10 @@ export default function ForumNewTopic({ category, parent, locale }) {
       <div style={{ backgroundColor: C.navy, padding: '28px 24px 24px', color: 'white' }}>
         <div style={{ maxWidth: '760px', margin: '0 auto' }}>
           <nav style={{ display: 'flex', gap: '8px', fontSize: '13px', color: 'rgba(255,255,255,0.5)', alignItems: 'center', marginBottom: '12px', flexWrap: 'wrap' }}>
-            <Link href={`/${locale}/forum`} style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Forum</Link>
-            {parentName && (<><span>›</span><Link href={`/${locale}/forum`} style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>{parentName}</Link></>)}
+            <Link prefetch={false} href={`/${locale}/forum`} style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Forum</Link>
+            {parentName && (<><span>›</span><Link prefetch={false} href={`/${locale}/forum`} style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>{parentName}</Link></>)}
             <span>›</span>
-            <Link href={`/${locale}/forum/${category.slug}`} style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>{catName}</Link>
+            <Link prefetch={false} href={`/${locale}/forum/${category.slug}`} style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>{catName}</Link>
           </nav>
           <h1 style={{ margin: 0, fontSize: 'clamp(20px, 3vw, 28px)', fontWeight: 900, letterSpacing: '-0.02em' }}>{t('New topic', 'Nouveau sujet')}</h1>
         </div>
@@ -101,7 +101,7 @@ export default function ForumNewTopic({ category, parent, locale }) {
         {checking ? null : !user ? (
           <div style={{ backgroundColor: C.surface, border: `1px solid ${C.border}`, borderRadius: '14px', padding: '24px', textAlign: 'center' }}>
             <p style={{ margin: '0 0 12px', fontSize: '14px', color: C.muted }}>{t('Sign in to start a topic.', 'Connectez-vous pour créer un sujet.')}</p>
-            <Link href={loginHref} style={{ display: 'inline-block', padding: '9px 18px', borderRadius: '10px', backgroundColor: C.navy, color: 'white', fontSize: '14px', fontWeight: 600, textDecoration: 'none' }}>
+            <Link prefetch={false} href={loginHref} style={{ display: 'inline-block', padding: '9px 18px', borderRadius: '10px', backgroundColor: C.navy, color: 'white', fontSize: '14px', fontWeight: 600, textDecoration: 'none' }}>
               {t('Sign in', 'Se connecter')}
             </Link>
           </div>
@@ -125,7 +125,7 @@ export default function ForumNewTopic({ category, parent, locale }) {
             {error && <p style={{ margin: '12px 0 0', fontSize: '13px', color: C.red }}>{error}</p>}
 
             <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px', marginTop: '16px' }}>
-              <Link href={`/${locale}/forum/${category.slug}`} style={{ padding: '10px 18px', borderRadius: '10px', border: `1.5px solid ${C.borderSolid}`, backgroundColor: 'transparent', color: C.navy, fontSize: '14px', fontWeight: 600, textDecoration: 'none' }}>
+              <Link prefetch={false} href={`/${locale}/forum/${category.slug}`} style={{ padding: '10px 18px', borderRadius: '10px', border: `1.5px solid ${C.borderSolid}`, backgroundColor: 'transparent', color: C.navy, fontSize: '14px', fontWeight: 600, textDecoration: 'none' }}>
                 {t('Cancel', 'Annuler')}
               </Link>
               <button onClick={submit} disabled={submitting || !title.trim() || isEmptyHtml(body)}

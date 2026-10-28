@@ -60,7 +60,7 @@ function FlagImage({ imageUrl, isoCode, dateStart, duplicateIndex, alt, style })
   }
 
   return (
-    <img
+    <img loading="lazy" decoding="async"
       src={src}
       alt={alt}
       style={style}

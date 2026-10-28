@@ -44,7 +44,7 @@ function SubcategoryRow({ cat, locale, isLast }) {
   const last = stats.last_topic
 
   return (
-    <Link
+    <Link prefetch={false}
       href={`/${locale}/forum/${cat.slug}`}
       style={{ textDecoration: 'none', color: 'inherit' }}
       onMouseEnter={() => setHover(true)}
@@ -102,7 +102,7 @@ export default function ForumHome({ tree, locale }) {
       <div style={{ backgroundColor: C.navy, padding: '40px 24px 32px', color: 'white' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <nav style={{ display: 'flex', gap: '8px', fontSize: '13px', color: 'rgba(255,255,255,0.5)', alignItems: 'center', marginBottom: '12px' }}>
-            <Link href={`/${locale}`} style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>{t('Home', 'Accueil')}</Link>
+            <Link prefetch={false} href={`/${locale}`} style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>{t('Home', 'Accueil')}</Link>
             <span>›</span>
             <span style={{ color: '#9EB7E5' }}>Forum</span>
           </nav>

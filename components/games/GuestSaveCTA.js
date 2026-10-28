@@ -78,7 +78,7 @@ export default function GuestSaveCTA({
       </div>
 
       <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-        <Link href={`/${locale}/auth/login?next=${back}`}
+        <Link prefetch={false} href={`/${locale}/auth/login?next=${back}`}
           style={{
             padding: '11px 18px', borderRadius: '10px', minHeight: '44px',
             backgroundColor: '#FFFFFF', color: DS.navy, fontSize: '14px',
@@ -87,7 +87,7 @@ export default function GuestSaveCTA({
           }}>
           {t('Sign in', 'Se connecter')}
         </Link>
-        <Link href={`/${locale}/auth/login?next=${back}&mode=signup`}
+        <Link prefetch={false} href={`/${locale}/auth/login?next=${back}&mode=signup`}
           style={{
             padding: '11px 18px', borderRadius: '10px', minHeight: '44px',
             backgroundColor: 'transparent', color: '#FFFFFF',

@@ -134,7 +134,7 @@ export default function CountryRelatedPosts({ posts, locale }) {
 
       {/* Un article : carte horizontale, vignette bornee. */}
       {single ? (
-        <Link href={`/${locale}/blog/${posts[0].slug}`}
+        <Link prefetch={false} href={`/${locale}/blog/${posts[0].slug}`}
           style={{ ...cardBase, display: 'flex', alignItems: 'stretch' }}>
           <Cover post={posts[0]}
             width={isMobile ? '104px' : '260px'}
@@ -155,7 +155,7 @@ export default function CountryRelatedPosts({ posts, locale }) {
           gap: '12px',
         }}>
           {posts.map(p => (
-            <Link key={p.id} href={`/${locale}/blog/${p.slug}`}
+            <Link prefetch={false} key={p.id} href={`/${locale}/blog/${p.slug}`}
               style={{
                 ...cardBase,
                 display: 'flex',

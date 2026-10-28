@@ -68,7 +68,8 @@ export default function LoginPage() {
     try {
       if (mode === 'forgot') {
         const { error: err } = await supabase.auth.resetPasswordForEmail(email, {
-          redirectTo: `${location.origin}/${locale}/reset-password`,
+          // Le callback echange le code (PKCE) contre une session, puis ouvre la page du nouveau mot de passe
+          redirectTo: `${location.origin}/${locale}/auth/callback?next=/${locale}/auth/reset-password`,
         })
         if (err) throw err
         setInfo(tr('resetSent', locale))

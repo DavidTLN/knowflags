@@ -66,7 +66,7 @@ function CarouselCard({ post, locale, isMobile }) {
   const t = (en, fr) => locale === 'fr' ? fr : en
 
   return (
-    <Link
+    <Link prefetch={false}
       href={`/${locale}/blog/${post.slug}`}
       style={{
         textDecoration: 'none',
@@ -322,7 +322,7 @@ export default function RelatedPostsCarousel({ posts = [] }) {
 
           {/* All articles tile */}
           <div data-carousel-item style={{ flex: '0 0 auto', display: 'flex', scrollSnapAlign: 'start' }}>
-            <Link
+            <Link prefetch={false}
               href={`/${locale}/blog`}
               style={{
                 textDecoration: 'none',

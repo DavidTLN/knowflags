@@ -266,7 +266,7 @@ export default function AdminForumModeration({
         color: '#FFFFFF',
       }}>
         <div style={{ maxWidth: '960px', margin: '0 auto' }}>
-          <Link href={`/${locale}/admin`} style={{
+          <Link prefetch={false} href={`/${locale}/admin`} style={{
             fontSize: '13px', color: 'rgba(255,255,255,0.5)',
             textDecoration: 'none', display: 'inline-block', marginBottom: '12px',
           }}>
@@ -419,7 +419,7 @@ export default function AdminForumModeration({
 
                   <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginTop: '14px' }}>
                     {r.href && (
-                      <Link href={r.href} target="_blank" style={{ ...btnGhost, textDecoration: 'none' }}>
+                      <Link prefetch={false} href={r.href} target="_blank" style={{ ...btnGhost, textDecoration: 'none' }}>
                         {t('Open thread', 'Ouvrir le fil')}
                       </Link>
                     )}
@@ -525,7 +525,7 @@ export default function AdminForumModeration({
                     <Excerpt body={x.body} />
                     <div style={{ display: 'flex', gap: '8px', marginTop: '14px', flexWrap: 'wrap' }}>
                       {x.href && (
-                        <Link href={x.href} target="_blank" style={{ ...btnGhost, textDecoration: 'none' }}>
+                        <Link prefetch={false} href={x.href} target="_blank" style={{ ...btnGhost, textDecoration: 'none' }}>
                           {t('Open thread', 'Ouvrir le fil')}
                         </Link>
                       )}

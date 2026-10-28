@@ -153,7 +153,7 @@ export default function FeaturedFlag() {
 
         {/* CTA */}
         <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-          <Link
+          <Link prefetch={false}
             href={data.buttonLink}
             style={{
               display: 'inline-flex',
@@ -178,7 +178,7 @@ export default function FeaturedFlag() {
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
           </Link>
-          <Link
+          <Link prefetch={false}
             href={`/${locale}/countries`}
             style={{
               display: 'inline-flex',

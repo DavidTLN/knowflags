@@ -89,13 +89,13 @@ export default function AdminReportsList({ reports, locale }) {
             </div>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '18px' }}>
-            <Link href={`/${locale}/admin`} style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontWeight: 600 }}>
+            <Link prefetch={false} href={`/${locale}/admin`} style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontWeight: 600 }}>
               {t('Hub', 'Accueil')}
             </Link>
-            <Link href={`/${locale}/admin/submissions`} style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontWeight: 600 }}>
+            <Link prefetch={false} href={`/${locale}/admin/submissions`} style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontWeight: 600 }}>
               {t('Submissions', 'Soumissions')}
             </Link>
-            <Link href={`/${locale}`} style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>
+            <Link prefetch={false} href={`/${locale}`} style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>
               ← {t('Back to site', 'Retour au site')}
             </Link>
           </div>
@@ -151,7 +151,7 @@ export default function AdminReportsList({ reports, locale }) {
                       {r.country_code && (
                         <img src={`https://flagcdn.com/w40/${r.country_code.toLowerCase()}.png`} alt="" width="26" height="18" style={{ borderRadius: '3px', objectFit: 'cover', flexShrink: 0, border: `1px solid ${C.border}` }} onError={(e) => { e.target.style.display = 'none' }} />
                       )}
-                      <Link href={`/${locale}/countries/${(r.country_code || '').toLowerCase()}`} style={{ fontSize: '15px', fontWeight: 800, color: C.navy, textDecoration: 'none' }}>{cName}</Link>
+                      <Link prefetch={false} href={`/${locale}/countries/${(r.country_code || '').toLowerCase()}`} style={{ fontSize: '15px', fontWeight: 800, color: C.navy, textDecoration: 'none' }}>{cName}</Link>
                       {rs && (
                         <span style={{ padding: '3px 9px', borderRadius: '9999px', fontSize: '11px', fontWeight: 700, backgroundColor: C.secondary, color: C.navy, textTransform: 'uppercase', letterSpacing: '0.3px' }}>
                           {t(rs.en, rs.fr)}
@@ -173,7 +173,7 @@ export default function AdminReportsList({ reports, locale }) {
                       <span style={ctxK}>{t('Page', 'Page')}</span>
                       <span style={ctxV}>
                         {r.page_path
-                          ? <Link href={r.page_path} style={{ color: C.blue, textDecoration: 'none' }}>{r.page_path}</Link>
+                          ? <Link prefetch={false} href={r.page_path} style={{ color: C.blue, textDecoration: 'none' }}>{r.page_path}</Link>
                           : (r.country_code || '—')}
                         <span style={{ color: C.muted }}> · {r.page_type || 'country'}</span>
                       </span>

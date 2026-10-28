@@ -86,7 +86,7 @@ export default function GamesModule({ locale }) {
             </p>
           </div>
 
-          <Link href={`/${locale}/leaderboard`} style={{
+          <Link prefetch={false} href={`/${locale}/leaderboard`} style={{
             display: 'inline-flex', alignItems: 'center', gap: '8px',
             padding: '10px 20px', borderRadius: '10px',
             backgroundColor: 'transparent', color: DS.navy,
@@ -102,7 +102,7 @@ export default function GamesModule({ locale }) {
           {VISIBLE_GAMES.map(game => {
             const diff = DIFFICULTY[game.difficulty]
             return (
-              <Link key={game.key} href={`/${locale}/games/${game.key}`} className="kf-game-card"
+              <Link prefetch={false} key={game.key} href={`/${locale}/games/${game.key}`} className="kf-game-card"
                 style={{
                   display: 'flex', flexDirection: 'column', gap: '10px',
                   backgroundColor: DS.surface, borderRadius: '14px',
@@ -147,7 +147,7 @@ export default function GamesModule({ locale }) {
           })}
 
           {/* Tuile finale vers le catalogue complet */}
-          <Link href={`/${locale}/games`} className="kf-game-card"
+          <Link prefetch={false} href={`/${locale}/games`} className="kf-game-card"
             style={{
               display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '8px',
               backgroundColor: DS.navy, borderRadius: '14px',

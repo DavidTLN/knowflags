@@ -60,7 +60,7 @@ function yearOf(iso) { return iso ? new Date(iso).getFullYear() : null }
 function initials(n) { return n ? n.trim().slice(0, 2).toUpperCase() : '?' }
 
 function Avatar({ profile, size }) {
-  if (profile?.avatar_url) return <img src={profile.avatar_url} alt="" style={{ width: size, height: size, borderRadius: '50%', objectFit: 'cover' }} />
+  if (profile?.avatar_url) return <img loading="lazy" decoding="async" src={profile.avatar_url} alt="" style={{ width: size, height: size, borderRadius: '50%', objectFit: 'cover' }} />
   return (
     <span style={{ width: size, height: size, borderRadius: '50%', backgroundColor: '#EEF2F7', color: C.navy, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: size * 0.34, fontWeight: 700, margin: '0 auto' }}>
       {initials(profile?.username)}
@@ -111,7 +111,7 @@ function PostCard({ post, locale, currentUserId }) {
           <Avatar profile={post.author} size={52} />
           <p style={{ margin: '8px 0 2px', fontWeight: 700, fontSize: '13px' }}>
             {post.author?.username
-              ? <Link href={`/${locale}/forum/u/${encodeURIComponent(post.author.username)}`} style={{ color: C.navy, textDecoration: 'none' }}>{post.author.username}</Link>
+              ? <Link prefetch={false} href={`/${locale}/forum/u/${encodeURIComponent(post.author.username)}`} style={{ color: C.navy, textDecoration: 'none' }}>{post.author.username}</Link>
               : <span style={{ color: C.muted }}>{t('Deleted', 'Supprimé')}</span>}
           </p>
           <p style={{ margin: '0 0 8px', fontSize: '11px', color: role.color, fontWeight: 600 }}>{role.text}</p>
@@ -126,7 +126,7 @@ function PostCard({ post, locale, currentUserId }) {
           <div style={{ display: 'none', alignItems: 'center', gap: '8px', marginBottom: '10px' }} className="forum-profile-inline">
             <Avatar profile={post.author} size={30} />
             {post.author?.username
-              ? <Link href={`/${locale}/forum/u/${encodeURIComponent(post.author.username)}`} style={{ fontWeight: 700, fontSize: '13px', color: C.navy, textDecoration: 'none' }}>{post.author.username}</Link>
+              ? <Link prefetch={false} href={`/${locale}/forum/u/${encodeURIComponent(post.author.username)}`} style={{ fontWeight: 700, fontSize: '13px', color: C.navy, textDecoration: 'none' }}>{post.author.username}</Link>
               : <span style={{ fontWeight: 700, fontSize: '13px', color: C.muted }}>{t('Deleted', 'Supprimé')}</span>}
             <span style={{ fontSize: '11px', color: role.color, fontWeight: 600 }}>{role.text}</span>
           </div>
@@ -201,10 +201,10 @@ export default function ForumThread({ category, parent, topic, initialPosts, loc
       <div style={{ backgroundColor: C.navy, padding: '30px 24px 26px', color: 'white' }}>
         <div style={{ maxWidth: '860px', margin: '0 auto' }}>
           <nav style={{ display: 'flex', gap: '8px', fontSize: '13px', color: 'rgba(255,255,255,0.5)', alignItems: 'center', marginBottom: '14px', flexWrap: 'wrap' }}>
-            <Link href={`/${locale}/forum`} style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Forum</Link>
-            {parentName && (<><span>›</span><Link href={`/${locale}/forum`} style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>{parentName}</Link></>)}
+            <Link prefetch={false} href={`/${locale}/forum`} style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Forum</Link>
+            {parentName && (<><span>›</span><Link prefetch={false} href={`/${locale}/forum`} style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>{parentName}</Link></>)}
             <span>›</span>
-            <Link href={`/${locale}/forum/${category.slug}`} style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>{t(category.name_en, category.name_fr)}</Link>
+            <Link prefetch={false} href={`/${locale}/forum/${category.slug}`} style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>{t(category.name_en, category.name_fr)}</Link>
           </nav>
 
           {/* Titre en grand */}
@@ -219,7 +219,7 @@ export default function ForumThread({ category, parent, topic, initialPosts, loc
             {starter?.username && (
               <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
                 <Avatar profile={starter} size={22} />
-                <Link href={`/${locale}/forum/u/${encodeURIComponent(starter.username)}`} style={{ color: 'rgba(255,255,255,0.9)', fontWeight: 600, textDecoration: 'none' }}>{starter.username}</Link>
+                <Link prefetch={false} href={`/${locale}/forum/u/${encodeURIComponent(starter.username)}`} style={{ color: 'rgba(255,255,255,0.9)', fontWeight: 600, textDecoration: 'none' }}>{starter.username}</Link>
               </span>
             )}
             <MetaItem icon="calendar">{t('Started', 'Créé le')} {fmtShort(topic.created_at, locale)}</MetaItem>
@@ -259,7 +259,7 @@ export default function ForumThread({ category, parent, topic, initialPosts, loc
         ) : (
           <div style={{ backgroundColor: C.surface, border: `1px solid ${C.border}`, borderRadius: '14px', padding: '18px', textAlign: 'center' }}>
             <p style={{ margin: '0 0 10px', fontSize: '14px', color: C.muted }}>{t('Sign in to join the discussion.', 'Connectez-vous pour participer à la discussion.')}</p>
-            <Link href={loginHref} style={{ display: 'inline-block', padding: '9px 18px', borderRadius: '10px', backgroundColor: C.navy, color: 'white', fontSize: '14px', fontWeight: 600, textDecoration: 'none' }}>
+            <Link prefetch={false} href={loginHref} style={{ display: 'inline-block', padding: '9px 18px', borderRadius: '10px', backgroundColor: C.navy, color: 'white', fontSize: '14px', fontWeight: 600, textDecoration: 'none' }}>
               {t('Sign in', 'Se connecter')}
             </Link>
           </div>

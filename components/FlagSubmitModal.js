@@ -11,17 +11,43 @@ const C = {
 const LABEL = { display: 'block', fontSize: '11px', fontWeight: '700', color: '#8A8278', marginBottom: '5px', textTransform: 'uppercase', letterSpacing: '0.05em' }
 const INPUT = { width: '100%', boxSizing: 'border-box', padding: '9px 13px', borderRadius: '8px', border: '1.5px solid #E2DDD5', fontSize: '14px', color: '#0B1F3B', backgroundColor: 'white', outline: 'none', fontFamily: 'inherit' }
 
+
+// ── Icones SVG (trait, pas d'emoji) ───────────────────────────────────────────
+const ICON_PATHS = {
+  globe:    'M12 2a10 10 0 1 0 0 20a10 10 0 1 0 0-20M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20',
+  map:      'M9 3 3 5v16l6-2 6 2 6-2V3l-6 2-6-2zM9 3v16M15 5v16',
+  city:     'M3 21h18M5 21V7l6-3v17M11 21V9l8 3v9M8 9v.01M8 12v.01M8 15v.01M15 14v.01M15 17v.01',
+  landmark: 'M3 21h18M4 10h16M12 3 4 7v3h16V7l-8-4zM6 10v8M10 10v8M14 10v8M18 10v8',
+  scroll:   'M8 21h10a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H6M8 21a2 2 0 0 1-2-2V5a2 2 0 1 0-4 0v2h4M8 21a2 2 0 0 0 2-2v-2H6M10 8h6M10 12h6',
+  flag:     'M4 22V4M4 4h12l-2 4 2 4H4',
+  plus:     'M12 5v14M5 12h14',
+  pencil:   'M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z',
+  sparkle:  'M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8',
+  upload:   'M12 16V4M7 9l5-5 5 5M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3',
+  check:    'M20 6 9 17l-5-5',
+  checkCircle: 'M12 2a10 10 0 1 0 0 20a10 10 0 1 0 0-20M8 12l3 3 5-6',
+  x:        'M18 6 6 18M6 6l12 12',
+}
+function Icon({ name, size = 18, color = 'currentColor', strokeWidth = 2, style }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth={strokeWidth}
+      strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ flexShrink: 0, ...style }}>
+      <path d={ICON_PATHS[name]} />
+    </svg>
+  )
+}
+
 const FLAG_TYPES = [
-  { key: 'country',      icon: '🌍', en: 'Country',      fr: 'Pays' },
-  { key: 'region',       icon: '🗺️', en: 'Region',       fr: 'Région' },
-  { key: 'city',         icon: '🏙️', en: 'City',         fr: 'Ville' },
-  { key: 'organisation', icon: '🏛️', en: 'Organisation', fr: 'Organisation' },
-  { key: 'historic',     icon: '📜', en: 'Historic',     fr: 'Historique' },
+  { key: 'country',      icon: 'globe', en: 'Country',      fr: 'Pays' },
+  { key: 'region',       icon: 'map', en: 'Region',       fr: 'Région' },
+  { key: 'city',         icon: 'city', en: 'City',         fr: 'Ville' },
+  { key: 'organisation', icon: 'landmark', en: 'Organisation', fr: 'Organisation' },
+  { key: 'historic',     icon: 'scroll', en: 'Historic',     fr: 'Historique' },
 ]
 
 const SUBTYPES = [
-  { key: 'new_flag',   icon: '🆕', en: 'New official flag',        fr: 'Nouveau drapeau officiel',      desc_en: 'A new flag was officially adopted. The current one will be archived.',     desc_fr: 'Un nouveau drapeau a été adopté. L\'actuel sera archivé.' },
-  { key: 'correction', icon: '✏️', en: 'Correction / wrong image', fr: 'Correction / image incorrecte', desc_en: 'The current image is wrong or poor quality. The old will be kept in archive.', desc_fr: 'L\'image actuelle est incorrecte. L\'ancienne sera archivée.' },
+  { key: 'new_flag',   icon: 'sparkle', en: 'New official flag',        fr: 'Nouveau drapeau officiel',      desc_en: 'A new flag was officially adopted. The current one will be archived.',     desc_fr: 'Un nouveau drapeau a été adopté. L\'actuel sera archivé.' },
+  { key: 'correction', icon: 'pencil', en: 'Correction / wrong image', fr: 'Correction / image incorrecte', desc_en: 'The current image is wrong or poor quality. The old will be kept in archive.', desc_fr: 'L\'image actuelle est incorrecte. L\'ancienne sera archivée.' },
 ]
 
 const MODAL_STYLE = `
@@ -53,11 +79,11 @@ function EntityPicker({ value, onChange, items, getLabel, getKey, locale, placeh
 
   if (value) return (
     <div style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '9px 13px', backgroundColor: value === '__new__' ? '#f0f9ff' : '#f0fdf4', borderRadius: '8px', border: `1px solid ${value === '__new__' ? '#bae6fd' : '#bbf7d0'}` }}>
-      {value === '__new__' ? <span>➕</span> : null}
+      {value === '__new__' ? <Icon name="plus" size={16} color={C.navy} /> : null}
       <span style={{ fontSize: '13px', fontWeight: '700', color: C.navy, flex: 1 }}>
         {value === '__new__' ? newLabel : (selected ? getLabel(selected) : value)}
       </span>
-      <button onClick={() => { onChange(''); setSearch('') }} style={{ background: 'none', border: 'none', cursor: 'pointer', color: C.muted, fontSize: '14px' }}>✕</button>
+      <button onClick={() => { onChange(''); setSearch('') }} aria-label="Clear" style={{ background: 'none', border: 'none', cursor: 'pointer', color: C.muted, display: 'flex', minWidth: '28px', minHeight: '28px', alignItems: 'center', justifyContent: 'center' }}><Icon name="x" size={16} /></button>
     </div>
   )
 
@@ -68,8 +94,8 @@ function EntityPicker({ value, onChange, items, getLabel, getKey, locale, placeh
         <div style={{ position: 'absolute', top: '100%', left: 0, right: 0, backgroundColor: 'white', border: `1px solid ${C.border}`, borderRadius: '10px', boxShadow: '0 8px 24px rgba(0,0,0,0.1)', zIndex: 20, overflow: 'hidden', marginTop: '4px', maxHeight: '220px', overflowY: 'auto' }}>
           {allowNew && (
             <button onMouseDown={e => { e.preventDefault(); onChange('__new__'); setSearch('') }}
-              style={{ width: '100%', padding: '10px 14px', textAlign: 'left', border: 'none', borderBottom: `1px solid ${C.border}`, backgroundColor: '#f0f9ff', cursor: 'pointer', fontSize: '13px', fontWeight: '700', color: C.navy }}>
-              ➕ {newLabel}
+              style={{ width: '100%', padding: '10px 14px', textAlign: 'left', border: 'none', borderBottom: `1px solid ${C.border}`, backgroundColor: '#f0f9ff', cursor: 'pointer', fontSize: '13px', fontWeight: '700', color: C.navy, display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <Icon name="plus" size={16} /> {newLabel.replace(/^\+\s*/, '')}
             </button>
           )}
           {filtered.map(item => (
@@ -78,7 +104,7 @@ function EntityPicker({ value, onChange, items, getLabel, getKey, locale, placeh
               {getLabel(item)}
             </button>
           ))}
-          {filtered.length === 0 && <div style={{ padding: '12px', fontSize: '13px', color: C.muted, textAlign: 'center' }}>No results</div>}
+          {filtered.length === 0 && <div style={{ padding: '12px', fontSize: '13px', color: C.muted, textAlign: 'center' }}>{locale === 'fr' ? 'Aucun résultat' : 'No results'}</div>}
         </div>
       )}
     </div>
@@ -98,11 +124,11 @@ function CountryPicker({ value, onChange, countries, locale, placeholder, allowN
   if (value) return (
     <div style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '9px 13px', backgroundColor: value === '__new__' ? '#f0f9ff' : '#f0fdf4', borderRadius: '8px', border: `1px solid ${value === '__new__' ? '#bae6fd' : '#bbf7d0'}` }}>
       {value !== '__new__' && selected && <img src={`https://flagcdn.com/w40/${value.toLowerCase()}.png`} width="24" height="16" style={{ borderRadius: '2px' }} />}
-      {value === '__new__' && <span>➕</span>}
+      {value === '__new__' && <Icon name="plus" size={16} color={C.navy} />}
       <span style={{ fontSize: '13px', fontWeight: '700', color: C.navy, flex: 1 }}>
         {value === '__new__' ? newLabel : (selected ? getName(selected) : value)}
       </span>
-      <button onClick={() => { onChange(''); setSearch('') }} style={{ background: 'none', border: 'none', cursor: 'pointer', color: C.muted, fontSize: '14px' }}>✕</button>
+      <button onClick={() => { onChange(''); setSearch('') }} aria-label="Clear" style={{ background: 'none', border: 'none', cursor: 'pointer', color: C.muted, display: 'flex', minWidth: '28px', minHeight: '28px', alignItems: 'center', justifyContent: 'center' }}><Icon name="x" size={16} /></button>
     </div>
   )
 
@@ -113,8 +139,8 @@ function CountryPicker({ value, onChange, countries, locale, placeholder, allowN
         <div style={{ position: 'absolute', top: '100%', left: 0, right: 0, backgroundColor: 'white', border: `1px solid ${C.border}`, borderRadius: '10px', boxShadow: '0 8px 24px rgba(0,0,0,0.1)', zIndex: 20, overflow: 'hidden', marginTop: '4px', maxHeight: '220px', overflowY: 'auto' }}>
           {allowNew && (
             <button onMouseDown={e => { e.preventDefault(); onChange('__new__'); setSearch('') }}
-              style={{ width: '100%', padding: '10px 14px', textAlign: 'left', border: 'none', borderBottom: `1px solid ${C.border}`, backgroundColor: '#f0f9ff', cursor: 'pointer', fontSize: '13px', fontWeight: '700', color: C.navy }}>
-              ➕ {newLabel}
+              style={{ width: '100%', padding: '10px 14px', textAlign: 'left', border: 'none', borderBottom: `1px solid ${C.border}`, backgroundColor: '#f0f9ff', cursor: 'pointer', fontSize: '13px', fontWeight: '700', color: C.navy, display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <Icon name="plus" size={16} /> {newLabel.replace(/^\+\s*/, '')}
             </button>
           )}
           {filtered.map(c => (
@@ -124,7 +150,7 @@ function CountryPicker({ value, onChange, countries, locale, placeholder, allowN
               {getName(c)} <span style={{ color: C.muted, fontSize: '11px' }}>({c.iso_code.toUpperCase()})</span>
             </button>
           ))}
-          {filtered.length === 0 && <div style={{ padding: '12px', fontSize: '13px', color: C.muted, textAlign: 'center' }}>No results</div>}
+          {filtered.length === 0 && <div style={{ padding: '12px', fontSize: '13px', color: C.muted, textAlign: 'center' }}>{locale === 'fr' ? 'Aucun résultat' : 'No results'}</div>}
         </div>
       )}
     </div>
@@ -138,12 +164,12 @@ function SubtypeSelector({ value, onChange, changeDate, onChangeDate, t }) {
       {SUBTYPES.map(st => (
         <button key={st.key} onClick={() => onChange(st.key)}
           style={{ display: 'flex', gap: '12px', padding: '12px 16px', borderRadius: '12px', border: `2px solid ${value === st.key ? C.navy : C.border}`, backgroundColor: value === st.key ? '#f0f4ff' : 'white', cursor: 'pointer', textAlign: 'left' }}>
-          <span style={{ fontSize: '20px', flexShrink: 0 }}>{st.icon}</span>
+          <Icon name={st.icon} size={20} color={C.navy} />
           <div>
             <div style={{ fontSize: '13px', fontWeight: '700', color: C.navy }}>{t(st.en, st.fr)}</div>
             <div style={{ fontSize: '11px', color: C.muted, marginTop: '2px', lineHeight: 1.4 }}>{t(st.desc_en, st.desc_fr)}</div>
           </div>
-          {value === st.key && <span style={{ marginLeft: 'auto', color: C.navy, flexShrink: 0 }}>✓</span>}
+          {value === st.key && <Icon name="check" size={18} color={C.navy} style={{ marginLeft: 'auto' }} />}
         </button>
       ))}
       {value === 'new_flag' && (
@@ -196,6 +222,11 @@ export default function FlagSubmitModal({ onClose, defaultCountry = '' }) {
   const [newFounded,  setNewFounded]  = useState('')
   const [newWebsite,  setNewWebsite]  = useState('')
 
+  // Pays absent de la liste, pour une region ou une ville
+  const [newCountryIso,    setNewCountryIso]    = useState('')
+  const [newCountryNameEn, setNewCountryNameEn] = useState('')
+  const [newCountryNameFr, setNewCountryNameFr] = useState('')
+
   // Details
   const [labelEn,     setLabelEn]     = useState('')
   const [labelFr,     setLabelFr]     = useState('')
@@ -213,6 +244,8 @@ export default function FlagSubmitModal({ onClose, defaultCountry = '' }) {
 
   const isNewEntity   = entitySlug === '__new__'
   const isNewRegion   = regionSlug === '__new__'
+  const isNewCountry  = countryCode === '__new__' && (flagType === 'region' || flagType === 'city')
+  const newCountryOk  = !isNewCountry || (newCountryIso.length >= 2 && !!newCountryNameEn.trim())
   const getName = c => locale === 'fr' ? c.name_fr : c.name_en
 
   useEffect(() => {
@@ -292,13 +325,13 @@ export default function FlagSubmitModal({ onClose, defaultCountry = '' }) {
         return !!subtype && (subtype !== 'new_flag' || !!changeDate)
       }
       if (flagType === 'region') {
-        if (!countryCode) return false
+        if (!countryCode || !newCountryOk) return false
         if (!entitySlug) return false
         if (entitySlug === '__new__') return !!newNameEn && !!newIso
         return !!subtype && (subtype !== 'new_flag' || !!changeDate)
       }
       if (flagType === 'city') {
-        if (!countryCode) return false
+        if (!countryCode || !newCountryOk) return false
         // Region is mandatory
         if (!regionSlug) return false
         // If new region selected, need name + slug
@@ -340,7 +373,7 @@ export default function FlagSubmitModal({ onClose, defaultCountry = '' }) {
         flag_type:          flagType,
         submission_subtype: isNewEntity ? 'new_entity' : subtype,
         entity_code:        entityKey,
-        country_code:       flagType === 'country' ? entityKey : countryCode,
+        country_code:       flagType === 'country' ? entityKey : (isNewCountry ? newCountryIso : countryCode),
         file_path:          fileName,
         file_type:          ext,
         label_en:           labelEn,
@@ -364,6 +397,9 @@ export default function FlagSubmitModal({ onClose, defaultCountry = '' }) {
           new_org_type:      newOrgType  || null,
           new_founded:       newFounded  || null,
           new_website:       newWebsite  || null,
+          new_country_iso:     isNewCountry ? newCountryIso : null,
+          new_country_name_en: isNewCountry ? newCountryNameEn.trim() : null,
+          new_country_name_fr: isNewCountry ? (newCountryNameFr.trim() || null) : null,
           // If region is also new for a city submission
           new_region_slug:   regionSlug === '__new__' ? newIso : null,
           new_region_name_en: regionSlug === '__new__' ? newNameEn : null,
@@ -384,8 +420,8 @@ export default function FlagSubmitModal({ onClose, defaultCountry = '' }) {
     <div style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(11,31,59,0.7)', backdropFilter: 'blur(4px)', zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '16px' }} onClick={onClose}>
       <style>{MODAL_STYLE}</style>
       <div style={{ background: 'white', borderRadius: '20px', maxWidth: '480px', width: '100%', padding: '40px 24px', textAlign: 'center', position: 'relative' }} onClick={e => e.stopPropagation()}>
-        <button onClick={onClose} style={CLOSE_BTN}>✕</button>
-        <div style={{ fontSize: '48px', marginBottom: '16px' }}>🏳️</div>
+        <button onClick={onClose} style={CLOSE_BTN} aria-label="Close"><Icon name="x" size={16} /></button>
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '16px' }}><Icon name="flag" size={44} color={C.navy} strokeWidth={1.6} /></div>
         <h2 style={{ margin: '0 0 12px', fontSize: '20px', fontWeight: '900', color: C.navy }}>{t('Sign in to submit a flag', 'Connectez-vous pour soumettre')}</h2>
         <p style={{ margin: '0 0 24px', fontSize: '14px', color: C.muted, lineHeight: 1.6 }}>{t('You need an account to contribute.', 'Vous avez besoin d\'un compte.')}</p>
         <a href={`/${locale}/auth/login`} style={{ display: 'inline-block', padding: '12px 28px', backgroundColor: C.navy, color: C.cream, borderRadius: '10px', textDecoration: 'none', fontWeight: '700', fontSize: '14px', marginRight: '10px' }}>{t('Sign in', 'Se connecter')}</a>
@@ -398,8 +434,8 @@ export default function FlagSubmitModal({ onClose, defaultCountry = '' }) {
     <div style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(11,31,59,0.7)', backdropFilter: 'blur(4px)', zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '16px' }} onClick={onClose}>
       <style>{MODAL_STYLE}</style>
       <div style={{ background: 'white', borderRadius: '20px', maxWidth: '480px', width: '100%', padding: '40px 24px', textAlign: 'center', position: 'relative' }} onClick={e => e.stopPropagation()}>
-        <button onClick={onClose} style={CLOSE_BTN}>✕</button>
-        <div style={{ fontSize: '56px', marginBottom: '16px' }}>🎉</div>
+        <button onClick={onClose} style={CLOSE_BTN} aria-label="Close"><Icon name="x" size={16} /></button>
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '16px' }}><Icon name="checkCircle" size={52} color="#16A34A" strokeWidth={1.6} /></div>
         <h2 style={{ margin: '0 0 12px', fontSize: '20px', fontWeight: '900', color: C.navy }}>{t('Submission received!', 'Soumission reçue !')}</h2>
         <p style={{ margin: '0 0 8px', fontSize: '14px', color: C.muted, lineHeight: 1.6 }}>{t('Our team will review your flag and notify you by email.', 'Notre équipe va examiner votre drapeau et vous notifier par e-mail.')}</p>
         <button onClick={onClose} style={{ marginTop: '20px', padding: '12px 28px', backgroundColor: C.navy, color: C.cream, border: 'none', borderRadius: '10px', fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>{t('Close', 'Fermer')}</button>
@@ -416,8 +452,8 @@ export default function FlagSubmitModal({ onClose, defaultCountry = '' }) {
 
         {/* Header */}
         <div style={{ padding: '20px 24px 0', flexShrink: 0 }}>
-          <button onClick={onClose} style={CLOSE_BTN}>✕</button>
-          <h2 style={{ margin: '0 0 4px', fontSize: '20px', fontWeight: '900', color: C.navy }}>🏳️ {t('Submit a Flag', 'Soumettre un Drapeau')}</h2>
+          <button onClick={onClose} style={CLOSE_BTN} aria-label="Close"><Icon name="x" size={16} /></button>
+          <h2 style={{ margin: '0 0 4px', fontSize: '20px', fontWeight: '900', color: C.navy, display: 'flex', alignItems: 'center', gap: '10px' }}><Icon name="flag" size={22} color={C.navy} /> {t('Submit a Flag', 'Soumettre un Drapeau')}</h2>
           <p style={{ margin: '0 0 14px', fontSize: '13px', color: C.muted }}>{t('Contribute a flag to KnowFlags.', 'Contribuez un drapeau à KnowFlags.')}</p>
           <div style={{ display: 'flex', gap: '4px', marginBottom: '20px' }}>
             {STEPS.map((s, i) => (
@@ -436,9 +472,9 @@ export default function FlagSubmitModal({ onClose, defaultCountry = '' }) {
               {FLAG_TYPES.map(ft => (
                 <button key={ft.key} onClick={() => handleTypeChange(ft.key)}
                   style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '13px 16px', borderRadius: '12px', border: `2px solid ${flagType === ft.key ? C.navy : C.border}`, backgroundColor: flagType === ft.key ? C.navy : 'white', cursor: 'pointer', textAlign: 'left' }}>
-                  <span style={{ fontSize: '22px' }}>{ft.icon}</span>
+                  <Icon name={ft.icon} size={22} color={flagType === ft.key ? 'white' : C.navy} />
                   <span style={{ fontWeight: '700', fontSize: '14px', color: flagType === ft.key ? 'white' : C.navy }}>{t(ft.en, ft.fr)}</span>
-                  {flagType === ft.key && <span style={{ marginLeft: 'auto', color: 'white' }}>✓</span>}
+                  {flagType === ft.key && <Icon name="check" size={18} color="white" style={{ marginLeft: 'auto' }} />}
                 </button>
               ))}
             </div>
@@ -506,10 +542,22 @@ export default function FlagSubmitModal({ onClose, defaultCountry = '' }) {
                   <label style={LABEL}>{t('Country', 'Pays')} *</label>
                   <CountryPicker value={countryCode} onChange={handleCountryChange}
                     countries={countries} locale={locale}
-                    placeholder={t('Which country?', 'Quel pays ?')} />
+                    placeholder={t('Which country?', 'Quel pays ?')}
+                    allowNew newLabel={t('+ New country (not in list)', '+ Nouveau pays (absent de la liste)')} />
                 </div>
 
-                {countryCode && (
+                {countryCode === '__new__' && (
+                  <div style={{ padding: '14px', backgroundColor: '#f0f9ff', borderRadius: '12px', border: '1px solid #bae6fd', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                    <p style={{ margin: 0, fontSize: '12px', fontWeight: '700', color: '#0369a1' }}>{t('New country', 'Nouveau pays')}</p>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '10px' }}>
+                      <div><label style={LABEL}>ISO code *</label><input value={newCountryIso} onChange={e => setNewCountryIso(e.target.value.toLowerCase().replace(/[^a-z-]/g, '').slice(0, 6))} placeholder="xx" style={INPUT} /></div>
+                      <div><label style={LABEL}>{t('Name EN', 'Nom EN')} *</label><input value={newCountryNameEn} onChange={e => setNewCountryNameEn(e.target.value)} style={INPUT} /></div>
+                    </div>
+                    <div><label style={LABEL}>{t('Name FR', 'Nom FR')}</label><input value={newCountryNameFr} onChange={e => setNewCountryNameFr(e.target.value)} style={INPUT} /></div>
+                  </div>
+                )}
+
+                {countryCode && newCountryOk && (
                   <div>
                     <label style={LABEL}>{t('Region', 'Région')} *</label>
                     <EntityPicker value={entitySlug} onChange={v => { setEntitySlug(v); setSubtype(''); setChangeDate('') }}
@@ -534,7 +582,7 @@ export default function FlagSubmitModal({ onClose, defaultCountry = '' }) {
                     <div>
                       <label style={LABEL}>{t('Slug', 'Slug')} *</label>
                       <input value={newIso} onChange={e => setNewIso(e.target.value.toLowerCase().replace(/\s+/g, '-'))}
-                        placeholder={`${countryCode}-region-name`} style={INPUT} />
+                        placeholder={`${isNewCountry ? (newCountryIso || "xx") : countryCode}-region-name`} style={INPUT} />
                       <p style={{ margin: '4px 0 0', fontSize: '11px', color: C.muted }}>
                         {t('Unique identifier, e.g. france-bretagne', 'Identifiant unique, ex. france-bretagne')}
                       </p>
@@ -559,11 +607,23 @@ export default function FlagSubmitModal({ onClose, defaultCountry = '' }) {
                   <label style={LABEL}>{t('Country', 'Pays')} *</label>
                   <CountryPicker value={countryCode} onChange={handleCountryChange}
                     countries={countries} locale={locale}
-                    placeholder={t('Select country…', 'Sélectionner un pays…')} />
+                    placeholder={t('Select country…', 'Sélectionner un pays…')}
+                    allowNew newLabel={t('+ New country (not in list)', '+ Nouveau pays (absent de la liste)')} />
                 </div>
 
+                {countryCode === '__new__' && (
+                  <div style={{ padding: '14px', backgroundColor: '#f0f9ff', borderRadius: '12px', border: '1px solid #bae6fd', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                    <p style={{ margin: 0, fontSize: '12px', fontWeight: '700', color: '#0369a1' }}>{t('New country', 'Nouveau pays')}</p>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '10px' }}>
+                      <div><label style={LABEL}>ISO code *</label><input value={newCountryIso} onChange={e => setNewCountryIso(e.target.value.toLowerCase().replace(/[^a-z-]/g, '').slice(0, 6))} placeholder="xx" style={INPUT} /></div>
+                      <div><label style={LABEL}>{t('Name EN', 'Nom EN')} *</label><input value={newCountryNameEn} onChange={e => setNewCountryNameEn(e.target.value)} style={INPUT} /></div>
+                    </div>
+                    <div><label style={LABEL}>{t('Name FR', 'Nom FR')}</label><input value={newCountryNameFr} onChange={e => setNewCountryNameFr(e.target.value)} style={INPUT} /></div>
+                  </div>
+                )}
+
                 {/* 2. Region — mandatory, from DB list */}
-                {countryCode && (
+                {countryCode && newCountryOk && (
                   <div>
                     <label style={LABEL}>{t('Region', 'Région')} *</label>
                     <EntityPicker value={regionSlug} onChange={handleRegionChange}
@@ -588,7 +648,7 @@ export default function FlagSubmitModal({ onClose, defaultCountry = '' }) {
                     <div>
                       <label style={LABEL}>{t('Region slug', 'Slug région')} *</label>
                       <input value={newIso} onChange={e => setNewIso(e.target.value.toLowerCase().replace(/\s+/g, '-'))}
-                        placeholder={`${countryCode}-region-name`} style={INPUT} />
+                        placeholder={`${isNewCountry ? (newCountryIso || "xx") : countryCode}-region-name`} style={INPUT} />
                     </div>
                   </div>
                 )}
@@ -619,7 +679,7 @@ export default function FlagSubmitModal({ onClose, defaultCountry = '' }) {
                     <div>
                       <label style={LABEL}>{t('City slug', 'Slug ville')} *</label>
                       <input value={newIso} onChange={e => setNewIso(e.target.value.toLowerCase().replace(/\s+/g, '-'))}
-                        placeholder={regionSlug !== '__new__' && regionSlug ? `${regionSlug}-city-name` : `${countryCode}-city-name`}
+                        placeholder={regionSlug !== '__new__' && regionSlug ? `${regionSlug}-city-name` : `${isNewCountry ? (newCountryIso || "xx") : countryCode}-city-name`}
                         style={INPUT} />
                     </div>
                   </div>
@@ -713,7 +773,7 @@ export default function FlagSubmitModal({ onClose, defaultCountry = '' }) {
                       placeholder={t(`Fact ${i+1}…`, `Anecdote ${i+1}…`)} style={{ ...INPUT, flex: 1 }} />
                     {facts.length > 1 && (
                       <button onClick={() => setFacts(prev => prev.filter((_, j) => j !== i))}
-                        style={{ padding: '0 10px', background: 'transparent', border: `1px solid ${C.border}`, borderRadius: '8px', cursor: 'pointer', color: C.muted }}>✕</button>
+                        aria-label="Remove" style={{ padding: '0 10px', background: 'transparent', border: `1px solid ${C.border}`, borderRadius: '8px', cursor: 'pointer', color: C.muted, display: 'flex', alignItems: 'center' }}><Icon name="x" size={16} /></button>
                     )}
                   </div>
                 ))}
@@ -735,9 +795,9 @@ export default function FlagSubmitModal({ onClose, defaultCountry = '' }) {
               {!file ? (
                 <button onClick={() => fileRef.current?.click()}
                   style={{ width: '100%', padding: '40px 20px', border: `2px dashed ${C.border}`, borderRadius: '14px', backgroundColor: C.bg, cursor: 'pointer', textAlign: 'center' }}>
-                  <div style={{ fontSize: '36px', marginBottom: '8px' }}>📁</div>
-                  <div style={{ fontSize: '14px', fontWeight: '700', color: C.navy, marginBottom: '4px' }}>{t('Click to upload', 'Cliquer pour uploader')}</div>
-                  <div style={{ fontSize: '12px', color: C.muted }}>SVG ou PNG · max 5MB</div>
+                  <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '8px' }}><Icon name="upload" size={32} color={C.navy} strokeWidth={1.6} /></div>
+                  <div style={{ fontSize: '14px', fontWeight: '700', color: C.navy, marginBottom: '4px' }}>{t('Click to upload', 'Cliquer pour téléverser')}</div>
+                  <div style={{ fontSize: '12px', color: C.muted }}>{t('SVG or PNG · max 5 MB', 'SVG ou PNG · max 5 Mo')}</div>
                 </button>
               ) : (
                 <div style={{ border: '2px solid #16a34a', borderRadius: '14px', overflow: 'hidden', backgroundColor: '#f0fdf4' }}>
@@ -747,7 +807,7 @@ export default function FlagSubmitModal({ onClose, defaultCountry = '' }) {
                     </div>
                   )}
                   <div style={{ padding: '12px 16px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    <span style={{ fontSize: '20px' }}>✅</span>
+                    <Icon name="checkCircle" size={20} color="#16A34A" />
                     <div style={{ flex: 1 }}>
                       <div style={{ fontSize: '13px', fontWeight: '700', color: C.navy }}>{file.name}</div>
                       <div style={{ fontSize: '11px', color: C.muted }}>{(file.size / 1024).toFixed(1)} KB</div>
@@ -770,7 +830,7 @@ export default function FlagSubmitModal({ onClose, defaultCountry = '' }) {
                 [t('Type', 'Type'),        FLAG_TYPES.find(f => f.key === flagType)?.[locale === 'fr' ? 'fr' : 'en']],
                 [t('Subtype', 'Sous-type'), isNewEntity ? t('New entity', 'Nouvelle entité') : (subtype || '—')],
                 [t('Entity', 'Entité'),    isNewEntity ? `${newNameEn} (${newIso})` : entitySlug],
-                [t('Country', 'Pays'),     flagType !== 'country' ? (countries.find(c => c.iso_code === countryCode)?.[locale === 'fr' ? 'name_fr' : 'name_en'] || countryCode) : null],
+                [t('Country', 'Pays'),     flagType !== 'country' ? (isNewCountry ? `${newCountryNameEn} (${newCountryIso})` : countries.find(c => c.iso_code === countryCode)?.[locale === 'fr' ? 'name_fr' : 'name_en'] || countryCode) : null],
                 [t('Region', 'Région'),    flagType === 'city' ? (regions.find(r => r.slug === regionSlug)?.[locale === 'fr' ? 'name_fr' : 'name_en'] || regionSlug) : null],
                 ['Name EN',               labelEn],
                 [t('File', 'Fichier'),    file?.name],
@@ -811,7 +871,7 @@ export default function FlagSubmitModal({ onClose, defaultCountry = '' }) {
             ) : (
               <button onClick={handleSubmit} disabled={submitting}
                 style={{ padding: '10px 22px', backgroundColor: C.green, color: 'white', border: 'none', borderRadius: '10px', fontSize: '13px', fontWeight: '700', cursor: submitting ? 'not-allowed' : 'pointer', opacity: submitting ? 0.7 : 1 }}>
-                {submitting ? t('Submitting…', 'Envoi…') : t('Submit 🏳️', 'Soumettre 🏳️')}
+                {submitting ? t('Submitting…', 'Envoi…') : t('Submit', 'Soumettre')}
               </button>
             )}
           </div>

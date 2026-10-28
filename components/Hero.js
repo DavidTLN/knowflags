@@ -129,7 +129,7 @@ export default function Hero() {
           <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? '24px' : '56px', alignItems: isMobile ? 'stretch' : 'center' }}>
 
             {/* ── Flag image → flag detail page ── */}
-            <Link href={detailLink} style={{ textDecoration: 'none', flex: '0 0 auto', width: isMobile ? '100%' : 'min(460px, 50%)' }}>
+            <Link prefetch={false} href={detailLink} style={{ textDecoration: 'none', flex: '0 0 auto', width: isMobile ? '100%' : 'min(460px, 50%)' }}>
               <div
                 onMouseEnter={() => setImgHover(true)}
                 onMouseLeave={() => setImgHover(false)}
@@ -169,7 +169,7 @@ export default function Hero() {
 
               {/* CTAs */}
               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-                <Link
+                <Link prefetch={false}
                   href={detailLink}
                   onMouseEnter={() => setBtnHover(true)}
                   onMouseLeave={() => setBtnHover(false)}
@@ -180,7 +180,7 @@ export default function Hero() {
                   </svg>
                 </Link>
 
-                <Link href={`/${locale}/countries`}
+                <Link prefetch={false} href={`/${locale}/countries`}
                   style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '12px 20px', backgroundColor: 'transparent', color: DS.navy, border: `1.5px solid ${DS.border}`, borderRadius: '10px', fontSize: '14px', fontWeight: '600', textDecoration: 'none', transition: 'border-color 0.15s', width: isMobile ? '100%' : 'auto', justifyContent: 'center' }}
                   onMouseEnter={e => e.currentTarget.style.borderColor = DS.navy}
                   onMouseLeave={e => e.currentTarget.style.borderColor = DS.border}

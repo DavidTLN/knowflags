@@ -242,7 +242,7 @@ function CountryListingInner({ rows = [] }) {
 
     if (desktop) {
       return (
-        <Link href={`/${locale}/countries/${country.code}`}
+        <Link prefetch={false} href={`/${locale}/countries/${country.code}`}
           style={{ textDecoration: 'none', display: 'block', backgroundColor: DS.surface, borderRadius: '12px', overflow: 'hidden', border: `1px solid ${DS.border}`, transition: 'transform 0.15s, box-shadow 0.15s', cursor: 'pointer' }}
           onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 8px 24px rgba(11,31,59,0.12)' }}
           onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none' }}

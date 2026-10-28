@@ -19,7 +19,7 @@ function ArticleCard({ post, locale }) {
   const t = (en, fr) => locale === 'fr' ? fr : en
 
   return (
-    <Link href={`/${locale}/blog/${post.slug}`} style={{ textDecoration: 'none' }}>
+    <Link prefetch={false} href={`/${locale}/blog/${post.slug}`} style={{ textDecoration: 'none' }}>
       <article
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
@@ -40,7 +40,7 @@ function ArticleCard({ post, locale }) {
         {/* Cover image */}
         {post.coverImage ? (
           <div style={{ width: '100%', aspectRatio: '16/9', overflow: 'hidden', backgroundColor: '#f0ede4', flexShrink: 0 }}>
-            <img
+            <img loading="lazy" decoding="async"
               src={post.coverImage}
               alt={post.coverAlt}
               style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.4s ease', transform: hovered ? 'scale(1.04)' : 'scale(1)' }}
@@ -184,7 +184,7 @@ export default function BlogListPage({ posts }) {
 
         {/* Featured article — responsive : 2 colonnes desktop, empilé mobile */}
         {featured && (
-          <Link href={`/${locale}/blog/${featured.slug}`} style={{ textDecoration: 'none', display: 'block', marginBottom: '40px' }}>
+          <Link prefetch={false} href={`/${locale}/blog/${featured.slug}`} style={{ textDecoration: 'none', display: 'block', marginBottom: '40px' }}>
             <article style={{
               backgroundColor: '#fff',
               borderRadius: '20px',
@@ -201,7 +201,7 @@ export default function BlogListPage({ posts }) {
                     : { minHeight: '280px' }
                   ),
                 }}>
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={featured.coverImage}
                     alt={featured.coverAlt}
                     style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

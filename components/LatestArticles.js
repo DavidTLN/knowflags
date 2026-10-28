@@ -88,7 +88,7 @@ export default function LatestArticles({ posts = [], locale = 'en' }) {
           }}
         >
           {posts.map((post) => (
-            <Link
+            <Link prefetch={false}
               key={post.slug}
               href={`/${locale}/blog/${post.slug}`}
               style={{
@@ -137,7 +137,7 @@ export default function LatestArticles({ posts = [], locale = 'en' }) {
 
         {/* Voir tout */}
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: isMobile ? '24px' : '28px', padding: isMobile ? '0 16px' : 0 }}>
-          <Link
+          <Link prefetch={false}
             href={`/${locale}/blog`}
             style={{
               textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px',

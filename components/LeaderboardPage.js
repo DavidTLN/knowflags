@@ -148,7 +148,7 @@ function LeaderboardRow({ entry, rank, isMe, game, locale }) {
       <div style={{ position: 'relative', flexShrink: 0 }}>
         <Avatar name={displayName} size={38} />
         {entry.country && (
-          <img
+          <img loading="lazy" decoding="async"
             src={`https://flagcdn.com/w20/${entry.country.toLowerCase()}.png`}
             alt={entry.country}
             style={{ position: 'absolute', bottom: '-2px', right: '-4px', width: '16px', height: '11px', objectFit: 'contain', borderRadius: '2px', border: '1px solid white', boxShadow: '0 1px 3px rgba(0,0,0,0.2)' }}
@@ -416,7 +416,7 @@ export default function LeaderboardPage() {
                 {isCurrent ? t('No scores yet — be first!', 'Aucun score — soyez le premier !') : t('No scores recorded', 'Aucun score enregistré')}
               </p>
               {isCurrent && (
-                <Link href={`/${locale}/games`} style={{ display: 'inline-block', marginTop: '16px', padding: '12px 24px', backgroundColor: '#0B1F3B', color: 'white', borderRadius: '10px', fontWeight: '700', fontSize: '14px', textDecoration: 'none' }}>
+                <Link prefetch={false} href={`/${locale}/games`} style={{ display: 'inline-block', marginTop: '16px', padding: '12px 24px', backgroundColor: '#0B1F3B', color: 'white', borderRadius: '10px', fontWeight: '700', fontSize: '14px', textDecoration: 'none' }}>
                   🎮 {t('Play now', 'Jouer maintenant')}
                 </Link>
               )}
@@ -440,7 +440,7 @@ export default function LeaderboardPage() {
 
         {/* CTA */}
         <div style={{ marginTop: '24px', textAlign: 'center' }}>
-          <Link href={`/${locale}/games`} style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '14px 28px', backgroundColor: '#0B1F3B', color: 'white', borderRadius: '12px', fontWeight: '800', fontSize: '15px', textDecoration: 'none' }}>
+          <Link prefetch={false} href={`/${locale}/games`} style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '14px 28px', backgroundColor: '#0B1F3B', color: 'white', borderRadius: '12px', fontWeight: '800', fontSize: '15px', textDecoration: 'none' }}>
             🎮 {t('Play to earn points', 'Jouer pour gagner des points')}
           </Link>
         </div>

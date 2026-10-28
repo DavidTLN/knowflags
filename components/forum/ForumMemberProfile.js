@@ -33,7 +33,7 @@ export default function ForumMemberProfile({ stats, badges, topics, locale }) {
       <div style={{ backgroundColor: C.navy, padding: '32px 24px 28px', color: 'white' }}>
         <div style={{ maxWidth: '760px', margin: '0 auto' }}>
           <nav style={{ display: 'flex', gap: '8px', fontSize: '13px', color: 'rgba(255,255,255,0.5)', alignItems: 'center', marginBottom: '18px' }}>
-            <Link href={`/${locale}/forum`} style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Forum</Link>
+            <Link prefetch={false} href={`/${locale}/forum`} style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Forum</Link>
             <span>›</span><span style={{ color: '#9EB7E5' }}>{stats.username}</span>
           </nav>
 
@@ -100,7 +100,7 @@ export default function ForumMemberProfile({ stats, badges, topics, locale }) {
             {topics.map(tp => {
               const cat = tp.forum_categories || {}
               return (
-                <Link key={tp.id} href={`/${locale}/forum/${cat.slug}/${tp.slug}`} style={{ textDecoration: 'none' }}>
+                <Link prefetch={false} key={tp.id} href={`/${locale}/forum/${cat.slug}/${tp.slug}`} style={{ textDecoration: 'none' }}>
                   <div style={{ backgroundColor: C.surface, borderRadius: '12px', padding: '13px 16px', border: `1px solid ${C.border}` }}>
                     <div style={{ fontSize: '14px', fontWeight: 700, color: C.navy, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{tp.title}</div>
                     <div style={{ fontSize: '12px', color: C.muted, marginTop: '2px' }}>

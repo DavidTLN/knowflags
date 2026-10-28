@@ -134,7 +134,7 @@ export default function BlogPostPage({ post, relatedPosts = [] }) {
           <h1 style={{ color: C.navy, fontWeight: 900, fontSize: '22px', margin: '0 0 16px' }}>
             {t('Article not found', 'Article introuvable')}
           </h1>
-          <Link href={`/${locale}/blog`} style={{
+          <Link prefetch={false} href={`/${locale}/blog`} style={{
             display: 'inline-flex', alignItems: 'center', gap: '8px',
             color: C.navy, textDecoration: 'none', fontWeight: 600, fontSize: '15px',
             padding: '10px 20px', border: `1.5px solid ${C.borderSolid}`,
@@ -163,11 +163,11 @@ export default function BlogPostPage({ post, relatedPosts = [] }) {
       {/* Breadcrumb */}
       <div style={{ maxWidth: '760px', margin: '0 auto', padding: '24px 24px 0' }}>
         <nav style={{ display: 'flex', gap: '8px', fontSize: '13px', color: C.muted, alignItems: 'center', flexWrap: 'wrap' }}>
-          <Link href={`/${locale}`} style={{ color: C.navy, textDecoration: 'none', fontWeight: 600 }}>
+          <Link prefetch={false} href={`/${locale}`} style={{ color: C.navy, textDecoration: 'none', fontWeight: 600 }}>
             {t('Home', 'Accueil')}
           </Link>
           <span style={{ color: C.light }}>›</span>
-          <Link href={`/${locale}/blog`} style={{ color: C.navy, textDecoration: 'none', fontWeight: 600 }}>
+          <Link prefetch={false} href={`/${locale}/blog`} style={{ color: C.navy, textDecoration: 'none', fontWeight: 600 }}>
             Blog
           </Link>
           <span style={{ color: C.light }}>›</span>
@@ -248,7 +248,7 @@ export default function BlogPostPage({ post, relatedPosts = [] }) {
         borderTop: hasRelated ? 'none' : `1px solid ${C.borderSolid}`,
         display: 'flex', justifyContent: 'center',
       }}>
-        <Link href={`/${locale}/blog`} style={{
+        <Link prefetch={false} href={`/${locale}/blog`} style={{
           display: 'inline-flex', alignItems: 'center', gap: '8px',
           color: C.navy, textDecoration: 'none', fontWeight: 600, fontSize: '15px',
           padding: '12px 20px', border: `1.5px solid ${C.borderSolid}`,

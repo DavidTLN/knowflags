@@ -250,3 +250,74 @@ add('tn', S(6, 4, '2:3', circles=[(3, 2, 1)], dims=[('h', 2, 4, 2.9, '2')],
 add('tz', S(3, 2, '2:3', lines=[(0, 2, 3, 0)], source='Tanzanian flag 1964'))
 add('ug', S(9, 6, '2:3', y=[0, 1, 2, 3, 4, 5, 6], source='Uganda flag 1962: six equal stripes'))
 add('za', S(3, 2, '2:3', source='South African flag 1994'))
+
+# ── Batch 16 ─────────────────────────────────────────────────────────────────
+add('zm', S(42, 28, '2:3', x=[0, 27, 32, 37, 42], y=[0, 10, 28], centre=False,
+            source='Zambian flag 1964/1996: three vertical bands in the lower fly'))
+add('zw', S(14, 7, '1:2', y=list(range(0, 8)), source='Zimbabwe flag 1980: seven equal stripes'))
+add('sx', S(3, 2, '2:3', y=[0, 1, 2], source='Sint Maarten flag 1985'))
+add('ae', S(6, 3, '1:2', x=[0, 1.5, 6], y=[0, 1, 2, 3], centre=False, source='UAE flag 1971: red band 1/4 of the length'))
+add('af', S(9, 6, '2:3', x=[0, 3, 6, 9], source='Afghan tricolour (2004 Constitution, art. 19) as shown by the artwork; DB ratio reads 1:2'))
+add('az', S(6, 3, '1:2', y=[0, 1, 2, 3], source='Law on the State Flag 2004: three equal stripes'))
+add('bd', S(20, 12, '3:5', x=[0, 9, 20], gx=[9], circles=[(9, 6, 4)], dims=[('h', 5, 13, 10.6, '8')],
+            source='Bangladesh flag rules 1972: 10:6, disc radius 1/5 of the length, centre at 9/20'))
+add('bn', S(2, 1, '1:2', source='Brunei flag 1959'))
+add('bt', S(3, 2, '2:3', lines=[(0, 2, 3, 0)], source='Bhutan national flag rules 1972'))
+add('cn', S(30, 20, '2:3', x=[0, 5, 10, 15, 30], y=[0, 5, 10, 20], circles=[(5, 5, 3)], dims=[('h', 2, 8, 9, '6')],
+            centre=False, source='Construction sheet of the National Flag Law 1949/1990: canton 15 x 10 grid, large star diameter 6'))
+
+# ── Batch 17 ─────────────────────────────────────────────────────────────────
+add('cy', S(3, 2, '2:3', source='Constitution of Cyprus, art. 4'))
+add('ge', S(30, 20, '2:3', x=[0, 13, 17, 30], y=[0, 8, 12, 20], centre=False,
+            source='Law on the State Flag of Georgia 2004: cross 1/5 H'))
+add('hk', S(3, 2, '2:3', source='Basic Law of Hong Kong, annex'))
+add('il', S(220, 160, '8:11', y=[0, 15, 40, 120, 145, 160], source='Israel Flag and Emblem Law 1949: 220 x 160, stripes 25 at 15 from the edges'))
+add('in', S(9, 6, '2:3', y=[0, 2, 4, 6], source='Flag Code of India 2002: three equal stripes'))
+add('ir', S(21, 12, '4:7', y=[0, 4, 8, 12], source='Constitution of Iran, art. 18; ISIRI 1'))
+add('jo', S(6, 3, '1:2', y=[0, 1, 2, 3], x=[0, 3, 6], source='Constitution of Jordan, art. 4: triangle to half the length'))
+add('jp', S(15, 10, '2:3', circles=[(7.5, 5, 3)], dims=[('h', 4.5, 10.5, 9, '6')],
+            source='Act on National Flag and Anthem 1999: disc diameter 3/5 of the height, centred'))
+add('kg', S(5, 3, '3:5', source='Law on the State Flag of Kyrgyzstan 2023'))
+add('kh', S(3, 2, '2:3', y=[0, 0.5, 1.5, 2], source='Constitution of Cambodia: blue, red twice as wide, blue'))
+
+# ── Batch 18 ─────────────────────────────────────────────────────────────────
+add('kp', S(72, 36, '1:2', y=[0, 6, 7, 29, 30, 36], source='DPRK flag 1948: stripes 6:1:22:1:6'))
+add('kr', S(3, 2, '2:3', circles=[(1.5, 1, 0.5)], dims=[('h', 1, 2, 1.85, '1')],
+            source='National Flag Act 2007: taegeuk diameter 1/2 of the height'))
+add('kw', S(12, 6, '1:2', y=[0, 2, 4, 6], x=[0, 3, 12], source='Kuwaiti flag 1961: trapezium to 1/4 of the length'))
+add('kz', S(2, 1, '1:2', source='Constitutional Law on state symbols 2007'))
+add('la', S(6, 4, '2:3', y=[0, 1, 3, 4], circles=[(3, 2, 0.8)], dims=[('h', 2.2, 3.8, 3.5, '1.6')],
+            source='Lao flag 1975: blue half the height, disc diameter 0.8 of the blue band'))
+add('lb', S(12, 8, '2:3', y=[0, 2, 6, 8], source='Constitution of Lebanon, art. 5: white twice each red'))
+add('lk', S(2, 1, '1:2', source='Constitution of Sri Lanka, schedule'))
+add('mn', S(6, 3, '1:2', x=[0, 2, 4, 6], source='Law on the State Flag of Mongolia 1992'))
+add('mo', S(3, 2, '2:3', source='Basic Law of Macau, annex'))
+add('mv', S(6, 4, '2:3', x=[0, 1, 5, 6], y=[0, 1, 3, 4], source='Maldives flag 1965: red border 1/4 of the height'))
+
+# ── Batch 19 ─────────────────────────────────────────────────────────────────
+add('my', S(28, 14, '1:2', x=[0, 14, 28], y=[0, 8, 14], centre=False, source='Malaysian flag 1963: fourteen stripes, canton half the length over eight stripes'))
+add('np', S(1, 1.219, '4:3', wl='1', hl='≈1.219', centre=False,
+            source='Constitution of Nepal, schedule 1: two stacked pennants, full geometric construction'))
+add('om', S(12, 6, '1:2', x=[0, 3, 12], y=[0, 2, 4, 6], centre=False, source='Omani flag 1995: red band 1/4 of the length'))
+add('ph', S(2, 1, '1:2', x=[0, 0.866, 2], xl=['≈0.866', None], y=[0, 0.5, 1],
+            source='Republic Act 8491: equilateral white triangle'))
+add('pk', S(12, 8, '2:3', x=[0, 3, 12], source='Pakistan flag specification: white band 1/4 of the length'))
+add('ps', S(6, 3, '1:2', y=[0, 1, 2, 3], x=[0, 2, 6], source='Palestinian flag 1964: triangle to 1/3 of the length'))
+add('qa', S(28, 11, '11:28', x=[0, 8, 10, 28], source='Qatari flag 1971/1974: nine-point serrated band'))
+add('sa', S(3, 2, '2:3', source='Basic Law of Saudi Arabia, art. 3'))
+add('sg', S(3, 2, '2:3', y=[0, 1, 2], source='Singapore Arms and Flag and National Anthem Act'))
+add('tj', S(14, 7, '1:2', y=[0, 2, 5, 7], source='Law on the State Flag of Tajikistan: stripes 2:3:2'))
+
+# ── Batch 20 ─────────────────────────────────────────────────────────────────
+add('tl', S(6, 3, '1:2', x=[0, 2, 3, 6], centre=False, lines=[(0, 0, 3, 1.5), (0, 3, 3, 1.5)],
+            source='Constitution of Timor-Leste: black triangle to 1/3, yellow to 1/2 of the length'))
+add('tm', S(3, 2, '2:3', source='Turkmen flag 2001'))
+add('tr', S(12, 8, '2:3', circles=[(4.25, 4, 2), (4.75, 4, 1.6)], gx=[4.25], dims=[('v', 2, 6, 2.0, '4')],
+            source='Turkish Flag Law 2994: crescent outer diameter 1/2 of the height'))
+add('tw', S(3, 2, '2:3', x=[0, 1.5, 3], y=[0, 1, 2], centre=False, source='Flag law of the Republic of China 1954'))
+add('uz', S(100, 50, '1:2', y=[0, 16, 17, 33, 34, 50], source='Law on the State Flag of Uzbekistan 1991'))
+add('vn', S(3, 2, '2:3', source='Constitution of Vietnam, art. 13'))
+add('au', S(4, 2, '1:2', x=[0, 2, 4], y=[0, 1, 2], centre=False, source='Flags Act 1953: Union Jack canton 1/4'))
+add('fj', S(4, 2, '1:2', x=[0, 2, 4], y=[0, 1, 2], centre=False, source='Fiji flag 1970'))
+add('fm', S(38, 20, '10:19', source='Micronesia flag 1978'))
+add('gu', S(41, 22, '22:41', source='Guam flag 1948'))

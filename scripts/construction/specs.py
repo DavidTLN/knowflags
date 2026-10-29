@@ -100,3 +100,33 @@ add('gb-eng', S(25, 15, '3:5', x=[0, 11, 14, 25], y=[0, 6, 9, 15], centre=False,
                 source='Cross of St George, cross 1/5 of the height'))
 add('gb-sct', S(5, 4, '4:5', lines=[(0, 0, 5, 4), (0, 4, 5, 0)], texts=[(2.5, 1.0, {'en': 'saltire width = 1/5 of height', 'fr': 'largeur du sautoir = 1/5 de la hauteur'})],
                 source='Lord Lyon: 4:5, saltire width 1/5 of the height (DB ratio reads 5:4)'))
+
+# ── Batch 6 — British Isles and Central Europe ───────────────────────────────
+_UJ = dict(x=[0, 25, 27, 33, 35, 60], y=[0, 10, 12, 18, 20, 30], centre=False,
+           lines=[(0, 0, 60, 30), (0, 30, 60, 0)],
+           source='Union Flag: St George cross 6 (1/5 H) with 2 white fimbriation, saltires 6 (white 3 + red 2 counterchanged)')
+add('gb', S(60, 30, '1:2', **_UJ))
+add('gb-nir', S(60, 30, '1:2', **_UJ))
+add('gb-wls', S(5, 3, '3:5', y=[0, 1.5, 3], source='Welsh flag: equal white over green, dragon centred'))
+add('gg', S(36, 24, '2:3', x=[0, 15, 21, 36], y=[0, 9, 15, 24], centre=False,
+            source='Guernsey flag 1985: red cross 1/4 H with gold cross of William'))
+add('gi', S(6, 3, '1:2', y=[0, 2, 3], source='Gibraltar flag: white 2/3, red 1/3'))
+add('je', S(30, 18, '3:5', lines=[(0, 0, 30, 18), (0, 18, 30, 0)], source='Jersey flag 1981: red saltire with badge'))
+add('im', S(2, 1, '1:2', source='Isle of Man flag: triskelion centred'))
+add('cz', S(3, 2, '2:3', x=[0, 1.5, 3], y=[0, 1, 2], source='Act 3/1993: blue wedge to half the length'))
+add('sk', S(9, 6, '2:3', y=[0, 2, 4, 6], source='Constitution of Slovakia, art. 8'))
+add('si', S(12, 6, '1:2', y=[0, 2, 4, 6], source='Act on the coat of arms, flag and anthem 1994'))
+
+# ── Batch 7 — Europe with emblems ────────────────────────────────────────────
+add('ad', S(25, 17.5, '7:10', x=[0, 8, 17, 25], source='Andorran flag law 1971/1996: stripes 8:9:8'))
+add('al', S(7, 5, '5:7', source='Law 8926/2002: double-headed eagle centred'))
+add('ba', S(16, 8, '1:2', source='Decision of the High Representative, 1998'))
+add('hr', S(6, 3, '1:2', y=[0, 1, 2, 3], source='Law on the coat of arms, flag and anthem 1990'))
+add('li', S(5, 3, '3:5', y=[0, 1.5, 3], source='Law of 30 June 1982'))
+add('md', S(6, 3, '1:2', x=[0, 2, 4, 6], source='Law on the State Flag 1990'))
+add('me', S(40, 20, '1:2', x=[0, 1, 39, 40], y=[0, 1, 19, 20], xl=[None, None, None], yl=['1', None, '1'],
+            source='Law on the state symbols 2004: gold border 1/20 of the height'))
+add('mk', S(2, 1, '1:2', source='Law on the flag 1995: sun with eight rays'))
+add('mt', S(3, 2, '2:3', x=[0, 1.5, 3], source='Constitution of Malta, art. 3'))
+add('pt', S(15, 10, '2:3', x=[0, 6, 15], circles=[(6, 5, 2.5)], dims=[('v', 2.5, 7.5, 9, '5')],
+            source='Decree of 19 June 1911: green 2/5, red 3/5, sphere diameter 1/2 H on the dividing line'))

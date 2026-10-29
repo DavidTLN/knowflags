@@ -7,7 +7,8 @@ Usage:
 github.com/hampusborgos/country-flags/svg, which mirrors Wikimedia Commons).
 The flag artwork is embedded as-is; this script only adds the construction
 layer (dimension arrows, centre-line guides, ISO and ratio tags) from the
-specs in specs.py. Output: public/flags/construction/{iso}-construction-{fr,en}.svg
+specs in specs.py. Files in scripts/construction/artwork/ take precedence
+(af: Islamic Emirate flag, gb-nir: Ulster Banner, nc: Kanak flag). Output: public/flags/construction/{iso}-construction-{fr,en}.svg
 
 Style: viewBox only, #FAFAF9 background, #111 outline, #2540E8 double arrows,
 #444 dash-dot guides (10 6 3 6), [ISO] bottom-left and [H:W] bottom-right in #0A8A0A.
@@ -22,6 +23,7 @@ from lxml import etree
 sys.path.insert(0, os.path.dirname(__file__))
 from specs import SPECS  # noqa: E402
 
+ART = os.path.join(os.path.dirname(__file__), 'artwork')
 OUT = os.path.join(os.path.dirname(__file__), '..', '..', 'public', 'flags', 'construction')
 SVG_NS = 'http://www.w3.org/2000/svg'
 BLUE, GUIDE, GREEN = '#2540E8', '#444', '#0A8A0A'
@@ -142,7 +144,9 @@ def build(iso, spec, src_dir):
     parts = [f'<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" '
              f'viewBox="0 0 {cw:.0f} {ch:.0f}" font-family="Arial, Helvetica, sans-serif">',
              f'<rect width="{cw:.0f}" height="{ch:.0f}" fill="#FAFAF9"/>']
-    flag, file_ratio = embed_flag(os.path.join(src_dir, spec.get('src', iso) + '.svg'), M, M, fw, fh)
+    name = spec.get('src', iso) + '.svg'
+    local = os.path.join(ART, name)  # repo overrides (flags missing or outdated in the artwork set)
+    flag, file_ratio = embed_flag(local if os.path.exists(local) else os.path.join(src_dir, name), M, M, fw, fh)
     if abs(file_ratio - W / H) / (W / H) > 0.02:
         print(f'  ! {iso}: artwork ratio {file_ratio:.3f} vs spec {W/H:.3f}')
     parts.append(flag)

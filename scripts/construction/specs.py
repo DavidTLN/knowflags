@@ -99,14 +99,15 @@ add('ch', S(32, 32, '1:1', x=[0, 6, 13, 19, 26, 32], y=[0, 6, 13, 19, 26, 32],
 add('gb-eng', S(25, 15, '3:5', x=[0, 11, 14, 25], y=[0, 6, 9, 15], centre=False,
                 source='Cross of St George, cross 1/5 of the height'))
 add('gb-sct', S(5, 4, '4:5', lines=[(0, 0, 5, 4), (0, 4, 5, 0)], texts=[(2.5, 1.0, {'en': 'saltire width = 1/5 of height', 'fr': 'largeur du sautoir = 1/5 de la hauteur'})],
-                source='Lord Lyon: 4:5, saltire width 1/5 of the height (DB ratio reads 5:4)'))
+                source='Lord Lyon: 4:5, saltire width 1/5 of the height '))
 
 # ── Batch 6 — British Isles and Central Europe ───────────────────────────────
 _UJ = dict(x=[0, 25, 27, 33, 35, 60], y=[0, 10, 12, 18, 20, 30], centre=False,
            lines=[(0, 0, 60, 30), (0, 30, 60, 0)],
            source='Union Flag: St George cross 6 (1/5 H) with 2 white fimbriation, saltires 6 (white 3 + red 2 counterchanged)')
 add('gb', S(60, 30, '1:2', **_UJ))
-add('gb-nir', S(60, 30, '1:2', **_UJ))
+add('gb-nir', S(60, 30, '1:2', x=[0, 27, 33, 60], y=[0, 12, 18, 30], centre=False,
+                source='Ulster Banner (1953): red cross 1/5 of the height, crowned star with the Red Hand'))
 add('gb-wls', S(5, 3, '3:5', y=[0, 1.5, 3], source='Welsh flag: equal white over green, dragon centred'))
 add('gg', S(36, 24, '2:3', x=[0, 15, 21, 36], y=[0, 9, 15, 24], centre=False,
             source='Guernsey flag 1985: red cross 1/4 H with gold cross of William'))
@@ -205,7 +206,7 @@ add('cf', S(12, 8, '2:3', y=[0, 2, 4, 6, 8], x=[0, 5, 7, 12], source='Constituti
 add('cg', S(3, 2, '2:3', x=[0, 1, 2, 3], lines=[(0, 2, 2, 0), (1, 2, 3, 0)], centre=False,
             source='Constitution of the Republic of the Congo: yellow diagonal band'))
 add('cm', S(9, 6, '2:3', x=[0, 3, 6, 9], source='Constitution of Cameroon, art. 1'))
-add('cv', S(20.4, 12, '10:17', y=[0, 6, 7, 8, 9, 12], source='Cape Verde flag 1992: stripes 6:1:1:1:3'))
+add('cv', S(18, 12, '2:3', y=[0, 6, 7, 8, 9, 12], source='Cape Verde flag 1992: stripes 6:1:1:1:3; 2:3 per the 2009 government graphic guide'))
 add('dj', S(15, 10, '2:3', y=[0, 5, 10], x=[0, 8.66, 15], xl=['≈8.66', None],
             source='Djibouti flag 1977: equilateral white triangle'))
 
@@ -257,7 +258,7 @@ add('zm', S(42, 28, '2:3', x=[0, 27, 32, 37, 42], y=[0, 10, 28], centre=False,
 add('zw', S(14, 7, '1:2', y=list(range(0, 8)), source='Zimbabwe flag 1980: seven equal stripes'))
 add('sx', S(3, 2, '2:3', y=[0, 1, 2], source='Sint Maarten flag 1985'))
 add('ae', S(6, 3, '1:2', x=[0, 1.5, 6], y=[0, 1, 2, 3], centre=False, source='UAE flag 1971: red band 1/4 of the length'))
-add('af', S(9, 6, '2:3', x=[0, 3, 6, 9], source='Afghan tricolour (2004 Constitution, art. 19) as shown by the artwork; DB ratio reads 1:2'))
+add('af', S(2, 1, '1:2', source='Flag of the Islamic Emirate of Afghanistan (2021): white field with the Shahada'))
 add('az', S(6, 3, '1:2', y=[0, 1, 2, 3], source='Law on the State Flag 2004: three equal stripes'))
 add('bd', S(20, 12, '3:5', x=[0, 9, 20], gx=[9], circles=[(9, 6, 4)], dims=[('h', 5, 13, 10.6, '8')],
             source='Bangladesh flag rules 1972: 10:6, disc radius 1/5 of the length, centre at 9/20'))
@@ -296,7 +297,7 @@ add('mv', S(6, 4, '2:3', x=[0, 1, 5, 6], y=[0, 1, 3, 4], source='Maldives flag 1
 
 # ── Batch 19 ─────────────────────────────────────────────────────────────────
 add('my', S(28, 14, '1:2', x=[0, 14, 28], y=[0, 8, 14], centre=False, source='Malaysian flag 1963: fourteen stripes, canton half the length over eight stripes'))
-add('np', S(1, 1.219, '4:3', wl='1', hl='≈1.219', centre=False,
+add('np', S(1, 1.219, '1.219:1', wl='1', hl='≈1.219', centre=False,
             source='Constitution of Nepal, schedule 1: two stacked pennants, full geometric construction'))
 add('om', S(12, 6, '1:2', x=[0, 3, 12], y=[0, 2, 4, 6], centre=False, source='Omani flag 1995: red band 1/4 of the length'))
 add('ph', S(2, 1, '1:2', x=[0, 0.866, 2], xl=['≈0.866', None], y=[0, 0.5, 1],
@@ -335,5 +336,9 @@ add('sb', S(2, 1, '1:2', lines=[(0, 1, 2, 0)], source='Solomon Islands flag 1977
 add('to', S(96, 48, '1:2', x=[0, 17, 23, 40, 96], y=[0, 9, 15, 24, 48], centre=False,
             source='Constitution of Tonga, art. 47: white canton with red cross'))
 add('tv', S(4, 2, '1:2', x=[0, 2, 4], y=[0, 1, 2], centre=False, source='Tuvalu flag 1997'))
-add('vu', S(5, 3, '3:5', source='Vanuatu flag 1980 (DB ratio reads 19:37)'))
+add('vu', S(3, 2, '2:3', source='State Flag and Armorial Bearings Public Declaration: official image 2:3 (3:5 and 19:36 also used)'))
 add('ws', S(4, 2, '1:2', x=[0, 2, 4], y=[0, 1, 2], centre=False, source='Flag of Samoa Act 1948'))
+
+# ── Corrections ──────────────────────────────────────────────────────────────
+add('nc', S(6, 3, '1:2', y=[0, 1, 2, 3], gx=[2], circles=[(2, 1.5, 0.983)], dims=[('h', 0, 2, 2.75, '2')],
+            source='Kanak flag (official alongside the tricolour since 2010): three equal stripes, disc centred 1/3 from the hoist'))

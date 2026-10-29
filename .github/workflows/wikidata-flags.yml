@@ -1,0 +1,35 @@
+name: Wikidata flags import
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'history | regions | all'
+        default: 'all'
+      isos:
+        description: 'Optional space-separated ISO codes (empty = all countries)'
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: wikidata-import
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests
+      - run: python3 scripts/wikidata/fetch_flags.py ${{ inputs.mode }} ${{ inputs.isos }}
+      - name: Commit results
+        run: |
+          git config user.name "knowflags-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/flags/history public/flags/regions data/wikidata
+          git commit -m "Wikidata import: ${{ inputs.mode }} ${{ inputs.isos }}" || echo "nothing to commit"
+          git push origin HEAD:wikidata-import

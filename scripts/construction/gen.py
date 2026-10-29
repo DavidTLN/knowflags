@@ -65,10 +65,13 @@ def arrow_v(y1, y2, x, label, halo=False, small=False):
 
 
 def label_text(x, y, label, halo, size=FS, rot=False):
-    extra = ' paint-order="stroke" stroke="#FAFAF9" stroke-width="9" stroke-linejoin="round"' if halo else ' stroke="none"'
     tr = f' transform="rotate(-90 {x:.1f} {y:.1f})"' if rot else ''
-    return (f'<text x="{x:.1f}" y="{y:.1f}" font-size="{size}" text-anchor="middle"{extra}{tr}>'
-            f'{escape(fmt(label))}</text>')
+    body = escape(fmt(label))
+    base = f'<text x="{x:.1f}" y="{y:.1f}" font-size="{size}" text-anchor="middle"{tr}'
+    out = ''
+    if halo:  # separate halo text underneath (paint-order is not supported everywhere)
+        out = f'{base} fill="#FAFAF9" stroke="#FAFAF9" stroke-width="10" stroke-linejoin="round">{body}</text>'
+    return out + f'{base} stroke="none">{body}</text>'
 
 
 def escape(s):

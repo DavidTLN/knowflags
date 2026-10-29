@@ -194,3 +194,59 @@ add('ni', S(5, 3, '3:5', y=[0, 1, 2, 3], source='Law 1971: three equal stripes')
 add('pe', S(9, 6, '2:3', x=[0, 3, 6, 9], source='Law 8 / Decree 1950: three equal vertical bands'))
 add('py', S(60, 33, '11:20', y=[0, 11, 22, 33], source='Law 990/1996: three equal stripes'))
 add('sv', S(335, 189, '189:335', y=[0, 63, 126, 189], source='Law of the national symbols 1972: three equal stripes'))
+
+# ── Batch 12 — Africa ────────────────────────────────────────────────────────
+add('ao', S(3, 2, '2:3', y=[0, 1, 2], source='Constitution of Angola 2010, annex'))
+add('bf', S(3, 2, '2:3', y=[0, 1, 2], source='Constitution of Burkina Faso, art. 34'))
+add('bi', S(5, 3, '3:5', lines=[(0, 0, 5, 3), (0, 3, 5, 0)], source='Constitution of Burundi, art. 9'))
+add('bj', S(15, 10, '2:3', x=[0, 6, 15], y=[0, 5, 10], centre=False, source='Benin flag 1959/1990: green 2/5 of the length'))
+add('cd', S(4, 3, '3:4', lines=[(0, 3, 4, 0)], source='Constitution of the DR Congo 2006, art. 1'))
+add('cf', S(12, 8, '2:3', y=[0, 2, 4, 6, 8], x=[0, 5, 7, 12], source='Constitution of the Central African Republic'))
+add('cg', S(3, 2, '2:3', x=[0, 1, 2, 3], lines=[(0, 2, 2, 0), (1, 2, 3, 0)], centre=False,
+            source='Constitution of the Republic of the Congo: yellow diagonal band'))
+add('cm', S(9, 6, '2:3', x=[0, 3, 6, 9], source='Constitution of Cameroon, art. 1'))
+add('cv', S(20.4, 12, '10:17', y=[0, 6, 7, 8, 9, 12], source='Cape Verde flag 1992: stripes 6:1:1:1:3'))
+add('dj', S(15, 10, '2:3', y=[0, 5, 10], x=[0, 8.66, 15], xl=['≈8.66', None],
+            source='Djibouti flag 1977: equilateral white triangle'))
+
+# ── Batch 13 — Africa ────────────────────────────────────────────────────────
+add('dz', S(3, 2, '2:3', x=[0, 1.5, 3], source='Law 63-145 of 25 April 1963'))
+add('er', S(4, 2, '1:2', lines=[(0, 0, 4, 1), (0, 2, 4, 1)], source='Eritrean flag 1995'))
+add('et', S(6, 3, '1:2', y=[0, 1, 2, 3], source='Proclamation 654/2009'))
+add('gh', S(9, 6, '2:3', y=[0, 2, 4, 6], source='Ghana Armed Forces flag regulations; three equal stripes'))
+add('gq', S(9, 6, '2:3', y=[0, 2, 4, 6], x=[0, 2.25, 9], source='Equatorial Guinea flag; triangle to 1/4 of the length'))
+add('gw', S(12, 6, '1:2', x=[0, 4, 12], y=[0, 3, 6], centre=False, source='Constitution of Guinea-Bissau: red band 1/3 of the length'))
+add('ke', S(27, 18, '2:3', y=[0, 6, 7, 11, 12, 18], source='Kenyan flag: stripes 6:1:4:1:6'))
+add('km', S(20, 12, '3:5', y=[0, 3, 6, 9, 12], source='Constitution of Comoros 2001: four equal stripes'))
+add('lr', S(20.9, 11, '10:19', x=[0, 5, 20.9], y=list(range(0, 12)), centre=False,
+            source='Liberian flag 1847: eleven stripes, canton five stripes square'))
+add('ls', S(15, 10, '2:3', y=[0, 3, 7, 10], source='Lesotho flag 2006: stripes 3:4:3'))
+
+# ── Batch 14 — Africa ────────────────────────────────────────────────────────
+add('ly', S(8, 4, '1:2', y=[0, 1, 3, 4], source='Libyan flag 1951/2011: stripes 1:2:1'))
+add('ma', S(9, 6, '2:3', source='Dahir of 17 November 1915'))
+add('mg', S(3, 2, '2:3', x=[0, 1, 3], y=[0, 1, 2], centre=False, source='Constitution of Madagascar: white 1/3 of the length'))
+add('mr', S(15, 10, '2:3', y=[0, 2, 8, 10], source='Constitutional law 2017: red stripes 1/5 of the height'))
+add('mw', S(4.5, 3, '2:3', y=[0, 1, 2, 3], source='Malawi flag: three equal stripes'))
+add('na', S(3, 2, '2:3', lines=[(0, 2, 3, 0)], source='Namibian flag 1990'))
+add('ne', S(7, 6, '6:7', y=[0, 2, 4, 6], circles=[(3.5, 3, 0.85)], source='Constitution of Niger: three equal stripes, orange disc'))
+add('rw', S(6, 4, '2:3', y=[0, 2, 3, 4], source='Rwanda flag 2001: blue half, yellow and green quarters'))
+add('sc', S(6, 3, '1:2', x=[0, 2, 4, 6], y=[0, 1, 2, 3], centre=False,
+            lines=[(0, 3, 2, 0), (0, 3, 4, 0), (0, 3, 6, 1), (0, 3, 6, 2)],
+            source='Seychelles flag 1996: five oblique bands from the lower hoist'))
+add('sd', S(12, 6, '1:2', y=[0, 2, 4, 6], x=[0, 4, 12], source='Sudan flag 1970: green triangle to 1/3 of the length'))
+
+# ── Batch 15 — Africa ────────────────────────────────────────────────────────
+add('sn', S(9, 6, '2:3', x=[0, 3, 6, 9], source='Constitution of Senegal, art. 1'))
+add('so', S(3, 2, '2:3', source='Somali flag 1954'))
+add('ss', S(20, 10, '1:2', y=[0, 3, 3.5, 6.5, 7, 10], x=[0, 8.66, 20], xl=['≈8.66', None],
+            source='South Sudan flag: stripes 3:0.5:3:0.5:3, equilateral blue triangle'))
+add('st', S(28, 14, '1:2', y=[0, 4, 10, 14], x=[0, 7, 28], source='São Tomé and Príncipe flag: yellow 3/7, triangle 1/4 of the length'))
+add('sz', S(24, 16, '2:3', y=[0, 3, 4, 12, 13, 16], source='Eswatini flag 1968: stripes 3:1:8:1:3'))
+add('tg', S(8.09, 5, '1:1.618', y=[0, 1, 2, 3, 4, 5], x=[0, 3, 8.09], xl=['3', '5.09'], wl='8.09',
+            source='Togolese flag 1960: five equal stripes, square canton three stripes high, golden ratio'))
+add('tn', S(6, 4, '2:3', circles=[(3, 2, 1)], dims=[('h', 2, 4, 2.9, '2')],
+            source='Law 99-56: white disc diameter 1/3 of the length'))
+add('tz', S(3, 2, '2:3', lines=[(0, 2, 3, 0)], source='Tanzanian flag 1964'))
+add('ug', S(9, 6, '2:3', y=[0, 1, 2, 3, 4, 5, 6], source='Uganda flag 1962: six equal stripes'))
+add('za', S(3, 2, '2:3', source='South African flag 1994'))

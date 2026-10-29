@@ -1,0 +1,9 @@
+insert into flag_taxonomy (slug, name_en, name_fr, flag_type, image_path, iso_code, metadata)
+select trim(both '-' from lower(regexp_replace(translate(c.name_en, 'ÅåÉéÍíÓóÚúÇçãÃõôêèÖöÜüÄä''', 'AaEeIiOoUuCcaAooeeOoUuAa '), '[^a-zA-Z0-9]+', '-', 'g'))),
+       c.name_en, c.name_fr, 'country', 'https://flagcdn.com/' || c.iso_code || '.svg', c.iso_code,
+       jsonb_build_object('iso2', c.iso_code, 'continent', c.region)
+from countries c
+where c.iso_code in ('ad','ae','af','ag','al','am','ao','ar','at','au','ax','az','ba','bb','bd','be','bf','bg','bh','bi','bj','bm','bn','bo','br','bs','bt','bw','by','bz','cd','cf','cg','ci','cl','cm','cn','co','cr','cu','cv','cy','cz','dj','dk','dm','do','dz','ec','ee','eg','er','es','et','fi','fj','fm','ga','gd','ge','gg','gh','gl','gm','gn','gq','gr','gt','gu','gw','gy','hk','hn','hr','ht','hu','id','ie','il','in','iq','ir','is','it','je','jm','jo','jp','ke','kg','kh','km','kn','kp','kr','kw','kz','la','lb','lc','li','lk','lr','ls','lt','lu','lv','ly','ma','mc','md','me','mh','mk','ml','mm','mn','mr','mt','mu','mv','mw','mx','my','mz','na','nc','ne','ng','ni','nl','no','np','nr','nz','om','pa','pe','pf','pg','ph','pk','pl','pr','ps','pt','pw','py','qa','ro','rs','ru','rw','sa','sb','sc','sd','se','sg','si','sk','sl','sm','sn','so','sr','ss','st','sv','sy','sz','td','tg','th','tj','tl','tm','tn','to','tr','tt','tw','tz','ua','ug','uy','uz','vc','ve','vn','vu','ws','xk','ye','za','zm','zw')
+  and not exists (select 1 from flag_taxonomy t where t.flag_type = 'country' and t.iso_code = c.iso_code)
+on conflict (slug) do nothing;
+update flag_taxonomy set country_id = id where flag_type = 'country' and country_id is null;

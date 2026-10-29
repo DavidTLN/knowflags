@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360">
+   <rect id="background" width="360" height="360" y="0" x="0" fill="#FFFFFF" />
+   <rect id="vertical line" width="64" height="360" y="0" x="148" fill="#254b99" />
+   <rect id="horizontal line" width="360" height="64" y="148" x="0" fill="#254b99" />
+   </svg>

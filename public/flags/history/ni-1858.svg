@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1200"
+   height="720"
+   viewBox="0 0 5 3"
+   version="1.1"
+   id="svg6"
+   sodipodi:docname="Flag_of_Nicaragua_(1858-1889_and_1893-1896).svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata12">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs10">
+    <linearGradient
+       y2="283.42"
+       x2="500.626"
+       y1="289.055"
+       x1="498.738"
+       gradientUnits="userSpaceOnUse"
+       id="cap1">
+      <stop
+         id="stop14"
+         offset="0"
+         stop-color="#510000" />
+      <stop
+         id="stop16"
+         offset="0.3"
+         stop-color="#8a0000" />
+      <stop
+         id="stop18"
+         offset="1"
+         stop-color="#a00" />
+    </linearGradient>
+    <linearGradient
+       y2="287.449"
+       x2="502.927"
+       y1="291.373"
+       x1="501.444"
+       gradientUnits="userSpaceOnUse"
+       id="cap2">
+      <stop
+         id="stop21"
+         offset="0"
+         stop-color="#ff2a2a" />
+      <stop
+         id="stop23"
+         offset="1"
+         stop-color="#f00" />
+    </linearGradient>
+    <linearGradient
+       y2="317.647"
+       x2="484.764"
+       y1="311.709"
+       x1="484.764"
+       gradientUnits="userSpaceOnUse"
+       id="mountain">
+      <stop
+         id="stop26"
+         offset="0"
+         stop-color="#F5F549" />
+      <stop
+         id="stop28"
+         offset="1"
+         stop-color="#97C924" />
+    </linearGradient>
+    <linearGradient
+       id="seafgrad">
+      <stop
+         id="stop31"
+         offset="0"
+         stop-color="#025" />
+      <stop
+         id="stop33"
+         offset="0.5"
+         stop-color="#04a" />
+      <stop
+         id="stop35"
+         offset="1"
+         stop-color="#025" />
+    </linearGradient>
+    <linearGradient
+       y2="317.486"
+       x2="634.411"
+       y1="317.486"
+       x1="444.509"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#seafgrad"
+       id="seabgrad" />
+    <clipPath
+       id="shield">
+      <path
+         id="path39"
+         d="m500,226.375 -63.7015,110.332h127.401z"
+         fill="#000" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview8"
+     showgrid="false"
+     inkscape:zoom="0.34176828"
+     inkscape:cx="861.81834"
+     inkscape:cy="201.4223"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6" />
+  <rect
+     fill="#4664f4"
+     width="5"
+     height="3"
+     id="rect2"
+     style="fill:#0067c6;fill-opacity:1" />
+  <rect
+     fill="#fff"
+     y="1"
+     width="5"
+     height="1"
+     id="rect4" />
+</svg>

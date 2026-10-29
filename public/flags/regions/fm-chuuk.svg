@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="760" height="400" version="1.0">
+  <path fill="#08298c" d="M0 0h760v400H0z" style="stroke-width:1.52294"/>
+  <path id="a" fill="#fff" d="m269.73 26.1-7.79 1.5 7.19 3.36-.98 7.88 5.42-5.8 7.19 3.37-3.84-6.95 5.43-5.79-7.8 1.5-3.83-6.95z" transform="translate(0 10)scale(1.484375)"/>
+  <use xlink:href="#a" transform="rotate(9.47 380 200)"/>
+  <use xlink:href="#a" transform="rotate(18.95 380 200)"/>
+  <use xlink:href="#a" transform="rotate(28.42 380 200)"/>
+  <use xlink:href="#a" transform="rotate(37.9 380 200)"/>
+  <use xlink:href="#a" transform="rotate(47.37 380 200)"/>
+  <use xlink:href="#a" transform="rotate(56.84 380 200)"/>
+  <use xlink:href="#a" transform="rotate(66.32 380 200)"/>
+  <use xlink:href="#a" transform="rotate(75.79 380 200)"/>
+  <use xlink:href="#a" transform="rotate(85.26 380 200)"/>
+  <use xlink:href="#a" transform="rotate(94.74 380 200)"/>
+  <use xlink:href="#a" transform="rotate(104.21 380 200)"/>
+  <use xlink:href="#a" transform="rotate(113.68 380 200)"/>
+  <use xlink:href="#a" transform="rotate(123.16 380 200)"/>
+  <use xlink:href="#a" transform="rotate(132.63 380 200)"/>
+  <use xlink:href="#a" transform="rotate(142.1 380 200)"/>
+  <use xlink:href="#a" transform="rotate(151.58 380 200)"/>
+  <use xlink:href="#a" transform="rotate(161.05 380 200)"/>
+  <use xlink:href="#a" transform="rotate(170.53 380 200)"/>
+  <g transform="rotate(180 380 200)">
+    <path fill="#fff" d="m388.82 50.97 10.67 4.99-1.45 11.7 8.04-8.62 10.67 5-5.7-10.31 8.06-8.6-11.57 2.23-5.69-10.31-1.47 11.7z"/>
+    <use xlink:href="#a" transform="rotate(9.47 380 200)"/>
+    <use xlink:href="#a" transform="rotate(18.95 380 200)"/>
+    <use xlink:href="#a" transform="rotate(28.42 380 200)"/>
+    <use xlink:href="#a" transform="rotate(37.9 380 200)"/>
+    <use xlink:href="#a" transform="rotate(47.37 380 200)"/>
+    <use xlink:href="#a" transform="rotate(56.84 380 200)"/>
+    <use xlink:href="#a" transform="rotate(66.32 380 200)"/>
+    <use xlink:href="#a" transform="rotate(75.79 380 200)"/>
+    <use xlink:href="#a" transform="rotate(85.26 380 200)"/>
+    <use xlink:href="#a" transform="rotate(94.74 380 200)"/>
+    <use xlink:href="#a" transform="rotate(104.21 380 200)"/>
+    <use xlink:href="#a" transform="rotate(113.68 380 200)"/>
+    <use xlink:href="#a" transform="rotate(123.16 380 200)"/>
+    <use xlink:href="#a" transform="rotate(132.63 380 200)"/>
+    <use xlink:href="#a" transform="rotate(142.1 380 200)"/>
+    <use xlink:href="#a" transform="rotate(151.58 380 200)"/>
+    <use xlink:href="#a" transform="rotate(161.05 380 200)"/>
+    <use xlink:href="#a" transform="rotate(170.53 380 200)"/>
+  </g>
+  <path fill="#fff" d="M381.67 248.98c-7.89-7.88-14.96-19.84-19.44-32.27q-.41.16-.84.31l-2.04.62.67-2.03.9-2.82c-3.24-10.32-4.59-20.7-3-29.12 8.22 13.03 7.6 18.72 3.15 32.29 12.62-3.8 17.2-27.67 4.27-37.85 17.26 4.37 28.08 11.54 33.21 26.34 6.44-16.4-12.49-35.46-22.82-36.36 10.08-9.61 28.02-6.15 35.44 4.82 2.35-12.82-25.23-24.08-35.62-15.96 1.48-17.77 12.74-28.16 23.37-27.09-13.23-8.61-30.67 3.88-37.66 21.9 0-18.76-15.15-40.41-31.36-40.08 8.37 8.37 10.14 14.76 18.56 43.79-13.36-13.57-40.2-7.88-44.16-1.67 14.47-.89 28.57 3.2 36.92 10.02-19.42-2.23-36.92 21.38-29.69 31.36 4.52-15.67 20.85-22.48 38.22-16.89-12.12 8.33-18 28.06-15.4 36.74 5.94-6.08 13-17.96 20.41-29.5-5.69 30.72 12.02 65.45 27.84 81.27 8.8 8.8 20.71 18.36 29.31 22.26h42.3c-33.39-11.59-54.34-21.87-72.54-40.08" style="stroke-width:1.48438"/>
+</svg>

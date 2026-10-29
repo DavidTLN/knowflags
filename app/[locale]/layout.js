@@ -29,7 +29,7 @@ const BASE_URL = 'https://knowflags.com'
 const GTM_ID   = 'GTM-W6DS4C7M'
 
 // Bump this when the favicon files change — forces browsers to drop the cached icon.
-const ICON_VERSION = '2'
+const ICON_VERSION = '3'
 
 // ── Inline strings hoisted out of the JSX ────────────────────────────────────
 // Keeping these outside the tree avoids multi-line template literals inside

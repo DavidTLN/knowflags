@@ -321,3 +321,19 @@ add('au', S(4, 2, '1:2', x=[0, 2, 4], y=[0, 1, 2], centre=False, source='Flags A
 add('fj', S(4, 2, '1:2', x=[0, 2, 4], y=[0, 1, 2], centre=False, source='Fiji flag 1970'))
 add('fm', S(38, 20, '10:19', source='Micronesia flag 1978'))
 add('gu', S(41, 22, '22:41', source='Guam flag 1948'))
+
+# ── Batch 21 — Oceania ───────────────────────────────────────────────────────
+add('ki', S(2, 1, '1:2', source='Kiribati flag 1979'))
+add('mh', S(57, 30, '10:19', lines=[(0, 30, 57, 0)], source='Marshall Islands flag 1979'))
+add('nr', S(24, 12, '1:2', y=[0, 5.5, 6.5, 12], source='Nauru flag 1968: yellow stripe 1/12 of the height on the centre line'))
+add('nz', S(4, 2, '1:2', x=[0, 2, 4], y=[0, 1, 2], centre=False, source='Flags, Emblems and Names Protection Act 1981'))
+add('pf', S(12, 8, '2:3', y=[0, 2, 6, 8], source='Organic law 2004-192: white band half the height'))
+add('pg', S(4, 3, '3:4', lines=[(0, 0, 4, 3)], source='National Flag of Papua New Guinea Act 1971'))
+add('pw', S(16, 10, '5:8', x=[0, 7, 16], gx=[7], circles=[(7, 5, 3)], dims=[('v', 2, 8, 11, '6')],
+            source='Palau flag 1981: disc diameter 3/5 of the height, offset towards the hoist'))
+add('sb', S(2, 1, '1:2', lines=[(0, 1, 2, 0)], source='Solomon Islands flag 1977'))
+add('to', S(96, 48, '1:2', x=[0, 17, 23, 40, 96], y=[0, 9, 15, 24, 48], centre=False,
+            source='Constitution of Tonga, art. 47: white canton with red cross'))
+add('tv', S(4, 2, '1:2', x=[0, 2, 4], y=[0, 1, 2], centre=False, source='Tuvalu flag 1997'))
+add('vu', S(5, 3, '3:5', source='Vanuatu flag 1980 (DB ratio reads 19:37)'))
+add('ws', S(4, 2, '1:2', x=[0, 2, 4], y=[0, 1, 2], centre=False, source='Flag of Samoa Act 1948'))

@@ -78,3 +78,25 @@ add('gr', S(27, 18, '2:3', x=[0, 10, 27], y=list(range(0, 19, 2)), gx=[4, 6], ce
              source='Law 851/1978: nine stripes, canton five stripes square, cross one stripe wide'))
 add('ar', S(24, 15, '5:8', y=[0, 5, 10, 15], source='Decree 10.302/1944; three equal stripes'))
 add('bo', S(22, 15, '15:22', y=[0, 5, 10, 15], source='Supreme Decree 241/2004; three equal stripes'))
+
+# ── Batch 5 — Nordic and Christian crosses ───────────────────────────────────
+add('dk', S(37, 28, '28:37', x=[0, 12, 16, 37], y=[0, 12, 16, 28], centre=False,
+            source='Danish flag specification 12+4+21 by 12+4+12'))
+add('se', S(16, 10, '5:8', x=[0, 5, 7, 16], y=[0, 4, 6, 10], centre=False,
+            source='Swedish Flag Act 1982:269: 5+2+9 by 4+2+4'))
+add('no', S(22, 16, '8:11', x=[0, 6, 7, 9, 10, 22], y=[0, 6, 7, 9, 10, 16], centre=False,
+            source='Act on the flag of Norway, 1898: 6+1+2+1+12 by 6+1+2+1+6'))
+add('fi', S(18, 11, '11:18', x=[0, 5, 8, 18], y=[0, 4, 7, 11], centre=False,
+            source='Act on the Flag of Finland 380/1978: 5+3+10 by 4+3+4'))
+add('is', S(25, 18, '18:25', x=[0, 7, 8, 10, 11, 25], y=[0, 7, 8, 10, 11, 18], centre=False,
+            source='Act on the Icelandic national flag 34/1944: 7+1+2+1+14 by 7+1+2+1+7'))
+add('fo', S(22, 16, '8:11', x=[0, 6, 7, 9, 10, 22], y=[0, 6, 7, 9, 10, 16], centre=False,
+            source='Faroese flag law 1959: 6+1+2+1+12 by 6+1+2+1+6'))
+add('ax', S(26, 17, '17:26', x=[0, 8, 9.5, 11.5, 13, 26], y=[0, 6, 7.5, 9.5, 11, 17], centre=False,
+            source='Åland flag act 1991/2004: 8+1.5+2+1.5+13 by 6+1.5+2+1.5+6'))
+add('ch', S(32, 32, '1:1', x=[0, 6, 13, 19, 26, 32], y=[0, 6, 13, 19, 26, 32],
+            source='Swiss coat of arms protection act 2013: cross arms 6 wide, 7 long, square 32'))
+add('gb-eng', S(25, 15, '3:5', x=[0, 11, 14, 25], y=[0, 6, 9, 15], centre=False,
+                source='Cross of St George, cross 1/5 of the height'))
+add('gb-sct', S(5, 4, '4:5', lines=[(0, 0, 5, 4), (0, 4, 5, 0)], texts=[(2.5, 1.0, {'en': 'saltire width = 1/5 of height', 'fr': 'largeur du sautoir = 1/5 de la hauteur'})],
+                source='Lord Lyon: 4:5, saltire width 1/5 of the height (DB ratio reads 5:4)'))

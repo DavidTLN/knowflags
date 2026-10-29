@@ -30,7 +30,12 @@ MAX_W, MAX_H = 1716, 1092
 FS = 46            # dimension font size
 
 
+LOC = 'en'
+
+
 def fmt(v):
+    if isinstance(v, dict):
+        return v[LOC]
     if isinstance(v, str):
         return v
     f = Fraction(v).limit_denominator(1000)
@@ -175,6 +180,9 @@ def build(iso, spec, src_dir):
         else:
             parts.append(arrow_v(Y(a), Y(b), X(at), lab, halo=True, small=(b - a) * s < 80))
 
+    for (tx, tyy, txt) in spec.get('texts', []):
+        parts.append(label_text(X(tx), Y(tyy), txt, True, size=40).replace('stroke="none"', f'stroke="none" fill="{BLUE}"'))
+
     ty = M + fh + 70 + 115
     parts.append(f'<text x="{M - 70}" y="{ty:.0f}" font-size="42" font-weight="700" fill="{GREEN}">[{iso.upper()}]</text>')
     parts.append(f'<text x="{M + fw + 70:.0f}" y="{ty:.0f}" font-size="42" font-weight="700" fill="{GREEN}" '
@@ -190,8 +198,10 @@ def main():
     for iso, spec in SPECS.items():
         if only and iso not in only:
             continue
-        svg = build(iso, spec, src)
+        global LOC
         for loc in ('fr', 'en'):
+            LOC = loc
+            svg = build(iso, spec, src)
             with open(os.path.join(OUT, f'{iso}-construction-{loc}.svg'), 'w', encoding='utf-8') as f:
                 f.write(svg)
         print('ok', iso)

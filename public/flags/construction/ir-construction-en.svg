@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2016 1371" font-family="Arial, Helvetica, sans-serif">
+<rect width="2016" height="1371" fill="#FAFAF9"/>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 630 360" x="150.0" y="150.0" width="1716.0" height="980.6" preserveAspectRatio="none">
+<rect width="630" height="360" fill="#da0000"/>
+<rect width="630" height="240" fill="#fff"/>
+<rect width="630" height="120" fill="#239f40"/>
+<g transform="translate(8.4,100.4)">
+<g id="tb4">
+<g id="tb1" fill="none" stroke="#fff" stroke-width="2">
+<path id="tbp1" d="M0,1H26M1,10V5H9V9H17V5H12M4,9H6M26,9H21V5H29M29,0V9H37V0M33,0V9" transform="scale(1.4)"/>
+<path id="tbp2" d="M0,7H9M10,7H19" transform="scale(2.8)"/>
+<use xlink:href="#tbp2" y="120"/>
+<use xlink:href="#tbp1" y="145.2"/>
+</g>
+<g id="tb3">
+<use xlink:href="#tb1" x="56"/>
+<use xlink:href="#tb1" x="112"/>
+<use xlink:href="#tb1" x="168"/>
+</g>
+</g>
+<use xlink:href="#tb3" x="168"/>
+<use xlink:href="#tb4" x="392"/>
+</g>
+<g fill="#da0000" transform="matrix(45,0,0,45,315,180)">
+<g id="emblem_half">
+<path d="M-0.54815,0.83638A0.912046,0.912046 0 0,0 0.328544,-0.722384A1,1 0 0,1 -0.54815,0.83638"/>
+<path d="M0.618339,0.661409A0.763932,0.763932 0 0,0 0.421644,-0.741049A1,1 0 0,1 0.618339,0.661409"/>
+<path d="M0,1 -0.05,0 0,-0.787278A0.309995,0.309995 0 0,0 0.118034,-0.688191V-0.100406L0.077809,0.892905z"/>
+<path d="M-0.02,-0.85 0,-0.831217A0.14431,0.14431 0 0,0 0.252075,-0.967708A0.136408,0.136408 0 0,1 0,-0.924634"/>
+</g>
+<use xlink:href="#emblem_half" transform="scale(-1,1)"/>
+</g>
+</svg>
+<rect x="150" y="150" width="1716.0" height="980.6" fill="none" stroke="#111" stroke-width="3.5"/>
+<line x1="1008.0" y1="150.0" x2="1008.0" y2="1130.6" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
+<line x1="150.0" y1="476.9" x2="1866.0" y2="476.9" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
+<line x1="150.0" y1="640.3" x2="1866.0" y2="640.3" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
+<line x1="150.0" y1="803.7" x2="1866.0" y2="803.7" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
+<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="150.0" x2="80.0" y2="476.9"/><polygon points="80.0,150.0 73.0,164.0 87.0,164.0"/><polygon points="80.0,476.9 73.0,462.9 87.0,462.9"/><text x="64.0" y="313.4" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 313.4)" stroke="none">4</text></g>
+<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="476.9" x2="80.0" y2="803.7"/><polygon points="80.0,476.9 73.0,490.9 87.0,490.9"/><polygon points="80.0,803.7 73.0,789.7 87.0,789.7"/><text x="64.0" y="640.3" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 640.3)" stroke="none">4</text></g>
+<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="803.7" x2="80.0" y2="1130.6"/><polygon points="80.0,803.7 73.0,817.7 87.0,817.7"/><polygon points="80.0,1130.6 73.0,1116.6 87.0,1116.6"/><text x="64.0" y="967.1" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 967.1)" stroke="none">4</text></g>
+<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="150.0" y1="1200.6" x2="1866.0" y2="1200.6"/><polygon points="150.0,1200.6 164.0,1193.6 164.0,1207.6"/><polygon points="1866.0,1200.6 1852.0,1193.6 1852.0,1207.6"/><text x="1008.0" y="1186.6" font-size="46" text-anchor="middle" stroke="none">21</text></g>
+<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="1936.0" y1="150.0" x2="1936.0" y2="1130.6"/><polygon points="1936.0,150.0 1929.0,164.0 1943.0,164.0"/><polygon points="1936.0,1130.6 1929.0,1116.6 1943.0,1116.6"/><text x="1920.0" y="640.3" font-size="46" text-anchor="middle" transform="rotate(-90 1920.0 640.3)" stroke="none">12</text></g>
+<text x="80" y="1316" font-size="42" font-weight="700" fill="#0A8A0A">[IR]</text>
+<text x="1936" y="1316" font-size="42" font-weight="700" fill="#0A8A0A" text-anchor="end">[4:7]</text>
+</svg>

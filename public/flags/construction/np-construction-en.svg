@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1196 1482" font-family="Arial, Helvetica, sans-serif">
+<rect width="1196" height="1482" fill="#FAFAF9"/>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-17.582 -4.664 71.571 87.246" x="150.0" y="150.0" width="895.8" height="1092.0" preserveAspectRatio="none">
+<title>Flag of Nepal</title>
+<desc>Coding according to the official construction in "Constitution of the Kingdom of Nepal, Article 5, Shedule 1", adopted in November 1990</desc>
+<use xlink:href="#b" stroke="#003893" stroke-width="5.1646754223"/>
+<path id="b" d="M -15,37.5735931288 h 60 L -15,0 v 80 h 60 L -15,20 z" fill="#DC143C"/>
+<g fill="#fff">
+<path d="M -11.9502769431,23.4834957055 A 12.8400974233,12.8400974233 0 0,0 11.9502769431,23.4834957055 A 11.9502769431 11.9502769431 0 0,1 -11.9502769431,23.4834957055"/>
+<g transform="translate(0,29.0445562765) scale(5.5610605710)">
+<circle r="1"/>
+<g id="jags6">
+<g id="jags3">
+<path id="jag" d="M 0.195090322016,-0.980785280403 L 0,-1.388784109750 L -0.195090322016,-0.980785280403" transform="rotate(11.25)"/>
+<use xlink:href="#jag" transform="rotate(22.5)"/>
+<use xlink:href="#jag" transform="rotate(45)"/>
+</g>
+<use xlink:href="#jags3" transform="rotate(67.5)"/>
+</g>
+<use xlink:href="#jags6" transform="scale(-1, 1)"/>
+</g>
+<g transform="translate(0,58.7867965644) scale(8.1433982822)">
+<circle r="1"/>
+<g id="rays4">
+<g id="rays2">
+<path id="ray" d="M 0.258819045103,0.965925826289 L 0,1.576749285537 L -0.258819045103,0.965925826289"/>
+<use xlink:href="#ray" transform="rotate(180)"/>
+</g>
+<use xlink:href="#rays2" transform="rotate(90)"/>
+</g>
+<use xlink:href="#rays4" transform="rotate(30)"/>
+<use xlink:href="#rays4" transform="rotate(60)"/>
+</g>
+</g>
+</svg>
+<rect x="150" y="150" width="895.8" height="1092.0" fill="none" stroke="#111" stroke-width="3.5"/>
+<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="150.0" y1="1312.0" x2="1045.8" y2="1312.0"/><polygon points="150.0,1312.0 164.0,1305.0 164.0,1319.0"/><polygon points="1045.8,1312.0 1031.8,1305.0 1031.8,1319.0"/><text x="597.9" y="1298.0" font-size="46" text-anchor="middle" stroke="none">1</text></g>
+<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="1115.8" y1="150.0" x2="1115.8" y2="1242.0"/><polygon points="1115.8,150.0 1108.8,164.0 1122.8,164.0"/><polygon points="1115.8,1242.0 1108.8,1228.0 1122.8,1228.0"/><text x="1099.8" y="696.0" font-size="46" text-anchor="middle" transform="rotate(-90 1099.8 696.0)" stroke="none">≈1.219</text></g>
+<text x="80" y="1427" font-size="42" font-weight="700" fill="#0A8A0A">[NP]</text>
+<text x="1116" y="1427" font-size="42" font-weight="700" fill="#0A8A0A" text-anchor="end">[4:3]</text>
+</svg>

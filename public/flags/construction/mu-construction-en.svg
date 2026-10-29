@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1938 1482" font-family="Arial, Helvetica, sans-serif">
+<rect width="1938" height="1482" fill="#FAFAF9"/>
+<svg viewBox="0 0 6 4" x="150.0" y="150.0" width="1638.0" height="1092.0" preserveAspectRatio="none"><path fill="#00A551" d="M0 0h6v4H0z"/><path fill="#FFD500" d="M0 0h6v3H0z"/><path fill="#1A206D" d="M0 0h6v2H0z"/><path fill="#EA2839" d="M0 0h6v1H0z"/></svg>
+<rect x="150" y="150" width="1638.0" height="1092.0" fill="none" stroke="#111" stroke-width="3.5"/>
+<line x1="969.0" y1="150.0" x2="969.0" y2="1242.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
+<line x1="150.0" y1="423.0" x2="1788.0" y2="423.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
+<line x1="150.0" y1="696.0" x2="1788.0" y2="696.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
+<line x1="150.0" y1="969.0" x2="1788.0" y2="969.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
+<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="150.0" x2="80.0" y2="423.0"/><polygon points="80.0,150.0 73.0,164.0 87.0,164.0"/><polygon points="80.0,423.0 73.0,409.0 87.0,409.0"/><text x="64.0" y="286.5" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 286.5)" stroke="none">2</text></g>
+<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="423.0" x2="80.0" y2="696.0"/><polygon points="80.0,423.0 73.0,437.0 87.0,437.0"/><polygon points="80.0,696.0 73.0,682.0 87.0,682.0"/><text x="64.0" y="559.5" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 559.5)" stroke="none">2</text></g>
+<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="696.0" x2="80.0" y2="969.0"/><polygon points="80.0,696.0 73.0,710.0 87.0,710.0"/><polygon points="80.0,969.0 73.0,955.0 87.0,955.0"/><text x="64.0" y="832.5" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 832.5)" stroke="none">2</text></g>
+<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="969.0" x2="80.0" y2="1242.0"/><polygon points="80.0,969.0 73.0,983.0 87.0,983.0"/><polygon points="80.0,1242.0 73.0,1228.0 87.0,1228.0"/><text x="64.0" y="1105.5" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 1105.5)" stroke="none">2</text></g>
+<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="150.0" y1="1312.0" x2="1788.0" y2="1312.0"/><polygon points="150.0,1312.0 164.0,1305.0 164.0,1319.0"/><polygon points="1788.0,1312.0 1774.0,1305.0 1774.0,1319.0"/><text x="969.0" y="1298.0" font-size="46" text-anchor="middle" stroke="none">12</text></g>
+<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="1858.0" y1="150.0" x2="1858.0" y2="1242.0"/><polygon points="1858.0,150.0 1851.0,164.0 1865.0,164.0"/><polygon points="1858.0,1242.0 1851.0,1228.0 1865.0,1228.0"/><text x="1842.0" y="696.0" font-size="46" text-anchor="middle" transform="rotate(-90 1842.0 696.0)" stroke="none">8</text></g>
+<text x="80" y="1427" font-size="42" font-weight="700" fill="#0A8A0A">[MU]</text>
+<text x="1858" y="1427" font-size="42" font-weight="700" fill="#0A8A0A" text-anchor="end">[2:3]</text>
+</svg>

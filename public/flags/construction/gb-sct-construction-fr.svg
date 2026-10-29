@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1665 1482" font-family="Arial, Helvetica, sans-serif">
+<rect width="1665" height="1482" fill="#FAFAF9"/>
+<svg viewBox="0 0 5 3" x="150.0" y="150.0" width="1365.0" height="1092.0" preserveAspectRatio="none"><defs><clipPath id="a"><path d="M0 0h5v3H0z"/></clipPath></defs><g clip-path="url(#a)"><rect width="100%" height="100%" fill="#005EB8"/><path d="M0 0l5 3M0 3L5 0" stroke="#fff" stroke-width="0.6"/></g></svg>
+<rect x="150" y="150" width="1365.0" height="1092.0" fill="none" stroke="#111" stroke-width="3.5"/>
+<line x1="832.5" y1="150.0" x2="832.5" y2="1242.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
+<line x1="150.0" y1="696.0" x2="1515.0" y2="696.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
+<line x1="150.0" y1="150.0" x2="1515.0" y2="1242.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
+<line x1="150.0" y1="1242.0" x2="1515.0" y2="150.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
+<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="150.0" y1="1312.0" x2="1515.0" y2="1312.0"/><polygon points="150.0,1312.0 164.0,1305.0 164.0,1319.0"/><polygon points="1515.0,1312.0 1501.0,1305.0 1501.0,1319.0"/><text x="832.5" y="1298.0" font-size="46" text-anchor="middle" stroke="none">5</text></g>
+<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="1585.0" y1="150.0" x2="1585.0" y2="1242.0"/><polygon points="1585.0,150.0 1578.0,164.0 1592.0,164.0"/><polygon points="1585.0,1242.0 1578.0,1228.0 1592.0,1228.0"/><text x="1569.0" y="696.0" font-size="46" text-anchor="middle" transform="rotate(-90 1569.0 696.0)" stroke="none">4</text></g>
+<text x="832.5" y="423.0" font-size="40" text-anchor="middle" fill="#FAFAF9" stroke="#FAFAF9" stroke-width="10" stroke-linejoin="round">largeur du sautoir = 1/5 de la hauteur</text><text x="832.5" y="423.0" font-size="40" text-anchor="middle" stroke="none" fill="#2540E8">largeur du sautoir = 1/5 de la hauteur</text>
+<text x="80" y="1427" font-size="42" font-weight="700" fill="#0A8A0A">[GB-SCT]</text>
+<text x="1585" y="1427" font-size="42" font-weight="700" fill="#0A8A0A" text-anchor="end">[4:5]</text>
+</svg>

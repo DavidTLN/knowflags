@@ -130,3 +130,67 @@ add('mk', S(2, 1, '1:2', source='Law on the flag 1995: sun with eight rays'))
 add('mt', S(3, 2, '2:3', x=[0, 1.5, 3], source='Constitution of Malta, art. 3'))
 add('pt', S(15, 10, '2:3', x=[0, 6, 15], circles=[(6, 5, 2.5)], dims=[('v', 2.5, 7.5, 9, '5')],
             source='Decree of 19 June 1911: green 2/5, red 3/5, sphere diameter 1/2 H on the dividing line'))
+
+# ── Batch 8 ──────────────────────────────────────────────────────────────────
+add('rs', S(9, 6, '2:3', y=[0, 2, 4, 6], source='Law on the appearance and use of the coat of arms, flag and anthem 2009'))
+add('sm', S(4, 3, '3:4', y=[0, 1.5, 3], source='Law 1/2011 of San Marino'))
+add('va', S(2, 2, '1:1', x=[0, 1, 2], source='Fundamental Law of Vatican City State, annex'))
+add('xk', S(7, 5, '5:7', source='Law on the flag of Kosovo 2008'))
+add('bb', S(3, 2, '2:3', x=[0, 1, 2, 3], source='National Emblems and National Flag Act 1966'))
+add('bs', S(6, 3, '1:2', x=[0, 2.598, 6], xl=['≈2.6', None], y=[0, 1, 2, 3],
+            source='Bahamas flag: three equal stripes, equilateral black triangle'))
+add('ca', S(8, 4, '1:2', x=[0, 2, 6, 8], source='Royal Proclamation 1965: red bands each 1/4 of the length'))
+add('cl', S(24, 16, '2:3', x=[0, 8, 24], y=[0, 8, 16], circles=[(4, 4, 2)], dims=[('h', 2, 6, 7, '4')],
+            source='Decree 1534/1967: canton square 1/2 H, star diameter 1/2 canton'))
+add('cu', S(20, 10, '1:2', y=[0, 2, 4, 6, 8, 10], x=[0, 8.66, 20], xl=['≈8.66', None],
+            source='Cuban flag law: five equal stripes, equilateral red triangle'))
+add('jm', S(12, 6, '1:2', lines=[(0, 0, 12, 6), (0, 6, 12, 0)], source='Jamaican flag: gold saltire 1/6 of the height'))
+
+# ── Batch 9 ──────────────────────────────────────────────────────────────────
+add('ag', S(3, 2, '2:3', y=[0, 1, 2], lines=[(0, 0, 1.5, 2), (3, 0, 1.5, 2)], source='Antigua and Barbuda flag 1967'))
+add('aw', S(27, 18, '2:3', y=[0, 12, 13, 14, 15, 18], gx=[4], gy=[4], centre=False,
+            source='Aruba flag 1976: two yellow stripes 1/18 H, star centred 4 units from hoist and top'))
+add('bm', S(4, 2, '1:2', x=[0, 2, 4], y=[0, 1, 2], source='Bermuda red ensign: canton 1/4 of the field'))
+add('br', S(20, 14, '7:10', x=[0, 1.7, 18.3, 20], y=[0, 1.7, 12.3, 14], circles=[(10, 7, 3.5)],
+            dims=[('h', 6.5, 13.5, 10.6, '7')],
+            source='Law 5.700/1971: 20 x 14 modules, rhombus 1.7 from the edges, circle radius 3.5'))
+add('bz', S(50, 30, '3:5', y=[0, 3, 27, 30], source='Belize National Flag: red stripes 1/10 of the height'))
+add('cw', S(54, 36, '2:3', y=[0, 22.5, 27, 36], source='Curaçao flag 1984: yellow stripe 1/8 H at 5/8'))
+add('dm', S(24, 12, '1:2', x=[0, 10.5, 11.5, 12.5, 13.5, 24], y=[0, 4.5, 5.5, 6.5, 7.5, 12],
+            source='Dominica National Flag Act: triple cross of 1/12 H stripes'))
+add('do', S(45, 30, '2:3', x=[0, 19.5, 25.5, 45], y=[0, 12, 18, 30], centre=False,
+            source='Constitution of the Dominican Republic, art. 31: white cross 1/5 H'))
+add('gd', S(50, 30, '3:5', x=[0, 4.2, 45.8, 50], y=[0, 4.2, 25.8, 30], lines=[(4.2, 4.2, 45.8, 25.8), (4.2, 25.8, 45.8, 4.2)],
+            circles=[(25, 15, 3.6)], source='Grenada flag 1974: red border 1/7 H'))
+add('gl', S(18, 12, '2:3', y=[0, 6, 12], x=[0, 3, 11, 18], gx=[7], circles=[(7, 6, 4)], centre=False,
+            source='Greenland flag 1985: disc diameter 8 centred 7 from the hoist'))
+
+# ── Batch 10 ─────────────────────────────────────────────────────────────────
+add('gy', S(5, 3, '3:5', x=[0, 2.5, 5], lines=[(0, 0, 5, 1.5), (0, 3, 5, 1.5)], source='Guyana flag 1966: black triangle to half the length'))
+add('hn', S(6, 3, '1:2', y=[0, 1, 2, 3], source='Decree 1866 / 1949: three equal stripes'))
+add('kn', S(3, 2, '2:3', lines=[(0, 2, 3, 0)], source='Saint Kitts and Nevis flag 1983'))
+add('lc', S(2, 1, '1:2', source='Saint Lucia flag 1979/2002'))
+add('pa', S(6, 4, '2:3', x=[0, 3, 6], y=[0, 2, 4], gx=[1.5, 4.5], gy=[1, 3], centre=False,
+            source='Law 34/1949: four quarters, stars centred in the white quarters'))
+add('pr', S(15, 10, '2:3', y=[0, 2, 4, 6, 8, 10], x=[0, 8.66, 15], xl=['≈8.66', None],
+            source='Law 1/1952: five equal stripes, equilateral blue triangle'))
+add('sr', S(15, 10, '2:3', y=[0, 2, 3, 7, 8, 10], source='Suriname flag 1975: stripes 2:1:4:1:2'))
+add('tt', S(5, 3, '3:5', source='Trinidad and Tobago flag 1962'))
+add('us', S(1.9, 1, '10:19', x=[0, 0.76, 1.9], xl=['D=0.76', None], y=[0, 0.5385, 1], yl=['C=0.5385', None],
+            wl='B=1.9', hl='A=1', centre=False, source='Executive Order 10834 (1959): A=1, B=1.9, C=0.5385, D=0.76, L=0.0769'))
+add('uy', S(27, 18, '2:3', x=[0, 10, 27], y=list(range(0, 19, 2)), centre=False,
+            source='Law of 11 July 1830: nine stripes, white canton five stripes square'))
+add('vc', S(12, 8, '2:3', x=[0, 3, 9, 12], source='Saint Vincent flag 1985: bands 1:2:1'))
+add('ve', S(18, 12, '2:3', y=[0, 4, 8, 12], source='Law on the national flag, shield and anthem 2006'))
+
+# ── Batch 11 ─────────────────────────────────────────────────────────────────
+add('ec', S(3, 2, '2:3', y=[0, 1, 1.5, 2], source='Ecuador flag law 1900/2009: yellow half the height'))
+add('fk', S(4, 2, '1:2', x=[0, 2, 4], y=[0, 1, 2], source='Falkland Islands blue ensign'))
+add('gt', S(24, 15, '5:8', x=[0, 8, 16, 24], source='Decree 104-97: three equal vertical bands'))
+add('ht', S(5, 3, '3:5', y=[0, 1.5, 3], source='Constitution of Haiti 1987, art. 3'))
+add('ky', S(4, 2, '1:2', x=[0, 2, 4], y=[0, 1, 2], source='Cayman Islands blue ensign'))
+add('mx', S(21, 12, '4:7', x=[0, 7, 14, 21], source='Law on the national arms, flag and anthem 1984'))
+add('ni', S(5, 3, '3:5', y=[0, 1, 2, 3], source='Law 1971: three equal stripes'))
+add('pe', S(9, 6, '2:3', x=[0, 3, 6, 9], source='Law 8 / Decree 1950: three equal vertical bands'))
+add('py', S(60, 33, '11:20', y=[0, 11, 22, 33], source='Law 990/1996: three equal stripes'))
+add('sv', S(335, 189, '189:335', y=[0, 63, 126, 189], source='Law of the national symbols 1972: three equal stripes'))

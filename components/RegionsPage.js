@@ -86,7 +86,7 @@ function FlagCard({ flag, name, parentName }) {
       onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none' }}
     >
       <div style={{ aspectRatio: '3/2', overflow: 'hidden', backgroundColor: '#f0ede4', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <FlagImage slug={flag.slug} prefix="/flags/regions" name={name} acronym={flag.metadata && flag.metadata.abbr} color="#0B1F3B" style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '6px' }} />
+        <FlagImage slug={flag.image_path || !(flag.metadata && flag.metadata.source === 'wikidata') ? flag.slug : null} prefix="/flags/regions" name={name} acronym={flag.metadata && flag.metadata.abbr} color="#0B1F3B" style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '6px' }} />
       </div>
       <div style={{ padding: '12px 14px', textAlign: 'center' }}>
         <p style={{ margin: 0, fontSize: '14px', fontWeight: '700', color: '#0B1F3B', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{name}</p>
@@ -108,6 +108,7 @@ export default function RegionsPage() {
   const t = (en, fr) => locale === 'fr' ? fr : en
 
   const [flags, setFlags]       = useState([])
+  const [visible, setVisible]   = useState(120)
   const [loading, setLoading]   = useState(true)
   const [isMobile, setIsMobile] = useState(false)
   const [filtersOpen, setFiltersOpen] = useState(false)
@@ -133,13 +134,28 @@ export default function RegionsPage() {
   }, [])
 
   useEffect(() => {
+    // ~4000 regions since the Wikidata import: PostgREST caps a response at
+    // 1000 rows, so page through the table.
     const supabase = createClient()
-    supabase
-      .from('flag_taxonomy')
-      .select('id, slug, name_en, name_fr, image_path, sort_order, metadata, parent:parent_id(id, slug, name_en, name_fr, image_path, metadata)')
-      .eq('flag_type', 'region')
-      .order('sort_order')
-      .then(({ data }) => { setFlags(data || []); setLoading(false) })
+    const PAGE = 1000
+    let cancelled = false
+    ;(async () => {
+      const all = []
+      for (let from = 0; ; from += PAGE) {
+        const { data, error } = await supabase
+          .from('flag_taxonomy')
+          .select('id, slug, name_en, name_fr, image_path, sort_order, metadata, parent:parent_id(id, slug, name_en, name_fr, image_path, metadata)')
+          .eq('flag_type', 'region')
+          .order('sort_order')
+          .order('id')
+          .range(from, from + PAGE - 1)
+        if (error || !data) break
+        all.push(...data)
+        if (data.length < PAGE) break
+      }
+      if (!cancelled) { setFlags(all); setLoading(false) }
+    })()
+    return () => { cancelled = true }
   }, [])
 
   const countries = useMemo(() => {
@@ -184,6 +200,8 @@ export default function RegionsPage() {
     })
     return list
   }, [flags, search, activeContinent, activeCountry, activeColors, activeSymbols, activeRatios, activeShapes, sortOrder, locale])
+
+  useEffect(() => { setVisible(120) }, [search, activeContinent, activeCountry, activeColors, activeSymbols, activeRatios, activeShapes, sortOrder])
 
   const hasFilters = !!(search || activeContinent !== 'all' || activeCountry !== 'all' || activeColors.length || activeSymbols.length || activeRatios.length || activeShapes.length)
 
@@ -303,13 +321,24 @@ export default function RegionsPage() {
       </div>
     ) : (
       <div style={{ display: 'grid', gridTemplateColumns: `repeat(${cols}, 1fr)`, gap: cols === 2 ? '12px' : '16px' }}>
-        {filtered.map(flag => {
+        {filtered.slice(0, visible).map(flag => {
           const name = locale === 'fr' ? flag.name_fr : flag.name_en
           const parentName = flag.parent ? (locale === 'fr' ? flag.parent.name_fr : flag.parent.name_en) : null
           return <FlagCard key={flag.slug} flag={flag} name={name} parentName={parentName} />
         })}
       </div>
     )
+  )
+
+  const moreButton = filtered.length > visible && (
+    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '24px' }}>
+      <button
+        onClick={() => setVisible(v => v + 120)}
+        style={{ padding: '10px 20px', borderRadius: '10px', backgroundColor: DS.navy, color: 'white', fontSize: '14px', fontWeight: 600, border: 'none', cursor: 'pointer', boxShadow: '0 2px 8px rgba(22,50,79,0.08)', minHeight: '44px' }}
+      >
+        {t(`Show more (${filtered.length - visible} left)`, `Afficher plus (${filtered.length - visible} restantes)`)}
+      </button>
+    </div>
   )
 
   return (
@@ -398,6 +427,7 @@ export default function RegionsPage() {
             )}
 
             {grid(2)}
+            {moreButton}
           </div>
         )}
 
@@ -440,6 +470,7 @@ export default function RegionsPage() {
 
             <div style={{ flex: 1, minWidth: 0 }}>
               {grid(4)}
+              {moreButton}
             </div>
           </div>
         )}

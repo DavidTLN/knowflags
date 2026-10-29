@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1938 1482" font-family="Arial, Helvetica, sans-serif">
+<rect width="1938" height="1482" fill="#FAFAF9"/>
+<svg viewBox="0 0 90 60" x="150.0" y="150.0" width="1638.0" height="1092.0" preserveAspectRatio="none"><defs><clipPath id="a"><path d="M0 0h90v60H0z"/></clipPath></defs><path fill="#003580" d="M0 60V0h90z"/><path fill="#009543" d="M90 0v60H0z"/><g fill="none" clip-path="url(#a)"><path stroke="#fff" stroke-width="20" d="M0 60L90 0"/><path stroke="#d21034" stroke-width="15" d="M0 60L90 0"/></g><g fill="#ffce00" transform="translate(18 16.341)"><path d="M0-10l1.55 4.2L5-8.66l-.76 4.42L8.66-5 5.8-1.55 10 0 5.8 1.55 8.66 5l-4.42-.76L5 8.66 1.55 5.8 0 10l-1.55-4.2L-5 8.66l.76-4.42-4.42.76 2.86-3.45L-10 0l4.2-1.55L-8.66-5l4.42.76L-5-8.66l3.45 2.86z"/><circle r="5.5" stroke="#003580"/></g></svg>
+<rect x="150" y="150" width="1638.0" height="1092.0" fill="none" stroke="#111" stroke-width="3.5"/>
+<line x1="969.0" y1="150.0" x2="969.0" y2="1242.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
+<line x1="150.0" y1="696.0" x2="1788.0" y2="696.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
+<line x1="150.0" y1="1242.0" x2="1788.0" y2="150.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
+<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="150.0" y1="1312.0" x2="1788.0" y2="1312.0"/><polygon points="150.0,1312.0 164.0,1305.0 164.0,1319.0"/><polygon points="1788.0,1312.0 1774.0,1305.0 1774.0,1319.0"/><text x="969.0" y="1298.0" font-size="46" text-anchor="middle" stroke="none">3</text></g>
+<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="1858.0" y1="150.0" x2="1858.0" y2="1242.0"/><polygon points="1858.0,150.0 1851.0,164.0 1865.0,164.0"/><polygon points="1858.0,1242.0 1851.0,1228.0 1865.0,1228.0"/><text x="1842.0" y="696.0" font-size="46" text-anchor="middle" transform="rotate(-90 1842.0 696.0)" stroke="none">2</text></g>
+<text x="80" y="1427" font-size="42" font-weight="700" fill="#0A8A0A">[NA]</text>
+<text x="1858" y="1427" font-size="42" font-weight="700" fill="#0A8A0A" text-anchor="end">[2:3]</text>
+</svg>

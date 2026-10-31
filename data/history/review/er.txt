@@ -1,0 +1,28 @@
+### er  (en:Flag of Eritrea, fr:Drapeau de l'Érythrée, ar:علم إرتريا)
+- Flag of Ottoman Empire (1517-1793).svg [1517,1557,1793] svg fr:Histoire > La période ottomane
+    fr: alt=Drapeau ottoman représentant trois croissants de lune dorés dans un cercle vert sur un fond rouge.|Le drapeau ottoman utilisé entre 1557 et 1793 en Érythrée (entre 1517 et 1793 pour le reste de l'
+- Flag of the Ottoman Empire (eight pointed star).svg [1844] svg fr:Histoire > La période ottomane
+    fr: alt=Drapeau ottoman représentant sur un fond rouge un croissant de lune blanc et une étoile à huit branches.|Le drapeau ottoman avec l'étoile à huit branches, adopté en 1844.
+- Flag of Italy (1861-1946) crowned.svg [1861,1946] svg fr:Histoire > La période coloniale > La pér
+    fr: alt=Drapeau de la marine militaire italienne représentant le drapeau du royaume italien, c'est-à-dire l'actuel drapeau italien composé de trois bandes verticales verte, blanche et rouge, avec l'emblèm
+- Flag of Italy (1861-1946).svg [1861,1890,1941,1946] svg fr:intro
+    fr: Drapeau du royaume d'Italie utilisé en Érythrée italienne de 1890 à 1941.
+- Flag of Ethiopia (1897).svg [1897,1974] svg fr:intro
+    fr: Le drapeau avec le lion de Juda (1897-1974).
+- Flag of Egypt (1922–1953).svg [1922,1953] svg fr:Histoire > La période coloniale > La pér
+    fr: alt=Drapeau du royaume égyptien composé d'un croissant blanc et de trois étoiles à cinq branches blanche en sont centre, le tout sur du vert.|Le drapeau du royaume égyptien utilisé pendant l'administr
+- Flag of Eritrea (1952-1961).svg [1952,1961,1962] svg ar:أعلام تاريخية; en:Historical flags; fr:intro
+    en: Flag from 1952 to 1962 (2:3 ratio)
+    fr: Drapeau l'Érythrée de 1952 à 1962 (2:3)
+    ar: علم إريتريا من 1952 إلى 1962 (نسبة 2: 3)
+- Flag of Ethiopia (1974-1975).svg [1974,1975] svg fr:intro
+    fr: Drapeau de l'Empire éthiopien de 1974 à 1975, modifiée après le renversement de Haïlé Sélassié en enlevant la couronne de la tête du lion et en changeant le fleuron de la croix par une point de lance.
+- Flag of Ethiopia (1975–1987) (02).svg [1975,1987] svg fr:intro
+    fr: Le drapeau d'État sous le Derg de 1975 à 1987.
+- Flag of Ethiopia (1975–1987).svg [1975,1987] svg fr:intro
+    fr: Le drapeau officiel sous le Derg de 1975 à 1987, essentiellement le drapeau impérial sans le lion.
+- Flag of Eritrea (1993-1995).svg [1991,1993,1995] svg en:Historical flags; fr:intro
+    en: Flag from 1993 to 1995 (2:3 ratio)
+    fr: Drapeau de l'Érythrée de 1991 à 1995 (2:3)
+- Flag of Eritrea.svg [1995] svg en:Description; en:Historical flags
+    en: ! 40pxColor scheme ! ! style="background:#3C8BDC; width: ; color:white;"| Blue ! style="background:#EB0433; width: ; color:white;"| Red ! style="background:#FBC724; width: ; color:black;" | Yellow ! s

@@ -1,0 +1,15 @@
+### bh  (en:Flag of Bahrain, fr:Drapeau de Bahreïn, ar:علم البحرين)
+- Flag of Bahrain (1820-1932).png [1820,1932] png ar:intro
+    ar: تصغير|علم البحرين 1820 إلى 1932.
+- Flag of Bahrain (1820–1932).svg [1820,1932] svg fr:Anciens drapeaux
+    fr: Ancien drapeau de 1820 à 1932.
+- Flag of Bahrain (before 1820).png [1820] png ar:intro
+    ar: تصغير|علم البحرين قبل 1820.
+- Flag of Bahrain (before 1820).svg [1820] svg fr:Anciens drapeaux
+    fr: Ancien drapeau avant 1820.
+- Flag of Bahrain (1932 to 1972).svg [1932,1972] svg ar:intro; fr:Anciens drapeaux
+    fr: Ancien drapeau de 1932 à 1972.
+    ar: تصغير|علم البحرين من 1932 إلى 1972.
+- Flag of Bahrain (1972-2002).svg [1972,2002] svg ar:intro; fr:Anciens drapeaux
+    fr: Ancien drapeau de 1972 à 2002.
+    ar: تصغير|علم دولة البحرين من 1972 إلى 2002.

@@ -1,0 +1,15 @@
+### zm  (en:Flag of Zambia, fr:Drapeau de la Zambie)
+- Flag of Barotseland.svg [1864,1891] svg en:Historical flags; fr:Drapeaux des entités historiques
+    en: 1864–1891 || Flag of the Kingdom of Barotseland || A red field with a white diagonal stripe.
+    fr: 1864–1891 : Drapeau du Royaume de Barotseland
+- Flag of the United Kingdom (1-2).svg [1924,1964] svg en:Historical flags; fr:Drapeaux des entités historiques
+    en: 1924–1964 || Flag of the United Kingdom || A superimposition of the flags of England and Scotland with the Saint Patrick's Saltire (representing Ireland).
+    fr: 1924–1964 drapeau du Royaume-Uni
+- Flag of Northern Rhodesia (1939–1964).svg [1939,1964] svg en:Historical flags; fr:Drapeaux des entités historiques
+    en: 1939–1964 || Flag of Northern Rhodesia (NR is sometimes known as British Congo) || A Blue Ensign with the emblem of Northern Rhodesia.
+    fr: 1939–1964 drapeau de la Rhodésie du Nord
+- Flag of Rhodesia and Nyasaland (1953–1963).svg [1953,1963,1964] svg en:Historical flags; fr:Drapeaux des entités historiques
+    en: 1953–1964 || Flag of the Federation of Rhodesia and Nyasaland || A blue ensign with the emblem of the federation.
+    fr: 1953–1964 : drapeau de la Fédération de Rhodésie et du Nyassaland
+- Flag of Zambia (1964-1996).svg [1964,1996] svg fr:Autres drapeaux
+    fr: Ancien drapeau de 1964 à 1996 (vert plus foncé)

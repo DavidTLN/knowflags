@@ -1,0 +1,62 @@
+### lt  (en:Flag of Lithuania, en:List of flags of Lithuania, fr:Drapeau de la Lituanie, lt:Lietuvos vėliava)
+- Alex K Grundwald flags 1410-02.svg [1410] svg fr:Histoire
+    fr: Drapeau avec les colonnes de Gediminas.
+- Alex K Grundwald flags 1410-03.svg [1410] svg en:Historical flags; en:History; fr:Histoire; lt:Istorija; lt:Kitos Lietuvos vėliavos > Is
+    en: ! scope="row" | | 15th century | Royal banner of the Grand Duchy of Lithuania (modern reconstruction)
+    fr: Drapeau avec le Vytis.
+    lt: Žalgirio mūšio vėliavos rekonstrukcija.
+- Flag of Lithuania during the Vilnius Conference.svg [1917] svg en:Historical flags; lt:Kitos Lietuvos vėliavos > Istorinės vėli
+    en: ! scope="row" | | 1917 | Flag used during the Vilnius Conference
+    lt: Lietuvos vėliava Vilniaus konferencijoje (1917)
+- Flag of Lithuania (1918–1940).svg [1918,1940] svg en:Historical flags; en:History; lt:Istorija; lt:Kitos Lietuvos vėliavos > Istorinės vėli
+    en: ! scope="row" | | 1918–1940 | State flag and civil ensign of Republic of Lithuania | Ratio: 2:3
+    lt: Lietuvos vėliava, naudota 1918–1940 m. (santykis 2:3)
+- Flag of Lithuania 1918-1940.svg [1918,1940] svg fr:Histoire
+    fr: Drapeau national (1918-1940).
+- Flag of Perloja.png [1918,1923] png en:Historical flags
+    en: ! scope="row" | | 1918–1923 | Flag of the Republic of Perloja
+- Flag of the Lithuanian-Byelorussian SSR.svg [1918,1919] svg en:Historical flags > Soviet occupation
+    en: ! scope="row" | | 1918–1919 | Soviet puppet state from 1918 to 1919 (Lithuanian Soviet Socialist Republic and Socialist Soviet Republic of Lithuania and Belorussia) | A plain red flag
+- Flag of Central Lithuania 1920.svg [1920,1922] svg en:Historical flags; lt:Kitos Lietuvos vėliavos > Istorinės vėli
+    en: ! scope="row" | | 1920–1922 | Flag of The Republic of Central Lithuania (Polish puppet state) | A red flag with White Eagle and Vytis (Pogonia) in the middle.
+    lt: Vidurinės Lietuvos vėliava (1920–1922)
+- Флаг СССР от 5 декабря 1936 года.svg [1936,1940,1941,1944,1955] svg en:Historical flags > Soviet occupation
+    en: ! scope="row" | | 1940–1941,1944–1955 | Flag of the Soviet Union | A plain red flag with a golden hammer and sickle and a gold-bordered red star in the canton. Modified in 1955.
+- Flag of the Lithuanian Soviet Socialist Republic (1940–1953).svg [1940,1941,1944,1953] svg en:Historical flags > Soviet occupation
+    en: ! scope="row" | | 1940–1941 | Soviet occupation from 3 July 1940 until 22 June 1941 (Lithuanian Soviet Socialist Republic) | A red flag with LIETUVOS TSR and the hammer and sickle in the canton.
+- Flag of Lithuanian SSR.svg [1953,1988] svg en:Historical flags > Soviet occupation; lt:Istorija
+    en: ! scope="row" | 125pxborder| | 1953–1988 | Flag of the Lithuanian Soviet Socialist Republic (obverse and reverse) | A flag based on the Soviet flag, with an additional thin white stripe and thick gree
+    lt: Lietuvos TSR vėliava, naudota 1953–1988 m.
+- Flag of the Lithuanian Soviet Socialist Republic (1953–1988).svg [1953,1988] svg fr:Histoire; lt:Kitos Lietuvos vėliavos > Istorinės vėli
+    fr: Drapeau de la RSS de Lituanie (1953-1988).
+    lt: Lietuvos SSR vėliava (1953–1988)
+- Flag of the Lithuanian Soviet Socialist Republic (reverse).svg [1953,1988] svg en:Historical flags > Soviet occupation
+    en: ! scope="row" | 125pxborder| | 1953–1988 | Flag of the Lithuanian Soviet Socialist Republic (obverse and reverse) | A flag based on the Soviet flag, with an additional thin white stripe and thick gree
+- Flag of Lithuania (1988–2004).svg [1988,2004] svg en:History > Restoration of modern flag; lt:Istorija
+    en: Flag of Lithuania from 1988 to 2004. The flag had a 1:2 ratio at the time.
+    lt: Lietuvos vėliava, naudota 1988–2004 m. (santykis 1:2)
+- Flag of Lithuania 1989-2004.svg [1988,1989,2004] svg en:Historical flags; fr:Histoire; lt:Kitos Lietuvos vėliavos > Istorinės vėli
+    en: ! scope="row" | | 1988–2004 | National flag and civil ensign | Ratio: 1:2 |}
+    fr: Drapeau national (1988-2004, 1:2).
+    lt: Lietuvos vėliava (1988–2004)
+- Flag of Žemaitija.svg [1994] svg en:Cultural regions; lt:Kitos Lietuvos vėliavos > Etnografinių r
+    en: ! scope="row" | | 1994–present | Žemaitija
+    lt: Žemaitijos vėliava
+- Flag of Dzūkija.svg [2003] svg en:Cultural regions; lt:Kitos Lietuvos vėliavos > Etnografinių r
+    en: ! scope="row" | | 2003–present | Dzūkija
+    lt: Dzūkijos vėliava
+- Flag of Lithuania (state).svg [2004] svg en:National flag and state flag; fr:Drapeau gouvernemental (historique); lt:Kitos Lietuvos
+    en: ! scope="row" | | 2004–present | State flag (historical) | The flag displays the national emblem in a banner form.Adopted in 2004. Ratio: 3:5 |}
+    fr: Drapeau gouvernemental adopté en 2004.
+    lt: Karinių jūrų pajėgų guisas ir tvirtovės vėliava
+- Flag of Aukštaitija.svg [2006] svg en:Cultural regions; lt:Kitos Lietuvos vėliavos > Etnografinių r
+    en: ! scope="row" | | 2006–present | Aukštaitija
+    lt: Aukštaitijos vėliava
+- Flag of Myanmar.svg [2010] svg lt:Panašios vėliavos
+    lt: Mianmaras (nuo 2010) | Skiriasi spalvų tonai, Mianmaro vėliava turi žvaigždę
+- Flag of Suvalkija.svg [2021] svg en:Cultural regions; lt:Kitos Lietuvos vėliavos > Etnografinių r
+    en: ! scope="row" | | 2021–present | Suvalkija
+    lt: Suvalkijos vėliava
+- Flag of Lithuania Minor (2024, v2).svg [2024] svg en:Cultural regions; lt:Kitos Lietuvos vėliavos > Etnografinių r
+    en: ! scope="row" | | 2024–present | Mažoji Lietuva | |}
+    lt: Mažosios Lietuvos vėliava

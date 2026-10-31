@@ -1,0 +1,20 @@
+### ug  (en:Flag of Uganda, en:List of Ugandan flags, fr:Drapeau de l'Ouganda)
+- Flag of Buganda (1860).svg [1860,1861] svg en:Historical flags > Kingdom of Buganda; en:Subdivision flags > Historical flags
+    en: ! scope="row" | | 1860–1861 | rowspan="4" | Flag of the Kingdom of Buganda | A simple red field.
+- Flag of Buganda (1861-1876, 1881-1890).svg [1861,1876,1881,1890] svg en:Historical flags > Kingdom of Buganda; en:Subdivision flags > Historical flags
+    en: ! scope="row" rowspan="2" | | 1861–1876 | rowspan="2" | A red field with a white vertical band at the hoist.
+- Flag of Buganda (1876-1881).svg [1876,1881] svg en:Historical flags > Kingdom of Buganda; en:Subdivision flags > Historical flags
+    en: ! scope="row" | | 1876–1881 | A white swallowtailed flag with two vertical stripes of red and blue. |}
+- Flag of the United Kingdom (1-2).svg [1890,1962] svg en:Historical flags > British Empire
+    en: ! scope="row" | | 1890–1962 | Flag of the United Kingdom | A superimposition of the flags of England and Scotland with the Saint Patrick's Saltire (representing Ireland).
+- Flag of Buganda (1891-1892).svg [1891,1892] svg en:Subdivision flags > Historical flags
+- Flag of Buganda (1892).svg [1892] svg en:Subdivision flags > Historical flags
+- Flag of Buganda (1900).png [1900] png en:Subdivision flags > Historical flags
+- Flag of the Uganda Protectorate.svg [1914,1962] svg en:Historical flags > British Empire; fr:Historique
+    en: ! scope="row" | | rowspan="2" | 1914–1962 | Flag of the Protectorate of Uganda | British Blue Ensign with the emblem of Uganda.
+    fr: (1914 - Mars 1962)
+- Flag of Uganda 1962.svg [1962] svg en:Historical flags > British Empire; fr:Historique
+    en: ! scope="row" | | 1962 | Flag of the Dominion of Uganda (provisional) | Vertical outer bands of green, a central blue band, and narrow yellow bands between the green and blue. On the blue band, a yell
+    fr: (Mars - Octobre 1962)
+- Flag of Uganda.svg [1962] svg en:National flag
+    en: ! scope="row" | | 1962–present | Flag of Uganda | Six equal horizontal bands of black (top), yellow, red, black, yellow, and red (bottom); a white disc is superimposed at the centre and depicts the na

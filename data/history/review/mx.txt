@@ -1,0 +1,86 @@
+### mx  (en:Flag of Mexico, en:List of Mexican flags, fr:Drapeau du Mexique, es:Bandera de México)
+- Flag of New Spain.svg [1506,1701] svg es:Resumen histórico > Otras banderas histó; fr:Histoire > Évolution
+    fr: style="background:#f9f9f9;" | style="text-align: ;"| Monarchie | - Antonio de MendozaVice-roi - Matías de Gálvez y GallardoVice-roi | style="text-align: ;"| | Vice-roi de la Nouvelle-Espagne
+    es: Bandera de la Cruz de Borgoña, enseña militar y naval de la Monarquía Hispánica (1506-1701)
+- Bandera de la Primera República Federal de los Estados Unidos Mexicanos.svg [1687,1823,1824,1835,1864,1902] svg en:National flag; es:Historia > México independiente > Bander; es:Resumen histórico
+    en: ! scope="row" | | 1824–1835
+    es: height="65" | width="90" align=" " valign="middle" height="65" bgcolor="#f6f6f6" | 1823 a 1864|| width="200" height="65" bgcolor="#f6f6f6" valign="middle" align=" " bgcolor="#f6f6f6" | | width="500" h
+- Bandera de Costas.svg [1701,1771,1793] svg es:Resumen histórico > Otras banderas histó
+    es: Bandera de las plazas marítimas, castillos y defensas de las costas de los territorios españoles (1701-1771, prolongándose hasta 1793)
+- Flag of Spain (1785-1873 and 1875-1931).svg [1785,1793,1821,1873,1875,1931] svg es:Historia > Conquista y época colonial; es:Resumen histórico > Otras banderas histó; fr:
+    fr: style="background:#f9f9f9;" | style="text-align: ;"| 1785 - 1821Monarchie | - Bernardo de GálvezVice-roi - Juan O'Donojú y O'RianVice-roi | style="text-align: ;"| | Vice-roi de la Nouvelle-Espagne
+    es: Pabellón naval de España desde 1785; usado en puertos y fuertes marinos desde 1793
+- Bandera de Allende anverso y reverso Cruz.svg [1810] svg en:History; es:Resumen histórico
+    en: The Twin Flags of Allende, a pair of flags that were made expressly by the then-captain of the Army of New Spain, Ignacio Allende, for the armed struggle that would begin on 1 October 1810, but since 
+    es: height="65" | width="90" height="65" align=" " valign="middle" bgcolor="#f6f6f6" | 1810|| width="200" height="65" bgcolor="#f6f6f6" valign="middle" align=" " bgcolor="#f6f6f6" | | width="500" height="
+- Bandera del Supremo Gobierno Mexicano.svg [1815] svg es:Resumen histórico
+    es: height="65" | width="90" height="65" align=" " valign="middle" bgcolor="#f6f6f6" | 1815|| width="200" height="65" bgcolor="#f6f6f6" valign="middle" align=" " bgcolor="#f6f6f6" | | width="500" height="
+- Bandera del Primer Imperio Mexicano.svg [1821,1823] svg en:History; en:National flag; es:Historia > México independiente > Primer; es:Resumen hist
+    en: Flag of the First Mexican Empire, 1821–23
+    es: height="65" | width="90" height="65" align=" " valign="middle" bgcolor="#f6f6f6" | 1821 a 1823|| width="200" height="65" bgcolor="#f6f6f6" valign="middle" align=" " bgcolor="#f6f6f6" | | width="500" h
+- Flag of Mexico (1821-1823).svg [1821,1823] svg en:National flag; fr:Histoire > Évolution
+    en: ! scope="row" | | 1821–1823
+    fr: style="background:#fff;" | style="text-align: ;"| Congrès constitutionnel | Agustín Iturbide I of MexicoEmpereurJosé Manuel de HerreraPremier ministre | style="text-align: ;"| | Drapeau du Premier Emp
+- Flag of the Three Guarantees.svg [1821] svg en:History; en:National flag; fr:Histoire > Évolution
+    en: The flag of the Army of the Three Guarantees, an early use of the colors red, white, and green to represent the cause of Mexican independence
+    fr: style="background:#f9f9f9;" | style="text-align: ;"| Junta Provisional Souveraine | Agustin de IturbideRoyalisteVicente Ramón GuerreroInsurgent | style="text-align: ;"| | Drapeau des trois garantiesCo
+- Flag of Mexico (1823-1864, 1867-1893).svg [1823,1864,1867,1893] svg en:National flag; fr:Histoire > Évolution
+    en: ! scope="row" | | 1823–18641867–1893
+    fr: style="background:#fff;" | style="text-align: ;"| Congrès constitutionnel | - Guadalupe VictoriaPrésident - Félix María ZuloagaPrésident | style="text-align: ;"| | Drapeau de la République mexicaineCo
+- Flag of Mexico 1823-1864.png [1823,1824,1864] png en:National flag
+    en: ! scope="row" | | 1823–1824
+- Bandera Histórica de la República Mexicana (1824-1918).svg [1824,1846,1863,1918] svg en:National flag
+    en: ! scope="row" | | 1846–1863
+- Bandera de la República Central Mexicana.svg [1835,1846] svg en:National flag; es:Historia > México independiente > Bander
+    en: ! scope="row" | | 1835–1846
+    es: Bandera de la República Centralista (1835-1846)
+- Bandera Republia Restaurada Mexico 1846 a 1879.svg [1846,1879,1880] svg es:Historia > México independiente > Bander; es:Resumen histórico
+    es: height="65" | width="90" valign="middle" align=" " bgcolor="#f6f6f6" | 1846 a 1879|| width="200" height="65" bgcolor="#f6f6f6" valign="middle" align=" " | | width="500" height="65" bgcolor="#f6f6f6" a
+- Bandera Republia Restaurada Mexico Liberal 1846 a 1879.svg [1846,1857,1879,1880] svg es:Historia > México independiente > Bander; es:Resumen histórico
+    es: height="65" | width="90" valign="middle" align=" " bgcolor="#f6f6f6" | 1846 a 1857|| width="200" height="65" bgcolor="#f6f6f6" valign="middle" align=" " | | width="500" height="65" bgcolor="#f6f6f6" a
+- Erin Go Bragh Banner.svg [1846,1847,1850] svg es:Resumen histórico > Otras banderas histó
+    es: Bandera del Batallón de San Patricio. (1846-1847) Disuelto en 1850.
+- Flag of the Second Mexican Empire (1865-1867).svg [1864,1865,1867] svg es:Historia > México independiente > Segund; es:Resumen histórico
+    es: height="65" | width="90" height="65" align=" " valign="middle" bgcolor="#eaeaea" | 1864 a 1867|| width="200" height="65" bgcolor="#f9f9f9" valign="middle" align=" " bgcolor="#eaeaea" | | width="500" h
+- Bandera de Guerra del Segundo Imperio Mexicano 1865-1867.svg [1865,1867] svg es:Historia > México independiente > Segund
+    es: Bandera de guerra del Segundo Imperio mexicano (1865-1867)
+- Bandera y Gallardete de la Marina Armada del Segundo Imperio Mexicano 1865-1867.svg [1865,1867] svg es:Historia > México independiente > Segund
+    es: Bandera y gallardete para uso en embarcaciones de la Armada Imperial.
+- Bandera de la Segunda República Federal de los Estados Unidos Mexicanos.svg [1867,1880] svg es:Historia > México independiente > Bander; es:Resumen histórico
+    es: height="65" | width="90" height="65" align=" " valign="middle" bgcolor="#f9f9f9" | 1867 a 1880|| width="200" height="65" bgcolor="#f6f6f6" valign="middle" align=" " | | width="500" height="65" bgcolor
+- Bandera de México (1880-1893).png [1880,1893,1898,1899] png en:National flag; es:Historia > México independiente > Bander; es:Resumen histórico
+    en: ! scope="row" | | 1880–1893
+    es: height="65" | width="90" height="65" align=" " valign="middle" bgcolor="#f9f9f9" | 1880 a 1899|| width="200" height="65" bgcolor="#f6f6f6" valign="middle" align=" " | | width="500" height="65" bgcolor
+- Bandera de México (1880-1914).svg [1880,1910,1911,1914] svg en:National flag
+    en: ! scope="row" | | 1910–1911
+- Flag of Mexico (1893-1916).svg [1893,1899,1916] svg en:National flag; es:Resumen histórico; fr:Histoire > Évolution
+    en: ! scope="row" | | 1893–1916
+    fr: style="background:#f9f9f9;" | style="text-align: ;"| Gouvernement exécutif | José de la Cruz Porfirio DíazPrésident | style="text-align: ;"| | Drapeau des États-Unis mexicainsConcepteur : Tomas de la 
+    es: height="65" | width="90" height="65" align=" " valign="middle" bgcolor="#f9f9f9" | 1899 a 1916|| width="200" height="65" bgcolor="#f6f6f6" valign="middle" align=" " | | width="500" height="65" bgcolor
+- Flag of Mexico (1893-1916, 3-2).svg [1893,1898,1916] svg es:Historia > México independiente > Bander
+    es: Bandera porfirista con el escudo de Juan de Dios Fernández (1898-1916).
+- Bandera de la Tercera República Federal de los Estados Unidos Mexicanos.svg [1916,1934] svg en:National flag; es:Historia > México independiente > Bander; es:Resumen histórico
+    en: ! scope="row" | | | | Variant
+    es: height="65" | width="90" height="65" align=" " valign="middle" bgcolor="#f9f9f9" | 1916 a 1934|| width="200" height="65" bgcolor="#f6f6f6" valign="middle" align=" " |200x200px|| width="500" height="65
+- Flag of Mexico (1916-1934).svg [1916,1934] svg fr:Histoire > Évolution
+    fr: style="background:#f9f9f9;" | style="text-align: ;"| Gouvernement exécutif | Venustiano Carranza GarzaPrésident | style="text-align: ;"| | Drapeau des États-Unis mexicainsConcepteur : Antonio Gómez
+- Flag of Mexico (1916–1934).svg [1916,1934] svg en:National flag
+    en: ! scope="row" | | 1916–1934
+- Mexico Flag Cristeros.svg [1926,1929] svg es:Resumen histórico > Otras banderas histó
+    es: Bandera usada por el Ejército Cristero durante la Guerra Cristera. (1926-1929)
+- Bandera de México (1934-1968) alterna.png [1934,1968] png es:Historia > México independiente > Bander
+    es: Bandera con el sello oficial de 1934 a 1968.
+- Bandera de México (1934-1968).png [1934,1968] png es:Historia > México independiente > Bander; es:Resumen histórico
+    es: height="65" | width="90" height="65" align=" " valign="middle" bgcolor="#f9f9f9" | 1934 a 1968|| width="200" height="65" bgcolor="#f6f6f6" valign="middle" align=" " | | width="500" height="65" bgcolor
+- Bandera de la Tercer República Federal de los Estados Unidos Mexicanos modelo 1934.svg [1934,1968] svg en:National flag; es:Historia > México independiente > Bander
+    en: ! scope="row" | | | Official
+    es: Bandera con el escudo oficial de 1934 a 1968.
+- Flag of Mexico (1934-1968).svg [1934,1968] svg en:National flag; fr:Histoire > Évolution
+    en: ! scope="row" | | 1934–1968
+    fr: style="background:#f9f9f9;" | style="text-align: ;"| Gouvernement exécutif | Abelardo Rodríguez LujánPrésident | style="text-align: ;"| | Drapeau des États-Unis mexicainsConcepteur : Jorge Enciso
+- Flag of Mexico (1934-1968, 2).svg [1934,1968] svg en:National flag
+    en: ! scope="row" | | | | Variant
+- Flag of Mexico.svg [1968] svg en:National flag; es:Resumen histórico; es:Tipo de bandera para uso oficial y comer; fr:Hi
+    en: ! scope="row" | | 1968–present | | A vertical tricolor of green, white, and red with the national coat of arms centered on the white band. |}
+    fr: style="background:#fff;" | style="text-align: ;"| Gouvernement exécutif | Gustavo Díaz OrdazPrésident | style="text-align: ;"| | Drapeau des États-Unis mexicainsConcepteur : Francisco Eppens Helguera 
+    es: height="65" | width="90" height="65" align=" " valign="middle" bgcolor="#eaeaea" | 1968 a la Fecha|| width="200" height="65" bgcolor="#f9f9f9" valign="middle" align=" " bgcolor="#eaeaea" | Bandera de 

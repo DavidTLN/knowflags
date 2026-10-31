@@ -1,0 +1,12 @@
+### na  (en:Flag of Namibia, fr:Drapeau de la Namibie)
+- Flag of Germany (1867–1918).svg [1867,1918] svg en:Historical flags; fr:Drapeaux historiques
+    en: Flag of the German Empire
+    fr: Drapeau de l'Empire allemand
+- Reichskolonialflagge.svg [1884,1915] svg en:Historical flags; fr:Drapeaux historiques
+    en: Flag of the Reich Colonial Office, used in German South-West Africa from 24 April 1884 to 9 July 1915.
+    fr: Drapeau du Sud-Ouest africain allemand (1884-1915)
+- Flag of the United Kingdom.svg [1915,1919] svg en:Historical flags
+    en: Flag of South West Africa between 1915 and 28 June 1919.
+- Flag of South West Africa People's Organisation.svg [1976,1990] svg en:Historical flags; fr:Drapeaux historiques
+    en: Flag of SWAPO used at the United Nations between 1976 and 21 March 1990.
+    fr: Drapeau de la SWAPO utilisé par les Nations-unies de 1976 à 1990 pour représenter la Namibie.

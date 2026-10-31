@@ -1,0 +1,36 @@
+### lb  (en:Flag of Lebanon, en:List of Lebanese flags, fr:Drapeau du Liban, ar:علم لبنان)
+- Maanid Emirate Flag.svg [1119,1697] svg ar:أعلام لبنان في مختلف الأزمنة > أعلام الس
+    ar: علم إمارة المعنيين (1119-1697)
+- Flag of Ayyubid Dynasty.svg [1171,1250] svg ar:أعلام لبنان في مختلف الأزمنة > أعلام الس
+    ar: العلم تحت حكم الدولة الأيوبية (1171–1250)
+- Mameluke Flag.svg [1250,1517] svg ar:أعلام لبنان في مختلف الأزمنة > أعلام الس
+    ar: العلم خلال حكم الدولة المملوكية (1250–1517)
+- Abbasid banner.svg [1258] svg ar:أعلام لبنان في مختلف الأزمنة > أعلام الس; ar:أعلام لبنان في مختلف الأزمنة > العصور ال
+    ar: خلال فترة الحكم العباسي (750–1258)
+- Flag of Lebanon (1516–1842).svg [1516,1697,1842] svg fr:Drapeaux anciens et modernes
+    fr: Drapeau des émirs Chehabistes (1697-1842)
+- Chehab Emirate flag.svg [1697,1842] svg ar:أعلام لبنان في مختلف الأزمنة > أعلام الس
+    ar: العلم خلال حكم سلالة الشهابيون (1697–1842)
+- Deir El Qamar Flag.svg [1830] svg ar:أعلام لبنان في مختلف الأزمنة > أعلام متن
+    ar: العلم المستخدم في دير القمر، عاصمة المعنيون وأمراء الشهابيون الأوائل (1830)
+- Flag of Lebanon (1918-1920).svg [1842,1918,1920] svg en:History > Post-Ottoman period and French; en:National flag > Historical; fr:Drapeaux an
+    en: ! scope="row" | | rowspan="2" | 1918–1920 | rowspan="2" | Lebanese flag after the fall of the Ottoman Empire | rowspan="2" | A white field with the cedar tree in the .
+    fr: Drapeau du Mont-Liban (1842-1920)
+- Flag of Lebanon (1918-1920; variant).svg [1918,1920] svg en:History > Post-Ottoman period and French; en:National flag > Historical
+    en: () Flag used by Lebanese Maronites in the 19th century, and first raised as a Lebanese flag in 1918 (1918–1920; variant)
+- Flag of Lebanon (1920-1943).svg [1920,1926,1943] svg en:History > Post-Ottoman period and French; en:National flag > Historical
+    en: ! scope="row" | | 1920–1943 | Flag of Greater Lebanon during French colonization (1920–1926) and of the Lebanese Republic (1926–1943) | The French tricolor (blue, white, red); charged with a green Leb
+- Flag of Lebanon during French Mandate (1920-1943) 2.svg [1920,1943] svg ar:أعلام لبنان في مختلف الأزمنة > الانتداب 
+    ar: علم بديل لدولة لبنان الكبير في عهد الانتداب الفرنسي (1920–1943)
+- Flag of Lebanon during French Mandate (1920-1943) 3.svg [1920,1943] svg ar:أعلام لبنان في مختلف الأزمنة > الانتداب 
+    ar: علم بديل لدولة لبنان الكبير في عهد الانتداب الفرنسي (1920–1943)
+- Flag of Lebanon during French Mandate (1920-1943).svg [1920,1943] svg ar:أعلام لبنان في مختلف الأزمنة > الانتداب ; en:History > Post-Ottoman period and French; 
+    en: () Flag of the State of Greater Lebanon during the French mandate (1920–1943; variant)
+    fr: État du Grand-Liban (1920-1943)
+    ar: علم دولة لبنان الكبير في عهد الانتداب الفرنسي (1920–1943)
+- Flag of Lebanon (1943-1990).svg [1943,1990] svg en:History > Republic of Lebanon (1943–pres; en:National flag > Historical
+    en: ! scope="row" | | 1943–1990 | Flag of Lebanon | A horizontal triband of red, white (double height), and red; charged with a green Lebanese cedar tree with a brown trunk. |}
+- Flag of Lebanon.svg [1943,1990] svg ar:نظام الألوان; en:History > Republic of Lebanon (1943–pres; en:National flag > Current; 
+    en: ! scope="row" | | 1990–present | National flag and ensign | A horizontal triband of red, white (double height), and red; charged with a green cedar of Lebanon. |}
+    fr: République libanaise (1943)
+    ar: ! 40pxنظام الألوان ! ! style="background:#EE161F; width: ; color:white;"| أحمر ! style="background:#FFFFFF; width: ; color:black;"| أبيض ! style="background:#00A750; width: ; color:white;" | أخضر

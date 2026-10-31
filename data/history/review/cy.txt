@@ -1,0 +1,53 @@
+### cy  (en:Flag of Cyprus, en:List of Cypriot flags, fr:Drapeau de Chypre, el:Σημαία της Κύπρου)
+- Royal Banner of England.svg [1191,1192] svg en:Historical flags
+    en: ! scope="row" | | 1191–1192 | Royal banner of King Richard I | A red field with three gold lions facing , with a paw raised and their heads turned towards the viewer.
+- Bandeira Templária.svg [1192] svg en:Historical flags
+    en: ! scope="row" | | 1192 | Battle flag of the Knights Templar | A horizontally divided flag of black and white with a red cross in the .
+- Flag of the Rubenid Dynasty.svg [1198,1219] svg en:Historical flags
+    en: ! scope="row" | | 1198–1219 | Flag of the Armenian Kingdom of Cilicia | A red crowned lion on a white field.
+- Flag of Armenia (1350) as reported by the Book of All Kingdoms.svg [1350,1400] svg en:Historical flags
+    en: ! scope="row" | | 1350–1400 | Royal flag as reported by the Book of All Kingdoms | A horizontally divided banner, one half white with the Jerusalem cross, and one half purple with five golden Fleur-de
+- Flag of Republic of Venice (1659-1675).svg [1489,1571,1659,1675] svg en:Historical flags
+    en: ! scope="row" | | 1489–1571 | Flag of the Republic of Venice (Venetian Cyprus) | A gold Lion of St. Mark on a field of dark red with a six-tongued fringe at the fly.
+- Flag of Ottoman Empire (1517-1793).svg [1517,1571,1793] svg en:Historical flags
+    en: ! scope="row" | | 1571–1793 | Flag of the Ottoman Empire | A red field with a dark crescent in the .
+- Flag of the Ottoman Empire (eight pointed star).svg [1793,1844] svg en:Historical flags
+    en: ! scope="row" | | 1793–1844 | Flag of the Ottoman Empire (Ottoman Cyprus) | A red field with a white crescent and an eight-pointed star.
+- Flag of Greece (1828-1978).svg [1828,1975,1978] svg en:Historical flags
+    en: ! scope="row" | | 1975–1978 | A white cross on a blue field.
+- Flag of the United Kingdom (1-2).svg [1878,1960] svg en:Historical flags; en:National flags
+    en: ! scope="row" | | 1878–1960 (used today in Akrotiri and Dhekelia) | Flag of the United Kingdom | A superimposition of the flags of England and Scotland with the Saint Patrick's Saltire (representing I
+- Flag of Cyprus (1881-1922).svg [1881,1922] svg en:Flags
+    en: First flag of Cyprus under British colonial rule (1881–1922)
+- Flag of the High Commissioner of Cyprus (1881–1905).svg [1881,1905] svg en:Historical flags
+    en: ! scope="row" | | 1881–1905 | Flag of the High Commissioner of Cyprus
+- Flag of Cyprus (1922-1960).svg [1922,1960] svg el:Παλαιότερες σημαίες; en:Flags
+    en: Last flag of Cyprus under British colonial rule (1922–1960)
+    el: 2η σημαία Βρετανικής Κύπρου (1922–1960)
+- EOKA flag.svg [1955,1959] svg en:Historical flags
+    en: ! scope="row" | 150x150px150px|Flags of EOKA | 1955–1959 | Flags of the Ethniki Organosis Kyprion Agoniston (National Organisation of Cypriot Fighters), Greek Cypriot organisation that fought for the 
+- Flag of Cyprus (1960).svg [1960] svg el:Χρήση σημαίας > Εκδοχές της σημαίας; en:Flags; en:Historical flags; fr:Histoire
+    en: ! scope="row" | | 1960 | First flag of Cyprus | An unfilled outline of the island of Cyprus above twin olive branches on a white field.
+    fr: Version utilisée d’avril au .
+    el: Έως 20/08/1960
+- Flag of Cyprus (1960-2006).svg [1960,2006] svg el:Χρήση σημαίας > Εκδοχές της σημαίας; en:Flags
+    en: Version of the flag used from 16 August 1960 to 24 April 2006.
+    el: 1960–2006
+- Flag of Greece (1970-1975).svg [1970,1974,1975] svg en:Historical flags
+    en: ! scope="row" | | 1974–1975 | Flag of Greece under the Colonels' regime. | The sea flag, in ratio 7:12 and in very dark shade of blue (dark "midnight blue"). The old "land" version was restored as nat
+- Flag of Turkey.svg [1974,1984] svg en:Historical flags; en:Use of the flags of Greece and Turkey
+    en: ! scope="row" | | 1974–1984 (used today by the Turkish Cypriots) | Flag of Turkey | A red field with a white crescent and a five-pointed star.
+- Flag of the United Nations.svg [1974] svg en:National flags
+    en: ! scope="row" | | 1974–present | Flag of the United Nations Buffer Zone in Cyprus | The flag of the United Nations is used. |}
+- Flag of Greece.svg [1978,1984] svg en:Historical flags; en:Use of the flags of Greece and Turkey
+    en: ! scope="row" | | 1978–1984 (used today by the Greek Cypriots) | rowspan="2" | Flag of Greece | Nine equal horizontal stripes of blue and white, alternating. There is a blue canton in the upper hoist-
+- Flag of the Turkish Republic of Northern Cyprus (1983).svg [1983,1984,1996] svg en:Northern Cyprus
+    en: ! scope="row" | | 1983–1984 | Reported flag of the Turkish Republic of Northern Cyprus from 1983 to 1984 | A white star and crescent – slightly towards the hoist from the centre – between two horizont
+- Flag of the President of the Turkish Republic of Northern Cyprus.svg [1984] svg en:Northern Cyprus
+    en: ! scope="row" | | 1984–present | Flag of the president of the Turkish Republic of Northern Cyprus
+- Flag of the Turkish Republic of Northern Cyprus.svg [1984] svg en:National flags; en:Northern Cyprus
+    en: ! scope="row" | | 1984–present (recognised only by Turkey) | Flag of Northern Cyprus | A red star and crescent – slightly towards the hoist from the centre – between two horizontal red bars on a white
+- Flag of Cyprus.svg [2006] svg el:Χρήση σημαίας > Εκδοχές της σημαίας; en:Flags; en:National flags; fr:Histoire
+    en: ! scope="row" | | 2006–present | National flag of Cyprus | An outline of the island of Cyprus above twin olive branches on a white field.
+    fr: Version utilisée depuis .
+    el: 2006–σήμερα

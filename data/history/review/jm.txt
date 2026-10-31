@@ -1,0 +1,18 @@
+### jm  (en:Flag of Jamaica, en:List of Jamaican flags, fr:Drapeau de la Jamaïque)
+- Royal Banner of the Crown of Castille (Habsburg Style).svg [1494,1510,1516] svg en:Historical
+    en: ! scope="row" | | 13 October 1510 –23 January 1516 | Colonial flag of Jamaica || The royal banner of arms of the Crown of Castile was first used in 1494, during the discovery of the island by Christop
+- Flag of New Spain.svg [1516,1655] svg en:Historical
+    en: ! scope="row" | | 23 January 1516 –9 April 1655 | Colonial flag of Jamaica | The Cross of Burgundy was used during the Spanish colonisation.
+- Union flag 1606 (Kings Colors).svg [1606,1655,1800] svg en:Historical
+    en: ! scope="row" | | 10 April 1655 –30 December 1800 | Colonial flag of Jamaica | The flag of Great Britain.
+- Flag of the United Kingdom (1-2).svg [1801,1875] svg en:Historical
+    en: ! scope="row" | | 1 January 1801 –24 August 1875 | Colonial flag of Jamaica | The flag of the United Kingdom.
+- Flag of Jamaica (1906-1957).svg [1906,1957] svg en:Historical flags
+    en: 1906–1957
+- Flag of Jamaica (1957-1962).svg [1957,1962] svg en:Historical flags
+    en: 1957–1962
+- Flag of Jamaica (1962).svg [1962] svg en:Historical; en:Historical flags; fr:Drapeaux coloniaux
+    en: ! scope="row" | | rowspan="3" | 13 July 1962 –6 August 1962 || Colonial flag of Jamaica | A British Blue Ensign defaced with the coat of arms of colonial Jamaica within a white circle.
+    fr: 1962
+- Flag of Jamaica.svg [1962] svg en:National flag
+    en: ! scope="row" | | 1962– | Flag of Jamaica | A gold diagonal cross divides the field into four triangles of green (top and bottom) and black (hoist and fly sides). |}

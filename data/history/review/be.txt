@@ -1,0 +1,64 @@
+### be  (en:Flag of Belgium, en:List of Belgian flags, fr:Drapeau de la Belgique, nl:Vlag van België)
+- Generieke vlag van Henegouwen.svg [1071,1477,1795] svg en:Historical flags; en:Variants > Historical flags; nl:Historische vlaggen > Overige hist
+    en: ! scope="row" | | 900–1477 | Flag of the County of Hainaut | A yellow quartered banner with two black and two red lions.
+    nl: Vlag van het Graafschap Henegouwen(1071-1795)
+- Banner of the Duchy of Brabant.svg [1183,1794] svg en:Historical flags; nl:Historische vlaggen
+    en: ! scope="row" | | 1183–1794 | Flag of the Duchy of Brabant | A golden lion on a black field.
+    nl: miniatuur|Vlag van het Hertogdom Brabant
+- Hertogdom Brabant vlag.png [1183,1795] png en:Variants > Historical flags
+    en: Flag of the Duchy of Brabant (1183 – 1795)
+- Flag of the Low Countries.svg [1482,1714] svg en:Historical flags; fr:Autres drapeaux belges > Drapeaux antéri
+    en: ! scope="row" | | rowspan="2" | 1482–1714 | Flag of the Spanish Netherlands | A white flag with the cross of Burgundy.
+    fr: Drapeau des Pays-Bas espagnols.
+- Flag of Cross of Burgundy.svg [1556,1715] svg en:Variants > Historical flags; fr:Autres drapeaux belges > Drapeaux antéri; nl:Historisch
+    en: Flag of the Spanish Netherlands (1556 – 1715)
+    fr: Drapeau des Pays-Bas bourguignons.
+    nl: Vlag van de Spaanse Nederlanden(1556-1715)
+- Austrian Low Countries Flag.svg [1715,1781,1786,1795] svg en:Historical flags; en:Variants > Historical flags; fr:Autres drapeaux belges > Drapeaux 
+    en: ! scope="row" | | 1781–1786 | Flag of the Austrian Netherlands | A tricolour, with three equal horizontal bands of red, white, and gold with the arms of Austria.
+    fr: Drapeau des Pays-Bas autrichiens avec la croix de Bourgogne.
+    nl: Vlag van de Oostenrijkse Nederlanden(1715-1795)
+- Flag of the Brabantine Revolution (with lion).png [1789,1790] png en:Variants > Revolutionary flags
+    en: Flag during the Brabant Revolution, with lion (1789 – 1790)
+- Flag of the Brabantine Revolution.svg [1789,1790] svg en:Historical flags; en:Variants > Historical flags; fr:Autres drapeaux belges > Drapeaux 
+    en: ! scope="row" | | 1789–1790 | Flag of the United Belgian States | A tricolour, with three equal horizontal bands of red, black, and yellow.
+    fr: Drapeau de la révolution brabançonne.
+    nl: miniatuur|Vlag van de Verenigde Belgische Staten
+- LuikVlag.svg [1790,1795] svg en:Historical flags; en:Variants > Historical flags; nl:Historische vlaggen > Overige hist
+    en: ! scope="row" | | 980–1790 | Flag of the Prince-Bishopric of Liège, also of the Republic of Liège | A bicolour, with two equal vertical bands of red and yellow.
+    nl: Vlag van het Prinsbisdom Luik(980-1795)
+- Generieke vlag van Vlaanderen.svg [1794,1797] svg en:Historical flags; en:Variants > Historical flags; nl:Historische vlaggen > Overige hist
+    en: ! scope="row" | | 862–1797 | Flag of the County of Flanders | A yellow flag with a black lion in the . "Or, a lion rampant armed and langued Gules"
+    nl: Vlag van het Graafschap Vlaanderen(863-1794)
+- Flag of Belgium (1830).svg [1830,1831] svg en:Historical flags; en:Variants > Historical flags; nl:Historische vlaggen > Verenigde Be
+    en: ! scope="row" | | 1830–1831 | Flag of the Belgian Revolution and the first Belgian flag | A tricolour, with three equal horizontal bands of black, yellow, and red.
+    nl: miniatuur|Eerste Belgische vlag
+- Flag of the Liege Volunteers 1830.png [1830,1831] png en:Variants > Revolutionary flags
+    en: Flag of volunteers of Liege (1830 – 1831)
+- Flag of Belgium.svg [1831] svg en:Historical flags; en:National flag; en:Variants > Historical flags; nl:Historische vlag
+    en: ! scope="row" | | 1831–present | Flag of Belgium | A vertical tricolour of black, yellow, and red with a 13:15 ratio. Technically the national flag, but rarely seen in the officially approved dimensio
+    nl: miniatuur|Vlag van het Koninkrijk België|203x203px
+- Flag of Moresnet.svg [1883,1920] svg en:Historical flags > Other historic flags
+    en: ! scope="row" | | 1883–1920 | Flag of Neutral Moresnet | A tricolour, with three equal horizontal bands of black, white, and blue.
+- Flag of the Congo Free State.svg [1885,1908,1960] svg en:Historical flags > Colonials
+    en: ! scope="row" | | 1908–1960 | Flag of the Belgian Congo | A blue flag with a yellow five-pointed star previously used by the Congo Free State (1885-1908).
+- Vlag van Brussel (stad).svg [1930] svg en:Sub-national > Brussels
+    en: ! scope="row" | | 1930–present | Flag of Brussels (city) | Emblem of Archangel Michael slaying the dragon |}
+- Flag of Europe.svg [1955] svg en:Other
+    en: ! scope="row" | | 1955–present | Flag of Europe | A circle of twelve five-pointed gold (yellow) stars on a blue field.
+- Flag of Flanders.svg [1973] svg en:Sub-national > Communities; en:Sub-national > Regions
+    en: ! scope="row" | | | Flemish Community | 1973 | A black lion with red claws and tongue on a yellow field.Blazon: Or, a lion rampant armed and langued Gules.
+- Flag Belgium brussels.svg [1989] svg en:Sub-national > Community commissions in 
+    en: ! scope="row" | | 1989–present | Flag of the Common Community Commission
+- Flag of the Flemish Community Commission.svg [1989] svg en:Sub-national > Community commissions in 
+    en: ! scope="row" | | 1989–present | Flag of the Flemish Community Commission
+- Flag of the French Community Commission.svg [1989] svg en:Sub-national > Community commissions in 
+    en: ! scope="row" | | 1989–present | Flag of the French Community Commission |}
+- Flag of the German Community in Belgium.svg [1990] svg en:Sub-national > Communities
+    en: ! scope="row" | | | German-speaking community | 1990 | |}
+- Flag of Wallonia.svg [1991,1998] svg en:Sub-national > Communities; en:Sub-national > Regions
+    en: ! scope="row" | | | French Community | 1991–present | A red rooster on a yellow field.
+- Flag of the Brussels-Capital Region (1991–2015).svg [1991,2015] svg en:Sub-national > Brussels
+    en: ! scope="row" | | 1991–2015 | First version of Flag of Brussels-Capital Region | A blue field with a yellow iris with a white on top.
+- Flag of the Brussels-Capital Region.svg [2015] svg en:Sub-national > Brussels; en:Sub-national > Regions
+    en: ! scope="row" | | 2015–present | Flag of the Brussels-Capital Region

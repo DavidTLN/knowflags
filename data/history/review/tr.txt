@@ -1,0 +1,31 @@
+### tr  (en:Flag of Turkey, en:List of Turkish flags, en:List of national flags of sovereign states, fr:Drapeau de la Turquie, tr:Türk bayrağı)
+- Flag of Turkey.svg [1844,1923,1936] svg en:Flags of UN member states and General As; en:National flags; tr:Yapısı > Renk kodları
+    en: ! scope="row" | | 1936–present | Flag of Turkey | 18th-century design officially adopted in 1844. The star and crescent design appears on Ottoman flags beginning in the late 18th or early 19th century
+    tr: Dijital ortamlarda ise resmî kurumlar fiilen daha açık bir kırmızı tonu kullanmaktadır. Bu renk RGB renk modelinde %89 kırmızı, %3.9 yeşil ve %9 mavi (onaltılık renk kodu #E30A17) ile oluşur. CMYK ren
+- Flag of the Ottoman Empire.svg [1844] svg en:History
+    en: The star and crescent flag of the Ottoman Empire, a late 18th-century design officially adopted in 1844
+- Flag of Brazil.svg [1889] svg en:Flags of UN member states and General As
+    en: !scope="row"|Brazil | | | |Green with a large yellow diamond in the bearing a blue globe with 27 white stars (one for each state and the Federal District) arranged as in the sky over Rio de Janeiro at
+- Flag of Lebanon.svg [1901,1993] svg en:Flags of UN member states and General As
+    en: !scope="row"|Lebanon |rowspan="2"| | | |Three horizontal bands consisting of red (top), white (middle, double width), and red (bottom) with a green cedar tree centered in the white band. |; see also "
+- Flag of TRWT.svg [1913] svg tr:Benzer ve ilişkili bayraklar
+    tr: 31 Ağustos 1913'te Batı Trakya'da kurulan ancak yalnızca 52 gün yaşayabilen Batı Trakya Bağımsız Hükûmeti'nin bayrağı
+- Flag of the South West Caucasian Republic.svg [1918,1919] svg tr:Benzer ve ilişkili bayraklar
+    tr: alt=|Güneybatı Kafkas Geçici Hükûmeti'nin bayrağı (1918-1919)
+- Flag of the President of Turkey.svg [1923] svg en:National flags; tr:Benzer ve ilişkili bayraklar
+    en: ! scope="row" | | 1923–present | Presidential standard of the president of Turkey. | The flag of Turkey with a presidential seal in the upper hoist, which is composed of a sun with eight long and eigh
+    tr: Cumhurbaşkanlığı Forsu
+- Hatay flag.svg [1938,1939] svg tr:Benzer ve ilişkili bayraklar
+    tr: 7 Eylül 1938'de Fransa sömürgesindeki Suriye topraklarından ayrılarak kurulan ve 23 Haziran 1939'da Türkiye'ye katılan Hatay Cumhuriyeti'nin bayrağı
+- Flag of the Turkish Republic of Northern Cyprus.svg [1983] svg en:Flags of de facto states; fr:Influence; tr:Benzer ve ilişkili bayraklar
+    en: !scope="row"|Northern Cyprus | | | |White with a vertical red crescent moon (the closed portion is toward the hoist side) and red five-pointed star centered just outside the crescent opening centered 
+    fr: Drapeau de Chypre du Nord.
+    tr: 15 Kasım 1983'te kurulan ancak yalnızca Türkiye'nin tanıdığı Kuzey Kıbrıs Türk Cumhuriyeti'nin bayrağı
+- Flag of Turkey (construction sheet).svg [1985] svg tr:Yapısı
+    tr: Türkiye Cumhuriyeti Bakanlar Kurulunun, 25 Ocak 1985 tarih ve 85/9034 numaralı "Türk Bayrağı Tüzüğü" kararının 4. maddesinde, bayrağın boyutları belirlenmiştir. küçükresim| =3.62|Türk bayrağının şekli
+- Flag of Lithuania.svg [2006] svg en:Flags of UN member states and General As
+    en: !rowspan="2" scope="row"|Lithuania | | |Three equal horizontal bands of yellow (top), green, and red. |rowspan="2"|Seimas of Lithuania – History of the National Flag . Retrieved 15 December 2006
+- Flag of Afghanistan (2013–2021).svg [2013,2021] svg en:Flags of UN member states and General As
+    en: Three equal vertical bands of black (hoist side), red, and green, with the national emblem in white centered on the red band and slightly overlapping the other 2 bands.
+- Flag of Vatican City (2023–present).svg [2023] svg en:Flags of UN member states and General As
+    en: !scope="row"|Vatican City | | | |Two vertical bands of yellow (hoist side) and white with the arms of the Holy See, consisting of the crossed keys of Saint Peter surmounted by the three-tiered papal t

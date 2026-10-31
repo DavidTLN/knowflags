@@ -1,0 +1,26 @@
+### bi  (en:Flag of Burundi, en:List of Burundian flags, fr:Drapeau du Burundi)
+- Flag of Germany (1867–1918).svg [1867,1890,1916,1918] svg en:Historical flags
+    en: ! scope="row" | | 1890–1916 | Flag of the German Empire
+- Reichskolonialflagge.svg [1890,1916] svg en:Historical flags
+    en: ! scope="row" | | 1890–1916 | Colonial flag
+- Flag of the Congo Free State.svg [1926,1945] svg en:Historical flags
+    en: ! scope="row" | | 1926–1945 | First flag of the Belgian Congo
+- Flag of Burundi (1961–1962).svg [1961,1962] svg en:Historical flags
+    en: ! scope="row" | | 1961–1962 | Flag of Burundi under Ruanda-Urundi
+- Flag of Burundi (1962–1966) variant.svg [1962,1966] svg en:Historical flags; en:History
+    en: ! scope="row" | | 1962–1966 | First flag of the Kingdom of Burundi (drum variant)
+- Flag of Burundi (1962–1966).svg [1962,1966] svg en:Historical flags; en:History; fr:Anciens drapeaux
+    en: ! scope="row" | | 1962–1966 | First flag of the Kingdom of Burundi
+    fr: juillet 1962 - 28 novembre 1966
+- Flag of Burundi (1966).svg [1966] svg en:Historical flags; en:History; fr:Anciens drapeaux
+    en: ! scope="row" | | 1966 | Second and last flag of the Kingdom of Burundi
+    fr: 28 - 29 novembre 1966
+- Flag of Burundi (1966–1967).svg [1966,1967] svg en:Historical flags; en:History; fr:Anciens drapeaux
+    en: ! scope="row" | | 1966–1967 | First flag of the Republic of Burundi
+    fr: 29 novembre 1966 - 28 juin 1967
+- Flag of Burundi (1967–1982).svg [1967,1982] svg en:Historical flags; en:History; fr:Anciens drapeaux
+    en: ! scope="row" | | 1967–1982 | Second flag of the Republic of Burundi
+    fr: 28 juin 1967 - 28 septembre 1982
+- Flag of Burundi.svg [1967,1982] svg en:History; en:National flag; fr:Anciens drapeaux
+    en: The current national flag, adopted on 27 September 1982 features slightly different dimensions to the 1967 flag
+    fr: Depuis le 28 septembre 1982.

@@ -1,0 +1,6 @@
+### pf  (en:Flag of French Polynesia, fr:Drapeau de la Polynésie française)
+- Flag of the Kingdom of Tahiti.svg [1788,1843] svg en:History; fr:Histoire
+    en: Flag of Kingdom of Tahiti, used 1788–1843
+    fr: Drapeau du royaume de Tahiti.
+- Flag of the Tahiti Protectorate 1843-1880.svg [1843,1880] svg fr:Drapeaux historiques
+    fr: Drapeau du protectorat français (1843-1880).

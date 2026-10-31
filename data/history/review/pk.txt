@@ -1,0 +1,22 @@
+### pk  (en:Flag of Pakistan, en:List of Pakistani flags, fr:Drapeau du Pakistan, ur:پاکستان کا پرچم)
+- Delhi Sultanate Flag.svg [1269,1375,1596] svg en:Historical flags > Pre-colonial states
+    en: ! scope="row" | |1269–1596 |Flag of the Delhi Sultanate according to the Catalan Atlas (1375) |A dark grey flag with a black strip to the hoist of centre.
+- Flag of the Mughal Empire.png [1526,1858] png en:Historical flags > Pre-colonial states
+    en: ! scope="row" | |1526–1858 |Mughal Empire Alam that was primarily moss green with a Sun and Lion.
+- Flag of the Maratha Empire.svg [1674,1740] svg en:Historical flags > Pre-colonial states
+    en: ! scope="row" | |1674–1740 | rowspan="2" |Flags of the Maratha Empire(Bhagwa Dhwaj) |Saffron-coloured, with a swallowtail fly.
+- Safavid Flag.svg [1729,1736] svg en:Historical flags > Pre-colonial states
+    en: ! scope="row" | |1729–1736
+- Flag of the Maratha Confederacy (Empire Total War).svg [1740,1818] svg en:Historical flags > Pre-colonial states
+    en: ! scope="row" | |1740–1818 |An ashokachakra was added to the Bhagwa Dhwaj.
+- Sikh Empire flag.svg [1799,1849] svg en:Historical flags > Pre-colonial states
+    en: ! scope="row" | |1799–1849 |Flag of the Sikh Empire (Nishan Sahib)
+- Flag of Herat until 1842.svg [1818,1842] svg en:Historical flags > Pre-colonial states
+    en: ! scope="row" | |1818–1842 |Flag of the Durrani Empire |A horizontal triband of green, white, and green.
+- Flag of Muscat.svg [1856,1958] svg en:Historical flags > Pre-colonial states
+    en: ! scope="row" | |1856–1958 |Flag of the Sultanate of Muscat and Oman in Gwadar |A simple red field.
+- Flag of the United Kingdom (1-2).svg [1858,1947] svg en:Historical flags > British India
+    en: ! scope="row" | |1858–1947 |The official state flag of the British Empire for use in India |The flag of the United Kingdom.
+- Flag of Pakistan.svg [1947] svg en:National flag; ur:رنگ
+    en: ! scope="row" | | rowspan="2" | 1947–present | National flag of Pakistan | A white star and crescent on a dark green field, with a vertical white stripe at the hoist. The tips of the moon and star poi
+    ur: {|class="wikitable" style="text-align: ;" ! ! style="background:#01411C; width: " | سبز ! style="background:#FFFFFF; width: " | سفید

@@ -1,0 +1,42 @@
+### kp  (en:Flag of North Korea, en:List of Korean flags, en:List of North Korean flags, fr:Drapeau de la Corée du Nord, ko:조선민주주의인민공화국의 국기)
+- Royal Flag of Goryeo magi.svg [1392] svg en:National
+    en: 125x125px |Extant 1392 | A royal banner from the Goryeo dynasty. |Also known as the "Haema-gi", which means "The Seahorse Flag".
+- Royal Flag of Goryeo sanggi.svg [1392] svg en:National
+    en: 125x125px |Extant 1392 | A royal banner from the Goryeo dynasty. |Also known as the "Sang-gi", which means "The Elephant Flag".
+- Royal flag of Goryeo (Bong-gi).svg [1392] svg en:National
+    en: 125x125px |Extant 1392 | A royal flag from the Goryeo dynasty |Also known as the "Bong-gi", which means "The Phoenix Flag".
+- Flag of the king of Joseon.svg [1882,1907] svg en:National; fr:Galerie > Drapeaux historiques
+    en: 125x125px |1882–1907 | Royal standard of the Joseon dynasty
+    fr: Drapeau de la dynastie Joseon (utilisé pendant le ).
+- Flag of Korea (1884).svg [1884] svg en:National
+    en: 125x125px
+- Flag of Korea (1888, Denny Taegukgi).svg [1888] svg en:National
+    en: 125x125px
+- Flag of Korea (1893).svg [1893] svg en:National
+    en: 125x125px
+- Flag of Korea (1899).svg [1899] svg en:National
+    en: 125x125px
+- Flag of the Provisional Government of the Republic of Korea.svg [1919,1945] svg en:National
+    en: 125x125px | rowspan="3"|1919–1945 | rowspan="3"| The flag of the Provisional Government of the Republic of Korea | rowspan="3"|In exile in several cities of China
+- Flag of the Soviet Union (1924–1955).svg [1924,1945,1948,1955] svg fr:Galerie > Drapeaux historiques
+    fr: Drapeau de l'URSS, utilisé conjointement avec le drapeau suivant pendant l'occupation soviétique du Nord de la Corée (1945-1948).
+- Flag of the People's Committee of Korea.svg [1945,1946] svg en:National
+    en: 125x125px |1945–1946 | Flag of the People's Republic of Korea |A white rectangular background with three red horizontal strips throughout middle, and a red and blue taegeuk with white near hoist side.
+- Flag of South Korea (1946–1948).svg [1946,1948] svg en:National
+    en: 125x125px
+- Flag of the Provisional People's Committee for North Korea.svg [1946,1948] svg en:National
+    en: ! scope="row" | | 1946–1948 | Flag of the Provisional People's Committee of North Korea / People's Committee of North Korea | A white rectangular background, a red and blue Taeguk in the that symboliz
+- Flag of North Korea (1948–1992).svg [1948,1992] svg en:National; fr:Galerie > Drapeaux historiques; ko:그 외의 기
+    en: ! scope="row" | | 1948–1992 | rowspan="3" | Flag of the Democratic People's Republic of Korea | rowspan="3" | Red field with a blue bar on the top and bottom separated by a thin white stripe, the red 
+    fr: Drapeau de la Corée du Nord (1948-1992).
+    ko: 1948년 7월 10일부터 사용된 조선민주주의인민공화국의 국기
+- Flag of South Korea.svg [1948,2011] svg en:National
+    en: 125x125px |2011–present |Flag of the Republic of Korea (Taegeukgi) |White field with a red and blue taegeuk in the and four black trigrams, one in each corner of the flag. Modified several times since
+- Unification flag of Korea.svg [1991] svg en:Korean reunification flag
+    en: 1991–present |Korean Unification Flag |Used to represent the whole of Korea when North and South participate together in international sporting events. |}
+- Flag of North Korea.svg [1992,2026] svg en:National
+    en: 125x125px | |Flag of the Democratic People's Republic of Korea |Red field with a blue bar on the top and bottom separated by a thin white stripe, the red field charged near the hoist with a white disc
+- Unification flag of Korea (pre 2009).svg [2009] svg fr:Galerie > Autres drapeaux
+    fr: Drapeau de l'unification coréenne, version utilisée par la Corée du Nord.
+- Flag of North Korea (20-33).svg [2026] svg en:National
+    en: 2026–present |Flag of the Democratic People's Republic of Korea (Ramhongsaek Konghwagukki) |Red field with a blue bar on the top and bottom separated by a thin white stripe, the red field charged near

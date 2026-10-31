@@ -1,0 +1,30 @@
+### sg  (en:Flag of Singapore, en:List of Singaporean flags, fr:Drapeau de Singapour)
+- Flag of Portugal (1495).svg [1495,1511,1521] svg en:Historic
+    en: ! scope="row" | | 1511–1521 | Portuguese Malacca | A white banner with the coat of arms of the kingdom in the .
+- Flag of Portugal (1521).svg [1521,1578] svg en:Historic
+    en: ! scope="row" | | 1521–1578 | Portuguese Malacca | A white banner with the coat of arms of the kingdom in the .
+- Flag of Portugal (1578).svg [1578,1614] svg en:Historic
+    en: ! scope="row" | | 1578–1614 | Portuguese Malacca | A white banner with the coat of arms of the kingdom in the . -->
+- Flag of Aceh Sultanate.svg [1614,1636] svg en:Historic
+    en: ! scope="row" | | 1614–1636 | Flag of the Aceh Sultanate | A red field with a white crescent and star. A sword is below them.
+- White Flag of the Malay Sultanates.svg [1636,1819] svg en:Historic
+    en: ! scope="row" | | 1636–1819 | Flag of the Johor Sultanate | A simple white banner.
+- Flag of the British Straits Settlements (1904–1925).svg [1904,1925] svg en:Historic; en:History; fr:Histoire > Singapour comme Établissement
+    en: alt=A British Blue Ensign (a blue flag with the Union Jack placed at the top corner) charged with a white disc containing the badge of the Straits Settlements (red diamond with an inverted white Y; in
+    fr: Établissements des détroits de à 1925.
+- Flag of the British Straits Settlements (1925–1946).svg [1925,1946] svg en:Historic; en:History; fr:Histoire > Singapour comme Établissement
+    en: alt=A British Blue Ensign (a blue flag with the Union Jack placed at the top corner) charged with the badge of the Straits Settlements (red diamond with an inverted white Y; inside that inverted Y is 
+    fr: Même drapeau entre 1925 et 1946.
+- Malaysia Preventive Service flag.svg [1929,2021] svg en:Miscellaneous
+    en: ! scope="row" | | 1929–2021 | Malaysia Preventive Service flag | To be used by Malaysian-owned ships when operating in Singaporean waters. Repealed on 1 March 2021. |}
+- Flag of Singapore (1946–1952).svg [1946,1952] svg en:Historic; en:History; fr:Histoire > Colonie de la Couronne (1946–
+    en: ! scope="row" | | 1946–1952 | rowspan="2" | Flag of the Crown colony of Singapore | Adopted when Singapore became a Crown colony on its own following the dissolution of the Crown colony of the Straits
+    fr: Colonie de la Couronne de Singapour entre 1946 et 1952
+- Flag of Singapore (1952–1959).svg [1952,1959] svg en:Historic; en:History; fr:Histoire > Colonie de la Couronne (1946–
+    en: alt=A British Blue Ensign (a blue flag with the Union Jack placed at the top corner) charged with the badge of Singapore.| Flag of the Crown colony of Singapore from 1952 to 1959
+    fr: Même drapeau entre 1952 et 1959
+- Flag of Singapore.svg [1959] svg en:National; fr:Histoire > Fédération de Malaisie puis R
+    en: ! scope="row" | | 1959– | Flag of Singapore | A horizontal bicolour of red over white, charged in white in the canton with a crescent facing towards the fly and a pentagon of five stars. |}
+    fr: République de Singapour
+- Flag of Malaysia.svg [1963,1965] svg en:Historic
+    en: ! scope="row" | | 1963–1965 | Flag of Malaysia | Used in Singapore during its statehood in Malaysia. Still the current flag of Malaysia. |}

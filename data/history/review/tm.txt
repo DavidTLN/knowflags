@@ -1,0 +1,21 @@
+### tm  (en:Flag of Turkmenistan, en:List of Turkmen flags, fr:Drapeau du Turkménistan, tk:Türkmenistanyň baýdagy)
+- Flag of the Turkmen Soviet Socialist Republic (1926-1937).svg [1926,1937] svg en:Historical flags; en:History > Modern flag
+    en: 150x150px |1926–1937 |rowspan = 5 | Flag of the Turkmen SSR |A plain red field with a golden hammer and sickle and a gold-bordered red star in its canton
+- Flag of the Turkmen Soviet Socialist Republic (1937–1940).svg [1937,1940] svg en:Historical flags; en:History > Modern flag
+    en: 150x150px |1937–1940 |A plain red field with the golden letters TSSR in its canton
+- Flag of the Turkmen Soviet Socialist Republic (1940-1953).svg [1940,1953] svg en:History > Modern flag
+    en: 150x150px |1940–1953 |A plain red field with the golden letters ТССР in its canton
+- Flag of the Turkmen Soviet Socialist Republic (1953-1973).svg [1953,1973,1974] svg en:History > Modern flag
+    en: 150x150px |1953–1974 |A red field with two blue bars transversing it in the middle. A golden hammer and sickle and a gold-bordered red star are placed in its canton
+- Flag of the Turkmen Soviet Socialist Republic.svg [1974,1991] svg en:History > Modern flag
+    en: rowspan = 2 | 150x150px |1974–1991 |rowspan = 2 | Similar to the previous flag of the Turkmen SSR, with the golden hammer and sickle, and gold-bordered start placed to the hoist
+- Flag of Turkmenistan (1992–1997).svg [1992,1997] svg en:Historical flags; en:History > Modern flag; fr:Description
+    en: 150x150px |1992–1997 |A green field with a 1:2 proportion. A vertical red stripe is near the hoist side, containing five carpet guls. A white crescent moon and five white five-pointed stars are placed
+    fr: alt=Drapeau au format 1:2 sans les rameaux d'olivier|Drapeau du Turkménistan entre 1992 et 1997.
+- Flag of Turkmenistan (1997-2001).svg [1997,2001] svg en:Historical flags; en:History > Modern flag; fr:Description
+    en: 150x150px |1997–2001 |Similar to the previous flag, with a golden olive branch added to the bottom of the red stripe
+    fr: alt=Drapeau au format 1:2 avec les rameaux d'olivier|Drapeau du Turkménistan entre 1997 et 2001.
+- Flag of Turkmenistan.svg [2001] svg en:History > Modern flag; en:National flag and state flag; fr:Description; tk:intro
+    en: 2001–present || National flag || A green field with a vertical red stripe near the hoist side, containing five carpet guls stacked above two crossed olive branches; a white waxing crescent moon and fi
+    fr: alt=Drapeau au format 2:3 avec les rameaux d'olivier|Drapeau du Turkménistan depuis 2001.
+    tk: Türkmenistanyň baýdagy

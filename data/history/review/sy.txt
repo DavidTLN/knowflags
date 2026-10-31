@@ -1,0 +1,77 @@
+### sy  (en:Flag of Syria, en:List of Syrian flags, fr:Drapeau de la Syrie, ar:علم سوريا)
+- Banner of the Principality of Antioch.png [1098,1268] png en:Historical flags > Crusader states
+    en: ! scope="row" | |1098–1268 |Banner of the Principality of Antioch
+- Flag of the County of Edessa.png [1098,1144] png en:Historical flags > Crusader states
+    en: ! scope="row" | | rowspan="2" |1098–1144 |Flag of the County of Edessa
+- Banner of Arms of the House of Toulouse-Tripoli.svg [1102,1289] svg en:Historical flags > Crusader states
+    en: ! scope="row" | |1102–1289 |Banner of the County of Tripoli | |}
+- Mameluke Flag.svg [1260,1516] svg en:Historical flags > Mamluk rule
+    en: ! scope="row" | | rowspan="2" |1260–1516 |Flag of the Mamluk Sultanate
+- Flag of Ottoman Empire (1517-1793).svg [1516,1517,1793] svg en:Historical flags > Ottoman rule
+    en: 1516–1793 | rowspan="3" |Flag of the Ottoman Empire
+- Flag of the Ottoman Empire (eight pointed star).svg [1793,1844] svg en:Historical flags > Ottoman rule
+    en: ! scope="row" | |1793–1844 |A red field with a white crescent moon and an eight-pointed star.
+- Flag of the Ottoman Empire.svg [1844] svg ar:تاريخ أعلام سوريا > الدولة العثمانية
+    ar: 150بك|تصغير|علم الدولة العثمانية منذ العام 1844
+- Flag of Kingdom of Syria (1920-03-08 to 1920-07-24).svg [1920] svg ar:تاريخ أعلام سوريا > المملكة العربية السو; ar:قائمة أعلام سورية; en:Historical flags > F
+    en: ! scope="row" | |8 March – 24 July 1920 |Flag of the Arab Kingdom of Syria |Tricolor consisting of black, green, and white stripes, with a red triangle at the hoist containing a seven-pointed star. 1:
+    fr: mars-juillet 1920 | | Royaume arabe de Syrie | Premier drapeau utilisé par les Syriens, lorsque l'indépendance est proclamée par Fayçal d'Irak. Il s'agit du drapeau de la révolte arabe, avec une étoil
+    ar: 150بك|تصغير|علم المملكة الذي رفع في 8 آذار 1920 مع إعلان قيام المملكة العربية السورية
+- Flag of Lebanon during French Mandate (1920-1943).svg [1920,1943] svg ar:أعلام سورية خلال فترة الانتداب الفرنسي
+    ar: علم لبنان الكبير فترة الانتداب الفرنسي، 1920-1943
+- Flag of the Alawite State (1920–1936).svg [1920,1925,1936,1937] svg ar:أعلام سورية خلال فترة الانتداب الفرنسي; ar:تاريخ أعلام سوريا > الانتداب الفرنسي > ا; en
+    en: ! scope="row" | |1920–1936 |Flag of the Alawite State
+    fr: État alaouite, puis Sandjak de Lattaquié (1925-1937).
+    ar: علم سنجق اللاذقية ودولة العلويين، 1920-1936
+- Flag of the French Mandate of Syria (1920).svg [1920,1922] svg ar:تاريخ أعلام سوريا > الانتداب الفرنسي; ar:قائمة أعلام سورية; en:Historical flags > Forme
+    en: ! scope="row" | |1920–1922 |Flag of the Mandate of Syria |Sky blue field charged with a crescent moon at its and the flag of France in the upper hoist.
+    fr: juillet-août 1920 | | Mandat français en Syrie | Après avoir repris le contrôle du pays, les Français changent le drapeau en un croissant blanc centré sur fond bleu azur avec au canton le drapeau de l
+    ar: 150بك|تصغير|علم الانتداب الفرنسي على سوريا ولبنان حتى 1 سبتمبر 1920
+- Flag of the State of Aleppo.svg [1920,1925] svg ar:أعلام سورية خلال فترة الانتداب الفرنسي; ar:تاريخ أعلام سوريا > الانتداب الفرنسي > ا; en
+    en: ! scope="row" | |1920–1925 |Flag of the State of Aleppo
+    fr: État d'Alep (1920-1925).
+    ar: علم دولة حلب، 1920-1925
+- Flag of the State of Damascus.svg [1920,1925] svg ar:أعلام سورية خلال فترة الانتداب الفرنسي; ar:تاريخ أعلام سوريا > الانتداب الفرنسي > ا; en
+    en: ! scope="row" | |1920–1925 |Flag of the State of Damascus
+    fr: État de Damas (1920-1925).
+    ar: علم دولة دمشق، 1920-1925
+- Flag of the State of Souaida (state).svg [1920,1921,1924] svg ar:أعلام سورية خلال فترة الانتداب الفرنسي; en:Historical flags > French rule > States 
+    en: ! scope="row" | |1921–1924 | rowspan="2" |Flag of the Jabal Druze State
+    ar: علم دولة السويداء، 1920-1924
+- Flag of Jabal ad-Druze (state).svg [1921,1924,1936] svg ar:أعلام سورية خلال فترة الانتداب الفرنسي; ar:تاريخ أعلام سوريا > الانتداب الفرنسي > ا; en
+    en: ! scope="row" | |1924–1936
+    fr: État des Druzes (1921-1936).
+    ar: علم دولة جبل الدروز، 1924-1936
+- Flag of Syria French mandate.svg [1922,1924,1925,1930,1932] svg ar:قائمة أعلام سورية; en:Historical flags > Former Syrian states; fr:Drapeaux historiques
+    en: ! scope="row" rowspan="2" | |1922–1925 |Flag of the Syrian Federation | rowspan="2" |Green, white, green triband with the flag of France in the upper hoist.
+    fr: 1922-1932 | | Fédération syrienne puis État de Syrie puis République syrienne | Un mois plus tard, le drapeau change à nouveau et se compose à présent de trois bandes horizontales verte, blanche et ve
+    ar: علم الاتحاد السوري والدولة السورية أثناء الانتداب الفرنسي على سورية 1922-1932
+- Flag of Syria (1930–1958, 1961–1963).svg [1930,1932,1958,1961,1963] svg ar:تاريخ أعلام سوريا > علم الاستقلال > الان; ar:قائمة أعلام سورية; en:Historic flags of Sy
+    en: The 1930 Independence Flag (1930–1958, 1961–1963)
+    ar: الجمهورية السورية، ويدعى بعلم الاستقلال لأن فترة رفعه شهدت استقلال سورية 1932-1958
+- Flag of the Syrian revolution.svg [1930,2011,2024,2025] svg en:Civil and state flags
+    en: ! scope="row" | |2024–2025(de facto use by the Syrian caretaker government); 2025–present (official) |Flag of Syria |2011 design based on the 1930 flag but with 2:3 ratio and with closer and bigger st
+- Syria-flag 1932-58 1961-63.svg [1930,1932,1936,1946,1950,1958] svg en:Historical flags > Former Syrian states; fr:Drapeaux historiques
+    en: ! rowspan="2" | |1930–1950 |Flag of the First Syrian Republic | rowspan="2" |Tricolor consisting of green, white, and black stripes, with three red stars in the middle white stripe. 1:2 ratio.
+    fr: 1932-1958 | |République syrienne | Ce drapeau est hissé pour la première fois à Alep en 1932, et est officiellement adopté en 1936, à la suite du traité conférant une semi-indépendance à la Syrie. Il 
+- Hatay flag.svg [1937,1938,1939] svg ar:أعلام سورية خلال فترة الانتداب الفرنسي; ar:تاريخ أعلام سوريا > الانتداب الفرنسي > ا; en
+    en: ! scope="row" | |1938–1939 |Flag of the independent Hatay State | |}
+    fr: République du Hatay (1937-1939).
+    ar: علم لواء الإسكندرون أو دولة هتاي، 1938-1939
+- Flag of Free France (1940-1944).svg [1940,1942,1944] svg en:Historical flags > French rule
+    en: ! scope="row" | |1942–1944 |Flag of Free France |A vertical tricolour of blue, white, and red with the Cross of Lorraine. |}
+- Flag of Syria (1963–1972).svg [1963,1972] svg en:Historical flags > Former Syrian states; fr:Drapeaux historiques
+    en: ! scope="row" | |1963–1972 |Flag of the Syrian Arab Republic |Tricolor consisting of red, white, and black stripes, with three green stars in the middle white stripe. 1:2 ratio.
+    fr: 1963-1972 | | La dictature militaire prend le pouvoir en 1963, et porte le parti Baas au pouvoir en Syrie. Le pays adopte alors un drapeau rouge-blanc-noir identique au drapeau irakien alors en usage,
+- Flag of Syria (1972–1980).svg [1972,1977,1980] svg ar:قائمة أعلام سورية; en:Historical flags > Former Syrian states; fr:Drapeaux historiques
+    en: ! scope="row" | |1972–1980 |Flag of Syria in the Federation of Arab Republics |Tricolor consisting of red, white, and black stripes with a golden Hawk of Quraish in the middle white stripe. 2:3 ratio.
+    fr: 1972-1980 | | Union des Républiques arabes | En 1972, les trois étoiles centrales sont remplacées par le faucon d'or (dit « de Quraych ») au centre, saisissant avec ses griffes un ruban portant l'insc
+    ar: الجمهورية العربية السورية في اتحاد الجمهوريات العربية 1972-1980
+- Flag of the Democratic Administration of North and East Syria.svg [2018,2026] svg en:Subdivision flags
+    en: ! scope="row" | |2018–2026 |Flag of the Democratic Autonomous Administration of North and East Syria
+- Flag of the Syrian Salvation Government.svg [2018,2024] svg ar:قائمة أعلام سورية
+    ar: علم حكومة الإنقاذ السورية 2018–2024
+- Flag of the Afrin Canton.svg [2024] svg en:Subdivision flags
+    en: ! scope="row" | |?–2024 |Flag of the Afrin Region | |}
+- Flag of Jazira Canton.svg [2026] svg en:Subdivision flags
+    en: ! scope="row" | |?–2026 |Flag of the Jazira Region

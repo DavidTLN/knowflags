@@ -1,0 +1,37 @@
+### kh  (en:Flag of Cambodia, en:List of flags of Cambodia, fr:Drapeau du Cambodge, km:ទង់ជាតិកម្ពុជា)
+- Flag of Cambodia (1863-1940).svg [1863,1940,1948] svg en:Historical flags > National; en:Historical national flags; km:ប្រវត្តិទង់ជាតិ
+    en: 1863–1940 1940–1948 || Flag of the Kingdom of Cambodia as a French protectorate (1863–1940, 1940–1948) as well as Kingdom of Kampuchea|| {| class="wikitable" style="text-align: ;" ! !! style="backgrou
+    km: ១៨៦៣-១៩៤០ || អាណានិគម​បារាំង
+- Flag of Cambodia (pre-1863).svg [1863] svg en:Historical flags > National; km:ប្រវត្តិទង់ជាតិ
+    en: ! scope="row" | | ?–1863 | Alleged flag of the Khmer Empire and Cambodia | A yellow pennant with green fringe. The claim that this flag existed is dubious and questioned.
+    km: ៨០២-១៨៦៣ || សម័យអង្គរ ដល់ចុងសម័យឧដុង្គ
+- Flag of Cambodia under Japanese occupation.svg [1941,1945] svg en:Historical flags > National; fr:Drapeaux historiques; km:ប្រវត្តិទង់ជាតិ
+    en: ! scope="row" | | 1941–1945 | Flag of Cambodia under Japanese occupation | A red flag with a square formed by thin white lines which has small white squares centered at each corner and another in the 
+    fr: 1945 | Drapeau du Gouvernement du Cambodge sous domination japonaise (Mars - Octobre 1945) | Gouvernement du Cambodge sous domination japonaise au sein de la Sphère de coprospérité de la grande Asie o
+    km: ១៩៤២-១៩៤៥ || ការ​ត្រួតត្រា​របស់​ជប៉ុន
+- Flag of Cambodia vertical.svg [1948] svg en:State > National > Ceremonial
+    en: ! scope="row" | | 1948–19701993–present | Ceremonial flag of Cambodia | Three vertical bands of blue, red, and blue and a depiction of Angkor Wat in white with black outlining. |}
+- Flag of Cambodia.svg [1948,1953,1970,1975,1976,1990] svg en:Historical flags > National; en:Historical national flags; en:State > National; fr:Drap
+    en: 1948–1970 1975–1976 | Flag of the Kingdom of Cambodia during the French protectorate (1948–1953) and after its independence from France (1953–1970) as well as Kampuchea (1975–1976) || {| class="wikita
+    fr: 1948-1970 | Drapeau du royaume du Cambodge | Royaume du Cambodge
+    km: bgcolor="#efefef" ! ទង់ជាតិព្រះរាជាណាចក្រកម្ពុជាបច្ចុប្បន្ន​ |} ទង់ជាតិ​នៃ​ព្រះរាជាណាចក្រកម្ពុជា​ បច្ចុប្បន្ន​នេះ​ត្រូវ​បាន​ដាក់​ឱ្យ​ប្រើប្រាស់​ជា​ផ្លូវការនៅក្នុង​ឆ្នាំ១៩៩៣ ឡើងវិញក្រោយការបោះឆ្នោតសភាតំ
+- Flag of the Khmer Republic.svg [1970,1975] svg en:Historical flags > National; en:Historical national flags; fr:Drapeaux historiques; km:
+    en: 1970–1975 || Flag of the Khmer Republic. || {| class="wikitable" style="text-align: ;" ! !! style="background-color:#032ea1"|Blue !! style="background-color:#e00025"|Red !! style="background-color:#ff
+    fr: 1970-1975 | Drapeau de la République khmère | République khmère
+    km: ១៩៧០-១៩៧៥ || សាធារណរដ្ឋខ្មែរ (លន់ នល់)
+- Flag of Democratic Kampuchea.svg [1975,1976,1979,1982,1990,1993] svg en:Historical flags > National; en:Historical national flags; fr:Drapeaux historiques; km:
+    en: 1976–1979 1982–1993 1993-1998 || Flag of Democratic Kampuchea (and of the Coalition Government of Democratic Kampuchea until 1993 and the Provisional Government of National Union and National Salvatio
+    fr: 1975-1979 | Drapeau du Kampuchéa démocratique | Kampuchéa démocratique
+    km: ១៩៧៥-១៩៧៩ || កម្ពុជាប្រជាធិបតេយ្យ (ប៉ុល ពត)
+- Flag of the People's Republic of Kampuchea.svg [1979,1989] svg en:Historical flags > National; en:Historical national flags; fr:Drapeaux historiques; km:
+    en: 1979–1989 || Flag of the People's Republic of Kampuchea || {| class="wikitable" style="text-align: ;" ! !! style="background-color:#da121a"|Red !! style="background-color:#fcdd09"|Yellow
+    fr: 1979-1989 | Drapeau de la République démocratique du Kampuchéa | République populaire du Kampuchéa
+    km: ១៩៧៩-១៩៨៩ || សាធារណរដ្ឋប្រជាមានិតកម្ពុជា
+- Flag of the State of Cambodia.svg [1989,1991,1992] svg en:Historical national flags; fr:Drapeaux historiques; km:ប្រវត្តិទង់ជាតិ
+    en: 1989–1992 || Flag of the State of Cambodia. || {| class="wikitable" style="text-align: ;" ! !! style="background-color:#032ea1" |Blue !! style="background-color:#e00025" |Red !! style="background-colo
+    fr: 1989-1991 | Drapeau de l'État du Cambodge | État du Cambodge
+    km: ១៩៨៩-១៩៩១ || រដ្ឋកម្ពុជា
+- Flag of Cambodia under UNTAC.svg [1992,1993] svg en:Historical flags > National; en:Historical national flags; fr:Drapeaux historiques; km:
+    en: 1992–1993 || Flag of United Nations Administered Cambodia (UNTAC)|| {| class="wikitable" style="text-align: ;" ! !! style="background-color:#009fdc"|Blue !! style="background-color:#ffffff"|White
+    fr: 1992-1993 | Drapeau du Cambodge sous l'APRONUC | Autorité provisoire des Nations Unies au Cambodge (APRONUC)
+    km: ១៩៩២-១៩៩៣ || អ៊ុនតាក់

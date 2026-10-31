@@ -1,0 +1,52 @@
+### ss  (en:Flag of South Sudan, en:List of South Sudanese flags, fr:Drapeau du Soudan du Sud)
+- Flag of Egypt (1793-1844).svg [1793,1820,1844] svg en:Historical flags > Ottoman Empire (Turki
+    en: ! scope="row" | | 1820–1844 | Flag of Ottoman Egypt | A red field with a white crescent moon and seven-pointed star.
+- Flag of the Ottoman Empire (eight pointed star).svg [1820,1844] svg en:Historical flags > Ottoman Empire (Turki
+    en: ! scope="row" | | 1820–1844 | rowspan="2" | Flag of the Ottoman Empire | A red field with a white crescent moon and eight-pointed star.
+- Flag of Egypt (1844-1867).svg [1844,1867] svg en:Historical flags > Ottoman Empire (Turki
+    en: ! scope="row" | | 1844–1867 | Flag of the self-declared Khedivate of Egypt introduced by Muhammad Ali | Red flag with a white crescent containing a five-pointed white star.
+- Flag of Muhammad Ali.svg [1867,1881] svg en:Historical flags > Ottoman Empire (Turki
+    en: ! scope="row" | | 1867–1881 | Flag of the Khedivate of Egypt | Red flag with a white crescent and three five-pointed stars.
+- Flag of Egypt 19th century 6point.svg [1881,1899,1914] svg en:Historical flags > Anglo-Egyptian Sudan; en:Historical flags > Ottoman Empire (Turki
+    en: ! scope="row" | | 1881–1899 | Flag of the Khedivate of Egypt under British occupation | |}
+- Flag of the Mahdi movement in Sudan.svg [1881,1899] svg en:Historical flags > Mahdist State
+    en: ! scope="row" | | 1881–1899 | Flag used during the Mahdist Revolt and in Mahdist Sudan | A golden field with blue and red borders and blue Arabic script in the .
+- Egypt flag 1882.svg [1882,1914,1923] svg en:Historical flags > Anglo-Egyptian Sudan
+    en: ! scope="row" | | 1914–1923 | Flag of the Sultanate of Egypt | Red flag with three white crescents, each containing a five-pointed white star.
+- Flag of Lado.svg [1894,1910] svg en:Historical flags > Belgian Empire
+    en: ! scope="row" | | 1894–1910 | Flag of the Lado Enclave | A blue field with a yellow saltire that extends to the corners of the flag and four yellow stars in each blue triangle. |}
+- Flag of the Congo Free State.svg [1894,1910] svg en:Historical flags > Belgian Empire
+    en: ! scope="row" | | 1894–1910 | Flag of the Congo Free State and the Belgian Congo | A yellow five-pointed flag on a blue background.
+- Flag of Anglo-Egyptian Sudan (1914–1922).png [1914,1922] png en:Historical flags > South Sudan as part o
+    en: Flags used in Anglo-Egyptian Sudan (1914–1922)
+- Flag of Anglo-Egyptian Sudan.svg [1922,1955] svg en:Historical flags > South Sudan as part o
+    en: Flags used in Anglo-Egyptian Sudan (1922–1955)
+- Flag of Egypt (1922–1958).svg [1922,1923,1956,1958] svg en:Historical flags > Anglo-Egyptian Sudan
+    en: ! scope="row" | | 1923–1956 | Flag of the Kingdom of Egypt and the co-official flag of the Arab Republic of Egypt | Green flag with a white crescent containing three five-pointed white stars.
+- Flag of the Sudan Defense Force (1925-1956).svg [1925,1956] svg en:Historical flags > Anglo-Egyptian Sudan
+    en: ! scope="row" | | 1925–1956 | Flag of the Sudan Defence Force | A horizontal triband of black, white, and black, with two crossed swords in the .
+- Flag of the Egyptian Revolution (1952).svg [1952,1956,1958] svg en:Historical flags > Anglo-Egyptian Sudan
+    en: ! scope="row" | | 1952–1956 | Flag of the 1952 Egyptian Revolution and the Republic of EgyptThe green monarchical flag remained the national flag of Egypt until 1958, even after the proclamation of th
+- Flag of Sudan (Bandung Conference).svg [1955] svg en:Historical flags > Anglo-Egyptian Sudan; en:Historical flags > South Sudan as part o
+    en: ! scope="row" | | April 1955 | Provisional flag of Sudan used during the Afro-Asian Conference | A white field with "SUDAN" written in red in the . |}
+- Flag of Sudan (1956–1970, 2-3).svg [1956,1970] svg en:Historical flags > Under Sudan
+    en: ! scope="row" | | Similar, but a 2:3 ratio.
+- Flag of the Nile Republic.svg [1969,1971] svg en:Historical flags > South Sudan as part o
+    en: Flag of Gordon Muortat Mayen's Nile Provisional Government (NPG) and self-declared Nile Republic (1969–1971)
+- Flag of Sudan (vertical).svg [1970,2011] svg en:Historical flags > Under Sudan
+    en: ! scope="row" | 150x150px | 1970–2011 | Flag of Sudan (vertical) | |}
+- Flag of Sudan.svg [1970,2011] svg en:Historical flags > South Sudan as part o; en:Historical flags > Under Sudan
+    en: ! scope="row" | | rowspan="2" | 1970–2011 | rowspan="2" | Flag of Sudan | A horizontal tricolour of red, white, and black; with a green triangle based at the hoist.
+- Flag of South Sudan (2011–2023, upright star).svg [2005,2011,2023] svg en:Historical flags > South Sudan as part o; en:Historical flags > South Sudan as the in; 
+    en: ! scope="row" | | rowspan="3" | 2011–2023 | rowspan="2" | Flag of South Sudan | A horizontal tricolour of black, red, and green, fimbriated with white stripes; with a darker blue equilateral triangle 
+    fr: Drapeau de 2011 à 2023
+- Flag of South Sudan (2011–2023; vertical).svg [2011,2023] svg en:Historical flags > Under South Sudan
+    en: ! scope="row" | 150x150px | Flag of South Sudan (vertical) | |}
+- Flag of South Sudan (alternate design).svg [2011,2023] svg en:Historical flags > South Sudan as the in
+    en: Flag of South Sudan (2011–2023), using dark blue triangle and tilted star.
+- Flag of South Sudan (Tilted Star).svg [2023] svg en:National flag; fr:Galerie > Historique des drapeaux
+    en: ! scope="row" | | Variant with a tilted star.
+    fr: Variante (depuis 2023)
+- Flag of South Sudan.svg [2023] svg en:National flag; fr:Galerie > Historique des drapeaux
+    en: ! scope="row" | | rowspan="3" | 2023–present | rowspan="2" | Flag of South Sudan | A horizontal tricolour of black, red, and green, fimbriated with white stripes; with a lighter blue equilateral trian
+    fr: Drapeau depuis 2023

@@ -1,0 +1,13 @@
+### lc  (en:Flag of Saint Lucia, fr:Drapeau de Sainte-Lucie)
+- Flag of Saint Lucia (1875-1939).svg [1875,1939] svg en:Historical flags; fr:Drapeau historique
+    en: ! scope="row" | | 1875–1939 | Flag of the British Colony of Saint Lucia | The Latin motto in the seal reads: (roughly, "Hardly a faithless guard for ships").
+    fr: Ancien drapeau de 1875 à 1939
+- Flag of Saint Lucia (1939–1967).svg [1939,1967] svg en:Historical flags; fr:Drapeau historique
+    en: ! scope="row" | | 1939–1967 | Flag of the British Colony of Saint Lucia | A British Blue Ensign defaced with the arms of the colony. This consisted of a black shield featuring two sticks of bamboo for
+    fr: Ancien drapeau de 1939 à 1967
+- Flag of Saint Lucia (1967–1979).svg [1967,1979] svg en:Historical flags; fr:Drapeau historique
+    en: ! scope="row" | | 1967–1979 | Flag of Saint Lucia | A cerulean blue field charged with a yellow triangle in front of a white-edged black arrowhead.
+    fr: Ancien drapeau de 1967 à 1979
+- Flag of Saint Lucia (1979-2002).svg [1979,2002] svg en:Historical flags; fr:Drapeau historique
+    en: ! scope="row" | | 1979–2002 | Flag of Saint Lucia | A cerulean blue field charged with a yellow triangle in front of a white-edged black arrowhead. The yellow triangle was enlarged and the arrowhead m
+    fr: Ancien drapeau de 1979 à 2002 (couleurs modifiées)

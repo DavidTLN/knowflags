@@ -1,0 +1,26 @@
+### lv  (en:Flag of Latvia, en:List of flags of Latvia, fr:Drapeau de la Lettonie, lv:Latvijas karogs)
+- Flag of Courland (state).svg [1562,1795] svg en:Historical flags; fr:Histoire
+    en: ! scope="row" | | rowspan="2" | 1562–1795 | Flag of the Duchy of Courland and Semigallia
+    fr: Drapeau du Duché de Courlande de 1562 à 1795.
+- Iskolata karogs.svg [1917,1918] svg en:Historical flags; fr:Histoire
+    en: ! scope="row" | | 1917–1918 | Flag of the Iskolat
+    fr: Drapeau de l'Iskolats de 1917 à 1918.
+- Flag of Latvia.svg [1918,1940,1990,2019] svg en:National flag and state flag; fr:Histoire
+    en: ! scope="row" | | 2019–present | Digital flag | rowspan="2" | Dimensions: 10 horizontally and 2:1:2 vertically.
+    fr: Drapeau de la République de Lettonie de 1918 à 1940.
+- Flag of Latvian SSR 1919.svg [1918,1919,1920] svg en:Historical flags; fr:Histoire
+    en: ! scope="row" | | 1919–1920 | Flag of the short-lived Latvian Socialist Soviet Republic
+    fr: Drapeau de la République soviétique socialiste de Lettonie de 1918 à 1919.
+- Flag of the Iron Division Freikorps.svg [1919] svg en:Historical flags
+    en: ! scope="row" | | 1919 | Flag of the Iron Division
+- Flag of Latvia (Textile).svg [1940,1990] svg en:History; en:National flag and state flag
+    en: ! scope="row" | | 1990–present(1940–1990 de jure) | State flag and civil ensign |}
+- Flag of Latvian SSR (1940-1953).svg [1940,1953] svg fr:Histoire
+    fr: Drapeau de la RSS de Lettonie de 1940 à 1953.
+- Flag of the Latvian Soviet Socialist Republic (1940–1953).svg [1940,1953] svg en:Historical flags
+    en: ! scope="row" | | 1940–19411945–1953 | Flag of the Latvian Soviet Socialist Republic | Red flag with the gold hammer and sickle in the canton, with the Latin characters LPSR.
+- Flag of Latvian SSR.svg [1953,1990] svg en:Historical flags; fr:Histoire
+    en: ! scope="row" | text-bottom| 150pxtext-top| | 1953–1990 | Flag of the Latvian Soviet Socialist Republic (obverse and reverse) | All flags of the constituent republics of the Soviet Union did not bear 
+    fr: Drapeau de la RSS de Lettonie de 1953 à 1990.
+- Flag of the Latvian Soviet Socialist Republic (1953–1990, reverse).svg [1953,1990] svg en:Historical flags
+    en: ! scope="row" | text-bottom| 150pxtext-top| | 1953–1990 | Flag of the Latvian Soviet Socialist Republic (obverse and reverse) | All flags of the constituent republics of the Soviet Union did not bear 

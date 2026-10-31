@@ -1,0 +1,21 @@
+### in  (en:Flag of India, en:List of Indian flags, en:List of Indian state flags, fr:Drapeau de l'Inde, hi:भारत का ध्वज)
+- Flag of India 1906 (Calcutta Flag).svg [1906] svg fr:Origine et signification > Histoire; hi:तिरंगे का विकास
+    fr: Le drapeau de Calcutta (1906).
+    hi: कोलकाता फ्लैग (१९०६)
+- Flag of India 1907 (Nationalists Flag).svg [1907] svg fr:Origine et signification > Histoire
+    fr: Drapeau de Berlin (1907).
+- Flag of India 1917.svg [1917] svg fr:Origine et signification > Histoire
+    fr: Drapeau du Home Rule Mouvement (1917).
+- 1921 India flag.svg [1921] svg fr:Origine et signification > Histoire; hi:तिरंगे का विकास
+    fr: Drapeau non officiel de 1921.
+    hi: तिरंगा झंडा जो केंद्र में एक चरखा के साथ सफेद, हरे और लाल का है। गांधी का ध्वज, 1921 में कांग्रेस की बैठक में पेश किया।
+- 1931 Flag of India.svg [1931] svg en:History > Gandhi's activism; fr:Origine et signification > Histoire; hi:तिरंगे का विकास
+    en: alt=A tricolour flag of saffron, white and green with a spinning wheel in the centre| The Swaraj flag, officially adopted by the Indian National Congress in 1931
+    fr: Drapeau adopté par le Congrès national indien en 1931.
+    hi: केसरिया, सफेद और केंद्र में एक चरखा के साथ हरे रंग का एक तिरंगा झंडा। स्वराज ध्वज, आधिकारिक तौर पर 1931 में कांग्रेस द्वारा अपनाया गया।
+- Flag of Jammu and Kashmir (1936-1953).svg [1936,1947,1952,1953] svg en:Former official state flags
+    en: rowspan="2"| | 1947–1952 | The flag was red with a plough in the centre. The red background stood for labour and the plough stood for agriculture. The ratio of the flag was 3:2.
+- Jammu-Kashmir-flag.svg [1952,2019] svg en:Former official state flags
+    en: 1952–2019 | The flag was red with three white vertical stripes in the hoist and a plough in the fly. The red background stood for labour, the stripes stood for the three administrative divisions of th
+- Flag of Supreme Court.png [2024] png en:Supreme Court
+    en: ! scope="row" | | 2024–present | Flag used by the Supreme Court of India | A blue field bearing the new emblem of the Supreme Court in gold. The emblem contains an open book, the dome of the Supreme C

@@ -1,0 +1,37 @@
+### ao  (en:Flag of Angola, en:List of Angolan flags, fr:Drapeau de l'Angola, pt:Bandeira de Angola)
+- PortugueseFlag1385.svg [1385,1482,1485] svg en:Historical flags
+    en: ! scope="row" | | 1482–1485 | Flag of the Kingdom of Portugal
+- PortugueseFlag1485.svg [1485,1495] svg en:Historical flags
+    en: ! scope="row" | | 1485–1495 | Flag of the Kingdom of Portugal
+- Flag of Portugal (1495).svg [1495,1521] svg en:Historical flags
+    en: ! scope="row" | | 1495–1521 | Flag of the Kingdom of Portugal
+- Flag of Portugal (1521).svg [1521,1578] svg en:Historical flags
+    en: ! scope="row" | | 1521–1578 | Flag of the Kingdom of Portugal
+- Flag of Portugal (1578).svg [1578,1640] svg en:Historical flags
+    en: ! scope="row" | | 1578–1640 | Flag of the Kingdom of Portugal
+- Flag of Portugal (1616).svg [1616,1640] svg en:Historical flags
+    en: ! scope="row" | | 1616–1640 | Flag of the Kingdom of Portugal (putative)
+- Flag of Portugal (1640).svg [1640,1667] svg en:Historical flags
+    en: ! scope="row" | | 1640–1667 | Flag of the Kingdom of Portugal
+- Prinsenvlag.svg [1641,1648] svg en:Historical flags
+    en: ! scope="row" | | 1641–1648 | The Prince's Flag in the Dutch Republic
+- Flag of Portugal (1667).svg [1667,1706] svg en:Historical flags
+    en: ! scope="row" | | 1667–1706 | Flag of the Kingdom of Portugal
+- Flag of Portugal (1707-1816).svg [1706,1707,1750,1816] svg en:Historical flags
+    en: ! scope="row" rowspan="2" | | 1706–1750 | rowspan="2" | Flag of the Kingdom of Portugal | rowspan="2"
+- Variant of the Flag of Portugal (1750-1816).svg [1750,1816] svg en:Historical flags
+    en: ! scope="row" | | 1750–1816 | Flag of the Kingdom of Portugal
+- Flag of the United Kingdom of Portugal, Brazil, and the Algarves (1815-1825).svg [1815,1816,1825,1826] svg en:Historical flags
+    en: ! scope="row" | | 1816–1826 | Flag of the Kingdom of Portugal
+- Flag of Portugal (1834-1910).svg [1834,1910] svg en:Historical flags
+    en: ! scope="row" | | 1834–1910 | Flag of the Kingdom of Portugal
+- Royal Banner of the Kingdom of Kakongo (c. 1883).svg [1883] svg en:Historical flags
+    en: ! scope="row" | | c. 1883 | Royal Banner of the Kingdom of Kakongo
+- Flag of Portugal (official).svg [1910,1975] svg en:Historical flags
+    en: ! scope="row" | | 1910–1975 | Flag of Portugal | |}
+- Flag of Angola using the specifications prescribed in "Manual Simbolos Nacionais", V01.05.2021D.svg [1975,2020,2021] svg en:National flag
+    en: ! scope="row" | | 1975–present | National flag of Angola | A horizontal bicolor of red above black with a yellow emblem in the consisted of a five-pointed star within a half gear wheel crossed by a ma
+- Flag of the Angola Red Cross.svg [1978] svg en:Red Cross Society
+    en: ! scope="row" | | 1978–present | Flag of the Angola Red Cross | Red Cross surrounded by the association's name. |}
+- Angolan Olympic Committee flag.svg [1979] svg en:Olympic Committee
+    en: ! scope="row" | | 1979–present | Flag of the Angolan Olympic Committee | |}

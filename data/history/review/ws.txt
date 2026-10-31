@@ -1,0 +1,40 @@
+### ws  (en:Flag of Samoa, en:List of Samoan flags, fr:Drapeau des Samoa)
+- Flag of Tongatapu (1858-1862).svg [1845,1858,1862] svg en:Historical flags
+    en: ! scope="row" | | 1845–1858 | Flag of the Tuʻi Tonga Empire in Samoa | A white field with two red crosses, two blue crosses and a blue "M" and a red "A" in the .
+- Flag of Samoa (1858-1873) as reported in the Flags of Paradise chart.svg [1858,1861,1873] svg en:Historical flags; fr:Histoire
+    en: ! scope="row" | | 1858–1861 | Flag of the Kingdom of Samoa | A red field with a white crescent and a five-pointed star.
+    fr: Drapeau du Royaume de Samoa (1858-1873)
+- Flag of Germany (1867–1918).svg [1867,1900,1914,1918] svg en:Historical flags
+    en: ! scope="row" | | 1900–1914 | Flag of the German Empire | A tricolour made of three equal horizontal bands coloured black (top), white, and red (bottom).
+- Flag of Tutuila (1872).svg [1872,1873] svg en:Historical flags
+    en: ! scope="row" | | 1872–1873 | Flag of the Kingdom of Samoa | A nine-striped field (five blue stripes and four white stripes) and a red canton with two crescent moons and four five-pointed stars.
+- Flag of Samoa (1873-1875).svg [1873,1875] svg en:Historical flags
+    en: ! scope="row" | | 1873–1875 | Flag of the Kingdom of Samoa | A red field with a white five-pointed star on the blue canton.
+- Flag of Tuiaana line 1873-1887 1889-1900.svg [1873,1886,1887,1889,1900] svg en:Historical flags
+    en: ! scope="row" | | 1886–1887 | Flag of the Kingdom of Samoa | A red field with centred black cross and a white five-pointed star in the canton.
+- Flag of the Kingdom of Samoa (1873–1886, 1889–1900).svg [1873,1879,1886,1889,1900] svg en:Historical flags
+    en: ! scope="row" | | 1879–18861889–1900 | Flag of the Kingdom of Samoa | A red field with centred white cross and a five-pointed star in the canton.
+- Flag of Samoa (1875-1879).svg [1875,1879] svg en:Historical flags
+    en: ! scope="row" | | 1875–1879 | Flag of the Kingdom of Samoa | A seven-striped field (four red stripes and three white stripes) and a five-pointed star on the blue canton, similar to the flag of Liberia
+- Flag of Tupua Tamasesse 1887-1889.svg [1887,1889] svg en:Historical flags
+    en: ! scope="row" | | 1887–1889 | Flag of the Kingdom of Samoa | A white field with centred black cross and a red canton with a white five-pointed star.
+- Flag of the United States (1896–1908).svg [1896,1900,1908] svg en:Historical flags
+    en: ! scope="row" | | 1900–1908 | Flag of the United States | Thirteen horizontal stripes alternating red and white; in a blue canton, 45 white stars in alternating horizontal rows of 8 and 7 stars.
+- Reichskolonialflagge.svg [1900,1914] svg en:Historical flags; fr:Histoire
+    en: ! scope="row" | | 1900–1914 | Colonial flag of the German Empire | A tricolour made of three equal horizontal bands coloured black (top), white, and red (bottom) with the Reichsadler in the .
+    fr: Drapeau colonial allemand
+- Flag of the United States (1908–1912).svg [1908,1912] svg en:Historical flags
+    en: ! scope="row" | | 1908–1912 | Flag of the United States | Thirteen horizontal stripes alternating red and white; in a blue canton, 46 white stars in horizontal rows of 8 or 7 stars.
+- Flag of New Zealand.svg [1914,1920,1962] svg en:Historical flags; fr:Histoire
+    en: ! scope="row" | | 1914–1962 | Flag of New Zealand | A Blue Ensign defaced with four red stars with white borders in the fly, representing the constellation of Crux, the Southern Cross.
+    fr: Drapeau de la Nouvelle-Zélande utilisé durant l'occupation (1914–1920)
+- Flag of the United Kingdom (1-2).svg [1914,1962] svg en:Historical flags
+    en: ! scope="row" | | 1914–1962 | Flag of the United Kingdom | A superimposition of the flags of England and Scotland, with the Saint Patrick's Saltire (representing Ireland).
+- Flag of Samoa (1948-1949).svg [1948,1949] svg en:Historical flags; fr:Histoire
+    en: ! scope="row" | | 1948–1949 | Flag of the Western Samoa Trust Territory | A red field with a blue rectangle on the upper hoist-side quadrant bearing the Southern Cross of four white larger five-pointe
+    fr: Première version du drapeau des Samoa occidentales ()
+- Flag of Samoa.svg [1949,1962,1994] svg en:Historical flags; en:National flag; fr:Histoire
+    en: ! scope="row" | | 1962–present | Flag of Samoa | A red field with the blue rectangle on the upper hoist-side quadrant bearing the Southern Cross of four white larger five-pointed stars and a smaller s
+    fr: Drapeau des Samoa sous administration de l'ONU (1949-1962)
+- US flag 49 stars.svg [1959,1960] svg en:Historical flags
+    en: ! scope="row" | | 1959–1960 | Flag of the United States | Thirteen horizontal stripes alternating red and white; in a blue canton, 49 white stars arranged in staggered horizontal rows of 7 stars. |}

@@ -1,0 +1,70 @@
+### at  (en:Flag of Austria, en:List of Austrian flags, fr:Drapeau de l'Autriche, de:Flagge Österreichs)
+- Banner of Margraviate of Austria & Early Duchy of Austria.png [1191] png en:Historical flags
+    en: ! scope="row" | | 976–1191 | Medieval banner of the Margraviate of Austria and early Duchy of Austria under the House of Babenberg
+- Flag of Austria (1230–1934, 1945–2000).svg [1191,1230,1804,1918,1934,1938] svg en:Historical flags; fr:Histoire
+    en: ! scope="row" | | 1191–1804 | rowspan="2" | Flag of the late Duchy and Archduchy of Austria
+    fr: Drapeau de la république d'Autriche allemande puis de la république d'Autriche de 1918 à 1938.
+- Flag of Austria.svg [1230,1945] svg en:National and state flag; fr:Histoire
+    en: ! scope="row" | | 1230–18061918–19341945–present | Civil flag and ensign | Three equal horizontal bands of red, white, and red.
+    fr: Drapeau de la Deuxième République depuis 1945.
+- Banner of the Holy Roman Emperor with haloes (1400-1806).svg [1400,1806] svg fr:Histoire
+    fr: Bannière de l'empereur du Saint-Empire romain germanique.
+- Flag of the Grand Duchy of Tuscany (1840).svg [1765,1800,1815,1840,1848,1849] svg de:Geschichte der Flagge > Einfluss
+    de: 23pxGroßherzogtum Toskana, 1765 bis 1800, 1815 bis 1848 und 1849 bis 1860
+- Flag of Galicia and Lodomeria (1849-1890).svg [1772,1800,1849,1890] svg en:Historical flags > Flag of subdivisions 
+    en: Kingdom of Galicia and Lodomeria 1772–1800; 1849–90
+- Flag of the Habsburg Monarchy.svg [1804,1867,1918] svg de:Geschichte der Flagge > Die Fahnen Öster; en:Historical flags; en:History > Habsburg mo
+    en: ! scope="row" | | 1804–1918 | Flag of the Austrian Empire | Flag of the Habsburg monarchy and also the flag of the Austrian Empire; from the Austro-Hungarian Compromise of 1867, flag of Cisleithanian 
+    fr: Drapeau des Habsbourg et de l'empire d'Autriche (1804 – 1867), parfois utilisé pour représenter l'Autriche-Hongrie.
+    de: mini|hochkant=0.6|Zivile Nationalflagge der österreichischen Reichshälfte der Doppelmonarchie
+- Flag of the Kingdom of Lombardy–Venetia (1815–1866).svg [1815,1859,1866] svg de:Geschichte der Flagge > Einfluss
+    de: Königreich Lombardo-Venetien von 1815 bis 1859 bzw. 1866
+- State Flag of the Duchy of Modena and Reggio (1830-1859).svg [1830,1859] svg de:Geschichte der Flagge > Einfluss
+    de: 23pxHerzogtum Modena, 1830 bis 1859
+- Flag of Galicia-Lodomeria 1890-1918.svg [1890,1918] svg en:Historical flags > Flag of subdivisions 
+    en: Kingdom of Galicia and Lodomeria 1890–1918
+- Flag of Hungary (1915-1918; angels).svg [1915,1918] svg en:Historical flags > Flag of subdivisions 
+    en: Kingdom of Hungary
+- Flag of Austria (state) 1919-1934.svg [1919,1934] svg en:Historical flags
+    en: ! scope="row" | | 1919–1934 | State flag of the First Austrian Republic | Same as the modern Austrian flag, but without the broken chains
+- Flag of Salzburg (state).svg [1921] svg en:State flags
+    en: ! scope="row" | ! scope="row" | | Salzburg | 1921 | Two equal bands of red and white (with the state's coat of arms surmounted on the state flag version).
+- Flag of Salzburg.svg [1921] svg en:State flags
+    en: ! scope="row" | ! scope="row" | | Salzburg | 1921 | Two equal bands of red and white (with the state's coat of arms surmounted on the state flag version).
+- Flag of Austria (state) 1934-1938.svg [1934,1938,1945] svg en:Historical flags; fr:Histoire
+    en: ! scope="row" | | 1934–1938 | State flag of the Federal State of Austria | This is the state flag of Austria adopted in 1934 and used until Austria was incorporated into Germany from 1938 to 1945. Thi
+    fr: Drapeau d’État de l'Autriche entre 1934 et 1938.
+- Flag of German Reich (1935–1945).svg [1935,1938,1945] svg fr:Histoire
+    fr: Drapeau du Troisième Reich ayant annexé l'Autriche de 1938 à 1945.
+- Flag of Tirol (state).svg [1945] svg en:State flags
+    en: ! scope="row" rowspan="2" | ! scope="row" | | Tyrol (Tirol) | 1945 | rowspan="2" | Two equal bands of white and red (with the state's coat of arms surmounted on the state flag version).
+- Flag of Tirol.svg [1945] svg en:State flags
+    en: ! scope="row" rowspan="2" | ! scope="row" | | Tyrol (Tirol) | 1945 | rowspan="2" | Two equal bands of white and red (with the state's coat of arms surmounted on the state flag version).
+- Flag of Carinthia (state).svg [1946] svg en:State flags
+    en: ! scope="row" | ! scope="row" | | Carinthia (Kärnten) | 1946 | Three equal bands of yellow, red, and white (with the state's coat of arms surmounted on the state flag version).
+- Flag of Carinthia until 1946.svg [1946] svg en:Historical flags > Flag of subdivisions 
+    en: Duchy of Carinthia
+- Flag of Carinthia.svg [1946] svg en:State flags
+    en: ! scope="row" | ! scope="row" | | Carinthia (Kärnten) | 1946 | Three equal bands of yellow, red, and white (with the state's coat of arms surmounted on the state flag version).
+- Flag of Vienna (state).svg [1946] svg en:State flags
+    en: ! scope="row" rowspan="2" | ! scope="row" | | Vienna (Wien) | 1946 | rowspan="2" | Two equal bands of red and white (with the state's coat of arms surmounted on the state flag version).
+- Flag of Vorarlberg (state).svg [1946] svg en:State flags
+    en: ! scope="row" | | Vorarlberg | 1946 |}
+- Flag of Wien.svg [1946] svg en:State flags
+    en: ! scope="row" rowspan="2" | ! scope="row" | | Vienna (Wien) | 1946 | rowspan="2" | Two equal bands of red and white (with the state's coat of arms surmounted on the state flag version).
+- Flag of Upper Austria (state).svg [1949] svg en:State flags
+    en: ! scope="row" | | Upper Austria (Oberösterreich) | 1949
+- Flag of Lower Austria (state).svg [1954] svg en:State flags
+    en: ! scope="row" | ! scope="row" | | Lower Austria (Niederösterreich) | 1954 | Two equal bands of blue and gold (with the state's coat of arms surmounted on the state flag version).
+- Flag of Lower Austria.svg [1954] svg en:State flags
+    en: ! scope="row" | ! scope="row" | | Lower Austria (Niederösterreich) | 1954 | Two equal bands of blue and gold (with the state's coat of arms surmounted on the state flag version).
+- Flag of Styria (state).svg [1960] svg en:State flags
+    en: ! scope="row" | ! scope="row" | | Styria (Steiermark) | 1960 | Two equal bands of white and green (with the state's coat of arms surmounted on the state flag version).
+- Flag of Styria.svg [1960] svg en:State flags
+    en: ! scope="row" | ! scope="row" | | Styria (Steiermark) | 1960 | Two equal bands of white and green (with the state's coat of arms surmounted on the state flag version).
+- Styria Flag until 1960.svg [1960] svg en:Historical flags > Flag of subdivisions 
+    en: Duchy of Styria
+- Flag of Burgenland (state).svg [1971] svg en:State flags
+    en: ! scope="row" | ! scope="row" | | Burgenland | 1971 | Two equal bands of red and gold (with the state's coat of arms surmounted on the state flag version).
+- Flag of Burgenland.svg [1971] svg en:State flags
+    en: ! scope="row" | ! scope="row" | | Burgenland | 1971 | Two equal bands of red and gold (with the state's coat of arms surmounted on the state flag version).

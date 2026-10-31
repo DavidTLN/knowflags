@@ -1,0 +1,51 @@
+### bg  (en:Flag of Bulgaria, en:List of Bulgarian flags, fr:Drapeau de la Bulgarie, bg:Национално знаме на България)
+- Flag of Constantine Tikh of Bulgaria 13th century.png [1257,1277] png fr:Histoire > Premier et second empires bul
+    fr: Drapeau des monnaies du tsar Konstantin Ier Tikh Asen entre 1257 et 1277.
+- Flag of the Second Bulgarian Empire (1325).svg [1325] svg bg:История > Първо и Второ българско царств; en:Historical flags
+    en: ! scope="row" | | c. 1325 | Flag of the Second Bulgarian Empire | Flag according to Angelino Dalorto
+    bg: Знаме на Търновград от италианска карта, съставена от Анжелино Далорто през 1325 г.
+- Flag of the Second Bulgarian Empire (14th century).svg [1325] svg fr:Histoire > Premier et second empires bul
+    fr: Drapeau de Veliko Tarnovo en 1325 (d'après une carte italienne élaborée par Angelo Delto)
+- Flag of the Second Bulgarian Empire.svg [1380] svg bg:История > Първо и Второ българско царств; en:Historical flags; fr:Histoire > Premier et
+    en: ! scope="row" | | c. 1380 | Flag of the Second Bulgarian Empire | Flag according to Guillem Soler
+    fr: Drapeau du Second Empire bulgare en 1380, sous le tsar Ivan Chichman (d'après une carte médiévale dressée par Gilem Soler)
+    bg: Знаме на Второто българско царство (при Иван Шишман) от средновековна карта, съставена от Гилем Солер през 1380 г.commons.wikimedia.org
+- KG BRCC STARA ZAGORA REVOLT FLAG 1875.png [1875] png bg:История > През Възраждането
+    bg: Знаме на Старозагорското въстание 1875 г.
+- Razlovci uprising banner 01.png [1876] png en:Historical flags > Other
+    en: ! scope="row" | alt=red banner, on the far yellow text reading "Awaken to liberation", in the middle a orange box with a black lion who has a red mane and above him is written in bent text "Macedonia"
+- Flag of Stiliana Paraskevova.svg [1877,1878] svg bg:История > През Възраждането; en:Historical flags > Other; fr:Histoire > Renaissance nat
+    en: ! scope="row" | | 1877–1878 | The standard of the Bulgarian Volunteer Corps
+    fr: Le drapeau des volontaires bulgares Opaltchentsi, créé par Stiliyan Paraskevova, est considéré comme un prototype du drapeau national de la Bulgarie.
+    bg: мини|200п|Знамето на Българското опълчение, ушито от Стилияна Параскевова, смятано за първообраз на националното знаме на България.
+- Samara flag.png [1877] png bg:История > През Възраждането; en:Historical flags > Other; fr:Histoire > Renaissance nat
+    en: ! scope="row" | | 1877– | The standard of the Bulgarian Volunteer Corps | Samara Flag |}
+    fr: Drapeau de Samara, important symbole militaire de l'armée bulgare.
+    bg: Самарското знаме.
+- Flag of Bulgaria (1878-1944).svg [1878,1944,1946] svg fr:Histoire > Depuis l'indépendance
+    fr: Drapeau de la Principauté puis du Royaume de Bulgarie (1878-1946).
+- Flag of Eastern Rumelia.svg [1878,1885] svg fr:Histoire > Depuis l'indépendance
+    fr: Drapeau de la Roumélie orientale ottomane (1878-1885).
+- Flag of the Republic of Tamrash.svg [1878,1886] svg en:Historical flags
+    en: ! scope="row" | | 1878–1886 | Flag of the Republic of Tamrash
+- Unofficial Bulgarian War-time flag.svg [1879] svg en:National flag
+    en: ! scope="row" | | 1879–present | Wartime flag | A horizontal tricolor of red, green and white.
+- 1885ArmenianFlag.svg [1885] svg bg:Галерия с чужди знамена, наподобяващи бъ
+    bg: Арменско знаме (1885)
+- 1921 India flag.svg [1921] svg bg:Галерия с чужди знамена, наподобяващи бъ
+    bg: Знаме на Индия на Махатма Ганди (1921)
+- Flag of Bulgaria (1946-1948).svg [1946,1947,1948] svg en:Historical flags; fr:Histoire > Depuis l'indépendance
+    en: ! scope="row" | | 1947–1948 | rowspan="4" | Civil and state flag of the People's Republic of Bulgaria | rowspan="4" | A horizontal tricolor of white-green-red with the Bulgarian emblem in the top hois
+    fr: Drapeau de la république populaire de Bulgarie (1946–1948).
+- Flag of Bulgaria (1948-1967).svg [1948,1967,1968] svg bg:История > След Освобождението; en:Historical flags; fr:Histoire > Depuis l'indépendance
+    en: ! scope="row" | | 1948–1968
+    fr: Drapeau de la république populaire de Bulgarie (1948–1967).
+    bg: Българското знаме през 1948 – 1967
+- Flag of Bulgaria (1967-1971).svg [1967,1968,1971] svg bg:История > След Освобождението; en:Historical flags; fr:Histoire > Depuis l'indépendance
+    en: ! scope="row" | | 1968–1971
+    fr: Drapeau de la république populaire de Bulgarie (1967–1971).
+    bg: Българското знаме през 1967 – 1971
+- Flag of Bulgaria (1971 – 1990).svg [1971,1990] svg en:Historical flags
+    en: ! scope="row" | | 1971–1990 |}
+- UpsideDownFlagBulgaria.svg [1990] svg en:National flag
+    en: ! scope="row" | 150x150px | 1990–present | Hanging national flag | Vertical version of the tricolor. |}

@@ -1,0 +1,16 @@
+### ga  (en:Flag of Gabon, en:List of national flags of sovereign states, fr:Drapeau du Gabon)
+- Flag of Brazil.svg [1889] svg en:Flags of UN member states and General As
+    en: !scope="row"|Brazil | | | |Green with a large yellow diamond in the bearing a blue globe with 27 white stars (one for each state and the Federal District) arranged as in the sky over Rio de Janeiro at
+- Flag of Lebanon.svg [1901,1993] svg en:Flags of UN member states and General As
+    en: !scope="row"|Lebanon |rowspan="2"| | | |Three horizontal bands consisting of red (top), white (middle, double width), and red (bottom) with a green cedar tree centered in the white band. |; see also "
+- Flag of Gabon 1959-1960.svg [1959,1960] svg en:Historical flags; fr:Galerie
+    en: style=" background:#E0E0E0;" | || 1959–1960 || Flag of Gabon || Horizontal green and blue bands separated by a thinner yellow band at the centre, with the French Tricolour at the canton. |}
+    fr: Ancien drapeau (1959 à 1960)
+- Flag of Lithuania.svg [2006] svg en:Flags of UN member states and General As
+    en: !rowspan="2" scope="row"|Lithuania | | |Three equal horizontal bands of yellow (top), green, and red. |rowspan="2"|Seimas of Lithuania – History of the National Flag . Retrieved 15 December 2006
+- Flag of Afghanistan (2013–2021).svg [2013,2021] svg en:Flags of UN member states and General As
+    en: Three equal vertical bands of black (hoist side), red, and green, with the national emblem in white centered on the red band and slightly overlapping the other 2 bands.
+- Flag of the President of Gabon.svg [2016] svg fr:Galerie
+    fr: Drapeau du président de la République (depuis 2016)
+- Flag of Vatican City (2023–present).svg [2023] svg en:Flags of UN member states and General As
+    en: !scope="row"|Vatican City | | | |Two vertical bands of yellow (hoist side) and white with the arms of the Holy See, consisting of the crossed keys of Saint Peter surmounted by the three-tiered papal t

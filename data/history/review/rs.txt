@@ -1,0 +1,64 @@
+### rs  (en:Flag of Serbia, en:List of Serbian flags, fr:Drapeau de la Serbie, sr:Застава Србије)
+- Flag of Serbia 1281.svg [1281,1918,1983] svg fr:Histoire > Drapeaux médiévaux; sr:Историја
+    fr: 1281 | Reconstruction du drapeau de la Serbie décrit en 1281 | style="font-size:90%;" | La description la plus vieille d'un drapeau de la Serbie est une description de 1281 du trésor du roi Stefan Vla
+    sr: мини|десно|Једна од неколико могућих реконструкција стега (заставе) краља Владислава I.
+- Flag of the Serbian Empire, reconstruction.svg [1339,1979] svg fr:Histoire > Drapeaux médiévaux
+    fr: Drapeau du tsar Dušan |Le dessin le plus vieux d'un drapeau de la Serbie est de la carte de 1339 d'Angelino Dulcert. La carte dépeint un numéro de drapeaux, et la Serbie est représentée par un drapeau
+- Flag of Serbia (1792).svg [1790,1792] svg en:Historical flags > Other flags
+    en: ! scope="row" | | 1790–1792 | Flag of Habsburg-occupied Serbia | style=font-size:90%; | Flag used at the coronation of the Emperor Leopold II in 1790
+- Karadorde's flag, Stevan Gavrilovic 1804.png [1804] png sr:Историја > Устаничке заставе
+    sr: мини|десно|усправно|Карађорђева застава, рад Стефана Гавриловића, Историјски музеј Србије.
+- First Serbian Uprising voivode flag.png [1811] png fr:Histoire > Drapeaux médiévaux
+    fr: 1811 |drapeau de voivode |}
+- Flag of Principality of Serbia (1835).svg [1835] svg en:Historical flags > National flags; en:History > Modern Serbia; sr:Настанак тробојке > В
+    en: ! scope="row" | | 1835 | Principality of Serbia | style=font-size:90%; | Horizontal tricolor of red, white, and blue, with Serbian cross (flanked by oak and olive branches) centered on the white band 
+    sr: Застава Кнежевине Србије из 1835. године
+- Flag of Principality of Serbia (1835–1878).svg [1835,1839,1878] svg en:Historical flags > National flags; en:History > Modern Serbia; sr:Настанак тробојке > В
+    en: ! scope="row" | | 1839–1878 | Principality of Serbia | style=font-size:90%; | Horizontal tricolor of red, blue, and white (Serbian national colours), with the coat of arms centered on the blue band an
+    sr: Застава Кнежевине Србије 1839 — 1878
+- Flag of Serbia (1835-1882).svg [1835,1878,1882] svg en:Historical flags > National flags; en:History > Modern Serbia
+    en: ! scope="row" | | 1878–1882 | Principality of Serbia | style=font-size:90%; | Horizontal tricolor of red, blue, and white (Serbian national colours), with the coat of arms centered on the blue band
+- State Flag of Serbia (1835).png [1835] png sr:Настанак тробојке > Прва народна застава
+    sr: лево|мини|Реконструкција државне заставе, тробојка водоравних поља са грбом, према уставу из фебруара 1835. године, Историјски музеј Србије. Застава има сличности са заставом Холандије, која је након 
+- Zastava sretenjski ustav.svg [1835,1882] svg fr:Histoire > Drapeaux modernes
+    fr: 1835–1882 | Principauté de Serbie | style=font-size:90%; | La constitution de Sretenje de 1835 décrit le drapeau de la Serbie comme un drapeau tricolore horizontal de raies rouge, blanc et bleu azur (
+- Flag of the Serbian Vojvodina.svg [1848,1849] svg en:Historical flags > Other flags
+    en: ! scope="row" | | 1848–1849 | Flag of Serbian Vojvodina | style=font-size:90%; | Horizontal tricolor of red, blue, and white (Serbian national colours), with the Habsburg imperial arms and the Serbian
+- Flag of Serbia (1882–1918).svg [1882,1918] svg en:Historical flags > National flags; en:History > Modern Serbia; sr:Настанак тробојке > В
+    en: ! scope="row" | 150px150px | 1882–1918 | Kingdom of Serbia | style=font-size:90%; | State flag (top): horizontal tricolor of red, blue, and white (Serbian national colours), with the coat of arms in t
+    sr: Застава Краљевине Србије 1882 — 1918
+- Flag of Montenegro (1905–1918).svg [1905,1918,2008] svg en:Flags of Serb people in other countries 
+    en: ! scope="row" | | 2008–present | Ethnic flag of Serbs of Montenegro | style=font-size:90%; | Horizontal tricolor of red, blue, and white (Serbian national colours), with the coat of arms of Montenegro
+- Flag of Serbia (1941–1944).svg [1941,1944] svg en:Historical flags > Other flags; sr:Настанак тробојке > Војне заставе
+    en: ! scope="row" | | 1941–1944 | Flag of Government of National Salvation(German-occupied Serbia) | style=font-size:90%; | Horizontal tricolor of red, blue, and white (Serbian national colours), with sty
+    sr: Једнострана неформална застава Владе народног спаса(1941—1944)
+- Flag of SR Serbia.svg [1945,1947,1963,1990,1991,1992] svg en:Historical flags > National flags; fr:Histoire > Drapeaux modernes; sr:Настанак тробојк
+    en: ! scope="row" | | 1947–1991 | People's Republic of Serbia / Socialist Republic of Serbia (constituent republic of FPR / SFR Yugoslavia) | style=font-size:90%; | Horizontal tricolor of red, blue, and w
+    fr: 1945–1992 | République socialiste de Serbie(république fédérative socialiste de Yougoslavie) | style=font-size:90%; | Après la Seconde Guerre mondiale, la Ligue des communistes de Yougoslavie est arri
+    sr: Застава НР Србије (1947–1963), СР Србије (1963—1990) и Р. Србије (1990—1992)
+- Flag of the Serbian Partisans.svg [1945,1947] svg en:Historical flags > National flags; en:History > Modern Serbia; sr:Настанак тробојке > В
+    en: ! scope="row" | | 1945–1947 | Federated State of Serbia / People's Republic of Serbia (constituent state / republic of DF / FPR Yugoslavia) | style=font-size:90%; | Horizontal tricolor of red, blue, a
+    sr: Застава Федералне Државе Србија (1945–1947)
+- Flag of Serbian Krajina (1991).svg [1991] svg en:Historical flags > Other flags
+    en: ! scope="row" | | 1991 | Flag of SAO Krajina, SAO Western Slavonia, SAO Eastern Slavonia, Baranja, and Western Syrmia | style=font-size:90%; | Horizontal tricolor of red, blue, and white (Serbian nati
+- State Flag of Serbian Krajina (1991).svg [1991,1992,1995] svg en:Historical flags > Other flags
+    en: ! scope="row" | | 1992–1995 | Flag of Republic of Serbian Krajina | style=font-size:90%; | Horizontal tricolor of red, blue, and white (Serbian national colours), with the Serbian eagle in the
+- Flag of Serbia (1992-2004).svg [1992,2004] svg sr:Настанак тробојке > Војне заставе
+    sr: Застава Републике Србије (1992—2004)
+- Flag of the Republika Srpska.svg [1992] svg en:Flags of Serb people in other countries 
+    en: ! scope="row" | | 1992–present | State flag | style=font-size:90%; | Horizontal tricolor of red, blue, and white (Serbian national colours)
+- Flag of Montenegro (1993-2004).svg [1993,2004] svg fr:Adaptations
+    fr: Drapeau du Monténégro (1993-2004).
+- Flag of the Republic of Eastern Slavonia - Baranja - and Western Syrmia.svg [1995,1998] svg en:Historical flags > Other flags
+    en: ! scope="row" | | 1995–1998 | Flag of Eastern Slavonia, Baranja, and Western Syrmia | style=font-size:90%; | Horizontal tricolor of red, blue, and white (Serbian national colours), with the Serbian ea
+- Flag of Serbia (2004-2010).svg [2004,2010] svg fr:Histoire > Drapeaux modernes; sr:Настанак тробојке > Војне заставе
+    fr: 2004–2010 | République de Serbie | style=font-size:90%; | |}
+    sr: Државна застава Републике Србије (2004—2010)
+- Flag of Serbian national minority in Croatia.svg [2005] svg en:Flags of Serb people in other countries 
+    en: ! scope="row" | | 2005–present | Ethnic flag of Serbs of Croatia and Serbs of North Macedonia | style=font-size:90%; | Horizontal tricolor of red, blue, and white (Serbian national colours) |}
+- Flag of Serbia (vertical).svg [2010] svg en:Current flags > National flags; sr:Исправна употреба заставе > Поштовање за
+    en: ! scope="row" | | 2010–present | State flag | style=font-size:90%; | Vertical display
+    sr: десно|усправно|мини|Усправно истицање заставе
+- Flag of Serbia.svg [2010] svg en:Current flags > National flags; sr:Настанак тробојке > Војне заставе
+    en: ! scope="row" | | 2010–present | State flag | style=font-size:90%; | Horizontal tricolor of red, blue, and white (Serbian national colours), with the lesser coat of arms of
+    sr: Државна застава Републике Србије (2010—тренутно)

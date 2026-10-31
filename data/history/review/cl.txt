@@ -1,0 +1,19 @@
+### cl  (en:Flag of Chile, fr:Drapeau du Chili, es:Bandera de Chile)
+- Flag of Spain (1785-1873 and 1875-1931).svg [1785,1873,1875,1931] svg fr:Histoire > Drapeaux antérieurs à l'indép
+    fr: Drapeau utilisé par le roi d'Espagne pour ses domaines à partir de 1785.
+- Flag of Chile (1812-1814).svg [1812,1814] svg es:Historia > Banderas posteriores a 1810 >; fr:Histoire > Drapeau de la Patria Vieja
+    fr: Drapeau de la Patria Vieja (1812-1814).
+    es: miniaturadeimagen|izquierda| Bandera de la Patria Vieja (1812-1814). Versión simple, sin el escudo chileno, usada por naves mercantes
+- Flag of Chile (1812-1814, alternative).svg [1812,1814] svg es:Historia > Banderas posteriores a 1810 >; fr:Histoire > Drapeau de la Patria Vieja
+    fr: Version alternative avec l'écusson national du Chili, la Croix de Santiago et une disposition différente des couleurs.
+    es: miniaturadeimagen| Bandera de la Patria Vieja (1812-1814). Versión alternativa con el primer escudo chileno, cruz de Santiago y diferente disposición de colores
+- Flag of Chile (1817-1818).svg [1812,1814,1817,1818] svg es:Historia > Banderas posteriores a 1810 >; fr:Histoire > Drapeau de la transition
+    fr: Drapeau de la transition, (1817).
+    es: miniaturadeimagen|izquierda| Bandera de la Transición, 1817 miniaturadeimagen| Posible bandera utilizada durante algunos días de 1817 El triunfo patriota en Chacabuco dio paso al periodo conocido como
+- Flag of Chile (1817-1818, 2nd).svg [1812,1814,1817,1818] svg es:Historia > Banderas posteriores a 1810 >; fr:Histoire > Drapeau de la transition
+    fr: Drapeau possiblement utilisé pendant quelques jours de l'année 1817.
+    es: miniaturadeimagen|izquierda| Bandera de la Transición, 1817 miniaturadeimagen| Posible bandera utilizada durante algunos días de 1817 El triunfo patriota en Chacabuco dio paso al periodo conocido como
+- Flag of Chile (1818).svg [1818] svg es:Historia > Banderas posteriores a 1810 >
+    es: miniaturadeimagen|izquierda| Reproducción del diseño original de la bandera
+- Flag of Chile (1818-1854).svg [1818,1854,1912] svg es:Historia > Banderas posteriores a 1810 >
+    es: miniaturadeimagen|izquierda| Bandera común usada hasta 1912

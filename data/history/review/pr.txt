@@ -1,0 +1,53 @@
+### pr  (en:Flag of Puerto Rico, en:List of Puerto Rican flags, fr:Drapeau de Porto Rico, es:Bandera de Puerto Rico)
+- Bandera de Costas.svg [1492,1701,1793,1868] svg en:Historical flags
+    en: align=" " |150pxFlag of the Kingdom of Castile (1492) | align=" " | 150pxBurgundy Cross Flag (Spanish military flag) | align=" " | Flag of Spain (1701–1793) in fortresses and castles | align=" " | 150
+- Banner of arms crown of Castille Habsbourg style.svg [1492,1493,1701,1715,1793,1868] svg en:Historical flags; es:Banderas históricas
+    en: Royal Standard of the Crown of Castile |1493–1715 |Royal emblem of the Crown of Castile, representing the Spanish Crown, flown in the island of present-day Puerto Rico since its discovery as San Juan 
+    es: Estándar Real de la Corona de Castilla |1493-1715 |Emblema real de la Corona de Castilla, que representa a la Corona española, volado en la isla actual de Puerto Rico desde su descubrimiento como San 
+- Flag of Grito de Lares (current, medium blue).svg [1492,1701,1793,1868] svg en:Historical flags
+    en: align=" " |150pxFlag of the Kingdom of Castile (1492) | align=" " | 150pxBurgundy Cross Flag (Spanish military flag) | align=" " | Flag of Spain (1701–1793) in fortresses and castles | align=" " | 150
+- Flag of New Spain.svg [1492,1506,1701,1793,1868,1898] svg en:Historical flags; es:Banderas históricas
+    en: Flag of Cross of Burgundy |1506–1898 |Military ensign of the Spanish Empire, used in the island of present-day Puerto Rico since its colonization as San Juan Bautista (Saint John Baptist) by Juan Ponc
+    es: Bandera de Cruz de Borgoña |1506-1898 |Insignia militar del Imperio español, utilizada en la isla actual de Puerto Rico desde su colonización como San Juan Bautista por Juan Ponce de León hasta la div
+- Flag of Christopher Columbus.svg [1493] svg en:First flags used; en:Historical flags; es:Banderas históricas; es:Historia > Primeros d
+    en: Captain's Ensign of Christopher Columbus |1493 |La Capitana expeditionary flag of Christopher Columbus carried by his fleet when the island of present-day Puerto Rico was claimed by Spaniards as San J
+    es: Insignia del Capitán Cristóbal Colón |1493 |La bandera expedicionaria La Capitana de Cristóbal Colón llevada por su flota cuando la isla actual de Puerto Rico, conocida por su pueblo nativo taíno como
+- Flag of Puerto Rico (1873–1875).svg [1793,1873,1874,1875,1898] svg en:Historical flags; es:Banderas históricas
+    en: align=" " | 150pxPuerto Rico Provincial Flag (1873–1875) | align=" " | Flag of Spain (1793–1873, 1875–1898) | align=" " | Spanish American War flagFlag of the Batallón Provisional No. 3 de Puerto Rico
+    es: Bandera de la provincia de Puerto Rico |1873-1874 |Bandera provincial de la isla actual de Puerto Rico durante la división administrativa de la provincia de Puerto Rico.
+- Flag of Spain (1873–1874).svg [1793,1873,1874,1875,1898] svg en:Historical flags; es:Banderas históricas
+    en: align=" " | 150pxPuerto Rico Provincial Flag (1873–1875) | align=" " | Flag of Spain (1793–1873, 1875–1898) | align=" " | Spanish American War flagFlag of the Batallón Provisional No. 3 de Puerto Rico
+    es: Bandera de la Primera República Española |1873-1874 |Bandera nacional de España, representando al país como una república federal, ondeó en simultaneo con la bandera provincial.
+- Flag of Grito de Lares (1868, dark blue).svg [1868,1872] svg en:Historical flags; es:Banderas históricas
+    en: Flag of Grito de Lares |1868 |Revolutionary standard of the Grito de Lares (Cry of Lares) revolt carried by members and followers of the Revolutionary Committee of Puerto Rico, who proclaimed it as th
+    es: Bandera del Grito de Lares |1868 |Bandera de la revuelta del Grito de Lares llevada a cabo por miembros y seguidores del Comité Revolucionario de Puerto Rico, quienes la proclamaron como la bandera na
+- Flag of Grito de Lares (1868, light blue).svg [1868,1930] svg es:Banderas históricas
+    es: Bandera del Grito de Lares |1868 |Bandera revolucionaria de la revuelta del Grito de Lares llevada a cabo por miembros y seguidores del Comité Revolucionario de Puerto Rico, quienes la proclamaron com
+- Flag of Puerto Rico (1895-1952, light blue).svg [1895,1897,1952] svg es:Banderas históricas
+    es: Bandera de Intentona de Yauco |1897-presente |Bandera de la revuelta Intentona de Yauco llevada a cabo por miembros y seguidores del Comité Revolucionario de Puerto Rico, quienes la proclamaron como l
+- Flag of Puerto Rico.svg [1895,1952,1995] svg en:Historical flags; es:Banderas históricas
+    en: Flag of Puerto Rico |1995–present |Subnational flag of Puerto Rico flown in the island of present-day Puerto Rico as an unincorporated and organized American territory with autonomous local, democrati
+    es: Bandera de Puerto Rico |1995-presente |Bandera subnacional de Puerto Rico ondeada en Puerto Rico como un territorio no incorporado organizado con un gobierno local autónomo y democrático. Con su redec
+- Flag of the United States (1896–1908).svg [1896,1898,1900,1908,1912,1917] svg en:Historical flags; es:Banderas históricas
+    en: Flag of the United States |1898–1908 |National flag of the United States flown in the island of present-day Puerto Rico as the Province of Puerto Rico during its invasion and occupation in the Spanish
+    es: Bandera de los Estados Unidos |1898-1908 |Bandera nacional de los Estados Unidos, ondeó durante su invasión y ocupación en la guerra hispano-estadounidense, y su anexión como territorio de ultramar a 
+- US flag 46 stars.svg [1898,1908,1912,1959,1960] svg en:Historical flags
+    en: align=" " |150px45-star American flag, the first U.S. flag flown in Puerto Rico (1898–1908) | align=" " |150px46-star American flag (1908–1912) | align=" " |150px48-star American flag (1912–1959) | al
+- US flag 48 stars.svg [1898,1908,1912,1959,1960] svg en:Historical flags
+    en: align=" " |150px45-star American flag, the first U.S. flag flown in Puerto Rico (1898–1908) | align=" " |150px46-star American flag (1908–1912) | align=" " |150px48-star American flag (1912–1959) | al
+- US flag 49 stars.svg [1898,1908,1912,1952,1959,1960] svg en:Historical flags; es:Banderas históricas
+    en: Flag of the United States |1959-1960 |National flag of the United States flown in the island of present-day Puerto Rico as an unincorporated and organized American territory with autonomous local, dem
+    es: Bandera de los Estados Unidos |1959-1960 |Bandera nacional de los Estados Unidos, ondeada junto a la del ELA.
+- Flag of the United States (1908–1912).svg [1900,1908,1912,1917,1952] svg en:Historical flags
+    en: Flag of the United States |1908–1912 |National flag of the United States flown in the island of present-day Puerto Rico as an American overseas territory under an insular government from 1900 to 1952,
+- Sporting flag of Puerto Rico.svg [1948] svg en:Other flags > Olympics flag
+    en: Olympics flag of Puerto Rico (1948–52)
+- Flag of Puerto Rico (1952-1995).svg [1952,1995] svg en:Historical flags; es:Banderas históricas
+    en: Flag of Puerto Rico |1952–present |Subnational flag of Puerto Rico flown in the island of present-day Puerto Rico as an unincorporated and organized American territory with autonomous local, democrati
+    es: Bandera de Puerto Rico |1952-pesente |Bandera subnacional de Puerto Rico como un territorio no incorporado organizado con un gobierno autónomo local democrático, llamado oficialmente el Estado libre a
+- Flag of the United States (Web Colors).svg [1952,1960] svg en:Historical flags
+    en: Flag of the United States |1960–present |National flag of the United States flown in the island of present-day Puerto Rico as an unincorporated and organized American territory with autonomous local, 
+- Flag of Puerto Rico (black and white).svg [2016] svg en:Other flags > Black flag; es:Otras banderas > Bandera negra; fr:Variante du drapeau noi
+    en: Black La Monoestrellada (2016)
+    fr: alt=drapeau noir et blanc composé de 5 bandes et d'un triangle orné d'une étoile en son centre.| Drapeau de Porto Rico en noir et blanc.
+    es: La Monoestrellada en negro y blanco

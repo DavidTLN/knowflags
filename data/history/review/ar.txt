@@ -1,0 +1,97 @@
+### ar  (en:Flag of Argentina, en:List of Argentine flags, fr:Drapeau de l'Argentine, es:Bandera de la Argentina)
+- Flag of the United Kingdom (1806).svg [1806] svg en:Historical flags > Other historical flag
+    en: ! scope="row" | | Flag of the United Kingdom
+- Flag of Belgrano (1812).svg [1812] svg es:Historia > La bandera
+    es: miniaturadeimagen|Bandera izada por Belgrano en 1812.
+- Bandera de la Provincia de Jujuy.svg [1813,1994] svg en:First-level administrative divisions; en:Historical flags > Other historical flag; es:H
+    en: ! scope="row" | 150x150px | 1813 | Flag of the Civil Freedom of Argentina
+    es: miniaturadeimagen|Bandera Nacional de Nuestra Libertad Civil, donada por Belgrano al Cabildo de Jujuy.
+- Flag of Artigas 1815.svg [1815] svg en:Historical flags > National flags
+    en: ! scope="row" | | rowspan="2" | 1815
+- Flag of Artigas.svg [1815,1820] svg en:Historical flags > National flags
+    en: ! scope="row" | | 1815–1820 | rowspan="3" | Flag of League of the Free Peoples
+- Flag of Argentina (1818).svg [1818] svg en:Historical flags > National flags
+    en: ! scope="row" | | 1818 | rowspan="3" | Flag of the United Provinces of the Río de la Plata
+- Flag of Argentina (vertical with Sol de Mayo).svg [1818] svg en:National flags
+    en: ! scope="row" | 150x150px | 1818–present | Flag of Argentina (vertical) | A vertical triband, composed of three equal vertical bands coloured light blue, white, and light blue with a yellow Sun of May
+- Flag of Quiroga 1.svg [1820] svg en:Historical flags > Other historical flag
+    en: ! scope="row" | | rowspan="4" | 1820s | rowspan="4" | Revolutionary flags used by Facundo Quiroga
+- Bandera de la Provincia de Santa Fe.svg [1822,1880,1986] svg en:First-level administrative divisions
+    en: ! scope="row" | | 1986–present1822–1880 | | Santa Fe Province
+- Flag of the United Provinces of Central America.svg [1823,1824] svg es:Banderas inspiradas en la de Argentina >
+    es: Bandera de las Provincias Unidas del Centro de América (1823-1824).
+- Flag of the Federal Republic of Central America.svg [1824,1839] svg es:Banderas inspiradas en la de Argentina >
+    es: Bandera de la República Federal de Centro América (1824-1839).
+- Flag of Liga Federal.svg [1831,1835] svg en:Historical flags > National flags
+    en: ! scope="row" | | 1831–1835
+- Flag of Argentina (1840).svg [1835,1840,1852] svg en:Historical flags > National flags
+    en: ! scope="row" | | 1835–1852 | Three equal horizontal bands, the upper and lower bands are dark blue, and the middle band is white. A red Sun of May is depicted on the white band. Four red Phrygian cap
+- Flag of Rosas.svg [1836] svg en:Historical flags > Other historical flag
+    en: ! scope="row" | | rowspan="2" | 1836 | rowspan="2" | Flag of the Argentine Confederation used by several nationalists with the text "Viva la Confederación Argentina!", "Mueran los Salvajes Unitarios!"
+- Flag of Costa Rica (1842-1848).svg [1842,1848] svg es:Banderas inspiradas en la de Argentina >
+    es: Bandera del Estado Libre de Costa Rica (1842-1848).
+- Flag of the Argentine Confederation.svg [1850,1861] svg en:Historical flags > National flags
+    en: ! scope="row" | | 1850–1861 | rowspan="3" | Flag of the Argentine Confederation | Three equal horizontal bands, the upper and lower bands are dark blue, and the middle band is white. A red Sun of May 
+- Flag of the State of Buenos Aires (1852-1861).svg [1852,1861] svg en:Historical flags > National flags
+    en: ! scope="row" | | 1852–1861 | Flag of the State of Buenos Aires | |}
+- Flag of the Kingdom of Araucanía and Patagonia.svg [1860,1862] svg en:Historical flags > National flags
+    en: ! scope="row" | | 1860–1862 | Flag of the Kingdom of Araucania and Patagonia
+- Flag of Argentina.svg [1861] svg en:National flags
+    en: ! scope="row" | | 1861–present || National and state flag | A triband, composed of three equal horizontal bands colored light blue, white, and light blue with a yellow Sun of May in the .
+- Flag of Selk'nam people in Chile.svg [1890] svg en:Historical flags > Other historical flag
+    en: ! scope="row" | | 1890s | Flag of the Selk'nam Genocide survivors
+- Flag of El Salvador.svg [1912] svg es:Banderas inspiradas en la de Argentina >
+    es: Bandera de El Salvador desde 1912.
+- Bandera de la Gendarmeria Argentina II.svg [1938] svg en:National Gendarmerie
+    en: ! scope="row" | | 1938–present | Argentine National Gendarmerie | |}
+- Flag of Honduras.svg [1949,2022] svg es:Banderas inspiradas en la de Argentina >
+    es: Bandera de Honduras desde 1949 (modificado en 2022).
+- Flag of Guatemala.svg [1968] svg es:Banderas inspiradas en la de Argentina >
+    es: Bandera de Guatemala desde 1968.
+- Flag of Nicaragua.svg [1971] svg es:Banderas inspiradas en la de Argentina >
+    es: Bandera de Nicaragua desde 1971.
+- Bandera de la Provincia de Santiago del Estero.svg [1985] svg en:First-level administrative divisions
+    en: ! scope="row" | | 1985–present | | Santiago del Estero Province
+- Bandera de la Provincia de Corrientes.svg [1986] svg en:First-level administrative divisions
+    en: ! scope="row" | | 1986–present | | Corrientes Province
+- Bandera de la Provincia de La Rioja.svg [1986] svg en:First-level administrative divisions
+    en: ! scope="row" | | 1986–present | | La Rioja Province
+- Bandera de la Provincia de Entre Ríos.svg [1987] svg en:First-level administrative divisions
+    en: ! scope="row" | | 1987–present | | Entre Ríos Province
+- Bandera de la Provincia de San Luis.svg [1988] svg en:First-level administrative divisions
+    en: ! scope="row" | | 1988–present | | San Luis Province
+- Bandera de la Provincia del Neuquen.svg [1989] svg en:First-level administrative divisions
+    en: ! scope="row" | | 1989–present | | Neuquén Province
+- Bandera de la Provincia de Formosa.svg [1991] svg en:First-level administrative divisions
+    en: ! scope="row" | | 1991–present | | Formosa Province
+- Bandera de la Provincia de Mendoza.svg [1992] svg en:First-level administrative divisions
+    en: ! scope="row" | 150x150px | 1992–present | | Mendoza Province
+- Bandera de la Provincia de Misiones.svg [1992] svg en:First-level administrative divisions
+    en: ! scope="row" | | 1992–present | | Misiones Province
+- Bandera de la Provincia de La Pampa.svg [1993] svg en:First-level administrative divisions
+    en: ! scope="row" | | 1993–present | | La Pampa Province
+- Bandera de la Ciudad de Buenos Aires.svg [1995] svg en:First-level administrative divisions
+    en: ! scope="row" | | 1995–present | | Buenos Aires City
+- Bandera de la Provincia de Buenos Aires.svg [1997] svg en:First-level administrative divisions
+    en: ! scope="row" | | 1997–present | | Buenos Aires Province
+- Bandera de la Provincia de Salta.svg [1997] svg en:First-level administrative divisions
+    en: ! scope="row" | | 1997–present | | Salta Province
+- Bandera de la Provincia de Tierra del Fuego.svg [1999] svg en:First-level administrative divisions
+    en: ! scope="row" | | 1999–present | | Tierra del Fuego Province
+- Bandera de la Provincia de Santa Cruz.svg [2000] svg en:First-level administrative divisions
+    en: ! scope="row" | | 2000–present | | Santa Cruz Province
+- Bandera de la Provincia del Chubut.svg [2004] svg en:First-level administrative divisions
+    en: ! scope="row" | | 2004–present | | Chubut Province
+- Bandera de la Provincia del Chaco.svg [2007] svg en:First-level administrative divisions
+    en: ! scope="row" | | 2007–present | | Chaco Province
+- Bandera de la Provincia del Río Negro.svg [2009] svg en:First-level administrative divisions
+    en: ! scope="row" | | 2009–present | | Río Negro Province
+- Bandera de la Provincia de Tucumán.svg [2010] svg en:First-level administrative divisions; en:Historical flags > Other historical flag; es:H
+    en: ! scope="row" | | 2010–present | | Tucumán Province | |}
+    es: miniaturadeimagen|Una de las banderas de Macha, que fue adoptada como la bandera de Tucumán en 2010.
+- Bandera de la Provincia de Catamarca.svg [2011] svg en:First-level administrative divisions
+    en: ! scope="row" | | 2011–present | | Catamarca Province
+- Bandera de la Provincia de Córdoba 2014.svg [2014] svg en:First-level administrative divisions
+    en: ! scope="row" | | 2014–present | | Córdoba Province
+- Flag of the San Juan Province.svg [2018] svg en:First-level administrative divisions
+    en: ! scope="row" | | rowspan="2" | 2018–present | rowspan="2" | | rowspan="2" | San Juan Province | rowspan="2"

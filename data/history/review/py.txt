@@ -1,0 +1,64 @@
+### py  (en:Flag of Paraguay, en:List of Paraguayan flags, fr:Drapeau du Paraguay, es:Bandera de Paraguay)
+- Flag of Cross of Burgundy.svg [1785] svg es:Historia > Durante la época colonial (15
+    es: Bandera de la cruz de Borgoña, ondeada en el Paraguay colonial hasta 1785.
+- Flag of Paraguay (1811).svg [1811] svg en:Historical flags
+    en: ! scope="row" | | 17 June – August 1811 | Flag of Paraguay | A horizontal tricolor of blue, yellow, and red with Spain's arms in the .
+- Flag of Paraguay (1811-1812).svg [1811,1812] svg en:Historical flags; es:Banderas históricas; fr:Historique
+    en: ! scope="row" | | August 1811 – 15 August 1812 | Flag of Paraguay | A horizontal tricolor of red, yellow, and blue.
+    fr: Drapeau provisoire de 1811 à 1812
+    es: Bandera instaurada por el Congreso el 17 de junio de 1811.
+- Flag of Paraguay 1811.svg [1811] svg en:Historical flags; es:Banderas históricas; fr:Historique
+    en: ! scope="row" | | 15 May – 17 June 1811 | A blue field with a six-pointed star in the canton. |}
+    fr: Drapeau provisoire en mai 1811
+    es: Primera bandera utilizada desde el 15 de mayo al 16 de junio de 1811 (utilizada intermitentemente durante el gobierno del Dr. Francia).
+- Flag of Paraguay June 1811.svg [1811] svg en:Historical flags; fr:Historique
+    en: ! scope="row" | | 6 – 17 June 1811 | rowspan="2" | Improvised revolutionary flag of Paraguay | A horizontal tricolor of green, white, and blue.
+    fr: Drapeau provisoire en juin 1811
+- Flag of Paraguay (1812-1826).svg [1812,1826] svg en:Historical flags; fr:Historique
+    en: ! scope="row" | | 15 August – 30 September 1812 | Flag of the Republic of Paraguay | A horizontal tricolor of red, white, and blue.
+    fr: Drapeau de 1812 à 1826
+- Flag of Paraguay (1813).svg [1812,1813,1842] svg en:Historical flags
+    en: ! scope="row" | | 1812–1842 | A horizontal tricolor of red, white, and blue.
+- Flag of Paraguay 1812 to 1826.svg [1812,1826] svg es:Banderas históricas
+    es: Bandera instaurada por el Congreso el 15 de agosto de 1812.
+- Flag of Paraguay (1813-1840).svg [1813,1820,1840] svg en:Historical flags
+    en: ! scope="row" | | 1820s | rowspan="3" | Flag of the Republic of Paraguay (co-official)
+- Flag of Paraguay (1826-1842).svg [1826,1842] svg en:Historical flags; es:Banderas históricas; fr:Historique
+    en: ! scope="row" | | 1826–1842 | A light blue field with a six-pointed white star in the canton.
+    fr: Drapeau de 1826 à 1842
+    es: Bandera decretada por José Gaspar Rodríguez de Francia en 1826.
+- Flag of Paraguay (1842–1954).svg [1842,1954] svg en:Historical flags; es:Banderas históricas; fr:Historique
+    en: ! scope="row" | | rowspan="2" | 1842–1954 | rowspan="2" | Flag of the Republic of Paraguay (obverse and reverse) | A horizontal triband of red, white, and blue, defaced on the obverse with the nationa
+    fr: Drapeau de 1842 à 1954
+    es: Bandera instaurada por el Congreso el 25 de noviembre de 1842
+- Flag of Paraguay (reverse 1842-1954).svg [1842,1954] svg en:Historical flags; fr:Historique
+    en: ! scope="row" | | A horizontal triband of red, white, and blue, defaced on the reverse with the reversed national coat of arms.
+    fr: Revers du drapeau de 1842 à 1954
+- Flag of Paraguay (1954-1988).svg [1954,1988] svg fr:Historique
+    fr: Drapeau de 1954 à 1988
+- Flag of Paraguay (reverse 1954-1988).svg [1954,1988] svg en:Historical flags; fr:Historique
+    en: ! scope="row" | | A horizontal triband of red, white, and blue, defaced on the reverse with the reversed national coat of arms.
+    fr: Revers du drapeau de 1954 à 1988
+- Flag of Paraguay (1957-1970).svg [1957,1970] svg es:Banderas históricas
+    es: Bandera instaurada por el Congreso el 30 de abril 1957.
+- Flag of Asunción.svg [1961] svg en:First-level administrative divisions; es:Banderas departamentales
+    en: ! scope="row" | | 1961–present | | Asunción | A horizontal triband of red, white, and red, with the department's arms in the .
+    es: Distrito Capital:Asunción
+- Flag of Paraguay (1970-2013).svg [1970,2013] svg es:Banderas históricas
+    es: Bandera instaurada por Harold Rönnebeck y Alfredo Stroessner en 1970.
+- Flag of Paraguay (1988-1990).svg [1988,1990] svg fr:Historique
+    fr: Drapeau de 1988 à 1990
+- Flag of Paraguay (1988–1990, reverse).svg [1988,1990] svg fr:Historique
+    fr: Revers du drapeau de 1988 à 1990
+- Flag of Paraguay (1990-2013).svg [1990,2013] svg fr:Historique
+    fr: Drapeau de 1990 à 2013
+- Flag of Paraguay (reverse 1990-2013).svg [1990,2013] svg en:Historical flags; fr:Historique
+    en: ! scope="row" | | A horizontal triband of red, white, and blue, defaced on the reverse with the reversed national coat of arms.
+    fr: Revers du drapeau de 1990 à 2013
+- Flag of Paraguay (reverse).svg [2013] svg en:National flag; fr:Historique
+    en: ! scope="row" | | A horizontal triband of red, white, and blue, defaced on the reverse with the reversed national coat of arms. |}
+    fr: Revers du drapeau depuis 2013
+- Flag of Paraguay.svg [2013] svg en:National flag; es:Banderas históricas; fr:Historique
+    en: ! scope="row" | | rowspan="2" | 2013–present | rowspan="2" | National flag(obverse and reverse) | A horizontal triband of red, white, and blue, defaced on the obverse with the national coat of arms.
+    fr: Drapeau depuis 2013
+    es: Bandera instaurada por el Congreso el 15 de julio de 2013 (en uso).

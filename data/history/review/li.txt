@@ -1,0 +1,21 @@
+### li  (en:Flag of Liechtenstein, fr:Drapeau du Liechtenstein, de:Flagge Liechtensteins)
+- Flag of Liechtenstein (unknown-1719) 2.svg [1342,1719] svg en:Other flags of Liechtenstein > Historica
+    en: ! scope="row" | | 1342–1719 | County of Vaduz
+- Flag of Liechtenstein (unknown-1719) 1.svg [1437,1719] svg en:Other flags of Liechtenstein > Historica
+    en: ! scope="row" | | 1437–1719 | Lordship of Schellenberg
+- Flag of Liechtenstein (1719-1852).svg [1719,1852] svg de:Geschichte; en:Other flags of Liechtenstein > Historica; fr:intro
+    en: ! scope="row" | | 1719–1852 | Principality of Liechtenstein | Two horizontal gold and red bands at 3:5 proportions
+    fr: 1719-1852
+    de: 1719–1852
+- Flag of Liechtenstein (1852-1921).svg [1852,1921] svg de:Geschichte; en:Other flags of Liechtenstein > Historica; fr:intro
+    en: ! scope="row" | | 1852–1921 | Principality of Liechtenstein | Two vertical blue and red bands at 3:5 proportions
+    fr: 1852-1921
+    de: 1852–1921
+- Flag of Liechtenstein (1921-1937).svg [1921,1937] svg de:Geschichte; en:Other flags of Liechtenstein > Historica; fr:intro
+    en: ! scope="row" | | 1921–1937 | Principality of Liechtenstein | Two horizontal blue and red bands at 3:5 proportions
+    fr: 1921-1937
+    de: 1921–1937
+- Flag of Liechtenstein (1937-1982).svg [1937,1982] svg de:Geschichte; en:Other flags of Liechtenstein > Historica; fr:intro
+    en: ! scope="row" | | 1937–1982 | Principality of Liechtenstein | Two horizontal blue and red bands at 3:5 proportions, and princely crown in the canton |}
+    fr: 1937-1982
+    de: 1937–1982

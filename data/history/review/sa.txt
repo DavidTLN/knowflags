@@ -1,0 +1,77 @@
+### sa  (en:Flag of Saudi Arabia, en:List of Saudi Arabian flags, fr:Drapeau de l'Arabie saoudite, ar:علم السعودية)
+- Flag of Ayyubid Dynasty.svg [1174,1250] svg ar:أعلام تاريخية
+    ar: علم الدولة الأيوبية (التي ضمت الحجاز لها) 1174-1250
+- Rectangular green flag.svg [1174] svg ar:أعلام تاريخية
+    ar: علم الدولة الفاطمية(استطاع الفاطميون من مد نفوذهم على الأراضي في الحجاز) 969-1174
+- Mameluke Flag.svg [1250,1517] svg ar:أعلام تاريخية
+    ar: استخدم هذا العلم من قبل سلطنة المماليك (التي ورثت الحجاز عن الأيوبيين) 1250-1517
+- Black flag.svg [1517] svg ar:أعلام تاريخية
+    ar: علم الدولة العباسية (ابقت الدول اللاحقة على الخلفاء العباسيين حتى دخول العثمانيين مصر) 750-1517
+- Ottoman flag.svg [1517,1924] svg ar:أعلام تاريخية
+    ar: علم الدولة العثمانية (التي ضمت الحجاز لها بعد الانتصار على المماليك في معركة مرج دابق، والمنطقة الشرقية، ونجد في فترات متقطعة) 1517-1924
+- Red flag.svg [1517,1916,1917] svg ar:أعلام تاريخية; en:Historical flags
+    en: ! scope="row" | | 1916–1917 | Provisional flag of the Kingdom of Hejaz | A simple red field.
+    ar: علم أشراف مكة، 1517-1917
+- Flag of the Emirate of Riyadh (1902-1913).svg [1744,1818,1902,1913] svg ar:أعلام تاريخية; en:Historical flags
+    en: ! scope="row" rowspan="3" | | 1744–1818 | Flag of the Emirate of Diriyah | rowspan="3" | A green field with a white stripe on the fly and white Arabic text in the .
+    ar: علم الدولة السعودية الثالثة إمارة الرياض 1902-1913
+- Flag of the First and Second Saudi State (1744-1891).svg [1744,1818,1824,1891] svg ar:أعلام تاريخية; fr:Historique > Deuxième État saoudien (182; fr:Historique > Premier Éta
+    fr: Drapeau du Deuxième État saoudien (1824-1891).
+    ar: علم الدولة السعودية الأولى إمارة الدرعية 1744-1818
+- Flag of the Emirate of Ha'il.svg [1835,1921] svg ar:أعلام تاريخية; en:Historical flags
+    en: ! scope="row" | | 1835–1921 | Flag of the Emirate of Jabal Shammar | A red field with a large golden crescent moon and an eight-pointed star.
+    ar: علم إمارة حائل، 1835-1921
+- Flag of Upper Asir.svg [1906,1916,1920,1930] svg ar:أعلام تاريخية; en:Historical flags
+    en: ! scope="row" | | 1916–1920 | Flag of the Sheikdom of Upper Asir | A white field with a blue crescent moon in the canton and blue Arabic text in the .
+    ar: علم مشيخة عسير العليا 1906-1930
+- Flag of the Idrisid Emirate of Asir (1927-1930).svg [1906,1927,1930] svg ar:أعلام تاريخية; en:Historical flags
+    en: ! scope="row" | | 1927–1930 | Flag of the Idrisid Emirate of Asir | A green field with white Arabic text in the .
+    ar: علم إمارة جازان الإدريسية 1906-1930
+- Flag of the Idrisid Emirate of Asir (1909-1930).svg [1909,1927,1930] svg en:Historical flags
+    en: ! scope="row" | | 1909–1927 | Flag of the Idrisid Emirate of Asir | A green field with a white spiked and white Arabic text in the .
+- Flag of the Emirate of Nejd and Hasa.svg [1913,1921] svg ar:أعلام تاريخية; en:Historical flags
+    en: ! scope="row" | | 1913–1921 | Flag of the Emirate of Nejd and Hasa | A green field with a white stripe on the fly, white Arabic text in the , and two crossed swords.
+    ar: علم الدولة السعودية الثالثة إمارة نجد والأحساء 1913-1921
+- Flag of Hejaz 1917.svg [1917,1920] svg ar:أعلام تاريخية
+    ar: علم الحجاز من 1917-1920 وعلم الثورة العربية
+- Flag of Hejaz 1920.svg [1920,1923,1926] svg ar:أعلام تاريخية; en:Historical flags
+    en: ! scope="row" rowspan="2" | | 1920–1926 | rowspan="2" | A horizontal triband of black, white, and green, with a red isosceles triangle based on the hoist side.
+    ar: علم الحجاز 1920-1923
+- Flag of the Sultanate of Nejd.svg [1921,1926] svg ar:أعلام تاريخية; en:Historical flags
+    en: ! scope="row" | | 1921–1926 | Flag of the Sultanate of Nejd | A green field with a white stripe on the fly, white Arabic text in the and a horizontal sword, having its tip pointed to the .
+    ar: علم الدولة السعودية الثالثة سلطنة نجد 1921-1926
+- Flag of the Kingdom of Hejaz and Nejd.svg [1926,1932] svg ar:أعلام تاريخية; en:Historical flags; fr:Historique > Troisième État saoudien (19
+    en: ! scope="row" | | 1926–1932 | Flag of Nejd as part of the Kingdom of Hejaz and Nejd | A green field with a white stripe on the fly, white Arabic text in the above a horizontal sword, having its tip po
+    fr: alt=Drapeau du Hedjaz (partie du Royaume du Nejd et du Hedjaz; 1926-1932).|Drapeau du Hedjaz (partie du Royaume du Nejd et du Hedjaz ; 1926-1932).
+    ar: علم الدولة السعودية الثالثة مملكة الحجاز ونجد وملحقاتها 1926-1932
+- Flag of the Ministry of Interior of Saudi Arabia.svg [1926] svg ar:الأعلام والرايات الملكية السعودية > أعلا; en:Ministry flag
+    en: ! scope="row" | | 1926–present | Flag of the Ministry of Interior | |}
+    ar: علم وزارة الداخلية. (نسبة: 2:3)
+- Flag of Saudi Arabia (1932-1934).svg [1932,1934] svg fr:Historique > L'Arabie saoudite (depuis 1
+    fr: Drapeau saoudien entre 1932 et 1934, avec une bande blanche à la hampe.
+- Saudi Arabia Flag Variant (1932).svg [1932,1934] svg ar:مراحل تطور العلم السعودي
+    ar: العلم المستخدم منذ 1932 إلى 1934 مع وجود المساحة البيضاء.
+- Flag of Saudi Arabia (1934-1938).svg [1934,1938] svg fr:Historique > L'Arabie saoudite (depuis 1
+    fr: Drapeau saoudien entre 1934 et 1938, avec une bande plus fine.
+- Flag of Saudi Arabia (1934–1938).svg [1934,1938] svg en:Historical flags
+    en: ! scope="row" | | 1934–1938 | A green field with a narrow white stripe on the fly and the Shahada above a sword in the .
+- Saudi Arabia Flag Variant (1934).svg [1934,1938] svg ar:مراحل تطور العلم السعودي
+    ar: العلم المستخدم منذ 1934 إلى 1938 مع وجود المساحة البيضاء.
+- Flag of Saudi Arabia (1938-1973).svg [1938,1973] svg ar:مراحل تطور العلم السعودي; fr:Historique > L'Arabie saoudite (depuis 1
+    fr: Drapeau entre 1938 et 1973, sans bande blanche.
+    ar: العلم المستخدم منذ 1938 إلى 1973.
+- Royal Banner of Saudi Arabia (1938-1953).svg [1938,1953] svg en:Royal flags
+    en: ! scope="row" | | Royal banner of the King of Saudi Arabia. (Ratio: 12:25) | A green field with the Shahada written in the Thuluth script in white above two crossed swords, and a fly separated into fo
+- Royal Banner of Saudi Arabia1938-1973.png [1938,1964,1973] png ar:الأعلام والرايات الملكية السعودية
+    ar: العلم الملكي في عهد الملك عبد العزيز من 1938 إلى 1964
+- Royal Flag of Saudi Arabia (1938-1953).svg [1938,1953] svg en:Royal flags
+    en: ! scope="row" | | rowspan="3" | 1938–1953 | Royal flag of the King of Saudi Arabia. (Ratio: 2:3)
+- Royal Flag of Saudi Arabia (1953-1964).svg [1953,1964] svg ar:الأعلام والرايات الملكية السعودية; en:Royal flags
+    en: ! scope="row" | | rowspan="2" | 1953–1964 | Royal flag of the King of Saudi Arabia. (Ratio: 2:3) | rowspan="4" | A green field with the Shahada written in the Thuluth script in white above two crossed
+    ar: العلم الملكي في عهد الملك سعود من 1953 إلى 1964 معدل التناسب (نسبة: 2:3)
+- Royal Flag of Saudi Arabia (1964-1973).svg [1964,1973] svg ar:الأعلام والرايات الملكية السعودية; en:Royal flags
+    en: ! scope="row" | | rowspan="2" | 1964–1973 | Royal flag of the King of Saudi Arabia. (Ratio: 2:3) | A green field with the Shahada written in the Thuluth script in white above two crossed swords, with 
+    ar: العلم الملكي في عهد الملك فيصل من 1964 إلى 1973 (نسبة: 2:3)
+- Flag of Saudi Arabia.svg [1973,2008,2009,2019,2020] svg ar:intro; en:National flag; fr:Historique > L'Arabie saoudite (depuis 1
+    en: ! scope="row" | | 1973–present | Flag of Saudi Arabia | A green field with the Shahada written in the Thuluth script in white above a horizontal sword whose tip points to the .Saudi Arabia: The Revers
+    fr: Drapeau saoudien depuis 1973.

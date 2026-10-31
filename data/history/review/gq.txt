@@ -1,0 +1,13 @@
+### gq  (en:Flag of Equatorial Guinea, fr:Drapeau de la Guinée équatoriale, es:Bandera de Guinea Ecuatorial)
+- Flag of Spain (1785-1873 and 1875-1931).svg [1785,1873,1875,1926,1931] svg es:Banderas históricas
+    es: Bandera de Guinea Española (1926-1931)
+- Flag of Spain (1931 - 1939).svg [1931,1939] svg es:Banderas históricas
+    es: Bandera de Guinea Española (1931-1939)
+- Flag of Spain (1938 - 1945).svg [1938,1939,1945] svg es:Banderas históricas
+    es: Bandera de Guinea Española (1939-1945)
+- Flag of Spain (1945-1977).svg [1945,1968,1977] svg es:Banderas históricas
+    es: Bandera de Guinea Española (1945-1968)
+- Flag of Equatorial Guinea 1973-1979.svg [1973,1979] svg es:Banderas históricas
+    es: Bandera de Guinea Ecuatorial (1973-1979).
+- Flag of Equatorial Guinea.svg [1979] svg es:Banderas históricas
+    es: Bandera de Guinea Ecuatorial (Restaurada: 1979-actualidad)

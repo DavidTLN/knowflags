@@ -1,0 +1,14 @@
+### qa  (en:Flag of Qatar, fr:Drapeau du Qatar, ar:علم قطر)
+- Flag of Qatar (c. 1860-1916, 1916-1932).svg [1860,1916,1932,1936] svg ar:معرض صور; fr:Anciens drapeaux
+    fr: Drapeau de 1916 à 1936
+- Red flag.svg [1860] svg en:Historical flags
+    en: 18th century – 1860
+- Flag of Qatar (1916).svg [1916] svg ar:معرض صور; en:Historical flags
+    en: 1916
+- Flag of Qatar (1932-1936).svg [1932,1936] svg ar:معرض صور
+- Flag of Qatar (1936-1949).svg [1936,1949] svg fr:Anciens drapeaux
+    fr: Drapeau de 1936 à 1949
+- Flag of Qatar (1949).svg [1949,1971] svg fr:Anciens drapeaux
+    fr: Drapeau de 1949 à 1971
+- Flag of Qatar.svg [1971] svg en:Historical flags
+    en: 1971–present

@@ -1,0 +1,17 @@
+### mw  (en:Flag of Malawi, fr:Drapeau du Malawi)
+- Flag of British Central Africa Protectorate.svg [1893,1914] svg en:Historical flags
+    en: 1893–1914 |British Central Africa Protectorate
+- Flag of Nyasaland (1914–1919).svg [1914,1919] svg en:Historical flags
+    en: 1914–1919 |rowspan="3"|Nyasaland
+- Flag of Nyasaland (1919–1925).svg [1919,1925] svg en:Historical flags; fr:Anciens drapeaux
+    en: 1919–1925
+    fr: Drapeau du Nyassaland britannique
+- Flag of Nyasaland (1925–1964).svg [1925,1964] svg en:Historical flags
+    en: 1925–1964
+- Flag of Rhodesia and Nyasaland (1953–1963).svg [1953,1963] svg en:Historical flags
+    en: 1953–1963 |Federation of Rhodesia and Nyasaland
+- Flag of Malawi.svg [1964,2010,2012] svg en:Historical flags
+    en: 1964–2010, 2012–present |rowspan="2"|Republic of Malawi |A horizontal triband of black, red and green; charged with a red rising sun with 31 rays centred on the black stripe.
+- Flag of Malawi (2010–2012).svg [2010,2012] svg en:2010–2012; en:Historical flags; fr:Anciens drapeaux
+    en: 2010–2012 |A horizontal triband of red, black and green; charged with a white rising sun with 45 rays centred on the black stripe. |}
+    fr: Ancien drapeau de juillet 2010 à mai 2012 (présidence Bingu)

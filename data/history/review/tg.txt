@@ -1,0 +1,15 @@
+### tg  (en:Flag of Togo, en:List of Togolese flags, fr:Drapeau du Togo)
+- Flag of Germany (1867–1918).svg [1867,1884,1914,1918] svg en:Historical flags
+    en: ! scope="row" | | 1884–1914 | 2:3 | Togoland Protectorate | The flag of the German Empire was used as the official flag of German Togoland.
+- Togolandflag.png [1914] png fr:Anciens drapeaux
+    fr: Drapeau du Togoland allemand (projet de 1914)
+- Flag of French Togoland (1956–1960).svg [1956,1960] svg en:Historical flags
+    en: Flag of French Togoland (1956–1960)
+- Flag of Togo (1957-1958).svg [1957,1958] svg en:Historical flags; fr:Anciens drapeaux
+    en: ! scope="row" | | 1957–1958 | 3:5 | rowspan=2 | Autonomous Republic of Togo | A new flag for Togo was introduced in 1957, consisting of a green field with a French flag in the canton and two five-poin
+    fr: Drapeau de la république autonome du Togo de 1957 à 1958
+- Flag of Togo (1958-1960).svg [1958,1960] svg en:Historical flags; fr:Anciens drapeaux
+    en: ! scope="row" | | 1958–1960 | 3:5 | The French flag in the canton of the previous flag was removed in 1958.
+    fr: Drapeau de la république autonome du Togo de 1958 à 1960
+- Flag of Togo.svg [1960] svg en:Historical flags; en:National flag
+    en: ! scope="row" | | 1960–present | 1:φ | Togolese Republic | The current flag of Togo was introduced upon gaining independence from France on 27 April 1960. It consists of five equal horizontal bands of

@@ -1,0 +1,33 @@
+### ec  (en:Flag of Ecuador, en:List of Ecuadorian flags, fr:Drapeau de l'Équateur, es:Bandera de Ecuador)
+- Flag of Cross of Burgundy.svg [1534,1820] svg en:Historical flags
+    en: ! scope="row" | | 1534–1820 | The Cross of Burgundy flag of the Spanish colonial empire flew over Ecuador for many years.
+- Flag of New Spain.svg [1534,1820] svg en:History
+    en: Spanish Colonial Flag1534–1820 | | The Cross of Burgundy flag of the Spanish colonial empire flew over Ecuador for many years.
+- Flag of Quito Revolution (1809–1812).svg [1809,1812] svg en:Historical flags; en:History; es:Antecedentes > La Junta Revolucionaria d; fr:Histoire 
+    en: Flag of the Quiteñan Revolution1809–1812 | | The leaders of a rebellion against the Spanish authorities raised a reversed Cross of Burgundy flag in Quito on 10 August 1809. The uprising was defeated i
+    fr: Drapeau de l'Équateur lors de la révolution de Quito.
+    es: miniatura|23pxBandera de la Revolución Quiteña.
+- Flag of Venezuela (1811).svg [1811] svg en:Resemblance to other flags
+    en: The Venezuelan flag of 1811
+- Flag of Ecuador (1820-1822).svg [1820,1822] svg en:History
+    en: First National Flag1820–1822 | | A flag with five horizontal stripes and three stars in the middle stripe. This flag subsequently became that of the Guayas Province, and was first raised by the patrio
+- Flag of Ecuador (1822).svg [1822] svg en:Historical flags; en:History
+    en: width="90" | Second National Flag1822 | | The previous flag was changed by decree of 2 June 1822: "The flag of the free province of Guayaquil shall be white and its first quarter blue with a centered 
+- Flag of the Gran Colombia.svg [1822,1830,1845] svg en:Historical flags; en:History; es:Antecedentes > La era de la Gran Colombi
+    en: ! scope="row" | | 1822–1830 | Ecuador was subsumed into Gran Colombia, during which time the Colombian horizontal tricolour became definitive. Although Ecuador seceded from that union in 1830, the fla
+    es: miniatura|23pxGran Colombia, de 1822 a 1830.
+- Flag of Ecuador (1830-1835).svg [1830,1835] svg en:History; es:Evolución histórica
+    en: Fourth National Flag1830–1835 | | Provisional flag of the State of Ecuador, decreed on 19 November 1830.
+    es: 23pxDe 1830 a 1835.
+- Flag of Ecuador (1830-1845).svg [1830,1835,1845] svg en:History; es:Evolución histórica
+    en: Fifth National Flag1835–1845 | | First flag used officially by Ecuador after its separation from Colombia.
+    es: 23pxDe 1835 a 1845.
+- Flag of Ecuador (1845).svg [1845] svg en:Historical flags; en:History; es:Evolución histórica > Revolución Marcist; fr:Histoire 
+    en: Sixth National Flag1845 | | During the 1845 Marcist Revolution the pale blue and white colours return, but as a vertical tricolour of white, blue, white, with three white stars in the central stripe.
+    fr: Drapeau de l'Équateur en 1845
+    es: 23pxEn 1845.
+- Flag of Ecuador (1845-1860).svg [1845,1860] svg en:History; es:Evolución histórica > Revolución Marcist
+    en: Seventh National Flag1845–1860 | | The Cuenca Convention ratified, by decree of 6 November 1845, a change to a deeper blue, and the increase in the number of stars to seven "as symbols of the seven pr
+    es: 23pxDe 1845 a 1860.
+- Flag of Ecuador.svg [1860,2009] svg en:History; en:National flag
+    en: ! scope="row" | | 1860–present | Flag of Ecuador | A horizontal tricolor of yellow (double width), blue, and red with the national coat of arms superimposed at the .

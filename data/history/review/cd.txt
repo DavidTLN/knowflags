@@ -1,0 +1,42 @@
+### cd  (en:Flag of the Democratic Republic of the Congo, en:List of flags of the Democratic Republic of the Congo, fr:Drapeau de la république démocratique du Congo)
+- Flag of the Congo Free State.svg [1876,1877,1879,1885,1908,1960] svg en:Historical > National; en:Historical flags; fr:Histoire
+    en: ! scope="row" rowspan="4" | | align=" " | 1876–1879 | International African Association | rowspan="4" | Blue background emblazoned with a central yellow five-pointed star | rowspan="4" | The blue back
+    fr: Drapeau de l'Association internationale africaine, de l'État indépendant du Congo et du Congo belge (1877-1960).
+- Flag of Congo-Léopoldville (1960-1963).svg [1960,1963] svg fr:Histoire
+    fr: Drapeau de la république du Congo-Léopoldville (1960-1963).
+- Flag of Katanga.svg [1960,1963] svg en:Historical > Other
+    en: ! scope="row" | | 1960–1963 | Flag of the State of Katanga
+- Flag of South Kasai.svg [1960,1962] svg en:Historical > Other
+    en: ! scope="row" | | 1960–1962 | Flag of South Kasai
+- Flag of the Republic of the Congo (Léopoldville) (1960–1963).svg [1960,1963] svg en:Historical > National; en:Historical flags
+    en: ! scope="row" | | align=" " | 1960–1963 | rowspan="2" | First Congolese Republic | An additional six yellow five-pointed stars are added to the hoist |The added stars represent the six state provinces
+- Flag of the Republic of the Congo (Léopoldville) (1963–1966).svg [1963,1964,1966] svg en:Historical > National; en:Historical flags; fr:Histoire
+    en: ! scope="row" rowspan="2" | | align=" " | 1963–1964 | rowspan="2" | A yellow five-pointed star sitting alongside a red and gold bend sinister on a blue background | rowspan="2" | The red bend represen
+    fr: Drapeau de 1963 à 1966.
+- Flag of Congo-Kinshasa (1966-1971).svg [1966,1971] svg fr:Histoire
+    fr: Drapeau de la république démocratique du Congo (1966-1971).
+- Flag of the Democratic Republic of the Congo (1966–1971).svg [1966,1971] svg en:Historical > National; en:Historical flags
+    en: ! scope="row" | | align=" " | 1966–1971 | colspan="2" | The red and gold bend sinister was changed to a reduced bend sinister
+- Kinshasa Flag.svg [1967,2011] svg en:Sub-national
+    en: ! scope="row" | | 1967–2011 | Flag of Kinshasa
+- Flag of Zaire (1971–1997).svg [1971,1997] svg en:Historical > National; en:Historical flags; fr:Histoire
+    en: ! scope="row" | | align=" " | 1971–1997 | Republic of Zaire | Light green emblazoned with a yellow circle containing an arm holding a red torch | Filled with Pan-African colours, the flag has a centra
+    fr: Drapeau du Zaïre (1971-1997).
+- Flag of the Allied Democratic Forces.svg [1996] svg en:Rebel groups
+    en: ! scope="row" | | 1996–present | Flag of the Allied Democratic Forces
+- Flagge FDLR.svg [2000] svg en:Rebel groups
+    en: ! scope="row" | | 2000–present | Flag of the Democratic Forces for the Liberation of Rwanda
+- Flag of the Democratic Republic of the Congo (2003-2006).svg [2003,2006] svg fr:Histoire
+    fr: Drapeau de la république démocratique du Congo (2003-2006).
+- Flag of CNDP.svg [2006] svg en:Rebel groups
+    en: ! scope="row" | | 2006–present | Flag of the National Congress for the Defence of the People | The design of this flag resembles the flag of Zaire.
+- Flag of Democratic Republic of Congo 2020.png [2006,2020] png fr:Description
+    fr: redresse=0.7|centre|Le drapeau actuel, photographié aux États-Unis en 2020.|alt=Un drapeau tel que décrit dans la constitution de 2006, flottant en haut d’un mât.
+- Flag of the Democratic Republic of the Congo.svg [2006] svg en:National
+    en: ! scope="row" | | 2006–present | Flag of the Democratic Republic of the Congo | Sky blue flag, adorned with a yellow star in the upper hoist and cut diagonally by a red stripe with yellow fimbriation.
+- Flag of the United Republic of Kivu.svg [2010] svg en:Rebel groups
+    en: ! scope="row" | | 2010s–present | Separatist flag of Kivu | |}
+- Flag of Kinshasa, DRC.svg [2011] svg en:Sub-national
+    en: ! scope="row" | | 2011–present | Flag of Kinshasa | |}
+- NDCRflag.svg [2014] svg en:Rebel groups
+    en: ! scope="row" | | 2014–present | Flag of Nduma Defense of Congo-Renovated

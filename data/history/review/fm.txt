@@ -1,0 +1,10 @@
+### fm  (en:Flag of the Federated States of Micronesia, en:List of Micronesian flags, fr:Drapeau des États fédérés de Micronésie)
+- Flag of the Trust Territory of the Pacific Islands.svg [1965,1978,1980,1987] svg en:Historical flags; en:History; fr:Historique
+    en: alt=Flag of the Trust Territory of the Pacific Islands| Flag of the Trust Territory of the Pacific Islands, which inspired the modern Micronesian flag
+    fr: alt=Rectangle bleu foncé avec six étoiles blanches à cinq bras disposées en cercle|Drapeau du Territoire sous tutelle des îles du Pacifique employé de juillet 1965 à juillet 1987.
+- Flag of Pohnpei (1977-1992).svg [1977,1992] svg en:Historical flags; en:Historical flags > Pohnpei State
+    en: ! scope="row" | | 1977–1992 | Flag of Pohnpei State | |}
+- Flag of the Federated States of Micronesia.svg [1978] svg en:National flags
+    en: ! scope="row" | | rowspan="2" | 1978–present | Flag of the Federated States of Micronesia | A flag with a ratio of 10:19 featuring four stars, arranged in a circle, on a blue field.
+- Flag of Sapuk.svg [2000] svg en:Flags of villages of Micronesia > Chuuk 
+    en: ! scope="row" | | By 1 October 2000 – present | Flag of Sapuk, Weno | A green field with an irregular circle of fourteen white irregular stars. |}

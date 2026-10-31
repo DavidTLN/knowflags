@@ -1,0 +1,57 @@
+### cu  (en:Flag of Cuba, en:List of Cuban flags, fr:Drapeau de Cuba, es:Bandera de Cuba)
+- Flag of Cross of Burgundy.svg [1521,1843] svg en:Historical flags; en:Historical versions of the flag; es:Galería en orden cronológico; 
+    en: ! scope="row" | | 1521–1843 | Flag of Cross of Burgundy
+    fr: Drapeau de la Croix de Bourgogne (1521–1843)
+    es: Bandera de la Cruz de Borgoña (1521-1843)
+- Bandera de Joaquín Infante.svg [1810] svg en:Historical flags
+    en: ! scope="row" | | 1810 | Flag of Joaquín Infante, one of the earliest Cuban independence movements
+- Bandera del Sol de Bolívar Cubano.svg [1823] svg en:Historical flags
+    en: ! scope="row" | | 1823 | Flag of the sun of Bolivar, the first planned flag used for the plans for a Bolivarian Cuba
+- Bandera de Cienfuegos (1845).svg [1845,1885] svg en:Local flags > Historical local flags
+    en: ! scope="row" | | 1885 | Flag of Cienfuegos Maritime Province
+- Bandera de La Habana (1845).svg [1845] svg en:Local flags > Historical local flags
+    en: ! scope="row" | | 1845 | Flag of La Habana Maritime Province
+- Bandera de Nuevitas (1845).svg [1845] svg en:Local flags > Historical local flags
+    en: ! scope="row" | | 1845 | Flag of Nuevitas Maritime Province
+- Bandera de San Juan de los Remedios (1845).svg [1845] svg en:Local flags > Historical local flags
+    en: ! scope="row" | | 1845 | Flag of San Juan de los Remedios Maritime Province
+- Bandera de Santiago de Cuba (1845).svg [1845] svg en:Local flags > Historical local flags
+    en: ! scope="row" | | 1845 | Flag of Santiago de Cuba Maritime Province
+- SignalFlagAlpha-USNSpec.svg [1845] svg en:Local flags > Historical local flags
+    en: ! scope="row" | | 1845 | Flag of Trinidad Maritime Province
+- Bandera del Club de la Habana.svg [1847] svg en:Historical flags
+    en: ! scope="row" | | 1847 | Flag of the Havana Club Movement, a U.S. annexationist movement of Cuba in 1847
+- Conspiracy of La Mina de la Rosa Cuban Flag (red 8 star variant).svg [1847,1848] svg en:Historical flags
+    en: ! scope="row" | | 1847–1848 | The flag of the Conspiracy of the Cuban Rose Mine, an annexationist movement led by Narcisco Lopez between 1847 and 1848
+- Céspedes flag.svg [1868,1878] svg en:Historical flags; en:Historical versions of the flag; es:Galería en orden cronológico; 
+    en: ! scope="row" | | 1868–1878 | Céspedes flag of the Ten Years' War
+    fr: Drapeau de Céspedes pendant la guerre des Dix Ans (1868–1878)
+    es: Bandera de Céspedes en la Guerra de los Diez Años (1868-1878). Bandera de La Demajagua.
+- Flag of Spain (1873–1874).svg [1873,1874] svg en:Historical flags; en:Historical versions of the flag; es:Galería en orden cronológico; 
+    en: ! scope="row" | | 1873–1874 | Flag of First Spanish Republic
+    fr: Drapeau de la Première République espagnole (1873–1874)
+    es: Bandera de la Primera República española (1873-1874)
+- Bandera de Sagua la Grande (1885).svg [1885] svg en:Local flags > Historical local flags
+    en: ! scope="row" | | 1885 | Flag of Sagua La Grande Maritime Province | |}
+- Flag of the United States (1896-1908, 3-2 aspect ratio).svg [1896,1898,1902,1906,1908,1909] svg fr:Histoire du drapeau cubain
+    fr: Drapeau du gouvernement militaire des États-Unis à Cuba (1898-1902 ; 1906–1909)
+- Flag of the United States (1896–1908).svg [1896,1898,1902,1906,1908,1909] svg en:Historical flags; es:Galería en orden cronológico
+    en: ! scope="row" | | 1898–19021906–1908 | Flag of the Military Government of Cuba
+    es: Bandera del primer y segundo gobierno militar estadounidense en Cuba (1898-1902; 1906-1909)
+- Flag of Cuba (1902–1906).svg [1902,1906,1909,1959] svg en:Historical versions of the flag; en:National flag; es:Galería en orden cronológico; fr:
+    en: ! scope="row" | | 1902–1906 | Flag of Cuba (sky blue variant) | Sky blue variant used by the Republic of Cuba from 1902 to 1906. The blue was officially changed to a dark indigo as outlined by the Pre
+    fr: Drapeau de la première République de Cuba (1902–1906; 1909–1959)
+    es: Bandera de la primera República de Cuba (1902-1906: franjas azul celeste)
+- Flag of Cuba (construction sheet).svg [1906] svg en:Specifications
+    en: The Cuban flag is at a length-to-width ratio of 2:1. It is made up of five alternating horizontal stripes, three blue and two white. These blue and white stripes are of equal width. Since 1906, the co
+- Flag of Cuba.svg [1906] svg en:National flag; en:Specifications; es:Galería en orden cronológico
+    en: ! scope="row" | | 1906–present | Flag of Cuba | Five horizontal stripes, three of indigo blue alternate with two white, with a red equilateral triangle based on the hoist side bearing a white five-poi
+    es: Bandera de la República de Cuba (1906-presente)
+- Flag of the United States (1908–1912).svg [1908,1909,1912] svg en:Historical flags
+    en: ! scope="row" | | 1908–1909 | Flag of the Provisional Government of Cuba
+- Flag of 4 September 1933.svg [1933] svg en:Historical flags
+    en: ! scope="row" | | 1933 | Flag of the Cuban Revolution of 1933 | |}
+- Flag of Brigade 2506.svg [1960] svg en:Historical flags
+    en: ! scope="row" | | 1960 | The flag of Brigade 2506; a CIA-sponsored group of Cuban exiles formed in 1960 to attempt the military overthrow of the Cuban government headed by Fidel Castro.
+- Former flag of La Habana Province (1976 - 2010).svg [1976,2010] svg en:Local flags > Historical local flags
+    en: ! scope="row" | | 1976–2010 | Flag of La Habana Province (1976–2010)

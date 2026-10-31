@@ -1,0 +1,126 @@
+### my  (en:Flag of Malaysia, en:List of Malaysian flags, fr:Drapeau de la Malaisie, ms:Bendera Malaysia)
+- Old Flag of Brunei.svg [1401,1888] svg en:Historical > Sultanate flags
+    en: ! scope="row" | | data-sort-value="1401–1888" | 15th century–1888 | Flag of the Bruneian Empire, which once ruled most of the island of Borneo until Seludong (present-day Manila) and Banjarmasin in Ka
+- Flag of Portugal (1495).svg [1495,1511,1521] svg en:Historical > Colonial and other national
+    en: ! scope="row" | | 1511–1521 | rowspan="3" | Flag of the Kingdom of Portugal (Portuguese Malacca) | rowspan="3" | A white field with the Portuguese coat of arms in the centre.
+- Flag of Portugal (1521).svg [1521,1578] svg en:Historical > Colonial and other national
+    en: ! scope="row" | | 1521–1578
+- Flag of Portugal (1578).svg [1578,1640] svg en:Historical > Colonial and other national
+    en: ! scope="row" | | 1578–1640
+- Flag of Cross of Burgundy.svg [1580,1640] svg en:Historical > Colonial and other national
+    en: ! scope="row" | | rowspan="2" | 1580–1640 | Flag of the Iberian Union (Portuguese Malacca) | A red Saltire resembling two crossed, roughly pruned (knotted) branches, on a white field.
+- Flag of Portugal (1616).svg [1616,1640] svg en:Historical > Colonial and other national
+    en: ! scope="row" | | 1616–1640 | Flag of the Kingdom of Portugal (Portuguese Malacca) (putative flag) | rowspan="2" | A white field with the Portuguese coat of arms in the centre.
+- Flag of Portugal (1640).svg [1640,1641] svg en:Historical > Colonial and other national
+    en: ! scope="row" | | 1640–1641 | Flag of the Kingdom of Portugal (Portuguese Malacca)
+- Prinsenvlag.svg [1641,1795] svg en:Historical > Colonial and other national
+    en: ! scope="row" | | 1641–1795 | The Prince's Flag in the Dutch Republic (Dutch Malacca) | A horizontal tricolour of orange, white, and blue.
+- Statenvlag.svg [1652,1672] svg en:Historical > Colonial and other national
+    en: 150x150px|| 1652–1672 |States Flag in the Dutch Republic (Dutch Malacca) ||A horizontal tricolour of red, white, and blue.
+- White Flag of the Malay Sultanates.svg [1699] svg en:Historical > Sultanate flags
+    en: ! scope="row" rowspan="3" | | 1699 | Flag of the Johor Sultanate | rowspan="3" | A plain white flag. This flag was used by multiple Malay sultanates at the same time.
+- Flag of Kedah (18th century - 1821).svg [1701,1821] svg en:Historical > Sultanate flags
+    en: ! scope="row" | | data-sort-value="1701–1821" | 18th century–1821 | rowspan="2" | Flag of the Sultanate of Kedah | A plain red flag.
+- Flag of Selangor (1784).svg [1784,1875] svg en:Historical > Sultanate flags
+    en: ! scope="row" | | 1784–1875 | rowspan="2" | Flag of the Selangor Sultanate | Yellow flag with two red bands at the top and bottom.
+- Flag of the United Kingdom (1-2).svg [1801,1818,1858,1874] svg en:Historical > Colonial and other national
+    en: ! scope="row" | | 1801–1818, 1858–1874 | Flag of the United Kingdom | A superimposition of the flags of England and Scotland with the Saint Patrick's Saltire (representing Ireland).
+- Late 19th Century Flag of Sulu.svg [1801] svg en:Historical > Sultanate flags
+    en: ! scope="row" | | data-sort-value="1801" | 19th century | Red flag with a thin blue-white band on the hoist charged with a white emblem.
+- Flag of the Netherlands.svg [1818,1825] svg en:Historical > Colonial and other national
+    en: ! scope="row" | | 1818–1825 | Flag of the United Kingdom of the Netherlands (Dutch Malacca) | A horizontal tricolour of red, white, and blue.
+- Flag of Kedah (1821 - 1912).svg [1821,1912] svg en:Historical > Sultanate flags
+    en: ! scope="row" | | 1821–1912 | Red flag charged with a pouncing tiger.
+- Flag of Pahang (1853 - 1887).svg [1853,1887] svg en:Historical > Sultanate flags
+    en: ! scope="row" | | 1853–1887 | The flag of the Pahang Kingdom under the Bendahara dynasty | A plain black flag. Black represented the colour of the Bendahara.
+- Flag of Johor (1855 - 1865).svg [1855,1865] svg en:Historical > Sultanate flags
+    en: ! scope="row" | | 1855–1865 | rowspan="2" | Flag of the Johor Sultanate | Black flag with a white canton.
+- Flag of Johor (1865 - 1871).svg [1865,1871] svg en:Historical > Sultanate flags
+    en: ! scope="row" | | 1865–1871 | Black flag with a red canton charged with a white saltire.
+- Flag of the British Straits Settlements (1868–1877).svg [1868,1877] svg en:Historical flags
+    en: Flag of the Straits Settlements from 1868 to 1877
+- Flag of Perlis.svg [1870] svg en:Administrative divisions > States
+    en: ! scope="row" | | 1870 onwards | Flag of the state of Perlis | Two equal horizontal bands of yellow and blue.
+- Flag of the Kingdom of Sarawak (1870).svg [1870,1946] svg en:Historical flags
+    en: alt=Flag of the Kingdom of Sarawak.| Flag of the Kingdom of Sarawak from 1870 to 1946.
+- Flag of Johor.svg [1871] svg en:Administrative divisions > States; ms:Kaitan sejarah dengan bendera lain > Ben; ms:Seja
+    en: ! scope="row" | | 1871 onwards | Flag of the state of Johor | A blue field with a white crescent and five-pointed star in a red canton.
+    ms: Bendera Johor yang diinspirasikan untuk bendera Persekutuan Tanah Melayu
+- Flag of the British Straits Settlements (1874–1904).svg [1874,1904] svg en:Historical flags
+    en: alt=Flag of the British Straits Settlements (1874-1904).| Flag of the Straits Settlements from 1874 to 1904.
+- Flag of Selangor (pre 1965).svg [1875,1965] svg en:Historical > Sultanate flags
+    en: ! scope="row" | | 1875–1965 | Red and yellow horizontally quartered flag, charged with a yellow crescent and star on the upper hoist.
+- Flag of Perak.svg [1879] svg en:Administrative divisions > States
+    en: ! scope="row" | | 1879 onwards | Flag of the state of Perak | A white, yellow, and black horizontal tricolour.
+- Flag of North Borneo (1882–1902).svg [1882,1902] svg en:Historical flags
+    en: alt=Flag of North Borneo colony.| Flag of North Borneo from 1882 to 1902.
+- Flag of Pahang (1887 - 1903).svg [1887,1903] svg en:Historical > Sultanate flags
+    en: ! scope="row" | | 1887–1903 | The flag of the Pahang Sultanate | Black flag with a thin white stripe at its hoist. Black represented the colour of the Bendahara, while white represented the ruling Sul
+- Flag of Malaya (1896–1950).svg [1895,1896,1946,1950] svg en:Historical > Colonial and other national
+    en: ! scope="row" rowspan="3" | | 1895–1946 | Flag of the Federated Malay States | rowspan="3" | Four equal horizontal stripes of white (top), red, yellow, and black, superimposed in the centre on a small
+- Flag of Negeri Sembilan.svg [1895] svg en:Administrative divisions > States
+    en: ! scope="row" | | 1895 onwards | Flag of the state of Negeri Sembilan | A yellow field with a canton split diagonally between black and red.
+- Flag of the Federated Malay States (1895–1946).svg [1895,1896,1946,1948] svg ms:Galeri > Bendera-bendera Malaysia
+    ms: Bendera Negeri-negeri Melayu Bersekutu (1896 - 1946) dan Malayan Union (1946 - 1948).
+- Flag of North Borneo (1902–1946).svg [1902,1946] svg en:Historical > Colonial and other national; en:Historical flags
+    en: ! scope="row" | | rowspan="2" | 1902–1946 | Flag of North Borneo | A blue ensign defaced with the badge of the North Borneo Chartered Company.
+- Flag of Pahang.svg [1903] svg en:Administrative divisions > States
+    en: ! scope="row" | | 1903 onwards | Flag of the state of Pahang | Two equal horizontal bands of white and black.
+- Flag of the British Straits Settlements (1904–1925).svg [1904,1925] svg en:Historical flags
+    en: alt=Flag of the British Straits Settlements (1904-1925).| Flag of the Straits Settlements from 1904 to 1925.
+- Flag of Kedah.svg [1912] svg en:Administrative divisions > States
+    en: ! scope="row" | | 1912 onwards | Flag of the state of Kedah | A red field with the state coat of arms in the canton.
+- Flag of Kelantan (1912 - 1923).svg [1912,1923] svg en:Historical > Sultanate flags
+    en: ! scope="row" | | 1912–1923 | Flag of the Kelantan Sultanate | White flag with a blue bordure at the hoist, chief, and fly, charged with a blue boat, on top of which lies a scripture stylised as a fel
+- Flag of Terengganu (1912 - 1933).svg [1912,1933] svg en:Historical > Sultanate flags
+    en: ! scope="row" | | 1912–1933 | rowspan="2" | Flag of the Terengganu Sultanate | Black flag with a white band at its hoist.
+- Flag of Kelantan.svg [1923] svg en:Administrative divisions > States
+    en: ! scope="row" | | 1923 onwards | Flag of the state of Kelantan | A red field defaced with a white crescent and star and two white kris and two spears.
+- Flag of the British Straits Settlements (1925–1946).svg [1925,1946] svg en:Historical flags
+    en: alt=Flag of the British Straits Settlements (1925-1946).| Flag of the Straits Settlements from 1925 to 1946.
+- Flag of Terengganu (1933 - 1947).svg [1933,1947,1953] svg en:Historical > Sultanate flags
+    en: ! scope="row" | | rowspan="2" | 1933–1953 | Black flag with a white band at its hoist, charged with an upwards white crescent and star on the chief of the black field.
+- Government Flag of Terengganu (1933 - 1947).svg [1933,1947] svg en:Historical > Sultanate flags
+    en: ! scope="row" | | Government flag of the Terengganu Sultanate | Black flag with a white band at its hoist, charged with an upwards black crescent and star on the chief of the hoist band and white salt
+- Flag of Malacca (1946-1957).svg [1946,1951,1957] svg en:Historical > Colonial and other national; en:Historical flags
+    en: ! scope="row" | | 1951–1957 | Flag of the Crown Colony of Malacca | A blue ensign defaced with a depiction of A Famosa. |}
+- Flag of Singapore (1946–1952).svg [1946,1948,1952] svg en:Historical > Colonial and other national; en:Historical flags
+    en: ! scope="row" | | 1948–1952 | rowspan="2" | Flag of the Crown Colony of Singapore | rowspan="2" | A blue ensign defaced with a white disc containing a crown within a red inverted pall.
+- Flag of Sarawak (1947–1963).svg [1947,1963] svg en:Historical flags
+    en: Flag of the Crown Colony of Sarawak from 1947 to 1963.
+- Flag of North Borneo (1948–1963).svg [1948,1963] svg en:Historical > Colonial and other national; en:Historical flags
+    en: ! scope="row" | | 1948–1963 | Flag of the Crown Colony of North Borneo | After World War II, North Borneo became a crown colony. A blue ensign was adopted with the new badge instead of that of the Nor
+- Flag of Penang (1949–1952).svg [1949,1952,1985] svg en:Historical > Colonial and other national; en:Historical flags
+    en: ! scope="row" | | 1949–1952 | rowspan="2" | Flag of the Crown Colony of Penang | A blue ensign defaced with the pre-1985 lesser arms of Penang.
+- Flag of Malaya (1950–1963) (vertical).svg [1950,1963] svg en:Historical > National flag
+    en: ! scope="row" | | Flag of the Federation of Malaya (banner) | A swallowtail banner with eleven vertical stripes alternating red and white; in the chief, a yellow crescent and eleven-pointed star on a 
+- Flag of Malaya.svg [1950,1963] svg en:Historical flags; en:History
+    en: alt=Flag with 11 alternating red and white stripes along the fly and a blue canton (occupying 7 stripes) bearing a crescent and an 11-point star.| Flag of the Federation of Malaya from 1950 to 1963.
+- Flag of Penang (1952–1957).svg [1952,1957] svg en:Historical > Colonial and other national; en:Historical flags
+    en: ! scope="row" | | 1952–1957 | Flag badge depicting the areca nut palm tree leaved and fructed proper on a mound with a wreath of the colours of the settlement arms adopted on 16 June 1952 by the Settl
+- Flag of Singapore (1952–1959).svg [1952,1959] svg en:Historical > Colonial and other national; en:Historical flags
+    en: alt=Flag of Singapore colony.| Flag of the Crown Colony of Singapore from 1952 to 1959.
+- Flag of Terengganu.svg [1953] svg en:Administrative divisions > States
+    en: ! scope="row" | | 1953 onwards | Flag of the state of Terengganu | A black field defaced with a white crescent and five-pointed star, with a white . |}
+- Flag of Malacca.svg [1957] svg en:Administrative divisions > States
+    en: ! scope="row" | | 1957 onwards | Flag of the state of Malacca | Two equal horizontal bands of red and white, with a yellow crescent and five-pointed star in a blue canton.
+- Flag of Singapore.svg [1959,1963,1965] svg en:Historical > State flags
+    en: ! scope="row" | | 1959–1965 | Flag of the state of Singapore as a British self-governing colony (1959–1963) and as part of Malaysia (1963–1965) | A horizontal bicolour of red over white, charged in th
+- Flag of Malaysia.svg [1963] svg en:Historical flags; en:National flags; ms:Galeri > Bendera-bendera Malaysia
+    en: ! scope="row" | | rowspan="2" | 1963 onwards | Flag of Malaysia (Jalur Gemilang) | Fourteen horizontal stripes alternating red and white; in the canton, a yellow crescent and fourteen-pointed star on 
+    ms: Bendera Malaysia (1963 - kini).
+- Flag of Sabah (1963-1982).svg [1963,1982] svg en:Historical > State flags
+    en: ! scope="row" | | 1963–1982 | rowspan="2" | Flag of the state of Sabah | Four equal horizontal bands of red, white, yellow, and blue, with a green canton charged with a brown silhouette of Mount Kinab
+- Flag of Penang (Malaysia).svg [1965] svg en:Administrative divisions > States
+    en: ! scope="row" | | 1965 onwards | Flag of the state of Penang | A blue, white, and yellow vertical tricolour defaced with a betel nut tree.
+- Flag of Selangor.svg [1965] svg en:Administrative divisions > States
+    en: ! scope="row" | | 1965 onwards | Flag of the state of Selangor | Red and yellow quartered, with a white crescent and five-pointed star in the canton.
+- Flag of Sarawak (1973–1988).svg [1973,1988] svg en:Historical > State flags
+    en: ! scope="row" | | 1973–1988 | Flag of the state of Sarawak | Red and white horizontal bicolour flag with a blue pile based at the hoist.
+- Flag of Sabah (1982-1988).svg [1982,1988] svg en:Historical > State flags
+    en: ! scope="row" | | 1982–1988 | Blue and white horizontal bicolour flag with a red pile based at the hoist.
+- Flag of Sabah.svg [1988] svg en:Administrative divisions > States
+    en: ! scope="row" | | rowspan="2" | 1988 onwards | Flag of the state of Sabah | A blue (top), white, and red tricolour, with the silhouette of Mount Kinabalu on a light blue canton.
+- Flag of the Supreme Head of Malaysia.svg [1988] svg en:Monarch; ms:Galeri > Bendera-bendera Malaysia
+    en: ! scope="row" | | rowspan="2" | 1988–present (modified depending on updates to the coat of arms) | Standard of the King of Malaysia | The Jata Negara, the coat of arms of Malaysia, enwreathed by two s
+    ms: Bendera Yang di-Pertuan Agong.

@@ -1,0 +1,50 @@
+### me  (en:Flag of Montenegro, en:List of flags of Montenegro, fr:Drapeau du Monténégro, sr:Застава Црне Горе)
+- Flag of Zeta.svg [1451,1496] svg en:Historical > Historical flags of Montene; en:Historical flags > National flags; en:Hist
+    en: ! scope="row" | | 15th century | Flag of the House of Crnojević | Flag during regime of House of Crnojević in Principality of Zeta (1451–1496)
+- Alternative Flag of Montenegro (1516–1852).svg [1516,1852] svg en:Historical flags > National flags
+    en: ! scope="row" | | Red cross pattée on white background
+- Flag of Montenegro (1516–1852).svg [1516,1852] svg en:Historical flags > National flags
+    en: ! scope="row" | | rowspan="2" | 1516–1852 | rowspan="2" | Flag of the Prince-Bishopric of Montenegro | White cross pattée on red background
+- Flag of the Prince-Bishopric of Montenegro2.svg [1516,1852] svg en:Historical > Historical flags of Montene
+    en: ! scope="row" | | 1516–1852 | Flag of the Prince-Bishopric of Montenegro | White cross pattée on red background.
+- Flag of Montenegro during Stephen the Little.png [1767,1773] png en:Historical > Historical flags of Montene; en:Historical flags > National flags
+    en: ! scope="row" | | 1767–1773 | Flag of Montenegro during the reign of Stephen the Little | White background with red borders.
+- Zastava Scepana Malog.png [1768] png sr:Остале историјске заставе Црне Горе
+    sr: Застава из времена Шћепана Малог (1768), без крсташа у пољу
+- Flag of Montenegro (1852–1860).svg [1852,1860] svg en:Historical > Historical flags of Montene; en:Historical flags > National flags; sr:Зван
+    en: ! scope="row" | | 1852–1860 | Flag of the Principality of Montenegro under Danilo I | rowspan="2" | Red flag with white two-headed eagle over a lion.
+    sr: Застава из времена књаза Данила (1852–1860)
+- Flag of Montenegro (1852–1905).svg [1852,1860,1905] svg en:Historical > Historical flags of Montene; sr:Званичне историјске заставе Црне Горе
+    en: ! scope="row" | | 1860–1905 | Flag of the Principality of Montenegro under Nicholas I
+    sr: Застава из времена књаза Николе (1860–1905)
+- Flag of the Principality of Montenegro.svg [1852,1860,1905,1910] svg fr:Historique; sr:Историјске војне и владарске заставе Црн
+    fr: Drapeau de la principauté du Monténégro entre 1852 et 1905.
+    sr: Књажевска стандарта Николе I (1860–1910)
+- Flag of Principality of Montenegro People Flag.svg [1860,1881,1918] svg sr:Историјске поморско-трговачке заставе Цр; sr:Остале историјске заставе Црне Горе
+    sr: Варијанта заставе са монограмом владара (1860–1918)
+- Flag of Montenegro (1905-1918 & 1941-1944).svg [1905,1910,1918,1941,1944] svg fr:Historique; sr:Званичне историјске заставе Црне Горе
+    fr: Drapeau du royaume du Monténégro entre 1910 et 1918 (variante sans les armoiries) également utilisé pendant l'occupation italienne.
+    sr: Народна застава Црне Горе (1905–1918)
+- Flag of Montenegro (1905–1918).svg [1905,1910,1918] svg en:Historical > Historical flags of Montene; en:Historical flags > National flags; fr:Hist
+    en: ! scope="row" | | 1905–1918 | Top: State flag of the Principality (1905–10) and the Kingdom of Montenegro (1910–18)Historical symbols, Official Montenegrin web presentation Bottom: Civil flag of the P
+    fr: Drapeau de la principauté du Monténégro entre 1905 et 1910 puis du royaume du Monténégro entre 1910 et 1918.
+    sr: десно|мини|265x265пиксел|Застава Књажевине Црне Горе из 1905. године, са српском тробојком и бијелим орлом. Ова застава представља претензије на српски престо црногорског краља Николе I Петровића Њего
+- Flag of the Kingdom of Montenegro23.svg [1910,1918] svg sr:Остале историјске заставе Црне Горе
+    sr: Варијанта заставе са краљевском круном (1910–1918)
+- Flag of Montenegro (1946–1993), Flag of Serbia (1947–1992).svg [1945,1946,1947,1992,1993] svg en:Historical > Historical flags of Montene; en:Historical flags > National flags; sr:Зван
+    en: ! scope="row" | | 1945–1993 | Flag of the People's/Socialist Republic of Montenegro | Red-blue-white traditional tricolor with the communist red star.
+    sr: Застава Црне Горе (1946–1992)
+- Flag of the Serbian Partisans.svg [1945,1946] svg sr:Званичне историјске заставе Црне Горе
+    sr: Застава Федералне Државе Црне Горе (1945–1946)
+- Flag of Serbia (1992-2004).svg [1992,1993,1994,2004] svg fr:Historique
+    fr: Drapeau du Monténégro au sein de la république fédérale de Yougoslavie entre 1993 et 1994.
+- Flag of Montenegro (1993-2004).svg [1993,1994,2004] svg fr:Historique; sr:Званичне историјске заставе Црне Горе
+    fr: Drapeau du Monténégro au sein de la république fédérale de Yougoslavie entre 1994 et 2004.
+    sr: Застава Црне Горе (1993–2004)
+- Flag of Montenegro.svg [2004,2010] svg en:Historical > Historical flags of Montene; en:National flags; fr:Historique
+    en: ! scope="row" | | rowspan="2" | 2004– | National flag; civil and state ensign; naval ensign until 2010 | Red with a golden and the state coat of arms in the . Ratio: 1:2. Adopted on 13 July 2004.
+    fr: Drapeau actuel du Monténégro depuis 2004.
+- Flag of the Serb National Council of Montenegro.png [2008] png sr:Историја > Питање народне заставе
+    sr: десно|мини|240п|Застава Српског националног савјета Црне Горе, усвојена 2008. године као спој традиционалне српске тробојке и златног крсташа у средини заставе
+- Тraditional flag of the Montenegro.png [2020] png sr:Историја > Питање народне заставе
+    sr: десно|мини|240п|Приједлог традиционалне заставе Црне Горе од стране коалиције За будућност Црне Горе, из 2020. године као спој традиционалне српске тробојке и државног грба у средини заставе

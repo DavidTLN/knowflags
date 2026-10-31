@@ -1,0 +1,64 @@
+### et  (en:Flag of Ethiopia, en:List of Ethiopian flags, fr:Drapeau de l'Éthiopie, am:የኢትዮጵያ ሰንደቅ ዓላማ)
+- Flag of Abyssinia (pre 1853).svg [1270,1853] svg en:Historical flags
+    en: style=" background:#E0E0E0;" | || 1270–1853 || Flag of The Ethiopian Empire || A horizontal tricolour of Yellow, Red and Green.
+- Red flag.svg [1734,1937] svg en:Regions > Historical flags
+    en: Sultanate of Aussa (1734–1937)
+- Flag of Emirate of Harar.svg [1875,1884] svg en:Regions > Historical flags
+    en: Emirate of Harar (1875–1884)
+- Flag of Ethiopia (1875–1881).svg [1875,1881,1897] svg en:Historical flags
+    en: style=" background:#E3E3E3" | 150x150px | 1875–1881 | A horizontal tricolour of red, white and purple with the Lion of Judah superimposed at the . Disputed early version of the post-1897 flag.
+- Flag of Ethiopia (1897).svg [1897,1974,1975] svg am:ታሪክ; fr:Anciens drapeaux
+    fr: 1897-1974Empire d'Éthiopie
+    am: ባንዲራ ፡ ከይሁዳ ፡ አንበሳ ፡ ጋር (1897-1975) ። በራስተፈሪ ፡ እንቅስቃሴ ፡ እና ፡ ለሃይለስላሴ ፡ ታማኝ ፡ በሆኑ ፡ ሰዎች ፡ ዘንድ ፡ ተወዳጅ ፡ ሆኖ ፡ ቆይቷል።
+- Flag of Ethiopia (1897-1914).svg [1897,1914] svg en:Historical flags
+    en: 180x100px
+- Flag of Ethiopia (1974-1975).svg [1974,1975] svg en:Historical flags; fr:Anciens drapeaux
+    en: 180x100px
+    fr: 1974-1975Derg
+- Flag of Ethiopia (1975–1987) (02).svg [1975,1987] svg am:ታሪክ; en:Historical flags; fr:Anciens drapeaux
+    en: style=" background:#E3E3E3" | || 1975–1987 || rowspan="2" | A horizontal tricolour of green, yellow and red with the National Emblem superimposed at the .
+    fr: 1975-1987Derg (variante avec l'emblème du régime).
+    am: የደርግ ፡ መንግሥታዊ ፡ ሰንደቅ ፡ ዓላማ ።
+- Flag of Ethiopia (1975–1987).svg [1975,1987] svg am:ታሪክ; en:Historical flags
+    en: 180x100px
+    am: የደርግ ፡ ባንዲራ ፣ በ1975-1987 ዓ.ም ።የንጉሠ ፡ ነገሥቱ ፡ ባንዲራ ፡ ያለ ፡ አንበሳ ።
+- Flag of Ethiopia (1991-1996).svg [1975,1987,1991,1996] svg am:ታሪክ; en:Historical flags; fr:Anciens drapeaux
+    en: 180x100px
+    fr: 1991-1996Gouvernement de Transition
+    am: The flag from 1991 to 1996. It is the same as the 1975-1987 official flag, except for the ratio. It is still widely seen today.
+- Flag of Ethiopia (1987-1991).svg [1987,1991] svg am:ታሪክ; fr:Anciens drapeaux
+    fr: 1987-1991RPDE
+    am: የኢትዮጵያ ፡ ሕዝባዊ ፡ ዲሞክራሲያዊ ፡ ሪፐብሊክ ፡ ሰንደቅ ፡ ዓላማ (1987እ.ኤ.አ.-1991እ.ኤ.አ.)
+- Flag of Ethiopia (1992-1996).svg [1992,1996] svg en:Historical flags
+    en: 180x100px
+- Flag of the Afar Region (1994-2012).svg [1994,2012] svg en:Regions > Historical flags
+    en: Afar Region (1994–2012)
+- Flag of the Somali Region (1994-2008, 2018-).svg [1994,2008,2018] svg en:Regions
+    en: style=" background:#E3E3E3" | |||| Somali || 2018–present
+- Flag of Ethiopia (1996).svg [1996,2009] svg am:ታሪክ; en:Historical flags; fr:Anciens drapeaux
+    en: 180x100px
+    fr: 1996République fédérale démocratique d'Éthiopie (première version du drapeau actuel).
+    am: The flag from 1996 to August 2009. Its central disc is smaller than in the current flag.
+- Flag of Ethiopia (1996-2004).svg [1996,2004] svg en:Historical flags
+    en: 180x100px
+- Flag of the Amhara Region.svg [1999] svg en:Regions
+    en: style=" background:#E3E3E3" | |||| Amhara || 1999–present
+- Flag of the Somali Region (2008-2018).svg [2008,2018] svg en:Regions > Historical flags
+    en: Somali Region (2008–2018)
+- Flag of Ethiopia.svg [2009] svg am:ታሪክ; en:Historical flags; en:National flag
+    en: style=" background:#E3E3E3" | || 2009–Present || Flag of Ethiopia || A horizontal tricolour of green, yellow and red with the National Emblem superimposed at the . |}
+    am: የአሁኑ ፡ ባንዲራ ።
+- Flag of the Afar Region.svg [2012] svg en:Regions
+    en: style=" background:#E3E3E3" | |||| Afar || 2012–present
+- Early Sidama flag.svg [2020] svg en:Regions > Historical flags
+    en: Sidama Region (2020), used before the creation of the region, gradually replaced by a new design.
+- Flag of Sidama.svg [2020] svg en:Regions
+    en: style=" background:#E3E3E3" | |||| Sidama || 2020–present
+- Flag of South West Ethiopia.svg [2021] svg en:Regions
+    en: style=" background:#E3E3E3" | || || South West Ethiopia Peoples' Region || 2021–present
+- Flag of Central Ethiopia Regional State.svg [2023] svg en:Regions
+    en: style=" background:#E3E3E3" | |||| Central Ethiopia || 2023–present
+- Flag of Southern Ethiopia.svg [2023] svg en:Regions
+    en: style=" background:#E3E3E3" | || || South Ethiopia || 2023–present
+- Flag of the Southern Nations, Nationalities, and Peoples' Region.svg [2023] svg en:Regions > Historical flags
+    en: Southern Nations, Nationalities, and Peoples' Region (?–2023)

@@ -1,0 +1,56 @@
+### uy  (en:Flag of Uruguay, en:List of Uruguayan flags, fr:Drapeau de l'Uruguay, es:Bandera de Uruguay)
+- Flag of New Spain.svg [1506,1785] svg es:Historia > Durante el Imperio hispano
+    es: miniatura|200x200px| Cruz de Borgoña, emblema militar de la Monarquía Hispánica (1506-1785)|alt=|izquierda
+- Flag of Spain (1785-1873 and 1875-1931).svg [1785,1873,1875,1931] svg es:Historia > Durante el Imperio hispano
+    es: miniatura|200x200px| Bandera utilizada por el rey de España para sus dominios desde 1785.
+- Flag of Artigas 1815.svg [1814,1815] svg en:Historical flags
+    en: ! scope="row" | | 1814–1815 | First flag of the League of the Free Peoples, also known as the flag of Artigas | A triband, composed of three equal horizontal bands coloured blue, white, and blue; with
+- Flag of Uruguay (1825-1828).svg [1816,1825,1828] svg en:Historical flags; es:Historia > Proceso independentista > Lig; fr:Historique du drapeau
+    en: ! scope="row" | | 1825–1828 | Flag of the Oriental Province | A triband, composed of three equal horizontal bands coloured blue, white, and red.
+    fr: Drapeau de l'Uruguay 1825 à 1828
+    es: miniaturadeimagen|200x200px| Bandera de la Provincia Oriental, establecida por Artigas en 1816|alt=
+- Flag of the Provincia Cisplatina.svg [1820,1828] svg en:Historical flags
+    en: ! scope="row" | | 1820–1828 | Flag of the Cisplatina Province | A triband, composed of three equal horizontal bands coloured green, white, and green; with the province's emblem in the .
+- Flag of the Treinta y Tres.svg [1825,1952] svg en:National flags; es:Banderas oficiales de Uruguay; es:Historia > Proceso independentista
+    en: ! scope="row" | | 1952–present | Treinta y Tres flag | Three horizontal stripes: the top one blue, the one white, and the bottom one red. Upon the white stripe are printed the words "Libertad o Muerte
+    fr: Drapeau Treinta y Tres
+    es: miniaturadeimagen|200x200px| Bandera de los Treinta y Tres Orientales, utilizada en 1825 desde 1952 goza de estatus oficial en Uruguay
+- Flag of Uruguay (1828-1830).svg [1828,1830] svg en:Historical flags; es:Historia > Primer Pabellón Nacional; fr:Historique du drapeau
+    en: ! scope="row" | | 1828–1830 | Flag of Uruguay | Nine horizontal stripes of light blue with the upper hoist-side corner bearing the Sun of May in the over a white canvas.
+    fr: Drapeau de 1828 à 1830
+    es: izquierda|miniaturadeimagen| Primer Pabellón Nacional.
+- Flag of Uruguay.svg [1830] svg en:National flags; es:Banderas oficiales de Uruguay
+    en: ! scope="row" | | 1830–present | National flag | Four horizontal stripes of blue with the upper hoist-side corner bearing the Sun of May in the over a white canvas.
+    es: Bandera del Uruguay
+- Flag of Uruguay (Rivera).svg [1840] svg en:Historical flags
+    en: ! scope="row" | | rowspan="2" | 1840s | Flag of the Gobierno de la Defensa
+- Flag of Artigas.svg [1952] svg en:National flags; es:Banderas oficiales de Uruguay; es:Historia > Proceso independentista
+    en: ! scope="row" | | 1952–present | Artigas flag | A triband, composed of three equal horizontal bands coloured blue, white, and blue; with a red diagonal stripe from the upper hoist to the lower fly.
+    fr: Drapeau d'Artigas
+    es: izquierda|miniaturadeimagen|200x200px| Bandera de la Liga Federal, actualmente conocida como Bandera de Artigas desde 1952 goza de estatus oficial en Uruguay.
+- Flag of Flores Department.svg [1987] svg en:Department flags
+    en: ! scope="row" | | 1987–present | | Flores Department
+- Flag of Florida Department.svg [1990] svg en:Department flags
+    en: ! scope="row" | | 1990–present | | Florida Department
+- Flag of Paysandú Department.svg [1992] svg en:Department flags
+    en: ! scope="row" | | 1992–present | | Paysandú Department
+- Flag of Soriano Department.svg [1994] svg en:Department flags
+    en: ! scope="row" | | 1994–present | | Soriano Department
+- Flag of Artigas Department.svg [1995] svg en:Department flags
+    en: ! scope="row" | | 1995–present | | Artigas Department
+- Flag of Rio Negro Department.svg [1995] svg en:Department flags
+    en: ! scope="row" | | 1995–present | | Rio Negro Department
+- Flag of Salto Department.svg [1997] svg en:Department flags
+    en: ! scope="row" | | 1997–present | | Salto Department
+- Flag of Rivera Department.png [1998] png en:Department flags
+    en: ! scope="row" | | 1998–present | | Rivera Department
+- Flag of San José Department.svg [1999] svg en:Department flags
+    en: ! scope="row" | | 1999–present | | San José Department
+- Flag of Durazno Department.svg [2000] svg en:Department flags
+    en: ! scope="row" | | 2000–present | | Durazno Department
+- Flag of Treinta y Tres Department.svg [2003] svg en:Department flags
+    en: ! scope="row" | | 2003–present | | Treinta y Tres Department | |}
+- Flag of Canelones Department.svg [2010] svg en:Department flags
+    en: ! scope="row" | | 2010–present | | Canelones Department
+- Flag of Cerro Largo Department.svg [2018] svg en:Department flags
+    en: ! scope="row" | | 2018–present | | Cerro Largo Department

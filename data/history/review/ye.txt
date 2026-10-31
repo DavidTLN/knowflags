@@ -1,0 +1,33 @@
+### ye  (en:Flag of Yemen, fr:Drapeau du Yémen, ar:علم اليمن)
+- Flag of the United Kingdom.svg [1839,1869,1937,1963,1967] svg ar:أعلام تاريخية > جنوب اليمن > اتحاد الجنو; ar:أعلام تاريخية > شرق اليمن > محمية الجنوب
+    ar: علم مستعمرة عدن من 16 يناير 1839 إلى 1 أبريل 1937
+- Flag of Yemen 1918.svg [1918,1923] svg ar:أعلام تاريخية > شمال اليمن > المملكة الم; fr:Historique > Yémen du Nord > République 
+    fr: Drapeau du Royaume mutawakkilite du Yémen (1918-1923)
+    ar: علم المملكة المتوكلية 30 أكتوبر 1918 إلى 1923
+- Flag of the Mutawakkilite Kingdom of Yemen (1918-1927).svg [1918,1923,1927] svg ar:أعلام تاريخية > شمال اليمن > المملكة الم; fr:Historique > Yémen du Nord > République 
+    fr: Drapeau du Royaume mutawakkilite du Yémen (1923-1927)
+    ar: علم المملكة المتوكلية 1923 إلى 1927 (متضمناً لفظ الشهادتين)
+- Flag of the Mutawakkilite Kingdom of Yemen.svg [1927,1962,1970] svg ar:أعلام تاريخية > شمال اليمن > المملكة الم; fr:Historique > Yémen du Nord > République 
+    fr: Drapeau du Royaume mutawakkilite du Yémen (1927-1962)
+    ar: علم المملكة المتوكلية 1927 إلى 26 سبتمبر 1962 (حتى مايو 1970 في المناطق الملكية)
+- Flag of Aden (1937–1963).svg [1937,1963] svg ar:أعلام تاريخية > جنوب اليمن > اتحاد الجنو; fr:Historique > Yémen du Sud > République d
+    fr: Drapeau de la Colonie d'Aden (1937-1963)
+    ar: علم مستعمرة عدن من 1 أبريل 1937 إلى 18 نوفمبر 1963
+- Flag of the Qu'aiti Sultanate (1939-1967).svg [1939,1967] svg ar:أعلام تاريخية > شرق اليمن > محمية الجنوب
+    ar: علم السلطنة القعيطية في المكلا
+- Flag of Nagybánya (1941).svg [1941] svg ar:أعلام مشابهة
+    ar: علم مدينة بايا ماري (1941)
+- Flag of North Yemen.svg [1962,1990] svg ar:أعلام تاريخية > شمال اليمن > الجمهورية ا
+    ar: علم الجمهورية العربية اليمنية 1 نوفمبر 1962 إلى 22 مايو 1990
+- Flag of the Federation of South Arabia.svg [1962,1967] svg ar:أعلام تاريخية > جنوب اليمن > اتحاد الجنو; fr:Historique > Yémen du Sud > République d
+    fr: (2:3)Drapeau de la Fédération d'Arabie du Sud (1962-1967)
+    ar: علم اتحاد الجنوب العربي من 11 فبراير 1962 إلى 30 نوفمبر 1967
+- Flag of the Yemen Arab Republic.svg [1962,1990] svg fr:Historique > Yémen du Nord > République 
+    fr: (2:3) Drapeau de la République arabe du Yémen (1962-1990)
+- Flag of the State of Aden.svg [1963,1967] svg ar:أعلام تاريخية > جنوب اليمن > اتحاد الجنو
+    ar: علم ولاية عدن من 18 نوفمبر 1963 إلى 30 نوفمبر 1967
+- Flag of South Yemen.svg [1967,1990] svg ar:أعلام تاريخية > جنوب اليمن > جمهورية الي; fr:Historique > Yémen du Sud > République d
+    fr: (2:3) Drapeau de la République démocratique populaire du Yémen (1967-1990)
+    ar: علم جمهورية اليمن الديمقراطية الشعبية 30 نوفمبر 1967 إلى 22 مايو 1990
+- Flag of Libya (1969–1972).svg [1969,1972] svg ar:أعلام مشابهة
+    ar: علم الجمهورية العربية الليبية (نقيض علم الوحدة اليمنية)

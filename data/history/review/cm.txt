@@ -1,0 +1,32 @@
+### cm  (en:Flag of Cameroon, en:List of Cameroonian flags, fr:Drapeau du Cameroun)
+- Kanem flag from dulcerta 1339-pt.svg [1339,1380] svg en:Historical flags
+    en: ! scope="row" | | 700–1380 | Flag of the Kanem Empire | A white pennon with a green palm tree in the . |}
+- Flag of the Bornu Empire.svg [1380,1884] svg en:Historical flags
+    en: ! scope="row" | | 1380–1884 | Flag of the Bornu Empire | A brown field with a white crescent moon in the .
+- Flag of France (1794–1815, 1830–1974, 2020–present).svg [1794,1815,1830,1916,1960,1974] svg en:Historical flags > Colonial-era
+    en: Flag of French Cameroon (1916–1960)
+- Flag of the Sokoto Caliphate.svg [1804,1884] svg en:Historical flags
+    en: ! scope="row" | | 1804–1884 | Flag of the Sokoto Caliphate | A simple green field.
+- Flag of Germany (1867–1918).svg [1867,1884,1916,1918] svg en:Historical flags
+    en: ! scope="row" | | 1884–1916 | Flag of the German Empire | A tricolour, made of three equal horizontal bands coloured black (top), white, and red (bottom).
+- Reichskolonialflagge.svg [1884,1885,1916] svg en:Historical flags; en:Historical flags > Colonial-era; fr:Anciens drapeaux coloniaux
+    en: ! scope="row" | | 1884–1916 | Colonial Flag | A tricolour, made of three equal horizontal bands coloured black (top), white, and red (bottom) with the German Eagle in the .
+    fr: Cameroun allemand (1885-1916).
+- Flag of British Cameroon.svg [1916,1961] svg en:Historical flags; fr:Anciens drapeaux coloniaux
+    en: ! scope="row" | | 1916–1961 | Flag of British Cameroon | A blue ensign with the arms of Cameroon.
+    fr: Cameroun britannique (1916-1961).
+- Flag of the United Kingdom (1-2).svg [1916,1961] svg en:Historical flags
+    en: ! scope="row" | | 1916–1961 | Flag of the United Kingdom | A superimposition of the flags of England and Scotland with the Saint Patrick's Saltire (representing Ireland).
+- British Cameroon Flag.svg [1922,1961] svg en:Historical flags > Colonial-era
+    en: Flag of British Cameroons (1922–1961)
+- Flag of Cameroon (1957).svg [1957,1960,1961] svg en:Historical flags > Colonial-era; fr:Drapeaux nationaux successifs
+    en: Flag of the State of Cameroon (1957–1960).
+    fr: État du Cameroun (1957-1960), puis république du Cameroun (1960-1961).
+- Flag of Cameroon (1957-1961).svg [1957,1960,1961] svg en:Historical flags
+    en: ! scope="row" | | 1960–1961 | First flag of Cameroon | A vertical tricolour of green, red, and yellow.
+- Flag of Cameroon (1961-1975).svg [1961,1972,1975] svg en:Historical flags; fr:Drapeaux nationaux successifs
+    en: ! scope="row" | | 1961–1975 | Second flag of Cameroon | A vertical tricolour of green, red, and yellow with two gold stars (darker than the yellow band) in the upper half of the green.
+    fr: République fédérale du Cameroun (1961-1972), puis république unie du Cameroun (1972-1975).
+- Flag of Cameroon.svg [1971,1975] svg en:National flag and state flag; fr:Drapeaux nationaux successifs
+    en: ! scope="row" | | 1975–present | Flag of Cameroon | A vertical tricolour of green, red, and yellow, with a gold star centred on the red band.The International Flag Book in Color, Christian Fogd Peders
+    fr: République du Cameroun (du à nos jours).

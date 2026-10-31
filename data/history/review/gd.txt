@@ -1,0 +1,36 @@
+### gd  (en:Flag of Grenada, en:List of national flags of sovereign states, en:List of Grenadian flags, fr:Drapeau de la Grenade)
+- Royal Banner of the Crown of Castille (15th Century Style).svg [1498,1500] svg en:Historical flags
+    en: ! scope="row" | | 1498–1500 | Royal flag of the Crown of Castile | A quartered heraldical field of Castile, represented by a castle, and León, represented by a lion.
+- Royal Banner of the Crown of Castille (Habsburg Style).svg [1500,1516] svg en:Historical flags
+    en: ! scope="row" | | 1500–1516 | Royal flag of the Crown of Castile | A rectangular variant of the previous flag.
+- Flag of New Spain.svg [1516,1650] svg en:Historical flags
+    en: ! scope="row" | | 1516–16091609–1650 | The Spanish Cross of Burgundy | A red saltire resembling two crossed, roughly-pruned (knotted) branches, on a white field.
+- Flag of England.svg [1609] svg en:Historical flags
+    en: ! scope="row" | | 1609 | Flag of the Kingdom of England | A white field with centred red cross.
+- Flag of the United Kingdom (1-2).svg [1801,1967] svg en:Flags of UN member states and General As; en:Historical flags
+    en: !scope="row"|United Kingdom | | | |Blue field on which the Cross of Saint Andrew counterchanged with the Cross of Saint Patrick, over all the Cross of Saint George fimbriated in white.
+- Flag of Grenada (1875-1903).svg [1875,1903] svg en:Historical flags; fr:Drapeaux historiques
+    en: ! scope="row" | | 1875–1903 | Flag of British Grenada | A Blue Ensign defaced with the first colonial badge of Grenada.
+    fr: Drapeau de la Grenade de 1875 à 1903
+- Flag of Brazil.svg [1889] svg en:Flags of UN member states and General As
+    en: !scope="row"|Brazil | | | |Green with a large yellow diamond in the bearing a blue globe with 27 white stars (one for each state and the Federal District) arranged as in the sky over Rio de Janeiro at
+- Flag of Lebanon.svg [1901,1993] svg en:Flags of UN member states and General As
+    en: !scope="row"|Lebanon |rowspan="2"| | | |Three horizontal bands consisting of red (top), white (middle, double width), and red (bottom) with a green cedar tree centered in the white band. |; see also "
+- Flag of Grenada (1903–1967).svg [1903,1967] svg en:Historical flags; fr:Drapeaux historiques
+    en: ! scope="row" | | 1903–1967 | Flag of British Grenada | A Blue Ensign defaced with the second colonial badge of Grenada.
+    fr: Drapeau de la Grenade de 1903 à 1967
+- Flag of the West Indies Federation (1958–1962).svg [1958,1962] svg en:Historical flags; fr:Drapeaux historiques
+    en: ! scope="row" | | 1958–1962 | Flag of the West Indies Federation | A blue field with four horizontal narrow white wavy stripes with a large orange-gold circle over the middle two lines in the of the f
+    fr: Drapeau de la Fédération des Indes occidentales de 1958 à 1962
+- Flag of Grenada (1967-1974).svg [1967,1974] svg fr:Drapeaux historiques
+    fr: Drapeau de la Grenade de 1967 à 1974
+- Flag of Grenada.svg [1974] svg en:Flags of UN member states and General As; en:National flag
+    en: !scope="row"|Grenada | | | |A rectangle divided diagonally into yellow triangles (top and bottom) and green triangles (hoist side and outer side), with a red around the flag; there are seven yellow, f
+- Personal flag of Queen Elizabeth II.svg [1974,2022] svg en:Royal and Viceregal flags
+    en: ! scope="row" | | 1974–2022 | Personal flag of Queen Elizabeth II | The flag is the crowned letter 'E' in gold, surrounded by a garland of gold roses on a blue background, with a golden fringe. The cr
+- Flag of Lithuania.svg [2006] svg en:Flags of UN member states and General As
+    en: !rowspan="2" scope="row"|Lithuania | | |Three equal horizontal bands of yellow (top), green, and red. |rowspan="2"|Seimas of Lithuania – History of the National Flag . Retrieved 15 December 2006
+- Flag of Afghanistan (2013–2021).svg [2013,2021] svg en:Flags of UN member states and General As
+    en: Three equal vertical bands of black (hoist side), red, and green, with the national emblem in white centered on the red band and slightly overlapping the other 2 bands.
+- Flag of Vatican City (2023–present).svg [2023] svg en:Flags of UN member states and General As
+    en: !scope="row"|Vatican City | | | |Two vertical bands of yellow (hoist side) and white with the arms of the Holy See, consisting of the crossed keys of Saint Peter surmounted by the three-tiered papal t

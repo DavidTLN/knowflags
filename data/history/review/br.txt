@@ -1,0 +1,76 @@
+### br  (en:Flag of Brazil, en:List of national flags of sovereign states, en:List of Brazilian flags, fr:Drapeau du Brésil, pt:Bandeira do Brasil)
+- Flag Order of Christ.svg [1332,1651] svg en:Historical flags
+    en: ! scope="row" | | 1332–1651 | Flag of the Order of Christ | A white flag charged with the red Cross of the Order of Christ.
+- Flag of Portugal sea (1500).svg [1500,1521] svg en:Historical flags
+    en: ! scope="row" | | 1500–1521 | Royal Portuguese flag | A white flag charged with the red Cross of the Order of Christ with the Royal Portuguese Shield.
+- Flag of Portugal (1521).svg [1521,1616] svg en:Historical flags
+    en: ! scope="row" | | 1521–1616 | Flag of John III of Portugal | A white flag charged with the Royal Portuguese Coat of Arms.
+- Flag John V of Portugal with Order of Christ.svg [1600,1700] svg en:Historical flags
+    en: ! scope="row" | | 1600–1700 | Royal Portuguese flag during the XVII century | A white flag charged with the Royal Portuguese Coat of Arms on top of the necklace of the Order of Christ.
+- Flag of Portugal (1616).svg [1616,1640] svg en:Historical flags
+    en: ! scope="row" | | 1616–1640 | Flag of Portugal during the Spanish Dominium | A white flag charged with the Royal Portuguese Coat of Arms on top of green pilgrimage.
+- Prinsenvlag.svg [1630,1654] svg en:Historical flags
+    en: ! scope="row" | | 1630–1654 | The Prince's Flag | A horizontal triband of orange, white, and blue.
+- Flag of John IV of Portugal during the Restoration War.svg [1640,1683] svg en:Historical flags
+    en: ! scope="row" | | 1640–1683 | Flag of John IV of Portugal during the Portuguese Restoration War | A white flag with blue borders charged with the Royal Portuguese Coat of Arms.
+- Flag of the Princes of Brazil.svg [1645,1816] svg en:Historical flags
+    en: ! scope="row" | | 1645–1816 | Flag of Portuguese Brazil | The armillary sphere representing the Portuguese navigation on a white field.
+- Statenvlag.svg [1652,1654] svg en:Historical flags
+    en: ! scope="row" | | 1652–1654 | States Flag | A horizontal triband of red, white, and blue
+- Flag Peter II of Portugal.svg [1683,1706] svg en:Historical flags
+    en: ! scope="row" | | 1683–1706 | Flag of Pedro II of Brazil | A green flag charged with the Royal Portuguese Coat of Arms.
+- Flag of the United Kingdom of Portugal, Brazil, and the Algarves (1815-1825).svg [1815,1816,1821,1822,1825] svg en:Historical flags; en:History > United Kingdom of Portugal, Br; en:Other flags > Previou
+    en: ! scope="row" | | 1816–1821 | Flag of the United Kingdom of Portugal, Brazil and the Algarves | The coat of arms of the union with the armillary sphere representing the Kingdom of Brazil and the Portu
+- Flag of Brazil (1822-1853).svg [1822,1853] svg en:Historical flags; en:History > Empire of Brazil (1822–1889); en:Other flags > Previous 
+    en: ! scope="row" | | 1822–1853 | rowspan="2" | Flag of the Empire of Brazil | rowspan="2" | The Imperial Coat of Arms, within a yellow rhombus representing the House of Habsburg, on a green field represe
+- Flag of the Kingdom of Brazil (1822).svg [1822] svg en:Historical flags; en:History > Empire of Brazil (1822–1889); en:Other flags > Previous 
+    en: ! scope="row" | | 1822 | Flag of the newly independent Kingdom of Brazil | The Prince Royal's Personal Standard with a Royal Crown instead of an Imperial.
+- Flag of Brazil (1853-1889).svg [1853,1889] svg en:Historical flags; en:History > Empire of Brazil (1822–1889); en:Other flags > Previous 
+    en: Flag of the Empire of Brazil, second version (30 August 1853 – 15 November 1889)
+    pt: esquerda| Bandeira do Império do Brasil com 20 estrelas após a criação da Província do Paraná em 1853, padrão que vigorou até 15 de novembro de 1889.Vade-Mécum de Cerimonial Militar do Exército – Guar
+- Flag of Empire of Brazil (1870-1889).svg [1870,1889] svg fr:Origines
+    fr: Drapeau de l'empire du Brésil durant le second règne.
+- Flag-lopes-trovão.svg [1888] svg en:Other flags > Rejected flags; pt:História > Bandeiras republicanas
+    en: Design by Lopes Trovão, 1888. It was raised when the Republic was founded, then replaced with the similar design by Ruy Barbosa.
+    pt: miniaturadaimagem|Bandeira de Lopes Trovão usada durante a Proclamação da República.
+- Flag of Brazil (1889-1960).svg [1889,1960] svg en:Other flags > Previous flags; fr:Origines > Évolution de l'actuel drapeau
+    en: First Flag of the United States of Brazil (19 November 1889 – present)
+    fr: Drapeau des États-Unis du Brésil(du à )Les étoiles représentent les et le District fédéral..
+- Flag of Brazil (1889–1960).svg [1889,1960] svg en:Historical flags; en:History > Republic of Brazil (1889–prese
+    en: ! scope="row" | | 1889–1960 | rowspan="3" | Flag of Brazil | A blue disc depicting a starry sky (with 21 stars) spanned by a curved band inscribed with the national motto, within a yellow rhombus, on 
+- Flag of Brazil (Deodoro project).png [1889] png en:Other flags > Rejected flags
+    en: Design by Deodoro da Fonseca, 1889.
+- Flag of Brazil 15-19 November.svg [1889] svg en:Historical flags; en:History > Republic of Brazil (1889–prese; en:Other flags > Previou
+    en: ! scope="row" | | 1889 | Provisional flag of the Republic of the United States of Brazil between 15–19 November 1889 | Thirteen horizontal green and yellow stripes; in the canton, 21 white stars on a 
+    pt: Primeira Bandeira Republicana, criada por Ruy Barbosa, usada entre 15 e 19 de novembro de 1889, chamada de "Estados Unidos do Brasil".
+- Flag of Brazil.svg [1889,1992] svg en:Flags of UN member states and General As; en:National flags; fr:Origines > Évolution de
+    en: ! scope="row" | | 1992–present | National flag and ensign | A blue disc depicting a starry sky containing 27 stars, spanned by a curved white band inscribed with the national motto, placed within a ye
+    fr: alt=Drapeau de la république fédérative du Brésil (depuis le ).|Drapeau de la république fédérative du Brésil (depuis le )Les étoiles représentent les et le District fédéral..
+- Flag of Brazil (Valadão project).svg [1892] svg en:Other flags > Rejected flags
+    en: Design by Oliveira Valadão, 1892.
+- Flag of Lebanon.svg [1901,1993] svg en:Flags of UN member states and General As
+    en: !scope="row"|Lebanon |rowspan="2"| | | |Three horizontal bands consisting of red (top), white (middle, double width), and red (bottom) with a green cedar tree centered in the white band. |; see also "
+- Brazil Ambassador Flag.svg [1958] svg en:Diplomatic services flags
+    en: ! scope="row" | | 1958–present | Ambassador flag
+- Brazil Chargé d'Affaires Flag.svg [1958] svg en:Diplomatic services flags
+    en: ! scope="row" | | 1958–present | Chargé d'affaires flag
+- Brazil Consul Flag.svg [1958] svg en:Diplomatic services flags
+    en: ! scope="row" | | 1958–present | Consul flag
+- Brazil Consul General Flag.svg [1958] svg en:Diplomatic services flags
+    en: ! scope="row" | | 1958–present | Consul general flag
+- Brazil Envoy Extraordinary Flag.svg [1958] svg en:Diplomatic services flags
+    en: ! scope="row" | | 1958–present | Envoy extraordinary flag
+- Brazil Vice Consul Flag.png [1958,1982] png en:Diplomatic services flags
+    en: ! scope="row" | | 1958–1982 | Vice consul flag | |}
+- Flag of Brazil (1960-1968).svg [1960,1968] svg fr:Origines > Évolution de l'actuel drapeau
+    fr: Drapeau des États-Unis du Brésil (de au )Les étoiles représentent les et le District fédéral..
+- Flag of Brazil (1968-1992).svg [1968,1992] svg fr:Origines > Évolution de l'actuel drapeau
+    fr: alt=Drapeau de la République fédérative du Brésil (du 28 mai 1968 au 11 mai 1992).|Drapeau de la république fédérative du Brésil (du au )Les étoiles représentent les et le District fédéral..
+- Flag of Brazil (dimensions).svg [1992] svg pt:Características > Dimensões e construção
+    pt: centro|Esquema oficial da bandeira segundo a lei nº 8 421, de 11 de maio de 1992.|591x591px
+- Flag of Lithuania.svg [2006] svg en:Flags of UN member states and General As
+    en: !rowspan="2" scope="row"|Lithuania | | |Three equal horizontal bands of yellow (top), green, and red. |rowspan="2"|Seimas of Lithuania – History of the National Flag . Retrieved 15 December 2006
+- Flag of Afghanistan (2013–2021).svg [2013,2021] svg en:Flags of UN member states and General As
+    en: Three equal vertical bands of black (hoist side), red, and green, with the national emblem in white centered on the red band and slightly overlapping the other 2 bands.
+- Flag of Vatican City (2023–present).svg [2023] svg en:Flags of UN member states and General As
+    en: !scope="row"|Vatican City | | | |Two vertical bands of yellow (hoist side) and white with the arms of the Holy See, consisting of the crossed keys of Saint Peter surmounted by the three-tiered papal t

@@ -1,0 +1,143 @@
+### fr  (en:Flag of France, en:List of French flags, fr:Drapeau de la France)
+- Flag of the County of Nice.svg [1108,1176] svg en:Historical flags > Occitania
+    en: ! scope="row" | | 1108–1176 | Flag of County of Nice
+- Flag of Savoie.svg [1147,1847] svg en:Historical flags > Savoy
+    en: ! scope="row" | | 1147–1847 | Flag of Duchy of Savoy | |}
+- Flag of Occitania.svg [1271] svg en:Historical flags > Occitania
+    en: ! scope="row" | | 778–1271 | Flag of County of Toulouse
+- Flag of Comtat Venaissin.svg [1274,1791] svg en:Historical flags > Occitania
+    en: ! scope="row" | | 1274–1791 | Flag of Comtat Venaissin
+- Banner of the Breton French.svg [1351] svg en:Historical flags > Brittany
+    en: ! scope="row" | | 1351 | Brittany banner during the Breton Civil War | |}
+- Drapeau Charles VII Bourges 1419.svg [1419] svg en:Historical flags > Other historical flag
+    en: ! scope="row" | | 1419 | Flag of Dauphin Charles (future Charles VII) upon his entry (adventus) into Bourges on 14 March 1419. According to Anselme d'Ysalguier (from Toulouse) eyewitness.
+- Flag of Aquitaine.svg [1453] svg en:Historical flags > Occitania
+    en: ! scope="row" | | 602–1453 | Flag of Duchy of Aquitaine
+- Flag of Normandie.svg [1469] svg en:Historical flags > Normandy
+    en: ! scope="row" | | 911–1469 | Flag of Duchy of Normandy
+- Ancient Flag of Burgundy.svg [1482] svg en:Historical flags > Burgundy
+    en: ! scope="row" | | 918–1482 | Flag of Duchy of Burgundy
+- Drapeau de la province de Bretagne (1532).svg [1532,1547] svg en:Historical flags > Brittany
+    en: ! scope="row" | | rowspan="2" | 939–1547 | Flag of Duchy of Brittany
+- Flag of Béarn.svg [1620] svg en:Historical flags > Occitania
+    en: ! scope="row" | | 9th century–1620 | Flag of Viscounty of Béarn
+- Flag of Corsica (before 1755).svg [1755] svg en:Historical flags > Corsica
+    en: ! scope="row" | | ?–1755 | Flag of Corsica
+- Drapeau révolutionnaire 1.svg [1790] svg en:Historical flags
+    en: ! scope="row" | | 14 July 1790 | rowspan="3" | Revolutionist flag | Similar to the flag of Bohemia and Moravia
+- Flag of France (1790–1794).svg [1790,1794] svg en:Historical flags
+    en: ! scope="row" | | 1790–1794 | Flag of Kingdom of France and French First Republic
+- Drapeau révolutionnaire 2.svg [1793] svg en:Historical flags
+    en: ! scope="row" | | 21 January 1793 | Similar to the flag of the Netherlands.
+- Drapeau révolutionnaire 3.svg [1794] svg en:Historical flags
+    en: ! scope="row" | | 7 May 1794 | Similar to the flag of pre-Communist Yugoslavia.
+- Flag of France (1794–1815, 1830–1974, 2020–present).svg [1794,1815,1830,1974,1976,2020] svg en:National flags
+    en: ! scope="row" | | 2020–present; | National flag of the French Second Republic, Second French Empire, French Third Republic, French State, Provisional Government of the French Republic, French Fourth R
+- Flag of the Anglo-Corsican Kingdom.svg [1794,1796] svg en:Historical flags > Corsica
+    en: ! scope="row" | | 1794–1796 | Flag of the Anglo-Corsican Kingdom | |}
+- Banner of the Prince-Bishopric of Strassbourg I (1^1).svg [1803] svg en:Historical flags > Alsace
+    en: ! scope="row" | | 982–1803 | Banner of the Prince-Bishopric of Strasbourg | |}
+- Royal flag of France during the Bourbon Restoration.svg [1814,1815,1830] svg en:Historical flags; en:History > Kingdom of France
+    en: ! scope="row" | | 1814–1815 1815–1830 | Royal flag of Kingdom of France
+- Variant of the Flag of Bora Bora (1820-1845).svg [1820,1845] svg en:Historical flags > French Polynesia > So
+    en: ! scope="row" | | 1820–1845 | rowspan="3" | Flag of Kingdom of Bora Bora
+- Flag of the Kingdom of Tahiti 1822-1829.svg [1822,1829] svg en:Historical flags > French Polynesia > So
+    en: ! scope="row" | | 1822–1829 | rowspan="2" | Flag of Kingdom of Tahiti
+- Flag of the Kingdom of Tahiti.svg [1829,1843] svg en:Historical flags > French Polynesia > So
+    en: ! scope="row" | | 1829–1843
+- Flag of the Kingdom of Mangareva 1832-1843.svg [1832,1843] svg en:Historical flags > French Polynesia > Ga
+    en: ! scope="row" | | 1832–1843 | Flag of Kingdom of Mangareva | |}
+- Flag of the Tuamotu Kingdom 1832-1843.svg [1832,1843] svg en:Historical flags > French Polynesia > Tu
+    en: ! scope="row" | | 1832–1843 | Flag of Tuamotu Kingdom | |}
+- Flag of Nuku Hiva.svg [1835] svg en:Historical flags > French Polynesia > Ma
+    en: ! scope="row" | | 1835 | Flag of Kingdom of Taiohae | |}
+- Flag of the Kingdom of Bora Bora (1837-1842).svg [1837,1842] svg en:Historical flags > French Polynesia > So
+    en: ! scope="row" | | 1837–1842
+- Flag of the Kingdom of Tahuata (1837-1842).svg [1837,1842] svg en:Historical flags > French Polynesia > Ma
+    en: ! scope="row" | | 1837–1842 | Flag of Kingdom of Tahuata
+- Flag of Bora Bora.svg [1842,1895] svg en:Historical flags > French Polynesia > So
+    en: ! scope="row" | | 1842–1895
+- Flag of Uvea (1842-1860).svg [1842,1860] svg en:Historical flags > Wallis and Futuna
+    en: ! scope="row" | | 1842–1860 | rowspan="3" | Flag of the Kingdom of Uvea
+- Flag of the Tahiti Protectorate 1843-1880.svg [1843,1880] svg en:Historical flags > French Polynesia > So
+    en: ! scope="row" | | 1843–1880 | Flag of Tahiti Protectorate | |}
+- Flag of the Society Islands Protectorate.svg [1845,1880] svg en:Colonial flags
+    en: Flag of the Kingdom of Tahiti under the Protectorate of France (1845–1880)
+- Flag of Huahine.svg [1847,1888] svg en:Historical flags > French Polynesia > So
+    en: ! scope="row" | | 1847–1888 |Flag of Kingdom of Huahine
+- Flag of Raiatea.svg [1847,1880] svg en:Historical flags > French Polynesia > So
+    en: ! scope="row" | | 1847–1880 | rowspan="2" | Flag of Kingdom of Raiatea
+- Drapeau france 1848.svg [1848] svg en:Historical flags
+    en: ! scope="row" | | 1848 | Flag of French Second Republic
+- Flag of the Free Cities of Menton and Roquebrune (1848-1849).svg [1848,1849] svg en:Historical flags > Occitania
+    en: ! scope="row" | | 1848–1849 | Flag of the Free Cities of Menton and Roquebrune
+- Flag of the Kingdom of Rimatara 1856-1891.svg [1856,1891] svg en:Historical flags > French Polynesia > Au
+    en: ! scope="row" | | 1856–1891 | rowspan="2" | Flag of Kingdom of Rimatara
+- Drapeau Protectorat Français RuRutu (1858-1889).png [1858,1889] png en:Colonial flags
+    en: Flag of the French protectorate of Rurutu in French Polynesia (1858–1889)
+- Flag of Rurutu.svg [1858,1889] svg en:Historical flags > French Polynesia > Au
+    en: ! scope="row" | | 1858–1889 | rowspan="2" | Flag of Kingdom of Rurutu
+- Flag of Uvea (1860).svg [1860,1886] svg en:Colonial flags; en:Historical flags > Wallis and Futuna
+    en: Flag of the French Protectorate of Wallis and Futuna (Uvea) (1860–1886)
+- Banner of the Papal Zouaves.svg [1870] svg en:Historical flags > Other historical flag
+    en: ! scope="row" | | 1870 | Banner of the Catholic French Papal Zouaves
+- Socialist red flag.svg [1871,1918] svg en:Historical flags > Alsace; en:Historical flags > Other historical flag
+    en: ! scope="row" | | 1871 | Revolutionary banner from the Paris Commune | A plain red flag |}
+- Flag of the Kingdom of Raiatea (1880-1888).svg [1880,1888] svg en:Historical flags > French Polynesia > So
+    en: ! scope="row" | | 1880–1888
+- Flag of the Madagascar Protectorate (1885-1896).svg [1885,1895,1896] svg en:Colonial flags
+    en: Flag of Madagascar under French protection (1885–1895)
+- Flag of Uvea (1886-1887).svg [1886,1887] svg en:Historical flags > Wallis and Futuna
+    en: ! scope="row" | | 1886–1887
+- Flag of the Republic of Independent Guyana (1886-1887).svg [1886,1887] svg en:Colonial flags
+    en: Flag of Republic of Independent Guyana (1886–1887)
+- Flag of the Kingdom of Rurutu (1889-1900).svg [1889,1900] svg en:Historical flags > French Polynesia > Au
+    en: ! scope="row" | | 1889–1900
+- Flag of the Kingdom of Rimatara 1891-1900.svg [1891,1900] svg en:Historical flags > French Polynesia > Au
+    en: ! scope="row" | | 1891–1900 | |}
+- Flag of Wallis and Futuna (1910-1976).svg [1910,1976] svg en:Historical flags > Wallis and Futuna
+    en: ! scope="row" | | 1910–1976
+- Flag of the Republic of Alsace-Lorraine.svg [1912,1918] svg en:Historical flags > Alsace
+    en: ! scope="row" | | 1912–1918 | Flag of Imperial Territory of Alsace-Lorraine
+- Flag of Lebanon (1920-1943).svg [1920,1943] svg en:Colonial flags
+    en: Flag of the State of Greater Lebanon during the French mandate 1920–1943
+- Flag of the Alawite State (1920–1936).svg [1920,1936] svg en:Colonial flags
+    en: Flag of the State of Alawites, in the French Mandate of Syria
+- Flag of the French Mandate of Syria (1920).svg [1920] svg en:Colonial flags
+    en: Briefly used flag of the French Mandate of Syria and the Lebanon in 1920
+- Flag of the State of Aleppo.svg [1920,1924] svg en:Colonial flags
+    en: Flag of the State of Aleppo, in the French Mandate of Syria (1920–1924)
+- Flag of the State of Damascus.svg [1920,1924] svg en:Colonial flags
+    en: Flag of the State of Damascus, in the French Mandate of Syria (1920–1924)
+- Flag of Syria French mandate.svg [1924,1930] svg en:Colonial flags
+    en: Flag of the State of Syria, in the French Mandate of Syria (1924–1930)
+- Flag of Free France (1940-1944).svg [1940,1944] svg en:Historical flags
+    en: ! scope="row" | | 1940–1944 | Flag of Free France
+- Flag of the collaborationist French Militia.svg [1943,1944] svg en:Historical flags
+    en: ! scope="row" | | 1943–1944 | Flag of the Milice | |}
+- Flag of Free Republic of Vercors.svg [1944] svg en:Historical flags > Occitania
+    en: ! scope="row" | | 1944 | Flag of Free Republic of Vercors | |}
+- Flag of Saar (1947–1956).svg [1947,1956] svg en:Colonial flags
+    en: Flag of the French protectorate of Saar (1947–1956)
+- Flag of the Tai Dam People.svg [1948,1955] svg en:Colonial flags
+    en: Flag of the Sip Song Chau Tai, French Indochina (1948–1955)
+- Flag of Togo (1957-1958).svg [1956,1957,1958,1960] svg en:Colonial flags
+    en: Flag of French Togoland (1956–1960), present-day Togo
+- Flag of Gabon 1959-1960.svg [1959,1960] svg en:Colonial flags
+    en: Flag of Gabon (1959–1960)
+- Flag of France (1976–2020).svg [1976,2020,2021] svg en:National flags
+    en: ! scope="row" | | 1976–2020 | An interchangeable lighter version of the national flag of the French Fifth Republic from 1976. This version was abandoned by President Emmanuel Macron in July 2021 in fa
+- Flag of France (1976–2020; vertical).svg [1976,2020] svg en:National flags
+    en: ! scope="row" | 100x666px | 1976–2020 | Flag of France (vertical) | |}
+- Flag of Wallis and Futuna (1976-1985).svg [1976,1985] svg en:Historical flags > Wallis and Futuna
+    en: ! scope="row" | | 1976–1985
+- Flag of Wallis and Futuna (1985-2020).svg [1985,2020] svg en:Historical flags > Wallis and Futuna
+    en: ! scope="row" | | 1985–2020 | |}
+- Flag of French Guiana.svg [2010,2015] svg en:Historical flags > French Guiana
+    en: ! scope="row" | | 2010–2015 | Flag of the Territorial Collectivity of French Guiana
+- Flag of the Territorial Collectivity of Martinique.svg [2019,2021] svg en:Historical flags > Martinique
+    en: ! scope="row" | | 2019–2021 | Flag of the Territorial Collectivity of Martinique
+- Flag of France (vertical).svg [2020] svg en:National flags
+    en: ! scope="row" | 100x666px | 2020–present; | Modern flag of France
+- Flag-of-Martinique.svg [2023] svg en:Historical flags > Martinique
+    en: ! scope="row" | | Since 2023 | Official flag of Martinique | |}

@@ -1,0 +1,37 @@
+### do  (en:Flag of the Dominican Republic, en:List of flags of the Dominican Republic, fr:Drapeau de la République dominicaine, es:Bandera de la República Dominicana)
+- Flag of the Dominican Republic.svg [1126,1849,1865,1874,1916,1924] svg en:Chronology; en:Description; en:National flags; es:Cronología Histórica
+    en: ! scope="row" | | 1849–present | State flag and ensign, war ensign | A crossed two-colored flag with the country's coat of arms in the . The white cross at the is taken from the flag of La Trinitaria 
+    es: 1865-1916 || Bandera de la República Dominicana || Legalmente, sólo el pabellón naval contenía el escudo de armas hasta 1874. A partir de 1874, la versión con escudo adquiere el estatus de bandera nac
+- Flag of New Spain.svg [1492,1516,1785,1795] svg en:Chronology; en:Historical flags; es:Cronología Histórica
+    en: 1492–1795 |Flag of the Captaincy General of Santo Domingo |The Cross of Burgundy was used by Spanish military units in the 15th to 18th centuries and is often used to represent the Spanish Empire.
+    es: 1492–1795|| Bandera de la capitanía general de Santo Domingo|| Bandera de la Cruz de Borgoña que fue utilizada por unidades militares españolas en los siglos XV al XVIII y se suele usar para represent
+- Royal Banner of the Crown of Castille (15th Century Style).svg [1492,1500] svg en:Historical flags
+    en: ! scope="row" | | 1492–1500 | Royal flag of the Crown of Castile | Quartered banner of arms of Castile, represented by a castle, and León, represented by a lion.
+- Royal Banner of the Crown of Castille (Habsburg Style).svg [1500,1516] svg en:Historical flags
+    en: ! scope="row" | | 1500–1516 | Royal flag of the Crown of Castile | The same design of the previous flag, in a rectangular shape.
+- Flag of Spain (1785-1873 and 1875-1931).svg [1785,1795,1809,1810,1821,1861] svg en:Chronology; en:Historical flags; es:Cronología Histórica
+    en: ! scope="row" | | 1785–1795, 1810–1821, 1861–1865 | Flag of Santo Domingo | A horizontal triband of red, yellow, and red with the coat of arms off-centred toward the hoist. In 1861, general Pedro Sant
+    es: 1809-1821||Bandera de la capitanía general de Santo Domingo|| La ocupación francesa de Santo Domingo amenazaba con desvirtuar la identidad y costumbres españolas de los dominicanos. Los españoles se r
+- Bandera de España 1808-1813.svg [1808,1809,1813] svg en:Historical flags
+    en: ! scope="row" | | 1809–1813 | Flag of Spain under Joseph Bonaparte | A white field with the coat of arms off-centred toward the hoist.
+- Flag of Haiti (1820–1849, 1859–1964).svg [1820,1822,1844,1849,1859,1964] svg en:Chronology; en:Historical flags; es:Cronología Histórica
+    en: 1822–1844 |Flag of Haiti |It was a historical period that lasted 22 years, in which Haiti governed the eastern part of the island, imposing itself on the new State of Spanish Haiti, which was divided 
+    es: 1822-1844 || Bandera de Haití || Fue un período histórico que duró 22 años, en el cual Haití gobernó la parte oriental de la isla imponiéndose sobre el nuevo Estado de Haití Español, el cual fue divid
+- Flag of Spanish Haiti.svg [1821,1822] svg en:Chronology; en:Historical flags; es:Cronología Histórica; fr:Chronologie des drapeaux
+    en: 1821–1822 |Flag of the Republic of Spanish Haiti |During the period of "España Boba", (meek Spain), Spain neglected Santo Domingo to attend to the territories of continental America that were seeking 
+    fr: Drapeau du Haïti espagnol1821 - 1822
+    es: 1821-1822|| Bandera del Estado Independiente de Haití Español || Durante el periodo de la España Boba, España "descuidó" Santo Domingo para atender los territorios virreinales de la América continenta
+- Flag of the Dominican Republic (up to 1844).svg [1844,1849] svg en:Chronology; en:Historical flags; es:Cronología Histórica; fr:Chronologie des drapeaux
+    en: ! scope="row" | | 1844–1849 | Flag of the Dominican War of Independence | It was developed from the flag of Haiti and was added a white symmetric cross.
+    fr: Drapeau de la République dominicaine de 1844 à 1849
+    es: 1844-1849 || Bandera de los Trinitarios || Durante los 22 años de ocupación los haitianos tomaron medidas políticas que disgustaron a los dominicanos: Las personas de piel blanca no podían tener propi
+- Flag of the Dominican First Republic.svg [1849,1861] svg en:Chronology; en:Historical flags; fr:Chronologie des drapeaux
+    en: ! scope="row" | | 1849–1861 | Flag of the First Dominican Republic | A crossed two-colored flag with the country's coat of arms in the .
+    fr: Drapeau de la République dominicaine de 1849 à 1861
+- Flag of the United States (1896–1908).svg [1896,1905,1908] svg en:Historical flags
+    en: ! scope="row" | | 1905–1908 | Flag of the United States | Thirteen horizontal stripes alternating red and white; in the canton, 45 white stars on a blue field.
+- Flag of the United States (1908–1912).svg [1908,1912] svg en:Historical flags
+    en: ! scope="row" | | 1908–1912 | Flag of the United States | Thirteen horizontal stripes alternating red and white; in the canton, 46 white stars on a blue field.
+- US flag 48 stars.svg [1912,1916,1924,1948] svg en:Chronology; es:Cronología Histórica
+    en: 1916–1924 |Flag of the United States (1912–1948) |Following the Dominican Restoration War, instigated by the United States ' interest in controlling Spanish America, the Dominican Republic experienced
+    es: 1916-1924 || Bandera de Estados Unidos (1912-1948) || Después de la Guerra de la Restauración, instigada por el interés de los Estados Unidos en controlar Hispanoamérica, la República Dominicana pasó 

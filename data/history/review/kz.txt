@@ -1,0 +1,32 @@
+### kz  (en:Flag of Kazakhstan, en:List of Kazakh flags, fr:Drapeau du Kazakhstan, kk:Қазақстан туы)
+- Golden Horde flag 1339.svg [1339] svg en:Historical flags
+    en: ! scope="row" | | 14th–16th century | Flag of the Golden Horde
+- Flag of Russia.svg [1847,1918] svg kk:Тарихи байрақтар
+    kk: Ресей империясының туы (1847-1918)
+- Flag of the Kazakh Khanate.svg [1847] svg kk:Тарихи байрақтар
+    kk: Қазақ хандығының мүмкін байрағы (...-1847)
+- Amangeldy Flag.svg [1916] svg en:History > Central Asian Revolt; kk:Тарихи байрақтар
+    en: Flag of Amankeldy İmanov's associates who rebelled in 1916
+    kk: Ұлт-азаттық көтерілістеріндегі қолданылған байрақтар (1916)
+- Flag of Alash Autonomy.svg [1918] svg en:History > Alash Autonomy; kk:Тарихи байрақтар
+    en: Possible flag of the Alash Autonomy (1918)
+    kk: Алаш автономиясының басқа байрағы (1918)
+- Flag of The Kazakh Autonomous Socialist Soviet Republic (1920-36).svg [1920,1936,1937] svg en:Historical flags; en:History > Soviet Kazakhstan; fr:Drapeau historique; kk:Тарихи байр
+    en: ! scope="row" | | 1920–1936 | Flag of the Kazakh Autonomous Socialist Soviet Republic
+    fr: 1920-1937 | Drapeau de la République socialiste soviétique autonome kazakhe | Drapeau de la République socialiste soviétique autonome kazakhe
+    kk: Қазақ Автономиялы Кеңестік Социалистік Республикасы (1920-1936)
+- Flag of the Kazakh Soviet Socialist Republic (1937-1940).svg [1937,1940] svg kk:Тарихи байрақтар
+    kk: Қазақ Кеңестік Социалистік Республикасының байрағы (1937-1940)
+- Flag of the Kazakh Soviet Socialist Republic (1940–1953).svg [1940,1953] svg en:History > Soviet Kazakhstan; kk:Тарихи байрақтар
+    en: Flag of Kazakh SSR 1940–1953
+    kk: ҚазақКСР-ның байрағы (1940-1953)
+- Flag of the Kazakh SSR.svg [1953,1991,1992] svg en:Historical flags; fr:Drapeau historique
+    en: ! scope="row" rowspan="2" | | 1953–1991 | rowspan="2"|Flag of the Kazakh Soviet Socialist Republic.
+    fr: 1953-1991 | Drapeau de la RSSK | Drapeau de la République socialiste soviétique kazakhe
+- Flag of the Kazakh Soviet Socialist Republic (1953–1991); Flag of Kazakhstan (1991–1992) (reverse).svg [1953,1991,1992] svg en:Historical flags; en:History > Soviet Kazakhstan
+    en: ! scope="row" rowspan="2" | | 1953–1991 | Flag of the Kazakh Soviet Socialist Republic (reversed) | rowspan="2" | All flags of the constituent republics of the Soviet Union did not bear the hammer and
+- Flag of the Kazakh Soviet Socialist Republic (1953–1991); Flag of Kazakhstan (1991–1992).svg [1953,1991,1992] svg en:History > Soviet Kazakhstan; kk:Тарихи байрақтар
+    en: Flag of Kazakh SSR and Kazakhstan, obverse side 1953–1991, 1991–1992
+    kk: ҚазақКСР-ның (1953-1991) және Қазақстан Республикасының (1991-1992) байрағы
+- Flag of Kazakhstan.svg [1992] svg en:National flag
+    en: ! scope="row" | | 1992–present | Flag of Kazakhstan | A gold sun with 32 rays above a soaring golden steppe eagle, both centred on a turquoise field and shifted towards the fly. The hoist edge display

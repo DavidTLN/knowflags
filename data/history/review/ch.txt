@@ -1,0 +1,7 @@
+### ch  (en:Flag of Switzerland, fr:Drapeau et armoiries de la Suisse, de:Fahne und Wappen der Schweiz)
+- Flag of the Helvetic Republic (French).svg [1798,1803] svg de:Geschichte > Helvetische Republik und St; en:History > Napoleonic period and Restored
+    en: The green-red-yellow banner of the Helvetic Republic, a French satellite state (1798–1803).
+    de: mini|hochkant=0.4|links|Fahne der Helvetischen Republik
+- Swiss flag Bachmann 1815.png [1815] png de:Geschichte > Helvetische Republik und St; en:History > Napoleonic period and Restored
+    en: The first Swiss battalion flag, issued by the Tagsatzung on 12 October 1815, after the design of general Niklaus Franz von Bachmann. A red square field with a white cross in the centre containing a sw
+    de: mini| Bataillonsfahne von 1815

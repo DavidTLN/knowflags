@@ -1,0 +1,11 @@
+### mr  (en:Flag of Mauritania, en:List of Mauritanian flags, fr:Drapeau de la Mauritanie, ar:علم موريتانيا)
+- Flag of the Mali Empire.svg [1325,1464] svg ar:أعلام تاريخية
+    ar: علم إمبراطورية مالي مابين عامي (1325-1464)
+- Flag of Mauritania (1959–2017) type 4.svg [1959,2017] svg ar:أعلام تاريخية
+    ar: علم الجمهورية الإسلامية الموريتانية السابق من 1 أبريل 1959 حتى 15 أغسطس 2017
+- Flag of Mauritania (1959–2017).svg [1959,2017] svg en:National flags; fr:Histoire > Avant 2017
+    en: ! scope="row" | | 1959–2017 | Flag of Mauritania | A green field charged with a golden upward-pointed crescent and star. |}
+    fr: Drapeau utilisé entre 1959 et 2017.
+- Flag of Mauritania.svg [2017] svg ar:أعلام تاريخية; en:National flags
+    en: ! scope="row" | | 2017–present | Flag of Mauritania | Two red stripes above and below a green field; charged with a golden upward-pointed crescent and star.Mauritanie: nouveau drapeau et nouvel hymne 
+    ar: علم موريتانيا (حاليا)

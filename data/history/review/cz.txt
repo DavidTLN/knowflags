@@ -1,0 +1,43 @@
+### cz  (en:Flag of the Czech Republic, en:List of Czech flags, fr:Drapeau de la Tchéquie, cs:Česká vlajka)
+- Flag of the Taborites.svg [1420,1434] svg en:Historical flags > Hussite Wars
+    en: ! scope="row" | | 1420s–1434 | Taborites banner
+- Hussite banner (Orphans).png [1420,1434] png en:Historical flags > Hussite Wars
+    en: ! scope="row" | | 1420s–1434 | Orebites banner | Banner with pelican used by Orebites and later Orphans.
+- Hussite banner (Schwanberg).png [1420,1434] png en:Historical flags > Hussite Wars
+    en: ! scope="row" | | 1420s–1434 | Bohuslav of Švamberg banner
+- Flag of the Palacký University Olomouc.svg [1573,2011] svg en:University flags
+    en: ! scope="row" | | 2011–present | Flag of the Palacký University Olomouc | Public university established in 1573
+- Flag of Bohemia.svg [1806,1918,1920,1990,1992] svg cs:Historie; en:Historical flags > National flags; en:History; fr:Histoire
+    en: ! scope="row" | | 1990–1992 | Flag of the Czech Republic in Czech and Slovak Federative Republic | | 2:3 |}
+    fr: Drapeau de la Tchécoslovaquie entre 1918 et 1920.
+    cs: vlajka Českého království (do roku 1918), Československa a České republiky
+- Flag of the Brno University of Technology.svg [1899,2015] svg en:University flags
+    en: ! scope="row" | | 2015–present | Flag of the Brno University of Technology | Public university established in 1899
+- Banner of arms of Moravia.svg [1918] svg fr:Histoire
+    fr: Drapeau du margraviat de Moravie jusqu'en 1918.
+- Flag of the Masaryk University.svg [1919,2017] svg en:University flags
+    en: ! scope="row" | | 2017–present | Flag of the Masaryk University | Public university established in 1919
+- Flag of the Czech Republic.svg [1920,1992,1993] svg cs:Historie; cs:intro; en:Current flags > State flag; en:History; fr:Histoire
+    en: ! scope="row" | | 1 January 1993 | Flag of the Czech Republic | Two equal horizontal bands of white and red with a blue isosceles triangle based on the hoist side. | rowspan="2" | 2:3
+    fr: Drapeau de la Tchécoslovaquie puis de la Tchéquie.
+    cs: náhled|vpravo|23px23pxVlajka České republiky od roku 1993 (23pxa Československa Poměr stran: 2:3
+- Flag of Bohmen und Mahren.svg [1939] svg cs:Historie; en:History; fr:Histoire
+    en: x100px
+    fr: Drapeau du Protectorat de Bohême et Moravie (1939-45).
+    cs: vlajka Protektorátu Čechy a Morava
+- Flag of the Protectorate of Bohemia and Moravia.svg [1939,1945] svg en:Historical flags > National flags
+    en: ! scope="row" | | 1939–1945 | Flag of the Protectorate of Bohemia and Moravia | Tricolour flag of white, red, and blue. | 2:3
+- Flag of the University of Ostrava.svg [1991,2016] svg en:University flags
+    en: ! scope="row" | | 2016–present | Flag of the University of Ostrava | Public university established in 1991
+- Flag of the University of West Bohemia.svg [1991,2009] svg en:University flags
+    en: ! scope="row" | | 2009–present | Flag of the University of West Bohemia | Public university established in 1991 |}
+- Flag of Czech Republic (vertical hoisting).svg [1993] svg cs:Používání; en:Current flags > State flag; fr:Description
+    en: ! scope="row" | 150x150px | 1 January 1993 | Flag of the Czech Republic (vertical display) | The same flag, rotated and flipped over to place the hoist at the top and the white band at the .
+    fr: 100 px|En position verticale.
+    cs: náhled| Vzor svislého věšení
+- Flag of the Czech Republic (abnormal vertical hoisting).svg [1993,2020] svg en:Current flags > State flag
+    en: ! scope="row" | | 1 January 1993 | Variant; vertical hoisting hanging flag | Same as the ordinary flag of the Czech Republic, but stretched to be much longer. Traditionally used as a ceremonial flag f
+- Flag of the President of the Czech Republic.svg [1993] svg en:Current flags > State flag
+    en: ! scope="row" | | 1 January 1993 | Flag of the President | Greater coat of arms with inscription of national motto Pravda vítězí. | 1:1 |}
+- Flag of the Tomas Bata University in Zlín.svg [2001] svg en:University flags
+    en: ! scope="row" | | 2001–present | Flag of the Tomas Bata University in Zlín | Public university established in 2001

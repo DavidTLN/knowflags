@@ -1,0 +1,7 @@
+### sm  (en:Flag of San Marino, fr:Drapeau de Saint-Marin, it:Bandiera di San Marino)
+- Old Flag of San Marino.svg [1465] svg en:History; fr:Histoire; it:Storia > Età moderna e contemporanea
+    en: ! scope="row" | | 1465 | Battle standard.Hypothetical reconstruction according to Casali.
+    fr: Drapeau attesté en 1465, hypothèse par Casali
+    it: Ricostruzione dello stendardo attestato nel 1465, su ipotesi di Verter Casali
+- Flag of San Marino.svg [2011] svg en:History
+    en: ! scope="row" | | 2011–present | A horizontal bicolour of white and light blue; charged with the national coat of arms in the centre. |}

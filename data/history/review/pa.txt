@@ -1,0 +1,45 @@
+### pa  (en:Flag of Panama, en:List of Panamanian flags, fr:Drapeau du Panama, es:Bandera de Panamá)
+- Flag of Cross of Burgundy.svg [1492,1506,1793,1898] svg en:Historical national flags; es:Cronología de banderas históricas de Pan
+    en: FIAV historical|23x23px Cross of Burgundy, The first Spanish flag. Used as the flag of the Spanish Empire (1492–1898) and used until 1793.
+    es: 23x23px Enseña naval y militar de la Monarquía Hispánica. Utilizada también como bandera del Imperio español (1492-1898) usada desde 1506 hasta 1793.
+- Flag of Spain (1785-1873 and 1875-1931).svg [1785,1786,1821,1873,1875,1931] svg en:Historical national flags; es:Banderas históricas; es:Cronología de banderas históricas
+    en: 23x23px, Flag of Spain (1786–1821)
+    es: miniatura| derecha| Bandera del Reino de España, oficial en el actual territorio panameño hasta el 28 de noviembre de 1821
+- Flag of the Gran Colombia (1819-1820).svg [1819,1820,1824,1855] svg en:Historical flags
+    en: ! scope="row" | | 1824–1855 | Flag of the Isthmus Department | A horizontal tricolor with an enlarged yellow top stripe with a blue and a red stripe below. In the upper hoist is the coat of arms of Gr
+- Flag of Gran Colombia.svg [1821,1830,1831] svg en:Historical flags; en:Historical national flags
+    en: ! scope="row" | | 1821–1831 | Flag of Gran Colombia | A horizontal tricolor with, from top to bottom, yellow, blue, and red. The contains the coat of arms of Gran Colombia.
+- Flag of the Gran Colombia.svg [1821,1830] svg es:Banderas históricas > Unión a la Gran Co; es:Cronología de banderas históricas de Pan
+    es: 23x23px Tercera bandera de la Gran Colombia, entre 1821 y 1830.
+- Flag of New Granada (1830-1834).svg [1830,1834] svg en:Historical national flags; es:Cronología de banderas históricas de Pan
+    en: 23x23px23x23px Provisional flag of the Republic of New Granada, effective between 1830 and May 9, 1834
+    es: 23x23px23x23px Bandera provisional del Estado de Nueva Granada, vigente entre 1830 y el 9 de mayo de 1834.
+- Flag of New Granada.svg [1831,1834,1861,1863] svg en:Historical flags; en:Historical national flags; es:Cronología de banderas históricas de
+    en: ! scope="row" | | 1831–1863 | Flag of the Republic of New Granada and the Granadine Confederation. | A vertical tricolor with, from hoist to fly, red, blue, and yellow.
+    es: 23x23px Bandera de la República de la Nueva Granada y la Confederación Granadina, vigente entre el 9 de mayo de 1834 y 26 de julio de 1861.
+- Flag of Federal State of Panama.svg [1855,1863] svg en:Historical flags; en:Historical national flags; es:Cronología de banderas históricas de
+    en: ! scope="row" | | 1855–1863 | rowspan="2" | Flag of the State of Panama | A vertical tricolor of red, blue, and yellow with the state's emblem in the .
+    es: 23x23px Bandera del Estado Federal de Panamá, 1855-1863.
+- Flag of Colombia.svg [1861,1863,1886,1903] svg en:Historical flags; en:Historical national flags; es:Cronología de banderas históricas de
+    en: ! scope="row" rowspan="2" | | 1863–1886 | Flag of the United States of Colombia | rowspan="2" | A horizontal tricolor with an enlarged yellow top stripe with a blue and a red stripe below.
+    es: 23x23px Bandera de los Estados Unidos de Colombia y de la actual República de Colombia, usada desde el 26 de noviembre de 1861 hasta el 3 de noviembre de 1903.
+- Flag of Sovereign State of Panama.svg [1863,1886] svg en:Historical flags; en:Historical national flags; es:Banderas históricas > Periodo de Uni
+    en: ! scope="row" | | 1863–1886 | A horizontal tricolor with an enlarged yellow top stripe, a blue and a red stripe below, and the state's emblem in the . |}
+    es: miniatura| derecha| Bandera del Estado Soberano de Panamá.
+- Flag of Panama (1903).svg [1903,1904] svg en:Historical national flags; en:National flags; es:Cronología de banderas históricas de P
+    en: ! scope="row" | | 1903 | First flag of Panama | Divided rectangle into four quadrants, with the upper hoist consisting of a blue background, the upper fly consisting of a white background with a red f
+    fr: Composition initiale du drapeau, selon Manuel E. Amador.
+    es: miniatura| derecha| Diseño original de la bandera, según Manuel E. Amador. Fue la primera bandera de Panamá, desde el 3 de noviembre de 1903 hasta 1904.
+- Flag of Panama Canal Zone.svg [1903,1979] svg en:Historical national flags; en:National flags
+    en: ! scope="row" | | 1903–1979 | Flag of the Panama Canal Zone (U.S. territory) | A blue field with the territory's emblem in the .
+- Flag of Panama.svg [1903,1904,1925,1941] svg en:Historical national flags; en:National flags; es:Cronología de banderas históricas de P
+    en: ! scope="row" | | 1925–present | Flag of Panama | Rectangle divided into four quadrants, with the upper hoist consisting of a white background with a blue five-point star, the upper fly consisting of 
+    es: miniatura| derecha|Bandera actual de la República de Panamá: surgió de la modificación del primer modelo. Adoptado provisionalmente a través de la Ley 64 de 1904, adoptado definitivamente desde el 25 
+- Flag of Kuna Yala.svg [1925,2010] svg en:Indigenous regions
+    en: ! scope="row" | | 1925–2010 | Flag of revolution of Guna and former Guna Yala flag | Horizontal triband with an enlarged middle yellow stripe, with orange top and bottom stripes. In the middle rests a
+- Flag of Kuna Yala (1942).svg [1942] svg en:Indigenous regions
+    en: ! scope="row" | | 1942 | Former flag of Guna Yala | Horizontal triband with an enlarged middle yellow stripe, with red top and bottom stripes. In the middle rests a black -facing swastika, with a red 
+- Bandera de la Comarca Ngäbe-Buglé.svg [2009] svg en:Indigenous regions
+    en: ! scope="row" | | 2009–present | Flag of Ngäbe-Buglé Comarca | Vertical tricolor with, from hoist to fly, red, white, and green stripes. In the , there are three five-point stars, with one stacked on 
+- Bandera de la Comarca Guna Yala.svg [2010] svg en:Indigenous regions
+    en: ! scope="row" | | 2010–present | Flag of Guna Yala comarca | Horizontal tricolor with an enlarged middle yellow stripe, and a top red stripe and bottom green stripe. There are two crossed arms in the 

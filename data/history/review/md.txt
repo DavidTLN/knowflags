@@ -1,0 +1,71 @@
+### md  (en:Flag of Moldova, en:List of Moldovan flags, fr:Drapeau de la Moldavie, ro:Drapelul Republicii Moldova)
+- Kingdom of Hungary against Moldavia. Moldavian flag in the Battle of Baia.svg [1467] svg ro:Istoric > Perioada Principatului Moldove
+    ro: Călăreț purtător de steag moldovenesc, astfel cum este înfățișat în Chronica Hungarorum, în Bătălia de la Baia, 1467
+- Moldavian flag in the Battle of Baia - colors.svg [1467] svg fr:Histoire
+    fr: Bannière moldave à la bataille de Baia (1467).
+- Moldavian flag in the Battle of Baia - reconstruction.svg [1467] svg en:Historical flags
+    en: ! scope="row" | | 1467 | Moldavian flag in the Battle of Baia
+- Moldavian banner in the battle of Obertyn. 1531.svg [1531] svg en:Historical flags
+    en: ! scope="row" | | 1531 | Moldavian banner at the Battle of Obertyn
+- Flag of Moldavia according to Gwagnin.svg [1574] svg en:Historical flags; fr:Histoire; ro:Istoric > Perioada Principatului Moldove
+    en: ! scope="row" | | around 1574 | Flag of the Moldavian principality, described by Alexander Guagnini
+    fr: Drapeau de la principauté moldave, décrit par Alessandro Guagnini (1574).
+    ro: Drapelul 1574
+- Moldavian Banner under Prince Ieremia Movilă 1601.svg [1601] svg en:Historical flags; fr:Histoire; ro:Istoric > Perioada Principatului Moldove
+    en: ! scope="row" | | around 1601 | Infantry flag of the Principality of Moldavia
+    fr: Bannière du prince Ieremia Movilă (1601).
+    ro: Stendardul Domnului al lui Ieremia Movilă, 1601
+- Flag of Moldavia in 1831.svg [1831,1832,1859,1862] svg en:History; fr:Histoire; ro:Istoric > Perioada Principatului Moldove
+    en: flag of Moldavia (1831–1862)
+    fr: Drapeaux nationaux de la Moldavie (1831-1859).
+    ro: Drapelul Principatului Moldovei, conform Constituției, 1832
+- Flag of Wallachian Revolution of 1848, horizontal stripes.svg [1848] svg ro:Istoric > Perioada Principatului Moldove
+    ro: Drapel cu fâșiile în variantă orizontală, 1848
+- Flag of Regimentul Infant - obverse.svg [1917,1918] svg en:Historical flags
+    en: ! scope="row" | | 1917–1918 | Military colors of the Moldavian Democratic Republic | Blue, yellow, and red horizontal tricolor, proportions: 1:1:1. White RM initials over the flag. Ratio: 2:3.
+- Flag of Sfatul Tarii obverse.svg [1917,1918] svg en:Historical flags; en:History; fr:Histoire
+    en: ! scope="row" | | 1917–1918 | Flag of Sfatul Țării | Blue, yellow, and red horizontal tricolor, proportions: 1:1:1. Coat of arms in the middle of yellow and red stripes and the parliament's name on th
+    fr: Drapeau de la chambre basse moldave Sfatul Țării de 1917 à 1918.
+- Flag of Sfatul Tarii reverse.svg [1917,1918] svg en:History; fr:Histoire
+    en: Banner of the Moldavian Democratic Republic, 1917–1918
+    fr: Drapeau de la République démocratique moldave (1918).
+- National flag of the Moldavian Democratic Republic.svg [1917,1918] svg en:Historical flags; en:History; fr:Histoire; ro:Istoric > Perioada Imperiului rus și a R
+    en: ! scope="row" | | 1917–1918 | State flag of the Moldavian Democratic Republic | Blue, yellow, and red horizontal tricolor, proportions: 1:1:1. Coat of arms in the middle and country's name on the blue
+    fr: Drapeau national de la République démocratique moldave (1917).
+    ro: Drapel național Republicii Democratice Moldovenești
+- Red flag.svg [1918] svg fr:Débats
+    fr: Drapeau des bolcheviks de Bessarabie (1918).
+- Flag of Moldavian Autonomous Soviet Socialist Republic (1925-1932).svg [1925,1932] svg en:Historical flags; en:Transnistria > Historical flags
+    en: ! scope="row" | | 1925–1932 | Flag of the Moldavian Autonomous Soviet Socialist RepublicOnly 6 villages belonging to the Moldovan ASSR are not currently in Transnistria or Ukraine | Ratio: 1:2.
+- Flag of Moldavian Autonomous Soviet Socialist Republic (1937-1938).svg [1937,1938] svg en:Historical flags; en:Transnistria > Historical flags
+    en: ! scope="row" | | 1937–1938 | State flag of the Moldavian Autonomous Soviet Socialist Republic | Ratio: 1:2.
+- Flag of Moldavian Autonomous Soviet Socialist Republic.svg [1938,1940] svg en:Historical flags; en:History; en:Transnistria > Historical flags
+    en: ! scope="row" | | 1938–1940 | State flag of the Moldavian Autonomous Soviet Socialist Republic | Ratio: 1:2.
+- Flag of Moldavian SSR 02.svg [1940,1952] svg en:Historical flags
+    en: ! scope="row" | | 1940–1952 | State flag of the Moldavian Soviet Socialist Republic | Ratio: 1:2.
+- Flag of the Moldavian Soviet Socialist Republic (1941–1952).svg [1940,1941,1952] svg en:Transnistria > Historical flags
+    en: ! scope="row" | | 1940–1952 | Flag of the Moldavian Soviet Socialist Republic | Ratio: 1:2.
+- Flag of the Moldavian Soviet Socialist Republic (1952–1990, reverse).svg [1952,1990] svg en:Historical flags
+    en: ! scope="row" | | Reverse flag||All flags of the constituent republics of the Soviet Union did not bear the hammer and sickle on their reverse side.
+- Flag of the Moldavian Soviet Socialist Republic.svg [1952,1990] svg en:Historical flags; en:History; fr:Débats; ro:Istoric > Perioada Uniunii sovietice
+    en: ! scope="row" | | rowspan="2" | 1952–1990 | State flag of the Moldavian Soviet Socialist Republic | Ratio: 1:2.
+    fr: Drapeau de la République socialiste soviétique moldave (1952-1990).
+    ro: Steagul RSSM în cadrul Uniunii sovietice
+- Flag of Moldavian SSR 1990.svg [1990] svg en:History
+    en: Flag of the Moldavian SSR / SSR Moldova, April 1990 - November 1990 (without emblem)
+- Flag of Moldova (1990–2010).svg [1990,2010] svg en:Historical flags; en:History
+    en: ! scope="row" | | rowspan="2"| 1990–2010 | State flag of the Republic of Moldova | Ratio: 1:2.
+- Flag of Moldova (1990–2010, reverse).svg [1990,2010] svg en:Historical flags; en:History
+    en: ! scope="row" | | Reverse flag | The reverse side did not bear the coat of arms found on the obverse.
+- Flag of the Moldavian Soviet Socialist Republic (1990).svg [1990] svg en:Historical flags
+    en: ! scope="row" | | rowspan="2"| 1990 | rowspan="2"| State flag of the Moldavian Soviet Socialist Republic, later known as SSR Moldova | Ratio: 1:2.
+- Flag of Transnistria (state).svg [1991] svg en:Transnistria; fr:Débats
+    en: ! scope="row" | | rowspan="2" | 1991–present | State flag and ensign, war flag
+    fr: Drapeau de la Transnistrie.
+- Flag of Moldova, reverse.png [2010] png en:History
+    en: The reverse of the flag of Moldova from 2010 until today
+- Flag of Moldova.svg [2010] svg en:History; en:National flag and state flag; ro:intro
+    en: ! scope="row" | | rowspan="2" | 2010–present | National flag and ensign | A blue, yellow, and red tricolor, with the national coat of arms in the bar. Ratio: 1:2.
+    ro: 1:2 Partea principală
+- Flag of Russia.svg [2017] svg en:Transnistria
+    en: ! scope="row" | | 2017–present | Co-official national flag | Flag of Russia |}

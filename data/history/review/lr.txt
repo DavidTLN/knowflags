@@ -1,0 +1,10 @@
+### lr  (en:Flag of Liberia, fr:Drapeau du Liberia)
+- Flag of Liberia (1827–1847).svg [1827,1847] svg en:Other flags > Historical; fr:Historique > 1822-1847 : colonie du Libe
+    en: ! scope="row" | | 1827–1847 | Colony of Liberia
+    fr: ratio 2:3 Drapeau du Liberia de 1827 à 1847.
+- Flag of the United States (1837–1845).svg [1837,1845] svg en:Other flags > Historical
+    en: ! scope="row" | | 1837–1845 | Flag of the United States | Used in the first government of the Commonwealth of Liberia until Saturday, 26 April 1845.
+- Flag of Liberia.svg [1847] svg fr:Historique > Depuis 1847 : République du
+    fr: ratio: 10:19 Drapeau du Liberia depuis 1847.
+- Flag of the Republic of Maryland.svg [1854,1857] svg en:Other flags > Historical
+    en: ! scope="row" | | 1854–1857 | Republic of Maryland | |}

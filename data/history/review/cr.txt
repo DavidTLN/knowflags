@@ -1,0 +1,64 @@
+### cr  (en:Flag of Costa Rica, en:List of Costa Rican flags, fr:Drapeau du Costa Rica, es:Bandera de Costa Rica)
+- Flag of New Spain.svg [1541,1821] svg en:Historical flags
+    en: ! scope="row" | | 1541–1821 | Burgundy Cross, flag of the Spanish Overseas Territories | A red saltire resembling two crossed, roughly-pruned (knotted) branches, on a white field.
+- Flag of England.svg [1638,1707] svg en:Historical flags
+    en: ! scope="row" | | 1638–1707 | Flag of England | A white field with a red cross, also known as St George's Cross.
+- Bandera de España 1808-1813.svg [1808,1813] svg en:Historical flags
+    en: ! scope="row" | | 1808–1813 | Flag of Spain under Joseph Bonaparte (1808–1813). | A white banner with the royal coat of arms under Joseph Bonaparte.
+- Flag of the Gran Colombia (1819-1820).svg [1819,1820] svg en:Historical flags
+    en: ! scope="row" | | 1819–1820 | First flag of Great Colombia | A tricolour of yellow, blue, and red with the coat of arms.
+- Flag of the Gran Colombia (1820-1821).svg [1820,1821] svg en:Historical flags
+    en: ! scope="row" | | 1820–1821 | Second flag of Great Colombia | A tricolour of yellow, blue, and red with the coat of arms.
+- Bandera del Primer Imperio Mexicano.svg [1821,1823] svg en:Historical flags
+    en: ! scope="row" | | 1821–1823 | Second flag of the First Mexican Empire | Vertical tricolour of green, white, and red, with the imperial coat of arms in the .
+- First flag of the Mexican Empire.svg [1821] svg en:Historical flags
+    en: ! scope="row" | | 1821 | First flag of the First Mexican Empire | Three diagonal bands of white, green, and red with three golden stars.
+- Flag of Costa Rica (1821-1823).svg [1821,1823] svg en:Historical flags; es:Cronología; fr:Anciens drapeaux
+    en: ! scope="row" | | 1823 | First Costa Rican national flag | Horizontal triband of blue, yellow, and blue.
+    fr: Drapeau du Costa Rica de septembre 1821 au 6 juin 1823.
+    es: Propuesta de bandera (1823)
+- Flag of the Gran Colombia.svg [1821,1831] svg en:Historical flags
+    en: ! scope="row" | | 1821–1831 | Third flag of Great Colombia | Horizontal tricolour of yellow, blue, and red with the coat of arms in the .
+- Flag of Costa Rica (1823-1824).svg [1823,1824] svg en:Historical flags; es:Cronología; fr:Anciens drapeaux
+    en: ! scope="row" | | 1823–1824 | Second Costa Rican national flag | White field with a six-pointed red star.
+    fr: Drapeau du Costa Rica du 6 juin 1823 au 4 mars 1824.
+    es: 23pxBandera de Costa RicaSímbolos patrios(6 de junio de 1823 al 4 de marzo de 1824)
+- Flag of the United Provinces of Central America.svg [1823,1824] svg en:Historical flags; es:Cronología; fr:Anciens drapeaux
+    en: ! scope="row" | | 1823–1824 | Flag of the United Provinces of Central America | Three horizontal stripes of light blue (upper and lower) and white (central), with the coat of arms in the .
+    fr: Drapeau de la République fédérale d'Amérique centrale du 4 mars au 2 novembre 1824.
+    es: Pabellón de las Provincias Unidas del Centro de América (1823-1824)
+- Flag of Costa Rica (1824).svg [1824] svg en:Historical flags; es:Cronología; fr:Anciens drapeaux
+    en: ! scope="row" | | 1824 | First flag of the State of Costa Rica (within the United Provinces of Central America) | Same as UPCA flag, with the State Seal in the lower stripe.
+    fr: Drapeau du Costa Rica (Provinces unies d'Amérique centrale) du 2 au 22 novembre 1824.
+    es: Bandera de la Provincia de Costa Rica (1824)
+- Flag of Costa Rica (1824-1840).svg [1824,1838,1840] svg en:Historical flags; es:Cronología; fr:Anciens drapeaux
+    en: ! scope="row" | | 1824–1838 | Second flag of the State of Costa Rica (within the United Provinces of Central America) | Same as UPCA flag, with the state seal in the lower stripe.
+    fr: Drapeau du Costa Rica (République fédérale d'Amérique centrale) du 22 novembre 1824 au 15 novembre 1840.
+    es: 23pxBandera del Estado Libre de Costa Rica (1824-1840)
+- Flag of the Federal Republic of Central America.svg [1824,1839,1849] svg en:Historical flags; es:Cronología
+    en: ! scope="row" | | 1824–1849 | Flag of the United Provinces of Central America | Three horizontal stripes of light blue (upper and lower) and white (central), with the coat of arms in the .
+    es: Pabellón de la República Federal de Centro América (1824-1839)
+- Flag of New Granada (1830-1834).svg [1830,1831,1834] svg en:Historical flags
+    en: ! scope="row" | | 1831–1834 | Flag of the Republic of New Granada | A horizontal tricolour of yellow, blue, and red with the coat of arms in the .
+- Flag of New Granada.svg [1834,1856] svg en:Historical flags
+    en: ! scope="row" | | 1834–1856 | Flag of the Granadine Confederation | A vertical tricolour of red, blue, and yellow.
+- Flag of Costa Rica (1838-1840).svg [1838,1840] svg en:Historical flags
+    en: ! scope="row" | | 1838–1840 | Second flag of the State of Costa Rica (within the United Provinces of Central America) | Horizontal triband of blue, white, and blue, with the state seal in the lower bl
+- Flag of Costa Rica (1840-1842).svg [1840,1842] svg en:Historical flags; es:Cronología; fr:Anciens drapeaux
+    en: ! scope="row" | | 1840–1842 | | Horizontal triband of white, blue, and white, with the state seal in the central blue stripe.
+    fr: Drapeau du Costa Rica du 21 avril 1840 au 20 avril 1842.
+    es: Bandera del Estado Libre de Costa Rica (1840-1842)
+- Flag of Costa Rica (1842-1848).svg [1842,1848] svg en:Historical flags; es:Cronología; fr:Anciens drapeaux
+    en: ! scope="row" | | 1842–1848 | Third flag of the State of Costa Rica (within the United Provinces of Central America) | Horizontal tricolour of blue, white, and blue, with the state seal in the central
+    fr: Drapeau du Costa Rica de septembre 1842 au 12 novembre 1848.
+    es: Bandera del Estado Libre de Costa Rica (1842-1848)
+- Flag of Costa Rica (1848-1906).svg [1848,1906] svg en:Historical flags; es:Cronología; fr:Anciens drapeaux
+    en: ! scope="row" | | 1848–1906 | First flag after break of UPCA | The first appearance of the modern five stripe design, with the national coat of arms in the .
+    fr: Drapeau du Costa Rica du 12 novembre 1848 au 27 novembre 1906.
+    es: Bandera de la República de Costa Rica (29 de septiembre de 1848-27 de noviembre de 1906)
+- State Flag of Costa Rica (1906-1964).svg [1906,1964] svg en:Historical flags; es:Cronología
+    en: ! scope="row" | | 1906–1964 | State flag from 1906 to 1964 | In 1906 the style of the coat of arms was slightly modified, and the one used on the state flag was also modified, reduced in size and put 
+    es: Bandera de la República de Costa Rica (27 de noviembre de 1906-21 de octubre de 1964)
+- State Flag of Costa Rica (1964-1998).svg [1964,1998] svg en:Historical flags; es:Cronología
+    en: ! scope="row" | | 1964–1998 | State flag from 1964 to 1998 | In 1964 a law was passed by the government to increase the numbers of the stars from five to seven, to reflect the increase of number of it
+    es: Bandera de República de Costa Rica (21 de octubre de 1964-5 de mayo de 1998)

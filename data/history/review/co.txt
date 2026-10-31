@@ -1,0 +1,75 @@
+### co  (en:Flag of Colombia, en:List of Colombian flags, fr:Drapeau de la Colombie, es:Bandera de Colombia)
+- Flag of Cross of Burgundy.svg [1506,1717] svg en:Historical flags
+    en: ! scope="row" | | 1506–1717 | Flag of the New Kingdom of Granada (Cross of Burgundy flag), military flag of Spain also used as flag of the Overseas Territories.
+- Bandera de Costas.svg [1717,1785] svg en:Historical flags
+    en: ! scope="row" | | 1717–1785 | Military flag of Spain, in use for the Viceroyalty of New Granada
+- Flag of Francisco de Miranda (1801).svg [1801] svg fr:Histoire > Origines du drapeau
+    fr: Drapeau décrit par Francisco de Miranda dans son journal militaire et dans son œuvre Colombeia, en 1801.
+- Flag of the Revolution of 1810 (New Granada).png [1810] png en:Historical flags
+    en: ! scope="row" | | 1810 | Flag used, according to tradition, by the revolutionaries that promoted the creation of the government junta of Santa Fe during the events that lead to the drafting of the Col
+- Flag of Cundinamarca.svg [1811,1813,1815] svg en:Departments; en:Historical flags
+    en: ! scope="row" | | 1811–1815 | Flag of the Free and Independent State of Cundinamarca
+- Flag of New Granada (1811-1814).svg [1811,1814,1815,1817,1821] svg en:Historical flags; fr:Histoire > Premier drapeau national
+    en: Flag of United Provinces of New Granada (1811–1814), later adopted and used by Jean Lafitte from 1817 to 1821 at Galveston Island, Spanish Texas, New Spain
+    fr: Premier drapeau des Provinces-Unies de Nouvelle-Grenade, en vigueur entre le 26 avril 1814 et le 14 juillet 1815.
+- Flag of Valle del Cauca.svg [1811] svg en:Departments
+    en: Valle del Cauca | 1811 | Flag of Valle del Cauca
+- Flag of Antioquia Department.svg [1812,1962] svg en:Departments
+    en: ! scope="row" | | | Antioquia | 1812/1962 | Flag of Antioquia
+- Flag of New Granada (1814-1816).svg [1814,1815,1816,1819] svg en:Historical flags; fr:Histoire > Premier drapeau national
+    en: ! scope="row" | | 1814–1816 | Flag of Cartagena de Indias, in use for the United Provinces of New Granada
+    fr: Second drapeau des Provinces-Unies de Nouvelle-Grenade, utilisé entre le 14 juillet 1815 et par intermittence jusqu'en 1819.
+- Flag of San Andrés y Providencia.svg [1818] svg en:Departments
+    en: ! scope="row" | | | San Andrés y Providencia | 1818
+- Flag of the Gran Colombia (1819-1820).svg [1819,1820] svg en:Historical flags; fr:Histoire > Drapeau de la Grande Colombie
+    en: ! scope="row" | | 1819–1820 | First flag of Great Colombia
+    fr: de la Grande Colombie entre 1819 et 1820.
+- Flag of the Gran Colombia (1820-1821).svg [1820,1821] svg en:Historical flags; fr:Histoire > Drapeau de la Grande Colombie
+    en: ! scope="row" | | 1820–1821 | Second flag of Great Colombia
+    fr: de la Grande Colombie entre 1820 et 1821.
+- Flag of the Gran Colombia.svg [1821,1830,1831] svg en:Historical flags; fr:Histoire > Drapeau de la Grande Colombie
+    en: ! scope="row" | | 1821–1831 | Third flag of Great Colombia
+    fr: de la Grande Colombie entre 1821 et 1830.
+- Flag of New Granada (1830-1834).svg [1830,1831,1834] svg en:Historical flags; fr:Histoire > Drapeau de la république de N
+    en: ! scope="row" | | 1830–1834 | Flag of the Republic of New Granada
+    fr: Drapeau de la république de Nouvelle-Grenade, en usage entre 1831 et 1834.
+- Flag of New Granada.svg [1834,1858,1861] svg en:Historical flags; fr:Histoire > Drapeau de la Confédération g; fr:Histoire > Drapeau de
+    en: ! scope="row" | | 1834 – July 26, 1861 | Flag of the Republic of New Granada and the Granadine Confederation
+    fr: Drapeau de la république de Nouvelle-Grenade, en usage entre 1834 et 1858.
+- Flag of Colombia.svg [1861,1886] svg en:Historical flags; en:National flags; en:Official flags
+    en: Flag of United States of Colombia (1861–1886) and Republic of Colombia (1886–present)
+- Flag of United States of New Granada.svg [1861] svg en:Historical flags; fr:Histoire > Drapeau des États-Unis de Col
+    en: ! scope="row" | | July 26, 1861 –November 26, 1861 | Flag of the United States of New Granada | |}
+    fr: Drapeau adopté par Tomás Cipriano de Mosquera, officiel entre juillet et novembre 1861.
+- Flag of Bolívar (Colombia).svg [1886] svg en:Departments
+    en: ! scope="row" | | | Bolívar | 1886 | Flag of Bolívar
+- Flag of Magdalena.svg [1886] svg en:Departments
+    en: ! scope="row" | | | Magdalena | 1886 | Flag of Magdalena
+- Flag of Córdoba.svg [1951] svg en:Departments
+    en: ! scope="row" | | | Córdoba | 1951
+- Flag of Huila.svg [1952] svg en:Departments
+    en: ! scope="row" | | | Huila | 1952
+- Flag of La Guajira.svg [1966] svg en:Departments
+    en: ! scope="row" | | | La Guajira | 1966 | Flag of La Guajira
+- Flag of Boyacá Department.svg [1968] svg en:Departments
+    en: ! scope="row" | | | Boyacá | 1968 | Flag of Boyacá
+- Flag of Risaralda.svg [1969] svg en:Departments
+    en: ! scope="row" | | | Risaralda | 1969
+- Flag of Meta.svg [1970] svg en:Departments
+    en: ! scope="row" | | | Meta | 1970
+- Flag of Santander Department.svg [1972] svg en:Departments
+    en: ! scope="row" | | | Santander | 1972 | Flag of Santander
+- Flag of Amazonas (Colombia).svg [1974] svg en:Departments
+    en: ! scope="row" | | | Amazonas | 1974 | Flag of Amazonas
+- Flag of Caquetá.svg [1974] svg en:Departments
+    en: ! scope="row" | | | Caquetá | 1974
+- Flag of Sucre Department.svg [1974] svg en:Departments
+    en: ! scope="row" | | | Sucre | 1974
+- Flag of Norte de Santander.svg [1978] svg en:Departments
+    en: ! scope="row" | | | Norte de Santander | 1978 | Flag of Norte de Santander
+- Flag of Arauca.svg [1979] svg en:Departments
+    en: ! scope="row" | | | Arauca | 1979
+- Flag of Vaupés.svg [1984] svg en:Departments
+    en: ! scope="row" | | | Vaupés | 1984
+- Flag of Atlántico.svg [1989] svg en:Departments
+    en: ! scope="row" | | | Atlántico | 1989

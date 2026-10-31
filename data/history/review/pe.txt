@@ -1,0 +1,46 @@
+### pe  (en:Flag of Peru, en:List of flags of Peru, fr:Drapeau du Pérou, es:Bandera del Perú)
+- Flag of Cross of Burgundy.svg [1542,1824] svg en:National flags > Historical; es:Historia > Virreinato
+    en: ! scope="row" | | 1542–1824 | Former flag of Peru | Flag of the Viceroyalty of Peru featuring the Cross of Burgundy.
+    es: Cruz de Borgoña, emblema de los ejércitos españoles
+- Bandera de Tupac Amaru II.svg [1653,1780,1783] svg en:National flags > Historical; es:Historia > Virreinato > Bandera de Túpac
+    en: ! scope="row" | | 1780–1783 | Flag of the Túpac Amaru II rebellion | Flag of the Rebellion of Túpac Amaru II.
+    es: miniaturadeimagen|220x220px| Bandera carmesí, con la heráldica de los incas."(...) de los Incas eran el arco celeste y dos culebras tendidas a lo largo paralelas (..)" Bernabé Cobo, Historia del Nuevo
+- Flag of Spain (1785-1873 and 1875-1931).svg [1785,1812,1873,1875,1931] svg es:Historia > Virreinato
+    es: Bandera española de la armada de 1785 empleada por la Constitución de Cádiz (1812).
+- Flag of Peru (1821-1822).svg [1821,1822] svg en:History > Flag of 1820; es:Historia > Bandera del protectorado de S; fr:Histoire
+    en: 23x15px First republican flag, created by General José de San Martín.
+    fr: Premier drapeau républicain (1821-1822)
+    es: miniatura| Primera bandera nacional, creada por el general José de San Martín
+- Flag of the Gran Colombia (1821-1830, version 1) recolor.svg [1821,1826,1830] svg es:Historia > Bandera de la Federación de l
+    es: miniatura| bandera de Gran Colombia símbolo de la Federación de los Andes de 1826 donde la República Peruana quedaría dividida en dos entidades bolivarianas, los estados nor y sur peruanos.
+- Flag of Peru (1822).svg [1822] svg en:History > Flag of March 1822; en:National flags > Historical; es:Historia > Bandera del
+    en: ! scope="row" | | 1822 | Former flag of Peru | Second flag, created by José Bernardo de Tagle, a horizontal triband defaced with a golden sun.
+    fr: Deuxième drapeau (1822)
+    es: alt=|miniaturadeimagen| Segundo diseño oficial, establecido por Torre Tagle.
+- Flag of Peru (1822–1825).svg [1822,1825] svg en:History > Flag of May 1822; es:Historia > Bandera del gobierno de Torre; fr:Histoire
+    en: 23x15px Third design.
+    fr: Troisième drapeau (1822-1825)
+    es: alt=|miniaturadeimagen| Tercer diseño oficial, establecido por Torre Tagle.
+- Flag of Peru (1822–1835).svg [1822,1825,1835] svg en:National flags > Historical
+    en: ! scope="row" | | 1822–1825 | Former flag of Peru | Third flag, by José Bernardo de Tagle, a vertical triband defaced with a golden sun.
+- Flag of Peru (1825 - 1950).svg [1825,1884,1950] svg en:History > Flag of 1884; en:National flags > Historical; fr:Histoire
+    en: ! scope="row" | | 1884–1950 | Former flag of Peru | Same as the former flag, with two leaves in the coat of arms broken to symbolize the loss of Arica and Tarapacá.
+    fr: Quatrième drapeau (1825-1950)
+- Flag of Peru (1825–1884).svg [1825,1884] svg en:History > Flag of 1825; en:National flags > Historical; es:Historia > Bandera de la dic
+    en: ! scope="row" | | 1825–1884 | Former flag of Peru and North Peru | Fourth flag, by José Gregorio Paredes and Francisco Javier Cortés, a vertical triband defaced with the second version of the coat of 
+    es: miniatura| Cuarta bandera del Perú, creada en 1825, vigente hasta 1884 y usada por el Estado Nor-Peruano
+- Flag of South Peru.svg [1836,1839] svg en:History > Flags of the Peru-Bolivian Con; en:National flags > Historical; es:Historia >
+    en: ! scope="row" | | 1836–1839 | Flag of South Peru | Flag of South Peru, a constituent republic within the Peru-Bolivian Confederation.
+    fr: Drapeau de la République du Sud-Pérou (1836-1839)
+    es: miniaturadeimagen| Bandera del Estado Sud-Peruano
+- Flag of the Peru-Bolivian Confederation.svg [1836,1839] svg en:History > Flags of the Peru-Bolivian Con; en:National flags > Historical; es:Historia >
+    en: ! scope="row" | | 1836–1839 | Flag of the Peru-Bolivian Confederation | Flag of the Peru-Bolivian Confederation.
+    fr: Drapeau de la Confédération péruvio-bolivienne (1836-1839)
+    es: miniaturadeimagen| Bandera de la Confederación Perú-Boliviana usada entre 1836 y 1839.
+- Flag of Peru (vertical).svg [1950] svg en:National flags > Current
+    en: ! scope="row" | 150x150px | 1950–present | Vertical flag
+- Flag of Peru.svg [1950] svg en:National flags > Current; fr:Histoire
+    en: ! scope="row" | | 1950–present | National flag | Red-white-red vertical triband
+    fr: Drapeau actuel (depuis 1950)
+- Vertical flag of Peru.svg [1950] svg en:National flags > Current
+    en: ! scope="row" | 150x150px | 1950–present | Vertical swallowtail flag | |}

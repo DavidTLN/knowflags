@@ -1,0 +1,17 @@
+### pg  (en:Flag of Papua New Guinea, en:List of Papua New Guinean flags, fr:Drapeau de la Papouasie-Nouvelle-Guinée)
+- Flag of Germany (1867–1918).svg [1867,1899,1918] svg en:Historical flags > Foreign powers' flags
+    en: ! scope="row" | | 1899–1918 | Flag of the German Empire | A tricolour, made of three equal horizontal bands coloured black (top), white, and red (bottom)
+- Flag of the Territory of Papua.svg [1884,1906,1949,1971] svg en:Historical flags > National flags; fr:Les drapeaux historiques du pays
+    en: ! scope="row" | | 1906–1971 | Flag of the Territory of Papua | A blue British ensign with a white disc in the fly featuring the Tudor Crown over the name "Papua"
+    fr: Drapeau du territoire de Papouasie (1884-1949)
+- Flag of the United Kingdom (1-2).svg [1884,1971] svg en:Historical flags > Foreign powers' flags
+    en: ! scope="row" | | 1884–1971 | Flag of the United Kingdom | A superimposition of the flags of England and Scotland with the Saint Patrick's Saltire (representing Ireland)
+- Flag of the German Empire.svg [1899,1914] svg fr:Les drapeaux historiques du pays
+    fr: Drapeau de l'Empire allemand en Nouvelle-Guinée (1899-1914)
+- Reichskolonialflagge.svg [1899,1918] svg en:Historical flags > Foreign powers' flags
+    en: ! scope="row" | | 1899–1918 | Colonial flag of the German Empire | A tricolour, made of three equal horizontal bands coloured black (top), white, and red (bottom) with The Reichsadler in the
+- Flag of the Territory of New Guinea.svg [1914,1921,1949,1965,1971] svg en:Historical flags > National flags; fr:Les drapeaux historiques du pays
+    en: ! scope="row" | | 1921–1971 | Flag of the Territory of New Guinea | A blue British ensign with a white disc in the fly featuring the Tudor Crown over the letters "T.N.G." |}
+    fr: Drapeau du Territoire australien de Nouvelle-Guinée (1914-1949), et du territoire de Papouasie et Nouvelle-Guinée (1949-1965)
+- Flag of Germany (3-2 aspect ratio).svg [1918,1921] svg en:Historical flags > Foreign powers' flags
+    en: ! scope="row" | | 1918–1921 | Flag of the Weimar Republic | A triband made of three equal horizontal bands coloured black (top), red, and gold (bottom).

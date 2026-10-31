@@ -1,0 +1,27 @@
+### mu  (en:Flag of Mauritius, en:List of Mauritian flags, fr:Drapeau de Maurice)
+- Flag of Portugal (1495).svg [1495,1511,1521] svg en:Historical flags > Colonial flags
+    en: ! scope="row" | | 1511–1521 | Flag of Portuguese Mauritius | A white banner with the coat of arms in the . |}
+- Flag of Portugal (1521).svg [1521,1578] svg en:Historical flags > Colonial flags
+    en: ! scope="row" | | 1521–1578 | Flag of Portuguese Mauritius | A white banner with the coat of arms in the .
+- Flag of Portugal (1578).svg [1578,1598] svg en:Historical flags > Colonial flags
+    en: ! scope="row" | | 1578–1598 | Flag of Portuguese Mauritius | A white banner with the coat of arms in the .
+- Prinsenvlag.svg [1598,1710] svg en:Historical flags > Colonial flags
+    en: ! scope="row" | | 1598–1710 | Flag of Dutch Mauritius | A horizontal tricolour of orange, white, and blue.
+- Statenvlag.svg [1652,1672] svg en:Historical flags > Colonial flags
+    en: ! scope="row" | | 1652–1672 | Flag of Dutch Mauritius | A horizontal tricolour of red, white, and blue.
+- Flag of France (1790–1794).svg [1790,1794] svg en:Historical flags > Colonial flags
+    en: ! scope="row" | | 1790–1794 | Flag of French Mauritius | A vertical tricolour of red, white, and blue.
+- Flag of the United Kingdom (1-2).svg [1810,1869] svg en:Historical flags > Colonial flags
+    en: ! scope="row" | | 1810–1869 | Flag of British Mauritius | The Union Flag of the United Kingdom.
+- Flag of the United Kingdom.svg [1810,1869] svg en:Historical flags
+    en: British Mauritius colonial flag (1810-1869)
+- Flag of Mauritius (1869–1906).svg [1869,1906] svg en:Historical flags; en:Historical flags > Colonial flags
+    en: ! scope="row" | | 1869–1906 | Flag of British Mauritius | A British Blue Ensign with the 1869 arms of Mauritius on a white disc in the fly.
+- Flag of Mauritius (1906–1923).svg [1906,1923] svg en:Historical flags; en:Historical flags > Colonial flags
+    en: ! scope="row" | | 1906–1923 | Flag of British Mauritius | A British Blue Ensign with the Mauritian coat of arms on a white disc in the fly.
+- Flag of Mauritius (1923–1968).svg [1923,1968] svg en:Historical flags; en:Historical flags > Colonial flags
+    en: ! scope="row" | | 1923–1968 | Flag of British Mauritius | A British Blue Ensign with the Mauritian coat of arms in the fly.
+- Flag Of Mauritius(1968-1992).png [1968,1989,1992] png en:Historical flags
+    en: Flag of Mauritius 1989 Based on Flags Of World Poster 1989
+- Flag of Mauritius.svg [1968,2015] svg en:National flag
+    en: ! scope="row" | | 1968–present | Flag of Mauritius | Four horizontal bands of red, blue, yellow, and green. From the National Flag Act 2015: |}

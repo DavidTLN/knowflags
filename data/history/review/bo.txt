@@ -1,0 +1,22 @@
+### bo  (en:Flag of Bolivia, fr:Drapeau de la Bolivie, es:Bandera de Bolivia)
+- Flag of Cross of Burgundy.svg [1506,1701,1785,1821,1825] svg en:Historical flags
+    en: Colonial flag, Spanish Empire flag (1506–1825/1821 in Peru, and Bolivia), (1506–1785/1701 in other colonies), (1506–1821 in Philippines)
+- Flag of Argentina (1818).svg [1818] svg es:Historia > Banderas en el periodo indepe
+    es: 23x23px Bandera de las Provincias Unidas del Río de la Plata (patriotas)
+- Flag of Bolivia (1825-1826).svg [1825,1826] svg en:Historical flags; fr:Anciens drapeaux
+    en: Bandera Menor, Civil flag (1825–1826)
+    fr: Bandera Menor (1825–1826)
+- Flag of Bolivia (state, 1825-1826).svg [1825,1826] svg en:Historical flags
+    en: Bandera Mayor, State flag (1825–1826)
+- State flag of Bolivia (1825-1826).svg [1825,1826] svg fr:Anciens drapeaux
+    fr: Bandera Mayor (1825–1826)
+- Flag of Bolivia (1826-1851).svg [1826,1831,1851] svg en:Historical flags; fr:Anciens drapeaux
+    en: Bandera Menor, Civil flag (1831–1851)
+    fr: Bandera Menor (1826–1851)
+- Flag of Bolivia (state, 1826-1851).svg [1826,1831,1851] svg en:Historical flags; fr:Anciens drapeaux
+    en: Bandera Mayor, State flag (1831–1851)
+    fr: Bandera Mayor (1826–1851)
+- Flag of the Peru-Bolivian Confederation.svg [1836,1839] svg en:Historical flags
+    en: Peru-Bolivian Confederation (1836–1839)
+- Flag of the Patujú flower.svg [2019,2020,2025] svg es:Historia > Bandera de la flor de Patujú
+    es: miniaturadeimagen|Bandera de la flor de Patujú, usada a nivel nacional entre 2019 y 2020 y a partir de 2025.

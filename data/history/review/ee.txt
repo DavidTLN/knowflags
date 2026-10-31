@@ -1,0 +1,43 @@
+### ee  (en:Flag of Estonia, en:List of Estonian flags, fr:Drapeau de l'Estonie, et:Eesti lipp)
+- Flag of Denmark (state).svg [1219,1346,1559,1645] svg en:Historical flags; en:Various historical flags
+    en: Legendary royal flag of Denmark and the Duchy of Estonia (1219–1346)
+- Flag of the State of the Teutonic Order.svg [1226,1237,1561] svg en:Historical flags; en:Various historical flags
+    en: ! || 1237–1561 || Flag of the State of the Teutonic Order || White flag with a black cross.
+- State Banner of Denmark (14th Century).svg [1300,1346] svg en:Historical flags
+    en: ! || 1300–1346 || Flag of the Duchy of Estonia under The Kingdom of Denmark || |}
+- Flag of Sweden (1562–1650).svg [1561,1562,1650] svg en:Historical flags
+    en: ! || 1561–1650
+- Flag of the Swedish Empire.svg [1561,1721] svg en:Various historical flags
+    en: Flag of the Kingdom of Sweden and its Duchy of Estonia (1561–1721)
+- Flag of et-Parnu.svg [1570,1579] svg en:Historical flags
+    en: ! || 1570–1579 || Flag of the Kingdom of Livonia
+- Flag of Russia (1858–1896).svg [1721,1858,1896,1917] svg en:Various historical flags
+    en: Tricolour of Romanov dynasty (Emperor of Russia, Prince of Estonia, 1721–1917), national flag of the Russian Empire (1858–1896)
+- Estonia lipp.png [1821,1862,1887,1904,1939] png et:Alternatiivsed lipukavandid
+    et: pisi|Endisest Eestimaa kubermangust pärit üliõpilaste korp! Estonia (1821–1939) värvides rohe-violett-valge lipp oli baltisakslaste seas populaarsem, mitteametlik ja tsaarivõimude poolt mitu korda kee
+- Romanov Flag.svg [1858,1896] svg en:Historical flags
+    en: ! || 1858–1896 || Horizontal black-yellow-white tricolour.
+- Flag of Germany (1867–1918).svg [1867,1918] svg en:Historical flags
+    en: ! || 1918 || Flag of German Empire || Horizontal black-white-red tricolour.
+- Flag of Russia.svg [1896,1917] svg en:Historical flags
+    en: ! || 1896–1917 || rowspan="2" | Flag of Russian Empire || Horizontal white-blue-red tricolour.
+- Flag of Estonia.svg [1918,1940,1990] svg en:National flag; en:intro; et:intro; fr:Historique
+    en: ! |rowspan="2"| Since 19901918–1940 || National flag, Civil flag, Civil ensign || A horizontal tricolour of blue, black, and whiteProportion = 7:11 ||rowspan="2"
+    fr: Drapeau de la république d'Estonie de 1918 à 1940.
+    et: pisi|20pxEesti lipp
+- Flag of the Commune of the Working People of Estonia.svg [1918,1919] svg fr:Historique
+    fr: Drapeau de la Commune des travailleurs d'Estonie de 1918 à 1919
+- Flag of the Estonian Workers' Commune (1918-1919).svg [1918,1919] svg en:Historical flags
+    en: ! alt=Flag of the Estonian Workers' Commune (1918-1919)| 150x150px|Estonian Workers' Commune || 1918–1919(50 days) || Flag of the Estonian Workers' Commune|| A red flag with a golden canton. Inside th
+- Flag of Estonian SSR (1940-1953).svg [1940,1944,1953] svg en:Historical flags; fr:Historique
+    en: ! || 1940–1953 || Flag of the Estonian Soviet Socialist Republic || Red flag with a golden hammer and sickle in the top hoist corner and "ENSV" (Eesti Nõukogude Sotsialistlik Vabariik) written above t
+    fr: Drapeau de la RSS d'Estonie de 1944 à 1953
+- Flag of the Estonian Soviet Socialist Republic (1940–1953).svg [1940,1941,1944,1953] svg en:Various historical flags
+    en: Flag of the Estonian SSR (1940–1941, 1944–1953)
+- Flags of Estonia - Postal Flag.svg [1940,1994] svg en:Postal flag
+    en: ! || 1994–20091923–1940 || Postal flag || National tricolour defaced with a post horn || |}
+- Flag of the Estonian Soviet Socialist Republic (reverse).svg [1953,1990] svg en:Historical flags
+    en: ! scope="row"| 150pxborder| | 1953–1990 | Flag of the Estonian Soviet Socialist Republic | Red flag with a golden hammer and sickle and outlined star above them in the top hoist corner. A band of blue
+- Flag of the Estonian Soviet Socialist Republic.svg [1953,1990] svg en:Historical flags; en:Various historical flags; fr:Historique
+    en: ! scope="row"| 150pxborder| | 1953–1990 | Flag of the Estonian Soviet Socialist Republic | Red flag with a golden hammer and sickle and outlined star above them in the top hoist corner. A band of blue
+    fr: Drapeau de la RSS d'Estonie de 1953 à 1990

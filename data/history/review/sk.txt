@@ -1,0 +1,45 @@
+### sk  (en:Flag of Slovakia, en:List of Slovak flags, fr:Drapeau de la Slovaquie, sk:Vlajka Slovenska)
+- SlovenskaVlajka1848.png [1171,1196,1848,1863] png fr:Histoire > Avant l'indépendance de la Tc
+    fr: Armoiries actuelles de la Hongrie |Couverture des premiers statuts de la matica slovenská (1863) |Armoiries actuelles de la Slovaquie |} La croix présente sur les armoiries serait d'origine byzantine 
+- Flag of First Slovak Republic 1939-1945.svg [1848,1849,1868,1919,1938,1939] svg fr:Histoire > Tchécoslovaquie et État slova; sk:Historický vývoj
+    fr: Drapeau de Slovaquie entre 1939 et 1945
+    sk: valign="top"| Vlajka s týmto poradím farieb sa používala od rokov 1848/1849 a oficiálne bola ustanovená v roku 1868 ako vlajka Slovákov. Vo veľkom ju používali Slováci žijúci v Amerike a americké slov
+- Slovenská vlajka 1848 z.png [1848] png en:Historical flags; sk:Historický vývoj
+    en: ! scope="row" | 150x150px | 1848 | One of the flags, where the double cross was no longer green, but blue three-peaked, first used in 1848 during the autumn campaign.
+    sk: valign="top"| Jedna zo zástav, kde pod dvojkrížom už nebolo zelené, ale modré trojvršie, prvýkrát použitá v roku 1848 počas jesennej výpravy.
+- Slovenská vlajka 1848-1849.png [1848,1849] png en:Historical flags; sk:Historický vývoj
+    en: ! scope="row" | 150x150px | 1848–1849 | Flag used by the Slovak volunteer corps during the Slovak uprising in 1848–1849. Later it became the flag of the Slovak National Council.
+    sk: valign="top"| Vlajka používaná slovenským dobrovoľníckym zborom počas Slovenského povstania v rokoch 1848 – 1849. Neskôr sa stala vlajkou Slovenskej národnej rady.
+- Slovenská vlajka 1848.png [1848] png en:Historical flags; sk:Historický vývoj
+    en: ! scope="row" | 150x150px | 1848 | Flag from Demands of the Slovak Nation from 11 May 1848.
+    sk: valign="top"| Vlajka zo Žiadostí slovenského národa z 11. mája 1848.
+- Slovenská vlajka 1849.png [1848,1849] png en:Historical flags; sk:Historický vývoj
+    en: ! scope="row" | 150x150px | 1848–1849 | Another Slovak flag used during the revolution.
+    sk: valign="top"| Ďalšia zo zástav Slovákov používaná počas revolúcie.
+- Czechoslovak Legion in France Flag.png [1914,1915,1917,1918] png en:Historical flags
+    en: ! scope="row" | Czechoslovak Legion in France Flag|150x150px | 1914–19151917–1918 | The flag used by the Czechoslovak units in the French Foreign Legion, with the legion being disbanded in 1915 due to
+- Banner of the First Assault Battalion of the Czechoslovak Legions (Obverse).svg [1917,1918] svg en:Historical flags
+    en: ! scope="row" | Banner of the First Assault Battalion of the Czechoslovak Legions|150x150px | 1917–1918 | The obverse side of the flag used by the First Assault Battalion of the Czechoslovak Legions i
+- Czechoslovak Legion in Russia Flag.png [1917,1918] png en:Historical flags
+    en: ! scope="row" | Czechoslovak Legion in Russia Flag|150x150px | 1917–1918 | The obverse side of the flag of the Czechoslovak Legion in Russia, with the reverse side being the russian flag.
+- Czechoslovak Legion in Italy Flag.png [1918] png en:Historical flags
+    en: ! scope="row" | Czechoslovak Legion in Italy Flag|150x150px | 1918 | The flag used by the Czechoslovak Legion in Italy.
+- Flag of Bohemia.svg [1918,1920,1990,1992] svg en:Historical flags; fr:Histoire > Tchécoslovaquie et État slova; sk:Historický vývoj
+    en: ! scope="row" | 150x150px | 1918–1920 | The flag of the First Czechoslovak Republic in the years 1918–1920, which was based on the national flag of Bohemia. According to the CNR Act 67/1990 Coll. was 
+    fr: Drapeau de Tchécoslovaquie de 1918 à 1920
+    sk: valign="top"| Vlajka Československej republiky v rokoch 1918 – 1920, ktorá vychádzala zo zemskej vlajky Čiech. Podľa zákona ČNR 67/1990 Zb. bola tiež oficiálna, ale prakticky nepoužívaná vlajka Česka 
+- Red flag.svg [1919] svg sk:Historický vývoj
+    sk: valign="top"| Vlajka Slovenskej republiky rád, ktorá existovala iba krátkodobo (od 16. júna do 7. júla 1919).
+- Socialist red flag.svg [1919] svg en:Historical flags
+    en: ! scope="row" | 150x150px | 1919 | The flag of the Slovak Soviet Republic, which existed only for a short time (from 16 June to 7 July 1919).
+- Flag of the Czech Republic.svg [1920,1992,1993] svg en:Historical flags; sk:Historický vývoj
+    en: ! scope="row" | 150x150px | 1920–1992 | The flag of Czechoslovakia in the years 1920 to 1992 and also the official flag of Czech Republic from 1 January 1993.
+    sk: valign="top"| Vlajka Československa v rokoch 1920 až 1992 a tiež oficiálna vlajka Česka od 1. januára 1993.
+- Flag of the Slovak 535th platoon.svg [1944] svg en:Historical flags
+    en: ! scope="row" | 150x150px | 1944 | The flag of Platoon 535 used during the Warsaw Uprising.
+- Flag of Slovakia vertical.svg [1992] svg en:Current flags > National flag; sk:Opis
+    en: ! scope="row" | 150x150px | 3 September 1992 | National flag for vertical display | A vertical tricolor of white, blue, and red; the coat of arms is rotated relative to the flag so that it is still , 
+    sk: Vertikálna verzia vlajky
+- Flag of Slovakia.svg [1992] svg en:Current flags > National flag; sk:Historický vývoj; sk:intro
+    en: ! scope="row" | 150x150px | 3 September 1992 | National flag | A horizontal tricolor of white, blue, and red; charged with coat of arms at the hoist side. | rowspan="2" | 2:3
+    sk: valign="top"| Vlajka Slovenska od 3. septembra 1992. |}

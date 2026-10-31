@@ -1,0 +1,56 @@
+### eg  (en:Flag of Egypt, en:List of Egyptian flags, fr:Drapeau de l'Égypte, ar:علم مصر)
+- Flag of Egypt.svg [1126,1984] svg ar:الأعلام المصرية التاريخية; ar:وصف العلم > مخطط الألوان; en:History > Arab Republic of E
+    en: Flag of the Arab Republic of Egypt (1984–present)
+    fr: Drapeau de la République arabe d’Égypte (depuis 1984)
+    ar: {| class="wikitable" style="text-align: ;" ! ! style="background:#ce1126ff; width: " | أحمر ! style="background:#FFFFFF; width: " | أبيض ! style="background:#000000ff; width: " | أسود ! style="backgro
+- Flag of Egypt (1793-1844).svg [1793,1844] svg en:Historical flags
+    en: ! scope="row" | | 1793–1844 | Flag of Ottoman Egypt | Red flag with a white crescent containing a seven-pointed white star. |}
+- Flag of the Ottoman Empire (also used in Egypt).svg [1793,1844] svg ar:الأعلام المصرية التاريخية; en:History > Muhammad Ali Dynasty (1805–192; fr:Histoire > D
+    en: Flag used in the Egyptian Eyalet (1793–1844)
+    fr: Drapeau de l'Égypte ottomane au
+    ar: إيالة مصر(من 1793 حتى 1844)
+- Flag of Egypt (1882-1922).svg [1805,1882,1922] svg fr:Histoire > Dynastie de Méhémet Ali (1805
+    fr: Drapeau de l'Égypte sous Méhémet Ali et ses successeurs (1805-1922)
+- Egypt flag 1882.svg [1826,1882,1914,1922,1923] svg ar:الأعلام المصرية التاريخية; en:Historical flags; en:History > Muhammad Ali Dynasty (1805
+    en: ! scope="row" | | 1914–1923 | Flag of the Sultanate of Egypt | Red flag with three white crescents, each containing a five-pointed white star.
+    ar: خديوية مصر(من 1882 حتى 1914)
+- Flag of Egypt 19th century 6point.svg [1826,1867,1881,1914] svg en:Historical flags
+    en: ! scope="row" | | 1881–1914 | Flag of the Khedivate of Egypt under British occupation | Identical to the national flag used between 1826 and 1867 (see description below).
+- Flag of Egypt (1844-1867).svg [1844,1867] svg ar:الأعلام المصرية التاريخية; en:Historical flags; en:History > Muhammad Ali Dynasty (1805
+    en: ! scope="row" | | 1844–1867 | Flag of self-declared Khedivate of Egypt introduced by Muhammad Ali | Red flag with a white crescent containing a five-pointed white star.
+    ar: إيالة مصر(من 1844 حتى 1867)
+- Flag of Muhammad Ali.svg [1867,1881,1882] svg ar:الأعلام المصرية التاريخية; en:Historical flags; en:History > Muhammad Ali Dynasty (1805
+    en: ! scope="row" | | 1867–1881 | Flag of the Khedivate of Egypt | Red flag with a white crescent and three white five-pointed stars.
+    ar: خديوية مصر(من 1867 حتى 1882)
+- Flag of Egypt (1922–1953).svg [1922,1953,1958] svg fr:Histoire > Royaume d'Égypte (1922-1953)
+    fr: Drapeau du royaume d'Égypte (1922-1953) puis de la république d'Égypte (1953-1958)
+- Flag of Egypt (1922–1958).svg [1922,1923,1958,2001] svg en:Historical flags
+    en: ! scope="row" | | 1923–1958 | Flag of the Kingdom of Egypt and the co-official flag of the Republic of Egypt(adopted by Law No. 47 of 1923) | Green flag with a white crescent containing three white fi
+- Flag of Egypt (1953–1958).svg [1952,1953,1958] svg fr:Histoire > République d'Égypte (1953–195
+    fr: Drapeau de la Révolution égyptienne de 1952
+- Flag of the Egyptian Revolution (1952).svg [1952,1953,1958] svg en:Historical flags; en:History > Republic of Egypt (1953–1958) 
+    en: ! scope="row" | | 1952–1958 | Flag of the 1952 Egyptian revolution and the Republic of EgyptThe green monarchical flag (see below) remained the national flag of Egypt until 1958, even after the procla
+- Flag of the United Arab Republic (1958–1971).svg [1958,1971,1972] svg fr:Histoire > République arabe unie (1958-1
+    fr: Drapeau de la République arabe unie (1958-1971), utilisé jusqu'en 1972
+- Flag of North Yemen.svg [1962] svg ar:أعلام مشتقة من العلم المصري
+    ar: علم الجمهورية العربية اليمنية 1962
+- Flag of Syria (1963–1972).svg [1963,1972] svg ar:أعلام مشتقة من العلم المصري
+    ar: علم سوريا 1963
+- Flag of South Yemen.svg [1967] svg ar:أعلام مشتقة من العلم المصري
+    ar: علم جمهورية اليمن الديمقراطية الشعبية 1967
+- Flag of Sudan.svg [1970] svg ar:أعلام مشتقة من العلم المصري
+    ar: علم السودان منذ 1970
+- Flag of Libya (1972–1977).svg [1972,1977] svg ar:أعلام مشتقة من العلم المصري
+    ar: علم الجمهورية العربية الليبية 1972
+- Flag of Syria (1972–1980).svg [1972,1980] svg ar:أعلام مشتقة من العلم المصري
+    ar: علم سوريا 1972
+- Drapeau de la République Arabe Islamique (Union tuniso-libyenne).svg [1974] svg ar:أعلام مشتقة من العلم المصري
+    ar: علم الجمهورية العربية الإسلامية 1974
+- Flag of Egypt (darker shade of gold).svg [1984,2001] svg en:National flags
+    en: ! scope="row" | | 1984–present | Flag of Egypt | Tricolour made of three equal horizontal bands—coloured red (top), white (middle) and black (bottom)—with the golden Eagle of Saladin centered in the w
+- Vertical Flag of Egypt.svg [1984] svg en:National flags
+    en: ! scope="row" | | 1984–present | Vertical flag of Egypt |}
+- Flag of Yemen.svg [1990] svg ar:أعلام مشتقة من العلم المصري
+    ar: علم اليمن منذ 1990
+- Flag of Iraq.svg [2008] svg ar:أعلام مشتقة من العلم المصري
+    ar: علم العراق منذ 2008

@@ -1,0 +1,27 @@
+### lu  (en:Flag of Luxembourg, en:List of flags of Luxembourg, fr:Drapeau du Luxembourg, lb:Fändel vu Lëtzebuerg)
+- Flag of Austria (1230–1934, 1945–2000).svg [1230,1713,1795,1934,1945,2000] svg en:Historical flags
+    en: ! scope="row" | 150x150px | 1713–1795 | Flag of the Archduchy of Austria | Three equal horizontal bands of red (top), white, and red.
+- Bandera de Borgoña.svg [1443,1556] svg en:Historical flags
+    en: ! scope="row" | | 1443–1556 | Flag of the Duchy of Burgundy under Philip the Good | A banner of the coat of arms of the Duchy of Burgundy under the House of Valois-Burgundy
+- Banner of the Holy Roman Emperor with Arms (1493-1556).svg [1493,1556] svg en:Historical royal flags
+    en: ! scope="row" | | 1556 | Banner of arms of Emperor Charles V
+- Banner of Charles V as Holy Roman Emperor.svg [1556] svg en:Historical royal flags
+    en: ! scope="row" | 150x150px | 1556 | Banner of arms of Emperor Charles V
+- Flag of Cross of Burgundy.svg [1556,1700] svg en:Historical flags
+    en: ! scope="row" | | 1556–16841698–1700 | Flag of the Seventeen Provinces, the Southern Netherlands, and the Spanish Netherlands | A red saltire resembling two crossed, roughly-pruned (knotted) branches,
+- Austrian Low Countries Flag.svg [1781,1786] svg en:Historical flags
+    en: ! scope="row" | | 1781–1786 | Flag of the Austrian Netherlands | A tricolour, with three equal horizontal bands of red, white, and gold with the arms of Austria.
+- Flag of the Brabantine Revolution.svg [1789,1790] svg en:Historical flags
+    en: ! scope="row" | | 1789–1790 | Flag of the Brabant Revolution | A tricolour, with three equal horizontal bands of red, black, and yellow.
+- Flag of France (1794–1815, 1830–1974, 2020–present).svg [1794,1795,1814,1815,1830,1974] svg en:Historical flags
+    en: ! scope="row" | | 1795–1814 | Flag of the French First Republic and the First French Empire | A vertical tricolour of blue, white, and red (proportions 3:2).
+- Flag of the Netherlands.svg [1815,1848] svg en:Flag change debate; en:Historical flags
+    en: ! scope="row" | | 1815–18301839–1848 | Flag of the United Kingdom of the Netherlands and the Kingdom of the Netherlands | A horizontal triband of red, white, and blue.
+- Flag of Belgium (1830).svg [1830,1831] svg en:Historical flags
+    en: ! scope="row" | | 1830–1831 | Flag of the Belgian Revolution | A tricolour, with three equal horizontal bands of black, yellow, and red.
+- Flag of Luxembourg (1-2).svg [1848,1972,1993] svg en:Historical flags; en:National flag
+    en: ! scope="row" | | 1972–1993 | Flag of Luxembourg (Ratio: 1:2) | The national flag in 1:2 ratio. |}
+- Flag of Luxembourg.svg [1848,1993] svg en:National flag
+    en: ! scope="row" | | 1993–present | Flag of Luxembourg (Ratio: 3:5) | A horizontal tricolor of red, white, and blue. De facto used from 1848, but it was not officially adopted until 1993.
+- Flag of Luxembourg (vertical).svg [1993] svg en:Ensign
+    en: The Red Lion () is the official ensign for ships registered in Luxembourg. It is used for river and sea shipping, as well as for aviation. This flag is based on the coat of arms of Luxembourg (a banne

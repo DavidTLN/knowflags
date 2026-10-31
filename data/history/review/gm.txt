@@ -1,0 +1,24 @@
+### gm  (en:Flag of the Gambia, en:List of Gambian flags, fr:Drapeau de la Gambie)
+- Flag of the Mali Empire.svg [1324,1506] svg en:Historical flags
+    en: ! scope="row" | | 1324–1506 | Possible flag of the Mali Empire | Attested flag used by Mansa Musa, possible state flag of the Mali Empire. Yellow with a red .
+- PortugueseFlag1385.svg [1385,1450,1485] svg en:Historical flags
+    en: ! scope="row" | | 1450–1485 | Flag used in the Portuguese colonization in The Gambia
+- PortugueseFlag1485.svg [1485,1495] svg en:Historical flags
+    en: ! scope="row" | 150x150px | 1485–1495 | Flag used in the Portuguese colonization in The Gambia
+- Flag of Portugal (1495).svg [1495,1521] svg en:Historical flags
+    en: ! scope="row" | 150x150px | 1495–1521 | Flag used in the Portuguese colonization in The Gambia
+- Flag of Portugal (1521).svg [1521,1578] svg en:Historical flags
+    en: ! scope="row" | | 1521–1578 | Flag used in the Portuguese colonization in The Gambia
+- Flag of Portugal (1578).svg [1578,1588] svg en:Historical flags
+    en: ! scope="row" | | 1578–1588 | Flag used in the Portuguese colonization in The Gambia
+- Flag of England.svg [1588,1681] svg en:Historical flags
+    en: ! scope="row" | | 1588–16511661–1681 | Flag used in the English colonization in The Gambia
+- Prinsenvlag.svg [1659,1660] svg en:Historical flags
+    en: ! scope="row" | | 1659–1660 | The Prince's Flag used in the Dutch colonization in The Gambia
+- Statenvlag.svg [1659,1660] svg en:Historical flags
+    en: ! scope="row" | | 1659–1660 | The States Flag used in the Dutch colonization in The Gambia
+- Flag of the British West Africa Settlements (1870–1888).svg [1870,1888,1889] svg en:Historical flags
+    en: ! scope="row" | | 1870–1889 | Flag of British West Africa
+- Flag of The Gambia (1889–1965).svg [1889,1965] svg en:Historical flags; fr:Protectorat Britannique
+    en: ! scope="row" | | 1889–1965 | Flag of the Gambia Colony and Protectorate
+    fr: Drapeau de la Gambie de 1889 à 1965

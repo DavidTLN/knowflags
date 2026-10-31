@@ -1,0 +1,26 @@
+### mk  (en:Flag of North Macedonia, en:List of flags of North Macedonia, fr:Drapeau de la Macédoine du Nord, mk:Знаме на Македонија)
+- Flag of Kruševo Republic.svg [1903,1998] svg en:Historical flags; mk:Историски знамиња
+    en: ! scope="row" | | 3 August – 13 August 1903 | Flag of the 3rd cheta of Pitu Guli,Иванов, Иван, Български бойни знамена и флагове, изд. Св. „Георги Победоносец“, София, 1998 г., „Знамената на освободит
+    mk: Знамето на Крушевската Република и крушевската востаничка чета.
+- Yugoslav Partisans flag 1945.svg [1941,1945] svg en:Historical flags
+    en: ! scope="row" | | 1941–1945 | Flag of Yugoslav partisan movement | Three equal horizontal bands, blue on the top, white in the middle, and red on the bottom, with a red star in the white field
+- Flag of North Macedonia (1944–1946).svg [1944,1946] svg en:Historical flags; en:History > Flag of People's Republic of M; fr:Histoire > Drapeau de
+    en: ! scope="row" | | 1944–1946 | Flag of Democratic Federal Macedonia | Red flag with a gold-edged red star in the middle
+    fr: Le drapeau de la république populaire de Macédoine entre 1944 et 1946.
+    mk: 23pxЗнаме на НР Македонија од 1944 до 1946 година
+- Flag of the First Macedonian Brigade.svg [1944] svg en:Historical flags
+    en: ! scope="row" | | 1944 | Flag of the First Macedonian Brigade (WW2) | Red flag with the unit's name written in yellow capital Cyrillic letters in the lower half
+- Flag of North Macedonia (1946–1992).svg [1946,1991,1992] svg en:History > Flag of Socialist Republic of ; mk:Историски знамиња
+    en: The flag of the Socialist Republic of Macedonia from 1946 to 1991
+    mk: 23pxЗнаме на СР Македонија од 1946 до 1992 година
+- Flag of the Socialist Republic of Macedonia (1946–1992).svg [1946,1963,1991,1992] svg en:Historical flags; fr:Histoire > Drapeau de la république soci
+    en: ! scope="row" | | 1946–1991 | Flag of the People's Republic of Macedonia (1946–1963) and Socialist Republic of Macedonia (1963–1991) | Red flag with a gold-edged red star in the top-hoist corner
+    fr: Le drapeau de la république socialiste de Macédoine de 1946 à 1992.
+- Flag of SFR Yugoslavia.svg [1947,1991] svg en:Historical flags
+    en: ! scope="row" | | 1947–1991 | Flag of the Socialist Federal Republic of Yugoslavia | Three equal horizontal bands, blue on the top, white in the middle, and red on the bottom, five-pointed red star in
+- Flag of North Macedonia (1992–1995).svg [1992,1995] svg en:Historical flags; en:History > Kutlesh flag (1992–1995); fr:Histoire > Premier drapeau 
+    en: ! scope="row" | | 1992–1995 | Flag of the Republic of Macedonia | Red flag with the yellow Vergina Sun in the middle
+    fr: Le drapeau avec le soleil de Vergina, en usage de 1992 à 1995.
+    mk: Етничко македонско знаме со Ѕвездата од Кутлеш.
+- Flag of North Macedonia (vertical).svg [1995] svg en:North Macedonia
+    en: ! scope="row" | 150x150px | 1995–present | Flag of North Macedonia (vertical) | |}

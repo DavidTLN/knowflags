@@ -1,0 +1,37 @@
+### tz  (en:Flag of Tanzania, fr:Drapeau de la Tanzanie, sw:Bendera ya Tanzania)
+- Flag of Portugal (1495).svg [1495,1505,1521] svg en:Historical flags
+    en: 1505–1521 || Flag of Portuguese Zanzibar || A white field with the coat of arms in the .
+- Flag of Portugal (1521).svg [1521,1578] svg en:Historical flags
+    en: 1521–1578 || Flag of Portuguese Zanzibar || A white field with the coat of arms in the .
+- Flag of Portugal (1578).svg [1578,1640] svg en:Historical flags
+    en: 1578–1640 || Flag of Portuguese Zanzibar || A white field with the coat of arms in the .
+- Flag of Portugal (1640).svg [1640,1667] svg en:Historical flags
+    en: 1640–1667 || Flag of Portuguese Zanzibar || A white field with the coat of arms in the .
+- Flag of Portugal (1667).svg [1667,1698] svg en:Historical flags
+    en: 1667–1698 || Flag of Portuguese Zanzibar || A white field with the coat of arms in the .
+- Flag of Muscat.svg [1698,1856] svg en:Historical flags
+    en: 1698–1856 || Flag of Zanzibar as a part of the Omani Empire || A plain red field.
+- Flag of Zanzibar Under British Rule.svg [1856,1896,1963] svg en:Historical flags; sw:Bendera za kihistoria tangu zamani za uk
+    en: 1896–1963 || Flag of the Sultanate of Zanzibar (British protectorate) || A plain red field.
+    sw: 1856–1963 || Bendera ya Usultani wa Zanzibar || Kitambaa chekundu
+- Flag of the Sultanate of Zanzibar.svg [1856,1896] svg en:Historical flags
+    en: 1856–1896 || Flag of the Sultanate of Zanzibar || 13 horizontal stripes. 4 red, 4 green, 2 white and 3 yellow with 8 green crescent moons. 3 in the superior and inferior yellow stripes and 2 in the ce
+- Reichskolonialflagge.svg [1891,1893,1918,1919] svg en:Historical flags; sw:Bendera za kihistoria tangu zamani za uk
+    en: 1891–1918 || Flag of German East Africa || A horizontal black-white-red tricolour with the German in a white circle in the middle.
+    sw: 1893-1919 || Bendera ya Mamlaka ya Koloni za Ujerumani || Nyeusi-nyeupe – nyekundu kama Dola la Ujerumani, pamoja na ishara ya tai, ilitumiwa katika koloni zote za Ujerumani
+- Flag of Tanganyika (1923–1961).svg [1919,1923,1946,1961] svg en:Historical flags; sw:Bendera za kihistoria tangu zamani za uk
+    en: 1923–1961 || Flag of Tanganyika Territory || A British Red Ensign with the Emblem of the British League of Nations mandate (a British UN Trust Territory after 1946) centred on the outer half of the fl
+    sw: 1919–1961 || Ramani ya eneo la kudhaminiwa Tanganyika || Bendera nyekundu yenye rangi za Uingereza kwenye kona na ishara ya twiga
+- Flag of Tanganyika (1961–1964).svg [1961,1964] svg en:Historical flags; fr:Significations; sw:Bendera za kihistoria tangu zamani za uk; sw:in
+    en: 1961–1964 || Flag of Tanganyika || A green field with a gold-edged black horizontal band in the centre.
+    fr: Drapeau du Tanganyika
+    sw: 1961–1964 || Bendera ya Tanganyika || Kijani yenye kanda nyeusi katikati linaloshikwa na milia ya njano-dhahabu
+- Flag of the Sultanate of Zanzibar (1963).svg [1963,1964] svg en:Historical flags; sw:Bendera za kihistoria tangu zamani za uk
+    en: 1963–1964 || Flag of the Sultanate of Zanzibar || A red field with a green disk in the centre bearing two yellow cloves in the centre.
+    sw: 1963–1964 || Bendera ya Usultani wa Zanzibar baada ya uhuru|| Nyekundu, yenye duara ya kibichi inayoonyesha karafuu mbili za rangi ya njano
+- Flag of Zanzibar (January 1964).svg [1964] svg en:Historical flags
+    en: 12–29 January 1964 || Flag of the People's Republic of Zanzibar || A horizontal tricolour of black, yellow and blue.
+- Flag of Zanzibar (January-April 1964).svg [1964] svg en:Historical flags; fr:Significations; sw:Bendera za kihistoria tangu zamani za uk; sw:in
+    en: 29 January–26 April 1964 || Flag of the People's Republic of Zanzibar || A horizontal tricolour of blue, black and green. |}
+    fr: Drapeau de Zanzibar
+    sw: Januari–Aprili 1964 || Bendera ya Jamhuri ya Watu wa Zanzibar hadi maungano || Kanda za buluu, nyeusi na kijani. |}

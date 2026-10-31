@@ -1,0 +1,41 @@
+### gy  (en:Flag of Guyana, en:List of Guyanese flags, fr:Drapeau du Guyana)
+- Flag of Cross of Burgundy.svg [1530,1785] svg en:Historical flags > Spanish Rule
+    en: ! scope="row" | | 1530–1785 | Flag of the Spanish Empire | A red saltire resembling two crossed, roughly-pruned (knotted) branches, on a white field.
+- Prinsenvlag.svg [1611,1795] svg en:Historical flags > Dutch rule
+    en: ! scope="row" | | 1611–17811784–1795 | The Prince's Flag | A horizontal tricolor of orange, white, and blue.
+- Statenvlag.svg [1652,1795] svg en:Historical flags > Dutch rule
+    en: ! scope="row" | | 1652–17811784–1795 | States Flag | A horizontal tricolor of red, white, and blue. |}
+- Flag of Spain (1785-1873 and 1875-1931).svg [1785,1819,1873,1875,1931] svg en:Historical flags > Spanish Rule
+    en: ! scope="row" | | 1785–1819 | Flag of the Spanish Empire | A horizontal triband flag of red, yellow (double width), and red; charged with the Spanish coat of arms off-centred toward the hoist. |}
+- Flag of France (1794–1815, 1830–1974, 2020–present).svg [1794,1802,1803,1808,1813,1815] svg en:Historical flags > French rule
+    en: ! scope="row" | | 1802–1803 | Flag of the French First Republic || A vertical tricolor of blue, white, and red.
+- Flag of the United Kingdom (1-2).svg [1801,1875] svg en:Historical flags > British rule
+    en: ! scope="row" | | 1801–1875 | Flag of the United Kingdom | A superimposition of the flags of England and Scotland with the Saint Patrick's Saltire (representing Ireland).
+- Bandera de España 1808-1813.svg [1808,1813] svg en:Historical flags > French rule
+    en: ! scope="row" | | 1808–1813 | Flag of Napoleonic Spain | A white field with the coat of arms off-centred toward the hoist.
+- Bandera de la Guerra a Muerte.svg [1813,1814] svg en:Historical flags > Under Venezuela
+    en: ! scope="row" | | 1813–1814 | Flag of the Second Venezuelan Republic | Red field with a white rhombus encasing a black rectangle.
+- Bandera de Angostura (20 de noviembre de 1817).svg [1817,1819] svg en:Historical flags > Under Venezuela
+    en: ! scope="row" | | 1817–1819 | Flag of the Third Republic of Venezuela | Horizontal tricolor of yellow, blue, and red with eight blue stars on the yellow band.
+- Flag of Venezuela (1817 and 1859).svg [1817,1859] svg en:Historical flags > Under Venezuela
+    en: ! scope="row" | | 1817 | Flag of the Third Venezuelan Republic | Horizontal tricolor of yellow, blue, and red with seven blue stars on the yellow band.
+- Flag of the Gran Colombia (1819-1820).svg [1819,1820] svg en:Historical flags > Under Great Colombia
+    en: ! scope="row" | | 1819–1820 | Flag of Great Colombia | Horizontal tricolor of yellow, blue, and red with the coat of arms in the canton, showing an indigenous woman, an Orinoco crocodile and the Carib
+- Flag of the Gran Colombia (1820-1821).svg [1820,1821] svg en:Historical flags > Under Great Colombia
+    en: ! scope="row" | | 1820–1821 | Flag of Great Colombia | Horizontal tricolor of yellow, blue, and red with the coat of arms in the canton, showing an Andean condor holding a sword and a pomegranate plan
+- Flag of Gran Colombia.svg [1821,1830] svg en:Historical flags > Under Great Colombia
+    en: ! scope="row" | | 1821–1830 | Flag of Great Colombia | A horizontal tricolour of yellow, blue, and red with the emblem of Gran Colombia in the of the flag with olive branches surrounding the emblem.
+- Flag of Venezuela (1830-1836).svg [1830,1836] svg en:Historical flags > Under Venezuela
+    en: ! scope="row" | | 1830–1836 | Provisional flag of the State of Venezuela | Horizontal tricolor of yellow, blue, and red, with the coat of arms of the State of Venezuela in the .
+- Bandera de Venezuela 1836-1859.svg [1836,1859] svg en:Historical flags > Under Venezuela
+    en: ! scope="row" | | 1836–1859 | Flag of the State of Venezuela | Horizontal tricolor of yellow, blue, and red, with the coat of arms of the State of Venezuela on the hoist side of the yellow band.
+- Flag of Venezuela (1859-1863).svg [1859,1863] svg en:Historical flags > Under Venezuela
+    en: ! scope="row" | | 1859–1863 | Second flag of the Federation | Horizontal tricolor of yellow, blue, and red, with the coat of arms of the State of Venezuela in the .
+- State flag of Venezuela (1863-1905).svg [1863,1897,1905] svg en:Historical flags > Under Venezuela
+    en: ! scope="row" | | 1863–1897 | State flag of the United States of Venezuela | Horizontal tricolor of yellow, blue, and red, with the hexagon of seven white stars in the of the blue band and the country
+- Flagge Preußen - Provinz Westfalen (1882).svg [1882] svg en:Subdivision flags
+    en: ! scope="row" | | ? | Flag of Essequibo Islands-West Demerara
+- Flag of Guyana (vertical).svg [1966] svg en:National flag
+    en: ! scope="row" | 150x150px | 1966–present | Flag of Guyana (vertical) | |}
+- Flag of Guyana.svg [1966] svg en:National flag
+    en: ! scope="row" | | 1966–present | Flag of Guyana | A green field with a black-edged red isosceles triangle based on the hoist side superimposed on the larger white-edged golden triangle, also based on 

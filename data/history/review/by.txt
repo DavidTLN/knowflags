@@ -1,0 +1,36 @@
+### by  (en:Flag of Belarus, fr:Drapeau de la Biélorussie, be:Сцяг Беларусі)
+- Flag of Belarus (1918, 1991-1995).svg [1918,1919,1939,1990,1991,1995] svg be:Гісторыя; be:Гісторыя > Бела-чырвона-белы сцяг; en:Historical flags > White-red-white f
+    en: The white-red-white flag of the Belarusian People's Republic (1918), the Byelorussian SSR (1990–1991), and the Republic of Belarus (1991–1995)
+    be: bgcolor= height= width= 100пкс | Беларуская Народная Рэспубліка | 1918—1919 | Палотнішча з суадносінамі бакоў 1:2, з трох роўных гарызантальных палос — дзвюх белых і адной чырвонай між імі
+- Flag of Byelorussian SSR (1919-1927).svg [1919,1927] svg fr:Drapeaux historiques > République social
+    fr: Drapeau de la RSS de Biélorussie de 1919 à 1927.
+- Flag of the Byelorussian Soviet Socialist Republic (1919-1927).svg [1919,1927] svg en:Historical flags > Soviet era > 1919–195
+    en: Byelorussian SSR1919–1927
+- Flag of the Lithuanian-Byelorussian SSR.svg [1919,1920] svg be:Гісторыя; en:Historical flags > Soviet era > 1919–195; fr:Drapeaux historiques > Républ
+    en: Lithuanian–Byelorussian SSR1919–1920
+    fr: Drapeau de la RSS lituano-biélorusse en 1919.
+    be: bgcolor= height= width= 100пкс | ЛітБел | 1919—1920 | Чырвонае палотнішча з суадносінамі бакоў 1:2
+- Flag of Byelorussian SSR (1927-1937).svg [1927,1937] svg be:Гісторыя; en:Historical flags > Soviet era > 1919–195; fr:Drapeaux historiques > Républ
+    en: Byelorussian SSR1927–1937
+    fr: Drapeau de la RSS de Biélorussie de 1927 à 1937.
+    be: bgcolor= height= width= 100пкс | БССР | 1927—1937 | Чырвонае або пунцовае палотнішча, у верхнім вугле якога ля тронка змяшчаюцца залатыя літары «БССР» або надпіс «Беларуская Сацыялістычная Савецкая Рэ
+- Flag of Byelorussian SSR (1937-1951).svg [1937,1951] svg fr:Drapeaux historiques > République social
+    fr: Drapeau de la RSS de Biélorussie de 1937 à 1951.
+- Flag of the Byelorussian SSR (1937).svg [1937,1940,1951] svg be:Гісторыя; en:Historical flags > Soviet era > 1919–195
+    en: Byelorussian SSR1937–1951
+    be: bgcolor= height= width= 1937-1940|100пкс | БССР | 1937—1951 | Чырвонае палотнішча з суадносінамі бакоў 1:2 з выявай у яго верхнім вугле, ля тронка залатых сярпа і молата і над імі — чырвонай пяціканцо
+- Flag of Byelorussian SSR.svg [1951,1991] svg be:Гісторыя; be:Гісторыя > Сцяг Беларускай Савецкай Сацы; en:Historical flags > Soviet era
+    en: Flag of the Byelorussian Soviet Socialist Republic (1951–1991)
+    fr: Drapeau de la RSS de Biélorussie de 1951 à 1991.
+    be: bgcolor= height= width= 100пкс | БССР | | Палотнішча з дзвюх гарызантальна размешчаных палос: верхняй чырвонага колеру і ніжняй зялёнага колеру ў адносінах 2/3:1/3 з выявай у верхнім левым вугле чырво
+- Flag of the Comoros (1975–1978).svg [1975,1978] svg be:Падобныя сцягі
+    be: Сцяг Каморскіх Астравоў (1975-1978).
+- Flag of Belarus (1995-2012).svg [1995,2012] svg be:Гісторыя; be:Гісторыя > Гісторыя зацвярджэння на рэфе; en:Historical flags > 1995 refer
+    en: Flag adopted in 1995, slightly modified in 2012
+    fr: Drapeau de la Biélorussie de 1995 à 2012.
+    be: bgcolor= height= width= 100пкс | Рэспубліка Беларусь | 1995—2012 | Палотнішча памерамі 1:2, падзеленае гарызантальна на чырвоную і зялёную палосы ў прапорцыі адпаведна 2:1. Уздоўж тронка размяшчаецца 
+- Flag of Belarus.svg [2012] svg be:Гісторыя; fr:Drapeaux historiques > République de Bié
+    fr: Drapeau de la Biélorussie depuis 2012.
+    be: bgcolor= height= width= 100пкс | Рэспубліка Беларусь | з 2012 | Палотнішча памерамі 1:2, падзеленае гарызантальна на чырвоную і зялёную палосы ў прапорцыі адпаведна 2:1. Уздоўж тронка размяшчаецца арн
+- Flag of Belarus (w-r-w) with Arms (2020).svg [2020] svg fr:Drapeaux historiques > République de Bié
+    fr: Variante du drapeau blanc-rouge-blanc figurant la Pahonie.

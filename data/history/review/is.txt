@@ -1,0 +1,20 @@
+### is  (en:Flag of Iceland, en:List of flags by color, en:List of Icelandic flags, fr:Drapeau de l'Islande, is:Íslenski fáninn)
+- Royal Banner of Norway (14th Century).svg [1262,1397] svg en:Historical flags
+    en: ! scope="row" | | 1262–1397 | Flag of Norway | Banner of arms with golden lion on red canvas.
+- Flag of the Kalmar Union.svg [1397,1523] svg en:Historical flags
+    en: ! scope="row" | | 1397–1523 | The "Banner of the realms", flag of the Kalmar Union. | A red cross in a yellow field.
+- Flag of Denmark.svg [1523,1918] svg en:Historical flags
+    en: ! scope="row" | | 1523–1918 | Flag of Denmark | A red field charged with a white Nordic cross that extends to the edges; the vertical part of the cross is shifted to the hoist side.
+- Flag of Jørgen Jørgensen (1809).png [1809] png is:Fyrri hugmyndir að fána Íslands > Þorska
+    is: alt=Dökkblár fáni með með þremur hvítum þorskfiskum í efri stangarreit|Íslandsfáni Jörundar hundadagakonungs.
+- Flag of Jørgen Jørgensen (1809).svg [1809] svg en:Historical flags; fr:Histoire > Premiers drapeaux islandais à
+    en: ! scope="row" | | July 11th 1809–August 19th 1809 | Proposal for what the flag of Iceland might have looked like during the rule of Jørgen Jørgensen | It’s not fully known what Jørgen’s flag really lo
+    fr: Drapeau de l'Islande sous Jørgen Jørgensen.
+- Flag of Iceland.svg [1913,1918,1944] svg en:National flag and State flag; is:Fánalitir og hlutföll; is:intro
+    en: ! scope="row" | | 1944–present | Civil flag and ensign | A blue flag with a red Nordic cross, fimbriated white. Used unofficially in 1913–1918, and as a territorial symbol as of 1918 until 1944 when t
+    is: Þjóðfáni Íslands. Hlutföll 25:18.
+- Flag of Iceland (1918–1944).svg [1918,1944] svg is:Fyrri hugmyndir að fána Íslands > Núvera
+    is: Frá 1918–1944 var blái liturinn í fánanum talsvert skærari.
+- Flag of Iceland (state).svg [1944] svg en:National flag and State flag; is:Fánalitir og hlutföll
+    en: ! scope="row" | | 1944–present | State flag and ensign, war flag and naval ensign | A swallowtail flag otherwise similar to the civil flag. Ratio: 9:16 |}
+    is: Ríkisfáni Íslands (Tjúgufáninn). Hlutföll 32:18.

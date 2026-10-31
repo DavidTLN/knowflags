@@ -1,0 +1,13 @@
+### dj  (en:Flag of Djibouti, fr:Drapeau de Djibouti)
+- Flag of Adal Sultanate.svg [1415,1577] svg en:Historical flags
+    en: Flag of the Adal Sultanate (1415–1577)
+- Flag of Ottoman Empire (1517-1793).svg [1517,1577,1793] svg en:Historical flags
+    en: Flag of the Ottoman Empire (1577–1793), used when Habesh Eyalet included part of present-day Djibouti.
+- Flag of the Ottoman Empire (eight pointed star).svg [1793,1844] svg en:Historical flags
+    en: Flag of the Ottoman Empire (1793–1844).
+- Flag of the Ottoman Empire.svg [1844,1883] svg en:Historical flags
+    en: Flag of the Ottoman Empire (1844–1883).
+- Flag of Muhammad Ali.svg [1874,1881] svg en:Historical flags
+    en: Flag of the Khedivate of Egypt (1874–1881), used when the Khedivate's Somali Coast included part of present-day Djibouti.
+- Flag of Egypt (1882-1922).svg [1881,1882,1883,1922] svg en:Historical flags
+    en: Flag of the Khedivate of Egypt (1881–1883).

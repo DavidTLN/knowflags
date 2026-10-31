@@ -1,0 +1,15 @@
+### sr  (en:Flag of Suriname, fr:Drapeau du Suriname, nl:Vlag van Suriname)
+- Flag of Suriname (construction sheet).svg [1080] svg en:Description; fr:Composition du drapeau; nl:Compositie van de vlag > Maten
+    en: NCS |3060 G 10 Y |n/a |1080 Y 90 R |0580 Y 10 R |} Flag construction sheet
+    fr: Construction du drapeau
+    nl: Compositietekening
+- Flag of Dutch Guyana.svg [1959,1975] svg en:Historical flags > First flag, 1959–1975
+    en: Flag of Suriname between 1959 and 1975
+- Flag of Suriname (1959–1975).svg [1959,1975] svg fr:Drapeau de Suriname jusqu'à 1975; nl:Geschiedenis > Vlag van Suriname van 195
+    fr: -
+    nl: Vlag van Suriname (1959-1975)
+- Flag of the Netherlands.svg [1959] svg en:Historical flags > First flag, 1959–1975; nl:Geschiedenis > Vlag van Suriname van 181
+    en: Flag used until 1959
+    nl: Vlag van het Koninkrijk der Nederlanden
+- Flag of Chechen Republic of Ichkeria.svg [1991,2000] svg nl:Vlaggen die lijken op de vlag van Surina
+    nl: Vlag van Itsjkerië (1991-2000)

@@ -1,0 +1,11 @@
+### rw  (en:Flag of Rwanda, en:List of Rwandan flags, fr:Drapeau du Rwanda)
+- Flag of Germany (1867–1918).svg [1867,1890,1916,1918] svg en:Historical flags
+    en: ! scope="row" | | rowspan="4" | 1890–1916 | Flag of the German Empire
+- Flag of the Congo Free State.svg [1926,1945] svg en:Historical flags
+    en: ! scope="row" | | 1926–1945 | First flag of the Belgian Congo
+- Flag of Rwanda (1959-1961).svg [1959,1961] svg fr:Histoire
+    fr: Premier drapeau (1959-1961)
+- Flag of Rwanda (1962–2001).svg [1962,2001] svg en:Historical flags
+    en: ! scope="row" | | 1962–2001 | Second flag of the Republic of Rwanda | A vertical tricolour of red, yellow, and green with a black R in the .
+- Flag of Rwanda.svg [2001] svg en:National flag
+    en: ! scope="row" | | 2001–present | Flag of Rwanda | A horizontal tricolour of light blue (double width), yellow, and green; charged with a golden-yellow sun in the upper fly side corner. |}

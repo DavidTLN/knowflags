@@ -1,0 +1,80 @@
+### si  (en:Flag of Slovenia, en:List of Slovenian flags, fr:Drapeau de la Slovénie, sl:Zastava Slovenije)
+- Flag of Hungary (895-1000).svg [1000] svg en:Historical flags
+    en: ! scope="row" | | 907–962 | Flag of the Principality of Hungary | A red swallow-tailed flag.
+- Flag of Hungary (11th-12th century).svg [1102,1172] svg en:Historical flags
+    en: ! scope="row" | | 1102–1172 | rowspan="3" | Flag of the Kingdom of Hungary | A red flag with a white Latin cross in the .
+- Flag of Hungary (late 12th century).svg [1172,1196] svg en:Historical flags
+    en: ! scope="row" | | 1172–1196 | A red flag with a white patriarchal cross in the .
+- Flag of Hungary (13th century).svg [1196,1301] svg en:Historical flags
+    en: ! scope="row" | | rowspan="2" | 1196–1301 | A red flag with a white patriarchal cross on a green triple mount in the .
+- Flag of Hungary (11th c. - 1301).svg [1301] svg en:Historical flags
+    en: ! scope="row" | | Flag of the Árpád dynasty | Eight horizontal stripes alternating red and white.
+- Flag of Hungary (1301-1382).svg [1301,1382] svg en:Historical flags
+    en: ! scope="row" | | 1301–1382 | rowspan="2" | Flag of the Kingdom of Hungary | Eight horizontal stripes alternating red and white with a yellow fleur-de-lis pattern on a vertical blue stripe at the hois
+- Flag of Sigismund of Hungary.svg [1387,1437] svg en:Historical flags
+    en: ! scope="row" | | 1387–1437 | A red flag divided into four quarters: eight horizontal stripes alternating white and red in the first and fourth quarters, a white eagle in the second quarter and a whit
+- Banner of the Holy Roman Emperor with haloes (1400-1806).svg [1400,1430,1804,1806] svg en:Historical flags
+    en: ! scope="row" | | 1430–1804 | Imperial banner of the Holy Roman Emperor and flag of the Holy Roman Empire | A black double-headed eagle with haloes on a yellow field.
+- Flag of Republic of Venice (1659-1675).svg [1420,1659,1675,1797] svg en:Historical flags
+    en: ! scope="row" | | 1420–1797 | Flag of the Republic of Venice | A gold Lion of St. Mark on a field of dark red with a six-tongued fringe at the fly.
+- Flag of Vladislaus I of Hungary.svg [1440,1444] svg en:Historical flags
+    en: ! scope="row" | | 1440–1444 | rowspan="5" | Flag of the Kingdom of Hungary | A red flag divided into four quarters: eight horizontal stripes alternating white and red in the first and fourth quarters 
+- Flag of Matthias I of Hungary.svg [1458,1490] svg en:Historical flags
+    en: ! scope="row" | | rowspan="2" | 1458–1490 | A red swallow-tailed flag divided into four quarters: eight horizontal stripes alternating white and red in the first and fourth quarters, a white patriarch
+- Flag of Vladislaus II of Hungary.svg [1490,1516] svg en:Historical flags
+    en: ! scope="row" | | 1490–1516 | A red swallow-tailed flag divided into four quarters: eight horizontal stripes alternating red and white in the first and fourth quarters and a white patriarchal cross on
+- Flag of Louis II of Hungary.svg [1516,1526] svg en:Historical flags
+    en: ! scope="row" | | 1516–1526 | A red swallow-tailed flag divided into four quarters: eight horizontal stripes alternating red and white in the first quarter, a white patriarchal cross on a green triple
+- Flag of Görz und Gradisca.svg [1754,1815] svg en:Historical flags
+    en: ! scope="row" | | 1754–1815 | Flag of the Princely County of Gorizia and Gradisca | A horizontal bicolour of white and red.
+- Flag of France (1794–1815, 1830–1974, 2020–present).svg [1794,1809,1813,1815,1830,1974] svg en:Historical flags
+    en: ! scope="row" | | rowspan="2" | 1809–1813 | Flag of the First French Empire | A vertical tricolour of blue, white, and red (proportions 3:2).
+- Flag of Germany (3-2 aspect ratio).svg [1815,1866] svg en:Historical flags
+    en: ! scope="row" | | 1815–1866 | Flag of the German Confederation | A tricolour, made of three equal horizontal bands coloured black (top), red, and gold (bottom).
+- Flag of the Kingdom of Lombardy–Venetia.svg [1815,1816] svg en:Historical flags
+    en: ! scope="row" | | 1815–1816 | Flag of the Kingdom of Lombardy–Venetia | A yellow field bordered with black triangles and with the Austrian Eagle in the .
+- Flag of the Kingdom of Illyria.svg [1816,1848] svg en:Historical flags
+    en: ! scope="row" | | 1816–1848 | Flag of the Kingdom of Illyria | A horizontal bicolour of white and red with the Austrian eagle in the .
+- Flag of Krain.svg [1848,1918] svg en:Historical flags
+    en: ! scope="row" | | 1848–1918 | Flag of the Duchy of Carniola | A horizontal tricolour of white, blue, and red.
+- Flag of the Slovene Nation.svg [1848] svg en:Historical development > Origins; sl:Zgodovina > Slovenska zastava
+    en: 1:2 Flag of the Slovene nation, first flown during the spring of nations of 1848.
+    sl: Slovenska narodna zastava|levo
+- Flag of Imperial Free City of Trieste.svg [1850,1918] svg en:Historical flags
+    en: ! scope="row" | | 1850–1918 | Flag of the Imperial Free City of Trieste | A horizontal tricolour of red (top), white, and red with a golden spear in the .
+- Flag of Italy (1861-1946) crowned.svg [1861,1941,1946,1947] svg en:Historical flags
+    en: ! scope="row" | | 1941–19431945–1947 | Flag of the Kingdom of Italy | An Italian tricolour with Savoy shield and Royal crown in the middle.
+- Flag of Hungary (1869-1874).svg [1869,1874] svg en:Historical flags
+    en: ! scope="row" | | 1869–1874 | rowspan="3" | Flag of the Kingdom of Hungary | rowspan="2" | A horizontal tricolor of red, white, and green with the crowned small coat of arms in the .
+- Flag of Hungary (1874-1896).svg [1874,1896] svg en:Historical flags
+    en: ! scope="row" | | 1874–1896
+- Flag of Hungary (1896-1915; angels).svg [1896,1915] svg en:Historical flags
+    en: ! scope="row" | | rowspan="2" | 1896–1915 | A horizontal tricolor of red, white, and green with the crowned small coat of arms flanked by two angels in the .
+- Flag of Hungary (1915-1918, 1919-1946).svg [1915,1918,1919,1944,1946] svg en:Historical flags
+    en: ! scope="row" | | 1915–19181941–1944 | Flag of the Kingdom of Hungary | A horizontal tricolor of red, white, and green with the crowned small coat of arms in the .
+- Flag of Yugoslavia (1918–1941).svg [1918,1941] svg en:Historical flags
+    en: ! scope="row" | | 1918–1941 | Flag of the Kingdom of Yugoslavia | Three equal horizontal bands in the pan-Slavic colors, blue (top), white, and red.
+- Flag of the State of Slovenes, Croats and Serbs.svg [1918] svg en:Historical flags
+    en: ! scope="row" | | 1918 | Flag of the State of Slovenes, Croats and Serbs | A horizontal tricolour of red, white, and blue.
+- Flag of the Slovene Home Guard.svg [1941,1943,1945] svg en:Historical development > Slovene flags d; en:Historical flags; sl:Zgodovina > Druga sve
+    en: ! scope="row" | | 1943–1945 | Flag of the Slovene Home Guard | The flag often featured a standard horizontal tricolor with the emblem or shield placed in the .
+    sl: 1:2 Zastava slovenskega domobranstva 1941–1945.
+- Flag of the Slovene Partisans.svg [1941,1946] svg en:Historical flags
+    en: ! scope="row" | | 1941–1946 | Flag of the Slovene Partisans | Three equal horizontal bands, white (top), blue, and red, with a red star in the central white band.
+- Slovenian Partisans flag.svg [1941] svg en:Historical development > Slovene flags d; sl:Zgodovina > Druga svetovna vojna in obdo
+    en: 1:2 Flag used by Slovene Partisans that was adopted on 26 September 1941 at the Stolice meeting of the Yugoslav Partisans.
+    sl: 1:2 Zastava slovenskih partizanov, sprejeta 26. septembra 1941 na konferenci jugoslovanskih partizanov v Stolicah
+- Flag of Slovenia (1945-1991).svg [1945,1991] svg en:Historical development > Slovene flags d; fr:Drapeau historique; sl:Zgodovina > Druga s
+    en: 1:2 Flag of SR Slovenia, 1945–1991.
+    fr: centre| Drapeau de l'ancienne République socialiste de Slovénie (1945-1991).
+    sl: 1:2 Zastava SR Slovenije, 1945–1991.
+- Yugoslav Partisans flag 1945.svg [1945,1946] svg en:Historical flags
+    en: ! scope="row" | | 1945–1946 | Flag of the Democratic Federal Yugoslavia | Three equal horizontal bands in the pan-Slavic colors, blue (top), white, and red, with a red star in the central white band.
+- Flag of SFR Yugoslavia.svg [1946,1991] svg en:Historical flags
+    en: ! scope="row" | | rowspan="2" | 1946–1991 | Flag of the Socialist Federal Republic of Yugoslavia | Three equal horizontal bands in the pan-Slavic colors, blue (top), white, and red, with a yellow-bord
+- Free Territory Trieste Flag.svg [1947,1954] svg en:Historical flags
+    en: ! scope="row" | | 1947–1954 | Flag of the Free Territory of Trieste | A red field with a white spear in the . |}
+- Flag of Slovenia Vertical.svg [1991] svg en:National flag
+    en: ! scope="row" | 150x150px | 1991–present | Flag of Slovenia (vertical) | |}
+- Flag of Slovenia.svg [1991] svg en:National flag
+    en: ! scope="row" | | 1991–present | Flag of Slovenia | A horizontal tricolor of white, blue, and red; charged with the coat of arms at the hoist side.

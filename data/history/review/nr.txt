@@ -1,0 +1,10 @@
+### nr  (en:Flag of Nauru, fr:Drapeau de Nauru)
+- Flag of Japan (1870-1999).svg [1870,1942,1945,1999] svg en:Historical flags of Nauru
+    en: ! scope="row" | | 1942–1945 | Flag of Nauru under the Japanese occupation of Nauru during World War II. | A white field with a red disc in the centre.
+- Reichskolonialflagge.svg [1899,1914] svg en:Historical flags of Nauru
+    en: ! scope="row" | | 1899–1914 | In 1899, the German Imperial Government took over the administration of German New Guinea through the Imperial Colonial Office, the flag of which was flown until the conq
+- Flag of Nauru.svg [1968] svg en:Historical flags of Nauru; fr:Histoire
+    en: ! scope="row" | | 1968–present | Current flag of Nauru adopted on 31 January 1968 following its independence from the trusteeship. | A blue field with a thin yellow horizontal stripe across the centre
+    fr: Nauru (depuis le )
+- Flag of the Nauru Pacific Line.svg [1969] svg en:Other flags of Nauru
+    en: ! scope="row" | | 1969–present | Flag of the Nauru Pacific Line | A blue field with a large white twelve-pointed star in the centre with an anchor inside the star.

@@ -1,0 +1,26 @@
+### iq  (en:Flag of Iraq, fr:Drapeau de l'Irak, ar:علم العراق)
+- Flag of Iraq (1921–1959).svg [1921,1959] svg ar:التاريخ > 1921–1958
+    ar: تصغير|150بك|1921-1959
+- Flag of Iraq 1924.svg [1921,1924,1959] svg fr:Histoire > 1921-1959
+    fr: 1921-1959 (ratio: 1:2)
+- Flag of the Arab Federation.svg [1921,1924,1958] svg ar:التاريخ > 1958; en:History > Iraq as part of the Arab Feder; fr:Histoire > 1958
+    en: 23 August 1921 – 10 July 1924 (ratio: 1:2), reused as Flag of the Arab Federation, of which Iraq was part, January 1, 1958 – December 31, 1958|200x200px
+    fr: 1958 (ratio: 1:2)
+    ar: تصغير|يسار| 1958
+- Flag of Iraq (1959–1963).svg [1959,1963] svg ar:التاريخ > 1959 - 1963; en:History > Qasimist Iraq (1959–1963); fr:Histoire > 1959-1963
+    en: January 1, 1959 – July 31, 1963 (ratio: 1:2)|200x200px
+    fr: 1959-1963 (ratio: 1:2)
+    ar: تصغير|150بك|1959-1963
+- Flag of Iraq (1963-1991).svg [1963,1991] svg fr:Histoire > 1963-1991
+    fr: 1963-1991 (ratio: 2:3)
+- Flag of Iraq, 1991-2004.svg [1991,2004] svg fr:Histoire > 1991-2004
+    fr: 1991-2004 (ratio: 2:3)
+- Flag of Iraq 2004-2008.svg [2004,2008] svg fr:Histoire > 2004-2008
+    fr: Ratio 2:3, avec écriture stylisée, utilisée de 2004 à 2008.
+- Flag of Iraq (construction sheet).svg [2008] svg ar:تصميم العلم > التصميم; en:Specifications
+    en: 22:January 2008 – present flag of Iraq (ratio: 2:3)
+    ar: مركز|350x350px|تصميم العلم.
+- Flag of Iraq.svg [2008] svg ar:التاريخ > 2008 - حتى الآن; en:History > 2008–present; fr:Histoire > Depuis 2008
+    en: 22 January 2008FOTW – present flag of Iraq (ratio: 2:3)
+    fr: Drapeau en vigueur depuis 2008. Les étoiles ont été retirées.
+    ar: تصغير|153بك|علم العراق 2008 - الآن

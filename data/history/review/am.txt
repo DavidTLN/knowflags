@@ -1,0 +1,92 @@
+### am  (en:Flag of Armenia, en:List of Armenian flags, fr:Drapeau de l'Arménie, hy:Հայաստանի դրոշ)
+- Bagratuni flag.svg [1045] svg hy:Պատմություն > Միջնադար
+    hy: Միջնադարյան Հայկական թագավորություն, Բագրատունիների (Բագրատունիների) տոհմի (885 մ.թ. - մ.թ. 1045 թթ.) դրոշը
+- FlagKilikia.svg [1080,1252] svg hy:Պատմություն > Միջնադար
+    hy: 23x15px Ռուբենյանների դինաստիայի դրոշներից մեկը (1080 մ. թ. — 1252 մ. թ.)
+- Flag of the Rubenid Dynasty.svg [1198,1219] svg en:Historical flags
+    en: ! scope="row" | | rowspan="3" | 1198–1219 | rowspan="3" | Reconstructed flag of the Armenian Kingdom of Cilicia under the Rubenid dynasty.
+- FlagKilikia.png [1226,1341] png en:Historical flags; hy:Պատմություն > Միջնադար
+    en: ! scope="row" | | 1226–1341 | Flag of the Armenian Kingdom of Cilicia under the Hethumid dynasty.
+    hy: Կիլիկիայի դրոշը, Հեթումյանների դինաստիայի օրոք (1226 մ.թ. - մ.թ. 1341)
+- Flag of Ayas as per Dalorto.png [1325] png en:History > Middle Ages
+    en: The flag of Ayas as shown on the Dalaroto atlas, now modern Yumurtalık (1325)
+- Flag of Ayas, Cilicia.png [1339] png en:History > Middle Ages
+    en: The flag of Medieval Ayas/Lajazzo, a port city of Armenian Kingdom of Cilicia, as shown on the Dulcert atlas, now modern Yumurtalık (1339)
+- Flag of Sebastia Catalan Atlas.png [1339,1375] png en:History > Middle Ages
+    en: The flag of Sebastia as seen on the Catalan Atlas and Dulcert atlas, now modern Sivas (1339) (1375)
+- Flag of Lusignan Armenia in Armorial Latin MS 28.png [1416] png en:History > Middle Ages
+    en: The flag of the Armenian Kingdom of Cilicia under the House of Lusignan according to Armorial Latin MS 28 by a Portuguese herald (1416)
+- Flag of Korikos.png [1428] png en:History > Middle Ages
+    en: The flag of medieval Corycus, a port city of Armenian Kingdom of Cilicia, shown on the Villadestes atlas kept in the Topkapi Museum, as well as in the Book of Knowledge of All Kingdoms (1428)
+- Flag of Tarson.png [1428] png en:History > Middle Ages
+    en: The flag of medieval Tarson, a port city of the Armenian Kingdom of Cilicia, as shown on the Villadestes atlas kept in the Topkapi Museum, now modern Tarsus (1428)
+- Flag of Alexandretta Jorge Aguiar Atlas.png [1492] png en:History > Middle Ages
+    en: The flag of Alexandretta as shown on the Jorge Aguiar atlas, now modern İskenderun (1492)
+- Flag of Cilician Armenia 1563.png [1563] png en:Historical flags; en:History > Middle Ages
+    en: 150x150px | | Flag attributed to Cilician Armenia as shown on Diogo Homem's Chart (1563)
+- Armenian Flag Khachen.png [1822] png hy:Պատմություն > Միջնադար
+    hy: Դրոշ Խաչենի Իշխանություն (Մ.թ. 885 - Մ.թ. 1822)
+- 1885ArmenianFlag.svg [1885] svg en:History > 19th century; fr:Histoire > ; hy:Պատմություն > Նոր ժամանակ
+    en: Reconstruction of Alishan's first flag (1885)
+    fr: Premier drapeau.
+    hy: 23x15px Ալիշանի նախագծած դրոշը 1885 թ
+- Flag of Administration of Western Armenia.svg [1915,1918] svg en:Historical flags; hy:Պատմություն > Ազդեցություն
+    en: ! scope="row" | | 1915–1918 | Flag of the Republic of Van
+    hy: Արևմտյան Հայաստանի վարչակազմի դրոշը
+- Flag of Armenia (1918–1922).svg [1918,1920,1922] svg hy:Պատմություն > Ազդեցություն; hy:Պատմություն > Արցախի Հանրապետության դրոշ
+    hy: Հայաստանի Առաջին Հանրապետության դրոշը 1918-1920
+- Flag of Armenia (3-2).svg [1918,1920] svg hy:Պատմություն > Նորագույն ժամանակը
+    hy: Հայաստանի Դեմոկրատական Հանրապետության դրոշը 1918-1920
+- Flag of Armenia (vertical).svg [1918] svg en:National flags
+    en: ! scope="row" | 150x150px | 1918–19221990–present | Flag of Armenia (vertical) | |}
+- Flag of Armenia.svg [1918,1990,1991] svg en:Historical flags; en:History > Armenian Soviet Socialist Repu; en:National flags; hy:Եր
+    en: ! scope="row" | | 1918–19221990–present | Flag of Armenia | A horizontal tricolour of red, blue, and orange.
+    hy: ! style="background: #eee"
+- Flag of the First Republic of Armenia.svg [1918,1922] svg en:Historical flags; en:History > First Republic of Armenia; fr:Histoire > République démo
+    en: ! scope="row" | | 1918 –February 1922 | Flag of the First Republic of Armenia
+    fr: Drapeau de la Première République d'Arménie.
+- Flag of the Transcaucasian Federation.svg [1918] svg en:Historical flags; fr:Histoire > République démocratique fédér; hy:Պատմություն > Ազդեցու
+    en: ! scope="row" | | 22 April 1918 –28 May 1918 | Flag of the Transcaucasian Democratic Federative Republic
+    fr: Drapeau de la RDFT.
+    hy: դրոշ Անդրկովկասյան Հանրապետություն (1918)
+- Flag of Armenian SSR (1920-1922).png [1920,1922] png hy:Պատմություն > Ազդեցություն
+    hy: Անկախ Հայաստանի Սոցիալիստական Խորհրդային Հանրապետություն 1920—1922
+- Flag of the Armenian Soviet Socialist Republic (1920-1922).png [1920,1922,1937] png en:History > Armenian Soviet Socialist Repu
+    en: Flag of the Armenian SSR(1922-1937)
+- Flag of SSRA.svg [1922] svg en:Historical flags; fr:Histoire > République socialiste fédérat
+    en: ! scope="row" | | Feb. 1922 –Mar. 1922 | Flag of the Socialist Soviet Republic of Armenia
+    fr: Drapeau de la RSSA.
+- Flag of Transcaucasian SFSR.svg [1922,1936] svg fr:Histoire > République socialiste fédérat; hy:Պատմություն > Ազդեցություն
+    fr: Drapeau de la RSFST.
+    hy: Флаг Անդրկովկասյան ԽՍՀՄ 1922—1936
+- Flag of the Armenian Soviet Socialist Republic (1922).svg [1922,1923,1936] svg en:History > Armenian Soviet Socialist Repu; hy:Պատմություն > Ազդեցություն
+    en: Depiction of the flag of the Armenian SSR in Cyrillic(1923)
+    hy: Հանրապետությունը ЗСФСР-ի կազմում 1922—1936
+- Flag of the Transcaucasian SFSR.svg [1922,1936] svg en:Historical flags
+    en: ! scope="row" | | Mar. 1922 – 1936 | Flag of the Transcaucasian SFSR
+- Flag of the Armenian Soviet Socialist Republic (1936–1940).svg [1936,1937,1940] svg en:History > Armenian Soviet Socialist Repu; fr:Histoire > République socialiste soviéti
+    en: Flag of the Armenian SSR(1937−1940)
+    fr: 1936-1940
+- Flag of the Armenian Soviet Socialist Republic (1937–1940).svg [1936,1937,1940] svg en:Historical flags; hy:Պատմություն > Ազդեցություն
+    en: ! scope="row" | | 1936–1940 | Flag of the Armenian Soviet Socialist Republic
+    hy: 1937—1940
+- Flag of Armenian SSR (1940-1952).svg [1940,1952] svg en:Historical flags; fr:Histoire > République socialiste soviéti; hy:Պատմություն > Ազդեցու
+    en: ! scope="row" | | 1940–1952 | Flag of the Armenian Soviet Socialist Republic
+    fr: 1940-1952
+    hy: 1940—1952
+- Flag of the Armenian Soviet Socialist Republic (1940–1952).svg [1940,1952] svg en:History > Armenian Soviet Socialist Repu
+    en: Flag of the Armenian SSR(1940−1952)
+- Flag of Armenian SSR.svg [1952,1990] svg en:History > Armenian Soviet Socialist Repu; fr:Histoire > République socialiste soviéti; 
+    en: Flag of the Armenian SSR, obverse(1952–1990)
+    fr: 1952-1990
+    hy: 1952—1990
+- Flag of the Armenian Soviet Socialist Republic (1952–1990).svg [1952,1990] svg en:Historical flags
+    en: ! scope="row" | | rowspan="2" | 1952–1990 | Flag of the Armenian Soviet Socialist Republic
+- Flag of the Armenian Soviet Socialist Republic (1952–1990, reverse).svg [1952,1990] svg en:Historical flags; en:History > Armenian Soviet Socialist Repu
+    en: ! scope="row" | | Reverse flag. All flags of the constituent republics of the Soviet Union did not bear the hammer and sickle on their reverse side.
+- Flag of the President of Armenia.svg [1990] svg en:President's flag
+    en: ! scope="row" | | 1990–present | Flag of the president of Armenia | |}
+- Flag of Artsakh.svg [1992,2023] svg en:Armenian people in other countries; en:Influence > Flag of Artsakh
+    en: Flag of the Republic of Artsakh was the Armenian flag defaced with the white sideways zig-zag chevron in the fly.
+- Flag of Western Armenia.png [2004] png en:Armenian people in other countries
+    en: ! scope="row" | | 2004–present | Flag of Western Armenia

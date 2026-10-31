@@ -1,0 +1,9 @@
+### bn  (en:Flag of Brunei, en:List of Bruneian flags, fr:Drapeau de Brunei, ms:Bendera Brunei)
+- Old Flag of Brunei.svg [1368,1888,1906] svg en:Historical flags
+    en: ! scope="row" | 150x75px | 1368–1906 | Flag of the Bruneian Sultanate | A simple yellow field. | 1:2
+- Flag of Brunei 1906-1959.svg [1906,1959] svg en:Historical flags; ms:intro
+    en: Flag from 1906 to 1959
+    ms: 248x248px| Bendera Brunei (1906 - 1959)
+- Flag of Brunei.svg [1959] svg en:National flags; ms:intro
+    en: ! scope="row" | 150x75px | 1959–present | National flag of Brunei | A centred red crest of Brunei on a yellow field cut by black and white diagonal stripes (parallelograms). | 1:2 |}
+    ms: kiri| Bendera Brunei (1959)

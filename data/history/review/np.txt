@@ -1,0 +1,87 @@
+### np  (en:Flag of Nepal, en:List of non-rectangular flags, en:List of national flags of sovereign states, fr:Drapeau du Népal, ne:नेपालको झन्डा)
+- Flag of Hungary (895-1000).svg [1000] svg en:Former flags
+    en: Hungary ! scope="row" | |895–1000
+- Raven Banner.svg [1013,1042] svg en:Former flags
+    en: North Sea Empire ! scope="row" | |1013–1042
+- Flag of Hungary (11th-12th century).svg [1102,1163] svg en:Former flags
+    en: Kingdom of Hungary ! scope="row" | |1102–1163
+- Banovina Bosna zastava.png [1154,1277] png en:Former flags
+    en: Bosnian Banate ! scope="row" | |1154–1277
+- Alex K Halych-Volhynia-flag.svg [1199,1349] svg en:Former flags
+    en: Kingdom of Galicia–Volhynia ! scope="row" | |1199–1349
+- Kanem flag from dulcerta 1339-pt.svg [1339] svg en:Former flags
+    en: Kanem–Bornu Empire ! scope="row"
+- Banner of the Novgorod Republic (c. 1385).svg [1385] svg en:Former flags
+    en: Novgorod Republic ! scope="row" | |1385
+- Royal Banner of Aragón.svg [1413,1516] svg en:Former flags
+    en: Crown of Aragon ! scope="row" | |1413–1516
+- Flag of Kingdom of Kakheti.svg [1465,1762] svg en:Former flags
+    en: Kingdom of Kakheti ! scope="row" | |1465–1762
+- Speculative flag of the Bengal Sultanate as depicted by Fernão Vaz Dourado (1576).png [1492,1538,1576] png en:Former flags
+    en: Bengal Sultanate (Hussain Shahi Dynasty) ! scope="row" | | 1492–1538 | Dynastial flag
+- Banner of the Most Merciful Savior, 1552.svg [1552] svg en:Former flags
+    en: Banner of Ivan the Terrible in the Siege of Kazan ! scope="row"
+- Flag of Awadh.svg [1572,1856] svg en:Former flags
+    en: Oudh State ! scope="row" | |1572–1856
+- Flag carried during a Ternatean king ceremony, de Bry (1601).svg [1601] svg en:Former flags
+    en: Sultanate of Ternate ! scope="row" | |16th to 17th century
+- Flag of Republic of Venice (1659-1675).svg [1659,1675] svg en:Former flags
+    en: Republic of Venice ! scope="row" | | |Banner of Saint Mark
+- Flag of Jaipur (c. 1699-1818).svg [1699,1818] svg en:Former flags
+    en: Jaipur State ! scope="row" | |1699–1818
+- Flag of Gwalior (State).svg [1731,1818] svg en:Former flags
+    en: Gwalior State ! scope="row" | |1731–1818
+- Flag of Nepal (19th century).svg [1768,1846,1856] svg en:Former flags
+    en: rowspan="3" |Nepal ! scope="row" | |c. 1846–1856 | rowspan="3" |Since its establishment in 1768, Nepal has changed its flag multiple times, each time to a non-rectangular flag.
+- Flag of Nepal (1775–1962).svg [1775,1962] svg fr:Modernisation
+    fr: =0.6| Drapeau avant la modernisation de 1962.
+- Tunisian flag till 1831.svg [1831] svg en:Former flags
+    en: Ottoman Tunisia ! scope="row"
+- Flag of Jammu and Kashmir (1836-1936).png [1836,1936] png en:Former flags
+    en: Jammu and Kashmir State ! scope="row" | |1836–1936
+- Flag of Nepal (1856-c.1930).svg [1856,1930] svg en:Former flags; en:History
+    en: 200x200px| Flag of Nepal (1856–)
+- Flag of China (1862–1889).svg [1862,1889] svg en:Former flags
+    en: rowspan="2" |Qing dynasty ! scope="row" | |1862–1889
+- Flag of Cambodia (pre-1863).svg [1863,1864] svg en:Former flags
+    en: Cambodia ! scope="row" | |Pre-1864
+- Flag of macedonian revolutionaries 1878.svg [1878] svg en:Former flags
+    en: West Macedonia ! scope="row"
+- Flag of Brazil.svg [1889] svg en:Flags of UN member states and General As
+    en: !scope="row"|Brazil | | | |Green with a large yellow diamond in the bearing a blue globe with 27 white stars (one for each state and the Federal District) arranged as in the sky over Rio de Janeiro at
+- Flag of the Imamate of Futa Djallon (1896-1912).svg [1896,1912] svg en:Former flags
+    en: ! scope="row" | | 1896–1912
+- Flag of the Imamate of Futa Djallon (pre-1896).svg [1896] svg en:Former flags
+    en: rowspan="2" |Jallon ! scope="row" | |pre-1896
+- Postal Flag of Norway.svg [1899] svg en:Former flags
+    en: Postal Flag of Norway ! scope="row" | |1899
+- Flag of Lebanon.svg [1901,1993] svg en:Flags of UN member states and General As
+    en: !scope="row"|Lebanon |rowspan="2"| | | |Three horizontal bands consisting of red (top), white (middle, double width), and red (bottom) with a green cedar tree centered in the white band. |; see also "
+- Flag of the Idrisid Emirate of Asir (1909-1930).svg [1909,1927,1930] svg en:Former flags
+    en: Idrisid Emirate of Asir ! scope="row" | |1909–1927
+- Flag of Bogd Khaanate Mongolia.svg [1911,1920,1921,1924] svg en:Former flags
+    en: Bogd Khanate of Mongolia ! scope="row" | |1911–1920 1921–1924
+- Flag of India 1917.svg [1917] svg en:Former flags
+    en: India ! scope="row" | |1917 |Indian Home Rule movement
+- Flag of the Mongolian People's Republic (1924–1930).svg [1924,1930] svg en:Former flags
+    en: rowspan="2" |Mongolian People's Republic ! scope="row" | |1924–1930
+- Flag of the Province of the Carnaro.svg [1924,1947] svg en:Former flags
+    en: Province of Carnaro ! scope="row" | |1924–1947
+- Flag of the Mongolian People's Republic (1930–1940).svg [1930,1940] svg en:Former flags
+    en: ! scope="row" | |1930–1940
+- Flag of the Republic of China-Nanjing (Peace, Anti-Communism, National Construction).svg [1940,1943] svg en:Former flags
+    en: Republic of China (Wang Jingwei regime) ! scope="row" | |1940–1943 |Flag of China
+- Flag of Allied Occupied Japan.svg [1945,1952] svg en:Former flags
+    en: Allied-Occupied Japan ! scope="row" | |1945–1952
+- Rose Island Micronation flag.svg [1968,1969] svg en:Former flags
+    en: Republic of Rose Island | 100x100px |1968–1969 |A micronation
+- Flag of the Holy Empire of Reunion.svg [1997] svg en:Current flags > Private entities
+    en: Holy Empire of Reunion ! scope="row" | |1997–present |A micronation based in Réunion.
+- POL Kalisz flag (2004-2018).svg [2004,2018] svg en:Former flags
+    en: Kalisz ! scope="row" | |2004–2018
+- Flag of Lithuania.svg [2006] svg en:Flags of UN member states and General As
+    en: !rowspan="2" scope="row"|Lithuania | | |Three equal horizontal bands of yellow (top), green, and red. |rowspan="2"|Seimas of Lithuania – History of the National Flag . Retrieved 15 December 2006
+- Flag of Afghanistan (2013–2021).svg [2013,2021] svg en:Flags of UN member states and General As
+    en: Three equal vertical bands of black (hoist side), red, and green, with the national emblem in white centered on the red band and slightly overlapping the other 2 bands.
+- Flag of Vatican City (2023–present).svg [2023] svg en:Flags of UN member states and General As
+    en: !scope="row"|Vatican City | | | |Two vertical bands of yellow (hoist side) and white with the arms of the Holy See, consisting of the crossed keys of Saint Peter surmounted by the three-tiered papal t

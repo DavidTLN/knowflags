@@ -1,0 +1,43 @@
+### au  (en:Flag of Australia, en:List of Australian flags, fr:Drapeau de l'Australie)
+- Flag of Great Britain (1707-1800).svg [1707,1770,1800,1801] svg en:Historical flags > Historical official f
+    en: ! scope="row" | | 1770–1801 | Union Flag | The Union Flag of the Kingdom of Great Britain. First raised in Australia by Captain Cook in April 1770 at Botany Bay.
+- City of Hobart Flag.svg [1760,1804,1816,1951,1953] svg en:Local flags
+    en: ! scope="row" | | | Flag of the City of Hobart | The flag of Hobart City Council, of Tasmania, Australia. Designed in 1951 by Hobart architect and alderman, I.G. Anderson and first flown in 1953. The 
+- Flag of the United Kingdom (1-2).svg [1801,1953] svg en:Historical flags > Historical official f
+    en: ! scope="row" | | 1801–present | Union Flag | The Union Flag of the United Kingdom and the British Empire. Given priority over what is now known as the Australian National Flag until the passage of th
+- Murray River Flag (Lower).svg [1850] svg en:Local flags
+    en: ! scope="row" | | 1850–present | Lower Murray River Flag | Flown by vessels on the lower reaches of the Murray River, predominantly in South Australia. The blue bars are said to represent the four maj
+- Murray River Flag (Upper).svg [1850] svg en:Local flags
+    en: ! scope="row" | | 1850–present | Upper Murray River Flag | Flown by vessels on the upper reaches of the Murray River, predominantly in Victoria. The blue bars are said to represent the four major rive
+- Flag of South Australia (1870–1876).svg [1870,1876] svg en:Historical flags > Historical official f
+    en: ! scope="row" | | 1870–1876 | rowspan="2" | Flag of South Australia
+- Flag of Queensland (1901–1963).svg [1876,1901,1963] svg en:Historical flags > Historical official f
+    en: ! scope="row" | | 1876–1963 | Flag of Queensland
+- Flag of South Australia (1876–1904).svg [1876,1904] svg en:Historical flags > Historical official f
+    en: ! scope="row" | | 1876–1904
+- Flag of Victoria (1877).svg [1877] svg en:Historical flags > Historical official f
+    en: ! scope="row" | | 1877 | Flag of Victoria
+- Copyrighted flag.svg [1886,1992,1996,2007,2008] svg en:Local flags; en:Nationally proclaimed flags of Indigenou
+    en: ! scope="row" | link=File:Flag of Toowoomba, Queensland, Australia.png| | 2008–present | Flag of Toowoomba | A new Toowoomba flag was created in 2007 and became the official flag of the Toowoomba Regi
+- Flag of Australia (1901–1903).svg [1901,1903] svg en:Historical flags > Historical official f; fr:Composition du dessin du Drapeau fédéral
+    en: ! scope="row" | | 1901–1903 | Original 1901 Federal Flag Design Competition winner | A Blue Ensign defaced with the six-point Commonwealth Star in the lower hoist quarter and the five stars of the Sou
+    fr: {| cellspacing=3 cellpadding=3 style="background:#fff;" |width= align= bordure|Un des nombreux dessins rejetés |width= align= bordure|Dessin gagnant |width= align= bordure|Dessin approuvé par le roi É
+- Flag of Australia (1903–1908).svg [1903,1908] svg en:Historical flags > Historical official f; fr:Composition du dessin du Drapeau fédéral
+    en: ! scope="row" | | 1903–1908 | Australian flag as approved by King Edward VII | Flag modified so that all stars of southern cross have seven points, except the smallest star with five points.
+    fr: {| cellspacing=3 cellpadding=3 style="background:#fff;" |width= align= bordure|Un des nombreux dessins rejetés |width= align= bordure|Dessin gagnant |width= align= bordure|Dessin approuvé par le roi É
+- Flag of Brisbane.svg [1947] svg en:Local flags
+    en: ! scope="row" | | 1947–present | Flag of the City of Brisbane | Blue background (representing the Brisbane River) bordered by a golden checker pattern (representing the Sun and Brisbane's warm climate
+- Flag of Perth.svg [1949] svg en:Local flags
+    en: ! scope="row" | | 1949–present | Flag of the City of Perth | Saint George's Cross overlaid with the City of Perth coat of arms in the centre.
+- Australian Aboriginal Flag.svg [1971,1995] svg en:Nationally proclaimed flags of Indigenou; en:Other Australian flags
+    en: ! scope="row" | | 1971–present | Australian Aboriginal flag | A black and red flag with a yellow circle in the middle. The flag was designed in 1971 by Harold Thomas. | rowspan="2"
+- Flag of Papua New Guinea.svg [1971,1975] svg en:Historical flags > Historical official f
+    en: ! scope="row" | | 1971–1975 | Flag of the Territory of Papua and New Guinea | The upper triangle is red with the soaring Raggiana bird-of-paradise and the lower triangle is black with the Southern Cro
+- Flag of Adelaide.svg [1982] svg en:Local flags
+    en: ! scope="row" | | 1982–present | Armorial flag of the City of Adelaide | Blue background divided into four quarters by a Saint George's Cross outlined in gold overlain with the Arms of the City of Ade
+- Flag of Scotland Island.svg [1996] svg en:Local flags
+    en: ! scope="row" | | 1996–present | Flag of Scotland Island, New South Wales | |}
+- Flag of Darwin.svg [2009] svg en:Local flags
+    en: ! scope="row" | | 2009–present | Flag of the City of Darwin | According to council policy, Darwin maintains both the coat of arms flag and a logo flag.
+- Australian Border Force Flag.svg [2015] svg en:Other official federal flags
+    en: ! scope="row" | | 2015–present | Australian Border Force Flag | The Australian national flag defaced with "AUSTRALIAN BORDER FORCE" |}

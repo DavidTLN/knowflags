@@ -1,0 +1,65 @@
+### ir  (en:Flag of Iran, en:List of Iranian flags, en:List of Iranian flags, fr:Drapeau de l'Iran, fa:پرچم ایران)
+- Flag of Nizari Ismaili state (1090-1162).svg [1090,1162] svg en:Historical flags > Historical state flag
+    en: ! scope="row" | | 1090–1162 | First flag of the Nizari Ismaili state | Plain green flag
+- Flag of Nizari Ismaili state (1162-1256).svg [1162,1256] svg en:Historical flags > Historical state flag
+    en: ! scope="row" | | 1162–1256 | Second flag of the Nizari Ismaili state | Plain red flag
+- Flag of the Ilkhanate.svg [1258,1432] svg en:Historical flags > Historical state flag
+    en: ! scope="row" | | 1258–1432 | Flag of the Ilkhanate and the Jalayirid Sultanate | A scarlet square on a golden field
+- Flag of Persia (1502–1524).png [1501,1502,1524] png en:Historical flags > Historical state flag; fr:Historique
+    en: ! scope="row" | | 1501–1524 | Flag of the Safavid dynasty | A yellow circle represents the sun on a green background.
+    fr: 1502-1524 | |Séfévides |Drapeau d’Ismail I, vert et pleine lune d’or dans la partie supérieure.
+- Imperial Flag of Nader Shah (2nd Series) - No. 1.svg [1736,1747] svg en:Historical flags > Other historical flag; en:History > Afsharid era > Flags; fa:تاریخچه
+    en: ! scope="row" | | 1736–1747 | Standard of Nader Shah | Ten stripes – five yellow and five red.
+    fa: یکی از دو پرچم سری دوم پرچم‌های شاهنشاهی نادر شاه
+- Naderian Afsharid Flag 1.png [1736,1747] png en:Historical flags
+    en: Diplomatic flag of Nader Shah(1736–1747)
+- Zand Dynasty flag.svg [1750,1751,1794] svg en:Historical flags > Historical state flag; en:History > Zand era > Flags; fr:Historique
+    en: ! scope="row" | | 1751–1794 | A Zand flag | Green-edged Lion and Sun standard
+    fr: 1750-1794 | |Dynastie Zand |Drapeau triangulaire blanc, bordé de vert, avec l’emblème du lion surmonté d’un globe solaire.
+- Zand "Ya Karim" Flag.svg [1751,1779] svg en:Historical flags > Other historical flag; en:History > Zand era > Flags
+    en: ! scope="row" | | 1751–1779 | Flag of Karim Khan | The "Ya Karim" flag, which was a pun on Karim Khan Zand's name, and Al-Karim (the generous), which was one of the Islamic names of God.
+- Flag of Agha Mohammad Khan.svg [1779,1789,1797] svg en:Historical flags > Historical state flag; en:History > Early Qajar era > Flags; fr:Hist
+    en: ! scope="row" | | 1789–1797 | Flag of the Qajar dynasty | A red background with a lion in a circle in middle of it.
+    fr: 1779- | |Dynastie Qadjar |Drapeau de Agha Mohammad Shah. Le lion porte désormais une épée.
+- Fath Ali Shah Flag 1.svg [1797,1834] svg en:Historical flags; en:History > Early Qajar era > Flags
+    en: Diplomatic flag of Fat'h Ali Shah Qajar (1797–1834)
+- Mohammad Shah Qajar Flag.svg [1797,1896] svg en:Historical flags; en:Historical flags > Historical state flag; en:History > Early Qajar
+    en: ! scope="row" | | 1797–1896 | Flag of the Qajar dynasty | A white background with the Lion and Sun on it.
+- Peace Flag of Fath Ali Shah (with sword).svg [1797,1834] svg en:Historical flags; en:History > Early Qajar era > Flags
+    en: Peace flag of Fat'h Ali Shah Qajar (1797–1834)
+- Flag of the Yerevan Khanate.svg [1801,1828] svg en:Historical flags > Other historical flag
+    en: ! scope="row" | | 1801–1828 | Flag of Eriwan Khanate during the reign of Fath Ali Shah Qajar and Russo-Persian Wars
+- Amir Kabir Flag.svg [1848,1852] svg en:Historical flags; en:Historical flags > Historical state flag; en:History > Early Qajar
+    en: ! scope="row" | | 1848–1852 | Flag of the Qajar dynasty | The green and red was added.
+    fr: Dynastie Qadjar |Drapeau introduit par Amir Kabir entre 1848 et 1852, il place le lion impérial sur fond blanc entre deux bandes rouge et verte.
+    fa: بازسازی بیرق مخصوص به ابنیه و عمارات سلطنت و سربازخانه‌ها و بنادر و هر چه متعلق به دولت و سلطنت است. (بیرق نمرهٔ هشتم کتاب «کُرّاسهٔ اَلمَعی» مربوط به اواخر دورهٔ ناصرالدین شاه)
+- Tricolour Flag of Iran (1886).svg [1886] svg en:Historical flags > Historical state flag; en:History > Early Qajar era > Flags; fa:تاری
+    en: ! scope="row" | | 1886 | Flag of the Qajar dynasty | A horizontal tricolor of green, white, and red with the Iranian lion surrounded in the middle, overlapping the tricolors.
+    fa: بازسازی بیرقی دیگر که بالای ابنیهٔ دولتی و سلطنتی افراشته می‌شود. (بیرق نمرهٔ نهم کتاب «کُرّاسهٔ اَلمَعی» مربوط به اواخر دورهٔ ناصرالدین شاه)
+- Early 20th Century Qajar Flag.svg [1896,1906,1907] svg en:Historical flags; en:Historical flags > Historical state flag; en:History > Early Qajar
+    en: ! scope="row" | | 1896–1907 | Flag of the Qajar dynasty | Without red borders.
+    fr: Fin XIX-1906 | |Dynastie Qadjar |Drapeau persan introduit durant le règne de Mozaffaredin Shah.
+    fa: بندانگشتی|پرچم ایران که در بیشتر سفرهای خارجی ناصرالدین شاه و مظفرالدین شاه و نیز نمایشگاه‌های جهانی دوران این دو شاه به کار می‌رفت.|جایگزین=
+- State flag of Persia (1907–1933).svg [1906,1907,1925,1933] svg en:Historical flags; en:Historical flags > Historical state flag; fr:Historique
+    en: ! scope="row" | | 1907–1933 | Flag of the Qajar dynasty and the Pahlavi dynasty | A longer horizontal tricolor of green, white, and red with the Iranian lion surrounded in the middle
+    fr: 1906-1925 | |Dynastie Qadjar |Drapeau national adopté durant la révolution constitutionnelle de l'Iran, les couleurs reçoivent une symbolique : le vert représente l’islam, le rouge, le sang des martyr
+- Lion and Sun flag.svg [1907,1964,1979,1980] svg en:Historical flags; en:Historical flags > Historical state flag
+    en: ! scope="row" | | 1964–1980 | State flag and ensign of the absolute monarchy of Iran under the Pahlavi dynasty and represented to the wider Iranian diaspora and the Iranian opposition | This flag was 
+- Flag of Persia in 1917.png [1917] png fa:تاریخچه > پرچم مشروطیت ایران
+    fa: بندانگشتی| پرچم‌های ایران در سال ۱۹۱۷ م (دوران پادشاهی احمد شاه قاجار) در کتاب پرچم‌های جهان نشر «جامعهٔ جغرافیایی ملی» ایالات متحدهٔ آمریکا
+- State Flag of Iran (1925).svg [1925,1933,1964] svg en:Historical flags
+    en: State flag(1933–1964)
+- Flag of Iran (1964).svg [1964] svg fa:تاریخچه > ویژگی‌های پرچم در دورهٔ پهلوی 
+    fa: ۴:۷ پرچم شهروندی (مدنی) ایران تا سال ۱۳۳۷ ه‍.خ (هر چند که از این پرچم تا انقلاب اسلامی استفاده می‌شد.)
+- State flag of Iran (1964–1980).svg [1964,1979,1980] svg fr:Historique
+    fr: 1964-1979 | |Dynastie Pahlavi |À la suite de la révolution blanche, le drapeau national, qui reprend le modèle précédent, adopte les proportions internationales.
+- First Flag of I.R.Iran.svg [1980] svg en:Historical flags; en:Historical flags > Historical state flag; fa:تاریخچه > پرچم جمهوری
+    en: ! scope="row" | | 1980 | First flag of the Islamic Republic of Iran | A horizontal tricolor of green, white, and red with the emblem in the middle |}
+    fa: نخستین پرچم جمهوری اسلامی ایران از ۱۰ بهمن ۱۳۵۸ تا ۱۵ تیر ۱۳۵۹
+- Flag of Iran.svg [1980] svg en:Historical flags; en:National flag; fa:تاریخچه > پرچم جمهوری اسلامی ایران; fr:Historiqu
+    en: ! scope="row" | | 1980–present | Flag of Iran | A horizontal tricolor of green, white, and red with the national emblem in red centred on the white band and the Takbir written in a Kufic script in whi
+    fr: 1980-présent | |République islamique d'Iran |Drapeau actuel. |}
+    fa: پرچم جمهوری اسلامی ایران با دومین طراحی الله اکبر
+- IRI flag with the first takbir design.svg [1980] svg en:National flag; fa:تاریخچه > پرچم جمهوری اسلامی ایران
+    en: ! | 1980 | Flag of Iran with the banned first Takbir design | A horizontal tricolor of green, white, and red with the national emblem in red centred on the white band and the Takbir written in a diffe
+    fa: پرچم جمهوری اسلامی ایران با نخستین طراحی الله اکبر

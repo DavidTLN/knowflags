@@ -1,0 +1,8 @@
+### sc  (en:Flag of Seychelles, fr:Drapeau des Seychelles)
+- Flag of Seychelles (1903–1961).svg [1903,1961] svg en:History > 1903–1976
+- Flag of Seychelles (1961–1976).svg [1961,1976] svg en:History > 1903–1976
+- Flag of Seychelles (1976–1977).svg [1976,1977] svg en:History > 1976–1996; fr:intro
+    fr: Premier drapeau des Seychelles (1976-1977)
+- Flag of the President of Seychelles (1976–1977).svg [1976,1977] svg en:History > 1976–1996
+- Flag of Seychelles (1977–1996).svg [1977,1996] svg en:History > 1976–1996; fr:intro
+    fr: Deuxième drapeau des Seychelles (1977-1996)

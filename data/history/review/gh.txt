@@ -1,0 +1,52 @@
+### gh  (en:Flag of Ghana, en:List of Ghanaian flags, fr:Drapeau du Ghana)
+- PortugueseFlag1385.svg [1385,1482,1485] svg en:Historical flags
+    en: ! scope="row" | | 1482–1485 | Flag of the Kingdom of Portugal (Portuguese Gold Coast) | Five blue escutcheons each charged with an undetermined number of bezants on a white field. Border: red with yel
+- PortugueseFlag1485.svg [1485,1495] svg en:Historical flags
+    en: ! scope="row" | | 1485–1495 | Flag of the Kingdom of Portugal (Portuguese Gold Coast) | Five blue escutcheons each charged with five bezants on a white field. Border: red with seven yellow castles.
+- Flag of Portugal (1495).svg [1495,1521] svg en:Historical flags
+    en: ! scope="row" | | 1495–1521 | Flag of the Kingdom of Portugal (Portuguese Gold Coast) | A white field with the Portuguese coat of arms in the centre.
+- Flag of Portugal (1521).svg [1521,1578] svg en:Historical flags
+    en: ! scope="row" | | 1521–1578 | Flag of the Kingdom of Portugal (Portuguese Gold Coast) | A white field with the Portuguese coat of arms in the centre.
+- Flag of Portugal (1578).svg [1578,1640] svg en:Historical flags
+    en: ! scope="row" | | 1578–1640 | Flag of the Kingdom of Portugal (Portuguese Gold Coast) | A white field with the Portuguese coat of arms in the centre.
+- Prinsenvlag.svg [1612,1795] svg en:Historical flags
+    en: ! scope="row" | | 1612–1795 | The Prince's Flag of the Dutch Republic (Dutch Gold Coast) | A horizontal tricolour of orange, white, and blue.
+- Flag of Portugal (1616).svg [1616,1640] svg en:Historical flags
+    en: ! scope="row" | | 1616–1640 | Flag of the Kingdom of Portugal (Portuguese Gold Coast) (putative flag) | A white field with the Portuguese coat of arms in the centre.
+- Flag of England.svg [1631,1700] svg en:Historical flags
+    en: ! scope="row" | | 1631–16371663–1700 | Flag of the Kingdom of England (English Gold Coast) | A white field with centred red cross.
+- Flag of Portugal (1640).svg [1640,1642] svg en:Historical flags
+    en: ! scope="row" | | 1640–1642 | Flag of the Kingdom of Portugal (Portuguese Gold Coast) | A white field with the Portuguese coat of arms in the centre.
+- Statenvlag.svg [1652,1672] svg en:Historical flags
+    en: ! scope="row" | | 1652–1672 | States Flag of the Dutch Republic (Dutch Gold Coast) | A horizontal tricolour of red, white, and blue.
+- Flag of Denmark.svg [1658,1850] svg en:Historical flags
+    en: ! scope="row" | | 1658–1850 | Flag of Denmark–Norway and the Kingdom of Denmark (Danish Gold Coast) | A red field charged with a white Nordic cross that extends to the edges; the vertical part of the 
+- Flag of Brandenburg (1660–1750).svg [1660,1682,1701,1750] svg en:Historical flags
+    en: ! scope="row" | | 1682–1701 | Flag of the Margraviate of Brandenburg (Brandenburger Gold Coast) | Seven horizontal stripes alternating white and black; with a red eagle off-centred toward the hoist.
+- Flag of the Kingdom of Prussia (1701-1750).svg [1701,1721,1750] svg en:Historical flags
+    en: ! scope="row" | | 1701–1721 | Flag of the Kingdom of Prussia (Prussian Gold Coast) | A black eagle holding a sword and rod on a white field, a crown on top.
+- Flag of France (1794–1815, 1830–1974, 2020–present).svg [1794,1795,1813,1815,1830,1974] svg en:Historical flags
+    en: ! scope="row" | | 1795–1813 | Flag of the French First Republic and the First French Empire (French occupied Dutch Gold Coast) | A vertical tricolour of blue, white, and red.
+- Flag of the Batavian Republic.svg [1795,1806] svg en:Historical flags
+    en: ! scope="row" | | 1795–1806 | Flag of the Batavian Republic | A horizontal triband of red, white, and blue with the Republic's emblem in the canton.
+- Flag of the United Kingdom (1-2).svg [1801,1960] svg en:Historical flags
+    en: ! scope="row" | | 1801–1960 | Flag of the United Kingdom | A superimposition of the flags of England and Scotland with the Saint Patrick's Saltire (representing Ireland).
+- Flag of the Netherlands.svg [1806,1872] svg en:Historical flags
+    en: ! scope="row" | | 1806–1872 | Flag of the Kingdom of Holland, the Sovereign Principality of the United Netherlands, the United Kingdom of the Netherlands and the Kingdom of the Netherlands (Dutch Gold
+- Flag of Germany (1867–1918).svg [1867,1884,1916,1918] svg en:Historical flags
+    en: ! scope="row" | | 1884–1916 | Flag of the German Empire (German Togoland) | A tricolour, made of three equal horizontal bands coloured black (top), white, and red (bottom).
+- Flag of the Gold Coast (1877–1957).svg [1877,1957] svg en:Historical flags; en:History; fr:Anciens drapeaux
+    en: ! scope="row" | | 1877–1957 | Flag of the British Gold Coast | A blue ensign defaced with the emblem of the Gold Coast.
+    fr: Drapeau de la colonie britannique de la Côte-de-l'Or (avant le ).
+- Reichskolonialflagge.svg [1884,1916] svg en:Historical flags
+    en: ! scope="row" | | 1884–1916 | Colonial flag of the German Empire | A tricolour, made of three equal horizontal bands coloured black (top), white, and red (bottom) with the Reichsadler in the centre.
+- Flag of Ghana.svg [1957,1964,1966] svg en:Historical flags; en:National flag
+    en: ! scope="row" | | 1966–present | Flag of Ghana | A horizontal triband of red, gold, and green, charged with a black star in the centre."Mrs Theodosia Okoh: The Woman Who Designed The Ghanaian Flag", A
+- Flag of the Union of African States (1958-1961).svg [1958,1959,1961] svg en:Historical flags; en:History; fr:Anciens drapeaux
+    en: ! scope="row" | | 1958–1961 | Flag of the Union of African States | A horizontal tricolour of red, gold, and green, charged with two black stars on the yellow band.
+    fr: Drapeau de l'Union des États africains de 1958 à 1959
+- Flag of the Union of African States (1961-1962).svg [1959,1961,1962,1963] svg en:History; fr:Anciens drapeaux
+    en: Second flag of the Union of African States, used between 1961 and 1963 (after Mali joined).
+    fr: Drapeau de l'Union des États africains de 1959 à 1962
+- Flag of Ghana (1964-1966).svg [1964,1966] svg en:History
+    en: Ghana national flag (1964–66).

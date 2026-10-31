@@ -1,0 +1,12 @@
+### ne  (en:Flag of Niger, en:List of Nigerien flags, fr:Drapeau du Niger)
+- Kanem flag from dulcerta 1339-pt.svg [1339,1380] svg en:Historical flags > Kanem–Bornu Empire
+    en: ! scope="row" | | 700–1380 | Flag of the Kanem Empire | A white field with a green palm tree in the .
+- Flag of the Bornu Empire.svg [1380,1890] svg en:Historical flags > Kanem–Bornu Empire
+    en: ! scope="row" | | 1380–1890 | Flag of the Bornu Empire | A brown field with a white crescent moon in the . |}
+- Flag of Free France (1940-1944).svg [1940,1943,1944] svg en:Historical flags > French rule
+    en: ! scope="row" | | 1943–1944 | Flag of Free France | A vertical tricolour of blue, white, and red with a red Cross of Lorraine. |}
+- Flag of Philippe Pétain, Chief of State of Vichy France.svg [1940,1942] svg en:Historical flags > French rule
+    en: ! scope="row" | | 1940–1942 | Flag of Vichy France | A vertical tricolour of blue, white, and red with an axe and seven golden stars.
+- Flag of Niger.svg [1959,1960] svg en:Historical national flags; en:National flag; fr:Dimensions > Versions
+    en: rowspan="2" | | rowspan="2" |1959–present | rowspan="2" |6:7 | rowspan="2" |The current flag, consisting of a horizontal triband of orange, white and green; charged with an orange circle in the , was 
+    fr: Ratio 6:7

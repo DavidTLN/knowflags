@@ -1,0 +1,23 @@
+### hn  (en:Flag of Honduras, fr:Drapeau du Honduras, es:Bandera de Honduras)
+- Flag of Cross of Burgundy.svg [1542,1821] svg es:Historia > Antecedentes
+    es: Bandera de la Capitanía General de Guatemala (1542-1821)
+- Bandera del Primer Imperio Mexicano.svg [1821,1823] svg es:Historia > Antecedentes
+    es: Bandera del Primer Imperio Mexicano (1821-1823)
+- Flag of the United Provinces of Central America.svg [1823,1824] svg es:Historia > Antecedentes; fr:Histoire > Drapeaux antérieurs
+    fr: Drapeau des Provinces-Unies d'Amérique centrale (1823-1824).
+    es: Bandera de las Provincias Unidas del Centro de América (1823-1824)
+- Flag of the Federal Republic of Central America.svg [1825,1839] svg es:Historia > Antecedentes; fr:Histoire > Drapeaux antérieurs
+    fr: Drapeau de la République fédérale d'Amérique centrale (1825-1839).
+    es: Bandera de la República Federal de Centroamérica (1825-1839)
+- Flag of Honduras (1839-1866).svg [1839,1866] svg es:Historia > Antecedentes
+    es: Bandera de Honduras (1839-1866)
+- Flag of Honduras (1866-1898 Alternative).svg [1866,1898] svg es:Historia > Antecedentes
+    es: Versión alternativa de la bandera de 1866.
+- Flag of Honduras (1866-1898).svg [1866,1895,1898] svg es:Historia > Antecedentes; fr:Histoire > Drapeaux antérieurs
+    fr: Drapeau du Honduras (1866-1895).
+    es: Bandera de 1866 utilizada hasta 1898
+- Flag of Honduras (1890s yellow star variant).svg [1890,1898,1949] svg es:Historia > Antecedentes
+    es: Versión de 1898-1949
+- Flag of the Greater Republic of Central America (1898).svg [1895,1898] svg es:Historia > Antecedentes; es:Historia > República Mayor de Centroamér; fr:Histoire > Dra
+    fr: Drapeau de la Grande république d'Amérique centrale (1895-1898).
+    es: Bandera de la República Mayor de Centroamérica (1895-1898)|263x263px

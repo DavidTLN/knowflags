@@ -1,0 +1,22 @@
+### se  (en:Flag of Sweden, en:List of flags of Sweden, fr:Drapeau de la Suède, sv:Sveriges flagga)
+- Flag of the Kalmar Union.svg [1397,1430,1523] svg en:Historical flags
+    en: ! scope="row" | | 1397–1523 | The "banner of the realms", flag of the Kalmar Union | The flag of the Kalmar Union was used in the triple union led by Denmark, which included Norway and Sweden. In a le
+- Flag of Sweden (1562–1650).svg [1520,1562,1620,1650] svg en:Historical flags; en:History > Nordic cross flag
+    en: ! scope="row" | | c. 1520s – c. 1620 | State flag and war ensign | Swallow-tailed flag (slightly different colors and proportions occurred)
+- Striped cross flag of Sweden 1565.svg [1565] svg en:History > Nordic cross flag > Striped fl
+    en: Swedish striped cross banner ()
+- Flag of Sweden (1818-1844) (alternative).svg [1818,1838,1844] svg en:Historical flags
+    en: ! scope="row" | | 1838–1844 | Alternate state flag | Used by private ships serving the Swedish royal mail.
+- Color change of the national flag of Sweden.svg [1906] svg en:History > The 1906 flag law; sv:Historia > Flagglagen 1906
+    en: Colour specification of the Swedish flag in 1906
+    sv: miniatyr|vänster|1906 fastställdes flaggans blå nyans som ljusblå, vilken ansågs vara mer historiskt korrekt än en vanligt förekommande mörkare ton.
+- Flag of the Romani people.svg [1971] svg en:Flags of national minorities
+    en: ! scope="row" | | 1971 | Romani people | Divided in blue and green horizontally with a red 16-spoked cartwheel in the
+- Sami flag.svg [1986] svg en:Flags of national minorities
+    en: ! scope="row" | | 1986 | Sámi people
+- Flag of Tornedalians (2007).svg [2007] svg en:Flags of national minorities
+    en: ! scope="row" | | 2007 | Tornedalians | Yellow, white, and blue horizontal tricolour
+- Sverigefinskaflaggan.svg [2007] svg en:Flags of national minorities
+    en: ! scope="row" | | 2007 | Sweden Finns
+- Forest Finns flag.svg [2022] svg en:Flags of national minorities
+    en: ! scope="row" | | 2022–present | Cultural flag of the Forest Finns | |}

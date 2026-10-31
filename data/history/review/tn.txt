@@ -1,0 +1,39 @@
+### tn  (en:Flag of Tunisia, en:List of Tunisian flags, fr:Drapeau de la Tunisie, ar:علم تونس)
+- Fatimid Flag.svg [1171] svg ar:تاريخ العلم > المعايير السابقة
+    ar: علم الدولة الفاطمية بتونس (909–1171)
+- Flag of Tunis during 14th century.svg [1229,1337] svg en:Historical flags
+    en: ! scope="row" | | 1229–1337 | rowspan="3" | Flag of the Hafsid Sultanate of Tunis | A red field with a white crescent moon in the and a three-tongued fringe at the fly.
+- Hafsid Flag - Tunisia.svg [1230,1424,1550,1574] svg ar:تاريخ العلم > المعايير السابقة; en:Historical flags; en:History > Previous flags
+    en: ! scope="row" | | 1424–1550 | A yellow field with a white crescent moon and a five-pointed star in the .
+    ar: أحد أعلام الدولة الحفصية بتونس (1230–1574)
+- Flag of Hafsid Tunisia (1550).svg [1550,1574] svg en:Historical flags
+    en: ! scope="row" | | 1550–1574 | A white field with a blue crescent moon in the and a vertical blue band at the hoist.
+- Flag of Ottoman Tunisia (1685).svg [1574,1685,1705] svg ar:تاريخ العلم > المعايير السابقة; en:Historical flags; en:History > Previous flags
+    en: ! scope="row" | | 1574–1705 | Flag of the Eyalet of Tunis | A red field with three golden crescent moons off–centered towards the hoist.
+    ar: علم إيالة تونس (1574–1705)
+- Tunisian flag till 1831.svg [1574,1705,1827,1831] svg ar:تاريخ العلم > المعايير السابقة; en:Historical flags; en:History > Previous flags
+    en: ! scope="row" | | 1705–1827 | rowspan="2" | Flag of the Beylik of Tunis | A banner of five horizontal stripes; blue stripes at top and bottom, red stripes interior to those, and a green central stripe
+    ar: علم الدولة الحسينية (1574–1827)
+- Flag of the Bey of Tunis.svg [1827,1881] svg en:Historical flags
+    en: ! scope="row" | | 1827–1881 | Monarchic flag of the Beylik of Tunis || A banner of seven horizontal stripes; 4 red strips, 2 golden and 1 green with 31 6–pointed stars, 24 discs and a 2 pointed sword 
+- Flag of the Beylik of Tunis (1831–1881) and Tunisia (1881–1959).svg [1827,1831,1881,1885,1956,1959] svg ar:تاريخ العلم > أصل العلم الحالي; en:Historical flags; en:History > Previous flags
+    en: ! scope="row" rowspan="3" | | 1885–1956 | Flag of the French protectorate of Tunisia | rowspan="4" | A red field with a centered white sun–disc containing a red five–pointed star surrounded by a red c
+    ar: تصغير|180x180px|أول علم لتونس منذ اعتماده في 20 أكتوبر 1827.
+- Flag of Tunisia (1959–1999).svg [1831,1959,1999] svg ar:تاريخ العلم > أصل العلم الحالي; en:Historical flags
+    en: ! scope="row" | | 1959–1999 |}
+    ar: تصغير|180x180px|الراية البحرية التونسية من ثلاثينيات القرن التاسع عشر، والعلم الوطني لتونس من 1831 إلى 1999، مع هلال أرق قليلاً من التصميم الحالي.
+- Flag of Tunisia with French canton.svg [1881,1885] svg ar:تاريخ العلم > أصل العلم الحالي; en:Historical flags
+    en: ! scope="row" | | 1881–1885 | Unofficial flag of the French protectorate of Tunisia | A red field with a centered white sun–disc containing a red five–pointed star surrounded by a red crescent with th
+    ar: تصغير|علم غير رسمي استخدم خلال الاحتلال الفرنسي وظهر في عدد صادر لـ[Flag Bulletin].|180x180px
+- Drapeau de la République Arabe Islamique (Union tuniso-libyenne).svg [1998] svg ar:تاريخ العلم > الاتحاد مع ليبيا
+    ar: تصغير|مخطط علم "الجمهورية العربية الإسلامية" حسب الوصف الوارد في كتاب الطاهر بلخوجة.Tahar Belkhodja, Les trois décennies Bourguiba. Témoignage, éd. Publisud, Paris, 1998, p. 168|180x180px
+- Flag of Tunisia (vertical).svg [1999] svg en:State flag
+    en: ! scope="row" | 150x150px | 1999–present | Flag of Tunisia (vertical)
+- Flag of Tunisia.svg [1999] svg en:State flag
+    en: ! scope="row" | | 1999–present | Flag of Tunisia | rowspan="2" | A red field with a centered white sun–disc containing a red five–pointed star surrounded by a red crescent.
+- Mesures drapeau Tunisie apres 1999.svg [1999] svg ar:وصف العلم; fr:Description
+    fr: Construction détaillée du drapeau avant 1999. Le drapeau tunisien est défini dans l'article 4 de la Constitution du en ces termes : Le drapeau de la République tunisienne est rouge, il comporte, dans 
+    ar: تصغير|180x180px|مقاييس العلم التونسي منذ 1999.
+- Mesures drapeau Tunisie avant 1999.svg [1999] svg ar:وصف العلم; fr:Description
+    fr: Construction détaillée du drapeau avant 1999. Le drapeau tunisien est défini dans l'article 4 de la Constitution du en ces termes : Le drapeau de la République tunisienne est rouge, il comporte, dans 
+    ar: تصغير|180x180px|مقاييس العلم التونسي قبل 1999.

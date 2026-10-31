@@ -1,0 +1,37 @@
+### om  (en:Flag of Oman, en:List of Omani flags, fr:Drapeau d'Oman, ar:علم سلطنة عمان)
+- Flag of Portugal (1495).svg [1495,1508,1521] svg en:Historical flags
+    en: ! scope="row" | | 1508–1521 | rowspan="3" | Flag of the Kingdom of Portugal | rowspan="5" | A white field with the Portuguese coat of arms in the .
+- Flag of Portugal (1521).svg [1521,1578] svg en:Historical flags
+    en: ! scope="row" | | 1521–1578
+- Flag of Portugal (1578).svg [1578,1640] svg en:Historical flags
+    en: ! scope="row" | | 1578–1640
+- Flag of Portugal (1616).svg [1616,1640] svg en:Historical flags
+    en: ! scope="row" | | 1616–1640 | Flag of the Kingdom of Portugal (putative flag)
+- Flag of Portugal (1640).svg [1640,1650] svg en:Historical flags
+    en: ! scope="row" | | 1640–1650 | Flag of the Kingdom of Portugal
+- Flag of Muscat.svg [1650,1696,1820,1856,1970] svg ar:أعلام تاريخية; ar:مكونات العلم; en:Historical flags; en:History
+    en: ! scope="row" | | 1696–1856 | Flag of the Sultanate of Muscat and Oman | A simple red field.
+    ar: علم سلطنة مسقط وعمان في الفترة 1856-1970
+- White flag 3 to 2.svg [1650,1954] svg ar:أعلام تاريخية; ar:مكونات العلم; en:Historical flags
+    en: ! scope="row" | | 661–750 | Flag of the Umayyad Caliphate | A simple white field.
+    ar: علم إمامة عمان في الفترة 1650-1954
+- WhiteFlag.png [1868,1871] png en:Historical flags; en:History
+    en: ! scope="row" | | 1868–1871 | Flag of the Imamate of Muscat and Oman | A simple white field.
+- Flag of Oman (1954–1959).svg [1954,1959] svg ar:أعلام تاريخية
+    ar: علم إمامة عمان في الفترة 1954-1959
+- Flag of the Imamate of Oman (1954–1959).svg [1954,1959] svg en:Historical flags; en:History
+    en: ! scope="row" | | 1954–1959 | Flag of the Imamate of Oman | A white field with red Arabic script and a red sword pointed to the below.
+- Flag of Oman (1970–1995).svg [1970,1985,1995] svg ar:أعلام تاريخية; en:Historical flags; en:History; fr:Historique > Entre 1970 et 1995
+    en: ! scope="row" | | 1970–1985 | rowspan="2" | Flag of Oman | A horizontal tricolor of white, red, and green; with a vertical red stripe at the hoist, charged with the National Emblem of Oman, the red st
+    fr: Drapeau d'Oman
+    ar: علم سلطنة عمان في الفترة 1970-1995
+- Flag of Oman (3-2).svg [1985,1995] svg ar:أعلام أخرى; en:Historical flags; en:Other flags
+    en: ! scope="row" | | 1985–1995 | A horizontal tricolor of white, red, and green; with a vertical red stripe at the hoist, charged with the national emblem of Oman (Proportion of 3:2). |}
+    ar: أبعاد العلم 3:2
+- Flag of Oman (2-1).svg [1995,2004] svg en:History
+    en: Flag of Oman from 1995 to 2004
+- Flag of Oman (variation).svg [1995,2022] svg ar:أعلام تاريخية
+    ar: علم سلطنة عمان في الفترة 1995-2022
+- Flag of Oman.svg [2004] svg en:National flag; fr:Historique > Depuis 1995
+    en: ! scope="row" | | 2004–present | National flag, civil ensign, state ensign | A horizontal tricolor of white, red, and green; with a vertical red stripe at the hoist, charged with the national emblem o
+    fr: Drapeau d'Oman

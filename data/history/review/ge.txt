@@ -1,0 +1,29 @@
+### ge  (en:Flag of Georgia (country), fr:Drapeau de la Géorgie, ka:საქართველოს სახელმწიფო დროშა)
+- Dadiani flag 1358.svg [1358] svg ka:ადრეული საქართველოს დროშები
+    ka: ხელის მტევნის სიმბოლო, რომელიც XIV საუკუნეში იყო სოხუმის (სებასტოპოლის) დროშა.
+- Flag of The Principality of Mingrelia (Portolan 1560).svg [1560] svg ka:ადრეული საქართველოს დროშები
+    ka: ოდიშის სამთავროს დროშა XVI საუკუნეში.
+- Flag of Kingdom of Kartli-Kakheti.svg [1762,1801] svg fr:Histoire > De l'Antiquité à la RSS de Gé
+    fr: Drapeau du royaume de Kartl-Kakhétie de 1762 à 1801
+- Flag of Georgia (1918-1921).svg [1918,1921] svg fr:Histoire > Drapeau de l'Indépendance; ka:ადრეული საქართველოს დროშები > საბჭოთა სა
+    fr: Drapeau de la république démocratique de Géorgie.
+    ka: 100 px|საქართველოს დროშა, 1918-1921 (1:2)
+- Флаг Грузинской ССР (1940-1952).svg [1921,1937,1940,1952] svg ka:ადრეული საქართველოს დროშები > საბჭოთა სა
+    ka: 100 px|საქართველოს დროშა, 1921—1937 (1:2)
+- Flag of Georgian SSR (1937-1951).svg [1937,1951] svg ka:ადრეული საქართველოს დროშები > საბჭოთა სა
+    ka: 100 px|საქართველოს დროშა, 1937—1951 (1:2)
+- Flag of Georgian SSR.svg [1951,1990] svg fr:Histoire > De l'Antiquité à la RSS de Gé; ka:ადრეული საქართველოს დროშები > საბჭოთა სა
+    fr: Drapeau de la RSS de Géorgie de 1951 à 1990.
+    ka: 100 px|საქართველოს დროშა, 1951-1990 (1:2)
+- Flag of Georgia (1990-2004).svg [1990,2004] svg ka:ადრეული საქართველოს დროშები > საბჭოთა სა
+    ka: 84 px|საქართველოს დროშა, 1990-2004 (3:5)
+- Flag of Abkhazia.svg [1991] svg fr:Autres drapeaux > Drapeaux locaux
+    fr: Depuis 1991 || Drapeau de la république autonome d'Abkhazie || Celui-ci montre sept bandes vertes et blanches avec une main couronnée de sept étoiles à quatre branches sur fond de gueules dans le coin
+- Flag of Adjara.svg [2004] svg fr:Autres drapeaux > Drapeaux locaux
+    fr: Depuis 2004 || Drapeau de la république autonome d'Adjarie || Le drapeau montre sept bandes bleues et blanches avec le drapeau de la Géorgie en haut à .
+- Flag of Kutaisi, Georgia.svg [2004] svg fr:Autres drapeaux > Drapeaux locaux
+    fr: Depuis 2004 || Drapeau de la Ville de Koutaïssi || Le drapeau est divisé en quatre parties : celles de haut à et de bas à sont bleues ; les deux autres sont vertes. Chaque partie contient une petite c
+- Flag of Tbilisi.svg [2005] svg fr:Autres drapeaux > Drapeaux locaux
+    fr: Depuis 2005 || Drapeau de Tbilissi (capitale) || Le drapeau représente une grande croix bleue de style nordique, surligné d'ambre. Le croisement des deux branches de la croix est surmontée par les arm
+- Flag of the President of Georgia.svg [2020] svg fr:Autres drapeaux > Drapeau présidentiel
+    fr: Depuis 2020 ||Drapeau du président de Géorgie || |}

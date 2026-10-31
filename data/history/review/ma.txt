@@ -1,0 +1,29 @@
+### ma  (en:Flag of Morocco, en:List of Moroccan flags, fr:Drapeau du Maroc, ar:علم المغرب)
+- Flag of Morocco 1073 1147.svg [1073,1147] svg ar:التاريخ > من القرن 17 إلى الآن
+    ar: علم المغرب (780-1147)، علم الأدارسة
+- Flag of Morocco 1147 1269.svg [1147,1269] svg ar:التاريخ > من القرن 17 إلى الآن
+    ar: علم المغرب (1147-1269)، الموحدون
+- Flag of Morocco 1258 1659.svg [1258,1269,1659,1666] svg ar:التاريخ > من القرن 17 إلى الآن
+    ar: علم المغرب بالإضافة إلى يافطة بيضاء (1269-1666)، المرينيون، السعديون
+- Flag of Morocco.svg [1272,1915] svg ar:التاريخ > من القرن 17 إلى الآن; ar:التصميم; en:National flags; fr:Historique > Alaouite
+    en: ! scope="row" | | rowspan="5" | 1915–present | National flag and state ensign | A red field with a green pentagram, the five-pointed "Seal of Solomon".
+    fr: Drapeau depuis 1915.
+    ar: !30pxمخطط الألوان (تقريبي) !! style="background-color:#c1272dff"|أحمر قان !! style="background-color:#006233ff"|أخضر نخيلي
+- Wattasid dynasty flag.png [1462,1554] png ar:التاريخ > من القرن 17 إلى الآن
+    ar: علم المغرب (1462- 1554)، علم الوطاسيون
+- Drapeau du Maroc pré-1915.svg [1666,1915] svg fr:Historique > Alaouites > De 1666 jusqu'e
+    fr: Drapeau sous la Dynastie alaouite (1666–1915)
+- Flag of Morocco (1666–1915) variant.svg [1666,1915] svg fr:Historique > Alaouites > De 1666 jusqu'e
+    fr: Variante du drapeau sous la Dynastie alaouite (1666–1915)
+- Flag of Morocco 1666 1915.svg [1666,1915] svg ar:التاريخ > من القرن 17 إلى الآن
+    ar: علم المغرب (1666-1915)
+- Flag of the Republic of the Rif.svg [1921,1926] svg en:History > Other historical flags
+    en: Flag of the Republic of the Rif (1921–1926)
+- Flag of Morocco hexagram.svg [1924] svg en:Misattributed flags; fr:Historique > Alaouites > Version avec un
+    en: ! scope="row" | | 1924 | Inaccurate flag of Morocco as shown in Nouveau Petit Larousse Illustré, 1924 | A red field with the Seal of Solomon. |}
+    fr: Drapeau supposé du Maroc avec une étoile à six branches..
+- Flag of International Tangier.svg [1953,1957] svg ar:التاريخ > من القرن 17 إلى الآن
+    ar: العلم التجاري لطنجة الدولية (1953-1957)Flags of the world: International Zone of Tangiers
+- Flag of Morocco (construction sheet).svg [2005] svg ar:التصميم; fr:Description
+    fr: Feuille de constructionDahir 1-05-99, publié dans le BO 5378 du 15 décembre 2005.
+    ar: style="background:white; : solid #AAA;"

@@ -1,0 +1,58 @@
+### id  (en:Flag of Indonesia, en:List of Indonesian flags, fr:Drapeau de l'Indonésie, id:Bendera Indonesia)
+- Flag of Portugal (1495).svg [1495,1512,1521] svg en:Historical flags > Colonial-era flags
+    en: Flag of Portugal (flown 1512–1521)
+- Flag of Ottoman Empire (1517-1793).svg [1517,1569,1793] svg en:Historical flags > Ottoman flags of Aceh
+    en: Flag of the Ottoman Empire (1569–1793)
+- Flag of Portugal (1521).svg [1521,1578] svg en:Historical flags > Colonial-era flags
+    en: Flag of Portugal (1521–1578)
+- Flag of Portugal (1578).svg [1578,1640] svg en:Historical flags > Colonial-era flags
+    en: Flag of Portugal (1578–1640)
+- Flag of Cross of Burgundy.svg [1580,1640] svg en:Historical flags > Colonial-era flags
+    en: Flag of the Iberian Union (1580–1640)
+- Flag of the Netherlands.svg [1602,1800,1942,1949] svg en:Historical flags > Colonial-era flags > ; en:History > Hotel Yamato incident; id:Sejara
+    en: Flag of the Dutch East Indies used 1 January 1800 – 27 December 1949
+    id: Bendera Belanda digunakan sejak 20 Maret 1602 – 8 Maret 1942 (340 tahun)
+- Prinsenvlag.svg [1610,1795] svg en:Historical flags > Colonial-era flags
+    en: The Prince's Flag (1610–1795)
+- Flag of Portugal (1616).svg [1616,1640] svg en:Historical flags > Colonial-era flags
+    en: Flag of Portugal (1616–1640) - Putative flag
+- Flag of Portugal (1640).svg [1640,1667] svg en:Historical flags > Colonial-era flags
+    en: Flag of Portugal (1640–1667)
+- Statenvlag.svg [1652,1796] svg en:Historical flags > Colonial-era flags
+    en: States Flag (1652–1796)
+- Flag of Portugal (1667).svg [1667,1707] svg en:Historical flags > Colonial-era flags
+    en: Flag of Portugal (1667–1707)
+- Flag of Portugal (1707).svg [1706,1707,1750,1826,1830] svg en:Historical flags > Colonial-era flags
+    en: Flag of the Portuguese Empire (1706–1750, 1826–1830)
+- Flag of Portugal (1750).svg [1750,1816] svg en:Historical flags > Colonial-era flags
+    en: Flag of the Portuguese Empire (1750–1816)
+- Flag of the Ottoman Empire (eight pointed star).svg [1793,1844] svg en:Historical flags > Ottoman flags of Aceh
+    en: Flag of the Ottoman Empire (1793–1844)
+- Flag of the Batavian Republic.svg [1796,1806] svg en:Historical flags > Colonial-era flags
+    en: Flag of the Batavian Republic (1796–1806)
+- Flag of the United Kingdom (1-2).svg [1811,1816] svg en:Historical flags > Colonial-era flags
+    en: British Empire (1811–1816)
+- Flag of the United Kingdom of Portugal, Brazil, and Algarves.svg [1815,1822] svg en:Historical flags > Colonial-era flags
+    en: Flag of the United Kingdom of Portugal, Brazil and Algarves (December 1815 – September 1822)
+- Flag Portugal sea (1830).svg [1830,1850] svg en:Historical flags > Colonial-era flags
+    en: Flag of Portugal, sea use (1830–1850)
+- Flag of Portugal (1830).svg [1830,1850] svg en:Historical flags > Colonial-era flags
+    en: Flag of Portugal, land use (1830–1850)
+- Flag of China (1862–1889).svg [1862,1884,1889] svg en:Historical flags > Qing flags of Lanfang
+    en: Flag of the Qing China (1862–1884)
+- Flag of Japan (1870-1999).svg [1870,1942,1945,1999] svg en:History > Hotel Yamato incident; id:Sejarah
+    en: Flag of Imperial Japan used 8 March 1942 – 17 August 1945 (3 years 5 months)
+    id: Bendera Jepang digunakan sejak 8 Maret 1942 – 17 Agustus 1945 (3 tahun 5 bulan)
+- Flag of Perhimpunan Indonesia.png [1908,1923] png en:Historical flags > Colonial-era flags > ; en:History
+    en: Perhimpoenan Indonesia's banteng flag from the Gedenkboek: 1908-1923 cover
+- Onderscheidingsvlag Resident Nederlands-Indie (1928-1949).svg [1928,1949] svg en:Historical flags > Colonial-era flags > 
+    en: Distinctive flag of a resident of the Dutch East Indies (1928–1949)
+- Flag of PETA (Pembela Tanah Air).svg [1943,1945] svg en:Historical flags > World War II flags
+    en: Flag of PETA / Pembela Tanah Air (1943–1945)
+- Flag of PETA Giyugun Bali.svg [1944,1945] svg en:Historical flags > World War II flags
+    en: Flag of PETA / Giyūgun Bali (1944–1945)
+- Flag of Indonesia.svg [1945] svg en:History > Hotel Yamato incident; en:National flag; id:Kemiripan dengan bendera negara l
+    en: ! scope="row" | | rowspan="2" | 17 August 1945 – present | National flag and national ensign | A horizontal bicolor of red and white
+    id: ! 40pxSkema warna ! style="background:#EE2536; width: ; color:white;"| Merah ! style="background:#FFFFFF; width: ; color:black;" | Putih
+- Flag of West Papua.svg [1961,1962] svg en:Flags of separatist movements and terror; en:Historical flags > Colonial-era flags > 
+    en: Flag of Dutch New Guinea (1961–1962)

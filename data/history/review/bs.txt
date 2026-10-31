@@ -1,0 +1,16 @@
+### bs  (en:Flag of the Bahamas, fr:Drapeau des Bahamas)
+- Flag of the Bahamas (1869-1904).svg [1869,1904] svg en:Historical flags; fr:Drapeaux historiques
+    en: 100x100px |1869–1904 |Flag of the Crown Colony of the Bahama Islands |A British Blue Ensign defaced with the emblem of the crown colony. This consisted of a British ship chasing two pirate ships out a
+    fr: 1869-1904
+- Flag of the Bahamas (1904-1923).svg [1904,1923] svg en:Historical flags; fr:Drapeaux historiques
+    en: 100x100px |1904–1923 |Flag of the Crown Colony of the Bahama Islands |The crown on the crest was changed to a domed Tudor crown.
+    fr: 1904-1923
+- Flag of the Bahamas (1923-1953).svg [1923,1953] svg en:Historical flags; fr:Drapeaux historiques
+    en: 1923–1953 || Flag of the Crown Colony of the Bahama Islands || The crown on the crest was changed to a Tudor crown.
+    fr: 1923-1953
+- Flag of the Bahamas (1953-1964).svg [1953,1964] svg en:Historical flags; fr:Drapeaux historiques
+    en: 1953–1964 || Flag of the Crown Colony of the Bahama Islands || A British Blue Ensign defaced with the emblem of the crown colony featuring a St Edward's crown for the new monarch.
+    fr: 1953-1964
+- Flag of the Bahamas (1964–1973).svg [1964,1973] svg en:Historical flags; fr:Drapeaux historiques
+    en: 1964–1973 || Flag of the Crown Colony of the Bahama Islands || A British Blue Ensign defaced with the emblem of the crown colony featuring a St Edward's crown.
+    fr: 1964–1973

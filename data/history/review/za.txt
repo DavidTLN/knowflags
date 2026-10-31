@@ -1,0 +1,102 @@
+### za  (en:Flag of South Africa, en:List of South African flags, fr:Drapeau de l'Afrique du Sud, af:Vlag van Suid-Afrika)
+- Prinsenvlag.svg [1652,1795] svg af:Geskiedenis > Tot 1902; en:History > Historical flags (1652–1928); fr:Histoire > Les dr
+    en: ! scope="row" | | 1652–1795 | The Prince's Flag | A horizontal triband of orange, white, and blue.
+    fr: Le van Riebeeck flag de 1652
+    af: Jan van Riebeeck se vlag: die Nederlandse Prinsevlag, 1652
+- Statenvlag.svg [1652,1795,1803,1806] svg af:Geskiedenis > Tot 1902; en:History > Historical flags (1652–1928)
+    en: ! scope="row" | | 1652–1795 | States Flag | A horizontal triband of red, white, and blue. The blue is a lighter shade than that of the current national flag.
+    af: Vlag van die Bataafse Republiek: die Nederlandse Statenvlag, 1803 tot 1806
+- Flag of the Netherlands.svg [1795,1796,1849,1852,1858,1860] svg fr:Histoire > Les drapeaux antérieurs à la 
+    fr: Swellendam (1795) Graaff-Reinet (1795 - 1796)Lydenburg (1849-1860) Utrecht (1852-1858)
+- Flag of the Batavian Republic.svg [1803,1806] svg en:History > Historical flags (1652–1928)
+    en: ! scope="row" | | 1803–1806 | Flag of the Batavian Republic | A horizontal triband of red, white, and blue with the Republic’s emblem in the canton.
+- Voortrekker flag.svg [1835,1836,1844,1864] svg fr:Histoire > Les drapeaux antérieurs à la 
+    fr: Zoutpansberg (1835-1864) et Winburg (1836-1844)
+- South African Burgers Flag.svg [1837,1844,1848,1874,1875] svg af:Geskiedenis > Tot 1902; en:History > Historical flags (1652–1928); fr:Histoire > Les dr
+    en: ! scope="row" | | 1874–1875 | Flag of the South African Republic (Transvaal Republic) | ('Thomas François Burgers's Voortrekker flag'). A red saltire outlined in white on a dark blue field.
+    fr: Potchefstroom (1837-1844) et Winburg-Potchefstroom (1844-1848)
+    af: Vlag onder die presidentskap van Thomas François Burgers, 1874 tot 1875
+- Flag of Natalia Republic.svg [1839,1840,1842,1843] svg en:History > Historical flags (1652–1928); fr:Histoire > Les drapeaux antérieurs à la 
+    en: ! scope="row" | | 1839–1843 | Flag of the Natalia Republic
+    fr: Drapeau de la république de Natalia (1840-1842)
+- Flag of the Orange Free State.svg [1854,1856,1857,1902] svg af:Geskiedenis > Tot 1902; en:History > Historical flags (1652–1928); fr:Histoire > Les dr
+    en: ! scope="row" | | 1857–1902 | Flag of the Orange Free State
+    fr: Drapeau de l'État libre d'Orange (1856-1902)
+    af: Vlag van die Oranje-Vrystaat, 1854 tot 1902
+- Flag of Transvaal.svg [1857,1858,1874,1875,1877,1881] svg af:Geskiedenis > Tot 1902; en:History > Historical flags (1652–1928); fr:Histoire > Les dr
+    en: ! scope="row" | | 1857–1874,1875–1877,1881–1902 | Flag of the South African Republic (Transvaal Republic) | ('Vierkleur')
+    fr: Le Vierkleur de la république sud-africaine du Transvaal (1858-1902)
+    af: Vlag van die Zuid-Afrikaansche Republiek (Transvaal), 1857 tot 1874, 1875 tot 1877 en 1881 tot 1902
+- Diamond flag of the Diggers Republic.svg [1870] svg en:History > Historical flags (1652–1928)
+    en: ! scope="row" | | 1870–71 | Flag of the Diggers' Republic | ('Diamond flag')
+- Flag of the Diggers Republic.svg [1870] svg en:History > Historical flags (1652–1928)
+    en: ! scope="row" | | 1870–71 | Flag of the Diggers' Republic | ('Klipdrift flag')
+- Flag of the Natal Colony 1875-1910.svg [1875,1910] svg af:Geskiedenis > 1902–1910
+    af: Vlag van die Natalkolonie, 1875 tot 1910
+- Flag of the Cape Colony 1876-1910.svg [1876,1910] svg af:Geskiedenis > 1902–1910; en:History > Historical flags (1652–1928)
+    en: ! scope="row" | | 1876–1910 | Flag of the Cape Colony | A Blue Ensign defaced with the shield-of-arms of Cape Colony.
+    af: Vlag van die Kaapkolonie, 1876 tot 1910
+- Flag of Stellaland (early 1883).svg [1882,1883] svg fr:Histoire > Les drapeaux antérieurs à la 
+    fr: Stellaland (1882-1883)
+- Flag of the Republic of Goshen.svg [1882,1883,1885] svg en:History > Historical flags (1652–1928); fr:Histoire > Les drapeaux antérieurs à la 
+    en: ! scope="row" | | 1883–1885 | Flag of Goshen
+    fr: Goshen (1882-1883)
+- First flag of Stellaland.svg [1883] svg en:History > Historical flags (1652–1928)
+    en: ! scope="row" | | 1883 | Flag of Stellaland
+- Flag of Stellaland (1883-5).svg [1883,1885] svg fr:Histoire > Les drapeaux antérieurs à la 
+    fr: Stellaland (1883-1885)
+- Flag of Stellaland.svg [1883,1885] svg en:History > Historical flags (1652–1928)
+    en: ! scope="row" | | 1883–1885 | Flag of Stellaland
+- Flag of Nieuwe Republiek.svg [1884,1888] svg en:History > Historical flags (1652–1928); fr:Histoire > Les drapeaux antérieurs à la 
+    en: ! scope="row" | | 1884–1888 | Flag of the Nieuwe Republiek
+    fr: Nieuwe Republiek (Vryheid) (1884 - 1888)
+- Flag of Klein Vrystaat.svg [1890,1891] svg en:History > Historical flags (1652–1928)
+    en: ! scope="row" | | 1890–1891 | Flag of Klein Vrystaat
+- Flag of Orange River Colony.svg [1902,1904,1910] svg af:Geskiedenis > 1902–1910; en:History > Historical flags (1652–1928); fr:Histoire > Les d
+    en: ! scope="row" | | 1902–1910 | Flag of the Orange River Colony | A Blue Ensign defaced with a springbok antelope in a disc.This replaced the Orange Free State republican flag.
+    fr: Drapeau de la colonie de la rivière Orange (1902-1910)
+    af: Vlag van die Oranjerivierkolonie, 1904 tot 1910
+- Flag of the Transvaal Colony 1904–1910.svg [1904,1910] svg af:Geskiedenis > 1902–1910; en:History > Historical flags (1652–1928)
+    en: ! scope="row" | | 1904–1910 | Flag of Transvaal | A Blue Ensign defaced with a disc showing a lion lying on an African plain with palm trees.The flag is the colonial flag which replaced the "Vierkleur
+    af: Vlag van die Transvaalkolonie, 1904 tot 1910
+- Flag of the United Kingdom (1-2).svg [1910,1957] svg en:History > National flags (1928–1994); en:Overview
+    en: ! scope="row" | | 1910–1957 | Flag of the Union of South Africa | The flag was a co-official flag until 1957 when the flag of the Union of South Africa became the sole official flag.
+- Flag of South Africa (1928–1994, dark version).svg [1928,1994] svg fr:Autres drapeaux historiques; fr:Description du drapeau actuel
+    fr: L'ancien drapeau national de l'Afrique du Sud (1928 à 1994)
+- Flag of Transkei.svg [1966,1994] svg en:History > Homeland flags (1966–1994); fr:Autres drapeaux historiques
+    en: ! scope="row" | | 1966–1994 | Transkei
+    fr: Drapeau du Transkei.
+- Flag of Bophuthatswana (1972–1994).svg [1972,1973,1994] svg en:History > Homeland flags (1966–1994); fr:Autres drapeaux historiques
+    en: ! scope="row" | | 1973–1994 | Bophuthatswana
+    fr: Drapeau du Bophuthatswana.
+- Flag of Ciskei.svg [1973,1994] svg en:History > Homeland flags (1966–1994); fr:Autres drapeaux historiques
+    en: ! scope="row" | | 1973–1994 | Ciskei
+    fr: Drapeau du Ciskei.
+- Flag of Gazankulu.svg [1973,1994] svg en:History > Homeland flags (1966–1994); fr:Autres drapeaux historiques
+    en: ! scope="row" | | 1973–1994 | Gazankulu
+    fr: Drapeau du Gazankulu.
+- Flag of Venda (1973–1994).svg [1973,1994] svg en:History > Homeland flags (1966–1994); fr:Autres drapeaux historiques
+    en: ! scope="row" | | 1973–1994 | Venda
+    fr: Drapeau du Venda.
+- Flag of Lebowa.svg [1974,1994] svg en:History > Homeland flags (1966–1994); fr:Autres drapeaux historiques
+    en: ! scope="row" | | 1974–1994 | Lebowa
+    fr: Drapeau du Lebowa.
+- Flag of QwaQwa (1975–1994).svg [1975,1994] svg en:History > Homeland flags (1966–1994); fr:Autres drapeaux historiques
+    en: ! scope="row" | | 1975–1994 | QwaQwa
+    fr: Drapeau du QwaQwa.
+- Flag of KwaZulu (1977–1985).svg [1977,1985] svg en:History > Homeland flags (1966–1994)
+    en: ! scope="row" | | 1977–1985 | KwaZulu (1)
+- Flag of KwaNdbele.svg [1982,1994] svg en:History > Homeland flags (1966–1994)
+    en: ! scope="row" | | 1982–1994 | KwaNdebele
+- Flag of South Africa (1982–1994).svg [1982,1994] svg en:History > 1928–1994; en:History > National flags (1928–1994)
+    en: ! scope="row" | | 1982–1994 | Flag of the Republic of South Africa | The flag using a lighter shade of "Solway" blue as specified by the South African government in 1982. |}
+- Flag of KwaZulu (1985–1994).svg [1985,1994] svg en:History > Homeland flags (1966–1994); fr:Autres drapeaux historiques
+    en: ! scope="row" | | 1985–1994 | KwaZulu (2) | |}
+    fr: Drapeau du KwaZulu.
+- Flag of South Africa (1992 Summer Olympics).svg [1992] svg af:Geskiedenis > 1928–1994; fr:Histoire > Le premier drapeau national d
+    fr: Le drapeau utilisé par la délégation sud-africaine lors des Jeux olympiques d'été de 1992.
+    af: Olimpiese Vlag van Suid-Afrika tydens die Olimpiese Somerspele 1992
+- Flag of South Africa (1994 Winter Olympics).svg [1994] svg af:Geskiedenis > 1928–1994
+    af: Olimpiese Vlag van Suid-Afrika tydens die Olimpiese Winterspele 1994
+- Flag of South Africa.svg [1994] svg en:History > National flag (1994–present); en:Overview
+    en: ! scope="row" | | Flag of South Africa1994–present | Two horizontal bands of chilli red (top) and blue (bottom) with a black triangle at the hoist, over all a green horizontal (pall) (Y-shape), fimbri

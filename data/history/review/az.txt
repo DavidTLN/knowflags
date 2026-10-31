@@ -1,0 +1,79 @@
+### az  (en:Flag of Azerbaijan, en:List of Azerbaijani flags, fr:Drapeau de l'Azerbaïdjan, az:Azərbaycan bayrağı)
+- Flag of Ganja Khanate.svg [1747,1804] svg en:Historical flags
+    en: ! scope="row" | | 1747–1804 | Banner of the Ganja Khanate
+- Flag of Karabakh Khanate.svg [1747,1804] svg en:Historical flags
+    en: ! scope="row" | 150x150px | 1747–1804 | Banner of the Karabakh Khanate
+- Flag of the Nakhichevan Khanate.svg [1747,1828] svg en:Historical flags
+    en: ! scope="row" | | 1747–1828 | Banner of the Nakhichevan Khanate
+- Flag of Azerbaijan (1918–1920).svg [1918,1920] svg en:Timeline gallery
+    en: Flag of the Azerbaijan Democratic Republic (1918–1920)
+- Flag of Azerbaijan 1918.svg [1918,1920] svg en:Historical flags; fr:Histoire > Première indépendance
+    en: ! scope="row" | | 1918–1920 | Flag of Azerbaijan Democratic Republic | Similar to the current flag
+    fr: Drapeau de la république démocratique d'Azerbaïdjan du au .
+- Flag of the Centrocaspian Dictatorship.svg [1918] svg en:Historical flags
+    en: ! scope="row" | | 1918 | Flag of theCentrocaspian Dictatorship | Three horizontal stripes, the upper and lower stripes of light blue colour and the middle stripe red.
+- Flag of the Democratic Republic of Azerbaijan (1918).svg [1918] svg az:Bayrağın tarixi > Azərbaycan Xalq Cümhur; en:Historical flags; en:History > Azerbaijan 
+    en: ! scope="row" | | 1918 | Flag of Azerbaijan Democratic Republic | Source for the design of the current flag
+    fr: Drapeau de la république démocratique d'Azerbaïdjan du au .
+    az: Azərbaycan Xalq Cümhuriyyətinin ilk bayrağı
+- Flag of the Republic of Aras.svg [1918,1919] svg en:Historical flags
+    en: ! scope="row" | | 1918–1919 | Flag of Republic of Aras
+- Flag of the Azerbaijan Soviet Socialist Republic (1920).svg [1920] svg en:Historical flags; en:Timeline gallery
+    en: ! scope="row" | | 1920 | Flag of the Azerbaijan Soviet Socialist Republic
+- Flag of the Azerbaijan Soviet Socialist Republic (1920–1921).svg [1920,1921] svg fr:Histoire > Période soviétique
+    fr: Drapeau de la RSS d'Azerbaïdjan de 1920 à 1921.
+- Flag of the Azerbaijan Soviet Socialist Republic (1921–1922).svg [1921,1922] svg en:Historical flags; en:Timeline gallery; fr:Histoire > Période soviétique
+    en: Flag of the Azerbaijan Soviet Socialist Republic (1921–1922)
+    fr: Drapeau de la RSS d'Azerbaïdjan de 1921 à 1922.
+- Flag of the Nakhichevan ASSR (1921–1925).svg [1921,1925] svg en:Historical flags
+    en: ! scope="row" | | 1921–1925 | Flag of the Nakhichevan Autonomous Soviet Socialist Republic
+- Flag of Azerbaijan 1922 (2).svg [1922,1924] svg en:Historical flags
+    en: ! scope="row" | | 1922–1924 | rowspan="2" | Flag of the Azerbaijan Socialist Soviet Republic (TSFSR)
+- Flag of Transcaucasian SFSR.svg [1922,1937] svg fr:Histoire > Période soviétique
+    fr: Drapeau de la RSFS de Transcaucasie de 1922 à 1937
+- Flag of the Azerbaijan Soviet Socialist Republic (1924-1927).svg [1924,1927] svg en:Historical flags; en:Timeline gallery
+    en: Flag of the Azerbaijan Soviet Socialist Republic within the TSFSR (1924–1927)
+- Flag of the Azerbaijan Soviet Socialist Republic (1927-1931).svg [1927,1931] svg en:Historical flags; en:Timeline gallery
+    en: ! scope="row" | | 1927–1931 | rowspan="2" | Flag of the Azerbaijan Soviet Socialist Republic (TSFSR)
+- Flag of the Transcaucasian SFSR (variant).svg [1930,1936] svg en:Timeline gallery
+    en: Flag of the Transcaucasian SFSR (1930s–1936)
+- Flag of the Transcaucasian SFSR.svg [1930,1936] svg en:Historical flags
+    en: ! scope="row" | | 1930s–1936 | Flag of the Transcaucasian Socialist Federative Soviet Republic
+- Flag of the Azerbaijan Soviet Socialist Republic (1931-1937).svg [1931,1937] svg en:Historical flags; en:Timeline gallery
+    en: Flag of the Azerbaijan Soviet Socialist Republic within the TSFSR (1931–1937)
+- Flag AzSSR.svg [1937,1940] svg en:Historical flags; en:Timeline gallery
+    en: ! scope="row" | | 1937–1940 | rowspan="3" | Flag of the Azerbaijan Soviet Socialist Republic
+- Flag of the Azerbaijan Soviet Socialist Republic (1937–1940).svg [1937,1940] svg fr:Histoire > Période soviétique
+    fr: Drapeau de la RSS d'Azerbaïdjan de 1937 à 1940.
+- Flag of the Nakhichevan ASSR (1937–1939).svg [1937,1939] svg en:Historical flags
+    en: ! scope="row" | | 1937–1939 | rowspan="6" | Flag of the Nakhichevan Autonomous Soviet Socialist Republic | One version of the flag of the Nakhichevan Autonomous Soviet Socialist Republic. Later versio
+- Flag of the Azerbaijan Soviet Socialist Republic (1940–1952).svg [1940,1952] svg fr:Histoire > Période soviétique
+    fr: Drapeau de la RSS d'Azerbaïdjan de 1940 à 1952.
+- Flag of the Nakhichevan ASSR (1940–1945).svg [1940,1945] svg en:Historical flags
+    en: ! scope="row" | | 1940–1945
+- Flag АзССР.svg [1940,1952] svg en:Historical flags; en:Timeline gallery
+    en: Flag of the Azerbaijan Soviet Socialist Republic (1940–1952)
+- Flag of the Nakhichevan ASSR (1945–1953).svg [1945,1953] svg en:Historical flags
+    en: ! scope="row" | | 1945–1953
+- Flag of Azerbaijan SSR.svg [1952,1991] svg az:Bayrağın tarixi > Azərbaycan SSR-in bayr
+    az: Azərbaycan SSR-nin 1952–1991-ci illərdəki bayrağı
+- Flag of the Azerbaijan Soviet Socialist Republic (1952–1956).svg [1952,1956] svg fr:Histoire > Période soviétique
+    fr: Drapeau de la RSS d'Azerbaïdjan de 1952 à 1956.
+- Flag of the Azerbaijan Soviet Socialist Republic (1952–1991, reverse).svg [1952,1991] svg en:Historical flags
+    en: ! scope="row" | | Reverse flag | All flags of the constituent republics of the Soviet Union did not bear the hammer and sickle on their reverse side.
+- Flag of the Azerbaijan Soviet Socialist Republic.svg [1952,1956,1990,1991] svg en:Historical flags; en:History > Azerbaijan SSR (1920–1991); en:Timeline gallery; fr:Hist
+    en: ! scope="row" | | rowspan="2" | 1952–1991 | Flag of the Azerbaijan Soviet Socialist Republic
+    fr: Drapeau de la RSS d'Azerbaïdjan de 1956 à 1991.
+- Flag of the Nakhichevan ASSR (1956–1978).svg [1956,1978] svg en:Historical flags
+    en: ! scope="row" | | 1956–1978
+- Flag of Nakhichevan ASSR.svg [1978,1990] svg en:Historical flags
+    en: ! scope="row" | | 1978–1990 | Last flag of the Nakhichevan Autonomous Soviet Socialist Republic
+- Flag of Azerbaijan (1991–2013).svg [1991,2013] svg en:Historical flags; en:Timeline gallery
+    en: ! scope="row" | | 1991–2013 | Flag of the Republic of Azerbaijan | Similar to the flag of the Azerbaijani Democratic Republic and the current flag of the Republic of Azerbaijan
+- Flag of the Border Units (State Border Service of Azerbaijan) (Reverse).svg [1991] svg en:Azerbaijani Armed Forces > Border Servic
+    en: ! scope="row" | | 1991 | Flag of the Border Units (reverse).Note: The obverse of the flag is similar to the national flag | |}
+- Flag of Talysh.svg [1993] svg en:Historical flags
+    en: ! scope="row" | | 1993 | Flag of Talysh-Mughan Autonomous Republic | |}
+- Flag of Azerbaijan.svg [2013] svg az:Rəng kodları; en:National flag; en:Timeline gallery
+    en: ! scope="row" | | 2013–present | Flag of the Republic of Azerbaijan | Horizontal tricolour of bright blue, red, and green, with a white crescent and a centred eight-pointed star.Proportion 1:2. |}
+    az: "Azərbaycan Respublikasının dövlət bayrağının istifadə qaydası" haqqında sərəncamda dövlət bayrağının dəqiq rəng xüsusiyyətləri qeyd olunur. 22 oktyabr 2013-cü il tarixində "Azərbaycan Respublikası Dö

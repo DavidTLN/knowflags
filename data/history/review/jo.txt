@@ -1,0 +1,12 @@
+### jo  (en:Flag of Jordan, fr:Drapeau de la Jordanie, ar:علم الأردن)
+- Flag of Kingdom of Syria (1920-03-08 to 1920-07-24).svg [1920] svg en:Historical flags
+    en: Flag of the Arab Kingdom of Syria (1920)
+- Flag of the Emirate of Transjordan.svg [1922,1928,1936,1939] svg ar:تاريخ العلم الأردني; ar:تاريخ العلم الأردني > 1928; en:Historical flags; fr:intro
+    en: Flag of the Emirate of Transjordan (1922–1939)
+    fr: Drapeau de l'Émirat de Transjordanie de 1928 à 1939.
+    ar: 150بك|مركز || إمارة شرق الأردن | 1936 - 1928
+- Flag of Jordan.svg [1936] svg ar:تاريخ العلم الأردني
+    ar: width="10%"| 150بك|مركز || المملكة الأردنية الهاشمية |width="15%"| 1936 - حتى الآن |width="50%"
+- Flag of the Arab Federation.svg [1958] svg ar:تاريخ العلم الأردني > 1958; en:Historical flags
+    en: Flag of the Hashemite Arab Federation (1958)
+    ar: 1958

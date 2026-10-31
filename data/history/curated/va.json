@@ -1,0 +1,29 @@
+{
+"iso": "va",
+"update": [
+{
+"id": 2537,
+"label_fr": "États pontificaux (754-1803)",
+"label_en": "Papal States (754–1803)",
+"notes_fr": "Depuis la donation de Pépin le Bref en 754, les papes gouvernent un territoire en Italie centrale, sous des bannières aux clés de saint Pierre.",
+"notes_en": "Since Pepin the Short's donation of 754, the popes ruled territory in central Italy, under banners bearing the keys of St Peter."
+},
+{
+"id": 2538,
+"label_fr": "États pontificaux (1803-1825)",
+"label_en": "Papal States (1803–1825)",
+"notes_fr": "Pavillon des États pontificaux sous Pie VII, à l'époque des guerres napoléoniennes et de l'annexion de Rome par la France (1809-1814).",
+"notes_en": "Flag of the Papal States under Pius VII, in the era of the Napoleonic Wars and France's annexation of Rome (1809–1814)."
+},
+{
+"id": 2539,
+"label_fr": "États pontificaux (jaune et blanc, 1825-1870)",
+"label_en": "Papal States (yellow and white, 1825–1870)",
+"notes_fr": "Le bicolore jaune et blanc, adopté en 1825 pour la marine marchande, devient l'emblème des États pontificaux jusqu'à la prise de Rome en 1870 ; la Cité du Vatican le reprend en 1929.",
+"notes_en": "The yellow and white bicolour, adopted in 1825 for merchant ships, became the Papal States' emblem until Rome was taken in 1870; Vatican City took it up in 1929."
+}
+],
+"delete": [
+2287
+]
+}

@@ -1,0 +1,47 @@
+{
+"iso": "zw",
+"update": [
+{
+"id": 2292,
+"file": "Flag of Zimbabwe Rhodesia.svg"
+}
+],
+"add": [
+{
+"date_start": "1924-01-01",
+"date_end": "1964-04-11",
+"label_fr": "Rhodésie du Sud",
+"label_en": "Southern Rhodesia",
+"notes_fr": "Colonie autonome de la Couronne, la Rhodésie du Sud arbore un Blue Ensign chargé de ses armes, surmontées de l'oiseau de pierre du Grand Zimbabwe.",
+"notes_en": "A self-governing Crown colony, Southern Rhodesia flew a Blue Ensign bearing its arms, topped by the stone bird of Great Zimbabwe.",
+"file": "Flag of Southern Rhodesia (1924–1964).svg"
+},
+{
+"date_start": "1953-08-01",
+"date_end": "1963-12-31",
+"label_fr": "Fédération de Rhodésie et du Nyassaland",
+"label_en": "Federation of Rhodesia and Nyasaland",
+"notes_fr": "Fédération des deux Rhodésies et du Nyassaland, dominée par la minorité blanche et dissoute fin 1963.",
+"notes_en": "A federation of the two Rhodesias and Nyasaland, dominated by the white minority and dissolved at the end of 1963.",
+"file": "Flag of the Federation of Rhodesia and Nyasaland.svg"
+},
+{
+"date_start": "1964-04-11",
+"date_end": "1968-11-11",
+"label_fr": "Rhodésie (1964-1968)",
+"label_en": "Rhodesia (1964–1968)",
+"notes_fr": "Ce Blue Ensign bleu ciel accompagne la déclaration unilatérale d'indépendance proclamée en 1965 par le régime minoritaire blanc de Ian Smith.",
+"notes_en": "This light-blue Blue Ensign accompanied the unilateral declaration of independence proclaimed in 1965 by Ian Smith's white-minority regime.",
+"file": "Flag of Rhodesia (1964–1968).svg"
+},
+{
+"date_start": "1968-11-11",
+"date_end": "1979-06-01",
+"label_fr": "Rhodésie (1968-1979)",
+"label_en": "Rhodesia (1968–1979)",
+"notes_fr": "Le régime de Ian Smith adopte un drapeau vert-blanc-vert aux armes, qu'aucun État ne reconnaît.",
+"notes_en": "Ian Smith's regime adopted a green-white-green flag with the arms, which no state recognised.",
+"file": "Flag of Rhodesia (1968–1979).svg"
+}
+]
+}

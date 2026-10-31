@@ -1,0 +1,20 @@
+{
+"iso": "zm",
+"update": [
+{
+"id": 2291,
+"file": "Flag of Zambia (1964–1996).svg"
+}
+],
+"add": [
+{
+"date_start": "1939-01-01",
+"date_end": "1964-10-24",
+"label_fr": "Rhodésie du Nord",
+"label_en": "Northern Rhodesia",
+"notes_fr": "Blue Ensign du protectorat, dont le badge montre un aigle pêcheur tenant un poisson au-dessus des eaux, évocation des chutes Victoria.",
+"notes_en": "Blue Ensign of the protectorate, whose badge shows a fish eagle holding a fish above the water, a nod to Victoria Falls.",
+"file": "Flag of Northern Rhodesia (1939–1964).svg"
+}
+]
+}

@@ -1,0 +1,29 @@
+{
+"iso": "uy",
+"update": [
+{
+"id": 2285,
+"file": "Flag of Uruguay (1828–1830).svg"
+}
+],
+"add": [
+{
+"date_start": "1815-01-01",
+"date_end": "1820-01-22",
+"label_fr": "Ligue fédérale d'Artigas",
+"label_en": "Artigas's Federal League",
+"notes_fr": "Bannière de José Gervasio Artigas, héros de l'indépendance : la bande diagonale rouge du fédéralisme sur le bleu et blanc. Elle reste un symbole national.",
+"notes_en": "The banner of José Gervasio Artigas, hero of independence: the red diagonal of federalism over blue and white. It remains a national symbol.",
+"file": "Flag of Artigas.svg"
+},
+{
+"date_start": "1825-04-19",
+"date_end": "1828-08-27",
+"label_fr": "Drapeau des Trente-Trois Orientaux",
+"label_en": "Flag of the Thirty-Three Orientals",
+"notes_fr": "Arboré en 1825 par les « Trente-Trois Orientaux » débarqués pour libérer la Bande orientale du Brésil, avec la devise « Libertad o Muerte ».",
+"notes_en": "Flown in 1825 by the \"Thirty-Three Orientals\" who landed to free the Banda Oriental from Brazil, with the motto \"Libertad o Muerte\".",
+"file": "Flag of the Treinta y Tres.svg"
+}
+]
+}

@@ -1,0 +1,42 @@
+{
+"iso": "ye",
+"update": [
+{
+"id": 2290,
+"label_fr": "Yémen du Sud (1967-1990)",
+"label_en": "South Yemen (1967–1990)",
+"notes_fr": "Le Yémen du Sud marxiste ajoute au tricolore rouge-blanc-noir un triangle bleu clair frappé d'une étoile rouge ; il s'unit au Nord le 22 mai 1990.",
+"notes_en": "Marxist South Yemen added a light-blue triangle with a red star to the red-white-black tricolour; it united with the North on 22 May 1990.",
+"file": "Flag of South Yemen.svg"
+}
+],
+"add": [
+{
+"date_start": "1927-01-01",
+"date_end": "1962-09-26",
+"label_fr": "Royaume mutawakkilite du Yémen",
+"label_en": "Mutawakkilite Kingdom of Yemen",
+"notes_fr": "Royaume des imams zaydites : drapeau rouge au sabre blanc et aux cinq étoiles, pour les cinq piliers de l'islam.",
+"notes_en": "The kingdom of the Zaydi imams: a red flag with a white sword and five stars, for the five pillars of Islam.",
+"file": "Flag of the Mutawakkilite Kingdom of Yemen.svg"
+},
+{
+"date_start": "1937-04-01",
+"date_end": "1963-01-18",
+"label_fr": "Colonie d'Aden",
+"label_en": "Aden Colony",
+"notes_fr": "Blue Ensign de la colonie d'Aden, escale clé de la route des Indes après l'ouverture du canal de Suez.",
+"notes_en": "Blue Ensign of Aden Colony, a key stop on the route to India after the Suez Canal opened.",
+"file": "Flag of Aden (1937–1963).svg"
+},
+{
+"date_start": "1962-09-26",
+"date_end": "1990-05-22",
+"label_fr": "République arabe du Yémen (Nord)",
+"label_en": "Yemen Arab Republic (North)",
+"notes_fr": "Après la révolution de 1962, la République arabe du Yémen adopte le tricolore rouge-blanc-noir frappé d'une étoile verte.",
+"notes_en": "After the 1962 revolution, the Yemen Arab Republic adopted the red-white-black tricolour with a green star.",
+"file": "Flag of North Yemen.svg"
+}
+]
+}

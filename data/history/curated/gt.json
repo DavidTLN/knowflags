@@ -1,0 +1,25 @@
+{"iso":"gt","update":[
+{"id":2156,"date_start":"1823-07-01","date_end":"1825-01-01","file":"Flag of the United Provinces of Central America.svg"}
+],"add":[
+{"date_start":"1825-01-01","date_end":"1838-04-17","label_fr":"État du Guatemala dans la fédération (1825-1838)","label_en":"State of Guatemala in the federation (1825–1838)","file":"Flag of Guatemala (1825-1838).svg",
+ "notes_fr":"Membre de la République fédérale d'Amérique centrale, le Guatemala arbore les bandes bleu-blanc-bleu avec les armes de l'État.",
+ "notes_en":"As a member of the Federal Republic of Central America, Guatemala flew blue-white-blue stripes with the state's arms."},
+{"date_start":"1838-04-17","date_end":"1843-01-01","label_fr":"État du Guatemala (1838-1843)","label_en":"State of Guatemala (1838–1843)","file":"Flag of Guatemala (1838-1843).svg",
+ "notes_fr":"Après la dislocation de la fédération, le Guatemala conserve le bleu et le blanc sous de nouvelles armoiries.",
+ "notes_en":"After the federation broke up, Guatemala kept blue and white under new arms."},
+{"date_start":"1843-01-01","date_end":"1851-01-01","label_fr":"Guatemala (1843-1851)","label_en":"Guatemala (1843–1851)","file":"Flag of Guatemala (1843-1851).svg",
+ "notes_fr":"Nouvelle version des armoiries sur le fond bleu et blanc, avant la proclamation de la République en 1847.",
+ "notes_en":"A new version of the arms on the blue and white field, ahead of the proclamation of the Republic in 1847."},
+{"date_start":"1851-01-01","date_end":"1858-05-31","label_fr":"République du Guatemala (1851-1858)","label_en":"Republic of Guatemala (1851–1858)","file":"Flag of Guatemala (1851-1858).svg",
+ "notes_fr":"Sous le conservateur Rafael Carrera, le rouge et le jaune de l'Espagne s'ajoutent au bleu et au blanc.",
+ "notes_en":"Under the conservative Rafael Carrera, Spain's red and yellow were added to the blue and white."},
+{"date_start":"1858-05-31","date_end":"1871-08-17","label_fr":"République du Guatemala (1858-1871)","label_en":"Republic of Guatemala (1858–1871)","file":"Flag of Guatemala (1858–1871).svg",
+ "notes_fr":"Carrera adopte un drapeau à bandes horizontales bleues, blanches, rouges et jaunes, qui disparaît avec la révolution libérale.",
+ "notes_en":"Carrera adopted a flag of horizontal blue, white, red and yellow stripes, which vanished with the liberal revolution."},
+{"date_start":"1871-08-17","date_end":"1968-09-12","label_fr":"République du Guatemala (1871-1968)","label_en":"Republic of Guatemala (1871–1968)","file":"Flag of Guatemala (1871-1968).svg",
+ "notes_fr":"Après la révolution libérale de 1871, Miguel García Granados rétablit les bandes verticales bleu-blanc-bleu et des armoiries au quetzal, oiseau symbole de liberté.",
+ "notes_en":"After the 1871 liberal revolution, Miguel García Granados brought back vertical blue-white-blue stripes and arms showing the quetzal, a bird symbolising freedom."},
+{"date_start":"1968-09-12","date_end":"1997-12-26","label_fr":"République du Guatemala (1968-1997)","label_en":"Republic of Guatemala (1968–1997)","file":"Flag of Guatemala (1968–1997).svg",
+ "notes_fr":"En 1968, les armoiries au quetzal sont redessinées et standardisées ; leurs couleurs sont de nouveau précisées en 1997.",
+ "notes_en":"In 1968 the quetzal arms were redrawn and standardised; their colours were specified again in 1997."}
+]}

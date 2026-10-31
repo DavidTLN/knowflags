@@ -1,0 +1,27 @@
+{"iso":"hn","update":[
+{"id":2380,"label_fr":"Provinces-Unies d'Amérique centrale (1823-1824)","label_en":"United Provinces of Central America (1823–1824)",
+ "notes_fr":"Le Honduras fait partie des Provinces-Unies d'Amérique centrale, dont les bandes bleu-blanc-bleu inspirent encore son drapeau.",
+ "notes_en":"Honduras was part of the United Provinces of Central America, whose blue-white-blue stripes still shape its flag."},
+{"id":2381,"label_fr":"République fédérale d'Amérique centrale (1825-1839)","label_en":"Federal Republic of Central America (1825–1839)",
+ "notes_fr":"Le drapeau fédéral, aux armes à cinq volcans, flotte jusqu'au retrait du Honduras de la fédération.",
+ "notes_en":"The federal flag, with its five-volcano arms, flew until Honduras left the federation."},
+{"id":2382,"label_fr":"État du Honduras (1839-1866)","label_en":"State of Honduras (1839–1866)",
+ "notes_fr":"Après la dislocation de la fédération, le Honduras garde les bandes bleu-blanc-bleu avec ses propres armes.",
+ "notes_en":"After the federation broke up, Honduras kept the blue-white-blue stripes with its own arms."},
+{"id":2383,"label_fr":"République du Honduras (cinq étoiles, 1866-1898)","label_en":"Republic of Honduras (five stars, 1866–1898)",
+ "notes_fr":"Le décret du 16 février 1866 ajoute cinq étoiles sur la bande blanche, pour les cinq États de l'ancienne fédération et l'espoir de sa renaissance.",
+ "notes_en":"The decree of 16 February 1866 added five stars to the white stripe, for the five states of the former federation and the hope of reviving it."},
+{"id":2384,"label_fr":"République du Honduras (1898-1949)","label_en":"Republic of Honduras (1898–1949)",
+ "notes_fr":"Version en usage après la dissolution de la Grande République d'Amérique centrale en 1898, avec des nuances variables selon les époques.",
+ "notes_en":"The version used after the Greater Republic of Central America was dissolved in 1898, with shades that varied over time."},
+{"id":2385,"label_fr":"République du Honduras (bleu marine, 1949-2022)","label_en":"Republic of Honduras (navy blue, 1949–2022)",
+ "notes_fr":"Le dessin fixé en 1949 s'impose dans un bleu marine pendant plus de soixante-dix ans, jusqu'au changement décidé par le gouvernement de Xiomara Castro.",
+ "notes_en":"The design set in 1949 was flown in navy blue for more than seventy years, until the change ordered by Xiomara Castro's government."},
+{"id":2386,"label_fr":"République du Honduras (bleu turquoise, 2022-2026)","label_en":"Republic of Honduras (turquoise, 2022–2026)",
+ "notes_fr":"En janvier 2022, le bleu turquoise, présenté comme la couleur d'origine, devient officiel ; le Congrès national rétablit le bleu marine en janvier 2026.",
+ "notes_en":"In January 2022 turquoise, presented as the original colour, became official; the National Congress restored navy blue in January 2026."}
+],"add":[
+{"date_start":"1896-09-15","date_end":"1898-11-29","label_fr":"Grande République d'Amérique centrale","label_en":"Greater Republic of Central America","file":"Flag of the Greater Republic of Central America (1898).svg",
+ "notes_fr":"Union éphémère du Honduras, du Nicaragua et du Salvador, dernière tentative de reconstituer la fédération centraméricaine.",
+ "notes_en":"A short-lived union of Honduras, Nicaragua and El Salvador, the last attempt to rebuild the Central American federation."}
+],"delete":[2161]}

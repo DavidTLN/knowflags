@@ -1,0 +1,18 @@
+{"iso":"gr","update":[
+{"id":2379,"label_fr":"Révolution grecque (1821-1830)","label_en":"Greek Revolution (1821–1830)",
+ "notes_fr":"Pendant la guerre d'indépendance, les insurgés adoptent la croix blanche sur fond bleu, couleurs fixées par l'Assemblée d'Épidaure en janvier 1822.",
+ "notes_en":"During the War of Independence the insurgents took up the white cross on blue, colours set by the Assembly of Epidaurus in January 1822."}
+],"add":[
+{"date_start":"1800-03-21","date_end":"1807-07-07","label_fr":"République des Sept-Îles","label_en":"Septinsular Republic","file":"Flag of the Septinsular Republic.svg",
+ "notes_fr":"Premier État grec autonome des temps modernes, formé dans les îles Ioniennes sous protection russe et ottomane : son drapeau porte le lion de saint Marc hérité de Venise.",
+ "notes_en":"The first self-governing Greek state of modern times, formed in the Ionian Islands under Russian and Ottoman protection: its flag bears the lion of St Mark inherited from Venice."},
+{"date_start":"1863-03-30","date_end":"1924-03-25","label_fr":"Royaume de Grèce (croix couronnée, 1863-1924)","label_en":"Kingdom of Greece (crowned cross, 1863–1924)","file":"State Flag of Greece (1863-1924 and 1935-1973).svg",
+ "notes_fr":"Sous la dynastie des Glücksbourg, le drapeau d'État et de guerre à terre porte une couronne royale au centre de la croix blanche.",
+ "notes_en":"Under the Glücksburg dynasty, the state and war flag on land bore a royal crown at the centre of the white cross."},
+{"date_start":"1935-11-03","date_end":"1970-01-01","label_fr":"Royaume de Grèce (croix couronnée, 1935-1970)","label_en":"Kingdom of Greece (crowned cross, 1935–1970)","file":"State Flag of Greece (1863-1924 and 1935-1973).svg",
+ "notes_fr":"La couronne revient sur la croix avec la restauration de la monarchie en 1935, après la Deuxième République hellénique.",
+ "notes_en":"The crown returned to the cross when the monarchy was restored in 1935, after the Second Hellenic Republic."},
+{"date_start":"1970-01-01","date_end":"1975-06-07","label_fr":"Régime des colonels (1970-1975)","label_en":"Colonels' regime (1970–1975)","file":"Flag of Greece (1970-1975, 3-2).svg",
+ "notes_fr":"Sous la dictature des colonels, le drapeau rayé devient l'unique drapeau national, dans un bleu très foncé ; la croix simple revient comme drapeau à terre de 1975 à 1978.",
+ "notes_en":"Under the colonels' dictatorship the striped flag became the only national flag, in a very dark blue; the plain cross returned as the land flag from 1975 to 1978."}
+]}

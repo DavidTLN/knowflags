@@ -1,29 +1,87 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1392 1482" font-family="Arial, Helvetica, sans-serif">
-<rect width="1392" height="1482" fill="#FAFAF9"/>
-<svg viewBox="0 0 32 32" x="150.0" y="150.0" width="1092.0" height="1092.0" preserveAspectRatio="none"><path d="M0 0h32v32H0z" fill="#da291c"/><path d="M13 6h6v7h7v6h-7v7h-6v-7H6v-6h7z" fill="#fff"/></svg>
-<rect x="150" y="150" width="1092.0" height="1092.0" fill="none" stroke="#111" stroke-width="3.5"/>
-<line x1="354.8" y1="150.0" x2="354.8" y2="1242.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="593.6" y1="150.0" x2="593.6" y2="1242.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="696.0" y1="150.0" x2="696.0" y2="1242.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="798.4" y1="150.0" x2="798.4" y2="1242.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="1037.2" y1="150.0" x2="1037.2" y2="1242.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="354.8" x2="1242.0" y2="354.8" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="593.6" x2="1242.0" y2="593.6" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="696.0" x2="1242.0" y2="696.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="798.4" x2="1242.0" y2="798.4" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="1037.2" x2="1242.0" y2="1037.2" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="150.0" y1="80.0" x2="354.8" y2="80.0"/><polygon points="150.0,80.0 164.0,73.0 164.0,87.0"/><polygon points="354.8,80.0 340.8,73.0 340.8,87.0"/><text x="252.4" y="66.0" font-size="46" text-anchor="middle" stroke="none">6</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="354.8" y1="80.0" x2="593.6" y2="80.0"/><polygon points="354.8,80.0 368.8,73.0 368.8,87.0"/><polygon points="593.6,80.0 579.6,73.0 579.6,87.0"/><text x="474.2" y="66.0" font-size="46" text-anchor="middle" stroke="none">7</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="593.6" y1="80.0" x2="798.4" y2="80.0"/><polygon points="593.6,80.0 607.6,73.0 607.6,87.0"/><polygon points="798.4,80.0 784.4,73.0 784.4,87.0"/><text x="696.0" y="66.0" font-size="46" text-anchor="middle" stroke="none">6</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="798.4" y1="80.0" x2="1037.2" y2="80.0"/><polygon points="798.4,80.0 812.4,73.0 812.4,87.0"/><polygon points="1037.2,80.0 1023.2,73.0 1023.2,87.0"/><text x="917.8" y="66.0" font-size="46" text-anchor="middle" stroke="none">7</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="1037.2" y1="80.0" x2="1242.0" y2="80.0"/><polygon points="1037.2,80.0 1051.2,73.0 1051.2,87.0"/><polygon points="1242.0,80.0 1228.0,73.0 1228.0,87.0"/><text x="1139.6" y="66.0" font-size="46" text-anchor="middle" stroke="none">6</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="150.0" x2="80.0" y2="354.8"/><polygon points="80.0,150.0 73.0,164.0 87.0,164.0"/><polygon points="80.0,354.8 73.0,340.8 87.0,340.8"/><text x="64.0" y="252.4" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 252.4)" stroke="none">6</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="354.8" x2="80.0" y2="593.6"/><polygon points="80.0,354.8 73.0,368.8 87.0,368.8"/><polygon points="80.0,593.6 73.0,579.6 87.0,579.6"/><text x="64.0" y="474.2" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 474.2)" stroke="none">7</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="593.6" x2="80.0" y2="798.4"/><polygon points="80.0,593.6 73.0,607.6 87.0,607.6"/><polygon points="80.0,798.4 73.0,784.4 87.0,784.4"/><text x="64.0" y="696.0" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 696.0)" stroke="none">6</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="798.4" x2="80.0" y2="1037.2"/><polygon points="80.0,798.4 73.0,812.4 87.0,812.4"/><polygon points="80.0,1037.2 73.0,1023.2 87.0,1023.2"/><text x="64.0" y="917.8" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 917.8)" stroke="none">7</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="1037.2" x2="80.0" y2="1242.0"/><polygon points="80.0,1037.2 73.0,1051.2 87.0,1051.2"/><polygon points="80.0,1242.0 73.0,1228.0 87.0,1228.0"/><text x="64.0" y="1139.6" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 1139.6)" stroke="none">6</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="150.0" y1="1312.0" x2="1242.0" y2="1312.0"/><polygon points="150.0,1312.0 164.0,1305.0 164.0,1319.0"/><polygon points="1242.0,1312.0 1228.0,1305.0 1228.0,1319.0"/><text x="696.0" y="1298.0" font-size="46" text-anchor="middle" stroke="none">32</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="1312.0" y1="150.0" x2="1312.0" y2="1242.0"/><polygon points="1312.0,150.0 1305.0,164.0 1319.0,164.0"/><polygon points="1312.0,1242.0 1305.0,1228.0 1319.0,1228.0"/><text x="1296.0" y="696.0" font-size="46" text-anchor="middle" transform="rotate(-90 1296.0 696.0)" stroke="none">32</text></g>
-<text x="80" y="1427" font-size="42" font-weight="700" fill="#0A8A0A">[CH]</text>
-<text x="1312" y="1427" font-size="42" font-weight="700" fill="#0A8A0A" text-anchor="end">[1:1]</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-37380 -37380 74760 74760" fill="none" font-family="Calibri,Arial,'Liberation Sans',sans-serif">
+	<rect x="-37380" y="-37380" width="74760" height="74760" fill="#FAFAF9"/><title>Flag of Switzerland — construction sheet</title>
+	
+	<defs>
+		<marker id="left-arrow" viewBox="-4 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+			<path fill="blue" d="m2 0 4 4-10-4L6-4z"/>
+		</marker>
+	</defs>
+	<path fill="#fafafa" d="m-37380-37380h74760v74760h-74760z"/>
+	<path fill="#fff" d="m-33600-33600h67200v67200h-67200z"/>
+	<g opacity=".5" transform="scale(2100)">
+		<path fill="#da291c" d="m-16-16h32v32h-32z"/>
+		<path fill="#fff" d="m-3-10h6v20h-6zm-7 7h20v6h-20z"/>
+	</g>
+	<g stroke="#000" stroke-width="140" stroke-linejoin="round" stroke-linecap="round">
+		<g opacity=".2" stroke-width="100">
+			<path stroke-dashoffset="368" stroke-dasharray="735,315,105,315" d="m0 0v-33600M0 0v33600"/>
+			<path stroke-dashoffset="368" stroke-dasharray="735,315,105,315" d="m0 0h-33600M0 0h33600"/>
+		</g>
+		<path stroke="#444" stroke-width="250" d="m-33600-33600h67200v67200h-67200z"/>
+		<path d="m-6300-21000H6300v14700h14700V6300H6300v14700H-6300V6300h-14700V-6300h14700z"/>
+		<path stroke="#222" stroke-width="75" stroke-dasharray="210,210" d="m-33600-36120V0m0 36120V0m12600-36120v29820m14700-29820v15120M6300-36120v15120m14700-15120v29820m12600-29820V0m0 36120V0m-69720-33600H0m36120 0H0m-36120 12600h29820M-36120-6300h15120M-36120 6300h15120m-15120 14700h29820m-29820 12600H0m36120 0H0M-6300-6300H6300V6300H-6300z"/>
+	</g>
+	<g fill="#008" opacity=".8">
+		<circle r="200" cx="-6300" cy="-21000"/>
+		<circle r="200" cx="6300" cy="-21000"/>
+		<circle r="200" cx="-21000" cy="-6300"/>
+		<circle r="200" cx="-6300" cy="-6300"/>
+		<circle r="200" cx="6300" cy="-6300"/>
+		<circle r="200" cx="21000" cy="-6300"/>
+		<circle r="200" cx="-21000" cy="6300"/>
+		<circle r="200" cx="-6300" cy="6300"/>
+		<circle r="200" cx="6300" cy="6300"/>
+		<circle r="200" cx="21000" cy="6300"/>
+		<circle r="200" cx="-6300" cy="21000"/>
+		<circle r="200" cx="6300" cy="21000"/>
+	</g>
+	<g stroke="#00f" stroke-width="75" marker-start="url(#left-arrow)">
+		<path d="m-33300-35175h4900"/>
+		<path d="m-21300-35175h-4900"/>
+		<path d="m-20700-35175h5950"/>
+		<path d="m-6600-35175h-5950"/>
+		<path d="m-6000-35175h4900"/>
+		<path d="m6000-35175H1100"/>
+		<path d="m6600-35175h5950"/>
+		<path d="m20700-35175h-5950"/>
+		<path d="m21300-35175h4900"/>
+		<path d="m33300-35175h-4900"/>
+		<path d="m-33300 35175h31500"/>
+		<path d="m33300 35175H1800"/>
+		<path d="m-35175 33300v-4900"/>
+		<path d="m-35175 21300v4900"/>
+		<path d="m-35175 20700v-5950"/>
+		<path d="m-35175 6600v5950"/>
+		<path d="m-35175 6000V1100"/>
+		<path d="m-35175-6000v4900"/>
+		<path d="m-35175-6600v-5950"/>
+		<path d="m-35175-20700v5950"/>
+		<path d="m-35175-21300v-4900"/>
+		<path d="m-35175-33300v4900"/>
+		<path d="m35175 33300V1800"/>
+		<path d="m35175-33300v31500"/>
+	</g>
+	<g fill="#000" text-anchor="middle" font-size="50" transform="scale(50)">
+		<g>
+			<text x="-546" y="-688">6</text>
+			<text x="-273" y="-688">7</text>
+			<text y="-688">6</text>
+			<text x="273" y="-688">7</text>
+			<text x="546" y="-688">6</text>
+			<text y="718">32</text>
+		</g>
+		<g transform="rotate(270)">
+			<text x="-546" y="-688" text-decoration="underline">6</text>
+			<text x="-273" y="-688">7</text>
+			<text y="-688" text-decoration="underline">6</text>
+			<text x="273" y="-688">7</text>
+			<text x="546" y="-688" text-decoration="underline">6</text>
+			<text y="718">32</text>
+		</g>
+		<g font-size="27">
+			<text x="-709" y="722">[<tspan font-weight="bold" fill="#080">CH</tspan>]</text>
+			<text x="709" y="722">[<tspan font-weight="bold" fill="#080">1:1</tspan>]</text>
+		</g>
+	</g>
 </svg>

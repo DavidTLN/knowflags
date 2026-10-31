@@ -1,32 +1,93 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1938 1482" font-family="Arial, Helvetica, sans-serif">
-<rect width="1938" height="1482" fill="#FAFAF9"/>
-<svg viewBox="0 0 27 18" x="150.0" y="150.0" width="1638.0" height="1092.0" preserveAspectRatio="none"><path fill="#0D5EAF" d="M0 0h27v18H0z"/><path fill="none" stroke-width="2" stroke="#FFF" d="M5 0v11M0 5h10m0-2h17M10 7h17M0 11h27M0 15h27"/></svg>
-<rect x="150" y="150" width="1638.0" height="1092.0" fill="none" stroke="#111" stroke-width="3.5"/>
-<line x1="392.7" y1="150.0" x2="392.7" y2="1242.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="514.0" y1="150.0" x2="514.0" y2="1242.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="756.7" y1="150.0" x2="756.7" y2="1242.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="271.3" x2="1788.0" y2="271.3" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="392.7" x2="1788.0" y2="392.7" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="514.0" x2="1788.0" y2="514.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="635.3" x2="1788.0" y2="635.3" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="756.7" x2="1788.0" y2="756.7" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="878.0" x2="1788.0" y2="878.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="999.3" x2="1788.0" y2="999.3" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="1120.7" x2="1788.0" y2="1120.7" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="150.0" y1="80.0" x2="756.7" y2="80.0"/><polygon points="150.0,80.0 164.0,73.0 164.0,87.0"/><polygon points="756.7,80.0 742.7,73.0 742.7,87.0"/><text x="453.3" y="66.0" font-size="46" text-anchor="middle" stroke="none">10</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="756.7" y1="80.0" x2="1788.0" y2="80.0"/><polygon points="756.7,80.0 770.7,73.0 770.7,87.0"/><polygon points="1788.0,80.0 1774.0,73.0 1774.0,87.0"/><text x="1272.3" y="66.0" font-size="46" text-anchor="middle" stroke="none">17</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="150.0" x2="80.0" y2="271.3"/><polygon points="80.0,150.0 73.0,164.0 87.0,164.0"/><polygon points="80.0,271.3 73.0,257.3 87.0,257.3"/><text x="64.0" y="210.7" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 210.7)" stroke="none">2</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="271.3" x2="80.0" y2="392.7"/><polygon points="80.0,271.3 73.0,285.3 87.0,285.3"/><polygon points="80.0,392.7 73.0,378.7 87.0,378.7"/><text x="64.0" y="332.0" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 332.0)" stroke="none">2</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="392.7" x2="80.0" y2="514.0"/><polygon points="80.0,392.7 73.0,406.7 87.0,406.7"/><polygon points="80.0,514.0 73.0,500.0 87.0,500.0"/><text x="64.0" y="453.3" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 453.3)" stroke="none">2</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="514.0" x2="80.0" y2="635.3"/><polygon points="80.0,514.0 73.0,528.0 87.0,528.0"/><polygon points="80.0,635.3 73.0,621.3 87.0,621.3"/><text x="64.0" y="574.7" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 574.7)" stroke="none">2</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="635.3" x2="80.0" y2="756.7"/><polygon points="80.0,635.3 73.0,649.3 87.0,649.3"/><polygon points="80.0,756.7 73.0,742.7 87.0,742.7"/><text x="64.0" y="696.0" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 696.0)" stroke="none">2</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="756.7" x2="80.0" y2="878.0"/><polygon points="80.0,756.7 73.0,770.7 87.0,770.7"/><polygon points="80.0,878.0 73.0,864.0 87.0,864.0"/><text x="64.0" y="817.3" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 817.3)" stroke="none">2</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="878.0" x2="80.0" y2="999.3"/><polygon points="80.0,878.0 73.0,892.0 87.0,892.0"/><polygon points="80.0,999.3 73.0,985.3 87.0,985.3"/><text x="64.0" y="938.7" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 938.7)" stroke="none">2</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="999.3" x2="80.0" y2="1120.7"/><polygon points="80.0,999.3 73.0,1013.3 87.0,1013.3"/><polygon points="80.0,1120.7 73.0,1106.7 87.0,1106.7"/><text x="64.0" y="1060.0" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 1060.0)" stroke="none">2</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="1120.7" x2="80.0" y2="1242.0"/><polygon points="80.0,1120.7 73.0,1134.7 87.0,1134.7"/><polygon points="80.0,1242.0 73.0,1228.0 87.0,1228.0"/><text x="64.0" y="1181.3" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 1181.3)" stroke="none">2</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="150.0" y1="1312.0" x2="1788.0" y2="1312.0"/><polygon points="150.0,1312.0 164.0,1305.0 164.0,1319.0"/><polygon points="1788.0,1312.0 1774.0,1305.0 1774.0,1319.0"/><text x="969.0" y="1298.0" font-size="46" text-anchor="middle" stroke="none">27</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="1858.0" y1="150.0" x2="1858.0" y2="1242.0"/><polygon points="1858.0,150.0 1851.0,164.0 1865.0,164.0"/><polygon points="1858.0,1242.0 1851.0,1228.0 1865.0,1228.0"/><text x="1842.0" y="696.0" font-size="46" text-anchor="middle" transform="rotate(-90 1842.0 696.0)" stroke="none">18</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="392.7" y1="696.0" x2="514.0" y2="696.0"/><polygon points="392.7,696.0 406.7,689.0 406.7,703.0"/><polygon points="514.0,696.0 500.0,689.0 500.0,703.0"/><text x="453.3" y="682.0" font-size="46" text-anchor="middle" fill="#FAFAF9" stroke="#FAFAF9" stroke-width="10" stroke-linejoin="round">2</text><text x="453.3" y="682.0" font-size="46" text-anchor="middle" stroke="none">2</text></g>
-<text x="80" y="1427" font-size="42" font-weight="700" fill="#0A8A0A">[GR]</text>
-<text x="1858" y="1427" font-size="42" font-weight="700" fill="#0A8A0A" text-anchor="end">[2:3]</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-3780 -3780 90720 63000" fill="none" font-family="Calibri,Arial,'Liberation Sans',sans-serif">
+	<rect x="-3780" y="-3780" width="90720" height="63000" fill="#FAFAF9"/><title>Flag of Greece — construction sheet</title>
+	
+	<defs>
+		<marker id="left-arrow" viewBox="-4 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+			<path fill="blue" d="m2 0 4 4-10-4L6-4z"/>
+		</marker>
+	</defs>
+	<path fill="#f8f8f8" d="m-3780-3780h90720v63000H-3780z"/>
+	<path fill="#fff" d="m0 0h83160v55440H0z"/>
+	<g opacity=".5" transform="scale(3080)">
+		<path fill="#0d5eaf" d="m0 0h27v18H0z"/>
+		<path stroke="#fff" stroke-width="2" d="m5 0v11M0 5h10m0-2h17M10 7h17M0 11h27M0 15h27"/>
+	</g>
+	<g stroke="#000" stroke-width="140" stroke-linejoin="round" stroke-linecap="round">
+		<g opacity=".2" stroke-width="100">
+			<path stroke-dashoffset="362" stroke-dasharray="725,315,105,315" d="m41580 27720V0m0 27720v27720"/>
+			<path stroke-dashoffset="368" stroke-dasharray="735,315,105,315" d="m41580 27720H0m41580 0h41580"/>
+		</g>
+		<path stroke="#444" stroke-width="250" d="m0 0h83160v55440H0z"/>
+		<path d="m0 12320h12320V0M0 18480h12320v12320H0M18480 0v12320h12320V6160h52360m0 6160H30800v6160h52360m0 6160H30800v-6160H18480v12320h64680M0 36960h83160M0 43120h83160M0 49280h83160"/>
+		<path stroke="#222" stroke-width="75" stroke-dasharray="210,210" d="m0-2520v30240m0 30240V27720M12320-2520V0m6160-2520V0m12320-2520v8680m52360-8680v30240m0 30240V27720M-2520 0h44100m44100 0H41580m44100 6160h-2520m2520 6160h-2520m2520 6160h-2520m2520 6160h-2520m-70840 6160h6160m67200 0h-2520m2520 6160h-2520m2520 6160h-2520m2520 6160h-2520M12320 12320h6160v6160h-6160zM-2520 55440h44100m44100 0H41580"/>
+	</g>
+	<g fill="#008" opacity=".8">
+		<circle r="200" cx="12320" cy="12320"/>
+		<circle r="200" cx="18480" cy="12320"/>
+		<circle r="200" cx="12320" cy="18480"/>
+		<circle r="200" cx="18480" cy="18480"/>
+		<circle r="200" cx="12320" cy="30800"/>
+		<circle r="200" cx="18480" cy="30800"/>
+		<circle r="200" cx="30800" cy="6160"/>
+		<circle r="200" cx="30800" cy="12320"/>
+		<circle r="200" cx="30800" cy="18480"/>
+	</g>
+	<g stroke="#00f" stroke-width="75" marker-start="url(#left-arrow)">
+		<path d="m300-1575h4760"/>
+		<path d="m12020-1575H7260"/>
+		<path d="m12620-1575h1680"/>
+		<path d="m18180-1575h-1680"/>
+		<path d="m18780-1575h4760"/>
+		<path d="m30500-1575h-4760"/>
+		<path d="m31100-1575h24080"/>
+		<path d="m82860-1575H58780"/>
+		<path d="m300 57015h39480"/>
+		<path d="m82860 57015H43380"/>
+		<path d="m-1575 55140V29520"/>
+		<path d="m-1575 300v25620"/>
+		<path d="m84735 5860V4180"/>
+		<path d="m84735 300v1680"/>
+		<path d="m84735 12020v-1680"/>
+		<path d="m84735 6460v1680"/>
+		<path d="m84735 18180v-1680"/>
+		<path d="m84735 12620v1680"/>
+		<path d="m84735 24340v-1680"/>
+		<path d="m84735 18780v1680"/>
+		<path d="m84735 30500v-1680"/>
+		<path d="m84735 24940v1680"/>
+		<path d="m84735 36660v-1680"/>
+		<path d="m84735 31100v1680"/>
+		<path d="m84735 42820v-1680"/>
+		<path d="m84735 37260v1680"/>
+		<path d="m84735 48980v-1680"/>
+		<path d="m84735 43420v1680"/>
+		<path d="m84735 55140v-1680"/>
+		<path d="m84735 49580v1680"/>
+	</g>
+	<g fill="#000" text-anchor="middle" font-size="50" transform="scale(50)">
+		<g>
+			<text x="123" y="-16">4</text>
+			<text x="308" y="-16">2</text>
+			<text x="493" y="-16">4</text>
+			<text x="1140" y="-16">17</text>
+			<text x="832" y="1155">27</text>
+		</g>
+		<g transform="rotate(270)">
+			<text x="-554" y="-16">18</text>
+			<text x="-1047" y="1710">2</text>
+			<text x="-924" y="1710">2</text>
+			<text x="-801" y="1710">2</text>
+			<text x="-678" y="1710">2</text>
+			<text x="-554" y="1710">2</text>
+			<text x="-431" y="1710">2</text>
+			<text x="-308" y="1710">2</text>
+			<text x="-185" y="1710">2</text>
+			<text x="-62" y="1710">2</text>
+		</g>
+		<g font-size="27">
+			<text x="-37" y="1159">[<tspan font-weight="bold" fill="#080">GR</tspan>]</text>
+			<text x="1700" y="1159">[<tspan font-weight="bold" fill="#080">2:3</tspan>]</text>
+		</g>
+	</g>
 </svg>

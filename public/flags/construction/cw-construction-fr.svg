@@ -1,31 +1,87 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1938 1482" font-family="Arial, Helvetica, sans-serif">
-<rect width="1938" height="1482" fill="#FAFAF9"/>
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 54 36" x="150.0" y="150.0" width="1638.0" height="1092.0" preserveAspectRatio="none">
-<rect width="54" height="36" fill="#002b7f"/>
-<path d="M0,22.5H54V27H0z" fill="#f9e814"/>
-<g fill="#fff" id="s">
-<g id="f">
-<g id="t">
-<path d="m12,8v4h2z" transform="rotate(18,12,8)" id="o"/>
-<use xlink:href="#o" x="-24" transform="scale(-1,1)"/>
-</g>
-<use xlink:href="#t" transform="rotate(72,12,12)"/>
-</g>
-<use xlink:href="#t" transform="rotate(-72,12,12)"/>
-<use xlink:href="#f" transform="rotate(144,12,12)"/>
-</g>
-<use xlink:href="#s" x="-4" y="-4" transform="scale(0.75)"/>
-</svg>
-<rect x="150" y="150" width="1638.0" height="1092.0" fill="none" stroke="#111" stroke-width="3.5"/>
-<line x1="969.0" y1="150.0" x2="969.0" y2="1242.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="696.0" x2="1788.0" y2="696.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="832.5" x2="1788.0" y2="832.5" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="969.0" x2="1788.0" y2="969.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="150.0" x2="80.0" y2="832.5"/><polygon points="80.0,150.0 73.0,164.0 87.0,164.0"/><polygon points="80.0,832.5 73.0,818.5 87.0,818.5"/><text x="64.0" y="491.2" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 491.2)" stroke="none">22.5</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="832.5" x2="80.0" y2="969.0"/><polygon points="80.0,832.5 73.0,846.5 87.0,846.5"/><polygon points="80.0,969.0 73.0,955.0 87.0,955.0"/><text x="64.0" y="900.8" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 900.8)" stroke="none">4.5</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="969.0" x2="80.0" y2="1242.0"/><polygon points="80.0,969.0 73.0,983.0 87.0,983.0"/><polygon points="80.0,1242.0 73.0,1228.0 87.0,1228.0"/><text x="64.0" y="1105.5" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 1105.5)" stroke="none">9</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="150.0" y1="1312.0" x2="1788.0" y2="1312.0"/><polygon points="150.0,1312.0 164.0,1305.0 164.0,1319.0"/><polygon points="1788.0,1312.0 1774.0,1305.0 1774.0,1319.0"/><text x="969.0" y="1298.0" font-size="46" text-anchor="middle" stroke="none">54</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="1858.0" y1="150.0" x2="1858.0" y2="1242.0"/><polygon points="1858.0,150.0 1851.0,164.0 1865.0,164.0"/><polygon points="1858.0,1242.0 1851.0,1228.0 1865.0,1228.0"/><text x="1842.0" y="696.0" font-size="46" text-anchor="middle" transform="rotate(-90 1842.0 696.0)" stroke="none">36</text></g>
-<text x="80" y="1427" font-size="42" font-weight="700" fill="#0A8A0A">[CW]</text>
-<text x="1858" y="1427" font-size="42" font-weight="700" fill="#0A8A0A" text-anchor="end">[2:3]</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-28 -28 596 416" fill="none" font-family="Liberation Sans,Arial,Helvetica,sans-serif">
+  <rect x="-28" y="-28" width="596" height="416" fill="#FAFAF9"/><title>Flag of Curaçao — construction sheet</title>
+  <defs>
+    <marker id="left-arrow" viewBox="-4 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+      <path fill="blue" d="m2 0 4 4-10-4L6-4z"/>
+    </marker>
+  </defs>
+  
+  <path fill="#fafafa" d="m-28-28h596v416h-596z"/>
+  <path fill="#fff" d="m0 0h540v360h-540z"/>
+  <g opacity=".5">
+    <path fill="#002b7f" d="m0 0h540v360h-540z"/>
+    <path fill="#f9e27f" d="m0 225h540v45h-540z"/>
+    <path fill="#fff" d="m60 30 6.73 20.72 21.8 0-17.64 12.81 6.74 20.74-17.63-12.82-17.64 12.82 6.74-20.74-17.64-12.81 21.8 0z"/>
+    <path fill="#fff" d="m120 80 8.97 27.63 29.07 0-23.52 17.09 8.99 27.64-23.51-17.09-23.52 17.09 8.99-27.66-23.52-17.07 29.07 0z"/>
+  </g>
+  
+  <g stroke="#000" stroke-width="1" stroke-linejoin="round" stroke-linecap="round">
+    <g stroke="#fa8" opacity=".7">
+      <path stroke-dasharray="2.5,2" stroke-dashoffset="5" d="m60 30a1 1 0 0 0 0 60m0-60a1 1 0 0 1 0 60"/>
+      <path stroke-dasharray="2.5,2" stroke-dashoffset="5" d="m120 80a1 1 0 0 0 0 80m0-80a1 1 0 0 1 0 80"/>
+      <path stroke-dasharray="7 3 1 3" d="m42.37 35.73 35.26 48.54m18.86 3.37 44.98 63.28"/>
+    </g>
+    <path stroke="#444" stroke-width="2.5" d="m540 360h-540v-360h540z"/>
+    <path d="m0 225h540M0 270h540"/>
+    <path stroke="#222" stroke-width="0.5" stroke-dasharray="1.5,1.5" d="m-20 60h80M-20 120h140M-20 0h580M0-20v400M540 0v380M60-20v80M120-20v140M0 225h560M0 270h560M0 360h560M42.37 35.73 82.82 6.35M77.63 84.27 118.08 54.83M96.49 87.64 145.03 52.38M143.51 152.36 192.05 117.1"/>
+    <path d="m56.25 60h7.5m-3.75-3.75v7.5M116.25 120h7.5m-3.75-3.75v7.5M60 30m0 0 6.73 20.72 21.8 0-17.64 12.81 6.74 20.74-17.63-12.82-17.64 12.82 6.74-20.74-17.64-12.81 21.8 0 6.73-20.72M120 80m0 0 8.97 27.63 29.07 0-23.52 17.09 8.99 27.64-23.51-17.09-23.52 17.09 8.99-27.66-23.52-17.07 29.07 0 8.97-27.63"/>
+  </g>
+  
+  <g fill="#008" opacity=".8">
+    <circle r="2" cx="42.37" cy="35.73"/>
+    <circle r="2" cx="77.63" cy="84.27"/>
+    <circle r="2" cx="96.49" cy="87.64"/>
+    <circle r="2" cx="143.51" cy="152.36"/>
+  </g>
+  
+  <g stroke="#00f" stroke-width="1" marker-start="url(#left-arrow)">
+    <path d="m136.94 62.26 14.1 19.41"/>
+    <path d="m179.96 122.98 -14.1 -19.41"/>
+    <path d="m76.73 14.23 8.81 12.13"/>
+    <path d="m107.99 58.77 -8.81 -12.13"/>
+    <path d="m3-10 15 0"/>
+    <path d="m57-10 -15 0"/>
+    <path d="m63-10 15 0"/>
+    <path d="m117-10 -15 0"/>
+    <path d="m-11 3 0 15"/>
+    <path d="m-11 57 0 -15"/>
+    <path d="m-11 63 0 15"/>
+    <path d="m-11 117 0 -15"/>
+    <path d="m3 372 244 0"/>
+    <path d="m537 372 -244 0"/>
+    <path d="m552 3 0 95"/>
+    <path d="m552 223 0 -95"/>
+    <path d="m552 230 0 11"/>
+    <path d="m552 268 0 -11"/>
+    <path d="m552 273 0 29"/>
+    <path d="m552 357 0 -29"/>
+  </g>
+  
+  <g fill="#000" text-anchor="middle" font-size="20">
+    <g>
+      <text x="30" y="-4">12</text>
+      <text x="90" y="-4">12</text>
+      <text x="270" y="379">108</text>
+    </g>
+    <g transform="rotate(270)">
+      <text x="-30" y="-6">12</text>
+      <text x="-90" y="-6">12</text>
+      <text x="-113.5" y="559">45</text>
+      <text x="-249.5" y="559" text-decoration="underline">9</text>
+      <text x="-316" y="559">18</text>
+    </g>
+    <g transform="rotate(54)">
+      <text x="84" y="-47">12</text>
+      <text x="167" y="-69">16</text>
+    </g>
+    <g font-size="10">
+      <text x="-2" y="376" text-anchor="end">
+        [<tspan font-weight="bold" fill="#080">CW</tspan>]
+      </text>
+      <text x="543" y="376" text-anchor="start">
+        [<tspan font-weight="bold" fill="#080">2:3</tspan>]
+      </text>
+    </g>
+  </g>
 </svg>

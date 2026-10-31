@@ -1,18 +1,72 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1938 1482" font-family="Arial, Helvetica, sans-serif">
-<rect width="1938" height="1482" fill="#FAFAF9"/>
-<svg viewBox="0 0 6 4" x="150.0" y="150.0" width="1638.0" height="1092.0" preserveAspectRatio="none"><path fill="#ce1126" d="M0 0h6v4H0z"/><path fill="#002868" d="M0 1h6v2H0z"/><circle fill="#fff" cx="3" cy="2" r=".8"/></svg>
-<rect x="150" y="150" width="1638.0" height="1092.0" fill="none" stroke="#111" stroke-width="3.5"/>
-<line x1="969.0" y1="150.0" x2="969.0" y2="1242.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="423.0" x2="1788.0" y2="423.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="696.0" x2="1788.0" y2="696.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="969.0" x2="1788.0" y2="969.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<circle cx="969.0" cy="696.0" r="218.4" fill="none" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.85"/>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="150.0" x2="80.0" y2="423.0"/><polygon points="80.0,150.0 73.0,164.0 87.0,164.0"/><polygon points="80.0,423.0 73.0,409.0 87.0,409.0"/><text x="64.0" y="286.5" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 286.5)" stroke="none">1</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="423.0" x2="80.0" y2="969.0"/><polygon points="80.0,423.0 73.0,437.0 87.0,437.0"/><polygon points="80.0,969.0 73.0,955.0 87.0,955.0"/><text x="64.0" y="696.0" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 696.0)" stroke="none">2</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="969.0" x2="80.0" y2="1242.0"/><polygon points="80.0,969.0 73.0,983.0 87.0,983.0"/><polygon points="80.0,1242.0 73.0,1228.0 87.0,1228.0"/><text x="64.0" y="1105.5" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 1105.5)" stroke="none">1</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="150.0" y1="1312.0" x2="1788.0" y2="1312.0"/><polygon points="150.0,1312.0 164.0,1305.0 164.0,1319.0"/><polygon points="1788.0,1312.0 1774.0,1305.0 1774.0,1319.0"/><text x="969.0" y="1298.0" font-size="46" text-anchor="middle" stroke="none">6</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="1858.0" y1="150.0" x2="1858.0" y2="1242.0"/><polygon points="1858.0,150.0 1851.0,164.0 1865.0,164.0"/><polygon points="1858.0,1242.0 1851.0,1228.0 1865.0,1228.0"/><text x="1842.0" y="696.0" font-size="46" text-anchor="middle" transform="rotate(-90 1842.0 696.0)" stroke="none">4</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="750.6" y1="1105.5" x2="1187.4" y2="1105.5"/><polygon points="750.6,1105.5 764.6,1098.5 764.6,1112.5"/><polygon points="1187.4,1105.5 1173.4,1098.5 1173.4,1112.5"/><text x="969.0" y="1091.5" font-size="46" text-anchor="middle" fill="#FAFAF9" stroke="#FAFAF9" stroke-width="10" stroke-linejoin="round">1.6</text><text x="969.0" y="1091.5" font-size="46" text-anchor="middle" stroke="none">1.6</text></g>
-<text x="80" y="1427" font-size="42" font-weight="700" fill="#0A8A0A">[LA]</text>
-<text x="1858" y="1427" font-size="42" font-weight="700" fill="#0A8A0A" text-anchor="end">[2:3]</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-45360 -31500 90720 63000" fill="none" font-family="Calibri,Arial,'Liberation Sans',sans-serif">
+	<rect x="-45360" y="-31500" width="90720" height="63000" fill="#FAFAF9"/><title>Flag of Laos — construction sheet</title>
+	
+	<defs>
+		<marker id="left-arrow" viewBox="-4 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+			<path fill="blue" d="m2 0 4 4-10-4L6-4z"/>
+		</marker>
+	</defs>
+	<g opacity=".5">
+		<g transform="scale(2772)">
+			<path fill="#ce1126" d="m-15-10h30v20h-30z"/>
+			<path fill="#002868" d="m-15-5h30V5h-30z"/>
+		</g>
+		<circle fill="#fff" r="11088"/>
+	</g>
+	<g stroke="#000" stroke-width="140" stroke-linejoin="round" stroke-linecap="round">
+		<g opacity=".4" stroke-width="100">
+			<path stroke-dashoffset="384" stroke-dasharray="769,315,105,315" d="m0 0v-27720M0 0v14175m0 2520v11025"/>
+			<path stroke-dashoffset="368" stroke-dasharray="735,315,105,315" d="m0 0h-41580M0 0h41580"/>
+			<path stroke-dasharray="735,315,105,315" stroke-dashoffset="840" d="m0-30240v2520M-44100 0h2520"/>
+		</g>
+		<path stroke="#444" stroke-width="250" d="m-41580-27720h83160v55440h-83160z"/>
+		<path d="m-41580-13860h83160m-83160 27720h83160"/>
+		<circle r="11088"/>
+		<path stroke="#222" stroke-width="75" stroke-dasharray="210,210" d="m-41580-30240V0m0 30240V0m30492 16380V0m22176 16380V0m30492-30240V0m0 30240V0m-85680-27720H0m44100 0H0m-44100 13860h2520m-2520 27720h2520m-2520 13860H0m44100 0H0"/>
+		<path stroke-width="135" d="m-375 0h750M0-375v750"/>
+	</g>
+	<g fill="#008" opacity=".8">
+		<circle r="200" cx="11088" cy="0"/>
+		<circle r="200" cx="-11088" cy="0"/>
+	</g>
+	<g stroke="#00f" stroke-width="75" marker-start="url(#left-arrow)">
+		<path d="m-41280-29295h18690"/>
+		<path d="m-300-29295h-18690"/>
+		<path d="m300-29295h18690"/>
+		<path d="m41280-29295H22590"/>
+		<path d="m-41280 29295h39480"/>
+		<path d="m41280 29295H1800"/>
+		<path d="m-10788 15435h9688"/>
+		<path d="m10788 15435H1100"/>
+		<path d="m-43155 27420v-5530"/>
+		<path d="m-43155 14160v5530"/>
+		<path d="m-43155 13560V8030"/>
+		<path d="m-43155 300v5530"/>
+		<path d="m-43155-300v-5530"/>
+		<path d="m-43155-13560v5530"/>
+		<path d="m-43155-14160v-5530"/>
+		<path d="m-43155-27420v5530"/>
+		<path d="m43155 27420V1800"/>
+		<path d="m43155-27420v25620"/>
+	</g>
+	<g fill="#000" text-anchor="middle" font-size="50" transform="scale(50)">
+		<g>
+			<text x="-416" y="-571">15</text>
+			<text x="416" y="-571">15</text>
+			<text y="601">30</text>
+			<text y="324">8</text>
+		</g>
+		<g transform="rotate(270)">
+			<text x="-416" y="-848">5</text>
+			<text x="-139" y="-848">5</text>
+			<text x="139" y="-848">5</text>
+			<text x="416" y="-848">5</text>
+			<text y="878">20</text>
+		</g>
+		<g font-size="27">
+			<text x="-869" y="605">[<tspan font-weight="bold" fill="#080">LA</tspan>]</text>
+			<text x="869" y="605">[<tspan font-weight="bold" fill="#080">2:3</tspan>]</text>
+		</g>
+	</g>
 </svg>

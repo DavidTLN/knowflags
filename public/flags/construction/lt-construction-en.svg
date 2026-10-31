@@ -1,16 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2016 1420" font-family="Arial, Helvetica, sans-serif">
-<rect width="2016" height="1420" fill="#FAFAF9"/>
-<svg viewBox="0 0 5 3" x="150.0" y="150.0" width="1716.0" height="1029.6" preserveAspectRatio="none"><path fill="#BE3A34" d="M0 0h5v3H0z"/><path fill="#046A38" d="M0 0h5v2H0z"/><path fill="#FFB81C" d="M0 0h5v1H0z"/></svg>
-<rect x="150" y="150" width="1716.0" height="1029.6" fill="none" stroke="#111" stroke-width="3.5"/>
-<line x1="1008.0" y1="150.0" x2="1008.0" y2="1179.6" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="493.2" x2="1866.0" y2="493.2" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="664.8" x2="1866.0" y2="664.8" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="836.4" x2="1866.0" y2="836.4" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="150.0" x2="80.0" y2="493.2"/><polygon points="80.0,150.0 73.0,164.0 87.0,164.0"/><polygon points="80.0,493.2 73.0,479.2 87.0,479.2"/><text x="64.0" y="321.6" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 321.6)" stroke="none">1</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="493.2" x2="80.0" y2="836.4"/><polygon points="80.0,493.2 73.0,507.2 87.0,507.2"/><polygon points="80.0,836.4 73.0,822.4 87.0,822.4"/><text x="64.0" y="664.8" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 664.8)" stroke="none">1</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="836.4" x2="80.0" y2="1179.6"/><polygon points="80.0,836.4 73.0,850.4 87.0,850.4"/><polygon points="80.0,1179.6 73.0,1165.6 87.0,1165.6"/><text x="64.0" y="1008.0" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 1008.0)" stroke="none">1</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="150.0" y1="1249.6" x2="1866.0" y2="1249.6"/><polygon points="150.0,1249.6 164.0,1242.6 164.0,1256.6"/><polygon points="1866.0,1249.6 1852.0,1242.6 1852.0,1256.6"/><text x="1008.0" y="1235.6" font-size="46" text-anchor="middle" stroke="none">5</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="1936.0" y1="150.0" x2="1936.0" y2="1179.6"/><polygon points="1936.0,150.0 1929.0,164.0 1943.0,164.0"/><polygon points="1936.0,1179.6 1929.0,1165.6 1943.0,1165.6"/><text x="1920.0" y="664.8" font-size="46" text-anchor="middle" transform="rotate(-90 1920.0 664.8)" stroke="none">3</text></g>
-<text x="80" y="1365" font-size="42" font-weight="700" fill="#0A8A0A">[LT]</text>
-<text x="1936" y="1365" font-size="42" font-weight="700" fill="#0A8A0A" text-anchor="end">[3:5]</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-3780 -31500 99960 63000" fill="none" font-family="Calibri,Arial,'Liberation Sans',sans-serif">
+	<rect x="-3780" y="-31500" width="99960" height="63000" fill="#FAFAF9"/><title>Flag of Lithuania — construction sheet</title>
+	
+	<defs>
+		<marker id="left-arrow" viewBox="-4 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+			<path fill="blue" d="m2 0 4 4-10-4L6-4z"/>
+		</marker>
+	</defs>
+	<path fill="#fafafa" d="m-3780-31500h99960v63000H-3780z"/>
+	<path fill="#fff" d="m0-27720h92400v55440H0z"/>
+	<g opacity=".5" transform="scale(9240)">
+		<path fill="#c1272d" d="m0-3h10v6H0z"/>
+		<path fill="#006a44" d="m0-3h10v4H0z"/>
+		<path fill="#fdb913" d="m0-3h10v2H0z"/>
+	</g>
+	<g stroke="#000" stroke-width="140" stroke-linejoin="round" stroke-linecap="round">
+		<g opacity=".4" stroke-width="100">
+			<path stroke-dashoffset="362" stroke-dasharray="725,315,105,315" d="m46200 0v-27720m0 27720v27720"/>
+			<path stroke-dashoffset="376" stroke-dasharray="751,315,105,315" d="m46200 0H0m46200 0h46200"/>
+		</g>
+		<path stroke="#444" stroke-width="250" d="m0-27720h92400v55440H0z"/>
+		<path d="m0-9240h92400M0 9240h92400"/>
+		<path stroke="#222" stroke-width="75" stroke-dasharray="210,210" d="m0-27720V0m0 30240V0m92400-27720V0m0 30240V0M-2520-27720h48720m48720 0H46200M-2520-9240H0M-2520 9240H0m-2520 18480h48720m48720 0H46200"/>
+	</g>
+	<g stroke="#00f" stroke-width="75" marker-start="url(#left-arrow)">
+		<path d="m300 29295h44800"/>
+		<path d="m92100 29295H47300"/>
+		<path d="m-1575 27420v-7840"/>
+		<path d="m-1575 9540v7840"/>
+		<path d="m-1575 8940V1100"/>
+		<path d="m-1575-8940v7840"/>
+		<path d="m-1575-9540v-7840"/>
+		<path d="m-1575-27420v7840"/>
+		<path d="m93975 27420V1100"/>
+		<path d="m93975-27420v26320"/>
+	</g>
+	<g fill="#000" text-anchor="middle" font-size="50" transform="scale(50)">
+		<g>
+			<text x="924" y="601">5</text>
+		</g>
+		<g transform="rotate(270)">
+			<text x="-370" y="-17">1</text>
+			<text y="-17">1</text>
+			<text x="370" y="-17">1</text>
+			<text y="1895">3</text>
+		</g>
+		<g font-size="27">
+			<text x="-37" y="605">[<tspan font-weight="bold" fill="#080">LT</tspan>]</text>
+			<text x="1885" y="605">[<tspan font-weight="bold" fill="#080">3:5</tspan>]</text>
+		</g>
+	</g>
 </svg>

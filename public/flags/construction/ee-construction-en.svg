@@ -1,18 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2016 1412" font-family="Arial, Helvetica, sans-serif">
-<rect width="2016" height="1412" fill="#FAFAF9"/>
-<rect x="150" y="150" width="1716" height="364" fill="#4B9CE2"/>
-<rect x="150" y="514" width="1716" height="364" fill="#7A7A7A"/>
-<rect x="150" y="878" width="1716" height="364" fill="#FFFFFF"/>
-<rect x="150" y="150" width="1716" height="1092" fill="none" stroke="#111" stroke-width="3.5"/>
-<line x1="1008.0" y1="150" x2="1008.0" y2="1242" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.7"/>
-<line x1="150" y1="514" x2="1866" y2="514" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.7"/>
-<line x1="150" y1="878" x2="1866" y2="878" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.7"/>
-<line x1="150" y1="696.0" x2="1866" y2="696.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.7"/>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80" y1="150" x2="80" y2="514"/><polygon points="80,150 73,164 87,164"/><polygon points="80,514 73,500 87,500"/><text x="64" y="332.0" font-size="46" text-anchor="middle" stroke="none" transform="rotate(-90 64 332.0)">7</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80" y1="514" x2="80" y2="878"/><polygon points="80,514 73,528 87,528"/><polygon points="80,878 73,864 87,864"/><text x="64" y="696.0" font-size="46" text-anchor="middle" stroke="none" transform="rotate(-90 64 696.0)">7</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80" y1="878" x2="80" y2="1242"/><polygon points="80,878 73,892 87,892"/><polygon points="80,1242 73,1228 87,1228"/><text x="64" y="1060.0" font-size="46" text-anchor="middle" stroke="none" transform="rotate(-90 64 1060.0)">7</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="1936" y1="150" x2="1936" y2="1242"/><polygon points="1936,150 1929,164 1943,164"/><polygon points="1936,1242 1929,1228 1943,1228"/><text x="1920" y="696.0" font-size="46" text-anchor="middle" stroke="none" transform="rotate(-90 1920 696.0)">21</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="150" y1="1322" x2="1866" y2="1322"/><polygon points="150,1322 164,1315 164,1329"/><polygon points="1866,1322 1852,1315 1852,1329"/><text x="1008.0" y="1308" font-size="46" text-anchor="middle" stroke="none">33</text></g>
-<text x="80" y="1377" font-size="42" font-weight="700" fill="#0A8A0A">[EE]</text>
-<text x="1986" y="1377" font-size="42" font-weight="700" fill="#0A8A0A" text-anchor="end">[7:11]</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-3780 -31122 93492 62244" fill="none" font-family="Calibri,Arial,'Liberation Sans',sans-serif">
+	<rect x="-3780" y="-31122" width="93492" height="62244" fill="#FAFAF9"/><title>Flag of Estonia — construction sheet</title>
+	
+	<defs>
+		<marker id="left-arrow" viewBox="-4 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+			<path fill="blue" d="m2 0 4 4-10-4L6-4z"/>
+		</marker>
+	</defs>
+	<path fill="#fafafa" d="m-3780-31122h93492v62244H-3780z"/>
+	<path fill="#fff" d="m0-27342h85932v54684H0z"/>
+	<g opacity=".5" transform="scale(1302)">
+		<path fill="#fff" d="m0-21h66v42H0z"/>
+		<path fill="#000" d="m0-21h66V7H0z"/>
+		<path fill="#0072ce" d="m0-21h66v14H0z"/>
+	</g>
+	<g stroke="#000" stroke-width="140" stroke-linejoin="round" stroke-linecap="round">
+		<g opacity=".4" stroke-width="100">
+			<path stroke-dashoffset="378" stroke-dasharray="755,315,105,315" d="m42966 0v-27342m0 27342v27342"/>
+			<path stroke-dashoffset="368" stroke-dasharray="735,315,105,315" d="m42966 0H0m42966 0h42966"/>
+		</g>
+		<path stroke="#444" stroke-width="250" d="m0-27342h85932v54684H0z"/>
+		<path d="m0-9114h85932M0 9114h85932"/>
+		<path stroke="#222" stroke-width="75" stroke-dasharray="210,210" d="m0-27342V0m0 29862V0m85932-27342V0m0 29862V0M-2520-27342h45486m45486 0H42966M-2520-9114H0M-2520 9114H0m-2520 18228h45486m45486 0H42966"/>
+	</g>
+	<g stroke="#00f" stroke-width="75" marker-start="url(#left-arrow)">
+		<path d="m300 28917h40866"/>
+		<path d="m85632 28917H44766"/>
+		<path d="m-1575 27042v-7714"/>
+		<path d="m-1575 9414v7714"/>
+		<path d="m-1575 8814V1100"/>
+		<path d="m-1575-8814v7714"/>
+		<path d="m-1575-9414v-7714"/>
+		<path d="m-1575-27042v7714"/>
+		<path d="m87507 27042V1800"/>
+		<path d="m87507-27042v25242"/>
+	</g>
+	<g fill="#000" text-anchor="middle" font-size="50" transform="scale(50)">
+		<g>
+			<text x="859" y="593">33</text>
+		</g>
+		<g transform="rotate(270)">
+			<text x="-365" y="-17">7</text>
+			<text y="-17">7</text>
+			<text x="365" y="-17">7</text>
+			<text y="1765">21</text>
+		</g>
+		<g font-size="27">
+			<text x="-37" y="597">[<tspan font-weight="bold" fill="#080">EE</tspan>]</text>
+			<text x="1756" y="597">[<tspan font-weight="bold" fill="#080">7:11</tspan>]</text>
+		</g>
+	</g>
 </svg>

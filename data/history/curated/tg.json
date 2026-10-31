@@ -1,0 +1,17 @@
+{
+"iso": "tg",
+"update": [
+{
+"id": 2505,
+"label_fr": "République autonome du Togo (1957-1958)",
+"label_en": "Autonomous Republic of Togo (1957–1958)",
+"notes_fr": "Devenu république autonome au sein de l'Union française, le Togo adopte un drapeau vert à deux étoiles blanches avec le tricolore français au canton.",
+"notes_en": "As an autonomous republic within the French Union, Togo adopted a green flag with two white stars and the French tricolour in the canton."
+},
+{
+"id": 2277,
+"date_start": "1958-01-01",
+"image": "/flags/history/tg-1958.svg"
+}
+]
+}

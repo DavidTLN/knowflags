@@ -1,0 +1,20 @@
+{
+"iso": "to",
+"update": [
+{
+"id": 2278,
+"file": "Flag of Tonga (1866–1875).svg"
+}
+],
+"add": [
+{
+"date_start": "1862-01-01",
+"date_end": "1866-01-01",
+"label_fr": "Royaume de Tonga (1862-1866)",
+"label_en": "Kingdom of Tonga (1862–1866)",
+"notes_fr": "Premier drapeau du royaume unifié par George Tupou Ier, qui promulgue le code de Vava'u la même année.",
+"notes_en": "The first flag of the kingdom unified by George Tupou I, who issued the Vava'u Code that same year.",
+"file": "Flag of Tonga (1862-1866).svg"
+}
+]
+}

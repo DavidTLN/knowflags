@@ -1,0 +1,20 @@
+{
+"iso": "tr",
+"update": [
+{
+"id": 2282,
+"file": "Flag of the Ottoman Empire (eight pointed star).svg"
+}
+],
+"add": [
+{
+"date_start": "1844-01-01",
+"date_end": "1923-10-29",
+"label_fr": "Empire ottoman (1844-1923)",
+"label_en": "Ottoman Empire (1844–1923)",
+"notes_fr": "Avec les réformes du Tanzimat, l'étoile à cinq branches remplace en 1844 celle à huit branches ; la République de Turquie conserve ce drapeau et fixe ses proportions en 1936.",
+"notes_en": "With the Tanzimat reforms, the five-pointed star replaced the eight-pointed one in 1844; the Republic of Turkey kept this flag and fixed its proportions in 1936.",
+"file": "Flag of the Ottoman Empire.svg"
+}
+]
+}

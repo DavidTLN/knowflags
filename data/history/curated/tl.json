@@ -1,0 +1,20 @@
+{
+"iso": "tl",
+"update": [
+{
+"id": 2276,
+"image": "https://flagcdn.com/id.svg"
+}
+],
+"add": [
+{
+"date_start": "1975-11-28",
+"date_end": "1975-12-07",
+"label_fr": "République démocratique du Timor oriental (1975)",
+"label_en": "Democratic Republic of East Timor (1975)",
+"notes_fr": "Proclamée par le Fretilin le 28 novembre 1975, la république est envahie par l'Indonésie neuf jours plus tard ; son drapeau est repris à l'indépendance de 2002.",
+"notes_en": "Proclaimed by Fretilin on 28 November 1975, the republic was invaded by Indonesia nine days later; its flag was taken up again at independence in 2002.",
+"file": "Flag of East Timor (1975–1976).svg"
+}
+]
+}

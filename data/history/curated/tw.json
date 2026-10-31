@@ -1,0 +1,23 @@
+{
+"iso": "tw",
+"add": [
+{
+"date_start": "1661-01-01",
+"date_end": "1683-10-05",
+"label_fr": "Royaume de Tungning (Koxinga)",
+"label_en": "Kingdom of Tungning (Koxinga)",
+"notes_fr": "Royaume fondé par Koxinga, fidèle aux Ming, après avoir chassé les Hollandais de l'île en 1662 ; il est conquis par les Qing en 1683.",
+"notes_en": "A kingdom founded by the Ming loyalist Koxinga after he drove the Dutch from the island in 1662; it was conquered by the Qing in 1683.",
+"file": "Flag of Ming Cheng.svg"
+},
+{
+"date_start": "1895-05-23",
+"date_end": "1895-10-21",
+"label_fr": "République de Formose",
+"label_en": "Republic of Formosa",
+"notes_fr": "Proclamée pour résister à la cession de Taïwan au Japon, la république au tigre bleu ne dure que cinq mois.",
+"notes_en": "Proclaimed to resist the handover of Taiwan to Japan, the blue-tiger republic lasted only five months.",
+"file": "Flag of the Republic of Formosa (1895).svg"
+}
+]
+}

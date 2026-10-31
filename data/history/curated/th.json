@@ -1,0 +1,50 @@
+{
+"iso": "th",
+"update": [
+{
+"id": 2275,
+"date_end": "1916-01-01",
+"file": "Flag of Thailand 1855.svg",
+"notes_fr": "Rama IV retire le chakra : l'éléphant blanc seul sur fond rouge devient le drapeau du Siam.",
+"notes_en": "Rama IV removed the chakra: the white elephant alone on red became the flag of Siam."
+}
+],
+"add": [
+{
+"date_start": "1680-01-01",
+"date_end": "1782-04-06",
+"label_fr": "Royaume d'Ayutthaya",
+"label_en": "Ayutthaya Kingdom",
+"notes_fr": "Les navires du royaume d'Ayutthaya arborent un simple pavillon rouge.",
+"notes_en": "Ships of the Ayutthaya Kingdom flew a plain red flag.",
+"file": "Flag of Thailand (Ayutthaya period).svg"
+},
+{
+"date_start": "1782-04-06",
+"date_end": "1817-01-01",
+"label_fr": "Royaume de Siam (Rama Ier)",
+"label_en": "Kingdom of Siam (Rama I)",
+"notes_fr": "Rama Ier, fondateur de la dynastie Chakri, ajoute le chakra blanc, arme du dieu Vishnou.",
+"notes_en": "Rama I, founder of the Chakri dynasty, added the white chakra, the weapon of the god Vishnu.",
+"file": "Flag of Thailand (1782).svg"
+},
+{
+"date_start": "1817-01-01",
+"date_end": "1855-01-01",
+"label_fr": "Royaume de Siam (Rama II)",
+"label_en": "Kingdom of Siam (Rama II)",
+"notes_fr": "Rama II place un éléphant blanc, animal sacré et symbole royal, au centre du chakra.",
+"notes_en": "Rama II placed a white elephant, a sacred animal and royal symbol, inside the chakra.",
+"file": "Flag of Thailand (1817).svg"
+},
+{
+"date_start": "1916-01-01",
+"date_end": "1917-09-28",
+"label_fr": "Royaume de Siam (bandes rouges et blanches)",
+"label_en": "Kingdom of Siam (red and white stripes)",
+"notes_fr": "Selon la tradition, le roi Vajiravudh aurait vu un drapeau à l'éléphant hissé à l'envers ; il adopte un drapeau symétrique à bandes rouges et blanches, complété de bleu en 1917.",
+"notes_en": "According to tradition, King Vajiravudh saw an elephant flag hung upside down; he adopted a symmetrical red and white striped flag, with blue added in 1917.",
+"file": "Flag of Thailand (1916).svg"
+}
+]
+}

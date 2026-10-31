@@ -1,0 +1,15 @@
+{
+"iso": "tv",
+"update": [
+{
+"id": 2509,
+"label_fr": "Tuvalu (1978-1995)",
+"label_en": "Tuvalu (1978–1995)",
+"notes_fr": "Drapeau de l'indépendance : un Blue Ensign bleu ciel où neuf étoiles dessinent la carte des neuf îles de l'archipel.",
+"notes_en": "The independence flag: a light-blue Blue Ensign on which nine stars map the archipelago's nine islands."
+}
+],
+"delete": [
+2510
+]
+}

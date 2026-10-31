@@ -1,0 +1,21 @@
+{
+"iso": "tt",
+"update": [
+{
+"id": 2279,
+"date_end": "1958-01-01",
+"file": "Flag of Trinidad and Tobago (1889–1958).svg"
+}
+],
+"add": [
+{
+"date_start": "1958-01-01",
+"date_end": "1962-08-31",
+"label_fr": "Trinité-et-Tobago (1958-1962)",
+"label_en": "Trinidad and Tobago (1958–1962)",
+"notes_fr": "Dernier Blue Ensign colonial, à l'époque de la Fédération des Indes occidentales dont Port of Spain est la capitale.",
+"notes_en": "The last colonial Blue Ensign, from the time of the West Indies Federation, whose capital was Port of Spain.",
+"file": "Flag of Trinidad and Tobago (1958–1962).svg"
+}
+]
+}

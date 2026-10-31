@@ -1,0 +1,39 @@
+{
+"iso": "tn",
+"update": [
+{
+"id": 2280,
+"date_end": "1831-01-01",
+"file": "Tunisian flag till 1831.svg"
+}
+],
+"add": [
+{
+"date_start": "1230-01-01",
+"date_end": "1574-09-13",
+"label_fr": "Dynastie hafside",
+"label_en": "Hafsid dynasty",
+"notes_fr": "Bannière des Hafsides, qui gouvernent Tunis du XIIIe siècle à la conquête ottomane de 1574.",
+"notes_en": "Banner of the Hafsids, who ruled Tunis from the 13th century until the Ottoman conquest of 1574.",
+"file": "Hafsid Flag - Tunisia.svg"
+},
+{
+"date_start": "1831-01-01",
+"date_end": "1959-06-01",
+"label_fr": "Beylicat de Tunis puis protectorat (1831-1959)",
+"label_en": "Beylik of Tunis, then protectorate (1831–1959)",
+"notes_fr": "Adopté par Hussein II bey après la bataille de Navarin (1827), où la flotte tunisienne n'avait pu être distinguée des autres : croissant et étoile rouges dans un disque blanc.",
+"notes_en": "Adopted by Hussein II Bey after the Battle of Navarino (1827), where the Tunisian fleet could not be told apart from others: a red crescent and star in a white disc.",
+"file": "Flag of the Beylik of Tunis (1831–1881) and Tunisia (1881–1959).svg"
+},
+{
+"date_start": "1959-06-01",
+"date_end": "1999-06-30",
+"label_fr": "République tunisienne (1959-1999)",
+"label_en": "Tunisian Republic (1959–1999)",
+"notes_fr": "La Constitution de 1959 confirme le drapeau beylical ; ses proportions et son dessin sont normalisés par la loi de 1999.",
+"notes_en": "The 1959 Constitution confirmed the beylical flag; its proportions and design were standardised by the 1999 law.",
+"file": "Flag of Tunisia (1959–1999).svg"
+}
+]
+}

@@ -1,0 +1,3 @@
+update country_flag_history set date_end = '1790-12-02' where id = 2024 and iso_code = 'be';
+update country_flag_history set image_url = '/flags/history/be-1830.svg' where id = 2026 and iso_code = 'be';
+insert into country_flag_history (iso_code, image_url, date_start, date_end, label_fr, label_en, notes_fr, notes_en) values ('be', '/flags/history/be-1715.svg', '1781-09-24', '1786-12-31', 'Pays-Bas autrichiens (pavillon civil)', 'Austrian Netherlands (civil ensign)', 'Sous Joseph II, les Pays-Bas autrichiens reçoivent un pavillon propre, rayé de rouge, de blanc et de jaune aux armes impériales, pour leurs navires marchands.', 'Under Joseph II, the Austrian Netherlands received their own striped red, white and yellow ensign with the imperial arms for merchant ships.');

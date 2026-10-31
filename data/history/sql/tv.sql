@@ -1,0 +1,2 @@
+delete from country_flag_history where id = 2510 and iso_code = 'tv';
+update country_flag_history set label_fr = 'Tuvalu (1978-1995)', label_en = 'Tuvalu (1978–1995)', notes_fr = 'Drapeau de l''indépendance : un Blue Ensign bleu ciel où neuf étoiles dessinent la carte des neuf îles de l''archipel.', notes_en = 'The independence flag: a light-blue Blue Ensign on which nine stars map the archipelago''s nine islands.' where id = 2509 and iso_code = 'tv';

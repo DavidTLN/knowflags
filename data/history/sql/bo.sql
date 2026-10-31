@@ -1,0 +1,4 @@
+update country_flag_history set image_url = '/flags/history/bo-0000.svg' where id = 2058 and iso_code = 'bo';
+update country_flag_history set image_url = '/flags/history/bo-0000-2.svg' where id = 2059 and iso_code = 'bo';
+update country_flag_history set image_url = 'https://flagcdn.com/bo.svg' where id = 2060 and iso_code = 'bo';
+insert into country_flag_history (iso_code, image_url, date_start, date_end, label_fr, label_en, notes_fr, notes_en) values ('bo', '/flags/history/bo-1836.svg', '1836-10-28', '1839-08-25', 'Confédération péruvio-bolivienne', 'Peru–Bolivian Confederation', 'Union voulue par le maréchal Andrés de Santa Cruz entre la Bolivie et deux États péruviens ; elle s''effondre après la défaite de Yungay en janvier 1839.', 'A union pushed by Marshal Andrés de Santa Cruz between Bolivia and two Peruvian states; it collapsed after the defeat at Yungay in January 1839.');

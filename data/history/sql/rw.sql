@@ -1,0 +1,2 @@
+update country_flag_history set label_fr = 'République du Rwanda (1961)', label_en = 'Republic of Rwanda (1961)', notes_fr = 'Après la proclamation de la République à Gitarama le 28 janvier 1961, le Rwanda adopte un tricolore rouge-jaune-vert.', notes_en = 'After the Republic was proclaimed at Gitarama on 28 January 1961, Rwanda adopted a red-yellow-green tricolour.' where id = 2485 and iso_code = 'rw';
+update country_flag_history set image_url = '/flags/history/rw-0000.svg' where id = 2253 and iso_code = 'rw';

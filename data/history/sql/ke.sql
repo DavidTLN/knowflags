@@ -1,0 +1,2 @@
+update country_flag_history set image_url = '/flags/history/ke-0000.svg' where id = 2176 and iso_code = 'ke';
+insert into country_flag_history (iso_code, image_url, date_start, date_end, label_fr, label_en, notes_fr, notes_en) values ('ke', '/flags/history/ke-1895.svg', '1895-07-01', '1921-01-01', 'Protectorat de l''Afrique orientale', 'East Africa Protectorate', 'Premier pavillon colonial du territoire, alors protectorat de l''Afrique orientale britannique.', 'The territory''s first colonial flag, when it was the British East Africa Protectorate.');

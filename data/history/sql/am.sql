@@ -1,0 +1,11 @@
+update country_flag_history set image_url = '/flags/history/am-1885.svg' where id = 1969 and iso_code = 'am';
+update country_flag_history set image_url = '/flags/history/am-1895.svg' where id = 1970 and iso_code = 'am';
+update country_flag_history set image_url = '/flags/history/am-0000.svg' where id = 1971 and iso_code = 'am';
+update country_flag_history set image_url = '/flags/history/am-0000-2.svg' where id = 1972 and iso_code = 'am';
+update country_flag_history set image_url = '/flags/history/am-0000-3.svg' where id = 1973 and iso_code = 'am';
+update country_flag_history set image_url = '/flags/history/am-1922.svg' where id = 1974 and iso_code = 'am';
+update country_flag_history set image_url = '/flags/history/am-0000-4.svg' where id = 1975 and iso_code = 'am';
+update country_flag_history set image_url = '/flags/history/am-1936.svg' where id = 1976 and iso_code = 'am';
+update country_flag_history set image_url = '/flags/history/am-1940.svg' where id = 1977 and iso_code = 'am';
+update country_flag_history set image_url = '/flags/history/am-1952.svg' where id = 1978 and iso_code = 'am';
+insert into country_flag_history (iso_code, image_url, date_start, date_end, label_fr, label_en, notes_fr, notes_en) values ('am', '/flags/history/am-1920.png', '1920-12-02', '1922-02-02', 'RSS d''Arménie (1920-1922)', 'Armenian SSR (1920–1922)', 'Premier drapeau de l''Arménie soviétique, proclamée à l''arrivée de l''Armée rouge à Erevan : un champ rouge portant les initiales de la république en lettres arméniennes.', 'First flag of Soviet Armenia, proclaimed as the Red Army entered Yerevan: a red field bearing the republic''s initials in Armenian letters.');

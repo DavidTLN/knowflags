@@ -1,0 +1,2 @@
+update country_flag_history set label_fr = 'Première République slovaque', label_en = 'First Slovak Republic', notes_fr = 'État satellite de l''Allemagne nazie dirigé par Jozef Tiso, la République slovaque arbore le tricolore blanc-bleu-rouge sans armoiries.', notes_en = 'A Nazi German satellite state led by Jozef Tiso, the Slovak Republic flew the white-blue-red tricolour without arms.' where id = 2488 and iso_code = 'sk';
+update country_flag_history set image_url = '/flags/history/sk-1939.svg' where id = 2262 and iso_code = 'sk';

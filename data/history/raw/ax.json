@@ -1,0 +1,107 @@
+{
+ "iso": "ax",
+ "flag_item": "Q202610",
+ "pages": [
+  "en:Flag of Åland",
+  "fr:Drapeau d'Åland",
+  "sv:Ålands flagga"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Åland",
+   "section": "intro",
+   "file": "Flags of Åland and Finland.png",
+   "text": "The flag of Åland displayed alongside the flag of Finland.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Åland",
+   "section": "Gallery",
+   "file": "Åland flag 1922.svg",
+   "text": "Unofficial tricolour used from the early 1920s until 1935",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Åland",
+   "section": "Gallery",
+   "file": "Åland flag (proposal 1).svg",
+   "text": "Original proposed flag design",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Åland",
+   "section": "Gallery",
+   "file": "Åland flag (proposal 2).svg",
+   "text": "Matts Dreijer's 1939 proposal",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Åland",
+   "section": "Gallery",
+   "file": "Åland Flag Proposal \"Pestflaggan\".svg",
+   "text": "The \"Pestflaggan\"",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Åland",
+   "section": "Gallery",
+   "file": "Åland Flag Proposal (1946).svg",
+   "text": "Matts Dreijer's 1946 proposal",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Åland",
+   "section": "Gallery",
+   "file": "Åland Flag Proposal (1953).svg",
+   "text": "Debate proposal 1",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Åland",
+   "section": "Gallery",
+   "file": "Åland Flag Proposal (November 1953).svg",
+   "text": "Debate proposal 2",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Åland",
+   "section": "Gallery",
+   "file": "Åland Flag Proposal (March & November 1953).svg",
+   "text": "Debate proposal 3",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Åland",
+   "section": "Gallery",
+   "file": "Åland flag (proposal 2).svg",
+   "text": "\"Finnish\" flag proposal",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau d'Åland",
+   "section": "intro",
+   "file": "Ålands lagting.jpg",
+   "text": "Le drapeau devant le parlement d'Åland",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "sv",
+   "page": "Ålands flagga",
+   "section": "Historik",
+   "file": "Åland flag 1922.svg",
+   "text": "Den inofficiella flaggan från 1922",
+   "kind": "thumb"
+  }
+ ]
+}

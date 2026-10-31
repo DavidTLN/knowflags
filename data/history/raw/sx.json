@@ -1,0 +1,35 @@
+{
+ "iso": "sx",
+ "flag_item": "Q604735",
+ "pages": [
+  "en:Flag of Sint Maarten",
+  "fr:Drapeau de Saint-Martin (royaume des Pays-Bas)",
+  "nl:Vlag van Sint Maarten (land)"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Sint Maarten",
+   "section": "Design > Construction sheet",
+   "file": "Flag of Sint Maarten (construction sheet).svg",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Sint Maarten",
+   "section": "Variants",
+   "file": "Flag of the Governor of Sint Maarten.svg",
+   "text": "| |Standard of the governor of Sint Maarten |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "nl",
+   "page": "Vlag van Sint Maarten (land)",
+   "section": "Beschrijving",
+   "file": "Flag of Sint Maarten (construction sheet).svg",
+   "text": "",
+   "kind": "thumb"
+  }
+ ]
+}

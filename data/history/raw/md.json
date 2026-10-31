@@ -1,0 +1,1460 @@
+{
+ "iso": "md",
+ "flag_item": "Q167584",
+ "pages": [
+  "en:Flag of Moldova",
+  "en:List of Moldovan flags",
+  "fr:Drapeau de la Moldavie",
+  "ro:Drapelul Republicii Moldova"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "intro",
+   "file": "Chisinau riot 2009-04-07 22.jpg",
+   "text": "Moldovan flag at the centre of a crowd during the April 2009 Moldovan parliamentary election protests",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Colors",
+   "file": "Flag of Moldova.svg",
+   "text": "1:2 Obverse",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Colors",
+   "file": "Flag of Moldova (reverse).svg",
+   "text": "1:2 Reverse",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Colors",
+   "file": "Flag of Moldova, construction sheet.svg",
+   "text": "Construction sheet",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Governmental flags > Governmental standards",
+   "file": "Flag of the President of Moldova.svg",
+   "text": "1:1 Flag of the president",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Governmental flags > Governmental standards",
+   "file": "Flag of the President of the Parliament of Moldova.svg",
+   "text": "1:1 Flag of the president of the Parliament",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Governmental flags > Governmental standards",
+   "file": "Flag of the Prime Minister of Moldova.svg",
+   "text": "1:1 Flag of the prime minister",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Governmental flags > Other governmental flags",
+   "file": "Flag of Civil Defense and Exceptional Situations of Moldova.svg",
+   "text": "2:3 Department of Civil Defense and Exceptional Situations",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Governmental flags > Other governmental flags",
+   "file": "Land flag of the Moldovan Customs.svg",
+   "text": "2:3 Customs flag",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Governmental flags > Other governmental flags",
+   "file": "Customs ensign of Moldova.png",
+   "text": "1:2 Customs ensign",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Governmental flags > Other governmental flags",
+   "file": "Flag of the Border Guard of Moldova.svg",
+   "text": "2:3? Border Guard",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Governmental flags > Other governmental flags",
+   "file": "Flag of the Information and Security Service of Moldova.png",
+   "text": "2:3 Information and Security Service",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Governmental flags > Other governmental flags",
+   "file": "Flag of Principal State Inspectorate for Technical Supervising of Dangerous Industrial Objects of Moldova.png",
+   "text": "1:2 Principal State Inspectorate for Technical Supervising of Dangerous Industrial Objects",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flag Day",
+   "file": "25 річниці незалежності Молдови 04.jpg",
+   "text": "Members of the Honor Guard Company of the Moldovan National Army holding a large Flag of Moldova in 2016.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "History",
+   "file": "Flag of Moldavia.svg",
+   "text": "Flag of Moldavia (14th–15th cent.)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "History",
+   "file": "Flag of Moldavia in 1831.svg",
+   "text": "flag of Moldavia (1831–1862)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "History",
+   "file": "National flag of the Moldavian Democratic Republic.svg",
+   "text": "State flag of the Moldavian Democratic Republic",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "History",
+   "file": "Flag of Sfatul Tarii obverse.svg",
+   "text": "Banner of the Moldavian Congress (Sfatul Țării), 1917–1918",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "History",
+   "file": "Flag of Sfatul Tarii reverse.svg",
+   "text": "Banner of the Moldavian Democratic Republic, 1917–1918",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "History",
+   "file": "Flag of Moldavian Autonomous Soviet Socialist Republic.svg",
+   "text": "Flag of the Moldavian ASSR, 1938",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "History",
+   "file": "Flag of the Moldavian Soviet Socialist Republic.svg",
+   "text": "Flag of the Moldavian SSR, 1952–1990 (readopted as the state flag of Transnistria)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "History",
+   "file": "Flag of Moldavian SSR proposed.svg",
+   "text": "Flag of the Moldavian SSR, 1990 (early prototype)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "History",
+   "file": "Flag of Moldavian SSR 1990.svg",
+   "text": "Flag of the Moldavian SSR / SSR Moldova, April 1990 - November 1990 (without emblem)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "History",
+   "file": "Flag of Moldova (1990–2010).svg",
+   "text": "1:2 The obverse of the flag of Moldova from 1990 until 2010",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "History",
+   "file": "Flag of Moldova (1990–2010, reverse).svg",
+   "text": "1:2 The reverse of the flag of Moldova from 1990 until 2010",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "History",
+   "file": "Flag of Moldova.svg",
+   "text": "The obverse of the flag of Moldova from 2010 until today",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "History",
+   "file": "Flag of Moldova, reverse.png",
+   "text": "The reverse of the flag of Moldova from 2010 until today",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "History",
+   "file": "Vladislav Grosul flag proposal.svg",
+   "text": "Proposed flag by historian Vladislav Grosul in the name of reunification of the country (1997)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "History",
+   "file": "Flag project proposed by the communists of Moldova.svg",
+   "text": "Proposed flag by the Russophile, anti-Unionist Party of Communists of Moldova in order to replace the current flag, similar to the flag and coat of arms of the Duchy of Bukovina (2010)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "History",
+   "file": "Flag of Stephen III of Moldavia (2018).svg",
+   "text": "Proposed new flag for Moldova by former president Igor Dodon (2018)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Autonomous Territorial Units",
+   "file": "Flag of Gagauzia.svg",
+   "text": "Flag of Gagauzia",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Districts",
+   "file": "Flag of Anenii Noi District.gif",
+   "text": "Anenii Noi District",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Districts",
+   "file": "Flag of Basarabeasca District.png",
+   "text": "Basarabeasca District",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Districts",
+   "file": "Flag of District Cahul.svg",
+   "text": "Cahul District",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Districts",
+   "file": "Rajon Calarasi flag.gif",
+   "text": "Călărași District",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Districts",
+   "file": "Flag of Căușeni District.jpg",
+   "text": "Căușeni District",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Districts",
+   "file": "Flag of Cimișlia District.gif",
+   "text": "Cimișlia District",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Districts",
+   "file": "Drapel Raionul Criuleni.gif",
+   "text": "Criuleni District",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Districts",
+   "file": "Flag of Dondușeni District.gif",
+   "text": "Dondușeni District",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Districts",
+   "file": "Drochia rajon flag.png",
+   "text": "Drochia District",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Districts",
+   "file": "Dubăsari District flag.svg",
+   "text": "Dubăsari District",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Districts",
+   "file": "Steag raionul edinet.svg",
+   "text": "Edineț District",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Districts",
+   "file": "Rajon Fălești Flag.gif",
+   "text": "Fălești District",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Districts",
+   "file": "Flag of Glodeni District.gif",
+   "text": "Glodeni District",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Districts",
+   "file": "Hincesti rajon flag.gif",
+   "text": "Hîncești District",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Districts",
+   "file": "Flag of Ialoveni District.gif",
+   "text": "Ialoveni District",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Districts",
+   "file": "Leova rajon flag.gif",
+   "text": "Leova District",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Districts",
+   "file": "Nisporeni rajon flag.gif",
+   "text": "Nisporeni District",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Districts",
+   "file": "Ocnitar.gif",
+   "text": "Ocnita District",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Districts",
+   "file": "Orhei2.gif",
+   "text": "Orhei District",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Districts",
+   "file": "Riscani rajon flag.gif",
+   "text": "Rîșcani District",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Districts",
+   "file": "Flag of District Rezina.svg",
+   "text": "Rezina District",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Districts",
+   "file": "Singerei rajon flag.gif",
+   "text": "Singerei District",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Districts",
+   "file": "Soldanesti rajon flag.gif",
+   "text": "Soldanesti District",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Districts",
+   "file": "Stefan voda rajon flag.gif",
+   "text": "Ștefan Vodă District",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Districts",
+   "file": "Straseni rajon flag.gif",
+   "text": "Straseni District",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Districts",
+   "file": "Drapel Raionul Taraclia.png",
+   "text": "Taraclia District",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Districts",
+   "file": "TELENESTI DRAP.jpg",
+   "text": "Telenesti District",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Districts",
+   "file": "Flag of District Ungheni.svg",
+   "text": "Ungheni District",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Former counties",
+   "file": "Drapel Județul Bălți.gif",
+   "text": "Bălți County",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Former counties",
+   "file": "Flag of Cahul County.gif",
+   "text": "Cahul County",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Former counties",
+   "file": "Flag of Chișinău County.gif",
+   "text": "Chișinău County",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Former counties",
+   "file": "Flag of Edineț County.gif",
+   "text": "Edineț County",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Former counties",
+   "file": "Flag of Lăpușna County.gif",
+   "text": "Lăpușna County",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Former counties",
+   "file": "Flag of Orhei County.gif",
+   "text": "Orhei County",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Former counties",
+   "file": "Flag of Soroca County.gif",
+   "text": "Soroca County",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Former counties",
+   "file": "Flag of Tighina County.gif",
+   "text": "Tighina County",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Moldova",
+   "section": "Flags of subdivisions > Former counties",
+   "file": "Flag of Ungheni County.gif",
+   "text": "Ungheni County",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "National flag and state flag",
+   "file": "Flag of Moldova.svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 2010–present | National flag and ensign | A blue, yellow, and red tricolor, with the national coat of arms in the bar. Ratio: 1:2.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "National flag and state flag",
+   "file": "Flag of Moldova (reverse).svg",
+   "text": "! scope=\"row\" | | Reverse flag | The reverse side is a mirror image of the obverse. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Autonomous regions flags",
+   "file": "Flag of Gagauzia.svg",
+   "text": "! scope=\"row\" | | 1995–present | Flag of Gagauzia | A blue, white, and red horizontal tricolor with stripe proportions of 3:1:1. Three yellow stars (15/100 of flag-width) on the blue stripe, forming an equilateral triangle with the base at hoist. Ratio: 1:2 |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Governmental flags",
+   "file": "Flag of the Border Guard of Moldova.svg",
+   "text": "! scope=\"row\" | | ?–present | Border Guard Service flag | Ratio: 2:3",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Governmental flags",
+   "file": "Land flag of the Moldovan Customs.svg",
+   "text": "! scope=\"row\" | | 1997–present | Customs flag on land | Ratio: 2:3",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Governmental flags",
+   "file": "Customs ensign of Moldova.png",
+   "text": "! scope=\"row\" | | 1997–present | Customs ensign |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Governmental flags",
+   "file": "Flag of Principal State Inspectorate for Technical Supervising of Dangerous Industrial Objects of Moldova.png",
+   "text": "! scope=\"row\" | | ?–present | Principal State Inspectorate for Technical Supervising of Dangerous Industrial Objects flag | Ratio: 2:3",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Governmental flags",
+   "file": "Flag of the President of Moldova.svg",
+   "text": "! scope=\"row\" | | ?–present | Standard of the president | Ratio: 1:1",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Governmental flags",
+   "file": "Flag of the President of the Parliament of Moldova.svg",
+   "text": "! scope=\"row\" | | ?–present | Standard of the president of the Parliament | Ratio: 1:1",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Governmental flags",
+   "file": "Flag of the Prime Minister of Moldova.svg",
+   "text": "! scope=\"row\" | | ?–present | Standard of the prime minister | Ratio: 1:1",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Governmental flags",
+   "file": "Flag of Civil Defense and Exceptional Situations of Moldova.svg",
+   "text": "! scope=\"row\" | | ?–present | The Moldovan Department of Civil Defence | Ratio: 2:3 |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Military flag",
+   "file": "Moldovan Armed Forces Flag (svg).svg",
+   "text": "! scope=\"row\" | | 1998–present | Flag of the Armed Forces | A blue cloth, charged with a red cross bordered yellow. On obverse, the emblem of the National Army in the middle. On reverse, instead of the emblem, with golden letters, the motto in Romanian: Pentru Onoare! Pentru Patrie! Pentru Tricolor! (\"For Honor! For Country! For the Tricolor!\"). Ratio: 2:3 |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Historical flags",
+   "file": "Flag of Moldova (1990–2010).svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\"| 1990–2010 | State flag of the Republic of Moldova | Ratio: 1:2.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Historical flags",
+   "file": "Flag of Moldova (1990–2010, reverse).svg",
+   "text": "! scope=\"row\" | | Reverse flag | The reverse side did not bear the coat of arms found on the obverse.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Historical flags",
+   "file": "Flag of the Moldavian Soviet Socialist Republic (1990).svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\"| 1990 | rowspan=\"2\"| State flag of the Moldavian Soviet Socialist Republic, later known as SSR Moldova | Ratio: 1:2.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Historical flags",
+   "file": "Flag of the Moldavian Soviet Socialist Republic (proposed).svg",
+   "text": "! scope=\"row\" | | Early prototype",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Historical flags",
+   "file": "Flag of the Moldavian Soviet Socialist Republic.svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 1952–1990 | State flag of the Moldavian Soviet Socialist Republic | Ratio: 1:2.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Historical flags",
+   "file": "Flag of the Moldavian Soviet Socialist Republic (1952–1990, reverse).svg",
+   "text": "! scope=\"row\" | | Reverse flag||All flags of the constituent republics of the Soviet Union did not bear the hammer and sickle on their reverse side.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Historical flags",
+   "file": "Flag of Moldavian SSR 02.svg",
+   "text": "! scope=\"row\" | | 1940–1952 | State flag of the Moldavian Soviet Socialist Republic | Ratio: 1:2.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Historical flags",
+   "file": "Flag of Moldavian Autonomous Soviet Socialist Republic.svg",
+   "text": "! scope=\"row\" | | 1938–1940 | State flag of the Moldavian Autonomous Soviet Socialist Republic | Ratio: 1:2.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Historical flags",
+   "file": "Flag of Moldavian Autonomous Soviet Socialist Republic (1937-1938).svg",
+   "text": "! scope=\"row\" | | 1937–1938 | State flag of the Moldavian Autonomous Soviet Socialist Republic | Ratio: 1:2.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Historical flags",
+   "file": "Flag of Moldavian Autonomous Soviet Socialist Republic (1925-1932).svg",
+   "text": "! scope=\"row\" | | 1925–1932 | State flag of the Moldavian Autonomous Soviet Socialist Republic | Ratio: 1:2.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Historical flags",
+   "file": "Flag of Regimentul Infant - obverse.svg",
+   "text": "! scope=\"row\" | | 1917–1918 | Military colors of the Moldavian Democratic Republic | Blue, yellow, and red horizontal tricolor, proportions: 1:1:1. White RM initials over the flag. Ratio: 2:3.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Historical flags",
+   "file": "Flag of Sfatul Tarii obverse.svg",
+   "text": "! scope=\"row\" | | 1917–1918 | Flag of Sfatul Țării | Blue, yellow, and red horizontal tricolor, proportions: 1:1:1. Coat of arms in the middle of yellow and red stripes and the parliament's name on the blue stripe. Ratio: 2:3.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Historical flags",
+   "file": "National flag of the Moldavian Democratic Republic.svg",
+   "text": "! scope=\"row\" | | 1917–1918 | State flag of the Moldavian Democratic Republic | Blue, yellow, and red horizontal tricolor, proportions: 1:1:1. Coat of arms in the middle and country's name on the blue stripe. Ratio: 2:3.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Historical flags",
+   "file": "War flag and naval ensign of the Principality of Moldavia (1856-1859).png",
+   "text": "! scope=\"row\" | | 1856–1861 | Military colors and naval ensign of the Principality of Moldavia | Ratio: 1:1.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Historical flags",
+   "file": "Civil Ensign of the Principality of Moldavia (1834-1861).svg",
+   "text": "! scope=\"row\" | | 1834–1861 | Civil ensign of the Principality of Moldavia | Ratio: 2:3.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Historical flags",
+   "file": "Знамя молдавской кавалерии XVII в - Синее.svg",
+   "text": "! scope=\"row\" | | 17th century | Banner of the Moldavian cavalry |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Historical flags",
+   "file": "Moldavian Banner under Prince Ieremia Movilă 1601.svg",
+   "text": "! scope=\"row\" | | around 1601 | Infantry flag of the Principality of Moldavia |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Historical flags",
+   "file": "Steagul de lupta al lui Stefan cel Mare.jpg",
+   "text": "! scope=\"row\" | | around 1500 | Military colors (?) of the Principality of Moldavia |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Historical flags",
+   "file": "Flag of Moldavia according to Gwagnin.svg",
+   "text": "! scope=\"row\" | | around 1574 | Flag of the Moldavian principality, described by Alexander Guagnini |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Historical flags",
+   "file": "Moldavian banner in the battle of Obertyn. 1531.svg",
+   "text": "! scope=\"row\" | | 1531 | Moldavian banner at the Battle of Obertyn |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Historical flags",
+   "file": "Moldavian flag in the Battle of Baia - reconstruction.svg",
+   "text": "! scope=\"row\" | | 1467 | Moldavian flag in the Battle of Baia |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Historical flags",
+   "file": "Flag of Moldavia.svg",
+   "text": "! scope=\"row\" | | 14th–19th century | State flag of the Principality of Moldavia | Ratio: 2:3. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Municipal flags",
+   "file": "Flag of Chișinău.svg",
+   "text": "! scope=\"row\" | | 1998–present | Chișinău | Ratio: 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Municipal flags",
+   "file": "Flag of Anenii Noi.svg",
+   "text": "! scope=\"row\" | | ?–present | Anenii Noi |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Municipal flags",
+   "file": "Balti flag 2006.png",
+   "text": "! scope=\"row\" | | ?–present | Bălți |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Municipal flags",
+   "file": "Bendery-Flag-2003b.png",
+   "text": "! scope=\"row\" | | 2003–present | Bender | Ratio: 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Municipal flags",
+   "file": "Flag of Căușeni.gif",
+   "text": "! scope=\"row\" | | ?–present | Căușeni |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Municipal flags",
+   "file": "Flag of Cimișlia.svg",
+   "text": "! scope=\"row\" | | 2010–present | Cimișlia (flag) | Ratio: 2:3",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Municipal flags",
+   "file": "Komrat flag.png",
+   "text": "! scope=\"row\" | | ?–present | Comrat |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Municipal flags",
+   "file": "Flag of Drochia.svg",
+   "text": "! scope=\"row\" | | ?–present | Drochia |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Municipal flags",
+   "file": "Flag of Orhei.svg",
+   "text": "! scope=\"row\" | | 1997–present | Orhei | Ratio: 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Municipal flags",
+   "file": "Flag of Rybnitsa.png",
+   "text": "! scope=\"row\" | | ?–present | Rîbnița |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Municipal flags",
+   "file": "Flag of Tiraspol.svg",
+   "text": "! scope=\"row\" | | ?–present | Tiraspol | Ratio: 2:3",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Municipal flags",
+   "file": "Bandera Ungheni.svg",
+   "text": "! scope=\"row\" | | ?–present | Ungheni | Ratio: 1:2 |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Former national flag proposals",
+   "file": "Flag project proposed by the communists of Moldova.svg",
+   "text": "! scope=\"row\" | | Proposed in 2010 | The Communist Party's proposed flag for Moldova. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Former national flag proposals",
+   "file": "Flag of Stephen III of Moldavia (2018).svg",
+   "text": "! scope=\"row\" | | Proposed in 2017 | Igor Dodon's proposed flag for Moldova. | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Transnistria",
+   "file": "Flag of Transnistria (state).svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 1991–present | State flag and ensign, war flag |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Transnistria",
+   "file": "Flag of Transnistria (variant).svg",
+   "text": "! scope=\"row\" | | Civil flag and ensign, reverse side of state flag/ensign |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Transnistria",
+   "file": "Flag of Russia.svg",
+   "text": "! scope=\"row\" | | 2017–present | Co-official national flag | Flag of Russia |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Transnistria > Standards",
+   "file": "Presidential Standard of the Pridnestrovian Moldavian Republic.svg",
+   "text": "! scope=\"row\" | | 2000–present | Presidential standard | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Transnistria > Historical flags",
+   "file": "Flag of Moldavian Autonomous Soviet Socialist Republic (1925-1932).svg",
+   "text": "! scope=\"row\" | | 1925–1932 | Flag of the Moldavian Autonomous Soviet Socialist RepublicOnly 6 villages belonging to the Moldovan ASSR are not currently in Transnistria or Ukraine | Ratio: 1:2.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Transnistria > Historical flags",
+   "file": "Flag of Moldavian Autonomous Soviet Socialist Republic (1937-1938).svg",
+   "text": "! scope=\"row\" | | 1937–1938 | Flag of the Moldavian Autonomous Soviet Socialist Republic | Ratio: 1:2.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Transnistria > Historical flags",
+   "file": "Flag of Moldavian Autonomous Soviet Socialist Republic.svg",
+   "text": "! scope=\"row\" | | 1938–1940 | Flag of the Moldavian Autonomous Soviet Socialist Republic | Ratio: 1:2.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Transnistria > Historical flags",
+   "file": "Flag of the Moldavian Soviet Socialist Republic (1941–1952).svg",
+   "text": "! scope=\"row\" | | 1940–1952 | Flag of the Moldavian Soviet Socialist Republic | Ratio: 1:2.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moldovan flags",
+   "section": "Transnistria > Historical flags",
+   "file": "Flag of the Moldavian Soviet Socialist Republic (1952–1990).svg",
+   "text": "! scope=\"row\" | | 1952–1990 | Flag of the Moldavian Soviet Socialist Republic | Ratio: 1:2. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Histoire",
+   "file": "Etendard d'Etienne le Grand - 28 juillet 1917, à la Sorbonne (Agence Rol).jpg",
+   "text": "Bannière du prince moldave Étienne le Grand (1457-1504) présentée à Paris en 1917 : les meubles d'or figurent sur fond de gueules.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Histoire",
+   "file": "Coa Romania Country History Ștefan cel Mare (1457-1504) v2.svg",
+   "text": "Armoiries d'Étienne le GrandA description and a representation of these arms are in a Bible made in 1502 for Stephen the Great in Zographou monastery on Athos, by a \"father Philippos\" - .",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Histoire",
+   "file": "Moldavian flag in the Battle of Baia - colors.svg",
+   "text": "Bannière moldave à la bataille de Baia (1467).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Histoire",
+   "file": "Petrilo palatinh Valachie - Battle of Obertyn crop.svg",
+   "text": "Bannière moldave à la bataille d'Obertyn (1531).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Histoire",
+   "file": "Flag of Moldavia according to Gwagnin.svg",
+   "text": "Drapeau de la principauté moldave, décrit par Alessandro Guagnini (1574).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Histoire",
+   "file": "Moldavian Banner under Prince Ieremia Movilă 1601.svg",
+   "text": "Bannière du prince Ieremia Movilă (1601).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Histoire",
+   "file": "Знамя молдавской кавалерии XVII в - Синее.svg",
+   "text": "Bannière de la cavalerie moldave au .",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Histoire",
+   "file": "Flag of Moldavia in 1831.svg",
+   "text": "Drapeaux nationaux de la Moldavie (1831-1859).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Histoire",
+   "file": "Flags - G. Heck. Moldavian and Wallachian Flags. 1849.jpg",
+   "text": "Drapeaux nationaux des principautés danubiennes : Valachie en haut (1849-1859), Moldavie en bas (1831-1859).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Histoire",
+   "file": "Civil ensign of Moldavia 1855.svg",
+   "text": "Pavillon de commerce de la Moldavie pour la navigation (1831-1859).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Histoire",
+   "file": "Naval ensign of Moldavia 1858.svg",
+   "text": "Pavillon de la police portuaire moldave (1858).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Histoire",
+   "file": "Banner of the Moldavian Principality of 1834.svg",
+   "text": "Bannière du régiment d'infanterie de l'armée moldave (1834).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Histoire",
+   "file": "National flag of the Moldavian Democratic Republic.svg",
+   "text": "Drapeau national de la République démocratique moldave (1917).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Histoire",
+   "file": "Flag of Sfatul Tarii reverse.svg",
+   "text": "Drapeau de la République démocratique moldave (1918).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Histoire",
+   "file": "Flag of Sfatul Tarii obverse.svg",
+   "text": "Drapeau de la chambre basse moldave Sfatul Țării de 1917 à 1918.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Histoire",
+   "file": "Tricolore1848.jpg",
+   "text": "Tricolore bleu-jaune-rouge porté par les étudiants moldaves et valaques à Paris en 1848 avec les mentions DРЕПТАТЕ ФРЪЦІЕ soit Dreptate, Frăție : « Justice, Fraternité » (Aquarelle de Costache Petrescu).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Débats",
+   "file": "Bessarabia Gubernia CoA.png",
+   "text": "Armoiries de la Bessarabie russe (1815-1826) :l'aigle bicéphale impériale…",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Débats",
+   "file": "Bessarabia Gubernia CoA 2.png",
+   "text": "Armoiries de la Bessarabie russe (1826-1878)…domine la tête d'aurochs moldave.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Débats",
+   "file": "Coat of arms of Bessarabia Governorate 1878.svg",
+   "text": "Armoiries de la Bessarabie russe (1878-1917).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Débats",
+   "file": "Red flag.svg",
+   "text": "Drapeau des bolcheviks de Bessarabie (1918).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Débats",
+   "file": "Flag of the Moldavian Soviet Socialist Republic.svg",
+   "text": "Drapeau de la République socialiste soviétique moldave (1952-1990).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Débats",
+   "file": "Flag of Transnistria (state).svg",
+   "text": "Drapeau de la Transnistrie.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Débats",
+   "file": "Flag project proposed by the communists of Moldova.svg",
+   "text": "Drapeau proposé par les communistes en 2010 pour la Moldavie.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Débats",
+   "file": "Flag of Stephen III of Moldavia (2018).svg",
+   "text": "Drapeau proposé par le président Igor Dodon en 2017–2018Drapeau d'État de la Moldavie (vexillographia.ru)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Débats",
+   "file": "Flag of Gagauzia.svg",
+   "text": "Drapeau de la Gagaouzie.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Drapeaux gouvernementaux",
+   "file": "Flag of Civil Defense and Exceptional Situations of Moldova.svg",
+   "text": "Drapeau de la Défense civile et des situations d'urgence de Moldavie",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Drapeaux gouvernementaux",
+   "file": "Land flag of the Moldovan Customs.svg",
+   "text": "Drapeau des douanes moldaves",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Drapeaux gouvernementaux",
+   "file": "Flag of the Border Guard of Moldova.svg",
+   "text": "Drapeau des gardes-frontières",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Drapeaux gouvernementaux",
+   "file": "Flag of the President of Moldova.svg",
+   "text": "Drapeau du président",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Drapeaux gouvernementaux",
+   "file": "Flag of the President of the Parliament of Moldova.svg",
+   "text": "Drapeau du président du Parlement moldave",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Moldavie",
+   "section": "Drapeaux gouvernementaux",
+   "file": "Flag of the Prime Minister of Moldova.svg",
+   "text": "Drapeau du Premier ministre",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ro",
+   "page": "Drapelul Republicii Moldova",
+   "section": "intro",
+   "file": "Flag of Moldova.svg",
+   "text": "1:2 Partea principală",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ro",
+   "page": "Drapelul Republicii Moldova",
+   "section": "intro",
+   "file": "Flag of Moldova (reverse).svg",
+   "text": "1:2 Partea inversă",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ro",
+   "page": "Drapelul Republicii Moldova",
+   "section": "intro",
+   "file": "Stamp of Moldova md402.jpg",
+   "text": "Timbru din 2001 comemorând cei zece ani de independență",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "ro",
+   "page": "Drapelul Republicii Moldova",
+   "section": "Istoric > Perioada Principatului Moldovei",
+   "file": "Kingdom of Hungary against Moldavia. Moldavian flag in the Battle of Baia.svg",
+   "text": "Călăreț purtător de steag moldovenesc, astfel cum este înfățișat în Chronica Hungarorum, în Bătălia de la Baia, 1467",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ro",
+   "page": "Drapelul Republicii Moldova",
+   "section": "Istoric > Perioada Principatului Moldovei",
+   "file": "Petrilo palatinh Valachie - Battle of Obertyn crop.svg",
+   "text": "Steagul moldovenesc la bătălia de la Obertyn. 1531",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ro",
+   "page": "Drapelul Republicii Moldova",
+   "section": "Istoric > Perioada Principatului Moldovei",
+   "file": "Flag of Moldavia according to Gwagnin.svg",
+   "text": "Drapelul 1574",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ro",
+   "page": "Drapelul Republicii Moldova",
+   "section": "Istoric > Perioada Principatului Moldovei",
+   "file": "Moldavian Banner under Prince Ieremia Movilă 1601.svg",
+   "text": "Stendardul Domnului al lui Ieremia Movilă, 1601",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ro",
+   "page": "Drapelul Republicii Moldova",
+   "section": "Istoric > Perioada Principatului Moldovei",
+   "file": "Знамя молдавской кавалерии XVII в - Синее.svg",
+   "text": "Stindard de cavalerie moldovenească din secolul al XVII-lea",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ro",
+   "page": "Drapelul Republicii Moldova",
+   "section": "Istoric > Perioada Principatului Moldovei",
+   "file": "Flag of Moldavia in 1831.svg",
+   "text": "Drapelul Principatului Moldovei, conform Constituției, 1832",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ro",
+   "page": "Drapelul Republicii Moldova",
+   "section": "Istoric > Perioada Principatului Moldovei",
+   "file": "Flag of Wallachian Revolution of 1848, horizontal stripes.svg",
+   "text": "Drapel cu fâșiile în variantă orizontală, 1848",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ro",
+   "page": "Drapelul Republicii Moldova",
+   "section": "Istoric > Perioada Imperiului rus și a Republicii Democratice Moldovenești",
+   "file": "Bessarabia Gubernia CoA.png",
+   "text": "Stema Basarabiei ruse între 1815 și 1826",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ro",
+   "page": "Drapelul Republicii Moldova",
+   "section": "Istoric > Perioada Imperiului rus și a Republicii Democratice Moldovenești",
+   "file": "Bessarabia Gubernia CoA 2.png",
+   "text": "Stema Basarabiei ruse între 1826 și 1856",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ro",
+   "page": "Drapelul Republicii Moldova",
+   "section": "Istoric > Perioada Imperiului rus și a Republicii Democratice Moldovenești",
+   "file": "Coat of arms of Bessarabia Governorate 1878.svg",
+   "text": "Stema Basarabiei ruse între 1856 și 1917",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ro",
+   "page": "Drapelul Republicii Moldova",
+   "section": "Istoric > Perioada Imperiului rus și a Republicii Democratice Moldovenești",
+   "file": "National flag of the Moldavian Democratic Republic.svg",
+   "text": "Drapel național Republicii Democratice Moldovenești",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ro",
+   "page": "Drapelul Republicii Moldova",
+   "section": "Istoric > Perioada Imperiului rus și a Republicii Democratice Moldovenești",
+   "file": "Flag of the Moldavian Democratic Republic.svg",
+   "text": "Drapelul Republicii Democratice Moldovenești",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ro",
+   "page": "Drapelul Republicii Moldova",
+   "section": "Istoric > Perioada Imperiului rus și a Republicii Democratice Moldovenești",
+   "file": "Flag of Sfatul Tarii.svg",
+   "text": "Drapelul Sfatului Țării",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ro",
+   "page": "Drapelul Republicii Moldova",
+   "section": "Istoric > Perioada Imperiului rus și a Republicii Democratice Moldovenești",
+   "file": "Flag of Regimentul Infant - two sides.svg",
+   "text": "Drapelul de luptă al unităților Republicii Democratice Moldovenești",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ro",
+   "page": "Drapelul Republicii Moldova",
+   "section": "Istoric > Perioada României interbelice",
+   "file": "Royal standard of Romania (King, 1922 model).svg",
+   "text": "Pavilionul Regelui, un steag personal al Suveranului, nu trebuie confundat cu drapelul național, deși ele au în comun anumite simboluri heraldice.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ro",
+   "page": "Drapelul Republicii Moldova",
+   "section": "Istoric > Perioada României interbelice",
+   "file": "Flag of the Romanian Army (1940–1947).svg",
+   "text": "Cea mai recentă variantă a drapelului regal (înainte de perioada comunistă, în anii '40), având la centru Stema Regală mare, iar la colțuri o variantă a Cifrului Regal",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ro",
+   "page": "Drapelul Republicii Moldova",
+   "section": "Istoric > Perioada României interbelice",
+   "file": "Kingdom of Romania - Big CoA.svg",
+   "text": "Stema Regală a României, varianta mare este aplicată în centrul drapelelor militare românești (1922-1948)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ro",
+   "page": "Drapelul Republicii Moldova",
+   "section": "Istoric > Perioada României interbelice",
+   "file": "Royal Monogram of King Michael of Romania.svg",
+   "text": "The Cifrul Regal al regelui Mihai I al României este aplicat la colțurile drapelelor militare românești, fie ca o cruce stilizată întreagă, fie \"rupt\" în patru litere M majuscule, încoronate.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ro",
+   "page": "Drapelul Republicii Moldova",
+   "section": "Istoric > Perioada României interbelice",
+   "file": "Romanian Army Flag - 1914 used model.svg",
+   "text": "Drapelul Regal după reunificare (1918), purtând la centru Stema Regală veche, pre-1922 și Cifrul regal of regelui Ferdinand I (două F-uri andosate). Steagul poate fi văzut azi la paradele militare din România.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ro",
+   "page": "Drapelul Republicii Moldova",
+   "section": "Istoric > Perioada României interbelice",
+   "file": "Romanian Army flag (WWII, Mihai I model).png",
+   "text": "Un drapel de luptă românesc din Al Doilea Război Mondial, purtând la centru Cifrul Regal al regelui Mihai I.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ro",
+   "page": "Drapelul Republicii Moldova",
+   "section": "Istoric > Perioada României interbelice",
+   "file": "Flag of the Romanian Army (1940–1947).svg",
+   "text": "Drapelul militar al Regatului României, având la centru Stema Regală varianta mare și, în colțuri, o formă a Cifrului regelui Mihai I.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ro",
+   "page": "Drapelul Republicii Moldova",
+   "section": "Istoric > Perioada Uniunii sovietice",
+   "file": "Flag of the Moldavian Soviet Socialist Republic.svg",
+   "text": "Steagul RSSM în cadrul Uniunii sovietice",
+   "kind": "thumb"
+  }
+ ]
+}

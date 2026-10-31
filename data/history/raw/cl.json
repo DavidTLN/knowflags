@@ -1,0 +1,395 @@
+{
+ "iso": "cl",
+ "flag_item": "Q160872",
+ "pages": [
+  "en:Flag of Chile",
+  "fr:Drapeau du Chili",
+  "es:Bandera de Chile"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Chile",
+   "section": "Design > Color scheme",
+   "file": "Flag of Chile.svg",
+   "text": "The exact color shades are not defined by law, but they are listed as \"turqui blue\", \"white\" and \"red\". Approximations below: {| class=\"wikitable\" style=\"text-align: ;\" ! !! style=\"background-color:#0039a6\"|Blue !! style=\"background-color:#d52b1e\"|Red !! style=\"background-color:#FFFFFF\"|White",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Chile",
+   "section": "Display",
+   "file": "Flag of Chile (presentation).svg",
+   "text": "Displaying the Chilean flag horizontally or vertically.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Chile",
+   "section": "Display",
+   "file": "Grafiti Valpo Bandera cl Cata Boye 2.jpg",
+   "text": "Chilean flag painted on a wall in Valparaíso.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Chile",
+   "section": "History > Pre-Independence flags",
+   "file": "Anganamón (cropped).JPG",
+   "text": "A portrait of the Mapuche chieftain Anganamón, painted at the turn of the 16th and 17th centuries by Jesuit Diego de Ocaña. His head features red, blue, and white feathers.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Chile",
+   "section": "History > Third and current flag",
+   "file": "JuraIndependencia.jpg",
+   "text": "During the Declaration of Independence, today's flag was raised for the first time.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Chile",
+   "section": "History > Third and current flag",
+   "file": "BanderaLaMoneda.JPG",
+   "text": "Time of Flags by the artist Ricardo Meza, located on the wall of the stairway access to the second floor of La Moneda Palace.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Chili",
+   "section": "intro",
+   "file": "Flag of the President of Chile.svg",
+   "text": "Drapeau du Président.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Chili",
+   "section": "Confection et déploiement",
+   "file": "Flag of Chile (construction sheet).svg",
+   "text": "Dimension du drapeau chilien",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Chili",
+   "section": "Histoire > Drapeaux antérieurs à l'indépendance",
+   "file": "Lautaro flag.svg",
+   "text": "Ancien drapeau mapuche selon l'œuvre du prêtre Pedro Subercaseaux.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Chili",
+   "section": "Histoire > Drapeaux antérieurs à l'indépendance",
+   "file": "Flag of New Spain.svg",
+   "text": "Croix de Bourgogne, emblème militaire de la Monarchie catholique espagnole.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Chili",
+   "section": "Histoire > Drapeaux antérieurs à l'indépendance",
+   "file": "Bandera Mapuche Wüñellfe.jpg",
+   "text": "Drapeau qui fut peut être utilisé par les troupes mapuches au début du .",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Chili",
+   "section": "Histoire > Drapeaux antérieurs à l'indépendance",
+   "file": "Flag of Spain (1785-1873 and 1875-1931).svg",
+   "text": "Drapeau utilisé par le roi d'Espagne pour ses domaines à partir de 1785.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Chili",
+   "section": "Histoire > Drapeau de la Patria Vieja",
+   "file": "Flag of Chile (1812-1814).svg",
+   "text": "Drapeau de la Patria Vieja (1812-1814).",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Chili",
+   "section": "Histoire > Drapeau de la Patria Vieja",
+   "file": "Flag of Chile (1812-1814, alternative).svg",
+   "text": "Version alternative avec l'écusson national du Chili, la Croix de Santiago et une disposition différente des couleurs.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Chili",
+   "section": "Histoire > Drapeau de la transition",
+   "file": "Flag of Chile (1817-1818).svg",
+   "text": "Drapeau de la transition, (1817).",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Chili",
+   "section": "Histoire > Drapeau de la transition",
+   "file": "Flag of Chile (1817-1818, 2nd).svg",
+   "text": "Drapeau possiblement utilisé pendant quelques jours de l'année 1817.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Chili",
+   "section": "Drapeau de l'île de Pâques",
+   "file": "Flag of Rapa Nui, Chile.svg",
+   "text": "Drapeau de l'île de Pâques.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "intro",
+   "file": "Chile flags in Puerto Montt.jpg",
+   "text": "miniatura| Banderas chilenas flameando",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Colores",
+   "file": "Bild einer chilenischen Flagge.jpg",
+   "text": "miniaturadeimagen|Aquí el cantón presenta un color azul marino, una de las tonalidades más usadas El decreto 1534 del del Ministerio del Interior define los colores de la bandera chilena como azul turquí, blanco y rojo. Debido a que no existen especificaciones técnicas sobre la tonalidad exacta de dichos colores, es posible encontrar banderas con una amplia gama de tonos; el caso más notorio es el del azul, que fluctúa entre el azul brillante y el azul marino. El Gobierno de Chile utiliza un logotipo basado en la bandera nacional y sus colores están definidos tanto en el sistema Pantone como e",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Confección",
+   "file": "Flag of Chile (construction sheet).svg",
+   "text": "miniaturadeimagen|izquierda|Proporción",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Despliegue",
+   "file": "Flag of Chile (presentation).svg",
+   "text": "miniaturadeimagen| Despliegue de la bandera de Chile en forma horizontal y vertical",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Historia > Banderas anteriores a 1810 > Banderas españolas",
+   "file": "FIAV historical.svg",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Historia > Banderas posteriores a 1810 > Bandera de la Patria Vieja (1812-1814)",
+   "file": "Flag of Chile (1812-1814).svg",
+   "text": "miniaturadeimagen|izquierda| Bandera de la Patria Vieja (1812-1814). Versión simple, sin el escudo chileno, usada por naves mercantes",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Historia > Banderas posteriores a 1810 > Bandera de la Patria Vieja (1812-1814)",
+   "file": "FIAV historical.svg",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Historia > Banderas posteriores a 1810 > Bandera de la Patria Vieja (1812-1814)",
+   "file": "Flag of Chile (1812-1814, alternative).svg",
+   "text": "miniaturadeimagen| Bandera de la Patria Vieja (1812-1814). Versión alternativa con el primer escudo chileno, cruz de Santiago y diferente disposición de colores",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Historia > Banderas posteriores a 1810 > Bandera de la Patria Vieja (1812-1814)",
+   "file": "FIAV reconstructed.svg",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Historia > Banderas posteriores a 1810 > Bandera de la Patria Vieja (1812-1814)",
+   "file": "Bandera de la Provincia de Mendoza.svg",
+   "text": "miniaturadeimagen|Bandera del Ejército de los Andes",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Historia > Banderas posteriores a 1810 > Bandera de la Transición (1817)",
+   "file": "Flag of Chile (1817-1818).svg",
+   "text": "miniaturadeimagen|izquierda| Bandera de la Transición, 1817 miniaturadeimagen| Posible bandera utilizada durante algunos días de 1817 El triunfo patriota en Chacabuco dio paso al periodo conocido como «Patria Nueva». Un nuevo pabellón nacional, cuyo diseño se atribuye al argentino Juan Gregorio de Las Heras, fue adoptado el y ampliamente difundido en la época. Esta bandera es actualmente denominada «bandera de la Transición» por ser la insignia utilizada entre la bandera de la Patria Vieja (1812-1814) y el pabellón izado hasta el día de hoy. Esta bandera se componía de tres franjas horizontale",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Historia > Banderas posteriores a 1810 > Bandera de la Transición (1817)",
+   "file": "FIAV historical.svg",
+   "text": "miniaturadeimagen|izquierda| Bandera de la Transición, 1817 miniaturadeimagen| Posible bandera utilizada durante algunos días de 1817 El triunfo patriota en Chacabuco dio paso al periodo conocido como «Patria Nueva». Un nuevo pabellón nacional, cuyo diseño se atribuye al argentino Juan Gregorio de Las Heras, fue adoptado el y ampliamente difundido en la época. Esta bandera es actualmente denominada «bandera de la Transición» por ser la insignia utilizada entre la bandera de la Patria Vieja (1812-1814) y el pabellón izado hasta el día de hoy. Esta bandera se componía de tres franjas horizontale",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Historia > Banderas posteriores a 1810 > Bandera de la Transición (1817)",
+   "file": "Flag of Chile (1817-1818, 2nd).svg",
+   "text": "miniaturadeimagen|izquierda| Bandera de la Transición, 1817 miniaturadeimagen| Posible bandera utilizada durante algunos días de 1817 El triunfo patriota en Chacabuco dio paso al periodo conocido como «Patria Nueva». Un nuevo pabellón nacional, cuyo diseño se atribuye al argentino Juan Gregorio de Las Heras, fue adoptado el y ampliamente difundido en la época. Esta bandera es actualmente denominada «bandera de la Transición» por ser la insignia utilizada entre la bandera de la Patria Vieja (1812-1814) y el pabellón izado hasta el día de hoy. Esta bandera se componía de tres franjas horizontale",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Historia > Banderas posteriores a 1810 > Bandera de la Transición (1817)",
+   "file": "FIAV proposal.svg",
+   "text": "miniaturadeimagen|izquierda| Bandera de la Transición, 1817 miniaturadeimagen| Posible bandera utilizada durante algunos días de 1817 El triunfo patriota en Chacabuco dio paso al periodo conocido como «Patria Nueva». Un nuevo pabellón nacional, cuyo diseño se atribuye al argentino Juan Gregorio de Las Heras, fue adoptado el y ampliamente difundido en la época. Esta bandera es actualmente denominada «bandera de la Transición» por ser la insignia utilizada entre la bandera de la Patria Vieja (1812-1814) y el pabellón izado hasta el día de hoy. Esta bandera se componía de tres franjas horizontale",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Historia > Banderas posteriores a 1810 > Bandera de la Transición (1817)",
+   "file": "Flag of Chile (1817-1818).svg",
+   "text": "miniaturadeimagen|izquierda| Bandera de la Transición, 1817",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Historia > Banderas posteriores a 1810 > Bandera de la Transición (1817)",
+   "file": "FIAV historical.svg",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Historia > Banderas posteriores a 1810 > Bandera de la Transición (1817)",
+   "file": "Flag of Chile (1817-1818, 2nd).svg",
+   "text": "miniaturadeimagen| Posible bandera utilizada durante algunos días de 1817",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Historia > Banderas posteriores a 1810 > Bandera de la Transición (1817)",
+   "file": "FIAV proposal.svg",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Historia > Banderas posteriores a 1810 > Bandera actual (1817-presente)",
+   "file": "Flag of Chile (1818).svg",
+   "text": "miniaturadeimagen|izquierda| Reproducción del diseño original de la bandera",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Historia > Banderas posteriores a 1810 > Bandera actual (1817-presente)",
+   "file": "FIAV historical.svg",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Historia > Banderas posteriores a 1810 > Bandera actual (1817-presente)",
+   "file": "BchFOPF.jpg",
+   "text": "miniaturadeimagen|Bandera original sobre la que se juró la independencia de Chile",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Historia > Banderas posteriores a 1810 > Bandera actual (1817-presente)",
+   "file": "Flag of Chile (1818-1854).svg",
+   "text": "miniaturadeimagen|izquierda| Bandera común usada hasta 1912",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Historia > Banderas posteriores a 1810 > Bandera actual (1817-presente)",
+   "file": "Coat of arms of Chile (1819).jpg",
+   "text": "miniaturadeimagen|Escudo de la Transición rodeado por banderas que incluyen el Wünelfe de ocho puntas (retrato de Bernardo O'Higgins por José Gil de Castro, 1821)",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Historia > Banderas posteriores a 1810 > Bandera actual (1817-presente)",
+   "file": "Flag of Chile (Civil Use, 1826-1854).svg",
+   "text": "miniaturadeimagen|izquierda| Bandera para uso civil (1826-1854)",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Historia > Banderas posteriores a 1810 > Bandera actual (1817-presente) > Disposiciones legales",
+   "file": "Bandera Bicentenario.jpg",
+   "text": "miniaturadeimagen|izquierda|Inauguración de la Bandera Bicentenario en la plaza de la Ciudadanía, símbolo del Bicentenario de Chile (2010)",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Historia > Banderas posteriores a 1810 > Bandera actual (1817-presente) > Disposiciones legales",
+   "file": "BanderaLaMoneda.JPG",
+   "text": "miniaturadeimagen|Tiempo de Banderas, por Ricardo Meza (en acceso del Palacio de La Moneda)",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Historia > Banderas posteriores a 1810 > Bandera actual (1817-presente) > Uso libre por civiles",
+   "file": "Fuerza Chile!.jpg",
+   "text": "miniaturadeimagen|izquierda|Bandera chilena flameando en los canales patagónicos",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Historia > Banderas posteriores a 1810 > Bandera actual (1817-presente) > Variantes",
+   "file": "FIAV 010010.svg",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Historia > Banderas posteriores a 1810 > Bandera actual (1817-presente) > Variantes",
+   "file": "FIAV 000001.svg",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Aspectos culturales > Leyendas y anécdotas",
+   "file": "Bandera Chile 1907.jpg",
+   "text": "miniaturadeimagen|izquierda|La hija de la familia Baehcker con la bandera chilena que habría ganado un certamen internacional",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Chile",
+   "section": "Banderas regionales",
+   "file": "Regional flags of Chile in the National Congress.jpg",
+   "text": "miniaturadeimagen|Banderas regionales exhibidas en el recibidor del Congreso Nacional de Chile en Valparaíso (2008)",
+   "kind": "thumb"
+  }
+ ]
+}

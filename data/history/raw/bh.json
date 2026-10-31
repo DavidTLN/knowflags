@@ -1,0 +1,251 @@
+{
+ "iso": "bh",
+ "flag_item": "Q130481",
+ "pages": [
+  "en:Flag of Bahrain",
+  "fr:Drapeau de Bahreïn",
+  "ar:علم البحرين"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Bahrain",
+   "section": "intro",
+   "file": "Flag of Bahrain.jpg",
+   "text": "Bahrain flag",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Bahrain",
+   "section": "Design > Colors",
+   "file": "Flag of Bahrain.svg",
+   "text": "! 40pxStandard colors ! ! style=\"background:#FFFFFF; width: ; color:#DA291C;\"| White ! style=\"background:#DA291C; width: ; color:#FFFFFF;\"| Red",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Bahrain",
+   "section": "Other flags",
+   "file": "Royal Standard of Bahrain.svg",
+   "text": "Royal Standard",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Bahrain",
+   "section": "Other flags",
+   "file": "Flag of the Bahrain Defence Force.svg",
+   "text": "Flag of the Bahrain Defence Force",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Bahrain",
+   "section": "Other flags",
+   "file": "Flag of the Royal Bahrain Naval Force.svg",
+   "text": "Flag of the Bahrain Navy",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Bahrain",
+   "section": "Other flags",
+   "file": "Flag of the Royal Bahraini Air Force.svg",
+   "text": "Flag of the Bahrain Air Force",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Bahrain",
+   "section": "Other flags",
+   "file": "Flag of the Royal Bahraini Army.svg",
+   "text": "Flag of the Bahrain Army",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Bahrain",
+   "section": "Other flags",
+   "file": "Flag of the Royal Guard of Bahrain.svg",
+   "text": "Flag of the Royal Guard of Bahrain",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Bahrain",
+   "section": "Other flags",
+   "file": "Flag of the Bahrain Defence Force Royal Medical Services.svg",
+   "text": "Flag of the Bahrain Defence Force Royal Medical Services",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Bahrain",
+   "section": "Other flags",
+   "file": "Flag of the National Guard of Bahrain.svg",
+   "text": "Flag of the National Guard of Bahrain",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Bahrain",
+   "section": "Other flags > Flags of Governorates",
+   "file": "Bahrain Capital Governorate Flag.svg",
+   "text": "Capital",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Bahrain",
+   "section": "Other flags > Flags of Governorates",
+   "file": "Bahrain Muharraq Governorate Flag.svg",
+   "text": "Muharraq",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Bahrain",
+   "section": "Other flags > Flags of Governorates",
+   "file": "Bahrain Southern Governorate Flag.svg",
+   "text": "Southern",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Bahrain",
+   "section": "Other flags > Flags of Governorates",
+   "file": "Bahrain Northern Governorate Flag.svg",
+   "text": "Northern, although its mistakingly written as \"Southern Governorate\" in Arabic.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Bahrain",
+   "section": "Other flags > Flags of Governorates > Former Governorates",
+   "file": "Central Governorate Logo.jpg",
+   "text": "Central",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Bahreïn",
+   "section": "Anciens drapeaux",
+   "file": "Flag of Bahrain (before 1820).svg",
+   "text": "Ancien drapeau avant 1820.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Bahreïn",
+   "section": "Anciens drapeaux",
+   "file": "Flag of Bahrain (1820–1932).svg",
+   "text": "Ancien drapeau de 1820 à 1932.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Bahreïn",
+   "section": "Anciens drapeaux",
+   "file": "Flag of Bahrain (1932 to 1972).svg",
+   "text": "Ancien drapeau de 1932 à 1972.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Bahreïn",
+   "section": "Anciens drapeaux",
+   "file": "Flag of Bahrain (1972-2002).svg",
+   "text": "Ancien drapeau de 1972 à 2002.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم البحرين",
+   "section": "intro",
+   "file": "Royal Standard of Bahrain.svg",
+   "text": "تصغير|العلم الملكي.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم البحرين",
+   "section": "intro",
+   "file": "Flag of Bahrain.svg",
+   "text": "تصغير|علم مملكة البحرين.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم البحرين",
+   "section": "intro",
+   "file": "Flag of Bahrain (1972-2002).svg",
+   "text": "تصغير|علم دولة البحرين من 1972 إلى 2002.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم البحرين",
+   "section": "intro",
+   "file": "Flag of Bahrain (1932 to 1972).svg",
+   "text": "تصغير|علم البحرين من 1932 إلى 1972.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم البحرين",
+   "section": "intro",
+   "file": "Flag of Bahrain (1820-1932).png",
+   "text": "تصغير|علم البحرين 1820 إلى 1932.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم البحرين",
+   "section": "intro",
+   "file": "Flag of Bahrain (before 1820).png",
+   "text": "تصغير|علم البحرين قبل 1820.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم البحرين",
+   "section": "معرض صور",
+   "file": "Flag of the Royal Bahraini Air Force.svg",
+   "text": "",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم البحرين",
+   "section": "معرض صور",
+   "file": "Flag of the Royal Bahrain Naval Force.svg",
+   "text": "",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم البحرين",
+   "section": "معرض صور",
+   "file": "Flag of the Royal Bahraini Army.svg",
+   "text": "",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم البحرين",
+   "section": "معرض صور",
+   "file": "Flag of the Bahrain Defence Force.svg",
+   "text": "",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم البحرين",
+   "section": "أعلام مشابهة",
+   "file": "Flag of Qatar.svg",
+   "text": "علم دولة قطر|تصغير|يمين",
+   "kind": "thumb"
+  }
+ ]
+}

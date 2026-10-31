@@ -1,0 +1,451 @@
+{
+ "iso": "bo",
+ "flag_item": "Q134874",
+ "pages": [
+  "en:Flag of Bolivia",
+  "fr:Drapeau de la Bolivie",
+  "es:Bandera de Bolivia"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Bolivia",
+   "section": "intro",
+   "file": "Bolivian flag.png",
+   "text": "State Flag of Bolivia on flagpole",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Bolivia",
+   "section": "Historical flags",
+   "file": "Flag of Cross of Burgundy.svg",
+   "text": "Colonial flag, Spanish Empire flag (1506–1825/1821 in Peru, and Bolivia), (1506–1785/1701 in other colonies), (1506–1821 in Philippines)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Bolivia",
+   "section": "Historical flags",
+   "file": "Flag of Bolivia (1825-1826).svg",
+   "text": "Bandera Menor, Civil flag (1825–1826)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Bolivia",
+   "section": "Historical flags",
+   "file": "Flag of Bolivia (state, 1825-1826).svg",
+   "text": "Bandera Mayor, State flag (1825–1826)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Bolivia",
+   "section": "Historical flags",
+   "file": "Flag of Bolivia (1826-1851).svg",
+   "text": "Bandera Menor, Civil flag (1831–1851)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Bolivia",
+   "section": "Historical flags",
+   "file": "Flag of Bolivia (state, 1826-1851).svg",
+   "text": "Bandera Mayor, State flag (1831–1851)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Bolivia",
+   "section": "Historical flags",
+   "file": "Flag of the Peru-Bolivian Confederation.svg",
+   "text": "Peru-Bolivian Confederation (1836–1839)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Bolivia",
+   "section": "Historical flags",
+   "file": "Banner of the Qulla Suyu (1979).svg",
+   "text": "alt=A square flag made of thirteen diagonal arrangements of colored squares, following a rainbow pattern towards the , the squares in the being white.|Wiphala banner (used since 2009, Incan)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Bolivia",
+   "section": "Historical flags",
+   "file": "Naval Ensign of Bolivia (1966-2013).svg",
+   "text": "Former naval ensign of Bolivia (1966–2013)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Bolivia",
+   "section": "Historical flags",
+   "file": "Bandera de Bolivia (Guerra).svg",
+   "text": "Flag of the Armed Forces of Bolivia",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Bolivie",
+   "section": "Drapeaux",
+   "file": "Bandera de Bolivia (Estado).svg",
+   "text": "Drapeau et pavillon d'État.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Bolivie",
+   "section": "Drapeaux",
+   "file": "Bandera de Bolivia (Guerra).svg",
+   "text": "Drapeau de guerre.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Bolivie",
+   "section": "Drapeaux",
+   "file": "Naval Ensign of Bolivia.svg",
+   "text": "Pavillon de guerre.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Bolivie",
+   "section": "Drapeaux",
+   "file": "Naval jack of Bolivia.svg",
+   "text": "Pavillon de beaupré.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Bolivie",
+   "section": "Drapeaux",
+   "file": "Banner of the Qulla Suyu (1979).svg",
+   "text": "Wiphala.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Bolivie",
+   "section": "Anciens drapeaux",
+   "file": "Flag of Bolivia (1825-1826).svg",
+   "text": "Bandera Menor (1825–1826)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Bolivie",
+   "section": "Anciens drapeaux",
+   "file": "State flag of Bolivia (1825-1826).svg",
+   "text": "Bandera Mayor (1825–1826)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Bolivie",
+   "section": "Anciens drapeaux",
+   "file": "Flag of Bolivia (1826-1851).svg",
+   "text": "Bandera Menor (1826–1851)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Bolivie",
+   "section": "Anciens drapeaux",
+   "file": "Flag of Bolivia (state, 1826-1851).svg",
+   "text": "Bandera Mayor (1826–1851)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Banderas oficiales",
+   "file": "Bandera de Bolivia (Estado).svg",
+   "text": "Bandera Tricolor (uso estatal)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Banderas oficiales",
+   "file": "Flag of Bolivia.svg",
+   "text": "Bandera Tricolor (uso civil)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Banderas oficiales",
+   "file": "Palacio Quemado Bolivia.jpg",
+   "text": "miniaturadeimagen|Las tres banderas Tricolores Bolivianas, izadas en el Palacio Quemado.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Historia > Banderas previas a la independencia",
+   "file": "Banner of the Inca Empire.svg",
+   "text": "23x23px Estandarte de la Casa real incaica",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Historia > Banderas previas a la independencia",
+   "file": "Pendón real de Medina del Campo.svg",
+   "text": "23x23px Estandarte de la Conquista del Tawantinsuyo",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Historia > Banderas previas a la independencia",
+   "file": "Flag of Cross of Burgundy.svg",
+   "text": "23x23px Cruz de Borgoña, bandera del Imperio español (1541-1785).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Historia > Banderas previas a la independencia",
+   "file": "Flag of Spain (1785–1873, 1875–1931).svg",
+   "text": "23x23px Bandera de España (1785-1825).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Historia > Banderas previas a la independencia",
+   "file": "Bandera de Tupac Amaru II.svg",
+   "text": "23x23px Bandera de la rebelión de Túpac Amaru II, una insurrección indígena que se expandió a Charcas, actual Bolivia (1780-1783).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Historia > Banderas en el periodo independentista",
+   "file": "Flag of Peru (1821–1822).svg",
+   "text": "Bandera del Protectorado de San Martín (patriotas)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Historia > Banderas en el periodo independentista",
+   "file": "Bandera de La Paz.svg",
+   "text": "23x23px Emblema llevado por los patriotas, usada por la Junta Tuitiva y por miembros de la republiqueta de Ayopaya y del Estado del Alto Perú proclamado por José Miguel Lanza",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Historia > Banderas en el periodo independentista",
+   "file": "Flag of Argentina (1818).svg",
+   "text": "23x23px Bandera de las Provincias Unidas del Río de la Plata (patriotas)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Historia > Banderas en el periodo independentista",
+   "file": "Flag of Republiqueta of Tarija.svg",
+   "text": "23x23px Emblema llevado por los patriotas, miembros de las republiquetas de Santa Cruz, Vallegrande y Tarija, adscritas a las Provincias Unidas del Río de la Plata.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Historia > Banderas en el periodo independentista",
+   "file": "Bandera de Esteban Arze.svg",
+   "text": "23x23px Bandera llevada por los revolucionarios de Cochabamba hasta su independencia. Creada por Esteban Arze e inspirada por la bandera de Alejo Calatayud.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Historia > Bandera de la flor de Patujú",
+   "file": "Flag of the Patujú flower.svg",
+   "text": "miniaturadeimagen|Bandera de la flor de Patujú, usada a nivel nacional entre 2019 y 2020 y a partir de 2025.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Historia > Bandera de la flor de Patujú",
+   "file": "Flags of Bolivia, Whipala & Patujú Flower.svg",
+   "text": "miniaturadeimagen|Uso de las tres banderas en actos oficiales.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Variantes",
+   "file": "Bandera de Bolivia (Estado).svg",
+   "text": "derecha|miniatura| Uso estatal Bandera del Estado.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Variantes",
+   "file": "FIAV 010010.svg",
+   "text": "Uso estatal",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Variantes > Bandera de la Reivindicación Marítima",
+   "file": "Naval ensign of Bolivia.svg",
+   "text": "derecha|miniatura| Bandera de la Reivindicación Marítima",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Variantes > Bandera de las Fuerzas Armadas y bandera de guerra",
+   "file": "Bandera de Bolivia (Guerra).svg",
+   "text": "derecha|miniaturadeimagen|150x150px|20x20px|Uso militar Bandera militar.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Variantes > Bandera de las Fuerzas Armadas y bandera de guerra",
+   "file": "FIAV 001000.svg",
+   "text": "20x20px|Uso militar",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Variantes > Bandera de las Fuerzas Armadas y bandera de guerra",
+   "file": "Banner of the Qulla Suyu (1979).svg",
+   "text": "miniaturadeimagen|120x120px|20x20px|Uso militar Bandera de guerra.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Variantes > Pabellón de guerra",
+   "file": "Naval ensign of Bolivia.svg",
+   "text": "derecha|miniatura| Uso naval Bandera naval",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Variantes > Pabellón de guerra",
+   "file": "FIAV 000001.svg",
+   "text": "Uso naval",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Juramento a la bandera",
+   "file": "Faro de Conchupata.jpg",
+   "text": "miniatura| Faro de Conchupata en Oruro, lugar donde se izó por primera vez la actual bandera boliviana.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Himno a la Bandera",
+   "file": "Flag of Bolivia (presentation).svg",
+   "text": "miniaturadeimagen|Despliegue de la bandera de Bolivia en forma horizontal y vertical.|258x258px",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Banderas similares",
+   "file": "Flag of Lithuania.svg",
+   "text": "Bandera de Lituania",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Banderas similares",
+   "file": "Flag of Myanmar.svg",
+   "text": "Bandera de Birmania",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Banderas similares",
+   "file": "Flag of Ethiopia.svg",
+   "text": "Bandera de Etiopía",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Banderas similares",
+   "file": "Flag of Ghana.svg",
+   "text": "Bandera de Ghana",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Banderas similares",
+   "file": "Flag of Guinea.svg",
+   "text": "Bandera de Guinea",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Banderas similares",
+   "file": "Flag of Senegal.svg",
+   "text": "Bandera de Senegal",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Banderas similares",
+   "file": "Flag of the Republic of the Congo.svg",
+   "text": "Bandera de la República del Congo",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Banderas similares",
+   "file": "Flag of Mali.svg",
+   "text": "Bandera de Malí",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Banderas similares",
+   "file": "Bandera Provincia Carchi.svg",
+   "text": "Bandera de Carchi (Ecuador)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Banderas similares",
+   "file": "Flag of Bolívar (Colombia).svg",
+   "text": "Bandera de Bolívar (Colombia)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Bolivia",
+   "section": "Banderas similares",
+   "file": "Flag of Yopal (Casanare).svg",
+   "text": "Bandera de Yopal (Colombia)",
+   "kind": "gallery"
+  }
+ ]
+}

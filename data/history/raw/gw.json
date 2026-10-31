@@ -1,0 +1,51 @@
+{
+ "iso": "gw",
+ "flag_item": "Q102953",
+ "pages": [
+  "en:Flag of Guinea-Bissau",
+  "fr:Drapeau de la Guinée-Bissau",
+  "pt:Bandeira da Guiné-Bissau"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Guinea-Bissau",
+   "section": "Design and symbolism > Colours",
+   "file": "Flag of Guinea-Bissau.svg",
+   "text": "style=\"background: #eee\" !30x30px (1958–present) ! style=\"background:#CE1126; color:#FFF; width: \" |Red ! style=\"background:#FCD116; color:#000; width: \" |Yellow ! style=\"background:#009460; color:#FFF; width: \" |Green ! style=\"background:#000000; color:#FFF; width: \" |Black",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guinea-Bissau",
+   "section": "History",
+   "file": "Flag of PAIGC.svg",
+   "text": "alt=Flag of the African Party for the Independence of Guinea and Cape Verde| Flag of the African Party for the Independence of Guinea and Cape Verde",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guinea-Bissau",
+   "section": "History",
+   "file": "Flag of Cape Verde (1975–1992).svg",
+   "text": "alt=Flag of Cape Verde following independence.| Flag of Cape Verde (1975–1992), following independence, based on the PAIGC flag.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guinea-Bissau",
+   "section": "History > Adoption",
+   "file": "Hastear da bandeira da Guiné Bissau após o arrear da de Portugal.jpg",
+   "text": "The flag of Guinea-Bissau is raised in place of the flag of Portugal in Canjadude, 1974.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Guinée-Bissau",
+   "section": "Drapeau historique",
+   "file": "Flag of Portuguese Guinea (proposal).svg",
+   "text": "Proposition de drapeau de la colonie",
+   "kind": "thumb"
+  }
+ ]
+}

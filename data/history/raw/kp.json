@@ -1,0 +1,2373 @@
+{
+ "iso": "kp",
+ "flag_item": "Q103064",
+ "pages": [
+  "en:Flag of North Korea",
+  "en:List of Korean flags",
+  "en:List of North Korean flags",
+  "fr:Drapeau de la Corée du Nord",
+  "ko:조선민주주의인민공화국의 국기"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of North Korea",
+   "section": "Design",
+   "file": "Flag of North Korea.svg",
+   "text": "The flag of North Korea until March 2026",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of North Korea",
+   "section": "Design > Symbolism",
+   "file": "Vertical Flag of North Korea (20-33).svg",
+   "text": "=0.7| Vertical display of the flag",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of North Korea",
+   "section": "Design > Construction",
+   "file": "Flag of North Korea (20-33 construction sheet).svg",
+   "text": "Flag construction sheet.|450x450px",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of North Korea",
+   "section": "Protocol",
+   "file": "Photograph of flags of North Korea.jpg",
+   "text": "North Korean flags flying near the Kumsusan Palace of the Sun",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of North Korea",
+   "section": "History > Background",
+   "file": "Kim-Il-sung 김일성 19461103election.jpg",
+   "text": "Kim Il Sung giving a speech in front of the Soviet flag and the taegukgi in 1946",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of North Korea",
+   "section": "History > Creation > Official account",
+   "file": "Proposed DPRK flag 1.svg",
+   "text": "The design initially selected by Kim Il Sung, according to North Korean government sources",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Korean reunification flag",
+   "file": "Unification flag of Korea.svg",
+   "text": "| |1991–present |Korean Unification Flag |Used to represent the whole of Korea when North and South participate together in international sporting events. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Flag of North Korea (20-33).svg",
+   "text": "| |2026–present |Flag of the Democratic People's Republic of Korea (Ramhongsaek Konghwagukki) |Red field with a blue bar on the top and bottom separated by a thin white stripe, the red field charged near the hoist with a white disc with a red star in the . Current, 2026 standard shown.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Flag of South Korea.svg",
+   "text": "| 125x125px |2011–present |Flag of the Republic of Korea (Taegeukgi) |White field with a red and blue taegeuk in the and four black trigrams, one in each corner of the flag. Modified several times since its original adoption in 1948. Current, 2011 version shown.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Royal flag of Goryeo (Bong-gi).svg",
+   "text": "| 125x125px |Extant 1392 | A royal flag from the Goryeo dynasty |Also known as the \"Bong-gi\", which means \"The Phoenix Flag\".",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Royal Flag of Goryeo magi.svg",
+   "text": "| 125x125px |Extant 1392 | A royal banner from the Goryeo dynasty. |Also known as the \"Haema-gi\", which means \"The Seahorse Flag\".",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Royal Flag of Goryeo sanggi.svg",
+   "text": "| 125x125px |Extant 1392 | A royal banner from the Goryeo dynasty. |Also known as the \"Sang-gi\", which means \"The Elephant Flag\".",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Flag of the King of Joseon (1876).png",
+   "text": "| 125x125px |Extant 1876 | The personal standard of the King of Joseon |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Flag of the king of Joseon.svg",
+   "text": "| 125x125px |1882–1907 | Royal standard of the Joseon dynasty |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Imperial banner of Korea.svg",
+   "text": "| 125x125px |1897–1907 | Imperial standard of the Korean Empire |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Imperial Standard of Korean Empire (1908 ~ 1910).png",
+   "text": "| 125x125px |1908–1910 | Imperial standard of the Korean Empire |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Emperor Emeritus's Standard of Korean Empire (1908 ~ 1910).png",
+   "text": "| 125x125px |1908–1910 | Standard of emperor emeritus of the Korean Empire |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Empress's Standard of Korean Empire (1908 ~ 1910).png",
+   "text": "| 125x125px |1908–1910 | Standard of empress of the Korean Empire |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Crown Prince's Standard of Korean Empire (1908 ~ 1910).png",
+   "text": "| 125x125px |1908–1910 | Standard of crown prince of the Korean Empire |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Crown Princess's Standard of Korean Empire (1908 ~ 1910).png",
+   "text": "| 125x125px |1908–1910 | Standard of crown princess of the Korean Empire |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Prince's Standard of Korean Empire (1908 ~ 1910).png",
+   "text": "| 125x125px |1908–1910 | Standard of prince of the Korean Empire |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Flag of Korea (1882-1910).svg",
+   "text": "| 125x125px | rowspan=\"6\"|1882–1910 | rowspan=\"6\"| *Flag of the Joseon dynasty and Korean Empire The first version from top is depicted in the 1882 U.S. Navy book Flags of Maritime Nations. The third version from the top is a replica of the one given by emperor Gojong to American diplomat Owen N. Denny (1838–1900), who served as his advisor. The second version from the bottom is depicted in the 1899 U.S. Navy book Flags of Maritime Nations. Lowest is the version found in the 1944 United States postage stamp series. | rowspan=\"6\"|The former Korean imperial flag had a different taegeuk from that",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Flag of Korea (1884).svg",
+   "text": "| 125x125px",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Flag of Korea (1888, Denny Taegukgi).svg",
+   "text": "| 125x125px",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Flag of Korea (1893).svg",
+   "text": "| 125x125px",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Flag of Korea (1899).svg",
+   "text": "| 125x125px",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Korean flag 1944 United States stamp detail.jpg",
+   "text": "| 125x125px",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Flag of the Provisional Government of the Republic of Korea.svg",
+   "text": "| 125x125px | rowspan=\"3\"|1919–1945 | rowspan=\"3\"| The flag of the Provisional Government of the Republic of Korea | rowspan=\"3\"|In exile in several cities of China",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Flag of the Provisional Government of the Republic of Korea (2).svg",
+   "text": "| 125x125px",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Flag of the Provisional Government of the Republic of Korea (3).svg",
+   "text": "| 125x125px",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Flag of the People's Committee of Korea.svg",
+   "text": "| 125x125px |1945–1946 | Flag of the People's Republic of Korea |A white rectangular background with three red horizontal strips throughout middle, and a red and blue taegeuk with white near hoist side. Used by the People's Committees in the postwar Korea.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Flag of South Korea (1945–1948).svg",
+   "text": "| 125x125px |rowspan=\"2\"|1945–1948 |rowspan=\"2\"| Flag of the United States Army Military Government in Korea |rowspan=\"2\"|A white rectangular background, a red and blue taegeuk in the that symbolizes harmony, and four black trigrams, on each corner of the flag.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Flag of South Korea (1946–1948).svg",
+   "text": "| 125x125px",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Flag of the Provisional People's Committee for North Korea.svg",
+   "text": "| 125x125px |1946–1948 |Flag of the Provisional People's Committee of North Korea / People's Committee of North Korea |A white rectangular background, a red and blue taegeuk in the that symbolizes harmony, and four black trigrams, on each corner of the flag.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Flag of North Korea (1948–1992).svg",
+   "text": "| 125x125px |1948–1992 |Flag of the Democratic People's Republic of Korea |Red field with a blue bar on the top and bottom separated by a thin white stripe, the red field charged near the hoist with a white disc with a red star in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Flag of South Korea (1948–1949).svg",
+   "text": "| 125x125px | |Civil and state flag and ensign of the First Republic of Korea. |This flag was designed by the first National Assembly.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Flag of South Korea (1949–1984).svg",
+   "text": "| 125x125px | |Civil and state flag and ensign of the First, Second, Third, Fourth and the Fifth Republic of Korea. | rowspan=\"2\"|The construction sheet was specified by the Ministry of Education and Culture in October 1949.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Flag of South Korea (1984–1997).svg",
+   "text": "| 125x125px | |Civil and state flag and ensign of the Fifth and Sixth Republic of Korea.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Flag of North Korea.svg",
+   "text": "| 125x125px | |Flag of the Democratic People's Republic of Korea |Red field with a blue bar on the top and bottom separated by a thin white stripe, the red field charged near the hoist with a white disc with a red star in the . |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "National",
+   "file": "Flag of South Korea (1997–2011).svg",
+   "text": "| 125x125px | |Civil and state flag and ensign of the Sixth Republic of Korea. |The exact colors were specified via presidential decree in October 1997. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Governmental flags > North Korea",
+   "file": "Flag of the Chairman of the State Affairs Commission of North Korea.svg",
+   "text": "| |2018–present |Car flag of the President of the State Affairs Commission |Emblem of the President of the State Affairs Commission on a dark red field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Governmental flags > North Korea",
+   "file": "Flag of the General Staff of the Korean People's Army (Obverse).svg",
+   "text": "| 125x125px |2023–present |Flag of the Ministry of National Defence |Red flag with the emblem of the Korean People's Army that defaced with the emblem of North Korea",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Governmental flags > North Korea",
+   "file": "Flag of the Ministry of Social Security (North Korea).svg",
+   "text": "| 125x125px |2023–present |Flag of the Ministry of Social Security, also flag of the Social Security Forces |Top portion in dark green and a narrow gold stripe, middle in black with two rectangles bearing two black oblique stripes on both hoist and fly, bottom in dark green and a narrow gold stripe, superimposed with the emblem of the ministry. The slogan reads \"Protect the political security of the socialist motherland and the happiness of the People!\" (사회주의조국의 정치적안전과 인민의 행북을 보위하여)",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Governmental flags > North Korea",
+   "file": "Flag of the Ministry of State Security (North Korea).svg",
+   "text": "| 125x125px |2023–present |Flag of the Ministry of State Security |Bicolour of black and gold with 5 alternating stripes between the large stripes and additional black stripe with the emblem of the ministry in the middle. The slogan reads \"For the firm security of the party and the country, and the victory of the great achievements of the Juche Revolution! (당과 국가의 굳건한 안전과 주체혁명위업의 승리를 위하여)\"",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Governmental flags > South Korea",
+   "file": "Flag of the President of South Korea.svg",
+   "text": "| |1967–present(design update in 2020) |Presidential Standard |Two Phoenix taking golden Hibiscus syriacus under their wings.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Governmental flags > South Korea",
+   "file": "Standard of the Prime Minister of the Republic of Korea.svg",
+   "text": "| 125x125px |1988–present |Standard of the prime minister |Golden Hibiscus syriacus inlaid in symbolic Hibiscus syriacus insignia",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Governmental flags > South Korea",
+   "file": "Flag of the government of South Korea (1988–2016).svg",
+   "text": "| 125x125px |1988–2016 |Flag of the National Government |Symbolic Hibiscus syriacus insignia, inlaid with the word (\"Government\").",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Governmental flags > South Korea",
+   "file": "Flag of the Government of the Republic of Korea.svg",
+   "text": "| 125x125px |2016–present |Flag of the National Government |Symbolic Taeguk insignia, with wordmark in Korean 대한민국정부 (\"Government of the Republic of Korea\").",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Governmental flags > South Korea",
+   "file": "Flag of the Blue House.svg",
+   "text": "| 125x125px | 2013–20222025–present | Flag of the Blue House | Insignia of the Blue House with wordmark in Korean (\"Cheong Wa Dae of the Republic of Korea\")",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Governmental flags > South Korea",
+   "file": "Flag of the Korean National Police Agency.svg",
+   "text": "| 125x125px |2005–present |Flag of the South Korean national police agency. |Insignia of the South Korean National Police, with the words 경찰청 (\"Police Agency\")",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Governmental flags > South Korea",
+   "file": "Flag of the Korean Coast Guard.svg",
+   "text": "| 125x125px |2005–present |Flag of the South Korean coast guard |Insignia of the South Korean coast guard, with the words 해양경찰청 (\"Maritime Police Agency\")",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Governmental flags > South Korea",
+   "file": "Flag of South Korean Prosecution Service.svg",
+   "text": "| 125x125px |2004–present |Flag of the South Korean Supreme Prosecutors' Office |Insignia of the Supreme Prosecutors' Office, with the words 검찰 / Prosecution Service",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Governmental flags > South Korea",
+   "file": "Flag of the Korean Corruption Investigation Office for High-ranking Officials.svg",
+   "text": "| 125x125px |2022–present |Flag of the Corruption Investigation Office for High-ranking Officials |Insignia of the Corruption Investigation Office for High-ranking Officials, with the words 고위공직자범죄수사처 (\"Corruption Investigation Office for High-ranking Officials\")",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Governmental flags > South Korea",
+   "file": "Former flag of the Committee of the Five Provinces of North Korea.svg",
+   "text": "| 125x125px |1949–2016 |Flag of the Committee for the Five Northern Korean Provinces |White flag with a Hibiscus syriacus superimposed by a blue north pointer",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Governmental flags > South Korea",
+   "file": "Flag of the Committee for the Five Northern Korean Provinces.svg",
+   "text": "| 125x125px |2016–present |Flag of the Committee for the Five Northern Korean Provinces |Symbolic Taeguk insignia, with grey words 이북5도위원회 (\"Committee for the Five Northern [Korean] Provinces\")",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Governmental flags > South Korea",
+   "file": "Flag of Korean Central Intelligence Agency.svg",
+   "text": "| 125x125px |?–1981 |Flag of the Korean Central Intelligence Agency |White trapezoid on blue background with orange emblem |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > Korea",
+   "file": "Military Flag of Goguryeo.svg",
+   "text": "| |4th century | Military Flag of Goguryeo |A banner with a simple orange field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > Korea",
+   "file": "Military Flag of Goguryeo.svg",
+   "text": "| 125x125px |Mid 5th Century |Military Flag of Goguryeo |A black 4-pointed banner with 3 white stripes.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > Korea",
+   "file": "(Tonggu No. 12).svg",
+   "text": "| 125x125px |Mid 5th Century |Military Flag of Goguryeo |A black 4-pointed banner with 3 white stripes.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > Korea",
+   "file": "Military Flag of Goguryeo (Ssangyeongchong).svg",
+   "text": "| 125x125px |Late 5th Century | Military Flag of Goguryeo |A red swallowtail banner with a yellow stripe.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > Korea",
+   "file": "Military flag of Baekje.svg",
+   "text": "| 125x125px | | Military flag of Baekje |A banner with a simple yellow field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > Korea",
+   "file": "Military Banner of Silla.svg",
+   "text": "| 125x125px | | Military flag of Silla |A banner with a blue field with a white crescent moon in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > Korea",
+   "file": "Ensign of the Joseon Navy.svg",
+   "text": "| 125x125px | | Flag of the commander of Joseon |A banner with Nakseo magic square.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > Korea",
+   "file": "Joseon Sujagi-01.svg",
+   "text": "| 125x125px | | Flag of the commander Eo Jae-yeon |As one of the military flags of the Joseon Dynasty, it is called Sujagi (帥字旗) or Sugi (帥旗). During the Joseon Dynasty, it was hung as a mark of the general in the military camp. As for the shape, the word for \"command\" (帥) is engraved in black letters on the pressed color, and some have a dream (decoration of the flag) around the flag.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > Korea",
+   "file": "Anti-Japan People's Front Army Flag.svg",
+   "text": "| 125x125px |1930s | Military flag of anti-Japanese partisans |Red field with golden word \"Anti-Japanese People's Guerilla Troop\" (반일인민유객대). Revived as ceremonial unit color for historical units in North Korea beginning 2015. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Standard of the Supreme Commander of the Korean People's Army before 2002.svg",
+   "text": "| 125x125px |1996–2002 | rowspan=\"2\"|Flag of the Supreme Commander of the Korean People's Army |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Standard of the Supreme Commander of the Korean People's Army.svg",
+   "text": "| 125x125px |2002–2022 |The Supreme Commander Star on a red flag. Sometimes used as a war flag during military exercises.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army (1948).svg",
+   "text": "| |rowspan=\"2\"|1948 | rowspan=\"9\"|Flag of the Korean People's Army |Initially designed in 1948 with the early draft for the Emblem of North Korea in 1948. The slogan reads: \"For the independence of the motherland and the people\" (). Used only as ceremonial unit color for historical units beginning 2013.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army (1948, reverse).svg",
+   "text": "| 125x125px |With a red star with golden and bearing a hammer and two sickles. The inspection reads: \"Korean People's Army / [Unit number] / 1st (as in ceremonies) Defensive Division\" (조선인민군 제1국방사단). Revived as ceremonial unit color for historical units beginning 2015.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army (1948-1961).svg",
+   "text": "| 125x125px |rowspan=\"4\"|1948–1961 |rowspan=\"2\"|Used only as ceremonial unit color for historical units beginning 2013.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army (1948-1961, reverse).svg",
+   "text": "| 125x125px",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army (1948-1961, for Guards).svg",
+   "text": "| 125x125px |rowspan=\"2\"|Used for Guards units only. The slogan on obverse side reads: \"For the motherland's freedom and independence\" (). The reverse side have a Guards badge with Korean letters reading \"[Unit number] / Guards Kang Kon 2nd (as in ceremonies) Infantry Division\" (근위강건제2부병사단). Revived as ceremonial unit color for Guards units beginning 2013.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army (1948, reverse for Guards).svg",
+   "text": "| 125x125px",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army (1961).svg",
+   "text": "| 125x125px |1961–1992 |Latest version shown; emblem adopted in 1992. The slogan reads: \"For the unification and independence of the motherland, and the freedom and happiness of the people\" ().",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army (1992).svg",
+   "text": "| 125x125px |1992–1993 |Emblem of DPRK updated to the one featuring Mount Paektu.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army (1961-1993, reverse).svg",
+   "text": "| 125x125px |1961–1993(reverse) |With a red star with golden and bearing a hammer and two sickles.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the General Staff of the Korean People's Army.svg",
+   "text": "| 125x125px | rowspan=\"2\"|1993–2023 | rowspan=\"4\"|Flag of the General Staff of the Korean People's Army | rowspan=\"2\"|Seen used during the October 1995 parade, observed very rarely.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the General Staff of the Korean People's Army (Back) (1993-2023).svg",
+   "text": "| 125x125px",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the General Staff of the Korean People's Army (Normal).svg",
+   "text": "| 125x125px | rowspan=\"2\"|2023–present |Red flag with the emblem of the KPA is defaced with the emblem of the DPRK emblazoned on largened red star. The slogan reads \"For the endless prosperity of the fatherland and the security of the people! (조국의 무궁한 번영과 인민의 안녕을 위하여)\", with the date of the founding of the KPA as 2 February 1948 in the canton.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the General Staff of the Korean People's Army (Reverse).svg",
+   "text": "| 125x125px |A design containing the façade of the WPK headquarters in Pyongyang, a red shield bearing the emblem of WPK, and two swords.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "//cdn.hk01.com/di/media/images/dw/20230207/699645847125626880084257.jpeg",
+   "text": "| 125x125px |A design containing the façade of the WPK headquarters in Pyongyang, a red shield bearing the emblem of WPK, and two swords.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army Ground Force.svg",
+   "text": "| 125x125px | rowspan=\"5\"|1993–2023 | rowspan=\"4\"|Flag of the People's Army Ground Force | rowspan=\"4\"|Emblem of KPA with slogan: \"For the unification and independence of the motherland, and the freedom and happiness of the people\" (). Until the death of Kim Il Sung, version with the slogan \"Let us defend the Party's Central Committee headed by dear Comrade Kim Il Sung with our lives!\" () was also used. When Kim Jong Il was in power, the slogan used between 1997 and 2011 was: \"Let us defend the headquarters of the revolution headed by the great Comrade Kim Jong Il with our lives!\" (). Until th",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army Ground Force (1993–1994).svg",
+   "text": "| 125x125px",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army Ground Force (1997-2012).svg",
+   "text": "| 125x125px",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army Ground Force (2020–2023).svg",
+   "text": "| 125x125px",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army Ground Force (reverse) (1993-2023).svg",
+   "text": "| 125x125px |Reverse side of the flag of the Korean People's Army Ground Force. |With Korean letters reading \"Revolutionary armed forces of the Workers' Party of Korea, Korean People's Army [unit name] / No.425 unit (in ceremonies)\" (). The number 425 commemorates the foundation of People's Anti-Japanese Guerrilla Army on April 25, 1932.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army Ground Force (2023-).svg",
+   "text": "|125x125px| | rowspan=\"2\"|2023–present |Flag of the People's Army Ground Force |Identical to the former flag except the emblem of the KPA is defaced with the emblem of the DPRK emblazoned on largened red star, and accomplished by acanthus leaves. The slogan reads \"For the endless prosperity of the fatherland and the security of the people! (조국의 무궁한 번영과 인민의 안녕을 위하여)\", with the date of founding of the particular unit placed in the canton. This flag is used by units of the Ground Forces to serve as a unit flag. The date of foundation on the canton differs among KPAGF units of regiment/brigade lev",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army Ground Force (Reverse).svg",
+   "text": "|125x125px| |Reverse side of the flag of the Korean People's Army Ground Force. |Identical to the former flag except the party symbol is placed within a design containing the facade of the WPK headquarters in Pyongyang, a red shield bearing the emblem of WPK, and two swords. The slogan reads \"Let us defend the Party's Central Committee headed by Dear Comrade Kim Jong Un with our lives!\" (경애하는 김정은동지를 수반으로 하는 당중앙위원회를 목숨으로 사수하자!)",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Navy (1993–2023).svg",
+   "text": "| 125x125px | rowspan=\"5\"|1993–2023 | rowspan=\"4\"|Flag of the People's Navy | rowspan=\"4\"|Emblem of KPA with anchor. The slogan reads: \"For the unification and independence of the motherland, and the freedom and happiness of the people\" (). Until the death of Kim Il Sung, version with the slogan \"Let us defend the Party's Central Committee headed by dear Comrade Kim Il Sung with our lives!\" () was also used. When Kim Jong Il was in power, the slogan used between 1997 and 2011 was: \"Let us defend the headquarters of the revolution headed by the great Comrade Kim Jong Il with our lives!\" (). Unt",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Navy (1993–1994).svg",
+   "text": "| 125x125px",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Navy (1997–2012).svg",
+   "text": "| 125x125px",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Navy (2020–2023).svg",
+   "text": "| 125x125px",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Navy (reverse) (1993-2023).svg",
+   "text": "| 125x125px |Reverse side of the flag of the flag of Korean People's Navy. |With Korean letters reading \"Revolutionary armed forces of the Workers' Party of Korea, Korean People's Army [unit name] / No.415 unit (in ceremonies)\" (). The number 415 commemorates the birthday of Kim Il-Sung on April 15.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army Navy (Obverse).svg",
+   "text": "| 125x125px | rowspan=\"2\"|2023–present |Flag of the People's Navy |Identical to the former flag except the emblem of the KPA is defaced with the emblem of the DPRK emblazoned on largened red star, surrounded by a laurel wreath, and surmounted by an anchor and steering wheel. The slogan reads \"For the endless prosperity of the fatherland and the stabling of the people! (조국의 무궁한 번영과 인민의 안녕을 위하여)\", with the date of founding of the particular unit placed in the canton. The representative flag of the whole branch displays the date 28 August 1949.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army Navy (Reverse).svg",
+   "text": "| 125x125px |Reverse side of the flag of the flag of Korean People's Navy. |Identical to the former flag except the party symbol is placed within a design containing the façade of the WPK headquarters in Pyongyang, an anchor, and a red shield bearing the emblem of WPK. The slogan reads \"Let us defend the Party's Central Committee headed by Dear Comrade Kim Jong Un with our lives!\" (경애하는 김정은동지를 수반으로 하는 당중앙위원회를 목숨으로 사수하자!)",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Naval Ensign of North Korea.svg",
+   "text": "| 125x125px |1990s–present |Naval ensign of North Korea |Red flag with Paektu Mountain in rays in a disc with national color outlines and a red star.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Guards Ensign of North Korea.svg",
+   "text": "| 125x125px |1990s–present |Naval Ensign of North Korea for Guards Units |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Naval jack of North Korea.svg",
+   "text": "| 125x125px |1990s–present |Naval Jack of North Korea |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "NKAF flag.svg",
+   "text": "| 125x125px | rowspan=\"4\"|1993–2023, (insignia updated in 2012) | rowspan=\"4\"|Flag of the Korean People's Army Air and Anti-Air Force | rowspan=\"4\"|Emblem of KPA with wings. The slogan reads: \"For the unification and independence of the motherland, and the freedom and happiness of the people\" (). Until the death of Kim Il Sung, version with the slogan \"Let us defend the Party's Central Committee headed by dear Comrade Kim Il Sung with our lives!\" () was also used. When Kim Jong Il was in power, the slogan used between 1997 and 2011 was: \"Let us defend the headquarters of the revolution headed ",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army Air Force.svg",
+   "text": "| 125x125px",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "(1993–1994).svg",
+   "text": "| 125x125px",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army Air Force (1997-2012).svg",
+   "text": "| 125x125px",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "(2020–2023).svg",
+   "text": "| 125x125px",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army Air Force (reverse) (1993-2023).svg",
+   "text": "| 125x125px | 1993–2023 |Reverse side of the flag of the Korean People's Army Air and Anti-Air Force. |With Korean letters reading \"Revolutionary armed forces of the Workers' Party of Korea, Korean People's Army [unit name] / No.216 unit (in ceremonies)\" (). The number 216 commemorates the birthday of Kim Jong-Il on February 16.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army Air and Anti-Air Force (Obverse).svg",
+   "text": "| 125x125px | rowspan=\"2\"|2023–present |Flag of the Korean People's Army Air Force |Identical to the former flag except the emblem of the KPAAF is defaced with the emblem of the DPRK emblazoned on largened red star with additional stars at the top. Lower stripes are arranged as chevrons, and with six trailing jet fighters emerging behind the emblem. The slogan reads \"For the endless prosperity of the fatherland and the security of the people! (조국의 무궁한 번영과 인민의 안녕을 위하여)\", with the date of founding of the particular unit placed in the canton. The representative flag of the whole branch displays t",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army Air and Anti-Air Force (Reverse).svg",
+   "text": "| 125x125px |Reverse side of the flag of the Korean People's Army Air Force. |Identical to the former flag except the party symbol is placed within a design containing the façade of the WPK headquarters in Pyongyang, a red shield bearing the emblem of WPK, and an eagle. The slogan reads \"Let us defend the Party's Central Committee headed by Dear Comrade Kim Jong Un with our lives!\" (경애하는 김정은동지를 수반으로 하는 당중앙위원회를 목숨으로 사수하자!)",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army Strategic Force.svg",
+   "text": "| 125x125px | rowspan=\"2\"|2018–2020 | rowspan=\"4\"|Flag of the Strategic Force |Emblem of KPA on an upper half globe",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of Korean People's Army Strategic Force (reverse).svg",
+   "text": "| 125x125px |With Korean letters reading \"Revolutionary armed forces of the Workers' Party of Korea, Korean People's Army [unit name] / No.108 unit (in ceremonies)\" (). The number 108 commemorates the birthday of Kim Jong-Un on January 8.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army Strategic Force (2023, Obverse).svg",
+   "text": "| 125x125px | rowspan=\"2\"|2023–present | rowspan=\"2\"|With the same pattern as army flag but has the date 3 July 1999 on obverse side.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army Strategic Force (2023, Reverse).svg",
+   "text": "| 125x125px",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Missile General Bureau (North Korea).svg",
+   "text": "| 125x125px | rowspan=\"2\"|2023–present | rowspan=\"2\"|Flag of the Missile Administration |The Flag of the Missile Administration is seen with its Emblem in a large form with the founding date of 2016.4.30, The slogan reads \"For the defense of the Democratic People's Republic of Korea and the security of its people! (조선민주주의인민공화국의 안전과 인민의 안녕을 위하여)\"",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Missile General Bureau (North Korea, Reverse).svg",
+   "text": "| 125x125px |Identical to the Backside flags of the KPA except the party symbol is placed within a design containing the façade of the WPK headquarters in Pyongyang",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army Special Operation Force.svg",
+   "text": "| 125x125px | rowspan=\"2\"|2018–2020 | rowspan=\"4\"|Flag of the Special Operation Force |Emblem of KPA with the Big Dipper.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army Special Operation Force (reverse).svg",
+   "text": "| 125x125px |With Korean letters reading \"Revolutionary armed forces of the Workers' Party of Korea, Korean People's Army [unit name]\". / No.506 unit (in ceremonies)\" (). The number 506 commemorates the 7th Congress of the Workers' Party of Korea on May 6, 2016.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army Special Operation Force (2023, Obverse).svg",
+   "text": "| 125x125px | rowspan=\"2\"| 2023–Present | rowspan=\"2\"| With the same pattern as army flag but has the date 7 February 1969 on obverse side.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Korean People's Army Special Operation Force (2023, Reverse).svg",
+   "text": "| 125x125px",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Worker-Peasant Red Guards.svg",
+   "text": "| 125x125px | rowspan=\"2\"|2007–2023 | rowspan=\"4\"|Flag of the Worker-Peasant Red Guards |Slogan used until 2012, since then the flag shares the same motto as the rest of the KPA.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Worker-Peasant Red Guards (reverse).svg",
+   "text": "| 125x125px |With Korean letters reading \"Worker-Peasant Red Guards\".",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Worker-Peasent Red Guards (Normal).svg",
+   "text": "| 125x125px | rowspan=\"2\"| 2023–Present | The slogan reads \"For the endless prosperity of the fatherland and the security of the people! (조국의 무궁한 번영과 인민의 안녕을 위하여)\"",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > North Korea",
+   "file": "Flag of the Worker-Peasant Red Guards (Reverse).svg",
+   "text": "| 125x125px | With Korean letters reading \"Worker-Peasant Red Guards\". |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > South Korea",
+   "file": "Flag of the Ministry of National Defense of the Republic of Korea.svg",
+   "text": "| | style=\"text-align: \"| 1948–present | Flag of the Armed Forces | Insignia of the armed forces on a red field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > South Korea",
+   "file": "Flag of the Minister of National Defense of the Republic of Korea.svg",
+   "text": "| 125x125px |?–present |Flag of the Minister of National Defense | Insignia of the armed forces and four stars on a red field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > South Korea",
+   "file": "Flag of the Vice Minister of National Defense of the Republic of Korea.svg",
+   "text": "| 125x125px |?–present |Flag of the Vice Minister of National Defense | Insignia of the armed forces and four stars on a blue field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > South Korea",
+   "file": "Flag of the Joint Chiefs of Staff of the Republic of Korea.svg",
+   "text": "| 125x125px |?–present |Flag of the Joint Chiefs of Staff | Crimson flag with the insignia of the JCS and the words 합동참모본부.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > South Korea",
+   "file": "Flag of the Chairman of the Joint Chiefs of Staff of the Republic of Korea.jpg",
+   "text": "| 125x125px |?–present |Flag of the Chairman of the Joint Chiefs of Staff | Insignia of the Chairman of the Joint Chiefs of Staff on a crimson field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > South Korea",
+   "file": "Flag of the Army of the Republic of Korea.svg",
+   "text": "| 125x125px | style=\"text-align: \"| 1946–present | Flag of the Army | Insignia of the army on a field parted per fess; above is white, below is blue.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > South Korea",
+   "file": "Flag of the Chief of Staff of the Republic of Korea Army.png",
+   "text": "| 125x125px |?–present |Flag of the Chief of Staff of the Army |Insignia of the Chief of Staff and four stars on a red field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > South Korea",
+   "file": "Flag of the ROK Army General (OF-9).svg",
+   "text": "| 125x125px |?–present |Flag of the Daejang |Four stars and a Hibiscus syriacus on a red field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > South Korea",
+   "file": "Flag of the ROK Army & Marine Corps Lieutenant General (OF-8).svg",
+   "text": "| 125x125px |?–present |Flag of the Jungjang |Three stars and a Hibiscus syriacus on a red field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > South Korea",
+   "file": "Flag of the ROK Army & Marine Corps Major General (OF-7).svg",
+   "text": "| 125x125px |?–present |Flag of the Sojang |Two stars and a Hibiscus syriacus on a red field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > South Korea",
+   "file": "Flag of the ROK Army & Marine Corps Brigadier General (OF-6).svg",
+   "text": "| 125x125px |?–present |Flag of the Junjang |A star and a Hibiscus syriacus on a red field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > South Korea",
+   "file": "Flag of the Republic of Korea Navy.svg",
+   "text": "| 125x125px | style=\"text-align: \"| 1955–present | Naval ensign, navy flag, and naval jack | Taegeuk on crossed anchors in a white canton on a blue field",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > South Korea",
+   "file": "Flag Chief of Naval Operations of the Republic of Korea Navy.png",
+   "text": "| 125x125px |?–present |Flag of the Chief of Naval Operations |Insignia of the Chief of Naval Operations and four stars on a blue field",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > South Korea",
+   "file": "Flag of the ROK Navy Admiral (OF-9).svg",
+   "text": "| 125x125px |?–present |Flag of the Daejang |Four stars and a Hibiscus syriacus on a blue field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > South Korea",
+   "file": "Flag of the ROK Navy Vice Admiral (OF-8).svg",
+   "text": "| 125x125px |?–present |Flag of the Jungjang |Three stars and a Hibiscus syriacus on a blue field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > South Korea",
+   "file": "Flag of the ROK Navy Rear Admiral Upper Half (OF-7).svg",
+   "text": "| 125x125px |?–present |Flag of the Sojang |Two stars and a Hibiscus syriacus on a blue field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > South Korea",
+   "file": "Flag of the ROK Navy Rear Admiral Lower Half (OF-6).svg",
+   "text": "| 125x125px |?–present |Flag of the Junjang |A star and a Hibiscus syriacus on a blue field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > South Korea",
+   "file": "Flag of the Republic of Korea Marine Corps.svg",
+   "text": "| 125x125px | style=\"text-align: \"| 1952–present | Flag of the Marine Corps | The similarity with the flag of the United States Marine Corps shows the strong influence of the United States since the creation of South Korean armed forces.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > South Korea",
+   "file": "Flag Commandant of the Republic of Korea Marine.svg",
+   "text": "| 125x125px |?–present |Flag of the Commandant of the Marine Corps |Three stars above the insignia of the Marine Corps on a red field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > South Korea",
+   "file": "Flag of the Republic of Korea Air Force.svg",
+   "text": "| 125x125px | style=\"text-align: \"| 1952–present | Flag of the Air Force | Insignia of the air force on a sky blue field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > South Korea",
+   "file": "Flag Chief of Staff of the Republic of Korea Air Force.png",
+   "text": "| 125x125px |?–present |Flag of the Chief of Staff of the Air Force |Insignia of the Chief of Staff and four stars on a sky blue field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > South Korea",
+   "file": "Flag of the ROK Air Force General (OF-9).svg",
+   "text": "| 125x125px |?–present |Flag of the Daejang |Four stars and a Hibiscus syriacus on a sky blue field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > South Korea",
+   "file": "Flag of the ROK Air Force Lieutenant General (OF-8).svg",
+   "text": "| 125x125px |?–present |Flag of the Jungjang |Three stars and a Hibiscus syriacus on a sky blue field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > South Korea",
+   "file": "Flag of the ROK Air Force Major General (OF-7).svg",
+   "text": "| 125x125px |?–present |Flag of the Sojang |Two stars and a Hibiscus syriacus on a sky blue field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > South Korea",
+   "file": "Flag of the ROK Air Force Brigadier General (OF-6).svg",
+   "text": "| 125x125px |?–present |Flag of the Junjang |A star and a Hibiscus syriacus on a sky blue field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > South Korea",
+   "file": "Flag of the Republic of Korea Civil Defense Corps (1975–2023).svg",
+   "text": "| 125x125px | style=\"text-align: \"| 1975–2023 | Flag of the Republic of Korea Civil Defense Corps |Insignia of the Civil Defense Corps on a white field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > South Korea",
+   "file": "Flag of the Republic of Korea Civil Defense Corps.svg",
+   "text": "| 125x125px | style=\"text-align: \"| 2023–present | Flag of the Republic of Korea Civil Defense Corps |Insignia of the Civil Defense Corps on a white field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Military > South Korea",
+   "file": "Flag of the Republic of Korea Reserve Forces.svg",
+   "text": "| 125x125px | style=\"text-align: \"| 1968–present | Flag of the Republic of Korea Reserve Forces |Insignia of the Reserve Forces on a blue field. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Political flags",
+   "file": "Flag of the Korean National Revolutionary Party.svg",
+   "text": "| || 1935–1947|| Korean National Revolutionary Party |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Political flags",
+   "file": "Flag of the Korean National Association (20th century).svg",
+   "text": "| | 1909–1940s|| Korean National Association |Red flag with yellow canton bearing red-blue taegeuk.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Political flags",
+   "file": "흥사단기.svg",
+   "text": "| | 1913–current|| |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Political flags",
+   "file": "Flag of the Workers' Party of North Korea (1946).svg",
+   "text": "| 125x125px |1946–1949 |Flag of the Workers' Party of North Korea |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Political flags",
+   "file": "Flag of the Workers' Party of South Korea.svg",
+   "text": "| 125x125px |1946–1949 |Flag of the Workers' Party of South Korea |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Political flags",
+   "file": "Flag of the Workers' Party of Korea.svg",
+   "text": "| 125x125px |1949–present |Flag of the Workers' Party of Korea |Combination of a hammer (workers), a writing brush (intellectuals) and a Korean sickle (peasants), crossed over a red field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Political flags",
+   "file": "Flag of KSYL.svg",
+   "text": "| 125x125px |1946–present |Flag of the Socialist Patriotic Youth League |Emblem of Youth League on a red flag, with \"Youth\" () on the emblem.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Political flags",
+   "file": "Korean Women's League logo.svg",
+   "text": "| 125x125px |1945–present |Flag of the Socialist Women's Union of Korea |Red-white-red flag with the name of the organization: \"Women's League\" ().",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Political flags",
+   "file": "Flag of Chochong.svg",
+   "text": "| 125x125px |1955–present |Flag of the |Tricolor flag with the League's logo.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Political flags",
+   "file": "Flag of Mindan.svg",
+   "text": "| 125x125px |1994?–present |Flag of Mindan |Sky blue flag with a Taegeuk surrounding by five petals of hibiscus syriacus. The formal name of the society (Zainihon Daikanminkoku Mindan) is written in kanji in white, and the abbreviation (Mindan) is written in hangul in yellow.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Political flags",
+   "file": "Democratic Party of South Korea banner.svg",
+   "text": "| 125x125px |2024–present |Flag of the Democratic Party of Korea |Blue flag with the party emblem in the middle.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Political flags",
+   "file": "Flag of People Power Party of Korea.svg",
+   "text": "| 125x125px |rowspan=\"2\"|2020–present |rowspan=\"2\"|Flag of the People Power Party |White flag with the party emblem in the middle.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Korean flags",
+   "section": "Political flags",
+   "file": "Flag of People Power Party of Korea (variant 2).svg",
+   "text": "| 125x125px |Red flag with the party emblem in the middle. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "National",
+   "file": "Flag of the Provisional People's Committee for North Korea.svg",
+   "text": "! scope=\"row\" | | 1946–1948 | Flag of the Provisional People's Committee of North Korea / People's Committee of North Korea | A white rectangular background, a red and blue Taeguk in the that symbolizes harmony, and four black trigrams, on each corner of the flag.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "National",
+   "file": "Flag of North Korea (1948–1992).svg",
+   "text": "! scope=\"row\" | | 1948–1992 | rowspan=\"3\" | Flag of the Democratic People's Republic of Korea | rowspan=\"3\" | Red field with a blue bar on the top and bottom separated by a thin white stripe, the red field charged near the hoist with a white disc with a red star in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "National",
+   "file": "Flag of North Korea.svg",
+   "text": "! scope=\"row\" | | 1992–2026",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "National",
+   "file": "Flag of North Korea (20-33).svg",
+   "text": "! scope=\"row\" | | 2026–present |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Political",
+   "file": "Flag of the Chairman of the State Affairs Commission of North Korea.svg",
+   "text": "! scope=\"row\" | | 2018–present | Car flag of the president of the State Affairs | Emblem of the president of the State Affairs on a red field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Political",
+   "file": "Flag of the Workers' Party of North Korea (1946).svg",
+   "text": "! scope=\"row\" | | 1946–1949 | Flag of the Workers' Party of North Korea |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Political",
+   "file": "Flag of the Workers' Party of Korea.svg",
+   "text": "! scope=\"row\" | | 1949–present | Flag of the Workers' Party of Korea | Combination of a hammer (workers), a writing brush (intellectuals) and a Korean sickle (peasants), crossed over a red field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Political",
+   "file": "Flag of the Korean Children's Union (KCU).svg",
+   "text": "! scope=\"row\" | | Unknown | Flag of the Korean Children's Union | Emplem of the Korean Children's Union on a red flag, with text on the top and bottom. The text written on top is \"For the Socialist Fatherland, Always Prepared!\" (), and the text on the bottom is \"Korean Children's Union\" ().",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Political",
+   "file": "Flag of Sarochong.svg",
+   "text": "! scope=\"row\" | | 1964-1996 | Flag of the League of Socialist Working Youth of Korea | Emblem of Youth League on a red flag, with \"Socialist Working Youth\" () on the emblem.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Political",
+   "file": "SPYL flag.svg",
+   "text": "! scope=\"row\" | | 1946–present | Flag of the Socialist Patriotic Youth League | Emblem of Youth League on a red flag, with \"Youth\" () on the emblem.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Political",
+   "file": "SPYL 80th anniversary flag.svg",
+   "text": "! scope=\"row\" | | 2021–present | Flag of the Socialist Patriotic Youth League | Emblem of Youth League on a red flag, with text on the top and sides, and a golden wreath of barley on the bottom. The text written on top is \"Socialist Patriotic Youth League\" (), and the text on the and say \"Youth Vanguard\" (). This flag commemorates the name change from the Kimilsungist-Kimjongilist Youth League to their current name.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Political",
+   "file": "Youth Shock Brigades (North Korea).jpg",
+   "text": "! scope=\"row\" | | Unknown | Flag of the Youth Shock Brigades | The text \"Vanguard of the party members\" on a red flag with Mount Paektu in the canton.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Political",
+   "file": "Korean Women's League logo.svg",
+   "text": "! scope=\"row\" | | 1945–present | Flag of the Socialist Women's Union of Korea | Flag with the name of the organization: \"Women's League\" ().",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Political",
+   "file": "Flag of Chochong.svg",
+   "text": "! scope=\"row\" | | 1955–present | Flag of the | Tricolor flag with the League's logo.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Political",
+   "file": "Flag of the Social Democratic Party of Korea.svg",
+   "text": "! scope=\"row\" | | 1945–present | Flag of the Korean Social Democratic Party |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Political",
+   "file": "Cheondoism flag.svg",
+   "text": "! scope=\"row\" | | 1946–present | Flag of the Chondoist Chongu Party | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army (1948).svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 1948 | rowspan=\"9\" | Flag of the Korean People's Army | Initially designed along with the early draft for the Emblem of North Korea in 1948. The slogan reads: \"For the independence of the motherland and the people\" (). Revived as ceremonial unit color for historical units beginning 2015.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army (1948, reverse).svg",
+   "text": "! scope=\"row\" | | With a red star with golden and bearing a hammer and two sickles. The inspection reads: \"Korean People's Army / [Unit number] / 1st (as in ceremonies) Defensive Division\" (조선인민군 제1국방사단). Revived as ceremonial unit color for historical units beginning 2015.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army (1948-1961).svg",
+   "text": "! scope=\"row\" | | rowspan=\"4\" | 1948–1961 | rowspan=\"2\" | Used only as ceremonial unit color for historical units beginning 2013.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army (1948-1961, reverse).svg",
+   "text": "! scope=\"row\" |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army (1948-1961, for Guards).svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | Used for Guards units only. The slogan on obverse side reads: \"For the freedom and independence of the Motherland\" (). The reverse side have a Guards badge with Korean letters reading \"[Unit number] / Guards Kang Kon 2nd (as in ceremonies) Infantry Division\" (근위강건제2부병사단). Revived as ceremonial unit color for Guards units beginning 2013.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army (1948, reverse for Guards).svg",
+   "text": "! scope=\"row\" |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army (1961).svg",
+   "text": "! scope=\"row\" | | 1961–1992 | Latest version shown; emblem adopted in 1992. The slogan reads: \"For the unification and independence of the motherland, and the freedom and happiness of the people\" ().",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army (1992).svg",
+   "text": "! scope=\"row\" | | 1992–1993 | Emblem of DPRK updated to the one featuring the Paektu Mountain.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army (1961-1993, reverse).svg",
+   "text": "! scope=\"row\" | | 1961–1993 | With a red star with golden and bearing a hammer and two sickles.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the General Staff of the Korean People's Army.svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 1993–2023 | rowspan=\"4\" | Flag of the General Staff Department of the Korean People's Army | rowspan=\"2\" | Seen used during the October 1995 parade, observed very rarely.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the General Staff of the Korean People's Army (Back) (1993-2023).svg",
+   "text": "! scope=\"row\" |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the General Staff of the Korean People's Army (Normal).svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 2023–present | Identical to the new flag of the ground forces except without the blue and white stripes. The slogan reads \"For the endless prosperity of the fatherland and the security of the people! (조국의 무궁한 번영과 인민의 안녕을 위하여)\", with the date of the founding of the KPA as 2 February 1948 in the canton.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the General Staff of the Korean People's Army (Reverse).svg",
+   "text": "! scope=\"row\" | | Party symbol placed within a design containing the façade of the WPK headquarters in Pyongyang, a red shield bearing the emblem of WPK, and two swords.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "//cdn.hk01.com/di/media/images/dw/20230207/699645847125626880084257.jpeg",
+   "text": "! scope=\"row\" | | Party symbol placed within a design containing the façade of the WPK headquarters in Pyongyang, a red shield bearing the emblem of WPK, and two swords.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Standard of the Supreme Commander of the Korean People's Army before 2002.svg",
+   "text": "! scope=\"row\" | | 1996–2002 | rowspan=\"2\" | Flag of the Supreme Commander of the Korean People's Army |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Standard of the Supreme Commander of the Korean People's Army.svg",
+   "text": "! scope=\"row\" | | 2002–2020 | The Supreme Commander Star on a red flag. Sometimes used as a war flag during military exercises.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army Ground Force.svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 1993–2023 | rowspan=\"7\" | Flag of the Korean People's Army Ground Force | Emblem of KPA with slogan: \"For the unification and independence of the motherland, and the freedom and happiness of the people\" (). The 4.25 commemorates the foundation of People's Anti-Japanese Guerrilla Army on 25 April 1932. Still used as ceremonial unit color for historical units as of 2025.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army Ground Force (reverse).svg",
+   "text": "! scope=\"row\" | | With Korean letters reading \"Revolutionary armed forces of the Workers' Party of Korea, Korean People's Army [unit name] / No.425 unit (in ceremonies)\" (). The number 425 commemorates the foundation of People's Anti-Japanese Guerrilla Army on 25 April 1932. Still used as ceremonial unit color for historical units as of 2025.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army Ground Force (1993–1994).svg",
+   "text": "! scope=\"row\" | | 1993–1994 | Flag with a slogan for Kim Il Sung, it reads: \"Let us defend the Party's Central Committee headed by dear Comrade Kim Il Sung with our lives!\" (). His name is slightly enlarged.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army Ground Force (1997-2012).svg",
+   "text": "! scope=\"row\" | | 1997–2011 | Flag with a slogan for Kim Jong Il when he was in power. The slogan: \"Let us defend the headquarters of the revolution headed by the great Comrade Kim Jong Il with our lives!\" (). His name is slightly enlarged. The word 혁명의 수뇌부 was later replaced by 당중앙위원회 (Party's Central Committee) in 2011.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army Ground Force (2020–2023).svg",
+   "text": "! scope=\"row\" | | 2012–2023 | Flag with a slogan for Kim Jong Un, it reads: \"Let us defend the Party's Central Committee headed by the great Comrade Kim Jong Un with our lives!\" (위대한 김정은동지를 수반으로 하는 당중앙위원회를 목숨으로 사수하자!). His name is slightly enlarged.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army Ground Force (2023-).svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 2023–present | Identical to the former flag except the emblem of the KPA is defaced with the emblem of the DPRK emblazoned on largened red star, and accomplished by acanthus leaves. The slogan reads \"For the endless prosperity of the fatherland and the security of the people! (조국의 무궁한 번영과 인민의 안녕을 위하여)\", with the date of founding of the particular unit placed in the canton. This flag is used by units of the Ground Forces to serve as a unit flag. The date of foundation on the canton differs among KPAGF units of regiment/brigade level and above, independent battali",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army Ground Force (Reverse).svg",
+   "text": "! scope=\"row\" | | Identical to the former flag except the party symbol is placed within a design containing the facade of the WPK headquarters in Pyongyang, a red shield bearing the emblem of WPK, and two swords. The slogan reads \"Let us defend the Party's Central Committee headed by Dear Comrade Kim Jong Un with our lives!\" (경애하는 김정은동지를 수반으로 하는 당중앙위원회를 목숨으로 사수하자!)",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Navy (1993–2023).svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 1993–2023 | rowspan=\"7\" | Flag of the Korean People's Army Navy | Emblem of KPA with anchor. Still used as ceremonial unit color for historical units as of 2025.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Navy (reverse) (1993-2023).svg",
+   "text": "! scope=\"row\" | | With Korean letters reading \"Revolutionary armed forces of the Workers' Party of Korea, Korean People's Army [unit name] / No.415 unit (in ceremonies)\" (). The number 415 commemorates the birthday of Kim Il-Sung on 15 April. Still used as ceremonial unit color for historical units as of 2025.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Navy (1993–1994).svg",
+   "text": "! scope=\"row\" | | 1993–1994 | Flag with a slogan for Kim Il Sung, it reads: \"Let us defend the Party's Central Committee headed by dear Comrade Kim Il Sung with our lives!\" (경애하는 김일성동지를 수반으로 하는 당중앙위원회를 목숨으로 사수하자!). His name is slightly enlarged.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Navy (1997–2012).svg",
+   "text": "! scope=\"row\" | | 1997–2011 | Flag with a slogan for Kim Jong Il when he was in power. The slogan: \"Let us defend the headquarters of the revolution headed by the great Comrade Kim Jong Il with our lives!\" (). His name is slightly enlarged. The word 혁명의 수뇌부 was later replaced by 당중앙위원회 (Party's Central Committee) in 2011.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Navy (2020–2023).svg",
+   "text": "! scope=\"row\" | | 2012–2023 | Flag with the slogan for Kim Jong Un, it reads: \"Let us defend the Party's Central Committee headed by the great Comrade Kim Jong Un with our lives!\" (위대한 김정은동지를 수반으로 하는 당중앙위원회를 목숨으로 사수하자!). His name is slightly enlarged.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army Navy (Obverse).svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 2023–present | Identical to the former flag except the emblem of the KPA is defaced with the emblem of the DPRK emblazoned on largened red star, surrounded by a laurel wreath, and surmounted by an anchor and steering wheel. The slogan reads \"For the endless prosperity of the fatherland and the security of the people! (조국의 무궁한 번영과 인민의 안녕을 위하여)\", with the date of founding of the particular unit placed in the canton. The representative flag of the whole branch displays the date 28 August 1949.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army Navy (Reverse).svg",
+   "text": "! scope=\"row\" | | Identical to the former flag except the party symbol is placed within a design containing the façade of the WPK headquarters in Pyongyang, an anchor, a red shield bearing the emblem of WPK. The slogan reads \"Let us defend the Party's Central Committee headed by Dear Comrade Kim Jong Un with our lives!\" (경애하는 김정은동지를 수반으로 하는 당중앙위원회를 목숨으로 사수하자!)",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the North Korean People's Army Air Force.svg",
+   "text": "! scope=\"row\" | | 1993–2023, (insignia updated in 2012) | rowspan=\"7\" | Flag of the Korean People's Army Air and Anti-Air Force | Emblem of KPA with wings. Still used as ceremonial unit color for historical units as of 2025.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army Air Force (reverse) (1993-2023).svg",
+   "text": "! scope=\"row\" | | 1993–2023 | With Korean letters reading \"Revolutionary armed forces of the Workers' Party of Korea, Korean People's Army [unit name] / No.216 unit (in ceremonies)\" (). The number 216 commemorates the birthday of Kim Jong-Il on 16 February. Still used as ceremonial unit color for historical units as of 2025.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army Air Force.svg",
+   "text": "! scope=\"row\" | | 1993–1994 | Flag with a slogan for Kim Il Sung, it reads: \"Let us defend the Party's Central Committee headed by dear Comrade Kim Il Sung with our lives!\" (). His name is slightly enlarged.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "(1993–1994).svg",
+   "text": "! scope=\"row\" | | 1993–1994 | Flag with a slogan for Kim Il Sung, it reads: \"Let us defend the Party's Central Committee headed by dear Comrade Kim Il Sung with our lives!\" (). His name is slightly enlarged.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army Air Force (1997-2012).svg",
+   "text": "! scope=\"row\" | | 1993–2012 | Flag with a slogan for Kim Jong Il when he was in power. The slogan: \"Let us defend the headquarters of the revolution headed by the great Comrade Kim Jong Il with our lives!\" (). His name is slightly enlarged. Wings and a star above the KPA emblem. The word 혁명의 수뇌부 was later replaced by 당중앙위원회 (Party's Central Committee) in 2011.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army Air Force.svg",
+   "text": "! scope=\"row\" | | 2012–2023 | Flag with a slogan for Kim Jong Un, it reads: \"Let us defend the Party's Central Committee headed by the great Comrade Kim Jong Un with our lives!\" (위대한 김정은동지를 수반으로 하는 당중앙위원회를 목숨으로 사수하자!). His name is slightly enlarged.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "(2020–2023).svg",
+   "text": "! scope=\"row\" | | 2012–2023 | Flag with a slogan for Kim Jong Un, it reads: \"Let us defend the Party's Central Committee headed by the great Comrade Kim Jong Un with our lives!\" (위대한 김정은동지를 수반으로 하는 당중앙위원회를 목숨으로 사수하자!). His name is slightly enlarged.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army Air and Anti-Air Force (Obverse).svg",
+   "text": "! scope=\"row\" | |rowspan=\"2\" | 2023–present | Identical to the former flag except the emblem of the KPAAF is defaced with the emblem of the DPRK emblazoned on largened red star with additional stars at the top. Lower stripes are arranged as chevrons, and with six trailing jet fighters emerging behind the emblem. The slogan reads \"For the endless prosperity of the fatherland and the security of the people! (조국의 무궁한 번영과 인민의 안녕을 위하여)\", with the date of founding of the particular unit placed in the canton. The representative flag of the whole branch displays the date 29 November 1945.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army Air and Anti-Air Force (Reverse).svg",
+   "text": "! scope=\"row\" | | Identical to the former flag except the party symbol is placed within a design containing the façade of the WPK headquarters in Pyongyang, a red shield bearing the emblem of WPK, and an eagle. The slogan reads \"Let us defend the Party's Central Committee headed by Dear Comrade Kim Jong Un with our lives!\" ()",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army Strategic Force.svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 2018–2020 | rowspan=\"4\" | Flag of the Korean People's Army Strategic Force||Emblem of KPA on an upper half globe. Reverted to army flag in 2020.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of Korean People's Army Strategic Force (reverse).svg",
+   "text": "! scope=\"row\" | | With Korean letters reading \"Revolutionary armed forces of the Workers' Party of Korea, Korean People's Army [unit name] / No.108 unit (in ceremonies)\" (). The number 108 commemorates the birthday of Kim Jong-Un on 8 January.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army Strategic Force (2023, Obverse).svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 2023–present | rowspan=\"2\" | With the same pattern as army flag but has the date 3 July 1999 on obverse side.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army Strategic Force (2023, Reverse).svg",
+   "text": "! scope=\"row\" |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Missile General Bureau (North Korea).svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 2023–present | rowspan=\"2\" | Flag of the North Korea's Missile Administration (formerly in English \"Missile General Bureau\").||The Flag of the Missile General Bureau is seen with its Emblem in a large form with the founding date of 30 April 2016, The slogan reads \"For the security of the Democratic People's Republic of Korea and the security of the people!\" (조선민주주의인민공화국의 안전과 인민의 안녕을 위하여)",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Missile General Bureau (North Korea, Reverse).svg",
+   "text": "! scope=\"row\" | | Identical to the Backside flags of the KPA except the party symbol is placed within a design containing the façade of the WPK headquarters in Pyongyang.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army Special Operation Force.svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 2018–2020 | rowspan=\"4\" | Flag of the Korean People's Army Special Operation Force|| Emblem of KPA with the Big Dipper. Reverted to army flag in 2020.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army Special Operation Force (reverse).svg",
+   "text": "! scope=\"row\" | | With Korean letters reading \"Revolutionary armed forces of the Workers' Party of Korea, Korean People's Army [unit name]\". / No.506 unit (in ceremonies)\" (). The number 506 commemorates the 7th Congress of the Workers' Party of Korea on 6 May 2016.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army Special Operation Force (2023, Obverse).svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 2023–present | rowspan=\"2\" | With the same pattern as army flag but has the date 7 February 1969 on obverse side.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Korean People's Army Special Operation Force (2023, Reverse).svg",
+   "text": "! scope=\"row\" |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Worker-Peasant Red Guards.svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 2007–2023 | rowspan=\"2\" | Flag of the Worker-Peasant Red Guards | Slogan used until 2012, since then the flag shares the same motto as the rest of the KPA. Has the emblem of the Guards in .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Worker-Peasant Red Guards (reverse).svg",
+   "text": "! scope=\"row\" | | With Korean letters reading \"Worker-Peasant Red Guards\".",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Worker-Peasent Red Guards (Normal).svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 2023–present | rowspan=\"2\" | Flag of the Worker-Peasant Red Guards | The slogan reads \"For the endless prosperity of the fatherland and the security of the people!\" (조국의 무궁한 번영과 인민의 안녕을 위하여)",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Worker-Peasant Red Guards (Reverse).svg",
+   "text": "! scope=\"row\" | | With Korean letters reading \"Worker-Peasant Red Guards\".",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Ministry of Social Security (North Korea).svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 2023–present | rowspan=\"2\" | Flag of the Ministry of Social Security | rowspan=\"2\" | A flag with the emblem of the Ministry of Social Security in the middle. Also used by Social Security Forces units. The slogan reads \"Protect the political security of the socialist fatherland and the happiness of the People!\" (사회주의조국의 정치적안전과 인민의 행북을 보위하여)",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Ministry of Social Security (North Korea, Reverse).svg",
+   "text": "! scope=\"row\" |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Ministry of State Security (North Korea).svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 2023–present | rowspan=\"2\" | Flag of the National Intelligence Agency | rowspan=\"2\" | The slogan reads \"For the firm security of the party and the country, and the victory of the great achievements of the Juche Revolution!\" (당과 국가의 굳건한 안전과 주체혁명위업의 승리를 위하여)",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Flag of the Ministry of State Security (North Korea, Reverse).svg",
+   "text": "! scope=\"row\" |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Naval Ensign of North Korea.svg",
+   "text": "! scope=\"row\" | | 1990s–present | Naval ensign of North Korea | Red flag with Paektu Mountain in rays in a disc with national color outlines and a red star.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Guards Ensign of North Korea.svg",
+   "text": "! scope=\"row\" | | 1990s–present | Naval ensign of North Korea for Guards Units |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of North Korean flags",
+   "section": "Military",
+   "file": "Naval jack of North Korea.svg",
+   "text": "! scope=\"row\" | | 1990s–present | Naval jack of North Korea | Identical to the naval ensign but has a white disc with a red star. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "intro",
+   "file": "Flag of North Korea (alternative colours tone version).svg",
+   "text": "Variante du drapeau de la Corée du Nord avec des couleurs plus foncées.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "intro",
+   "file": "Flag of North Korea (construction sheet).svg",
+   "text": "Mesures précises.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "intro",
+   "file": "Flag of the Workers' Party of Korea.svg",
+   "text": "Drapeau du Parti du travail de Corée.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "intro",
+   "file": "North Korea-Pyongyang-Arirang Mass Games-03.jpg",
+   "text": "Drapeau utilisé lors d'un spectacle de masse.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "intro",
+   "file": "Photograph of flags of North Korea.jpg",
+   "text": "Drapeaux nord-coréens.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Drapeaux historiques",
+   "file": "Flag of the king of Joseon.svg",
+   "text": "Drapeau de la dynastie Joseon (utilisé pendant le ).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Drapeaux historiques",
+   "file": "Flag of Korea (1882–1910).svg",
+   "text": "Drapeau de l'Empire coréen (1897-1910).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Drapeaux historiques",
+   "file": "Flag of Japan (1870–1999).svg",
+   "text": "Drapeau du Japon, hissé en Corée pendant l’occupation japonaise (1910-1945).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Drapeaux historiques",
+   "file": "Flag of the Soviet Union (1924–1955).svg",
+   "text": "Drapeau de l'URSS, utilisé conjointement avec le drapeau suivant pendant l'occupation soviétique du Nord de la Corée (1945-1948).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Drapeaux historiques",
+   "file": "Flag of the Provisional People%27s Committee for North Korea.svg",
+   "text": "Drapeau utilisé par le Comité provisoire du peuple de Corée du Nord (1946-1948).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Drapeaux historiques",
+   "file": "Flag of North Korea (1948–1992).svg",
+   "text": "Drapeau de la Corée du Nord (1948-1992).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Drapeaux militaires",
+   "file": "Standard of the Supreme Commander of the Korean People's Army.svg",
+   "text": "Drapeau du commandant suprême (avant 2020).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Drapeaux militaires",
+   "file": "Standard of the Supreme Commander of the Korean People's Army before 2002.svg",
+   "text": "Drapeau du commandant suprême (avant 2002).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Drapeaux militaires",
+   "file": "Flag of the General Staff of the Korean People's Army (Normal).svg",
+   "text": "Drapeau de l'Armée populaire de Corée.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Drapeaux militaires",
+   "file": "Flag of the Korean People's Army Ground Force (2023-).svg",
+   "text": "Drapeau des Forces terrestres populaires de Corée.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Drapeaux militaires",
+   "file": "Flag of the Korean People's Army Ground Force (Reverse).svg",
+   "text": "Drapeau des Forces terrestres populaires de Corée (revers).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Drapeaux militaires",
+   "file": "Flag of the Korean People's Army Navy (Obverse).svg",
+   "text": "Drapeau de la Marine populaire de Corée.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Drapeaux militaires",
+   "file": "Flag of the Korean People's Army Navy (Reverse).svg",
+   "text": "Drapeau de la Marine populaire de Corée (revers).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Drapeaux militaires",
+   "file": "Flag of the Korean People's Army Air and Anti-Air Force (Obverse).svg",
+   "text": "Drapeau de la Force aérienne populaire de Corée.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Drapeaux militaires",
+   "file": "Flag of the Korean People's Army Air and Anti-Air Force (Reverse).svg",
+   "text": "Drapeau de la Force aérienne populaire de Corée (revers).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Drapeaux militaires",
+   "file": "Flag of the Korean People's Army Strategic Force.svg",
+   "text": "Drapeau des Forces stratégiques populaire de Corée.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Drapeaux militaires",
+   "file": "Flag of Korean People's Army Strategic Force (reverse).svg",
+   "text": "Drapeau des Forces stratégiques populaire de Corée (revers).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Drapeaux militaires",
+   "file": "Flag of the Korean People's Army Special Operation Force.svg",
+   "text": "Drapeau des Forces d'opérations spéciales populaires de Corée.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Drapeaux militaires",
+   "file": "Flag of the Korean People's Army Special Operation Force (reverse).svg",
+   "text": "Drapeau des Forces d'opérations spéciales populaires de Corée (revers).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Drapeaux militaires",
+   "file": "Flag of the Worker-Peasent Red Guards (Obverse).svg",
+   "text": "Drapeau des Gardes rouges des ouvriers et paysans.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Drapeaux militaires",
+   "file": "Backside Flag of the WPRG.png",
+   "text": "Drapeau des Gardes rouges des ouvriers et paysans (revers).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Pavillons",
+   "file": "Naval Ensign of North Korea.svg",
+   "text": "Pavillon naval.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Pavillons",
+   "file": "Guards Ensign of North Korea.svg",
+   "text": "Pavillon naval des unités de la garde.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Pavillons",
+   "file": "Naval jack of North Korea.svg",
+   "text": "Pavillon de beaupré.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Drapeaux régionaux",
+   "file": "Flag of the Sinŭiju Special Administrative Region.svg",
+   "text": "Drapeau de la Région administrative spéciale de Sinuiju.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Autres drapeaux",
+   "file": "Vertical Flag of North Korea.svg",
+   "text": "Drapeau de la Corée du Nord (version verticale).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Autres drapeaux",
+   "file": "Vertical Flag of North Korea (alternative colours tone version).svg",
+   "text": "Drapeau de la Corée du Nord (version verticale, variante).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Autres drapeaux",
+   "file": "Flag of the Workers' Party of Korea Vertical Display.svg",
+   "text": "Drapeau du Parti du travail de Corée (version verticale).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Autres drapeaux",
+   "file": "Unification flag of Korea (pre 2009).svg",
+   "text": "Drapeau de l'unification coréenne, version utilisée par la Corée du Nord.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Autres drapeaux",
+   "file": "Flag of KSYL.svg",
+   "text": "Drapeau de l'Union de la jeunesse socialiste patriotique.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Autres drapeaux",
+   "file": "Korean Women's League logo.svg",
+   "text": "Drapeau de l'Union démocratique des femmes de Corée.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Corée du Nord",
+   "section": "Galerie > Autres drapeaux",
+   "file": "Flag of the Chairman of the State Affairs Commission of North Korea.svg",
+   "text": "Drapeau du président de la Commission des affaires de l'État.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ko",
+   "page": "조선민주주의인민공화국의 국기",
+   "section": "디자인 > 규격과 색상",
+   "file": "Flag of North Korea (construction sheet).svg",
+   "text": "섬네일| 조선민주주의인민공화국의 국기 규격",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "ko",
+   "page": "조선민주주의인민공화국의 국기",
+   "section": "역사",
+   "file": "Proposed DPRK flag 1.svg",
+   "text": "조선민주주의인민공화국의 공식 선전 그림에 등장한 조선민주주의인민공화국의 국기 초안 1안",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ko",
+   "page": "조선민주주의인민공화국의 국기",
+   "section": "역사",
+   "file": "Proposed DPRK flag 2.svg",
+   "text": "조선민주주의인민공화국의 공식 선전 그림에 등장한 조선민주주의인민공화국의 국기 초안 2안",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ko",
+   "page": "조선민주주의인민공화국의 국기",
+   "section": "역사",
+   "file": "Kim-Il-sung 김일성 19461103election.jpg",
+   "text": "섬네일| 소련 국기와 태극기 앞에서 연설하는 김일성, 1946년.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "ko",
+   "page": "조선민주주의인민공화국의 국기",
+   "section": "관련 사진",
+   "file": "Gijeong-ri Flag.jpg",
+   "text": "기정동 마을에 게양된 조선민주주의인민공화국의 국기",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ko",
+   "page": "조선민주주의인민공화국의 국기",
+   "section": "관련 사진",
+   "file": "Mansudae Assembly Hall 03 (cropped).JPG",
+   "text": "만수대의사당에 게양된 조선민주주의인민공화국의 국기",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ko",
+   "page": "조선민주주의인민공화국의 국기",
+   "section": "관련 사진",
+   "file": "Dprk pyongyang chuche monument 05.jpg",
+   "text": "주체사상탑과 조선민주주의인민공화국의 국기",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ko",
+   "page": "조선민주주의인민공화국의 국기",
+   "section": "관련 사진",
+   "file": "North Korea-Pyongyang-Arirang Mass Games-03.jpg",
+   "text": "아리랑 축제에 등장한 조선민주주의인민공화국의 국기",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ko",
+   "page": "조선민주주의인민공화국의 국기",
+   "section": "그 외의 기",
+   "file": "Vertical Flag of North Korea.svg",
+   "text": "세로 방향으로 게양된 조선민주주의인민공화국의 국기",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ko",
+   "page": "조선민주주의인민공화국의 국기",
+   "section": "그 외의 기",
+   "file": "Flag of the Workers' Party of Korea Vertical Display.svg",
+   "text": "세로 방향으로 게양된 조선로동당의 기",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ko",
+   "page": "조선민주주의인민공화국의 국기",
+   "section": "그 외의 기",
+   "file": "Provisional People%27s Committee for North Korea flag.svg",
+   "text": "1946년 2월부터 1948년 7월 10일 전까지 사용했던 북조선인민위원회의 국기",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ko",
+   "page": "조선민주주의인민공화국의 국기",
+   "section": "그 외의 기",
+   "file": "Flag of North Korea (1948–1992).svg",
+   "text": "1948년 7월 10일부터 사용된 조선민주주의인민공화국의 국기",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ko",
+   "page": "조선민주주의인민공화국의 국기",
+   "section": "그 외의 기",
+   "file": "Flag of the Workers' Party of Korea.svg",
+   "text": "조선로동당의 기",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ko",
+   "page": "조선민주주의인민공화국의 국기",
+   "section": "그 외의 기",
+   "file": "Flag of the Chairman of the State Affairs Commission of North Korea.svg",
+   "text": "조선민주주의인민공화국 국무위원장 자동차기",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ko",
+   "page": "조선민주주의인민공화국의 국기",
+   "section": "그 외의 기",
+   "file": "Flag of the Korean People's Army (1948-1961).svg",
+   "text": "과거의 조선인민군기",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ko",
+   "page": "조선민주주의인민공화국의 국기",
+   "section": "그 외의 기",
+   "file": "Flag of the General Staff of the Korean People's Army (Obverse).svg",
+   "text": "현재의 조선인민군기",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ko",
+   "page": "조선민주주의인민공화국의 국기",
+   "section": "그 외의 기",
+   "file": "Flag of the Korean People's Army Ground Force (2023-).svg",
+   "text": "조선인민군 륙군기",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ko",
+   "page": "조선민주주의인민공화국의 국기",
+   "section": "그 외의 기",
+   "file": "Flag of the Korean People's Army Navy (Obverse).svg",
+   "text": "조선인민군 해군기",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ko",
+   "page": "조선민주주의인민공화국의 국기",
+   "section": "그 외의 기",
+   "file": "Naval ensign of North Korea.svg",
+   "text": "조선인민군 해군 군함기",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ko",
+   "page": "조선민주주의인민공화국의 국기",
+   "section": "그 외의 기",
+   "file": "Guards Ensign of North Korea.svg",
+   "text": "조선인민군 해군 근위대 군함기",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ko",
+   "page": "조선민주주의인민공화국의 국기",
+   "section": "그 외의 기",
+   "file": "Flag of the Korean People's Army Air and Anti-Air Force (Obverse).svg",
+   "text": "조선인민군 항공및반항공군기",
+   "kind": "gallery"
+  }
+ ]
+}

@@ -1,0 +1,458 @@
+{
+ "iso": "na",
+ "flag_item": "Q165822",
+ "pages": [
+  "en:Flag of Namibia",
+  "fr:Drapeau de la Namibie"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Namibia",
+   "section": "intro",
+   "file": "Flag of Namibia 02.jpg",
+   "text": "Namibian flag",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Namibia",
+   "section": "Other flags",
+   "file": "Flag of the President of Namibia.svg",
+   "text": "Presidential Standard",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Namibia",
+   "section": "Other flags",
+   "file": "Flag of the Namibian Police Force.svg",
+   "text": "Police Flag",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Namibia",
+   "section": "Other flags",
+   "file": "Flag of the Namibian Defence Force.png",
+   "text": "NDF Flag",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Namibia",
+   "section": "Other flags",
+   "file": "Flag of the Namibian Army.svg",
+   "text": "Army Flag",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Namibia",
+   "section": "Other flags",
+   "file": "Flag of the Namibian Navy.svg",
+   "text": "Navy Flag",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Namibia",
+   "section": "Other flags",
+   "file": "Flag of the Namibian Air Force.svg",
+   "text": "Air Force Flag",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Namibia",
+   "section": "Historical flags",
+   "file": "Flag of Germany (1867–1918).svg",
+   "text": "Flag of the German Empire",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Namibia",
+   "section": "Historical flags",
+   "file": "Reichskolonialflagge.svg",
+   "text": "Flag of the Reich Colonial Office, used in German South-West Africa from 24 April 1884 to 9 July 1915.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Namibia",
+   "section": "Historical flags",
+   "file": "Flag of Deutsch-Südwest.svg",
+   "text": "Proposed flag of German South-West Africa.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Namibia",
+   "section": "Historical flags",
+   "file": "Flag of the United Kingdom.svg",
+   "text": "Flag of South West Africa between 1915 and 28 June 1919.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Namibia",
+   "section": "Historical flags",
+   "file": "Red Ensign of South Africa (1912–1951).svg",
+   "text": "Merchant flag of South West Africa from 1915 to 1928.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Namibia",
+   "section": "Historical flags",
+   "file": "Flag of South Africa (1928–1994, dark colors).svg",
+   "text": "The dark version of the flag of South West Africa from 1928 until 1990 under Mandates and Trusteeships by South Africa.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Namibia",
+   "section": "Historical flags",
+   "file": "Flag of South Africa (1928–1994, bright colors).svg",
+   "text": "The bright version of the flag of South West Africa from 1928 until 1990 under Mandates and Trusteeships by South Africa.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Namibia",
+   "section": "Historical flags",
+   "file": "Flag of South West Africa People's Organisation.svg",
+   "text": "Flag of SWAPO used at the United Nations between 1976 and 21 March 1990.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Namibia",
+   "section": "Historical flags > Flags of bantustans in South West Africa",
+   "file": "Flag of South Africa (1928–1994, dark colors).svg",
+   "text": "Bushmanland",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Namibia",
+   "section": "Historical flags > Flags of bantustans in South West Africa",
+   "file": "Flag of Damaraland.svg",
+   "text": "Damaraland",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Namibia",
+   "section": "Historical flags > Flags of bantustans in South West Africa",
+   "file": "Flag of East Caprivi.svg",
+   "text": "East Caprivi",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Namibia",
+   "section": "Historical flags > Flags of bantustans in South West Africa",
+   "file": "Flag of South Africa (1928–1994, dark colors).svg",
+   "text": "Hereroland",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Namibia",
+   "section": "Historical flags > Flags of bantustans in South West Africa",
+   "file": "Flag of South Africa (1928–1994, dark colors).svg",
+   "text": "Kaokoland (dark version)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Namibia",
+   "section": "Historical flags > Flags of bantustans in South West Africa",
+   "file": "Flag of South Africa (1928–1994, bright colors).svg",
+   "text": "Kaokoland (bright version)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Namibia",
+   "section": "Historical flags > Flags of bantustans in South West Africa",
+   "file": "Flag of Kavangoland.svg",
+   "text": "Kavangoland",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Namibia",
+   "section": "Historical flags > Flags of bantustans in South West Africa",
+   "file": "Flag of South Africa (1928–1994, dark colors).svg",
+   "text": "Namaland",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Namibia",
+   "section": "Historical flags > Flags of bantustans in South West Africa",
+   "file": "Flag of Ovamboland.svg",
+   "text": "Ovamboland",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Namibia",
+   "section": "Historical flags > Flags of bantustans in South West Africa",
+   "file": "Flag of Rehoboth-Basterland.svg",
+   "text": "Rehoboth (Basterland)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Namibia",
+   "section": "Historical flags > Flags of bantustans in South West Africa",
+   "file": "Flag of South Africa (1928–1994, dark colors).svg",
+   "text": "Tswanaland (dark version)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Namibia",
+   "section": "Historical flags > Flags of bantustans in South West Africa",
+   "file": "Flag of South Africa (1928–1994, bright colors).svg",
+   "text": "Tswanaland (bright version)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Namibie",
+   "section": "Signification des couleurs",
+   "file": "Flag of Namibia 02.jpg",
+   "text": "Le drapeau namibien",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Namibie",
+   "section": "Étendard présidentiel",
+   "file": "Flag of the President of Namibia.svg",
+   "text": "Étendard présidentiel",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Namibie",
+   "section": "Étendard présidentiel",
+   "file": "Standard of the State President of South Africa (1985-1994).png",
+   "text": "Pavillon présidentiel sud-africain duquel est inspiré le pavillon namibien",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Namibie",
+   "section": "Autres drapeaux",
+   "file": "Flag of the Namibian Police Force.svg",
+   "text": "Drapeau de la Police",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Namibie",
+   "section": "Autres drapeaux",
+   "file": "Flag of the Namibian Defence Force.png",
+   "text": "Drapeau des Forces de défense namibienne (NDF)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Namibie",
+   "section": "Autres drapeaux",
+   "file": "Flag of the Namibian Army.svg",
+   "text": "Drapeau de l'Armée",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Namibie",
+   "section": "Autres drapeaux",
+   "file": "Flag of the Namibian Navy.svg",
+   "text": "Drapeau de la marine",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Namibie",
+   "section": "Autres drapeaux",
+   "file": "Flag of the Namibian Air Force.svg",
+   "text": "Drapeau de l'armée de l'air",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Namibie",
+   "section": "Drapeaux historiques",
+   "file": "Flag of Germany (1867–1918).svg",
+   "text": "Drapeau de l'Empire allemand",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Namibie",
+   "section": "Drapeaux historiques",
+   "file": "Reichskolonialflagge.svg",
+   "text": "Drapeau du Sud-Ouest africain allemand (1884-1915)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Namibie",
+   "section": "Drapeaux historiques",
+   "file": "Flag of Deutsch-Südwest.svg",
+   "text": "Drapeau proposé pour le Sud-Ouest africain allemand.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Namibie",
+   "section": "Drapeaux historiques",
+   "file": "Flaggenentwurf 7 Südwestafrika 1914.svg",
+   "text": "Drapeau proposé pour le Sud-Ouest africain allemand",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Namibie",
+   "section": "Drapeaux historiques",
+   "file": "Flag of the United Kingdom (3-5).svg",
+   "text": "Drapeau du Sud-Ouest africain (1915 au 28 juin 1919)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Namibie",
+   "section": "Drapeaux historiques",
+   "file": "Red Ensign of South Africa (1912–1951).svg",
+   "text": "Red ensign d'Afrique du Sud utilisé pour le Sud-Ouest africain (1919-1928)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Namibie",
+   "section": "Drapeaux historiques",
+   "file": "Flag of South Africa (1928-1982).svg",
+   "text": "Drapeau d'Afrique du Sud utilisé pour le Sud-Ouest africain (1928-1982) .",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Namibie",
+   "section": "Drapeaux historiques",
+   "file": "Flag of South Africa (1928–1994, bright colors).svg",
+   "text": "Drapeau d'Afrique du Sud utilisé pour le Sud-Ouest africain (1982-1990)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Namibie",
+   "section": "Drapeaux historiques",
+   "file": "Flag of South West Africa People's Organisation.svg",
+   "text": "Drapeau de la SWAPO utilisé par les Nations-unies de 1976 à 1990 pour représenter la Namibie.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Namibie",
+   "section": "Drapeaux historiques > Drapeaux des bantoustans du Sud-Ouest Africain",
+   "file": "Flag of South Africa (1928–1994, dark colors).svg",
+   "text": "Bushmanland",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Namibie",
+   "section": "Drapeaux historiques > Drapeaux des bantoustans du Sud-Ouest Africain",
+   "file": "Flag of Damaraland.svg",
+   "text": "Damaraland",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Namibie",
+   "section": "Drapeaux historiques > Drapeaux des bantoustans du Sud-Ouest Africain",
+   "file": "Flag of East Caprivi.svg",
+   "text": "Caprivi",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Namibie",
+   "section": "Drapeaux historiques > Drapeaux des bantoustans du Sud-Ouest Africain",
+   "file": "Flag of South Africa (1928–1994, dark colors).svg",
+   "text": "Hereroland",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Namibie",
+   "section": "Drapeaux historiques > Drapeaux des bantoustans du Sud-Ouest Africain",
+   "file": "Flag of South Africa (1928-1982).svg",
+   "text": "Kaokoland (jusqu'en 1982)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Namibie",
+   "section": "Drapeaux historiques > Drapeaux des bantoustans du Sud-Ouest Africain",
+   "file": "Flag of South Africa (1928–1994, bright colors).svg",
+   "text": "Kaokoland (1982-1990)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Namibie",
+   "section": "Drapeaux historiques > Drapeaux des bantoustans du Sud-Ouest Africain",
+   "file": "Flag of Kavangoland.svg",
+   "text": "Kavangoland",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Namibie",
+   "section": "Drapeaux historiques > Drapeaux des bantoustans du Sud-Ouest Africain",
+   "file": "Flag of South Africa (1928–1994, dark colors).svg",
+   "text": "Namaland",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Namibie",
+   "section": "Drapeaux historiques > Drapeaux des bantoustans du Sud-Ouest Africain",
+   "file": "Flag of Ovamboland.svg",
+   "text": "Ovamboland",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Namibie",
+   "section": "Drapeaux historiques > Drapeaux des bantoustans du Sud-Ouest Africain",
+   "file": "Flag of Rehoboth-Basterland.svg",
+   "text": "Rehoboth",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Namibie",
+   "section": "Drapeaux historiques > Drapeaux des bantoustans du Sud-Ouest Africain",
+   "file": "Flag of South Africa (1928-1982).svg",
+   "text": "Tswanaland (jusqu'en 1982)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Namibie",
+   "section": "Drapeaux historiques > Drapeaux des bantoustans du Sud-Ouest Africain",
+   "file": "Flag of South Africa (1928–1994, bright colors).svg",
+   "text": "Tswanaland (1982-1990)",
+   "kind": "gallery"
+  }
+ ]
+}

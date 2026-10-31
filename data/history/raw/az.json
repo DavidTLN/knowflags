@@ -1,0 +1,1092 @@
+{
+ "iso": "az",
+ "flag_item": "Q82236",
+ "pages": [
+  "en:Flag of Azerbaijan",
+  "en:List of Azerbaijani flags",
+  "fr:Drapeau de l'Azerbaïdjan",
+  "az:Azərbaycan bayrağı"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "History > Azerbaijan Democratic Republic (1918–1920)",
+   "file": "Flag of the Democratic Republic of Azerbaijan (1918).svg",
+   "text": "23x15px Flag of Azerbaijan between 21 June and 9 November 1918",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "History > Azerbaijan Democratic Republic (1918–1920)",
+   "file": "FIAV historical.svg",
+   "text": "23x15px",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "History > Azerbaijan Democratic Republic (1918–1920)",
+   "file": "Flag of Azerbaijan Republic made by Mammad Amin Rasulzade.jpg",
+   "text": "23x15px ADR flag made by Mammad Amin Rasulzade during the years of emigration",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "History > Azerbaijan Democratic Republic (1918–1920) > Use of the Azerbaijan Democratic Republic flag after 1920",
+   "file": "Azerbaijan Parlament.jpg",
+   "text": "The first meeting of the Parliament of the Azerbaijan Democratic Republic, where a tricolor flag was hung. 7 December 1918.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "History > Azerbaijan Democratic Republic (1918–1920) > Use of the Azerbaijan Democratic Republic flag after 1920",
+   "file": "Azerbaijani delegation in Paris.jpg",
+   "text": "Azerbaijani delegation in Paris at the Claridge Hotel during the Paris Peace Conference, 1919. The tricolor flag of the ADR is visible in the background, on the chest of drawers.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "History > Azerbaijan Democratic Republic (1918–1920) > Use of the Azerbaijan Democratic Republic flag after 1920",
+   "file": "Army of Azerbaijan in 1918.jpg",
+   "text": "Officers and soldiers of the army of the Azerbaijan Democratic Republic against the background of the state tricolor",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "History > Azerbaijan Democratic Republic (1918–1920) > Use of the Azerbaijan Democratic Republic flag after 1920",
+   "file": "Azerbaijani Legion emblem.svg",
+   "text": "Patch worn by the Azerbaijani Legion which fought for Nazi Germany during World War II",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "History > Azerbaijan SSR (1920–1991)",
+   "file": "Flag of the Azerbaijan Soviet Socialist Republic.svg",
+   "text": "23x15px Flag of Soviet Azerbaijan between 1952 and 1990. Ratio: 1:2",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "History > Azerbaijan SSR (1920–1991)",
+   "file": "FIAV historical.svg",
+   "text": "23x15px",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "History > Republic of Azerbaijan (1991–present)",
+   "file": "National Flag Square e-citizen.jpg",
+   "text": "National Flag Square in Baku",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "Timeline gallery",
+   "file": "Flag of the Democratic Republic of Azerbaijan (1918).svg",
+   "text": "Flag of the Azerbaijan Democratic Republic (1918)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "Timeline gallery",
+   "file": "Flag of Azerbaijan (1918–1920).svg",
+   "text": "Flag of the Azerbaijan Democratic Republic (1918–1920)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "Timeline gallery",
+   "file": "Flag of the Azerbaijan Soviet Socialist Republic (1920).svg",
+   "text": "Flag of the Azerbaijan Soviet Socialist Republic (1920)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "Timeline gallery",
+   "file": "Azerbaijansovietrep1920-1921.svg",
+   "text": "Flag of the Azerbaijan Soviet Socialist Republic (1920–1921)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "Timeline gallery",
+   "file": "Flag of the Azerbaijan Soviet Socialist Republic (1921–1922).svg",
+   "text": "Flag of the Azerbaijan Soviet Socialist Republic (1921–1922)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "Timeline gallery",
+   "file": "Flag of the Azerbaijan Soviet Socialist Republic (1924-1927).svg",
+   "text": "Flag of the Azerbaijan Soviet Socialist Republic within the TSFSR (1924–1927)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "Timeline gallery",
+   "file": "Flag of the Azerbaijan Soviet Socialist Republic (1927-1931).svg",
+   "text": "Flag of the Azerbaijan Soviet Socialist Republic within the TSFSR (1927–1931)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "Timeline gallery",
+   "file": "Flag of the Azerbaijan Soviet Socialist Republic (1931-1937).svg",
+   "text": "Flag of the Azerbaijan Soviet Socialist Republic within the TSFSR (1931–1937)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "Timeline gallery",
+   "file": "Flag of the Transcaucasian SFSR (variant).svg",
+   "text": "Flag of the Transcaucasian SFSR (1930s–1936)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "Timeline gallery",
+   "file": "Flag AzSSR.svg",
+   "text": "Flag of the Azerbaijan Soviet Socialist Republic (1937–1940)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "Timeline gallery",
+   "file": "Flag АзССР.svg",
+   "text": "Flag of the Azerbaijan Soviet Socialist Republic (1940–1952)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "Timeline gallery",
+   "file": "Flag of the Azerbaijan Soviet Socialist Republic.svg",
+   "text": "Flag of the Azerbaijan Soviet Socialist Republic (1952–1991)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "Timeline gallery",
+   "file": "Flag of Azerbaijan (1991–2013).svg",
+   "text": "Flag of the Republic of Azerbaijan (1991–2013)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "Timeline gallery",
+   "file": "Flag of Azerbaijan.svg",
+   "text": "Flag of the Republic of Azerbaijan (2013–present)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "Design",
+   "file": "Flag of Azerbaijan (construction sheet).svg",
+   "text": "Construction sheet of the Azerbaijani flag",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "Design > Color",
+   "file": "Flag of Azerbaijan (1991–2013).svg",
+   "text": "The flag is colored green, red, sky blue, and white. The exact specifications for its colors were issued in the 2004 decree \"On the Rules of the National Flag of the Republic of Azerbaijan\". The color scheme used before 2013 is as follows: {| class=\"wikitable\" style=\"margin:1em auto; width:60%; text-align: ;\" ! scope=\"col\" | 40pxColors schemebefore 2013 ! scope=\"col\" style=\"background:#0098C3; width: ; color:white;\"| Blue ! scope=\"col\" style=\"background:#E00034; width: ; color:white;\"| Red ! scope=\"col\" style=\"background:#00AE65; width: ; color:white;\" | Green",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "Design > Color",
+   "file": "Flag of Azerbaijan.svg",
+   "text": "! scope=\"row\" |RGB | 0-152-195 || 224-0-52 || 0-174-101 |} The colors, updated in 2013 and ratified in 2018 and specified in Pantone, are as follows: {| class=\"wikitable\" style=\"margin:1em auto; width:60%; text-align: ;\" ! scope=\"col\" | 40pxColors scheme2013–present ! scope=\"col\" style=\"background:#00B5E2; width: ; color:white;\"| Blue ! scope=\"col\" style=\"background:#EF3340; width: ; color:white;\"| Red ! scope=\"col\" style=\"background:#509E2F; width: ; color:white;\" | Green",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "Protocol",
+   "file": "Azerbaijani embassy in Paris.jpg",
+   "text": "Flag of Azerbaijan over the building of the Azerbaijani embassy in Paris According to Article 2 of Law No. 683 of the Republic of Azerbaijan, dated 8 June 2004 (as amended on 1 September 2005), the national flag must be raised by the following: {|class=\"wikitable\" style=\"text-align: \" ! Office !! Buildings !! Vehicles",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "Protocol",
+   "file": "Official inauguration of Ilham Aliyev, who has been elected President of the Republic of Azerbaijan, was held 19.jpg",
+   "text": "|align= Border crossings of Azerbaijan || || |} A member of the Azerbaijani National Guard holding the national flag The national flag must also be raised over the buildings, military courts and headquarters of military units and naval vessels of the Armed Forces of the Republic of Azerbaijan in the following cases: During the public holidays During the military oath In the case of awarding of military units or military courts When a military unit or military vessel is located on the territory of another country When hanging without a flagpole, the Azerbaijani flag must be placed on the wall o",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "Protocol",
+   "file": "Azerbaijani embassy in Paris.jpg",
+   "text": "Flag of Azerbaijan over the building of the Azerbaijani embassy in Paris",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Azerbaijan",
+   "section": "Protocol",
+   "file": "Official inauguration of Ilham Aliyev, who has been elected President of the Republic of Azerbaijan, was held 19.jpg",
+   "text": "A member of the Azerbaijani National Guard holding the national flag",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "National flag",
+   "file": "Flag of Azerbaijan.svg",
+   "text": "! scope=\"row\" | | 2013–present | Flag of the Republic of Azerbaijan | Horizontal tricolour of bright blue, red, and green, with a white crescent and a centred eight-pointed star.Proportion 1:2. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Governmental flags",
+   "file": "Standard of the President of Azerbaijan.svg",
+   "text": "! scope=\"row\" | | 1992–present | Presidential standard | National tricolour with the coat of arms in the",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Governmental flags",
+   "file": "Standard of the Supreme Commander of the Armed Forces of Azerbaijan.svg",
+   "text": "! scope=\"row\" | | 2004–present | Presidential standard (at sea) | Naval ensign with national tricolour and the coat of arms in the |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Azerbaijani Armed Forces > Azerbaijani Land Forces",
+   "file": "Flag of Azerbaijani Land Forces.svg",
+   "text": "! scope=\"row\" | | | Flag of the Azerbaijani Land Forces | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Azerbaijani Armed Forces > Azerbaijani Navy",
+   "file": "Naval Flag of Azerbaijan.svg",
+   "text": "! scope=\"row\" | | rowspan=\"11\" | 1991 | Ensign of the Azerbaijani Navy | As Azerbaijan was formerly a Soviet republic, the naval ensign of Azerbaijan closely mimics the old Soviet equivalent; a star and crescent replaces the red star, a blue anchor replaces the hammer and sickle, and what used to be a simple light blue bar at the bottom of the flag has been replaced by a wavy sort of pattern.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Azerbaijani Armed Forces > Azerbaijani Navy",
+   "file": "Flag of the Commander in Chief of Azerbaijan Naval Staff.jpg",
+   "text": "! scope=\"row\" | | Flag of the commander in chief of Azerbaijan Naval Staff |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Azerbaijani Armed Forces > Azerbaijani Navy",
+   "file": "Flag of the Commander in Chief of the Azerbaijani Navy.jpg",
+   "text": "! scope=\"row\" | | Flag of the commander in chief of the Azerbaijani Navy |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Azerbaijani Armed Forces > Azerbaijani Navy",
+   "file": "Flag of the Commander of a Group of Azerbaijan Navy.jpg",
+   "text": "! scope=\"row\" | | Flag of the commander of a group of Azerbaijan Navy |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Azerbaijani Armed Forces > Azerbaijani Navy",
+   "file": "Coast Guard Flag of Azerbaijan.svg",
+   "text": "! scope=\"row\" | | The flag of the Azerbaijani Coast Guard | A green flag with the flag of the Navy in the canton.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Azerbaijani Armed Forces > Azerbaijani Navy",
+   "file": "Flag of the President of Azerbaijan on board of a ship of the State Border Service.svg",
+   "text": "! scope=\"row\" | | Flag of the president of Azerbaijan while on board a ship of the State Border Service |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Azerbaijani Armed Forces > Azerbaijani Navy",
+   "file": "Flag of the Chief of the Azerbaijan State Border Service - Commander of Border Troops.svg",
+   "text": "! scope=\"row\" | | Flag of the chief of the State Border Service - Commander of Border Troops |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Azerbaijani Armed Forces > Azerbaijani Navy",
+   "file": "Flag of the Chief of General Staff of the Border Troops of the Azerbaijan State Border Service.svg",
+   "text": "! scope=\"row\" | | Flag of the chief of general staff of the Border Troops |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Azerbaijani Armed Forces > Azerbaijani Navy",
+   "file": "Flag of the Commander of Group of Vessels of the Azerbaijan State Border Service.svg",
+   "text": "! scope=\"row\" | | Flag of the commander of a group of vessels |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Azerbaijani Armed Forces > Azerbaijani Navy",
+   "file": "Command Pennant of the Azerbaijan Border patrol vessels.svg",
+   "text": "! scope=\"row\" | | Command pennant of Border Patrol vessels |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Azerbaijani Armed Forces > Azerbaijani Navy",
+   "file": "Masthead Pennant of the Azerbaijan Border patrol vessels.svg",
+   "text": "! scope=\"row\" | | Masthead pennant of Border Patrol vessels | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Azerbaijani Armed Forces > Azerbaijani Air Force",
+   "file": "AzAF Flag of Azerbaijan.png",
+   "text": "! scope=\"row\" | | 1991 | Flag of the Azerbaijani Air and Air Defence Force | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Azerbaijani Armed Forces > Border Service of Azerbaijan",
+   "file": "Azerbaijan Border Guards Standard (Reverse).svg",
+   "text": "! scope=\"row\" | | 1991 | Flag of the Border Troops (reverse).Note: The obverse of the flag is similar to the national flag |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Azerbaijani Armed Forces > Border Service of Azerbaijan",
+   "file": "Flag of the Border Regiments (Reverse).svg",
+   "text": "! scope=\"row\" | | 1991 | Flag of the Border Regiments (reverse).Note: The obverse of the flag is similar to the national flag |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Azerbaijani Armed Forces > Border Service of Azerbaijan",
+   "file": "Flag of the Border Units (State Border Service of Azerbaijan) (Reverse).svg",
+   "text": "! scope=\"row\" | | 1991 | Flag of the Border Units (reverse).Note: The obverse of the flag is similar to the national flag | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Azerbaijani Armed Forces > Internal Troops of Azerbaijan",
+   "file": "Azerbaijan Internal Troops flag.png",
+   "text": "! scope=\"row\" | | | Flag of the Internal Troops of Azerbaijan |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Azerbaijani Armed Forces > Internal Troops of Azerbaijan",
+   "file": "Azerbaijan \"Vashaq\" Special Forces flag.png",
+   "text": "! scope=\"row\" | | | Flag of the Vashag | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Political flags",
+   "file": "Emblem of Azerbaijan Democratic Reforms Party.svg",
+   "text": "! scope=\"row\" | | 2005–present | Democratic Reforms Party |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Ethnic groups flags",
+   "file": "Flag of the Avars (Variant 2).svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | | rowspan=\"2\" | Flags of Avars |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Ethnic groups flags",
+   "file": "Avar flag (ethnic).svg",
+   "text": "! scope=\"row\" | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Ethnic groups flags",
+   "file": "Lezgian flag.svg",
+   "text": "! scope=\"row\" | | | Flag of Lezgins |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Ethnic groups flags",
+   "file": "Flag of Talysh.svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | | rowspan=\"2\" | Flags of Talysh people |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Ethnic groups flags",
+   "file": "Flag of the Talysh-Mughan Republic.svg",
+   "text": "! scope=\"row\" | | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Atabek of Azerbaijan.png",
+   "text": "! scope=\"row\" | | | Banner of the Atabegs of Azerbaijan |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "راية اوزون حسن.svg",
+   "text": "! scope=\"row\" | | | Banner of Uzun Hassan, leader of the Aq Qoyunlu |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Flag of Ak Koyunlu.svg",
+   "text": "! scope=\"row\" | | | Banner of the Aq Qoyunlu |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Flag of Kara Koyunlu dynasty.png",
+   "text": "! scope=\"row\" | | | Banner of the Qara Qoyunlu |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Flag of the Nakhichevan Khanate.svg",
+   "text": "! scope=\"row\" | | 1747–1828 | Banner of the Nakhichevan Khanate |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Flag of Ganja Khanate.svg",
+   "text": "! scope=\"row\" | | 1747–1804 | Banner of the Ganja Khanate",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Flag of Karabakh Khanate.svg",
+   "text": "! scope=\"row\" | 150x150px | 1747–1804 | Banner of the Karabakh Khanate |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Flag of the Centrocaspian Dictatorship.svg",
+   "text": "! scope=\"row\" | | 1918 | Flag of theCentrocaspian Dictatorship | Three horizontal stripes, the upper and lower stripes of light blue colour and the middle stripe red.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Flag of Musavat Party.svg",
+   "text": "! scope=\"row\" | | 1917 | Flag of the Musavat Party of Turkic Federalists |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Flag of the Democratic Republic of Azerbaijan (1918).svg",
+   "text": "! scope=\"row\" | | 1918 | Flag of Azerbaijan Democratic Republic | Source for the design of the current flag",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Flag of the Republic of Aras.svg",
+   "text": "! scope=\"row\" | | 1918–1919 | Flag of Republic of Aras |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Baku sovnarkom.png",
+   "text": "! scope=\"row\" | | 1918 | Flag of the Baku Commune | Bears the text Бакинскiй Совнаркомь (Bakinskiy Sovnarkom)",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Flag of Azerbaijan 1918.svg",
+   "text": "! scope=\"row\" | | 1918–1920 | Flag of Azerbaijan Democratic Republic | Similar to the current flag",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Flag of the Azerbaijan Soviet Socialist Republic (1920).svg",
+   "text": "! scope=\"row\" | | 1920 | Flag of the Azerbaijan Soviet Socialist Republic |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Azerbaijansovietrep1920-1921.svg",
+   "text": "! scope=\"row\" | | 1920–1921 | rowspan=\"2\" | Flag of the Azerbaijan Socialist Soviet Republic |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Flag of the Azerbaijan Soviet Socialist Republic (1921–1922).svg",
+   "text": "! scope=\"row\" | | 1921–1922 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Flag of Azerbaijan 1922 (2).svg",
+   "text": "! scope=\"row\" | | 1922–1924 | rowspan=\"2\" | Flag of the Azerbaijan Socialist Soviet Republic (TSFSR) |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Flag of the Azerbaijan Soviet Socialist Republic (1924-1927).svg",
+   "text": "! scope=\"row\" | | 1924–1927 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Flag of the Azerbaijan Soviet Socialist Republic (1927-1931).svg",
+   "text": "! scope=\"row\" | | 1927–1931 | rowspan=\"2\" | Flag of the Azerbaijan Soviet Socialist Republic (TSFSR) |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Flag of the Azerbaijan Soviet Socialist Republic (1931-1937).svg",
+   "text": "! scope=\"row\" | | 1931–1937 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Flag of the Transcaucasian SFSR.svg",
+   "text": "! scope=\"row\" | | 1930s–1936 | Flag of the Transcaucasian Socialist Federative Soviet Republic |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Flag AzSSR.svg",
+   "text": "! scope=\"row\" | | 1937–1940 | rowspan=\"3\" | Flag of the Azerbaijan Soviet Socialist Republic |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Flag АзССР.svg",
+   "text": "! scope=\"row\" | | 1940–1952 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Flag of the Azerbaijan Soviet Socialist Republic.svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 1952–1991 | Flag of the Azerbaijan Soviet Socialist Republic",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Flag of the Azerbaijan Soviet Socialist Republic (1952–1991, reverse).svg",
+   "text": "! scope=\"row\" | | Reverse flag | All flags of the constituent republics of the Soviet Union did not bear the hammer and sickle on their reverse side.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Flag of the Nakhichevan ASSR (1921–1925).svg",
+   "text": "! scope=\"row\" | | 1921–1925 | Flag of the Nakhichevan Autonomous Soviet Socialist Republic |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Flag of the Nakhichevan ASSR (1937–1939).svg",
+   "text": "! scope=\"row\" | | 1937–1939 | rowspan=\"6\" | Flag of the Nakhichevan Autonomous Soviet Socialist Republic | One version of the flag of the Nakhichevan Autonomous Soviet Socialist Republic. Later versions bore the text \"Нахчыван МССР\" (Naxçıvan MSSR, meaning Nakhichevan ASSR), placed on the flag of the Azerbaijan SSR of the time, without the Armenian name.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Нахичеванская АССР (1939-1940).svg",
+   "text": "! scope=\"row\" | | 1939–1940 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Flag of the Nakhichevan ASSR (1940–1945).svg",
+   "text": "! scope=\"row\" | | 1940–1945 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Flag of the Nakhichevan ASSR (1945–1953).svg",
+   "text": "! scope=\"row\" | | 1945–1953 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Flag of the Nakhichevan ASSR (1956–1978).svg",
+   "text": "! scope=\"row\" | | 1956–1978 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Flag of Nakhichevan ASSR.svg",
+   "text": "! scope=\"row\" | | 1978–1990 | Last flag of the Nakhichevan Autonomous Soviet Socialist Republic",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Flag of Azerbaijan (1991–2013).svg",
+   "text": "! scope=\"row\" | | 1991–2013 | Flag of the Republic of Azerbaijan | Similar to the flag of the Azerbaijani Democratic Republic and the current flag of the Republic of Azerbaijan",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Historical flags",
+   "file": "Flag of Talysh.svg",
+   "text": "! scope=\"row\" | | 1993 | Flag of Talysh-Mughan Autonomous Republic | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Azerbaijanis in other countries",
+   "file": "Flag of Iraqi Turkmans.svg",
+   "text": "! scope=\"row\" | | | Flag of Iraqi Turkmen |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Azerbaijanis in other countries",
+   "file": "Flag of South Azerbaijan.svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | | rowspan=\"2\" | Flags of Iranian Azerbaijanis |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Azerbaijanis in other countries",
+   "file": "Flag of the South Azerbaijan Independence Party.svg",
+   "text": "! scope=\"row\" | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Azerbaijanis in other countries",
+   "file": "Flag of the Afshar Tribe.svg",
+   "text": "! scope=\"row\" | | | Flag of Afshars |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Azerbaijani flags",
+   "section": "Azerbaijanis in other countries",
+   "file": "Flag of the South West Caucasian Republic.svg",
+   "text": "! scope=\"row\" | | | Flag of Karapapakhs | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de l'Azerbaïdjan",
+   "section": "intro",
+   "file": "Naval Flag of Azerbaijan.svg",
+   "text": "Pavillon naval alternatif (ratio 3:5)|",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de l'Azerbaïdjan",
+   "section": "Histoire > Première indépendance",
+   "file": "Flag of the Transcaucasian Federation.svg",
+   "text": "Drapeau de la république démocratique fédérative de Transcaucasie d'avril à .",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de l'Azerbaïdjan",
+   "section": "Histoire > Première indépendance",
+   "file": "Flag of the Democratic Republic of Azerbaijan (1918).svg",
+   "text": "Drapeau de la république démocratique d'Azerbaïdjan du au .",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de l'Azerbaïdjan",
+   "section": "Histoire > Première indépendance",
+   "file": "Flag of Azerbaijan 1918.svg",
+   "text": "Drapeau de la république démocratique d'Azerbaïdjan du au .",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de l'Azerbaïdjan",
+   "section": "Histoire > Période soviétique",
+   "file": "Flag of the Azerbaijan Soviet Socialist Republic (1920–1921).svg",
+   "text": "Drapeau de la RSS d'Azerbaïdjan de 1920 à 1921.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de l'Azerbaïdjan",
+   "section": "Histoire > Période soviétique",
+   "file": "Flag of the Azerbaijan Soviet Socialist Republic (1921–1922).svg",
+   "text": "Drapeau de la RSS d'Azerbaïdjan de 1921 à 1922.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de l'Azerbaïdjan",
+   "section": "Histoire > Période soviétique",
+   "file": "Flag of Transcaucasian SFSR.svg",
+   "text": "Drapeau de la RSFS de Transcaucasie de 1922 à 1937",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de l'Azerbaïdjan",
+   "section": "Histoire > Période soviétique",
+   "file": "Flag of the Azerbaijan Soviet Socialist Republic (1937–1940).svg",
+   "text": "Drapeau de la RSS d'Azerbaïdjan de 1937 à 1940.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de l'Azerbaïdjan",
+   "section": "Histoire > Période soviétique",
+   "file": "Flag of the Azerbaijan Soviet Socialist Republic (1940–1952).svg",
+   "text": "Drapeau de la RSS d'Azerbaïdjan de 1940 à 1952.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de l'Azerbaïdjan",
+   "section": "Histoire > Période soviétique",
+   "file": "Flag of the Azerbaijan Soviet Socialist Republic (1952–1956).svg",
+   "text": "Drapeau de la RSS d'Azerbaïdjan de 1952 à 1956.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de l'Azerbaïdjan",
+   "section": "Histoire > Période soviétique",
+   "file": "Flag of the Azerbaijan Soviet Socialist Republic.svg",
+   "text": "Drapeau de la RSS d'Azerbaïdjan de 1956 à 1991.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de l'Azerbaïdjan",
+   "section": "Histoire > Retour de l'indépendance",
+   "file": "National Flag Square.jpg",
+   "text": "La place du drapeau national à Bakou.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "az",
+   "page": "Azərbaycan bayrağı",
+   "section": "Bayrağın təsviri",
+   "file": "Azerbaijan Flag Construction Sheet.svg",
+   "text": "thumbnail|Bayrağın tikilmə planı",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "az",
+   "page": "Azərbaycan bayrağı",
+   "section": "Rəng kodları",
+   "file": "Flag of Azerbaijan.svg",
+   "text": "\"Azərbaycan Respublikasının dövlət bayrağının istifadə qaydası\" haqqında sərəncamda dövlət bayrağının dəqiq rəng xüsusiyyətləri qeyd olunur. 22 oktyabr 2013-cü il tarixində \"Azərbaycan Respublikası Dövlət bayrağının istifadəsi qaydaları haqqında\" Azərbaycan Respublikasının Qanununda dəyişiklik edilməsi barədə Azərbaycan Respublikasının Qanunu qəbul edilmişdir, lakin sonradan bu qanuna əsasən müəyyənləşdirilmiş pantone kodları — Pantone Blue 313C, Pantone Red 185C və Pantone Green 3405C rəng çalarları ləğv edilmişdir. {| class=\"wikitable\" style=\"margin:1em auto; width:60%; text-align: ;\" ! scop",
+   "kind": "table"
+  },
+  {
+   "wiki": "az",
+   "page": "Azərbaycan bayrağı",
+   "section": "Bayrağın tarixi > Azərbaycan Xalq Cümhuriyyətinin bayrağı",
+   "file": "Azerbaijan Parlament.jpg",
+   "text": "Azərbaycan Demokratik Respublikası Parlamentinin birinci iclası. İlk dəfə Azərbaycanın üçrəngli bayrağı bu parlamentdə ucaldı. 7 dekabr 1918-ci il.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "az",
+   "page": "Azərbaycan bayrağı",
+   "section": "Bayrağın tarixi > Azərbaycan Xalq Cümhuriyyətinin bayrağı",
+   "file": "Azerbaijani delegation in Paris.jpg",
+   "text": "Paris Sülh Konfransında Azərbaycan nümayəndə heyətinin iştirakı. 1919-cu il. Arxa planda ADR-in üçrəngli bayrağı.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "az",
+   "page": "Azərbaycan bayrağı",
+   "section": "Bayrağın tarixi > Azərbaycan Xalq Cümhuriyyətinin bayrağı",
+   "file": "Army of Azerbaijan in 1918.jpg",
+   "text": "Azərbaycan Xalq Cümhuriyyətinin zabitləri və əsgərləri Dövlət Bayrağı fonunda.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "az",
+   "page": "Azərbaycan bayrağı",
+   "section": "Bayrağın tarixi > Azərbaycan Xalq Cümhuriyyətinin bayrağı",
+   "file": "Flag of the Democratic Republic of Azerbaijan (1918).svg",
+   "text": "Azərbaycan Xalq Cümhuriyyətinin ilk bayrağı",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "az",
+   "page": "Azərbaycan bayrağı",
+   "section": "Bayrağın tarixi > Azərbaycan Xalq Cümhuriyyətinin bayrağı",
+   "file": "Flag of Azerbaijan on document.JPG",
+   "text": "ADR hökumətinin 9 noyabr 1918-ci il iclasındakı protokoldan bayraq haqqında sənəd",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "az",
+   "page": "Azərbaycan bayrağı",
+   "section": "Bayrağın tarixi > Azərbaycan Xalq Cümhuriyyətinin bayrağı",
+   "file": "Stamp of ADR1919-20 k.jpg",
+   "text": "1919-cu ildə AXC hökumətinin poçt markası.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "az",
+   "page": "Azərbaycan bayrağı",
+   "section": "Bayrağın tarixi > Azərbaycan SSR-in bayrağı",
+   "file": "Flag of Azerbaijan SSR.svg",
+   "text": "Azərbaycan SSR-nin 1952–1991-ci illərdəki bayrağı",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "az",
+   "page": "Azərbaycan bayrağı",
+   "section": "Bayrağın tarixi > 1920-ci ildən sonra Azərbaycan Xalq Cümhuriyyətinin bayrağının istifadəsi",
+   "file": "Flag of Azerbaijan Republic made by Mammad Amin Rasulzade.jpg",
+   "text": "Mühacirət dövründə Məhəmməd Əmin Rəsulzadənin hazırladığı Azərbaycan Xalq Cümhuriyyətinin bayrağı.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "az",
+   "page": "Azərbaycan bayrağı",
+   "section": "Dövlət bayrağının istifadəsi",
+   "file": "Azerbaijan flag, Qarabağ (AZE) - Saint Etienne (FRA) football match (4).jpg",
+   "text": "Tofiq Bəhramov adına Respublika Stadionu. Bakı, 2014.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "az",
+   "page": "Azərbaycan bayrağı",
+   "section": "Dövlət bayrağının istifadəsi",
+   "file": "2010 Moscow Victory Day Parade-9.jpeg",
+   "text": "Azərbaycan Silahlı Qüvvələri 9 may 2010-cu ildə Moskva şəhərində keçirilən hərbi nümayiş zamanı.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "az",
+   "page": "Azərbaycan bayrağı",
+   "section": "Dövlət bayrağının istifadəsi",
+   "file": "Military parade in Baku 2013 33.JPG",
+   "text": "Azərbaycan Hərbi Hava Qüvvələri göydə Azərbaycan bayrağının rənglərini nümayiş etdirirlər. Bakı, 2013.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "az",
+   "page": "Azərbaycan bayrağı",
+   "section": "Dövlət bayrağının istifadəsi",
+   "file": "Pht-Vugar Ibadov eurovision (24).jpg",
+   "text": "2012 Avroviziya Mahnı Müsabiqəsində Azərbaycan azarkeşləri. Bakı, 2013.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "az",
+   "page": "Azərbaycan bayrağı",
+   "section": "Dövlət bayrağının istifadəsi",
+   "file": "2010 Opening Ceremony - Azerbaijan entering.jpg",
+   "text": "Azərbaycan 2010 Qış Olimpiya Oyunlarında. Vankuver, 2010.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "az",
+   "page": "Azərbaycan bayrağı",
+   "section": "Dövlət bayrağının istifadəsi",
+   "file": "Azerbaijani fans at the 2012 Summer Paralympics.jpg",
+   "text": "Azərbaycan azarkeşləri 2012 Yay Paralimpiya Oyunlarında. London, 2012.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "az",
+   "page": "Azərbaycan bayrağı",
+   "section": "Dövlət bayrağının istifadəsi",
+   "file": "Ilham Aliyev was interviewed by Euronews TV.jpg",
+   "text": "Azərbaycan Prezidenti İlham Əliyev İkinci Qarabağ müharibəsi dövründə. Solunda Azərbaycan bayrağı, sağında Azərbaycan Prezidentinin ştandartı.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "az",
+   "page": "Azərbaycan bayrağı",
+   "section": "Dövlət bayrağının istifadəsi",
+   "file": "Azərbaycan 10 ildə. Sosial-iqtisadi inkişaf dövlət proqramlarının icrası sərgisi.JPG",
+   "text": "Sosial-iqtisadi inkişaf dövlət proqramlarının icrası sərgisində. 2013.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "az",
+   "page": "Azərbaycan bayrağı",
+   "section": "Dövlət bayrağının istifadəsi",
+   "file": "Azerbaijani embassy in Paris.jpg",
+   "text": "Paris şəhərində Azərbaycanın Fransa səfirliyi",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "az",
+   "page": "Azərbaycan bayrağı",
+   "section": "Dövlət bayrağının istifadəsi > Dövlət bayraq meydanları və muzeyləri > Bakıda",
+   "file": "National Flag Square e-citizen.jpg",
+   "text": "thumbnail|Bakıda yerləşən Dövlət Bayrağı Meydanı. Meydanda ucaldılmış dayağın hündürlüyü — 162m.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "az",
+   "page": "Azərbaycan bayrağı",
+   "section": "Təsiri > Poçt markası üzərində",
+   "file": "Stamps of Azerbaijan, 2011-990.jpg",
+   "text": "2011-ci ildə buraxılmış poçt markası",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "az",
+   "page": "Azərbaycan bayrağı",
+   "section": "Təsiri > Azərbaycan bayrağı əsasında yaradılmış bayraqlar",
+   "file": "Azerbaijani Legion emblem.svg",
+   "text": "Azərbaycan legionunun bayrağı",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "az",
+   "page": "Azərbaycan bayrağı",
+   "section": "Təsiri > Azərbaycan bayrağı əsasında yaradılmış bayraqlar",
+   "file": "Flag of South Azerbaijan.svg",
+   "text": "[[Cənubi Azərbaycan bayrağı]]",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "az",
+   "page": "Azərbaycan bayrağı",
+   "section": "Təsiri > Azərbaycan bayrağı əsasında yaradılmış bayraqlar",
+   "file": "SouthAzerbaijanFlag.gif",
+   "text": "CAMAH tərəfindən təqdim olunmuş [[Cənubi Azərbaycan bayrağı]]",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "az",
+   "page": "Azərbaycan bayrağı",
+   "section": "Təsiri > Azərbaycan bayrağı əsasında yaradılmış bayraqlar",
+   "file": "Flag of South Azerbaijan (variant Elchibey).svg",
+   "text": "Əbülfəz Elçibəyin görünüşündə Güney Azərbaycanın bayrağı",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "az",
+   "page": "Azərbaycan bayrağı",
+   "section": "Təsiri > Azərbaycan bayrağı əsasında yaradılmış bayraqlar",
+   "file": "Flag of Iraqi Turkmans.svg",
+   "text": "Türkmanların bayrağı",
+   "kind": "gallery"
+  }
+ ]
+}

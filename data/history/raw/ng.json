@@ -1,0 +1,867 @@
+{
+ "iso": "ng",
+ "flag_item": "Q102960",
+ "pages": [
+  "en:Flag of Nigeria",
+  "en:List of Nigerian flags",
+  "fr:Drapeau du Nigeria"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Nigeria",
+   "section": "intro",
+   "file": "NigerianEmbassyWashingtonDC01.jpg",
+   "text": "Nigerian flag at the Nigerian embassy in Washington, DC|alt=The flag of Nigeria displayed in a Nigerian embassy in Washington, DC.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "National flag",
+   "file": "Flag of Nigeria.svg",
+   "text": "! scope=\"row\" | | 1960–present | Flag of Nigeria | A vertical bicolour triband of green, white, and green. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Governmental flags",
+   "file": "Flag of Nigeria (state).svg",
+   "text": "! scope=\"row\" | | | State flag | A vertical bicolour triband of green, white, and green; charged with the coat of arms in the centre.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Governmental flags",
+   "file": "Civil Ensign of Nigeria.svg",
+   "text": "! scope=\"row\" | | | Civil ensign | A red field with the national flag in the canton.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Governmental flags",
+   "file": "Government Ensign of Nigeria.svg",
+   "text": "! scope=\"row\" | | | State ensign | A blue field with the national flag in the canton. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Presidential flags",
+   "file": "Flag of the President of Nigeria.svg",
+   "text": "! scope=\"row\" | | | Flag of the president of Nigeria |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Presidential flags",
+   "file": "Presidential Standard of Nigeria (Armed Forces).svg",
+   "text": "! scope=\"row\" | | | Flag of the president as commander-in-chief of the armed forces | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Military flags",
+   "file": "Nigerian Defence Forces Flag.svg",
+   "text": "! scope=\"row\" | | | Flag of the Nigerian Defence Forces |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Military flags",
+   "file": "Naval Ensign of Nigeria.svg",
+   "text": "! scope=\"row\" | | 1998– | Naval ensign | A white field with the national flag in the canton, with the Naval seal in the fly.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Military flags",
+   "file": "Air Force Ensign of Nigeria.svg",
+   "text": "! scope=\"row\" | | | Air force ensign | A sky-blue field with the national flag in the canton, with the air force roundel in the fly.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Military flags",
+   "file": "Flag of the Nigerian Army Headquarters.svg",
+   "text": "! scope=\"row\" | | | Flag of the Nigerian Army | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Flag of Abia (before 2025).png",
+   "text": "! scope=\"row\" | | | Abia | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Abia.svg",
+   "text": "! scope=\"row\" | | | Abia | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Flag of Akwa Ibom State.svg",
+   "text": "! scope=\"row\" | | | Akwa Ibom | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Akwa Ibom.svg",
+   "text": "! scope=\"row\" | | | Akwa Ibom | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Flag of Anambra State.png",
+   "text": "! scope=\"row\" | | | Anambra | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Anambra.svg",
+   "text": "! scope=\"row\" | | | Anambra | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Flag of Bauchi State, Nigeria.png",
+   "text": "! scope=\"row\" | | | Bauchi | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Bauchi.svg",
+   "text": "! scope=\"row\" | | | Bauchi | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Flag of Bayelsa State.svg",
+   "text": "! scope=\"row\" | | | Bayelsa | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Bayelsa.svg",
+   "text": "! scope=\"row\" | | | Bayelsa | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Flag of Benue.png",
+   "text": "! scope=\"row\" | | | Benue | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Benue.svg",
+   "text": "! scope=\"row\" | | | Benue | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Borno State Flag.gif",
+   "text": "! scope=\"row\" | | | Borno | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Borno.svg",
+   "text": "! scope=\"row\" | | | Borno | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Cross River State Flag.svg",
+   "text": "! scope=\"row\" | | | Cross River | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Cross River.svg",
+   "text": "! scope=\"row\" | | | Cross River | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Flag of Delta State.gif",
+   "text": "! scope=\"row\" | | | Delta | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Delta.svg",
+   "text": "! scope=\"row\" | | | Delta | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Seal of Ebonyi State.png",
+   "text": "! scope=\"row\" | | | Ebonyi | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Ebonyi.svg",
+   "text": "! scope=\"row\" | | | Ebonyi | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Flag of Edo State.svg",
+   "text": "! scope=\"row\" | | | Edo | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Edo.svg",
+   "text": "! scope=\"row\" | | | Edo | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Ekiti State Flag.gif",
+   "text": "! scope=\"row\" | | | Ekiti | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Ekiti.svg",
+   "text": "! scope=\"row\" | | | Ekiti | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Enugu State Flag.svg",
+   "text": "! scope=\"row\" | | | Enugu | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Enugu.svg",
+   "text": "! scope=\"row\" | | | Enugu | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Flag of Gombe State.svg",
+   "text": "! scope=\"row\" | | | Gombe | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Gombe.svg",
+   "text": "! scope=\"row\" | | | Gombe | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Imo State Flag.svg",
+   "text": "! scope=\"row\" | | | Imo | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Imo.svg",
+   "text": "! scope=\"row\" | | | Imo | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Jigawa.svg",
+   "text": "! scope=\"row\" | | | Jigawa | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Kaduna.svg",
+   "text": "! scope=\"row\" | | | Kaduna | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Kano State flag official.png",
+   "text": "! scope=\"row\" | | | Kano | | https://www.facebook.com/Team-Kano-national-youth-game-2019-coloring-108374617225882/photos/108393340557343",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Kano.svg",
+   "text": "! scope=\"row\" | | | Kano | | https://www.facebook.com/Team-Kano-national-youth-game-2019-coloring-108374617225882/photos/108393340557343",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Flag of Katsina State.svg",
+   "text": "! scope=\"row\" | | | Katsina | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Katsina.svg",
+   "text": "! scope=\"row\" | | | Katsina | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Kebbi flag.png",
+   "text": "! scope=\"row\" | | | Kebbi | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Kebbi.svg",
+   "text": "! scope=\"row\" | | | Kebbi | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Kogi State Flag.svg",
+   "text": "! scope=\"row\" | | | Kogi | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Kogi.svg",
+   "text": "! scope=\"row\" | | | Kogi | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Kwara State Flag.jpg",
+   "text": "! scope=\"row\" | | | Kwara | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Kwara.svg",
+   "text": "! scope=\"row\" | | | Kwara | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Lagos State Flag.svg",
+   "text": "! scope=\"row\" | | | Lagos | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Lagos.svg",
+   "text": "! scope=\"row\" | | | Lagos | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Flag of Nasarawa State.png",
+   "text": "! scope=\"row\" | | | Nasarawa | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Nasarawa.svg",
+   "text": "! scope=\"row\" | | | Nasarawa | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Niger state flag.png",
+   "text": "! scope=\"row\" | | | Niger | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Niger.svg",
+   "text": "! scope=\"row\" | | | Niger | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Niger State Emblem.png",
+   "text": "! scope=\"row\" | | | Niger | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Niger State Emblem.PNG",
+   "text": "! scope=\"row\" | | | Niger | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Ogun State Flag.jpg",
+   "text": "! scope=\"row\" | | | Ogun | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Ogun.svg",
+   "text": "! scope=\"row\" | | | Ogun | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Flag of Ondo State.png",
+   "text": "! scope=\"row\" | | | Ondo | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Ondo.svg",
+   "text": "! scope=\"row\" | | | Ondo | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Flag of Osun State, Nigeria.svg",
+   "text": "! scope=\"row\" | | | Osun | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Osun.svg",
+   "text": "! scope=\"row\" | | | Osun | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Oyo State Flag.svg",
+   "text": "! scope=\"row\" | | | Oyo | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Oyo.svg",
+   "text": "! scope=\"row\" | | | Oyo | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Plateau State Flag.jpg",
+   "text": "! scope=\"row\" | | | Plateau | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Plateau.svg",
+   "text": "! scope=\"row\" | | | Plateau | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Rivers State Flag.svg",
+   "text": "! scope=\"row\" | | | Rivers | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Rivers.svg",
+   "text": "! scope=\"row\" | | | Rivers | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Sokoto State Flag.svg",
+   "text": "! scope=\"row\" | | | Sokoto | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Sokoto.svg",
+   "text": "! scope=\"row\" | | | Sokoto | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Taraba.svg",
+   "text": "! scope=\"row\" | | | Taraba | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Yobe State Flag.png",
+   "text": "! scope=\"row\" | | | Yobe | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Yobe.svg",
+   "text": "! scope=\"row\" | | | Yobe | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Flag of Abuja.svg",
+   "text": "! scope=\"row\" | | | Federal Capital Territory | | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Subnational flags",
+   "file": "Nigeria - Abuja.svg",
+   "text": "! scope=\"row\" | | | Federal Capital Territory | | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Historical flags",
+   "file": "Kanem flag from dulcerta 1339-pt.svg",
+   "text": "! scope=\"row\" | | 700–1380 | Flag of the Kanem Empire | A white field with a green palm tree in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Historical flags",
+   "file": "Flag of the Bornu Empire.svg",
+   "text": "! scope=\"row\" | | 1380–1893 | Flag of the Bornu Empire | A brown field with a white crescent moon in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Historical flags",
+   "file": "Flag of the Aro Confederacy.svg",
+   "text": "! scope=\"row\" | | 1640–1902 | Flag of the Aro Confederacy | A black background with a sword and gun with a bird on top with the word \"OMU\" and \"ARO-CHUKU\" at the bottom of the flag. On the and are two crowns and in the middle two hands appearing to be trading something.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Historical flags",
+   "file": "Unidentified West African flag.svg",
+   "text": "! scope=\"row\" | | 1897 | A flag which was captured by British forces from the Kingdom of Benin in 1897 | A red background with a man with a sword cutting someone’s head off.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Historical flags",
+   "file": "Flag of the Sokoto Caliphate.svg",
+   "text": "! scope=\"row\" | | 1804–1903 | Flag of the Sokoto Caliphate |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Historical flags",
+   "file": "Royal Niger Company flag.svg",
+   "text": "! scope=\"row\" | | 1887–1888 | rowspan=\"2\" | Flag of the Royal Niger Company |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Historical flags",
+   "file": "Ensign of the Royal Niger Company (1888-1899).svg",
+   "text": "! scope=\"row\" | | 1888–1899 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Historical flags",
+   "file": "Flag of the British West Africa Settlements (1870–1888).svg",
+   "text": "! scope=\"row\" | | 1870–1888 | Flag of the British West African Settlements |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Historical flags",
+   "file": "Flag of Lagos Colony (1888–1906).svg",
+   "text": "! scope=\"row\" | | 1888–1906 | Flag of the Lagos Colony |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Historical flags",
+   "file": "Flag of the Oil Rivers Protectorate (1884–1893).svg",
+   "text": "! scope=\"row\" | | 1884–1893 | Flag of the Oil Rivers Protectorate |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Historical flags",
+   "file": "Flag of the Niger Coast Protectorate (1893–1899).svg",
+   "text": "! scope=\"row\" | | 1893–1899 | Flag of the Niger Coast Protectorate |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Historical flags",
+   "file": "Flag of the Northern Nigeria Protectorate (1900–1914).svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 1900–1914 | Flag of the Northern Nigeria Protectorate |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Historical flags",
+   "file": "Flag of the Southern Nigeria Protectorate (1900–1914).svg",
+   "text": "! scope=\"row\" | | Flag of the Southern Nigeria Protectorate |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Historical flags",
+   "file": "Flag of Nigeria (1914–1952).svg",
+   "text": "! scope=\"row\" | | 1914–1952 | rowspan=\"2\" | Flag of the Colony and Protectorate of Nigeria | British Blue Ensign with a red disc containing a green six-pointed star described as the Seal of Solomon, surrounding a Tudor Crown with the white word \"Nigeria\" under it.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Historical flags",
+   "file": "Flag of Nigeria (1952–1960).svg",
+   "text": "! scope=\"row\" | | 1952–1960 | British Blue Ensign with red disc containing a green six-pointed star described as the Seal of Solomon, surrounding a St. Edward's Crown with the white word \"Nigeria\" under it.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Historical flags",
+   "file": "Flag of Nigeria (original proposal).svg",
+   "text": "! scope=\"row\" | | 1959 | Akinkunmi's original proposal for the flag of independent Nigeria |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Historical flags",
+   "file": "Naval Ensign of Nigeria (1960–1998).svg",
+   "text": "! scope=\"row\" | | 1960–1998 | Naval ensign | A white field with a red St. George's Cross, with the national flag in canton.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerian flags",
+   "section": "Historical flags",
+   "file": "Presidential Standard of Nigeria (1963).svg",
+   "text": "! scope=\"row\" | | 1963 | Former flag of the president | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Nigeria",
+   "section": "intro",
+   "file": "NigerianEmbassyWashingtonDC01.jpg",
+   "text": "alt=The flag of Nigeria displayed in a Nigerian embassy in Washington, DC.| Drapeau nigérian à l'ambassade du Nigéria à Washington, DC",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Nigeria",
+   "section": "Proportions et dimensions",
+   "file": "Presidential Standard of Nigeria (Armed Forces).svg",
+   "text": "250x250px|Drapeau présidentiel en tant que commandant des forces armées. Selon l'usage britannique, le drapeau nigérian est deux fois plus large que haut. Les dimensions officiellement retenues sont : {| class=\"wikitable\" ! !Largeur !Hauteur",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Nigeria",
+   "section": "Proportions et dimensions",
+   "file": "Presidential Standard of Nigeria (Armed Forces).svg",
+   "text": "250x250px|Drapeau présidentiel en tant que commandant des forces armées.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Nigeria",
+   "section": "Anciens pavillons",
+   "file": "Civil Ensign of Nigeria.svg",
+   "text": "Pavillon civil (Red Ensign).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Nigeria",
+   "section": "Anciens pavillons",
+   "file": "Naval Ensign of Nigeria.svg",
+   "text": "Pavillon de la marine militaire (White Ensign).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Nigeria",
+   "section": "Drapeaux coloniaux > Deux Nigeria",
+   "file": "Flag of the Northern Nigeria Protectorate (1900–1914).svg",
+   "text": "Drapeau du Protectorat du Nigeria du Nord",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Nigeria",
+   "section": "Drapeaux coloniaux > Deux Nigeria",
+   "file": "Flag of the Southern Nigeria Protectorate (1900–1914).svg",
+   "text": "Drapeau du Protectorat du Nigeria du Sud",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Nigeria",
+   "section": "Drapeaux coloniaux > Colonie et Protectorat du Nigeria",
+   "file": "Flag of Nigeria (1914–1952).svg",
+   "text": "Drapeau de la colonie britannique (1914-1952)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Nigeria",
+   "section": "Drapeaux coloniaux > Colonie et Protectorat du Nigeria",
+   "file": "Flag of Nigeria (1952–1960).svg",
+   "text": "Drapeau de la colonie britannique (1952-1960)",
+   "kind": "gallery"
+  }
+ ]
+}

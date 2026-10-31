@@ -1,0 +1,138 @@
+{
+ "iso": "ls",
+ "flag_item": "Q104969",
+ "pages": [
+  "en:Flag of Lesotho",
+  "fr:Drapeau du Lesotho"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Lesotho",
+   "section": "intro",
+   "file": "Mokorotlo.jpg",
+   "text": "A mokorotlo is a type of straw hat widely used for traditional Sotho clothing",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Lesotho",
+   "section": "intro",
+   "file": "Lesotho Border Post at Sani Pass.jpg",
+   "text": "Lesotho flag at the Sani Pass post",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Lesotho",
+   "section": "intro",
+   "file": "Lesotho Mokorotlo.svg",
+   "text": "The mokorotlo hat in black, which appears on the flag of Lesotho",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Lesotho",
+   "section": "Colours",
+   "file": "Flag of Lesotho.svg",
+   "text": "! 40pxColors scheme ! style=\"background:#00209F; width: ; color:white;\" ! | Blue ! style=\"background:#FFFFFF; width: ; color:black;\" | White ! style=\"background:#009543; width: ; color:white;\" | Green ! style=\"background:#000000; width: ; color:white;\" | Black",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Lesotho",
+   "section": "Gallery > Historical flags",
+   "file": "Flag of the United Kingdom.svg",
+   "text": "Union Jack served as the flag of Basutoland (1884–1966)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Lesotho",
+   "section": "Gallery > Historical flags",
+   "file": "Unofficial flag of Basutoland.svg",
+   "text": "Unofficial flag of Basutoland (1951–1966)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Lesotho",
+   "section": "Gallery > Historical flags",
+   "file": "Unofficial banner of Basutoland.svg",
+   "text": "Unofficial flag of Basutoland without circle (1951–1966)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Lesotho",
+   "section": "Gallery > Historical flags",
+   "file": "Flag of the Resident Commissioner of Basutoland (1951–1966).svg",
+   "text": "Flag of the Resident Commissioner of Basutoland (1951–1966)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Lesotho",
+   "section": "Gallery > Historical flags",
+   "file": "Coat of arms of Basutoland.svg",
+   "text": "Coat of arms of Basutoland (1951–1966)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Lesotho",
+   "section": "Gallery > Historical flags",
+   "file": "Royal Standard of Lesotho (1966–1987, incorrect version).svg",
+   "text": "Incorrect variant of Royal Standard of Lesotho (1966–1987)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Lesotho",
+   "section": "Anciens drapeaux",
+   "file": "Unofficial Basutoland Ensign.svg",
+   "text": "Drapeau colonial du Basutoland de 1884 à 1966",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Lesotho",
+   "section": "Anciens drapeaux",
+   "file": "Flag of Lesotho (1966–1987).svg",
+   "text": "Drapeau du Royaume du Lesotho 1966 à 1987",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Lesotho",
+   "section": "Anciens drapeaux",
+   "file": "Flag of Lesotho (1987-2006).svg",
+   "text": "Drapeau du Royaume du Lesotho 1987 à 2006",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Lesotho",
+   "section": "Étendard royal",
+   "file": "Royal Standard of Lesotho (1966–1987).svg",
+   "text": "Étendard royal du Lesotho de 1966 à 1987",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Lesotho",
+   "section": "Étendard royal",
+   "file": "Royal Standard of Lesotho (1987–2006).svg",
+   "text": "Étendard royal du Lesotho de 1987 à 2006",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Lesotho",
+   "section": "Étendard royal",
+   "file": "Royal Standard of Lesotho.svg",
+   "text": "Étendard royal du Lesotho depuis 2006",
+   "kind": "gallery"
+  }
+ ]
+}

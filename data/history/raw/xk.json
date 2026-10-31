@@ -1,0 +1,764 @@
+{
+ "iso": "xk",
+ "flag_item": "Q168711",
+ "pages": [
+  "en:Flag of Kosovo",
+  "en:List of flags of Kosovo",
+  "fr:Drapeau du Kosovo",
+  "sq:Flamuri i Kosovës"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Kosovo",
+   "section": "Design and use",
+   "file": "Hashim Thaci at the Pentagon.jpg",
+   "text": "The Kosovar flag flying at the Pentagon on 18 July 2008.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kosovo",
+   "section": "Use of Albanian and Serbian flags in Kosovo",
+   "file": "Flag of Albania.svg",
+   "text": "Flag of Albania often used by Kosovo Albanians",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kosovo",
+   "section": "Use of Albanian and Serbian flags in Kosovo",
+   "file": "Flag of Serbia.svg",
+   "text": "Flag of Serbia often used by Kosovo Serbs",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kosovo",
+   "section": "Historical flags > Kosovo in SFR Yugoslavia / Serbia and Montenegro",
+   "file": "Flag of the Committee for the National Defence of Kosovo (1918).svg",
+   "text": "Flag of Kosovo used by Committee \"National Defence of Kosovo\" 1918.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kosovo",
+   "section": "Historical flags > Kosovo in SFR Yugoslavia / Serbia and Montenegro",
+   "file": "Flag of Yugoslavia (1946-1992).svg",
+   "text": "Flag of SFR Yugoslavia (1946–1992)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kosovo",
+   "section": "Historical flags > Kosovo in SFR Yugoslavia / Serbia and Montenegro",
+   "file": "Flag of Serbia and Montenegro (1992–2006).svg",
+   "text": "Flag of Serbia and Montenegro (1992–2006)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kosovo",
+   "section": "Historical flags > Kosovo in SFR Yugoslavia / Serbia and Montenegro",
+   "file": "Flag of Serbia (1947–1992); Flag of Montenegro (1946–1993).svg",
+   "text": "Flag of SR Serbia (1947–1992)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kosovo",
+   "section": "Historical flags > Kosovo in SFR Yugoslavia / Serbia and Montenegro",
+   "file": "Flag of Serbia (1992–2004).svg",
+   "text": "Flag of Serbia (1992–2004)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kosovo",
+   "section": "Historical flags > Kosovo in SFR Yugoslavia / Serbia and Montenegro",
+   "file": "Flag of Serbia (2004–2010).svg",
+   "text": "Flag of Serbia (2004–2010)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kosovo",
+   "section": "Historical flags > Kosovo in SFR Yugoslavia / Serbia and Montenegro",
+   "file": "Flag of SFR Yugoslav Albanian Minority.svg",
+   "text": "Flag of Albanian minority in SFR Yugoslavia",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kosovo",
+   "section": "Historical flags > Kosovo in SFR Yugoslavia / Serbia and Montenegro",
+   "file": "Flamuri i Lidhjes së Komunistëve të Kosovës.svg",
+   "text": "Flag of the League of Communists of Kosovo",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kosovo",
+   "section": "Historical flags > Republic of Kosova",
+   "file": "Flag of Kosova (1991–1999).svg",
+   "text": "Flag of the Republic of Kosova (1991-1999)",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kosovo",
+   "section": "Historical flags > Kosovo under United Nations administration",
+   "file": "Flag of the United Nations.svg",
+   "text": "Flag of the United Nations used in Kosovo between 1999 and 2008",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kosovo",
+   "section": "Historical flags > Kosovo under United Nations administration",
+   "file": "Kosovo pisg ca.png",
+   "text": "The Emblem of Kosovo during UN administration also depicted a golden map of Kosovo surmounted by stars on a blue field",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kosovo",
+   "section": "Historical flags > Kosovo under United Nations administration",
+   "file": "Flamuri i Policisë së Kosovës.svg",
+   "text": "Flag of the Kosovo Police Service",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kosovo",
+   "section": "Historical flags > Kosovo under United Nations administration",
+   "file": "Flag of the Kosovo Protection Corps.svg",
+   "text": "Flag of the Kosovo Protection Corps",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kosovo",
+   "section": "Historical flags > Kosovo under United Nations administration",
+   "file": "Flag of the Kosovo Olympic Committee (2003–2008).svg",
+   "text": "Flag of the Olympic Committee of Kosovo (2003–2008)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kosovo",
+   "section": "Historical flags > Kosovo under United Nations administration",
+   "file": "Flag of the Kosovo Force.svg",
+   "text": "Flag of the KFOR peacekeeping force",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kosovo",
+   "section": "Historical flags > The proposals and final choice",
+   "file": "Flag proposal Kosovo 2008.svg",
+   "text": "Competition proposal 1",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kosovo",
+   "section": "Historical flags > The proposals and final choice",
+   "file": "Flag proposal Kosovo 2008-2.svg",
+   "text": "Competition proposal 2",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kosovo",
+   "section": "Historical flags > The proposals and final choice",
+   "file": "Flag proposal Kosovo 2008-3.svg",
+   "text": "Competition proposal 3",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kosovo",
+   "section": "Historical flags > Other proposals",
+   "file": "Flag of Dardania.svg",
+   "text": "The \"Flag of Dardania\"",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Republic of Kosovo > State flag",
+   "file": "Flag of Kosovo.svg",
+   "text": "! scope=\"row\" | | 2008–present | National flag | Blue with six white stars in an arc above a gold-colored map of Kosovo in the . Dimensions: 5:7 |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Republic of Kosovo > Government flags",
+   "file": "Flamuri i Policisë së Kosovës.svg",
+   "text": "! scope=\"row\" | | 1999–present | Flag of the Kosovo Police | White with two blue stripes, and a yellow-blue emblem of the KP in the centre. Dimensions: 2:3.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Republic of Kosovo > Government flags",
+   "file": "Flag of Dardania.svg",
+   "text": "! scope=\"row\" | | 2001–present | Presidential standard | Flag based on Ibrahim Rugova's \"Dardania\" flag proposal. Features the eagle of the flag of Albania. Dimensions: 2:3 |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Republic of Kosovo > Armed forces flags",
+   "file": "Flag of the Kosovo Security Force.svg",
+   "text": "! scope=\"row\" | | 2009–present | Flag of the Kosovo Security Force | Red field, with the KSF emblem featuring an eagle and six stars. Dimensions: 2:3. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Ethnic flags",
+   "file": "Flag of Albania.svg",
+   "text": "! scope=\"row\" | | 1960s–present | Flag of Albania used by Kosovo Albanians | A red field charged with a double-headed eagle. Dimensions: 2:3",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Ethnic flags",
+   "file": "Flag of Serbia.svg",
+   "text": "! scope=\"row\" | | 2010–present | Flag of Serbia used by Kosovo Serbs | A horizontal tricolour of red, blue, and white; charged with the lesser coat of arms towards the hoist of . Dimensions: 2:3",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Ethnic flags",
+   "file": "Flag of Bosnia and Herzegovina (1992–1998).svg",
+   "text": "! scope=\"row\" | | 2008–present | Former Flag of Bosnia and Herzegovina used by Kosovo Bosniaks | A blue escutcheon charged with a white bend between six gold fleurs-de-lis displayed on a white field. Dimensions: 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Ethnic flags",
+   "file": "Flag of Turkey.svg",
+   "text": "! scope=\"row\" | | 2008–present | Flag of Turkey used by Kosovo Turks | A red field with a white star and crescent towards the hoist of . Dimensions: 2:3",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Ethnic flags",
+   "file": "Flag of the Romani people.svg",
+   "text": "! scope=\"row\" | | 2008–present | Romani Flag used by Romani people in Kosovo | The flag consists of a background of blue and green, representing the heavens and earth, respectively; it also contains a 16-spoke red dharmachakra, or cartwheel, in the . Dimensions: 2:3",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Ethnic flags",
+   "file": "Flag of Ashkali.svg",
+   "text": "! scope=\"row\" | | 2008–present | Flag used by Ashkali people in Kosovo | A horizontally divided green-white-red flag with a golden eagle in the . Dimensions: 1:2 |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Municipal flags",
+   "file": "Flag of Deçan.png",
+   "text": "! scope=\"row\" | | | Flag of Deçan Municipality | White with the emblem of Deçan in the centre and the name of the municipality in Albanian below.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Municipal flags",
+   "file": "Flag of Drenas.png",
+   "text": "! scope=\"row\" | | | Flag of Drenas Municipality | White with the emblem of Drenas in the centre.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Municipal flags",
+   "file": "Flag of Ferizaj.png",
+   "text": "! scope=\"row\" | | | Flag of Ferizaj Municipality | White with the emblem of Ferizaj in the centre.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Municipal flags",
+   "file": "Flag of Kosovo Polje.png",
+   "text": "! scope=\"row\" | | | Flag of Fushë Kosova / Kosovo Polje Municipality | White with the emblem of Fushë Kosova in the centre.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Municipal flags",
+   "file": "Flag of Gjakova.png",
+   "text": "! scope=\"row\" | | | Flag of Gjakova Municipality | White with the emblem of Gjakova in the centre.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Municipal flags",
+   "file": "Flag of Gjilan Municipality.png",
+   "text": "! scope=\"row\" | | | Flag of Gjilan Municipality | White with the emblem of Gjilan in the centre with the date \"1600\" above and the name of the municipality in Albanian below.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Municipal flags",
+   "file": "Flag of Graçanicë, Kosovo.svg",
+   "text": "! scope=\"row\" | | | Flag of Gračanica Municipality | Dark blue with the emblem of Gračanica in the centre.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Municipal flags",
+   "file": "Flag of Elez Han, Kosovo.svg",
+   "text": "! scope=\"row\" | | | Flag of Hani i Elezit Municipality | Red with the emblem of Hani i Elezit in the centre.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Municipal flags",
+   "file": "Flag of Istog.png",
+   "text": "! scope=\"row\" | | | Flag of Istog Municipality | White with the emblem of Istog in the centre with the name of the municipality written below in Albanian.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Municipal flags",
+   "file": "Flag of Kaçanik, Kosovo.svg",
+   "text": "! scope=\"row\" | | | Flag of Kaçanik Municipality | Grey with the emblem of Kaçanik in the centre with the name of the municipality written above in Albanian.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Municipal flags",
+   "file": "Flag of Kamenica, Kosovo.png",
+   "text": "! scope=\"row\" | | | Flag of Kamenica Municipality | White with the emblem of Kamenica in the centre with the name of the municipality written above in Albanian and Serbian in the Latin script below.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Municipal flags",
+   "file": "Flag of Klina.png",
+   "text": "! scope=\"row\" | | | Flag of Klina Municipality | White with the emblem of Klina in the centre.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Municipal flags",
+   "file": "Flag of Klokot.png",
+   "text": "! scope=\"row\" | | | Flag of Klokot Municipality | White with the emblem of Klokot in the centre.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Municipal flags",
+   "file": "Flag of Lipjan.png",
+   "text": "! scope=\"row\" | | | Flag of Lipjan Municipality | White with the coat of arms of Lipjan in the centre.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Municipal flags",
+   "file": "Flag of Malisheva.png",
+   "text": "! scope=\"row\" | | | Flag of Malisheva Municipality | White with the coat of arms of Malisheva in the centre with the name of the municipality written below in Albanian and Engliah.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Municipal flags",
+   "file": "Flag of Obiliq.png",
+   "text": "! scope=\"row\" | | | Flag of Obiliq Municipality | White with the emblem of Obiliq in the centre and the name of the municipality written below in Albanian, Serbian (Latin script) and English.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Municipal flags",
+   "file": "Flag of Partesh.png",
+   "text": "! scope=\"row\" | | | Flag of Parteš Municipality | Dark blue with the emblem of Parteš in the centre.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Municipal flags",
+   "file": "Flag of Peja.png",
+   "text": "! scope=\"row\" | | | Flag of Peja Municipality | White with the emblem of Pristina in the centre and the name of the municipality written below in Albanian.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Municipal flags",
+   "file": "Prishtina-flag.svg",
+   "text": "! scope=\"row\" | | | Flag of Pristina Municipality | Light blue with the emblem of Pristina in the centre. The emblem features a statuette known as Goddess on the Throne.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Municipal flags",
+   "file": "Flag of Prizren.png",
+   "text": "! scope=\"row\" | | | Flag of Prizren Municipality | White with the emblem of Prizren in the centre. The emblem features the House of the League of Prizren.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Municipal flags",
+   "file": "Flag of Podujevo.png",
+   "text": "! scope=\"row\" | | | Flag of Podujevo Municipalityhttps://mediat.online/Home/Details/92827 | White with the emblem of Podujevë in the centre and the name written below in Albanian. The emblem depicts the Orpheus mosaic found in the Dardanian city of Vendenis.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Municipal flags",
+   "file": "Flag of Rahovec.png",
+   "text": "! scope=\"row\" | | | Flag of Rahovec Municipality | White with the emblem of Rahovec in the centre and the name of the municipality in Albanian below. The emblem depicts the Rahovec Clocktower and bunches of grapes.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Municipal flags",
+   "file": "Flag of Shtime, Kosovo.svg",
+   "text": "! scope=\"row\" | | | Flag of Shtime Municipality | White with the emblem of Shtime in the centre.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Municipal flags",
+   "file": "Flag of Skenderaj.png",
+   "text": "! scope=\"row\" | | | Flag of Skenderaj Municipality | White with the emblem of Skenderaj in the centre.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Municipal flags",
+   "file": "Flag of Štrpce.png",
+   "text": "! scope=\"row\" | | | Flag of Štrpce Municipality | Light blue with the emblem of Štrpce in the centre.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Municipal flags",
+   "file": "Flag of Suhareka, Kosovo.svg",
+   "text": "! scope=\"row\" | | | Flag of Suva Reka Municipality | Banner of the arms of Suva Reka Municipality.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Municipal flags",
+   "file": "Flag of Vitina.png",
+   "text": "! scope=\"row\" | | | Flag of Viti Municipality | White with the emblem of Vitina in the centre.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Municipal flags",
+   "file": "Flag of Vushtrri, Kosovo.svg",
+   "text": "! scope=\"row\" | | | Flag of Vushtrri Municipality | Light blue with the emblem of Vushtrri in the centre with the Latin name of the municipality written above. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Political parties' flags",
+   "file": "Flag of VETËVENDOSJE.svg",
+   "text": "! scope=\"row\" | | | Flag of Vetëvendosje | Red with the motto of the party Vetëvendosje (Self Determination).",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Political parties' flags",
+   "file": "Flag of the Democratic Party of Kosovo.svg",
+   "text": "! scope=\"row\" | | | Flag of Democratic Party of Kosovo | White with the logo of the Democratic Party of Kosovo.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Political parties' flags",
+   "file": "NISMA Socialdemokrate.svg",
+   "text": "! scope=\"row\" | | | Flag of Social Democratic Initiative | Purple with the four letters of the party NISMA. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Historical flags > Flags used in Kosovo under UN administration",
+   "file": "Flag of the United Nations.svg",
+   "text": "! scope=\"row\" | | 1999–2008 | Flag of the United Nations | The flag of the United Nations was used for official and government purposes in United Nations Administered Kosovo between 10 June 1999 and 17 February 2008.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Historical flags > Flags used in Kosovo under UN administration",
+   "file": "Flag of the Kosovo Olympic Committee (2003–2008).svg",
+   "text": "! scope=\"row\" | 150x150px | 2003–2008 | Flag of the Kosovo Olympic Committee | An outline map of Kosovo containing the emblem of UN administered Kosovo, the Olympic rings, a pictogram of an athlete and the name KOSOVË.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Historical flags > Flags used in Kosovo under UN administration",
+   "file": "Flag of the Kosovo Protection Corps.svg",
+   "text": "! scope=\"row\" | | 1999–2009 | Kosovo Protection Corps | Red with the emblem of the KPC in the centre. Dimensions: 2:3.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Historical flags > Flags used in Kosovo under UN administration",
+   "file": "//img107.imageshack.us/i/73493181jn8.jpg",
+   "text": "! scope=\"row\" | | 1999–2009 | Kosovo Protection Corps | Red with the emblem of the KPC in the centre. Dimensions: 2:3.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Historical flags > Flags used in Kosovo under UN administration",
+   "file": "Flag of the Kosovo Force.svg",
+   "text": "! scope=\"row\" | | 1999–present | Kosovo Force | Blue with the emblem of KFOR in the centre. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Historical flags > Flags used in Kosovo as part of Yugoslavia and Serbia",
+   "file": "Flag of Yugoslavia (1946-1992).svg",
+   "text": "! scope=\"row\" | | 1946–1992 | Flag of SFR Yugoslavia | A horizontal tricolour of blue, white, and red; charged with a red star. Dimensions: 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Historical flags > Flags used in Kosovo as part of Yugoslavia and Serbia",
+   "file": "Flag of Serbia and Montenegro (1992–2006).svg",
+   "text": "! scope=\"row\" | | 1992–1999 | Flag of FR Yugoslavia | A horizontal tricolour of blue, white, and red. Dimensions: 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Historical flags > Flags used in Kosovo as part of Yugoslavia and Serbia",
+   "file": "Flag of SR Serbia.svg",
+   "text": "! scope=\"row\" | | 1947–1992 | Flag of SR Serbia | A horizontal tricolour of red, blue, and white; charged with a red star. Dimensions: 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Historical flags > Flags used in Kosovo as part of Yugoslavia and Serbia",
+   "file": "Flag of Serbia (1992–2004).svg",
+   "text": "! scope=\"row\" | | 1992–1999 | Flag of the Republic of Serbia | A horizontal tricolour of red, blue, and white. Dimensions: 1:2 |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Historical flags > Flags used in Kosovo as part of Yugoslavia and Serbia > Ethnic Albanian flags in Kosovo during Yugoslavia",
+   "file": "Flag of the Committee for the National Defence of Kosovo (1918).svg",
+   "text": "! scope=\"row\" | | c.1918 | National Defence of Kosovo | The flag was used by Committee \"National Defence of Kosovo\"",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Historical flags > Flags used in Kosovo as part of Yugoslavia and Serbia > Ethnic Albanian flags in Kosovo during Yugoslavia",
+   "file": "Flag of SFR Yugoslav Albanian Minority.svg",
+   "text": "! scope=\"row\" | | c.1950–c.1990 | Albanian minority flag | The flag was the official flag of the Albanian ethnic minority of Socialist Yugoslavia from the late 1940s to the late 1980s",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Historical flags > Flags used in Kosovo as part of Yugoslavia and Serbia > Ethnic Albanian flags in Kosovo during Yugoslavia",
+   "file": "Flag of the Yugoslav Albanian Minority.svg",
+   "text": "! scope=\"row\" | | c.1950–c.1990 | Albanian minority flag | The flag was the official flag of the Albanian ethnic minority of Socialist Yugoslavia from the late 1940s to the late 1980s",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Historical flags > Flags used in Kosovo as part of Yugoslavia and Serbia > Ethnic Albanian flags in Kosovo during Yugoslavia",
+   "file": "Flag used by Kosovo Albanians during Demostrations.svg",
+   "text": "! scope=\"row\" | | c.1991 | Demonstrations flag | The flag used by the Albanian ethnic minority of Socialist Yugoslavia in 1991 during Demonstrations |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Flag proposals",
+   "file": "Flag proposal Kosovo 2008.svg",
+   "text": "! scope=\"row\" | | Never used | State flag | \"Competition Candidate 1\" Dimensions: 2:3. Winning proposal and inspiration for the current flag.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Flag proposals",
+   "file": "Flag proposal Kosovo 2008-2.svg",
+   "text": "! scope=\"row\" | | Never used | State flag | \"Competition Candidate 2\". Dimensions: 2:3",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Flag proposals",
+   "file": "Flag proposal Kosovo 2008-3.svg",
+   "text": "! scope=\"row\" | | Never used | State flag | \"Competition Candidate 3\". Dimensions: 2:3",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Flag proposals",
+   "file": "Flag of Kosovo (DioGuardi's proposal).svg",
+   "text": "! scope=\"row\" | | Never used | State flag | Joseph J. DioGuardi's proposal for a new flag for Kosovo based on the Albanian and US flags. Dimensions: 2:3",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kosovo",
+   "section": "Flag proposals",
+   "file": "Kosovo Proposal - Union Flag.svg",
+   "text": "! scope=\"row\" | | Never used | State flag | A Dutch proposal for a flag for Kosovo based on shared symbolism. Dimensions: 2:3 |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Kosovo",
+   "section": "intro",
+   "file": "Flag of SFR Yugoslav Albanian Minority.svg",
+   "text": "Albanais de Yougoslavie.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Kosovo",
+   "section": "Proposition pour un nouveau drapeau",
+   "file": "Flag proposal Kosovo 2008.svg",
+   "text": "",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Kosovo",
+   "section": "Proposition pour un nouveau drapeau",
+   "file": "Flag proposal Kosovo 2008-2.png",
+   "text": "",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Kosovo",
+   "section": "Proposition pour un nouveau drapeau",
+   "file": "Flag proposal Kosovo 2008-3.png",
+   "text": "",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Kosovo",
+   "section": "Proposition pour un nouveau drapeau",
+   "file": "Flag of Dardania.svg",
+   "text": "Drapeau de Dardanie.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "sq",
+   "page": "Flamuri i Kosovës",
+   "section": "intro",
+   "file": "Flag of Kosovo.svg",
+   "text": "Flamuri zyrtar i Kosovës",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "sq",
+   "page": "Flamuri i Kosovës",
+   "section": "Dezinjimi dhe përdorimi",
+   "file": "Hashim Thaci at the Pentagon.jpg",
+   "text": "Flamuri kosovar duke u valëvitur në Pentagon në 18 korrik, 2008.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "sq",
+   "page": "Flamuri i Kosovës",
+   "section": "Përdorimi i flamujve të tjerë",
+   "file": "Protesti u BL2.jpg",
+   "text": "Një protestë e vitit 2008 në Bosnjë ku është prezent flamuri serb.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "sq",
+   "page": "Flamuri i Kosovës",
+   "section": "Konkursi për një flamur të ri > Propozimet dhe zgjedhja përfundimtare",
+   "file": "Flag of Kosovo.svg",
+   "text": "Flamuri përfundimtar, i zgjedhur nga Kuvendimë 17 shkurt 2008",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "sq",
+   "page": "Flamuri i Kosovës",
+   "section": "Konkursi për një flamur të ri > Propozimet dhe zgjedhja përfundimtare",
+   "file": "Flag proposal Kosovo 2008.svg",
+   "text": "Propozimi origjinal i modelit të adoptuar të flamurit.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "sq",
+   "page": "Flamuri i Kosovës",
+   "section": "Konkursi për një flamur të ri > Propozimet dhe zgjedhja përfundimtare",
+   "file": "Flag proposal Kosovo 2008-2.svg",
+   "text": "Propozim alternativ",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "sq",
+   "page": "Flamuri i Kosovës",
+   "section": "Konkursi për një flamur të ri > Propozimet dhe zgjedhja përfundimtare",
+   "file": "Flag proposal Kosovo 2008-3.svg",
+   "text": "Propozim alternativ",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "sq",
+   "page": "Flamuri i Kosovës",
+   "section": "Konkursi për një flamur të ri > Propozime të tjera",
+   "file": "Flag of Dardania.svg",
+   "text": "\"Flamuri i Dardanisë\"",
+   "kind": "thumb"
+  }
+ ]
+}

@@ -1,0 +1,1036 @@
+{
+ "iso": "gl",
+ "flag_item": "Q184268",
+ "pages": [
+  "en:Flag of Greenland",
+  "en:List of Danish flags",
+  "fr:Drapeau du Groenland",
+  "da:Grønlands flag"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Greenland",
+   "section": "History",
+   "file": "Flag of Greenland construction, in concise SVG.svg",
+   "text": "Construction sheet of the flag of Greenland, with colours and proportions",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "intro",
+   "file": "Flag of Denmark ubt.jpeg",
+   "text": "The Dannebrog the national flag of Denmark.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "National flag and state flag",
+   "file": "Flag of Denmark.svg",
+   "text": "! scope=\"row\" | | 1219–present | Civil flag and ensign | A white Nordic cross on a red field",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "National flag and state flag",
+   "file": "Flag of Denmark (state).svg",
+   "text": "! scope=\"row\" | | ?–present | State flag |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "National flag and state flag",
+   "file": "Flag of Denmark (vertical).svg",
+   "text": "! scope=\"row\" | 150x150px | ?–present | Civil flag and ensign (vertical display) | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Royal flags",
+   "file": "Royal Standard of Denmark.svg",
+   "text": "! scope=\"row\" | | rowspan=\"3\" |2024–present | Royal standard of Denmark, used by King Frederik X | Royal flag with the greater (Monarch's) coat of arms",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Royal flags",
+   "file": "Standard of the Crown Prince of Denmark (2025).svg",
+   "text": "! scope=\"row\" | 150x150px | The flag of the Crown Prince of Denmark | Royal flag with the smaller (also: national) coat of arms.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Royal flags",
+   "file": "Standard of Queen Mary of Denmark (2025).svg",
+   "text": "! scope=\"row\" | 150x150px | Royal standard of Queen Mary | Royal flag with the coat of arms of Queen Mary",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Royal flags",
+   "file": "Standard of the Regent of Denmark.svg",
+   "text": "! scope=\"row\" | | 1914–present | The flag of the temporary Regent of Denmark (in practice a member of the Royal House)||Royal flag with a royal crown (top), a sceptre and a sword (in saltire), and an orb (bottom) in the centre white square.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Royal flags",
+   "file": "Standard of the Royal House of Denmark.svg",
+   "text": "! scope=\"row\" | | ?–present | Royal House standard (other members of the Royal Family) | Royal flag with a royal crown in the centre white square.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Royal flags",
+   "file": "Monarch's Pennant of Denmark.svg",
+   "text": "! scope=\"row\" | | 1972–present | Royal pennant of the Monarch | A pentagonal (i.e. a square and a triangle combined) pennant. In the hoist a white square with the same coat of arms as the royal flag, in the fly, a triangle with swallow-tail, a red field with a white cross.Unclear if this is still used, as it uses the former version royal arms.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Royal flags",
+   "file": "Royal Pennant of Denmark.svg",
+   "text": "! scope=\"row\" | | ?–present | Royal pennant | A pentagonal (i.e. a square and a triangle combined) pennant. In the hoist a white square with the lesser coat of arms (same as the crown prince's flag), in the fly, a triangle with swallow-tail, a red field with a white cross. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Royal flags > Historical royal flags",
+   "file": "Royal Standard of Denmark (1972-2024).svg",
+   "text": "! scope=\"row\" | 150x150px | 1972–2024 | rowspan=\"5\" | Royal standard of Denmark | rowspan=\"4\" | Royal flag with the greater coat of arms of Denmark",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Royal flags > Historical royal flags",
+   "file": "Royal Standard of Denmark (1948-1972).svg",
+   "text": "! scope=\"row\" | | 1948–1972",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Royal flags > Historical royal flags",
+   "file": "Royal Standard of Denmark (1903-1948).svg",
+   "text": "! scope=\"row\" | | 1903–1948",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Royal flags > Historical royal flags",
+   "file": "Royal Standard of Denmark (1819-1903).svg",
+   "text": "! scope=\"row\" | | 1819–1903",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Royal flags > Historical royal flags",
+   "file": "Royal Standard of Denmark (1731–1819).svg",
+   "text": "! scope=\"row\" | | 1731–1819 | Royal flag with the middle coat of arms of Denmark-Norway",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Royal flags > Historical royal flags",
+   "file": "Standard of Queen Ingrid The Queen Mother (1948-2000).svg",
+   "text": "! scope=\"row\" | | 1948–2000 | Royal standard of Queen Ingrid, The Queen Mother |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Royal flags > Historical royal flags",
+   "file": "Standard of Prince Henrik, Prince Consort of Denmark (1972-2002).svg",
+   "text": "! scope=\"row\" | | 1972–2002 | rowspan=\"2\" | The flag of Prince Henrik of Denmark | Royal flag with the arms of Prince Henrik.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Royal flags > Historical royal flags",
+   "file": "Standard of Prince Henrik, Prince Consort of Denmark (2002-2018).svg",
+   "text": "! scope=\"row\" | | 2002–2018 | Royal flag with the arms of Prince Henrik, with a prince's crown replaced by the royal crown.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Royal flags > Historical royal flags",
+   "file": "Standard of the Crown Prince of Denmark.svg",
+   "text": "! scope=\"row\" | 150x150px | 1914–2024 | The flag of the Crown Prince of Denmark | Royal flag with the smaller (also: national) coat of arms. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Rank flags",
+   "file": "Standard of the Minister of Defense of Denmark.svg",
+   "text": "! scope=\"row\" | | ?–present | Minister of Defence flag | Naval ensign with a crowned fouled anchor, placed in a centred white box.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Rank flags",
+   "file": "General Chief of Defence rank flag (Denmark).svg",
+   "text": "! scope=\"row\" | 150px150px | ?–present | Rank flag for the Chief of Defence | State flag or naval ensign with two white staffs in saltire in the upper canton.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Rank flags",
+   "file": "Admiral Chief of Defence rank flag (Denmark).svg",
+   "text": "! scope=\"row\" | 150px150px | ?–present | Rank flag for the Chief of Defence | State flag or naval ensign with two white staffs in saltire in the upper canton.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Rank flags",
+   "file": "Full general rank flag (Denmark).svg",
+   "text": "! scope=\"row\" | 150px150px | rowspan=\"4\" | 1979–present | Rank flag for a general or an admiral | State flag or naval ensign with four stars equally split in the cantons of the hoist side.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Rank flags",
+   "file": "Naval Rank Flag of Denmark - Admiral.svg",
+   "text": "! scope=\"row\" | 150px150px | rowspan=\"4\" | 1979–present | Rank flag for a general or an admiral | State flag or naval ensign with four stars equally split in the cantons of the hoist side.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Rank flags",
+   "file": "Lieutenant general rank flag (Denmark).svg",
+   "text": "! scope=\"row\" | 150px150px | Rank flag for a lieutenant general or a vice admiral | State flag or naval ensign with three stars, two in the upper canton and one in the lower.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Rank flags",
+   "file": "Naval Rank Flag of Denmark - Vice Admiral.svg",
+   "text": "! scope=\"row\" | 150px150px | Rank flag for a lieutenant general or a vice admiral | State flag or naval ensign with three stars, two in the upper canton and one in the lower.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Rank flags",
+   "file": "Major general rank flag (Denmark).svg",
+   "text": "! scope=\"row\" | 150px150px | Rank flag for a major general or a counter admiral | State flag or naval ensign with two stars equally split in the cantons of the hoist side.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Rank flags",
+   "file": "Naval Rank Flag of Denmark - Rear Admiral.svg",
+   "text": "! scope=\"row\" | 150px150px | Rank flag for a major general or a counter admiral | State flag or naval ensign with two stars equally split in the cantons of the hoist side.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Rank flags",
+   "file": "Brigade general rank flag (Denmark).svg",
+   "text": "! scope=\"row\" | 150px150px | Rank flag for a brigade general or a flotilla admiral | State flag or naval ensign with one star in the upper canton. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Rank flags",
+   "file": "Naval Rank Flag of Denmark - Flotilla Admiral.svg",
+   "text": "! scope=\"row\" | 150px150px | Rank flag for a brigade general or a flotilla admiral | State flag or naval ensign with one star in the upper canton. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army",
+   "file": "Flag of Denmark (state).svg",
+   "text": "! scope=\"row\" | | 1580–present | The Royal Danish Army uses the state flag. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army",
+   "file": "DAR Colours.svg",
+   "text": "! scope=\"row\" | | 2019–present | Danish Artillery Regiment colours |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army",
+   "file": "IGR Colours.svg",
+   "text": "! scope=\"row\" | | 1997–present | Engineer Regiment colours |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army",
+   "file": "GARDER HUSAR regimentets FANE Estandart.jpg",
+   "text": "! scope=\"row\" | 150x150px150x150px | 2026–present | Guard Hussar Regiment colours and standard |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army",
+   "file": "ERR Colours.svg",
+   "text": "! scope=\"row\" | | 2019–present | Intelligence Regiment colours |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army",
+   "file": "JDR Estandart 2026.jpg",
+   "text": "! scope=\"row\" | 150x150px | 2026–present | Jutland Dragoon Regiment standard |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army",
+   "file": "Royal Danish Life Guards Regimential Standard.jpg",
+   "text": "! scope=\"row\" | |2026-present | Royal Life Guards colours |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army",
+   "file": "SLFR Colours.svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" |2019–present | Schleswig Regiment of Foot colours |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army",
+   "file": "FSR Colours.svg",
+   "text": "! scope=\"row\" | | Signal Regiment colours |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army",
+   "file": "TRR Colours.svg",
+   "text": "! scope=\"row\" | | 1990–present | Logistic Regiment colours | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army > Former regiments of the Royal Danish Army",
+   "file": "Regimental flag of 2nd Jutland Infantry Regiment.svg",
+   "text": "! scope=\"row\" | | 1790–1842 | Standard of the 10th Regiment |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army > Former regiments of the Royal Danish Army",
+   "file": "Regimental flag of Ribe Infantry Regiment.svg",
+   "text": "! scope=\"row\" | | 1785–1790 | Standard of the 10th Regiment |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army > Former regiments of the Royal Danish Army",
+   "file": "Regimental flag of Danish Life Regiment (Denmark).svg",
+   "text": "! scope=\"row\" | | 1790–1819 | Standard of the Danish Life Regiment |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army > Former regiments of the Royal Danish Army",
+   "file": "Regimental flag of 3rd Jutland Infantry Regiment.svg",
+   "text": "! scope=\"row\" | | 1785–1842 | Standard of the Falster Regiment of Foot |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army > Former regiments of the Royal Danish Army",
+   "file": "Regimental flag of King's Regiment (Denmark).svg",
+   "text": "! scope=\"row\" | | 1790–1808 | Standard of the Funen Life Regiment |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army > Former regiments of the Royal Danish Army",
+   "file": "Regimental flag of (NYPL b14896507-465782).svg",
+   "text": "! scope=\"row\" | | 1749–1766 | Standard of the Funen Life Regiment |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army > Former regiments of the Royal Danish Army",
+   "file": "Regimental flag of Funen Infantry Regiment.svg",
+   "text": "! scope=\"row\" | | 1790–1842 | Standard of the Jutlandic Regiment of Foot |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army > Former regiments of the Royal Danish Army",
+   "file": "Regimental flag of 2nd Jutland Infantry Regiment.svg",
+   "text": "! scope=\"row\" | | 1785–1790 | Standard of the Jutlandic Regiment of Foot |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army > Former regiments of the Royal Danish Army",
+   "file": "Regimental flag of 2nd Life regiment on Foot (Denmark) (1819-1842).svg",
+   "text": "! scope=\"row\" | | 1819–1842 | Standard of the King's Regiment of Foot |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army > Former regiments of the Royal Danish Army",
+   "file": "Regimental flag of Norwegian Infantry Regiment.svg",
+   "text": "! scope=\"row\" | | 1785–1819 | Standard of the King's Regiment of Foot |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army > Former regiments of the Royal Danish Army",
+   "file": "Regimental flag of The King's Life Regiment.svg",
+   "text": "! scope=\"row\" | | ?–1785 | Standard of the King's Regiment of Foot |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army > Former regiments of the Royal Danish Army",
+   "file": "Regimental flag of 1st Jutland Infantry Regiment.svg",
+   "text": "! scope=\"row\" | | 1790–1860 | Standard of the Marine Regiment |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army > Former regiments of the Royal Danish Army",
+   "file": "Regimental flag of Aarhus Infantry Regiment.svg",
+   "text": "! scope=\"row\" | | 1785–1790 | Standard of the Marine Regiment |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army > Former regiments of the Royal Danish Army",
+   "file": "Regimental flag of Bornholm Infantry Regiment.svg",
+   "text": "! scope=\"row\" | | ?–1785 | Standard of the Marine Regiment |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army > Former regiments of the Royal Danish Army",
+   "file": "Regimental flag of Prince Frederik's Armed Infantry Regiment.svg",
+   "text": "! scope=\"row\" | | 1790–1808 | Standard of the Prince's Life Regiment |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army > Former regiments of the Royal Danish Army",
+   "file": "Regimental flag of Prince Frederick's Infantry Regiment.svg",
+   "text": "! scope=\"row\" | | 1753–1790 | Standard of the Prince's Life Regiment |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army > Former regiments of the Royal Danish Army",
+   "file": "Regimental flag of Queen's Regiment of Foot (Denmark).svg",
+   "text": "! scope=\"row\" | | 1810–1842 | Standard of the Queen's Life Regiment |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army > Former regiments of the Royal Danish Army",
+   "file": "Regimental flag of Queen's Life Regiment.svg",
+   "text": "! scope=\"row\" | | ?–1790 | Standard of the Queen's Life Regiment |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army > Former regiments of the Royal Danish Army",
+   "file": "Regimental flag of Crown Prince's Regiment (Denmark).svg",
+   "text": "! scope=\"row\" | | 1790–1808 | Standard of the Zealand Life Regiment |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army > Former regiments of the Royal Danish Army",
+   "file": "Regimental flag of Schleswig Infantry Regiment.svg",
+   "text": "! scope=\"row\" | | 1790–1842 | Standard of the Schleswig Regiment of Foot |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army > Former regiments of the Royal Danish Army",
+   "file": "Regimental flag of Funen Infantry Regiment (1778–1785).svg",
+   "text": "! scope=\"row\" | | 1779–1785 | Standard of the Schleswig Regiment of Foot |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army > Former regiments of the Royal Danish Army",
+   "file": "Flag of the Danish volunteers in the Winter War.svg",
+   "text": "! scope=\"row\" | | 1940s | Standard of the Danish volunteers in the Winter War |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army > Former regiments of the Royal Danish Army",
+   "file": "Flag of the Schalburgkorps.svg",
+   "text": "! scope=\"row\" | | 1940–1945 | Standard of the SS-Schalburgkorps (part of Germanic SS during World War II, not part of Royal Danish Army) |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Army > Former regiments of the Royal Danish Army",
+   "file": "Colour of the Frikorps Danmark 1941.svg",
+   "text": "! scope=\"row\" | | 1941–1943 | Standard of the Free Corps Denmark (part of Germanic SS during World War II, not part of Royal Danish Army) | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Navy",
+   "file": "Naval Ensign of Denmark.svg",
+   "text": "! scope=\"row\" | | <1585–present | Naval ensign | Like the state flag but the Royal Danish Navy uses flags with a darker hue than both the national and state flags.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Navy",
+   "file": "Standard of the Chief of the Defense Staff of Denmark.svg",
+   "text": "! scope=\"row\" | | ?–present | Chief of Defence staff flag | State flag with two white staffs in saltire in the first quarter.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Navy",
+   "file": "Navy Rank Flag of General Admiral (Denmark).svg",
+   "text": "! scope=\"row\" | | ?–present | Rank flag for General admiral staff flag |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Navy",
+   "file": "Naval Rank Flag of Denmark - Chief of Squadron.svg",
+   "text": "! scope=\"row\" | | ?–present | Chief of Squadron flag |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Navy",
+   "file": "Naval Rank Flag of Denmark - Senior Officer Afloat.svg",
+   "text": "! scope=\"row\" | | ?–present | Senior Officer Afloat flag |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Navy",
+   "file": "Naval Rank Flag of Denmark - Vice Admiral (1880).svg",
+   "text": "! scope=\"row\" | | 1880s–? | Vice Admiral flag |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Military flags > Navy",
+   "file": "Naval Rank Flag of Denmark - Counter admiral (1880).svg",
+   "text": "! scope=\"row\" | | 1880s–? | Counter admiral flag | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Customs services",
+   "file": "Tollflagg 1778-1814.gif",
+   "text": "! scope=\"row\" | | 1778–1814 | Customs services flag | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Flags of state-owned companies",
+   "file": "Postal Flag of Denmark.svg",
+   "text": "! scope=\"row\" | | ?–present | Post Danmark | State flag with the logo of Post Danmark",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Flags of state-owned companies",
+   "file": "DSBFlag.png",
+   "text": "! scope=\"row\" | | ?–present | Danish State Railways | State flag with the logo of DSB |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Subnational flags > Autonomous entities",
+   "file": "Flag of Greenland.svg",
+   "text": "! scope=\"row\" | | 1985–present | Flag of Greenland | Two equal horizontal bands of white (top) and red with a large disk slightly to the hoist side of centre. The top half of the disk is red, the bottom half is white",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Subnational flags > Autonomous entities",
+   "file": "Flag of the Faroe Islands.svg",
+   "text": "! scope=\"row\" | | 1940–present | Flag of the Faroe Islands | A red Nordic cross, surrounded by an azure-blue and is set on a white field |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Subnational flags > Regions",
+   "file": "Flag of the Capital Region of Denmark.svg",
+   "text": "align=\" \" valign=\"top\" | width=\"120\" style=\" :0;\" | 150pxCapital Region of Denmark | width=\"120\" style=\" :0;\" | 150pxCentral Denmark Region | width=\"120\" style=\" :0;\" | 150pxNorth Jutland Region | width=\"120\" style=\" :0;\" | 150pxRegion Zealand | width=\"120\" style=\" :0;\" | 150pxRegion of Southern Denmark |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Subnational flags > Regions",
+   "file": "Flag of Region Midtjylland.svg",
+   "text": "align=\" \" valign=\"top\" | width=\"120\" style=\" :0;\" | 150pxCapital Region of Denmark | width=\"120\" style=\" :0;\" | 150pxCentral Denmark Region | width=\"120\" style=\" :0;\" | 150pxNorth Jutland Region | width=\"120\" style=\" :0;\" | 150pxRegion Zealand | width=\"120\" style=\" :0;\" | 150pxRegion of Southern Denmark |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Subnational flags > Regions",
+   "file": "Flag of Region Nordjylland.svg",
+   "text": "align=\" \" valign=\"top\" | width=\"120\" style=\" :0;\" | 150pxCapital Region of Denmark | width=\"120\" style=\" :0;\" | 150pxCentral Denmark Region | width=\"120\" style=\" :0;\" | 150pxNorth Jutland Region | width=\"120\" style=\" :0;\" | 150pxRegion Zealand | width=\"120\" style=\" :0;\" | 150pxRegion of Southern Denmark |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Subnational flags > Regions",
+   "file": "Flag of Region Sjælland.svg",
+   "text": "align=\" \" valign=\"top\" | width=\"120\" style=\" :0;\" | 150pxCapital Region of Denmark | width=\"120\" style=\" :0;\" | 150pxCentral Denmark Region | width=\"120\" style=\" :0;\" | 150pxNorth Jutland Region | width=\"120\" style=\" :0;\" | 150pxRegion Zealand | width=\"120\" style=\" :0;\" | 150pxRegion of Southern Denmark |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Subnational flags > Regions",
+   "file": "Flag of Region Syddanmark.svg",
+   "text": "align=\" \" valign=\"top\" | width=\"120\" style=\" :0;\" | 150pxCapital Region of Denmark | width=\"120\" style=\" :0;\" | 150pxCentral Denmark Region | width=\"120\" style=\" :0;\" | 150pxNorth Jutland Region | width=\"120\" style=\" :0;\" | 150pxRegion Zealand | width=\"120\" style=\" :0;\" | 150pxRegion of Southern Denmark |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Subnational flags > Unofficial regional flags",
+   "file": "Flag of Ærø.svg",
+   "text": "! scope=\"row\" | | 1633–present | Unofficial flag of Ærø | Nine horizontal stripes of yellow, green, and red, repeated three times. Similar to the flag of Lithuania. A frequent interpretation is that the colours represent the kings of Denmark (red), the dukes of Schleswig (yellow) and the islands itself (green).",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Subnational flags > Unofficial regional flags",
+   "file": "Flag of Denmark Bornholm.svg",
+   "text": "! scope=\"row\" | 150px150px | 1970s–present | Unofficial flag of Bornholm | Nordic cross flag in red and green. Also known in a version with a white fimbriation of the green cross in a style similar to design of the Norwegian flag.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Subnational flags > Unofficial regional flags",
+   "file": "Flag Denmark Bornholmsflaget.svg",
+   "text": "! scope=\"row\" | 150px150px | 1970s–present | Unofficial flag of Bornholm | Nordic cross flag in red and green. Also known in a version with a white fimbriation of the green cross in a style similar to design of the Norwegian flag.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Subnational flags > Unofficial regional flags",
+   "file": "Flag of Jutland.svg",
+   "text": "! scope=\"row\" | | 1975–present | Unofficial flag of Jutland | A Nordic cross flag in blue, green, and red. Designed by Per Kramer in 1975.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Subnational flags > Unofficial regional flags",
+   "file": "Unofficial flag of Vendsyssel.svg",
+   "text": "! scope=\"row\" | | 1976–present | Unofficial flag of Vendsyssel | Nordic cross flag in blue, orange, and green. Designed by Mogens Bohøj.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Subnational flags > Unofficial regional flags",
+   "file": "Fyns flag.jpg",
+   "text": "! scope=\"row\" | | 2015–present | Unofficial flag of Funen | There are two proposed flags: The green colour symbolises the island's importance as the 'pantry of Denmark'. The blue represents the island itself, and the red its strong ties to Denmark. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Ethnic groups flags",
+   "file": "Bandera Bund Deutscher Nordschleswiger.svg",
+   "text": "! scope=\"row\" | | | Flag of North Schleswig Germans | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Historical",
+   "file": "Raven Banner.svg",
+   "text": "! scope=\"row\" | | 1016–1035 | North Sea Empire | The raven banner was used by Cnut the Great and many other Scandinavian rulers.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Historical",
+   "file": "State Banner of Denmark (14th Century).svg",
+   "text": "! scope=\"row\" | | Circa 1300s | State banner of the King of Denmark as depicted in the Gelre Armorial, the earliest representation of the Dannebrog. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Historical",
+   "file": "Royal Banner of Denmark (14th Century).svg",
+   "text": "! scope=\"row\" | | Circa 1300s | Royal Banner | Yellow banner depicting the arms of the King of Denmark; three crowned lions with a semée of hearts.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Historical",
+   "file": "Flag of the Kalmar Union.svg",
+   "text": "! scope=\"row\" | | 1430s | Kalmar Union | Emblems of the Kalmar Union",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Historical",
+   "file": "Skibsflaget fra Mariakirken i Lübeck.png",
+   "text": "! scope=\"row\" | | 1427 | A medieval ship flag captured from a Danish ship by forces from Lübeck | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "House flags of Danish freight companies",
+   "file": "Torm house flag.svg",
+   "text": "! scope=\"row\" | | 1889–present | Dampskibsselskabet Torm |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "House flags of Danish freight companies",
+   "file": "DFDS house flag.svg",
+   "text": "! scope=\"row\" | | 1866–2024 | DFDS |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "House flags of Danish freight companies",
+   "file": "House Flag of Maersk.svg",
+   "text": "! scope=\"row\" | | 1904–present | Maersk |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "House flags of Danish freight companies",
+   "file": "East Asiatic Company.svg",
+   "text": "! scope=\"row\" | | 1897–present | EAC Invest A/S |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "House flags of Danish freight companies",
+   "file": "House flag of Det Dansk-Franske Dampskibsselskab.svg",
+   "text": "! scope=\"row\" | | 1902–1979 | Danish-French Steamship Companyda |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "House flags of Danish freight companies",
+   "file": "House Flag of Thingvalla Line.svg",
+   "text": "! scope=\"row\" | | 1879–1898 | Thingvalla Line | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Yacht clubs of Denmark",
+   "file": "Ensign of Royal Danish Yacht Club.svg",
+   "text": "! scope=\"row\" | | ?–present | Ensign of Royal Danish Yacht Club |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Yacht clubs of Denmark",
+   "file": "Ensign of Randers Sejlklub.svg",
+   "text": "! scope=\"row\" | | ?–present | Ensign of Randers Sejlklub |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Yacht clubs of Denmark",
+   "file": "Denmark Yacht Ensign.svg",
+   "text": "! scope=\"row\" | | ?–present | Denmark Yacht ensign | |} {|class=\"wikitable\"",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Yacht clubs of Denmark",
+   "file": "Burgee of Aarhus Sejlklub.svg",
+   "text": "! scope=\"row\" | | Aarhus Sejlklub",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Yacht clubs of Denmark",
+   "file": "Burgee of Espergærde Sejlklub.svg",
+   "text": "! scope=\"row\" | | Espergærde Sejlklub",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Yacht clubs of Denmark",
+   "file": "Burgee of Faaborg Sejlklub.svg",
+   "text": "! scope=\"row\" | | Faaborg Sejlklub",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Yacht clubs of Denmark",
+   "file": "Burgee of Fredericia Sejlklub.svg",
+   "text": "! scope=\"row\" | | Fredericia Sejlklub",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Yacht clubs of Denmark",
+   "file": "Burgee of Gråsten Sejlklub.svg",
+   "text": "! scope=\"row\" | | Gråsten Sejlklub",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Yacht clubs of Denmark",
+   "file": "Burgee of Hellerup Sejlklub.svg",
+   "text": "! scope=\"row\" | | Hellerup Sejlklub",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Yacht clubs of Denmark",
+   "file": "Burgee of Horsens Sejlklub.svg",
+   "text": "! scope=\"row\" | | Horsens Sejlklub",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Yacht clubs of Denmark",
+   "file": "Burgee of Kerteminde Sejlklub.svg",
+   "text": "! scope=\"row\" | | Kerteminde Sejlklub",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Yacht clubs of Denmark",
+   "file": "Burgee of Kjøbenhavns Amatør-Sejlklub.svg",
+   "text": "! scope=\"row\" | | Kjøbenhavns Amatør-Sejlklub",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Yacht clubs of Denmark",
+   "file": "Burgee of Kolding Sejlklub.svg",
+   "text": "! scope=\"row\" | | Kolding Sejlklub",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Yacht clubs of Denmark",
+   "file": "Burgee of Kongelig Dansk Yachtklub.svg",
+   "text": "! scope=\"row\" | | Royal Danish Yacht Club",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Yacht clubs of Denmark",
+   "file": "Burgee of Middelfart Sejlklub.svg",
+   "text": "! scope=\"row\" | | Middelfart Sejlklub",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Yacht clubs of Denmark",
+   "file": "Burgee of Skovshoved Sejlklub.svg",
+   "text": "! scope=\"row\" | | Skovshoved Sejlklub",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Yacht clubs of Denmark",
+   "file": "Burgee of Skælskør Amatør Sejlklub.svg",
+   "text": "! scope=\"row\" | | Skælskør Amatør Sejlklub",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Yacht clubs of Denmark",
+   "file": "Burgee of Taarbæk Sejlklub.svg",
+   "text": "! scope=\"row\" | | Taarbæk Sejlklub",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Yacht clubs of Denmark",
+   "file": "Burgee of Thisted Sejlklub.svg",
+   "text": "! scope=\"row\" | | Thisted Sejlklub",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Yacht clubs of Denmark",
+   "file": "Burgee of Yachtklubben Furesøen.svg",
+   "text": "! scope=\"row\" | | Yachtklubben Furesøen |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Other flags/microstate flags",
+   "file": "Danish blue ensign.svg",
+   "text": "! scope=\"row\" | | 1796–1848 | In the flag books this is labelled 'Danish in West Indies'. No official sources can tell us what the flag was, and that the flag is *not* the colonial ensign of the Danish West India. However, he argues that the flag was hoisted as a courtesy ensign on the foretop mast by ships bound for the colony. | Dannebrog in the canton of a blue flag.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Other flags/microstate flags",
+   "file": "2nd World Scout Jamboree.svg",
+   "text": "! scope=\"row\" | | 1924 | Flag of 2nd World Scout Jamboree |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Other flags/microstate flags",
+   "file": "Flag of Christiania.svg",
+   "text": "! scope=\"row\" | | 1971–present | Flag of Christiania |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Danish flags",
+   "section": "Other flags/microstate flags",
+   "file": "Flag of Elleore.svg",
+   "text": "! scope=\"row\" | | 1944–present | Flag of Kingdom of Elleore | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Groenland",
+   "section": "Histoire",
+   "file": "Proposed flag of Greenland (1984).svg",
+   "text": "Proposition de Sven Tito Achen.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "da",
+   "page": "Grønlands flag",
+   "section": "intro",
+   "file": "Flag of Greenland.svg",
+   "text": "200 px|Erfalasorput",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "da",
+   "page": "Grønlands flag",
+   "section": "intro",
+   "file": "Greenland flag on building perspective.jpg",
+   "text": "Grønlands flag malet på en lejlighedsbygning (Blok P) i Nuuk",
+   "kind": "thumb"
+  }
+ ]
+}

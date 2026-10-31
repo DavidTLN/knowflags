@@ -1,0 +1,154 @@
+{
+ "iso": "td",
+ "flag_item": "Q165811",
+ "pages": [
+  "en:Flag of Chad",
+  "fr:Drapeau du Tchad"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Chad",
+   "section": "Colour",
+   "file": "Flag of Chad.svg",
+   "text": "{| class=\"wikitable\" width=\" \" style=\"white-space: nowrap; text-align: \" ! (1959–present) ! style=\"background:#00205B; color:#FFF; width: \" |Indigo ! style=\"background:#FFCD00; color:#000; width: \" |Yellow ! style=\"background:#C8102E; color:#FFF; width: \" |Red",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Chad",
+   "section": "Historical flags",
+   "file": "Kanem flag from dulcerta 1339-pt.svg",
+   "text": "Flag of Kanem according to Angelino Dulcert (1339)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Chad",
+   "section": "Historical flags",
+   "file": "Flag of France.svg",
+   "text": "Flag of France used in French Equatorial Africa (1900–1959)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Chad",
+   "section": "Historical flags",
+   "file": "Standard of the Free French Government of Chad, 1940–1942.svg",
+   "text": "Flag of the Free French government of Chad under Pierre-Olivier Lapie (1940–1942)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Chad",
+   "section": "Historical flags",
+   "file": "Flag of Pierre-Olivier Lapie as Governor of Chad.svg",
+   "text": "Lapie's personal flag (1940–1942)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Chad",
+   "section": "Historical flags",
+   "file": "Standard of the French Community.svg",
+   "text": "Standard of the French Community",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Tchad",
+   "section": "Dimensions et couleurs",
+   "file": "Place de la nation5 (Tchad).jpg",
+   "text": "253x253px|Le drapeau du Tchad flottant sur la place de la Nation à N'Djaména en 2018.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Tchad",
+   "section": "Drapeaux historiques",
+   "file": "Kanem flag from dulcerta 1339-pt.svg",
+   "text": "Drapeau possible du Kanem, également appelé Organa, selon le portulan d'Angelino Dulcert de 1339.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Tchad",
+   "section": "Drapeaux historiques",
+   "file": "Flag of France (1794–1815, 1830–1974, 2020–present).svg",
+   "text": "Drapeau de la France et de l'Afrique-Équatoriale française (1900-1960).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Tchad",
+   "section": "Drapeaux historiques",
+   "file": "Standard of the Free French Government of Chad, 1940–1942.svg",
+   "text": "Drapeau du gouvernement du Tchad « France libre » sous Pierre-Olivier Lapie (1940-1942).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Tchad",
+   "section": "Drapeaux historiques",
+   "file": "Flag of Pierre-Olivier Lapie as Governor of Chad.svg",
+   "text": "Drapeau personnel de Pierre-Olivier Lapie, gouverneur du Tchad (1940-1942).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Tchad",
+   "section": "Drapeaux historiques",
+   "file": "Standard of the French Community.svg",
+   "text": "Drapeau de la Communauté française (1958-1960).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Tchad",
+   "section": "Drapeaux similaires",
+   "file": "Flag of Chad.svg",
+   "text": "Drapeau national du Tchad.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Tchad",
+   "section": "Drapeaux similaires",
+   "file": "Flag of Romania.svg",
+   "text": "Drapeau de la Roumanie.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Tchad",
+   "section": "Drapeaux similaires",
+   "file": "Flag of the Socialist Republic of Romania (16-9).svg",
+   "text": "Drapeau de la Roumanie pendant le communisme",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Tchad",
+   "section": "Drapeaux similaires",
+   "file": "Flag of Andorra (civil).svg",
+   "text": "Drapeau civil d'Andorre.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Tchad",
+   "section": "Drapeaux similaires",
+   "file": "Flag of Moldova.svg",
+   "text": "Drapeau de la Moldavie.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Tchad",
+   "section": "Drapeaux similaires",
+   "file": "Flag of Andorra.svg",
+   "text": "Drapeau officiel d'Andorre.",
+   "kind": "gallery"
+  }
+ ]
+}

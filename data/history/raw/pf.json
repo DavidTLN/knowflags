@@ -1,0 +1,234 @@
+{
+ "iso": "pf",
+ "flag_item": "Q232591",
+ "pages": [
+  "en:Flag of French Polynesia",
+  "fr:Drapeau de la Polynésie française"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of French Polynesia",
+   "section": "History",
+   "file": "Discours du président.JPG",
+   "text": "Assembly of French Polynesia with flags of French Polynesia and France.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of French Polynesia",
+   "section": "History",
+   "file": "Flag of the Kingdom of Tahiti.svg",
+   "text": "Flag of Kingdom of Tahiti, used 1788–1843",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of French Polynesia",
+   "section": "Use",
+   "file": "Drapeaux.Archipels.Papeete.JPG",
+   "text": "The flag of French Polynesia and of France flying alongside the flags of the component archipelagos in Pape'ete.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Polynésie française",
+   "section": "Histoire",
+   "file": "Flag of the Kingdom of Tahiti.svg",
+   "text": "Drapeau du royaume de Tahiti.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Polynésie française",
+   "section": "Drapeaux des archipels",
+   "file": "Flag of the Austral Islands.svg",
+   "text": "Archipel des Australes",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Polynésie française",
+   "section": "Drapeaux des archipels",
+   "file": "Flag of the Gambier Islands.svg",
+   "text": "Archipel des Gambier",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Polynésie française",
+   "section": "Drapeaux des archipels",
+   "file": "Flag of Marquesas Islands.svg",
+   "text": "Archipel des Marquises",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Polynésie française",
+   "section": "Drapeaux des archipels",
+   "file": "Flag of the Leeward Islands.svg",
+   "text": "Îles Sous-le-Vent",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Polynésie française",
+   "section": "Drapeaux des archipels",
+   "file": "Flag of Tuamotu Archipelago.svg",
+   "text": "Archipel des Tuamotu",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Polynésie française",
+   "section": "Drapeau des îles > Archipel des Australes",
+   "file": "Flag of Rapa.svg",
+   "text": "Rapa",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Polynésie française",
+   "section": "Drapeau des îles > Archipel des Australes",
+   "file": "Flag of Raivavae.svg",
+   "text": "Raivavae",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Polynésie française",
+   "section": "Drapeau des îles > Archipel des Australes",
+   "file": "Flag of Rimatara.svg",
+   "text": "Rimatara",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Polynésie française",
+   "section": "Drapeau des îles > Archipel des Australes",
+   "file": "Flag of Rurutu.svg",
+   "text": "Rurutu",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Polynésie française",
+   "section": "Drapeau des îles > Archipel des Australes",
+   "file": "Flag of Tubuai.svg",
+   "text": "Tubuai",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Polynésie française",
+   "section": "Drapeau des îles > Archipel des Marquises",
+   "file": "Flag of Nuku Hiva.svg",
+   "text": "Nuku Hiva",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Polynésie française",
+   "section": "Drapeau des îles > Îles Sous-le-Vent",
+   "file": "Flag of Bora Bora.svg",
+   "text": "Bora-Bora",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Polynésie française",
+   "section": "Drapeau des îles > Îles Sous-le-Vent",
+   "file": "Flag of Raiatea.svg",
+   "text": "Raiatea",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Polynésie française",
+   "section": "Drapeau des îles > Îles Sous-le-Vent",
+   "file": "Flag of Huahine.svg",
+   "text": "Huahine",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Polynésie française",
+   "section": "Drapeau des îles > Îles du Vent",
+   "file": "Flag of Tahiti.svg",
+   "text": "Tahiti",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Polynésie française",
+   "section": "Drapeau des îles > Îles du Vent",
+   "file": "Flag of Moorea-Maiao.svg",
+   "text": "Moorea-Maiao",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Polynésie française",
+   "section": "Drapeau des îles > Archipel des Tuamotu",
+   "file": "Hao.svg",
+   "text": "Hao",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Polynésie française",
+   "section": "Drapeau des îles > Archipel des Tuamotu",
+   "file": "Flag of Makatea.svg",
+   "text": "Makatea",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Polynésie française",
+   "section": "Drapeau des îles > Archipel des Tuamotu",
+   "file": "Flag of Reao Pukaruha.svg",
+   "text": "Pukarua",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Polynésie française",
+   "section": "Drapeaux historiques",
+   "file": "Personal Standard of Pomare IV.svg",
+   "text": "Drapeau de Pōmare IV",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Polynésie française",
+   "section": "Drapeaux historiques",
+   "file": "Society Islands (Tahiti). Johnson's new chart of national emblems, 1868.jpg",
+   "text": "Drapeau des îles de la Société (Tahiti), Johnson’s new chart of national emblems, 1868 .",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Polynésie française",
+   "section": "Drapeaux historiques",
+   "file": "Flag of the Tahiti Protectorate 1843-1880.svg",
+   "text": "Drapeau du protectorat français (1843-1880).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Polynésie française",
+   "section": "Drapeaux historiques",
+   "file": "Flag of Austral Islands (old).svg",
+   "text": "Ancien drapeau de l'archipel des Australes",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Polynésie française",
+   "section": "Autres drapeaux",
+   "file": "Flag of Tavini Huiraatira.svg",
+   "text": "Drapeau de Tavini Huiraatira, considéré comme un drapeau de l'indépendance",
+   "kind": "gallery"
+  }
+ ]
+}

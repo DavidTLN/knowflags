@@ -1,0 +1,540 @@
+{
+ "iso": "bn",
+ "flag_item": "Q165872",
+ "pages": [
+  "en:Flag of Brunei",
+  "en:List of Bruneian flags",
+  "fr:Drapeau de Brunei",
+  "ms:Bendera Brunei"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Brunei",
+   "section": "Design and symbolism",
+   "file": "Secretary Kerry Meets With Sultan Bolkiah of Brunei (10183863905).jpg",
+   "text": "Flag of Brunei behind Sultan Bolkiah in a meeting with John Kerry.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Brunei",
+   "section": "Historical flags",
+   "file": "Old Flag of Brunei.svg",
+   "text": "Flag from 1888 to 1906",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Brunei",
+   "section": "Historical flags",
+   "file": "Flag of Brunei 1906-1959.svg",
+   "text": "Flag from 1906 to 1959",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "National flags",
+   "file": "Flag of Brunei.svg",
+   "text": "! scope=\"row\" | 150x75px | 1959–present | National flag of Brunei | A centred red crest of Brunei on a yellow field cut by black and white diagonal stripes (parallelograms). | 1:2 |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Government",
+   "file": "Military ensign of Brunei Darussalam.svg",
+   "text": "! scope=\"row\" | 150x75px | Flag of the Royal Brunei Armed Forces | Yellow flag with three diagonal stripes white over red over black, with the Royal Brunei Armed Forces badge in the middle. | 2:3",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Government",
+   "file": "Royal Brunei Land Force (RBLF) - Tentera Darat Diraja Brunei (TDDB) ensign.svg",
+   "text": "! scope=\"row\" |150x75px | Flag of the Royal Brunei Land Force | Red ensign with the Bruneian flag in canton and the Royal Brunei Land Force emblem in fly. | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Government",
+   "file": "Naval Ensign of Brunei.svg",
+   "text": "! scope=\"row\" | 150x75px | Flag of the Royal Brunei Navy | White ensign with the Bruneian flag in canton and the Royal Brunei Naval emblem in fly. | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Government",
+   "file": "Ensign of the Royal Brunei Air Force.svg",
+   "text": "! scope=\"row\" | 150x75px | Flag of the Royal Brunei Air Force | Light blue ensign with the Bruneian flag in canton and the Royal Brunei Air Force emblem in fly. | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Government",
+   "file": "Flag of the Royal Brunei Police Force.svg",
+   "text": "! scope=\"row\" | 150x75px | Flag of the Royal Brunei Police Force | Dark blue flag with the emblem in the centre. | 1:2 |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Royal family",
+   "file": "Royal Standard of Brunei.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Sultan of Brunei | The standard of His Majesty the Sultan is yellow, incorporating his personal emblem at the centre of the standard with all its elements red. | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Royal family",
+   "file": "Royal Standard of the Non-Gahara Child of the Sultan of Brunei.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the non-gahara child of the Sultan of Brunei | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Royal family",
+   "file": "Royal Standard of the Gahara Grandchild of the Sultan of Brunei.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the gahara grandchild of the Sultan of Brunei | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Royal family",
+   "file": "Royal Standard of the Non-Gahara Grandchild of the Sultan of Brunei.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the non-gahara grandchild of the Sultan of Brunei | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Royal family",
+   "file": "Royal Standard of the Great-Grandchild of the Sultan of Brunei.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the piut grandchild of the Sultan of Brunei | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Royal family",
+   "file": "Royal Standard of the Great-Great-Grandchild of the Sultan of Brunei.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the antah grandchild of the Sultan of Brunei | | 1:2 |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Duli-Duli Wazir",
+   "file": "Royal Standard of the Pengiran Perdana Wazir (Gahara).svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Pengiran Perdana Wazir (gahara child of the Sultan of Brunei) | The personal emblem of Pengiran Perdana Wazir of Brunei on a white field. | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Duli-Duli Wazir",
+   "file": "Royal Standard of the Pengiran Bendahara (Gahara).svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Pengiran Bendehara (gahara child of the Sultan of Brunei) | The personal emblem of the gahara children of the Sultan of Brunei on a white field. | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Duli-Duli Wazir",
+   "file": "Royal Standard of the Pengiran Bendahara (Non-Gahara).svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Pengiran Bendehara (non-gahara child of the Sultan of Brunei) | A centred red crest of Brunei on a white field. | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Duli-Duli Wazir",
+   "file": "Royal Standard of the Pengiran Di-Gadong (Gahara).svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Pengiran Di-Gadong (gahara child of the Sultan of Brunei) | The personal emblem of the gahara children of the Sultan of Brunei on a green field. | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Duli-Duli Wazir",
+   "file": "Royal Standard of the Pengiran Di-Gadong (Non-Gahara).svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Pengiran Di-Gadong (non-gahara child of the Sultan of Brunei) | A centred red crest of Brunei on a green field. | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Duli-Duli Wazir",
+   "file": "Royal Standard of the Pengiran Pemancha (Gahara).svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Pengiran Pemancha (gahara child of the Sultan of Brunei) | The personal emblem of the gahara children of the Sultan of Brunei on a black field. | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Duli-Duli Wazir",
+   "file": "Royal Standard of the Pengiran Pemancha (Non-Gahara).svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Pengiran Pemancha (non-gahara child of the Sultan of Brunei) | A centred red crest of Brunei on a black field. | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Duli-Duli Wazir",
+   "file": "Royal Standard of the Pengiran Temenggong (Gahara).svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Pengiran Temenggong (gahara child of the Sultan of Brunei) | The personal emblem of the gahara children of the Sultan of Brunei on a red field. | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Duli-Duli Wazir",
+   "file": "Royal Standard of the Pengiran Temenggong (Non-Gahara).svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Pengiran Temenggong (non-gahara child of the Sultan of Brunei) | A centred yellow crest of Brunei on a red field. | 1:2 |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Pengiran-Pengiran Cheteria",
+   "file": "Royal Standard of the Pengiran Perdana Cheteria Sahibun Nabalah.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Pengiran Perdana Cheteria Laila Diraja Sahibun Nabalah | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Pengiran-Pengiran Cheteria",
+   "file": "Royal Standard of the Pengiran Lela Cheteria Sahibun Najabah.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Pengiran Lela Cheteria Sahibun Najabah | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Pengiran-Pengiran Cheteria",
+   "file": "Royal Standard of the Pengiran Maharaja Lela Sahibul Kahar.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Pengiran Maharaja Lela Sahibul Kahar | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Pengiran-Pengiran Cheteria",
+   "file": "Royal Standard of the Pengiran Indera Setia Diraja Sahibul Karib.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Pengiran Indera Setia Diraja Sahibul Karib and Pengiran Maharaja Setia Laila Diraja Sahibul Irshad | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Pengiran-Pengiran Cheteria",
+   "file": "Royal Standard of the Pengiran Pekerma Setia Diraja Sahibul Bandar.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Pengiran Pekerma Setia Diraja Sahibul Bandar | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Pengiran-Pengiran Cheteria",
+   "file": "Royal Standard of the Pengiran Sanggamara Diraja.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Pengiran Sanggamara Diraja | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Pengiran-Pengiran Cheteria",
+   "file": "Royal Standard of the Cheteria Besar.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Cheteria Besar (Cheteria Lapan) | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Pengiran-Pengiran Cheteria",
+   "file": "Royal Standard of the Cheteria Pengalasan.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Cheteria Pengalasan (Cheteria Enam Belas) | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Pengiran-Pengiran Cheteria",
+   "file": "Royal Standard of the Pengiran Penggawa Laila Bentara Istiadat Diraja Dalam Istana.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Pengiran Penggawa Laila Bentara Istiadat Diraja Dalam Istana | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Pengiran-Pengiran Cheteria",
+   "file": "Royal Standard of the Cheteria Damit.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Cheteria Damit (Cheteria Tiga Puluh Dua) | | 1:2 |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Descendants of Cheteria",
+   "file": "Bendera Pengiran Kebanyakkan.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Pengiran-Pengiran Kebanyakan | | 1:2 |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Pehin-Pehin Manteri",
+   "file": "Standard of the Pehin Datu Perdana Manteri.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Pehin Datu Perdana Manteri | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Pehin-Pehin Manteri",
+   "file": "Standard of the Pehin Orang Kaya Digadong Seri Diraja.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Kepala Manteri 4 and Manteri Tambahan Di-Atas Manteri 4 | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Pehin-Pehin Manteri",
+   "file": "Standard of the Pehin Orang Kaya Penggawa Laila Bentara Diraja.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Pehin Orang Kaya Penggawa Laila Bentara Diraja | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Pehin-Pehin Manteri",
+   "file": "Standard of the Pehin Sanggamara Asgar Diraja.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Pehin Sanggamara Asgar Diraja | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Pehin-Pehin Manteri",
+   "file": "Standard of the Manteri Empat.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Manteri Empat | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Pehin-Pehin Manteri",
+   "file": "Standard of the Pehin Mentari.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Pehin-Pehin Manteri and Pehin-Pehin Manteri Tambahan | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Pehin-Pehin Manteri",
+   "file": "Standard of the Pehin Orang Kaya Perbendaharaan Diraja.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Pehin Orang Kaya Perbendaharaan Diraja | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Pehin-Pehin Manteri",
+   "file": "Flag of the Pehin Datu Seri Maharaja.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Pehin Datu Seri Maharaja | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Pehin-Pehin Manteri",
+   "file": "Flag of the Pehin Datu Imam.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Pehin Datu Imam | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Pehin-Pehin Manteri",
+   "file": "Flag of the Begawan Pehin Datu Imam.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Begawan Pehin Datu Imam | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Pehin-Pehin Manteri",
+   "file": "Flag of the Pehin Siraja Khatib.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Pehin Siraja Khatib | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Pehin-Pehin Manteri",
+   "file": "Flag of the Begawan Pehin Siraja Khatib.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Begawan Pehin Siraja Khatib | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Pehin-Pehin Manteri",
+   "file": "Flag of the Pehin Tuan Imam.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Pehin Tuan Imam | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Pehin-Pehin Manteri",
+   "file": "Flag of the Begawan Pehin Tuan Imam.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Begawan Pehin Tuan Imam | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Pehin-Pehin Manteri",
+   "file": "Flag of the Pehin Udana Khatib.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Pehin Udana Khatib | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Pehin-Pehin Manteri",
+   "file": "Flag of the Begawan Pehin Udana Khatib.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Begawan Pehin Udana Khatib | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Pehin-Pehin Manteri",
+   "file": "Flag of the Pehin Khatib.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Pehin Khatib | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Pehin-Pehin Manteri",
+   "file": "Flag of the Begawan Pehin Khatib.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Begawan Pehin Khatib | | 1:2 |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Manteri Hulubalang and Manteri Darat",
+   "file": "Flag of the Manteri Hulubalang.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Manteri Hulubalang | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Manteri Hulubalang and Manteri Darat",
+   "file": "Flag of the Kepala Manteri Darat.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Kepala Manteri Darat | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Manteri Hulubalang and Manteri Darat",
+   "file": "Flag of the Manteri Darat.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Manteri Darat | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Manteri Hulubalang and Manteri Darat",
+   "file": "Flag of the Mudim.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Mudim | | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Royal standards > Manteri Hulubalang and Manteri Darat",
+   "file": "Flag of the Begawan Mudim.svg",
+   "text": "! scope=\"row\" | 150x75px | Standard of the Begawan Mudim | | 1:2 |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Historical flags",
+   "file": "Naval flag of Majapahit Kingdom.svg",
+   "text": "! scope=\"row\" | 150x75px | 1352–1368 | Flag of the Majapahit Empire | Thirteen horizontal stripes alternating red and white. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Historical flags",
+   "file": "Old Flag of Brunei.svg",
+   "text": "! scope=\"row\" | 150x75px | 1368–1906 | Flag of the Bruneian Sultanate | A simple yellow field. | 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Historical flags",
+   "file": "Alleged Royal Brunei Navy Flag in 1601.png",
+   "text": "! scope=\"row\" | 150x75px | Until 1888 | A flag of the Bruneian navy | The swallowtail variant of the flag of the Bruneian Sultanate. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Historical flags",
+   "file": "BruneianNavalFlag1906.png",
+   "text": "! scope=\"row\" | 150x75px | Until 1906 | A flag of the Bruneian navy | The pennant variant of the flag of the Bruneian Sultanate. Most commonly used by irregular war praus |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Historical flags",
+   "file": "Alleged war flag of the Bruneian Sultanate.jpg",
+   "text": "! scope=\"row\" | 150x75px | Until 1888 | A likely flag of the Bruneian army | Quartered diagonally, with yellow triangles on top and bottom and red triangles at the hoist and fly. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Bruneian flags",
+   "section": "Historical flags",
+   "file": "Flag of Brunei (no Coat of Arms).svg",
+   "text": "! scope=\"row\" | 150x75px | 1906–1959 | Flag of the Protectorate of Brunei | A yellow field cut by black and white diagonal stripes (parallelograms). | 1:2 |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "ms",
+   "page": "Bendera Brunei",
+   "section": "intro",
+   "file": "Flag of Brunei.svg",
+   "text": "kiri| Bendera Brunei (1959)",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "ms",
+   "page": "Bendera Brunei",
+   "section": "intro",
+   "file": "Flag of Brunei 1906-1959.svg",
+   "text": "248x248px| Bendera Brunei (1906 - 1959)",
+   "kind": "thumb"
+  }
+ ]
+}

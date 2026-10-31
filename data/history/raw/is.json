@@ -1,0 +1,389 @@
+{
+ "iso": "is",
+ "flag_item": "Q93335",
+ "pages": [
+  "en:Flag of Iceland",
+  "en:List of flags by color",
+  "en:List of Icelandic flags",
+  "fr:Drapeau de l'Islande",
+  "is:Íslenski fáninn"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Iceland",
+   "section": "intro",
+   "file": "Flag of the President of Iceland.svg",
+   "text": "The flag of the president of Iceland. It has an aspect ratio of 9:16.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Iceland",
+   "section": "intro",
+   "file": "Customs Flag and Ensign of Iceland.svg",
+   "text": "The flag of the Icelandic Customs Service. It has an aspect ratio of 9:16.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Iceland",
+   "section": "History",
+   "file": "Light Blue Flag of Iceland.svg",
+   "text": "The civil flag as it appeared between 1918 and 1944, when the blue colour was classified as \"ultramarine blue\". It has an aspect ratio of 18:25.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Iceland",
+   "section": "History",
+   "file": "Hvítbláinn.svg",
+   "text": "A former flag which never became official, known as (), in use by Icelandic republicans around 1900. A very similar design has subsequently been adopted as the flag of Shetland.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Iceland",
+   "section": "History",
+   "file": "Flag of Iceland - 1914 Proposal.svg",
+   "text": "A flag proposed in 1914",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Iceland",
+   "section": "History",
+   "file": "Old icelandic flag.jpg",
+   "text": "Old Icelandic flag (which was never an official flag) in the National Museum of Iceland, in Reykjavik, Iceland.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Iceland",
+   "section": "Icelandic flag days",
+   "file": "Flags of Iceland.jpg",
+   "text": "Icelandic flags in Viðey",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Iceland",
+   "section": "Icelandic flag days",
+   "file": "Thingvellir.jpg",
+   "text": "The Icelandic flag in Þingvellir National Park",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Iceland",
+   "section": "The state flag",
+   "file": "Icelandic state flag Embassy Helsinki.jpg",
+   "text": "Icelandic state flag at the Embassy in Helsinki.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Icelandic flags",
+   "section": "National flag and State flag",
+   "file": "Flag of Iceland.svg",
+   "text": "! scope=\"row\" | | 1944–present | Civil flag and ensign | A blue flag with a red Nordic cross, fimbriated white. Used unofficially in 1913–1918, and as a territorial symbol as of 1918 until 1944 when the Republic of Iceland was established. Current color scheme established in 1944. The dimensions of the flag are 7:1:2:1:14 horizontally and 7:1:2:1:7 vertically; ratio: 18:25",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Icelandic flags",
+   "section": "National flag and State flag",
+   "file": "Flag of Iceland (state).svg",
+   "text": "! scope=\"row\" | | 1944–present | State flag and ensign, war flag and naval ensign | A swallowtail flag otherwise similar to the civil flag. Ratio: 9:16 |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Icelandic flags",
+   "section": "City flags",
+   "file": "Flag of Reykjavik, Iceland.svg",
+   "text": "! scope=\"row\" | 150x150px | 6 June 1957–present | Flag of Reykjavík (capital city of Iceland) | White flag with the coat of arms of Reykjavík in the middle. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Icelandic flags",
+   "section": "Governmental flags",
+   "file": "Flag of the President of Iceland.svg",
+   "text": "! scope=\"row\" | | 1944–present | President's flag | The Icelandic swallowtail flag with the coat of arms in a white square at the junction of the cross. Ratio: 9:16",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Icelandic flags",
+   "section": "Governmental flags",
+   "file": "Customs Flag and Ensign of Iceland.svg",
+   "text": "! scope=\"row\" | | 1944–present | Customs ensign | The Icelandic swallowtail flag with the a capital \"T\" in the canton. Ratio: 9:16 |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Icelandic flags",
+   "section": "Military flag",
+   "file": "Flag of Iceland (state).svg",
+   "text": "! scope=\"row\" | | 1944–present | The state flag is used as a war flag and naval ensign by the Icelandic Coast Guard, Iceland Air Defence System, and Icelandic Crisis Response Unit. | The Icelandic swallowtail flag. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Icelandic flags",
+   "section": "Historical flags",
+   "file": "Royal Banner of Norway (14th Century).svg",
+   "text": "! scope=\"row\" | | 1262–1397 | Flag of Norway | Banner of arms with golden lion on red canvas.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Icelandic flags",
+   "section": "Historical flags",
+   "file": "Flag of the Kalmar Union.svg",
+   "text": "! scope=\"row\" | | 1397–1523 | The \"Banner of the realms\", flag of the Kalmar Union. | A red cross in a yellow field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Icelandic flags",
+   "section": "Historical flags",
+   "file": "Flag of Denmark.svg",
+   "text": "! scope=\"row\" | | 1523–1918 | Flag of Denmark | A red field charged with a white Nordic cross that extends to the edges; the vertical part of the cross is shifted to the hoist side.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Icelandic flags",
+   "section": "Historical flags",
+   "file": "Flag of Jørgen Jørgensen (1809).svg",
+   "text": "! scope=\"row\" | | July 11th 1809–August 19th 1809 | Proposal for what the flag of Iceland might have looked like during the rule of Jørgen Jørgensen | It’s not fully known what Jørgen’s flag really looked like. There are no surviving copies and his original description simply read as: “The Icelandic flag shall be blue, with three white stockfishes on it”. Due to this vague description, there can be multiple different interpretations of what the flag looked like. The example shown here shows three stockfishes in the first quarter on a dark-blue field. The word “stockfishes” in Jørgen’s descript",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Icelandic flags",
+   "section": "Historical flags",
+   "file": "Gunnfáni.svg",
+   "text": "! scope=\"row\" | | 1857–1869 | Standard of the Vestmannaeyjar Battalion (Herfylkingin) | A red saltire cross on a white field. In an old drawing of the Herfylking, the flag is shown with seemingly black text at the top and bottom of the flag, although it’s impossible to make out what the text says",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Icelandic flags",
+   "section": "Historical flags",
+   "file": "Light Blue Flag of Iceland.svg",
+   "text": "! scope=\"row\" | | 1918–1944flagspot.net | National flag and civil ensign of Iceland | It is almost identical to the newer Icelandic flag but this has a lighter blue color.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Icelandic flags",
+   "section": "Historical flags",
+   "file": "State flag of Iceland (1918–1944).svg",
+   "text": "! scope=\"row\" | | 1918–1944 | War flag and naval ensign of Iceland | It is almost identical to the newer Icelandic flag but this has a lighter blue color, just like the normal flag, above.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Icelandic flags",
+   "section": "Historical flags",
+   "file": "Royal Standard of Iceland (1921-1944).svg",
+   "text": "! scope=\"row\" | | 1921–1944flagspot.net | Royal standard of the Kingdom of Iceland | Crowned gyrfalcon on a blue field",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Icelandic flags",
+   "section": "Historical flags",
+   "file": "Flag of the United Kingdom (1-2).svg",
+   "text": "! scope=\"row\" | | 1940–1941 | Flag of the United Kingdom, also commonly known as the Union Jack. | A superimposition of the flags of England and Scotland with the Saint Patrick's Saltire (representing Ireland).",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Icelandic flags",
+   "section": "Historical flags",
+   "file": "Flag of the United States (1912-1959).svg",
+   "text": "! scope=\"row\" | | 1941–1944 | Flag of the United States | Thirteen horizontal stripes alternating red and white; in the canton, 48 white stars on blue field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Icelandic flags",
+   "section": "Historical flags",
+   "file": "Standard of the Regent of Iceland (1941–1944).svg",
+   "text": "! scope=\"row\" | | 1941–1944 | Standard of the Regent of Iceland | State flag of Iceland charged with a capital gold R on a rectangular panel |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Icelandic flags",
+   "section": "Unofficial flags",
+   "file": "Icelandic falcon flag (unofficial).png",
+   "text": "! scope=\"row\" | | 19th – early 20th century | Flag used by the independence movement | A gyrfalcon on a blue field",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Icelandic flags",
+   "section": "Unofficial flags",
+   "file": "Flag of Iceland - 1914 Proposal.svg",
+   "text": "! scope=\"row\" | | | Flag proposal. The flag committee of 1913 presented two proposals, the current flag and this flag. | White with a sky-blue cross with a white and blue stripe on either side.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Icelandic flags",
+   "section": "Unofficial flags",
+   "file": "Hvítbláinn.svg",
+   "text": "! scope=\"row\" | | | Republican flag | Unofficial flag used by the republicans in the early 1900s. This flag was rejected by the flag committee of 1913 as it was considered too similar to the flag of Sweden and the Greek naval ensign. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Icelandic flags",
+   "section": "Yacht club flags of Iceland",
+   "file": "Burgee of Siglingafelag Reykjavíkur, Brokey.svg",
+   "text": "! scope=\"row\" | | | Brokey Yacht Club | Burgee of Siglingafélag Reykjavíkur, Brokey. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Icelandic flags",
+   "section": "Political flags",
+   "file": "Flag of the Nationalist Party (Iceland).svg",
+   "text": "! scope=\"row\" | | 1934–1944 | Nationalist Party | Republican flag defaced with red swastika.",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de l'Islande",
+   "section": "intro",
+   "file": "Flag of the President of Iceland.svg",
+   "text": "Pavillon présidentiel de l'Islande. Ratio 37:18.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de l'Islande",
+   "section": "intro",
+   "file": "Customs Flag and Ensign of Iceland.svg",
+   "text": "Drapeau des services de douanes islandais. Ratio 37:18. Le «T» signifie la «Tollstjóri», la direction islandaise de douanes.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de l'Islande",
+   "section": "Histoire > Premiers drapeaux islandais à la morue",
+   "file": "Flag of Jørgen Jørgensen (1809).svg",
+   "text": "Drapeau de l'Islande sous Jørgen Jørgensen.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de l'Islande",
+   "section": "Histoire > ",
+   "file": "Hvítbláinn.svg",
+   "text": "Ancien drapeau officieux, connu sous le nom de Hvítbláinn (« le blanc-bleu »), utilisé par les Républicains islandais vers 1900. Un dessin très similaire fut adopté comme drapeau des Shetland",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de l'Islande",
+   "section": "Fêtes nationales",
+   "file": "Tjugufani.png",
+   "text": "Tjúgufáni hissé.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de l'Islande",
+   "section": "Couleurs",
+   "file": "Icelandic bed.jpg",
+   "text": "Parterre de fleurs aux couleurs du drapeau.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "is",
+   "page": "Íslenski fáninn",
+   "section": "intro",
+   "file": "Flag of Iceland.svg",
+   "text": "Þjóðfáni Íslands",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "is",
+   "page": "Íslenski fáninn",
+   "section": "Fyrri hugmyndir að fána Íslands > Þorskafáninn",
+   "file": "Flag of Jørgen Jørgensen (1809).png",
+   "text": "alt=Dökkblár fáni með með þremur hvítum þorskfiskum í efri stangarreit|Íslandsfáni Jörundar hundadagakonungs.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "is",
+   "page": "Íslenski fáninn",
+   "section": "Fyrri hugmyndir að fána Íslands > Hvítbláinn",
+   "file": "Hvítbláinn.svg",
+   "text": "Hvítbláinn",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "is",
+   "page": "Íslenski fáninn",
+   "section": "Fyrri hugmyndir að fána Íslands > Núverandi fáni",
+   "file": "Flag of Iceland (1918–1944).svg",
+   "text": "Frá 1918–1944 var blái liturinn í fánanum talsvert skærari.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "is",
+   "page": "Íslenski fáninn",
+   "section": "Fánalitir og hlutföll",
+   "file": "Flag of Iceland.svg",
+   "text": "Þjóðfáni Íslands. Hlutföll 25:18.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "is",
+   "page": "Íslenski fáninn",
+   "section": "Fánalitir og hlutföll",
+   "file": "Flag of Iceland (state).svg",
+   "text": "Ríkisfáni Íslands (Tjúgufáninn). Hlutföll 32:18.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "is",
+   "page": "Íslenski fáninn",
+   "section": "Fánalitir og hlutföll",
+   "file": "Flag of the President of Iceland.svg",
+   "text": "Fáni forseta Íslands. Hlutföll 32:18.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "is",
+   "page": "Íslenski fáninn",
+   "section": "Fánalitir og hlutföll",
+   "file": "Customs Flag and Ensign of Iceland.svg",
+   "text": "Tollgæslufáni. Hlutföll 32:18.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "is",
+   "page": "Íslenski fáninn",
+   "section": "Fánalitir og hlutföll",
+   "file": "Flag of Iceland (construction sheet).svg",
+   "text": "Hlutföllin í íslenska fánanum Hlutföllin í litum fánans eru, talið lárétt frá stöng: 7-1-2-1-14, en lóðrétt meðfram stöng eru þau 7-1-2-1-7. Þannig er breidd fánans 18/25 af lengd hans samkvæmt 1. grein fánalaga. Forsætisráðuneytið hefur gefið út viðmið um hvaða litir skulu notaðir í íslenska fánanum. Litirnir eigi að samsvarast SCOTDIC-litakerfinu sem best. {| class=\"wikitable\" width=\"60%\" =\"1\" cellpadding=\"2\" cellspacing=\"0\" style=\"background: #f9f9f9; : solid #aaaaaa; -collapse: collapse; white-space: nowrap; text-align: \" !Litakerfi ! style=\"background:#02529C;color:white\" |Blár ! style=\"b",
+   "kind": "table"
+  },
+  {
+   "wiki": "is",
+   "page": "Íslenski fáninn",
+   "section": "Fánalitir og hlutföll",
+   "file": "Flag of Iceland (construction sheet).svg",
+   "text": "Hlutföllin í íslenska fánanum",
+   "kind": "thumb"
+  }
+ ]
+}

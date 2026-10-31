@@ -1,0 +1,965 @@
+{
+ "iso": "ps",
+ "flag_item": "Q191731",
+ "pages": [
+  "en:Flag of Palestine",
+  "en:List of Arab flags",
+  "en:List of Palestinian flags",
+  "fr:Drapeau de la Palestine",
+  "ar:علم فلسطين"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Palestine",
+   "section": "Origin",
+   "file": "Palestinian flag handed to Shaukat Ali by Amin Al-Husseini and other figures in Jerusalem, 1931.jpg",
+   "text": "Indian independence activist Shaukat Ali receiving a Palestinian Arab flag (with the Dome of the Rock printed in the centre) from Amin al-Husseini and other Palestinian Arab nationalists in Jerusalem, Mandatory Palestine, 1931",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Palestine",
+   "section": "Origin",
+   "file": "Jaffa Alhambra Cinema03562ucroped.jpg",
+   "text": "Palestinian Arab flag flying atop the Alhambra Cinema in Jaffa, Mandatory Palestine, 1937",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Palestine",
+   "section": "Origin",
+   "file": "Palestinian rebels 1938.jpg",
+   "text": "Rebels posing with their rifles and a Palestinian Arab flag emblazoned with a Christian cross and an Islamic crescent during the Arab revolt in Palestine, 1937",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Palestine",
+   "section": "Suppression by Israel",
+   "file": "Intifada in Gaza Strip, 1987 V Dan Hadani Archive.jpg",
+   "text": "Confrontation between Israeli troops and Palestinians in Gaza City during the First Intifada, 1987",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Palestine",
+   "section": "Suppression by Israel",
+   "file": "Soldier grab flag from protester in huwara 17 june 22 1.jpg",
+   "text": "Israeli soldiers confiscating Palestinian flags in Huwara, 2022",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "intro",
+   "file": "A map of the Arab World with flags.svg",
+   "text": "300x300px|Flag map of the Arab World.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Lists of national flags > United Nations member states and observers",
+   "file": "Flag of Algeria.svg",
+   "text": "| || 1962–present ||Flag of Algeria || Two vertical bands of green and white and the red crescent moon encircling the red five-pointed star in the within the dividing line.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Lists of national flags > United Nations member states and observers",
+   "file": "Flag of Bahrain.svg",
+   "text": "| || 2002–present ||Flag of Bahrain || A red field with the white serrated band with five points on the hoist-side.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Lists of national flags > United Nations member states and observers",
+   "file": "Flag of the Comoros.svg",
+   "text": "| || 2002–present ||Flag of Comoros || Four horizontal bands of yellow, white, red and blue and the green isosceles triangle is based on the hoist-side bearing the white vertical crescent moon with the convex side is facing the hoist and in the and four small white five-pointed stars are placed vertically in the line in between the points of the crescent.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Lists of national flags > United Nations member states and observers",
+   "file": "Flag of Egypt.svg",
+   "text": "| || 1984–present ||Flag of Egypt || Three horizontal bands of red, white and black and the National Coat of Arms in gold in the of the white band.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Lists of national flags > United Nations member states and observers",
+   "file": "Flag of Iraq.svg",
+   "text": "| || 2008–present ||Flag of Iraq || Three horizontal bands of red, white and black and the Takbir is written in the Kufic Script in green in the of the white band. The written of the Takbir is: \"ALLAHU AKBAR\" (In Arabic for, \"ALLAH IS THE GREATEST\").",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Lists of national flags > United Nations member states and observers",
+   "file": "Flag of Jordan.svg",
+   "text": "| || 1928–present ||Flag of Jordan || Three horizontal bands of black, white and green and the red isosceles triangle is based on the hoist-side bearing the small white seven-pointed star in the",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Lists of national flags > United Nations member states and observers",
+   "file": "Flag of Kuwait.svg",
+   "text": "| || 1961–present ||Flag of Kuwait || Three horizontal bands of green, white and red and the black trapezoid is based on the hoist-side.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Lists of national flags > United Nations member states and observers",
+   "file": "Flag of Lebanon.svg",
+   "text": "| || 1943–present ||Flag of Lebanon || Three horizontal bands of red, white (double-width) and red and the green Cedar Tree in the of the white band.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Lists of national flags > United Nations member states and observers",
+   "file": "Flag of Libya.svg",
+   "text": "| || 1951–1969, 2011–present ||Flag of Libya || Three horizontal stripes of red, black (double-width) and green and the white crescent and the five-pointed star in the of the black stripe.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Lists of national flags > United Nations member states and observers",
+   "file": "Flag of Mauritania.svg",
+   "text": "| || 2017–present ||Flag of Mauritania || A green field with the golden five-pointed star and the golden horizontal crescent moon, the closed side is down, in the in between two red horizontal bands on the top and the bottom edges of the flag.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Lists of national flags > United Nations member states and observers",
+   "file": "Flag of Morocco.svg",
+   "text": "| || 1915–present ||Flag of Morocco || A red field with a green five-pointed linear star in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Lists of national flags > United Nations member states and observers",
+   "file": "Flag of Oman.svg",
+   "text": "| || 1970–present ||Flag of Oman || Three horizontal bands of white, red and green and the red vertical band is on the hoist-side bearing the National emblem of Oman in white in the and near the top of the red band.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Lists of national flags > United Nations member states and observers",
+   "file": "Flag of Palestine.svg",
+   "text": "| || 1964–present ||Flag of Palestine || A horizontal tricolour of black, white, and green; with a red triangle based at the hoist.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Lists of national flags > United Nations member states and observers",
+   "file": "Flag of Qatar.svg",
+   "text": "| || 1971–present ||Flag of Qatar || A maroon field with the white serrated band with nine points on the hoist side.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Lists of national flags > United Nations member states and observers",
+   "file": "Flag of Saudi Arabia.svg",
+   "text": "| || 1973–present | Flag of Saudi Arabia || A green field with the Shahada in the Thuluth Script in white and white horizontal saber, with the tip pointing to the hoist-side, in the . The flag is manufactured with differing obverse and the reverse sides, so that the Shahada reads and the saber points correctly from to on both sides. The Shahada is written as \"lā ʾilāha ʾillā-llāh, muhammadun rasūlu-llāh\", Arabic for \"There is no god but Allah; Muhammad is the Messenger of God.\"",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Lists of national flags > United Nations member states and observers",
+   "file": "Flag of Sudan.svg",
+   "text": "| || 1970–present ||Flag of Sudan || Three horizontal bands of red, white and black and the green isosceles triangle is based on the hoist-side.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Lists of national flags > United Nations member states and observers",
+   "file": "Flag of Syria (2025-).svg",
+   "text": "| 100x100px|| 2025–present ||Flag of Syria || Three horizontal bands of green, white and black and three red five-pointed stars that arranged in the horizontal line in the of the white band.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Lists of national flags > United Nations member states and observers",
+   "file": "Flag of Tunisia.svg",
+   "text": "| ||1827–present ||Flag of Tunisia || A red field with the large white disk in the bearing the red crescent moon nearly encircling the red five-pointed star.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Lists of national flags > United Nations member states and observers",
+   "file": "Flag of the United Arab Emirates.svg",
+   "text": "| || 1971–present ||Flag of the United Arab Emirates || Three horizontal bands of green, white and black and the red vertical band is on the hoist-side.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Lists of national flags > United Nations member states and observers",
+   "file": "Flag of Yemen.svg",
+   "text": "| || 1990–present ||Flag of Yemen || Three horizontal bands of red, white and black. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Lists of national flags > Partially recognised States",
+   "file": "Flag of Western Sahara.svg",
+   "text": "| || 1976–present ||Flag of the Sahrawi Arab Democratic Republic || A horizontal tricolour of black, white, and green; with a red triangle based at the hoist and a Red crescent and star on the white band. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Old Arab national flags",
+   "file": "Flag of Hejaz (1917).svg",
+   "text": "| || 1917–1920 ||Flag of the Arab Revolt ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Old Arab national flags",
+   "file": "Flag of the Arab Federation.svg",
+   "text": "| || 1958 ||Flag of the Arab Federation ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Old Arab national flags",
+   "file": "Flag of United Arab Republic.svg",
+   "text": "| || 1958–1971,1980–2024 || Flag of the United Arab Republic, the Flag of the Arab Republic of Egypt, and the Flag of the Syrian Arab Republic ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Old Arab national flags",
+   "file": "Flag of Egypt (1972-1984).svg",
+   "text": "| || 1972–1984 ||Flag of the Arab Republic of Egypt ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Old Arab national flags",
+   "file": "Flag of Bahrain 1972.svg",
+   "text": "| || 1972–2002 ||Flag of the State of Bahrain ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Old Arab national flags",
+   "file": "Flag of Iraq (1924–1959).svg",
+   "text": "| || 1924–1958 ||Flag of the Hashemite Kingdom of Iraq ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Old Arab national flags",
+   "file": "Flag of Iraq (1963–1991).svg",
+   "text": "| || 1963–2008 || rowspan=\"2\" |Flag of the Iraqi Republic ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Old Arab national flags",
+   "file": "Flag of Iraq (1991–2004).svg",
+   "text": "| || 1991–2004 || Variant of the 1963 flag featuring a takbir written in a handwriting of Saddam Hussein",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Old Arab national flags",
+   "file": "Flag of Iraq (2004–2008).svg",
+   "text": "| || 2004–2008 ||Flag of Iraq || Variant of the 1963 flag featuring a takbir written in Kufic script",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Old Arab national flags",
+   "file": "Flag of Libya (1977–2011).svg",
+   "text": "| || 1977–2011 ||Flag of the Great Socialist People's Libyan Arab Jamahiriya ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Old Arab national flags",
+   "file": "Saudi Arabia Flag Variant (1932).svg",
+   "text": "| || 1932–1934 || rowspan=\"3\" |Flag of the Kingdom of Saudi Arabia ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Old Arab national flags",
+   "file": "Flag of Saudi Arabia (1934-1938).svg",
+   "text": "| || 1934–1938 ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Old Arab national flags",
+   "file": "Flag of Saudi Arabia (1938-1973).svg",
+   "text": "| || 1938–1973 ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Old Arab national flags",
+   "file": "Flag of Palestine (1948–1964).svg",
+   "text": "| || 1948 to 1959 ||Flag of the All-Palestine Protectorate || The All-Palestine Government (Arabic: حكومة عموم فلسطين Ḥukūmat ‘Umūm Filasṭīn) was established on 22 September 1948, during the 1948 Arab–Israeli War, to govern the Egyptian-controlled territory in Gaza, which Egypt had on the same day declared as the All-Palestine Protectorate, Three horizontal bands of green, white and black and the red equilateral triangle is based on the hoist side.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Old Arab national flags",
+   "file": "Flag of Sudan (1956-1970).svg",
+   "text": "| || 1956–1970 ||Flag of the Republic of Sudan ||A horizontal tricolour of blue (representing the Nile), yellow (representing the Sahara), and green (representing farmlands).",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Old Arab national flags",
+   "file": "Flag of Kingdom of Syria (1920-03-08 to 1920-07-24).svg",
+   "text": "| || 1920 ||Flag of the Arab Kingdom of Syria ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Old Arab national flags",
+   "file": "Syria-flag 1932-58 1961-63.svg",
+   "text": "| || 1932–1958, 1961–1963 ||Flag of the Mandatory Syrian Republic and Syrian Republic (1946–1963)||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Old Arab national flags",
+   "file": "Flag of Syria (1963–1972).svg",
+   "text": "| || 1963–1972 ||Flag of the Syrian Arab Republic ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Old Arab national flags",
+   "file": "Flag of Syria (1972–1980).svg",
+   "text": "| || 1972–1980 ||Flag of the Syrian Arab Republic ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Old Arab national flags",
+   "file": "Flag of the Trucial States (1968–1971).svg",
+   "text": "| || 1968–1971 ||Flag of the Trucial States ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Old Arab national flags",
+   "file": "Flag of Yemen 1918.svg",
+   "text": "| || 1918–1923 || rowspan=\"3\" |Flag of the Mutawakkilite Kingdom of Yemen ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Old Arab national flags",
+   "file": "Flag of the Mutawakkilite Kingdom of Yemen (1918-1927).svg",
+   "text": "| || 1923–1927 ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Old Arab national flags",
+   "file": "Flag of the Mutawakkilite Kingdom of Yemen.svg",
+   "text": "| || 1927–1962 ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Old Arab national flags",
+   "file": "Flag of the Yemen Arab Republic.svg",
+   "text": "| || 1962–1990 ||Flag of the Yemen Arab Republic ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Old Arab national flags",
+   "file": "Kathiri flag.svg",
+   "text": "| || 1379–1967 ||Flag of the Kathiri Sultanate of Hadhramaut ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Old Arab national flags",
+   "file": "Flag of South Yemen.svg",
+   "text": "| || 1967–1990 ||Flag of the People's Democratic Republic of Yemen ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Old Arab national flags",
+   "file": "Flag of the Sultanate of Zanzibar.svg",
+   "text": "| || 1856–1896 || rowspan=\"2\" |Flag of the Sultanate of Zanzibar ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Old Arab national flags",
+   "file": "Flag of the Sultanate of Zanzibar (1963).svg",
+   "text": "| || 1963–1964 || |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Arab organizations",
+   "file": "Flag of the Arab League.svg",
+   "text": "| || ||Flag of the Arab League ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Arab organizations",
+   "file": "GCC Flag.svg",
+   "text": "| || ||Flag of the Cooperation Council for the Arab States of the Gulf ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Arab organizations",
+   "file": "Flag of the Ba'ath Party.svg",
+   "text": "| || 1947–2025|| Flag of the Ba'ath Party || Three equal horizontal stripes (black, white, and green from top to bottom) overlaid by a red triangle issuing from the hoist. These are the Pan-Arab colors. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "Other Arab territories",
+   "file": "Flag of Palestine - short triangle.svg",
+   "text": "| || 1964–present ||Flag of the Palestine Liberation Organization and the Palestinian National Authority ||Similar to the flag of the State of Palestine |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Arab flags",
+   "section": "References",
+   "file": "PD-icon.svg",
+   "text": "link=|alt=",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "National flag",
+   "file": "Flag of Palestine.svg",
+   "text": "! scope=\"row\" | | 1964–present | Flag of Palestine | Tricolour of three equal horizontal stripes—black, white, and green from top to bottom—overlaid by a red triangle issuing from the hoist. It recalls the pan-Arab colours, which were first combined in the current style during the 1916 Arab Revolt, and represents Palestine and the Palestinian people.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "National flag",
+   "file": "Flag of Palestine (state).svg",
+   "text": "! scope=\"row\" | | 1997–present | Presidential standard | Standard of the President of Palestine. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Political and military flags",
+   "file": "Flag of al-Qassam Brigades.svg",
+   "text": "! scope=\"row\" | | ?–present | Flag of the Islamic Resistance Movement | A green field bearing the Shahada in white Arabic calligraphy.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Political and military flags",
+   "file": "Fatah Flag Vector Graphic.svg",
+   "text": "! scope=\"row\" | | ?–present | Flag of the Palestinian National Liberation Movement |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Political and military flags",
+   "file": "Flag of the Democratic Front for the Liberation of Palestine.svg",
+   "text": "! scope=\"row\" | | ?–present | Flag of the Democratic Front for the Liberation of Palestine |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Political and military flags",
+   "file": "Flag of the Ba'ath Party.svg",
+   "text": "! scope=\"row\" | | ?–present | Flag of the Vanguard for the Popular Liberation War – Lightning Forces |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Political and military flags",
+   "file": "PFLP-GC Flag.svg",
+   "text": "! scope=\"row\" | | ?–present | Flag of the Popular Front for the Liberation of Palestine – General Command |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Political and military flags",
+   "file": "Palestinian Communist Party Flag.svg",
+   "text": "! scope=\"row\" | | ?–present | Flag of the Palestinian Communist Party | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Historical flags",
+   "file": "Flag of the United Kingdom (1-2).svg",
+   "text": "! scope=\"row\" | | 1918–1948 | Flag of the United Kingdom | A superimposition of the flags of England and Scotland with the Saint Patrick's Saltire (representing Ireland).",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Historical flags",
+   "file": "Flag of the of the High Commissioner of Palestine 1948.svg",
+   "text": "! scope=\"row\" | | 1920–1948 | Flag of the High Commissioner of Palestine | The Union Jack defaced with the phrase \"Palestine High Commissioner\".",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Historical flags",
+   "file": "Palestine-Mandate-Ensign-1927-1948.svg",
+   "text": "! scope=\"row\" | | 1927–1948 | Palestine Maritime ensign | A Red Ensign with the word \"Palestine\" on a white disc, flown by ships registered in the British Mandate territory.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Historical flags",
+   "file": "Ensign of the Palestine Mandate Customs and Postal Services (1929–1948).svg",
+   "text": "! scope=\"row\" | | 1929–1948 | Customs and Postal Banner of Palestine | A Blue Ensign with the word \"Palestine\" on a white disc.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Historical flags",
+   "file": "Palestinian flag 1938.svg",
+   "text": "! scope=\"row\" | | 1936–1939 | Flag used during the 1936–1939 Arab revolt |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Historical flags",
+   "file": "Red script Palestine flag.svg",
+   "text": "! scope=\"row\" | | 1945–1948 | Flag of Palestine used by the Arab League | A white field with the name of the country in red Arabic text in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Historical flags",
+   "file": "Flag of Hejaz (1917).svg",
+   "text": "! scope=\"row\" | | 1948–1959 | All-Palestine | Flag of the Arab Revolt.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Historical flags",
+   "file": "Flag of Egypt (1922–1958).svg",
+   "text": "! scope=\"row\" | | 1948–1958 | Flag of the Kingdom of Egypt and the co-official flag of the Arab Republic of Egypt | A green field with a white crescent containing three white five-pointed stars.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Historical flags",
+   "file": "Flag of Jordan.svg",
+   "text": "! scope=\"row\" | | 1948–1967 | Jordanian administered West Bank, Palestine | Flag of Jordan, used during its administration of the Palestinian territory of the West Bank.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Historical flags",
+   "file": "Flag of the Egyptian Revolution (1952).svg",
+   "text": "! scope=\"row\" | | 1952–1958 | Flag of the 1952 Egyptian Revolution and the Republic of Egypt | Following the Revolution of 1952, the Free Officers retained the flag of the Kingdom, but also introduced the former Republic of Egypt flag colors of red, white, and black horizontal bands, with the emblem of the Revolution, the Eagle of Saladin, in the band, with a green escutcheon with a white crescent and three five pointed stars.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Historical flags",
+   "file": "Flag of the United Arab Republic (1958–1971), Flag of Syria (1980–2024).svg",
+   "text": "! scope=\"row\" | | 1959–1967 | Egyptian administered Gaza, Palestine | Flag of the United Arab Republic, used during its administration of the Palestinian territory of Gaza.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Historical flags",
+   "file": "Flag of Palestine - short triangle.svg",
+   "text": "! scope=\"row\" | | 1964–1993 | Palestine Liberation Organization | Flag of Palestine with a shorter triangle.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Historical flags",
+   "file": "Flag of Palestine.svg",
+   "text": "! scope=\"row\" | | 1994–present | Flag of the Palestinian National Authority | Based on the Palestine Liberation Organization flag. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Proposed flags",
+   "file": "Proposed flag of Palestine (Husein Mikdadi).svg",
+   "text": "! scope=\"row\" | | 9 November 1929 | Husein Mikdadi | An upside-down Arab Revolt flag with a white symbol in the triangle consisting of a Latin cross within a crescent. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Proposed flags",
+   "file": "\"An Arab From Haifa\" proposed Palestine flag (alt 2).svg",
+   "text": "! scope=\"row\" | | rowspan=\"12\" | 1929 | \"Jawad Ismail\" | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Proposed flags",
+   "file": "\"An Arab From Haifa\" proposed Palestine flag (alt 1).svg",
+   "text": "! scope=\"row\" | | rowspan=\"9\" | \"An Arab From Haifa\" | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Proposed flags",
+   "file": "\"An Arab From Haifa\" proposed Palestine flag (alternative 3).svg",
+   "text": "! scope=\"row\" | | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Proposed flags",
+   "file": "Proposed flag of Palestine (\"An Arab From Haifa\").svg",
+   "text": "! scope=\"row\" | | Three horizontal stripes of black, white, and green; in a red triangle at the hoist, a white symbol consisting of a Latin cross within a crescent. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Proposed flags",
+   "file": "\"An Arab From Haifa\" proposed Palestine flag (alt 5).svg",
+   "text": "! scope=\"row\" | | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Proposed flags",
+   "file": "\"An Arab From Haifa\" proposed Palestine flag (alt 6).svg",
+   "text": "! scope=\"row\" | | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Proposed flags",
+   "file": "\"An Arab From Haifa\" proposed Palestine flag (alt 7).svg",
+   "text": "! scope=\"row\" | | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Proposed flags",
+   "file": "\"An Arab From Haifa\" proposed Palestine flag (alt 8).svg",
+   "text": "! scope=\"row\" | | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Proposed flags",
+   "file": "\"An Arab From Haifa\" proposed Palestine flag (alt 9).svg",
+   "text": "! scope=\"row\" | | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Proposed flags",
+   "file": "\"An Arab From Haifa\" proposed Palestine flag (alt 10).svg",
+   "text": "! scope=\"row\" | | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Proposed flags",
+   "file": "Proposed flag of Palestine (Elias Hana Rantissi).svg",
+   "text": "! scope=\"row\" | | Elias Hana Rantissi | Three vertical stripes – green, white, and black, with a red disc in the white band. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Proposed flags",
+   "file": "Proposed flag of Palestine (Hamdi Can'an).svg",
+   "text": "! scope=\"row\" | | Hamdi Can'an | Three horizontal stripes – black, green, and white, with a red triangle at the hoist containing three white stars. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Proposed flags",
+   "file": "Proposed flag of Palestine (Assma Tubi).svg",
+   "text": "! scope=\"row\" | | 25 October 1929 | Assma Tubi | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Proposed flags",
+   "file": "Proposed flag of Palestine (\"Jalili\").svg",
+   "text": "! scope=\"row\" | | 9 November 1929 | \"Jalili\" | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Proposed flags",
+   "file": "\"As’ad Shufani\" proposed Palestine flag (alt 1).svg",
+   "text": "! scope=\"row\" | | rowspan=\"14\" | 1929 | rowspan=\"5\" | As’ad Shufani | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Proposed flags",
+   "file": "As’ad Shufani proposed Palestine flag (alt 1) Corrected.svg",
+   "text": "! scope=\"row\" | | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Proposed flags",
+   "file": "\"As’ad Shufani\" proposed Palestine flag (alt 2).svg",
+   "text": "! scope=\"row\" | | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Proposed flags",
+   "file": "\"As’ad Shufani\" proposed Palestine flag (alt 3).svg",
+   "text": "! scope=\"row\" | | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Proposed flags",
+   "file": "\"As’ad Shufani\" proposed Palestine flag (alt 4).svg",
+   "text": "! scope=\"row\" | | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Proposed flags",
+   "file": "Filastin Newspaper Palestine Flag Proposal (alt 1) 1929.svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | Filastin Newspaper | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Proposed flags",
+   "file": "Filastin Newspaper Palestine Flag Proposal (alt 2) 1929.svg",
+   "text": "! scope=\"row\" | | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Proposed flags",
+   "file": "Theodore Saruf Palestine Flag Proposal.svg",
+   "text": "! scope=\"row\" | | Theodore Saruf | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Proposed flags",
+   "file": "Munir Dakak Palestine Flag Proposal (alt 1) 1929.svg",
+   "text": "! scope=\"row\" | | rowspan=\"3\" | Munir Dakak | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Proposed flags",
+   "file": "Munir Dakak Palestine Flag Proposal (alt 2) 1929.svg",
+   "text": "! scope=\"row\" | | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Proposed flags",
+   "file": "Munir Dakak Palestine Flag Proposal (alt 3) 1929.svg",
+   "text": "! scope=\"row\" | | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Proposed flags",
+   "file": "Palestine Flag Proposal 2.svg",
+   "text": "! scope=\"row\" | | rowspan=\"3\" | Anonymous | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Proposed flags",
+   "file": "Palestine Flag Proposal 1.svg",
+   "text": "! scope=\"row\" | | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Palestinian flags",
+   "section": "Proposed flags",
+   "file": "Palestine Flag Proposal 3.svg",
+   "text": "! scope=\"row\" | | | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Palestine",
+   "section": "Histoire",
+   "file": "Free Palestine Hyde Park MRD 02.jpg",
+   "text": "210x210px|Drapeau palestinien lors d'une manifestation",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Palestine",
+   "section": "Drapeau historique",
+   "file": "Jaffa Alhambra Cinema03562ucroped.jpg",
+   "text": "Drapeau arabe palestinien flottant au sommet du cinéma Alhambra à Jaffa, Palestine mandataire (1937).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Palestine",
+   "section": "Drapeau historique",
+   "file": "Palestinian rebels 1938.jpg",
+   "text": "Rebelles posant avec leurs fusils et un drapeau arabe palestinien orné d'une croix chrétienne et d'un croissant islamique pendant la révolte arabe en Palestine (1937).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Palestine",
+   "section": "Drapeau historique",
+   "file": "Aqaba.jpg",
+   "text": "Hampe de drapeau d'Aqaba, en Jordanie, portant le drapeau de la révolte arabe de 1936-1939, presque identique à celui de la Palestine (2006).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Palestine",
+   "section": "Drapeau historique",
+   "file": "Palestine-Mandate-Ensign-1927-1948.svg",
+   "text": "Pavillon des navires immatriculés sous le mandat palestinien, utilisé de 1927 à 1948.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Palestine",
+   "section": "Drapeau historique",
+   "file": "Palestina Libre.jpg",
+   "text": "Peinture murale à Barcelone (Espagne) montrant une pastèque symbolisant la Palestine et les mots « Palestina Lliure - Libre » (2024)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Palestine",
+   "section": "Drapeau historique",
+   "file": "Palestinian flag handed to Shaukat Ali by Amin Al-Husseini and other figures in Jerusalem, 1931.jpg",
+   "text": "Le militant indépendantiste indien recevant un drapeau arabe palestinien (avec le dôme du Rocher imprimé au centre) des mains de Mohammed Amin al-Husseini et d'autres nationalistes arabes palestiniens à Jérusalem, en Palestine mandataire, en 1931.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم فلسطين",
+   "section": "intro",
+   "file": "Jaffa Alhambra Cinema03562ucroped.jpg",
+   "text": "تصغير|يسار|285بك |علم فلسطين مرفوعا على مبنى سينما الحمرا في مدينة يافا سنة 1937م",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم فلسطين",
+   "section": "علم الانتداب البريطاني",
+   "file": "Ensign of the Palestine Mandate (1927–1948).svg",
+   "text": "تصغير|285بك|علم فلسطين ايام الانتداب البريطاني",
+   "kind": "thumb"
+  }
+ ]
+}

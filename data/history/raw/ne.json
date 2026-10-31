@@ -1,0 +1,299 @@
+{
+ "iso": "ne",
+ "flag_item": "Q103046",
+ "pages": [
+  "en:Flag of Niger",
+  "en:List of Nigerien flags",
+  "fr:Drapeau du Niger"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Niger",
+   "section": "intro",
+   "file": "Niger, flags.jpg",
+   "text": "Flags of Niger",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Niger",
+   "section": "Ratio",
+   "file": "Flag of Niger (3-2).svg",
+   "text": "Ratio 2:3",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Niger",
+   "section": "Ratio",
+   "file": "Flag of Niger (5-3).svg",
+   "text": "Ratio 3:5",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Niger",
+   "section": "Ratio",
+   "file": "Flag of Niger (2-1).svg",
+   "text": "Ratio 1:2",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Niger",
+   "section": "Historical national flags",
+   "file": "Flag of France.svg",
+   "text": "|rowspan=3 | |1902–1904 |rowspan=3 |2:3 |As part of Senegambia and Niger |rowspan=3 |The French tricolor was used as the official flag of Niger for most of its history as a French colony.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Niger",
+   "section": "Historical national flags",
+   "file": "Flag of Niger.svg",
+   "text": "| rowspan=\"2\" | | rowspan=\"2\" |1959–present | rowspan=\"2\" |6:7 | rowspan=\"2\" |The current flag, consisting of a horizontal triband of orange, white and green; charged with an orange circle in the , was adopted as the official flag of the Colony of Niger on 23 November 1959. It has remained the national flag of the Republic of Niger since its independence in 1960.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Niger",
+   "section": "Other flags > Military flags",
+   "file": "Flag of niger armed forces obv.jpg",
+   "text": "Flag of the Niger Armed Forces, obverse side",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Niger",
+   "section": "Other flags > Military flags",
+   "file": "Flag of niger armed forces rev.jpg",
+   "text": "Flag of the Niger Armed Forces, reverse side",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Niger",
+   "section": "Other flags > Military flags",
+   "file": "Flag of the National Gendarmerie (Niger).png",
+   "text": "Flag of the Gendarmerie Nationale",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Niger",
+   "section": "Other flags > Military flags",
+   "file": "Flag of the National Police (Niger).png",
+   "text": "Flag of the National Police",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Niger",
+   "section": "Other flags > Military flags",
+   "file": "Roundel of Niger.svg",
+   "text": "Roundel of the Niger Air Force",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Niger",
+   "section": "Other flags > Military flags",
+   "file": "Roundel of Niger (1961–1980).svg",
+   "text": "Historical roundel of the Niger Air Force (1961–1980)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Niger",
+   "section": "Other flags > Ethnic group flags",
+   "file": "Flag of the Hausa people.svg",
+   "text": "Flag of the Hausa people (53.1% of the total population of Niger)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Niger",
+   "section": "Other flags > Ethnic group flags",
+   "file": "Flag of the Kanuri people.svg",
+   "text": "Flag of the Kanuri people (5.9% of the total population of Niger)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Niger",
+   "section": "Other flags > Ethnic group flags",
+   "file": "Flag of the Toubou people.svg",
+   "text": "Flag of the Toubou people (0.4% of the total population of Niger)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Niger",
+   "section": "Other flags > Ethnic group flags",
+   "file": "Le drapeau Toubou-Gorane.png",
+   "text": "Flag of Daza-speaking Toubou people",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerien flags",
+   "section": "National flag",
+   "file": "Flag of Niger.svg",
+   "text": "! scope=\"row\" | | 1959–present | Flag of Niger | A horizontal triband of orange, white, and green, charged with an orange circle in the centre. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerien flags",
+   "section": "Ethnic flags",
+   "file": "Flag of the Hausa people.svg",
+   "text": "! scope=\"row\" | | ?–present | Flag of the Hausa people | A white field with a Dagin Arewa in the . Used unofficially to represent the Hausa people.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerien flags",
+   "section": "Ethnic flags",
+   "file": "Flag of the Kanuri people.svg",
+   "text": "! scope=\"row\" | | ?–present | Flag of the Kanuri people | A horizontal triband of blue, yellow, and green, with a yellow star in the green band.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerien flags",
+   "section": "Ethnic flags",
+   "file": "Flag of the Toubou people.svg",
+   "text": "! scope=\"row\" | | ?–present | Flag of the Toubou people | A horizontal bicolor of yellow and blue, with a black star in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerien flags",
+   "section": "Ethnic flags",
+   "file": "Flag of the Daza People.svg",
+   "text": "! scope=\"row\" | | ?–present | Flag of the Daza people | A horizontal bicolour of yellow and black, divided with two lines of red and blue and a black star in the of the yellow stripe. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerien flags",
+   "section": "Political flags",
+   "file": "Flag of Patriotic Movement for the Republic.svg",
+   "text": "! scope=\"row\" | | 2015–present | Flag of the Patriotic Movement for the Republic | A vertical bicolor of orange and white with an orange sun in the white band. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerien flags",
+   "section": "Military flags",
+   "file": "Flag of niger armed forces obv.jpg",
+   "text": "| | 1961–present | Flag of the Niger Armed Forces (obverse) | A horizontal triband of orange, white, and green; charged with an orange circle in the centre, four suns with wheat in the corners, a golden fringe, the name of the country, and the motto \"Fraternite, Travail, Progres\".",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerien flags",
+   "section": "Military flags",
+   "file": "Flag of niger armed forces rev.jpg",
+   "text": "| | 1961–present | Flag of the Niger Armed Forces (reverse) | A horizontal triband of orange, white, and green; charged with an orange circle in the centre, four suns with wheat in the corners, a golden fringe (shown here on the wrong side), and the name of the armed forces.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerien flags",
+   "section": "Military flags",
+   "file": "Flag of the National Gendarmerie (Niger).png",
+   "text": "| | 1962–present | Flag of the Gendarmerie Nationale | A vertical bicolor of green and orange with a white fringe, a white sun with wheat, and the name of the National Gendarmerie.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerien flags",
+   "section": "Military flags",
+   "file": "Flag of the National Police (Niger).png",
+   "text": "| | 1999–present | Flag of the National Police | A diagonal triband of orange, white, and green with an orange sun with yellow rays in the , a golden fringe, and the name of the National Police. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerien flags",
+   "section": "Historical flags > Kanem–Bornu Empire",
+   "file": "Kanem flag from dulcerta 1339-pt.svg",
+   "text": "! scope=\"row\" | | 700–1380 | Flag of the Kanem Empire | A white field with a green palm tree in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerien flags",
+   "section": "Historical flags > Kanem–Bornu Empire",
+   "file": "Flag of the Bornu Empire.svg",
+   "text": "! scope=\"row\" | | 1380–1890 | Flag of the Bornu Empire | A brown field with a white crescent moon in the . |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerien flags",
+   "section": "Historical flags > French rule",
+   "file": "Flag of France.svg",
+   "text": "! scope=\"row\" | | 1890–19401944–1959 | Flag of France | A vertical tricolour of blue, white, and red (proportions 3:2).",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerien flags",
+   "section": "Historical flags > French rule",
+   "file": "Flag of Philippe Pétain, Chief of State of Vichy France.svg",
+   "text": "! scope=\"row\" | | 1940–1942 | Flag of Vichy France | A vertical tricolour of blue, white, and red with an axe and seven golden stars.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nigerien flags",
+   "section": "Historical flags > French rule",
+   "file": "Flag of Free France (1940-1944).svg",
+   "text": "! scope=\"row\" | | 1943–1944 | Flag of Free France | A vertical tricolour of blue, white, and red with a red Cross of Lorraine. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Niger",
+   "section": "Dimensions",
+   "file": "Niger, flags.jpg",
+   "text": "Drapeaux du Niger",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Niger",
+   "section": "Dimensions > Versions",
+   "file": "Flag of Niger.svg",
+   "text": "Ratio 6:7",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Niger",
+   "section": "Dimensions > Versions",
+   "file": "Flag of Niger (3-2).svg",
+   "text": "Ratio 2:3",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Niger",
+   "section": "Dimensions > Versions",
+   "file": "Flag of Niger (5-3).svg",
+   "text": "Ratio 3:5",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Niger",
+   "section": "Dimensions > Versions",
+   "file": "Flag of Niger (2-1).svg",
+   "text": "Ratio 1:2",
+   "kind": "gallery"
+  }
+ ]
+}

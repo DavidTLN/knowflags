@@ -1,0 +1,34 @@
+{
+ "iso": "bw",
+ "flag_item": "Q160242",
+ "pages": [
+  "en:Flag of Botswana",
+  "fr:Drapeau du Botswana"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Botswana",
+   "section": "Design and symbolism > Construction",
+   "file": "Flag of Botswana (construction sheet).svg",
+   "text": "Construction sheet of the flag of Botswana",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Botswana",
+   "section": "intro",
+   "file": "Flag of the President of Botswana.svg",
+   "text": "Étendard présidentiel",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Botswana",
+   "section": "Construction",
+   "file": "Flag of Botswana (construction sheet).svg",
+   "text": "200x200px|Construction détaillée du drapeau du Botswana",
+   "kind": "thumb"
+  }
+ ]
+}

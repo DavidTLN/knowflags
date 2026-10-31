@@ -1,0 +1,35 @@
+{
+ "iso": "cw",
+ "flag_item": "Q756694",
+ "pages": [
+  "en:Flag of Curaçao",
+  "fr:Drapeau de Curaçao",
+  "nl:Vlag van Curaçao"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Curaçao",
+   "section": "Design > Colors",
+   "file": "Flag of Curaçao.svg",
+   "text": "! 40pxColors scheme ! style=\"background:#002b7f; width: ; color:white;\"| Blue ! style=\"background:#F9E814; width: ; color:white;\"| Yellow ! style=\"background:#ffffff; width: ; color:black;\"| White",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Curaçao",
+   "section": "Gallery",
+   "file": "Avantia Damberg Dia di Bandera postzegel.jpg",
+   "text": "",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Curaçao",
+   "section": "Gallery",
+   "file": "Flag of Curaçao (1982-1984).svg",
+   "text": "",
+   "kind": "gallery"
+  }
+ ]
+}

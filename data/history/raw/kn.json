@@ -1,0 +1,130 @@
+{
+ "iso": "kn",
+ "flag_item": "Q181120",
+ "pages": [
+  "en:Flag of Saint Kitts and Nevis",
+  "fr:Drapeau de Saint-Christophe-et-Niévès"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Saint Kitts and Nevis",
+   "section": "intro",
+   "file": "Flag of Saint Kitts and Nevis (1-2).svg",
+   "text": "Version with aspect ratio 1:2",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Saint Kitts and Nevis",
+   "section": "intro",
+   "file": "Secretary Pompeo Meets with Saint Kitts and Nevis Foreign Affairs Minister Brantley (49429597733).jpg",
+   "text": "Meeting between American and Kittsian diplomats; Saint Kitts and Nevis flag in background",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Saint Kitts and Nevis",
+   "section": "Historical flags",
+   "file": "Flag of Leeward Islands (1871–1952).svg",
+   "text": "| || 1871–1952 || Flag of the British Leeward Islands ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Saint Kitts and Nevis",
+   "section": "Historical flags",
+   "file": "Flag of Leeward Islands (1952–1958).svg",
+   "text": "| || 1952–1958 || Flag of the British Leeward Islands ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Saint Kitts and Nevis",
+   "section": "Historical flags",
+   "file": "Flag of the West Indies Federation (1958–1962).svg",
+   "text": "| || 1958–1962 || Flag of the West Indies Federation || A blue field with four white horizontal wavy bars (the top pair of bars being parallel and the lower pair also parallel) and an orange sun in the centre.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Saint Kitts and Nevis",
+   "section": "Historical flags",
+   "file": "Flag of St. Christopher-Nevis-Anguilla (1958-1967).svg",
+   "text": "| || 1958–1967 || Flag of Saint Christopher-Nevis-Anguilla ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Saint Kitts and Nevis",
+   "section": "Historical flags",
+   "file": "Flag of Saint Christopher-Nevis-Anguilla (1967).svg",
+   "text": "| || 1967 || Flag of Saint Christopher-Nevis-Anguilla || A vertical tricolour of green, yellow and blue.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Saint Kitts and Nevis",
+   "section": "Historical flags",
+   "file": "Flag of St Christopher Nevis Anguilla.svg",
+   "text": "| 100x100px|| 1967–1983 || Flag of Saint Christopher-Nevis-Anguilla || A vertical tricolour of green, yellow and blue charged with a palm tree at the centre. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Saint Kitts and Nevis",
+   "section": "Flag of Nevis",
+   "file": "Flag of Nevis.svg",
+   "text": "Flag of Nevis",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Saint-Christophe-et-Niévès",
+   "section": "Insigne naval et drapeaux régionaux",
+   "file": "Naval Ensign of Saint Kitts and Nevis.svg",
+   "text": "Insigne naval. Ratio: 1:2",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Saint-Christophe-et-Niévès",
+   "section": "Insigne naval et drapeaux régionaux",
+   "file": "Flag of Nevis.svg",
+   "text": "Drapeau de Niévès",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Saint-Christophe-et-Niévès",
+   "section": "Drapeaux historiques",
+   "file": "Flag of St. Christopher-Nevis-Anguilla (1958-1967).svg",
+   "text": "Drapeau de Saint-Christophe-Niévès-Anguilla de 1958 à 1967",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Saint-Christophe-et-Niévès",
+   "section": "Drapeaux historiques",
+   "file": "Flag of West Indies.svg",
+   "text": "Drapeau de la Fédération des Indes occidentales de 1958 à 1962",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Saint-Christophe-et-Niévès",
+   "section": "Drapeaux historiques",
+   "file": "Flag of Saint Christopher-Nevis-Anguilla (1967).svg",
+   "text": "Drapeau de Saint-Christophe-Niévès-Anguilla du au",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Saint-Christophe-et-Niévès",
+   "section": "Drapeaux historiques",
+   "file": "Flag of St Christopher Nevis Anguilla.svg",
+   "text": "Drapeau de Saint-Christophe-Niévès-Anguilla du au puis de Saint-Christophe-et-Niévès de 1967 à 1983",
+   "kind": "gallery"
+  }
+ ]
+}

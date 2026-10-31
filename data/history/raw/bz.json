@@ -1,0 +1,339 @@
+{
+ "iso": "bz",
+ "flag_item": "Q169192",
+ "pages": [
+  "en:Flag of Belize",
+  "en:List of Belizean flags",
+  "fr:Drapeau du Belize"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Belize",
+   "section": "intro",
+   "file": "Belize flag.jpg",
+   "text": "Belize flag being raised",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Belize",
+   "section": "Historical flags",
+   "file": "Flag of British Honduras (1870–1919).svg",
+   "text": "Flag of British Honduras (1870–1919)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Belize",
+   "section": "Historical flags",
+   "file": "Civil Ensign of British Honduras (1870–1919).svg",
+   "text": "Civil ensign of British Honduras (1870–1919)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Belize",
+   "section": "Historical flags",
+   "file": "Flag of British Honduras (1919–1981).svg",
+   "text": "Flag of British Honduras/Belize (1919–1981)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Belize",
+   "section": "Historical flags",
+   "file": "Civil Ensign of British Honduras (1919–1981).svg",
+   "text": "Civil ensign of British Honduras/Belize (1919–1981)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Belize",
+   "section": "Historical flags",
+   "file": "Flag of the Governor of British Honduras (1884–1981).svg",
+   "text": "Standard of the governor of British Honduras/Belize",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Belize",
+   "section": "Historical flags",
+   "file": "Flag of Belize (1950-1981).svg",
+   "text": "Unofficial civil flag of British Honduras/Belize (1950–1981).This flag was the basis for the current flag.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Belize",
+   "section": "Historical flags",
+   "file": "Flag of Belize (1981–2019).svg",
+   "text": "Flag flown from 1981 until 28 August 2019 before standardisations",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Belize",
+   "section": "Other flags",
+   "file": "Flag of the Governor-General of Belize.svg",
+   "text": "Flag of the Governor-General of Belize",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Belizean flags",
+   "section": "National flag",
+   "file": "Flag of Belize.svg",
+   "text": "! scope=\"row\" | | 2019–present | Flag of Belize | A royal blue field with two red narrow horizontal stripes along the top and bottom edges and a large white disk in the centre bearing the national coat of arms. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Belizean flags",
+   "section": "Government flag",
+   "file": "Flag of the Governor-General of Belize.svg",
+   "text": "! scope=\"row\" | | 1981–present | Flag of the governor-general of Belize | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Belizean flags",
+   "section": "Armed forces flag",
+   "file": "Flag of the Belize Defence Force.svg",
+   "text": "! scope=\"row\" | Link to file | | Flag of the Belize Defence Force | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Belizean flags",
+   "section": "Ethnic group flags",
+   "file": "600px-Maya flag.png",
+   "text": "! scope=\"row\" | | ?–present | Flag of Mayan people |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Belizean flags",
+   "section": "Ethnic group flags",
+   "file": "Flag of Garifuna.svg",
+   "text": "! scope=\"row\" | | ?–present | Flag of the Garifuna people | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Belizean flags",
+   "section": "City flags",
+   "file": "Flag of Belize City.svg",
+   "text": "! scope=\"row\" | | ?–present | Flag of Belize City |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Belizean flags",
+   "section": "City flags",
+   "file": "Flag of Belmopan, Belize.svg",
+   "text": "! scope=\"row\" | | ?–present | Flag of Belmopan |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Belizean flags",
+   "section": "City flags",
+   "file": "Flag of San Ignacio, Belize.svg",
+   "text": "! scope=\"row\" | | ?–present | Flag of San Ignacio |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Belizean flags",
+   "section": "City flags",
+   "file": "Flag of Sarteneja, Belize.svg",
+   "text": "! scope=\"row\" | | ?–present | Flag of Sarteneja | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Belizean flags",
+   "section": "Historical flags",
+   "file": "Flag of Cross of Burgundy.svg",
+   "text": "! scope=\"row\" | | 1524–1785 | Flag of Spain | A red saltire resembling two crossed, roughly-pruned (knotted) branches, on a white field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Belizean flags",
+   "section": "Historical flags",
+   "file": "Flag of England.svg",
+   "text": "! scope=\"row\" | | 1665–1700 | Flag of England | A white field with centred red cross.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Belizean flags",
+   "section": "Historical flags",
+   "file": "Flag of Spain (1785–1873, 1875–1931).svg",
+   "text": "! scope=\"row\" | | 1785–1821 | Flag of Spain | Three horizontal stripes: red, yellow (double width), and red, with the coat of arms offset from the centre towards the hoist.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Belizean flags",
+   "section": "Historical flags",
+   "file": "Bandera del Primer Imperio Mexicano.svg",
+   "text": "! scope=\"row\" | | 1821–1823 | Flag of the First Mexican Empire | Three vertical stripes: green, white, and red, with the Imperial coat of arms in the centre.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Belizean flags",
+   "section": "Historical flags",
+   "file": "Flag of the United Provinces of Central America.svg",
+   "text": "! scope=\"row\" | | 1823–1824 | rowspan=\"2\" | Flag of the United Provinces of Central America / Federal Republic of Central America | Three horizontal stripes: light blue (upper and lower) and white (central), with the coat of arms in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Belizean flags",
+   "section": "Historical flags",
+   "file": "Flag of the Federal Republic of Central America.svg",
+   "text": "! scope=\"row\" | | 1824–1836 | Similar to the previous flag.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Belizean flags",
+   "section": "Historical flags",
+   "file": "Flag of Guatemala (1825-1838).svg",
+   "text": "! scope=\"row\" | | 1825–1836 | Flag of Guatemala within Central America | Three horizontal stripes: blue (upper and lower) and white (central).",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Belizean flags",
+   "section": "Historical flags",
+   "file": "Flag of the Republic of Yucatan.svg",
+   "text": "! scope=\"row\" | | 1841–1848 | Flag of the Republic of Yucatán | Tricolor of red (upper), white, and red with a green vertical band on the hoist side containing five white stars.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Belizean flags",
+   "section": "Historical flags",
+   "file": "Flag of the United Kingdom (3-5).svg",
+   "text": "! scope=\"row\" | | 1836–1870 | Flag of the United Kingdom | A superimposition of the flags of England and Scotland with the Saint Patrick's Saltire (representing Ireland).",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Belizean flags",
+   "section": "Historical flags",
+   "file": "Flag of British Honduras (1870–1919).svg",
+   "text": "! scope=\"row\" | | 1870–1919 | Flag of the British Honduras (Blue Ensign) | A Blue Ensign with the arms of British Honduras.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Belizean flags",
+   "section": "Historical flags",
+   "file": "Civil Ensign of British Honduras (1870–1919).svg",
+   "text": "! scope=\"row\" | | 1870–1919 | Flag of the British Honduras (Red Ensign) | A Red Ensign with the arms of British Honduras.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Belizean flags",
+   "section": "Historical flags",
+   "file": "Flag of the Governor of British Honduras (1884–1981).svg",
+   "text": "! scope=\"row\" | | 1884–1981 | Former flag of the governor-general of British Honduras/Belize | A Union Jack defaced with the arms of British Honduras.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Belizean flags",
+   "section": "Historical flags",
+   "file": "Flag of British Honduras (1919–1981).svg",
+   "text": "! scope=\"row\" | | 1919–1981 | Flag of the British Honduras (Blue Ensign) | A Blue Ensign with the arms of British Honduras.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Belizean flags",
+   "section": "Historical flags",
+   "file": "Civil Ensign of British Honduras (1919–1981).svg",
+   "text": "! scope=\"row\" | | 1919–1981 | Flag of the British Honduras (Red Ensign) | A Red Ensign with the arms of British Honduras.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Belizean flags",
+   "section": "Historical flags",
+   "file": "Flag of Belize (1950-1981).svg",
+   "text": "! scope=\"row\" | | 1950–1981 | First flag of Belize | Blue field with a large white disk in the centre bearing the national coat of arms.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Belizean flags",
+   "section": "Historical flags",
+   "file": "Flag of Belize (1981–2019).svg",
+   "text": "! scope=\"row\" | | 1981–2019 | Second flag of Belize | Similar to the present flag. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Belizean flags",
+   "section": "Political flags",
+   "file": "Flag of the Belize People's United Party.svg",
+   "text": "! scope=\"row\" | | 1950–present | People's United Party |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Belizean flags",
+   "section": "Political flags",
+   "file": "Flag of the Belize United Democratic Party.svg",
+   "text": "! scope=\"row\" | | 1973–present | United Democratic Party |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Belizean flags",
+   "section": "Political flags",
+   "file": "Belize People's Front flag.png",
+   "text": "! scope=\"row\" | Link to file | 2013–present | Belize People's Front |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Belizean flags",
+   "section": "Political flags",
+   "file": "Belize Progressive Party flag.png",
+   "text": "! scope=\"row\" | Link to file | 2015–present | Belize Progressive Party | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Belize",
+   "section": "intro",
+   "file": "Flag of the Governor-General of Belize.svg",
+   "text": "Drapeau du gouvernement général du Belize depuis 1981",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Belize",
+   "section": "Anciens drapeaux",
+   "file": "Flag of British Honduras (1919–1981).svg",
+   "text": "Drapeau du Honduras britannique (1919-1981; un drapeau similaire fut utilisé de 1870 à 1919)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Belize",
+   "section": "Anciens drapeaux",
+   "file": "Flag of Belize (1950-1981).svg",
+   "text": "Drapeau non officiel du Belize de 1950 à 1981 (à la base du drapeau actuel)",
+   "kind": "gallery"
+  }
+ ]
+}

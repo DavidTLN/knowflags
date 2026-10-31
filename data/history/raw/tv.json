@@ -1,0 +1,50 @@
+{
+ "iso": "tv",
+ "flag_item": "Q105643",
+ "pages": [
+  "en:Flag of Tuvalu",
+  "fr:Drapeau des Tuvalu"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Tuvalu",
+   "section": "Design and symbolism",
+   "file": "Flag of Tuvalu-(star interpretation).svg",
+   "text": "alt=Diagram of the stars on the Tuvaluan flag|Each star in the flag of Tuvalu represents one of the country's nine islands.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau des Tuvalu",
+   "section": "Description",
+   "file": "Flag of Tuvalu-(star interpretation).svg",
+   "text": "redresse|Interprétation des étoiles.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau des Tuvalu",
+   "section": "Historique",
+   "file": "Flag of Tuvalu (1976–1978).svg",
+   "text": "Drapeau des Tuvalu du au .",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau des Tuvalu",
+   "section": "Historique",
+   "file": "Flag of Tuvalu (1995).svg",
+   "text": "Drapeau éphémère à 8 étoiles utilisé en 1995.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau des Tuvalu",
+   "section": "Historique",
+   "file": "Flag of Tuvalu (1995–1997).svg",
+   "text": "Drapeau utilisé entre 1995 et 1997.",
+   "kind": "thumb"
+  }
+ ]
+}

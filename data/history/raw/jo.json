@@ -1,0 +1,163 @@
+{
+ "iso": "jo",
+ "flag_item": "Q170064",
+ "pages": [
+  "en:Flag of Jordan",
+  "fr:Drapeau de la Jordanie",
+  "ar:علم الأردن"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Jordan",
+   "section": "intro",
+   "file": "Jordan flags.jpg",
+   "text": "Flags of Jordan in Amman",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Jordan",
+   "section": "Historical flags",
+   "file": "Flag of Hejaz (1917).svg",
+   "text": "Flag under Arab administration (1918–1921)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Jordan",
+   "section": "Historical flags",
+   "file": "Flag of Kingdom of Syria (1920-03-08 to 1920-07-24).svg",
+   "text": "Flag of the Arab Kingdom of Syria (1920)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Jordan",
+   "section": "Historical flags",
+   "file": "Flag of the Emirate of Transjordan.svg",
+   "text": "Flag of the Emirate of Transjordan (1922–1939)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Jordan",
+   "section": "Historical flags",
+   "file": "Flag of the Arab Federation.svg",
+   "text": "Flag of the Hashemite Arab Federation (1958)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Jordan",
+   "section": "Military flags",
+   "file": "Royal Jordanian Army Flag.svg",
+   "text": "Flag of the Royal Jordanian Army",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Jordan",
+   "section": "Military flags",
+   "file": "Naval Ensign of Jordan.svg",
+   "text": "Ensign of the Royal Jordanian Navy",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Jordan",
+   "section": "Military flags",
+   "file": "Air Force Ensign of Jordan.svg",
+   "text": "Ensign of the Royal Jordanian Air Force",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Jordanie",
+   "section": "intro",
+   "file": "Flag of the Emirate of Transjordan.svg",
+   "text": "Drapeau de l'Émirat de Transjordanie de 1928 à 1939.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم الأردن",
+   "section": "وصف العلم الأردني",
+   "file": "علم المملكة الاردنية الهاشمية.png",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم الأردن",
+   "section": "دلالات الألوان والأشكال في العلم الأردني",
+   "file": "United Arab Flag.jpg",
+   "text": "220بك|يسار|تصغير|علم الثورة العربية",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم الأردن",
+   "section": "تاريخ العلم الأردني",
+   "file": "Flag of Jordan.svg",
+   "text": "|width=\"10%\"| 150بك|مركز || المملكة الأردنية الهاشمية |width=\"15%\"| 1936 - حتى الآن |width=\"50%\"|",
+   "kind": "table"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم الأردن",
+   "section": "تاريخ العلم الأردني",
+   "file": "Flag of the Emirate of Transjordan.svg",
+   "text": "| 150بك|مركز || إمارة شرق الأردن | 1936 - 1928 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم الأردن",
+   "section": "تاريخ العلم الأردني",
+   "file": "Flag of Hejaz (1920).svg",
+   "text": "| 150بك|مركز || إمارة شرق الأردن | 1921 - 1928 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم الأردن",
+   "section": "تاريخ العلم الأردني",
+   "file": "Flag of Hejaz (1917).svg",
+   "text": "| 150بك|مركز || الثورة العربية الكبرى | 1916 - 1920 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم الأردن",
+   "section": "تاريخ العلم الأردني > 1916 - 1921",
+   "file": "Flag of Hejaz (1917).svg",
+   "text": "تصغير|150بك|1916 - 1921",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم الأردن",
+   "section": "تاريخ العلم الأردني > 1928",
+   "file": "Flag of the Emirate of Transjordan.svg",
+   "text": "تصغير|150بك|يسار| 1928 - 1939",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم الأردن",
+   "section": "تاريخ العلم الأردني > 1928",
+   "file": "علم المملكة الاردنية الهاشمية في وسط البلد.png",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم الأردن",
+   "section": "تاريخ العلم الأردني > 1958",
+   "file": "Flag of the Arab Federation.svg",
+   "text": "1958",
+   "kind": "thumb"
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "iso": "sz",
+ "flag_item": "Q102993",
+ "pages": [
+  "en:Flag of Eswatini",
+  "fr:Drapeau de l'Eswatini"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Eswatini",
+   "section": "intro",
+   "file": "Commonwealth Day 2014 (13059089315).jpg",
+   "text": "Commonwealth Day, 2014, London: Swazi flag on the extreme",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Eswatini",
+   "section": "Historical flags",
+   "file": "Flag of Swaziland (c. 1890-1894).svg",
+   "text": "Flag of Swaziland (c. 1890–1894) *some people say 1880s-1894",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Eswatini",
+   "section": "Historical flags",
+   "file": "Flag of Swaziland (1894–1902).svg",
+   "text": "Flag of Swaziland (1894–1902)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Eswatini",
+   "section": "Historical flags",
+   "file": "Flag of the United Kingdom.svg",
+   "text": "Flag of Swaziland Protectorate (1902–1968)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Eswatini",
+   "section": "Royal flags",
+   "file": "Royal Standard of Swaziland.svg",
+   "text": "Royal standard of Eswatini",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Eswatini",
+   "section": "Royal flags",
+   "file": "Queen Mother Standard of Eswatini.svg",
+   "text": "Queen Mother standard of Eswatini",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de l'Eswatini",
+   "section": "intro",
+   "file": "Utimuni.png",
+   "text": "Croquis d'un guerrier zoulou, 1849",
+   "kind": "thumb"
+  }
+ ]
+}

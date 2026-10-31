@@ -1,0 +1,748 @@
+{
+ "iso": "pa",
+ "flag_item": "Q168941",
+ "pages": [
+  "en:Flag of Panama",
+  "en:List of Panamanian flags",
+  "fr:Drapeau du Panama",
+  "es:Bandera de Panamá"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "History > Bunau-Varilla proposal",
+   "file": "Flag of Panama (Bunau-Varilla proposal).svg",
+   "text": "23x15px Reconstruction of the Bunau-Varilla design",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "History > Bunau-Varilla proposal",
+   "file": "FIAV proposal.svg",
+   "text": "23x15px",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "History > Bunau-Varilla proposal",
+   "file": "Flag of Panama (1903).svg",
+   "text": "Original design of the flag, according to Manuel E. Amador. It was the first flag of Panama, from November 3, 1903 to 1904",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "History > Bunau-Varilla proposal",
+   "file": "Flag of Panama.png",
+   "text": "Flag of Panama flying from a pole",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Description",
+   "file": "Flag of Panama (construction sheet).svg",
+   "text": "Construction Sheet for the Flag of Panama",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Description > Color scheme",
+   "file": "Flag of Panama.svg",
+   "text": "! borderColours scheme !! style=\"background-color:#072357ff;color:#FFF;\" |Blue !! style=\"background-color:#da121aff;color:#FFF;\" |Red !! style=\"background-color:#ffffffff\" |White",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Protocol > Daily use",
+   "file": "Escolta de la Bandera por unidades de la Policia Nacional de Panamá.PNG",
+   "text": "National flag hoisting ceremony at the National Police Headquarters.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Protocol > Fold",
+   "file": "Banderapandoblar.svg",
+   "text": "How to fold the flag of Panama",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Protocol > Placement",
+   "file": "Banderapanbalcones.svg",
+   "text": "How to place the flag of Panama",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Protocol > Placement",
+   "file": "Panbanderadesfile.png",
+   "text": "The flag of Panama in a parade",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Protocol > Placement",
+   "file": "Banderapanotras.JPG",
+   "text": "Placement of the flag of Panama in a group of flags",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Historical national flags",
+   "file": "Flag of Cross of Burgundy.svg",
+   "text": "FIAV historical|23x23px Cross of Burgundy, The first Spanish flag. Used as the flag of the Spanish Empire (1492–1898) and used until 1793.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Historical national flags",
+   "file": "Flag of Spain (1785-1873 and 1875-1931).svg",
+   "text": "23x23px, Flag of Spain (1786–1821)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Historical national flags",
+   "file": "Flag of Gran Colombia.svg",
+   "text": "23x23px The third flag of Gran Colombia, between 1821 and 1830.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Historical national flags",
+   "file": "Flag of New Granada (1830-1834).svg",
+   "text": "23x23px23x23px Provisional flag of the Republic of New Granada, effective between 1830 and May 9, 1834",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Historical national flags",
+   "file": "Flag of New Granada.svg",
+   "text": "23x23pxFlag of the Republic of New Granada and the Grenadine Confederation, effective between May 9, 1834, and July 26, 1861.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Historical national flags",
+   "file": "Flag of Federal State of Panama.svg",
+   "text": "23x23px Flag of the Federal State of Panama, 1855–1863.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Historical national flags",
+   "file": "Flag of Sovereign State of Panama.svg",
+   "text": "23x23px Flag of the Sovereign State of Panama, 1863–1886.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Historical national flags",
+   "file": "Flag of Colombia.svg",
+   "text": "23x23px Flag of the United States of Colombia and the current Republic of Colombia, used from November 26, 1861, until November 3, 1903.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Historical national flags",
+   "file": "Flag of Panama (1903).svg",
+   "text": "23x23px Original flag design, according to Manuel E. Amador. It was the first post-independence flag of Panama, during November 1903.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Historical national flags",
+   "file": "Flag of Panama Canal Zone.svg",
+   "text": "Flag of the Panama Canal Zone (1903–1979), U.S. territory",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Historical national flags",
+   "file": "Flag of Panama.svg",
+   "text": "Current flag of the Republic of Panama: arose from the modification of the first model and began to be used before the oath of December 20, 1903, and ratified among others by Law 64 of 1904.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Other flags",
+   "file": "Naval Jack of Panama.svg",
+   "text": "Naval jack of Panama",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Flags of subdivisions > Provinces",
+   "file": "Bandera de la Provincia de Bocas del Toro.svg",
+   "text": "Bocas del Toro",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Flags of subdivisions > Provinces",
+   "file": "Bandera de la Provincia de Chiriquí.svg",
+   "text": "Chiriquí",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Flags of subdivisions > Provinces",
+   "file": "Bandera de la Provincia de Coclé.svg",
+   "text": "Coclé",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Flags of subdivisions > Provinces",
+   "file": "Bandera de la Provincia de Colón.svg",
+   "text": "Colón",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Flags of subdivisions > Provinces",
+   "file": "Bandera de la Provincia de Darién.svg",
+   "text": "Darién",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Flags of subdivisions > Provinces",
+   "file": "Bandera de la Provincia de Herrera.svg",
+   "text": "Herrera",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Flags of subdivisions > Provinces",
+   "file": "Bandera de la Provincia de Los Santos.svg",
+   "text": "Los Santos",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Flags of subdivisions > Provinces",
+   "file": "Bandera de la Provincia de Panamá Oeste.svg",
+   "text": "Panamá Oeste",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Flags of subdivisions > Provinces",
+   "file": "Bandera de la Provincia de Veraguas.svg",
+   "text": "Veraguas",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Flags of subdivisions > Province-level Indigenous Regions",
+   "file": "Bandera de la Comarca Guna Yala.svg",
+   "text": "Guna Yala",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Flags of subdivisions > Province-level Indigenous Regions",
+   "file": "Bandera de la Comarca Ngäbe-Buglé.svg",
+   "text": "Ngäbe-Buglé",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Panama",
+   "section": "Flags of subdivisions > Province-level Indigenous Regions",
+   "file": "Flag of Nasi Tjer Di Indigenous Region.png",
+   "text": "Naso Tjër Di",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Panamanian flags",
+   "section": "National flags",
+   "file": "Flag of Panama.svg",
+   "text": "! scope=\"row\" | | 1925–present | Flag of Panama | Rectangle divided into four quadrants, with the upper hoist consisting of a white background with a blue five-point star, the upper fly consisting of a red background, the lower hoist consisting of a blue background, and the lower fly consisting of a white background with a red five-point star.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Panamanian flags",
+   "section": "National flags",
+   "file": "Presidential Flag of Panama.svg",
+   "text": "! scope=\"row\" | | ?–present | Presidential standard of Panama | Current flag of Panama with the Panamanian coat of arms in the middle.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Panamanian flags",
+   "section": "National flags",
+   "file": "Flag of Panama Canal Zone.svg",
+   "text": "! scope=\"row\" | | 1903–1979 | Flag of the Panama Canal Zone (U.S. territory) | A blue field with the territory's emblem in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Panamanian flags",
+   "section": "National flags",
+   "file": "Flag of Panama (1903).svg",
+   "text": "! scope=\"row\" | | 1903 | First flag of Panama | Divided rectangle into four quadrants, with the upper hoist consisting of a blue background, the upper fly consisting of a white background with a red five-point star, the lower hoist consisting of a white background with a blue five-point star, and the lower fly consisting of a red background.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Panamanian flags",
+   "section": "National flags",
+   "file": "Flag of Panama (Bunau-Varilla proposal).svg",
+   "text": "! scope=\"row\" | | 1903 | Proposed flag of Panama | Thirteen horizontal red-yellow alternating stripes with a blue canton, featuring two suns connected together, representing North America and South America being united by the Panama isthmus. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Panamanian flags",
+   "section": "Province flags",
+   "file": "Bandera de la Provincia de Bocas del Toro.svg",
+   "text": "! scope=\"row\" | | ?–present | Flag of Bocas del Toro Province | Flag divided diagonally in half from the upper hoist corner to the lower fly corner, green on bottom half and yellow on the top half. Three white five-pointed stars in a slight arc centered above a serifed capital 'B' with a drop shadow.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Panamanian flags",
+   "section": "Province flags",
+   "file": "Bandera de la Provincia de Coclé.svg",
+   "text": "! scope=\"row\" | | 2004–present | Flag of Coclé Province | Vertical tricolor with, from hoist to fly, red, gray, and white. The red stripe has two gray diamonds, one towards the bottom corner from the top one. The gray stripe has two white diamonds, one at the bottom and one at the top. The white stripe has two red diamonds, one towards the bottom corner from the top one.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Panamanian flags",
+   "section": "Province flags",
+   "file": "Bandera de la Provincia de Colón.svg",
+   "text": "! scope=\"row\" | | 1996–present | Flag of Colón Province | Horizontal tricolor with, from top to bottom, baby blue, white, and gold. The coat of arms of Colón is centered in the middle, with five gold five-pointed stars in an arc at the top.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Panamanian flags",
+   "section": "Province flags",
+   "file": "Bandera de la Provincia de Chiriquí.svg",
+   "text": "! scope=\"row\" | | ?–present | Flag of Chiriquí Province | Flag divided diagonally in half from the lower hoist corner to the upper fly corner, red at the top and green at the bottom. There are fourteen white five-pointed stars in the middle arrayed in a circle, similar to the EU flag.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Panamanian flags",
+   "section": "Province flags",
+   "file": "Bandera de la Provincia de Darién.svg",
+   "text": "! scope=\"row\" | | ?–present | Flag of Darién Province | Flag divided diagonally in half from the lower hoist corner to the upper fly corner, baby blue at the top and green at the bottom. There are four yellow five-pointed stars, arrayed in a hard curve.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Panamanian flags",
+   "section": "Province flags",
+   "file": "Bandera de la Provincia de Herrera.svg",
+   "text": "! scope=\"row\" | | 1992–present | Flag of Herrera Province | Flag divided in half horizontally, with gold on the top half and blue on the bottom half. There is a labeled map of the province in the middle, with seven blue five-pointed stars at the top arrayed in a curve to represent each district in the province.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Panamanian flags",
+   "section": "Province flags",
+   "file": "Bandera de la Provincia de Los Santos.svg",
+   "text": "! scope=\"row\" | | 1850–present | Flag of Los Santos Province | Horizontal tricolor with, from the top to the bottom, blue, gold, and red.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Panamanian flags",
+   "section": "Province flags",
+   "file": "Bandera de la Provincia de Panamá Oeste.svg",
+   "text": "! scope=\"row\" | | 2015–present | Flag of Panamá Oeste Province | Horizontal triband with, from top to bottom, gold, white, and gold. At the hoist is a green pile with five white five-pointed stars arrayed in a curve.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Panamanian flags",
+   "section": "Province flags",
+   "file": "Bandera de la Provincia de Veraguas.svg",
+   "text": "! scope=\"row\" | | 2019–present | Flag of Veraguas Province | Blue background with a white filled-in outline of the province. It also has twelve white five-pointed stars arrayed around the map. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Panamanian flags",
+   "section": "Indigenous regions",
+   "file": "Flag of Chocó.svg",
+   "text": "! scope=\"row\" | | ?–present | Flag of Emberá-Wounaan Comarca | Horizontal tricolor with a large green stripe at the top, and thinner stripes of yellow and blue below.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Panamanian flags",
+   "section": "Indigenous regions",
+   "file": "Bandera de la Comarca Guna Yala.svg",
+   "text": "! scope=\"row\" | | 2010–present | Flag of Guna Yala comarca | Horizontal tricolor with an enlarged middle yellow stripe, and a top red stripe and bottom green stripe. There are two crossed arms in the middle, one holding an arrow and the other a bow. There are eight five-point stars arrayed in a curve around the top of the middle symbol.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Panamanian flags",
+   "section": "Indigenous regions",
+   "file": "Flag of Kuna Yala.svg",
+   "text": "! scope=\"row\" | | 1925–2010 | Flag of revolution of Guna and former Guna Yala flag | Horizontal triband with an enlarged middle yellow stripe, with orange top and bottom stripes. In the middle rests a black -facing swastika.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Panamanian flags",
+   "section": "Indigenous regions",
+   "file": "Flag of Kuna Yala (1942).svg",
+   "text": "! scope=\"row\" | | 1942 | Former flag of Guna Yala | Horizontal triband with an enlarged middle yellow stripe, with red top and bottom stripes. In the middle rests a black -facing swastika, with a red ring, representing the nose rings the Guna people use, encircling it, overlapping the swastika except the top branch; The design was created to distance the original flag away from the Nazis.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Panamanian flags",
+   "section": "Indigenous regions",
+   "file": "Bandera de la Comarca Ngäbe-Buglé.svg",
+   "text": "! scope=\"row\" | | 2009–present | Flag of Ngäbe-Buglé Comarca | Vertical tricolor with, from hoist to fly, red, white, and green stripes. In the , there are three five-point stars, with one stacked on the other two.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Panamanian flags",
+   "section": "Indigenous regions",
+   "file": "Flag of Nasi Tjer Di Indigenous Region.png",
+   "text": "! scope=\"row\" | | ?–present | Flag of Naso Tjër Di Comarca | The comarca's emblem centered in the middle of a plain white background. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Panamanian flags",
+   "section": "Historical flags",
+   "file": "Flag of the Company of Scotland Trading to Africa and the Indies.svg",
+   "text": "! scope=\"row\" | | 1698–1700 | Colony of New Caledonia | Red background with three thin stripes at the bottom, from top to bottom, blue, white, and blue, representing a sea. Above the stripes there is a rising yellow sun shifted towards the hoist.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Panamanian flags",
+   "section": "Historical flags",
+   "file": "Flag of Spain (1785–1873, 1875–1931).svg",
+   "text": "! scope=\"row\" | | 1739–1810,1816–1822 | Flag of the Viceroyalty of New Granada | The flag for the viceroyalty was the Spanish flag from 1785 to 1873. It is a horizontal triband, with an enlarged yellow stripe with two red stripes at the top and bottom. Off-centered towards the hoist is an outdated version of the coat of arms of Spain.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Panamanian flags",
+   "section": "Historical flags",
+   "file": "Flag of Gran Colombia.svg",
+   "text": "! scope=\"row\" | | 1821–1831 | Flag of Gran Colombia | A horizontal tricolor with, from top to bottom, yellow, blue, and red. The contains the coat of arms of Gran Colombia.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Panamanian flags",
+   "section": "Historical flags",
+   "file": "Flag of New Granada.svg",
+   "text": "! scope=\"row\" | | 1831–1863 | Flag of the Republic of New Granada and the Granadine Confederation. | A vertical tricolor with, from hoist to fly, red, blue, and yellow.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Panamanian flags",
+   "section": "Historical flags",
+   "file": "Flag of Colombia.svg",
+   "text": "! scope=\"row\" rowspan=\"2\" | | 1863–1886 | Flag of the United States of Colombia | rowspan=\"2\" | A horizontal tricolor with an enlarged yellow top stripe with a blue and a red stripe below.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Panamanian flags",
+   "section": "Historical flags",
+   "file": "Flag of the Gran Colombia (1819-1820).svg",
+   "text": "! scope=\"row\" | | 1824–1855 | Flag of the Isthmus Department | A horizontal tricolor with an enlarged yellow top stripe with a blue and a red stripe below. In the upper hoist is the coat of arms of Gran Colombia.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Panamanian flags",
+   "section": "Historical flags",
+   "file": "Flag of Federal State of Panama.svg",
+   "text": "! scope=\"row\" | | 1855–1863 | rowspan=\"2\" | Flag of the State of Panama | A vertical tricolor of red, blue, and yellow with the state's emblem in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Panamanian flags",
+   "section": "Historical flags",
+   "file": "Flag of Sovereign State of Panama.svg",
+   "text": "! scope=\"row\" | | 1863–1886 | A horizontal tricolor with an enlarged yellow top stripe, a blue and a red stripe below, and the state's emblem in the . |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Panama",
+   "section": "Histoire > Le prototype",
+   "file": "Flag of Panama (Bunau-Varilla proposal).svg",
+   "text": "Composition présentée par Philippe Bunau-Varilla",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Panama",
+   "section": "Histoire > Premier modèle",
+   "file": "Flag of Panama (1903).svg",
+   "text": "Composition initiale du drapeau, selon Manuel E. Amador.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Panamá",
+   "section": "Banderas históricas",
+   "file": "Flag of Spain (1785-1873 and 1875-1931).svg",
+   "text": "miniatura| derecha| Bandera del Reino de España, oficial en el actual territorio panameño hasta el 28 de noviembre de 1821",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Panamá",
+   "section": "Banderas históricas",
+   "file": "FIAV historical.svg",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Panamá",
+   "section": "Banderas históricas > Unión a la Gran Colombia (1821-1830)",
+   "file": "Flag of the Gran Colombia.svg",
+   "text": "miniatura| derecha|Bandera de la Gran Colombia",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Panamá",
+   "section": "Banderas históricas > Periodo de Unión a Colombia (1830-1903)",
+   "file": "Flag of Sovereign State of Panama.svg",
+   "text": "miniatura| derecha| Bandera del Estado Soberano de Panamá.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Panamá",
+   "section": "Banderas históricas > Periodo de Unión a Colombia (1830-1903)",
+   "file": "FIAV historical.svg",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Panamá",
+   "section": "La bandera panameña > El primer prototipo",
+   "file": "Flag of Panama (Bunau-Varilla proposal).svg",
+   "text": "Archivo:FIAV proposal.png Diseño presentado por Philippe Bunau-Varilla y rechazado unánimemente.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Panamá",
+   "section": "La bandera panameña > El primer prototipo",
+   "file": "FIAV proposal.png",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Panamá",
+   "section": "La bandera panameña > Primer modelo",
+   "file": "Flag of Panama (1903).svg",
+   "text": "miniatura| derecha| Diseño original de la bandera, según Manuel E. Amador. Fue la primera bandera de Panamá, desde el 3 de noviembre de 1903 hasta 1904.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Panamá",
+   "section": "La bandera panameña > Primer modelo",
+   "file": "FIAV historical.svg",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Panamá",
+   "section": "La bandera panameña > Diseño actual",
+   "file": "Flag of Panama.svg",
+   "text": "miniatura| derecha|Bandera actual de la República de Panamá: surgió de la modificación del primer modelo. Adoptado provisionalmente a través de la Ley 64 de 1904, adoptado definitivamente desde el 25 de marzo de 1925 y ratificado en 1941.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Panamá",
+   "section": "La bandera panameña > Diseño actual",
+   "file": "132-Christening Flag of Republic of Panama.jpg",
+   "text": "miniaturadeimagen|Bautizo de la bandera panameña",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Panamá",
+   "section": "Uso diario",
+   "file": "Escolta de la Bandera por unidades de la Policia Nacional de Panamá.PNG",
+   "text": "miniatura| Ceremonia de izada de la bandera nacional por unidades de Seguridad de Instalaciones en la Sede de la Policía Nacional de Panamá.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Panamá",
+   "section": "Uso diario > Acto cívico",
+   "file": "Flag of Panama.png",
+   "text": "miniaturadeimagen|Bandera de la República de Panamá ondeando.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Panamá",
+   "section": "Uso diario > Doblez",
+   "file": "Banderapandoblar.svg",
+   "text": "miniatura| derecha|Procedimiento de doblado de la bandera nacional.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Panamá",
+   "section": "Uso diario > Colocación",
+   "file": "Banderapanbalcones.svg",
+   "text": "miniatura| derecha|Forma de colocar la bandera de Panamá en un balcón",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Panamá",
+   "section": "Uso diario > Colocación",
+   "file": "Panbanderadesfile.png",
+   "text": "miniatura| derecha|Colocación de la bandera nacional en un desfile",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Panamá",
+   "section": "Uso diario > Colocación",
+   "file": "Banderapanotras.JPG",
+   "text": "miniatura| derecha|Colocación de la bandera nacional en un grupo de banderas",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Panamá",
+   "section": "Cronología de banderas históricas de Panamá",
+   "file": "Flag of Cross of Burgundy.svg",
+   "text": "23x23px Enseña naval y militar de la Monarquía Hispánica. Utilizada también como bandera del Imperio español (1492-1898) usada desde 1506 hasta 1793.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Panamá",
+   "section": "Cronología de banderas históricas de Panamá",
+   "file": "Flag of Spain (1785-1873 and 1875-1931).svg",
+   "text": "23x23px, Bandera de España (1786-1821)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Panamá",
+   "section": "Cronología de banderas históricas de Panamá",
+   "file": "Flag of the Gran Colombia.svg",
+   "text": "23x23px Tercera bandera de la Gran Colombia, entre 1821 y 1830.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Panamá",
+   "section": "Cronología de banderas históricas de Panamá",
+   "file": "Flag of New Granada (1830-1834).svg",
+   "text": "23x23px23x23px Bandera provisional del Estado de Nueva Granada, vigente entre 1830 y el 9 de mayo de 1834.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Panamá",
+   "section": "Cronología de banderas históricas de Panamá",
+   "file": "Flag of New Granada.svg",
+   "text": "23x23px Bandera de la República de la Nueva Granada y la Confederación Granadina, vigente entre el 9 de mayo de 1834 y 26 de julio de 1861.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Panamá",
+   "section": "Cronología de banderas históricas de Panamá",
+   "file": "Flag of Federal State of Panama.svg",
+   "text": "23x23px Bandera del Estado Federal de Panamá, 1855-1863.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Panamá",
+   "section": "Cronología de banderas históricas de Panamá",
+   "file": "Flag of Sovereign State of Panama.svg",
+   "text": "23x23px Bandera del Estado Soberano de Panamá, 1863-1886.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Panamá",
+   "section": "Cronología de banderas históricas de Panamá",
+   "file": "Flag of Colombia.svg",
+   "text": "23x23px Bandera de los Estados Unidos de Colombia y de la actual República de Colombia, usada desde el 26 de noviembre de 1861 hasta el 3 de noviembre de 1903.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Panamá",
+   "section": "Cronología de banderas históricas de Panamá",
+   "file": "Flag of Panama (1903).svg",
+   "text": "23x23px Diseño original de la bandera, según Manuel E. Amador. Fue la primera bandera de Panamá, durante noviembre de 1903.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Panamá",
+   "section": "Cronología de banderas históricas de Panamá",
+   "file": "Flag of Panama.svg",
+   "text": "Bandera actual de la República de Panamá: surgió de la modificación del primer modelo y empezó a usarse antes del juramento del 20 de diciembre de 1903, y ratificada entre otras por la Ley 64 de 1904.",
+   "kind": "gallery"
+  }
+ ]
+}

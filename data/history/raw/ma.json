@@ -1,0 +1,724 @@
+{
+ "iso": "ma",
+ "flag_item": "Q159865",
+ "pages": [
+  "en:Flag of Morocco",
+  "en:List of Moroccan flags",
+  "fr:Drapeau du Maroc",
+  "ar:علم المغرب"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Morocco",
+   "section": "Design",
+   "file": "Flag of Morocco.svg",
+   "text": "!30pxColour scheme !! style=\"background-color:#B7312C\"|Bright Red !! style=\"background-color:#006341\"|Palm Green",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Morocco",
+   "section": "Design > Variants",
+   "file": "Flag of Morocco.svg",
+   "text": "Non-interlaced pentagram",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Morocco",
+   "section": "Design > Variants",
+   "file": "Flag of Morocco unbordered.svg",
+   "text": "Thicker non-interlaced pentagram",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Morocco",
+   "section": "Design > Variants",
+   "file": "Flag of Morocco (large stroke).svg",
+   "text": "Interlaced pentagram",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Morocco",
+   "section": "Design > Variants",
+   "file": "Flag of Morocco 1slash6.svg",
+   "text": "1/6 circle interlaced pentagram",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Morocco",
+   "section": "History",
+   "file": "Flag of Morocco HV.svg",
+   "text": "Wide and vertical presentations",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Morocco",
+   "section": "History > Other historical flags",
+   "file": "Flag of Morocco (1666–1915).svg",
+   "text": "Flag of Morocco under the Alawi dynasty (1666–1915)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Morocco",
+   "section": "History > Other historical flags",
+   "file": "Flag of the Republic of the Rif.svg",
+   "text": "Flag of the Republic of the Rif (1921–1926)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Morocco",
+   "section": "History > Other historical flags",
+   "file": "Merchant flag of French Morocco.svg",
+   "text": "Merchant flag of the French protectorate in Morocco (1919–1956)Flags of the world: French Protectorate of Morocco",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Morocco",
+   "section": "History > Other historical flags",
+   "file": "Merchant flag of Spanish Morocco.svg",
+   "text": "Merchant flag of the Spanish protectorate in Morocco (1937–1956)Flags of the world: Spanish Protectorate of Morocco",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Morocco",
+   "section": "History > Other historical flags",
+   "file": "Flag of the Tangier International Zone.svg",
+   "text": "Merchant flag of the Tangier International Zone (1953–1957)Flags of the world: International Zone of Tangiers",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Morocco",
+   "section": "Other national flags",
+   "file": "Morocco gov index commercial.svg",
+   "text": "Civil ensign",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Morocco",
+   "section": "Other national flags",
+   "file": "Morocco gov index naval warfare.svg",
+   "text": "Naval ensign",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Morocco",
+   "section": "Other national flags",
+   "file": "Naval Jack of Morocco.svg",
+   "text": "Naval jack",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Morocco",
+   "section": "Other national flags",
+   "file": "Royal Flag of Morocco.svg",
+   "text": "Royal flag",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Morocco",
+   "section": "Other national flags",
+   "file": "Royal standard of Morocco.svg",
+   "text": "Royal standard",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moroccan flags",
+   "section": "National flags",
+   "file": "Flag of Morocco.svg",
+   "text": "! scope=\"row\" | | rowspan=\"5\" | 1915–present | National flag and state ensign | A red field with a green pentagram, the five-pointed \"Seal of Solomon\".",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moroccan flags",
+   "section": "National flags",
+   "file": "Morocco gov index commercial.svg",
+   "text": "! scope=\"row\" | | Civil ensign | A red field with a green interlaced pentagram; in the canton, a yellow one-starred crown.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moroccan flags",
+   "section": "National flags",
+   "file": "Morocco gov index naval warfare.svg",
+   "text": "! scope=\"row\" | | Naval ensign | A red field with a interlaced pentagram; a yellow one-starred crown is in each corner.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moroccan flags",
+   "section": "National flags",
+   "file": "Naval Jack of Morocco.svg",
+   "text": "! scope=\"row\" | | Naval jack | A red swallowtailed field with a yellow and a green yellow-bordered interlaced pentagram.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moroccan flags",
+   "section": "National flags",
+   "file": "Royal Flag of Morocco.svg",
+   "text": "! scope=\"row\" | | Royal flag | A red field with a green yellow-bordered interlaced pentagram. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moroccan flags",
+   "section": "Royal standard",
+   "file": "Royal standard of Morocco.svg",
+   "text": "! scope=\"row\" | | 1915–present | Royal standard | A green field with the national coat of arms in the . |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moroccan flags",
+   "section": "Military flags",
+   "file": "Flag of the Royal Moroccan Army.jpg",
+   "text": "! scope=\"row\" | | Ground Force | A red field with a of golden leaves and the army's emblem in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moroccan flags",
+   "section": "Military flags",
+   "file": "Flag of the Royal Moroccan Navy.svg",
+   "text": "! scope=\"row\" | | 1960–present | Naval Force | A light blue field with a of golden leaves and the navy's emblem in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moroccan flags",
+   "section": "Military flags",
+   "file": "Flag of the Royal Moroccan Air Force.png",
+   "text": "! scope=\"row\" | | 1956–present | Air Force | A blue field with a of golden leaves and the air force's emblem in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moroccan flags",
+   "section": "Military flags > Alawi Sultanate",
+   "file": "Flag of Morocco (1666–1915).svg",
+   "text": "! scope=\"row\" | | 1666–1915 | Flag of the Alawi Sultanate | A plain red field. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moroccan flags",
+   "section": "Military flags > French Morocco",
+   "file": "Flag of Morocco.svg",
+   "text": "! scope=\"row\" rowspan=\"2\" | | 1915–1919frameless| | rowspan=\"4\" | Merchant flag of Morocco under the French protectorate | rowspan=\"2\" | A red field with a green pentagram.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moroccan flags",
+   "section": "Military flags > French Morocco",
+   "file": "Bulletin Officiel, N°569, page 2, Protectorat de la République Française au Maroc, Dahir du 1er Septembre 1919, Article 41 du code chérifien du commerce maritime 02.jpg",
+   "text": "! scope=\"row\" rowspan=\"2\" | | 1915–1919frameless| | rowspan=\"4\" | Merchant flag of Morocco under the French protectorate | rowspan=\"2\" | A red field with a green pentagram.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moroccan flags",
+   "section": "Military flags > French Morocco",
+   "file": "Merchant flag of French Morocco.svg",
+   "text": "! scope=\"row\" rowspan=\"2\" | | 1919–1940 | rowspan=\"2\" | A red field with a green pentagram and a small French tricolor in the upper hoist canton.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moroccan flags",
+   "section": "Military flags > Spanish Morocco",
+   "file": "Flag of Spanish Morocco (1912-1937).svg",
+   "text": "! scope=\"row\" | | 1912–1937 | rowspan=\"2\" | Merchant flag of Morocco under the Spanish protectorate | A simple red field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moroccan flags",
+   "section": "Military flags > Spanish Morocco",
+   "file": "Merchant flag of Spanish Morocco.svg",
+   "text": "! scope=\"row\" | | 1937–1956 | A red field with a green canton containing a white pentagram. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moroccan flags",
+   "section": "Military flags > Republic of the Rif",
+   "file": "Flag of the Republic of the Rif.svg",
+   "text": "! scope=\"row\" | | 1921–1926 | Flag of the Republic of the Rif | A red field centered with a white diamond and a green crescent moon and a six-pointed star inside the diamond. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moroccan flags",
+   "section": "Military flags > Tangier International Zone",
+   "file": "Flag of the Tangier International Zone.svg",
+   "text": "! scope=\"row\" rowspan=\"2\" | | 1924–1940 | rowspan=\"2\" | Flag of International Tangier | rowspan=\"2\" | A red field with the emblem of Tangier on the hoist side and a green pentagram on the fly side.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moroccan flags",
+   "section": "Regional flags",
+   "file": "Flag of Sidi Bennour.png",
+   "text": "! scope=\"row\" | | ?–present | Flag of Sidi Bennour Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moroccan flags",
+   "section": "Regional flags",
+   "file": "Flag of Agadir province (1976-1997).svg",
+   "text": "! scope=\"row\" | | 1976–1997 | Flag of Agadir Prefecture |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moroccan flags",
+   "section": "Regional flags",
+   "file": "Flag of Al Hoceima province (1976-1997).svg",
+   "text": "! scope=\"row\" | | 1976–1997 | Flag of Al Hoceïma Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moroccan flags",
+   "section": "Regional flags",
+   "file": "Flag of Marrakech province.svg",
+   "text": "! scope=\"row\" | | ?–present | Flag of Marrakesh Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moroccan flags",
+   "section": "Regional flags",
+   "file": "Flag of Azilal province (1976-1997).svg",
+   "text": "! scope=\"row\" | | 1976–1997 | Flag of Azilal Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moroccan flags",
+   "section": "Regional flags",
+   "file": "Flag of Tan Tan province.svg",
+   "text": "! scope=\"row\" | | ?–present | Flag of Tan Tan Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moroccan flags",
+   "section": "Regional flags",
+   "file": "Flag of Dakhla province (1976-1997).svg",
+   "text": "! scope=\"row\" | | 1976–1997 | Flag of Dakhla Province | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Moroccan flags",
+   "section": "Misattributed flags",
+   "file": "Flag of Morocco hexagram.svg",
+   "text": "! scope=\"row\" | | 1924 | Inaccurate flag of Morocco as shown in Nouveau Petit Larousse Illustré, 1924 | A red field with the Seal of Solomon. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Maroc",
+   "section": "intro",
+   "file": "Civil Ensign of Morocco.svg",
+   "text": "Pavillon civil du Maroc depuis l'indépendance..",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Maroc",
+   "section": "intro",
+   "file": "Naval Ensign of Morocco.svg",
+   "text": "Pavillon de la marine royale..",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Maroc",
+   "section": "Le drapeau actuel et ses origines",
+   "file": "Star of Morocco (unbordered).svg",
+   "text": "Le pentagramme.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Maroc",
+   "section": "Description",
+   "file": "Flag of Morocco (construction sheet).svg",
+   "text": "Feuille de constructionDahir 1-05-99, publié dans le BO 5378 du 15 décembre 2005.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Maroc",
+   "section": "Protocole et usages > L'étendard royal",
+   "file": "Royal Flag of Morocco.svg",
+   "text": "Drapeau du roi du Maroc et de la dynastie alaouite",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Maroc",
+   "section": "Historique > Alaouites > De 1666 jusqu'en 1915",
+   "file": "Drapeau du Maroc pré-1915.svg",
+   "text": "Drapeau sous la Dynastie alaouite (1666–1915)",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Maroc",
+   "section": "Historique > Alaouites > De 1666 jusqu'en 1915",
+   "file": "Flag of Morocco (1666–1915) variant.svg",
+   "text": "Variante du drapeau sous la Dynastie alaouite (1666–1915)",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Maroc",
+   "section": "Historique > Alaouites > Version avec une étoile à six branches",
+   "file": "Flag of Morocco hexagram.svg",
+   "text": "Drapeau supposé du Maroc avec une étoile à six branches..",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Maroc",
+   "section": "Historique > Alaouites > Version avec une étoile à six branches",
+   "file": "Le général Lyautey inaugure la première foire du Maroc - Fès - Médiathèque de l'architecture et du patrimoine - AP62T066592.jpg",
+   "text": "Le drapeau à l'étoile à six branches flotte sur la foire de Fès lors d'une visite du général Lyautey en octobre 1916.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Maroc",
+   "section": "Historique > Alaouites > Depuis 1915",
+   "file": "Flag of Morocco.svg",
+   "text": "Drapeau depuis 1915.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Maroc",
+   "section": "Historique > Les armoiries du royaume du Maroc",
+   "file": "Coat of arms of Morocco.svg",
+   "text": "Armoiries du Maroc.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Maroc",
+   "section": "Historique > Dans les Forces armées royales",
+   "file": "Moroccan Armed Force.png",
+   "text": "Insigne des Forces armées royales",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Maroc",
+   "section": "Historique > Dans les Forces armées royales",
+   "file": "Moroccan Navy Force.png",
+   "text": "Insigne de la marine royale",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Maroc",
+   "section": "Historique > Dans les Forces armées royales",
+   "file": "Royal Moroccan Gendarmerie.png",
+   "text": "Insigne de la gendarmerie royale marocaine",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Maroc",
+   "section": "Historique > Dans les Forces armées royales",
+   "file": "Moroccan Air Force.png",
+   "text": "Insigne de l'armée de l'air royale",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Maroc",
+   "section": "Historique > Dans les Forces armées royales",
+   "file": "Flag of the Royal Moroccan Navy.svg",
+   "text": "Fanion de la marine royale",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Maroc",
+   "section": "Historique > Dans les Forces armées royales",
+   "file": "Flag of the Royal Moroccan Air Force.png",
+   "text": "Fanion de l'armée de l'air",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Maroc",
+   "section": "Historique > Dans les Forces armées royales",
+   "file": "Morocco FRA Roundel.png",
+   "text": "Cocarde des avions de chasse.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Maroc",
+   "section": "Historique > Dans les Forces armées royales",
+   "file": "Roundel of Morocco.svg",
+   "text": "Cocarde des avions de transport et des hélicoptères",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Maroc",
+   "section": "Historique > Pavillons civils de l'époque des protectorats",
+   "file": "Merchant flag of Spanish Morocco.svg",
+   "text": "Pavillon civil utilisé sous le protectorat espagnol.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Maroc",
+   "section": "Historique > Pavillons civils de l'époque des protectorats",
+   "file": "Merchant flag of French Morocco.svg",
+   "text": "Drapeau de la Marine Marchande utilisé sous le protectorat français.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم المغرب",
+   "section": "الوصف",
+   "file": "Cherifian Dahir describing the Moroccan flag (1915) Arabic-language text.jpg",
+   "text": "تصغير| يمين|النص الأصلي للظهير.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم المغرب",
+   "section": "التصميم",
+   "file": "Flag of Morocco (construction sheet).svg",
+   "text": "| style=\"background:white; : solid #AAA;\"|",
+   "kind": "table"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم المغرب",
+   "section": "التصميم",
+   "file": "Flag of Morocco (1).jpg",
+   "text": "|} {| class=\"wikitable\" style=\"text-align: ;\"",
+   "kind": "table"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم المغرب",
+   "section": "التصميم",
+   "file": "3193 93659919275 757714275 2496701 1066813 n.jpg",
+   "text": "|} {| class=\"wikitable\" style=\"text-align: ;\"",
+   "kind": "table"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم المغرب",
+   "section": "التصميم",
+   "file": "Flag of Morocco.svg",
+   "text": "!30pxمخطط الألوان (تقريبي) !! style=\"background-color:#c1272dff\"|أحمر قان !! style=\"background-color:#006233ff\"|أخضر نخيلي",
+   "kind": "table"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم المغرب",
+   "section": "المشتقات",
+   "file": "Civil Ensign of Morocco.svg",
+   "text": "الراية المدنية",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم المغرب",
+   "section": "المشتقات",
+   "file": "Naval Ensign of Morocco.svg",
+   "text": "العلم البحري",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم المغرب",
+   "section": "المشتقات",
+   "file": "Naval Jack of Morocco.svg",
+   "text": "اليافطة البحرية",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم المغرب",
+   "section": "المشتقات",
+   "file": "Royal Flag of Morocco.svg",
+   "text": "العلم الملكي",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم المغرب",
+   "section": "التاريخ > من القرن 9 إلى 17",
+   "file": "West Africa Catalan Atlas.jpg",
+   "text": "تصغير|يسار| خريطة في الأطلس الكتالوني سنة 1375، يظهر عليها علم الدولة ( ) خلال فترة حكم سلالة الموحدين.Flags of the world: Historical flags of Morocco.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم المغرب",
+   "section": "التاريخ > من القرن 9 إلى 17",
+   "file": "Chequered COA of Morocco.svg",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم المغرب",
+   "section": "التاريخ > من القرن 17 إلى الآن",
+   "file": "Flag of Morocco 1073 1147.svg",
+   "text": "علم المغرب (780-1147)، علم الأدارسة",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم المغرب",
+   "section": "التاريخ > من القرن 17 إلى الآن",
+   "file": "Almoravides flag.jpg",
+   "text": "علم المغرب (1073-1147)، المرابطون",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم المغرب",
+   "section": "التاريخ > من القرن 17 إلى الآن",
+   "file": "Flag of Morocco 1147 1269.svg",
+   "text": "علم المغرب (1147-1269)، الموحدون",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم المغرب",
+   "section": "التاريخ > من القرن 17 إلى الآن",
+   "file": "Flag of Morocco 1258 1659.svg",
+   "text": "علم المغرب بالإضافة إلى يافطة بيضاء (1269-1666)، المرينيون، السعديون",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم المغرب",
+   "section": "التاريخ > من القرن 17 إلى الآن",
+   "file": "Wattasid dynasty flag.png",
+   "text": "علم المغرب (1462- 1554)، علم الوطاسيون",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم المغرب",
+   "section": "التاريخ > من القرن 17 إلى الآن",
+   "file": "Flag of Morocco 1666 1915.svg",
+   "text": "علم المغرب (1666-1915)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم المغرب",
+   "section": "التاريخ > من القرن 17 إلى الآن",
+   "file": "Flag of Morocco.svg",
+   "text": "علم المغرب (1915 - حتى الآن)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم المغرب",
+   "section": "التاريخ > من القرن 17 إلى الآن",
+   "file": "Merchant flag of French Morocco.svg",
+   "text": "العلم التجاري لحماية فرنسا (1919-1946)Flags of the world: French Protectorate of Morocco",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم المغرب",
+   "section": "التاريخ > من القرن 17 إلى الآن",
+   "file": "Merchant flag of Spanish Morocco.svg",
+   "text": "العلم التجاري لحماية إسبانيا (1937-1956)Flags of the world: Spanish Protectorate of Morocco",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم المغرب",
+   "section": "التاريخ > من القرن 17 إلى الآن",
+   "file": "Flag of International Tangier.svg",
+   "text": "العلم التجاري لطنجة الدولية (1953-1957)Flags of the world: International Zone of Tangiers",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم المغرب",
+   "section": "التاريخ > من القرن 17 إلى الآن",
+   "file": "The great siege and the evacuation of Mazagan (1769).jpg",
+   "text": "تصغير|يمين| أعلام يحملها المغاربة (يمين) خلال حصارهم مدينة مازگان سنة 1769. تصغير|يسار| أعلام حربية مغربية استولت عليها فرنسا بعد معركة إسلي سنة 1844. بعد فترة من الاضطرابات، قام مولاي الرشيد بالسيطرة على الأطلس ومجموع المغرب؛ كان ابن مؤسس سلالة العلويين وسليل الرسول محمد بن عبد الله، قام العلويون بإعادة تنظيم الدولة وأسسوا معاهدات تجارية مع السويد، إنجلترا، فرنسا والدنمارك، كان يتم رفع العلم كل صباح وإنزاله كل مساء في القلاع بالرباط وسلا. العلم الأحمر مع خاتم سليمان الأخضر تم اعتماده في 1915. في أواخر القرن 19، كانت هناك الكثير من الثورات في المغرب والقوى الأوروبية قررت حل «الأزمة المغربية». ",
+   "kind": "table"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم المغرب",
+   "section": "التاريخ > من القرن 17 إلى الآن",
+   "file": "Moroccan flags at the Invalides.jpg",
+   "text": "تصغير|يمين| أعلام يحملها المغاربة (يمين) خلال حصارهم مدينة مازگان سنة 1769. تصغير|يسار| أعلام حربية مغربية استولت عليها فرنسا بعد معركة إسلي سنة 1844. بعد فترة من الاضطرابات، قام مولاي الرشيد بالسيطرة على الأطلس ومجموع المغرب؛ كان ابن مؤسس سلالة العلويين وسليل الرسول محمد بن عبد الله، قام العلويون بإعادة تنظيم الدولة وأسسوا معاهدات تجارية مع السويد، إنجلترا، فرنسا والدنمارك، كان يتم رفع العلم كل صباح وإنزاله كل مساء في القلاع بالرباط وسلا. العلم الأحمر مع خاتم سليمان الأخضر تم اعتماده في 1915. في أواخر القرن 19، كانت هناك الكثير من الثورات في المغرب والقوى الأوروبية قررت حل «الأزمة المغربية». ",
+   "kind": "table"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم المغرب",
+   "section": "التاريخ > من القرن 17 إلى الآن",
+   "file": "Morocco. Johnson's new chart of national emblems, 1868.jpg",
+   "text": "تصغير|يمين| أعلام يحملها المغاربة (يمين) خلال حصارهم مدينة مازگان سنة 1769. تصغير|يسار| أعلام حربية مغربية استولت عليها فرنسا بعد معركة إسلي سنة 1844. بعد فترة من الاضطرابات، قام مولاي الرشيد بالسيطرة على الأطلس ومجموع المغرب؛ كان ابن مؤسس سلالة العلويين وسليل الرسول محمد بن عبد الله، قام العلويون بإعادة تنظيم الدولة وأسسوا معاهدات تجارية مع السويد، إنجلترا، فرنسا والدنمارك، كان يتم رفع العلم كل صباح وإنزاله كل مساء في القلاع بالرباط وسلا. العلم الأحمر مع خاتم سليمان الأخضر تم اعتماده في 1915. في أواخر القرن 19، كانت هناك الكثير من الثورات في المغرب والقوى الأوروبية قررت حل «الأزمة المغربية». ",
+   "kind": "table"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم المغرب",
+   "section": "التاريخ > من القرن 17 إلى الآن",
+   "file": "Morocco National Flag 1899.jpg",
+   "text": "تصغير|يمين| أعلام يحملها المغاربة (يمين) خلال حصارهم مدينة مازگان سنة 1769. تصغير|يسار| أعلام حربية مغربية استولت عليها فرنسا بعد معركة إسلي سنة 1844. بعد فترة من الاضطرابات، قام مولاي الرشيد بالسيطرة على الأطلس ومجموع المغرب؛ كان ابن مؤسس سلالة العلويين وسليل الرسول محمد بن عبد الله، قام العلويون بإعادة تنظيم الدولة وأسسوا معاهدات تجارية مع السويد، إنجلترا، فرنسا والدنمارك، كان يتم رفع العلم كل صباح وإنزاله كل مساء في القلاع بالرباط وسلا. العلم الأحمر مع خاتم سليمان الأخضر تم اعتماده في 1915. في أواخر القرن 19، كانت هناك الكثير من الثورات في المغرب والقوى الأوروبية قررت حل «الأزمة المغربية». ",
+   "kind": "table"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم المغرب",
+   "section": "التاريخ > من القرن 17 إلى الآن",
+   "file": "The great siege and the evacuation of Mazagan (1769).jpg",
+   "text": "تصغير|يمين| أعلام يحملها المغاربة (يمين) خلال حصارهم مدينة مازگان سنة 1769.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "ar",
+   "page": "علم المغرب",
+   "section": "التاريخ > من القرن 17 إلى الآن",
+   "file": "Moroccan flags at the Invalides.jpg",
+   "text": "تصغير|يسار| أعلام حربية مغربية استولت عليها فرنسا بعد معركة إسلي سنة 1844.",
+   "kind": "thumb"
+  }
+ ]
+}

@@ -1,0 +1,114 @@
+{
+ "iso": "sc",
+ "flag_item": "Q173201",
+ "pages": [
+  "en:Flag of Seychelles",
+  "fr:Drapeau des Seychelles"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Seychelles",
+   "section": "intro",
+   "file": "Flag of Seychelles.jpg",
+   "text": "Flying flag of Seychelles",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Seychelles",
+   "section": "Description > Colours",
+   "file": "Flag of Seychelles.svg",
+   "text": "! 40pxColor scheme ! style=\"background:#002F6C; width: ; color:white;\"| Blue ! style=\"background:#FED141; width: ; color:black;\"| Yellow ! style=\"background:#D22730; width: ; color:white;\" | Red ! style=\"background:#FFFFFF; width: ; color:black;\" | White ! style=\"background:#007A33; width: ; color:white;\" | Green",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Seychelles",
+   "section": "Description > Colours",
+   "file": "Flag of Seychelles (construction sheet).svg",
+   "text": "|RGB |0-61-136 |252-217-85 |215-35-35 |255-255-255 |0-123-58 |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Seychelles",
+   "section": "History > 1903–1976",
+   "file": "Flag of Seychelles (1903–1961).svg",
+   "text": "",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Seychelles",
+   "section": "History > 1903–1976",
+   "file": "Flag of Seychelles (1961–1976).svg",
+   "text": "",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Seychelles",
+   "section": "History > 1903–1976",
+   "file": "Flag of the Governor of Seychelles (1903–1961).svg",
+   "text": "",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Seychelles",
+   "section": "History > 1903–1976",
+   "file": "Flag of the Governor of Seychelles (1961–1976).svg",
+   "text": "",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Seychelles",
+   "section": "History > 1976–1996",
+   "file": "Flag of Seychelles (1976–1977).svg",
+   "text": "",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Seychelles",
+   "section": "History > 1976–1996",
+   "file": "Flag of Seychelles (1977–1996).svg",
+   "text": "",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Seychelles",
+   "section": "History > 1976–1996",
+   "file": "Flag of the President of Seychelles (1976–1977).svg",
+   "text": "",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Seychelles",
+   "section": "History > 1976–1996",
+   "file": "Flag of the President of Seychelles (1977–1996).svg{{center",
+   "text": "President's flag from 1977 to 1996}}",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau des Seychelles",
+   "section": "intro",
+   "file": "Flag of Seychelles (1976–1977).svg",
+   "text": "Premier drapeau des Seychelles (1976-1977)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau des Seychelles",
+   "section": "intro",
+   "file": "Flag of Seychelles (1977–1996).svg",
+   "text": "Deuxième drapeau des Seychelles (1977-1996)",
+   "kind": "gallery"
+  }
+ ]
+}

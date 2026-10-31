@@ -1,0 +1,908 @@
+{
+ "iso": "uy",
+ "flag_item": "Q171103",
+ "pages": [
+  "en:Flag of Uruguay",
+  "en:List of Uruguayan flags",
+  "fr:Drapeau de l'Uruguay",
+  "es:Bandera de Uruguay"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Uruguay",
+   "section": "Symbolism and design",
+   "file": "Sol de Mayo-Bandera de Uruguay.svg",
+   "text": "thumbnail| Sun of May",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Uruguay",
+   "section": "Symbolism and design > Colors",
+   "file": "Flag of Uruguay.svg",
+   "text": "The specific color hues of the flag are not officially defined by law. However, most representations use the following: {| class=\"wikitable\" style=\"text-align: ;\" ! ! style=\"background:#fcd116; color:black\" | Yellow ! style=\"background:#7b3f00; color:white\" | Brown ! style=\"background:#0038a8; color:white\" | Blue ! style=\"background:#ffffff; color:black\" | White",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "intro",
+   "file": "Banderas y Monumento Artigas en la Plaza Independencia - panoramio.jpg",
+   "text": "Official flags of Uruguay",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "National flags",
+   "file": "Flag of Uruguay.svg",
+   "text": "! scope=\"row\" | | 1830–present | National flag | Four horizontal stripes of blue with the upper hoist-side corner bearing the Sun of May in the over a white canvas.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "National flags",
+   "file": "Flag of Artigas.svg",
+   "text": "! scope=\"row\" | | 1952–present | Artigas flag | A triband, composed of three equal horizontal bands coloured blue, white, and blue; with a red diagonal stripe from the upper hoist to the lower fly.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "National flags",
+   "file": "Flag of the Treinta y Tres.svg",
+   "text": "! scope=\"row\" | | 1952–present | Treinta y Tres flag | Three horizontal stripes: the top one blue, the one white, and the bottom one red. Upon the white stripe are printed the words \"Libertad o Muerte\" (\"Freedom or Death\"). |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Military > Army",
+   "file": "Flag of Uruguayan Army.svg",
+   "text": "! scope=\"row\" | | ?–present | Flag of the National Army of Uruguay | A light brown field with the army emblem in the . |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Military > Uruguay Navy > Jack",
+   "file": "Naval Jack of Uruguay.svg",
+   "text": "! scope=\"row\" | | 1990s–present | Jack of the National Navy of Uruguay | A white field with a blue saltire that extends to the corners of the flag and the Sun of May in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Military > Uruguay Navy > Jack",
+   "file": "Flag of Artigas.svg",
+   "text": "! scope=\"row\" | | 1930s–1990s | Jack of the National Navy of Uruguay |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Military > Uruguay Navy > Jack",
+   "file": "Naval Jack of Uruguay (1817-1930s).svg",
+   "text": "! scope=\"row\" | | 1817–1930s | Jack of the National Navy of Uruguay | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Military > Uruguay Navy > Rank flags",
+   "file": "Flag of the Uruguay Ministry of National Defense.svg",
+   "text": "! scope=\"row\" | | ?–present | Ministry of National Defense |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Military > Uruguay Navy > Rank flags",
+   "file": "Flag of the Commander in Chief of the Uruguayan Navy.svg",
+   "text": "! scope=\"row\" | | ?–present | Commander in Chief |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Military > Uruguay Navy > Rank flags",
+   "file": "Flag of the Vice Admiral of the Uruguayan Navy.svg",
+   "text": "! scope=\"row\" | | ?–present | Vice admiral |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Military > Uruguay Navy > Rank flags",
+   "file": "Flag of the Rear Admiral of the Uruguayan Navy.svg",
+   "text": "! scope=\"row\" | | ?–present | Rear admiral |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Military > Uruguay Navy > Rank flags",
+   "file": "Flag of the Captain commanding a naval force of the Uruguayan Navy.svg",
+   "text": "! scope=\"row\" | | ?–present | Captain commanding a naval force |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Military > Uruguay Navy > Rank flags",
+   "file": "Flag of the Commander of a naval squadron of the Uruguayan Navy.svg",
+   "text": "! scope=\"row\" | | ?–present | Commander of a naval squadron |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Military > Uruguay Navy > Rank flags",
+   "file": "Seniority Pennant of the Uruguayan Navy.svg",
+   "text": "! scope=\"row\" | | ?–present | Seniority pennant |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Military > Uruguay Navy > Rank flags",
+   "file": "Old flag of the Uruguay Ministry of National Defense.svg",
+   "text": "! scope=\"row\" | | ?–? | Ministry of National Defense |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Military > Uruguay Navy > Rank flags",
+   "file": "Old flag of the Inspector general of the Uruguayan Navy.svg",
+   "text": "! scope=\"row\" | | ?–? | Inspector general |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Military > Uruguay Navy > Rank flags",
+   "file": "Flag of the officer commanding the division of ships of the Uruguayan Navy.svg",
+   "text": "! scope=\"row\" | | ?–? | Officer commanding the division of ships |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Military > Uruguay Navy > Rank flags",
+   "file": "Flag of the officer as Commander of two or more ships of the Uruguayan Navy.svg",
+   "text": "! scope=\"row\" | | ?–? | Officer commanding of two or more ships | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Military > Uruguay Navy > Navy Academy",
+   "file": "Flag of Uruguayan Navy Academy.svg",
+   "text": "! scope=\"row\" | | | Uruguay Naval Academy | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Military > Uruguay Navy > Other",
+   "file": "Uruguay commissioning pennant.svg",
+   "text": "! scope=\"row\" | | | War pennant |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Military > Uruguay Navy > Other",
+   "file": "Flag of the privateers in the service of the League of the Free Peoples 1.svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 1815–1820 | rowspan=\"2\" | Flag of the privateers in the service of the League of the Free Peoples |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Military > Uruguay Navy > Other",
+   "file": "Flag of the privateers in the service of the League of the Free Peoples 2.svg",
+   "text": "! scope=\"row\" | | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Military > Air force",
+   "file": "Flag of the Uruguayan Air Force.svg",
+   "text": "! scope=\"row\" | | 1953–present | Flag of the Uruguayan Air Force | A blue field with the Air Force emblem in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Military > Air force",
+   "file": "Flag of the Inspector General of the Uruguayan Air Force.svg",
+   "text": "! scope=\"row\" | | ?–present | Inspector general |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Military > Air force",
+   "file": "Flag of the Group Commander of the Uruguayan Air Force.svg",
+   "text": "! scope=\"row\" | | ?–present | Group commander |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Military > Air force",
+   "file": "Flag of the Squadron leader of the Uruguayan Air Force.svg",
+   "text": "! scope=\"row\" | | ?–present | Squadron leader | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Civil ensign",
+   "file": "Pilot flag of Uruguay.svg",
+   "text": "! scope=\"row\" | | ?–present | Pilot flag | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Police",
+   "file": "Flag of the National Police of Uruguay.svg",
+   "text": "! scope=\"row\" | | ?–present | National Police of Uruguay | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Flag of Artigas Department.svg",
+   "text": "! scope=\"row\" | | 1995–present | | Artigas Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Artigas in Uruguay.svg",
+   "text": "! scope=\"row\" | | 1995–present | | Artigas Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Flag of Canelones Department.svg",
+   "text": "! scope=\"row\" | | 2010–present | | Canelones Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Canelones in Uruguay.svg",
+   "text": "! scope=\"row\" | | 2010–present | | Canelones Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Flag of Cerro Largo Department.svg",
+   "text": "! scope=\"row\" | | 2018–present | | Cerro Largo Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Cerro Largo in Uruguay.svg",
+   "text": "! scope=\"row\" | | 2018–present | | Cerro Largo Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Flag of Colonia Department.svg",
+   "text": "! scope=\"row\" | | ?–present | | Colonia Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Colonia in Uruguay.svg",
+   "text": "! scope=\"row\" | | ?–present | | Colonia Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Flag of Durazno Department.svg",
+   "text": "! scope=\"row\" | | 2000–present | | Durazno Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Durazno in Uruguay.svg",
+   "text": "! scope=\"row\" | | 2000–present | | Durazno Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Flag of Flores Department.svg",
+   "text": "! scope=\"row\" | | 1987–present | | Flores Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Flores in Uruguay.svg",
+   "text": "! scope=\"row\" | | 1987–present | | Flores Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Flag of Florida Department.svg",
+   "text": "! scope=\"row\" | | 1990–present | | Florida Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Florida in Uruguay.svg",
+   "text": "! scope=\"row\" | | 1990–present | | Florida Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Flag of Lavalleja Department.svg",
+   "text": "! scope=\"row\" | | ?–present | | Lavalleja Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Lavalleja in Uruguay.svg",
+   "text": "! scope=\"row\" | | ?–present | | Lavalleja Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Flag of Maldonado Department.png",
+   "text": "! scope=\"row\" | | ?–present | | Maldonado Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Maldonado in Uruguay.svg",
+   "text": "! scope=\"row\" | | ?–present | | Maldonado Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Flag of Paysandú Department.svg",
+   "text": "! scope=\"row\" | | 1992–present | | Paysandú Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Paysandu in Uruguay.svg",
+   "text": "! scope=\"row\" | | 1992–present | | Paysandú Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Flag of Rio Negro Department.svg",
+   "text": "! scope=\"row\" | | 1995–present | | Rio Negro Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Rio Negro in Uruguay.svg",
+   "text": "! scope=\"row\" | | 1995–present | | Rio Negro Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Flag of Rivera Department.png",
+   "text": "! scope=\"row\" | | 1998–present | | Rivera Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Rivera in Uruguay.svg",
+   "text": "! scope=\"row\" | | 1998–present | | Rivera Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Flag of Rocha Department.svg",
+   "text": "! scope=\"row\" | | ?–present | | Rocha Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Rocha in Uruguay.svg",
+   "text": "! scope=\"row\" | | ?–present | | Rocha Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Flag of Salto Department.svg",
+   "text": "! scope=\"row\" | | 1997–present | | Salto Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Salto in Uruguay.svg",
+   "text": "! scope=\"row\" | | 1997–present | | Salto Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Flag of San José Department.svg",
+   "text": "! scope=\"row\" | | 1999–present | | San José Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "San Jose in Uruguay.svg",
+   "text": "! scope=\"row\" | | 1999–present | | San José Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Flag of Soriano Department.svg",
+   "text": "! scope=\"row\" | | 1994–present | | Soriano Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Soriano in Uruguay.svg",
+   "text": "! scope=\"row\" | | 1994–present | | Soriano Department |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Flag of Treinta y Tres Department.svg",
+   "text": "! scope=\"row\" | | 2003–present | | Treinta y Tres Department | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Department flags",
+   "file": "Treinta y Tres in Uruguay.svg",
+   "text": "! scope=\"row\" | | 2003–present | | Treinta y Tres Department | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Historical flags",
+   "file": "Flag of Uruguay (Rivera).svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 1840s | Flag of the Gobierno de la Defensa |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Historical flags",
+   "file": "Flag of Uruguay (Oribe).svg",
+   "text": "! scope=\"row\" | | Flag of the Gobierno del Cerrito | Similar to the current flag.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Historical flags",
+   "file": "Flag of Uruguay (1828-1830).svg",
+   "text": "! scope=\"row\" | | 1828–1830 | Flag of Uruguay | Nine horizontal stripes of light blue with the upper hoist-side corner bearing the Sun of May in the over a white canvas.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Historical flags",
+   "file": "Flag of Uruguay (1825-1828).svg",
+   "text": "! scope=\"row\" | | 1825–1828 | Flag of the Oriental Province | A triband, composed of three equal horizontal bands coloured blue, white, and red.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Historical flags",
+   "file": "Flag of the Provincia Cisplatina.svg",
+   "text": "! scope=\"row\" | | 1820–1828 | Flag of the Cisplatina Province | A triband, composed of three equal horizontal bands coloured green, white, and green; with the province's emblem in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Historical flags",
+   "file": "Flag of Artigas 1815.svg",
+   "text": "! scope=\"row\" | | 1814–1815 | First flag of the League of the Free Peoples, also known as the flag of Artigas | A triband, composed of three equal horizontal bands coloured blue, white, and blue; with red stripes inside the blue bands. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Ethnic groups flags",
+   "file": "Flag of the Charrúa People.svg",
+   "text": "! scope=\"row\" | | 1990s–present | Charrúa | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Political flags",
+   "file": "Flag of Unidad Popular (Uruguay).svg",
+   "text": "! scope=\"row\" | | 2013–present | Popular Unity |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Political flags",
+   "file": "Bandera Comuna.svg",
+   "text": "! scope=\"row\" | | 2008–present | Anti-imperialist Unitary Commissions |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Political flags",
+   "file": "Flag of the Independent Party (Uruguay).svg",
+   "text": "! scope=\"row\" | | 2002–present | Independent Party |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Political flags",
+   "file": "Flag of Workers' Party (Uruguay).svg",
+   "text": "! scope=\"row\" | | 1984–present | Workers' Party |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Political flags",
+   "file": "BanderaPVP.svg",
+   "text": "! scope=\"row\" | | 1975–present | Party for the Victory of the People |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Political flags",
+   "file": "Logo Frente Amplio.svg",
+   "text": "! scope=\"row\" | | 1971–present | Broad Front Party |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Political flags",
+   "file": "Flag of Christian Democratic Party of Uruguay.svg",
+   "text": "! scope=\"row\" | | 2020s–present | rowspan=\"3\" | Christian Democratic Party of Uruguay |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Political flags",
+   "file": "Old flag of Christian Democratic Party of Uruguay.svg",
+   "text": "! scope=\"row\" | | ?–present |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Political flags",
+   "file": "Flag of Christian Democratic Party of Uruguay (1960s).svg",
+   "text": "! scope=\"row\" | | 1960s |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Political flags",
+   "file": "Flag of the FAU.svg",
+   "text": "! scope=\"row\" | | 1956–present | Uruguayan Anarchist Federation |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Political flags",
+   "file": "Flag of the National Party (Uruguay).svg",
+   "text": "! scope=\"row\" | | 1904–present | rowspan=\"2\" | National Party |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Political flags",
+   "file": "Flag of the National Party (Uruguay) (1897-1904).svg",
+   "text": "! scope=\"row\" | | 1897–1904 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Political flags",
+   "file": "Flag of Colorado Party (Uruguay).svg",
+   "text": "! scope=\"row\" | | 1836–present | Colorado Party |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Political flags",
+   "file": "Flag of Partido de la Concertación.svg",
+   "text": "! scope=\"row\" | | 2013–2019 | Concertation Partyes |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Political flags",
+   "file": "Flag of Independent Democratic Feminist Party.svg",
+   "text": "! scope=\"row\" | | 1932–1938 | Independent Democratic Feminist Party | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Political flags > Rebel groups flags",
+   "file": "Bandera dels Tupamaros.svg",
+   "text": "! scope=\"row\" | | 1967–1972 | Tupamaros | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Sporting flags",
+   "file": "Flag of Uruguayan Football Association.svg",
+   "text": "! scope=\"row\" | | ?–present | Uruguayan Football Association | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Burgees of Uruguay",
+   "file": "Burgee of YC Punta del Este.png",
+   "text": "! scope=\"row\" | | 1924–present | Flag of The Punta del Este Yacht Club |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Uruguayan flags",
+   "section": "Burgees of Uruguay",
+   "file": "Burgee of YC Uruguayo.svg",
+   "text": "! scope=\"row\" | | 1906–present | Flag of The Yacht Club Uruguayo | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de l'Uruguay",
+   "section": "Historique du drapeau",
+   "file": "Flag of Uruguay (1825-1828).svg",
+   "text": "Drapeau de l'Uruguay 1825 à 1828",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de l'Uruguay",
+   "section": "Historique du drapeau",
+   "file": "Flag of Uruguay (1828-1830).svg",
+   "text": "Drapeau de 1828 à 1830",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de l'Uruguay",
+   "section": "Drapeaux co-officiels",
+   "file": "Flag of Artigas.svg",
+   "text": "Drapeau d'Artigas",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de l'Uruguay",
+   "section": "Drapeaux co-officiels",
+   "file": "Flag of the Treinta y Tres.svg",
+   "text": "Drapeau Treinta y Tres",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de l'Uruguay",
+   "section": "Drapeaux co-officiels > Drapeau maritime",
+   "file": "Naval Jack of Uruguay.svg",
+   "text": "Bannière navale de l'Uruguay",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Uruguay",
+   "section": "Historia > Durante el Imperio hispano",
+   "file": "Flag of New Spain.svg",
+   "text": "miniatura|200x200px| Cruz de Borgoña, emblema militar de la Monarquía Hispánica (1506-1785)|alt=|izquierda",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Uruguay",
+   "section": "Historia > Durante el Imperio hispano",
+   "file": "FIAV historical.svg",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Uruguay",
+   "section": "Historia > Durante el Imperio hispano",
+   "file": "Flag of Spain (1785-1873 and 1875-1931).svg",
+   "text": "miniatura|200x200px| Bandera utilizada por el rey de España para sus dominios desde 1785.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Uruguay",
+   "section": "Historia > Proceso independentista > Liga Federal",
+   "file": "Flag of Artigas.svg",
+   "text": "izquierda|miniaturadeimagen|200x200px| Bandera de la Liga Federal, actualmente conocida como Bandera de Artigas desde 1952 goza de estatus oficial en Uruguay.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Uruguay",
+   "section": "Historia > Proceso independentista > Liga Federal",
+   "file": "Flag of Uruguay (1825-1828).svg",
+   "text": "miniaturadeimagen|200x200px| Bandera de la Provincia Oriental, establecida por Artigas en 1816|alt=",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Uruguay",
+   "section": "Historia > Proceso independentista > Liga Federal",
+   "file": "Flag of the Treinta y Tres.svg",
+   "text": "miniaturadeimagen|200x200px| Bandera de los Treinta y Tres Orientales, utilizada en 1825 desde 1952 goza de estatus oficial en Uruguay",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Uruguay",
+   "section": "Historia > Provincia Oriental (1825-1828)",
+   "file": "Canelones-Monument.jpg",
+   "text": "miniaturadeimagen| Monumento a la Bandera, Canelones",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Uruguay",
+   "section": "Historia > Primer Pabellón Nacional",
+   "file": "Flag of Uruguay (1828-1830).svg",
+   "text": "izquierda|miniaturadeimagen| Primer Pabellón Nacional.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Uruguay",
+   "section": "Historia > Pabellón Actual",
+   "file": "La bandera en la Plaza de la Democracia.JPG",
+   "text": "miniaturadeimagen| Plaza de la Democracia, Montevideo",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Uruguay",
+   "section": "Historia > Pabellón Actual",
+   "file": "Uruguay flags.jpg",
+   "text": "miniaturadeimagen| Las tres banderas oficiales de Uruguay",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Uruguay",
+   "section": "Promesa y juramento de fidelidad",
+   "file": "Jura de la Bandera Uruguaya.jpg",
+   "text": "miniatura|Alumnos de secundaria prestando juramento a la bandera.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Uruguay",
+   "section": "Banderas oficiales de Uruguay",
+   "file": "Flag of Artigas.svg",
+   "text": "Bandera de Artigas",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Uruguay",
+   "section": "Banderas oficiales de Uruguay",
+   "file": "Flag of Uruguay.svg",
+   "text": "Bandera del Uruguay",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Uruguay",
+   "section": "Banderas oficiales de Uruguay",
+   "file": "Flag of the Treinta y Tres.svg",
+   "text": "Bandera de los Treinta y Tres Orientales",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Uruguay",
+   "section": "Banderas similares",
+   "file": "Flag of Greece.svg",
+   "text": "Bandera de Grecia.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Uruguay",
+   "section": "Banderas similares",
+   "file": "Flag of Argentina.svg",
+   "text": "Bandera de Argentina.",
+   "kind": "gallery"
+  }
+ ]
+}

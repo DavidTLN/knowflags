@@ -1,0 +1,1011 @@
+{
+ "iso": "gt",
+ "flag_item": "Q178179",
+ "pages": [
+  "en:Flag of Guatemala",
+  "fr:Drapeau du Guatemala",
+  "es:Bandera de Guatemala"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "intro",
+   "file": "20230915 GG ARRIADA BANDERA NACIONAL 1.jpg",
+   "text": "Flag of Guatemala flying on an outdoor flagpole",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Ethnic group flags",
+   "file": "Bandera de los Pueblos Guatemala (circle).svg",
+   "text": "! scope=\"row\" | | Bandera de los Pueblos, flag attributed to indigenous peoples.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Ethnic group flags",
+   "file": "Flag of the Mayan People.svg",
+   "text": "! scope=\"row\" | | Flag of the Maya people",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Ethnic group flags",
+   "file": "Garifuna Flag.svg",
+   "text": "! scope=\"row\" | | Flag of the Garifuna |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Government flags",
+   "file": "Flag of the President of Guatemala.svg",
+   "text": "Flag of the president of Guatemala",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Government flags",
+   "file": "Flag of the Vice-President of Guatemala.svg",
+   "text": "Flag of the vice president of Guatemala",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Government flags",
+   "file": "Flag of the President of the Congress of Guatemala.svg",
+   "text": "Flag of the president of the Congress of Guatemala",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Government flags",
+   "file": "Flag of the President of the Supreme Court of Justice of Guatemala.svg",
+   "text": "Flag of the president of the Supreme Court of Justice Guatemala",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Military flags",
+   "file": "Flag for the Minister of Defence (Guatemala).svg",
+   "text": "! scope=\"row\" | | Flag of the Minister of Defence",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Military flags",
+   "file": "Flag for the Chief of the General Staff (Guatemala).svg",
+   "text": "! scope=\"row\" | | Flag of the Chief of the General Staff |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Political flags",
+   "file": "MLN Logo.svg",
+   "text": "! scope=\"row\" | | Flag of the National Liberation Movement",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Political flags",
+   "file": "Partido Guatemalteco del Trabajo (flag).svg",
+   "text": "! scope=\"row\" | | Flag of the Guatemalan Party of Labour",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Political flags",
+   "file": "Flag of the Guatemalan National Revolutionary Unity.svg",
+   "text": "! scope=\"row\" | | Flag of the Guatemalan National Revolutionary Unity |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Flag of Alta Verapaz Department.svg",
+   "text": "! scope=\"row\" | | | Alta Verapaz",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Alta Verapaz in Guatemala.svg",
+   "text": "! scope=\"row\" | | | Alta Verapaz",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Flag of Baja Verapaz Department.svg",
+   "text": "! scope=\"row\" | | | Baja Verapaz",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Baja Verapaz in Guatemala.svg",
+   "text": "! scope=\"row\" | | | Baja Verapaz",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Flag of Chimaltenango Department.svg",
+   "text": "! scope=\"row\" | | | Chimaltenango",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Chimaltenango in Guatemala.svg",
+   "text": "! scope=\"row\" | | | Chimaltenango",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Flag of Chiquimula, Guatemala.svg",
+   "text": "! scope=\"row\" | | | Chiquimula",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Chiquimula in Guatemala.svg",
+   "text": "! scope=\"row\" | | | Chiquimula",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Flag of El Progreso Department.svg",
+   "text": "! scope=\"row\" | | | El Progresso",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "El Progreso in Guatemala.svg",
+   "text": "! scope=\"row\" | | | El Progresso",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Flag of Escuintla.svg",
+   "text": "! scope=\"row\" | | | Escuintla",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Escuintla in Guatemala.svg",
+   "text": "! scope=\"row\" | | | Escuintla",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Bandera del Departamento Guatemala.svg",
+   "text": "! scope=\"row\" | | | Guatemala",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Guatemala in Guatemala.svg",
+   "text": "! scope=\"row\" | | | Guatemala",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Flag of Huehuetenango Department.svg",
+   "text": "! scope=\"row\" | | | Huehuetenango",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Huehuetenango in Guatemala.svg",
+   "text": "! scope=\"row\" | | | Huehuetenango",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Flag of Izabal Department.svg",
+   "text": "! scope=\"row\" | | | Izabal",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Izabal in Guatemala.svg",
+   "text": "! scope=\"row\" | | | Izabal",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Flag of Jalapa Department, Guatemala.svg",
+   "text": "! scope=\"row\" | | | Jalapa",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Jalapa in Guatemala.svg",
+   "text": "! scope=\"row\" | | | Jalapa",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Flag of Jutiapa Department.svg",
+   "text": "! scope=\"row\" | | | Jutiapa",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Jutiapa in Guatemala.svg",
+   "text": "! scope=\"row\" | | | Jutiapa",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Flag of El Petén Department.svg",
+   "text": "! scope=\"row\" | | | Petén",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Peten in Guatemala.svg",
+   "text": "! scope=\"row\" | | | Petén",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Flag of Quetzaltenango Department.svg",
+   "text": "! scope=\"row\" | | | Quetzaltenango",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Quetzaltenango in Guatemala.svg",
+   "text": "! scope=\"row\" | | | Quetzaltenango",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Flag of Quiché Department.svg",
+   "text": "! scope=\"row\" | | | Quiché",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "El Quiche in Guatemala.svg",
+   "text": "! scope=\"row\" | | | Quiché",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Flag of Retahuleu Department.svg",
+   "text": "! scope=\"row\" | | | Retalhuleu",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Retalhuleu in Guatemala.svg",
+   "text": "! scope=\"row\" | | | Retalhuleu",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Flag of Sacatepéquez Department.svg",
+   "text": "! scope=\"row\" | | | Sacatepéquez",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Sacatepequez in Guatemala.svg",
+   "text": "! scope=\"row\" | | | Sacatepéquez",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Flag of San Marcos Department.svg",
+   "text": "! scope=\"row\" | | | San Marcos",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "San Marcos in Guatemala.svg",
+   "text": "! scope=\"row\" | | | San Marcos",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Flag of Santa Rosa Department.svg",
+   "text": "! scope=\"row\" | | | Santa Rosa",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Santa Rosa in Guatemala.svg",
+   "text": "! scope=\"row\" | | | Santa Rosa",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Flag of Sololá Department.svg",
+   "text": "! scope=\"row\" | | | Sololá",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Solola in Guatemala.svg",
+   "text": "! scope=\"row\" | | | Sololá",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Flag of Suchitepéquez Department.svg",
+   "text": "! scope=\"row\" | | | Suchitepéquez",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Suchitepequez in Guatemala.svg",
+   "text": "! scope=\"row\" | | | Suchitepéquez",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Flag of Totonicapán Department.svg",
+   "text": "! scope=\"row\" | | | Totonicapán",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Totonicapan in Guatemala.svg",
+   "text": "! scope=\"row\" | | | Totonicapán",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Flag of Zacapa Department.svg",
+   "text": "! scope=\"row\" | | | Zacapa |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Department flags",
+   "file": "Zacapa in Guatemala.svg",
+   "text": "! scope=\"row\" | | | Zacapa |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Historical flags",
+   "file": "Flag of New Spain.svg",
+   "text": "! scope=\"row\" | | 1524–1821 | Flag of the Kingdom of Guatemala",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Historical flags",
+   "file": "First flag of the Mexican Empire.svg",
+   "text": "! scope=\"row\" | | 1821–1823 | Flag of the First Mexican Empire",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Historical flags",
+   "file": "Flag of the United Provinces of Central America.svg",
+   "text": "! scope=\"row\" | | 1823–1824 | Flag of the United Provinces of Central America",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Historical flags",
+   "file": "Flag of the Federal Republic of Central America.svg",
+   "text": "! scope=\"row\" | | 1824–1838 | Flag of the Federal Republic of Central America",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Historical flags",
+   "file": "Flag of Guatemala (1825-1838).svg",
+   "text": "! scope=\"row\" | | 1825–1838 | Flag of Guatemala within Central America",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Historical flags",
+   "file": "Flag of Guatemala (1838-1843).svg",
+   "text": "! scope=\"row\" | | 1838–1843 | Flag of Guatemala",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Historical flags",
+   "file": "Flag of the State of Los Altos.svg",
+   "text": "! scope=\"row\" | | 1838–18401848–1849 | Flag of the State of Los Altos",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Historical flags",
+   "file": "Flag of Guatemala (1843-1851).svg",
+   "text": "! scope=\"row\" | | 1843–1851 | Flag of Guatemala",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Historical flags",
+   "file": "Flag of Guatemala (1851-1858).svg",
+   "text": "! scope=\"row\" | | 1851–1858 | Flag of Guatemala",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Historical flags",
+   "file": "State Flag of Guatemala (1851-1858).svg",
+   "text": "! scope=\"row\" | | 1851–1858 | State flag of Guatemala",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Historical flags",
+   "file": "Flag of Guatemala (1858–1871).svg",
+   "text": "! scope=\"row\" | | 1858–1871 | Flag of Guatemala",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Historical flags",
+   "file": "State Flag of Guatemala (1858-1871).svg",
+   "text": "! scope=\"row\" | | 1858–1871 | State flag of Guatemala",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Historical flags",
+   "file": "Flag of Guatemala (1871-1968).svg",
+   "text": "! scope=\"row\" | | 1871–1968 | State flag used until 1968, similar to the modern flag but with minor differences and additions of blue and white ribbons; some variants contained red ribbons or multiple",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Historical flags",
+   "file": "Flag of Guatemala (1924).svg",
+   "text": "! scope=\"row\" | | 1871–1968 | State flag of Guatemala (variant, used before )",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Historical flags",
+   "file": "Flag of Guatemala (1968–1997).svg",
+   "text": "! scope=\"row\" | | 1968–1997 | State flag of Guatemala",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guatemala",
+   "section": "Historical flags",
+   "file": "Flag of Guatemala.svg",
+   "text": "! scope=\"row\" | | 1997–present | State flag of Guatemala |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Guatemala",
+   "section": "intro",
+   "file": "Guatemala Presidental Flag.svg",
+   "text": "Drapeau du Président.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Guatemala",
+   "section": "Anciens drapeaux",
+   "file": "Flag of the United Provinces of Central America.svg",
+   "text": "Drapeau des Provinces-Unies d'Amérique centrale 1823-1824.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Guatemala",
+   "section": "Anciens drapeaux",
+   "file": "Flag of the Federal Republic of Central America.svg",
+   "text": "Drapeau de la République fédérale d'Amérique centrale 1825-1839.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Guatemala",
+   "section": "Anciens drapeaux",
+   "file": "Flag of Guatemala (1825-1838).svg",
+   "text": "1825-1838 (au sein de la République fédérale d'Amérique centrale).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Guatemala",
+   "section": "Anciens drapeaux",
+   "file": "Flag of Guatemala (1838-1843).svg",
+   "text": "1838-1843.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Guatemala",
+   "section": "Anciens drapeaux",
+   "file": "Flag of Guatemala (1843-1851).svg",
+   "text": "1843-1851.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Guatemala",
+   "section": "Anciens drapeaux",
+   "file": "Flag of Guatemala (1851-1858).svg",
+   "text": "1851-1858.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Guatemala",
+   "section": "Anciens drapeaux",
+   "file": "Flag of Guatemala (1858–1871).svg",
+   "text": "1858-1871.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Guatemala",
+   "section": "Anciens drapeaux",
+   "file": "Flag of Guatemala (1871-1968).svg",
+   "text": "1871-1968.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Guatemala",
+   "section": "Anciens drapeaux",
+   "file": "Flag of Guatemala (1968–1997).svg",
+   "text": "1968-1997.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "intro",
+   "file": "20230915 GG ARRIADA BANDERA NACIONAL 1.jpg",
+   "text": "miniaturadeimagen|Bandera de Guatemala",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Banderas utilizadas durante la colonización española > Bandera de la Cruz de Borgoña (1524-1701)",
+   "file": "Flag of Cross of Burgundy.svg",
+   "text": "1525–1701",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Banderas utilizadas durante la colonización española > Bandera del Pabellón de la Armada Española usada como bandera Nacional (1701-1760)",
+   "file": "Bandera de España (1701–1760).svg",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Banderas utilizadas durante la colonización española > Bandera utilizada por decreto del Rey Carlos III (1760-1785)",
+   "file": "Flag of Spain (1760–1785).svg",
+   "text": "1760–1785",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Banderas utilizadas durante la colonización española > Bandera utilizada por decreto del Rey Carlos III (1785-1821)",
+   "file": "Flag of Spain (1785–1873, 1875–1931).svg",
+   "text": "1785–1821",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Banderas y Escudos Nacionales posterior a la independencia y anterior a la Unión Centroamericana > Utilización de la bandera Española",
+   "file": "Flag of Spain (1785–1873, 1875–1931).svg",
+   "text": "1785–1821",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Banderas y Escudos Nacionales posterior a la independencia y anterior a la Unión Centroamericana > Anexión al Imperio Mexicano",
+   "file": "Bandera del Primer Imperio Mexicano.svg",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Banderas y escudos anteriores > 1823–1838 Bandera y escudo de armas usados por provincia de Guatemala",
+   "file": "Flag of the United Provinces of Central America.svg",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Banderas y escudos anteriores > 1825-1843 Bandera y escudo del Estado de Guatemala",
+   "file": "Flag of Guatemala (1825-1838).svg",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Banderas y escudos anteriores > 1843-1851 Bandera y escudo del Estado de Guatemala",
+   "file": "Flag of Guatemala (1843-1851).svg",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Banderas y escudos anteriores > 1851-1858 Bandera y escudo de la República de Guatemala",
+   "file": "State Flag of Guatemala (1851-1858).svg",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Banderas y escudos anteriores > 1858-1871 Bandera y escudo de la República de Guatemala",
+   "file": "State Flag of Guatemala (1858-1871).svg",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Decreto de creación de la bandera",
+   "file": "Flag of Guatemala (1871-1968).svg",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Decreto de creación del escudo",
+   "file": "Coat of arms of Guatemala.svg",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Decreto de regulación de la bandera y el escudo",
+   "file": "Flag of Guatemala.svg",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Decreto de regulación de la bandera y el escudo > Decreto 104-97 del Congreso de la República",
+   "file": "Flag of Guatemala.svg",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Cronología",
+   "file": "Flag of Cross of Burgundy.svg",
+   "text": "| 1525–1701 |Bandera de la Colonia de Guatemala y posteriormente de la Capitanía General de Guatemala | 1524 | 1701",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Cronología",
+   "file": "Flag of Spain (1701–1760).svg",
+   "text": "| 1701–1760 |Bandera de la Capitanía General de Guatemala usada por Orden del Rey Felipe V | 1701 | 1760",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Cronología",
+   "file": "Flag of Spain (1760–1785).svg",
+   "text": "| 1760–1785 |Bandera de la Capitanía General de Guatemala por Orden del Rey Carlos lll | 1760 | 1785",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Cronología",
+   "file": "Flag of Spain (1785–1873, 1875–1931).svg",
+   "text": "| 1785–1821 |Bandera de la Capitanía General de Guatemala Por orden del Rey Carlos lll | 1785 | 15 de septiembre de 1821",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Cronología",
+   "file": "Flag of Spain (1785–1873, 1875–1931).svg",
+   "text": "| 1785–1821 |Bandera utilizada por la independencia del territorio por Gabino Gainza |15 de septiembre de 1821 |5 de enero de 1822",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Cronología",
+   "file": "Bandera del Primer Imperio Mexicano.svg",
+   "text": "| |bandera utilizada en la anexión al primer imperio mexicano |5 de enero de 1822 |1 de julio de 1823",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Cronología",
+   "file": "Flag of the United Provinces of Central America.svg",
+   "text": "| |Bandera utilizada durante la Unión Centroamericana llamada Provincias Unidas del Centro de América |1 de julio de 1823 |22 de noviembre de 1824",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Cronología",
+   "file": "Flag of the Federal Republic of Central America.svg",
+   "text": "| |Bandera utilizada a partir de la creación de la República federal de Centroamérica |22 de noviembre de 1824 |17 de abril de 1839",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Cronología",
+   "file": "Flag of Guatemala (1825-1838).svg",
+   "text": "| |Bandera usada por el estado federal de Guatemala dentro de la República |20 de enero de 1825 |1838",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Cronología",
+   "file": "Flag of Guatemala (1838-1843).svg",
+   "text": "| |Bandera utilizada como bandera de estado y posteriormente a partir de que Guatemala se separó oficialmente de La República Federal de Centro América |1838 |14 de noviembre de 1843",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Cronología",
+   "file": "Flag of Guatemala (1843-1851).svg",
+   "text": "| |Bandera utilizada por decreto presidencial de Mariano Rivera Paz |14 de noviembre de 1843 |14 de marzo de 1851",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Cronología",
+   "file": "State Flag of Guatemala (1851-1858).svg",
+   "text": "| |Bandera utilizada por decreto Presidencial de Mariano Paredes |14 de marzo de 1851 |31 de mayo de 1858",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Cronología",
+   "file": "State Flag of Guatemala (1858-1871).svg",
+   "text": "| |Bandera Utilizada por decreto del presidente Rafael Carrera |31 de mayo de 1858 |17 de agosto de 1871",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Cronología",
+   "file": "Flag of Guatemala (1871-1968).svg",
+   "text": "| |Bandera utilizada por decreto presidencial de Miguel García Granados, quien instauró la bandera actual junto al escudo y símbolos patrios |17 de agosto de 1871 |15 de septiembre de 1968",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Cronología",
+   "file": "Flag of Guatemala (1924).svg",
+   "text": "| |Variante de la bandera anterior que se utilizó ocasionalmente |17 de agosto de 1871 | Años 1920",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Cronología",
+   "file": "Flag of Guatemala.svg",
+   "text": "| |Bandera utilizada por decreto del presidente Julio Méndez quien rediseñó la bandera a la actual |15 de septiembre de 1968 |actualidad |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Banderas gubernamentales",
+   "file": "Flag of the President of Guatemala.svg",
+   "text": "23x23pxBandera del Presidente de Guatemala",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Banderas gubernamentales",
+   "file": "Flag of the Vice-President of Guatemala.svg",
+   "text": "23x23pxBandera del Vicepresidente de Guatemala",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Banderas gubernamentales",
+   "file": "Flag of the President of the Congress of Guatemala.svg",
+   "text": "23x23pxBandera del Presidente del Congreso de la República de Guatemala.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Banderas gubernamentales",
+   "file": "Flag of the President of the Supreme Court of Justice of Guatemala.svg",
+   "text": "23x23pxBandera del Presidente de la Corte Suprema de Justicia de Guatemala",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Otras banderas",
+   "file": "Bandera de los Pueblos Guatemala.png",
+   "text": "| |Bandera creada en 2008 para honrar al pueblo maya existente desde 2000 años a. C.Los cuatro colores de la bandera representan los principales pueblos indígenas de Guatemala: los mayas (blanco), ladinos (negro), garífunas (amarillo) y xincas (rojo). |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Galería",
+   "file": "Presidente Bernardo Arévalo junto a su Gabinete de Gobierno celebra los 204 años de Independencia.jpg",
+   "text": "alt=|Izado de una bandera monumental durante la celebración de los 204 años de Independencia",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Galería",
+   "file": "20230915 AI ARRIADA BANDERA NACIONAL 3.jpg",
+   "text": "alt=",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Galería",
+   "file": "CRJ6355.jpg",
+   "text": "alt=",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Galería",
+   "file": "20220817100551 GAG 1403.jpg",
+   "text": "alt=",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guatemala",
+   "section": "Galería",
+   "file": "20230915 AI ARRIADA BANDERA NACIONAL 1 (1).jpg",
+   "text": "alt=",
+   "kind": "gallery"
+  }
+ ]
+}

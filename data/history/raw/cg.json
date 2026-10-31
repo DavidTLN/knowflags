@@ -1,0 +1,74 @@
+{
+ "iso": "cg",
+ "flag_item": "Q163333",
+ "pages": [
+  "en:Flag of the Republic of the Congo",
+  "fr:Drapeau de la république du Congo"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of the Republic of the Congo",
+   "section": "History",
+   "file": "Flag of the Kingdom of Loango.svg",
+   "text": "Flag of the Kingdom of Loango (c. 1550–c. 1883)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of the Republic of the Congo",
+   "section": "History",
+   "file": "Flag of the Kingdom of Kongo according to Giovanni Cavazzi da Montecuccolo.svg",
+   "text": "Flag of the Kingdom of Kongo (circa 17th century)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of the Republic of the Congo",
+   "section": "History",
+   "file": "Royal Banner of the Kingdom of Kakongo (c. 1883).svg",
+   "text": "Flag of Kakongo (circa 15th century)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of the Republic of the Congo",
+   "section": "History",
+   "file": "French Congo 1959 proposal (Flag).svg",
+   "text": "Proposed flag of the French Congo (pre-1959)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of the Republic of the Congo",
+   "section": "History",
+   "file": "Flag of the People's Republic of the Congo.svg",
+   "text": "Flag of the People's Republic of the Congo (2 January 1970 – 9 June 1991) and the Congolese Party of Labour",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of the Republic of the Congo",
+   "section": "Design",
+   "file": "Photo Flag Rep Congo.JPG",
+   "text": "Republic of the Congo flag",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of the Republic of the Congo",
+   "section": "Design > Colour schemes",
+   "file": "Flag of the Republic of the Congo.svg",
+   "text": "! (1991–present) !style=\"background:#009739; color:#FFF; width: \"| Green !style=\"background:#FFD100; color:#000; width: \"| Yellow !style=\"background:#EF3340; color:#FFF; width: \"| Red",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la république du Congo",
+   "section": "intro",
+   "file": "Flag of the People's Republic of the Congo.svg",
+   "text": "Drapeau de 1970 à 1991",
+   "kind": "thumb"
+  }
+ ]
+}

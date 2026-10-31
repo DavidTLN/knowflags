@@ -1,0 +1,955 @@
+{
+ "iso": "ss",
+ "flag_item": "Q182782",
+ "pages": [
+  "en:Flag of South Sudan",
+  "en:List of South Sudanese flags",
+  "fr:Drapeau du Soudan du Sud"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Description",
+   "file": "Independence 5.JPG",
+   "text": "Man with South Sudan flag, 2011",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Historical flags > South Sudan as part of Anglo-Egyptian Sudan",
+   "file": "Flag of Anglo-Egyptian Sudan (1914–1922).png",
+   "text": "Flags used in Anglo-Egyptian Sudan (1914–1922)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Historical flags > South Sudan as part of Anglo-Egyptian Sudan",
+   "file": "Flag of Anglo-Egyptian Sudan.svg",
+   "text": "Flags used in Anglo-Egyptian Sudan (1922–1955)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Historical flags > South Sudan as part of Anglo-Egyptian Sudan",
+   "file": "Flag of Sudan (Bandung Conference).svg",
+   "text": "Provisional flag of Sudan used during the Afro-Asian Conference (April 1955).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Historical flags > South Sudan as part of the Republic of Sudan",
+   "file": "Flag of Sudan (1956–1970).svg",
+   "text": "National Flag of Sudan used in South Sudan (1956–1970)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Historical flags > South Sudan as part of the Republic of Sudan",
+   "file": "Flag of Sudan.svg",
+   "text": "National Flag of Sudan used in South Sudan (1970–2011)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Historical flags > South Sudan as part of the Republic of Sudan",
+   "file": "Flag of the Nile Republic.svg",
+   "text": "Flag of Gordon Muortat Mayen's Nile Provisional Government (NPG) and self-declared Nile Republic (1969–1971)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Historical flags > South Sudan as part of the Republic of Sudan",
+   "file": "Flag of South Sudan (2011–2023, upright star).svg",
+   "text": "Flag of Southern Sudan used by South Sudan (2005–2011)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Historical flags > South Sudan as the independent Republic of South Sudan",
+   "file": "Flag of South Sudan (2011–2023, upright star).svg",
+   "text": "Flag of South Sudan (2011–2023), using dark blue triangle.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Historical flags > South Sudan as the independent Republic of South Sudan",
+   "file": "Flag of South Sudan (alternate design).svg",
+   "text": "Flag of South Sudan (2011–2023), using dark blue triangle and tilted star.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Other flags > Government flags",
+   "file": "Flag of the President of South Sudan.svg",
+   "text": "Standard of the president of South Sudan.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Other flags > Government flags",
+   "file": "Flag of the Governor-General of the Anglo-Egyptian Sudan.svg",
+   "text": "Flag of the British governor general (used in Anglo-Egyptian Sudan).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Other flags > Military flags",
+   "file": "Flag of the SPLA (2011 to present).svg",
+   "text": "Flag of the South Sudan People's Defence Forces (2011–present)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Other flags > Military flags",
+   "file": "Flag of the SPLA (until 2011).svg",
+   "text": "Flag of the South Sudan People's Defence Forces (until 2011)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Other flags > Military flags",
+   "file": "Flag of the Sudan Defense Force (1925-1956).svg",
+   "text": "Flag of the Sudan Defence Force (1925–1956; used in Anglo-Egyptian Sudan)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Other flags > Military flags",
+   "file": "Roundel of South Sudan.svg",
+   "text": "Roundel of the South Sudan Air Force",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Other flags > Political party flags",
+   "file": "Flag of Sudan People's Liberation Army (1983).svg",
+   "text": "Flag used by the Sudan People's Liberation Movement (1983–1995)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Other flags > Political party flags",
+   "file": "Flag of Sudan People's Liberation Army (1995).svg",
+   "text": "Flag used by the Sudan People's Liberation Movement (1995)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Other flags > Political party flags",
+   "file": "Flag of Sudan People's Liberation Movement.svg",
+   "text": "Flag used by the Sudan People's Liberation Movement",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Other flags > Political party flags",
+   "file": "Flag of Sudan People's Liberation Movement (Yellow Star).svg",
+   "text": "Flag used by the Sudan People's Liberation Movement",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Other flags > Political party flags",
+   "file": "Flag of SSLM.svg",
+   "text": "Flag of the South Sudan Liberation Movement",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Other flags > Political party flags",
+   "file": "Flag of the National Salvation Front.svg",
+   "text": "Flag of the National Salvation Front",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Other flags > Political party flags",
+   "file": "Flag of the United Democratic Salvation Front.svg",
+   "text": "Flag of the United Democratic Front",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Other flags > Political party flags",
+   "file": "Flag of the Anyanya.svg",
+   "text": "Flag of the Anyanya (1963–1972)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Other flags > Political party flags",
+   "file": "Flag of the Azania Liberation Front.svg",
+   "text": "Flag of the Azania Liberation Front (1965–1970)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Other flags > Political party flags",
+   "file": "Flag of the SPLA-Nasir.svg",
+   "text": "Flag of SPLA-Nasir (1991–2002)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Other flags > Miscellaneous flags",
+   "file": "Flag of South Sudan Independence Day.svg",
+   "text": "One of the many flags flown in the capital of South Sudan on Independence Day.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Other flags > Miscellaneous flags",
+   "file": "Flag of Dinka people.svg",
+   "text": "Flag of the Dinka people",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Other flags > Miscellaneous flags",
+   "file": "Flag of the Bari people.svg",
+   "text": "Flag of the Bari people",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Other flags > Miscellaneous flags",
+   "file": "Nuer White Army Flag.svg",
+   "text": "Flag of the Nuer White Army",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Sub-national flags > States",
+   "file": "Flag of Central Equatoria.png",
+   "text": "Central Equatoria",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Sub-national flags > States",
+   "file": "Flag of Eastern Equatoria.png",
+   "text": "Eastern Equatoria",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Sub-national flags > States",
+   "file": "Flag of Jonglei.png",
+   "text": "Jonglei",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Sub-national flags > States",
+   "file": "Flag of Lakes State.png",
+   "text": "Lakes State",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Sub-national flags > States",
+   "file": "Flag of Northern Bahr el Ghazal.png",
+   "text": "Northern Bahr el Ghazal",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Sub-national flags > States",
+   "file": "Flag of Unity State.png",
+   "text": "Unity State",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Sub-national flags > States",
+   "file": "Flag of Upper Nile State.png",
+   "text": "Upper Nile",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Sub-national flags > States",
+   "file": "Flag of Warrap State.png",
+   "text": "Warrap",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Sub-national flags > States",
+   "file": "Flag of Western Bahr el Ghazal.png",
+   "text": "Western Bahr el Ghazal",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Sub-national flags > States",
+   "file": "Flag of Western Equatoria.png",
+   "text": "Western Equatoria",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Sub-national flags > Administrative areas",
+   "file": "Flag of the Abyei Area.png",
+   "text": "Abyei Special Administrative Area",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Sub-national flags > Administrative areas",
+   "file": "Flag of Greater Pibor Administrative Area.png",
+   "text": "Greater Pibor Administrative Area",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of South Sudan",
+   "section": "Sub-national flags > Administrative areas",
+   "file": "Flag of Ruweng.png",
+   "text": "Ruweng Administrative Area",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "National flag",
+   "file": "Flag of South Sudan.svg",
+   "text": "! scope=\"row\" | | rowspan=\"3\" | 2023–present | rowspan=\"2\" | Flag of South Sudan | A horizontal tricolour of black, red, and green, fimbriated with white stripes; with a lighter blue equilateral triangle based on the hoist side bearing a gold star.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "National flag",
+   "file": "Flag of South Sudan (Tilted Star).svg",
+   "text": "! scope=\"row\" | | Variant with a tilted star.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "National flag",
+   "file": "Flag of South Sudan (vertical).svg",
+   "text": "! scope=\"row\" | 150x150px | Flag of South Sudan (vertical) | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Government flag",
+   "file": "Flag of the President of South Sudan.svg",
+   "text": "! scope=\"row\" | | 2023–present | Flag of the President of South Sudan | A horizontal tricolour of black, red, and green, fimbriated with white stripes; with a blue equilateral triangle based on the hoist side bearing a gold star, and the national coat of arms towards the fly. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Military flags",
+   "file": "Flag of the SPLA (2011 to present).svg",
+   "text": "! scope=\"row\" | | 2011–present | Flag of the South Sudan People's Defence Forces | A tricolour of black, red, and green with the emblem in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Military flags",
+   "file": "Flag of the SPLA (until 2011).svg",
+   "text": "! scope=\"row\" | | 1983–2011 | Flag of the South Sudan People's Defence Forces | A tricolour of black, red, and green with the emblem in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Military flags",
+   "file": "Nuer White Army Flag.svg",
+   "text": "! scope=\"row\" | | 1991–present | Flag of the Nuer White Army | Four horizontal stripes of red, black, white, and green. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Political party flags",
+   "file": "Flag of Sudan People's Liberation Movement.svg",
+   "text": "! scope=\"row\" | | 1995–present | rowspan=\"4\" | Flag of the Sudan People's Liberation Movement |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Political party flags",
+   "file": "Flag of Sudan People's Liberation Movement (Yellow Star).svg",
+   "text": "! scope=\"row\" | | 1995–present |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Political party flags",
+   "file": "Flag of Sudan People's Liberation Army (1995).svg",
+   "text": "! scope=\"row\" | | 1995 | Similar to the national flag.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Political party flags",
+   "file": "Flag of Sudan People's Liberation Army (1983).svg",
+   "text": "! scope=\"row\" | | 1983–1995 | A horizontal tricolour of black, red, and green, fimbriated with white stripes; with a light blue equilateral triangle based on the hoist side bearing a red star. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Sub-national flags",
+   "file": "Flag of Central Equatoria.png",
+   "text": "! scope=\"row\" | | ?–present | Flag of Central Equatoria |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Sub-national flags",
+   "file": "Flag of Eastern Equatoria.png",
+   "text": "! scope=\"row\" | | ?–present | Flag of Eastern Equatoria |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Sub-national flags",
+   "file": "Flag of Jonglei.png",
+   "text": "! scope=\"row\" | | ?–present | Flag of Jonglei |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Sub-national flags",
+   "file": "Flag of Lakes State.png",
+   "text": "! scope=\"row\" | | ?–present | Flag of the Lakes State |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Sub-national flags",
+   "file": "Flag of Northern Bahr el Ghazal.png",
+   "text": "! scope=\"row\" | | ?–present | Flag of Northern Bahr el Ghazal |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Sub-national flags",
+   "file": "Flag of Unity State.png",
+   "text": "! scope=\"row\" | | ?–present | Flag of Unity State |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Sub-national flags",
+   "file": "Flag of Upper Nile State.png",
+   "text": "! scope=\"row\" | | ?–present | Flag of Upper Nile |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Sub-national flags",
+   "file": "Flag of Warrap State.png",
+   "text": "! scope=\"row\" | | ?–present | Flag of Warrap |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Sub-national flags",
+   "file": "Flag of Western Bahr el Ghazal.png",
+   "text": "! scope=\"row\" | | ?–present | Flag of Western Bahr el Ghazal |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Sub-national flags",
+   "file": "Flag of Western Equatoria.png",
+   "text": "! scope=\"row\" | | ?–present | Flag of Western Equatoria |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Sub-national flags",
+   "file": "Flag of the Abyei Area.png",
+   "text": "! scope=\"row\" | | ?–present | Flag of the Abyei Special Administrative Area |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Sub-national flags",
+   "file": "Flag of Greater Pibor Administrative Area.png",
+   "text": "! scope=\"row\" | | ?–present | Flag of the Greater Pibor Administrative Area |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Sub-national flags",
+   "file": "Flag of Ruweng.png",
+   "text": "! scope=\"row\" | | ?–present | Flag of the Ruweng Administrative Area |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Sub-national flags",
+   "file": "Flag of Juba, South Sudan.png",
+   "text": "! scope=\"row\" | | ?–present | Flag of Juba | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Ottoman Empire (Turkish Sudan)",
+   "file": "Flag of the Ottoman Empire (eight pointed star).svg",
+   "text": "! scope=\"row\" | | 1820–1844 | rowspan=\"2\" | Flag of the Ottoman Empire | A red field with a white crescent moon and eight-pointed star.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Ottoman Empire (Turkish Sudan)",
+   "file": "Flag of the Ottoman Empire (1844–1922).svg",
+   "text": "! scope=\"row\" | | 1844–1899 | A red field with a white crescent moon and five-pointed star.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Ottoman Empire (Turkish Sudan)",
+   "file": "Flag of Egypt (1793-1844).svg",
+   "text": "! scope=\"row\" | | 1820–1844 | Flag of Ottoman Egypt | A red field with a white crescent moon and seven-pointed star.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Ottoman Empire (Turkish Sudan)",
+   "file": "Flag of Egypt (1844-1867).svg",
+   "text": "! scope=\"row\" | | 1844–1867 | Flag of the self-declared Khedivate of Egypt introduced by Muhammad Ali | Red flag with a white crescent containing a five-pointed white star.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Ottoman Empire (Turkish Sudan)",
+   "file": "Flag of Muhammad Ali.svg",
+   "text": "! scope=\"row\" | | 1867–1881 | Flag of the Khedivate of Egypt | Red flag with a white crescent and three five-pointed stars.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Ottoman Empire (Turkish Sudan)",
+   "file": "Flag of Egypt 19th century 6point.svg",
+   "text": "! scope=\"row\" | | 1881–1899 | Flag of the Khedivate of Egypt under British occupation | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Mahdist State",
+   "file": "Flag of the Mahdi movement in Sudan.svg",
+   "text": "! scope=\"row\" | | 1881–1899 | Flag used during the Mahdist Revolt and in Mahdist Sudan | A golden field with blue and red borders and blue Arabic script in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Mahdist State",
+   "file": "Black flag.svg",
+   "text": "! scope=\"row\" | | 1881–1899 | Black Standard used in Mahdist Sudan | A simple black field. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Belgian Empire",
+   "file": "Flag of Belgium (civil).svg",
+   "text": "! scope=\"row\" | | 1894–1910 | Flag of Belgium | A vertical tricolour of black, yellow, and red.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Belgian Empire",
+   "file": "Flag of the Congo Free State.svg",
+   "text": "! scope=\"row\" | | 1894–1910 | Flag of the Congo Free State and the Belgian Congo | A yellow five-pointed flag on a blue background.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Belgian Empire",
+   "file": "Flag of Lado.svg",
+   "text": "! scope=\"row\" | | 1894–1910 | Flag of the Lado Enclave | A blue field with a yellow saltire that extends to the corners of the flag and four yellow stars in each blue triangle. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Anglo-Egyptian Sudan",
+   "file": "Flag of the United Kingdom (1-2).svg",
+   "text": "! scope=\"row\" | | 1899–1956 | Flag of the United Kingdom, also known as the Union Jack | A superimposition of the flags of England and Scotland with the Saint Patrick's Saltire (representing Ireland).",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Anglo-Egyptian Sudan",
+   "file": "Flag of Egypt 19th century 6point.svg",
+   "text": "! scope=\"row\" | | 1899–1914 | Flag of the Khedivate of Egypt under British occupation |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Anglo-Egyptian Sudan",
+   "file": "Egypt flag 1882.svg",
+   "text": "! scope=\"row\" | | 1914–1923 | Flag of the Sultanate of Egypt | Red flag with three white crescents, each containing a five-pointed white star.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Anglo-Egyptian Sudan",
+   "file": "Flag of Egypt (1922–1958).svg",
+   "text": "! scope=\"row\" | | 1923–1956 | Flag of the Kingdom of Egypt and the co-official flag of the Arab Republic of Egypt | Green flag with a white crescent containing three five-pointed white stars.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Anglo-Egyptian Sudan",
+   "file": "Flag of the Egyptian Revolution (1952).svg",
+   "text": "! scope=\"row\" | | 1952–1956 | Flag of the 1952 Egyptian Revolution and the Republic of EgyptThe green monarchical flag remained the national flag of Egypt until 1958, even after the proclamation of the Republic. | Following the Revolution of 1952, the Free Officers retained the flag of the Kingdom, but also introduced the former Republic of Egypt flag colors of red, white, and black horizontal bands, with the emblem of the Revolution, the Eagle of Saladin, in the band, with a green escutcheon with a white crescent and five stars.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Anglo-Egyptian Sudan",
+   "file": "Flag of Egypt 1922.svg",
+   "text": "! scope=\"row\" | | 1952–1956 | Flag of the 1952 Egyptian Revolution and the Republic of EgyptThe green monarchical flag remained the national flag of Egypt until 1958, even after the proclamation of the Republic. | Following the Revolution of 1952, the Free Officers retained the flag of the Kingdom, but also introduced the former Republic of Egypt flag colors of red, white, and black horizontal bands, with the emblem of the Revolution, the Eagle of Saladin, in the band, with a green escutcheon with a white crescent and five stars.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Anglo-Egyptian Sudan",
+   "file": "Flag of the Governor-General of the Anglo-Egyptian Sudan.svg",
+   "text": "! scope=\"row\" | | 1899–1956 | Flag of the British Governor General | A Union Jack defaced with the emblem of Sudan.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Anglo-Egyptian Sudan",
+   "file": "Flag of the Sudan Defense Force (1925-1956).svg",
+   "text": "! scope=\"row\" | | 1925–1956 | Flag of the Sudan Defence Force | A horizontal triband of black, white, and black, with two crossed swords in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Anglo-Egyptian Sudan",
+   "file": "Flag of Sudan (Bandung Conference).svg",
+   "text": "! scope=\"row\" | | April 1955 | Provisional flag of Sudan used during the Afro-Asian Conference | A white field with \"SUDAN\" written in red in the . |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Under Sudan",
+   "file": "Flag of Sudan (1956–1970).svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 1956–1970 | rowspan=\"2\" | Flag of Independent Sudan | A horizontal tricolour of blue, yellow, and green.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Under Sudan",
+   "file": "Flag of Sudan (1956–1970, 2-3).svg",
+   "text": "! scope=\"row\" | | Similar, but a 2:3 ratio.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Under Sudan",
+   "file": "Naval Ensign of Sudan (1956-1970).svg",
+   "text": "! scope=\"row\" | | 1962–1970 | Naval ensign of Sudan | A white field with the national flag in the canton.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Under Sudan",
+   "file": "Ensign of the Sudanese Customs Service (1956-1970).svg",
+   "text": "! scope=\"row\" | | 1956–1970 | Flag of the Sudanese Customs Service |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Under Sudan",
+   "file": "Flag of Sudan.svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 1970–2011 | rowspan=\"2\" | Flag of Sudan | A horizontal tricolour of red, white, and black; with a green triangle based at the hoist.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Under Sudan",
+   "file": "Flag of Sudan (2-3).svg",
+   "text": "! scope=\"row\" | | Similar, but a 2:3 ratio.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Under Sudan",
+   "file": "Flag of Sudan (vertical).svg",
+   "text": "! scope=\"row\" | 150x150px | 1970–2011 | Flag of Sudan (vertical) | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Under South Sudan",
+   "file": "Flag of South Sudan (2011–2023, upright star).svg",
+   "text": "! scope=\"row\" | | rowspan=\"3\" | 2011–2023 | rowspan=\"2\" | Flag of South Sudan | A horizontal tricolour of black, red, and green, fimbriated with white stripes; with a darker blue equilateral triangle based on the hoist side bearing a gold star.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Under South Sudan",
+   "file": "Flag of South Sudan (2011–2023, tilted star).svg",
+   "text": "! scope=\"row\" | | Variant with a tilted star.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Under South Sudan",
+   "file": "The flag of South Sudan.png",
+   "text": "! scope=\"row\" | | Variant with a tilted star.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Under South Sudan",
+   "file": "Mayor Michael Lado Allah-Jabu.j.png",
+   "text": "! scope=\"row\" | | Variant with a tilted star.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Under South Sudan",
+   "file": "Flag of South Sudan (2011–2023; vertical).svg",
+   "text": "! scope=\"row\" | 150x150px | Flag of South Sudan (vertical) | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Independence movements",
+   "file": "Flag of the Azania Liberation Front.svg",
+   "text": "! scope=\"row\" | | 1967–1969 | Flag of both the Azania Liberation Front (ALF) and the Southern Sudan Provisional Government (SSPG) | Four horizontal bands; red, white, black, white, red. The ratio of the bands' widths is around 2:1:6:1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Independence movements",
+   "file": "Flag of the Nile Republic.svg",
+   "text": "! scope=\"row\" | | 1969–1971 | Flag used by the Nile Provisional Government (NPG), later the Nile Republic, led by Gordon Muortat Mayen | A horizontal tricolour of red, white, and green; with black star in the upper hoist corner and a shoebill inside a blue disc in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Independence movements",
+   "file": "Flag of the Nile State (green).svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 1969 | rowspan=\"2\" | The flag of the Nile State | rowspan=\"2\" | A tricolor of red, black, and either green or blue (it is unclear which) with an emblem of a white shield and spears.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of South Sudanese flags",
+   "section": "Historical flags > Independence movements",
+   "file": "Flag of the state of the Nile (Blue).svg",
+   "text": "! scope=\"row\" | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Soudan du Sud",
+   "section": "Galerie > Historique des drapeaux",
+   "file": "Flag of South Sudan (2011–2023, upright star).svg",
+   "text": "Drapeau de 2011 à 2023",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Soudan du Sud",
+   "section": "Galerie > Historique des drapeaux",
+   "file": "Flag of South Sudan (2011–2023, tilted star).svg",
+   "text": "Variante (2011-2023)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Soudan du Sud",
+   "section": "Galerie > Historique des drapeaux",
+   "file": "Flag of South Sudan.svg",
+   "text": "Drapeau depuis 2023",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Soudan du Sud",
+   "section": "Galerie > Historique des drapeaux",
+   "file": "Flag of South Sudan (Tilted Star).svg",
+   "text": "Variante (depuis 2023)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Soudan du Sud",
+   "section": "Galerie > Provinces",
+   "file": "Flag of Central Equatoria.png",
+   "text": "Équatoria-Central",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Soudan du Sud",
+   "section": "Galerie > Provinces",
+   "file": "Flag of Eastern Equatoria.png",
+   "text": "Équatoria-Oriental",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Soudan du Sud",
+   "section": "Galerie > Provinces",
+   "file": "Flag of Jonglei.png",
+   "text": "Jonglei",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Soudan du Sud",
+   "section": "Galerie > Provinces",
+   "file": "Flag of Lakes State.png",
+   "text": "Lacs",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Soudan du Sud",
+   "section": "Galerie > Provinces",
+   "file": "Flag of Northern Bahr el Ghazal.png",
+   "text": "Bahr el Ghazal du Nord",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Soudan du Sud",
+   "section": "Galerie > Provinces",
+   "file": "Flag of Unity State.png",
+   "text": "Unité",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Soudan du Sud",
+   "section": "Galerie > Provinces",
+   "file": "Flag of Upper Nile State.png",
+   "text": "Nil Supérieur",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Soudan du Sud",
+   "section": "Galerie > Provinces",
+   "file": "Flag of Warrap State.png",
+   "text": "Warab",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Soudan du Sud",
+   "section": "Galerie > Provinces",
+   "file": "Flag of Western Bahr el Ghazal.png",
+   "text": "Bahr el Ghazal occidental",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Soudan du Sud",
+   "section": "Galerie > Provinces",
+   "file": "Flag of Western Equatoria.png",
+   "text": "Équatoria-Occidental",
+   "kind": "gallery"
+  }
+ ]
+}

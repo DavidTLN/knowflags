@@ -1,0 +1,468 @@
+{
+ "iso": "ke",
+ "flag_item": "Q165905",
+ "pages": [
+  "en:Flag of Kenya",
+  "en:List of flags of Kenya",
+  "fr:Drapeau du Kenya",
+  "sw:Bendera ya Kenya"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Kenya",
+   "section": "History",
+   "file": "Original KAU flag.png",
+   "text": "The original tricolour with the KAU emblem at its centre",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kenya",
+   "section": "History",
+   "file": "Timeline of the Kenyan flag.jpg",
+   "text": "Independence Monument of Kenya, Uhuru Gardens, Nairobi (Figure 1a), The KANU emblem (Figure 1b), The original KAU bicolor (Figure 1c), The KANU flag (Figure 1d), KANU flag variant (Figure 1e) and the Coat of Arms of Kenya (Figure 1g) next to the national flag",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kenya",
+   "section": "History",
+   "file": "Kenyatta Mausoleum (1295043494).jpg",
+   "text": "Kenyan flags at the Kenyatta Mausoleum",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kenya",
+   "section": "Symbolism",
+   "file": "Be Kenyan Embassy 01.jpg",
+   "text": "The flag at the Kenyan Embassy in Berlin",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kenya",
+   "section": "Symbolism",
+   "file": "Turkana County, Lodwar Airport. Flight Fly540 before taking off.jpg",
+   "text": "Kenyan flag at Lodwar Airport",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kenya",
+   "section": "Design",
+   "file": "Flag of Kenya.svg",
+   "text": "The colours of the flag are specified in the Constitution in terms of British Standard 2660.Second Schedule of Kenyan Constitution {| class=\"wikitable\" style=\"text-align: \" |+ !50x50pxColors scheme ! style=\"background:#000000; width: ; color:white;\"| Black ! style=\"background:#922529; width: ; color:white;\"| Red ! style=\"background:#008C51; width: ; color:white;\" | Green ! style=\"background:#FFFFFF; width: ; color:black;\" | White",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kenya",
+   "section": "Variants > Historical presidential standards",
+   "file": "First presidential standard of Kenya.svg",
+   "text": "First Presidential Standard of Kenya (1963–1970)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kenya",
+   "section": "Variants > Historical presidential standards",
+   "file": "Kenya presidential standard JOMO KENYATTA.svg",
+   "text": "Presidential Standard of Jomo Kenyatta",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kenya",
+   "section": "Variants > Historical presidential standards",
+   "file": "Kenya presidential standard DANIEL ARAP MOI.svg",
+   "text": "Presidential Standard of Daniel Arap Moi",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kenya",
+   "section": "Variants > Historical presidential standards",
+   "file": "Kenya presidential standard MWAI KIBAKI.svg",
+   "text": "Presidential Standard of Mwai Kibaki",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kenya",
+   "section": "Variants > Historical presidential standards",
+   "file": "Kenya presidential standard UHURU KENYATTA.svg",
+   "text": "Presidential Standard of Uhuru Kenyatta",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kenya",
+   "section": "Variants > Historical presidential standards",
+   "file": "Kenya Presidential Standard.svg",
+   "text": "Presidential Standard of William Ruto, Incumbent President of Kenya",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kenya",
+   "section": "Variants > Defence forces",
+   "file": "Flag of the Kenya Defence Forces.svg",
+   "text": "Flag of Kenya Defence Forces",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kenya",
+   "section": "Variants > Defence forces",
+   "file": "Flag of the Kenyan Army.svg",
+   "text": "Flag of Kenya Army",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kenya",
+   "section": "Variants > Defence forces",
+   "file": "Air Force Ensign of Kenya.svg",
+   "text": "Flag of Kenya Air Force",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kenya",
+   "section": "Variants > Defence forces",
+   "file": "Naval Ensign of Kenya.svg",
+   "text": "Flag of Kenya Navy",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kenya",
+   "section": "Variants > Defence forces",
+   "file": "Presidential Colour of the Kenyan Navy.svg",
+   "text": "Presidential Colour of the Navy",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kenya",
+   "section": "Variants > Variants",
+   "file": "Kenyan coat of arms flag.svg",
+   "text": "Flag of Kenya with the coat of arms.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kenya",
+   "section": "Historical flags",
+   "file": "Flag of the Imperial British East Africa Company.svg",
+   "text": "Imperial British East Africa Company (1888–1895)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kenya",
+   "section": "Historical flags",
+   "file": "Flag of Kenya (1895–1921).svg",
+   "text": "East Africa Protectorate (1895–1921)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kenya",
+   "section": "Historical flags",
+   "file": "Flag of Kenya (1921–1963).svg",
+   "text": "Colony and Protectorate of Kenya (1921–1963)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Kenya",
+   "section": "Historical flags",
+   "file": "Flag of Kenya.svg",
+   "text": "Flag of the Dominion of Kenya (1963–1964); flag of the Republic of Kenya (1964–Present)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "National flag",
+   "file": "Flag of Kenya.svg",
+   "text": "! scope=\"row\" | | 1963–present | | The flag is based on that of the Kenya African National Union. The colours symbolise black majority, red for the blood shed during the struggle for freedom and green for natural wealth; the white fimbriation was added later and symbolises peace. The traditional Maasai shield and two spears symbolise the defence of all the things mentioned above. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Military",
+   "file": "Flag of the Kenya Defence Forces.svg",
+   "text": "! scope=\"row\" | | 1964–present | Defence Forces flag |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Military",
+   "file": "Air Force Ensign of Kenya.svg",
+   "text": "! scope=\"row\" | | 1964–present | Air Force flag |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Military",
+   "file": "Naval Ensign of Kenya.svg",
+   "text": "! scope=\"row\" | | 1964–present | Naval ensign |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Military",
+   "file": "Presidential Colour of the Kenyan Navy.svg",
+   "text": "! scope=\"row\" | | 1964–present | Presidential colour of the Navy | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Presidential",
+   "file": "First presidential standard of Kenya.svg",
+   "text": "! scope=\"row\" | | 1964–1970 | First presidential standard of Kenya |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Presidential",
+   "file": "Kenya presidential standard JOMO KENYATTA.svg",
+   "text": "! scope=\"row\" | | 1970–1978 | Presidential standard of Jomo Kenyatta |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Presidential",
+   "file": "Kenya presidential standard DANIEL ARAP MOI.svg",
+   "text": "! scope=\"row\" | | 1978–2002 | Presidential standard of Daniel Arap Moi |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Presidential",
+   "file": "Kenya presidential standard MWAI KIBAKI.svg",
+   "text": "! scope=\"row\" | | 2002–2013 | Presidential standard of Mwai Kibaki |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Presidential",
+   "file": "Kenya presidential standard UHURU KENYATTA.svg",
+   "text": "! scope=\"row\" | | 2013–2022 | Presidential standard of Uhuru Kenyatta |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Presidential",
+   "file": "Kenya presidential standard William Ruto.svg",
+   "text": "! scope=\"row\" | | 2022–present | Presidential standard of William Ruto, Incumbent President of Kenya | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Historical > Portuguese rule",
+   "file": "Flag Portugal (1495).svg",
+   "text": "! scope=\"row\" | | 1498–1521 | Kingdom of Portugal | A white field with the coat of arms in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Historical > Portuguese rule",
+   "file": "Flag Portugal (1521).svg",
+   "text": "! scope=\"row\" | | 1521–1578 | Kingdom of Portugal | A white field with the coat of arms in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Historical > Portuguese rule",
+   "file": "Flag of Portugal (1578).svg",
+   "text": "! scope=\"row\" | | 1578–1640 | Kingdom of Portugal | A white field with the coat of arms in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Historical > Portuguese rule",
+   "file": "Flag Portugal (1616).svg",
+   "text": "! scope=\"row\" | | 1616–1640 | Kingdom of Portugal | A white field with the coat of arms in the . (putative flag)",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Historical > Portuguese rule",
+   "file": "Flag Portugal (1640).svg",
+   "text": "! scope=\"row\" | | 1640–1667 | Kingdom of Portugal | A white field with the coat of arms in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Historical > Portuguese rule",
+   "file": "Flag Portugal (1667).svg",
+   "text": "! scope=\"row\" | | 1667–1698 | Kingdom of Portugal | A white field with the coat of arms in the . |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Historical > Omani rule",
+   "file": "Flag of the Omani Empire.svg",
+   "text": "! scope=\"row\" | | 1698–1888 | Omani Empire | A white field with a red sword and red Arabic script below. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Historical > German Wituland",
+   "file": "Flagge DOAG1885.svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 1885–1890 | rowspan=\"2\" | German East Africa Company |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Historical > German Wituland",
+   "file": "Flag of the German East Africa Company.svg",
+   "text": "! scope=\"row\" | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Historical > German Wituland",
+   "file": "Flag of the German Empire.svg",
+   "text": "! scope=\"row\" | | 1885–1890 | German Empire | A tricolour, made of three equal horizontal bands coloured black (top), white, and red (bottom).",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Historical > German Wituland",
+   "file": "Reichskolonialflagge.svg",
+   "text": "! scope=\"row\" | | 1885–1890 | Colonial flag | Horizontal black-white-red fields with the German Reichsadler in a white circle in the middle.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Historical > German Wituland",
+   "file": "Flagge Witu 1890 laut Voeltzkow.svg",
+   "text": "! scope=\"row\" | | 1890 | German Wituland | A vertical bicolour of white (hoist) and red (fly) with a white five-pointed star in the red band. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Historical > British East Africa Company",
+   "file": "Flag of the Witu Protectorate (1893-1920).svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 1893–1920 | Witu Protectorate | A Union Flag (proportions: 15:27) with a red , proportions: 37:57",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Historical > British East Africa Company",
+   "file": "Flag of the Witu Protectorate (1893-1920, Variant 1).svg",
+   "text": "! scope=\"row\" | | Ensign of Witu Protectorate | Proportions: 1:2",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Historical > British East Africa Company",
+   "file": "Flag of the Imperial British East Africa Company.svg",
+   "text": "! scope=\"row\" | | rowspan=\"3\" | 1880–1895 | Governor's flag | A Union Flag defaced with a golden sun with a crown above it.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Historical > British East Africa Company",
+   "file": "Blue Ensign of the Imperial British East Africa Company.svg",
+   "text": "! scope=\"row\" | | State ensign | A British Blue Ensign; in the fly, a golden sun with a crown above it.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Historical > British East Africa Company",
+   "file": "Red Ensign of the Imperial British East Africa Company.svg",
+   "text": "! scope=\"row\" | | Civil ensign | A British Red Ensign; in the fly, a golden sun with a crown above it. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Historical > British East Africa Protectorate",
+   "file": "Flag of Kenya (1895–1921).svg",
+   "text": "! scope=\"row\" | | 1895–1921 | East Africa Protectorate | A British Blue Ensign with the emblem of the protectorate, a red lion, in a white disc in the fly. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Historical > British Protectorate of Kenya",
+   "file": "Flag of Kenya (1921–1963).svg",
+   "text": "! scope=\"row\" | | 1921–1963 | Colony and Protectorate of Kenya | A British Blue Ensign with a red lion in the fly.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Historical > British Protectorate of Kenya",
+   "file": "Flag of the Royal East African Navy.svg",
+   "text": "! scope=\"row\" | | 1952–1962 | Royal East African Navy | A British Blue Ensign with the emblem of the Royal East African Navy in the fly. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Historical > Italian occupation",
+   "file": "Flag of Italy (1861-1946) crowned.svg",
+   "text": "! scope=\"row\" | | 1940–1941 | Kingdom of Italy | An Italian tricolour with Savoy shield and Royal crown in the middle. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Kenya",
+   "section": "Cities",
+   "file": "Flag of Nairobi.svg",
+   "text": "! scope=\"row\" | | | Flag of Nairobi | A heraldic fountain on a quartered yellow and green background. |} Kenya Flags Flags",
+   "kind": "table"
+  },
+  {
+   "wiki": "sw",
+   "page": "Bendera ya Kenya",
+   "section": "Buni",
+   "file": "Flag of Kenya (construction sheet).png",
+   "text": "| Rangi Rasmi za Uingereza | Nyekundu ya Posta 0-006 | 0-010 |} Chanzo: Bendera ya Kenya iliyoko Get Kenya Online. Imeangaliwa tmwezi wa 6 Agosti 2006. Chanzo: Maelezo ya Bendera iliyoko Kumbuku za Taifa. Imeangaliwa 16 Februari 2006. Karatasi ya Ujenzi",
+   "kind": "table"
+  },
+  {
+   "wiki": "sw",
+   "page": "Bendera ya Kenya",
+   "section": "Buni",
+   "file": "Flag of Kenya (construction sheet).png",
+   "text": "Karatasi ya Ujenzi",
+   "kind": "thumb"
+  }
+ ]
+}

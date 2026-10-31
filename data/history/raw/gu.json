@@ -1,0 +1,66 @@
+{
+ "iso": "gu",
+ "flag_item": "Q235829",
+ "pages": [
+  "en:Flag of Guam",
+  "fr:Drapeau de Guam"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Guam",
+   "section": "Gallery",
+   "file": "Flags (17748536052).jpg",
+   "text": "Flag pole at the Guam National Wildlife Refuge unit at Ritidian Point",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guam",
+   "section": "Gallery",
+   "file": "U.S. Army Sgt. 1st Class Patrick Flores, with Echo Company, 1st Battalion, 294th Infantry Regiment, Guam Army National Guard, attaches a miniature Guam flag to his carry-on bag Dec. 25, 2013, at Camp Phoenix 131225-Z-WM549-201.jpg",
+   "text": "A soldier of the Guam Army National Guard attaches a miniature Guam flag to his carry-on bag",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guam",
+   "section": "Gallery",
+   "file": "Guam Liberation Day 2019 (190722-N-AY639-0008).jpg",
+   "text": "The commander of Submarine Squadron 15 at Naval Base Guam on a float in the 2019 Liberation Day parade",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guam",
+   "section": "Gallery",
+   "file": "U.S. flags on Memorial Day night in Asan Park, Guam (cropped).jpg",
+   "text": "Small U.S. and Guam flags at the Asan unit of War in the Pacific National Historical Park on Memorial Day",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guam",
+   "section": "Former flags",
+   "file": "Flag of Spain (1785-1873 and 1875-1931).svg",
+   "text": "Flag of Spain during Spanish East Indies (late 17th century–1898).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guam",
+   "section": "Former flags",
+   "file": "Flag of Guam (1917-1948).png",
+   "text": "Flag of Guam as recognized by the United States from 1917-1948.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Guam",
+   "section": "Former flags",
+   "file": "Flag of Japan (1870-1999).svg",
+   "text": "Flag of Japan during the Japanese occupation of Guam (1941–1944).",
+   "kind": "gallery"
+  }
+ ]
+}

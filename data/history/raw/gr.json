@@ -1,0 +1,2108 @@
+{
+ "iso": "gr",
+ "flag_item": "Q129132",
+ "pages": [
+  "en:Flag of Greece",
+  "en:List of Greek flags",
+  "fr:Drapeau de la Grèce",
+  "el:Σημαία της Ελλάδας"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background",
+   "file": "Roman (Orthodox Christian) Merchant Flag 1453-1793.svg",
+   "text": "Greek Orthodox Christian Merchant Flag (1453–1793)",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Antiquity and the Byzantine Empire",
+   "file": "Byzantine imperial flag, 14th century, square.svg",
+   "text": "This design, from the 14th century during the Palaiologan dynasty, is the only attested flag of the Byzantine Empire.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Ottoman period",
+   "file": "Spachides Flag.svg",
+   "text": "Flag used by the Greek sipahis of the Ottoman army between 1431 and 1619",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Ottoman period",
+   "file": "Roman (Orthodox Christian) Merchant Flag 1453-1793.svg",
+   "text": "Civil ensign for merchant ships owned by Ottoman subjects belonging to the Greek Orthodox (Rum) millet",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Ottoman period",
+   "file": "Flag of the Principality of Samos (1834–1912).svg",
+   "text": "Civil flag and ensign of the Principality of Samos (1835–1912)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Ottoman period",
+   "file": "Flag of the Septinsular Republic.svg",
+   "text": "Flag of the Septinsular Republic (1800–1807), the first autonomous modern Greek state",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Ottoman period",
+   "file": "Flag of Cretan State.svg",
+   "text": "National flag and ensign of the Cretan State",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Ottoman period",
+   "file": "Flag of the Free State of Ikaria.svg",
+   "text": "Flag of the Free State of Icaria",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Ottoman period",
+   "file": "Graeco-Ottoman banner.png",
+   "text": "The merchant vessel Panagia tis Hydras, built 1793, flying the Graeco-Ottoman flag",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Ottoman period",
+   "file": "Agios Nikolaos and Poseidon.jpg",
+   "text": "Agios Nikolaos (1797) and Poseidon (1815), belonging to the Anargyros brothers from Spetses, flying variants of the Russian flag",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > War of Independence",
+   "file": "Rigas Feraios flag manuscript.png",
+   "text": "Proposed flag of Greece as drawn by Rigas Feraios in his manuscripts",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > War of Independence",
+   "file": "Epanastasi.jpg",
+   "text": "Bishop Germanos of Patras blessing the flag of the Greek revolutionaries at the Monastery of Agia Lavra, part of a popular legend regarding the start of the revolution of 1821, although it never actually happened",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > War of Independence",
+   "file": "Greek Independence 1821.svg",
+   "text": "Flag used by Orlov revolutionaries from 1770 to the early stages of the War of Independence",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Revolutionary flags",
+   "file": "Flag of Rigas Feraios.svg",
+   "text": "The flag of Greece, as proposed by Rigas Feraios in 1797",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Revolutionary flags",
+   "file": "Flag of the Sacred Band of 1821.svg",
+   "text": "Flag of the Sacred Band with phoenix and motto \"from my ashes I'm reborn\"",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Revolutionary flags",
+   "file": "Alexander Ypsilantis flag (obverse).svg",
+   "text": "Flag of Alexander Ypsilantis",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Revolutionary flags",
+   "file": "Areios Pagos Anatolikis Ellados.svg",
+   "text": "Flag of the Areopagus of Eastern Continental Greece",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Revolutionary flags",
+   "file": "Andreas Lontos Flag (Revolution1821).svg",
+   "text": "The flag of Andreas Londos",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Revolutionary flags",
+   "file": "Flag of Korkondeilas Kladas.svg",
+   "text": "The flag of Krokodeilos Kladas",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Revolutionary flags",
+   "file": "Filiki Eteria flag.svg",
+   "text": "Flag of the Filiki Eteria with initials of the motto \"Freedom or Death\"",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Revolutionary flags",
+   "file": "Greek flag of Thrace (black cross).svg",
+   "text": "Flag of the Greeks of Thrace",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Revolutionary flags",
+   "file": "Mani Flag (Greece).svg",
+   "text": "Flag of the Maniots",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Revolutionary flags",
+   "file": "Thessalia-flag.jpg",
+   "text": "Used in Thessaly, created by Anthimos Gazis",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Revolutionary flags",
+   "file": "1821 Flag of Hydra.svg",
+   "text": "Flag of Hydra island",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Revolutionary flags",
+   "file": "1821 Flag of Spetses.svg",
+   "text": "Flag of Spetses island",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Revolutionary flags",
+   "file": "Flag of Kastellorizo.svg",
+   "text": "Flag of Kastellorizo island",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Revolutionary flags",
+   "file": "Chalkidiki Flag Greek Revolution.svg",
+   "text": "Flag of Chalkidiki",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Revolutionary flags",
+   "file": "Athanasios Diakos 1821.svg",
+   "text": "Flag of Athanasios Diakos",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Revolutionary flags",
+   "file": "Flag of the Administration of Samos.svg",
+   "text": "Flag of the Military-Political System of Samos",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Revolutionary flags",
+   "file": "Xenophon - Book of Signals - Flags of the Admirals.jpg",
+   "text": "Flags used by various admirals of the Revolutionary Navy, from an 1823 manuscript",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Adoption",
+   "file": "Old land flag of Greece.png",
+   "text": "The old land flag, still flying over the Old Parliament House in Athens",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Adoption",
+   "file": "Evangelical School Teachers and Graduates, 1878.JPG",
+   "text": "Greek Teachers and Graduates of the Evangelical School of Smyrna with the Greek flag (1878)",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > National flags",
+   "file": "Flag of Greece (1822-1978).svg",
+   "text": "National flag (1822–1863, 1924–1935, 1941–1944 & 1975–1978) as adopted by the First National Assembly at Epidaurus",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > National flags",
+   "file": "State Flag of Greece (1863-1924 and 1935-1973).svg",
+   "text": "National flag (1863–1924, 1935–1941 & 1944–1969)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > National flags",
+   "file": "Flag of Greece (1970–1975).svg",
+   "text": "National flag (1970–1975)Proportions: 7:12",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > National flags",
+   "file": "Flag of Greece (1970-1975, 3-2).svg",
+   "text": "National flag (1970–1975)Proportions: 2:3",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > National flags",
+   "file": "Flag of Greece.svg",
+   "text": "Naval ensign (1822–1832 & 1970–present), National flag (1969–1970 & 1978–present)Proportions: 2:3",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > National flags",
+   "file": "Flag of Greece (7-12).svg",
+   "text": "Naval ensign (1822–1832 & 1970–present), National flag (1969–1970 & 1978–present)Proportions: 7:12",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Historical evolution",
+   "file": "Specifications for the Flag of Greece (1833).png",
+   "text": "The first official specifications for the war flag or naval ensign (published 3 June 1833)",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Historical background > Historical evolution",
+   "file": "Administrative flags of Greece, Megale Ellenike Egkyklopaideia, 1934.jpg",
+   "text": "Administrative flags of Greece (1934)",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Current flag of Greece",
+   "file": "Flag of Greece (construction sheet).svg",
+   "text": "Construction sheet of the national flag",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Current flag of Greece",
+   "file": "Greek flag-Acropolis.png",
+   "text": "The Flag of Greece flying on the Acropolis of Athens",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Current flag of Greece > Protocol",
+   "file": "Flag of Greece (parade).svg",
+   "text": "The flag as used in parades",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Current flag of Greece > Flag days",
+   "file": "Porosoxiday.jpg",
+   "text": "Ohi Day decorations in Poros Law 851/1978 sets the general outline for when the specific days on which the flag should be raised. For national holidays, this applies country-wide, but on local ones it only applies to those areas where the said holiday is being celebrated. Additionally, the flag may also be flown on days of national mourning, half-mast. The Minister of the Interior has the authority to proclaim flag days if they are not already proclaimed, and proclaiming regional flag days is vested with the elected head of each regional unit (formerly prefectures). {| class=\"wikitable\" style=",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Current flag of Greece > Flag days",
+   "file": "Porosoxiday.jpg",
+   "text": "Ohi Day decorations in Poros",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Military flags > Army and Air Force War flag",
+   "file": "War flag of the Hellenic Army.svg",
+   "text": "Army regimental war flag",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Military flags > Army and Air Force War flag",
+   "file": "Flag of the Hellenic Air Force (1973-1978).svg",
+   "text": "Air Force and civil air ensign, 1973–1978",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Military flags > Naval and civil ensigns",
+   "file": "Greek merchant navy flag.svg",
+   "text": "Civil ensign (1822–1828)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Military flags > Naval and civil ensigns",
+   "file": "Naval Ensign of Greece (1833-1858).svg",
+   "text": "Naval ensign (1833–1858)Proportions: 18:25",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Military flags > Naval and civil ensigns",
+   "file": "Naval Ensign of Greece (1858-1862).svg",
+   "text": "Naval ensign (1858–1862)Proportions: 2:3",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Military flags > Naval and civil ensigns",
+   "file": "Naval Ensign of Greece (1863-1924 and 1935-1970).svg",
+   "text": "Naval ensign (1863–1924 & 1935–1970)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Military flags > Naval and civil ensigns",
+   "file": "Hellenic Coast Guard Flag (1973-1980).svg",
+   "text": "Coast Guard ensign (1973–1980)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Military flags > Naval and civil ensigns",
+   "file": "Naval jack of Greece.svg",
+   "text": "Naval jack of Greece",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Military flags > Naval and civil ensigns",
+   "file": "Naval rank flag of the Prime Minister of Greece.svg",
+   "text": "Naval rank flag of the prime minister of Greece",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Military flags > Naval and civil ensigns",
+   "file": "Greek Navy Admiral Flag.svg",
+   "text": "Naval rank flag for a full admiral",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Flag of the head of state",
+   "file": "Greek flag with monogram of King Otto.svg",
+   "text": "Flag with the monogram of King Otto of Greece (1833–1862)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Flag of the head of state",
+   "file": "Naval Royal Standard of Greece (1833-1858).svg",
+   "text": "The Naval Royal Standard of Greece (1833–1858)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Flag of the head of state",
+   "file": "Naval Royal Standard of Greece (1858-1862).svg",
+   "text": "The Naval Royal Standard of Greece (1858–1862)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Flag of the head of state",
+   "file": "Greek Royal Flag 1863.svg",
+   "text": "The Royal Standard of Greece (1863–1913)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Flag of the head of state",
+   "file": "Standard of King George I of Greece (1863-1913).svg",
+   "text": "Flag of King George I of Greece (1863–1913)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Flag of the head of state",
+   "file": "Royal Standard of the Kingdom of Greece (1914 pattern).svg",
+   "text": "Flag of King Constantine I of Greece in his capacity as a Field Marshal (1914–1917 and 1920–1922)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Flag of the head of state",
+   "file": "Flag of the President of Greece (1924–1935).svg",
+   "text": "Flag of the president of Greece (1924–1935)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Flag of the head of state",
+   "file": "Royal Standard of the Kingdom of Greece (1936-1967).svg",
+   "text": "Flag of the king of Greece (1936–1967)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Flag of the head of state",
+   "file": "Presidential Standard of Greece (1973-1974).svg",
+   "text": "Flag of the president of Greece (1973–1974)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Flag of the head of state",
+   "file": "Flag of the President of Greece.svg",
+   "text": "Flag of the president of Greece (1979–present)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Use of double-headed eagle",
+   "file": "Flag of the Greek Orthodox Church.svg",
+   "text": "Flag of the Greek Orthodox Church",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Use of double-headed eagle",
+   "file": "Flag of the Autonomous Republic of Northern Epirus.svg",
+   "text": "Flag of the Autonomous Republic of Northern Epirus",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Use of double-headed eagle",
+   "file": "Flag of the Greek Army.svg",
+   "text": "Flag of the Hellenic Army General Staff",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Greece",
+   "section": "Use of double-headed eagle",
+   "file": "Palaeologoi eagle.jpg",
+   "text": "The double-headed eagle was the symbol of the Palaiologoi dynasty.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "National flag",
+   "file": "Flag of Greece.svg",
+   "text": "! scope=\"row\" | | In use since 1822 (as the Greek naval ensign), and from 1978 onwards as the sole national flag. | The current flag of Greece was adopted by the First National Assembly at Epidaurus in January 1822 as the official naval ensign of the country. Between 1822 and 1978, this flag was flown on Greek vessels and also used for foreign service. In 1978, it was established as the sole national flag of Greece, and as the war and civil ensign, and has been used in that capacity ever since. | Nine horizontal stripes of equal width; five blue alternating with four white. Number nine stands ",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Presidential standard",
+   "file": "Flag of the President of Greece.svg",
+   "text": "! scope=\"row\" | | Since 1979 | Distinguishing flag of the president of the Hellenic Republic (president of Greece). Used to show the presence of the President of the Republic (in vehicles, buildings etc.). This flag also used as a rank flag in the Hellenic Navy's ships mainmast when the President of the Republic is aboard. | Square blue flag bearing the coat of arms of Greece at its : Greek cross argent, escutcheon azure, laurel wreath or, field azure. (A white Greek cross on a blue shield, surrounded by a golden laurel wreath.)",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Presidential standard",
+   "file": "Presidential Standard of Greece (1973-1974).svg",
+   "text": "! scope=\"row\" | | 1973–1974 | Presidential flag during the republican phase of the Regime of the Colonels (June 1973 – July 1974). | A golden phoenix rising from the flames on a dark \"midnight blue\" background.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Presidential standard",
+   "file": "Flag of the President of Greece (1924–1935).svg",
+   "text": "! scope=\"row\" | | 1924–1935 | Presidential flag during the Second Hellenic Republic. | A white cross on a blue field. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Presidential standard > Royal standards",
+   "file": "Royal Standard of the Kingdom of Greece (1936-1967).svg",
+   "text": "! scope=\"row\" | | 1936–1974 | Royal standard of the king, adopted in 1936.per Royal Decree of 20 February 1936, Gazette 109, dated 26.02.1936, pages 549–550 | Like the Navy jack, with the royal family arms in the centre and four crowns in the quarters.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Presidential standard > Royal standards",
+   "file": "Standard of the Crown Prince of Greece (1936-1967).svg",
+   "text": "! scope=\"row\" | | 1936–1974 | Standard of the crown prince, adopted in 1936. | Like the Navy jack, with the Greek royal family arms in the centre and one crown in the first quarter.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Presidential standard > Royal standards",
+   "file": "Standard of members of the Greek Royal Family (1936-1967).svg",
+   "text": "! scope=\"row\" | | 1936–1974 | Standard used by the Greek royal family, adopted in 1936. | Like the Navy jack, with the Greek royal family arms in the centre but no additional crowns.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Presidential standard > Royal standards",
+   "file": "Personal flag of Queen Frederica of Greece.svg",
+   "text": "! scope=\"row\" | | 1963–1964 | Personal flag of Queen Frederica of Greece. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Presidential standard > Royal standards",
+   "file": "Standard of the Crown Prince of Greece (1914 pattern).svg",
+   "text": "! scope=\"row\" rowspan=\"2\" | | 1914–1924 | rowspan=\"2\" | Standard used by the crown prince, adopted in 1914. The flag was made redundant after the abolition of the monarchy in 1924. Following the restoration of the monarchy in 1935, the 1914 decrees regarding Greek flags and those of the royal family were reinstated by decree of 7 November 1935. This flag was replaced in 1936 with a new design. | rowspan=\"2\" | Like the Navy jack, but in a light blue field. In the first and third quarter is a royal crown.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Presidential standard > Royal standards",
+   "file": "Standard of Queen Sophia of Greece.svg",
+   "text": "! scope=\"row\" rowspan=\"2\" | | 1914–1924 | rowspan=\"2\" | Standard of the queen of Greece (in this case, showing the arms of Sophia of Prussia), adopted in 1914. The flag was made redundant after the abolition of the monarchy in 1924. Following the restoration of the monarchy in 1935, the 1914 decrees regarding Greek flags and those of the royal family were reinstated by decree of 7 November 1935. | rowspan=\"2\" |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Presidential standard > Royal standards",
+   "file": "Standard of members of the Greek Royal Family (1914 pattern).svg",
+   "text": "! scope=\"row\" rowspan=\"2\" | | 1914–1924 | rowspan=\"2\" | Standard used by the other members of the royal family, adopted in 1914. The flag was made redundant after the abolition of the monarchy in 1924. Following the restoration of the monarchy in 1935, the 1914 decrees regarding Greek flags and those of the royal family were reinstated by decree of 7 November 1935. | rowspan=\"2\" |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Presidential standard > Royal standards",
+   "file": "Royal Standard of the Kingdom of Greece (1914 pattern).svg",
+   "text": "! scope=\"row\" rowspan=\"2\" | | 1914–1917 | rowspan=\"2\" | Royal standard of the king, adopted in 1914. The crossed marshal's batons refer to King Constantine I, who was raised to the rank in 1913. The flag was in use during Constantine I's two reigns, 1913–1917 and 1920–1922. | rowspan=\"2\" | Like the Navy jack, but in a light blue field with the Arms of King Constantine I at the . Behind the arms are two crossed Field Marshal's batons.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Presidential standard > Royal standards",
+   "file": "Standard of Queen Olga of Greece.svg",
+   "text": "! scope=\"row\" | | 1913–1914 | Personal flag of Queen Olga of Greece as Queen Mother, as specified in the Royal Decree of 3 June 1914. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Presidential standard > Royal standards",
+   "file": "Standard of King George I of Greece (1863-1913).svg",
+   "text": "! scope=\"row\" | Personal flag of King George I of Greece | rowspan=\"2\" | 1863–1913 | Standard used by King George I of Greece. | The flag consists of the plain cross version of the national flag, with a royal coat of arms of Greece superimposed in the of the cross.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Presidential standard > Royal standards",
+   "file": "Greek Royal Flag 1863.svg",
+   "text": "! scope=\"row\" | | Royal standard reported during the early years of King George I's reign.FLAGS AND SIGNALS OF ALL NATIONS by Hounsell Brothers c.1870 http://www.life.com/image/50700092 Greek National Historical Museum | Swallow-tailed Greek flag and the coat of arms of House of Glücksburg.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Presidential standard > Royal standards",
+   "file": "Flag of Otto of Greece.svg",
+   "text": "! scope=\"row\" | Flag of the Principality of Samos | 1832–1862 | Royal standard during reign of King Otto. | The flag consists of a square plain cross version of the flag with the monogram of King Otto of Greece in the middle.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Presidential standard > Royal standards",
+   "file": "Naval Royal Standard of Greece (1858-1862).svg",
+   "text": "! scope=\"row\" | Royal standard during the late reign of King Otto | 1858–1862 | Royal standard for use on ships during the late reign of King Otto, adopted in 1858. | The flag consists of the plain cross version of the national flag in 3:2 proportions, with the Bavarian arms of the Wittelsbach dynasty superimposed in the of the cross, topped by a crown. The blue color is of a lighter shade than usual today.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Presidential standard > Royal standards",
+   "file": "Naval Royal Standard of Greece (1833-1858).svg",
+   "text": "! scope=\"row\" | Royal standard during the reign of King Otto | 1833–1858 | Royal standard for use on ships during most of the reign of King Otto, adopted in 1833. | The flag consists of the plain cross version of the national flag in 10:7 proportions, with the Bavarian arms of the Wittelsbach dynasty superimposed in the of the cross, topped by a crown. The blue color is of a lighter shade than usual today. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Military flags > Hellenic Armed Forces",
+   "file": "Flag of the Hellenic National Defence General Staff.svg",
+   "text": "! scope=\"row\" | | rowspan=\"4\" | 1950–present | Flag of the Hellenic National Defence General Staff. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Military flags > Hellenic Armed Forces",
+   "file": "Flag of the Chief of the Hellenic National Defence General Staff (Army variant).svg",
+   "text": "! scope=\"row\" | | Rank flag of the Chief of the Hellenic National Defence General Staff – Army variant. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Military flags > Hellenic Armed Forces",
+   "file": "Flag of the Chief of the Hellenic National Defence General Staff (Navy variant).svg",
+   "text": "! scope=\"row\" | | Rank flag of the Chief of the Hellenic National Defence General Staff – Navy variant. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Military flags > Hellenic Armed Forces",
+   "file": "Flag of the Chief of the Hellenic National Defence General Staff (Air Force variant).svg",
+   "text": "! scope=\"row\" | | Rank flag of the Chief of the Hellenic National Defence General Staff – Air force variant. | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Military flags > Hellenic Army",
+   "file": "War flag of the Hellenic Army.svg",
+   "text": "! scope=\"row\" | | | Army war flag (regimental colour)() | A square flag with a white cross on blue field with an image of Saint George slaying the dragon.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Military flags > Hellenic Army",
+   "file": "Flag of the Greek Army.svg",
+   "text": "! scope=\"row\" | | 1904–present | Flag of the Hellenic Army General Staff. | The seal of the Hellenic Army on three stripes red, green, and red with white borders in-between.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Military flags > Hellenic Army",
+   "file": "Hellenic Army General flag.png",
+   "text": "! scope=\"row\" | | ?–present | Hellenic Army general flag. | A red flag with four white six-pointed stars in the centre.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Military flags > Hellenic Army",
+   "file": "Hellenic Army Major General flag.png",
+   "text": "! scope=\"row\" | | ?–present | Hellenic Army lieutenant general flag. | A red flag with three white six-pointed stars in the centre.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Military flags > Hellenic Army",
+   "file": "Hellenic Army Lieutenant General flag.png",
+   "text": "! scope=\"row\" | | ?–present | Hellenic Army major general flag. | A red flag with two white six-pointed stars in the centre.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Military flags > Hellenic Army",
+   "file": "Hellenic Army Brigadier General flag.png",
+   "text": "! scope=\"row\" | | ?–present | Hellenic Army brigadier general flag. | A red flag with one white six-pointed star in the centre. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Military flags > Hellenic Navy",
+   "file": "Naval jack of Greece.svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 1822–present | Jack of the Hellenic Navy.|| A square flag with a white cross on a blue field. A golden crown was added in the centre during the periods of monarchy (1833–1924 and 1935–1973).",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Military flags > Hellenic Navy",
+   "file": "Hellenic Navy Masthead pennant.svg",
+   "text": "! scope=\"row\" | | Commissioning pennant (, i.e., \"Warship Pennant\") flown by all Hellenic Navy's ships and establishments in commission, unless displaced by a senior officer's rank flag. | \"Warship pennant, blue coloured, has shape of isosceles triangle elongated, bearing a white cross near the base of the triangle\". The flag has typically base to length (height of triangle) 1 to 20. The cross has arms width 1/5 base length and each arm length 3/5 of base length. The pennant flown on the top of mainmast.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Military flags > Hellenic Navy",
+   "file": "Flag of the Hellenic Navy General Staff.svg",
+   "text": "! scope=\"row\" | | ?–present | Flag of the Hellenic Navy General Staff. | The seal of the Hellenic Navy on three stripes white, red, and white with a blue outer .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Military flags > Hellenic Navy",
+   "file": "Greek Navy Admiral Flag.svg",
+   "text": "! scope=\"row\" | | ?–present | Rank flag of the admiral of the Hellenic Navy. | A square flag with a white cross on a blue field with a star in all four quarters.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Military flags > Hellenic Navy",
+   "file": "Naval rank flag of the Prime Minister of Greece.svg",
+   "text": "! scope=\"row\" | | rowspan=\"3\" | 1956–present | Rank flag of the prime minister of Greece aboard Hellenic Navy vessels. | Like the Hellenic Navy jack, with three white rising diagonal stripes in the first quarter.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Military flags > Hellenic Navy",
+   "file": "Flag Minister of Defence of Greece.svg",
+   "text": "! scope=\"row\" | | Rank flag of the Greek minister of national defence aboard Hellenic Navy vessels. | Like the Hellenic Navy jack, with three white rising diagonal stripes in the first quarter and three descending stripes in the third.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Military flags > Hellenic Navy",
+   "file": "Naval rank flag of Ministers of Greece.svg",
+   "text": "! scope=\"row\" | | Rank flag for ministers of the Hellenic Republic. | Like the Hellenic Navy jack, with three white rising diagonal stripes in the first and the third quarter. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Military flags > Hellenic Air Force",
+   "file": "Hellenic Air Force Air Chief Marshal flag.png",
+   "text": "! scope=\"row\" | | ?–present | Air chief marshal flag. | A light blue flag with four white six-pointed stars in the centre.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Military flags > Hellenic Air Force",
+   "file": "Hellenic Air Force Air Marshal flag.png",
+   "text": "! scope=\"row\" | | ?–present | Air marshal flag. | A light blue flag with three white six-pointed stars in the centre.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Military flags > Hellenic Air Force",
+   "file": "Hellenic Air Force Air Vice Marshal flag.png",
+   "text": "! scope=\"row\" | | ?–present | Air vice-marshal flag. | A light blue flag with two white six-pointed stars in the centre.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Military flags > Hellenic Air Force",
+   "file": "Hellenic Air Force Brigadier flag.png",
+   "text": "! scope=\"row\" | | ?–present | Brigadier of the Air Force flag. | A light blue flag with one white six-pointed star in the centre. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Military flags > Hellenic Coast Guard",
+   "file": "Hellenic Coast Guard Flag 1.svg",
+   "text": "! scope=\"row\" | | ?–present | Service flag of the Hellenic Coast Guard. | Seven horizontal stripes, white and blue, with the emblem of the Hellenic Coast Guard.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Military flags > Hellenic Coast Guard",
+   "file": "Hellenic Coast Guard House Flag.svg",
+   "text": "! scope=\"row\" | | ?–present | House flag of Hellenic Coast Guard vessels. | Fifteen vertical blue and white stripes with two blue anchors crossed and a white canton in the upper hoist corner with the national emblem of Greece in the centre. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Regional and municipal flags",
+   "file": "Flag of Greek Macedonia.svg",
+   "text": "! scope=\"row\" | alt=Flag of Macedonia | 1980–present | Flag of the historical region of Macedonia. | Blue field with the golden Vergina Sun in the centre. The flag is unofficial but widely recognized in Greece.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Regional and municipal flags",
+   "file": "Flag of Athens, Greece-en.svg",
+   "text": "! scope=\"row\" | Link to flag | | Municipal flag of Athens. | The flag is blue with an inner gold and outer red . A white Greek cross lies in the middle, charged with a disc with a white featuring gold olive branches. The blue disc in the features the head of the goddess Athena.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Regional and municipal flags",
+   "file": "Flag of Thessaloniki.svg",
+   "text": "! scope=\"row\" | | | Municipal flag of Thessaloniki. | Dark blue with a stylized depiction of the city's main landmark, the White Tower, and an ancient Macedonian coin depicting Alexander the Great.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Regional and municipal flags",
+   "file": "Flag of Rhodes Island.svg",
+   "text": "! scope=\"row\" | | | Municipal flag of Rhodes (city). | The seal of the city of Rhodes, depicting the head of Helios, on a blue gray background.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Regional and municipal flags",
+   "file": "Flag of Corfu.png",
+   "text": "! scope=\"row\" | | | Flag of Corfu island. | The flag of Corfu had a dark red/maroon/purple large outer , a dark gold thin inner and a very dark blue field with the seal in the centre in dark gold. The seal shows an ancient Greek Corfiot sailing ship. ΔΗΜΟΣ (Municipality) is written above the seal, ΚΕΡΚΥΡΑΣ (of Corfu), below the seal. The flag, on which the image shown above is based, had a ratio of 11:19.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Regional and municipal flags",
+   "file": "Flag of Zakynthos.svg",
+   "text": "! scope=\"row\" | | | Flag of Zakynthos island. | Dark green with an orange depiction of Zakynthos with the island's motto \"Freedom needs virtue and courage\" (ΘΕΛΕΙ ΑΡΕΤΗ ΚΑΙ ΤΟΛΜΗ Η ΕΛΕΥΘΕΡΙΑ, from Andreas Kalvos' The Lyre).",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Regional and municipal flags",
+   "file": "Flag of Aegina.svg",
+   "text": "! scope=\"row\" | | | Flag of Aegina island. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Regional and municipal flags",
+   "file": "Flag of Kastellorizo.svg",
+   "text": "! scope=\"row\" | | rowspan=\"4\" | 1821–present | The flag of Kastelorizo, used as an ensign for ships from Kastelorizo during the Greek War of Independence, now a municipal flag. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Regional and municipal flags",
+   "file": "Interpretation of flag of Hydra.svg",
+   "text": "! scope=\"row\" | | The flag of Hydra island, used as an ensign for ships from Hydra during the Greek War of Independence, now a municipal flag. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Regional and municipal flags",
+   "file": "Flag of Psara.svg",
+   "text": "! scope=\"row\" | | The flag of Psara, used as an ensign for ships from Psara during the Greek War of Independence, now a municipal flag. | White cloth bordered with red with a large red cross and the inscriptions of the motto Eleftheria i Thanatos (Liberty or Death) in capital red letters. The cross is standing on an upside down crescent, symbolizing the Ottoman Empire, flanked on one side by a lance, on the other by an anchor, around which is coiled a serpent eating a bird.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Regional and municipal flags",
+   "file": "1821 Flag of Spetses.svg",
+   "text": "! scope=\"row\" | | The flag of Spetses, used as an ensign for ships from Spetses during the Greek War of Independence, now a municipal flag. | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Flag of Greece (1970–1975).svg",
+   "text": "! scope=\"row\" | | 1970–1975 | Flag of Greece used by the Regime of the Colonels. | The same as the current flag – nine horizontal blue and white stripes with a white cross on a blue canton – but with a darker, deep midnight blue shade and proportions of .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "State Flag of Greece (1863-1924 and 1935-1973).svg",
+   "text": "! scope=\"row\" rowspan=\"2\" | State and War flag on land during the Greek royal family | 1863–1924 | rowspan=\"2\" | State and war flag of the Kingdom of Greece. | rowspan=\"2\" | The flag consists of a white cross on a field of blue with a golden royal crown superimposed in the of the cross.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Flag of Greece (1828-1978).svg",
+   "text": "! scope=\"row\" rowspan=\"2\" | First National Flag of Greece | 1822–1863 | rowspan=\"2\" | In January 1822, the First National Assembly at Epidaurus adopted this design to replace the multitude of local revolutionary flags then in use. Since 1828, this flag was flown inside the country, while the current flag was flown on naval vessels and abroad. | rowspan=\"2\" | White cross on a blue field. During the periods of monarchy (1833–1924 and 1935–1973), a golden crown was often added in the centre of official flags (see examples below).",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "EOKA flag.svg",
+   "text": "! scope=\"row\" | | 1955–1959 | Flag of EOKA, the Cypriot Greek nationalist guerilla organisation from the 1950s. | White cross on a blue field. The inscription reads: \"Ελευθερία ή Θάνατος, Ζήτω η Ελλάς\" (Freedom or Death, Long live Greece).",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Flag of Liberty of the Athenians.svg",
+   "text": "! scope=\"row\" | | 1944–present | Known as the Flag of Athenian Liberty, it was first hoisted on the Acropolis of Athens on the liberation of the city from Nazi occupation on 12 October 1944, a ceremony which is repeated every year on the anniversary of liberation. | The old national flag, with a depiction of the seal of the Athenian association in the centre.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Flag of Pontus (2).svg",
+   "text": "! scope=\"row\" | | 1919–1923 | Flag of the proposed state of the Republic of Pontus. | The naval version of the Greek flag with a facing black eagle superimposed in the centre of the cross in the canton.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Flag Pontus revolution.svg",
+   "text": "! scope=\"row\" | | 1914–1923 | Flag used by pontic Greek self-defense groups and guerillas during the Pontic Greek Genocide. | Resembles the land flag but with a black facing eagle on a golden disc superimposed in the middle. The eagle design derives from 4th century BC coins from Sinope.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Flag of the Autonomous Republic of Northern Epirus.svg",
+   "text": "! scope=\"row\" | | 1914 | Flag of the Autonomous Republic of Northern Epirus. It is used until today by many Northern Epirotes. | Resembles the land flag but with a black two-headed eagle superimposed in the middle. Beneath it are the Greek letters \"Α\" and \"Η\" that stand for \"Αυτόνομη Ήπειρος\" (Autonomous Epirus) and the year 1914, the year of its foundation.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Flag of the Free State of Ikaria.svg",
+   "text": "! scope=\"row\" | | 1912 | Flag of the Free State of Ikaria. | During the Balkan wars, the inhabitants of the Greek island of Ikaria revolted against the Ottoman Empire establishing a short-lived independent nation called the Free State of Ikaria (Ελευθέρα Πολιτεία Ικαρίας). The neighboring islands complex of Fournoi-Korseon also joined Ikaria.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Flag of the Principality of Samos (1834–1912).svg",
+   "text": "! scope=\"row\" | Flag of the Principality of Samos | rowspan=\"2\" | 1834–1912 | Flag of the autonomous Principality of Samos, tributary to the Ottoman Empire. | The flag consists of the plain cross version of the Greek national flag, with the upper half field in the red of the Ottoman flag.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Princely Flag of the Principality of Samos (1834–1912).svg",
+   "text": "! scope=\"row\" | | Princely flag of the autonomous Principality of Samos, tributary to the Ottoman Empire. | The flag consists of a white triangle on blue background, bearing a red Greek cross in the centre.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Flag of Cretan State.svg",
+   "text": "! scope=\"row\" | Flag of the Cretan State | 1898–1908 | Flag of the autonomous Cretan State. | The flag consists of the plain cross version of the Greek national flag, with the canton in red with a white five-pointed star, symbolising Ottoman suzerainty. It was not popular during its period of official use, as Cretans wanted union with Greece, and was de facto abolished following the island's unilateral proclamation of union with Greece in September 1908.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Cretan revolutionary flag, 1897.svg",
+   "text": "! scope=\"row\" | | 1897–1898 | Cretan revolutionary flag of the 1897 revolt. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Flag of Eastern Rumelia.svg",
+   "text": "! scope=\"row\" | | 1878–1885 | Flag of Eastern Rumelia in Northern Thrace. | Three horizontal stripes red, white, and blue.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Flag of the Cretan 1878 Insurrection.png",
+   "text": "! scope=\"row\" | | 1878 | Flag of the 1878 Cretan Insurrection. | The design of the flag above is a series of six stripes, the blue ones only stretching to 4/5 of the flag. The banner contains the words \"ΗΤΑΝ ΗΕΠΙΤΑΝ\" (expression of the Spartan women, when they would send off their sons into war implying: [I will wait for you] either with this [the shield, victorious], or on this [wounded or dead]) on the second white stripe, followed by a likely date of the rebellion, August 16, on the third white stripe. On the first two stripes, on the extreme corner, a Greek cross is displayed.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Flag of macedonian revolutionaries 1878.svg",
+   "text": "! scope=\"row\" | | 1878 | Flag of West Macedonia during the 1878 revolt. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Arkadi Cretan flag.svg",
+   "text": "! scope=\"row\" | Flag used during the siege of Arkadi | 1866 | Flag used in the Arkadi Monastery by Christian Cretans supporting union with Greece, during the Great Cretan Revolt of 1866–1869. | The flag consists of the plain cross version of the Greek national flag, featuring the initials of the motto Κρήτη, Ένωσις, Ελευθερία ή Θάνατος (\"Crete, Enosis, Freedom or Death\"), and the cross with the inscription ΙΣ ΧΣ ΝΙΚΑ (\"Jesus Christ Conquers\").",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Flag of the United States of the Ionian Islands.svg",
+   "text": "! scope=\"row\" | Flag of the Ionian Islands under British rule | 1817–1864 | Flag of the United States of the Ionian Islands, a British protectorate from 1815 until its unity with Greece in 1864. | The flag is a variation of the British colonial Blue Ensign, with red bordering. It is defaced with the islands' emblem, a variant of the Venetian \"Lion of St. Mark\" holding seven bundled arrows, representing the unity of the seven Ionian Islands, with the Bible superimposed on them.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Flag of the Septinsular Republic.svg",
+   "text": "! scope=\"row\" | Flag of the Septinsular Republic | 1800–1807 | Flag of the Septinsular Republic, the first modern Greek self-governing state, comprising the Ionian Islands, under joint Russian and Ottoman suzerainty. | The flag depicts the \"Lion of St. Mark\", the symbol of the Republic of Venice, under whose rule the Ionian Islands were until 1797. The lion holds seven bundled arrows, representing the unity of the seven islands, with the Bible superimposed on them.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Greek-Naval-Jack.svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 1807 | Flag of captain Ioannis Stathas, designed in the island of Skiathos. It resembles the old flag and the jack of the Hellenic Navy. | White cross on an azure field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Central Macedonia flag 1807.png",
+   "text": "! scope=\"row\" | | Flag of Central Macedonia designed by chieftain Nikolaos Tsamis against the Ottoman Empire. | An azure Greek cross on a white field. The flag also bore the inscription: \"Σημαία Ελληνική, Νικόλαος Τσάμης\" (Greek Flag, Nikolaos Tsamis).",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Kallergis Brothers flag.svg",
+   "text": "! scope=\"row\" | | c.a 1800 | Flag of the Kallergis family used before the revolution. | The flag shares a lot of similarities with the current flag and bears the phrase \"EN TOYTΩ NIKA\" (In hoc signo vinces, eng: In this sign thou shalt conquer). Heraldic ensembles containing the Kallergis family coat of arms (bendy argent and azure) can be found all over the island of Crete, in churches and other monuments.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Flag of Rigas Feraios.svg",
+   "text": "! scope=\"row\" | Flag of the Maniots | c.a 1793 | Flag proposed by Rigas Feraios for his envisioned pan-Balkan Federation. | Three red, white, and black horizontal stripes. Red stands for the imperial purple, white for the righteousness of the fight against tyranny, and black for the death in the struggle for liberty. It also features three crosses for the Christian nations of the Balkans, and the club of Hercules in the middle.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Graeco-Ottoman ensign.svg",
+   "text": "! scope=\"row\" | | 1774–1800s | This flag, the so-called \"Graeco-Ottoman\" ensign (Γραικοθωμανική παντιέρα), was allowed for use by Greek merchant ships during the latter stages of Ottoman rule. | The flag consists of three horizontal stripes in the colours red (for the Ottoman Empire), blue (for the Greeks), and red.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Greek Revolution flag.svg",
+   "text": "! scope=\"row\" | | 1770–1821 | This design appeared in the Orlov revolt, based on older patterns. Used among others by the Kolokotronis family, this flag, with variations, was the most widely used throughout Greece during the initial stages of the 1821 revolution. | A blue or cyan cross over a white field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Filiki Eteria flag.svg",
+   "text": "! scope=\"row\" | Flag of Filiki Eteria | 1814–1821 | The flag of the Filiki Eteria. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Mani Flag (Greece).svg",
+   "text": "! scope=\"row\" | Flag of the Maniots | 1821–1822 | The flag of the fighters of the autonomous Mani Peninsula. | A blue Greek cross on white background, with the words \"Victory or Death\" and the ancient Spartan motto \"With it or upon it\" in gold.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Flag of Botsaris.svg",
+   "text": "! scope=\"row\" | | 1820–1823 | Flag raised by the leader of the Souliotes, Markos Botsaris, in Souli, October 1820, after their exile in the Ionian islands. | The flag depicts St. George and reads in Greek: \"Freedom\", \"Fatherland\", \"Religion\".",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Areios Pagos Anatolikis Ellados.svg",
+   "text": "! scope=\"row\" | | 1821–1825 | The flag of the Areopagus of Eastern Continental Greece, a regional administration during the Greek Revolution. | The flag consists of three vertical stripes in the colours green, white, and black. The cross stands for Orthodox Christianity, the flaming heart for the will to fight for independence, and the anchor for the steadfastness of purpose.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Flag used by Greek guerillas (1821-1829).png",
+   "text": "! scope=\"row\" | | 1821–1829 | Flag used by admirals of the revolutionary navy during the Greek War of Independence. | Horizontal tricolor of yellow, blue, and white with a wreath and cross, the motto \"Ελευθερία ή Θάνατος\" (Freedom or Death) is written on the bottom.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Flag of the Administration of Samos.svg",
+   "text": "! scope=\"row\" | Flag of Samos | 1821–1834 | Flag of the Military-Political System of Samos during the Greek War of Independence. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Flag of the Sacred Band of 1821.svg",
+   "text": "! scope=\"row\" | Flag of the Sacred Band | 1821 | Flag of the Sacred Band. | Three red, white, and black horizontal stripes with a golden phoenix rising in the middle and reads in Greek: \"Εκ της κόνεώς μου αναγεννώμαι\" (From my ashes I am reborn.)",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Athanasios Diakos 1821.svg",
+   "text": "! scope=\"row\" | Flag of Athanasios Diakos | 1821 | Used by Athanasios Diakos and his irregulars during the Greek War of Independence. | The figure of St. George slaying the dragon, with the motto \"Ελευθερία ή θάνατος\" (Freedom or Death).",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Miaoulis flag.svg",
+   "text": "! scope=\"row\" | Flag of Andrea's Miaoulis | 1821 | Flag used by Andreas Miaoulis. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Andreas Lontos Flag (Revolution1821).svg",
+   "text": "! scope=\"row\" | Flag of Andreas Londos | 1821 | The first Greek revolutionary flag, raised at the beginning of the Greek War of Independence by Andreas Londos. | A black Latin cross in the of a red field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Alexander Ypsilantis flag (obverse).svg",
+   "text": "! scope=\"row\" | Flag of Alexander Ypsilantis | 1821 | Used by Alexander Ypsilantis. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "1821 Flag of Gazis.svg",
+   "text": "! scope=\"row\" | Flag of Anthimos Gazis | 1821 | Used by Anthimos Gazis and his irregulars from Thessaly during the Greek War of Independence. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Flag of Thessalian Revolutionaries.png",
+   "text": "! scope=\"row\" | | 1821 | Another flag used also in Thessaly during the War of Independence, created also by Anthimos Gazis. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Chalkidiki Flag Greek Revolution.svg",
+   "text": "! scope=\"row\" | Flag of Chalkidiki | 1821 | Flag of the revolutionaries from Chalkidiki during the Greek War of Independence. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Greek flag (black cross).svg",
+   "text": "! scope=\"row\" | Flag of Thrace | 1821 | Flag of the revolutionaries from Thrace and Samothrace during the Greek War of Independence. | A black Greek cross on blue background",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Naoussa, Macedonia Revolution flag 1822.JPG",
+   "text": "! scope=\"row\" | | 1822 | Flag of the revolutionaries from Naousa, in Macedonia during the Greek war of Independence. | Azure cross on a white field with a golden the phoenix rising from the flames. The flag bears the inscriptions: \"ΕΝ ΤΟΥΤΩ ΝΙΚΑ\" (In hoc signo vinces, eng: In this sign thou shalt conquer) and \"ΜΑΧΟΥ ΥΠΕΡ ΠΙΣΤΕΩΣ ΚΑΙ ΠΑΤΡΙΔΟΣ\" (Fight in favor of faith and fatherland) which was the title of the Declaration of the Greek Revolution by Alexander Ypsilantis.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Spachides Flag.svg",
+   "text": "! scope=\"row\" | | 1431–1500s | Flag (reconstruction) used by the Greek sipahis of the Ottoman army from the 15th to 17th century. A surviving flag exists in the Harbiye Military Museum, in Istanbul. | A blue or cyan cross over a white field with the figure of St. George slaying the dragon superimposed in the centre of the cross.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Flag of Himara in Epirus during Ottoman rule.png",
+   "text": "! scope=\"row\" | | 1431–1799 | The flag of Himara, an autonomous district in Epirus, during the Ottoman period. | The Archangels Michael and Gabriel depicted on a white field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Flag of Genoa.svg",
+   "text": "! scope=\"row\" | Flag of the Greek spachides | 1218–1566 | Flag of Republic of Genoa used in Genoese domains of Greece. | Saint George's flag, a red cross on white field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Flag of the Republic of Venice (Mid-14th century).svg",
+   "text": "! scope=\"row\" | Flag of the Greek spachides | 1204–1797 | Flag of the Republic of Venice from the portolan chart attributed to A. Dulcert, used in Venetian domains of Greece. | The red lion of Saint Mark on a white field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Porta del filarete, 1433-1445, 11, 02.jpg",
+   "text": "! scope=\"row\" | | ca. 1445 | Flag of the Byzantine Empire as depicted on the Filarete Door, showing the Byzantine Emperor's John VIII Palaiologos departure for the Council of Florence (1439) to discuss the possible reunification of the Orthodox Catholic and Western Catholic churches. | The triangular flag depicts a double headed eagle. Perhaps the flag was red adorned with a golden eagle as seen in armorial manuscripts of later centuries.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Byzantine imperial flag, 14th century according to portolan charts.svg",
+   "text": "! scope=\"row\" | | ca. 1400 | The Byzantine imperial flag as depicted in several different charts in the late 14th and early 15th century. | Golden cross on a red field with each of its quarters taken by golden Betas, also known as the tetragrammatic cross, that may represent the initials of the Palailogos family's motto King of Kings, Ruling Over Rulers (Βασιλεύς Βασιλέων, Βασιλεύων Βασιλευόντων).",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Byzantine imperial flag, 14th century (firesteels vesion).svg",
+   "text": "! scope=\"row\" | Tetragrammatic cross flag | rowspan=\"2\" | ca. 1385 | Imperial banner of the Palaiologos dynasty, as recorded by Pseudo-Kodinos in the \"Treatise on Offices\" and one of the Byzantine flags depicted in the Castilian \"Book of Knowledge of All Kingdoms\" (Conosçimiento de todos los reynos). The flag is presented as the flag of \"the real Greece and Empire of the Greeks (la vera Grecia e el imperio de los griegos)\" but also as a flag of Salonica (Thessaloniki), Lodomago (Heraclea Perinthus) and Castelle (Sinope). | Golden cross on a red field with each of its quarters taken by golden B",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Flag of Palaeologus Emperor - Libro del conosçimiento de todos los rregnos.svg",
+   "text": "! scope=\"row\" | | Flag of \"Empire of Constantinople\" also in the \"Book of Knowledge of All Kingdoms\". | A quartered flag; the first and fourth quarters are white with a red cross, the second and third are red with a golden cross, with each of its quarters taken by golden fire steels which are probably corrupted Greek Betas. The flag is a mixture of the imperial banner and the flag of the Genoese colony of Galata.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Banner of the Empire of Trebizond.svg",
+   "text": "! scope=\"row\" | | ca. 1375 | Banner with the double-headed eagle, used in various portolan charts to mark the Empire of Trebizond in the 14th century as well as in the \"Book of Knowledge of All Kingdoms\". | Golden double-headed eagle on a red field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Byzantine imperial flag, 14th century according to Geoffrey of Villehardouin.png",
+   "text": "! scope=\"row\" | | ca. 1330 | The Byzantine imperial ensign (βασιλικόν φλάμουλον) according to a depiction from the La Conquête de Constantinople of Geoffreoy de Villehardouin. | Another version of the banner with the tetragrammatic cross.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Byzantine imperial flag, 14th century according to Pietro Vesconte.png",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | ca. 1320 | The Byzantine imperial ensign (βασιλικόν φλάμουλον) of the 14th century according to Pietro Vesconte's portolan chart. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Flag of Salloniq in the 14th century.png",
+   "text": "! scope=\"row\" | | The flag of Salloniq (Thessaloniki) in the 14th century, also according to Pietro Vesconte's portolan chart. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Byzantine banner, Madrid Skylitzes, fol. 31r.png",
+   "text": "! scope=\"row\" | | rowspan=\"4\" | 12th century | rowspan=\"4\" | Examples of Byzantine military banners (), according to the Madrid illuminated manuscript of John Skylitzes' chronicle. | rowspan=\"4\" | The flags shown in the manuscript vary widely in appearance and no singular pattern can be discerned, apart from a relatively restricted range of colours (red, white, and blue) used either monochromatically or in alternating bands. Their veracity is open to question, as the Madrid manuscript was painted in 12th-century Sicily, but is supposed to represent events of the 9th–11th centuries.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Byzantine banner, Madrid Skylitzes, fol. 73va.png",
+   "text": "! scope=\"row\" |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Byzantine banner from a 12th-century manuscript.png",
+   "text": "! scope=\"row\" |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Byzantine banner, Madrid Skylitzes, fol. 43b.png",
+   "text": "! scope=\"row\" |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Byzantine banner with a Greek cross potent.png",
+   "text": "! scope=\"row\" | | 10th–13th century | A Byzantine banner (φλάμουλον) (speculative) reconstruction, probably borne by cavalry. Depictions of flags with crosses quartered with golden discs from the 10th century exist, preceding the later tetragrammatic cross. A mention of a banner with a cross is mentioned in De Cerimoniis. Also, a depiction of a flag almost identical to the Palaiologian tetragrammatic ones exists from the early 13th century. | The banner depicted a Greek cross quartered with golden discs (bezants) on a red field. The flag was a square shape with pointed streamers.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags",
+   "file": "Byzantine labarum according to coins.png",
+   "text": "! scope=\"row\" | | 10th–12th century | Byzantine ceremonial labarum during the Macedonian, Doukid, and Komnenian dynasties according to various coins from Constantinople. On the coins of the following Byzantine emperors, the labarum was replaced by the Patriarchal cross. | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags > Other historical flags",
+   "file": "Greek merchant navy flag.svg",
+   "text": "! scope=\"row\" | First Merchant Navy Flag | 1822–1828 | First flag of the Greek Merchant Navy, adopted in January 1822. In 1828 it was discontinued, as it was decided that the cross-and-stripes naval flag (today's national flag) should be flown by both military and merchant ships. | Blue flag with an inverse state flag on the canton (blue cross on white field).",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags > Other historical flags",
+   "file": "Naval Ensign of Greece (1833-1858).svg",
+   "text": "! scope=\"row\" | Naval ensign for military vessels during the reign of King Otto | 1833–1858 | War ensign at sea during most of the reign of King Otto, adopted in 1833. | The flag consists of the naval version of the national flag in 25:18 proportions, with the Bavarian arms of the Wittelsbach dynasty superimposed in the of the cross, topped by a golden royal crown superimposed in the canton. The shade of blue is undefined, but was usually of a lighter shade.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags > Other historical flags",
+   "file": "Naval Ensign of Greece (1858-1862).svg",
+   "text": "! scope=\"row\" | Naval ensign for military vessels during the late reign of King Otto | 1858–1862 | War ensign at sea during the late reign of King Otto, adopted in 1858. | The flag consists of the naval version of the national flag in 3:2 proportions, with the Bavarian arms of the Wittelsbach dynasty superimposed in the of the cross, topped by a golden royal crown superimposed in the canton. The shade of blue is undefined, but was usually of a lighter shade.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags > Other historical flags",
+   "file": "Flag of Minister of Navy of Greece (1914-1924).svg",
+   "text": "! scope=\"row\" | | 1914–1924 | The flag of the Minister of Naval Affairs, adopted in 1914. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags > Other historical flags",
+   "file": "Hellenic Royal Flag 1935.svg",
+   "text": "! scope=\"row\" | Royal Flag during the Greek royal family | 1936–1970 | Royal version of the state flag during the Kingdom of Greece. | The flag consists of the plain cross version of the national flag, with a detailed golden royal crown superimposed in the of the cross. The field is bordered by a gold fringe.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags > Other historical flags",
+   "file": "Naval Jack of Kingdom of Greece.svg",
+   "text": "! scope=\"row\" rowspan=\"2\" | | 1863–1924 | rowspan=\"2\" | Jack of the Royal Hellenic Navy. | rowspan=\"2\" | A square flag with a white cross on a blue field with the Hellenic royal crown in the centre. The crown was added during the periods of monarchy (1833–1924 and 1935–1973).",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags > Other historical flags",
+   "file": "Hellenic Naval Ensign 1935.svg",
+   "text": "! scope=\"row\" rowspan=\"2\" | War ensign for naval vessels during the Kingdom of Greece | 1863–1924 | rowspan=\"2\" | War ensign for naval vessels during the Kingdom of Greece. | rowspan=\"2\" | The flag consists of the naval version of the national flag, with a golden royal crown superimposed in the of the cross in the canton.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags > Other historical flags",
+   "file": "Ensign of the Royal Hellenic Air Force.svg",
+   "text": "! scope=\"row\" | | 1973 | Ensign of the Royal Hellenic Air Force until 1973. | A white cross on a blue field with the roundel of the Hellenic Air Force in the centre, the royal crown in a circle on the canton.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags > Other historical flags",
+   "file": "Flag of the Hellenic Air Force (1973-1978).svg",
+   "text": "! scope=\"row\" | | 1973–1978 | Ensign of the Hellenic Air Force (1973–1978) and Greek Civil Air Ensign, until 1978. | A white cross on a blue field with the roundel of the Hellenic Air Force in the centre.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags > Other historical flags",
+   "file": "Hellenic Coast Guard Flag (1919-1973).png",
+   "text": "! scope=\"row\" | | 1919–1973 | Service flag of the Hellenic Coast Guard. | The naval version of the national flag, with a golden royal crown superimposed in the centre of the cross in the canton and two silver anchors crossed in the upper hoist corner.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags > Other historical flags",
+   "file": "Flag of Hellenic Coast Guard (1973-1980).png",
+   "text": "! scope=\"row\" | | 1973–1980 | Service flag of the Hellenic Coast Guard. | The naval version of the national flag, with two golden anchors crossed in the centre of the cross in the canton. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags > Current and historical variants used outside of Greece",
+   "file": "Naval jack of Cyprus.svg",
+   "text": "! scope=\"row\" | | Since 1964 | Jack of the Cypriot Navy. | A square flag with a white cross on a blue field, with a crossed anchor, trident and cross in gold superimposed.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags > Current and historical variants used outside of Greece",
+   "file": "Semaia tes Kyprou.svg",
+   "text": "! scope=\"row\" | | Since 1950s | Unifying flag of Cyprus (Enotiki Simaia) | Used by many Greek Cypriots until today. It represents the willing of Greek Cypriots for union with Greece (Enosis).",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Historical flags > Current and historical variants used outside of Greece",
+   "file": "Flag of ELAM.svg",
+   "text": "! scope=\"row\" | | Since 2008 | Flag of ELAM, a far- , ultra-nationalist movement and political party in Cyprus. | The old Greek flag superimposed by a white sword on a black Boeotian shield. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Political flags",
+   "file": "Party flag of New Democracy.svg",
+   "text": "! scope=\"row\" | | 2018–present | New Democracy |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Political flags",
+   "file": "Flag of the SYRIZA.svg",
+   "text": "! scope=\"row\" | | 2020–present | SYRIZA (Coalition of the Radical Left – Progressive Alliance) |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Political flags",
+   "file": "KKE Flag.png",
+   "text": "! scope=\"row\" | | 1974–present | rowspan=\"2\" | Communist Party of Greece |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Political flags",
+   "file": "Flag of the Communist Party of Greece (1940s).svg",
+   "text": "! scope=\"row\" | | 1940s |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Political flags",
+   "file": "Flag of PASOK (Panhellenic Socialist Movement).png",
+   "text": "! scope=\"row\" | | 1974–present | PASOK (Panhellenic Socialist Movement) |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Political flags",
+   "file": "Hellenic Kingdom Flag 1935.svg",
+   "text": "! scope=\"row\" | | 1973–present | Flag of the Kingdom of Greece. Today used by Greek monarchists. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Political flags",
+   "file": "Meandros flag.svg",
+   "text": "! scope=\"row\" | | 1993–2020 | Golden Dawn |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Political flags",
+   "file": "17-n-flag.svg",
+   "text": "! scope=\"row\" | | 1975–2002 | Revolutionary Organization 17 November |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Political flags",
+   "file": "Flag of the Democratic Army of Greece.svg",
+   "text": "! scope=\"row\" | | 1946–1949 | Democratic Army of Greece |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Political flags",
+   "file": "Flag of Grivas Organization X updated.svg",
+   "text": "! scope=\"row\" | | 1943–1950 | Organization X |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Political flags",
+   "file": "ELAS flag.svg",
+   "text": "! scope=\"row\" | | 1942–1945 | ELAS |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Political flags",
+   "file": "EON flag.svg",
+   "text": "! scope=\"row\" | | 1936–1941 | National Youth Organisation (EON) |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Political flags",
+   "file": "Greek National Socialist party flag.png",
+   "text": "! scope=\"row\" | | 1932–1943 | Greek National Socialist Party |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Political flags",
+   "file": "Flag of National Union of Greece.svg",
+   "text": "! scope=\"row\" | | 1927–1944 | National Union of Greece |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Political flags",
+   "file": "Flag of Freethinkers' Party.svg",
+   "text": "! scope=\"row\" | | 1922–1936 | Freethinkers' Party | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Religious flags",
+   "file": "Flag of the Greek Orthodox Church.svg",
+   "text": "! scope=\"row\" | | 1980s–present | Flag of the Greek Orthodox Church and the autonomous Monastic State of the Holy Mountain (Mount Athos). Earlier versions of this flag were in use at least as far back as the early 1900s as evidenced by posters from that period. | Black double-headed eagle on a golden field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Religious flags",
+   "file": "Βυζαντινή σημαία στο Άργος.jpg",
+   "text": "! scope=\"row\" | | ?–present | A widely used ahistorical \"byzantine flag\" of the Greek Orthodox Church, usually hoisted on churches. | The flag is a version of the tetragrammatic cross banner with the fire steels. There is the inscription \"TOYTΩ NIKA\" in white while the top arm of the cross is charged with the Christogram in white. In the centre of the flag there is a white double-headed eagle fimbriated red, charged upon its breast with a red shield with a cross between four fire steels, all in gold. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Ethnic Greek subgroup flags (used unofficially)",
+   "file": "Flag of the Greek Orthodox Church.svg",
+   "text": "! scope=\"row\" | | ?–present | Flag of the Cappadocian Greeks. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Ethnic Greek subgroup flags (used unofficially)",
+   "file": "Flag of Pontus.svg",
+   "text": "! scope=\"row\" | | ?–present | Flag of the Pontic Greeks. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Ethnic Greek subgroup flags (used unofficially)",
+   "file": "Flag of Sarakatsani.svg",
+   "text": "! scope=\"row\" | | ?–present | Flag of the Sarakatsani. | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Greek flags",
+   "section": "Yacht clubs of Greece",
+   "file": "Burgee of Nautical Club of Palaio Faliro.svg",
+   "text": "! scope=\"row\" | | Burgee of Nautical Club of Palaio Faliro |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Grèce",
+   "section": "Historique",
+   "file": "Armoiries Othon de Wittelsbach, roi de Grèce.svg",
+   "text": "Armes d’ : d'azur à la croix alésée d'argent, sur le tout fuselé en bande d'azur et d'argent, qui est de Bavière.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Grèce",
+   "section": "Historique",
+   "file": "Epanastasi.jpg",
+   "text": "Le Serment à Aghia Lavra.Ce tableau de Theodoros P. Vryzakis (1865) commémore le soulèvement du .",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Grèce",
+   "section": "Drapeaux historiques",
+   "file": "Flag of Greece (1821).svg",
+   "text": "Drapeau des révolutionnaires grecs lors de la guerre d'indépendance contre l'Empire ottoman",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Grèce",
+   "section": "Drapeaux historiques",
+   "file": "Greek merchant navy flag.svg",
+   "text": "Drapeau de la marine marchande tel que défini en",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Grèce",
+   "section": "Drapeaux historiques > Utilisation générale",
+   "file": "Flag of Greece (1970–1975).svg",
+   "text": "alt=drapeau constitué d'une croix blanche sur fond bleu marine en haut à et de quatre rayures blanches altérant avec 5 rayures bleu marine| Drapeau de la Grèce pendant la dictature des colonels de 1970 à 1975.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Grèce",
+   "section": "Drapeaux historiques > Utilisation générale",
+   "file": "Presidential Standard of Greece (1973-1974).svg",
+   "text": "alt=drapeau constitué d'un phénix renaissant sur fond bleu marine| Drapeau du président de la Grèce pendant la dictature des colonels de 1973 à 1974.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Grèce",
+   "section": "Drapeaux historiques > Utilisation générale",
+   "file": "Flag of Greece.svg",
+   "text": "Drapeau de la Troisième République utilisé depuis 1978.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Grèce",
+   "section": "Drapeaux historiques > Utilisation terrestre",
+   "file": "Flag of Greece (1828-1978).svg",
+   "text": "Drapeau de la Première République hellénique de 1822 à 1832.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Grèce",
+   "section": "Drapeaux historiques > Utilisation terrestre",
+   "file": "Kingdom of Greece Flag.svg",
+   "text": "Drapeau du royaume de Grèce de 1863 à 1924.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Grèce",
+   "section": "Drapeaux historiques > Utilisation terrestre",
+   "file": "Flag of Greece (1828-1978).svg",
+   "text": "Drapeau de la Deuxième République hellénique de 1924 à 1935.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Grèce",
+   "section": "Drapeaux historiques > Utilisation terrestre",
+   "file": "Kingdom of Greece Flag.svg",
+   "text": "Drapeau du royaume de Grèce de 1935 à 1973.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Grèce",
+   "section": "Drapeaux historiques > Utilisation terrestre",
+   "file": "Flag of Greece (1828-1978).svg",
+   "text": "Drapeau de la Troisième République hellénique de 1975 à 1978.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Grèce",
+   "section": "Drapeaux historiques > Utilisation maritime",
+   "file": "Flag of Greece.svg",
+   "text": "Pavillon utilisé pendant les deux premières républiques",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Grèce",
+   "section": "Drapeaux historiques > Utilisation maritime",
+   "file": "Naval Ensign of Greece (1833-1858).svg",
+   "text": "Pavillon utilisé lors du règne d'Othon I",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Grèce",
+   "section": "Drapeaux historiques > Utilisation maritime",
+   "file": "Naval Ensign of Greece (1863-1924 and 1935-1970).svg",
+   "text": "Pavillon du royaume de Grèce",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "intro",
+   "file": "Evangelical School Teachers and Graduates, 1878.JPG",
+   "text": "Έλληνες Μικρασιάτες Καθηγητές και απόφοιτοι της Ευαγγελικής Σχολής Σμύρνης το 1878 με τη σημαία της Ελλάδας.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Ιστορία > Σημαίες της Ελληνικής Επανάστασης και Α΄ Εθνοσυνέλευση",
+   "file": "Greek Independence 1821.svg",
+   "text": "Σημαία που χρησιμοποιήθηκε από τους επαναστάτες των Ορλοφικών το 1770 έως τα πρώτα στάδια του Πολέμου της Ανεξαρτησίας το 1821.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Ιστορία > Σημαίες της Ελληνικής Επανάστασης και Α΄ Εθνοσυνέλευση",
+   "file": "Central Macedonia flag 1821.JPG",
+   "text": "Η σημαία των επαναστατών της Κεντρικής Μακεδονίας το 1822.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Ιστορία > Σημαία του ανεξάρτητου κράτους",
+   "file": "Administrative flags of Greece, Megale Ellenike Egkyklopaideia, 1934.jpg",
+   "text": "Η ελληνική σημαία σε διάφορες υπηρεσίες, Μεγάλη Ελληνική Εγκυκλοπαίδεια, 1934",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Ιστορία > Σημαία του ανεξάρτητου κράτους",
+   "file": "Flag of Greece (construction sheet).svg",
+   "text": "μικρογραφία|Σχεδιάγραμμα αναλογιών της σημαίας.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Ιστορία > Σημαία του ανεξάρτητου κράτους",
+   "file": "Κορυφή όρους Ημεροβίγγλι.jpg",
+   "text": "μικρογραφία|Η ελληνική σημαία στην κορυφή του όρους Ημεροβίγλι, νήσος Οθωνοί.|σύνδεσμος=Special:FilePath/Κορυφή_όρους_Ημεροβίγλι.jpg",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Εξέλιξη της εθνικής σημαίας",
+   "file": "Flag of Greece (1822-1978).svg",
+   "text": "(), (), (), (), ()",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Εξέλιξη της εθνικής σημαίας",
+   "file": "State Flag of Greece (1863-1924 and 1935-1973).svg",
+   "text": "(, , ), (), ()",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Εξέλιξη της εθνικής σημαίας",
+   "file": "Flag of Greece (1970–1975).svg",
+   "text": "(), ()",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Εξέλιξη της εθνικής σημαίας",
+   "file": "Flag of Greece.svg",
+   "text": "(), ()",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Σχεδιαστικά συναφείς σημαίες > Σημαίες σχεδιαστικά συναφείς με την πρώτη Σημαία της Ελλάδος",
+   "file": "Naval Flag of the Kingdom of France (Civil Ensign).svg",
+   "text": "Σημαία του Γαλλικού Εμπορικού Ναυτικού (1365-1792)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Σχεδιαστικά συναφείς σημαίες > Σημαίες σχεδιαστικά συναφείς με την πρώτη Σημαία της Ελλάδος",
+   "file": "Pavillon de la France (17è siècle).svg",
+   "text": "Ναυτική Σημαία της Γαλλίας (17ος αιώνας: 1 Ιαν 1601 – 31 Δεκ 1700)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Σχεδιαστικά συναφείς σημαίες > Σημαίες σχεδιαστικά συναφείς με την πρώτη Σημαία της Ελλάδος",
+   "file": "Rég du Roi 1757.png",
+   "text": "Σημαία του Γαλλικού Βασιλικού Συντάγματος Στρατού (1757-1791)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Σχεδιαστικά συναφείς σημαίες > Σημαίες σχεδιαστικά συναφείς με την πρώτη Σημαία της Ελλάδος",
+   "file": "Flag of Zwolle.svg",
+   "text": "Σημαία του Ζβόλε",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Σχεδιαστικά συναφείς σημαίες > Σημαίες σχεδιαστικά συναφείς με την πρώτη Σημαία της Ελλάδος",
+   "file": "Two-tailed Swedish ensign.jpg",
+   "text": "Πρώιμη διχαλωτή παραλλαγή της κρατικής και πολεμικής Σημαίας της Σουηδίας. Συνήθης παραλλαγή της Σημαίας της Σουηδικής Εταιρείας Ανατολικών Ινδιών.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Σχεδιαστικά συναφείς σημαίες > Σημαίες σχεδιαστικά συναφείς με την πρώτη Σημαία της Ελλάδος",
+   "file": "Flag of Quebec.svg",
+   "text": "Σημαία του Κεμπέκ",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Σχεδιαστικά συναφείς σημαίες > Σημαίες σχεδιαστικά συναφείς με την πρώτη Σημαία της Ελλάδος",
+   "file": "Flag of et-Parnu.svg",
+   "text": "Σημαία του Πάρνου",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Σχεδιαστικά συναφείς σημαίες > Σημαίες σχεδιαστικά συναφείς με την πρώτη Σημαία της Ελλάδος",
+   "file": "Flag of Shetland.svg",
+   "text": "Σημαία των Σέτλαντ",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Σχεδιαστικά συναφείς σημαίες > Σημαίες σχεδιαστικά συναφείς με την πρώτη Σημαία της Ελλάδος",
+   "file": "Flag of Turin.svg",
+   "text": "Σημαία του Τορίνο",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Σχεδιαστικά συναφείς σημαίες > Σημαίες σχεδιαστικά συναφείς με την πρώτη Σημαία της Ελλάδος",
+   "file": "Drapeau aux serpents de la Martinique.svg",
+   "text": "Η ανεπίσημη Σημαία της Μαρτινίκας",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Σχεδιαστικά συναφείς σημαίες > Σημαίες σχεδιαστικά συναφείς με την πρώτη Σημαία της Ελλάδος",
+   "file": "Eureka Flag.svg",
+   "text": "Σημαία της εξέγερσης της Γιουρίκα (στην Βικτόρια της Αυστραλίας)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Σχεδιαστικά συναφείς σημαίες > Σημαίες σχεδιαστικά συναφείς με την πρώτη Σημαία της Ελλάδος",
+   "file": "Flag of Indianapolis.svg",
+   "text": "Σημαία της Ιντιανάπολις",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Σχεδιαστικά συναφείς σημαίες > Σημαίες σχεδιαστικά συναφείς με την πρώτη Σημαία της Ελλάδος",
+   "file": "Bandera de mazatlan.JPG",
+   "text": "Σημαία της Μασατλάν",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Σχεδιαστικά συναφείς σημαίες > Σημαίες σχεδιαστικά συναφείς με την Σημαία της Ελλάδας",
+   "file": "Flag of the Federal Republic of Southern Cameroons.svg",
+   "text": "μη αναγνωρισμένη Σημαία της Αμπαζονίας (αγγλόφωνοι αυτονομιστές που επιδιώκουν ανεξαρτησία από το Καμερούν)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Σχεδιαστικά συναφείς σημαίες > Σημαίες σχεδιαστικά συναφείς με την Σημαία της Ελλάδας",
+   "file": "Flag of Liberia (1827–1847).svg",
+   "text": "Σημαία της Λιβερίας (1827 – 1847)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Σχεδιαστικά συναφείς σημαίες > Σημαίες σχεδιαστικά συναφείς με την Σημαία της Ελλάδας",
+   "file": "Flag of the Republic of Maryland.svg",
+   "text": "Σημαία της Δημοκρατίας του Μέριλαντ (αφρικανικό κράτος, 1854 - 1857)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Σχεδιαστικά συναφείς σημαίες > Σημαίες σχεδιαστικά συναφείς με την Σημαία της Ελλάδας",
+   "file": "British East India Company flag.svg",
+   "text": "Σημαία της Εταιρείας των Ανατολικών Ινδιών (1600 – 1707)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Σχεδιαστικά συναφείς σημαίες > Σημαίες σχεδιαστικά συναφείς με την Σημαία της Ελλάδας",
+   "file": "Flag of Uruguay.svg",
+   "text": "Σημαία της Ουρουγουάης",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Σχεδιαστικά συναφείς σημαίες > Σημαίες σχεδιαστικά συναφείς με την Σημαία της Εξόδου του Μεσολογγίου",
+   "file": "Flag of England.svg",
+   "text": "Σημαία της Αγγλίας",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Σχεδιαστικά συναφείς σημαίες > Σημαίες σχεδιαστικά συναφείς με την Σημαία της Εξόδου του Μεσολογγίου",
+   "file": "Flag of Marseille.svg",
+   "text": "Σημαία της Μασσαλίας",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Σχεδιαστικά συναφείς σημαίες > Σημαίες σχεδιαστικά συναφείς με την Σημαία της Εξόδου του Μεσολογγίου",
+   "file": "Flag of Finland.svg",
+   "text": "Σημαία της Φινλανδίας",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "el",
+   "page": "Σημαία της Ελλάδας",
+   "section": "Σχεδιαστικά συναφείς σημαίες > Σημαίες σχεδιαστικά συναφείς με την Σημαία της Εξόδου του Μεσολογγίου",
+   "file": "Alkuperalippu.svg",
+   "text": "Σημαία του Αγίου Γεωργίου, προσωρινή σημαία του φινλανδικού εμπορικού ναυτικού της περιόδου του Κριμαϊκού Πολέμου (1853–56)",
+   "kind": "gallery"
+  }
+ ]
+}

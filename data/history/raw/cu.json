@@ -1,0 +1,836 @@
+{
+ "iso": "cu",
+ "flag_item": "Q163008",
+ "pages": [
+  "en:Flag of Cuba",
+  "en:List of Cuban flags",
+  "fr:Drapeau de Cuba",
+  "es:Bandera de Cuba"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Cuba",
+   "section": "intro",
+   "file": "Cuba May 2014 (14153895015).jpg",
+   "text": "National flags on El Malecón, Havana",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Cuba",
+   "section": "intro",
+   "file": "Cuba 2013-01-29 (8572124067)a.jpg",
+   "text": "Cuban flag on display in Villa Clara",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Cuba",
+   "section": "Specifications",
+   "file": "Flag of Cuba (construction sheet).svg",
+   "text": "The Cuban flag is at a length-to-width ratio of 2:1. It is made up of five alternating horizontal stripes, three blue and two white. These blue and white stripes are of equal width. Since 1906, the color of blue is specified as azul turquí, a dark, saturated blue such as indigo or Prussian blue. The star within the red equilateral triangle has a diameter that is the length of the hoist, and its is the of the triangle. {| class=\"wikitable\" style=\"width:60%; text-align: ;\"",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Cuba",
+   "section": "Specifications",
+   "file": "Flag of Cuba.svg",
+   "text": "! 40pxColor scheme ! style=\"background:#002590; width: ; color:white;\"| Blue ! style=\"background:#CC0D0D; width: ; color:white;\"| Red ! style=\"background:#fff; width: ; color:black;\"| White",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Cuba",
+   "section": "Specifications",
+   "file": "Flag of Cuba (construction sheet).svg",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Cuba",
+   "section": "Historical versions of the flag",
+   "file": "Flag of Cross of Burgundy.svg",
+   "text": "Flag of Cross of Burgundy (1521–1843)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Cuba",
+   "section": "Historical versions of the flag",
+   "file": "Flag of Spain (1785–1873, 1875–1931).svg",
+   "text": "Flag of Spanish America (1843–1873; 1874–1898)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Cuba",
+   "section": "Historical versions of the flag",
+   "file": "Flag of Spain (1873–1874).svg",
+   "text": "Flag of First Spanish Republic (1873–1874)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Cuba",
+   "section": "Historical versions of the flag",
+   "file": "Céspedes flag.svg",
+   "text": "Céspedes flag of Ten Years' War (1868–1878)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Cuba",
+   "section": "Historical versions of the flag",
+   "file": "Flag of Cuba (1902–1906).svg",
+   "text": "Variant with sky blue stripes used by the Republic of Cuba from 1902 to 1906",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "National flag",
+   "file": "Flag of Cuba.svg",
+   "text": "! scope=\"row\" | | 1906–present | Flag of Cuba | Five horizontal stripes, three of indigo blue alternate with two white, with a red equilateral triangle based on the hoist side bearing a white five-pointed star in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "National flag",
+   "file": "Flag of Cuba (1902–1906).svg",
+   "text": "! scope=\"row\" | | 1902–1906 | Flag of Cuba (sky blue variant) | Sky blue variant used by the Republic of Cuba from 1902 to 1906. The blue was officially changed to a dark indigo as outlined by the Presidential Decree 24/04/1906. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Governmental flags",
+   "file": "Flag of the President of Cuba.svg",
+   "text": "! scope=\"row\" | 150x150px | 1959–present | Flag of the president of Cuba |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Governmental flags",
+   "file": "Flag of the President of Cuba (Commander-in-Chief).svg",
+   "text": "! scope=\"row\" | | 1959–present | Flag of the president of Cuba (Commander-in-Chief) |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Governmental flags",
+   "file": "Standard of the President of Cuba (1929-1959).svg",
+   "text": "! scope=\"row\" | | 1929–1959 | Flag of the president of Cuba |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Governmental flags",
+   "file": "Standard of the President of Cuba (1909-1929).svg",
+   "text": "! scope=\"row\" | | 1909–1929 | Flag of the president of Cuba |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Governmental flags",
+   "file": "Standard of the President of Cuba 1909-1929 (Afloat).svg",
+   "text": "! scope=\"row\" | | 1909–1929 | Flag of the president of Cuba (afloat) | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Military flags > Naval flags",
+   "file": "Flag of Commander of the Revolutionary Navy of Cuba.svg",
+   "text": "! scope=\"row\" | | | Flag of Commander of the Cuban Revolutionary Navy |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Military flags > Naval flags",
+   "file": "Flag of Deputy Chief of the Revolutionary Navy of Cuba.svg",
+   "text": "! scope=\"row\" | | | Flag of Deputy Chief of the Revolutionary Navy of Cuba |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Military flags > Naval flags",
+   "file": "Flag of Naval Base Commander of Cuba.svg",
+   "text": "! scope=\"row\" | | | Flag of Naval Base Commander |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Military flags > Naval flags",
+   "file": "Flag of Squadron Commander of Cuba.svg",
+   "text": "! scope=\"row\" | | | Flag of Squadron Commander |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Military flags > Naval flags",
+   "file": "Masthead Pennant of Cuba.svg",
+   "text": "! scope=\"row\" | | | Masthead pennant |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Military flags > Naval flags",
+   "file": "Naval jack of Cuba.svg",
+   "text": "! scope=\"row\" | | | Naval jack | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Military flags > Rank flags",
+   "file": "Flag of the First Vice Minister of Cuba.svg",
+   "text": "! scope=\"row\" | | | Flag of the first vice minister |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Military flags > Rank flags",
+   "file": "Flag of the Minister of the Revolutionary Armed Forces of Cuba.svg",
+   "text": "! scope=\"row\" | | | Flag of the Minister of the Cuban Revolutionary Armed Forces |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Military flags > Rank flags",
+   "file": "Flag of the Vice Minister, Chief of General Staff of Cuba.svg",
+   "text": "! scope=\"row\" | | | Flag of the vice minister, Chief of General Staff |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Military flags > Rank flags",
+   "file": "Flag of the Chief of Army of Cuba.svg",
+   "text": "! scope=\"row\" | | | Flag of the Chief of Army |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Local flags > Flags of municipalities",
+   "file": "Official flag of Havana, Cuba.svg",
+   "text": "! scope=\"row\" | | | Flag of the city of Havana |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Local flags > Flags of municipalities",
+   "file": "Bandera de Quivicán, Cuba.svg",
+   "text": "! scope=\"row\" | | | Flag of Quivicán |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Local flags > Flags of municipalities",
+   "file": "Flag of Santa Clara.svg",
+   "text": "! scope=\"row\" | | | Flag of Santa Clara |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Local flags > Flags of municipalities",
+   "file": "Flag of Cienfuegos, Cuba.svg",
+   "text": "! scope=\"row\" | | | Flag of Cienfuegos |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Local flags > Flags of municipalities",
+   "file": "Bandera de Cumanayagua, Cuba.svg",
+   "text": "! scope=\"row\" | | | Flag of Cumanayagua |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Local flags > Flags of municipalities",
+   "file": "Céspedes flag.svg",
+   "text": "! scope=\"row\" | | | Flag of Bayamo and Yara |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Local flags > Flags of municipalities",
+   "file": "Flag of Jagüey Grande, Cuba.svg",
+   "text": "! scope=\"row\" | | | Flag of Jagüey Grande |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Local flags > Flags of municipalities",
+   "file": "Flag of Ciénaga de Zapata.jpeg",
+   "text": "! scope=\"row\" | Link to file | | Flag of Ciénaga de Zapata |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Local flags > Flags of municipalities",
+   "file": "Bandera de Cruces, Cuba.svg",
+   "text": "! scope=\"row\" | | | Flag of Cruces |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Local flags > Flags of municipalities",
+   "file": "Flag of Ranchuelo.png",
+   "text": "! scope=\"row\" | Link to file | | Flag of Ranchuelo |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Local flags > Flags of municipalities",
+   "file": "Bandera de Guanabacoa, Cuba.svg",
+   "text": "! scope=\"row\" | | | Flag of Guanabacoa |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Local flags > Flags of municipalities",
+   "file": "Flag of Caimito, Cuba.svg",
+   "text": "! scope=\"row\" | Link to file | | Flag of Caimito |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Local flags > Flags of municipalities",
+   "file": "Bandera de Trinidad, Cuba.svg",
+   "text": "! scope=\"row\" | | | Flag of Trinidad |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Local flags > Flags of municipalities",
+   "file": "Flag of Santiago de Cuba.png",
+   "text": "! scope=\"row\" | Link to file | | Flag of Santiago de Cuba | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Local flags > Historical local flags",
+   "file": "Former flag of La Habana Province (1976 - 2010).svg",
+   "text": "! scope=\"row\" | | 1976–2010 | Flag of La Habana Province (1976–2010) |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Local flags > Historical local flags",
+   "file": "SignalFlagAlpha-USNSpec.svg",
+   "text": "! scope=\"row\" | | 1845 | Flag of Trinidad Maritime Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Local flags > Historical local flags",
+   "file": "Bandera de La Habana (1845).svg",
+   "text": "! scope=\"row\" | | 1845 | Flag of La Habana Maritime Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Local flags > Historical local flags",
+   "file": "Bandera de San Juan de los Remedios (1845).svg",
+   "text": "! scope=\"row\" | | 1845 | Flag of San Juan de los Remedios Maritime Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Local flags > Historical local flags",
+   "file": "Bandera de Santiago de Cuba (1845).svg",
+   "text": "! scope=\"row\" | | 1845 | Flag of Santiago de Cuba Maritime Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Local flags > Historical local flags",
+   "file": "Bandera de Nuevitas (1845).svg",
+   "text": "! scope=\"row\" | | 1845 | Flag of Nuevitas Maritime Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Local flags > Historical local flags",
+   "file": "Bandera de Cienfuegos (1845).svg",
+   "text": "! scope=\"row\" | | 1885 | Flag of Cienfuegos Maritime Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Local flags > Historical local flags",
+   "file": "Bandera de Sagua la Grande (1885).svg",
+   "text": "! scope=\"row\" | | 1885 | Flag of Sagua La Grande Maritime Province | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Historical flags",
+   "file": "Flag of Cross of Burgundy.svg",
+   "text": "! scope=\"row\" | | 1521–1843 | Flag of Cross of Burgundy |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Historical flags",
+   "file": "Bandera de Joaquín Infante.svg",
+   "text": "! scope=\"row\" | | 1810 | Flag of Joaquín Infante, one of the earliest Cuban independence movements |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Historical flags",
+   "file": "Bandera del Sol de Bolívar Cubano.svg",
+   "text": "! scope=\"row\" | | 1823 | Flag of the sun of Bolivar, the first planned flag used for the plans for a Bolivarian Cuba |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Historical flags",
+   "file": "Primero Soles y Rayos de Bolívar.svg",
+   "text": "! scope=\"row\" | | 1823 | Flag of the suns of Bolivar, The first flag used during the conspiracy for a Bolivarian Cuba |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Historical flags",
+   "file": "Segundo Soles y Rayos de Bolívar Cubano.svg",
+   "text": "! scope=\"row\" | | 1823 | Flag of the suns of Bolivar, The second flag used during the conspiracy for a Bolivarian Cuba |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Historical flags",
+   "file": "Unofficial Cuban Autonomist flag.svg",
+   "text": "! scope=\"row\" | | 1895 | Unofficial cuban autonomist flag in 1895 utilized by Jesús Rabí |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Historical flags",
+   "file": "Flag of Spain (1785–1873, 1875–1931).svg",
+   "text": "! scope=\"row\" | | 1843–18731874–1898 | Flag of Spanish America |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Historical flags",
+   "file": "Flag of Spain (1873–1874).svg",
+   "text": "! scope=\"row\" | | 1873–1874 | Flag of First Spanish Republic |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Historical flags",
+   "file": "Conspiracy of La Mina de la Rosa Cuban Flag (red 8 star variant).svg",
+   "text": "! scope=\"row\" | | 1847–1848 | The flag of the Conspiracy of the Cuban Rose Mine, an annexationist movement led by Narcisco Lopez between 1847 and 1848 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Historical flags",
+   "file": "Bandera del Club de la Habana.svg",
+   "text": "! scope=\"row\" | | 1847 | Flag of the Havana Club Movement, a U.S. annexationist movement of Cuba in 1847 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Historical flags",
+   "file": "Céspedes flag.svg",
+   "text": "! scope=\"row\" | | 1868–1878 | Céspedes flag of the Ten Years' War |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Historical flags",
+   "file": "Flag of the Revolutionary Directorate.svg",
+   "text": "! scope=\"row\" | | | Flag of the Revolutionary Directorate |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Historical flags",
+   "file": "Bandera del Directorio Revolucionario Estudiantil.svg",
+   "text": "! scope=\"row\" | | | Flag of the Revolutionary Directorate of 13 March |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Historical flags",
+   "file": "M-26-7.svg",
+   "text": "! scope=\"row\" | | 1953-1962 | Party flag of the Movimiento 26 de Julio |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Historical flags",
+   "file": "Naval jack of Cuba.svg",
+   "text": "! scope=\"row\" | | | Naval jack of Cuba, also known as the flag of Yara or the flag of La Demajagua |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Historical flags",
+   "file": "Flag of the Prime Minister of Cuba.svg",
+   "text": "! scope=\"row\" | | 1959–1976 | Standard of the prime minister of Cuba |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Historical flags",
+   "file": "Flag of the United States (1896–1908).svg",
+   "text": "! scope=\"row\" | | 1898–19021906–1908 | Flag of the Military Government of Cuba |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Historical flags",
+   "file": "Flag of the United States (1908–1912).svg",
+   "text": "! scope=\"row\" | | 1908–1909 | Flag of the Provisional Government of Cuba |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Historical flags",
+   "file": "Flag of Brigade 2506.svg",
+   "text": "! scope=\"row\" | | 1960 | The flag of Brigade 2506; a CIA-sponsored group of Cuban exiles formed in 1960 to attempt the military overthrow of the Cuban government headed by Fidel Castro. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Historical flags",
+   "file": "Flag of 4 September 1933.svg",
+   "text": "! scope=\"row\" | | 1933 | Flag of the Cuban Revolution of 1933 | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Political flags",
+   "file": "Flag of the Communist Party of Cuba.svg",
+   "text": "! scope=\"row\" | | 1965–present | Communist Party of Cuba |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Political flags",
+   "file": "Flag of Alpha 66.svg",
+   "text": "! scope=\"row\" | | 1961–present | Alpha 66 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Political flags",
+   "file": "Bandera del Movimiento Nacionalista Cristiano de Cuba.svg",
+   "text": "! scope=\"row\" | | 1962–1970's | Movimiento Nacionalista Cristiano, a Falangist organization made by Cuban exiles |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Political flags",
+   "file": "Bandera del Movimiento Nacionalista Cubano.svg",
+   "text": "! scope=\"row\" | 100x150px || 1962–1989 | The Movimiento Nacionalista Cubano, a Cuban exile Third Positionist organization that conducted several assassinations and bombings |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Political flags",
+   "file": "Flag of the ABC Movement (Cuba).svg",
+   "text": "! scope=\"row\" | | 1931–1952 | ABC |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Political flags",
+   "file": "Cuban Libertarian Party - José Martí.png",
+   "text": "! scope=\"row\" | 150x150px | 2017–present | The Cuban Libertarian Party |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Political flags",
+   "file": "Organización de Pioneros José Martí.png",
+   "text": "! scope=\"row\" | 150x150px | | Pioneers Organization \"Jose Martí\" |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "Political flags",
+   "file": "Organisation Autentica.png",
+   "text": "! scope=\"row\" | 150x150px | 1930–present | Organisation Autentica | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Cuban flags",
+   "section": "House flags",
+   "file": "House flag of the Cuban Shipping Company (ENC).svg",
+   "text": "! scope=\"row\" | | 1916–1956 | Flag of the Cuban Shipping Companyes | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Cuba",
+   "section": "intro",
+   "file": "Naval jack of Cuba.svg",
+   "text": "Drapeau utilisé au Parlement Cubain",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Cuba",
+   "section": "intro",
+   "file": "Flag of Cuba (constructios).svg",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Cuba",
+   "section": "intro",
+   "file": "11.Tribuna antiimperialista (3).JPG",
+   "text": "Drapeaux cubains à La Havane",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Cuba",
+   "section": "Histoire du drapeau cubain",
+   "file": "Flag of Cross of Burgundy.svg",
+   "text": "Drapeau de la Croix de Bourgogne (1521–1843)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Cuba",
+   "section": "Histoire du drapeau cubain",
+   "file": "Flag of Spain (1785–1873, 1875–1931).svg",
+   "text": "Drapeau de l'Amérique hispanique (1843–1873; 1874–1898)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Cuba",
+   "section": "Histoire du drapeau cubain",
+   "file": "Flag of Spain (1873–1874).svg",
+   "text": "Drapeau de la Première République espagnole (1873–1874)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Cuba",
+   "section": "Histoire du drapeau cubain",
+   "file": "Céspedes flag.svg",
+   "text": "Drapeau de Céspedes pendant la guerre des Dix Ans (1868–1878)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Cuba",
+   "section": "Histoire du drapeau cubain",
+   "file": "Flag of the United States (1896-1908, 3-2 aspect ratio).svg",
+   "text": "Drapeau du gouvernement militaire des États-Unis à Cuba (1898-1902 ; 1906–1909)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Cuba",
+   "section": "Histoire du drapeau cubain",
+   "file": "Flag of Cuba (1902–1906).svg",
+   "text": "Drapeau de la première République de Cuba (1902–1906; 1909–1959)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Cuba",
+   "section": "Histoire du drapeau cubain",
+   "file": "M-26-7.svg",
+   "text": "Drapeau du Mouvement du 26 juillet",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Cuba",
+   "section": "Histoire du drapeau cubain",
+   "file": "Naval jack of Cuba.svg",
+   "text": "Pavillon naval de Cuba",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Cuba",
+   "section": "Histoire du drapeau cubain",
+   "file": "Flag of the Prime Minister of Cuba.svg",
+   "text": "Étendard du Premier ministre de Cuba (1959–1976)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Cuba",
+   "section": "Histoire du drapeau cubain",
+   "file": "Flag of the President of Cuba.svg",
+   "text": "Étendard du président de Cuba",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Cuba",
+   "section": "Construcción",
+   "file": "Flag of Cuba (constructios).svg",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Cuba",
+   "section": "Simbología",
+   "file": "11.Tribuna antiimperialista (3).JPG",
+   "text": "Banderas de Cuba ondeando en la Tribuna Antiimperialista de La Habana.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Cuba",
+   "section": "Galería en orden cronológico",
+   "file": "Flag of Cross of Burgundy.svg",
+   "text": "Bandera de la Cruz de Borgoña (1521-1843)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Cuba",
+   "section": "Galería en orden cronológico",
+   "file": "Flag of Spain (1785–1873, 1875–1931).svg",
+   "text": "Pabellón naval del Reino de España (1843-1873; 1874-1898)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Cuba",
+   "section": "Galería en orden cronológico",
+   "file": "Flag of Spain (1873–1874).svg",
+   "text": "Bandera de la Primera República española (1873-1874)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Cuba",
+   "section": "Galería en orden cronológico",
+   "file": "Céspedes flag.svg",
+   "text": "Bandera de Céspedes en la Guerra de los Diez Años (1868-1878). Bandera de La Demajagua.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Cuba",
+   "section": "Galería en orden cronológico",
+   "file": "Flag of the United States (1896–1908).svg",
+   "text": "Bandera del primer y segundo gobierno militar estadounidense en Cuba (1898-1902; 1906-1909)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Cuba",
+   "section": "Galería en orden cronológico",
+   "file": "Flag of Cuba (1902–1906).svg",
+   "text": "Bandera de la primera República de Cuba (1902-1906: franjas azul celeste)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Cuba",
+   "section": "Galería en orden cronológico",
+   "file": "Flag of Cuba.svg",
+   "text": "Bandera de la República de Cuba (1906-presente)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Cuba",
+   "section": "Galería en orden cronológico",
+   "file": "Flag of the Prime Minister of Cuba.svg",
+   "text": "Estandarte del primer ministro de Cuba (1959-1976)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Cuba",
+   "section": "Galería en orden cronológico",
+   "file": "Flag of the President of Cuba.svg",
+   "text": "Estandarte del Presidente de Cuba",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Cuba",
+   "section": "Galería en orden cronológico",
+   "file": "Naval Jack of Cuba.svg",
+   "text": "Bandera de La Demajagua (rectángulo azul turquí desde 1983)",
+   "kind": "gallery"
+  }
+ ]
+}

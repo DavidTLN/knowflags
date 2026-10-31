@@ -1,0 +1,58 @@
+{
+ "iso": "to",
+ "flag_item": "Q188072",
+ "pages": [
+  "en:Flag of Tonga",
+  "fr:Drapeau des Tonga"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Tonga",
+   "section": "intro",
+   "file": "Nukualofa Tonga 7.jpg",
+   "text": "Tonga flags flying above a ceremonial gate in Nuku'alofa to celebrate the coronation of Tupou VI",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Tonga",
+   "section": "Design > Symbolism",
+   "file": "Flag of Tonga (construction sheet).svg",
+   "text": "Construction sheet flag",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau des Tonga",
+   "section": "Histoire",
+   "file": "Flag of Tongatapu (1858-1862).svg",
+   "text": "Drapeau de Tongatapu de 1858 à 1862.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau des Tonga",
+   "section": "Histoire",
+   "file": "Flag of Tonga (1862-1866).svg",
+   "text": "Drapeau des Tonga de 1862 à 1866.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau des Tonga",
+   "section": "Réglementation et usages",
+   "file": "Naval Ensign of Tonga.svg",
+   "text": "Pavillon de guerre,",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau des Tonga",
+   "section": "Réglementation et usages",
+   "file": "Royal Standard of Tonga.svg",
+   "text": "Pavillon royal",
+   "kind": "gallery"
+  }
+ ]
+}

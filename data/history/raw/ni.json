@@ -1,0 +1,2357 @@
+{
+ "iso": "ni",
+ "flag_item": "Q172533",
+ "pages": [
+  "en:Flag of Nicaragua",
+  "en:List of flags containing the color purple",
+  "en:List of Nicaraguan flags",
+  "fr:Drapeau du Nicaragua",
+  "es:Bandera de Nicaragua"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Nicaragua",
+   "section": "intro",
+   "file": "Coat of arms of Nicaragua.svg",
+   "text": "Detail of the coat of arms",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Nicaragua",
+   "section": "intro",
+   "file": "06.Plaza de la Independencia de Granada.JPG",
+   "text": "Flag at the Plaza de la Independencia, Granada, Nicaragua",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Nicaragua",
+   "section": "History",
+   "file": "Nicaraguan and Sandinista flags.jpg",
+   "text": "=0.85|Flag of Nicaragua and the FSLN flown together",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Nicaragua",
+   "section": "Historical flags",
+   "file": "Flag of Cross of Burgundy.svg",
+   "text": "New Spain until 1785",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Nicaragua",
+   "section": "Historical flags",
+   "file": "Flag of Spain (1785–1873, 1875–1931).svg",
+   "text": "Captaincy General of Guatemala (1785–1821)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Nicaragua",
+   "section": "Historical flags",
+   "file": "Bandera del Primer Imperio Mexicano.svg",
+   "text": "First Mexican Empire(1823–1824)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Nicaragua",
+   "section": "Historical flags",
+   "file": "Flag of the United Provinces of Central America.svg",
+   "text": "United Provinces of Central America(1823–1824)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Nicaragua",
+   "section": "Historical flags",
+   "file": "Flag of the Federal Republic of Central America.svg",
+   "text": "Federal Republic of Central America(1824–1838)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Nicaragua",
+   "section": "Historical flags",
+   "file": "Flag of Nicaragua (1858-1889 and 1893-1896).svg",
+   "text": "(1838–1854)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Nicaragua",
+   "section": "Historical flags",
+   "file": "Flag of Nicaragua (1839-1858).svg",
+   "text": "(1854–1856)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Nicaragua",
+   "section": "Historical flags",
+   "file": "State Flag of Nicaragua (1854-1858).png",
+   "text": "State flag(1854–1856)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Nicaragua",
+   "section": "Historical flags",
+   "file": "Civil Ensign of Nicaragua (1854-1858).svg",
+   "text": "Merchant Navy flag(1854–1856)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Nicaragua",
+   "section": "Historical flags",
+   "file": "Flag of Nicaragua under William Walker (1856-1857).svg",
+   "text": "William Walker's Nicaragua flag(1855–1857)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Nicaragua",
+   "section": "Historical flags",
+   "file": "Flag of Nicaragua (1858-1889 and 1893-1896).svg",
+   "text": "(1858–1889)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Nicaragua",
+   "section": "Historical flags",
+   "file": "Flag of Nicaragua (1889–1893).svg",
+   "text": "(1889–1893)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Nicaragua",
+   "section": "Historical flags",
+   "file": "Flag of Nicaragua (1858-1889 and 1893-1896).svg",
+   "text": "(1893–1896)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Nicaragua",
+   "section": "Historical flags",
+   "file": "Flag of Nicaragua (1896-1908).svg",
+   "text": "(1896–1908)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Nicaragua",
+   "section": "Historical flags",
+   "file": "Flag of the Greater Republic of Central America (1898).svg",
+   "text": "Greater Republic of Central America(November 1898)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Nicaragua",
+   "section": "Historical flags",
+   "file": "Flag of Nicaragua (1908-1971).svg",
+   "text": "(1908–1971)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Nicaragua",
+   "section": "Historical flags",
+   "file": "Flag of the United States (1912-1959).svg",
+   "text": "United States occupation of Nicaragua(1912–1933)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "National flags > Current",
+   "file": "Banner of the Qulla Suyu.svg",
+   "text": "| centre || Bolivia || 7 February 2009 || Used as the co-official national flag; see Wiphala",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "National flags > Current",
+   "file": "Flag of Dominica.svg",
+   "text": "| || Dominica || 3 November 1978 || As purple sisserou parrot, a national symbol (see flag of Dominica)",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "National flags > Current",
+   "file": "Flag of El Salvador.svg",
+   "text": "| || El Salvador || 27 May 1912 || As part of the rainbow in the coat of arms (see flag of El Salvador)",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "National flags > Current",
+   "file": "Flag of Nicaragua.svg",
+   "text": "| || Nicaragua || 27 August 1971 || As part of the rainbow in the coat of arms (see flag of Nicaragua)",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "National flags > Current",
+   "file": "Flag of the Kingdom of Spain.svg",
+   "text": "| || Spain || 5 October 1981 || As purpure lion in the coat of arms (see flag of Spain) |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "National flags > Historical",
+   "file": "Derafsh kaviani.svg",
+   "text": "| || Sasanian Empire || || See Derafsh Kaviani",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "National flags > Historical",
+   "file": "Banner of arms kingdom of Leon.svg",
+   "text": "| || Kingdom of León || 11th century || Used during the reign of Alfonso VII (1105-1157) (see heraldry of León)",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "National flags > Historical",
+   "file": "Flag of Dungarp St.svg",
+   "text": "| rowspan=\"2\" |200x200px | rowspan=\"2\" |Dungapur State |1177–1527 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "National flags > Historical",
+   "file": "Royal Banner of the Crown of Castille (Early Style).svg",
+   "text": "| | rowspan=\"3\" | Crown of Castile|| 14th century | rowspan=\"3\" |see heraldry of Castile",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "National flags > Historical",
+   "file": "Royal Banner of the Crown of Castille (15th Century Style).svg",
+   "text": "| || 15th century",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "National flags > Historical",
+   "file": "Royal Banner of the Crown of Castille (Habsburg Style).svg",
+   "text": "| || ca.1500–1715",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "National flags > Historical",
+   "file": "Flag of Haiti (1791–1798).svg",
+   "text": "| | Saint-Domingue | 1791–1794 | Flag of Saint-Domingue under the rebel control during the Haitian Revolution",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "National flags > Historical",
+   "file": "Flag of the United Provinces of Central America.svg",
+   "text": "| || United Provinces of Central America || 1823–1824 || As part of the rainbow in the coat of arms",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "National flags > Historical",
+   "file": "Flag of the Federal Republic of Central America.svg",
+   "text": "| || Federal Republic of Central America || 1824–1838 || As part of the rainbow in the coat of arms",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "National flags > Historical",
+   "file": "Flag of Nicaragua (1896–1908).svg",
+   "text": "| || rowspan=\"2\" | Nicaragua || 1896–1908 || rowspan=\"2\" | As part of the rainbow in the coat of arms (see flag of Nicaragua)",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "National flags > Historical",
+   "file": "Flag of Nicaragua (1908–1971).svg",
+   "text": "| || 1908–1971",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "National flags > Historical",
+   "file": "Flag of Spain (1931–1939).svg",
+   "text": "| || rowspan=\"2\" | Second Spanish Republic || 1931–1939 || see flag of the Second Spanish Republic",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "National flags > Historical",
+   "file": "Flag of the Second Spanish Republic (plain).svg",
+   "text": "| || 1931–1939 || civil ensign; see flag of the Second Spanish Republic",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "National flags > Historical",
+   "file": "Flag of Dominica (1978–1981).svg",
+   "text": "| || rowspan=\"3\" | Dominica || 1978–1981 || rowspan=\"3\" | As purple sisserou parrot, a national symbol (see flag of Dominica)",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "National flags > Historical",
+   "file": "Flag of Dominica (1981–1988).svg",
+   "text": "| || 1978–1981",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "National flags > Historical",
+   "file": "Flag of Dominica (1988–1990).svg",
+   "text": "| || 1988–1990",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Flag of Aberdeenshire.svg",
+   "text": "| |Aberdeenshire |United Kingdom |22 April 2023 | see flag of Aberdeenshire",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Flag of Adjuntas, Puerto Rico.svg",
+   "text": "| || Adjuntas || Puerto Rico, United States || || see flag of Adjuntas",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Flag of Ambrolauri Municipality.svg",
+   "text": "|200x200px |Ambrolauri Municipality |Georgia |26 November 2010 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Bandera de Amoroto.svg",
+   "text": "| || Amoroto || Spain || 12 July 1988 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Flag of Amnat Charoen province.svg",
+   "text": "| | Amnat Charoen || Thailand || ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Flag of the Balearic Islands.svg",
+   "text": "| || Balearic Islands || Spain || 1983 || see flag of the Balearic Islands",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Bandeira de Barão - RS.svg",
+   "text": "| | Barão | Brazil | Rio Grande do Sul |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Flag of Bomi County.svg",
+   "text": "| || Bomi County || Liberia || 1965 ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Flag of Bueng Kan Province.png",
+   "text": "| || Bueng Kan || Thailand || 23 March 2011 ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Flag of Buriram Province.jpg",
+   "text": "| 200x200px|| Buriram || Thailand || 1942||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Bandera de Burón (León).svg",
+   "text": "| | Burón | Spain | Castile and León |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Bandera de Canóvanas, Puerto Rico.svg",
+   "text": "| || Canóvanas || Puerto Rico, United States || ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Choctaw flag.svg",
+   "text": "| | Choctaw Nation of Oklahoma | United States | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Flag of Castile and León.svg",
+   "text": "| || Castile and León || Spain || 1983 || see flag of Castile and León",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Flag of Ciales.svg",
+   "text": "| || Ciales || Puerto Rico, United States || 1970 ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Flag of Cusco (2021).svg",
+   "text": "| || Department of Cuzco || Peru || 4 June 2021 || see flag of Cusco",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Pendón de Castilla y León.svg",
+   "text": "| || Castile and León || Spain || || flag variant; see flag of Castile and León",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Flag of Connecticut.svg",
+   "text": "|201x201px |Connecticut |United States |1897 |see Flag of Connecticut",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Flag of Gunma Prefecture.svg",
+   "text": "| || Gunma Prefecture || Japan || 25 October 1968 ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Bandera de Higuera de Calatrava (Jaén).svg",
+   "text": "| | Higuera de Calatrava | Andalusia | 2002 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Flag of the Jewish Autonomous Oblast.svg",
+   "text": "| || Jewish Autonomous Oblast || Russia || 27 October 1996 || As part of the rainbow (see flag of the Jewish Autonomous Oblast)",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Flag of Kyoto Prefecture.svg",
+   "text": "| || Kyoto Prefecture || Japan || 2 November 1976 ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Bandera de la provincia Mamoré.jpg",
+   "text": "| | Mamoré Province | Bolivia | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Flag of Mesas de Ibor Spain.svg",
+   "text": "| | Mesas de Ibor | Spain | Extremadura | 1996",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Flag of Ninotsminda Municipality.svg",
+   "text": "|200x200px |Ninotsminda Municipality |Georgia |20 April 2010 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Flag of North Chungcheong Province.svg",
+   "text": "| |North Chungcheong Province |South Korea |2023 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Flag of Okayama Prefecture.svg",
+   "text": "| || Okayama Prefecture || Japan || 1967 ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Bandera-peñuelas.svg",
+   "text": "| || Peñuelas || Puerto Rico, United States || ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Flag of Quindío.svg",
+   "text": "| || Quindío Department || Colombia || ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Flag of Sagarejo Municipality.svg",
+   "text": "|200x200px |Sagarejo Municipality |Georgia |27 May 2011 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Bandera de San Germán.svg",
+   "text": "| || San Germán || Puerto Rico, United States || ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Bandera de San Pedro de Ceque (Zamora).svg",
+   "text": "| | San Pedro de Ceque | Castile and León | 2005 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Toužetín LN CZ flag.svg",
+   "text": "| || Toužetín || Czechia || ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "CHE Val Mara Flag.svg",
+   "text": "| | Val Mara | Switzerland | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Flag of Virginia.svg",
+   "text": "|201x201px |Virginia |United States |28 March 1912 |see Flag of Virginia",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Flag of Yabucoa.svg",
+   "text": "| || Yabucoa || Puerto Rico, United States || ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Current",
+   "file": "Flag of Yamanashi Prefecture.svg",
+   "text": "| || Yamanashi Prefecture || Japan || 1 December 1966 || |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Historical",
+   "file": "Banner of the Anti Suyu (1979).svg",
+   "text": "| || Antisuyu || rowspan=\"3\" | Inca Empire || rowspan=\"3\" | 15th–16th century||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Historical",
+   "file": "Banner of the Chinchay Suyu.svg",
+   "text": "| || Chinchay Suyu ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Historical",
+   "file": "Banner of the Qulla Suyu.svg",
+   "text": "| || Qullasuyu ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Historical",
+   "file": "Drapeau Baudh.png",
+   "text": "|File:Drapeau Baudh.png |Baudh State |British India | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Historical",
+   "file": "Flag of Cusco (1978–2021).svg",
+   "text": "| || Department of Cuzco || Peru || 1978–2021 || see flag of Cusco",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Historical",
+   "file": "Eestimaa värvid.svg",
+   "text": "|200x200px |Governorate of Estonia |Russian Empire |1721–1917 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Historical",
+   "file": "Flag of Dungarp St.svg",
+   "text": "| rowspan=\"3\" |200x200px | rowspan=\"3\" |Dungapur State |Mughal Empire |1527–1713 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Historical",
+   "file": "Flag of Jaisalmer.svg",
+   "text": "|200x200px |Jaisalmer State |East India Company | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Historical",
+   "file": "Flag of the Jewish Autonomous Oblast (1996-07).svg",
+   "text": "| || Jewish Autonomous Oblast || Russia || 1996 || As part of the rainbow (see flag of the Jewish Autonomous Oblast)",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Historical",
+   "file": "Flag of the Kutlehar State.svg",
+   "text": "| rowspan=\"2\" |200x200px | rowspan=\"2\" |Kutlehar State |East India Company |750s–1810 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Historical",
+   "file": "Flag of Rajpipla.svg",
+   "text": "|200x200px |Rajpipla State |East India Company |1340–1948 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Historical",
+   "file": "LVA Ropažu pagasts flag.png",
+   "text": "| | rowspan=2|Ropaži Municipality | rowspan=2|Latvia | 2000–2009 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Historical",
+   "file": "Ropažu novads Flag.png",
+   "text": "| | 2012–2021 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Historical",
+   "file": "Flag of Borivskiy Raion in Kharkiv Oblast.svg",
+   "text": "| | Borova Raion | rowspan=3|Ukraine | rowspan=3|Until 2020 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Historical",
+   "file": "Flag of Ichnyanskiy raion.svg",
+   "text": "| | Ichnia Raion |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Historical",
+   "file": "Flag of Mashivskyj district.svg",
+   "text": "| | Mashivka Raion |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Historical",
+   "file": "Flag of North Chungcheong Province (1966–1998).svg",
+   "text": "| |North Chungcheong Province | South Korea | 1969-1998 | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Other flags",
+   "file": "Flag of Mallorca.svg",
+   "text": "| || Flag of Mallorca || Spain || || Flag of the island of Mallorca",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Other flags",
+   "file": "Pays Pourlet traditional district flag.svg",
+   "text": "| | Flag of Pourlet | France | | Flag of Pourlet, one of traditional regions of Brittany",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Subdivisional flags > Other flags",
+   "file": "Banner of the Qulla Suyu.svg",
+   "text": "| || Wiphala || Argentina, Bolivia, Chile, Colombia, Ecuador, Peru || || Flag used as the symbol of various native peoples around the area of Andes in South America. Historically associated with the Inca Empire |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "City flags > Current",
+   "file": "Flag of Ambrolauri (City).svg",
+   "text": "|200x200px |Ambrolauri |Georgia |Racha-Lechkhumi and Kvemo Svaneti |September 2015 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "City flags > Current",
+   "file": "Bandera de Amoroto.svg",
+   "text": "| | Amoroto|| Spain|| Basque Country|| 12 July 1988 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "City flags > Current",
+   "file": "Avratyn vol prapor.png",
+   "text": "| | Avratyn | Ukraine |Khmelnytskyi Oblast | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "City flags > Current",
+   "file": "Flag of Córdoba, Spain.svg",
+   "text": "| || Córdoba || Spain || Córdoba || || As part of the emblem",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "City flags > Current",
+   "file": "Flag of Cusco (2021).svg",
+   "text": "| || Cusco || Peru || Department of Cuzco || 4 June 2021 || see flag of Cusco",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "City flags > Current",
+   "file": "De Hoeve vlag.svg",
+   "text": "| | De Hoeve | Netherlands | Friesland | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "City flags > Current",
+   "file": "Flag of Hermann, Missouri.svg",
+   "text": "| | Hermann | United States | Missouri |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "City flags > Current",
+   "file": "Flag of Ichikawa, Chiba.svg",
+   "text": "| || Ichikawa || Japan || Chiba Prefecture | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "City flags > Current",
+   "file": "Bandera de Iznatoraf (Jaén).svg",
+   "text": "| | Iznatoraf | Spain | Andalusia | 2004 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "City flags > Current",
+   "file": "Flag of Kakogawa, Hyogo.svg",
+   "text": "| | Kakogawa | Japan | Hyōgo Prefecture | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "City flags > Current",
+   "file": "Flag of Málaga, Spain.svg",
+   "text": "| || Málaga || Spain || Andalusia || 14 March 1509 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "City flags > Current",
+   "file": "Bandera de Mancha Real (Jaén).svg",
+   "text": "| | Mancha Real | Spain | Andalusia | 2000 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "City flags > Current",
+   "file": "Flag of Markushi (Berdychiv).png",
+   "text": "| | Markushi | Ukraine | Khmelnytskyi Oblast | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "City flags > Current",
+   "file": "Flag of Montreal.svg",
+   "text": "|200x200px |Montreal |Canada |Quebec |13 September 2017 (most recent version) |see Flag of Montreal",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "City flags > Current",
+   "file": "Bandera Pegalajar.svg",
+   "text": "| | Pegalajar | Spain | Province of Jaén, Andalusia | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "City flags > Current",
+   "file": "Bandeira de São Vicente.svg",
+   "text": "| 200x200px |São Vicente |Brazil |São Paulo |22 March 1976 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "City flags > Current",
+   "file": "Flag of Saskatoon, Saskatchewan.svg",
+   "text": "|200x200px |Saskatoon |Canada |Saskatchewan |1952 |see flag of Saskatoon",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "City flags > Current",
+   "file": "Flag of Siversk, Donetsk region.svg",
+   "text": "| | Siversk | Ukraine | Donetsk Oblast | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "City flags > Current",
+   "file": "Hissflagge Schönau (Odenwald).svg",
+   "text": "| | Schönau | Germany | Baden-Württemberg | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "City flags > Current",
+   "file": "Flag of Tokyo Metropolis.svg",
+   "text": "| || Tokyo || Japan || Tokyo || 1 October 1964 || see symbols of Tokyo",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "City flags > Current",
+   "file": "Bandera de Torredelcampo (Jaén).svg",
+   "text": "| | Torredelcampo | Spain | Andalusia | 2011 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "City flags > Current",
+   "file": "Flag of Ejmiatsin.svg",
+   "text": "|200x200px |Vagharshapat |Armenia |Armavir Province | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "City flags > Current",
+   "file": "Bandera de Valdepeñas de Jaén (Jaén).svg",
+   "text": "| | Valdepeñas de Jaén | Spain | Andalusia | 2000 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "City flags > Current",
+   "file": "Bandera de Villanueva del Arzobispo (Jaén).svg",
+   "text": "| | Villanueva del Arzobispo | Spain | Andalusia | | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "City flags > Historical",
+   "file": "Flag of Cusco (1978–2021).svg",
+   "text": "| || Cusco || Peru || Department of Cuzco || 1978–2021 || see flag of Cusco",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "City flags > Historical",
+   "file": "Flag of Montreal (1935–1939).svg",
+   "text": "| | rowspan=2|Montreal | rowspan=2|Canada | rowspan=2|Quebec | 1935–1939 | rowspan=2| see flag of Montreal",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "City flags > Historical",
+   "file": "Flag of Montreal (1939–2017).svg",
+   "text": "| | 1939–2017",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "City flags > Historical",
+   "file": "Proud To Be Pocatello Flag.gif",
+   "text": "|link to the image|| Pocatello || United States || Idaho || 2001–2017 || unofficial flag; see flag of Pocatello, Idaho |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Naval flags > Current",
+   "file": "Naval ensign of Bolivia.svg",
+   "text": "| |Naval Ensign of the Bolivian Navy |Bolivia |2013 |also known in Spanish as the \"Bandera de Reintegración Marítima\". |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Naval flags > Historical",
+   "file": "Flag of the Minister of the Navy Second Spanish Republic (1931-1939).svg",
+   "text": "| | Flag of the Ministry of the Navy | Second Spanish Republic | 1931–1939 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Naval flags > Historical",
+   "file": "Flag of the Captain General of the Fleet Second Spanish Republic (1931-1939).svg",
+   "text": "| | Flag of the captain general of the Spanish Republican Navy | Second Spanish Republic | 1931–1939 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Naval flags > Historical",
+   "file": "Flag of Admiral of the Fleet Spanish Republic.svg",
+   "text": "| | Flag of the admiral of the Spanish Republican Navy | Second Spanish Republic | 1931–1939 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Naval flags > Historical",
+   "file": "Flag of Viceadmiral of the Fleet Spanish Republic.svg",
+   "text": "| | Flag of the viceadmiral of the Spanish Republican Navy | Second Spanish Republic | 1931–1939 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Naval flags > Historical",
+   "file": "Flag of Viceadmiral of the Fleet Spanish Republic - Subordinate.svg",
+   "text": "| | Flag of the viceadmiral (subordinate) of the Spanish Republican Navy | Second Spanish Republic | 1931–1939 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Naval flags > Historical",
+   "file": "Flag of Rear Admiral of the Spanish Republic.svg",
+   "text": "| | Flag of the rear admiral of the Spanish Republican Navy | Second Spanish Republic | 1931–1939 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Naval flags > Historical",
+   "file": "Flag of Rear Admiral of the Spanish Republic - Subordinate.svg",
+   "text": "| | Flag of the rear admiral (subordinate) of the Spanish Republican Navy | Second Spanish Republic | 1931–1939 | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "LGBTQ+ flags",
+   "file": "Gay Pride Flag.svg",
+   "text": "| || LGBT pride flag || 1978 ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "LGBTQ+ flags",
+   "file": "Bisexual Pride Flag.svg",
+   "text": "| || Bisexual flag || 1998 ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "LGBTQ+ flags",
+   "file": "Labrys Lesbian Flag.svg",
+   "text": "| || Labrys lesbian flag || 1999 ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "LGBTQ+ flags",
+   "file": "Asexual Pride Flag.svg",
+   "text": "| || Asexual pride flag || 2010 ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "LGBTQ+ flags",
+   "file": "Demisexual Pride Flag.svg",
+   "text": "| || Demisexual pride flag || 2010 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "LGBTQ+ flags",
+   "file": "Grey asexuality flag.svg",
+   "text": "| || Gray asexual pride flag || |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "LGBTQ+ flags",
+   "file": "Intersex Pride Flag.svg",
+   "text": "| || Intersex flag || 2013 ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "LGBTQ+ flags",
+   "file": "Nonbinary flag.svg",
+   "text": "| || Non-binary flag || 2014 ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "LGBTQ+ flags",
+   "file": "Philadelphia Pride Flag.svg",
+   "text": "| || Philadelphia Pride Flag || 2017 ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "LGBTQ+ flags",
+   "file": "LGBTQ+ rainbow flag Quasar \"Progress\" variant.svg",
+   "text": "| || Progress Pride || 2018 || |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Political flags",
+   "file": "Anarchist Feminism flag 3.2 ratio.svg",
+   "text": "| || Anarcha-feminism || 2004 || see anarchist symbolism",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Political flags",
+   "file": "Flag of Castile (purple).svg",
+   "text": "| || Castilian nationalism || ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Political flags",
+   "file": "Flag of Castile (with star).svg",
+   "text": "| || Castilian nationalism, Castilian Left || ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Political flags",
+   "file": "Bandera del GRAPO.svg",
+   "text": "| || Communist Party of Spain (Reconstituted), First of October Anti-Fascist Resistance Groups || ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Political flags",
+   "file": "Flag of the International Brigades.svg",
+   "text": "| |International Brigades | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Political flags",
+   "file": "Reconstrucción Comunista RC flag.svg",
+   "text": "| || Marxist–Leninist Party (Communist Reconstruction) || ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Political flags",
+   "file": "Bandera Partido Independiente 1982 Costa Rica.svg",
+   "text": "| | rowspan=2|Independent Party | 1982 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Political flags",
+   "file": "Flag of Partido Independiente.svg",
+   "text": "| | 1988 | Flag used in during the 1988 Costa Rican elections",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Political flags",
+   "file": "WSPU Flag.svg",
+   "text": "|200x200px | rowspan=\"2\" |Women's Social and Political Union | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Political flags",
+   "file": "Suffragette flag (United Kingdom).svg",
+   "text": "|200x200px | | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Ethnic flags",
+   "file": "Choctaw flag.svg",
+   "text": "| || Choctaw || 1970s ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Ethnic flags",
+   "file": "Flag of Kuban People's Republic.svg",
+   "text": "| 200x200px|| Kuban Cossacks || || Unofficial",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Ethnic flags",
+   "file": "Flag of the Hispanic peoples.svg",
+   "text": "| 200x200px || Hispanidad || 1932 || Winning entry in a contest organized by Juana de Ibarbourou",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Ethnic flags",
+   "file": "Flag of the Iroquois Confederacy.svg",
+   "text": "| 200x200px || Iroquois || 1980s || see also Flag of the Iroquois Confederacy",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Religious flags",
+   "file": "Armenian Apostolic Church logo.svg",
+   "text": "| 199x199px || Armenian Apostolic Church || ||",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Religious flags",
+   "file": "Flag of the Orange Order.svg",
+   "text": "|200x200px | rowspan=\"2\" |Orange Order | |see Flag of the Orange Order",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Religious flags",
+   "file": "Purple Standard.svg",
+   "text": "|200x200px | |sometimes used in Orange Order marching bands; see Flag of the Orange Order |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags containing the color purple",
+   "section": "Organizational flags",
+   "file": "Bandera del Poder Judicial-Suprema Corte de Justicia República Dominicana.svg",
+   "text": "| 199x199px || Supreme Court of the Dominican Republic || || |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "National flag",
+   "file": "Flag of Nicaragua.svg",
+   "text": "! scope=\"row\" | | 1975–present | Flag of Nicaragua | A horizontal triband of azure (top and bottom) and white with the national coat of arms centered on the white band.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "National flag",
+   "file": "Red and black flag.svg",
+   "text": "! scope=\"row\" | | 2025–present | Rojinegra | Horizontal bicolor of red and black. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Ethnic group flags",
+   "file": "Flag of Garifuna (3-5).svg",
+   "text": "! scope=\"row\" | | | Flag of the Garifuna people | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Departments",
+   "file": "Flag of Boaco.svg",
+   "text": "! scope=\"row\" | | | Boaco | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Departments",
+   "file": "Boaco Department in Nicaragua.svg",
+   "text": "! scope=\"row\" | | | Boaco | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Departments",
+   "file": "Flag of Jinotepe.svg",
+   "text": "! scope=\"row\" | | | Carazo | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Departments",
+   "file": "Carazo Department in Nicaragua.svg",
+   "text": "! scope=\"row\" | | | Carazo | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Departments",
+   "file": "Flag of Chinandega.svg",
+   "text": "! scope=\"row\" | | | Chinandega | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Departments",
+   "file": "Chinandega Department in Nicaragua.svg",
+   "text": "! scope=\"row\" | | | Chinandega | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Departments",
+   "file": "Flag of Juigalpa.svg",
+   "text": "! scope=\"row\" | | | Chontales | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Departments",
+   "file": "Chontales Department in Nicaragua.svg",
+   "text": "! scope=\"row\" | | | Chontales | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Departments",
+   "file": "Flag of Esteli.svg",
+   "text": "! scope=\"row\" | | | Estelí | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Departments",
+   "file": "Esteli Department in Nicaragua.svg",
+   "text": "! scope=\"row\" | | | Estelí | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Departments",
+   "file": "Flag of Granada, Nicaragua.svg",
+   "text": "! scope=\"row\" | | | Granada | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Departments",
+   "file": "Granada Department in Nicaragua.svg",
+   "text": "! scope=\"row\" | | | Granada | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Departments",
+   "file": "Flag of Jinotega.svg",
+   "text": "! scope=\"row\" | | | Jinotega | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Departments",
+   "file": "Jinotega Department in Nicaragua.svg",
+   "text": "! scope=\"row\" | | | Jinotega | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Departments",
+   "file": "Flag of Leon, Nicaragua.svg",
+   "text": "! scope=\"row\" | | | León | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Departments",
+   "file": "Leon Department in Nicaragua.svg",
+   "text": "! scope=\"row\" | | | León | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Departments",
+   "file": "Madriz Department in Nicaragua.svg",
+   "text": "! scope=\"row\" | | | Madriz | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Departments",
+   "file": "Flag of Managua.svg",
+   "text": "! scope=\"row\" | | | Managua | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Departments",
+   "file": "Managua Department in Nicaragua.svg",
+   "text": "! scope=\"row\" | | | Managua | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Departments",
+   "file": "Flag of Masaya.svg",
+   "text": "! scope=\"row\" | | | Masaya | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Departments",
+   "file": "Masaya Department in Nicaragua.svg",
+   "text": "! scope=\"row\" | | | Masaya | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Departments",
+   "file": "Flag of Matagalpa.svg",
+   "text": "! scope=\"row\" | | | Matagalpa | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Departments",
+   "file": "Matagalpa Department in Nicaragua.svg",
+   "text": "! scope=\"row\" | | | Matagalpa | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Departments",
+   "file": "Flag of Nueva Segovia.svg",
+   "text": "! scope=\"row\" | | | Nueva Segovia | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Departments",
+   "file": "Nueva Segovia Department in Nicaragua.svg",
+   "text": "! scope=\"row\" | | | Nueva Segovia | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Departments",
+   "file": "Flag of Rivas.svg",
+   "text": "! scope=\"row\" | | | Rivas | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Departments",
+   "file": "Rivas Department in Nicaragua.svg",
+   "text": "! scope=\"row\" | | | Rivas | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Departments",
+   "file": "Flag of San Carlos, Nicaragua.svg",
+   "text": "! scope=\"row\" | | | Rio San Juan | | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Departments",
+   "file": "Rio San Juan Department in Nicaragua.svg",
+   "text": "! scope=\"row\" | | | Rio San Juan | | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Autonomous Regions",
+   "file": "Flag of Region Autonoma del Atlantico Norte.svg",
+   "text": "! scope=\"row\" | | | North Caribbean Coast | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Autonomous Regions",
+   "file": "RAAN, Nicaragua.svg",
+   "text": "! scope=\"row\" | | | North Caribbean Coast | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Autonomous Regions",
+   "file": "Flag of Region Autonoma Atlantico Sur.svg",
+   "text": "! scope=\"row\" | | | South Caribbean Coast | | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Subdivision flags > Autonomous Regions",
+   "file": "RAAS, Nicaragua.svg",
+   "text": "! scope=\"row\" | | | South Caribbean Coast | | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Political flags",
+   "file": "APRE flag.svg",
+   "text": "! scope=\"row\" | | | Flag of the Alliance for the Republic |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Political flags",
+   "file": "PAC Nicaragua.png",
+   "text": "! scope=\"row\" | | | Flag of the Citizens' Action Party |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Political flags",
+   "file": "23Flag(Plain)V.svg",
+   "text": "! scope=\"row\" | | | Flag of the Conservative Party |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Political flags",
+   "file": "Bandera PLC Nicaragua.svg",
+   "text": "! scope=\"row\" | | | Flag of the Constitutionalist Liberal Party |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Political flags",
+   "file": "PLI.svg",
+   "text": "! scope=\"row\" | | | Flag of the Independent Liberal Party |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Political flags",
+   "file": "Bandera Union Nacional Opositora.png",
+   "text": "! scope=\"row\" | | | Flag of the National Opposition Union |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Political flags",
+   "file": "23Flag(Plain)R.svg",
+   "text": "! scope=\"row\" | | 1912–1979 | Flag of the Nationalist Liberal Party |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Political flags",
+   "file": "UDC Nicaragua.svg",
+   "text": "! scope=\"row\" | | | Flag of the Nicaraguan Christian Democratic Union |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Political flags",
+   "file": "ALN logo.svg",
+   "text": "! scope=\"row\" | | | Flag of the Nicaraguan Liberal Alliance |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Political flags",
+   "file": "Flag of the FSLN.svg",
+   "text": "! scope=\"row\" | | | Flag of the Sandinista National Liberation Front | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Historical flags",
+   "file": "Flag of New Spain.svg",
+   "text": "! scope=\"row\" | | 1524–1785 | Burgundy Cross, flag of the Spanish Overseas Territories |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Historical flags",
+   "file": "Flag of England.svg",
+   "text": "! scope=\"row\" | | 1638–1707 | Flag of England |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Historical flags",
+   "file": "Flag of Great Britain (1707–1800).svg",
+   "text": "! scope=\"row\" | | 1707–1787 | Flag of the Kingdom of Great Britain |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Historical flags",
+   "file": "Flag of Spain (1785–1873, 1875–1931).svg",
+   "text": "! scope=\"row\" | | 1785–1821 | War ensign of Spain |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Historical flags",
+   "file": "Bandera de España 1808-1813.svg",
+   "text": "! scope=\"row\" | | 1808–1813 | Flag of Spain under Joseph Bonaparte (1808–1813) |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Historical flags",
+   "file": "Flag of the Gran Colombia (1819-1820).svg",
+   "text": "! scope=\"row\" | | 1819–1820 | First flag of Great Colombia |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Historical flags",
+   "file": "Flag of the Gran Colombia (1820-1821).svg",
+   "text": "! scope=\"row\" | | 1820–1821 | Second flag of Great Colombia |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Historical flags",
+   "file": "First flag of the Mexican Empire.svg",
+   "text": "! scope=\"row\" | | 1821 | Flag of the First Mexican Empire |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Historical flags",
+   "file": "Bandera del Primer Imperio Mexicano.svg",
+   "text": "! scope=\"row\" | | 1821–1823 | Flag of the First Mexican Empire |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Historical flags",
+   "file": "Flag of the Gran Colombia.svg",
+   "text": "! scope=\"row\" | | 1821–1831 | Third flag of Great Colombia |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Historical flags",
+   "file": "Flag of the United Provinces of Central America.svg",
+   "text": "! scope=\"row\" | | 1823–1824 | Flag of the United Provinces of Central America |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Historical flags",
+   "file": "Flag of the Federal Republic of Central America.svg",
+   "text": "! scope=\"row\" | | 1824–1838 | Flag of the Federal Republic of Central America |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Historical flags",
+   "file": "Flag of New Granada (1830-1834).svg",
+   "text": "! scope=\"row\" | | 1831–1834 | Flag of the Republic of New Granada |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Historical flags",
+   "file": "Flag of New Granada.svg",
+   "text": "! scope=\"row\" | | 1834–1856 | Flag of Republic of New Granada and the Granadine Confederation |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Historical flags",
+   "file": "Flag of Nicaragua (1839-1858).svg",
+   "text": "! scope=\"row\" | | 1839–18561873–1889 | National flag |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Historical flags",
+   "file": "State Flag of Nicaragua (1854-1858).png",
+   "text": "! scope=\"row\" | | 1839–18561873–1889 | State flag |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Historical flags",
+   "file": "Civil Ensign of Nicaragua (1854-1858).svg",
+   "text": "! scope=\"row\" | | 1839–18561873–1889 | Merchant Navy flag |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Historical flags",
+   "file": "Flag of the United Kingdom (1-2).svg",
+   "text": "! scope=\"row\" | | 1844–1860 | Flag of the United Kingdom |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Historical flags",
+   "file": "Flag of Mosquitia.svg",
+   "text": "! scope=\"row\" | | 1824–1881 | Flag of Mosquitia |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Historical flags",
+   "file": "Flag of Nicaragua (1852).svg",
+   "text": "! scope=\"row\" | | 1852–1854 | Attributed flag |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Historical flags",
+   "file": "Flag of Nicaragua under William Walker (1856-1857).svg",
+   "text": "! scope=\"row\" | | 1856–1857 | Flag under William Walker |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Historical flags",
+   "file": "Flag of Nicaragua (1858-1889 and 1893-1896).svg",
+   "text": "! scope=\"row\" | | 1857–18731893–1896 | National flag |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Historical flags",
+   "file": "Flag of the Mosquito Reserve (1881-1894).svg",
+   "text": "! scope=\"row\" | | 1881–1894 | Flag of the Mosquito Reserve |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Historical flags",
+   "file": "Flag of Nicaragua (1889-1893).svg",
+   "text": "! scope=\"row\" | | 1889–1893 | Attributed flag |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Historical flags",
+   "file": "Flag of Nicaragua (1896-1908).svg",
+   "text": "! scope=\"row\" | | 1896–1908 | National flag |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Historical flags",
+   "file": "Flag of the Greater Republic of Central America (1898).svg",
+   "text": "! scope=\"row\" | | November 1898 | Flag of the Greater Republic of Central America |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Historical flags",
+   "file": "Flag of Nicaragua (1908-1971).svg",
+   "text": "! scope=\"row\" | | 1908–1971 | National flag |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "Historical flags",
+   "file": "Flag of the United States (1912-1959).svg",
+   "text": "! scope=\"row\" | | 1912–1933 | Flag of the United States used in Nicaragua during U.S. occupation | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Nicaraguan flags",
+   "section": "House flags",
+   "file": "Flag of Nicaragua under William Walker (1856-1857).svg",
+   "text": "! scope=\"row\" | | 1919–2003 | House flag of the Lloyd Nicaragüense | Based on William Walker's flag |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Nicaragua",
+   "section": "Drapeaux historiques > Provinces unies d'Amérique centrale - République fédérale d'Amérique centrale (1823-1839)",
+   "file": "Flag of the United Provinces of Central America.svg",
+   "text": "Drapeau de la République fédérale d'Amérique centrale du au",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Nicaragua",
+   "section": "Drapeaux historiques > Provinces unies d'Amérique centrale - République fédérale d'Amérique centrale (1823-1839)",
+   "file": "Military Flag of the United Provinces of Central America.svg",
+   "text": "Pavillon militaire des Provinces unies d'Amérique centrale de 1823 à 1824",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Nicaragua",
+   "section": "Drapeaux historiques > Provinces unies d'Amérique centrale - République fédérale d'Amérique centrale (1823-1839)",
+   "file": "Flag of the Federal Republic of Central America.svg",
+   "text": "Drapeau de la République fédérale d'Amérique centrale du au",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Nicaragua",
+   "section": "Drapeaux historiques > Nicaragua (1854-1896)",
+   "file": "Flag of Nicaragua (1854-1858).svg",
+   "text": "Drapeau du Nicaragua du à 1858",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Nicaragua",
+   "section": "Drapeaux historiques > Nicaragua (1854-1896)",
+   "file": "Civil Ensign of Nicaragua (1854-1858).svg",
+   "text": "Pavillon marchand du Nicaragua du à 1858",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Nicaragua",
+   "section": "Drapeaux historiques > Nicaragua (1854-1896)",
+   "file": "Flag of Nicaragua (1858-1889 and 1893-1896).svg",
+   "text": "Drapeau du Nicaragua de 1858 à 1889",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Nicaragua",
+   "section": "Drapeaux historiques > Nicaragua (1854-1896)",
+   "file": "Flag of Nicaragua (1889-1893).svg",
+   "text": "Drapeau du Nicaragua de 1889 à 1893",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Nicaragua",
+   "section": "Drapeaux historiques > Nicaragua (1854-1896)",
+   "file": "Flag of Nicaragua (1858-1889 and 1893-1896).svg",
+   "text": "Drapeau du Nicaragua de 1893 au",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Nicaragua",
+   "section": "Drapeaux historiques > Nicaragua au sein de la Grande République d'Amérique Centrale (1896-1898) puis indépendante (1898-1908)",
+   "file": "Flag of the Greater Republic of Central America (1898).svg",
+   "text": "Drapeau de la Grande République d'Amérique Centrale du au",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Nicaragua",
+   "section": "Drapeaux historiques > Nicaragua au sein de la Grande République d'Amérique Centrale (1896-1898) puis indépendante (1898-1908)",
+   "file": "Flag of Nicaragua (1896-1908).svg",
+   "text": "Drapeau du Nicaragua de 1896 au",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Banderas y escudos anteriores > 1823–1838: Bandera y escudos de armas usados por la provincia de Nicaragua durante el Período federal.",
+   "file": "Bandera de Nicaragua en la RFC.jpg",
+   "text": "192x192px|miniaturadeimagen|Bandera del Estado de Nicaragua (1823-1828)",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Banderas y escudos anteriores > 1854: Bandera y escudo de armas de la República de Nicaragua según el decreto del 21 de abril de 1854.",
+   "file": "State Flag of Nicaragua (1854-1858).png",
+   "text": "miniaturadeimagen|214x214px|Bandera de Nicaragua en 1854",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Ley 1249",
+   "file": "Nicaraguan and Sandinista flags.jpg",
+   "text": "miniatura|Bandera de Nicaragua y la Rojinegra ondeando en la Plaza de la Revolución en Managua.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Cronología de las banderas de Nicaragua",
+   "file": "Nicaraguan flag.jpg",
+   "text": "miniatura|Bandera de Nicaragua en la Plaza de la Independencia en Granada. A continuación se presenta, de manera cronológica, la evolución de las banderas que ha adoptado Nicaragua desde el período en que formaba parte del Reino de Guatemala hasta la actualidad. Cabe señalar que, en las primeras etapas de su historia, las disposiciones relativas a las tonalidades de los colores, las proporciones y las grafías de los emblemas nacionales eran poco precisas o, en muchos casos, inexistentes. No fue sino hasta la promulgación del Decreto N.º 1908 de 1971 que se establecieron de forma oficial y deta",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Cronología de las banderas de Nicaragua",
+   "file": "Bandera de Nicaragua 1838-1851 1853-1854 1858-1889 1893-1896.jpg",
+   "text": "| 150x150px|centro | 1838 | 1854 | Primera bandera nacional de Nicaragua, adoptada tras la separación del Estado de Nicaragua de la República Federal de Centroamérica.",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Cronología de las banderas de Nicaragua",
+   "file": "Flag of Nicaragua (1854-1858).svg",
+   "text": "| 150x150px|centro | 1854 | 1858 | Segunda bandera nacional, adoptada durante el gobierno de Fruto Chamorro.",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Cronología de las banderas de Nicaragua",
+   "file": "Bandera de Nicaragua 1838-1851 1853-1854 1858-1889 1893-1896.jpg",
+   "text": "| 150x150px|centro | 1858 | 1889 | Reinstauración del diseño anterior, tras la finalización de la Guerra Nacional (1854-1857), durante el gobierno de Tomás Martínez.",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Cronología de las banderas de Nicaragua",
+   "file": "Flag of Nicaragua (1889-1893).svg",
+   "text": "| 150x150px|centro | 1889 | 1893 | Bandera con diseño modificado durante el gobierno de Roberto Sacasa y Sarria.",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Cronología de las banderas de Nicaragua",
+   "file": "Bandera de Nicaragua 1838-1851 1853-1854 1858-1889 1893-1896.jpg",
+   "text": "| 150x150px|centro | 1893 | 1908 | Segunda reinstauración del diseño anterior.",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Cronología de las banderas de Nicaragua",
+   "file": "Flag of Nicaragua (1908–1971).svg",
+   "text": "| 150x150px|centro | 1908 | 1971 | Bandera de Nicaragua adoptada el 5 de septiembre de 1908, durante la presidencia de José Santos Zelaya. Se considera el diseño anterior a las modificaciones de 1971.",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Cronología de las banderas de Nicaragua",
+   "file": "Flag of Nicaragua.svg",
+   "text": "| 150x150px|centro | 1971 | Presente | Bandera azul y blanco de la República de Nicaragua, establecida mediante el Decreto Legislativo N.º 1908, «Ley sobre Características y Uso de los Símbolos Patrios», durante la presidencia de Anastasio Somoza Debayle.",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Cronología de las banderas de Nicaragua",
+   "file": "Bandera Rojinegra.png",
+   "text": "| 150x150px|centro | 2025 | Presente | Bandera rojinegra de la lucha antiimperialista del general Augusto C. Sandino y de la Revolución Popular Sandinista, incorporada a los símbolos patrios mediante la Ley N.º 1234, Ley de Reforma de la Constitución Política de la República de Nicaragua, durante la copresidencia de Daniel Ortega y Rosario Murillo. |} {| class=\"wikitable\" style=\"text-align: ; width:100%;\" |+ Otras banderas históricas, supranacionales y variantes oficiales ! Bandera ! Fecha de adopción ! Fecha de desuso ! Tipo ! Notas",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Cronología de las banderas de Nicaragua",
+   "file": "Flag of Cross of Burgundy.svg",
+   "text": "| 150x150px|centro | 1524 | 1701 | Bandera colonial | Bandera de la Capitanía General de Guatemala, utilizada durante el período de la dinastía de los Austrias.",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Cronología de las banderas de Nicaragua",
+   "file": "Flag of Spain (1701–1760).svg",
+   "text": "| 150x150px|centro | 1701 | 1760 | Bandera colonial | Bandera de la Capitanía General de Guatemala, utilizada durante el reinado de Felipe V, tras el establecimiento de la dinastía de los Borbones.",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Cronología de las banderas de Nicaragua",
+   "file": "Flag of Spain (1760–1785).svg",
+   "text": "| 150x150px|centro | 1760 | 1785 | Bandera colonial | Bandera de la Capitanía General de Guatemala, establecida durante el reinado de Carlos III.",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Cronología de las banderas de Nicaragua",
+   "file": "Flag of Spain (1785–1873, 1875–1931).svg",
+   "text": "| 150x150px|centro | 1785 | 1822 | Bandera colonial | Bandera de la Capitanía General de Guatemala, establecida durante el reinado de Carlos III.",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Cronología de las banderas de Nicaragua",
+   "file": "Bandera del Primer Imperio Mexicano.svg",
+   "text": "| 150x150px|centro | 1822 | 1823 | Bandera imperial | Bandera del Primer Imperio Mexicano, adoptada durante la anexión de las provincias centroamericanas al imperio de Iturbide.",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Cronología de las banderas de Nicaragua",
+   "file": "Flag of the United Provinces of Central America.svg",
+   "text": "| 150x150px|centro | 1823 | 1824 | Bandera federal | Bandera de las Provincias Unidas del Centro de América.",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Cronología de las banderas de Nicaragua",
+   "file": "Flag of the Federal Republic of Central America.svg",
+   "text": "| 150x150px|centro | 1824 | 1838 | Bandera federal | Bandera de la República Federal de Centroamérica.",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Cronología de las banderas de Nicaragua",
+   "file": "Flag of the United Provinces of Central America AÑIL.png",
+   "text": "| 150x150px|centro | 1823 | 1824 | Variante histórica | Variante de la bandera de las Provincias Unidas de Centroamérica. Durante esa época no se especificaba con precisión la tonalidad del azul; se ha propuesto que esta podría corresponder a la tonalidad original.",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Cronología de las banderas de Nicaragua",
+   "file": "Flag of the Federal Republic of Central America AÑIL.png",
+   "text": "| 150x150px|centro | 1824 | 1838 | Variante histórica | Variante de la bandera de la República Federal de Centroamérica, con azul añil, que se ha propuesto como posible tonalidad utilizada durante la época.",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Cronología de las banderas de Nicaragua",
+   "file": "Bandera de Nicaragua en la RFC.jpg",
+   "text": "| 150x150px|centro | 1824 | 1838 | Bandera estatal | Bandera del Estado de Nicaragua como integrante de la República Federal de Centroamérica.",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Cronología de las banderas de Nicaragua",
+   "file": "Bandera de Representacion CA 1851 1853.jpg",
+   "text": "| 150x150px|centro | 1851 | 1853 | Bandera supranacional | Bandera de la Representación Nacional de Centroamérica, unión entre El Salvador, Honduras y Nicaragua.",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Cronología de las banderas de Nicaragua",
+   "file": "Civil Ensign of Nicaragua (1854-1858).svg",
+   "text": "| 150x150px|centro | 1854 | 1858 | Enseña civil | Enseña civil de Nicaragua, utilizada durante el período de vigencia de las banderas nacionales de 1854-1858.",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Cronología de las banderas de Nicaragua",
+   "file": "State Flag of Nicaragua (1854-1858).png",
+   "text": "| 150x150px|centro | 1854 | 1858 | Bandera estatal | Bandera del Estado de Nicaragua, utilizada durante el mismo período que la bandera nacional de 1854-1858.",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Cronología de las banderas de Nicaragua",
+   "file": "Flag of Nicaragua under William Walker (1856-1857).svg",
+   "text": "| 150x150px|centro | 1856 | 1857 | Bandera de gobierno | Bandera del gobierno filibustero, adoptada durante el gobierno de facto de William Walker.",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Cronología de las banderas de Nicaragua",
+   "file": "Bandera de Nicaragua 1893-1908 (Con escudo).jpg",
+   "text": "| 150x150px|centro | 1893 | 1908 | Variante | Variante de la Bandera de Nicaragua con escudo, utilizada durante el período 1893-1908.",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Cronología de las banderas de Nicaragua",
+   "file": "Flag of the Greater Republic of Central America (1898).svg",
+   "text": "| 150x150px|centro | 1898 | 1898 | Bandera supranacional | Bandera de la República Mayor de Centroamérica y de los Estados Unidos de Centroamérica, entidad federal conformada por El Salvador, Honduras y Nicaragua, que existió oficialmente entre agosto y noviembre de 1898. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Cronología de las banderas de Nicaragua",
+   "file": "Nicaraguan flag.jpg",
+   "text": "miniatura|Bandera de Nicaragua en la Plaza de la Independencia en Granada.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Banderas departamentales",
+   "file": "Flag of Boaco.svg",
+   "text": "Bandera del departamento de Boaco",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Banderas departamentales",
+   "file": "Flag of Jinotepe.svg",
+   "text": "Bandera del departamento de Carazo",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Banderas departamentales",
+   "file": "Flag of Chinandega.svg",
+   "text": "Bandera del departamento de Chinandega",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Banderas departamentales",
+   "file": "Flag of Juigalpa.svg",
+   "text": "Bandera del departamento de Chontales",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Banderas departamentales",
+   "file": "Flag of Region Autonoma del Atlantico Norte.svg",
+   "text": "Bandera de la Región Autónoma de la Costa Caribe Norte",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Banderas departamentales",
+   "file": "Flag of Region Autonoma Atlantico Sur.svg",
+   "text": "Bandera de la Región Autónoma de la Costa Caribe Sur",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Banderas departamentales",
+   "file": "Flag of Esteli.svg",
+   "text": "Bandera del departamento de Estelí",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Banderas departamentales",
+   "file": "Flag of Granada, Nicaragua.svg",
+   "text": "Bandera del departamento de Granada",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Banderas departamentales",
+   "file": "Flag of Jinotega.svg",
+   "text": "Bandera del departamento de Jinotega",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Banderas departamentales",
+   "file": "Flag of Leon, Nicaragua.svg",
+   "text": "Bandera del departamento de León",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Banderas departamentales",
+   "file": "Flag of Somoto.svg",
+   "text": "Bandera del departamento de Madriz",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Banderas departamentales",
+   "file": "Flag of Managua.svg",
+   "text": "Bandera del departamento de Managua",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Banderas departamentales",
+   "file": "Flag of Masaya.svg",
+   "text": "Bandera del departamento de Masaya",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Banderas departamentales",
+   "file": "Flag of Matagalpa.svg",
+   "text": "Bandera del departamento de Matagalpa",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Banderas departamentales",
+   "file": "Flag of Nueva Segovia.svg",
+   "text": "Bandera del departamento de Nueva Segovia",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Banderas departamentales",
+   "file": "Flag of San Carlos, Nicaragua.svg",
+   "text": "Bandera del departamento de Río San Juan",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Nicaragua",
+   "section": "Banderas departamentales",
+   "file": "Flag of Rivas.svg",
+   "text": "Bandera del departamento de Rivas",
+   "kind": "gallery"
+  }
+ ]
+}

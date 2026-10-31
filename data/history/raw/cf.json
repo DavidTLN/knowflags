@@ -1,0 +1,82 @@
+{
+ "iso": "cf",
+ "flag_item": "Q165775",
+ "pages": [
+  "en:Flag of the Central African Republic",
+  "fr:Drapeau de la République centrafricaine"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of the Central African Republic",
+   "section": "Colour scheme",
+   "file": "Flag of the Central African Republic.svg",
+   "text": "{| class=\"wikitable\" style=\"text-align: ;\" ! ! style=\"background:#003082; color:white;\" | Blue ! style=\"background:#FFFFFF; color:black;\" | White ! style=\"background:#289728; color:white;\" | Green ! style=\"background:#ffce00; color:black;\" | Yellow ! style=\"background:#d21034; color:white;\" | Red",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of the Central African Republic",
+   "section": "History",
+   "file": "Boganda 1959 stamp.jpg",
+   "text": "Central African Republic's first postage stamp, from 1959, features Boganda flanked by his flag design.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of the Central African Republic",
+   "section": "History",
+   "file": "Niem (29224941165).jpg",
+   "text": "CAR flag in Niem Yéléwa, Nana-Mambéré prefecture",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of the Central African Republic",
+   "section": "History",
+   "file": "David Dacko carpet.jpg",
+   "text": "President David Dacko and CAR flags on a carpet; the flag is depicted incorrectly with two stars instead of one.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of the Central African Republic",
+   "section": "Former flags",
+   "file": "Flag of France (1794-1815).svg",
+   "text": "Flag of France, used during colonial Ubangi-Shari from 1903 until 1960",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of the Central African Republic",
+   "section": "Former flags",
+   "file": "Flag of the Central African Republic (1976 proposal).svg",
+   "text": "Proposed replacement flag for the Central African Republic from 1976",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of the Central African Republic",
+   "section": "Former flags",
+   "file": "Imperial Standard of Bokassa I (1976–1979).svg",
+   "text": "Imperial standard of Bokassa I, used as a co-flag of the Central African Empire from 1976 until 1979",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la République centrafricaine",
+   "section": "Durant l'Empire centrafricain de Bokassa",
+   "file": "Flag of the Central African Republic (1976 proposal).svg",
+   "text": "Proposition de drapeau en 1976.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la République centrafricaine",
+   "section": "Durant l'Empire centrafricain de Bokassa",
+   "file": "Imperial Standard of Bokassa I (1976–1979).svg",
+   "text": "Étendard impérial entre 1976 et 1979.",
+   "kind": "gallery"
+  }
+ ]
+}

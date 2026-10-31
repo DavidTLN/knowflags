@@ -1,0 +1,266 @@
+{
+ "iso": "bj",
+ "flag_item": "Q130442",
+ "pages": [
+  "en:Flag of Benin",
+  "fr:Drapeau du Bénin"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Benin",
+   "section": "intro",
+   "file": "Benin flag.png",
+   "text": "Flag of Benin",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Benin",
+   "section": "Colour scheme",
+   "file": "Flag of Benin.svg",
+   "text": "{| class=\"wikitable\" width=\" \" style=\"white-space: nowrap; text-align: \" ! !style=\"background:#008850; color:#FFF; width: \"| Green !style=\"background:#fcd20f; color:#000; width: \"| Yellow !style=\"background:#e90929; color:#FFF; width: \"| Red",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Benin",
+   "section": "Historical flags",
+   "file": "Flag of Ghezo of Dahomey.svg",
+   "text": "| |1818–1859 | |rowspan=3 | Kingdom of Dahomey |The royal flag of King Ghezo. It featured a white field with a red and an African war elephant in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Benin",
+   "section": "Historical flags",
+   "file": "No flag.svg",
+   "text": "| |1859- | |King Glele was not known to have used any royal flags or banners.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Benin",
+   "section": "Historical flags",
+   "file": "Royal banner of Béhanzin of Dahomey.svg",
+   "text": "| |–1894 | |The royal banner of King Behanzin, which featured a light blue field with the coat of arms in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Benin",
+   "section": "Historical flags",
+   "file": "Flag of France (1794–1815, 1830–1958).svg",
+   "text": "| |1894–1959 |2:3 |French Dahomey |The French tricolour was used as the official flag of French Dahomey.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Benin",
+   "section": "Historical flags",
+   "file": "Flag of Benin.svg",
+   "text": "| |1959–1975 |2:3 |Republic of Dahomey |The first flag of Dahomey was introduced on November 16, 1959, after Dahomey was granted semi-autonomous status within the French Community. It consists of two horizontal yellow and red bands on the fly side and a green vertical band at the hoist.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Benin",
+   "section": "Historical flags",
+   "file": "Flag of Benin (1975-1990).svg",
+   "text": "| |1975–1990 |2:3 |People's Republic of Benin |A new flag was introduced in 1975, following the 1972 coup d'état and the establishment of the People's Republic of Benin. It consisted of a green field charged with a five-pointed red star in the top- canton. This is a reversal of the colours of the ruling party's flag.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Benin",
+   "section": "Historical flags",
+   "file": "Flag of PRPB.svg",
+   "text": "| |1975–1990 |2:3 |People's Republic of Benin |A new flag was introduced in 1975, following the 1972 coup d'état and the establishment of the People's Republic of Benin. It consisted of a green field charged with a five-pointed red star in the top- canton. This is a reversal of the colours of the ruling party's flag.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Benin",
+   "section": "Historical flags",
+   "file": "Flag of Benin.svg",
+   "text": "| |1990–Present |2:3 |Republic of Benin |The pre-1975 flag was readopted in 1990, following the re-establishment of multi-party democracy.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Benin",
+   "section": "Other flags > Military",
+   "file": "Flag of Benin Armed Forces (obverse).svg",
+   "text": "2:3 Flag of the Benin Armed Forces, obverse side",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Benin",
+   "section": "Other flags > Military",
+   "file": "Flag of Benin Armed Forces (reverse).svg",
+   "text": "2:3 Flag of the Benin Armed Forces, reverse side",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Benin",
+   "section": "Other flags > Military",
+   "file": "Flag of Republican Police, Front.png",
+   "text": "2:3 Flag of the , obverse side",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Benin",
+   "section": "Other flags > Military",
+   "file": "Flag of Republican Police, Back.png",
+   "text": "2:3 Flag of the Republican Police, reverse side",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Benin",
+   "section": "Other flags > Military",
+   "file": "Roundel of Benin.svg",
+   "text": "Roundel of the Benin Air Force",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Benin",
+   "section": "Other flags > Military",
+   "file": "Roundel of Benin (1975–1990).svg",
+   "text": "Historical roundel of the Benin People's Air Force (1975–1990)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Benin",
+   "section": "Gallery",
+   "file": "Arrondissement de Lissègazoun drapeau du Bénin au Mur.jpg",
+   "text": "Faded mural depicting the national flag in Lissègazoun (2021)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Benin",
+   "section": "Gallery",
+   "file": "Celebrating Voudoun day.jpg",
+   "text": "Flags flown in celebration of Fête du Vodoun in Ouidah (2017)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Benin",
+   "section": "Gallery",
+   "file": "DEGAN Gabin (motorized parade).jpg",
+   "text": "Beninese men waving the national flag on independence day (2016)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Benin",
+   "section": "Gallery",
+   "file": "Benin 001.jpg",
+   "text": "Flags outside the Embassy of Benin in Tokyo, Japan (2013)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Benin",
+   "section": "Gallery",
+   "file": "Congress palace in Cotonou, Benin.JPG",
+   "text": "Beninese flags waving outside the Congress Palace of Cotonou (2009)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Benin",
+   "section": "Gallery",
+   "file": "Kalemie Medal Parade (12235622173).jpg",
+   "text": "Beninese and United Nations flags flown by the Beninese contingent of MONUSCO (2000)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Bénin",
+   "section": "Description",
+   "file": "DEGAN Gabin ( civil motorized parade).jpg",
+   "text": "Défilé civil lors du jour de l'Indépendance.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Bénin",
+   "section": "Description",
+   "file": "Bus de l'UAC pour les évenements sportifs.jpg",
+   "text": "Bus de l'université d'Abomey-Calavi peint aux couleurs nationales.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Bénin",
+   "section": "Drapeaux historiques du Bénin et du Dahomey",
+   "file": "Flag of Ghezo of Dahomey.svg",
+   "text": "| |1818–1859 | |rowspan=3 | Royaume du Dahomey |Drapeau du roi Ghezo. Il représentait un drapeau blanc bordé de rouge, orné au centre d'un éléphant de guerre africain.",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Bénin",
+   "section": "Drapeaux historiques du Bénin et du Dahomey",
+   "file": "No flag.svg",
+   "text": "| |1859- | |Aucun drapeau ni bannière n'a été associée au roi Glélé.",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Bénin",
+   "section": "Drapeaux historiques du Bénin et du Dahomey",
+   "file": "Royal banner of Béhanzin of Dahomey.svg",
+   "text": "| |–1894 | |La bannière du roi Behanzin avait un fond bleu et représentait en son centre les armoiries royales.",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Bénin",
+   "section": "Drapeaux historiques du Bénin et du Dahomey",
+   "file": "Flag of France (1794–1815, 1830–1958).svg",
+   "text": "| |1894–1959 |2:3 |Colonie du Dahomey |Le drapeau de la France a était utilisé comme drapeau officiel de la colonie.",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Bénin",
+   "section": "Drapeaux historiques du Bénin et du Dahomey",
+   "file": "Flag of Benin.svg",
+   "text": "| |1959–1975 |2:3 |République du Dahomey |Ce drapeau a été utilisé pour la première fois le , lorsque le Dahomey a été gratifié d'une semi-autonomie dans le cadre de la Communauté française.Il se compose de deux bandes horizontales jaunes et rouges du côté flottant et d'une bande verticale verte du côté de la hampe.",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Bénin",
+   "section": "Drapeaux historiques du Bénin et du Dahomey",
+   "file": "Flag of Benin (1975-1990).svg",
+   "text": "| |1975–1990 |2:3 |République populaire du Bénin |Ce nouveau drapeau fut introduit en 1975, suite au coup d'État de 1972 et à la proclamation de la république populaire du Bénin. Il s'agissait d'un champ vert orné d'une étoile rouge à cinq branches dans le canton supérieur . Ces couleurs étaient inversées par rapport à celles du drapeau du parti au pouvoir.",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Bénin",
+   "section": "Drapeaux historiques du Bénin et du Dahomey",
+   "file": "Flag of PRPB.svg",
+   "text": "| |1975–1990 |2:3 |République populaire du Bénin |Ce nouveau drapeau fut introduit en 1975, suite au coup d'État de 1972 et à la proclamation de la république populaire du Bénin. Il s'agissait d'un champ vert orné d'une étoile rouge à cinq branches dans le canton supérieur . Ces couleurs étaient inversées par rapport à celles du drapeau du parti au pouvoir.",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Bénin",
+   "section": "Drapeaux historiques du Bénin et du Dahomey",
+   "file": "Flag of Benin.svg",
+   "text": "| |Depuis 1990 |2:3 |République du Bénin |Le drapeau d'avant 1975 a été réadopté en 1990, suite au rétablissement de la démocratie représentative.",
+   "kind": "table"
+  }
+ ]
+}

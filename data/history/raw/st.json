@@ -1,0 +1,28 @@
+{
+ "iso": "st",
+ "flag_item": "Q169907",
+ "pages": [
+  "en:Flag of São Tomé and Príncipe",
+  "en:List of São Toméan flags",
+  "fr:Drapeau de Sao Tomé-et-Principe",
+  "pt:Bandeira de São Tomé e Príncipe"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of São Tomé and Príncipe",
+   "section": "Design > Construction",
+   "file": "Flag of São Tomé and Príncipe (construction sheet).svg",
+   "text": "=2|Construction sheet of the flag of São Tomé and Príncipe",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of São Tomé and Príncipe",
+   "section": "Usage",
+   "file": "19 03 2018 Audiência com o Presidente da República de São Tomé e Príncipe, Evaristo do Espírito Santo Carvalho (27066449008).jpg",
+   "text": "The flag flying at half-mast in Brasília, Brazil",
+   "kind": "thumb"
+  }
+ ]
+}

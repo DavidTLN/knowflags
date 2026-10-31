@@ -1,0 +1,732 @@
+{
+ "iso": "sk",
+ "flag_item": "Q160861",
+ "pages": [
+  "en:Flag of Slovakia",
+  "en:List of Slovak flags",
+  "fr:Drapeau de la Slovaquie",
+  "sk:Vlajka Slovenska"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Slovakia",
+   "section": "Design",
+   "file": "Flag of Slovakia (construction sheet).svg",
+   "text": "| rowspan=3| || CMYK || 0, 0, 0, 0 || 100, 80, 0, 0 || 0, 100, 100, 0",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Slovakia",
+   "section": "Photo gallery",
+   "file": "Flags of Slovakia.jpg",
+   "text": "A line of Slovak flags on poles",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Slovakia",
+   "section": "Photo gallery",
+   "file": "Vertical Slovak Flag Logan Square Philadelphia 30 Jul 2022.jpg",
+   "text": "The correct vertical display of the Slovak flag (with rotated coat of arms)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Slovakia",
+   "section": "Photo gallery",
+   "file": "EU and Slovakia flags.jpg",
+   "text": "Slovak flag and European Union flag are often seen together front of government buildings",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Slovakia",
+   "section": "Photo gallery",
+   "file": "Slovak International Air Fest 2012 - AFRC -15.jpg",
+   "text": "Flag of Slovakia in army uniform",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Slovakia",
+   "section": "Photo gallery",
+   "file": "Jill Biden met with Zuzana Čaputová at the Grassalkovich Palace in 2022 (1).jpg",
+   "text": "Presidential standard of Slovak Republic (centre) together with Slovak flags and European Union flags",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Slovakia",
+   "section": "Presidential standard",
+   "file": "Flag of the President of Czechoslovakia (1920-1939, 1945-1960).svg",
+   "text": "Presidential standard of Czechoslovakia(1920–1939)(1945–1960)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Slovakia",
+   "section": "Presidential standard",
+   "file": "Flag of the President of Slovakia (1939-1945).svg",
+   "text": "Presidential standard of First Slovak Republic(1939–1945)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Slovakia",
+   "section": "Presidential standard",
+   "file": "Flag of the President of Czechoslovakia (1960-1990).svg",
+   "text": "Presidential standard of Czechoslovak Socialist Republic(1960–1990)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Slovakia",
+   "section": "Presidential standard",
+   "file": "Flag of the President of Czechoslovakia (1990-1992).svg",
+   "text": "Presidential standard of Czech and Slovak Federative Republic(1990–1992)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Slovakia",
+   "section": "Presidential standard",
+   "file": "Flag of the President of Slovakia.svg",
+   "text": "Presidential standard of Slovak Republic(since 1993)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Current flags > National flag",
+   "file": "Flag of Slovakia.svg",
+   "text": "! scope=\"row\" | 150x150px | 3 September 1992 | National flag | A horizontal tricolor of white, blue, and red; charged with coat of arms at the hoist side. | rowspan=\"2\" | 2:3",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Current flags > National flag",
+   "file": "Flag of Slovakia vertical.svg",
+   "text": "! scope=\"row\" | 150x150px | 3 September 1992 | National flag for vertical display | A vertical tricolor of white, blue, and red; the coat of arms is rotated relative to the flag so that it is still , and is shifted towards the top. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Current flags > Governmental flags",
+   "file": "Flag of the President of Slovakia.svg",
+   "text": "! scope=\"row\" | 150x150px | 1 January 1993 | Flag of the President | Coat of arms of Slovakia in banner from, with a narrow white and a wide with oblique stripes in white, blue, and red. | 1:1 |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Current flags > Subnational flags > Regional flags",
+   "file": "Bratislavsky vlajka.svg",
+   "text": "! scope=\"row\" | 150x150px | | Bratislava Region",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Current flags > Subnational flags > Regional flags",
+   "file": "Trnavsky vlajka.svg",
+   "text": "! scope=\"row\" | 150x150px | | Trnava Region",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Current flags > Subnational flags > Regional flags",
+   "file": "Trenciansky vlajka.svg",
+   "text": "! scope=\"row\" | 150x150px | | Trenčín Region",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Current flags > Subnational flags > Regional flags",
+   "file": "Nitriansky vlajka.svg",
+   "text": "! scope=\"row\" | 150x150px | | Nitra Region",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Current flags > Subnational flags > Regional flags",
+   "file": "Zilinsky vlajka.svg",
+   "text": "! scope=\"row\" | 150x150px | | Žilina Region",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Current flags > Subnational flags > Regional flags",
+   "file": "Banskobystricky vlajka.svg",
+   "text": "! scope=\"row\" | 150x150px | | Banská Bystrica Region",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Current flags > Subnational flags > Regional flags",
+   "file": "Presovsky vlajka.svg",
+   "text": "! scope=\"row\" | 150x150px | | Prešov Region",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Current flags > Subnational flags > Regional flags",
+   "file": "Kosicky vlajka.svg",
+   "text": "! scope=\"row\" | 150x150px | | Košice Region |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Historical flags",
+   "file": "Slovenská vlajka 1848.png",
+   "text": "! scope=\"row\" | 150x150px | 1848 | Flag from Demands of the Slovak Nation from 11 May 1848.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Historical flags",
+   "file": "Slovenská vlajka 1848-1849.png",
+   "text": "! scope=\"row\" | 150x150px | 1848–1849 | Flag used by the Slovak volunteer corps during the Slovak uprising in 1848–1849. Later it became the flag of the Slovak National Council.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Historical flags",
+   "file": "Slovenská vlajka 1848 z.png",
+   "text": "! scope=\"row\" | 150x150px | 1848 | One of the flags, where the double cross was no longer green, but blue three-peaked, first used in 1848 during the autumn campaign.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Historical flags",
+   "file": "Slovenská vlajka 1849.png",
+   "text": "! scope=\"row\" | 150x150px | 1848–1849 | Another Slovak flag used during the revolution.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Historical flags",
+   "file": "Flag of Slovakia (1939–1945).svg",
+   "text": "! scope=\"row\" | 150x150px | 18681919–19381938–19391939–19451990–1992 | The flag with this order of colors was used from 1848/1849 and was officially established in 1868 as the flag of the Slovaks. It was widely used by Slovaks living in the United States and American Slovak associations. In the years 1919–1938 it was the unofficial flag of Slovakia, and in the years 1938–1939 the official flag of the autonomous Slovak Country. In the years 1939–1945 the official flag of the Slovak Republic and in the period 1990–1992 the official flag of the Slovak Republic within the Czech Republic.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Historical flags",
+   "file": "Flag of Czechoslovak National Council.svg",
+   "text": "! scope=\"row\" | 150x150px | | Czecho-Slovak flag from the design of Milan Rastislav Štefánik, which was later used as the flag of the Czechoslovak National Council.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Historical flags",
+   "file": "Flag of Bohemia.svg",
+   "text": "! scope=\"row\" | 150x150px | 1918–1920 | The flag of the First Czechoslovak Republic in the years 1918–1920, which was based on the national flag of Bohemia. According to the CNR Act 67/1990 Coll. was also the official but practically unused flag of the Czech Republic within the Czechoslovakia from 13 March 1990 to 31 December 1992.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Historical flags",
+   "file": "Socialist red flag.svg",
+   "text": "! scope=\"row\" | 150x150px | 1919 | The flag of the Slovak Soviet Republic, which existed only for a short time (from 16 June to 7 July 1919).",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Historical flags",
+   "file": "Flag of the Czech Republic.svg",
+   "text": "! scope=\"row\" | 150x150px | 1920–1992 | The flag of Czechoslovakia in the years 1920 to 1992 and also the official flag of Czech Republic from 1 January 1993.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Historical flags",
+   "file": "War ensign of the First Slovak Republic.svg",
+   "text": "! scope=\"row\" | 150x150px | 1939–1945 | War flag Slovak Republic (1939–1945).",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Historical flags",
+   "file": "Flag of the Slovak 535th platoon.svg",
+   "text": "! scope=\"row\" | 150x150px | 1944 | The flag of Platoon 535 used during the Warsaw Uprising.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Historical flags",
+   "file": "Czechoslovak Legion in Russia Flag.png",
+   "text": "! scope=\"row\" | Czechoslovak Legion in Russia Flag|150x150px | 1917–1918 | The obverse side of the flag of the Czechoslovak Legion in Russia, with the reverse side being the russian flag.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Historical flags",
+   "file": "Czechoslovak Legion in France Flag.png",
+   "text": "! scope=\"row\" | Czechoslovak Legion in France Flag|150x150px | 1914–19151917–1918 | The flag used by the Czechoslovak units in the French Foreign Legion, with the legion being disbanded in 1915 due to heavy casualties and then reestablished again in 1917.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Historical flags",
+   "file": "Czechoslovak Legion in Italy Flag.png",
+   "text": "! scope=\"row\" | Czechoslovak Legion in Italy Flag|150x150px | 1918 | The flag used by the Czechoslovak Legion in Italy.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Historical flags",
+   "file": "Banner of the First Assault Battalion of the Czechoslovak Legions (Obverse).svg",
+   "text": "! scope=\"row\" | Banner of the First Assault Battalion of the Czechoslovak Legions|150x150px | 1917–1918 | The obverse side of the flag used by the First Assault Battalion of the Czechoslovak Legions in Russia.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Historical flags",
+   "file": "Czechoslovak People's Army Flag.svg",
+   "text": "! scope=\"row\" | Czechoslovak People's Army Flag|150x150px | 1960–1990 | The reverse side of the flag of the Czechoslovak People's Army, with the obverse side using various military flags.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Historical flags",
+   "file": "2nd Czechoslovak independent parachute brigade.png",
+   "text": "! scope=\"row\" | Second independent parachute brigade in the USSR|150x150px | 1944 | The obverse side of the flag used by the Second independent parachute brigade in the USSR during the Slovak National Uprising with the flag being lost in December 1944 and only a replica existing.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Historical flags",
+   "file": "Flag of the 2nd Czechoslovak regiment Tatranský.png",
+   "text": "! scope=\"row\" | Flag of the 2nd Czechoslovak regiment Tatranský|150x150px | 1917–1920 | The flag of the 2nd Czechoslovak regiment Tatranský of the Czechoslovak Legion in Russia. The other side has a bohemian lion on a red background instead. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Political flags",
+   "file": "Flag of the Republic Movement.svg",
+   "text": "! scope=\"row\" | | 2021–present | Republic Movement |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Political flags",
+   "file": "Flag of the For the People (political party).svg",
+   "text": "! scope=\"row\" | | 2019–present | For the People |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Political flags",
+   "file": "Flag of People's Party Our Slovakia.svg",
+   "text": "! scope=\"row\" | 150px150px | 2018–present2015–2018 | People's Party Our Slovakia |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Political flags",
+   "file": "Flag-KLSNS.svg",
+   "text": "! scope=\"row\" | 150px150px | 2018–present2015–2018 | People's Party Our Slovakia |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Political flags",
+   "file": "Flag of the Communist Party of Slovakia.svg",
+   "text": "! scope=\"row\" | | 2018–present | Communist Party of Slovakia |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Political flags",
+   "file": "Flag of the Christian Democratic Movement.svg",
+   "text": "! scope=\"row\" | | 1990–present | Christian Democratic Movement |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Political flags",
+   "file": "Flag of SNS.svg",
+   "text": "! scope=\"row\" | | 1990–present | Slovak National Party |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Political flags",
+   "file": "Flag of Slovak Togetherness.svg",
+   "text": "! scope=\"row\" | | 2005–2006 | Slovak Togetherness |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Political flags",
+   "file": "Flag of the Party of the Democratic Left (Slovakia).svg",
+   "text": "! scope=\"row\" | Link to file | 1990–2004 | Party of the Democratic Left |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Political flags",
+   "file": "Vlajka Německé strany (Slovensko).png",
+   "text": "! scope=\"row\" | | 1938–1945 | German Party |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Political flags",
+   "file": "Flag of the Hlinka party (1938–1945) variant 2.svg",
+   "text": "! scope=\"row\" | 150px150px | 1913–1945 | Slovak People's Party and Hlinka Guard |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Political flags",
+   "file": "Flag of the Hlinka party (1938–1945) variant 1.svg",
+   "text": "! scope=\"row\" | 150px150px | 1913–1945 | Slovak People's Party and Hlinka Guard |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Political flags",
+   "file": "Flag of the KSC.svg",
+   "text": "! scope=\"row\" | | ?–1990 | Communist Party of Czechoslovakia | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Slovak flags",
+   "section": "Ethnic Group Flags",
+   "file": "Flag of Carpathian Germans.svg",
+   "text": "! scope=\"row\" | | ?–present | Flag of the Carpathian Germans | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Slovaquie",
+   "section": "Apparence",
+   "file": "Sur base du fichier au format « .svg",
+   "text": "La loi du définit l'apparence du drapeau de la république slovaque. L'écu se blasonne ainsi : . Cette même loi fournit en annexe une représentation graphique du drapeau, dont les couleurs (blanc, bleu et rouge) sont définies comme suit : + Construction du drapeau et définition des couleurs.",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Slovaquie",
+   "section": "Apparence",
+   "file": "Flag of Slovakia (construction sheet).svg",
+   "text": "La loi du définit l'apparence du drapeau de la république slovaque. L'écu se blasonne ainsi : . Cette même loi fournit en annexe une représentation graphique du drapeau, dont les couleurs (blanc, bleu et rouge) sont définies comme suit : + Construction du drapeau et définition des couleurs.",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Slovaquie",
+   "section": "Histoire > Avant l'indépendance de la Tchécoslovaquie",
+   "file": "Coat of Arms of Hungary.svg",
+   "text": "| Armoiries actuelles de la Hongrie|alt=Armoiries actuelles de la Hongrie, à , les bandes horizontales de la dynastie Árpád : quatre d'argent et quatre de gueules, à , trois collines de sinople surmontées d'une double croix d'argent sur fond de gueules, dont la base est entourée par une couronne d'or placée sur la colline du milieu, la plus haute des trois. | Couverture des premiers statuts de la matica slovenská (1863) |alt=Couverture des statuts de la matica slovenská avec en son centre dans un ovale trois collines azur surmonté d'une croix d'argent à double bras sur fond gueules | Armoiries",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Slovaquie",
+   "section": "Histoire > Avant l'indépendance de la Tchécoslovaquie",
+   "file": "Obal Matica.jpg",
+   "text": "| Armoiries actuelles de la Hongrie|alt=Armoiries actuelles de la Hongrie, à , les bandes horizontales de la dynastie Árpád : quatre d'argent et quatre de gueules, à , trois collines de sinople surmontées d'une double croix d'argent sur fond de gueules, dont la base est entourée par une couronne d'or placée sur la colline du milieu, la plus haute des trois. | Couverture des premiers statuts de la matica slovenská (1863) |alt=Couverture des statuts de la matica slovenská avec en son centre dans un ovale trois collines azur surmonté d'une croix d'argent à double bras sur fond gueules | Armoiries",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Slovaquie",
+   "section": "Histoire > Avant l'indépendance de la Tchécoslovaquie",
+   "file": "Coat of Arms of Slovakia.svg",
+   "text": "| Armoiries actuelles de la Hongrie|alt=Armoiries actuelles de la Hongrie, à , les bandes horizontales de la dynastie Árpád : quatre d'argent et quatre de gueules, à , trois collines de sinople surmontées d'une double croix d'argent sur fond de gueules, dont la base est entourée par une couronne d'or placée sur la colline du milieu, la plus haute des trois. | Couverture des premiers statuts de la matica slovenská (1863) |alt=Couverture des statuts de la matica slovenská avec en son centre dans un ovale trois collines azur surmonté d'une croix d'argent à double bras sur fond gueules | Armoiries",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Slovaquie",
+   "section": "Histoire > Avant l'indépendance de la Tchécoslovaquie",
+   "file": "SlovenskaVlajka1848.png",
+   "text": "|Armoiries actuelles de la Hongrie |Couverture des premiers statuts de la matica slovenská (1863) |Armoiries actuelles de la Slovaquie |} La croix présente sur les armoiries serait d'origine byzantine : le roi Béla III (1171 – 1196) reçut une éducation à la cour de l'empereur de Constantinople et fut le premier à utiliser le symbole de la double croix sur le territoire du royaume de Hongrie. À partir du , la double croix déposée sur trois collines devint le symbole de la Haute-Hongrie et progressivement des Slovaques qui formaient la majorité de la population de cette partie du royaume Ce symb",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Slovaquie",
+   "section": "Histoire > Avant l'indépendance de la Tchécoslovaquie",
+   "file": "SlovenskaVlajka1848.png",
+   "text": "Drapeau des volontaires lors des mouvements révolutionnaires de 1848.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Slovaquie",
+   "section": "Histoire > Tchécoslovaquie et État slovaque",
+   "file": "Flag of Bohemia.svg",
+   "text": "Drapeau de Tchécoslovaquie de 1918 à 1920",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Slovaquie",
+   "section": "Histoire > Tchécoslovaquie et État slovaque",
+   "file": "Flag of Czechoslovakia.svg",
+   "text": "Drapeau de Tchécoslovaquie après 1920 et drapeau de la République tchèque depuis 1992.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Slovaquie",
+   "section": "Histoire > Tchécoslovaquie et État slovaque",
+   "file": "Flag of First Slovak Republic 1939-1945.svg",
+   "text": "Drapeau de Slovaquie entre 1939 et 1945",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Slovaquie",
+   "section": "Histoire > Tchécoslovaquie et État slovaque",
+   "file": "War ensign of the First Slovak Republic.svg",
+   "text": "Drapeau de guerre de Slovaquie entre 1939 et 1945",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Slovaquie",
+   "section": "Histoire > Tchécoslovaquie et État slovaque",
+   "file": "535 pluton Slowakow powstanie.jpg",
+   "text": "Le Peloton 535 pendant l'insurrection de Varsovie,1944",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Slovaquie",
+   "section": "Histoire > Slovaquie indépendante",
+   "file": "Slovenská vlajka a vlajka EU u NR.JPG",
+   "text": "Drapeaux slovaques aux côtés des drapeaux européens devant le Conseil national de la République slovaque|alt=Drapeaux slovaques aux côtés des drapeaux européens devant le Conseil national de la République slovaque",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Slovaquie",
+   "section": "Usage > Usage simultané avec d'autres drapeaux",
+   "file": "StarLG.jpg",
+   "text": "Le drapeau slovaque à et le drapeau de Košice - Staré Mesto à",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Slovaquie",
+   "section": "Variantes > Pavillons du yachting maritime slovaque",
+   "file": "Flag of Slovakia vertical.svg",
+   "text": "Drapeau national vertical dans une proportion 3:2.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Slovaquie",
+   "section": "Variantes > Pavillons du yachting maritime slovaque",
+   "file": "SK Offshore Yachting Burgee H.svg",
+   "text": "Drapeau national pour yacht en mer type horizontal.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Slovaquie",
+   "section": "Variantes > Pavillons du yachting maritime slovaque",
+   "file": "SK Offshore Yachting Burgee V.svg",
+   "text": "Drapeau national pour yacht en mer type vertical.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Slovaquie",
+   "section": "Variantes > Pavillons du yachting maritime slovaque",
+   "file": "Drapeau national de la Slovaquie pour yachts.jpg",
+   "text": "Drapeau national pour yacht sur la rivière Bodrog en Hongrie.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Slovaquie",
+   "section": "Variantes > Étendards présidentiels",
+   "file": "Flag of the President of Slovakia (1939-1945).svg",
+   "text": "0.7| Étendard du président de l'État slovaque de 1939 à 1945",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Slovaquie",
+   "section": "Variantes > Étendards présidentiels",
+   "file": "Flag of the President of Slovakia.svg",
+   "text": "0.7| Étendard du président de la république slovaque depuis 1993",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Slovaquie",
+   "section": "Drapeaux aux couleurs panslaves",
+   "file": "Pan-Slavic flag.svg",
+   "text": "Drapeau panslave, adopté à la convention panslave de Prague en 1848 .",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "sk",
+   "page": "Vlajka Slovenska",
+   "section": "intro",
+   "file": "Flag of Slovakia.svg",
+   "text": "Vlajka Slovenska",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "sk",
+   "page": "Vlajka Slovenska",
+   "section": "Opis",
+   "file": "Flag of Slovakia (construction sheet).svg",
+   "text": "Rozmiestnenie súčastí slovenskej vlajky",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "sk",
+   "page": "Vlajka Slovenska",
+   "section": "Opis",
+   "file": "Flag of Slovakia vertical.svg",
+   "text": "Vertikálna verzia vlajky",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "sk",
+   "page": "Vlajka Slovenska",
+   "section": "Dejiny > Stredovek > Veľká Morava",
+   "file": "Constantine and Helena. Mosaic in Saint Isaac's Cathedral.jpg",
+   "text": "Vexillum cisára Konštantína Veľkého, zvané labarum, s vyobrazeným Kristovým monogramom",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "sk",
+   "page": "Vlajka Slovenska",
+   "section": "Dejiny > Stredovek > Pečať mesta Nitra",
+   "file": "Coat of Arms of Nitra.svg",
+   "text": "Súčasný erb mesta Nitra",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "sk",
+   "page": "Vlajka Slovenska",
+   "section": "Historický vývoj",
+   "file": "Slovenská vlajka 1848.png",
+   "text": "| |valign=\"top\"| Vlajka zo Žiadostí slovenského národa z 11. mája 1848.",
+   "kind": "table"
+  },
+  {
+   "wiki": "sk",
+   "page": "Vlajka Slovenska",
+   "section": "Historický vývoj",
+   "file": "Slovenská vlajka 1848-1849.png",
+   "text": "| |valign=\"top\"| Vlajka používaná slovenským dobrovoľníckym zborom počas Slovenského povstania v rokoch 1848 – 1849. Neskôr sa stala vlajkou Slovenskej národnej rady.",
+   "kind": "table"
+  },
+  {
+   "wiki": "sk",
+   "page": "Vlajka Slovenska",
+   "section": "Historický vývoj",
+   "file": "Slovenská vlajka 1848 z.png",
+   "text": "| |valign=\"top\"| Jedna zo zástav, kde pod dvojkrížom už nebolo zelené, ale modré trojvršie, prvýkrát použitá v roku 1848 počas jesennej výpravy.",
+   "kind": "table"
+  },
+  {
+   "wiki": "sk",
+   "page": "Vlajka Slovenska",
+   "section": "Historický vývoj",
+   "file": "Slovenská vlajka 1849.png",
+   "text": "| |valign=\"top\"| Ďalšia zo zástav Slovákov používaná počas revolúcie.",
+   "kind": "table"
+  },
+  {
+   "wiki": "sk",
+   "page": "Vlajka Slovenska",
+   "section": "Historický vývoj",
+   "file": "Flag of First Slovak Republic 1939-1945.svg",
+   "text": "| |valign=\"top\"| Vlajka s týmto poradím farieb sa používala od rokov 1848/1849 a oficiálne bola ustanovená v roku 1868 ako vlajka Slovákov. Vo veľkom ju používali Slováci žijúci v Amerike a americké slovenské spolky. V rokoch 1919 – 1938 bola neoficiálnou vlajkou Slovenska a v rokoch 1938 – 1939 oficiálna vlajka autonómnej Slovenskej krajiny. V rokoch 1939 – 1945 oficiálna vlajka Slovenskej republiky a v období rokov 1990 – 1992 oficiálna vlajka Slovenska v rámci ČSFR.",
+   "kind": "table"
+  },
+  {
+   "wiki": "sk",
+   "page": "Vlajka Slovenska",
+   "section": "Historický vývoj",
+   "file": "Flag of Czechoslovak National Council.svg",
+   "text": "| |valign=\"top\"| Česko-slovenská vlajka z návrhu Milana Rastislava Štefánika, ktorá sa neskôr uplatnila, ako vlajka Československej národnej rady.",
+   "kind": "table"
+  },
+  {
+   "wiki": "sk",
+   "page": "Vlajka Slovenska",
+   "section": "Historický vývoj",
+   "file": "Flag of Bohemia.svg",
+   "text": "| |valign=\"top\"| Vlajka Československej republiky v rokoch 1918 – 1920, ktorá vychádzala zo zemskej vlajky Čiech. Podľa zákona ČNR 67/1990 Zb. bola tiež oficiálna, ale prakticky nepoužívaná vlajka Česka v rámci ČSFR od 13. marca 1990 do 31. decembra 1992.",
+   "kind": "table"
+  },
+  {
+   "wiki": "sk",
+   "page": "Vlajka Slovenska",
+   "section": "Historický vývoj",
+   "file": "Red flag.svg",
+   "text": "| |valign=\"top\"| Vlajka Slovenskej republiky rád, ktorá existovala iba krátkodobo (od 16. júna do 7. júla 1919).",
+   "kind": "table"
+  },
+  {
+   "wiki": "sk",
+   "page": "Vlajka Slovenska",
+   "section": "Historický vývoj",
+   "file": "Flag of the Czech Republic.svg",
+   "text": "| |valign=\"top\"| Vlajka Československa v rokoch 1920 až 1992 a tiež oficiálna vlajka Česka od 1. januára 1993.",
+   "kind": "table"
+  },
+  {
+   "wiki": "sk",
+   "page": "Vlajka Slovenska",
+   "section": "Historický vývoj",
+   "file": "Flag of Slovakia.svg",
+   "text": "| |valign=\"top\"| Vlajka Slovenska od 3. septembra 1992. |}",
+   "kind": "table"
+  }
+ ]
+}

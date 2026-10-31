@@ -1,0 +1,2684 @@
+{
+ "iso": "ar",
+ "flag_item": "Q130774",
+ "pages": [
+  "en:Flag of Argentina",
+  "en:List of Argentine flags",
+  "fr:Drapeau de l'Argentine",
+  "es:Bandera de la Argentina"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Argentina",
+   "section": "Design",
+   "file": "Casa Rosada exterior from Plaza de Mayo.JPG",
+   "text": "thumbnail| The flag at Plaza de Mayo, in front of the Casa Rosada.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Argentina",
+   "section": "Design > Sun of May",
+   "file": "Sol de mayo moneda.png",
+   "text": "thumbnail| The Sun of May on the first coin of the United Provinces of the Río de la Plata.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Argentina",
+   "section": "Design > Colors",
+   "file": "Flag of Argentina.svg",
+   "text": "!30pxColours scheme !! style=\"background-color:#74ACDF\"|Sky Blue !! style=\"background-color:#F6B40E\"|Yellow !! style=\"background-color:#85340A\"|Brown",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Argentina",
+   "section": "History > War of Independence > American Flag",
+   "file": "Bandera de la Provincia de Jujuy.svg",
+   "text": "Flag of the Civil Freedom of Argentina",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Argentina",
+   "section": "History > Argentine Republic",
+   "file": "Sol de Mayo-Bandera de Argentina.svg",
+   "text": "The Sun of May as it appears on the Argentine flag. It has 32 rays, alternately straight and wavy, and the details are picked out in brown. The inner sun's diameter is of the total figure's height, while the diameter of the sun equals the height of the white stripe.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "National flags",
+   "file": "Flag of Argentina.svg",
+   "text": "! scope=\"row\" | | 1861–present || National and state flag | A triband, composed of three equal horizontal bands colored light blue, white, and light blue with a yellow Sun of May in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "National flags",
+   "file": "Flag of Argentina (civil).svg",
+   "text": "! scope=\"row\" | | 1861–present | Optional civil flag | The flag of Argentina without the Sun of May.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "National flags",
+   "file": "Flag of Argentina (vertical with Sol de Mayo).svg",
+   "text": "! scope=\"row\" | 150x150px | 1818–present | Flag of Argentina (vertical) | A vertical triband, composed of three equal vertical bands coloured light blue, white, and light blue with a yellow Sun of May in the . |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Presidential standard",
+   "file": "Flag of the President of Argentina.svg",
+   "text": "! scope=\"row\" | | ?–present | Presidential standard of Argentina | The national flag of Argentina, with the text \"Argentine Republic\" inscribed in the top stripe, and \"Presidency of the Nation\" inscribed in the bottom stripe. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Army",
+   "file": "Bandera del Oficial Comandante de Infantería del Estado Mayor General (Argentina).svg",
+   "text": "! scope=\"row\" | | 1940s–present | Commanding Officer of Infantry of the General Staff |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Army",
+   "file": "Bandera del Oficial Comandante de un Ejército (Argentina).svg",
+   "text": "! scope=\"row\" | | 1940s–present | Commanding Officer of an Army |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Army",
+   "file": "Bandera del Oficial Comandante de la Rama de Infantería (Argentina).svg",
+   "text": "! scope=\"row\" | | 1940s–present | Commanding Officer of the Infantry Branch |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Army",
+   "file": "Bandera del Oficial Comandante del Cuerpo de Caballería (Argentina).svg",
+   "text": "! scope=\"row\" | | 1940s–present | Commanding Officer of the Cavalry Corps |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Army",
+   "file": "Bandera del Oficial Comandante de la Rama del Cuerpo de Caballería (Argentina).svg",
+   "text": "! scope=\"row\" | | 1940s–present | Commanding Officer of the Cavalry Corps Branch |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Army",
+   "file": "Bandera del Oficial Comandante del Cuerpo Mecanizado (Argentina).svg",
+   "text": "! scope=\"row\" | | 1940s–present | Commanding Officer of the Mechanized Corps |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Army",
+   "file": "Bandera del Oficial Comandante de Infantería del Cuerpo Mecanizado (Argentina).svg",
+   "text": "! scope=\"row\" | | 1940s–present | Commanding Officer of the Mechanized Infantry Corps |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Army",
+   "file": "Directora general instituciónes militares EA (bandera).svg",
+   "text": "! scope=\"row\" | | 1940s–present | Director General of the Military Institutions of the Argentine Land Force |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Army",
+   "file": "Mando de división EA (bandera).svg",
+   "text": "! scope=\"row\" | | 1940s–present | Army Division Commander |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Army",
+   "file": "Comando división de Caballería Argentina (bandera).svg",
+   "text": "! scope=\"row\" | | 1940s–present | Cavalry Division Commander |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Army",
+   "file": "Comandante de regimiento señales o ingenieros EA (bandera).svg",
+   "text": "! scope=\"row\" | | 1940s–present | Commander of an engineering regiment or a communications regiment |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Army",
+   "file": "Oficial de la rama militar de una gran formación EA.svg",
+   "text": "! scope=\"row\" | | 1940s–present | Officer in command of the unit |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Army",
+   "file": "Bandera del comandante de una división blindada.svg",
+   "text": "! scope=\"row\" | | 1940s–present | Commander of an armored division |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Army",
+   "file": "Bandera del comandante de un grupo blindado.svg",
+   "text": "! scope=\"row\" | | 1940s–present | Commander of an armored group |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Army",
+   "file": "Oficial batallón EA (banderín).svg",
+   "text": "! scope=\"row\" | | 1940s–present | Command of an Argentine battalion |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Army",
+   "file": "Flag of Argentine Teniente General (1894-1904).svg",
+   "text": "! scope=\"row\" | | rowspan=\"4\" | 1894–? | Lieutenant General |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Army",
+   "file": "Flag of Argentine General de División (1894-1904).svg",
+   "text": "! scope=\"row\" | | Major General |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Army",
+   "file": "Flag of Argentine General de Brigada (1894-1904).svg",
+   "text": "! scope=\"row\" | | Brigadier general |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Army",
+   "file": "Flag of Argentine Commandante Superior (1894-1904).svg",
+   "text": "! scope=\"row\" | | Superior Commander |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Army",
+   "file": "Military Flag of Argentine Confederation.svg",
+   "text": "! scope=\"row\" | | 1835–1850 | Example of a Federalist military flag |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Army",
+   "file": "Bandera del Ejército Auxiliar de Potosí (1813).jpg",
+   "text": "! scope=\"row\" | | 1813 | | In May 1813, the Auxiliary Army of Potosí departed from Potosí, and used a flag with three stripes with the text \"To arms for the independence of South America in the Army of the United Provinces of the Río de la Plata, under the protection of its General Our Lady of Mercedes\", this being the first instance of an Argentine flag with three stripes. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Naval ensign",
+   "file": "Pabellón naval estado Buenos Ayres.svg",
+   "text": "! scope=\"row\" | | 1852–1861 | Naval ensign of the State of Buenos Aires |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Naval ensign",
+   "file": "Flag of Unitarian Party (Navy).svg",
+   "text": "! scope=\"row\" | | 1840s–1852 | Naval ensign of Unitarian Party |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Naval ensign",
+   "file": "Federal Flag of Buenos Aires.svg",
+   "text": "! scope=\"row\" | | 1840s–1852 | Naval ensign of Argentine Confederation |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Naval ensign",
+   "file": "Flag de Marina Argentina (1818).svg",
+   "text": "! scope=\"row\" | | 1818–1820 | Naval ensign of United Provinces of the Río de la Plata | Similar to the national flag, but with a wider top stripe. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Jack",
+   "file": "Naval Jack of Argentina.svg",
+   "text": "! scope=\"row\" | | ?–present | Jack of the Argentine Navy | A white square with the Sun of May on a light blue field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Jack",
+   "file": "Navy Jack of Argentina (1818).svg",
+   "text": "! scope=\"row\" | | 1818 | Jack of United Provinces of the Río de la Plata | The national flag with eight stars encircling the Sun of May. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Standard of the President of Argentina Afloat.svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 1920s–present | President of Argentina |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Bandera del ministro de marina de la armada Argentina.svg",
+   "text": "! scope=\"row\" | | Minister of the Navy |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Jefe de operaciones navales armada Argentina (bandera).svg",
+   "text": "! scope=\"row\" | | rowspan=\"11\" | 1930s–present | Supreme Commander of the Navy |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Almirante de la armada Argentina (bandera).svg",
+   "text": "! scope=\"row\" | | Admiral of the fleet |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Almirante armada Argentina (bandera).svg",
+   "text": "! scope=\"row\" | | Admiral |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Vicealmirante armada Argentina (bandera).svg",
+   "text": "! scope=\"row\" | | Vice admiral |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Contraalmirante armada Argentina (bandera).svg",
+   "text": "! scope=\"row\" | | Rear admiral |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Capitán de navío armada Argentina.svg",
+   "text": "! scope=\"row\" | | Captain commanding a Naval or Naval Air Force |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Banderín mando flota naval o aviador naval armada Argentina.svg",
+   "text": "! scope=\"row\" | | Commander of a Fleet, Naval or Naval Air Force |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Banderín comandante fuerza operativa armada Argentina.svg",
+   "text": "! scope=\"row\" | | Commander of a Task Force, Naval or Naval Air Force |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Banderín comandante de la división naval armada Argentina.svg",
+   "text": "! scope=\"row\" | | Commander of a Fleet Naval Division |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Comandante escuadrón aviación naval Argentina (banderín).svg",
+   "text": "! scope=\"row\" | | Squadron Commander of Naval Air Force |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Oficial mayor inspección portuaria amada Argentina (banderín).svg",
+   "text": "! scope=\"row\" | | Senior Officer |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Almirante de infantería de armada Argentina (bandera).svg",
+   "text": "! scope=\"row\" | | rowspan=\"7\" | 1930s–present | Admiral |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Vicealmirante infantería de armada Argentina (bandera).svg",
+   "text": "! scope=\"row\" | | Vice admiral |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Contraalmirante de infantería de marina Argentina (bandera).svg",
+   "text": "! scope=\"row\" | | Rear admiral |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Capitán infantería marina en el servicio de mando Argentina (bandera).svg",
+   "text": "! scope=\"row\" | | Captain |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Comandante a cargo una rama infantería armada Argentina (banderín).svg",
+   "text": "! scope=\"row\" | | Commander in charge |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Comandante unidad armada Argentina (banderín).svg",
+   "text": "! scope=\"row\" | | Commander of the armed unit |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Oficial bandera sin comando infantería armada Argentina (bandera).svg",
+   "text": "! scope=\"row\" | | Officer without Command |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Standard of the President of Argentina (until 1904).svg",
+   "text": "! scope=\"row\" | | rowspan=\"4\" | 1894–1920s | President of Argentina |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Flag of Argentine Ministers of Navy (1894-1904).svg",
+   "text": "! scope=\"row\" | | Minister of the Navy |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Bandera del ministro en jefe del estado mayor Argentina.svg",
+   "text": "! scope=\"row\" | | Minister in Chief of the General Staff |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Flag of Argentine Ministers of State (1894-1904).svg",
+   "text": "! scope=\"row\" | | Ministers of State |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Flag of Argentine Admiral (1894-1904).svg",
+   "text": "! scope=\"row\" | | rowspan=\"5\" | 1894–1930s | Admiral |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Flag of Argentine Vice Admiral (1894-1904).svg",
+   "text": "! scope=\"row\" | | Vice admiral |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Flag of Argentine Rear Admiral (1894-1904).svg",
+   "text": "! scope=\"row\" | | Rear admiral |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Flag of Argentine Captain Adjutant-General (1894-1904).svg",
+   "text": "! scope=\"row\" | | Captain Adjutant-General |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Flag of Argentine Captain in Command (1894-1904).svg",
+   "text": "! scope=\"row\" | | Captain in Command |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Comandante Superior de la armada Argentina (bandera. siglo XIX).svg",
+   "text": "! scope=\"row\" | | rowspan=\"8\" | 19th century | Commander-in-Chief of the Navy |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Contralmirante con mando de fuerza naval subordinada de la armada Argentina (bandera. siglo XIX).svg",
+   "text": "! scope=\"row\" | | Rear admiral in command of a subordinate naval force |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Vice-almirante con mando de fuerza naval subordinada de la armada Argentina (bandera. siglo XIX).svg",
+   "text": "! scope=\"row\" | | Vice admiral in command of a subordinate naval force |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Capitán de navío con mando de fuerza naval subordinada de la armada Argentina (bandera. siglo XIX).svg",
+   "text": "! scope=\"row\" | | Captain in command of a subordinate naval force |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Almirante jefe de arsenal de la armada Argentina (bandera. siglo XIX).svg",
+   "text": "! scope=\"row\" | | Admiral Chief of Arsenal |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Vice-almirante jefe de arsenal de la armada Argentina (bandera. siglo XIX).svg",
+   "text": "! scope=\"row\" | | Vice admiral Chief of Arsenal |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Contraalmirante jefe de arsenal de la armada Argentina (bandera. siglo XIX).svg",
+   "text": "! scope=\"row\" | | Rear admiral Chief of Arsenal |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Rank flags",
+   "file": "Capitán de navío jefe de arsenal de la armada Argentina (bandera. siglo XIX).svg",
+   "text": "! scope=\"row\" | | Captain Chief of Arsenal | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Other",
+   "file": "Banderín de la Armada de la República Argentina.svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | ?–present | War pennant |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Other",
+   "file": "Flag of excellent readiness to battle award.svg",
+   "text": "! scope=\"row\" | | Flag of excellent readiness to battle award |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Other",
+   "file": "Bandera de Los Pozos IB.svg",
+   "text": "! scope=\"row\" | | 1826 | Admiral William Brown's private flag given to him by the women after the Battle of Los Pozos. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Other",
+   "file": "Flag of the privateers in the service of the League of the Free Peoples 1.svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 1815–1820 | rowspan=\"2\" | Flag of the privateers in the service of the League of the Free Peoples |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Argentine Navy > Other",
+   "file": "Flag of the privateers in the service of the League of the Free Peoples 2.svg",
+   "text": "! scope=\"row\" | | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Air force",
+   "file": "Bandera del Comandante de Establecimientos Aeronáuticos (FAA).svg",
+   "text": "! scope=\"row\" | | 1940s–present | Commander of Aeronautical Establishments |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Air force",
+   "file": "Bandera del Comandante en Jefe de la FAA.svg",
+   "text": "! scope=\"row\" | | 1940s–present | Commander-in-Chief |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Air force",
+   "file": "Bandera del Cuartel Maestre General (FAA).svg",
+   "text": "! scope=\"row\" | | 1940s–present | Quartermaster general |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Air force",
+   "file": "Bandera del Comandante de la Fuerza Aérea Estratégica (FAA).svg",
+   "text": "! scope=\"row\" | | 1940s–present | Commander of the Strategic Air Force |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Air force",
+   "file": "Bandera del Comandante de la Fuerza Aérea Estratégica (FAA).svg",
+   "text": "! scope=\"row\" | | 1940s–present | Commander of the Tactical Air Force |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Air force",
+   "file": "Bandera del Comandante de la Defensa Antiaérea (FAA).svg",
+   "text": "! scope=\"row\" | | 1940s–present | Air Defense commander |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Air force",
+   "file": "Bandera del Comandante del Transporte Aéreo (FAA).svg",
+   "text": "! scope=\"row\" | | 1940s–present | Air Transport commander |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Air force",
+   "file": "Bandera servicio oficial al mando grupo aéreo FAA.svg",
+   "text": "! scope=\"row\" | | 1940s–present | Air Group commander |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Air force",
+   "file": "Bandera servicio oficial al mando grupo base aérea FAA.svg",
+   "text": "! scope=\"row\" | | 1940s–present | Air Group commander at the base |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Air force",
+   "file": "Bandera de servicio oficial al mando grupo aéreo técnico base aérea (FAA).svg",
+   "text": "! scope=\"row\" | | 1940s–present | Commander of the Aviation Technical Group at the base |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Air force",
+   "file": "Oficial al mando de un ala FAA (bandera).svg",
+   "text": "! scope=\"row\" | | 1940s–present | Squadron commander |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Air force",
+   "file": "Bandera del Ministro de Aeronáutica (FAA).svg",
+   "text": "! scope=\"row\" | | 1945–1958 | Minister of Aeronautics | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Military schools",
+   "file": "Bandera del Director del Colegio Militar Nacional de Argentina.svg",
+   "text": "! scope=\"row\" | | ?–present | Director of the National Military College |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Military schools",
+   "file": "Bandera del Director de la Escuela de Suboficiales Sargento Cabral (Argentina).svg",
+   "text": "! scope=\"row\" | | ?–present | Director of the \"Sgt. Cabral\" N.C.O.'s School |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Military schools",
+   "file": "Bandera del Director de la Escuela de los Servicios para Apoyo de Combate General Lemos (Argentina).svg",
+   "text": "! scope=\"row\" | | ?–present | Director of the \"General Lemos\" School for Professional Corps |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Military schools",
+   "file": "Bandera del Director de la Escuela de Mecánicos de Ingenieros Luis Beltrán (Argentina).svg",
+   "text": "! scope=\"row\" | | ?–present | Director of the \"Luis Beltran\" School for Engineer Mechanics |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Military schools",
+   "file": "Bandera del Director de la Escuela Superior de Guerra (Argentina).svg",
+   "text": "! scope=\"row\" | | ?–present | Director of the Advanced War Training School |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Military schools",
+   "file": "Bandera del Director de una Academia Militar (Argentina).svg",
+   "text": "! scope=\"row\" | | ?–present | Director of a Military Academy |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Military schools",
+   "file": "Bandera del Director de la Escuela de Infantería (Argentina).svg",
+   "text": "! scope=\"row\" | | ?–present | Director of the Infantry School |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Military schools",
+   "file": "Bandera del Director de la Escuela Superior Técnica (Argentina).svg",
+   "text": "! scope=\"row\" | | ?–present | Director of the Advanced Technical School |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Military schools",
+   "file": "Director de la escuela de la fuerza aérea Argentina (bandera).svg",
+   "text": "! scope=\"row\" | | ?–present | Director of the Air Force School |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Military schools",
+   "file": "Director escuela fuerza aérea operaciones de guerra Argentina (bandera).svg",
+   "text": "! scope=\"row\" | | ?–present | Director of the Air Force War Operations School |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Military schools",
+   "file": "Director de la escuela de aviación militar general FAA (Bandera).svg",
+   "text": "! scope=\"row\" | | ?–present | Director of the Military Aviation School | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Veterans",
+   "file": "Bandera de los veteranos del ejército de Argentina.svg",
+   "text": "! scope=\"row\" | | 2013–present | rowspan=\"2\" | Flag of veterans of the Malvinas War | Vertically fringed cloth loaded in its by a radiant sun, similar to that of the National Flag behind this two lines of equal size of upper red and lower black, symbolizing the blood spilled in the operation theater and the black line the footprint of the ground forces (Argentine Army). On the upper end three broken lines is a symbol of the winds representing the Argentine Air Force. Lower edge wavy movement of lines is a symbol of the Argentine Navy. Thus leaving the veterans' flag with the three weapons that",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Military > Veterans",
+   "file": "War Veterans Flag.svg",
+   "text": "! scope=\"row\" | | ?–2013 | Argentine triband with a black profile of the Malvinas islands in the instead of the Sun of May. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Argentine Naval Prefecture",
+   "file": "Bandera de Prefectura Naval Argentina.svg",
+   "text": "! scope=\"row\" | | 1930s–present | Argentine Naval Prefecture |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Argentine Naval Prefecture",
+   "file": "Former flag of Argentine Naval Prefecture.svg",
+   "text": "! scope=\"row\" | | 1924–1930s | Argentine Naval Prefecture | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "National Gendarmerie",
+   "file": "Bandera de la Gendarmeria Argentina II.svg",
+   "text": "! scope=\"row\" | | 1938–present | Argentine National Gendarmerie | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Police",
+   "file": "Flag of the Argentine Federal Police.svg",
+   "text": "! scope=\"row\" | | 1943–present | Argentine Federal Police | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Government",
+   "file": "Flag of the Argentine Ministry of Finance (ca. 1926).svg",
+   "text": "! scope=\"row\" | | ?–? | Ministry of Finance |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Government",
+   "file": "Flag of the Argentine Health Service (ca. 1926).svg",
+   "text": "! scope=\"row\" | | ?–? | Ministry of Health | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Civil ensign",
+   "file": "Flag of Argentina (civil).svg",
+   "text": "! scope=\"row\" | | ?–present | Civil ensign |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Civil ensign",
+   "file": "Bandera piloto de la armada Argentina II.svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | ?–present | rowspan=\"2\" | Pilot flag |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Civil ensign",
+   "file": "Bandera piloto de la armada Argentina.svg",
+   "text": "! scope=\"row\" |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Civil ensign",
+   "file": "Bandera marina mercante estado de Buenos Aires.svg",
+   "text": "! scope=\"row\" | | 1852–1861 | Merchant flag of the State of Buenos Aires |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Civil ensign",
+   "file": "Pilot flag of Buenos Aires (19th century).svg",
+   "text": "! scope=\"row\" | | 19th century | Pilot flag Buenos Aires | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Bandera de la Ciudad de Buenos Aires.svg",
+   "text": "! scope=\"row\" | | 1995–present | | Buenos Aires City |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Autonomous City of Buenos Aires in Argentina.svg",
+   "text": "! scope=\"row\" | | 1995–present | | Buenos Aires City |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Bandera de la Provincia de Buenos Aires.svg",
+   "text": "! scope=\"row\" | | 1997–present | | Buenos Aires Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Buenos Aires Province in Argentina.svg",
+   "text": "! scope=\"row\" | | 1997–present | | Buenos Aires Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Bandera de la Provincia de Catamarca.svg",
+   "text": "! scope=\"row\" | | 2011–present | | Catamarca Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Catamarca in Argentina.svg",
+   "text": "! scope=\"row\" | | 2011–present | | Catamarca Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Bandera de la Provincia del Chaco.svg",
+   "text": "! scope=\"row\" | | 2007–present | | Chaco Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Chaco in Argentina.svg",
+   "text": "! scope=\"row\" | | 2007–present | | Chaco Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Bandera de la Provincia del Chubut.svg",
+   "text": "! scope=\"row\" | | 2004–present | | Chubut Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Chubut in Argentina.svg",
+   "text": "! scope=\"row\" | | 2004–present | | Chubut Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Bandera de la Provincia de Córdoba 2014.svg",
+   "text": "! scope=\"row\" | | 2014–present | | Córdoba Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Cordoba in Argentina.svg",
+   "text": "! scope=\"row\" | | 2014–present | | Córdoba Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Bandera de la Provincia de Corrientes.svg",
+   "text": "! scope=\"row\" | | 1986–present | | Corrientes Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Corrientes in Argentina.svg",
+   "text": "! scope=\"row\" | | 1986–present | | Corrientes Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Bandera de la Provincia de Entre Ríos.svg",
+   "text": "! scope=\"row\" | | 1987–present | | Entre Ríos Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Entre Rios in Argentina.svg",
+   "text": "! scope=\"row\" | | 1987–present | | Entre Ríos Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Bandera de la Provincia de Formosa.svg",
+   "text": "! scope=\"row\" | | 1991–present | | Formosa Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Formosa in Argentina.svg",
+   "text": "! scope=\"row\" | | 1991–present | | Formosa Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Bandera de la Provincia de Jujuy.svg",
+   "text": "! scope=\"row\" | 150x150px | 1994–present | | Jujuy Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Jujuy in Argentina.svg",
+   "text": "! scope=\"row\" | 150x150px | 1994–present | | Jujuy Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Bandera de la Provincia de La Pampa.svg",
+   "text": "! scope=\"row\" | | 1993–present | | La Pampa Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "La Pampa in Argentina.svg",
+   "text": "! scope=\"row\" | | 1993–present | | La Pampa Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Bandera de la Provincia de La Rioja.svg",
+   "text": "! scope=\"row\" | | 1986–present | | La Rioja Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "La Rioja in Argentina.svg",
+   "text": "! scope=\"row\" | | 1986–present | | La Rioja Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Bandera de la Provincia de Mendoza.svg",
+   "text": "! scope=\"row\" | 150x150px | 1992–present | | Mendoza Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Mendoza in Argentina.svg",
+   "text": "! scope=\"row\" | 150x150px | 1992–present | | Mendoza Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Bandera de la Provincia de Misiones.svg",
+   "text": "! scope=\"row\" | | 1992–present | | Misiones Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Misiones in Argentina.svg",
+   "text": "! scope=\"row\" | | 1992–present | | Misiones Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Bandera de la Provincia del Neuquen.svg",
+   "text": "! scope=\"row\" | | 1989–present | | Neuquén Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Neuquen in Argentina.svg",
+   "text": "! scope=\"row\" | | 1989–present | | Neuquén Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Bandera de la Provincia del Río Negro.svg",
+   "text": "! scope=\"row\" | | 2009–present | | Río Negro Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Rio Negro in Argentina.svg",
+   "text": "! scope=\"row\" | | 2009–present | | Río Negro Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Bandera de la Provincia de Salta.svg",
+   "text": "! scope=\"row\" | | 1997–present | | Salta Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Salta in Argentina.svg",
+   "text": "! scope=\"row\" | | 1997–present | | Salta Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Flag of the San Juan Province.svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 2018–present | rowspan=\"2\" | | rowspan=\"2\" | San Juan Province | rowspan=\"2\" |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "San Juan in Argentina.svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 2018–present | rowspan=\"2\" | | rowspan=\"2\" | San Juan Province | rowspan=\"2\" |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Flag of the San Juan Province (reverse).svg",
+   "text": "! scope=\"row\" |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Bandera de la Provincia de San Luis.svg",
+   "text": "! scope=\"row\" | | 1988–present | | San Luis Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "San Luis in Argentina.svg",
+   "text": "! scope=\"row\" | | 1988–present | | San Luis Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Bandera de la Provincia de Santa Cruz.svg",
+   "text": "! scope=\"row\" | | 2000–present | | Santa Cruz Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Santa Cruz in Argentina.svg",
+   "text": "! scope=\"row\" | | 2000–present | | Santa Cruz Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Bandera de la Provincia de Santa Fe.svg",
+   "text": "! scope=\"row\" | | 1986–present1822–1880 | | Santa Fe Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Santa Fe in Argentina.svg",
+   "text": "! scope=\"row\" | | 1986–present1822–1880 | | Santa Fe Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Bandera de la Provincia de Santiago del Estero.svg",
+   "text": "! scope=\"row\" | | 1985–present | | Santiago del Estero Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Santiago del Estero in Argentina.svg",
+   "text": "! scope=\"row\" | | 1985–present | | Santiago del Estero Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Bandera de la Provincia de Tierra del Fuego.svg",
+   "text": "! scope=\"row\" | | 1999–present | | Tierra del Fuego Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Tierra del Fuego, Antartida e Islas del Atlantico Sur in Argentina.svg",
+   "text": "! scope=\"row\" | | 1999–present | | Tierra del Fuego Province |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Bandera de la Provincia de Tucumán.svg",
+   "text": "! scope=\"row\" | | 2010–present | | Tucumán Province | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "First-level administrative divisions",
+   "file": "Tucuman in Argentina.svg",
+   "text": "! scope=\"row\" | | 2010–present | | Tucumán Province | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > National flags",
+   "file": "Flag of the Argentine Confederation.svg",
+   "text": "! scope=\"row\" | | 1850–1861 | rowspan=\"3\" | Flag of the Argentine Confederation | Three equal horizontal bands, the upper and lower bands are dark blue, and the middle band is white. A red Sun of May is depicted on the white band. Four red Phrygian caps are placed in the corners.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > National flags",
+   "file": "Flag of Argentina (1840).svg",
+   "text": "! scope=\"row\" | | 1835–1852 | Three equal horizontal bands, the upper and lower bands are dark blue, and the middle band is white. A red Sun of May is depicted on the white band. Four red Phrygian caps mounted on pikes are placed in the corners.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > National flags",
+   "file": "Flag of Liga Federal.svg",
+   "text": "! scope=\"row\" | | 1831–1835 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > National flags",
+   "file": "Flag of Artigas.svg",
+   "text": "! scope=\"row\" | | 1815–1820 | rowspan=\"3\" | Flag of League of the Free Peoples",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > National flags",
+   "file": "Flag of Artigas 1815.svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 1815 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > National flags",
+   "file": "One of the early flags of the League of the Free Peoples.svg",
+   "text": "! scope=\"row\" | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > National flags",
+   "file": "Flag of Argentina (1818).svg",
+   "text": "! scope=\"row\" | | 1818 | rowspan=\"3\" | Flag of the United Provinces of the Río de la Plata |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > National flags",
+   "file": "Flag of Argentina (civil).svg",
+   "text": "! scope=\"row\" | | 1816–1818 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > National flags",
+   "file": "Flag of Spain (1785–1873, 1875–1931).svg",
+   "text": "! scope=\"row\" | | 1810–1816 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > National flags",
+   "file": "Flag of the Kingdom of Araucanía and Patagonia.svg",
+   "text": "! scope=\"row\" | | 1860–1862 | Flag of the Kingdom of Araucania and Patagonia |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > National flags",
+   "file": "Flag of the State of Buenos Aires (1852-1861).svg",
+   "text": "! scope=\"row\" | | 1852–1861 | Flag of the State of Buenos Aires | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > Other historical flags",
+   "file": "Flag of Rosas.svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 1836 | rowspan=\"2\" | Flag of the Argentine Confederation used by several nationalists with the text \"Viva la Confederación Argentina!\", \"Mueran los Salvajes Unitarios!\" (Long live the Argentine Confederation! Death to the savage Unitarians!) | rowspan=\"2\" |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > Other historical flags",
+   "file": "Flag of Rosas (Variant).svg",
+   "text": "! scope=\"row\" |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > Other historical flags",
+   "file": "República de La Boca.svg",
+   "text": "! scope=\"row\" | | (Unclear, either 1876 or 1882) | Unofficial flag of the , a recurrent micronation consisting of the neighborhood of La Boca in Buenos Aires. | The blue, white, and blue triband of Argentina, with the coat of arms of Savoy crowned with a Phrygian cap in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > Other historical flags",
+   "file": "Flag of Selk'nam people in Chile.svg",
+   "text": "! scope=\"row\" | | 1890s | Flag of the Selk'nam Genocide survivors |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > Other historical flags",
+   "file": "The original flag of the Army of the Andes, photographed during its restoration.png",
+   "text": "! scope=\"row\" | 150x150px | 1817–1820 | Flag of the Army of the Andes |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > Other historical flags",
+   "file": "Bandera de la Provincia de Jujuy.svg",
+   "text": "! scope=\"row\" | 150x150px | 1813 | Flag of the Civil Freedom of Argentina |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > Other historical flags",
+   "file": "Flag of Quiroga 1.svg",
+   "text": "! scope=\"row\" | | rowspan=\"4\" | 1820s | rowspan=\"4\" | Revolutionary flags used by Facundo Quiroga |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > Other historical flags",
+   "file": "Flag of Quiroga 2.svg",
+   "text": "! scope=\"row\" | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > Other historical flags",
+   "file": "Flag of Quiroga 3.svg",
+   "text": "! scope=\"row\" | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > Other historical flags",
+   "file": "Flag of Quiroga 4.svg",
+   "text": "! scope=\"row\" | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > Other historical flags",
+   "file": "Flag of Argentina (civil).svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 1812–? | rowspan=\"2\" | Flags used by Army of the North |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > Other historical flags",
+   "file": "Bandera de la Provincia de Tucumán.svg",
+   "text": "! scope=\"row\" | | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > Other historical flags > British Invasion-era flags preserved by Argentina",
+   "file": "1st Battalion, 71st Regiment of Foot Colours.svg",
+   "text": "! scope=\"row\" | | rowspan=\"5\" | 1806 | 1st Battalion, 71st Regiment of Foot | rowspan=\"7\" | Flags captured from the British military during the British invasions of the River Plate",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > Other historical flags > British Invasion-era flags preserved by Argentina",
+   "file": "2nd Battalion, 71st Regiment of Foot Colours.svg",
+   "text": "! scope=\"row\" | | 2nd Battalion, 71st Regiment of Foot",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > Other historical flags > British Invasion-era flags preserved by Argentina",
+   "file": "Royal Marines Battalion Colours.svg",
+   "text": "! scope=\"row\" | | Royal Marines Battalion",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > Other historical flags > British Invasion-era flags preserved by Argentina",
+   "file": "Flag of the United Kingdom (1806).svg",
+   "text": "! scope=\"row\" | | Flag of the United Kingdom",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > Other historical flags > British Invasion-era flags preserved by Argentina",
+   "file": "71st Regiment of Foot Guidon.svg",
+   "text": "! scope=\"row\" | | 71st Regiment of Foot Guidon",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > Other historical flags > British Invasion-era flags preserved by Argentina",
+   "file": "Saint Helena Regiment Flag.svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 1807 | Saint Helena Regiment or Rifle Corps of the 95th Infantry Regiment",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > Other historical flags > British Invasion-era flags preserved by Argentina",
+   "file": "British Naval Red Ensign (1807).svg",
+   "text": "! scope=\"row\" | | British Red Ensign |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > Proposed flags",
+   "file": "Proposed Civil Flag for Argentina 1.svg",
+   "text": "! scope=\"row\" | | rowspan=\"4\" | 1931 | rowspan=\"4\" | Proposed civil flag |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > Proposed flags",
+   "file": "Proposed Civil Flag for Argentina 2.svg",
+   "text": "! scope=\"row\" | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > Proposed flags",
+   "file": "Proposed Civil Flag for Argentina 3.svg",
+   "text": "! scope=\"row\" | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > Proposed flags",
+   "file": "Proposed Civil Flag for Argentina 4.svg",
+   "text": "! scope=\"row\" | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Historical flags > Proposed flags",
+   "file": "Bandera de la Patagonia.png",
+   "text": "! scope=\"row\" | alt=|| | |Flag proposal for Argentine Patagonia | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Ethnic groups flags",
+   "file": "Flag of the Comechingon people.svg",
+   "text": "! scope=\"row\" | | 2016–present | Comechingón |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Ethnic groups flags",
+   "file": "Bandera del pueblo guaraní.svg",
+   "text": "! scope=\"row\" | | 2000s–present | Guaraní | Flag of the Guarani in Argentina.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Ethnic groups flags",
+   "file": "Bandera del pueblo Lule.svg",
+   "text": "! scope=\"row\" | | | Lule |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Ethnic groups flags",
+   "file": "Tehuelche flag.svg",
+   "text": "! scope=\"row\" | | 1991–present | Mapuche | Flag of the Mapuches in Argentina. Once represented also Tehuelche people.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Ethnic groups flags",
+   "file": "Bandera del pueblo Mocoví.svg",
+   "text": "! scope=\"row\" | | 2009–present | Mocoví |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Ethnic groups flags",
+   "file": "Bandera del pueblo Pilagá.svg",
+   "text": "! scope=\"row\" | | | Pilagá |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Ethnic groups flags",
+   "file": "Bandera del pueblo Selknam.svg",
+   "text": "! scope=\"row\" | | 1990s–present | Selkʼnam |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Ethnic groups flags",
+   "file": "Flag of the Tehuelche People.svg",
+   "text": "! scope=\"row\" | | 2012–present | Tehuelche |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Ethnic groups flags",
+   "file": "Bandera del pueblo Qom (tricolor).svg",
+   "text": "! scope=\"row\" | | | rowspan=\"2\" | Toba |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Ethnic groups flags",
+   "file": "Bandera del pueblo Qom.svg",
+   "text": "! scope=\"row\" | | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Ethnic groups flags",
+   "file": "Bandera del pueblo Tonokoté.svg",
+   "text": "! scope=\"row\" | | | Tonocoté |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Ethnic groups flags",
+   "file": "Bandera del pueblo Wichi.svg",
+   "text": "! scope=\"row\" | | | Wichí |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Ethnic groups flags",
+   "file": "Flag of the Welsh colony in Chubut, Argentina (Y Wladfa).svg",
+   "text": "! scope=\"row\" | | 19th century – | rowspan=\"2\" | Y Wladfa | Reconstruction of the flag used in the 19th century, at least in 1865. Has gained popularity in recent years.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Ethnic groups flags",
+   "file": "Flag of the Welsh colony in Patagonia.svg",
+   "text": "! scope=\"row\" | | | Flag of Puerto Madryn. Argentina flag with Welsh Dragon. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Political flags",
+   "file": "Flag of the Communist Party of Argentina (Extraordinary Congress).svg",
+   "text": "! scope=\"row\" | | 1997–present | Communist Party – Extraordinary Congress |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Political flags",
+   "file": "Flag of Justicialist Party 2.svg",
+   "text": "! scope=\"row\" | | 1946–present | Justicialist Party |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Political flags",
+   "file": "Flag of Socialist Party (Argentina).svg",
+   "text": "! scope=\"row\" | | 1896–present | Socialist Party |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Political flags",
+   "file": "Flag of Radical Civic Union.svg",
+   "text": "! scope=\"row\" | | 1893–present | Radical Civic Union |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Political flags",
+   "file": "Flag of New Triumph Party.svg",
+   "text": "! scope=\"row\" | | 1990–2009 | New Triumph Party |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Political flags",
+   "file": "Bandera del PRT.svg",
+   "text": "! scope=\"row\" | | rowspan=\"2\" | 1965–1980 | rowspan=\"2\" | Workers' Revolutionary Party |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Political flags",
+   "file": "Bandera del Partido Revolucionario de los Trabajadores.svg",
+   "text": "! scope=\"row\" | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Political flags",
+   "file": "Flag of Tacuara Nationalist Movement.svg",
+   "text": "! scope=\"row\" | | 1957–1966 | Tacuara Nationalist Movement |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Political flags",
+   "file": "Single Color Flag - 0434B1.svg",
+   "text": "! scope=\"row\" | | 1931–1958 | National Democratic Party |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Political flags",
+   "file": "Flag of Argentine Nacionalistas.svg",
+   "text": "! scope=\"row\" | | rowspan=\"3\" | 1919–1939 | rowspan=\"3\" | Argentine Patriotic League, National Fascist Union, and Nationalist Liberation Alliance |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Political flags",
+   "file": "Flag of Fascist Party of Argentina.svg",
+   "text": "! scope=\"row\" | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Political flags",
+   "file": "Bandera de la alianza libertadora nacionalista.jpg",
+   "text": "! scope=\"row\" | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Political flags",
+   "file": "Bandera de la Unión Cívica.svg",
+   "text": "! scope=\"row\" | | 1890–1891 | Civic Union |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Political flags",
+   "file": "Mães da Praça de Maio2.JPG",
+   "text": "! scope=\"row\" | | 1977–present | Mothers of the Plaza de Mayo |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Political flags",
+   "file": "Flag of the Argentine Agrarian Federation (AFA).svg",
+   "text": "! scope=\"row\" | | 1912–present | Argentine Agrarian Federation | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Political flags > Rebel groups flags",
+   "file": "Bandera del ERP-22 de Agosto.svg",
+   "text": "! scope=\"row\" | | 1973–1974 | People's Revolutionary Army of 22 August |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Political flags > Rebel groups flags",
+   "file": "Flag of CPL.svg",
+   "text": "! scope=\"row\" | | 1973–1974 | Popular Liberation Commandses |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Political flags > Rebel groups flags",
+   "file": "Flag of OCPO.svg",
+   "text": "! scope=\"row\" | | 1973–1975 | Workers Power Communist Organizationes |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Political flags > Rebel groups flags",
+   "file": "Flag of Montoneros.svg",
+   "text": "! scope=\"row\" | | 1970–1981 | Montoneros |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Political flags > Rebel groups flags",
+   "file": "Bandera del ERP.svg",
+   "text": "! scope=\"row\" | | 1970–1976 | People's Revolutionary Army | rowspan=\"2\" | Two horizontal stripes (light blue and white) symbolizing the \"first independence\", with an additional red star symbolizing the \"second and final independence.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Political flags > Rebel groups flags",
+   "file": "Bandera de la Compañía de Monte RRJ (ERP).svg",
+   "text": "! scope=\"row\" | | 1970–1975 | People's Revolutionary Army - Monte Ramón Rosa Jiménez Company",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Political flags > Rebel groups flags",
+   "file": "BanderaGEL.png",
+   "text": "! scope=\"row\" | | 1968–1972 | Guerrilla of the Liberation Armyes |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Political flags > Rebel groups flags",
+   "file": "Bandera del Ejército Guerrillero del Pueblo.svg",
+   "text": "! scope=\"row\" | | 1963–1964 | People's Guerrilla Armyes |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Political flags > Rebel groups flags",
+   "file": "Bandera de Uturuncos.svg",
+   "text": "! scope=\"row\" | | 1955–1973 | Uturuncoses | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Argentine Red Cross",
+   "file": "Flag of the Argentine Red Cross.svg",
+   "text": "! scope=\"row\" | | ?–present | Argentine Red Cross |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Argentine Red Cross",
+   "file": "Old flag of the Argentine Red Cross.svg",
+   "text": "! scope=\"row\" | | ?–? | Argentine Red Cross | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Scouts de Argentina",
+   "file": "Flag of Scouts de Argentina.png",
+   "text": "! scope=\"row\" | | ?–present | Scouts de Argentina | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Sporting flags",
+   "file": "Flag of the Argentine Olympic Committee.svg",
+   "text": "! scope=\"row\" | | ?–present | Argentine Olympic Committee |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Sporting flags",
+   "file": "Banderade Asociación Argentina de Football (1912-?).svg",
+   "text": "! scope=\"row\" | | 1912–? | Argentine Football Association | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Vexillology Association flags",
+   "file": "Bandera de AAV.svg",
+   "text": "! scope=\"row\" | | ?–present | Argentina Vexillology Association",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Vexillology Association flags",
+   "file": "Flag of CIDEC.svg",
+   "text": "! scope=\"row\" | | ?–present | Foundation Interdisciplinary Center for Cultural Studies | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Argentine shipping company",
+   "file": "House flag of the Argentine Shipping Lines Company (ELMA).svg",
+   "text": "! scope=\"row\" | | 1960–1996 | Empresa Líneas Marítimas Argentinas |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Argentine shipping company",
+   "file": "House flag of the Argentine Overseas Shipping Fleet (\"FANU\").svg",
+   "text": "! scope=\"row\" | | 1949–1960 | Argentine Overseas Shipping Fleetes |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Argentine shipping company",
+   "file": "House flag of Yacimientos Petrolíferos Fiscales (1951 - c1992).svg",
+   "text": "! scope=\"row\" | | 1951–1992 | Fiscal Oilfieldses |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Argentine shipping company",
+   "file": "House flag of the State Merchant Fleet (Argentina).svg",
+   "text": "! scope=\"row\" | | 1943–1950 | State Merchant Fleetes |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Argentine shipping company",
+   "file": "House flag of Río de La Plata S.A. de Navegación de Ultramar.svg",
+   "text": "! scope=\"row\" | | 1943–1950 | Río de La Plata S.A.es |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Argentine shipping company",
+   "file": "House flag of Patagonian Importer and Exporter Corporation.svg",
+   "text": "! scope=\"row\" | | 1908–? | Patagonian Importer and Exporter Corporation |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Argentine shipping company",
+   "file": "House flag of Dodero line.svg",
+   "text": "! scope=\"row\" | | ?–1951 | Argentine Navigation Company Dodero | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of YC Argentino.svg",
+   "text": "Yacht Club Argentino",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of Club Delta Argentino.svg",
+   "text": "Club Delta Argentino",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of Club Náutico Buchardo.svg",
+   "text": "Club Náutico Buchardo",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of Club Marinas Puerto Santa Fe.svg",
+   "text": "Club Marinas Puerto Santa Fe",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of CN Pesca Comandante Espora.svg",
+   "text": "Club de Náutica y Pesca \"Comandante Espora\"",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of Club Regatas Chascomus.svg",
+   "text": "Club Regatas Chascomus",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of Club Regatas La Plata.svg",
+   "text": "Club Regatas La Plata",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of Club Regatas San Nicolas.svg",
+   "text": "Club Regatas San Nicolas",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of Club San Fernando.svg",
+   "text": "Club San Fernando",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of Club Universitario de Buenos Aires.svg",
+   "text": "Club Universitario de Buenos Aires",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of CN Albatros (Argentina).svg",
+   "text": "Club Náutico Albatros",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of CN Bahia Blanca.svg",
+   "text": "Club Náutico Bahia Blanca",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of CN Cordoba.svg",
+   "text": "Club Náutico Cordoba",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of CN Mar Plata.svg",
+   "text": "Club Náutico Mar Plata",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of CN Olivos.svg",
+   "text": "Club Náutico Olivos",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of CN San Isidro.svg",
+   "text": "Club Náutico San Isidro",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of Club Mendoza de Regatas.svg",
+   "text": "Club Mendoza de Regatas",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of CN San Martin.svg",
+   "text": "Club Náutico San Martin",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of CN San Pedro.svg",
+   "text": "Club Náutico San Pedro",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of CN Sudeste.svg",
+   "text": "Club Náutico Sudeste",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of CN Victoria.svg",
+   "text": "Club Náutico Victoria",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of CN Zarate.svg",
+   "text": "Club Náutico Zarate",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "C Veleros Barlovento.svg",
+   "text": "Club de Veleros Barlovento",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of CV Rosario.svg",
+   "text": "Club de Veleros Rosario",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of CV San Isidro.svg",
+   "text": "Club de Veleros San Isidro",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of Y C Rosario.svg",
+   "text": "Yacht Club Rosario",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of YC Olivos.svg",
+   "text": "Yacht Club Olivos",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of YC Santa Fe.svg",
+   "text": "Yacht Club Santa Fe",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of Club Náutico Quilmes.svg",
+   "text": "Club Náutico Quilmes",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of Club Náutico San Fernando.svg",
+   "text": "Club Náutico San Fernando",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of Club Suizo de Buenos Aires.svg",
+   "text": "Club Suizo de Buenos Aires",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of Yacht Club Buenos Aires.svg",
+   "text": "Yacht Club Buenos Aires",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of Rowing Club Argentino.svg",
+   "text": "Rowing Club Argentino",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of Yacht Club Neuquén.svg",
+   "text": "Yacht Club Neuquén",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of Yacht Club San Isidro.svg",
+   "text": "Yacht Club San Isidro",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of Yacht Club Entrerriano.svg",
+   "text": "Yacht Club Entrerriano",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Argentine flags",
+   "section": "Burgees of Argentina",
+   "file": "Burgee of Yacht Club Centro Naval.svg",
+   "text": "Yacht Club Centro Naval",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de l'Argentine",
+   "section": "Description > Proportions et contenu",
+   "file": "Sol de mayo moneda.png",
+   "text": "Revers d'une pièce de monnaie argentine de 1813, avec représentation du Sol de Mayo.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de l'Argentine",
+   "section": "Histoire du drapeau argentin > La cocarde",
+   "file": "Escarapela Argentina (argentinische Rosette).png",
+   "text": "Cocardes utilisées dans les premières années des Provinces-Unies du Río de la Plata.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de l'Argentine",
+   "section": "Histoire du drapeau argentin > Loi de 1985",
+   "file": "Flag of Argentina (civil).svg",
+   "text": "150x150px|Drapeau utilisé à la marge jusqu'en 1985.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de l'Argentine",
+   "section": "Variantes",
+   "file": "Standard of the President of Argentina Land.svg",
+   "text": "Pavillon présidentiel",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de l'Argentine",
+   "section": "Variantes",
+   "file": "Naval Jack of Argentina.svg",
+   "text": "Pavillon de la Marine",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Descripción > Normativa de diseño",
+   "file": "Bandera de la República Argentina.jpg",
+   "text": "miniatura|Bandera argentina ondeando en el mástil de la Casa Rosada. Entre 2002 y 2004 una serie de normas IRAM estableció las características de las banderas argentinas, incluyendo sus colores. Por un Decreto Presidencial N.º 1650 del 23 de noviembre de 2010 (año del Bicentenario de Argentina) se oficializó la norma para el diseño y los colores de la bandera argentina fijados anteriormente por las cuatro normas IRAM establecidas entre 2002 y 2004, este decreto concuerda con el de 1944 que estableció a la bandera creada por Manuel Belgrano en cuanto Bandera Nacional Argentina. La iniciativa de",
+   "kind": "table"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Descripción > Normativa de diseño",
+   "file": "Bandera de la República Argentina.jpg",
+   "text": "miniatura|Bandera argentina ondeando en el mástil de la Casa Rosada.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Historia > Antecedentes",
+   "file": "Escarapela argentina.svg",
+   "text": "izquierda|miniaturadeimagen|Escarapela argentina.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Historia > Antecedentes",
+   "file": "Cockades of Argentina.svg",
+   "text": "miniaturadeimagen|Escarapelas utilizadas en los primeros años de las Provincias Unidas del Río de la Plata.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Historia > La bandera",
+   "file": "Retrato del Gral. Manuel Belgrano - Atribuído a Francois Casimir Carbonnier.jpg",
+   "text": "miniatura|Manuel Belgrano.|izquierda",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Historia > La bandera",
+   "file": "Flag of Belgrano (1812).svg",
+   "text": "miniaturadeimagen|Bandera izada por Belgrano en 1812.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Historia > La bandera",
+   "file": "Bandera del Ejército Auxiliar de Potosí (1813).jpg",
+   "text": "izquierda|miniaturadeimagen|Bandera del Ejército Auxiliar de Potosí (1813)",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Historia > Sol de Mayo",
+   "file": "Sol de mayo moneda.png",
+   "text": "miniatura|Sol de Mayo en la primera moneda del Río de la Plata",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Historia > Banderas de Macha",
+   "file": "Bandera de la Provincia de Tucumán.svg",
+   "text": "miniaturadeimagen|Una de las banderas de Macha, que fue adoptada como la bandera de Tucumán en 2010.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Historia > Otras banderas",
+   "file": "Bandera de la Provincia de Jujuy.svg",
+   "text": "miniaturadeimagen|Bandera Nacional de Nuestra Libertad Civil, donada por Belgrano al Cabildo de Jujuy.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Historia > Otras banderas",
+   "file": "Bandera de los andes (perspective corrected).jpg",
+   "text": "miniatura|Bandera del Ejército de Los Andes (réplica, original: 1817).|izquierda",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas provinciales",
+   "file": "Bandera-bonaerense.svg",
+   "text": "Bandera de la Provincia de Buenos Aires",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas provinciales",
+   "file": "Bandera de la Provincia de Catamarca.svg",
+   "text": "Bandera de Catamarca",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas provinciales",
+   "file": "Bandera de la Provincia del Chaco.svg",
+   "text": "Bandera del Chaco",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas provinciales",
+   "file": "Flag of chubut province in argentina - bandera de chubut.svg",
+   "text": "Bandera del Chubut",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas provinciales",
+   "file": "Bandera de la Provincia de Córdoba 2014.svg",
+   "text": "Bandera de Córdoba",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas provinciales",
+   "file": "Bandera Corrientes.svg",
+   "text": "Bandera de Corrientes",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas provinciales",
+   "file": "Flag of Entre Ríos.svg",
+   "text": "Bandera de Entre Ríos",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas provinciales",
+   "file": "Flag of Formosa.svg",
+   "text": "Bandera de Formosa",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas provinciales",
+   "file": "Bandera de la Provincia de Jujuy.svg",
+   "text": "Bandera de Jujuy",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas provinciales",
+   "file": "Bandera de la Provincia de La Pampa.svg",
+   "text": "Bandera de La Pampa",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas provinciales",
+   "file": "Flag of La Rioja province in Argentina.svg",
+   "text": "Bandera de La Rioja",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas provinciales",
+   "file": "Flag of Mendoza Province, Argentina.svg",
+   "text": "Bandera de Mendoza",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas provinciales",
+   "file": "Flag of Misiones.svg",
+   "text": "Bandera de Misiones",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas provinciales",
+   "file": "Bandera de la Provincia del Neuquen.svg",
+   "text": "Bandera del Neuquén",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas provinciales",
+   "file": "Flag of Río Negro Province.svg",
+   "text": "Bandera de Río Negro",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas provinciales",
+   "file": "Bandera de la Provincia de Salta.svg",
+   "text": "Bandera de Salta",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas provinciales",
+   "file": "Flag of the San Juan Province.svg",
+   "text": "Bandera de San Juan",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas provinciales",
+   "file": "Flag of San Luis Province.svg",
+   "text": "Bandera de San Luis",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas provinciales",
+   "file": "Bandera-Santa Cruz.svg",
+   "text": "Bandera de Santa Cruz",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas provinciales",
+   "file": "Bandera-StaFe-argentina.svg",
+   "text": "Bandera de Santa Fe",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas provinciales",
+   "file": "Flag of Santiago del Estero.svg",
+   "text": "Bandera de Santiago del Estero",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas provinciales",
+   "file": "Flag of Tierra del Fuego province in Argentina.svg",
+   "text": "Bandera de Tierra de Fuego, Antártida e Islas del Atlántico Sur",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas provinciales",
+   "file": "Bandera de la Provincia de Tucumán.svg",
+   "text": "Bandera de Tucumán",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas provinciales > Bandera de la Ciudad Autónoma de Buenos Aires",
+   "file": "Bandera de la Ciudad de Buenos Aires.svg",
+   "text": "izquierda|miniaturadeimagen|Bandera de la Ciudad de Buenos Aires",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas inspiradas en la de Argentina > América Central",
+   "file": "Flag of the United Provinces of Central America.svg",
+   "text": "Bandera de las Provincias Unidas del Centro de América (1823-1824).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas inspiradas en la de Argentina > América Central",
+   "file": "Flag of the Federal Republic of Central America.svg",
+   "text": "Bandera de la República Federal de Centro América (1824-1839).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas inspiradas en la de Argentina > América Central",
+   "file": "Flag of Costa Rica (1842-1848).svg",
+   "text": "Bandera del Estado Libre de Costa Rica (1842-1848).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas inspiradas en la de Argentina > América Central",
+   "file": "Flag of El Salvador.svg",
+   "text": "Bandera de El Salvador desde 1912.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas inspiradas en la de Argentina > América Central",
+   "file": "Flag of Honduras.svg",
+   "text": "Bandera de Honduras desde 1949 (modificado en 2022).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas inspiradas en la de Argentina > América Central",
+   "file": "Flag of Guatemala.svg",
+   "text": "Bandera de Guatemala desde 1968.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de la Argentina",
+   "section": "Banderas inspiradas en la de Argentina > América Central",
+   "file": "Flag of Nicaragua.svg",
+   "text": "Bandera de Nicaragua desde 1971.",
+   "kind": "gallery"
+  }
+ ]
+}

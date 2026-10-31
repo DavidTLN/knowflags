@@ -1,0 +1,106 @@
+{
+ "iso": "sl",
+ "flag_item": "Q168912",
+ "pages": [
+  "en:Flag of Sierra Leone",
+  "fr:Drapeau de la Sierra Leone"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Sierra Leone",
+   "section": "intro",
+   "file": "Flag of the President of Sierra Leone.svg",
+   "text": "Standard of the president of Sierra Leone",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Sierra Leone",
+   "section": "intro",
+   "file": "Embassy of Sierra Leone DC.JPG",
+   "text": "Flag at the embassy in Washington, DC",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Sierra Leone",
+   "section": "Design",
+   "file": "Flag of Sierra Leone.svg",
+   "text": "{| class=\"wikitable\" width=\" \" style=\"white-space: nowrap; text-align: \" ! (1961–present) ! style=\"background:#1EB53A; color:#000; width: \" |Green ! style=\"background:#FFFFFF; color:#000; width: \" |White ! style=\"background:#0072C6; color:#FFF; width: \" |Blue",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Sierra Leone",
+   "section": "Historical flags",
+   "file": "Flag of Sierra Leone (1889–1914).svg",
+   "text": "| || 1889–1916 || Flag of the Sierra Leone Colony and Protectorate || A British Blue Ensign defaced with the arms of the territory. Identical to the flags of the Gold Coast, The Gambia and the Lagos Colony except for the initials on the emblem.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Sierra Leone",
+   "section": "Historical flags",
+   "file": "Flag of the Governor of Sierra Leone (1889–1916).svg",
+   "text": "| || 1889–1916 || Flag of the governor of Sierra Leone || The Union Jack defaced in the centre with the arms of the territory surrounded by a laurel wreath.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Sierra Leone",
+   "section": "Historical flags",
+   "file": "Flag of Sierra Leone 1914-1961.svg",
+   "text": "| || 1916–1961 || Flag of the Sierra Leone Colony and Protectorate || A British Blue Ensign defaced with the arms of the crown colony. This consisted of the old Union Jack at the middle chief, an oil palm tree at the sinister base, and an African person watching a ship arrive in the harbour.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Sierra Leone",
+   "section": "Historical flags",
+   "file": "Flag of Governor of Sierra Leone 1914-1961.svg",
+   "text": "| || 1916–1961 || Flag of the governor of Sierra Leone || The Union Jack defaced in the centre with the arms of the territory surrounded by a laurel wreath.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Sierra Leone",
+   "section": "Historical flags",
+   "file": "Royal Standard of Sierra Leone.svg",
+   "text": "| || 1961–1971 || Queen Elizabeth II's Personal Flag for Sierra Leone || One of Queen Elizabeth II's personal flags. It features the coat of arms of Sierra Leone in banner form. This flag was used when she was Queen of Sierra Leone until it was made redundant by the introduction of a republican form of government in 1971.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Sierra Leone",
+   "section": "Historical flags",
+   "file": "Flag of the Governor-General of Sierra Leone (1961-1971).svg",
+   "text": "| || 1961–1971 || Standard of the governor-general of Sierra Leone || Flag of the governor-general of Sierra Leone. This flag was made redundant by the introduction of a republican form of government in 1971. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Sierra Leone",
+   "section": "Autres drapeaux",
+   "file": "Flag of the President of Sierra Leone.svg",
+   "text": "Étendard des présidents sierra-léonais",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Sierra Leone",
+   "section": "Autres drapeaux",
+   "file": "Standard of Ambassadors of Sierra Leone.svg",
+   "text": "Étendard des ambassades sierra-léonaises",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Sierra Leone",
+   "section": "Autres drapeaux",
+   "file": "Naval Ensign of Sierra Leone.svg",
+   "text": "Utilisation : Pavillon des forces armées navales sierra-léonaises",
+   "kind": "gallery"
+  }
+ ]
+}

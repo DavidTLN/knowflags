@@ -1,0 +1,75 @@
+{
+ "iso": "gq",
+ "flag_item": "Q170554",
+ "pages": [
+  "en:Flag of Equatorial Guinea",
+  "fr:Drapeau de la Guinée équatoriale",
+  "es:Bandera de Guinea Ecuatorial"
+ ],
+ "candidates": [
+  {
+   "wiki": "fr",
+   "page": "Drapeau de la Guinée équatoriale",
+   "section": "intro",
+   "file": "Flag of Equatorial Guinea (1973–1979).svg",
+   "text": "Drapeau de la Guinée équatoriale pendant la dictature de Macías, de 1973 à 1979.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guinea Ecuatorial",
+   "section": "Banderas históricas",
+   "file": "Flag of Spain (1785-1873 and 1875-1931).svg",
+   "text": "Bandera de Guinea Española (1926-1931)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guinea Ecuatorial",
+   "section": "Banderas históricas",
+   "file": "Flag of Spain (1931 - 1939).svg",
+   "text": "Bandera de Guinea Española (1931-1939)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guinea Ecuatorial",
+   "section": "Banderas históricas",
+   "file": "Flag of Spain (1938 - 1945).svg",
+   "text": "Bandera de Guinea Española (1939-1945)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guinea Ecuatorial",
+   "section": "Banderas históricas",
+   "file": "Flag of Spain (1945-1977).svg",
+   "text": "Bandera de Guinea Española (1945-1968)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guinea Ecuatorial",
+   "section": "Banderas históricas",
+   "file": "Flag of Equatorial Guinea (without coat of arms).svg",
+   "text": "Bandera de Guinea Ecuatorial (1968-1973)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guinea Ecuatorial",
+   "section": "Banderas históricas",
+   "file": "Flag of Equatorial Guinea 1973-1979.svg",
+   "text": "Bandera de Guinea Ecuatorial (1973-1979).",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "es",
+   "page": "Bandera de Guinea Ecuatorial",
+   "section": "Banderas históricas",
+   "file": "Flag of Equatorial Guinea.svg",
+   "text": "Bandera de Guinea Ecuatorial (Restaurada: 1979-actualidad)",
+   "kind": "gallery"
+  }
+ ]
+}

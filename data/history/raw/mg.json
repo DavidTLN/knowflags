@@ -1,0 +1,579 @@
+{
+ "iso": "mg",
+ "flag_item": "Q103019",
+ "pages": [
+  "en:Flag of Madagascar",
+  "en:List of Malagasy flags",
+  "fr:Drapeau de Madagascar"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Madagascar",
+   "section": "Design and symbolism",
+   "file": "Flag of Madagascar.jpg",
+   "text": "Reverse side of the flag",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Current > Political",
+   "file": "Flag of Madagascar.svg",
+   "text": "2:3 Flag of the Republic of Madagascar",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Current > Political",
+   "file": "Presidential Standard of Madagascar.svg",
+   "text": "2:3 Presidential standard",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Current > Military",
+   "file": "Flag of the Chief of Army Staff of Madagascar (Brigade General).svg",
+   "text": "2:3 Flag of the Chief of Army Staff in the rank of Brigade General",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Current > Military",
+   "file": "Flag of the Chief of Army Staff of Madagascar (Divisional General).svg",
+   "text": "2:3 Flag of the Chief of Army Staff in the rank of Divisional General",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Current > Military",
+   "file": "Pennant of the Chief of the Naval Air Force Staff of Madagascar (non-flag officer).svg",
+   "text": "1:2 Pennant of the Chief of the Naval Air Force Staff in the rank of Commodore or below",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Current > Military",
+   "file": "Pennant of the Chief of the Naval Air Force Staff of Madagascar (Rear Admiral).svg",
+   "text": "1:2 Pennant of the Chief of the Naval Air Force Staff in the rank of Rear Admiral",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Current > Military",
+   "file": "Pennant of the Chief of the Naval Air Force Staff of Madagascar (Vice Admiral).svg",
+   "text": "1:2 Pennant of the Chief of the Naval Air Force Staff in the rank of Vice Admiral",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Current > Military",
+   "file": "Pennant of the Commander of a Naval Group (Madagascar).svg",
+   "text": "1:2 Pennant of the Commander of a Naval Group",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Current > Military",
+   "file": "Pennant of the Commander of a Naval Base (Madagascar).svg",
+   "text": "1:2 Pennant of the Commander of a Naval Base",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Current > Military",
+   "file": "Masthead pennant of Madagascar.svg",
+   "text": "1:20 Masthead pennant",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Current > Ethnic",
+   "file": "Flag of the Merina people.svg",
+   "text": "2:3 Flag of the Merina people (since 1997)Merina local flag (Madagascar) . Flags of the World (2015-05-20). Retrieved on 2017-10-17.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Historical",
+   "file": "Flag of the Antankarana Kingdom.svg",
+   "text": "2:3 Flag of the Antankarana Kingdom",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Historical",
+   "file": "Flag of the Antongila Kingdom (1773-1786).svg",
+   "text": "2:3 Flag of the Antongil Kingdom",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Historical",
+   "file": "Flag of the Boina Kingdom.svg",
+   "text": "2:3 Flag of the Boina Kingdom",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Historical",
+   "file": "Flag of the Menabe Kingdom.svg",
+   "text": "2:3 Flag of the Menabe Kingdom",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Historical",
+   "file": "Flag of the Sakalava of Antalaotra.gif",
+   "text": "alt=|Flag of the Sakalava of Antalaotra",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Historical",
+   "file": "Flag of the Tamatave Kingdom (1750-1819).svg",
+   "text": "1:1 First flag of the Tamatave Kingdom, 1750–1819",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Historical",
+   "file": "Flag of the Tamatave Kingdom (1819-1822).svg",
+   "text": "2:3 Second flag of the Tamatave Kingdom, 1819–1822",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Historical",
+   "file": "Flag of the Tamatave Kingdom (1822-1826).svg",
+   "text": "2:3 Third flag of the Tamatave Kingdom, 1822–1826",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Historical",
+   "file": "Flag of the Tamatave Kingdom (1826-1828).svg",
+   "text": "2:3 Fourth and final flag of the Tamatave Kingdom, 1826–1828",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Historical",
+   "file": "Flag of the Tanibe Kingdom (1822-1828).svg",
+   "text": "2:3 Flag of the Tanibe Kingdom, 1822–1828",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Historical",
+   "file": "Flag of the Merina Kingdom.svg",
+   "text": "2:3 Royal standard of Merina Kingdom, –1897",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Historical",
+   "file": "Merina Kingdom flag.svg",
+   "text": "2:3 Flag of the Merina Kingdom, –1881",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Historical",
+   "file": "Flag of the Madagascar Protectorate (1885-1896).svg",
+   "text": "2:3 Flag of the Merina Kingdom and Malagasy Protectorate, 1881–1897",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Historical",
+   "file": "Flag of France (1814–1830).svg",
+   "text": "Ensign of the French Royal Navy on Saint-Mary island from 1750 until the French Revolution, then 1814 and 1815–1830",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Historical",
+   "file": "Flag of France.svg",
+   "text": "2:3 Flag of the French Third Republic, Vichy France, the Provisional Government of the French Republic and the French Fourth Republic, 1896–1942 and 1944–1958",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Historical",
+   "file": "Flag of the United Kingdom (1-2).svg",
+   "text": "2:3 Flag of the British Occupation, 1942–1943",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Historical",
+   "file": "Flag of Free France (1940-1944).svg",
+   "text": "2:3 Flag of Free France, 1943–1944",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Historical > Presidential standards > Malagasy Republic",
+   "file": "Presidential Standard of Madagascar (1959).svg",
+   "text": "2:3 Philibert Tsiranana, 1959",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Historical > Presidential standards > Malagasy Republic",
+   "file": "Presidential Standard of Madagascar (1959-1972).svg",
+   "text": "2:3 Philibert Tsiranana, 1959–1972, obverse side",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Historical > Presidential standards > Malagasy Republic",
+   "file": "Presidential Standard of Madagascar (1959-1972, reverse).svg",
+   "text": "2:3 Philibert Tsiranana, 1959–1972, reverse side",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Historical > Presidential standards > Malagasy Republic",
+   "file": "Presidential Standard of Madagascar (1972-1975).svg",
+   "text": "2:3 Gabriel Ramanantsoa, 1972–1975, obverse side",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Historical > Presidential standards > Malagasy Republic",
+   "file": "Presidential Standard of Madagascar (1972-1975, reverse).svg",
+   "text": "2:3 Gabriel Ramanantsoa, 1972–1975, reverse side",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Historical > Presidential standards > Democratic Republic of Madagascar",
+   "file": "Presidential Standard of Madagascar (1976-1993).svg",
+   "text": "2:3 Didier Ratsiraka, 1976–1993, obverse side",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Historical > Presidential standards > Democratic Republic of Madagascar",
+   "file": "Presidential Standard of Madagascar (1976-1993, reverse).svg",
+   "text": "2:3 Didier Ratsiraka, 1976–1993, reverse side",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Historical > Presidential standards > Third Republic of Madagascar",
+   "file": "Presidential Standard of Madagascar (1993-1996).svg",
+   "text": "2:3 Albert Zafy, 1993–1996, obverse side",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Malagasy flags",
+   "section": "Historical > Presidential standards > Third Republic of Madagascar",
+   "file": "Presidential Standard of Madagascar (1993-1996, reverse).svg",
+   "text": "2:3 Albert Zafy, 1993–1996, reverse side",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Historique",
+   "file": "Merina Kingdom flag.svg",
+   "text": "| 1787 - 1896 | bordure| | Royaume d'Imerina | 2:3",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Historique",
+   "file": "Flag of the Merina Kingdom.svg",
+   "text": "| 1810 - 1896 | bordure| | Royaume de Madagascar | 2:3",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Historique",
+   "file": "Flag of the Madagascar Protectorate (1885-1896).svg",
+   "text": "| 1885 - 1896 | bordure| | Protectorat français de Madagascar |2:3",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Historique",
+   "file": "Flag of France (1794–1815, 1830–1974, 2020–present).svg",
+   "text": "| 1896 - 1958 | bordure| | Colonie de Madagascar et dépendances | 2:3",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Historique",
+   "file": "Flag of Madagascar.svg",
+   "text": "| Depuis 1958 | bordure| | Quatre républiques | 2:3 |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Historique > Royaumes malgaches",
+   "file": "Flag of the Tamatave Kingdom (1750-1819).svg",
+   "text": "| 1750 - 1819 | bordure| | rowspan=\"4\" | Royaume de Tamatave | 1:1 Similaire au drapeau du Régiment du Roi français de 1663 à 1757",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Historique > Royaumes malgaches",
+   "file": "Flag of the Tamatave Kingdom (1819-1822).svg",
+   "text": "| 1819 - 1822 | bordure| | 2:3",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Historique > Royaumes malgaches",
+   "file": "Flag of the Tamatave Kingdom (1822-1826).svg",
+   "text": "| 1822 - 1826 | bordure| | 2:3",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Historique > Royaumes malgaches",
+   "file": "Flag of the Tamatave Kingdom (1826-1828).svg",
+   "text": "| 1826 - 1828 | bordure| | 2:3",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Historique > Royaumes malgaches",
+   "file": "Flag of the Antankarana Kingdom.svg",
+   "text": "| Période inconnue | bordure| | Royaume Antakarana | 2:3",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Historique > Royaumes malgaches",
+   "file": "Flag of the Antongila Kingdom (1773-1786).svg",
+   "text": "| 1773 - 1786 | bordure| | Royaume de Manghabe | 2:3",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Historique > Royaumes malgaches",
+   "file": "Flag of the Boina Kingdom.svg",
+   "text": "| Période inconnue | bordure| | Royaume d'Iboina | 2:3",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Historique > Royaumes malgaches",
+   "file": "Flag of the Menabe Kingdom.svg",
+   "text": "| Période inconnue | bordure| | Royaume de Menabe | 2:3",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Historique > Royaumes malgaches",
+   "file": "Flag of the Tanibe Kingdom (1822-1828).svg",
+   "text": "| 1822 - 1828 | bordure| | Royaume de Tanibe | 2:3 |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Variantes > Ethniques",
+   "file": "Flag of the Merina people.svg",
+   "text": "2:3 Drapeau du peuple Merina depuis 1997 Merina local flag (Madagascar). Flags of the World (2015-05-20). Retrieved on 2017-10-17.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Variantes > Drapeaux militaires",
+   "file": "Flag of the Chief of Army Staff of Madagascar (Brigade General).svg",
+   "text": "2:3 Drapeau du chef d'état-major de l'armée au grade de général de brigade",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Variantes > Drapeaux militaires",
+   "file": "Flag of the Chief of Army Staff of Madagascar (Divisional General).svg",
+   "text": "2:3 Drapeau du chef d'état-major de l'armée au grade de général de division",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Variantes > Drapeaux militaires",
+   "file": "Pennant of the Chief of the Naval Air Force Staff of Madagascar (non-flag officer).svg",
+   "text": "1:2 Fanion du chef d'état-major de la Force aérienne navale au grade de commodore ou inférieur",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Variantes > Drapeaux militaires",
+   "file": "Pennant of the Chief of the Naval Air Force Staff of Madagascar (Rear Admiral).svg",
+   "text": "1:2 Fanion du chef d'état-major de l'armée de l'air navale au grade de contre-amiral",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Variantes > Drapeaux militaires",
+   "file": "Pennant of the Chief of the Naval Air Force Staff of Madagascar (Vice Admiral).svg",
+   "text": "1:2 Fanion du chef d'état-major de l'armée de l'air navale au grade de vice-amiral",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Variantes > Drapeaux militaires",
+   "file": "Pennant of the Commander of a Naval Group (Madagascar).svg",
+   "text": "1:2 Pavillon du commandant d'un groupe naval",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Variantes > Drapeaux militaires",
+   "file": "Pennant of the Commander of a Naval Base (Madagascar).svg",
+   "text": "1:2 Pavillon du commandant d'une base navale",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Variantes > Drapeaux militaires",
+   "file": "Masthead pennant of Madagascar.svg",
+   "text": "1:20 Flamme de guerre",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Drapeau présidentiel",
+   "file": "Presidential Standard of Madagascar.svg",
+   "text": "Drapeau présidentiel",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Drapeau présidentiel > Drapeaux des différents présidents > République malgache",
+   "file": "Presidential Standard of Madagascar (1959).svg",
+   "text": "2:3 Philibert Tsiranana, 1959",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Drapeau présidentiel > Drapeaux des différents présidents > République malgache",
+   "file": "Presidential Standard of Madagascar (1959-1972).svg",
+   "text": "2:3 Philibert Tsiranana, 1959–1972, recto",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Drapeau présidentiel > Drapeaux des différents présidents > République malgache",
+   "file": "Presidential Standard of Madagascar (1959-1972, reverse).svg",
+   "text": "2:3 Philibert Tsiranana, 1959–1972, verso",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Drapeau présidentiel > Drapeaux des différents présidents > République malgache",
+   "file": "Presidential Standard of Madagascar (1972-1975).svg",
+   "text": "2:3 Gabriel Ramanantsoa, 1972–1975, recto",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Drapeau présidentiel > Drapeaux des différents présidents > République malgache",
+   "file": "Presidential Standard of Madagascar (1972-1975, reverse).svg",
+   "text": "2:3 Gabriel Ramanantsoa, 1972–1975, verso",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Drapeau présidentiel > Drapeaux des différents présidents > République démocratique malgache",
+   "file": "Presidential Standard of Madagascar (1976-1993).svg",
+   "text": "2:3 Didier Ratsiraka, 1976–1993, recto",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Drapeau présidentiel > Drapeaux des différents présidents > République démocratique malgache",
+   "file": "Presidential Standard of Madagascar (1976-1993, reverse).svg",
+   "text": "2:3 Didier Ratsiraka, 1976–1993, verso",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Drapeau présidentiel > Drapeaux des différents présidents > Troisième république (Madagascar)",
+   "file": "Presidential Standard of Madagascar (1993-1996).svg",
+   "text": "2:3 Albert Zafy, 1993–1996, recto",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau de Madagascar",
+   "section": "Drapeau présidentiel > Drapeaux des différents présidents > Troisième république (Madagascar)",
+   "file": "Presidential Standard of Madagascar (1993-1996, reverse).svg",
+   "text": "2:3 Albert Zafy, 1993–1996, verso",
+   "kind": "gallery"
+  }
+ ]
+}

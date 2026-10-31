@@ -1,0 +1,419 @@
+{
+ "iso": "li",
+ "flag_item": "Q103055",
+ "pages": [
+  "en:Flag of Liechtenstein",
+  "fr:Drapeau du Liechtenstein",
+  "de:Flagge Liechtensteins"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "History",
+   "file": "Liechtenstein schaan flags 2009-08-15.jpg",
+   "text": "When flown vertically, the crown on the flag is rotated so that it always faces upwards.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Design > Construction",
+   "file": "Flag of Liechtenstein (construction).svg",
+   "text": "Construction sheet for the flag of Liechtenstein",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Design > Color scheme",
+   "file": "Flag of Liechtenstein.svg",
+   "text": "! 40pxColour scheme ! ! style=\"background:#002780; width: ; color:white;\"| Blue ! style=\"background:#CF0921; width: ; color:white;\"| Red ! style=\"background:#FFD93B; width: ; color:black;\"| Yellow ! style=\"background:#000000; width: ; color:white;\"| Black",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Government flags",
+   "file": "Liechtenstein princelystandard 1912.png",
+   "text": "! scope=\"row\" | | 1912–1957 | Standard of the Prince of Liechtenstein |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Government flags",
+   "file": "Flag of Liechtenstein (1719–1852).svg",
+   "text": "! scope=\"row\" | | 1957–1982 | Standard of the Prince of Liechtenstein |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Government flags",
+   "file": "Standard of the Prince of Liechtenstein.svg",
+   "text": "! scope=\"row\" | | 1982–present | Standard of the Prince of Liechtenstein |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Government flags",
+   "file": "Flag of Liechtenstein (state).svg",
+   "text": "! scope=\"row\" | | 1982–present | Standard of the Government of Liechtenstein |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Government flags",
+   "file": "Flag of Liechtenstein princely house.svg",
+   "text": "! scope=\"row\" | | | Banner of the Princely House of Liechtenstein |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Government flags",
+   "file": "Flag of Liechtenstein princely house pennant.svg",
+   "text": "! scope=\"row\" | | | Pennant |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Government flags",
+   "file": "Flag of Liechtenstein princely house vertical.svg",
+   "text": "! scope=\"row\" | | | Vertical | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Municipal flags",
+   "file": "Flag of Balzers Liechtenstein-1.svg",
+   "text": "! scope=\"row\" | | | Balzers | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Municipal flags",
+   "file": "Balzers in Liechtenstein.svg",
+   "text": "! scope=\"row\" | | | Balzers | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Municipal flags",
+   "file": "Flag of Eschen Liechtenstein-1.svg",
+   "text": "! scope=\"row\" | | | Eschen | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Municipal flags",
+   "file": "Eschen in Liechtenstein.svg",
+   "text": "! scope=\"row\" | | | Eschen | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Municipal flags",
+   "file": "Flag of Gamprin Liechtenstein-1.svg",
+   "text": "! scope=\"row\" | | | Gamprin | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Municipal flags",
+   "file": "Gamprin in Liechtenstein.svg",
+   "text": "! scope=\"row\" | | | Gamprin | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Municipal flags",
+   "file": "Flag of Mauren Liechtenstein-1.svg",
+   "text": "! scope=\"row\" | | | Mauren | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Municipal flags",
+   "file": "Mauren in Liechtenstein.svg",
+   "text": "! scope=\"row\" | | | Mauren | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Municipal flags",
+   "file": "Flag of Planken Liechtenstein-1.svg",
+   "text": "! scope=\"row\" | | | Planken | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Municipal flags",
+   "file": "Planken in Liechtenstein.svg",
+   "text": "! scope=\"row\" | | | Planken | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Municipal flags",
+   "file": "Flag of Ruggell Liechtenstein-1.svg",
+   "text": "! scope=\"row\" | | | Ruggell | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Municipal flags",
+   "file": "Ruggell in Liechtenstein.svg",
+   "text": "! scope=\"row\" | | | Ruggell | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Municipal flags",
+   "file": "Flag of Schaan Liechtenstein-1.svg",
+   "text": "! scope=\"row\" | | | Schaan | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Municipal flags",
+   "file": "Schaan in Liechtenstein.svg",
+   "text": "! scope=\"row\" | | | Schaan | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Municipal flags",
+   "file": "Flag of Schellenberg Liechtenstein-1.svg",
+   "text": "! scope=\"row\" | | | Schellenberg | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Municipal flags",
+   "file": "Schellenberg in Liechtenstein.svg",
+   "text": "! scope=\"row\" | | | Schellenberg | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Municipal flags",
+   "file": "Flag of Triesen Liechtenstein-1.svg",
+   "text": "! scope=\"row\" | | | Triesen | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Municipal flags",
+   "file": "Triesen in Liechtenstein.svg",
+   "text": "! scope=\"row\" | | | Triesen | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Municipal flags",
+   "file": "Flag of Triesenberg Liechtenstein-1.svg",
+   "text": "! scope=\"row\" | | | Triesenberg | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Municipal flags",
+   "file": "Triesenberg in Liechtenstein.svg",
+   "text": "! scope=\"row\" | | | Triesenberg | |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Municipal flags",
+   "file": "Flag of Vaduz Liechtenstein-1.svg",
+   "text": "! scope=\"row\" | | | Vaduz | | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Municipal flags",
+   "file": "Vaduz in Liechtenstein.svg",
+   "text": "! scope=\"row\" | | | Vaduz | | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Historical flags",
+   "file": "Flag of Liechtenstein (unknown-1719) 1.svg",
+   "text": "! scope=\"row\" | | 1437–1719 | Lordship of Schellenberg |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Historical flags",
+   "file": "Flag of Liechtenstein (unknown-1719) 2.svg",
+   "text": "! scope=\"row\" | | 1342–1719 | County of Vaduz |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Historical flags",
+   "file": "Flag of Liechtenstein (1719-1852).svg",
+   "text": "! scope=\"row\" | | 1719–1852 | Principality of Liechtenstein | Two horizontal gold and red bands at 3:5 proportions",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Historical flags",
+   "file": "Flag of Liechtenstein (1852-1921).svg",
+   "text": "! scope=\"row\" | | 1852–1921 | Principality of Liechtenstein | Two vertical blue and red bands at 3:5 proportions",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Historical flags",
+   "file": "Flag of Liechtenstein (1921-1937).svg",
+   "text": "! scope=\"row\" | | 1921–1937 | Principality of Liechtenstein | Two horizontal blue and red bands at 3:5 proportions",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Liechtenstein",
+   "section": "Other flags of Liechtenstein > Historical flags",
+   "file": "Flag of Liechtenstein (1937-1982).svg",
+   "text": "! scope=\"row\" | | 1937–1982 | Principality of Liechtenstein | Two horizontal blue and red bands at 3:5 proportions, and princely crown in the canton |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Liechtenstein",
+   "section": "intro",
+   "file": "Flag of Liechtenstein (1719-1852).svg",
+   "text": "1719-1852",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Liechtenstein",
+   "section": "intro",
+   "file": "Flag of Liechtenstein (1852-1921).svg",
+   "text": "1852-1921",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Liechtenstein",
+   "section": "intro",
+   "file": "Flag of Liechtenstein (1921-1937).svg",
+   "text": "1921-1937",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Liechtenstein",
+   "section": "intro",
+   "file": "Flag of Liechtenstein (1937-1982).svg",
+   "text": "1937-1982",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Liechtenstein",
+   "section": "intro",
+   "file": "Flag of Liechtenstein (state).svg",
+   "text": "Etendard d'État et parlement",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "de",
+   "page": "Flagge Liechtensteins",
+   "section": "Geschichte",
+   "file": "Flag of Liechtenstein (1719-1852).svg",
+   "text": "1719–1852",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "de",
+   "page": "Flagge Liechtensteins",
+   "section": "Geschichte",
+   "file": "Flag of Liechtenstein (1852-1921).svg",
+   "text": "1852–1921",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "de",
+   "page": "Flagge Liechtensteins",
+   "section": "Geschichte",
+   "file": "Flag of Liechtenstein (1921-1937).svg",
+   "text": "1921–1937",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "de",
+   "page": "Flagge Liechtensteins",
+   "section": "Geschichte",
+   "file": "Flag of Liechtenstein (1937-1982).svg",
+   "text": "1937–1982",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "de",
+   "page": "Flagge Liechtensteins",
+   "section": "Andere Flaggen",
+   "file": "Flag of Liechtenstein old yellow red.svg",
+   "text": "Flagge des Fürstenhauses",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "de",
+   "page": "Flagge Liechtensteins",
+   "section": "Andere Flaggen",
+   "file": "Standard of the Prince of Liechtenstein.svg",
+   "text": "Standarte des Fürsten von Liechtenstein",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "de",
+   "page": "Flagge Liechtensteins",
+   "section": "Andere Flaggen",
+   "file": "(FL1) Liechtenstein princely limousine.jpg",
+   "text": "Standarte am Fahrzeug",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "de",
+   "page": "Flagge Liechtensteins",
+   "section": "Andere Flaggen",
+   "file": "Flag of Liechtenstein (state).svg",
+   "text": "Standarte der Landesregierung und des Landtags",
+   "kind": "gallery"
+  }
+ ]
+}

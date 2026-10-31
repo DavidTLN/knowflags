@@ -1,0 +1,428 @@
+{
+ "iso": "lu",
+ "flag_item": "Q133022",
+ "pages": [
+  "en:Flag of Luxembourg",
+  "en:List of flags of Luxembourg",
+  "fr:Drapeau du Luxembourg",
+  "lb:Fändel vu Lëtzebuerg"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Luxembourg",
+   "section": "intro",
+   "file": "Luxembourg, drapeau national (100).jpg",
+   "text": "Luxembourg flag",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Luxembourg",
+   "section": "Ensign",
+   "file": "Flag of Luxembourg (vertical).svg",
+   "text": "The Red Lion () is the official ensign for ships registered in Luxembourg. It is used for river and sea shipping, as well as for aviation. This flag is based on the coat of arms of Luxembourg (a banner of arms) and is used as the ensign to avoid the possibility of Luxembourg's ensign being confused for that of the Netherlands. Ten white and blue stripes serve as the field for a red lion with a yellow tongue, claws and crown, and a doubled tail (à la queue fourchée). The proper ratio for this ensign is 5:7. The Règlement Grand-Ducal of 27 July 1993 defined the ensign's colours as follows: The f",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Luxembourg",
+   "section": "Ensign",
+   "file": "Flag of Luxembourg (vertical).svg",
+   "text": "The flag of Luxembourg displayed vertically",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Luxembourg",
+   "section": "Roundel",
+   "file": "Roundel of Luxembourg.svg",
+   "text": "",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Luxembourg",
+   "section": "Flag change debate",
+   "file": "Flag of the Netherlands.svg",
+   "text": "Flag of the Netherlands",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "National flag",
+   "file": "Flag of Luxembourg.svg",
+   "text": "! scope=\"row\" | | 1993–present | Flag of Luxembourg (Ratio: 3:5) | A horizontal tricolor of red, white, and blue. De facto used from 1848, but it was not officially adopted until 1993.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "National flag",
+   "file": "Flag of Luxembourg (1-2).svg",
+   "text": "! scope=\"row\" | | 1972–1993 | Flag of Luxembourg (Ratio: 1:2) | The national flag in 1:2 ratio. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Ensign",
+   "file": "Civil Ensign of Luxembourg.svg",
+   "text": "! scope=\"row\" | | 1972–present | Civil ensign and civil air ensign of Luxembourg | The Roude Liéw, a banner of the coat of arms of Luxembourg. It has ten horizontal white and blue stripes, superimposed by a red lion with yellow claws, teeth, tongue, and crown. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Standard of the Grand Duke",
+   "file": "Standard of the Grand Duke of Luxembourg.svg",
+   "text": "! scope=\"row\" | | 2001–present | Standard of the Grand Duke | An orange flag with the middle coat of arms of the Grand Duke. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Cities",
+   "file": "Flag of Luxembourg (city).svg",
+   "text": "! scope=\"row\" | | | Flag of Luxembourg City |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Cities",
+   "file": "Flag of Betzdorf.png",
+   "text": "! scope=\"row\" | | | Flag of Betzdorf |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Cities",
+   "file": "Flag of Diekirch.png",
+   "text": "! scope=\"row\" | | | Flag of Diekirch | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical flags",
+   "file": "Oriflamme of Charlemagne.png",
+   "text": "! scope=\"row\" | | 800–888 | The Imperial Oriflamme of Charlemagne | A three-tailed green flag with eight golden crosses and six flowers.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical flags",
+   "file": "Die greue van Sympoell II.svg",
+   "text": "| 150x150px || 1214–1242 || Flag of the Duchy of Limburg || A banner of arms of Limburg. It is made of a white field with a green stripe on the hoist and a red lion with yellow claws, teeth, tongue, and crown.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical flags",
+   "file": "Civil Ensign of Luxembourg.svg",
+   "text": "! scope=\"row\" | | 1242–1443 | Flag of the County and Duchy of Luxemburg | A banner of arms of Luxembourg. It is made of ten horizontal white and blue stripes with a red lion with yellow claws, teeth, tongue, and crown.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical flags",
+   "file": "Bandera de Borgoña.svg",
+   "text": "! scope=\"row\" | | 1443–1556 | Flag of the Duchy of Burgundy under Philip the Good | A banner of the coat of arms of the Duchy of Burgundy under the House of Valois-Burgundy",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical flags",
+   "file": "Flag of Cross of Burgundy.svg",
+   "text": "! scope=\"row\" | | 1556–16841698–1700 | Flag of the Seventeen Provinces, the Southern Netherlands, and the Spanish Netherlands | A red saltire resembling two crossed, roughly-pruned (knotted) branches, on a white field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical flags",
+   "file": "Civil ensign of the Spanish Netherlands.svg",
+   "text": "! scope=\"row\" | | 1556–16841698–1700 | Civil ensign of the Spanish Netherlands | A horizontal tricolour of red, white, and yellow, with the Cross of Burgundy in the centre.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical flags",
+   "file": "Royal Standard of the King of France.svg",
+   "text": "! scope=\"row\" | | 1684–16981701–1711 | Flag of the Kingdom of France | A white field with several fleur-de-lis.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical flags",
+   "file": "Royal flag of France during the Bourbon Restoration.svg",
+   "text": "! scope=\"row\" | | 1814–18151815–1830 | Flag of the Kingdom of France | Royal standard of Louis XVIII and Charles X",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical flags",
+   "file": "Electoral Standard of Bavaria (1623-1806).svg",
+   "text": "! scope=\"row\" | | 1711–1713 | Flag of the Electorate of Bavaria | A quartered banner of arms. The first and fourth quarters have an array of lozenges of blue and white. The second and third quarters are the lion of the Electorate of the Palatinate. Over these in the , an inescutcheon with a golden orb on a red field.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical flags",
+   "file": "Flag of Austria (1230–1934, 1945–2000).svg",
+   "text": "! scope=\"row\" | 150x150px | 1713–1795 | Flag of the Archduchy of Austria | Three equal horizontal bands of red (top), white, and red.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical flags",
+   "file": "Austrian Ensign 1685-1740.png",
+   "text": "! scope=\"row\" | | 1713–1740 | Flag of the Archduchy of Austria | A yellow field with a black double headed eagle with a crown on top and carrying a shield with the red and white triband of Austria on his chest.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical flags",
+   "file": "Austrian Low Countries Flag.svg",
+   "text": "! scope=\"row\" | | 1781–1786 | Flag of the Austrian Netherlands | A tricolour, with three equal horizontal bands of red, white, and gold with the arms of Austria.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical flags",
+   "file": "Flag of the Brabantine Revolution.svg",
+   "text": "! scope=\"row\" | | 1789–1790 | Flag of the Brabant Revolution | A tricolour, with three equal horizontal bands of red, black, and yellow.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical flags",
+   "file": "Flag of France (1794–1815, 1830–1974, 2020–present).svg",
+   "text": "! scope=\"row\" | | 1795–1814 | Flag of the French First Republic and the First French Empire | A vertical tricolour of blue, white, and red (proportions 3:2).",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical flags",
+   "file": "Flag of the Netherlands.svg",
+   "text": "! scope=\"row\" | | 1815–18301839–1848 | Flag of the United Kingdom of the Netherlands and the Kingdom of the Netherlands | A horizontal triband of red, white, and blue.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical flags",
+   "file": "Flag of Belgium (1830).svg",
+   "text": "! scope=\"row\" | | 1830–1831 | Flag of the Belgian Revolution | A tricolour, with three equal horizontal bands of black, yellow, and red.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical flags",
+   "file": "Flag of Belgium (civil).svg",
+   "text": "! scope=\"row\" | | 1831–1839 | Flag of the Kingdom of Belgium | A vertical tricolour of black, yellow, and red with a 2:3 ratio.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical flags",
+   "file": "Flag of Luxembourg (1-2).svg",
+   "text": "! scope=\"row\" | | 1848–19401944–1972 | Flag of Luxembourg |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical flags",
+   "file": "Flag of Germany (1935–1945).svg",
+   "text": "! scope=\"row\" | | 1940–1945 | Flag of Nazi Germany used during the occupation of Luxembourg in World War II | A red field, with a white disc with a black swastika at a 45-degree angle. Disc and swastika are shifted towards the hoist. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical royal flags",
+   "file": "Estandarte Real de Carlos I.svg",
+   "text": "! scope=\"row\" | 150x150px | 1556 | Banner of arms of King Charles I |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical royal flags",
+   "file": "Banner of the Holy Roman Emperor with Arms (1493-1556).svg",
+   "text": "! scope=\"row\" | | 1556 | Banner of arms of Emperor Charles V |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical royal flags",
+   "file": "Banner of Charles V as Holy Roman Emperor.svg",
+   "text": "! scope=\"row\" | 150x150px | 1556 | Banner of arms of Emperor Charles V |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical royal flags",
+   "file": "Estandarte real de 1556-1580 y 1668-1700.svg",
+   "text": "! scope=\"row\" | | 1556–15801668–16841698–1700 | Royal standard or royal flag of the House of Habsburg. |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical royal flags",
+   "file": "Estandarte Real de Felipe II.svg",
+   "text": "! scope=\"row\" | 150x150px | 1580–1668 | Banner of arms of the House of Austria(with the arms of Portugal). |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical royal flags",
+   "file": "Estandarte real de 1580-1668.svg",
+   "text": "! scope=\"row\" | | 1580–1668 | Royal standard or royal flag of the House of Habsburg. (Inescutcheon of Portugal in the royal arms) |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical royal flags",
+   "file": "Estandarte Real de Carlos II.svg",
+   "text": "! scope=\"row\" | 150x150px | 1668–16841698–1700 | Banner of arms of the House of Austria (from 1668) |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical royal flags",
+   "file": "Royal Standard of King Louis XIV.svg",
+   "text": "! scope=\"row\" | | 1684–16981701–1711 | Royal standard of Louis XIV |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical royal flags",
+   "file": "Imperial Standard of Napoléon I.svg",
+   "text": "! scope=\"row\" | | 1804–1814 | Imperial standard of Napoléon I |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical royal flags",
+   "file": "Royal flag of France during the Bourbon Restoration.svg",
+   "text": "! scope=\"row\" | | 1814–1815 | Royal standard of Louis XVIII |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical royal flags",
+   "file": "Royal Standard of the Netherlands (1815–1908).svg",
+   "text": "! scope=\"row\" | | 1815–18301839–1848 | Royal standard of the Dutch Monarch |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical royal flags",
+   "file": "Austrian Imperial Standard - Infantry pattern mix early 19th century.svg",
+   "text": "! scope=\"row\" | | 1815–1835 | Standard of Emperor Francis |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of flags of Luxembourg",
+   "section": "Historical royal flags",
+   "file": "Imperial Standard of Austria-Hungary (Before 1915).svg",
+   "text": "! scope=\"row\" | | 1848–1866 | Standard of the Emperor Franz Joseph | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Luxembourg",
+   "section": "Origines > L'hypothèse du drapeau néerlandais",
+   "file": "Reinier Nooms - Before the Battle of the Downs - c.1639.jpg",
+   "text": "Le drapeau luxembourgeois est quasiment le même que le Statenvlag des Provinces-Unies, l'ancêtre des Pays-Bas actuels (ici hissé sur les navires de la marine de guerre néerlandaise lors de la bataille des Downs sur une marine de Reinier Nooms, 1639).",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Luxembourg",
+   "section": "Deux drapeaux nationaux",
+   "file": "Ech sin dofir.JPG",
+   "text": "Le mouvement « Ech sin dofir » (« je suis pour », en luxembourgeois) eut lieu en 2006 lorsqu'un député proposa de remplacer le drapeau luxembourgeois par le pavillon de la batellerie et de l'aviation.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "fr",
+   "page": "Drapeau du Luxembourg",
+   "section": "Drapeau de la province de Luxembourg",
+   "file": "Flag of the Province of Luxembourg (Belgium).svg",
+   "text": "Le drapeau de la province de Luxembourg, en Belgique, est volontairement identique au drapeau national luxembourgeois, mis à part l'adjonction des armoiries provinciales, au centre.",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "lb",
+   "page": "Fändel vu Lëtzebuerg",
+   "section": "intro",
+   "file": "Luxembourg, drapeau national (100).jpg",
+   "text": "De Lëtzebuerger Fändel",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "lb",
+   "page": "Fändel vu Lëtzebuerg",
+   "section": "intro",
+   "file": "Luxembourg, drapeau national (101).jpg",
+   "text": "Versioun mam Monogramm vum Grand-Duc Henri am Kader vum Nationalfeierdag",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "lb",
+   "page": "Fändel vu Lëtzebuerg",
+   "section": "Roude Léiw",
+   "file": "Civil Ensign of Luxembourg.svg",
+   "text": "De Roude Léiw",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "lb",
+   "page": "Fändel vu Lëtzebuerg",
+   "section": "Roude Léiw",
+   "file": "Ech sin dofir.JPG",
+   "text": "De Wope vu Lëtzebuerg - Autocollant mam Roude Léiw",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "lb",
+   "page": "Fändel vu Lëtzebuerg",
+   "section": "D'Kokard vun der Militäraviatioun",
+   "file": "Roundel of Luxembourg.svg",
+   "text": "D'Kokard vun der Militäraviatioun",
+   "kind": "thumb"
+  }
+ ]
+}

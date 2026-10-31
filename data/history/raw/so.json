@@ -1,0 +1,700 @@
+{
+ "iso": "so",
+ "flag_item": "Q159538",
+ "pages": [
+  "en:Flag of Somalia",
+  "en:List of Somali flags",
+  "fr:Drapeau de la Somalie",
+  "so:Calanka ciraad"
+ ],
+ "candidates": [
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "History",
+   "file": "Somali National Flag Flying in Hargeisa 26th June 1960.jpg",
+   "text": "Somali flag at the Independence celebrations for State of Somaliland (currently under the de facto Republic of Somaliland control) on 26 June 1960",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "Characteristics",
+   "file": "Somohralhd1a.png",
+   "text": "Somali woman wearing a Somali flag dress.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "Characteristics",
+   "file": "Khatumohd5.png",
+   "text": "Somali women at a Khatumo State launch ceremony wearing the Somali flag.",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "Characteristics",
+   "file": "Coat of arms of Somalia.svg",
+   "text": "Somalia's coat of arms",
+   "kind": "thumb"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "Characteristics > Colors",
+   "file": "Flag of Somalia.svg",
+   "text": "{| class=\"wikitable\" style=\"text-align: ;\" !alt=|30x30px ! style=\"background:#418FDE; width: ;color:white;\" | Sky blue ! style=\"background:#FFFFFF; width: ;color:black;\" | White",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "Historical flags > Pre-colonial states",
+   "file": "Flag of Mogadishu.png",
+   "text": "flag of the Sultanate of Mogadishu (10th century–16th century)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "Historical flags > Pre-colonial states",
+   "file": "Muzzaffar (Mogadishu area) flag according to 1576 Portuguese map.svg",
+   "text": "Flag of the Ajuran Empire (13th century–17th century)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "Historical flags > Pre-colonial states",
+   "file": "Flag of Adal Sultanate.svg",
+   "text": "Flag of the Adal Sultanate (1415–1577)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "Historical flags > Pre-colonial states",
+   "file": "Flag used Mogadishu according to a Portuguese map.png",
+   "text": "Flag of the Hiraab Imamate (17th century–19th century)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "Historical flags > Pre-colonial states",
+   "file": "Majeerteen sultanate flag.jpg",
+   "text": "Flag of the Majeerteen Sultanate (1648–1927)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "Historical flags > Pre-colonial states",
+   "file": "Isaaq Flag.svg",
+   "text": "Religious banner of the Isaaq Sultanate derived from an Adal Sultanate flag (1700s–1884)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "Historical flags > Italian Somalia",
+   "file": "Flag of Italy (1861-1946) crowned.svg",
+   "text": "Flag of Italian Somaliland (1889–1941)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "Historical flags > Italian Somalia",
+   "file": "Flag of the United Kingdom (3-5).svg",
+   "text": "Flag of Italian Somaliland under British occupation (1941-1950)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "Historical flags > Italian Somalia",
+   "file": "Flag of Italy (1946–2003).svg",
+   "text": "Flag of Italy used in the Trust Territory of Somaliland (1950–1960)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "Historical flags > Italian Somalia",
+   "file": "Flag of the United Nations.svg",
+   "text": "Flag of the United Nations (1950–1960)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "Historical flags > Italian Somalia",
+   "file": "Flag of Somalia.svg",
+   "text": "Co-official/secondary flag of Trust Territory of Somaliland (1954–1960)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "Historical flags > British Somaliland",
+   "file": "Flag of the United Kingdom.svg",
+   "text": "Flag of the United Kingdom used in British Somaliland (1884–1903)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "Historical flags > British Somaliland",
+   "file": "British Raj Red Ensign.svg",
+   "text": "Flag of the British Raj used in British Somaliland (1884–1898)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "Historical flags > British Somaliland",
+   "file": "Flag of British Somaliland (1903–1950).svg",
+   "text": "Flag of British Somaliland (1903–1950)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "Historical flags > British Somaliland",
+   "file": "Flag of British Somaliland (1950–1952).svg",
+   "text": "Flag of British Somaliland (1950–1952)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "Historical flags > British Somaliland",
+   "file": "Flag of British Somaliland (1952–1960).svg",
+   "text": "Flag of British Somaliland (1952–1960)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "Historical flags > British Somaliland",
+   "file": "Flag of State of Somaliland.svg",
+   "text": "Flag of State of Somaliland (26 June 1960 – 1 July 1960)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "Subnational flags > Federal Member States",
+   "file": "Flag of Mogadishu, Somalia.svg",
+   "text": "Flag of Banaadir",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "Subnational flags > Federal Member States",
+   "file": "New Flag of Galmudug State of Somalia.svg",
+   "text": "Flag of Galmudug",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "Subnational flags > Federal Member States",
+   "file": "Flag of Hirshabelle.svg",
+   "text": "Flag of Hirshabelle",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "Subnational flags > Federal Member States",
+   "file": "Flag of Jubaland (Somalia).svg",
+   "text": "Flag of Jubaland",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "Subnational flags > Federal Member States",
+   "file": "Flag of Somaliland.svg",
+   "text": "Flag of Somaliland (claimed)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "Subnational flags > Federal Member States",
+   "file": "Flag of North Eastern State of Somalia.svg",
+   "text": "Flag of North East",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "Subnational flags > Federal Member States",
+   "file": "Flag of Puntland.svg",
+   "text": "Flag of Puntland",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "Flag of Somalia",
+   "section": "Subnational flags > Federal Member States",
+   "file": "Flag of Southwestern Somalia.svg",
+   "text": "Flag of South West",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "National flags",
+   "file": "Flag of Somalia.svg",
+   "text": "! scope=\"row\" | | 1954–present | National flag of Somalia and the flag for several Somali republics | A single white five-pointed star centered on a blue field.Maria Costantino, The Illustrated Flag Handbook, (Gramercy Books: 2001), p. 185. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Regional flags > State flags",
+   "file": "Flag of Southwestern Somalia.svg",
+   "text": "! scope=\"row\" | | 2002–2006, 2014–present | rowspan=\"3\" | Flag of the South West State | The blue background and star of the national flag in the upper hoist, a red diagonal band through the middle, and a green background with a ring of six stars in the lower fly.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Regional flags > State flags",
+   "file": "Flag of South West State of Somalia (2014 - ).png",
+   "text": "! scope=\"row\" | | 2014 | A horizontal tricolor of blue, red, and green, with a large white star in the top stripe, and a ring of six small stars in the bottom stripe.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Regional flags > State flags",
+   "file": "Flag of Southwestern Somalia (2002).png",
+   "text": "! scope=\"row\" | | 2002 | A horizontal tricolor of blue, red, and green, with a ring of six stars in the upper hoist.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Regional flags > State flags",
+   "file": "Flag of Galmudug.svg",
+   "text": "! scope=\"row\" | | 2015–present | rowspan=\"4\" | Flag of Galmudug State | A blue field bearing a white star on the flu side and a white pile at the hoist bearing two green stars aligned horizontally.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Regional flags > State flags",
+   "file": "Flag of Galmudug (2010-2015).svg",
+   "text": "! scope=\"row\" | | 2010–2015 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Regional flags > State flags",
+   "file": "Flag of Galmudug (2009-2010).svg",
+   "text": "! scope=\"row\" | | 2009–2010 |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Regional flags > State flags",
+   "file": "Flag of Somalia (2004-2012).svg",
+   "text": "! scope=\"row\" | | 2006–2009 | Same as Somalia's national flag.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Regional flags > State flags",
+   "file": "Flag of Puntland.svg",
+   "text": "! scope=\"row\" | | 2009–present | rowspan=\"2\" | Flag of Puntland State | A horizontal tricolor of blue, white, and green with a white star at the top.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Regional flags > State flags",
+   "file": "Flag of Somalia.svg",
+   "text": "! scope=\"row\" | | ?–2009 | Same as Somalia's national flag.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Regional flags > State flags",
+   "file": "North Eastern State of Somalia.jpg",
+   "text": "! scope=\"row\" | | 2023–present | Flag of the North East State |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Regional flags > State flags",
+   "file": "Flag of Jubaland (Somalia).svg",
+   "text": "! scope=\"row\" | | 2013–present | Flag of Jubaland State |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Regional flags > State flags",
+   "file": "Hirshabeelle.png",
+   "text": "! scope=\"row\" | | | Flag of Hirshabelle State |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Regional flags > State flags",
+   "file": "Flag of Himan and Heeb.svg",
+   "text": "! scope=\"row\" | | 2008–2015 | Flag of Himan and Heeb State |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Regional flags > State flags",
+   "file": "Flag of Mogadishu, Somalia.svg",
+   "text": "! scope=\"row\" | | | Flag of Banadir State, coextensive with Mogadishu |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Regional flags > State flags",
+   "file": "Flag of Maakhir.svg",
+   "text": "! scope=\"row\" | | 2007–2008 | Flag of Maakhir State, a quasi-state in the nation of Somalia |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Regional flags > State flags",
+   "file": "Flag of Maakhir 2008.svg",
+   "text": "! scope=\"row\" | | 2008–2009 | Flag of Maakhir |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Regional flags > State flags",
+   "file": "Flag of Jubba Valley State.svg",
+   "text": "! scope=\"row\" | | | Flag of the unrecognised Jubba Valley State |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Regional flags > State flags",
+   "file": "Flag of Raas Caseyr State.svg",
+   "text": "! scope=\"row\" | | | Flag of the unrecognised Raas Caseyr State | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Regional flags > Other",
+   "file": "Flag of Jubaland.svg",
+   "text": "! scope=\"row\" | | 1998–1999 | Flag of Jubaland |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Regional flags > Other",
+   "file": "Flag of Somaliland.svg",
+   "text": "! scope=\"row\" | | 1996–present | Flag of the Republic of Somaliland |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Regional flags > Other",
+   "file": "Flag of Azania.svg",
+   "text": "! scope=\"row\" | | | Flag of the Republic of Azania | J/Land:-M/weynaha D/Goboleedka AZANIA & Wafdi La Socda-Oo Gaaray Tuulada Dhoobleey!!! | Allkisima.com",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Regional flags > Other",
+   "file": "Islamic State flag.svg",
+   "text": "! scope=\"row\" | 150x150px | 2008–present | Flag of the Islamic Wilayaat of Somalia | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Military flags",
+   "file": "Somali Army Flag.svg",
+   "text": "! scope=\"row\" | | | Flag of the Somali Armed Forces | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Police flags",
+   "file": "Flag of the Somali Police Force.svg",
+   "text": "! scope=\"row\" | | | Flag of the Somali Police Force | A blue banner with the logo of the Somali Police Force, centered. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Political flags",
+   "file": "Flag of Ogaden National Liberation Front(2).svg",
+   "text": "! scope=\"row\" | | 1984–present | Flag of the Ogaden National Liberation Front |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Political flags",
+   "file": "Flag of Somali Labour Party.png",
+   "text": "! scope=\"row\" | | 2011–present | Flag of the Somali Labour Party |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Political flags",
+   "file": "Flag of the Somali Youth League.svg",
+   "text": "! scope=\"row\" | | | Flag of the Somali Youth League |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Political flags",
+   "file": "Flag of the Somali National Movement.svg",
+   "text": "! scope=\"row\" | | 1981–1991 | Flag of the Somali National Movement |",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Political flags",
+   "file": "Flag of Ahlu Sunnah Waljamaca.svg",
+   "text": "! scope=\"row\" | | 1991–present | Flag of Ahlu Sunnah Waljamaca | |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Historical flags > Pre-colonial states",
+   "file": "Flag of Mogadishu.png",
+   "text": "! scope=\"row\" | | 10th century–16th century | Flag of the Sultanate of Mogadishu according to Lázaro Luis' 1563 map | A dark blue field with a golden crescent moon in the .",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Historical flags > Pre-colonial states",
+   "file": "Muzzaffar (Mogadishu area) flag according to 1576 Portuguese map.svg",
+   "text": "! scope=\"row\" | | 13th century–17th century | Flag of the Ajuran Empire | A bicoloured pennon of red and yellow with a white crescent moon off-centred toward the hoist.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Historical flags > Pre-colonial states",
+   "file": "Flag used Mogadishu according to a Portuguese map.png",
+   "text": "! scope=\"row\" | | 17th century–19th century | Flag of the Hiraab Imamate | A swallowtailed bicoloured banner of red and blue with two white crescent moons.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Historical flags > Pre-colonial states",
+   "file": "Flag of Adal Sultanate.svg",
+   "text": "! scope=\"row\" | | 1415–1577 | Flag of the Adal Sultanate | Three banners of white, red, and white with a crescent moon in each banner.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Historical flags > Pre-colonial states",
+   "file": "Geledi Sultanante Flag.png",
+   "text": "! scope=\"row\" | | 1695–1911 | Signature flag of the Sultanate of the Geledi | A vertical bicolor of blue and green with a five-pointed star in the blue stripe and Arabic script in the green stripe.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Historical flags > Pre-colonial states",
+   "file": "Isaaq Flag.svg",
+   "text": "! scope=\"row\" | | 1700s–1884 | Religious banner of the Isaaq Sultanate derived from an Adal Sultanate flag | A green field with white Arabic script.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Historical flags > Pre-colonial states",
+   "file": "Taleh-based Dervish State flag2.svg",
+   "text": "! scope=\"row\" | | 1896–1925 | Flag of the Dervish State | A blue field with a red square in the and a red square inside of it, bordered with red. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Historical flags > Italian Somaliland",
+   "file": "Flag of Italy (1861-1946) crowned.svg",
+   "text": "! scope=\"row\" | | 1889–1941 | Flag of Italian Somaliland | An Italian tricolour with Savoy shield and Royal crown in the middle.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Historical flags > Italian Somaliland",
+   "file": "Flag of the United Kingdom (1-2).svg",
+   "text": "! scope=\"row\" | | 1941–1950 | Flag of Italian Somaliland under British occupation | A superimposition of the flags of England and Scotland with the Saint Patrick's Saltire (representing Ireland).",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Historical flags > Italian Somaliland",
+   "file": "Flag of Italy.svg",
+   "text": "! scope=\"row\" | | 1950–1960 | Official flag of Trust Territory of Somaliland | A tricolour featuring three equally sized vertical bands of green, white, and red.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Historical flags > Italian Somaliland",
+   "file": "Flag of the United Nations.svg",
+   "text": "! scope=\"row\" | | 1950–1960 | Flag of the United Nations | Sky blue banner with a white UN emblem (an azimuthal equidistant projection surrounded by two olive branches) in the centre.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Historical flags > Italian Somaliland",
+   "file": "Flag of Somalia.svg",
+   "text": "! scope=\"row\" | | 1954–1960 | Co-official/secondary flag of Trust Territory of Somaliland | Same as the Somali flag. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Historical flags > British Somaliland",
+   "file": "Flag of the United Kingdom (1-2).svg",
+   "text": "! scope=\"row\" | | 1884–1903 | Flag of the United Kingdom used in British Somaliland | A superimposition of the flags of England and Scotland with the Saint Patrick's Saltire (representing Ireland).",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Historical flags > British Somaliland",
+   "file": "British Raj Red Ensign.svg",
+   "text": "! scope=\"row\" | | 1884–1898 | Flag of the British Raj used in British Somaliland | A British Red Ensign defaced with the Star of India emblem in the fly.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Historical flags > British Somaliland",
+   "file": "Flag of British Somaliland (1903–1950).svg",
+   "text": "! scope=\"row\" | | 1903–1950 | rowspan=\"3\" | Flag of British Somaliland | A British Blue Ensign defaced with a kudu antelope in a white disc in the fly.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Historical flags > British Somaliland",
+   "file": "Flag of British Somaliland (1950–1952).svg",
+   "text": "! scope=\"row\" | | 1950–1952 | rowspan=\"2\" | A British Blue Ensign defaced with the badge of British Somaliland in a white disc in the fly.",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Historical flags > British Somaliland",
+   "file": "Flag of British Somaliland (1952–1960).svg",
+   "text": "! scope=\"row\" | | 1952–1960",
+   "kind": "table"
+  },
+  {
+   "wiki": "en",
+   "page": "List of Somali flags",
+   "section": "Historical flags > British Somaliland",
+   "file": "Flag of State of Somaliland.svg",
+   "text": "! scope=\"row\" | | 1960 | Flag of the State of Somaliland | Sky blue field charged with a white five-pointed star. |}",
+   "kind": "table"
+  },
+  {
+   "wiki": "so",
+   "page": "Calanka ciraad",
+   "section": "Dowladaha Xubnaha ka ah Federaalka",
+   "file": "Flag of Mogadishu, Somalia.svg",
+   "text": "Calanka Banaadir",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "so",
+   "page": "Calanka ciraad",
+   "section": "Dowladaha Xubnaha ka ah Federaalka",
+   "file": "New Flag of Galmudug State of Somalia.svg",
+   "text": "Calanka Galmudug",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "so",
+   "page": "Calanka ciraad",
+   "section": "Dowladaha Xubnaha ka ah Federaalka",
+   "file": "Hirshabeelle.png",
+   "text": "Calanka Hirshabelle",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "so",
+   "page": "Calanka ciraad",
+   "section": "Dowladaha Xubnaha ka ah Federaalka",
+   "file": "Flag of Jubaland (Somalia).svg",
+   "text": "Calanka Jubaland Jubaland",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "so",
+   "page": "Calanka ciraad",
+   "section": "Dowladaha Xubnaha ka ah Federaalka",
+   "file": "Flag of Somaliland.svg",
+   "text": "Calanka Somaliland (Sheegatay)",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "so",
+   "page": "Calanka ciraad",
+   "section": "Dowladaha Xubnaha ka ah Federaalka",
+   "file": "North Eastern State of Somalia.jpg",
+   "text": "Calanka Waqooyibari",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "so",
+   "page": "Calanka ciraad",
+   "section": "Dowladaha Xubnaha ka ah Federaalka",
+   "file": "Flag of Puntland.svg",
+   "text": "Calanka Puntland",
+   "kind": "gallery"
+  },
+  {
+   "wiki": "so",
+   "page": "Calanka ciraad",
+   "section": "Dowladaha Xubnaha ka ah Federaalka",
+   "file": "Flag of Southwestern Somalia.svg",
+   "text": "Calanka Koonfur Galbeed",
+   "kind": "gallery"
+  }
+ ]
+}

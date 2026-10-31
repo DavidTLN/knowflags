@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="325"
+   height="217.5"
+   id="svg2"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="Flag_of_the_Madagascar_Protectorate_(1885-1896).svg">
+  <metadata
+     id="metadata13">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs11" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview9"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.21213203"
+     inkscape:cx="-215.55245"
+     inkscape:cy="-156.82431"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g3" />
+  <g
+     transform="translate(-260.35715,-275.21933)"
+     id="g3"
+     style="stroke:none">
+    <rect
+       width="325"
+       height="72.5"
+       x="260.35715"
+       y="275.21933"
+       id="rect3640"
+       style="fill:#002654;fill-opacity:1;stroke:none" />
+    <rect
+       width="325"
+       height="72.5"
+       x="260.35715"
+       y="-420.21933"
+       transform="scale(1,-1)"
+       id="rect3640-7"
+       style="fill:#ffffff;stroke:none" />
+    <rect
+       width="325"
+       height="72.5"
+       x="260.35715"
+       y="420.21933"
+       id="rect3640-7-4"
+       style="fill:#ce1126;fill-opacity:1;stroke:none" />
+    <path
+       d="m 334.09375,354.875 c -15.68094,0 -28.375,12.69406 -28.375,28.375 0,15.68094 12.69406,28.40625 28.375,28.40625 1.0757,0 2.14289,-0.071 3.1875,-0.1875 -10.22825,-1.59174 -18.1875,-13.6211 -18.1875,-28.21875 0,-14.59765 7.95925,-26.62701 18.1875,-28.21875 -1.04461,-0.11649 -2.1118,-0.15625 -3.1875,-0.15625 z"
+       id="path2830"
+       style="fill:#ce1126;fill-opacity:1;stroke:none"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

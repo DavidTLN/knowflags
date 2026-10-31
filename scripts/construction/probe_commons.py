@@ -24,7 +24,7 @@ def main():
                 except Exception as e:  # noqa: BLE001
                     print('err', q, e)
                     continue
-                for m in j['query']['search']:
+                for m in j.get('query', {}).get('search', []):
                     t = m['title']
                     tl = t.lower()
                     if any(k in tl for k in ('construct', 'specification', 'sheet', 'construcci', 'konstrukt')):

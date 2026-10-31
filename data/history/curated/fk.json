@@ -1,0 +1,11 @@
+{"iso":"fk","update":[
+{"id":2363,"label_fr":"Blue Ensign au sceau des Falkland (1876-1925)","label_en":"Blue Ensign with the Falklands seal (1876–1925)",
+ "notes_fr":"Premier pavillon du territoire : un Blue Ensign chargé du sceau de la colonie.",
+ "notes_en":"The territory's first flag: a Blue Ensign bearing the colony's seal."},
+{"id":2364,"label_fr":"Blue Ensign à l'insigne colonial (1925-1948)","label_en":"Blue Ensign with colonial badge (1925–1948)",
+ "notes_fr":"Le sceau cède la place à un insigne colonial propre aux îles.",
+ "notes_en":"The seal gave way to a colonial badge of the islands' own."},
+{"id":2365,"label_fr":"Blue Ensign aux armes des Falkland (1948-1999)","label_en":"Blue Ensign with the Falklands arms (1948–1999)",
+ "notes_fr":"Les armoiries accordées en 1948, un bélier et le navire Desire de John Davis, figurent sur un disque blanc ; le disque est supprimé en 1999.",
+ "notes_en":"The arms granted in 1948, a ram and John Davis's ship Desire, sit on a white disc; the disc was dropped in 1999."}
+],"delete":[2305]}

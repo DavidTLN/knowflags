@@ -1,0 +1,22 @@
+{"iso":"eg","update":[
+{"id":2349,"label_fr":"Égypte de Méhémet Ali (1844-1867)","label_en":"Egypt under Muhammad Ali (1844–1867)",
+ "notes_fr":"Méhémet Ali, vice-roi presque indépendant du sultan, dote l'Égypte d'un drapeau rouge au croissant blanc enserrant une étoile.",
+ "notes_en":"Muhammad Ali, a viceroy nearly independent of the sultan, gave Egypt a red flag with a white crescent enclosing a star."},
+{"id":2350,"label_fr":"Khédivat d'Égypte (1867-1881)","label_en":"Khedivate of Egypt (1867–1881)",
+ "notes_fr":"Le khédive Ismaïl, qui obtient ce titre du sultan en 1867, adopte un drapeau rouge au croissant blanc et à trois étoiles à cinq branches.",
+ "notes_en":"Khedive Isma'il, granted that title by the sultan in 1867, adopted a red flag with a white crescent and three five-pointed stars."},
+{"id":2351,"date_end":"1914-12-19","label_fr":"Khédivat sous occupation britannique (1881-1914)","label_en":"Khedivate under British occupation (1881–1914)",
+ "notes_fr":"Au moment de la révolte d'Urabi et de l'occupation britannique de 1882, l'Égypte revient à un drapeau rouge proche de celui de Méhémet Ali.",
+ "notes_en":"Around the Urabi revolt and the British occupation of 1882, Egypt went back to a red flag close to Muhammad Ali's."},
+{"id":2129,"file":"Flag of Egypt (1922–1953).svg"},
+{"id":2353,"label_fr":"République arabe d'Égypte (faucon de Quraych)","label_en":"Arab Republic of Egypt (Hawk of Quraish)",
+ "notes_fr":"Avec la Fédération des républiques arabes (1972), les deux étoiles laissent place au faucon doré de Quraych ; l'aigle de Saladin revient en 1984.",
+ "notes_en":"With the Federation of Arab Republics (1972), the two stars gave way to the golden Hawk of Quraish; the Eagle of Saladin returned in 1984."}
+],"add":[
+{"date_start":"1914-12-19","date_end":"1922-02-28","label_fr":"Sultanat d'Égypte (protectorat britannique)","label_en":"Sultanate of Egypt (British protectorate)","file":"Egypt flag 1882.svg",
+ "notes_fr":"Devenue sultanat sous protectorat britannique au début de la Première Guerre mondiale, l'Égypte arbore un drapeau rouge à trois croissants blancs, chacun enserrant une étoile.",
+ "notes_en":"Made a sultanate under British protection at the start of the First World War, Egypt flew a red flag with three white crescents, each enclosing a star."},
+{"date_start":"1953-06-18","date_end":"1958-02-22","label_fr":"République d'Égypte (drapeau de la Libération)","label_en":"Republic of Egypt (Liberation flag)","file":"Flag of the Egyptian Revolution (1952).svg",
+ "notes_fr":"Drapeau de la révolution des Officiers libres : bandes rouge, blanche et noire avec l'aigle de Saladin. Il coexiste avec le drapeau vert de la monarchie jusqu'en 1958.",
+ "notes_en":"Flag of the Free Officers' revolution: red, white and black stripes with the Eagle of Saladin. It coexisted with the monarchy's green flag until 1958."}
+],"delete":[2352]}

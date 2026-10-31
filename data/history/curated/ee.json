@@ -1,0 +1,14 @@
+{"iso":"ee","update":[
+{"id":2138,"date_end":"1918-11-21"},
+{"id":2139,"date_start":"1940-07-21","date_end":"1953-01-06","label_fr":"RSS d'Estonie (1940-1953)","label_en":"Estonian SSR (1940–1953)"}
+],"add":[
+{"date_start":"1918-11-21","date_end":"1940-07-21","label_fr":"République d'Estonie (1918-1940)","label_en":"Republic of Estonia (1918–1940)","image":"/flags/history/ee-1918.svg",
+ "notes_fr":"Le tricolore de l'association étudiante devient drapeau national le 21 novembre 1918. Interdit sous l'occupation soviétique, il est caché par de nombreuses familles.",
+ "notes_en":"The student society's tricolour became the national flag on 21 November 1918. Banned under Soviet occupation, it was hidden by many families."},
+{"date_start":"1918-11-29","date_end":"1919-06-05","label_fr":"Commune des travailleurs d'Estonie","label_en":"Estonian Workers' Commune","image":"/flags/history/ee-1918-commune.svg",
+ "notes_fr":"Gouvernement bolchevique proclamé à Narva le 29 novembre 1918 ; il ne contrôle qu'une partie du pays pendant la guerre d'indépendance.",
+ "notes_en":"A Bolshevik government proclaimed in Narva on 29 November 1918; it only ever held part of the country during the War of Independence."},
+{"date_start":"1953-01-06","date_end":"1990-08-07","label_fr":"RSS d'Estonie (1953-1990)","label_en":"Estonian SSR (1953–1990)","image":"/flags/history/ee-1953.svg",
+ "notes_fr":"En 1953, le drapeau rouge reçoit dans sa partie basse des lignes bleues et blanches ondulées évoquant la mer Baltique. Le tricolore bleu-noir-blanc revient le 7 août 1990.",
+ "notes_en":"In 1953 the red flag gained wavy blue and white lines at the bottom, evoking the Baltic Sea. The blue-black-white tricolour returned on 7 August 1990."}
+]}

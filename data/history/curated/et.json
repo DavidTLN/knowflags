@@ -1,0 +1,15 @@
+{"iso":"et","update":[
+{"id":2360,"label_fr":"Derg (1975-1987)","label_en":"Derg (1975–1987)",
+ "notes_fr":"Sous la junte militaire du Derg, le lion de Juda disparaît : le tricolore vert-jaune-rouge est utilisé sans emblème impérial.",
+ "notes_en":"Under the Derg military junta the Lion of Judah disappeared: the green-yellow-red tricolour was used without the imperial emblem."},
+{"id":2361,"label_fr":"République démocratique populaire (1987-1991)","label_en":"People's Democratic Republic (1987–1991)",
+ "notes_fr":"La Constitution socialiste de 1987 ajoute au tricolore un emblème d'inspiration soviétique, avec une étoile rouge et un soleil levant.",
+ "notes_en":"The 1987 socialist constitution added a Soviet-style emblem to the tricolour, with a red star and a rising sun."},
+{"id":2362,"label_fr":"République fédérale (1996)","label_en":"Federal Republic (1996)",
+ "notes_fr":"En février 1996, un disque bleu portant un pentagramme doré, symbole de l'égalité des peuples d'Éthiopie, est placé au centre ; ce premier dessin est retouché dès octobre.",
+ "notes_en":"In February 1996 a blue disc bearing a golden pentagram, the symbol of equality among Ethiopia's peoples, was placed at the centre; this first design was revised by October."}
+],"add":[
+{"date_start":"1974-09-12","date_end":"1975-03-21","label_fr":"Gouvernement militaire provisoire (1974-1975)","label_en":"Provisional Military Government (1974–1975)","file":"Flag of Ethiopia (1974-1975).svg",
+ "notes_fr":"Après la déposition d'Haïlé Sélassié, le lion de Juda reste sur le drapeau mais perd sa couronne.",
+ "notes_en":"After Haile Selassie was deposed, the Lion of Judah stayed on the flag but lost its crown."}
+]}

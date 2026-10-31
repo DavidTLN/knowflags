@@ -1,0 +1,15 @@
+{"iso":"gb","update":[
+{"id":2251,"date_end":"1707-05-01","label_fr":"Union Flag de Jacques Ier (1606-1707)","label_en":"Union Flag of James I (1606–1707)","file":"Union flag 1606 (Kings Colors).svg",
+ "notes_fr":"Le 12 avril 1606, Jacques Ier, roi d'Angleterre et d'Écosse, fait superposer les croix de saint Georges et de saint André pour les navires de ses deux royaumes.",
+ "notes_en":"On 12 April 1606 James I, King of England and Scotland, had the crosses of St George and St Andrew combined for the ships of his two kingdoms."},
+{"id":2373,"date_start":"1707-05-01","date_end":"1801-01-01","label_fr":"Royaume de Grande-Bretagne (1707-1801)","label_en":"Kingdom of Great Britain (1707–1801)",
+ "notes_fr":"L'Acte d'Union de 1707 fait de l'Union Flag le drapeau du nouveau royaume de Grande-Bretagne ; la croix de saint Patrick n'y figure pas encore.",
+ "notes_en":"The 1707 Act of Union made the Union Flag the flag of the new Kingdom of Great Britain; St Patrick's cross was not yet part of it."}
+],"add":[
+{"date_start":"1649-05-19","date_end":"1651-01-01","label_fr":"Commonwealth d'Angleterre (1649-1651)","label_en":"Commonwealth of England (1649–1651)","file":"Flag of the Commonwealth (1649-1651).svg",
+ "notes_fr":"Après l'exécution de Charles Ier, la république remplace l'Union Flag par la croix de saint Georges accolée à la harpe irlandaise.",
+ "notes_en":"After Charles I was executed, the republic replaced the Union Flag with St George's cross set beside the Irish harp."},
+{"date_start":"1651-01-01","date_end":"1658-09-03","label_fr":"Commonwealth (1651-1658)","label_en":"Commonwealth (1651–1658)","file":"Flag of The Commonwealth.svg",
+ "notes_fr":"Drapeau écartelé des croix de saint Georges et de saint André, utilisé sous le Commonwealth et le protectorat d'Oliver Cromwell.",
+ "notes_en":"A flag quartering the crosses of St George and St Andrew, used under the Commonwealth and Oliver Cromwell's Protectorate."}
+]}

@@ -1,0 +1,20 @@
+{
+"iso": "lr",
+"update": [
+{
+"id": 2185,
+"file": "Flag of Liberia (1827–1847).svg"
+}
+],
+"add": [
+{
+"date_start": "1854-02-02",
+"date_end": "1857-03-18",
+"label_fr": "République du Maryland",
+"label_en": "Republic of Maryland",
+"notes_fr": "Colonie d'Afro-Américains libres fondée par la Maryland State Colonization Society, devenue république en 1854 puis rattachée au Liberia en 1857.",
+"notes_en": "A settlement of free African Americans founded by the Maryland State Colonization Society, which became a republic in 1854 and joined Liberia in 1857.",
+"file": "Flag of the Republic of Maryland.svg"
+}
+]
+}

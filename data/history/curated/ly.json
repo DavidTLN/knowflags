@@ -1,0 +1,46 @@
+{
+"iso": "ly",
+"update": [
+{
+"id": 2432,
+"label_fr": "Royaume de Libye",
+"label_en": "Kingdom of Libya",
+"notes_fr": "Drapeau du royaume d'Idris Ier, issu de la bannière senoussie : rouge pour le Fezzan, noir pour la Cyrénaïque, vert pour la Tripolitaine. Il est repris en 2011.",
+"notes_en": "Flag of Idris I's kingdom, derived from the Senussi banner: red for Fezzan, black for Cyrenaica, green for Tripolitania. It was brought back in 2011."
+},
+{
+"id": 2433,
+"label_fr": "République arabe libyenne (1969-1972)",
+"label_en": "Libyan Arab Republic (1969–1972)",
+"notes_fr": "Après le coup d'État de Kadhafi, la Libye adopte le tricolore rouge-blanc-noir de la libération arabe, sur le modèle égyptien.",
+"notes_en": "After Gaddafi's coup, Libya adopted the red-white-black Arab Liberation tricolour, on the Egyptian model."
+},
+{
+"id": 2434,
+"label_fr": "Fédération des républiques arabes (1972-1977)",
+"label_en": "Federation of Arab Republics (1972–1977)",
+"notes_fr": "Membre de la Fédération des républiques arabes avec l'Égypte et la Syrie, la Libye place au centre le faucon doré de Quraych.",
+"notes_en": "As a member of the Federation of Arab Republics with Egypt and Syria, Libya placed the golden Hawk of Quraish at the centre."
+}
+],
+"add": [
+{
+"date_start": "1711-01-01",
+"date_end": "1835-05-26",
+"label_fr": "Régence de Tripoli (Karamanli)",
+"label_en": "Regency of Tripoli (Karamanli)",
+"notes_fr": "Pavillon de la régence de Tripoli sous la dynastie Karamanli, quasi indépendante de l'Empire ottoman et redoutée pour sa course en Méditerranée.",
+"notes_en": "Flag of the Regency of Tripoli under the Karamanli dynasty, nearly independent of the Ottoman Empire and feared for its privateering in the Mediterranean.",
+"file": "Maritime flag of Regency of Tripoli (18th century).svg"
+},
+{
+"date_start": "1949-06-01",
+"date_end": "1951-12-24",
+"label_fr": "Émirat de Cyrénaïque",
+"label_en": "Emirate of Cyrenaica",
+"notes_fr": "Drapeau noir au croissant et à l'étoile blancs de l'émirat d'Idris al-Senussi, qui forme la bande centrale du drapeau libyen.",
+"notes_en": "The black flag with a white crescent and star of Idris al-Senussi's emirate, which became the central band of the Libyan flag.",
+"file": "Flag of Cyrenaica.svg"
+}
+]
+}

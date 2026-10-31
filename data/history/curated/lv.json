@@ -1,0 +1,39 @@
+{
+"iso": "lv",
+"update": [
+{
+"id": 2183,
+"date_end": "1953-01-01",
+"file": "Flag of the Latvian Soviet Socialist Republic (1940–1953).svg"
+}
+],
+"add": [
+{
+"date_start": "1562-11-28",
+"date_end": "1795-03-28",
+"label_fr": "Duché de Courlande",
+"label_en": "Duchy of Courland",
+"notes_fr": "Duché vassal de la Pologne-Lituanie, la Courlande eut même des colonies, à Tobago et en Gambie, au XVIIe siècle.",
+"notes_en": "A vassal duchy of Poland-Lithuania, Courland even had colonies, in Tobago and the Gambia, in the 17th century.",
+"file": "Flag of Courland (state).svg"
+},
+{
+"date_start": "1918-11-18",
+"date_end": "1940-08-05",
+"label_fr": "République de Lettonie (1918-1940)",
+"label_en": "Republic of Latvia (1918–1940)",
+"notes_fr": "Le carmin-blanc-carmin, déjà décrit dans une chronique rimée du XIIIe siècle, devient le drapeau de la Lettonie indépendante, officialisé en 1921.",
+"notes_en": "Carmine-white-carmine, already described in a 13th-century rhymed chronicle, became independent Latvia's flag, made official in 1921.",
+"image": "https://flagcdn.com/lv.svg"
+},
+{
+"date_start": "1953-01-01",
+"date_end": "1990-02-27",
+"label_fr": "RSS de Lettonie (1953-1990)",
+"label_en": "Latvian SSR (1953–1990)",
+"notes_fr": "En 1953, le drapeau rouge reçoit des vagues bleues et blanches évoquant la mer Baltique ; le carmin-blanc-carmin revient le 27 février 1990.",
+"notes_en": "In 1953 the red flag gained blue and white waves evoking the Baltic Sea; carmine-white-carmine returned on 27 February 1990.",
+"file": "Flag of Latvian SSR.svg"
+}
+]
+}

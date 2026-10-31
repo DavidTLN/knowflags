@@ -1,0 +1,20 @@
+{
+"iso": "ie",
+"update": [
+{
+"id": 2168,
+"file": "Green harp flag of Ireland.svg"
+}
+],
+"add": [
+{
+"date_start": "1386-01-01",
+"date_end": "1542-06-18",
+"label_fr": "Seigneurie d'Irlande",
+"label_en": "Lordship of Ireland",
+"file": "Banner of the Lordship of Ireland.svg",
+"notes_fr": "Bannière aux trois couronnes d'or sur fond bleu, emblème de la seigneurie d'Irlande détenue par les rois d'Angleterre jusqu'à la création du royaume en 1542.",
+"notes_en": "A banner with three gold crowns on blue, the emblem of the Lordship of Ireland held by the kings of England until the kingdom was created in 1542."
+}
+]
+}

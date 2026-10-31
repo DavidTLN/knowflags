@@ -3,7 +3,7 @@ name: Historical flags review
 on:
   push:
     branches: [history-review]
-    paths: [scripts/history/crawl_wikipedia.py, scripts/history/download.py, data/history/selection.json, .github/workflows/history-review.yml]
+    paths: [scripts/history/crawl_wikipedia.py, scripts/history/download.py, scripts/history/find_files.py, data/history/selection.json, data/history/find.json, .github/workflows/history-review.yml]
   workflow_dispatch:
 
 permissions:
@@ -28,6 +28,9 @@ jobs:
           if [ -f data/history/selection.json ] && [ -f scripts/history/download.py ]; then
             python3 scripts/history/download.py > data/history/download.log 2>&1 || true
           fi
+      - name: Find missing Commons files
+        run: |
+          if [ -f data/history/find.json ]; then python3 scripts/history/find_files.py > data/history/find.log 2>&1 || true; fi
       - name: Commit results
         run: |
           git config user.name "knowflags-bot"

@@ -11,6 +11,11 @@ from fetch_commons import api, imageinfo, safe, S, OUT
 import os
 
 
+def ok(tl):
+    return (any(k in tl for k in ('construct', 'specification', 'sheet', 'construcci', 'konstrukt', 'schéma'))
+            and any(k in tl for k in ('flag', 'bandera', 'drapeau', 'flagge', 'vlag', 'bandeira', 'banner', 'ensign')))
+
+
 def main():
     hits = {}
     for arg in sys.argv[1:]:
@@ -27,7 +32,7 @@ def main():
                 for m in j.get('query', {}).get('search', []):
                     t = m['title']
                     tl = t.lower()
-                    if any(k in tl for k in ('construct', 'specification', 'sheet', 'construcci', 'konstrukt')):
+                    if ok(tl):
                         found.add(t)
                 time.sleep(0.2)
             for cat in (f'Category:Flag of {name}', f'Category:Flags of {name}', f'Category:National flag of {name}',
@@ -38,10 +43,11 @@ def main():
                     continue
                 for m in j.get('query', {}).get('categorymembers', []):
                     tl = m['title'].lower()
-                    if any(k in tl for k in ('construct', 'specification', 'sheet', 'construcci', 'konstrukt')):
+                    if ok(tl):
                         found.add(m['title'])
         hits[arg] = sorted(found)
         print(arg, len(found))
+    json.dump({'hits': hits}, open(f'{OUT}/probe.json', 'w'), ensure_ascii=False, indent=1)
     allt = {t for v in hits.values() for t in v}
     info = imageinfo(allt) if allt else {}
     json.dump({'hits': hits, 'info': info}, open(f'{OUT}/probe.json', 'w'), ensure_ascii=False, indent=1)

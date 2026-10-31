@@ -66,8 +66,8 @@ def search_files(q):
 def imageinfo(titles):
     out = {}
     titles = sorted(titles)
-    for i in range(0, len(titles), 50):
-        j = api(action='query', prop='imageinfo', titles='|'.join(titles[i:i + 50]),
+    for i in range(0, len(titles), 20):
+        j = api(action='query', prop='imageinfo', titles='|'.join(titles[i:i + 20]),
                 iiprop='url|size|mime|extmetadata', iiextmetadatafilter='LicenseShortName|Artist|UsageTerms')
         for p in j['query']['pages']:
             ii = (p.get('imageinfo') or [{}])[0]

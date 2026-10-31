@@ -1,0 +1,12 @@
+{"iso":"bj","update":[
+{"id":1692,"date_start":"1959-11-16",
+ "notes_fr":"Adopté le 16 novembre 1959, quand le Dahomey devient république autonome au sein de la Communauté française, puis conservé à l'indépendance du 1er août 1960.",
+ "notes_en":"Adopted on 16 November 1959, when Dahomey became an autonomous republic within the French Community, and kept at independence on 1 August 1960."}
+],"add":[
+{"date_start":"1818-01-01","date_end":"1859-01-01","label_fr":"Royaume du Dahomey (bannière du roi Ghézo)","label_en":"Kingdom of Dahomey (banner of King Ghezo)","image":"/flags/history/bj-1818.svg",
+ "notes_fr":"Bannière royale du roi Ghézo : un champ blanc orné d'un éléphant de guerre. Son successeur Glélé n'a pas laissé de bannière connue.",
+ "notes_en":"King Ghezo's royal banner: a white field bearing a war elephant. His successor Glele left no known banner."},
+{"date_start":"1890-01-01","date_end":"1894-01-15","label_fr":"Royaume du Dahomey (bannière de Béhanzin)","label_en":"Kingdom of Dahomey (banner of Béhanzin)","image":"/flags/history/bj-1890.svg",
+ "notes_fr":"Bannière bleu clair aux armes du roi Béhanzin, dernier souverain indépendant du Dahomey, qui se rend aux troupes françaises en janvier 1894.",
+ "notes_en":"Light blue banner bearing the arms of King Béhanzin, Dahomey's last independent ruler, who surrendered to French troops in January 1894."}
+]}

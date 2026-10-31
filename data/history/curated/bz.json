@@ -1,0 +1,24 @@
+{
+"iso": "bz",
+"update": [],
+"add": [
+{
+"date_start": "1870-01-01",
+"date_end": "1919-01-01",
+"label_fr": "Honduras britannique (Blue Ensign, 1870-1919)",
+"label_en": "British Honduras (Blue Ensign, 1870–1919)",
+"file": "Flag of British Honduras (1870–1919).svg",
+"notes_fr": "Premier pavillon colonial : un Blue Ensign chargé des armes de la colonie, où figurent déjà les outils des bûcherons qui exploitaient l'acajou.",
+"notes_en": "First colonial flag: a Blue Ensign bearing the colony's arms, which already showed the tools of the woodcutters who harvested mahogany."
+},
+{
+"date_start": "1950-01-01",
+"date_end": "1981-09-21",
+"label_fr": "Drapeau du mouvement national (1950-1981)",
+"label_en": "National movement flag (1950–1981)",
+"file": "Flag of Belize (1950-1981).svg",
+"notes_fr": "Champ bleu à grand disque blanc portant les armes : ce drapeau non officiel, lié au mouvement indépendantiste né en 1950, précède le drapeau national de 1981.",
+"notes_en": "A blue field with a large white disc bearing the arms: this unofficial flag, tied to the independence movement born in 1950, preceded the 1981 national flag."
+}
+]
+}

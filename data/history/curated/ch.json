@@ -1,0 +1,8 @@
+{"iso":"ch","update":[{"id":2269,"file":"Flag of Switzerland 2-3.svg"}],"add":[
+{"date_start":"1470-01-01","date_end":"1798-04-12","label_fr":"Ancienne Confédération (croix de ralliement)","label_en":"Old Swiss Confederacy (field cross)","file":"Early Swiss cross.svg",
+ "notes_fr":"Dès les années 1470, pendant les guerres de Bourgogne, les troupes confédérées arborent une croix blanche sur fond rouge pour se reconnaître : c'est l'ancêtre direct du drapeau suisse.",
+ "notes_en":"From the 1470s, during the Burgundian Wars, Confederate troops displayed a white cross on red to recognise each other: the direct ancestor of the Swiss flag."},
+{"date_start":"1798-04-12","date_end":"1803-03-10","label_fr":"République helvétique","label_en":"Helvetic Republic","file":"Flag of the Helvetic Republic (French).svg",
+ "notes_fr":"République sœur de la France révolutionnaire, la République helvétique adopte un tricolore vert-rouge-jaune ; il disparaît avec l'Acte de médiation de 1803.",
+ "notes_en":"A sister republic of revolutionary France, the Helvetic Republic adopted a green-red-yellow tricolour; it disappeared with the 1803 Act of Mediation."}
+]}

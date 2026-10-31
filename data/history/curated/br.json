@@ -1,0 +1,26 @@
+{"iso":"br","update":[
+{"id":2088,"date_start":"1822-12-01","date_end":"1853-08-30","label_fr":"Empire du Brésil (1822-1853)","label_en":"Empire of Brazil (1822–1853)","file":"Flag of Brazil (1822-1853).svg"},
+{"id":2089,"file":"Flag of Brazil 15-19 November.svg"},
+{"id":2324,"label_fr":"République (21 étoiles, 1889-1960)","label_en":"Republic (21 stars, 1889–1960)",
+ "notes_fr":"Adopté le 19 novembre 1889, quatre jours après la proclamation de la République : 21 étoiles pour les 20 États et le District fédéral, sous la devise positiviste « Ordem e Progresso ».",
+ "notes_en":"Adopted on 19 November 1889, four days after the Republic was proclaimed: 21 stars for the 20 states and the Federal District, under the positivist motto \"Ordem e Progresso\"."},
+{"id":2325,"label_fr":"République (22 étoiles, 1960-1968)","label_en":"Republic (22 stars, 1960–1968)",
+ "notes_fr":"Une 22e étoile est ajoutée pour l'État de Guanabara, créé sur l'ancienne capitale Rio de Janeiro quand Brasília devient capitale en 1960.",
+ "notes_en":"A 22nd star was added for the state of Guanabara, created from the former capital Rio de Janeiro when Brasília became the capital in 1960."},
+{"id":2326,"label_fr":"République (23 étoiles, 1968-1992)","label_en":"Republic (23 stars, 1968–1992)",
+ "notes_fr":"La loi de 1968 refixe le dessin et ajoute l'étoile de l'Acre, devenu État en 1962. En 1992, le drapeau passe à 27 étoiles.",
+ "notes_en":"The 1968 law reset the design and added a star for Acre, a state since 1962. In 1992 the flag moved to 27 stars."}
+],"add":[
+{"date_start":"1645-01-01","date_end":"1816-05-13","label_fr":"Principauté du Brésil (sphère armillaire)","label_en":"Principality of Brazil (armillary sphere)","file":"Flag of the Princes of Brazil.svg",
+ "notes_fr":"À partir de 1645, l'héritier du trône portugais porte le titre de prince du Brésil ; sa bannière blanche montre une sphère armillaire, symbole des grandes navigations.",
+ "notes_en":"From 1645 the heir to the Portuguese throne bore the title Prince of Brazil; his white banner showed an armillary sphere, the symbol of the great voyages."},
+{"date_start":"1816-05-13","date_end":"1822-09-07","label_fr":"Royaume-Uni de Portugal, du Brésil et des Algarves","label_en":"United Kingdom of Portugal, Brazil and the Algarves","file":"Flag of the United Kingdom of Portugal, Brazil, and the Algarves (1815-1825).svg",
+ "notes_fr":"La cour portugaise, réfugiée à Rio de Janeiro, élève le Brésil au rang de royaume ; la sphère armillaire dorée sur fond bleu rejoint les armes du Portugal.",
+ "notes_en":"With the Portuguese court in exile in Rio de Janeiro, Brazil was raised to a kingdom; a golden armillary sphere on blue joined the arms of Portugal."},
+{"date_start":"1822-09-07","date_end":"1822-12-01","label_fr":"Royaume du Brésil (1822)","label_en":"Kingdom of Brazil (1822)","file":"Flag of the Kingdom of Brazil (1822).svg",
+ "notes_fr":"Drapeau du Brésil fraîchement indépendant : l'étendard du prince Pierre, sommé d'une couronne royale, avant son couronnement comme empereur le 1er décembre 1822.",
+ "notes_en":"Flag of newly independent Brazil: Prince Pedro's standard topped by a royal crown, before his coronation as emperor on 1 December 1822."},
+{"date_start":"1853-08-30","date_end":"1889-11-15","label_fr":"Empire du Brésil (1853-1889)","label_en":"Empire of Brazil (1853–1889)","file":"Flag of Brazil (1853-1889).svg",
+ "notes_fr":"Seconde version impériale : le cercle d'étoiles autour de la sphère armillaire passe à vingt étoiles, une par province.",
+ "notes_en":"Second imperial version: the ring of stars around the armillary sphere grew to twenty, one per province."}
+],"delete":[2090]}

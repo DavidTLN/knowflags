@@ -1,0 +1,14 @@
+{"iso":"cn","update":[
+{"id":2107,"file":"Flag of the Qing Dynasty (1889-1912).svg"},
+{"id":2108,"date_end":"1928-12-17","file":"Flag of China (1912–1928).svg"}
+],"add":[
+{"date_start":"1862-01-01","date_end":"1889-01-01","label_fr":"Dynastie Qing (dragon, triangulaire)","label_en":"Qing dynasty (triangular dragon flag)","file":"Flag of the Qing Dynasty (1862-1889).svg",
+ "notes_fr":"Premier drapeau officiel de la Chine, créé pour la marine : un fanion triangulaire jaune portant un dragon bleu face à une perle rouge. Il devient rectangulaire en 1889.",
+ "notes_en":"China's first official flag, created for the navy: a yellow triangular pennant bearing a blue dragon facing a red pearl. It became rectangular in 1889."},
+{"date_start":"1915-12-12","date_end":"1916-03-22","label_fr":"Empire de Chine (Yuan Shikai)","label_en":"Empire of China (Yuan Shikai)","file":"Flag of the Empire of China (1915–1916).svg",
+ "notes_fr":"Yuan Shikai se proclame empereur et adopte un drapeau à sautoir rouge sur les cinq couleurs ; l'empire est abandonné au bout de 83 jours.",
+ "notes_en":"Yuan Shikai proclaimed himself emperor and adopted a flag with a red saltire over the five colours; the empire was abandoned after 83 days."},
+{"date_start":"1928-12-17","date_end":"1949-10-01","label_fr":"République de Chine (gouvernement nationaliste)","label_en":"Republic of China (Nationalist government)","file":"Flag of the Republic of China.svg",
+ "notes_fr":"Le drapeau « ciel bleu, soleil blanc et terre entièrement rouge » du Kuomintang devient drapeau national en 1928 ; après 1949, il ne flotte plus qu'à Taïwan.",
+ "notes_en":"The Kuomintang's \"Blue Sky, White Sun and a Wholly Red Earth\" flag became the national flag in 1928; after 1949 it flew only on Taiwan."}
+]}

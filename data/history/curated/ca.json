@@ -1,0 +1,11 @@
+{"iso":"ca","update":[
+{"id":2327,"label_fr":"Red Ensign canadien (1868-1921)","label_en":"Canadian Red Ensign (1868–1921)",
+ "notes_fr":"Pavillon rouge britannique chargé d'un écu réunissant les armes des provinces de la Confédération ; l'écu s'enrichit à mesure que de nouvelles provinces la rejoignent.",
+ "notes_en":"British red ensign bearing a shield combining the arms of the Confederation's provinces; the shield grew as new provinces joined."},
+{"id":2328,"label_fr":"Red Ensign canadien (1921-1957)","label_en":"Canadian Red Ensign (1921–1957)",
+ "notes_fr":"En 1921, l'écu composite est remplacé par les nouvelles armoiries royales du Canada, terminées par trois feuilles d'érable vertes. Un décret de 1945 autorise son usage sur les édifices fédéraux.",
+ "notes_en":"In 1921 the composite shield gave way to Canada's new royal arms, ending in three green maple leaves. A 1945 order allowed it on federal buildings."},
+{"id":2329,"label_fr":"Red Ensign canadien (1957-1965)","label_en":"Canadian Red Ensign (1957–1965)",
+ "notes_fr":"En 1957, les trois feuilles d'érable des armoiries passent du vert au rouge. Ce pavillon est remplacé par l'unifolié le 15 février 1965.",
+ "notes_en":"In 1957 the three maple leaves on the arms turned from green to red. The ensign was replaced by the Maple Leaf flag on 15 February 1965."}
+],"delete":[2102,2330]}

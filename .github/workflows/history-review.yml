@@ -1,0 +1,37 @@
+name: Historical flags review
+
+on:
+  push:
+    branches: [history-review]
+    paths: [scripts/history/crawl_wikipedia.py, scripts/history/download.py, data/history/selection.json, .github/workflows/history-review.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: history-review
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests mwparserfromhell cairosvg
+      - name: Crawl Wikipedia
+        run: test -f data/history/candidates.txt || python3 scripts/history/crawl_wikipedia.py > data/history/crawl.log 2>&1 || true
+      - name: Download selected images
+        run: |
+          if [ -f data/history/selection.json ] && [ -f scripts/history/download.py ]; then
+            python3 scripts/history/download.py > data/history/download.log 2>&1 || true
+          fi
+      - name: Commit results
+        run: |
+          git config user.name "knowflags-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/history public/flags/history
+          git commit -m "Historical flags review: crawl/download [skip ci]" || echo "nothing to commit"
+          git push origin HEAD:history-review

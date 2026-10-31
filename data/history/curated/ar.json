@@ -1,0 +1,10 @@
+{"iso":"ar","update":[
+{"id":1961,"image":"/flags/history/ar-1810.svg"},
+{"id":1962,"image":"/flags/history/ar-1812.svg"},
+{"id":1963,"image":"/flags/history/ar-1818.svg"},
+{"id":1964,"image":"/flags/history/ar-1819.svg"}
+],"add":[
+{"date_start":"1840-01-01","date_end":"1852-02-03","label_fr":"Confédération argentine (Rosas)","label_en":"Argentine Confederation (Rosas)","file":"Flag of Argentina (1840).svg",
+ "notes_fr":"Sous Juan Manuel de Rosas, le bleu devient plus foncé et des bonnets phrygiens rouges, couleur du parti fédéral, apparaissent aux coins ; ce drapeau disparaît après la bataille de Caseros (1852).",
+ "notes_en":"Under Juan Manuel de Rosas the blue turned darker and red Phrygian caps, the colour of the Federalist party, appeared in the corners; the flag vanished after the Battle of Caseros (1852)."}
+],"delete":[2317]}

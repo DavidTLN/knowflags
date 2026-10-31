@@ -1,0 +1,30 @@
+{"iso":"al","update":[
+{"id":1934,"image":"/flags/history/al-1912.svg",
+ "notes_fr":"Hissé à Vlora le 28 novembre 1912 par Ismaïl Qemali lors de la proclamation de l'indépendance : l'aigle bicéphale noir de Skanderbeg sur fond rouge.",
+ "notes_en":"Raised in Vlorë on 28 November 1912 by Ismail Qemali when independence was proclaimed: Skanderbeg's black double-headed eagle on red."},
+{"id":1935,"image":"/flags/history/al-1914.svg",
+ "notes_fr":"Sous le prince Guillaume de Wied, une étoile blanche à cinq branches, emblème de sa maison, est placée au-dessus de l'aigle.",
+ "notes_en":"Under Prince William of Wied, a white five-pointed star, the emblem of his house, was placed above the eagle."},
+{"id":1936,"image":"/flags/history/al-1920.svg",
+ "notes_fr":"Après le congrès de Lushnjë (janvier 1920), la régence revient à l'aigle bicéphale seul, sans étoile.",
+ "notes_en":"After the Congress of Lushnjë (January 1920), the regency went back to the plain double-headed eagle, without the star."},
+{"id":1937,"image":"/flags/history/al-1925.svg",
+ "notes_fr":"La République, proclamée le 31 janvier 1925 avec Ahmet Zogu pour président, garde l'aigle bicéphale noir sur fond rouge.",
+ "notes_en":"The Republic, proclaimed on 31 January 1925 with Ahmet Zogu as president, kept the black double-headed eagle on red."},
+{"id":1938,"image":"/flags/history/al-1926.svg",
+ "notes_fr":"Version de 1926 à 1928 : l'aigle est redessiné pour reprendre celui des nouvelles armoiries de la République.",
+ "notes_en":"1926–1928 version: the eagle was redrawn to match the Republic's new coat of arms."},
+{"id":1939,"image":"/flags/history/al-1928.svg",
+ "notes_fr":"Le 1er septembre 1928, Zogu se proclame roi des Albanais ; le statut fondamental du royaume décrit le drapeau comme rouge à l'aigle bicéphale noir.",
+ "notes_en":"On 1 September 1928 Zogu proclaimed himself King of the Albanians; the kingdom's Fundamental Statute described the flag as red with a black double-headed eagle."},
+{"id":1940,"image":"/flags/history/al-1934.svg"},
+{"id":1941,"image":"/flags/history/al-1939.svg"},
+{"id":1942,"image":"/flags/history/al-1943.svg"},
+{"id":1943,"image":"/flags/history/al-1944.svg"},
+{"id":1944,"image":"/flags/history/al-1946.svg"},
+{"id":1945,"date_start":"2002-07-22"}
+],"add":[
+{"date_start":"1992-04-07","date_end":"2002-07-22","label_fr":"République d'Albanie (1992-2002)","label_en":"Republic of Albania (1992–2002)","file":"Flag of Albania (1992–2002).svg",
+ "notes_fr":"À la chute du régime communiste, l'étoile rouge disparaît : il ne reste que l'aigle bicéphale noir, dans un dessin qui variait selon les fabricants jusqu'à la loi de 2002.",
+ "notes_en":"When the communist regime fell, the red star was dropped, leaving only the black double-headed eagle, whose drawing varied between makers until the 2002 law."}
+],"delete":[2316]}

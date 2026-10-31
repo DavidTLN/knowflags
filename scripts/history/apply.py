@@ -69,6 +69,8 @@ def main():
             prev.setdefault(s['file'], []).append(s['name'])
     for d in data:
         for e in d.get('update', []) + d.get('add', []):
+            if e.get('image'):
+                e.pop('file', None)
             if e.get('file') and prev.get(e['file']):
                 cands = [n for n in prev[e['file']] if n.startswith(d['iso'] + '-')]
                 if cands:
@@ -94,7 +96,10 @@ def main():
             q.append(f'delete from country_flag_history where id = {int(i)} and iso_code = {lit(d["iso"])};')
         for e in d.get('update', []):
             sets = [f'{k} = {lit(e[k])}' for k in FIELDS if k in e]
-            if e.get('file'):
+            if e.get('image'):
+                assert e['image'].startswith('https://') or os.path.exists('public' + e['image']), e['image']
+                sets.append(f'image_url = {lit(e["image"])}')
+            elif e.get('file'):
                 if e['_name'] in got:
                     sets.append(f'image_url = {lit(got[e["_name"]])}')
                 else:
@@ -102,7 +107,9 @@ def main():
             if sets:
                 q.append(f'update country_flag_history set {", ".join(sets)} where id = {int(e["id"])} and iso_code = {lit(d["iso"])};')
         for e in d.get('add', []):
-            img = got.get(e.get('_name'))
+            img = e.get('image') or got.get(e.get('_name'))
+            if e.get('image'):
+                assert e['image'].startswith('https://') or os.path.exists('public' + e['image']), e['image']
             if e.get('file') and not img:
                 missing += 1
                 continue

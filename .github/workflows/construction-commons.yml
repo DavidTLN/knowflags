@@ -26,7 +26,7 @@ jobs:
         run: |
           if [ -f data/construction/probe_names.txt ]; then
             cd scripts/construction && mapfile -t N < ../../data/construction/probe_names.txt && cd ../.. && \
-            PYTHONPATH=scripts/construction python3 scripts/construction/probe_commons.py "${N[@]}"
+            PYTHONPATH=scripts/construction python3 scripts/construction/probe_commons.py "${N[@]}" > data/construction/probe.log 2>&1 || true
           fi
       - name: Commit results
         run: |

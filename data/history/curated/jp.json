@@ -1,0 +1,27 @@
+{
+"iso": "jp",
+"update": [
+{
+"id": 2173,
+"image": "https://flagcdn.com/jp.svg"
+},
+{
+"id": 2418,
+"label_fr": "Empire du Japon puis Japon (1870-1999)",
+"label_en": "Empire of Japan, then Japan (1870–1999)",
+"notes_fr": "La proclamation du 27 février 1870 fait du Hinomaru le pavillon des navires marchands, avec un disque légèrement décentré vers la hampe ; la loi de 1999 le recentre et fixe ses proportions.",
+"notes_en": "The proclamation of 27 February 1870 made the Hinomaru the merchant flag, with a disc set slightly towards the hoist; the 1999 law centred it and fixed its proportions."
+}
+],
+"add": [
+{
+"date_start": "1945-09-02",
+"date_end": "1952-04-28",
+"label_fr": "Occupation alliée : pavillon des navires",
+"label_en": "Allied occupation: ship flag",
+"notes_fr": "Pendant l'occupation, l'usage du Hinomaru est restreint ; les navires japonais arborent un pavillon de signalisation modifié, à queue d'aronde.",
+"notes_en": "During the occupation, use of the Hinomaru was restricted; Japanese ships flew a modified, swallow-tailed signal flag.",
+"file": "Flag of Allied Occupied Japan.svg"
+}
+]
+}

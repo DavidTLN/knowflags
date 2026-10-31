@@ -1,0 +1,30 @@
+{
+"iso": "jm",
+"update": [
+{
+"id": 2172,
+"date_end": "1957-01-01",
+"file": "Flag of Jamaica (1906-1957).svg"
+}
+],
+"add": [
+{
+"date_start": "1875-01-01",
+"date_end": "1906-01-01",
+"label_fr": "Colonie de la Jamaïque (1875-1906)",
+"label_en": "Colony of Jamaica (1875–1906)",
+"notes_fr": "Premier Blue Ensign colonial, chargé du badge de l'île.",
+"notes_en": "The first colonial Blue Ensign, bearing the island's badge.",
+"file": "Flag of Jamaica (1875-1906).svg"
+},
+{
+"date_start": "1957-01-01",
+"date_end": "1962-08-06",
+"label_fr": "Colonie de la Jamaïque (1957-1962)",
+"label_en": "Colony of Jamaica (1957–1962)",
+"notes_fr": "Les armoiries de la Jamaïque, avec un couple d'Arawaks et un crocodile en cimier, figurent sur le Blue Ensign jusqu'à l'indépendance.",
+"notes_en": "Jamaica's arms, with an Arawak couple and a crocodile crest, appeared on the Blue Ensign until independence.",
+"file": "Flag of Jamaica (1957-1962).svg"
+}
+]
+}

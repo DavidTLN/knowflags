@@ -3,7 +3,7 @@ name: Commons construction sheets
 on:
   push:
     branches: [construction-commons]
-    paths: [scripts/construction/fetch_commons.py, .github/workflows/construction-commons.yml]
+    paths: [scripts/construction/fetch_commons.py, scripts/construction/probe_commons.py, data/construction/probe_names.txt, .github/workflows/construction-commons.yml]
   workflow_dispatch:
 
 permissions:
@@ -21,7 +21,13 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install requests
-      - run: python3 scripts/construction/fetch_commons.py
+      - run: test -f data/construction/commons_index.json || python3 scripts/construction/fetch_commons.py
+      - name: Probe specific flags
+        run: |
+          if [ -f data/construction/probe_names.txt ]; then
+            cd scripts/construction && mapfile -t N < ../../data/construction/probe_names.txt && cd ../.. && \
+            PYTHONPATH=scripts/construction python3 scripts/construction/probe_commons.py "${N[@]}"
+          fi
       - name: Commit results
         run: |
           git config user.name "knowflags-bot"

@@ -1,14 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1665 1482" font-family="Arial, Helvetica, sans-serif">
-<rect width="1665" height="1482" fill="#FAFAF9"/>
-<svg viewBox="0 0 5 3" x="150.0" y="150.0" width="1365.0" height="1092.0" preserveAspectRatio="none"><defs><clipPath id="a"><path d="M0 0h5v3H0z"/></clipPath></defs><g clip-path="url(#a)"><rect width="100%" height="100%" fill="#005EB8"/><path d="M0 0l5 3M0 3L5 0" stroke="#fff" stroke-width="0.6"/></g></svg>
-<rect x="150" y="150" width="1365.0" height="1092.0" fill="none" stroke="#111" stroke-width="3.5"/>
-<line x1="832.5" y1="150.0" x2="832.5" y2="1242.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="696.0" x2="1515.0" y2="696.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="150.0" x2="1515.0" y2="1242.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="1242.0" x2="1515.0" y2="150.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="150.0" y1="1312.0" x2="1515.0" y2="1312.0"/><polygon points="150.0,1312.0 164.0,1305.0 164.0,1319.0"/><polygon points="1515.0,1312.0 1501.0,1305.0 1501.0,1319.0"/><text x="832.5" y="1298.0" font-size="46" text-anchor="middle" stroke="none">5</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="1585.0" y1="150.0" x2="1585.0" y2="1242.0"/><polygon points="1585.0,150.0 1578.0,164.0 1592.0,164.0"/><polygon points="1585.0,1242.0 1578.0,1228.0 1592.0,1228.0"/><text x="1569.0" y="696.0" font-size="46" text-anchor="middle" transform="rotate(-90 1569.0 696.0)" stroke="none">4</text></g>
-<text x="832.5" y="423.0" font-size="40" text-anchor="middle" fill="#FAFAF9" stroke="#FAFAF9" stroke-width="10" stroke-linejoin="round">largeur du sautoir = 1/5 de la hauteur</text><text x="832.5" y="423.0" font-size="40" text-anchor="middle" stroke="none" fill="#2540E8">largeur du sautoir = 1/5 de la hauteur</text>
-<text x="80" y="1427" font-size="42" font-weight="700" fill="#0A8A0A">[GB-SCT]</text>
-<text x="1585" y="1427" font-size="42" font-weight="700" fill="#0A8A0A" text-anchor="end">[4:5]</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1590 1410" font-family="Calibri, Arial, 'Liberation Sans', Helvetica, sans-serif">
+<rect width="1590" height="1410" fill="#FAFAF9"/>
+<rect x="170" y="170" width="1250.0" height="1000.0" fill="#fff"/>
+<g opacity="0.5"><svg viewBox="0 0 5 3" x="170.0" y="170.0" width="1250.0" height="1000.0" preserveAspectRatio="none"><defs><clipPath id="a"><path d="M0 0h5v3H0z"/></clipPath></defs><g clip-path="url(#a)"><rect width="100%" height="100%" fill="#005EB8"/><path d="M0 0l5 3M0 3L5 0" stroke="#fff" stroke-width="0.6"/></g></svg></g>
+<line x1="795.0" y1="170.0" x2="795.0" y2="1170.0" stroke="#444" stroke-width="1.6" stroke-dasharray="10 6 3 6" opacity="0.55"/>
+<line x1="170.0" y1="670.0" x2="1420.0" y2="670.0" stroke="#444" stroke-width="1.6" stroke-dasharray="10 6 3 6" opacity="0.55"/>
+<line x1="170.0" y1="170.0" x2="1420.0" y2="1170.0" stroke="#444" stroke-width="1.6" stroke-dasharray="10 6 3 6" opacity="0.55"/>
+<line x1="170.0" y1="1170.0" x2="1420.0" y2="170.0" stroke="#444" stroke-width="1.6" stroke-dasharray="10 6 3 6" opacity="0.55"/>
+<rect x="170" y="170" width="1250.0" height="1000.0" fill="none" stroke="#111" stroke-width="3.5"/>
+<g stroke="#2540E8" fill="#2540E8" stroke-width="2"><line x1="170.0" y1="1230.0" x2="762.2" y2="1230.0"/><line x1="827.8" y1="1230.0" x2="1420.0" y2="1230.0"/><polygon stroke="none" points="170.0,1230.0 186.0,1236.0 186.0,1224.0"/><polygon stroke="none" points="1420.0,1230.0 1404.0,1224.0 1404.0,1236.0"/></g><text x="795.0" y="1244.0" font-size="40" text-anchor="middle" fill="#111" transform="rotate(0.00 795.0 1230.0)">50</text>
+<g stroke="#2540E8" fill="#2540E8" stroke-width="2"><line x1="1480.0" y1="170.0" x2="1480.0" y2="637.2"/><line x1="1480.0" y1="702.8" x2="1480.0" y2="1170.0"/><polygon stroke="none" points="1480.0,170.0 1474.0,186.0 1486.0,186.0"/><polygon stroke="none" points="1480.0,1170.0 1486.0,1154.0 1474.0,1154.0"/></g><text x="1480.0" y="684.0" font-size="40" text-anchor="middle" fill="#111" transform="rotate(-90.00 1480.0 670.0)">40</text>
+<g stroke="#2540E8" fill="#2540E8" stroke-width="2"><line x1="545.0" y1="341.9" x2="495.2" y2="404.1"/><line x1="469.8" y1="435.9" x2="420.0" y2="498.1"/><polygon stroke="none" points="545.0,341.9 530.3,350.7 539.7,358.2"/><polygon stroke="none" points="420.0,498.1 434.7,489.3 425.3,481.8"/></g><text x="482.5" y="434.0" font-size="40" text-anchor="middle" fill="#111" transform="rotate(-51.32 482.5 420.0)">8</text>
+<g stroke="#2540E8" fill="#2540E8" stroke-width="2"><line x1="1045.0" y1="341.9" x2="1094.8" y2="404.1"/><line x1="1120.2" y1="435.9" x2="1170.0" y2="498.1"/><polygon stroke="none" points="1045.0,341.9 1050.3,358.2 1059.7,350.7"/><polygon stroke="none" points="1170.0,498.1 1164.7,481.8 1155.3,489.3"/></g><text x="1107.5" y="434.0" font-size="40" text-anchor="middle" fill="#111" transform="rotate(51.32 1107.5 420.0)">8</text>
+<text x="110" y="1384" font-size="40" font-weight="700" fill="#0A8A0A">[GB-SCT]</text>
+<text x="1560" y="1384" font-size="40" font-weight="700" fill="#0A8A0A" text-anchor="end">[4:5]</text>
 </svg>

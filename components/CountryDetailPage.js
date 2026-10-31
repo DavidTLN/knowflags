@@ -474,6 +474,25 @@ function SymbolBadge({ slug, fallback, keepColor = true, size = 40 }) {
   )
 }
 
+// Credits of the sheets taken from Wikimedia Commons (/flags/construction/credits.json),
+// shown under the sheet as their licences require. Loaded once per page session.
+let constructionCredits = null
+function useConstructionCredit(iso) {
+  const [credit, setCredit] = useState(null)
+  useEffect(() => {
+    let alive = true
+    const load = constructionCredits
+      ? Promise.resolve(constructionCredits)
+      : fetch('/flags/construction/credits.json').then(r => (r.ok ? r.json() : {})).catch(() => ({}))
+    load.then(data => {
+      constructionCredits = data
+      if (alive) setCredit((iso && data[iso]) || null)
+    })
+    return () => { alive = false }
+  }, [iso])
+  return credit
+}
+
 // Optional construction sheet: /flags/construction/{iso}-construction-{locale}.svg
 // Shows the current locale, falls back to the other language, then self-hides if neither file exists.
 function ConstructionSheet({ iso, locale }) {
@@ -489,6 +508,7 @@ function ConstructionSheet({ iso, locale }) {
   const [i, setI] = useState(0)
   const [ok, setOk] = useState(true)
   const [open, setOpen] = useState(false)
+  const credit = useConstructionCredit(iso)
   if (!iso || !ok) return null
   const src = candidates[i]
   const label = t('Construction sheet', 'Planche de construction')
@@ -513,6 +533,16 @@ function ConstructionSheet({ iso, locale }) {
           </span>
         </button>
       </div>
+      {credit && (
+        <p style={{ margin: '8px 0 0', fontSize: '11px', lineHeight: 1.5, color: DS.muted, maxWidth: '600px' }}>
+          {t('Source: ', 'Source : ')}
+          <a href={credit.url} target="_blank" rel="noopener noreferrer" style={{ color: DS.muted, textDecoration: 'underline' }}>
+            Wikimedia Commons
+          </a>
+          {credit.author ? ` · ${credit.author}` : ''}
+          {credit.license ? ` · ${credit.license === 'Public domain' ? t('Public domain', 'Domaine public') : credit.license}` : ''}
+        </p>
+      )}
       {open && <ConstructionLightbox src={src} label={label} onClose={() => setOpen(false)} closeLabel={t('Close', 'Fermer')} />}
     </div>
   )

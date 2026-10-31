@@ -1,27 +1,86 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1802 1482" font-family="Arial, Helvetica, sans-serif">
-<rect width="1802" height="1482" fill="#FAFAF9"/>
-<svg viewBox="0 0 22 16" x="150.0" y="150.0" width="1501.5" height="1092.0" preserveAspectRatio="none"><path fill="#ba0c2f" d="M0 0h22v16H0z"/><g fill="#fff"><path d="M6 0h4v16H6z"/><path d="M0 6h22v4H0z"/></g><g fill="#00205b"><path d="M7 0h2v16H7z"/><path d="M0 7h22v2H0z"/></g></svg>
-<rect x="150" y="150" width="1501.5" height="1092.0" fill="none" stroke="#111" stroke-width="3.5"/>
-<line x1="559.5" y1="150.0" x2="559.5" y2="1242.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="627.8" y1="150.0" x2="627.8" y2="1242.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="764.2" y1="150.0" x2="764.2" y2="1242.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="832.5" y1="150.0" x2="832.5" y2="1242.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="559.5" x2="1651.5" y2="559.5" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="627.8" x2="1651.5" y2="627.8" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="764.2" x2="1651.5" y2="764.2" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="832.5" x2="1651.5" y2="832.5" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="150.0" y1="80.0" x2="559.5" y2="80.0"/><polygon points="150.0,80.0 164.0,73.0 164.0,87.0"/><polygon points="559.5,80.0 545.5,73.0 545.5,87.0"/><text x="354.8" y="66.0" font-size="46" text-anchor="middle" stroke="none">6</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="559.5" y1="80.0" x2="627.8" y2="80.0"/><polygon points="559.5,80.0 573.5,73.0 573.5,87.0"/><polygon points="627.8,80.0 613.8,73.0 613.8,87.0"/><text x="593.6" y="66.0" font-size="36" text-anchor="middle" stroke="none">1</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="627.8" y1="80.0" x2="764.2" y2="80.0"/><polygon points="627.8,80.0 641.8,73.0 641.8,87.0"/><polygon points="764.2,80.0 750.2,73.0 750.2,87.0"/><text x="696.0" y="66.0" font-size="46" text-anchor="middle" stroke="none">2</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="764.2" y1="80.0" x2="832.5" y2="80.0"/><polygon points="764.2,80.0 778.2,73.0 778.2,87.0"/><polygon points="832.5,80.0 818.5,73.0 818.5,87.0"/><text x="798.4" y="66.0" font-size="36" text-anchor="middle" stroke="none">1</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="832.5" y1="80.0" x2="1651.5" y2="80.0"/><polygon points="832.5,80.0 846.5,73.0 846.5,87.0"/><polygon points="1651.5,80.0 1637.5,73.0 1637.5,87.0"/><text x="1242.0" y="66.0" font-size="46" text-anchor="middle" stroke="none">12</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="150.0" x2="80.0" y2="559.5"/><polygon points="80.0,150.0 73.0,164.0 87.0,164.0"/><polygon points="80.0,559.5 73.0,545.5 87.0,545.5"/><text x="64.0" y="354.8" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 354.8)" stroke="none">6</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="559.5" x2="80.0" y2="627.8"/><polygon points="80.0,559.5 73.0,573.5 87.0,573.5"/><polygon points="80.0,627.8 73.0,613.8 87.0,613.8"/><text x="64.0" y="593.6" font-size="36" text-anchor="middle" transform="rotate(-90 64.0 593.6)" stroke="none">1</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="627.8" x2="80.0" y2="764.2"/><polygon points="80.0,627.8 73.0,641.8 87.0,641.8"/><polygon points="80.0,764.2 73.0,750.2 87.0,750.2"/><text x="64.0" y="696.0" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 696.0)" stroke="none">2</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="764.2" x2="80.0" y2="832.5"/><polygon points="80.0,764.2 73.0,778.2 87.0,778.2"/><polygon points="80.0,832.5 73.0,818.5 87.0,818.5"/><text x="64.0" y="798.4" font-size="36" text-anchor="middle" transform="rotate(-90 64.0 798.4)" stroke="none">1</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="832.5" x2="80.0" y2="1242.0"/><polygon points="80.0,832.5 73.0,846.5 87.0,846.5"/><polygon points="80.0,1242.0 73.0,1228.0 87.0,1228.0"/><text x="64.0" y="1037.2" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 1037.2)" stroke="none">6</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="150.0" y1="1312.0" x2="1651.5" y2="1312.0"/><polygon points="150.0,1312.0 164.0,1305.0 164.0,1319.0"/><polygon points="1651.5,1312.0 1637.5,1305.0 1637.5,1319.0"/><text x="900.8" y="1298.0" font-size="46" text-anchor="middle" stroke="none">22</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="1721.5" y1="150.0" x2="1721.5" y2="1242.0"/><polygon points="1721.5,150.0 1714.5,164.0 1728.5,164.0"/><polygon points="1721.5,1242.0 1714.5,1228.0 1728.5,1228.0"/><text x="1705.5" y="696.0" font-size="46" text-anchor="middle" transform="rotate(-90 1705.5 696.0)" stroke="none">16</text></g>
-<text x="80" y="1427" font-size="42" font-weight="700" fill="#0A8A0A">[NO]</text>
-<text x="1722" y="1427" font-size="42" font-weight="700" fill="#0A8A0A" text-anchor="end">[8:11]</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-34020 -34020 90720 68040" fill="none" font-family="Calibri,Arial,'Liberation Sans',sans-serif">
+	<rect x="-34020" y="-34020" width="90720" height="68040" fill="#FAFAF9"/><title>Flag of Norway — construction sheet</title>
+	
+	<defs>
+		<marker id="left-arrow" viewBox="-4 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+			<path fill="blue" d="m2 0 4 4-10-4L6-4z"/>
+		</marker>
+	</defs>
+	<path fill="#f8f8f8" d="m-34020-34020h90720v68040h-90720z"/>
+	<path fill="#fff" d="m-30240-30240h83160v60480h-83160z"/>
+	<g opacity=".5" transform="scale(3780)">
+		<path fill="#fff" d="m-8-8h22V8H-8z"/>
+		<path fill="#ba0c2f" d="m-8-8h6v6h-6zM2-8h12v6H2zM2 2h12v6H2zM-8 2h6v6h-6z"/>
+		<path fill="#00205b" d="m-1-8h2V8h-2zm-7 7h22v2H-8"/>
+	</g>
+	<g stroke="#000" stroke-width="140" stroke-linejoin="round" stroke-linecap="round">
+		<g opacity=".2" stroke-width="100">
+			<path stroke-dashoffset="378" stroke-dasharray="755,315,105,315" d="m11340 0v-30240m0 30240v30240"/>
+		</g>
+		<g stroke="#569">
+			<path stroke-dasharray="1470,630,210,630" stroke-dashoffset="735" d="m0 0v-30240M0 0v30240M0 0h-30240M0 0h52920"/>
+		</g>
+		<path stroke="#444" stroke-width="250" d="m-30240-30240h83160v60480h-83160z"/>
+		<path d="m-30240-7560h22680v-22680M-30240-3780h26460v-26460M52920-7560H7560v-22680M52920-3780H3780v-26460M-30240 7560h22680v22680M-30240 3780h26460v26460M52920 7560H7560v22680M52920 3780H3780v26460"/>
+		<path stroke="#222" stroke-width="75" stroke-dasharray="210,210" d="m-30240-32760V0m0 32760V0m22680-32760v2520m3780-2520v2520m7560-2520v2520m3780-2520v2520m45360-2520V0m0 32760V0m-85680-30240h44100m44100 0H11340M-32760-7560h2520m-2520 3780h2520m-2520 7560h2520m-2520 3780h2520M-7560-7560H7560V7560H-7560zm3780 3780h7560v7560h-7560zm-28980 34020h44100m44100 0H11340"/>
+	</g>
+	<g fill="#008" opacity=".8">
+		<circle r="200" cx="-7560" cy="-7560"/>
+		<circle r="200" cx="-3780" cy="-3780"/>
+		<circle r="200" cx="7560" cy="-7560"/>
+		<circle r="200" cx="3780" cy="-3780"/>
+		<circle r="200" cx="7560" cy="7560"/>
+		<circle r="200" cx="3780" cy="3780"/>
+		<circle r="200" cx="-7560" cy="7560"/>
+		<circle r="200" cx="-3780" cy="3780"/>
+	</g>
+	<g stroke="#00f" stroke-width="75" marker-start="url(#left-arrow)">
+		<path d="m-29940-31815h10140"/>
+		<path d="m-7860-31815h-10140"/>
+		<path d="m-7260-31815h1090"/>
+		<path d="m-4080-31815h-1090"/>
+		<path d="m-3480-31815h2580"/>
+		<path d="m3480-31815H900"/>
+		<path d="m4080-31815h1090"/>
+		<path d="m7260-31815H6170"/>
+		<path d="m7860-31815h20880"/>
+		<path d="m52620-31815H31740"/>
+		<path d="m-29940 31815H9840"/>
+		<path d="m52620 31815H12840"/>
+		<path d="m-31815 29940V19800"/>
+		<path d="m-31815 7860v10140"/>
+		<path d="m-31815 7260V6170"/>
+		<path d="m-31815 4080v1090"/>
+		<path d="m-31815 3480V900"/>
+		<path d="m-31815-3480v2580"/>
+		<path d="m-31815-4080v-1090"/>
+		<path d="m-31815-7260v1090"/>
+		<path d="m-31815-7860v-10140"/>
+		<path d="m-31815-29940v10140"/>
+		<path d="m54495 29940V1500"/>
+		<path d="m54495-29940v28440"/>
+	</g>
+	<g fill="#000" text-anchor="middle" font-size="50" transform="scale(50)">
+		<g>
+			<text x="-378" y="-621">6</text>
+			<text x="-113" y="-621">1</text>
+			<text y="-621">2</text>
+			<text x="113" y="-621">1</text>
+			<text x="605" y="-621">12</text>
+			<text x="227" y="651">22</text>
+		</g>
+		<g transform="rotate(270)">
+			<text x="-378" y="-621" text-decoration="underline">6</text>
+			<text x="-113" y="-621">1</text>
+			<text y="-621">2</text>
+			<text x="113" y="-621">1</text>
+			<text x="378" y="-621" text-decoration="underline">6</text>
+			<text y="1105">16</text>
+		</g>
+		<g font-size="27">
+			<text x="-642" y="655">[<tspan font-weight="bold" fill="#080">NO</tspan>]</text>
+			<text x="1095" y="655">[<tspan font-weight="bold" fill="#080">8:11</tspan>]</text>
+		</g>
+	</g>
 </svg>

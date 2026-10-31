@@ -1,13 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1665 1482" font-family="Arial, Helvetica, sans-serif">
-<rect width="1665" height="1482" fill="#FAFAF9"/>
-<svg viewBox="0 0 5 4" x="150.0" y="150.0" width="1365.0" height="1092.0" preserveAspectRatio="none"><path fill="#FFF" d="M0 0h5v4H0z"/><path fill="#CE1126" d="M0 0h5v2H0z"/></svg>
-<rect x="150" y="150" width="1365.0" height="1092.0" fill="none" stroke="#111" stroke-width="3.5"/>
-<line x1="832.5" y1="150.0" x2="832.5" y2="1242.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="696.0" x2="1515.0" y2="696.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="150.0" x2="80.0" y2="696.0"/><polygon points="80.0,150.0 73.0,164.0 87.0,164.0"/><polygon points="80.0,696.0 73.0,682.0 87.0,682.0"/><text x="64.0" y="423.0" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 423.0)" stroke="none">2</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="696.0" x2="80.0" y2="1242.0"/><polygon points="80.0,696.0 73.0,710.0 87.0,710.0"/><polygon points="80.0,1242.0 73.0,1228.0 87.0,1228.0"/><text x="64.0" y="969.0" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 969.0)" stroke="none">2</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="150.0" y1="1312.0" x2="1515.0" y2="1312.0"/><polygon points="150.0,1312.0 164.0,1305.0 164.0,1319.0"/><polygon points="1515.0,1312.0 1501.0,1305.0 1501.0,1319.0"/><text x="832.5" y="1298.0" font-size="46" text-anchor="middle" stroke="none">5</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="1585.0" y1="150.0" x2="1585.0" y2="1242.0"/><polygon points="1585.0,150.0 1578.0,164.0 1592.0,164.0"/><polygon points="1585.0,1242.0 1578.0,1228.0 1592.0,1228.0"/><text x="1569.0" y="696.0" font-size="46" text-anchor="middle" transform="rotate(-90 1569.0 696.0)" stroke="none">4</text></g>
-<text x="80" y="1427" font-size="42" font-weight="700" fill="#0A8A0A">[MC]</text>
-<text x="1585" y="1427" font-size="42" font-weight="700" fill="#0A8A0A" text-anchor="end">[4:5]</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-3780 -34860 85260 69720" fill="none" font-family="Calibri,Arial,'Liberation Sans',sans-serif">
+	<rect x="-3780" y="-34860" width="85260" height="69720" fill="#FAFAF9"/><title>Flag of Monaco — construction sheet</title>
+	
+	<defs>
+		<marker id="left-arrow" viewBox="-4 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+			<path fill="blue" d="m2 0 4 4-10-4L6-4z"/>
+		</marker>
+	</defs>
+	<path fill="#f8f8f8" d="m-3780-34860h85260v69720H-3780z"/>
+	<path fill="#fff" d="m0-31080h77700v62160H0z"/>
+	<g opacity=".5" transform="scale(15540)">
+		<path fill="#fff" d="m0-2h5v4H0z"/>
+		<path fill="#ce1126" d="m0-2h5v2H0z"/>
+	</g>
+	<g stroke="#000" stroke-width="140" stroke-linejoin="round" stroke-linecap="round">
+		<g opacity=".4" stroke-width="100">
+			<path stroke-dashoffset="362" stroke-dasharray="725,315,105,315" d="m38850 0v-31080m0 31080v31080"/>
+			<path stroke-dasharray="735,315,105,315" stroke-dashoffset="840" d="m-2520 0H0"/>
+		</g>
+		<path stroke="#444" stroke-width="250" d="m0-31080h77700v62160H0z"/>
+		<path d="m0 0h77700"/>
+		<path stroke="#222" stroke-width="75" stroke-dasharray="210,210" d="m0-31080V0m0 33600V0m77700-31080V0m0 33600V0M-2520-31080h41370m41370 0H38850M-2520 31080h41370m41370 0H38850"/>
+	</g>
+	<g stroke="#00f" stroke-width="75" marker-start="url(#left-arrow)">
+		<path d="m300 32655h37450"/>
+		<path d="m77400 32655H39950"/>
+		<path d="m-1575 30780V16640"/>
+		<path d="m-1575 300v14140"/>
+		<path d="m-1575-300v-14140"/>
+		<path d="m-1575-30780v14140"/>
+		<path d="m79275 30780V1100"/>
+		<path d="m79275-30780v29680"/>
+	</g>
+	<g fill="#000" text-anchor="middle" font-size="50" transform="scale(50)">
+		<g>
+			<text x="777" y="668">5</text>
+		</g>
+		<g transform="rotate(270)">
+			<text x="-311" y="-16">2</text>
+			<text x="311" y="-16">2</text>
+			<text y="1600">4</text>
+		</g>
+		<g font-size="27">
+			<text x="-37" y="672">[<tspan font-weight="bold" fill="#080">MC</tspan>]</text>
+			<text x="1591" y="672">[<tspan font-weight="bold" fill="#080">4:5</tspan>]</text>
+		</g>
+	</g>
 </svg>

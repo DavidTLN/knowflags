@@ -1,21 +1,107 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1938 1482" font-family="Arial, Helvetica, sans-serif">
-<rect width="1938" height="1482" fill="#FAFAF9"/>
-<svg viewBox="0 0 720 480" x="150.0" y="150.0" width="1638.0" height="1092.0" preserveAspectRatio="none"><path fill="#D21034" d="M0 0h720v480H0z"/><g fill="#007E3A"><path d="M120 120h480v240H120z"/><circle fill="#FFF" cx="390" cy="240" r="80"/><circle cx="420" cy="240" r="80"/></g></svg>
-<rect x="150" y="150" width="1638.0" height="1092.0" fill="none" stroke="#111" stroke-width="3.5"/>
-<line x1="423.0" y1="150.0" x2="423.0" y2="1242.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="969.0" y1="150.0" x2="969.0" y2="1242.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="1515.0" y1="150.0" x2="1515.0" y2="1242.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="423.0" x2="1788.0" y2="423.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="696.0" x2="1788.0" y2="696.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="969.0" x2="1788.0" y2="969.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="150.0" y1="80.0" x2="423.0" y2="80.0"/><polygon points="150.0,80.0 164.0,73.0 164.0,87.0"/><polygon points="423.0,80.0 409.0,73.0 409.0,87.0"/><text x="286.5" y="66.0" font-size="46" text-anchor="middle" stroke="none">1</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="423.0" y1="80.0" x2="1515.0" y2="80.0"/><polygon points="423.0,80.0 437.0,73.0 437.0,87.0"/><polygon points="1515.0,80.0 1501.0,73.0 1501.0,87.0"/><text x="969.0" y="66.0" font-size="46" text-anchor="middle" stroke="none">4</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="1515.0" y1="80.0" x2="1788.0" y2="80.0"/><polygon points="1515.0,80.0 1529.0,73.0 1529.0,87.0"/><polygon points="1788.0,80.0 1774.0,73.0 1774.0,87.0"/><text x="1651.5" y="66.0" font-size="46" text-anchor="middle" stroke="none">1</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="150.0" x2="80.0" y2="423.0"/><polygon points="80.0,150.0 73.0,164.0 87.0,164.0"/><polygon points="80.0,423.0 73.0,409.0 87.0,409.0"/><text x="64.0" y="286.5" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 286.5)" stroke="none">1</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="423.0" x2="80.0" y2="969.0"/><polygon points="80.0,423.0 73.0,437.0 87.0,437.0"/><polygon points="80.0,969.0 73.0,955.0 87.0,955.0"/><text x="64.0" y="696.0" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 696.0)" stroke="none">2</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="969.0" x2="80.0" y2="1242.0"/><polygon points="80.0,969.0 73.0,983.0 87.0,983.0"/><polygon points="80.0,1242.0 73.0,1228.0 87.0,1228.0"/><text x="64.0" y="1105.5" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 1105.5)" stroke="none">1</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="150.0" y1="1312.0" x2="1788.0" y2="1312.0"/><polygon points="150.0,1312.0 164.0,1305.0 164.0,1319.0"/><polygon points="1788.0,1312.0 1774.0,1305.0 1774.0,1319.0"/><text x="969.0" y="1298.0" font-size="46" text-anchor="middle" stroke="none">6</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="1858.0" y1="150.0" x2="1858.0" y2="1242.0"/><polygon points="1858.0,150.0 1851.0,164.0 1865.0,164.0"/><polygon points="1858.0,1242.0 1851.0,1228.0 1865.0,1228.0"/><text x="1842.0" y="696.0" font-size="46" text-anchor="middle" transform="rotate(-90 1842.0 696.0)" stroke="none">4</text></g>
-<text x="80" y="1427" font-size="42" font-weight="700" fill="#0A8A0A">[MV]</text>
-<text x="1858" y="1427" font-size="42" font-weight="700" fill="#0A8A0A" text-anchor="end">[2:3]</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-45360 -31500 90720 63000" fill="none" font-family="Calibri,Arial,'Liberation Sans',sans-serif">
+	<rect x="-45360" y="-31500" width="90720" height="63000" fill="#FAFAF9"/><title>Flag of the Maldives — construction sheet</title>
+	
+	<defs>
+		<marker id="left-arrow" viewBox="-4 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+			<path fill="blue" d="m2 0 4 4-10-4L6-4z"/>
+		</marker>
+	</defs>
+	<path fill="#f8f8f8" d="m-45360-31500h90720v63000h-90720z"/>
+	<path fill="#fff" d="m-41580-27720h83160v55440h-83160z"/>
+	<g opacity=".5">
+		<g transform="scale(1155)">
+			<path fill="#D21034" d="m-36-24h72v48h-72z"/>
+			<path fill="#007e3a" d="m-24-12h48v24h-48z"/>
+		</g>
+		<path fill="#fff" d="m5198-9076a9240 9240 0 1 0 0 18152 9240 9240 0 0 1 0-18152z"/>
+	</g>
+	<g stroke="#000" stroke-width="140" stroke-linejoin="round" stroke-linecap="round">
+		<g opacity=".4" stroke-width="100">
+			<path stroke-dasharray="715,315,105,315" opacity=".25" stroke-dashoffset="368" d="m0 0v-14595m0-1680v-11445M0 0v27720"/>
+			<path stroke-dasharray="685,315,105,315" stroke-dashoffset="368" d="m0 0h-6090M0 0h16485m2520 0h22575"/>
+			<path stroke-dasharray="735,315,105,315" stroke-dashoffset="1050" d="m-44100 0h35490"/>
+		</g>
+		<g stroke="#d00" opacity=".5">
+			<path stroke-dasharray="420,445" stroke-dashoffset="420" d="m5198-9076a9240 9240 0 0 1 0 18152"/>
+			<path stroke-dasharray="1015,315,105,315" stroke-dashoffset="648" d="m3465 0v-9240m0 9240v9240"/>
+		</g>
+		<g stroke="#00d" opacity=".5">
+			<path stroke-dasharray="420,446" stroke-dashoffset="420" d="m5198-9076a9240 9240 0 1 1 0 18152"/>
+			<path stroke-dasharray="1015,315,105,315" stroke-dashoffset="648" d="m6930 0v-9240m0 9240v9240"/>
+		</g>
+		<path stroke="#444" stroke-width="250" d="m-41580-27720h83160v55440h-83160z"/>
+		<path d="m-27720-13860h55440v27720h-55440z"/>
+		<path stroke="#d00" d="m5198-9076a9240 9240 0 1 0 0 18152"/>
+		<path stroke="#00d" d="m5198-9076a9240 9240 0 0 0 0 18152"/>
+		<path stroke="#222" stroke-width="75" stroke-dasharray="210,210" d="m-41580-30240V0m0 30240V0m13860-30240v16380m31185-2520v7140m3465-7140v7140m20790-21000v16380m13860-16380V0m0 30240V0m-85680-27720H0m44100 0H0m-44100 13860h16380m19425 4620H3465m15225 0H6930M-8295 9240H3465m15225 0H6930m-51030 4620h16380m-16380 13860H0m44100 0H0"/>
+		<path stroke-width="135" d="m3090 0h750m-375-375v750M6555 0h750m-375-375v750"/>
+	</g>
+	<g fill="#008" opacity=".8">
+		<circle r="200" cx="-27720" cy="-13860"/>
+		<circle r="200" cx="27720" cy="-13860"/>
+		<circle r="200" cx="-27720" cy="13860"/>
+		<circle r="200" cx="3465" cy="-9240"/>
+		<circle r="200" cx="3465" cy="9240"/>
+		<circle r="200" cx="6930" cy="-9240"/>
+		<circle r="200" cx="6930" cy="9240"/>
+	</g>
+	<g fill="#ff0">
+		<circle r="100" cx="5198" cy="-9076"/>
+		<circle r="100" cx="5198" cy="9076"/>
+	</g>
+	<g stroke="#00f" stroke-width="75" marker-start="url(#left-arrow)">
+		<path d="m-41280-29295h4830"/>
+		<path d="m-28020-29295h-4830"/>
+		<path d="m-27420-29295h25620"/>
+		<path d="m27420-29295H1800"/>
+		<path d="m28020-29295h4830"/>
+		<path d="m41280-29295h-4830"/>
+		<path d="m-41280 29295h39480"/>
+		<path d="m41280 29295H1800"/>
+		<path d="m-27420-15435h13492"/>
+		<path d="m3165-15435h-13493"/>
+		<path d="m3765-15435h633"/>
+		<path d="m6630-15435h-632"/>
+		<path d="m7230-15435h8295"/>
+		<path d="m27420-15435h-8295"/>
+		<path d="m-43155 27420v-4830"/>
+		<path d="m-43155 14160v4830"/>
+		<path d="m-43155 13560V8730"/>
+		<path d="m-43155 300v4830"/>
+		<path d="m-43155-300v-4830"/>
+		<path d="m-43155-13560v4830"/>
+		<path d="m-43155-14160v-4830"/>
+		<path d="m-43155-27420v4830"/>
+		<path d="m43155 27420V1800"/>
+		<path d="m43155-27420v25620"/>
+		<path d="m-7350 8940V1800"/>
+		<path d="m-7350-8940v7140"/>
+		<path d="m17745 8940V1800"/>
+		<path d="m17745-8940v7140"/>
+	</g>
+	<g fill="#000" text-anchor="middle" font-size="50" transform="scale(50)">
+		<g>
+			<text x="-693" y="-571">12</text>
+			<text y="-571">48</text>
+			<text x="693" y="-571">12</text>
+			<text x="-243" y="-294">27</text>
+			<text x="104" y="-294">3</text>
+			<text x="346" y="-294">18</text>
+			<text y="601">72</text>
+		</g>
+		<g transform="rotate(270)">
+			<text x="-416" y="-848">12</text>
+			<text x="-139" y="-848">12</text>
+			<text x="139" y="-848">12</text>
+			<text x="416" y="-848">12</text>
+			<text y="-132">16</text>
+			<text y="370">16</text>
+			<text y="878">48</text>
+		</g>
+		<g font-size="27">
+			<text x="-869" y="605">[<tspan font-weight="bold" fill="#080">MV</tspan>]</text>
+			<text x="869" y="605">[<tspan font-weight="bold" fill="#080">2:3</tspan>]</text>
+		</g>
+	</g>
 </svg>

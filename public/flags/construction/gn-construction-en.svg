@@ -1,20 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1938 1482" font-family="Arial, Helvetica, sans-serif">
-<rect width="1938" height="1482" fill="#FAFAF9"/>
-<svg viewBox="0 0 3 2" x="150.0" y="150.0" width="1638.0" height="1092.0" preserveAspectRatio="none">
-<rect width="1" height="2" fill="#ce1126"/>
-<rect width="1" height="2" x="1" fill="#fcd116"/>
-<rect width="1" height="2" x="2" fill="#009460"/>
-</svg>
-<rect x="150" y="150" width="1638.0" height="1092.0" fill="none" stroke="#111" stroke-width="3.5"/>
-<line x1="696.0" y1="150.0" x2="696.0" y2="1242.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="969.0" y1="150.0" x2="969.0" y2="1242.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="1242.0" y1="150.0" x2="1242.0" y2="1242.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="696.0" x2="1788.0" y2="696.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="150.0" y1="80.0" x2="696.0" y2="80.0"/><polygon points="150.0,80.0 164.0,73.0 164.0,87.0"/><polygon points="696.0,80.0 682.0,73.0 682.0,87.0"/><text x="423.0" y="66.0" font-size="46" text-anchor="middle" stroke="none">3</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="696.0" y1="80.0" x2="1242.0" y2="80.0"/><polygon points="696.0,80.0 710.0,73.0 710.0,87.0"/><polygon points="1242.0,80.0 1228.0,73.0 1228.0,87.0"/><text x="969.0" y="66.0" font-size="46" text-anchor="middle" stroke="none">3</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="1242.0" y1="80.0" x2="1788.0" y2="80.0"/><polygon points="1242.0,80.0 1256.0,73.0 1256.0,87.0"/><polygon points="1788.0,80.0 1774.0,73.0 1774.0,87.0"/><text x="1515.0" y="66.0" font-size="46" text-anchor="middle" stroke="none">3</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="150.0" y1="1312.0" x2="1788.0" y2="1312.0"/><polygon points="150.0,1312.0 164.0,1305.0 164.0,1319.0"/><polygon points="1788.0,1312.0 1774.0,1305.0 1774.0,1319.0"/><text x="969.0" y="1298.0" font-size="46" text-anchor="middle" stroke="none">9</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="1858.0" y1="150.0" x2="1858.0" y2="1242.0"/><polygon points="1858.0,150.0 1851.0,164.0 1865.0,164.0"/><polygon points="1858.0,1242.0 1851.0,1228.0 1865.0,1228.0"/><text x="1842.0" y="696.0" font-size="46" text-anchor="middle" transform="rotate(-90 1842.0 696.0)" stroke="none">6</text></g>
-<text x="80" y="1427" font-size="42" font-weight="700" fill="#0A8A0A">[GN]</text>
-<text x="1858" y="1427" font-size="42" font-weight="700" fill="#0A8A0A" text-anchor="end">[2:3]</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-3780 -31500 90720 63000" fill="none" font-family="Calibri,Arial,'Liberation Sans',sans-serif">
+	<rect x="-3780" y="-31500" width="90720" height="63000" fill="#FAFAF9"/><title>Flag of Guinea — construction sheet</title>
+	
+	<defs>
+		<marker id="left-arrow" viewBox="-4 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+			<path fill="blue" d="m2 0 4 4-10-4L6-4z"/>
+		</marker>
+	</defs>
+	<path fill="#f8f8f8" d="m-3780-31500h90720v63000H-3780z"/>
+	<path fill="#fff" d="m0-27720h83160v55440H0z"/>
+	<g opacity=".5" transform="scale(27720)">
+		<path fill="#fcd116" d="m0-1h3v2H0z"/>
+		<path fill="#ce1126" d="m0-1h1v2H0z"/>
+		<path fill="#009460" d="m2-1h1v2H2z"/>
+	</g>
+	<g stroke="#000" stroke-width="140" stroke-linejoin="round" stroke-linecap="round">
+		<g opacity=".4" stroke-width="100">
+			<path stroke-dashoffset="362" stroke-dasharray="725,315,105,315" d="m41580 0v-27720m0 27720v27720"/>
+			<path stroke-dashoffset="376" stroke-dasharray="751,315,105,315" d="m41580 0H0m41580 0h41580"/>
+		</g>
+		<path stroke="#444" stroke-width="250" d="m0-27720h83160v55440H0z"/>
+		<path d="m27720-27720v55440m27720-55440v55440"/>
+		<path stroke="#222" stroke-width="75" stroke-dasharray="210,210" d="m0-30240V0m0 30240V0m27720-30240v2520m27720-2520v2520m27720-2520V0m0 30240V0M0-27720h41580m44100 0H41580M0 27720h41580m44100 0H41580"/>
+	</g>
+	<g stroke="#00f" stroke-width="75" marker-start="url(#left-arrow)">
+		<path d="m300-29295h12460"/>
+		<path d="m27420-29295H14960"/>
+		<path d="m28020-29295h12460"/>
+		<path d="m55140-29295H42680"/>
+		<path d="m55740-29295h12460"/>
+		<path d="m82860-29295H70400"/>
+		<path d="m300 29295h40180"/>
+		<path d="m82860 29295H42680"/>
+		<path d="m84735 27420V1100"/>
+		<path d="m84735-27420v26320"/>
+	</g>
+	<g fill="#000" text-anchor="middle" font-size="50" transform="scale(50)">
+		<g>
+			<text x="277" y="-571">1</text>
+			<text x="832" y="-571">1</text>
+			<text x="1386" y="-571">1</text>
+			<text x="832" y="601">3</text>
+		</g>
+		<g transform="rotate(270)">
+			<text y="1710">2</text>
+		</g>
+		<g font-size="27">
+			<text x="-37" y="605">[<tspan font-weight="bold" fill="#080">GN</tspan>]</text>
+			<text x="1700" y="605">[<tspan font-weight="bold" fill="#080">2:3</tspan>]</text>
+		</g>
+	</g>
 </svg>

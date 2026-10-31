@@ -1,6 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2016 1420" font-family="Arial, Helvetica, sans-serif">
-<rect width="2016" height="1420" fill="#FAFAF9"/>
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 600" x="150.0" y="150.0" width="1716.0" height="1029.6" preserveAspectRatio="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1940 1370" font-family="Calibri, Arial, 'Liberation Sans', Helvetica, sans-serif">
+<rect width="1940" height="1370" fill="#FAFAF9"/>
+<rect x="170" y="170" width="1600.0" height="960.0" fill="#fff"/>
+<g opacity="0.5"><svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 600" x="170.0" y="170.0" width="1600.0" height="960.0" preserveAspectRatio="none">
 <defs>
 <linearGradient id="cap1" gradientUnits="userSpaceOnUse" x1="498.738" y1="289.055" x2="500.626" y2="283.42">
 <stop stop-color="#510000" offset="0"/>
@@ -160,17 +161,19 @@
 <path fill="#fff" d="m550.067,324.648s2.71009,0.1485,3.84748,0.27558c1.13739,0.12711,2.95452,0.25356,2.95452,0.25356l-0.36909-0.48504c-0.57438,0.20274-4.4212-0.18918-6.43291-0.0441z"/>
 </g>
 <path fill="#c8a400" d="m500,224.874 -32.1418,55.6856 -32.8579,56.8991 64.2977,-0.007 65.7018,0.007 -32.153,-55.683 -32.847,-56.902zm0,3.00212 31.5491,54.652 30.8506,53.4278 -63.1018,-0.004 -61.7012,0.004 31.5597,-54.6448z"/>
-</svg>
-<rect x="150" y="150" width="1716.0" height="1029.6" fill="none" stroke="#111" stroke-width="3.5"/>
-<line x1="1008.0" y1="150.0" x2="1008.0" y2="1179.6" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="493.2" x2="1866.0" y2="493.2" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="664.8" x2="1866.0" y2="664.8" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="836.4" x2="1866.0" y2="836.4" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="150.0" x2="80.0" y2="493.2"/><polygon points="80.0,150.0 73.0,164.0 87.0,164.0"/><polygon points="80.0,493.2 73.0,479.2 87.0,479.2"/><text x="64.0" y="321.6" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 321.6)" stroke="none">1</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="493.2" x2="80.0" y2="836.4"/><polygon points="80.0,493.2 73.0,507.2 87.0,507.2"/><polygon points="80.0,836.4 73.0,822.4 87.0,822.4"/><text x="64.0" y="664.8" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 664.8)" stroke="none">1</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="836.4" x2="80.0" y2="1179.6"/><polygon points="80.0,836.4 73.0,850.4 87.0,850.4"/><polygon points="80.0,1179.6 73.0,1165.6 87.0,1165.6"/><text x="64.0" y="1008.0" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 1008.0)" stroke="none">1</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="150.0" y1="1249.6" x2="1866.0" y2="1249.6"/><polygon points="150.0,1249.6 164.0,1242.6 164.0,1256.6"/><polygon points="1866.0,1249.6 1852.0,1242.6 1852.0,1256.6"/><text x="1008.0" y="1235.6" font-size="46" text-anchor="middle" stroke="none">5</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="1936.0" y1="150.0" x2="1936.0" y2="1179.6"/><polygon points="1936.0,150.0 1929.0,164.0 1943.0,164.0"/><polygon points="1936.0,1179.6 1929.0,1165.6 1943.0,1165.6"/><text x="1920.0" y="664.8" font-size="46" text-anchor="middle" transform="rotate(-90 1920.0 664.8)" stroke="none">3</text></g>
-<text x="80" y="1365" font-size="42" font-weight="700" fill="#0A8A0A">[NI]</text>
-<text x="1936" y="1365" font-size="42" font-weight="700" fill="#0A8A0A" text-anchor="end">[3:5]</text>
+</svg></g>
+<line x1="970.0" y1="170.0" x2="970.0" y2="1130.0" stroke="#444" stroke-width="1.6" stroke-dasharray="10 6 3 6" opacity="0.55"/>
+<line x1="75.0" y1="490.0" x2="1770.0" y2="490.0" stroke="#444" stroke-width="1.6" stroke-dasharray="10 6 3 6" opacity="0.55"/>
+<line x1="170.0" y1="650.0" x2="1770.0" y2="650.0" stroke="#444" stroke-width="1.6" stroke-dasharray="10 6 3 6" opacity="0.55"/>
+<line x1="75.0" y1="810.0" x2="1770.0" y2="810.0" stroke="#444" stroke-width="1.6" stroke-dasharray="10 6 3 6" opacity="0.55"/>
+<circle cx="970.0" cy="649.0" r="144.0" fill="none" stroke="#2540E8" stroke-width="1.6" stroke-dasharray="8 6" opacity="0.7"/>
+<rect x="170" y="170" width="1600.0" height="960.0" fill="none" stroke="#111" stroke-width="3.5"/>
+<g stroke="#2540E8" fill="#2540E8" stroke-width="2"><line x1="110.0" y1="170.0" x2="110.0" y2="303.0"/><line x1="110.0" y1="357.0" x2="110.0" y2="490.0"/><polygon stroke="none" points="110.0,170.0 104.0,186.0 116.0,186.0"/><polygon stroke="none" points="110.0,490.0 116.0,474.0 104.0,474.0"/></g><text x="110.0" y="344.0" font-size="40" text-anchor="middle" fill="#111" transform="rotate(-90.00 110.0 330.0)">10</text>
+<g stroke="#2540E8" fill="#2540E8" stroke-width="2"><line x1="110.0" y1="490.0" x2="110.0" y2="623.0"/><line x1="110.0" y1="677.0" x2="110.0" y2="810.0"/><polygon stroke="none" points="110.0,490.0 104.0,506.0 116.0,506.0"/><polygon stroke="none" points="110.0,810.0 116.0,794.0 104.0,794.0"/></g><text x="110.0" y="664.0" font-size="40" text-anchor="middle" fill="#111" transform="rotate(-90.00 110.0 650.0)">10</text>
+<g stroke="#2540E8" fill="#2540E8" stroke-width="2"><line x1="110.0" y1="810.0" x2="110.0" y2="943.0"/><line x1="110.0" y1="997.0" x2="110.0" y2="1130.0"/><polygon stroke="none" points="110.0,810.0 104.0,826.0 116.0,826.0"/><polygon stroke="none" points="110.0,1130.0 116.0,1114.0 104.0,1114.0"/></g><text x="110.0" y="984.0" font-size="40" text-anchor="middle" fill="#111" transform="rotate(-90.00 110.0 970.0)">10</text>
+<g stroke="#2540E8" fill="#2540E8" stroke-width="2"><line x1="170.0" y1="1190.0" x2="937.2" y2="1190.0"/><line x1="1002.8" y1="1190.0" x2="1770.0" y2="1190.0"/><polygon stroke="none" points="170.0,1190.0 186.0,1196.0 186.0,1184.0"/><polygon stroke="none" points="1770.0,1190.0 1754.0,1184.0 1754.0,1196.0"/></g><text x="970.0" y="1204.0" font-size="40" text-anchor="middle" fill="#111" transform="rotate(0.00 970.0 1190.0)">50</text>
+<g stroke="#2540E8" fill="#2540E8" stroke-width="2"><line x1="1830.0" y1="170.0" x2="1830.0" y2="617.2"/><line x1="1830.0" y1="682.8" x2="1830.0" y2="1130.0"/><polygon stroke="none" points="1830.0,170.0 1824.0,186.0 1836.0,186.0"/><polygon stroke="none" points="1830.0,1130.0 1836.0,1114.0 1824.0,1114.0"/></g><text x="1830.0" y="664.0" font-size="40" text-anchor="middle" fill="#111" transform="rotate(-90.00 1830.0 650.0)">30</text>
+<g stroke="#2540E8" fill="#2540E8" stroke-width="2"><line x1="826.0" y1="842.0" x2="937.2" y2="842.0"/><line x1="1002.8" y1="842.0" x2="1114.0" y2="842.0"/><polygon stroke="none" points="826.0,842.0 842.0,848.0 842.0,836.0"/><polygon stroke="none" points="1114.0,842.0 1098.0,836.0 1098.0,848.0"/></g><text x="970.0" y="856.0" font-size="40" text-anchor="middle" fill="#111" transform="rotate(0.00 970.0 842.0)">≈9</text>
+<text x="110" y="1344" font-size="40" font-weight="700" fill="#0A8A0A">[NI]</text>
+<text x="1910" y="1344" font-size="40" font-weight="700" fill="#0A8A0A" text-anchor="end">[3:5]</text>
 </svg>

@@ -1,13 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1938 1482" font-family="Arial, Helvetica, sans-serif">
-<rect width="1938" height="1482" fill="#FAFAF9"/>
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 900 600" x="150.0" y="150.0" width="1638.0" height="1092.0" preserveAspectRatio="none"><path fill="#009e49" d="M0 0h900v600H0z"/><path fill="#ef2b2d" d="M0 0h900v300H0z"/><g transform="translate(450 300)" fill="#fcd116"><g id="b"><path id="a" d="M0-100V0h50" transform="rotate(18 0 -100)"/><use xlink:href="#a" transform="scale(-1 1)"/></g><use xlink:href="#b" transform="rotate(72)"/><use xlink:href="#b" transform="rotate(144)"/><use xlink:href="#b" transform="rotate(216)"/><use xlink:href="#b" transform="rotate(288)"/></g></svg>
-<rect x="150" y="150" width="1638.0" height="1092.0" fill="none" stroke="#111" stroke-width="3.5"/>
-<line x1="969.0" y1="150.0" x2="969.0" y2="1242.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="696.0" x2="1788.0" y2="696.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="150.0" x2="80.0" y2="696.0"/><polygon points="80.0,150.0 73.0,164.0 87.0,164.0"/><polygon points="80.0,696.0 73.0,682.0 87.0,682.0"/><text x="64.0" y="423.0" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 423.0)" stroke="none">1</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="696.0" x2="80.0" y2="1242.0"/><polygon points="80.0,696.0 73.0,710.0 87.0,710.0"/><polygon points="80.0,1242.0 73.0,1228.0 87.0,1228.0"/><text x="64.0" y="969.0" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 969.0)" stroke="none">1</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="150.0" y1="1312.0" x2="1788.0" y2="1312.0"/><polygon points="150.0,1312.0 164.0,1305.0 164.0,1319.0"/><polygon points="1788.0,1312.0 1774.0,1305.0 1774.0,1319.0"/><text x="969.0" y="1298.0" font-size="46" text-anchor="middle" stroke="none">3</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="1858.0" y1="150.0" x2="1858.0" y2="1242.0"/><polygon points="1858.0,150.0 1851.0,164.0 1865.0,164.0"/><polygon points="1858.0,1242.0 1851.0,1228.0 1865.0,1228.0"/><text x="1842.0" y="696.0" font-size="46" text-anchor="middle" transform="rotate(-90 1842.0 696.0)" stroke="none">2</text></g>
-<text x="80" y="1427" font-size="42" font-weight="700" fill="#0A8A0A">[BF]</text>
-<text x="1858" y="1427" font-size="42" font-weight="700" fill="#0A8A0A" text-anchor="end">[2:3]</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-45360 -31500 90720 63000" fill="none" font-family="Calibri,Arial,'Liberation Sans',sans-serif">
+	<rect x="-45360" y="-31500" width="90720" height="63000" fill="#FAFAF9"/><title>Flag of Burkina Faso — construction sheet</title>
+	
+	<defs>
+		<marker id="left-arrow" viewBox="-4 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+			<path fill="blue" d="m2 0 4 4-10-4L6-4z"/>
+		</marker>
+	</defs>
+	<path fill="#f8f8f8" d="m-45360-31500h90720v63000h-90720z"/>
+	<path fill="#fff" d="m-41580-27720h83160v55440h-83160z"/>
+	<g opacity=".5">
+		<g transform="scale(4620)">
+			<path fill="#009e49" d="m-9-6H9V6H-9z"/>
+			<path fill="#ef2b2d" d="m-9-6H9v6H-9z"/>
+		</g>
+		<path fill="#fcd116" d="m0-9240L5431 7475-8788-2855H8788L-5431 7475z"/>
+	</g>
+	<g stroke="#000" stroke-width="140" stroke-linejoin="round" stroke-linecap="round">
+		<g opacity=".4" stroke-width="100">
+			<path stroke-dashoffset="362" stroke-dasharray="725,315,105,315" d="m0 0v-27720M0 0v9555m0 2520v15645"/>
+			<path stroke-dashoffset="376" stroke-dasharray="751,315,105,315" d="m0 0h-4858M0 0h4858"/>
+			<path stroke-dasharray="735,315,105,315" stroke-dashoffset="840" d="m0-30240v2520M-44100 0h2520"/>
+		</g>
+		<path stroke="#66f" opacity=".8" stroke-dasharray="420,473" stroke-dashoffset="210" d="m0-9240A1 1 0 0 0 0 9240M0-9240A1 1 0 0 1 0 9240"/>
+		<path stroke="#444" stroke-width="250" d="m-41580-27720h83160v55440h-83160z"/>
+		<path d="m-41580 0h36722m9716 0h36722M0-9240l2075 6385h6713L3357 1091l2074 6384L0 3529-5431 7475l2074-6384-5431-3946h6713z"/>
+		<path stroke="#222" stroke-width="75" stroke-dasharray="210,210" d="m-41580-30240V0m0 30240V0m32340 11760V0M9240 11760V0m32340-30240V0m0 30240V0m-85680-27720H0m44100 0H0m-44100 55440H0m44100 0H0"/>
+		<path stroke-width="135" d="m-375 0h750M0-375v750"/>
+	</g>
+	<g fill="#008" opacity=".8">
+		<circle r="200" cx="9240" cy="0"/>
+		<circle r="200" cx="-9240" cy="0"/>
+	</g>
+	<g stroke="#00f" stroke-width="75" marker-start="url(#left-arrow)">
+		<path d="m-41280-29295h19390"/>
+		<path d="m-300-29295h-19390"/>
+		<path d="m300-29295h19390"/>
+		<path d="m41280-29295H21890"/>
+		<path d="m-41280 29295h39480"/>
+		<path d="m41280 29295H1800"/>
+		<path d="m-8940 10815h7840"/>
+		<path d="m8940 10815H1100"/>
+		<path d="m-43155-300v-12460"/>
+		<path d="m-43155-27420v12460"/>
+		<path d="m-43155 27420V14960"/>
+		<path d="m-43155 300v12460"/>
+		<path d="m43155 27420V1800"/>
+		<path d="m43155-27420v25620"/>
+	</g>
+	<g fill="#000" text-anchor="middle" font-size="50" transform="scale(50)">
+		<g>
+			<text x="-416" y="-571">9</text>
+			<text x="416" y="-571">9</text>
+			<text y="231">4</text>
+			<text y="601">18</text>
+		</g>
+		<g transform="rotate(270)">
+			<text x="-277" y="-848" text-decoration="underline">6</text>
+			<text x="277" y="-848" text-decoration="underline">6</text>
+			<text y="878">12</text>
+		</g>
+		<g font-size="27">
+			<text x="-869" y="605">[<tspan font-weight="bold" fill="#080">BF</tspan>]</text>
+			<text x="869" y="605">[<tspan font-weight="bold" fill="#080">2:3</tspan>]</text>
+		</g>
+	</g>
 </svg>

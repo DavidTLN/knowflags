@@ -60,9 +60,12 @@ def clean(path):
     for a in ('width', 'height'):
         if a in root.attrib:
             del root.attrib[a]
+    # opaque sheet background (several Commons sheets are transparent)
+    vx, vy, vw, vh = [float(v) for v in re.split(r'[\s,]+', vb.strip())]
+    bg = etree.Element('{%s}rect' % SVG, x='%g' % vx, y='%g' % vy, width='%g' % vw, height='%g' % vh, fill='#FAFAF9')
+    root.insert(0, bg)
     etree.cleanup_namespaces(root)
     s = etree.tostring(root, encoding='unicode')
-    s = re.sub(r'>\s+<', '><', s)
     return '<?xml version="1.0" encoding="UTF-8"?>\n' + s + '\n'
 
 
@@ -81,11 +84,19 @@ def main():
         for loc in ('fr', 'en'):
             with open(os.path.join(OUT, f'{iso}-construction-{loc}.svg'), 'w', encoding='utf-8') as f:
                 f.write(svg)
+        author = re.sub(r'\s+', ' ', meta.get('artist') or '').strip()
+        if 'MapGrid' in author:
+            author = 'MapGrid'
+        elif 'Vector:' in author:
+            author = author.split('Vector:')[-1].strip()
+        elif author.startswith(('See File history', 'This vector image', 'No machine-readable')):
+            author = ''
+        author = author[:60]
         credits[iso] = {
             'source': 'Wikimedia Commons',
             'file': title,
             'url': 'https://commons.wikimedia.org/wiki/' + title.replace(' ', '_'),
-            'author': meta.get('artist') or None,
+            'author': author or None,
             'license': meta.get('license') or None,
         }
         print('ok', iso, len(svg) // 1024, 'KB')

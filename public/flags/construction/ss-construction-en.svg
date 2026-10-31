@@ -1,22 +1,99 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2016 1248" font-family="Arial, Helvetica, sans-serif">
-<rect width="2016" height="1248" fill="#FAFAF9"/>
-<svg viewBox="0 0 20 10" x="150.0" y="150.0" width="1716.0" height="858.0" preserveAspectRatio="none"><path fill="#078930" d="M0 0h20v10H0z"/><path fill="#fff" d="M0 0h20v7H0z"/><path d="M0 0h20v3H0z"/><path fill="#da121a" d="M0 3.5h20v3H0z"/><path fill="#0f47af" d="M0 0l8.66 5L0 10z"/><path d="M1.22 5l3.015.98-1.863-2.565v3.17L4.235 4.02z" fill="#fcdd09"/></svg>
-<rect x="150" y="150" width="1716.0" height="858.0" fill="none" stroke="#111" stroke-width="3.5"/>
-<line x1="893.0" y1="150.0" x2="893.0" y2="1008.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="1008.0" y1="150.0" x2="1008.0" y2="1008.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="407.4" x2="1866.0" y2="407.4" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="450.3" x2="1866.0" y2="450.3" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="579.0" x2="1866.0" y2="579.0" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="707.7" x2="1866.0" y2="707.7" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<line x1="150.0" y1="750.6" x2="1866.0" y2="750.6" stroke="#444" stroke-width="1.5" stroke-dasharray="10 6 3 6" opacity="0.75"/>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="150.0" y1="80.0" x2="893.0" y2="80.0"/><polygon points="150.0,80.0 164.0,73.0 164.0,87.0"/><polygon points="893.0,80.0 879.0,73.0 879.0,87.0"/><text x="521.5" y="66.0" font-size="46" text-anchor="middle" stroke="none">≈8.66</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="150.0" x2="80.0" y2="407.4"/><polygon points="80.0,150.0 73.0,164.0 87.0,164.0"/><polygon points="80.0,407.4 73.0,393.4 87.0,393.4"/><text x="64.0" y="278.7" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 278.7)" stroke="none">3</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="407.4" x2="80.0" y2="450.3"/><polygon points="80.0,407.4 73.0,421.4 87.0,421.4"/><polygon points="80.0,450.3 73.0,436.3 87.0,436.3"/><text x="64.0" y="428.9" font-size="36" text-anchor="middle" transform="rotate(-90 64.0 428.9)" stroke="none">0.5</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="450.3" x2="80.0" y2="707.7"/><polygon points="80.0,450.3 73.0,464.3 87.0,464.3"/><polygon points="80.0,707.7 73.0,693.7 87.0,693.7"/><text x="64.0" y="579.0" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 579.0)" stroke="none">3</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="707.7" x2="80.0" y2="750.6"/><polygon points="80.0,707.7 73.0,721.7 87.0,721.7"/><polygon points="80.0,750.6 73.0,736.6 87.0,736.6"/><text x="64.0" y="729.1" font-size="36" text-anchor="middle" transform="rotate(-90 64.0 729.1)" stroke="none">0.5</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="80.0" y1="750.6" x2="80.0" y2="1008.0"/><polygon points="80.0,750.6 73.0,764.6 87.0,764.6"/><polygon points="80.0,1008.0 73.0,994.0 87.0,994.0"/><text x="64.0" y="879.3" font-size="46" text-anchor="middle" transform="rotate(-90 64.0 879.3)" stroke="none">3</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="150.0" y1="1078.0" x2="1866.0" y2="1078.0"/><polygon points="150.0,1078.0 164.0,1071.0 164.0,1085.0"/><polygon points="1866.0,1078.0 1852.0,1071.0 1852.0,1085.0"/><text x="1008.0" y="1064.0" font-size="46" text-anchor="middle" stroke="none">20</text></g>
-<g stroke="#2540E8" stroke-width="2.5" fill="#2540E8"><line x1="1936.0" y1="150.0" x2="1936.0" y2="1008.0"/><polygon points="1936.0,150.0 1929.0,164.0 1943.0,164.0"/><polygon points="1936.0,1008.0 1929.0,994.0 1943.0,994.0"/><text x="1920.0" y="579.0" font-size="46" text-anchor="middle" transform="rotate(-90 1920.0 579.0)" stroke="none">10</text></g>
-<text x="80" y="1193" font-size="42" font-weight="700" fill="#0A8A0A">[SS]</text>
-<text x="1936" y="1193" font-size="42" font-weight="700" fill="#0A8A0A" text-anchor="end">[1:2]</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-3780 -28896 108108 57792" fill="none" font-family="Calibri,Arial,'Liberation Sans',sans-serif">
+	<rect x="-3780" y="-28896" width="108108" height="57792" fill="#FAFAF9"/><title>Flag of South Sudan — construction sheet</title>
+	
+	<defs>
+		<marker id="left-arrow" viewBox="-4 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+			<path fill="blue" d="m2 0 4 4-10-4L6-4z"/>
+		</marker>
+		<marker id="right-arrow" viewBox="-6 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+			<path fill="blue" d="m-2 0-4 4L4 0-6-4z"/>
+		</marker>
+	</defs>
+	<path fill="#f8f8f8" d="m-3780-28896h108108v57792H-3780z"/>
+	<path fill="#fff" d="m0-25137h100548v50274H0z"/>
+	<g opacity=".5">
+		<g transform="scale(441)">
+			<path fill="#fff" d="m0-28.5h114v57H0z"/>
+			<path fill="#000" d="m0-57h228v34H18z"/>
+			<path fill="#da121a" d="m18-17h210v34H18z"/>
+			<path fill="#078930" d="m18 23h210v34H0z"/>
+		</g>
+		<path fill="#0f47af" d="m43539 0L0 25137v-50274z"/>
+		<path fill="#fcdd09" d="m6134 0 15158-4925-9368 12894V-7969l9368 12894z"/>
+	</g>
+	<g stroke="#000" stroke-width="140" stroke-linejoin="round" stroke-linecap="round">
+		<g opacity=".4" stroke-width="100">
+			<path stroke-dashoffset="368" stroke-dasharray="735,315,105,315" d="m50274 0v-25137m0 25137v25137"/>
+			<path stroke-dashoffset="368" stroke-dasharray="735,315,105,315" d="m14513 0H0m14513 0h8694m27067 0H25727m24547 0h50274"/>
+		</g>
+		<path stroke="#808" stroke-width="75" stroke-dasharray="210,210" d="m0-25137L14513 0M0 25137 14513 0"/>
+		<path stroke="#844" opacity=".8" stroke-dasharray="420,456" stroke-dashoffset="210" d="m6134 0a1 1 0 0 0 16758 0M6134 0a1 1 0 0 1 16758 0"/>
+		<path stroke="#444" stroke-width="250" d="m0-25137h100548v50274H0z"/>
+		<path d="m25970-10143h74578M30553-7497h69995M30553 7497h69995m-74578 2646h74578M0-25137 43539 0 0 25137M6134 0l5790-1881v-6088l3578 4925 5790-1881L17713 0l3579 4925-5790-1881-3578 4925V1881z"/>
+		<path stroke="#222" stroke-width="75" stroke-dasharray="210,210" d="m0-25137V0m0 27657V0m100548-25137V0m0 27657V0M-2520-25137h52794m52794 0H50274m52794 14994h-2520M25412-8379H14513M25412 8379H14513m88555-15876h-2520m2520 14994h-2520m2520 2646h-2520M-2520 25137h52794m52794 0H50274M1260-27319 0-25137M44799-2182 43539 0"/>
+		<path stroke-width="135" d="m14138 0h750m-375-375v750"/>
+	</g>
+	<g fill="#008" opacity=".8">
+		<circle r="200" cx="0" cy="-25137"/>
+		<circle r="200" cx="-0" cy="25137"/>
+		<circle r="200" cx="14513" cy="-8379"/>
+		<circle r="200" cx="14513" cy="8379"/>
+		<circle r="200" cx="43539" cy="0"/>
+	</g>
+	<g stroke="#00f" stroke-width="75" marker-start="url(#left-arrow)">
+		<path d="m300 26712h48174"/>
+		<path d="m100248 26712H52074"/>
+		<path d="m-1575 24837V1800"/>
+		<path d="m-1575-24837v23037"/>
+		<path d="m24467 8079V1800"/>
+		<path d="m24467-8079v6279"/>
+		<path d="m102123 24837v-5497"/>
+		<path d="m102123 10443v5497"/>
+		<path d="m102123 7197V1700"/>
+		<path d="m102123-7197v5497"/>
+		<path d="m102123-10443v-5497"/>
+		<path d="m102123-24837v5497"/>
+		<path d="m1047-26351 20384 11769"/>
+		<path d="m44066-1514-19517-11268"/>
+		<g marker-end="url(#right-arrow)">
+			<path d="m9398-19365a11025 11025 0 0 1-3626 3626"/>
+			<path d="m5253-15439a11025 11025 0 0 1-4953 1327"/>
+			<path d="m9398 19365a11025 11025 0 0 0-3626-3626"/>
+			<path d="m5253 15439a11025 11025 0 0 0-4953-1327"/>
+		</g>
+	</g>
+	<g fill="#000" text-anchor="middle" font-size="50" transform="scale(50)">
+		<g>
+			<text x="1006" y="549">114</text>
+		</g>
+		<g transform="rotate(15)">
+			<text x="130" y="305">30°</text>
+		</g>
+		<g transform="rotate(30)">
+			<text x="261" y="-452">57</text>
+		</g>
+		<g transform="rotate(45)">
+			<text x="356" y="175">30°</text>
+		</g>
+		<g transform="rotate(270)">
+			<text y="-16">57</text>
+			<text y="504">19</text>
+			<text x="-353" y="2058">17</text>
+			<text x="-176" y="2058">3</text>
+			<text y="2058">17</text>
+			<text x="176" y="2058">3</text>
+			<text x="353" y="2058">17</text>
+		</g>
+		<g transform="rotate(315)">
+			<text x="356" y="-145">30°</text>
+		</g>
+		<g transform="rotate(345)">
+			<text x="130" y="-275">30°</text>
+		</g>
+		<g font-size="27">
+			<text x="-37" y="553">[<tspan font-weight="bold" fill="#080">SS</tspan>]</text>
+			<text x="2048" y="553">[<tspan font-weight="bold" fill="#080">1:2</tspan>]</text>
+		</g>
+	</g>
 </svg>

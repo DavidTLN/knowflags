@@ -1,89 +1,198 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 724" font-family="Inter, system-ui, sans-serif">
-  <defs>
-    <marker id="ah" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto">
-      <path d="M1,1 L8,4.5 L1,8 z" fill="#16324F"/>
-    </marker>
-  </defs>
-
-  <rect width="1120" height="724" fill="#FAFAF7"/>
-
-  <!-- title -->
-  <text x="200" y="40" fill="#16324F" font-size="15" font-weight="800" letter-spacing="1.5">MYANMAR — CONSTRUCTION DU DRAPEAU</text>
-  <text x="200" y="62" fill="#6B7280" font-size="13" font-weight="600">Loi sur le drapeau de l'Union, 2010 · grille 18 × 12</text>
-
-  <!-- ===== Flag ===== -->
-  <rect x="200" y="110" width="720" height="160" fill="#FECB00"/>
-  <rect x="200" y="270" width="720" height="160" fill="#34B233"/>
-  <rect x="200" y="430" width="720" height="160" fill="#EA2839"/>
-
-  <!-- guide circle (circumscribed circle of the star) -->
-  <circle cx="560" cy="366.9" r="176.9" fill="none" stroke="#16324F" stroke-width="1" stroke-dasharray="5 5" opacity="0.55"/>
-
-  <!-- centre vertical line -->
-  <line x1="560" y1="110" x2="560" y2="590" stroke="#16324F" stroke-width="1" stroke-dasharray="12 4 2 4" opacity="0.30"/>
-
-  <!-- white five-pointed star -->
-  <polygon points="560,190 599.7,312.2 728.2,312.2 624.3,387.8 664.0,510 560,434.5 456.0,510 495.7,387.8 391.8,312.2 520.3,312.2"
-           fill="#FFFFFF" stroke="#0F1923" stroke-width="1.5" stroke-linejoin="round"/>
-
-  <!-- flag frame -->
-  <rect x="200" y="110" width="720" height="480" fill="none" stroke="#0F1923" stroke-width="2"/>
-
-  <!-- guide extensions -->
-  <g stroke="#16324F" stroke-width="1" stroke-dasharray="3 3" opacity="0.35">
-    <line x1="200" y1="110" x2="200" y2="66"/><line x1="560" y1="110" x2="560" y2="66"/><line x1="920" y1="110" x2="920" y2="66"/>
-    <line x1="920" y1="110" x2="990" y2="110"/><line x1="920" y1="590" x2="990" y2="590"/>
-    <line x1="200" y1="110" x2="44" y2="110"/><line x1="200" y1="270" x2="44" y2="270"/>
-    <line x1="200" y1="430" x2="44" y2="430"/><line x1="200" y1="590" x2="44" y2="590"/>
-    <line x1="200" y1="590" x2="200" y2="640"/><line x1="920" y1="590" x2="920" y2="640"/>
-  </g>
-
-  <!-- ===== Top dimensions: 9 / 9 ===== -->
-  <g stroke="#16324F" stroke-width="1.3" marker-start="url(#ah)" marker-end="url(#ah)">
-    <line x1="200" y1="84" x2="560" y2="84"/>
-    <line x1="560" y1="84" x2="920" y2="84"/>
-  </g>
-  <g fill="#16324F" font-size="20" font-weight="600" text-anchor="middle">
-    <text x="380" y="66">9</text>
-    <text x="740" y="66">9</text>
-  </g>
-
-  <!-- ===== Right dimension: 12 ===== -->
-  <line x1="985" y1="110" x2="985" y2="590" stroke="#16324F" stroke-width="1.3" marker-start="url(#ah)" marker-end="url(#ah)"/>
-  <text x="1008" y="350" fill="#16324F" font-size="20" font-weight="600" text-anchor="middle" transform="rotate(90 1008 350)">12</text>
-
-  <!-- ===== Left dimensions: 4 x3 (the three bands) ===== -->
-  <g stroke="#16324F" stroke-width="1.3" marker-start="url(#ah)" marker-end="url(#ah)">
-    <line x1="52" y1="110" x2="52" y2="270"/>
-    <line x1="52" y1="270" x2="52" y2="430"/>
-    <line x1="52" y1="430" x2="52" y2="590"/>
-  </g>
-  <g fill="#16324F" font-size="18" font-weight="600" text-anchor="middle">
-    <text x="30" y="190" transform="rotate(-90 30 190)">4</text>
-    <text x="30" y="350" transform="rotate(-90 30 350)">4</text>
-    <text x="30" y="510" transform="rotate(-90 30 510)">4</text>
-  </g>
-
-  <!-- ===== Star diameter D ===== -->
-  <g stroke="#16324F" stroke-width="1" stroke-dasharray="3 3" opacity="0.4">
-    <line x1="383.1" y1="366.9" x2="383.1" y2="608"/>
-    <line x1="736.9" y1="366.9" x2="736.9" y2="608"/>
-  </g>
-  <line x1="383.1" y1="608" x2="736.9" y2="608" stroke="#16324F" stroke-width="1.2" marker-start="url(#ah)" marker-end="url(#ah)"/>
-  <text x="756" y="613" fill="#16324F" font-size="18" font-weight="700">D</text>
-
-  <!-- ===== Bottom dimension: 18 ===== -->
-  <line x1="200" y1="636" x2="920" y2="636" stroke="#16324F" stroke-width="1.3" marker-start="url(#ah)" marker-end="url(#ah)"/>
-  <text x="560" y="662" fill="#16324F" font-size="20" font-weight="600" text-anchor="middle">18</text>
-
-  <!-- ===== Captions ===== -->
-  <text x="200" y="692" fill="#6B7280" font-size="14" font-weight="600">D = cercle circonscrit de l'étoile = (80 − 16√5) / 5 ≈ 8,84</text>
-  <text x="200" y="712" fill="#6B7280" font-size="14" font-weight="500">Format 2:3 — trois bandes égales ; étoile blanche à cinq branches centrée, pointe en haut.</text>
-
-  <!-- ===== Tags ===== -->
-  <text x="40" y="712" fill="#92400E" font-size="16" font-weight="800">[MM]</text>
-  <g transform="translate(1010,698)">
-    <rect x="-6" y="-16" width="76" height="24" rx="6" fill="#DCFCE7"/>
-    <text x="32" y="1" fill="#16A34A" font-size="14" font-weight="800" text-anchor="middle">2 : 3</text>
-  </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-45360 -31500 90720 63000" fill="none" font-family="Calibri,Arial,'Liberation Sans',sans-serif">
+	<rect x="-45360" y="-31500" width="90720" height="63000" fill="#FAFAF9"/><title>Flag of Myanmar — construction sheet</title>
+	
+	<defs>
+		<marker id="left-arrow" viewBox="-4 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+			<path fill="blue" d="m2 0 4 4-10-4L6-4z"/>
+		</marker>
+		<path id="MJX-1-TEX-N-221A" d="M95 178Q89 178 81 186T72 200T103 230T169 280T207 309Q209 311 212 311H213Q219 311 227 294T281 177Q300 134 312 108L397 -77Q398 -77 501 136T707 565T814 786Q820 800 834 800Q841 800 846 794T853 782V776L620 293L385 -193Q381 -200 366 -200Q357 -200 354 -197Q352 -195 256 15L160 225L144 214Q129 202 113 190T95 178Z"/>
+		<path id="MJX-1-TEX-N-3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"/>
+		<path id="MJX-1-TEX-SS-1D5A0" d="M183 181Q183 179 152 91T118 0H28L154 346L280 693Q281 694 333 694H385L511 349Q636 4 638 2Q638 0 584 0H530L464 183H184L183 181ZM324 606Q319 578 292 492T238 332T210 256Q210 254 324 254T438 255L429 281L419 308Q409 336 395 378T365 465T339 551T324 611V606Z"/>
+		<path id="MJX-1-TEX-SS-1D5A3" d="M88 0V694H237H258H316Q383 694 425 686T511 648Q578 604 622 525T666 343Q666 190 564 86Q494 18 400 3Q387 1 237 0H88ZM565 341Q565 409 546 463T495 550T429 600T359 621Q348 623 267 623H189V71H267Q272 71 286 71T310 70Q461 70 527 184Q565 251 565 341Z"/>
+		<path id="MJX-1-TEX-SS-1D7E2" d="M117 621Q174 678 247 678Q305 678 351 647Q396 617 424 557Q460 472 460 328Q460 271 455 224Q448 154 427 104T376 27T314 -10T249 -22Q201 -22 160 1T91 67Q39 154 39 316Q39 541 117 621ZM250 55Q274 55 293 66T324 93T344 136T357 185T364 240T366 291T367 340Q367 373 367 393T363 449T352 507T332 553T299 589T250 601Q217 601 194 584T159 542T141 479T133 411T132 340V331Q132 299 133 277T137 219T147 157T167 107T201 68T250 55Z"/>
+		<path id="MJX-1-TEX-SS-1D7E3" d="M94 612Q172 616 211 632T284 678H307V73H430V0H88V73H213V317Q213 560 212 560Q210 558 197 554T155 546T96 540L83 539V612H94Z"/>
+		<path id="MJX-1-TEX-SS-1D7E4" d="M222 599Q190 599 166 585T128 550T108 509T97 474T93 459L67 492L42 526L47 539Q72 608 120 642T225 677Q304 677 355 644Q449 579 449 454Q449 373 361 290Q351 280 315 250T199 144Q156 103 137 85L293 86H449V0H50V79L216 242Q284 302 317 349T351 456Q351 517 315 558T222 599Z"/>
+		<path id="MJX-1-TEX-SS-1D7E5" d="M333 521Q333 554 313 579T243 604Q154 604 99 514L78 546Q56 577 56 579Q56 580 62 589T82 611T114 637T162 662T222 677Q224 677 231 677T242 678H245Q318 678 374 634T430 520Q430 483 417 452T382 398T351 369T329 354L328 353Q369 333 373 330Q408 306 432 268T457 184Q457 103 397 41T242 -22Q131 -22 51 58L42 68L49 105L55 142L58 138Q62 134 66 130T77 120T91 108T108 96T129 83T152 72T179 63T209 57T242 54Q285 54 319 86T353 184Q353 231 331 267T260 315L213 316H166V354Q166 392 167 392Q233 395 257 405Q290 418 311 450T333 521Z"/>
+		<path id="MJX-1-TEX-SS-1D7E6" d="M271 654L272 656H380V235H471V159H380V0H286V159H28V235L149 443Q269 652 271 654ZM292 235V607Q292 604 290 591T286 571T280 548T269 517T252 476T226 422T189 354T140 267Q136 260 132 253T126 240L123 236Q123 235 207 235H292Z"/>
+		<path id="MJX-1-TEX-SS-1D7E7" d="M257 350Q236 350 218 342T189 323T171 301T160 281L157 273Q157 272 116 272H75V656H416V577H162V486Q162 396 163 396T174 403T207 418T258 426Q339 426 394 360T449 203Q449 113 386 46T226 -21H223Q188 -21 156 -11T102 13T64 42T41 66T33 77Q34 78 44 95T64 128L73 144Q93 112 117 93Q165 54 223 54Q270 54 306 86T345 197Q345 350 257 350Z"/>
+		<path id="MJX-1-TEX-SS-1D7E8" d="M42 318Q42 396 61 460T109 564T173 629T237 666T289 677H301H317Q359 677 408 658V621Q408 585 407 585H406Q359 605 308 605Q246 605 203 556T146 421Q143 403 144 403Q145 402 152 409Q216 469 299 469Q333 469 357 457T407 405Q457 330 457 226Q457 126 402 57Q340 -22 251 -22Q216 -22 183 -7T116 43T63 149T42 318ZM260 393Q216 393 188 365T150 306T141 243Q141 153 172 104Q192 68 230 56Q238 54 251 54Q311 54 342 116Q360 152 360 226Q360 297 344 332Q320 382 277 392Q275 392 270 392T260 393Z"/>
+		<path id="MJX-1-TEX-SS-1D7E9" d="M42 570V656H457V577L447 564Q345 439 295 289T244 0V-11H145V12Q160 330 356 550Q360 556 365 561T374 571L208 570H42Z"/>
+		<path id="MJX-1-TEX-SS-1D7EA" d="M55 500Q55 568 109 623T250 678Q327 678 385 627T444 501Q444 445 410 410T336 357L329 353H330Q378 335 417 293T456 184Q456 93 393 36T249 -22T106 35T43 184Q43 251 82 293T169 353Q171 354 166 356Q165 356 163 357Q113 378 84 416T55 500ZM358 496Q358 557 325 581T250 605Q206 605 174 580T141 496Q141 446 171 420T250 393Q298 393 328 419T358 496ZM245 316Q205 316 172 285T139 185V179Q139 79 222 57Q231 55 250 55H254Q295 55 327 84Q360 120 360 188Q360 254 326 285Q295 316 245 316Z"/>
+		<path id="MJX-1-TEX-SS-1D7EB" d="M44 476Q57 561 116 619T245 677H255Q308 677 349 647Q392 619 424 545T457 334Q457 178 382 78T205 -22Q168 -22 135 -10T86 14L72 25Q73 25 91 58L110 91Q127 78 136 72T163 60T203 54Q238 54 265 71T308 110T335 164T350 214T357 253V257L347 248Q284 187 200 187Q165 187 140 201T87 258Q42 332 42 430Q42 458 44 476ZM269 604Q265 605 254 605Q222 605 199 591T164 554T148 517T141 487Q140 478 140 430T141 373Q146 335 164 307T207 269Q223 263 247 263Q299 266 328 308T358 417Q358 435 356 456T346 511T318 570T269 604Z"/>
+		<path id="MJX-1-TEX-SS-2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"/>
+		<path id="MJX-1-TEX-SS-2248" d="M55 319Q55 360 72 393T114 444T163 472T205 482Q207 482 213 482T223 483Q262 483 296 468T393 413L443 381Q502 346 553 346Q609 346 649 375T694 454Q694 465 698 474T708 483Q722 483 722 452Q722 386 675 338T555 289Q514 289 468 310T388 357T308 404T224 426Q164 426 125 393T83 318Q81 289 69 289Q55 289 55 319ZM55 85Q55 126 72 159T114 210T163 238T205 248Q207 248 213 248T223 249Q262 249 296 234T393 179L443 147Q502 112 553 112Q609 112 649 141T694 220Q694 249 708 249T722 217Q722 153 675 104T555 55Q514 55 468 76T388 123T308 170T224 192Q164 192 125 159T83 84Q80 55 69 55Q55 55 55 85Z"/>
+		<path id="MJX-1-TEX-SS-2E" d="M90 0V98H188V0H90Z"/>
+	</defs>
+	<g opacity=".5">
+		<g transform="scale(4620)">
+			<path fill="#fecb00" d="m-9-6H9V6H-9z"/>
+			<path fill="#34b233" d="m-9-2H9v8H-9z"/>
+			<path fill="#ea2839" d="m-9 2H9v4H-9z"/>
+		</g>
+		<path fill="#fff" d="m0-18480 12009 36960-31440-22843h38862l-31440 22843z"/>
+	</g>
+	<g stroke="#000" stroke-width="140" stroke-linejoin="round" stroke-linecap="round">
+		<g opacity=".4" stroke-width="100">
+			<path stroke-dashoffset="362" stroke-dasharray="725,315,105,315" d="m0 0v-27720M0 0v22697m0 2520v2503"/>
+			<path stroke-dashoffset="376" stroke-dasharray="751,315,105,315" d="m0 0h-41580M0 0h41580"/>
+			<path stroke-dasharray="735,315,105,315" stroke-dashoffset="840" d="m0-30240v2520M-44100 0h2520"/>
+		</g>
+		<g stroke="#66f" opacity=".6">
+			<path stroke-dasharray="434,420" stroke-dashoffset="210" d="m0-18480a1 1 0 0 0 0 40862m0-40862a1 1 0 0 1 0 40862"/>
+			<path stroke-dasharray="935,315,105,315" stroke-dashoffset="568" d="m0 1951h-20431M0 1951h20431"/>
+		</g>
+		<path stroke="#444" stroke-width="250" d="m-41580-27720h83160v55440h-83160z"/>
+		<path d="m-41580-9240h38578m44582 0H3002M-41580 9240h32573m50587 0H9007M0-18480 4587-4363h14844L7422 4363l4587 14117L0 9755l-12009 8725 4587-14117-12009-8726h14844z"/>
+		<path stroke="#222" stroke-width="75" stroke-dasharray="210,210" d="m-41580-30240V0m0 30240V0m21149 24902V1951m40862 22951V1951m21149-32191V0m0 30240V0m-85680-27720H0m44100 0H0m-44100 9240H0m-44100 9240h2520m17369 11191h3780m-23669 7289h2520m-2520 9240h56109m-56109 9240H0m44100 0H0"/>
+		<path stroke-width="135" d="m-375 1951h750M0 1576v750"/>
+	</g>
+	<g fill="#008" opacity=".8">
+		<circle r="200" cx="-20431" cy="1951"/>
+		<circle r="200" cx="20431" cy="1951"/>
+		<circle r="200" cx="0" cy="-18480"/>
+		<circle r="200" cx="12009" cy="18480"/>
+		<circle r="200" cx="-12009" cy="18480"/>
+	</g>
+	<g stroke="#00f" stroke-width="75" marker-start="url(#left-arrow)">
+		<path d="m-41280-29295h19390"/>
+		<path d="m-300-29295h-19390"/>
+		<path d="m300-29295h19390"/>
+		<path d="m41280-29295H21890"/>
+		<path d="m-41280 29295h39580"/>
+		<path d="m41280 29295H1700"/>
+		<path d="m-20131 23957h18931"/>
+		<path d="m20131 23957H1200"/>
+		<path d="m-24106 2251v2200"/>
+		<path d="m-24106-300v-2200"/>
+		<path d="m-43155 27420v-3320"/>
+		<path d="m-43155 18780v3320"/>
+		<path d="m-43155 18180v-3320"/>
+		<path d="m-43155 9540v3320"/>
+		<path d="m-43155 8940V5620"/>
+		<path d="m-43155 300v3320"/>
+		<path d="m-43155-300v-3320"/>
+		<path d="m-43155-8940v3320"/>
+		<path d="m-43155-9540v-3320"/>
+		<path d="m-43155-18180v3320"/>
+		<path d="m-43155-18780v-3320"/>
+		<path d="m-43155-27420v3320"/>
+		<path d="m43155 27420V1500"/>
+		<path d="m43155-27420v25920"/>
+	</g>
+	<g fill="#000" text-anchor="middle" font-size="48" transform="scale(50)">
+		<g>
+			<text x="-416" y="-572">9</text>
+			<text x="416" y="-572">9</text>
+			<text y="600">18</text>
+			<text y="493">D</text>
+			<text x="-502" y="43">A</text>
+		</g>
+		<g transform="rotate(270)">
+			<text x="-462" y="-849">2</text>
+			<text x="-277" y="-849">2</text>
+			<text x="-92" y="-849">2</text>
+			<text x="92" y="-849">2</text>
+			<text x="277" y="-849">2</text>
+			<text x="462" y="-849">2</text>
+			<text y="877">12</text>
+		</g>
+		<g font-size="26">
+			<text x="-869" y="605">[<tspan font-weight="bold" fill="#080">MM</tspan>]</text>
+			<text x="869" y="605">[<tspan font-weight="bold" fill="#080">2:3</tspan>]</text>
+		</g>
+	</g>
+	<g fill="#000" transform="matrix(2,0,0,-2,11900 -20600)">
+		<g transform="translate(0,1221)">
+			<use xlink:href="#MJX-1-TEX-SS-1D5A3"/>
+			<g transform="translate(722,0)">
+				<g transform="translate(277.8,0)">
+					<use xlink:href="#MJX-1-TEX-N-3D"/>
+				</g>
+				<g transform="translate(1333.6,0)">
+					<g transform="translate(220,676)">
+						<use xlink:href="#MJX-1-TEX-SS-1D7EA"/>
+						<use x="500" xlink:href="#MJX-1-TEX-SS-1D7E2"/>
+						<g transform="translate(1222.2,0)">
+							<use xlink:href="#MJX-1-TEX-SS-2212"/>
+						</g>
+						<g transform="translate(2222.4,0)">
+							<use xlink:href="#MJX-1-TEX-SS-1D7E3"/>
+							<use x="500" xlink:href="#MJX-1-TEX-SS-1D7E8"/>
+						</g>
+						<g transform="translate(3222.4,0)">
+							<g transform="translate(853,0)">
+								<use xlink:href="#MJX-1-TEX-SS-1D7E7"/>
+							</g>
+							<g transform="translate(0,85)">
+								<use xlink:href="#MJX-1-TEX-N-221A"/>
+							</g>
+							<rect width="500" height="60" x="853" y="825"/>
+						</g>
+					</g>
+					<g transform="translate(2257.7,-686)">
+						<use xlink:href="#MJX-1-TEX-SS-1D7E7"/>
+					</g>
+					<rect width="4775.4" height="60" x="120" y="220"/>
+					<g transform="translate(5293.2,0)">
+						<use xlink:href="#MJX-1-TEX-SS-2248"/>
+					</g>
+					<g transform="translate(6349,0)">
+						<use xlink:href="#MJX-1-TEX-SS-1D7EA"/>
+						<use x="500" xlink:href="#MJX-1-TEX-SS-2E"/>
+						<use x="778" xlink:href="#MJX-1-TEX-SS-1D7EA"/>
+						<use x="1278" xlink:href="#MJX-1-TEX-SS-1D7E6"/>
+						<use x="1778" xlink:href="#MJX-1-TEX-SS-1D7E6"/>
+						<use x="2278" xlink:href="#MJX-1-TEX-SS-1D7E7"/>
+						<use x="2778" xlink:href="#MJX-1-TEX-SS-1D7EA"/>
+						<use x="3278" xlink:href="#MJX-1-TEX-SS-1D7E4"/>
+						<use x="3778" xlink:href="#MJX-1-TEX-SS-1D7E6"/>
+						<use x="4278" xlink:href="#MJX-1-TEX-SS-1D7E9"/>
+						<use x="4778" xlink:href="#MJX-1-TEX-SS-1D7E4"/>
+					</g>
+				</g>
+			</g>
+		</g>
+		<g transform="translate(0,-1656)">
+			<g transform="translate(55,0)">
+				<use xlink:href="#MJX-1-TEX-SS-1D5A0"/>
+			</g>
+			<g transform="translate(722,0)">
+				<g transform="translate(277.8,0)">
+					<use xlink:href="#MJX-1-TEX-N-3D"/>
+				</g>
+				<g transform="translate(1333.6,0)">
+					<g transform="translate(220,676)">
+						<use xlink:href="#MJX-1-TEX-SS-1D5A3"/>
+					</g>
+					<g transform="translate(331,-686)">
+						<use xlink:href="#MJX-1-TEX-SS-1D7E4"/>
+					</g>
+					<rect width="922" height="60" x="120" y="220"/>
+					<g transform="translate(1384.2,0)">
+						<use xlink:href="#MJX-1-TEX-SS-2212"/>
+					</g>
+					<g transform="translate(2384.4,0)">
+						<use xlink:href="#MJX-1-TEX-SS-1D7E6"/>
+					</g>
+					<g transform="translate(3162.2,0)">
+						<use xlink:href="#MJX-1-TEX-SS-2248"/>
+					</g>
+					<g transform="translate(4218,0)">
+						<use xlink:href="#MJX-1-TEX-SS-1D7E2"/>
+						<use x="500" xlink:href="#MJX-1-TEX-SS-2E"/>
+						<use x="778" xlink:href="#MJX-1-TEX-SS-1D7E6"/>
+						<use x="1278" xlink:href="#MJX-1-TEX-SS-1D7E4"/>
+						<use x="1778" xlink:href="#MJX-1-TEX-SS-1D7E4"/>
+						<use x="2278" xlink:href="#MJX-1-TEX-SS-1D7E4"/>
+						<use x="2778" xlink:href="#MJX-1-TEX-SS-1D7EB"/>
+						<use x="3278" xlink:href="#MJX-1-TEX-SS-1D7E3"/>
+						<use x="3778" xlink:href="#MJX-1-TEX-SS-1D7E4"/>
+						<use x="4278" xlink:href="#MJX-1-TEX-SS-1D7E5"/>
+						<use x="4778" xlink:href="#MJX-1-TEX-SS-1D7E8"/>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
 </svg>

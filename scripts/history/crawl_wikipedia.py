@@ -228,9 +228,12 @@ def main():
             if not text:
                 continue
             pages.append(f'{wiki}:{title}')
-            cands += extract(wiki, title, text)
+            try:
+                cands += extract(wiki, title, text)
+            except Exception as e:  # noqa: BLE001
+                print('extract error', iso, wiki, e, flush=True)
             if wiki == 'en':
-                for lst in dict.fromkeys(re.findall(r'\[\[(List of [^\]\|#]*flags[^\]\|#]*)', text))[:2]:
+                for lst in list(dict.fromkeys(re.findall(r'\[\[(List of [^\]\|#]*flags[^\]\|#]*)', text)))[:2]:
                     lt, ltext = wikitext('en', lst)
                     if ltext:
                         pages.append(f'en:{lt}')

@@ -1,0 +1,20 @@
+{
+"iso": "ps",
+"update": [
+{
+"id": 2226,
+"file": "Flag of the Arab Revolt.svg"
+}
+],
+"add": [
+{
+"date_start": "1948-09-22",
+"date_end": "1959-01-01",
+"label_fr": "Gouvernement de toute la Palestine",
+"label_en": "All-Palestine Government",
+"notes_fr": "Proclamé à Gaza en 1948 sous protection égyptienne, le gouvernement de toute la Palestine reprend le drapeau de la révolte arabe.",
+"notes_en": "Proclaimed in Gaza in 1948 under Egyptian protection, the All-Palestine Government took up the Arab Revolt flag.",
+"file": "Flag of Palestine (1948–1964).svg"
+}
+]
+}

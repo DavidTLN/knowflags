@@ -1,0 +1,60 @@
+{
+"iso": "rs",
+"update": [
+{
+"id": 2475,
+"label_fr": "Principauté de Serbie",
+"label_en": "Principality of Serbia",
+"notes_fr": "Le tricolore rouge-bleu-blanc apparaît en 1835 avec la Constitution de Sretenje ; la principauté devient pleinement indépendante en 1878.",
+"notes_en": "The red-blue-white tricolour appeared in 1835 with the Sretenje Constitution; the principality became fully independent in 1878."
+},
+{
+"id": 2476,
+"label_fr": "Royaume de Serbie",
+"label_en": "Kingdom of Serbia",
+"notes_fr": "Milan Obrenović se proclame roi en 1882 ; l'aigle bicéphale couronné figure sur le tricolore d'État.",
+"notes_en": "Milan Obrenović proclaimed himself king in 1882; the crowned double-headed eagle appeared on the state tricolour."
+},
+{
+"id": 2477,
+"label_fr": "Serbie sous occupation allemande",
+"label_en": "German-occupied Serbia",
+"notes_fr": "Sous l'occupation allemande, le gouvernement collaborateur de Milan Nedić arbore le tricolore serbe.",
+"notes_en": "Under German occupation, Milan Nedić's collaborationist government flew the Serbian tricolour."
+},
+{
+"id": 2478,
+"label_fr": "République socialiste de Serbie",
+"label_en": "Socialist Republic of Serbia",
+"notes_fr": "Au sein de la Yougoslavie, la Serbie arbore le tricolore rouge-bleu-blanc frappé d'une étoile rouge.",
+"notes_en": "Within Yugoslavia, Serbia flew the red-blue-white tricolour bearing a red star."
+},
+{
+"id": 2479,
+"label_fr": "République de Serbie (2004-2010)",
+"label_en": "Republic of Serbia (2004–2010)",
+"notes_fr": "Le tricolore retrouve les armoiries à l'aigle bicéphale ; leur dessin est modifié en 2010.",
+"notes_en": "The tricolour regained the double-headed eagle arms; their design was changed in 2010."
+}
+],
+"add": [
+{
+"date_start": "1918-12-01",
+"date_end": "1941-04-17",
+"label_fr": "Royaume des Serbes, Croates et Slovènes puis de Yougoslavie",
+"label_en": "Kingdom of Serbs, Croats and Slovenes, then Yugoslavia",
+"notes_fr": "Après 1918, la Serbie est le cœur du nouveau royaume, dont le tricolore bleu-blanc-rouge reprend les couleurs panslaves.",
+"notes_en": "After 1918 Serbia was the core of the new kingdom, whose blue-white-red tricolour used the Pan-Slavic colours.",
+"file": "Flag of Yugoslavia (1918–1943).svg"
+},
+{
+"date_start": "1945-11-29",
+"date_end": "1992-04-27",
+"label_fr": "Yougoslavie socialiste",
+"label_en": "Socialist Yugoslavia",
+"notes_fr": "Drapeau de la Yougoslavie de Tito : le tricolore bleu-blanc-rouge frappé d'une étoile rouge bordée d'or.",
+"notes_en": "Flag of Tito's Yugoslavia: the blue-white-red tricolour bearing a gold-edged red star.",
+"file": "Flag of SFR Yugoslavia.svg"
+}
+]
+}

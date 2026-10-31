@@ -1,0 +1,48 @@
+{
+"iso": "pl",
+"update": [
+{
+"id": 2449,
+"label_fr": "République de Pologne (1919-1927)",
+"label_en": "Republic of Poland (1919–1927)",
+"notes_fr": "La loi du 1er août 1919 fait du blanc et rouge, couleurs de l'aigle blanc sur champ rouge des armoiries, le drapeau de la Pologne renaissante.",
+"notes_en": "The law of 1 August 1919 made white and red, the colours of the white eagle on a red field in the arms, the flag of reborn Poland."
+},
+{
+"id": 2450,
+"label_fr": "Pologne (1927-1980)",
+"label_en": "Poland (1927–1980)",
+"notes_fr": "Le décret de 1927 précise les teintes du drapeau, qui traverse ensuite l'occupation et la République populaire sans recevoir d'emblème.",
+"notes_en": "The 1927 decree specified the flag's shades; it then lived through the occupation and the People's Republic without gaining an emblem."
+},
+{
+"id": 2234,
+"label_fr": "République populaire de Pologne (1980-1990)",
+"label_en": "Polish People's Republic (1980–1990)",
+"notes_fr": "La loi du 31 janvier 1980 redéfinit les couleurs et l'usage du drapeau, toujours sans emblème communiste ; elle reste en vigueur après 1989.",
+"notes_en": "The law of 31 January 1980 redefined the flag's colours and use, still without a communist emblem; it remained in force after 1989.",
+"date_start": "1980-01-31",
+"image": "https://flagcdn.com/pl.svg"
+}
+],
+"add": [
+{
+"date_start": "1807-07-22",
+"date_end": "1815-06-09",
+"label_fr": "Duché de Varsovie",
+"label_en": "Duchy of Warsaw",
+"notes_fr": "État polonais créé par Napoléon en 1807 sur des territoires repris à la Prusse, disparu après sa défaite.",
+"notes_en": "A Polish state created by Napoleon in 1807 from land taken from Prussia, which vanished after his defeat.",
+"file": "Flag of the Duchy of Warsaw.svg"
+},
+{
+"date_start": "1920-11-15",
+"date_end": "1939-09-02",
+"label_fr": "Ville libre de Dantzig",
+"label_en": "Free City of Danzig",
+"notes_fr": "Ville libre placée sous la protection de la Société des Nations, annexée par l'Allemagne au début de la Seconde Guerre mondiale ; elle est aujourd'hui Gdańsk.",
+"notes_en": "A free city under League of Nations protection, annexed by Germany at the start of the Second World War; it is now Gdańsk.",
+"file": "Flag of the Free City of Danzig.svg"
+}
+]
+}

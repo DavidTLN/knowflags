@@ -1,0 +1,47 @@
+{
+"iso": "py",
+"update": [
+{
+"id": 2465,
+"label_fr": "Paraguay indépendant (1812-1826)",
+"label_en": "Independent Paraguay (1812–1826)",
+"notes_fr": "Après l'indépendance de mai 1811, le Paraguay adopte le tricolore rouge-blanc-bleu qui restera le sien.",
+"notes_en": "After independence in May 1811, Paraguay adopted the red-white-blue tricolour it has kept ever since."
+},
+{
+"id": 2467,
+"label_fr": "République du Paraguay (1842-1954)",
+"label_en": "Republic of Paraguay (1842–1954)",
+"notes_fr": "Le congrès de 1842 fixe un drapeau à deux faces différentes : les armes à l'étoile de mai à l'avers, le sceau du Trésor au lion au revers, un cas presque unique au monde.",
+"notes_en": "The 1842 congress set a flag with two different sides: the arms with the May star on the front, the Treasury seal with a lion on the back, an almost unique case in the world."
+},
+{
+"id": 2468,
+"label_fr": "Paraguay (1954-1988)",
+"label_en": "Paraguay (1954–1988)",
+"notes_fr": "Les emblèmes de l'avers et du revers sont redessinés en 1954.",
+"notes_en": "The front and back emblems were redrawn in 1954."
+},
+{
+"id": 2469,
+"label_fr": "Paraguay (1990-2013)",
+"label_en": "Paraguay (1990–2013)",
+"notes_fr": "Les emblèmes sont redessinés en 1990, puis de nouveau simplifiés et mis en couleur en 2013.",
+"notes_en": "The emblems were redrawn in 1990, then simplified and recoloured again in 2013."
+}
+],
+"add": [
+{
+"date_start": "1988-01-01",
+"date_end": "1990-01-01",
+"label_fr": "Paraguay (1988-1990)",
+"label_en": "Paraguay (1988–1990)",
+"notes_fr": "Version transitoire des emblèmes, à la fin du régime d'Alfredo Stroessner renversé en février 1989.",
+"notes_en": "A transitional version of the emblems, at the end of Alfredo Stroessner's regime, overthrown in February 1989.",
+"file": "Flag of Paraguay (1988-1990).svg"
+}
+],
+"delete": [
+2466
+]
+}

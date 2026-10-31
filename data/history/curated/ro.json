@@ -1,0 +1,40 @@
+{
+"iso": "ro",
+"update": [
+{
+"id": 2470,
+"label_fr": "Principautés unies (1862-1866)",
+"label_en": "United Principalities (1862–1866)",
+"notes_fr": "Le prince Alexandre Jean Cuza, élu en Moldavie et en Valachie, adopte un tricolore horizontal rouge-jaune-bleu.",
+"notes_en": "Prince Alexandru Ioan Cuza, elected in both Moldavia and Wallachia, adopted a horizontal red-yellow-blue tricolour."
+},
+{
+"id": 2471,
+"label_fr": "Principauté puis royaume de Roumanie (1867-1947)",
+"label_en": "Principality, then Kingdom of Romania (1867–1947)",
+"notes_fr": "Sous Carol Ier, le tricolore devient vertical, bleu-jaune-rouge ; il flotte sur la principauté puis sur le royaume proclamé en 1881.",
+"notes_en": "Under Carol I the tricolour became vertical, blue-yellow-red; it flew over the principality and then the kingdom proclaimed in 1881."
+},
+{
+"id": 2472,
+"label_fr": "République populaire roumaine (1947-1949)",
+"label_en": "Romanian People's Republic (1947–1949)",
+"notes_fr": "Après l'abdication forcée du roi Michel, le 30 décembre 1947, les armoiries de la République populaire sont placées au centre du tricolore.",
+"notes_en": "After King Michael's forced abdication on 30 December 1947, the People's Republic's arms were placed at the centre of the tricolour."
+},
+{
+"id": 2473,
+"label_fr": "République populaire roumaine (1949-1952)",
+"label_en": "Romanian People's Republic (1949–1952)",
+"notes_fr": "Les armoiries communistes du centre sont redessinées.",
+"notes_en": "The communist arms at the centre were redrawn."
+},
+{
+"id": 2474,
+"label_fr": "République populaire roumaine (1952-1965)",
+"label_en": "Romanian People's Republic (1952–1965)",
+"notes_fr": "Nouvelle version de l'emblème, adoptée avec la Constitution de 1952 et marquée d'une étoile rouge.",
+"notes_en": "A new version of the emblem, adopted with the 1952 Constitution and marked with a red star."
+}
+]
+}

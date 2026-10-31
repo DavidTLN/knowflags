@@ -1,0 +1,58 @@
+{
+"iso": "kr",
+"update": [
+{
+"id": 2118,
+"date_end": "1910-08-29",
+"file": "Flag of Korea (1884).svg"
+},
+{
+"id": 2424,
+"label_fr": "République de Corée (1948-1950)",
+"label_en": "Republic of Korea (1948–1950)",
+"notes_fr": "Le taegukgi devient le drapeau de la République de Corée proclamée le 15 août 1948, sans dessin encore normalisé.",
+"notes_en": "The taegukgi became the flag of the Republic of Korea proclaimed on 15 August 1948, without a standard design yet."
+},
+{
+"id": 2425,
+"label_fr": "République de Corée (1950-1984)",
+"label_en": "Republic of Korea (1950–1984)",
+"notes_fr": "La disposition du cercle taeguk et des quatre trigrammes est fixée au tournant de 1950, sans normaliser les couleurs.",
+"notes_en": "The layout of the taeguk circle and the four trigrams was fixed around 1950, without standardising the colours."
+},
+{
+"id": 2426,
+"label_fr": "République de Corée (1984-1997)",
+"label_en": "Republic of Korea (1984–1997)",
+"notes_fr": "Un décret de 1984 précise les dimensions et les couleurs du drapeau.",
+"notes_en": "A 1984 decree specified the flag's dimensions and colours."
+},
+{
+"id": 2427,
+"label_fr": "République de Corée (1997-2011)",
+"label_en": "Republic of Korea (1997–2011)",
+"notes_fr": "Les teintes sont redéfinies en 1997 ; la loi sur le drapeau de 2007 et son décret de 2011 fixent le modèle actuel.",
+"notes_en": "The shades were redefined in 1997; the 2007 flag law and its 2011 decree set the current model."
+}
+],
+"add": [
+{
+"date_start": "1919-04-11",
+"date_end": "1945-08-15",
+"label_fr": "Gouvernement provisoire de la République de Corée",
+"label_en": "Provisional Government of the Republic of Korea",
+"notes_fr": "Pendant l'occupation japonaise, le gouvernement en exil installé à Shanghai garde le taegukgi comme symbole de la Corée libre.",
+"notes_en": "During the Japanese occupation, the government in exile set up in Shanghai kept the taegukgi as the symbol of a free Korea.",
+"file": "Flag of the Provisional Government of the Republic of Korea.svg"
+},
+{
+"date_start": "1945-08-15",
+"date_end": "1948-08-15",
+"label_fr": "Corée du Sud sous administration américaine",
+"label_en": "US-administered South Korea",
+"notes_fr": "Après la libération, le taegukgi flotte de nouveau dans le Sud, placé sous gouvernement militaire américain jusqu'en 1948.",
+"notes_en": "After liberation the taegukgi flew again in the South, under US military government until 1948.",
+"file": "Flag of South Korea (1946–1948).svg"
+}
+]
+}

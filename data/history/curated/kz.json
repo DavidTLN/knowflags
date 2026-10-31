@@ -1,0 +1,29 @@
+{
+"iso": "kz",
+"update": [
+{
+"id": 2175,
+"file": "Flag of the Kazakh SSR.svg"
+}
+],
+"add": [
+{
+"date_start": "1937-03-26",
+"date_end": "1940-01-01",
+"label_fr": "RSS kazakhe (1937-1940)",
+"label_en": "Kazakh SSR (1937–1940)",
+"notes_fr": "Devenue république fédérée en décembre 1936, la RSS kazakhe arbore un drapeau rouge à la faucille et au marteau, avec son nom en kazakh et en russe.",
+"notes_en": "Made a full Union republic in December 1936, the Kazakh SSR flew a red flag with the hammer and sickle and its name in Kazakh and Russian.",
+"file": "Flag of the Kazakh Soviet Socialist Republic (1937-1940).svg"
+},
+{
+"date_start": "1940-01-01",
+"date_end": "1953-01-24",
+"label_fr": "RSS kazakhe (1940-1953)",
+"label_en": "Kazakh SSR (1940–1953)",
+"notes_fr": "Nouvelle version des inscriptions après le passage du kazakh à l'alphabet cyrillique.",
+"notes_en": "New lettering after Kazakh switched to the Cyrillic alphabet.",
+"file": "Flag of the Kazakh Soviet Socialist Republic (1940–1953).svg"
+}
+]
+}

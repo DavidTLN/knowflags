@@ -1,0 +1,29 @@
+{
+"iso": "la",
+"update": [
+{
+"id": 2180,
+"file": "Flag of Laos (1952-1975).svg"
+}
+],
+"add": [
+{
+"date_start": "1893-10-03",
+"date_end": "1952-01-01",
+"label_fr": "Laos sous protectorat français",
+"label_en": "Laos under French protectorate",
+"notes_fr": "Le royaume de Luang Prabang, placé sous protectorat français, arbore l'éléphant blanc à trois têtes sous un parasol, l'Erawan.",
+"notes_en": "The Kingdom of Luang Prabang, under French protection, flew the three-headed white elephant beneath a parasol, Erawan.",
+"file": "Flag of Laos (1893-1952).svg"
+},
+{
+"date_start": "1945-10-12",
+"date_end": "1946-04-24",
+"label_fr": "Gouvernement Lao Issara",
+"label_en": "Lao Issara government",
+"notes_fr": "Le drapeau actuel, au disque blanc de la pleine lune sur le Mékong, est d'abord celui du gouvernement Lao Issara, brièvement indépendant en 1945-1946.",
+"notes_en": "Today's flag, with a white full-moon disc over the Mekong, was first that of the Lao Issara government, briefly independent in 1945–1946.",
+"image": "https://flagcdn.com/la.svg"
+}
+]
+}

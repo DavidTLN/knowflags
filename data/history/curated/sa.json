@@ -1,0 +1,96 @@
+{
+"iso": "sa",
+"update": [
+{
+"id": 1862,
+"label_fr": "Émirat de Riyad (1902-1913)",
+"label_en": "Emirate of Riyadh (1902–1913)",
+"notes_fr": "Ibn Saoud reprend Riyad le 15 janvier 1902 ; ses guerriers combattent sous une bannière verte frappée de la chahada.",
+"notes_en": "Ibn Saud retook Riyadh on 15 January 1902; his fighters went into battle under a green banner bearing the shahada.",
+"date_end": "1913-01-01",
+"file": "Flag of the Emirate of Riyadh (1902-1913).svg"
+},
+{
+"id": 1863,
+"label_fr": "Royaume d'Arabie saoudite (1938-1973)",
+"label_en": "Kingdom of Saudi Arabia (1938–1973)",
+"notes_fr": "Le sabre et la chahada prennent la disposition qui sera fixée en 1973, avec des variantes selon les fabricants.",
+"notes_en": "The sword and the shahada took the layout that would be fixed in 1973, with variations between makers.",
+"date_start": "1938-01-01",
+"file": "Flag of Saudi Arabia (1938-1973).svg"
+},
+{
+"id": 1864,
+"label_fr": "Royaume d'Arabie saoudite (actuel)",
+"label_en": "Kingdom of Saudi Arabia (current)",
+"notes_fr": "La loi de 1973 fixe le dessin actuel : la chahada en écriture thuluth au-dessus d'un sabre. Le drapeau n'est jamais mis en berne, par respect pour la profession de foi.",
+"notes_en": "The 1973 law set the current design: the shahada in thuluth script above a sword. The flag is never flown at half-mast, out of respect for the profession of faith.",
+"image": "https://flagcdn.com/sa.svg"
+}
+],
+"add": [
+{
+"date_start": "1913-01-01",
+"date_end": "1921-01-01",
+"label_fr": "Émirat du Nejd et du Hasa",
+"label_en": "Emirate of Nejd and Hasa",
+"notes_fr": "Après la prise du Hasa aux Ottomans en 1913, l'émirat saoudien arbore un drapeau vert à la chahada.",
+"notes_en": "After taking al-Hasa from the Ottomans in 1913, the Saudi emirate flew a green flag with the shahada.",
+"file": "Flag of the Emirate of Nejd and Hasa.svg"
+},
+{
+"date_start": "1917-01-01",
+"date_end": "1920-01-01",
+"label_fr": "Royaume du Hedjaz (1917-1920)",
+"label_en": "Kingdom of Hejaz (1917–1920)",
+"notes_fr": "Drapeau du royaume du chérif Hussein, gardien de La Mecque, inspiré de celui de la Grande Révolte arabe qu'il lance en 1916.",
+"notes_en": "Flag of the kingdom of Sharif Hussein, guardian of Mecca, based on the Arab Revolt flag he launched in 1916.",
+"file": "Flag of Hejaz 1917.svg"
+},
+{
+"date_start": "1920-01-01",
+"date_end": "1925-12-19",
+"label_fr": "Royaume du Hedjaz (1920-1925)",
+"label_en": "Kingdom of Hejaz (1920–1925)",
+"notes_fr": "Nouvelle version du drapeau hachémite du Hedjaz, jusqu'à la conquête du royaume par Ibn Saoud.",
+"notes_en": "A new version of the Hashemite flag of Hejaz, until Ibn Saud conquered the kingdom.",
+"file": "Flag of Hejaz 1920.svg"
+},
+{
+"date_start": "1921-01-01",
+"date_end": "1926-01-08",
+"label_fr": "Sultanat du Nejd",
+"label_en": "Sultanate of Nejd",
+"notes_fr": "Ibn Saoud prend le titre de sultan du Nejd après avoir vaincu l'émirat rival de Haïl.",
+"notes_en": "Ibn Saud took the title of Sultan of Nejd after defeating the rival emirate of Ha'il.",
+"file": "Flag of the Sultanate of Nejd.svg"
+},
+{
+"date_start": "1926-01-08",
+"date_end": "1932-09-23",
+"label_fr": "Royaume du Hedjaz et du Nejd",
+"label_en": "Kingdom of Hejaz and Nejd",
+"notes_fr": "Maître de La Mecque et de Médine, Ibn Saoud règne sur un double royaume, unifié en 1932.",
+"notes_en": "Master of Mecca and Medina, Ibn Saud ruled a dual kingdom, unified in 1932.",
+"file": "Flag of the Kingdom of Hejaz and Nejd.svg"
+},
+{
+"date_start": "1932-09-23",
+"date_end": "1934-01-01",
+"label_fr": "Royaume d'Arabie saoudite (1932-1934)",
+"label_en": "Kingdom of Saudi Arabia (1932–1934)",
+"notes_fr": "Le 23 septembre 1932, les deux royaumes s'unissent sous le nom d'Arabie saoudite.",
+"notes_en": "On 23 September 1932 the two kingdoms united as Saudi Arabia.",
+"file": "Flag of Saudi Arabia (1932-1934).svg"
+},
+{
+"date_start": "1934-01-01",
+"date_end": "1938-01-01",
+"label_fr": "Royaume d'Arabie saoudite (1934-1938)",
+"label_en": "Kingdom of Saudi Arabia (1934–1938)",
+"notes_fr": "Version de 1934 du drapeau vert à la chahada et au sabre.",
+"notes_en": "The 1934 version of the green flag with the shahada and sword.",
+"file": "Flag of Saudi Arabia (1934-1938).svg"
+}
+]
+}

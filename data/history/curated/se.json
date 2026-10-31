@@ -1,0 +1,22 @@
+{
+"iso": "se",
+"update": [
+{
+"id": 2268,
+"date_start": "1844-06-20",
+"date_end": "1905-11-01",
+"file": "Flag of Sweden (1844-1905).svg"
+}
+],
+"add": [
+{
+"date_start": "1562-01-01",
+"date_end": "1650-01-01",
+"label_fr": "Royaume de Suède (XVIe-XVIIe siècle)",
+"label_en": "Kingdom of Sweden (16th–17th century)",
+"notes_fr": "Les premières représentations de la croix jaune sur fond bleu datent du XVIe siècle ; elle reprend les couleurs des armoiries aux trois couronnes.",
+"notes_en": "The earliest images of the yellow cross on blue date from the 16th century; it uses the colours of the three-crowns coat of arms.",
+"file": "Flag of Sweden (1562–1650).svg"
+}
+]
+}

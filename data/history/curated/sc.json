@@ -1,0 +1,19 @@
+{
+"iso": "sc",
+"update": [
+{
+"id": 2486,
+"label_fr": "Colonie des Seychelles (1961-1976)",
+"label_en": "Colony of Seychelles (1961–1976)",
+"notes_fr": "Blue Ensign aux armes de la colonie, où figurent une tortue géante et un cocotier de mer.",
+"notes_en": "Blue Ensign with the colony's arms, showing a giant tortoise and a coco de mer palm."
+},
+{
+"id": 2487,
+"label_fr": "République des Seychelles (1976-1977)",
+"label_en": "Republic of Seychelles (1976–1977)",
+"notes_fr": "Drapeau de l'indépendance (29 juin 1976) : triangles bleus et rouges séparés par une croix de Saint-André blanche, symbole de la coalition au pouvoir ; il est remplacé après le coup d'État de 1977.",
+"notes_en": "The independence flag (29 June 1976): blue and red triangles separated by a white saltire, the symbol of the ruling coalition; it was replaced after the 1977 coup."
+}
+]
+}

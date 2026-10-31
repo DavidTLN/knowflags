@@ -1,0 +1,30 @@
+{
+"iso": "sg",
+"update": [
+{
+"id": 2261,
+"date_start": "1952-01-01",
+"file": "Flag of Singapore (1952–1959).svg"
+}
+],
+"add": [
+{
+"date_start": "1946-04-01",
+"date_end": "1952-01-01",
+"label_fr": "Colonie de Singapour (1946-1952)",
+"label_en": "Colony of Singapore (1946–1952)",
+"notes_fr": "Séparée des Établissements des détroits en 1946, Singapour devient une colonie de la Couronne avec son propre Blue Ensign.",
+"notes_en": "Split from the Straits Settlements in 1946, Singapore became a Crown colony with its own Blue Ensign.",
+"file": "Flag of Singapore (1946–1952).svg"
+},
+{
+"date_start": "1925-01-01",
+"date_end": "1946-04-01",
+"label_fr": "Établissements des détroits (1925-1946)",
+"label_en": "Straits Settlements (1925–1946)",
+"notes_fr": "Pavillon de la colonie regroupant Singapour, Malacca et Penang, dont le badge porte trois couronnes.",
+"notes_en": "Flag of the colony grouping Singapore, Malacca and Penang, whose badge bears three crowns.",
+"file": "Flag of the British Straits Settlements (1925–1946).svg"
+}
+]
+}

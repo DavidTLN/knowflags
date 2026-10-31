@@ -1,0 +1,11 @@
+{"iso":"do","update":[
+{"id":2127,"file":"Flag of Spanish Haiti.svg"},
+{"id":2128,"file":"Flag of Haiti (1820–1849, 1859–1964).svg"}
+],"add":[
+{"date_start":"1844-02-27","date_end":"1849-01-01","label_fr":"République dominicaine (1844-1849)","label_en":"Dominican Republic (1844–1849)","file":"Flag of the Dominican Republic (up to 1844).svg",
+ "notes_fr":"Proclamée le 27 février 1844, la République dominicaine reprend le bleu et le rouge haïtiens en y ajoutant une croix blanche, symbole de la foi.",
+ "notes_en":"Proclaimed on 27 February 1844, the Dominican Republic took Haiti's blue and red and added a white cross, a symbol of faith."},
+{"date_start":"1849-01-01","date_end":"1861-03-18","label_fr":"Première République (1849-1861)","label_en":"First Republic (1849–1861)","file":"Flag of the Dominican First Republic.svg",
+ "notes_fr":"Version fixée en 1849 : quartiers bleus et rouges alternés et armoiries au centre de la croix blanche. Elle disparaît pendant l'annexion espagnole de 1861 à 1865.",
+ "notes_en":"Version set in 1849: alternating blue and red quarters and the arms at the centre of the white cross. It disappeared during the Spanish annexation of 1861–1865."}
+]}

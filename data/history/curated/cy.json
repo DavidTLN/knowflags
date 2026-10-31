@@ -1,0 +1,13 @@
+{"iso":"cy","update":[
+{"id":2109,"file":"Flag of Cyprus (1922-1960).svg"},
+{"id":2341,"label_fr":"Premier dessin (1960)","label_en":"First design (1960)",
+ "notes_fr":"Première version du drapeau de la future république : la silhouette de l'île n'est encore qu'un contour au-dessus des deux rameaux d'olivier.",
+ "notes_en":"First version of the future republic's flag: the island is still only an outline above the two olive branches."},
+{"id":2342,"label_fr":"République de Chypre (1960-2006)","label_en":"Republic of Cyprus (1960–2006)",
+ "notes_fr":"Drapeau de l'indépendance (16 août 1960) : l'île couleur cuivre rappelle le métal qui porte son nom, et les rameaux d'olivier la paix entre Chypriotes grecs et turcs. Il est légèrement retouché en 2006.",
+ "notes_en":"The independence flag (16 August 1960): the copper-coloured island recalls the metal that bears its name, and the olive branches peace between Greek and Turkish Cypriots. It was slightly revised in 2006."}
+],"add":[
+{"date_start":"1881-01-01","date_end":"1922-01-01","label_fr":"Chypre sous administration britannique (1881-1922)","label_en":"British-administered Cyprus (1881–1922)","file":"Flag of Cyprus (1881-1922).svg",
+ "notes_fr":"Premier pavillon colonial : un Blue Ensign chargé du badge de l'île, alors encore possession ottomane administrée par le Royaume-Uni.",
+ "notes_en":"First colonial flag: a Blue Ensign bearing the island's badge, at a time when Cyprus was still Ottoman territory run by Britain."}
+]}

@@ -1,0 +1,23 @@
+{"iso":"co","update":[
+{"id":2110,"file":"Flag of the Gran Colombia.svg"},
+{"id":2111,"date_start":"1834-05-09","date_end":"1861-07-26","file":"Flag of New Granada.svg"}
+],"add":[
+{"date_start":"1811-11-27","date_end":"1814-01-01","label_fr":"Provinces-Unies de la Nouvelle-Grenade (1811-1814)","label_en":"United Provinces of New Granada (1811–1814)","file":"Flag of New Granada (1811-1814).svg",
+ "notes_fr":"Drapeau de la première fédération indépendantiste née en 1811. Il sera repris plus tard par le corsaire Jean Lafitte à Galveston, au Texas.",
+ "notes_en":"Flag of the first independent federation, formed in 1811. It was later adopted by the privateer Jean Lafitte at Galveston, Texas."},
+{"date_start":"1814-01-01","date_end":"1816-05-06","label_fr":"Provinces-Unies de la Nouvelle-Grenade (1814-1816)","label_en":"United Provinces of New Granada (1814–1816)","file":"Flag of New Granada (1814-1816).svg",
+ "notes_fr":"Les Provinces-Unies reprennent le drapeau de Carthagène des Indes, aux rectangles rouge, jaune et vert, jusqu'à la reconquête espagnole de 1816.",
+ "notes_en":"The United Provinces took up the flag of Cartagena de Indias, with red, yellow and green rectangles, until the Spanish reconquest of 1816."},
+{"date_start":"1819-12-17","date_end":"1820-01-01","label_fr":"Grande Colombie (1819-1820)","label_en":"Gran Colombia (1819–1820)","file":"Flag of the Gran Colombia (1819-1820).svg",
+ "notes_fr":"Premier drapeau de la Grande Colombie proclamée au congrès d'Angostura : le tricolore jaune-bleu-rouge imaginé par Francisco de Miranda, avec des armoiries.",
+ "notes_en":"First flag of Gran Colombia, proclaimed at the Congress of Angostura: Francisco de Miranda's yellow-blue-red tricolour, with a coat of arms."},
+{"date_start":"1820-01-01","date_end":"1821-01-01","label_fr":"Grande Colombie (1820-1821)","label_en":"Gran Colombia (1820–1821)","file":"Flag of the Gran Colombia (1820-1821).svg",
+ "notes_fr":"Deuxième version du drapeau de la Grande Colombie, avant la Constitution de Cúcuta de 1821.",
+ "notes_en":"Second version of the Gran Colombia flag, before the 1821 Constitution of Cúcuta."},
+{"date_start":"1831-11-17","date_end":"1834-05-09","label_fr":"République de Nouvelle-Grenade (1831-1834)","label_en":"Republic of New Granada (1831–1834)","file":"Flag of New Granada (1830-1834).svg",
+ "notes_fr":"Après l'éclatement de la Grande Colombie, la Nouvelle-Grenade garde le tricolore horizontal jaune-bleu-rouge, chargé de ses armoiries.",
+ "notes_en":"After Gran Colombia broke up, New Granada kept the horizontal yellow-blue-red tricolour, bearing its coat of arms."},
+{"date_start":"1861-07-26","date_end":"1861-11-26","label_fr":"États-Unis de Nouvelle-Grenade (1861)","label_en":"United States of New Granada (1861)","file":"Flag of United States of New Granada.svg",
+ "notes_fr":"Drapeau éphémère adopté pendant la guerre civile par Tomás Cipriano de Mosquera, quatre mois avant le passage aux États-Unis de Colombie.",
+ "notes_en":"A short-lived flag adopted during the civil war by Tomás Cipriano de Mosquera, four months before the switch to the United States of Colombia."}
+]}

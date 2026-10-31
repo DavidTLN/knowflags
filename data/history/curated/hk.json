@@ -1,0 +1,12 @@
+{"iso":"hk","update":[
+{"id":2301,"file":"Flag of Hong Kong 1959.svg",
+ "notes_fr":"Les armoiries accordées en 1959, avec le lion britannique et le dragon chinois, figurent sur le Blue Ensign jusqu'à la rétrocession du 1er juillet 1997.",
+ "notes_en":"The arms granted in 1959, with the British lion and the Chinese dragon, appeared on the Blue Ensign until the handover on 1 July 1997."}
+],"add":[
+{"date_start":"1871-01-01","date_end":"1876-01-01","label_fr":"Colonie de Hong Kong (1871-1876)","label_en":"Colony of Hong Kong (1871–1876)","file":"Flag of Hong Kong 1871.svg",
+ "notes_fr":"Premier Blue Ensign de la colonie, chargé d'un badge montrant une scène portuaire.",
+ "notes_en":"The colony's first Blue Ensign, bearing a badge with a harbour scene."},
+{"date_start":"1876-01-01","date_end":"1955-01-01","label_fr":"Colonie de Hong Kong (1876-1955)","label_en":"Colony of Hong Kong (1876–1955)","file":"Flag of Hong Kong 1876.svg",
+ "notes_fr":"Nouveau badge à la scène portuaire, avec des marchands sur le quai ; son usage est interrompu par l'occupation japonaise de 1941 à 1945.",
+ "notes_en":"A new harbour-scene badge with merchants on the quay; its use was interrupted by the Japanese occupation from 1941 to 1945."}
+]}

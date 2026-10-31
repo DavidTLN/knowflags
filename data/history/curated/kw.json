@@ -1,0 +1,30 @@
+{
+"iso": "kw",
+"update": [
+{
+"id": 2179,
+"date_end": "1956-01-01",
+"file": "Flag of Kuwait (1940-1961).svg",
+"notes_fr": "Drapeau rouge de l'émirat portant le nom du pays, « Koweït », inscrit en arabe.",
+"notes_en": "The emirate's red flag bearing the country's name, \"Kuwait\", written in Arabic."
+},
+{
+"id": 2428,
+"label_fr": "Émirat du Koweït (1956-1961)",
+"label_en": "Emirate of Kuwait (1956–1961)",
+"notes_fr": "Dernière version du drapeau rouge de l'émirat, remplacée par le drapeau aux couleurs panarabes le 7 septembre 1961.",
+"notes_en": "The last version of the emirate's red flag, replaced by the Pan-Arab colours flag on 7 September 1961."
+}
+],
+"add": [
+{
+"date_start": "1921-01-01",
+"date_end": "1940-01-01",
+"label_fr": "Émirat du Koweït (1921-1940)",
+"label_en": "Emirate of Kuwait (1921–1940)",
+"notes_fr": "Drapeau rouge de l'émirat sous le protectorat britannique, à l'époque du cheikh Ahmad al-Jaber Al-Sabah.",
+"notes_en": "The emirate's red flag under the British protectorate, in the time of Sheikh Ahmad al-Jaber Al-Sabah.",
+"file": "Flag of Kuwait (1921-1940).svg"
+}
+]
+}

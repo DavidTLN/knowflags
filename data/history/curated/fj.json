@@ -1,0 +1,17 @@
+{"iso":"fj","update":[
+{"id":2145,"file":"Flag of the Kingdom of Fiji (1871-1874).svg"},
+{"id":2146,"file":"Flag of Fiji (1924–1970).svg"}
+],"add":[
+{"date_start":"1865-01-01","date_end":"1867-01-01","label_fr":"Confédération des royaumes indépendants des Fidji","label_en":"Confederacy of Independent Kingdoms of Fiji","file":"Flag of the Confederacy of Independent Kingdoms of Fiji.svg",
+ "notes_fr":"Première tentative d'union des chefferies fidjiennes : une étoile blanche à huit branches sur fond bleu foncé. La confédération se défait au bout de deux ans.",
+ "notes_en":"The first attempt to unite Fiji's chiefdoms: a white eight-pointed star on dark blue. The confederacy fell apart after two years."},
+{"date_start":"1883-01-01","date_end":"1903-01-01","label_fr":"Colonie des Fidji (1883-1903)","label_en":"Colony of Fiji (1883–1903)","file":"Flag of Fiji (1883–1903).svg",
+ "notes_fr":"Premier Blue Ensign de la colonie, avec un badge sur disque blanc au battant.",
+ "notes_en":"The colony's first Blue Ensign, with a badge on a white disc in the fly."},
+{"date_start":"1903-01-01","date_end":"1908-01-01","label_fr":"Colonie des Fidji (1903-1908)","label_en":"Colony of Fiji (1903–1908)","file":"Flag of Fiji (1883–1908).svg",
+ "notes_fr":"Variante du badge colonial, utilisée jusqu'à l'octroi des armoiries de 1908.",
+ "notes_en":"A variant of the colonial badge, used until the arms were granted in 1908."},
+{"date_start":"1908-01-01","date_end":"1924-01-01","label_fr":"Colonie des Fidji (1908-1924)","label_en":"Colony of Fiji (1908–1924)","file":"Flag of Fiji (1908–1924).svg",
+ "notes_fr":"Les armoiries complètes accordées en 1908, avec le lion britannique tenant une cabosse de cacao, figurent sur un disque blanc.",
+ "notes_en":"The full arms granted in 1908, with the British lion holding a cocoa pod, appear on a white disc."}
+]}

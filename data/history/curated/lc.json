@@ -1,0 +1,32 @@
+{
+"iso": "lc",
+"update": [
+{
+"id": 2429,
+"label_fr": "Sainte-Lucie (1979-2002)",
+"label_en": "Saint Lucia (1979–2002)",
+"notes_fr": "Dessiné en 1967 par l'artiste Dunstan St. Omer, le drapeau aux triangles noir, or et blanc évoque les deux Pitons ; il est retouché en 2002.",
+"notes_en": "Designed in 1967 by the artist Dunstan St. Omer, the flag's black, gold and white triangles evoke the two Pitons; it was revised in 2002."
+}
+],
+"add": [
+{
+"date_start": "1875-01-01",
+"date_end": "1939-01-01",
+"label_fr": "Colonie de Sainte-Lucie (1875-1939)",
+"label_en": "Colony of Saint Lucia (1875–1939)",
+"notes_fr": "Premier Blue Ensign colonial, chargé du badge de l'île.",
+"notes_en": "The first colonial Blue Ensign, bearing the island's badge.",
+"file": "Flag of Saint Lucia (1875-1939).svg"
+},
+{
+"date_start": "1967-03-01",
+"date_end": "1979-02-22",
+"label_fr": "État associé de Sainte-Lucie",
+"label_en": "Associated State of Saint Lucia",
+"notes_fr": "Premier drapeau de Dunstan St. Omer, adopté avec le statut d'État associé ; le triangle doré et le noir y ont d'autres proportions.",
+"notes_en": "Dunstan St. Omer's first flag, adopted with associated statehood; the gold triangle and the black had different proportions.",
+"file": "Flag of Saint Lucia (1967–1979).svg"
+}
+]
+}

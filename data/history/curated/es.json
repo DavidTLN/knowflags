@@ -1,0 +1,31 @@
+{"iso":"es","update":[
+{"id":2136,"file":"Flag of Cross of Burgundy.svg"},
+{"id":2354,"label_fr":"Monarchie des Bourbons (1701-1760)","label_en":"Bourbon monarchy (1701–1760)",
+ "notes_fr":"Avec Philippe V, premier roi Bourbon, le drapeau blanc de la maison de Bourbon porte les armes royales d'Espagne.",
+ "notes_en":"Under Philip V, the first Bourbon king, the white flag of the House of Bourbon carried the royal arms of Spain."},
+{"id":2355,"label_fr":"Monarchie des Bourbons (1760-1843)","label_en":"Bourbon monarchy (1760–1843)",
+ "notes_fr":"Sous Charles III, les armes royales sont redessinées. En 1785, il crée pour la marine le pavillon rouge et jaune, plus visible en mer, qui deviendra le drapeau national en 1843.",
+ "notes_en":"Under Charles III the royal arms were redrawn. In 1785 he created the red and yellow naval ensign, easier to see at sea, which would become the national flag in 1843."},
+{"id":2356,"label_fr":"Royaume d'Espagne (rouge et jaune, 1843-1873)","label_en":"Kingdom of Spain (red and yellow, 1843–1873)",
+ "notes_fr":"Le 13 octobre 1843, Isabelle II étend le pavillon rouge et jaune de la marine à l'armée de terre : il devient le drapeau de toute l'Espagne.",
+ "notes_en":"On 13 October 1843 Isabella II extended the navy's red and yellow ensign to the army: it became the flag of all Spain."},
+{"id":2357,"date_start":"1938-02-02","label_fr":"État espagnol (aigle de saint Jean, 1938-1945)","label_en":"Spanish State (Eagle of Saint John, 1938–1945)",
+ "notes_fr":"Le régime franquiste place sur le rouge et jaune l'aigle de saint Jean, emprunté aux Rois catholiques, avec la devise « Una, Grande y Libre ».",
+ "notes_en":"Franco's regime placed on the red and yellow the Eagle of Saint John, borrowed from the Catholic Monarchs, with the motto \"Una, Grande y Libre\"."},
+{"id":2358,"label_fr":"État espagnol (1945-1977)","label_en":"Spanish State (1945–1977)",
+ "notes_fr":"Le décret du 11 octobre 1945 redessine les armoiries à l'aigle, en usage jusqu'à la Transition démocratique.",
+ "notes_en":"The decree of 11 October 1945 redrew the eagle arms, which stayed in use until the democratic Transition."},
+{"id":2359,"label_fr":"Transition démocratique (1977-1981)","label_en":"Democratic Transition (1977–1981)",
+ "notes_fr":"Pendant la Transition, l'aigle est conservé mais redessiné, la devise passant au-dessus de sa tête ; il est remplacé fin 1981 par les armoiries actuelles.",
+ "notes_en":"During the Transition the eagle was kept but redrawn, with the motto moved above its head; it was replaced by the current arms at the end of 1981."}
+],"add":[
+{"date_start":"1873-02-11","date_end":"1874-12-29","label_fr":"Première République","label_en":"First Spanish Republic","file":"Flag of the First Spanish Republic.svg",
+ "notes_fr":"La Première République garde le rouge et jaune mais retire la couronne royale des armoiries.",
+ "notes_en":"The First Republic kept the red and yellow but removed the royal crown from the arms."},
+{"date_start":"1874-12-29","date_end":"1931-04-14","label_fr":"Restauration (1874-1931)","label_en":"Restoration (1874–1931)","file":"Flag of Spain (1785-1873 and 1875-1931).svg",
+ "notes_fr":"Avec la Restauration d'Alphonse XII, la couronne revient sur les armes ; ce drapeau flotte jusqu'à la proclamation de la Seconde République.",
+ "notes_en":"With Alfonso XII's Restoration the crown returned to the arms; this flag flew until the Second Republic was proclaimed."},
+{"date_start":"1936-08-29","date_end":"1938-02-02","label_fr":"Camp nationaliste (1936-1938)","label_en":"Nationalist faction (1936–1938)","file":"Flag of the Bando Nacional (1936–1938).svg",
+ "notes_fr":"Pendant la guerre civile, le camp nationaliste rétablit dès l'été 1936 le rouge et jaune, d'abord avec des armoiries sans couronne.",
+ "notes_en":"During the Civil War the Nationalists brought back the red and yellow in summer 1936, at first with arms lacking a crown."}
+]}

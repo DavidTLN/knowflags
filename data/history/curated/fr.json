@@ -1,0 +1,30 @@
+{"iso":"fr","update":[
+{"id":2366,"label_fr":"Royaume de France (semé de fleurs de lys)","label_en":"Kingdom of France (semé of fleurs-de-lis)",
+ "notes_fr":"Champ d'azur semé de fleurs de lys d'or : les armes dites « France ancien », adoptées par les rois capétiens au XIIe siècle.",
+ "notes_en":"A blue field strewn with gold fleurs-de-lis: the so-called \"France ancient\" arms, adopted by the Capetian kings in the 12th century."},
+{"id":2367,"label_fr":"Royaume de France (trois fleurs de lys)","label_en":"Kingdom of France (three fleurs-de-lis)",
+ "notes_fr":"Vers 1376, Charles V réduit le semé à trois fleurs de lys, en l'honneur de la Sainte Trinité selon la tradition : ce sont les armes « France moderne ».",
+ "notes_en":"Around 1376 Charles V reduced the semé to three fleurs-de-lis, traditionally in honour of the Holy Trinity: the \"France modern\" arms."},
+{"id":2368,"label_fr":"Royaume de France (pavillon blanc royal)","label_en":"Kingdom of France (white royal flag)",
+ "notes_fr":"Le blanc, couleur du commandement royal, devient celle des pavillons de la monarchie ; la marine arbore un pavillon blanc, parfois semé de lys ou chargé des armes du roi.",
+ "notes_en":"White, the colour of royal command, became the colour of the monarchy's flags; the navy flew a white flag, sometimes strewn with lilies or bearing the king's arms."},
+{"id":2369,"label_fr":"Pavillon de la Révolution (1790-1794)","label_en":"Revolutionary ensign (1790–1794)",
+ "notes_fr":"En 1790, la marine reçoit un pavillon blanc portant au canton les bandes rouge, blanche et bleue : c'est la première forme officielle du tricolore.",
+ "notes_en":"In 1790 the navy received a white ensign with red, white and blue stripes in the canton: the first official form of the tricolour."},
+{"id":2370,"label_fr":"Tricolore de la Convention (1794-1814)","label_en":"Convention tricolour (1794–1814)",
+ "notes_fr":"Le décret du 27 pluviôse an II (15 février 1794) fixe le tricolore vertical bleu-blanc-rouge, attribué au peintre Jacques-Louis David ; il flotte sous la République puis l'Empire.",
+ "notes_en":"The decree of 27 Pluviôse Year II (15 February 1794) set the vertical blue-white-red tricolour, credited to the painter Jacques-Louis David; it flew under the Republic and then the Empire."},
+{"id":2371,"label_fr":"Cinquième République (1958-1974)","label_en":"Fifth Republic (1958–1974)",
+ "notes_fr":"L'article 2 de la Constitution du 4 octobre 1958 fait du drapeau tricolore, bleu, blanc, rouge, l'emblème national.",
+ "notes_en":"Article 2 of the Constitution of 4 October 1958 makes the blue, white and red tricolour the national emblem."},
+{"id":2372,"label_fr":"Cinquième République (bleu clair, 1974-2020)","label_en":"Fifth Republic (light blue, 1974–2020)",
+ "notes_fr":"Sous Valéry Giscard d'Estaing, un bleu plus clair, proche de celui du drapeau européen, se généralise ; en 2020, l'Élysée revient au bleu marine.",
+ "notes_en":"Under Valéry Giscard d'Estaing a lighter blue, close to the European flag's, became common; in 2020 the Élysée went back to navy blue."}
+],"add":[
+{"date_start":"1830-07-30","date_end":"1958-10-04","label_fr":"Tricolore (1830-1958)","label_en":"Tricolour (1830–1958)","file":"Flag of France (1794–1815, 1830–1974, 2020–present).svg",
+ "notes_fr":"Louis-Philippe rétablit le tricolore après les Trois Glorieuses. En février 1848, Lamartine le défend contre le drapeau rouge ; la Constitution de 1946 en fait l'emblème national.",
+ "notes_en":"Louis-Philippe restored the tricolour after the July Revolution. In February 1848 Lamartine defended it against the red flag; the 1946 Constitution made it the national emblem."},
+{"date_start":"1940-06-18","date_end":"1944-08-25","label_fr":"France libre","label_en":"Free France","file":"Flag of Free France (1940-1944).svg",
+ "notes_fr":"Les Forces françaises libres du général de Gaulle ajoutent au tricolore la croix de Lorraine, choisie par l'amiral Muselier en réponse à la croix gammée.",
+ "notes_en":"General de Gaulle's Free French Forces added the Cross of Lorraine to the tricolour, chosen by Admiral Muselier as an answer to the swastika."}
+]}

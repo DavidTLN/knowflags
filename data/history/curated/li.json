@@ -1,0 +1,38 @@
+{
+"iso": "li",
+"update": [
+{
+"id": 2187,
+"file": "Flag of Liechtenstein (1921-1937).svg"
+}
+],
+"add": [
+{
+"date_start": "1719-01-23",
+"date_end": "1852-01-01",
+"label_fr": "Principauté de Liechtenstein (1719-1852)",
+"label_en": "Principality of Liechtenstein (1719–1852)",
+"notes_fr": "Érigé en principauté du Saint-Empire le 23 janvier 1719, le Liechtenstein arbore les couleurs or et rouge de la maison princière.",
+"notes_en": "Raised to a principality of the Holy Roman Empire on 23 January 1719, Liechtenstein flew the gold and red of the princely house.",
+"file": "Flag of Liechtenstein (1719-1852).svg"
+},
+{
+"date_start": "1852-01-01",
+"date_end": "1921-10-05",
+"label_fr": "Principauté de Liechtenstein (1852-1921)",
+"label_en": "Principality of Liechtenstein (1852–1921)",
+"notes_fr": "Version en usage jusqu'à la Constitution de 1921, qui fixe le bleu et le rouge.",
+"notes_en": "The version in use until the 1921 Constitution, which set blue and red.",
+"file": "Flag of Liechtenstein (1852-1921).svg"
+},
+{
+"date_start": "1937-06-24",
+"date_end": "1982-09-18",
+"label_fr": "Principauté de Liechtenstein (couronne, 1937-1982)",
+"label_en": "Principality of Liechtenstein (crown, 1937–1982)",
+"notes_fr": "Aux Jeux olympiques de 1936, la délégation découvre que le drapeau d'Haïti est identique au sien : une couronne princière dorée est ajoutée en 1937, puis redessinée en 1982.",
+"notes_en": "At the 1936 Olympics the team discovered that Haiti's flag was identical to theirs: a golden princely crown was added in 1937, then redrawn in 1982.",
+"file": "Flag of Liechtenstein (1937-1982).svg"
+}
+]
+}

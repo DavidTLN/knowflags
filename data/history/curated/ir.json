@@ -1,0 +1,76 @@
+{
+"iso": "ir",
+"update": [
+{
+"id": 2167,
+"label_fr": "État impérial d'Iran (1933-1964)",
+"label_en": "Imperial State of Iran (1933–1964)",
+"notes_fr": "Sous Reza Chah puis Mohammad Reza Pahlavi, le tricolore vert-blanc-rouge porte le lion et soleil couronné, dans une version officielle fixée en 1933.",
+"notes_en": "Under Reza Shah and then Mohammad Reza Pahlavi, the green-white-red tricolour bore the crowned Lion and Sun, in an official version set in 1933.",
+"date_start": "1933-01-01",
+"date_end": "1964-01-01",
+"file": "State Flag of Iran (1925).svg"
+},
+{
+"id": 2413,
+"label_fr": "Dynastie Pahlavi (1964-1979)",
+"label_en": "Pahlavi dynasty (1964–1979)",
+"notes_fr": "Après la « révolution blanche » du chah, le lion et soleil est redessiné en 1964 ; ce drapeau reste en usage quelques mois après la révolution de 1979.",
+"notes_en": "After the Shah's \"White Revolution\", the Lion and Sun was redrawn in 1964; the flag stayed in use for a few months after the 1979 revolution."
+},
+{
+"id": 2414,
+"label_fr": "Révolution islamique (1979-1980)",
+"label_en": "Islamic Revolution (1979–1980)",
+"notes_fr": "Le gouvernement révolutionnaire retire la couronne du lion et soleil, avant l'adoption du drapeau de la République islamique le 29 juillet 1980.",
+"notes_en": "The revolutionary government removed the crown from the Lion and Sun, before the Islamic Republic's flag was adopted on 29 July 1980."
+}
+],
+"add": [
+{
+"date_start": "1501-01-01",
+"date_end": "1524-05-23",
+"label_fr": "Empire safavide (Ismaïl Ier)",
+"label_en": "Safavid Empire (Ismail I)",
+"notes_fr": "Bannière verte au soleil d'or du chah Ismaïl Ier, fondateur de la dynastie safavide, qui fait du chiisme la religion d'État.",
+"notes_en": "The green banner with a golden sun of Shah Ismail I, founder of the Safavid dynasty, who made Shia Islam the state religion.",
+"file": "Flag of Persia (1502–1524).png"
+},
+{
+"date_start": "1751-01-01",
+"date_end": "1794-01-01",
+"label_fr": "Dynastie Zand",
+"label_en": "Zand dynasty",
+"notes_fr": "Étendard bordé de vert de la dynastie Zand, portant déjà le lion et soleil, l'emblème de la Perse.",
+"notes_en": "The green-edged standard of the Zand dynasty, already bearing the Lion and Sun, the emblem of Persia.",
+"file": "Zand Dynasty flag.svg"
+},
+{
+"date_start": "1797-01-01",
+"date_end": "1896-01-01",
+"label_fr": "Dynastie Qadjar (1797-1896)",
+"label_en": "Qajar dynasty (1797–1896)",
+"notes_fr": "Sous les Qadjars, le lion et soleil sur fond blanc devient le drapeau de l'État persan.",
+"notes_en": "Under the Qajars, the Lion and Sun on a white field became the flag of the Persian state.",
+"file": "Mohammad Shah Qajar Flag.svg"
+},
+{
+"date_start": "1896-01-01",
+"date_end": "1907-10-07",
+"label_fr": "Dynastie Qadjar (1896-1907)",
+"label_en": "Qajar dynasty (1896–1907)",
+"notes_fr": "À la fin du XIXe siècle, le vert et le rouge encadrent le lion et soleil : le tricolore iranien prend forme.",
+"notes_en": "In the late 19th century green and red framed the Lion and Sun: the Iranian tricolour was taking shape.",
+"file": "Early 20th Century Qajar Flag.svg"
+},
+{
+"date_start": "1907-10-07",
+"date_end": "1933-01-01",
+"label_fr": "Perse constitutionnelle (1907-1933)",
+"label_en": "Constitutional Persia (1907–1933)",
+"notes_fr": "Le supplément à la Constitution de 1907 consacre le tricolore vert-blanc-rouge chargé du lion et soleil.",
+"notes_en": "The 1907 Supplementary Constitution enshrined the green-white-red tricolour bearing the Lion and Sun.",
+"file": "State flag of Persia (1907–1933).svg"
+}
+]
+}

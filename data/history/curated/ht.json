@@ -1,0 +1,21 @@
+{"iso":"ht","update":[
+{"id":2388,"label_fr":"République d'Haïti (1859-1964)","label_en":"Republic of Haiti (1859–1964)",
+ "notes_fr":"Rétabli par Fabre Geffrard à la chute de l'empereur Faustin Ier, le bicolore bleu et rouge aux armes est le drapeau de la République pendant plus d'un siècle.",
+ "notes_en":"Restored by Fabre Geffrard when Emperor Faustin I fell, the blue and red bicolour with the arms was the Republic's flag for over a century."}
+],"add":[
+{"date_start":"1806-10-17","date_end":"1811-03-28","label_fr":"État d'Haïti (nord, Henri Christophe)","label_en":"State of Haiti (north, Henri Christophe)","file":"Flag of Haiti (1806–1811).svg",
+ "notes_fr":"Après l'assassinat de Dessalines, le pays se divise : au nord, Henri Christophe dirige l'État d'Haïti sous son propre drapeau.",
+ "notes_en":"After Dessalines was assassinated, the country split: in the north, Henri Christophe ruled the State of Haiti under his own flag."},
+{"date_start":"1806-12-27","date_end":"1820-10-18","label_fr":"République d'Haïti (sud, Alexandre Pétion)","label_en":"Republic of Haiti (south, Alexandre Pétion)","file":"Flag of Haiti (1807–1849).svg",
+ "notes_fr":"Au sud, Alexandre Pétion rétablit le bleu et le rouge nés à l'Arcahaie en 1803, désormais en bandes horizontales.",
+ "notes_en":"In the south, Alexandre Pétion restored the blue and red born at Arcahaie in 1803, now as horizontal stripes."},
+{"date_start":"1811-03-28","date_end":"1820-10-08","label_fr":"Royaume d'Haïti (Henri Ier)","label_en":"Kingdom of Haiti (Henry I)","file":"Flag of Kingdom of Haiti.svg",
+ "notes_fr":"Proclamé roi sous le nom d'Henri Ier en 1811, Christophe dote son royaume du nord d'un drapeau aux armes royales jusqu'à sa mort en 1820.",
+ "notes_en":"Proclaimed king as Henry I in 1811, Christophe gave his northern kingdom a flag with the royal arms until his death in 1820."},
+{"date_start":"1820-10-18","date_end":"1849-08-26","label_fr":"Haïti réunifiée (1820-1849)","label_en":"Reunified Haiti (1820–1849)","file":"Flag of Haiti (1820–1849, 1859–1964).svg",
+ "notes_fr":"Après la réunification sous Jean-Pierre Boyer, le bicolore bleu et rouge aux armes flotte sur toute l'île, y compris la partie orientale jusqu'en 1844.",
+ "notes_en":"After reunification under Jean-Pierre Boyer, the blue and red bicolour with the arms flew over the whole island, including the eastern part until 1844."},
+{"date_start":"1849-08-26","date_end":"1859-01-15","label_fr":"Second Empire (Faustin Ier)","label_en":"Second Empire (Faustin I)","file":"Flag of Haiti (1849–1859).svg",
+ "notes_fr":"Le président Faustin Soulouque se proclame empereur en 1849 ; le drapeau porte alors les armes impériales.",
+ "notes_en":"President Faustin Soulouque proclaimed himself emperor in 1849; the flag then bore the imperial arms."}
+]}

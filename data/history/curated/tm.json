@@ -1,0 +1,65 @@
+{
+"iso": "tm",
+"update": [
+{
+"id": 2506,
+"label_fr": "RSS turkmène (1926-1937)",
+"label_en": "Turkmen SSR (1926–1937)",
+"notes_fr": "Premier drapeau de la RSS turkmène, créée lors du découpage national de l'Asie centrale soviétique.",
+"notes_en": "The first flag of the Turkmen SSR, created when Soviet Central Asia was divided along national lines.",
+"date_end": "1937-03-01"
+},
+{
+"id": 2281,
+"label_fr": "RSS turkmène (1953-1974)",
+"label_en": "Turkmen SSR (1953–1974)",
+"notes_fr": "Drapeau rouge traversé de deux fines bandes bleues, avec la faucille, le marteau et l'étoile dorés.",
+"notes_en": "A red flag crossed by two thin blue bands, with the golden hammer, sickle and star.",
+"date_end": "1974-01-01",
+"file": "Flag of the Turkmen Soviet Socialist Republic (1953-1973).svg"
+},
+{
+"id": 2507,
+"label_fr": "Turkménistan indépendant (1992-1997)",
+"label_en": "Independent Turkmenistan (1992–1997)",
+"notes_fr": "Le drapeau vert au croissant et aux cinq étoiles porte une bande verticale ornée de cinq motifs de tapis, un par grande tribu turkmène.",
+"notes_en": "The green flag with a crescent and five stars bears a vertical band with five carpet patterns, one for each major Turkmen tribe."
+},
+{
+"id": 2508,
+"label_fr": "Turkménistan (1997-2001)",
+"label_en": "Turkmenistan (1997–2001)",
+"notes_fr": "Une guirlande d'olivier est ajoutée sous les motifs de tapis, en référence à la neutralité reconnue par l'ONU en 1995 ; les proportions changent en 2001.",
+"notes_en": "An olive wreath was added below the carpet patterns, referring to the neutrality recognised by the UN in 1995; the proportions changed in 2001."
+}
+],
+"add": [
+{
+"date_start": "1937-03-01",
+"date_end": "1940-01-01",
+"label_fr": "RSS turkmène (1937-1940)",
+"label_en": "Turkmen SSR (1937–1940)",
+"notes_fr": "Le nom de la république figure en turkmène, alors écrit en alphabet latin, et en russe.",
+"notes_en": "The republic's name appears in Turkmen, then written in the Latin alphabet, and in Russian.",
+"file": "Flag of the Turkmen Soviet Socialist Republic (1937–1940).svg"
+},
+{
+"date_start": "1940-01-01",
+"date_end": "1953-01-01",
+"label_fr": "RSS turkmène (1940-1953)",
+"label_en": "Turkmen SSR (1940–1953)",
+"notes_fr": "Les inscriptions passent à l'alphabet cyrillique, adopté pour le turkmène en 1940.",
+"notes_en": "The lettering switched to Cyrillic, adopted for Turkmen in 1940.",
+"file": "Flag of the Turkmen Soviet Socialist Republic (1940-1953).svg"
+},
+{
+"date_start": "1974-01-01",
+"date_end": "1992-02-19",
+"label_fr": "RSS turkmène (1974-1992)",
+"label_en": "Turkmen SSR (1974–1992)",
+"notes_fr": "Dernière version du drapeau de la RSS, conservée jusqu'en février 1992.",
+"notes_en": "The SSR flag's last version, kept until February 1992.",
+"file": "Flag of the Turkmen Soviet Socialist Republic.svg"
+}
+]
+}

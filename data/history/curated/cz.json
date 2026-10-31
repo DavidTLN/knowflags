@@ -1,0 +1,11 @@
+{"iso":"cz","update":[{"id":2239,"file":"Flag of Bohemia.svg"}],"add":[
+{"date_start":"1920-03-30","date_end":"1939-03-15","label_fr":"Tchécoslovaquie (1920-1939)","label_en":"Czechoslovakia (1920–1939)","image":"https://flagcdn.com/cz.svg",
+ "notes_fr":"Le triangle bleu est ajouté au bicolore blanc-rouge le 30 mars 1920, notamment pour le distinguer du drapeau polonais.",
+ "notes_en":"The blue triangle was added to the white-red bicolour on 30 March 1920, partly to tell it apart from the Polish flag."},
+{"date_start":"1939-03-16","date_end":"1945-05-08","label_fr":"Protectorat de Bohême-Moravie","label_en":"Protectorate of Bohemia and Moravia","file":"Flag of the Protectorate of Bohemia and Moravia.svg",
+ "notes_fr":"Sous l'occupation allemande, le drapeau tchécoslovaque est interdit et remplacé par un tricolore horizontal blanc-rouge-bleu.",
+ "notes_en":"Under German occupation, the Czechoslovak flag was banned and replaced by a horizontal white-red-blue tricolour."},
+{"date_start":"1945-05-08","date_end":"1992-12-31","label_fr":"Tchécoslovaquie (1945-1992)","label_en":"Czechoslovakia (1945–1992)","image":"https://flagcdn.com/cz.svg",
+ "notes_fr":"Le drapeau de 1920 est rétabli à la libération. À la partition de 1993, la République tchèque le conserve, alors que la loi fédérale interdisait aux deux États d'en reprendre les symboles.",
+ "notes_en":"The 1920 flag was restored at liberation. At the 1993 split the Czech Republic kept it, even though federal law barred both states from taking over shared symbols."}
+]}

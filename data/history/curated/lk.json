@@ -1,0 +1,38 @@
+{
+"iso": "lk",
+"update": [
+{
+"id": 2267,
+"file": "Flag of Ceylon (1948–1951).svg"
+}
+],
+"add": [
+{
+"date_start": "1469-01-01",
+"date_end": "1815-03-02",
+"label_fr": "Royaume de Kandy",
+"label_en": "Kingdom of Kandy",
+"notes_fr": "Bannière au lion tenant un sabre du dernier royaume indépendant de l'île, annexé par les Britanniques en 1815 ; elle inspire le drapeau national actuel.",
+"notes_en": "The sword-bearing lion banner of the island's last independent kingdom, annexed by the British in 1815; it inspired today's national flag.",
+"file": "Flag of the King of Kandy in 1815.svg"
+},
+{
+"date_start": "1875-01-01",
+"date_end": "1948-02-04",
+"label_fr": "Ceylan britannique",
+"label_en": "British Ceylon",
+"notes_fr": "Blue Ensign colonial chargé d'un badge représentant un éléphant devant un temple.",
+"notes_en": "Colonial Blue Ensign bearing a badge showing an elephant in front of a temple.",
+"file": "Flag of Ceylon (1875–1948).svg"
+},
+{
+"date_start": "1951-03-02",
+"date_end": "1972-05-22",
+"label_fr": "Dominion de Ceylan (1951-1972)",
+"label_en": "Dominion of Ceylon (1951–1972)",
+"notes_fr": "Deux bandes verticales, verte et safran, sont ajoutées en 1951 pour représenter les minorités musulmane et tamoule.",
+"notes_en": "Two vertical stripes, green and saffron, were added in 1951 to represent the Muslim and Tamil minorities.",
+"file": "Flag of Ceylon (1951-1972).svg"
+}
+]
+}

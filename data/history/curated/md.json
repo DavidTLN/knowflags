@@ -1,0 +1,29 @@
+{
+"iso": "md",
+"update": [
+{
+"id": 2202,
+"file": "Flag of the Moldavian Soviet Socialist Republic.svg"
+}
+],
+"add": [
+{
+"date_start": "1917-12-15",
+"date_end": "1918-04-09",
+"label_fr": "République démocratique moldave",
+"label_en": "Moldavian Democratic Republic",
+"notes_fr": "Proclamée par le Sfatul Țării après l'effondrement de l'Empire russe, la république vote son union avec la Roumanie le 9 avril 1918.",
+"notes_en": "Proclaimed by the Sfatul Țării after the Russian Empire collapsed, the republic voted to unite with Romania on 9 April 1918.",
+"file": "National flag of the Moldavian Democratic Republic.svg"
+},
+{
+"date_start": "1941-01-01",
+"date_end": "1952-02-01",
+"label_fr": "RSS moldave (1941-1952)",
+"label_en": "Moldavian SSR (1941–1952)",
+"notes_fr": "Premier drapeau de la RSS moldave : rouge à la faucille et au marteau, avec le nom de la république.",
+"notes_en": "The Moldavian SSR's first flag: red with the hammer and sickle and the republic's name.",
+"file": "Flag of the Moldavian Soviet Socialist Republic (1941–1952).svg"
+}
+]
+}

@@ -1,0 +1,29 @@
+{
+"iso": "mu",
+"update": [
+{
+"id": 2198,
+"file": "Flag of Mauritius (1923–1968).svg"
+}
+],
+"add": [
+{
+"date_start": "1869-01-01",
+"date_end": "1906-01-01",
+"label_fr": "Colonie de Maurice (1869-1906)",
+"label_en": "Colony of Mauritius (1869–1906)",
+"notes_fr": "Premier Blue Ensign colonial de l'île, chargé de son badge.",
+"notes_en": "The island's first colonial Blue Ensign, bearing its badge.",
+"file": "Flag of Mauritius (1869–1906).svg"
+},
+{
+"date_start": "1906-01-01",
+"date_end": "1923-01-01",
+"label_fr": "Colonie de Maurice (1906-1923)",
+"label_en": "Colony of Mauritius (1906–1923)",
+"notes_fr": "Nouveau badge colonial, avant l'octroi des armoiries de 1906 portées sur le pavillon à partir de 1923.",
+"notes_en": "A new colonial badge, before the 1906 arms were placed on the flag from 1923.",
+"file": "Flag of Mauritius (1906–1923).svg"
+}
+]
+}

@@ -1,0 +1,21 @@
+{
+"iso": "sl",
+"update": [
+{
+"id": 2260,
+"file": "Flag of Sierra Leone 1914-1961.svg",
+"date_start": "1914-01-01"
+}
+],
+"add": [
+{
+"date_start": "1889-01-01",
+"date_end": "1914-01-01",
+"label_fr": "Colonie de Sierra Leone (1889-1914)",
+"label_en": "Colony of Sierra Leone (1889–1914)",
+"notes_fr": "Premier Blue Ensign de la colonie fondée autour de Freetown pour d'anciens esclaves libérés.",
+"notes_en": "The first Blue Ensign of the colony founded around Freetown for freed former slaves.",
+"file": "Flag of Sierra Leone (1889–1914).svg"
+}
+]
+}

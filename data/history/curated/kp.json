@@ -1,0 +1,25 @@
+{
+"iso": "kp",
+"update": [
+{
+"id": 2117,
+"date_start": "1945-08-15",
+"label_fr": "Corée du Nord sous administration soviétique",
+"label_en": "Soviet-administered North Korea",
+"file": "Flag of the Provisional People's Committee for North Korea.svg",
+"notes_fr": "Après la libération de 1945, le comité populaire du Nord utilise encore le taegukgi traditionnel, avant l'adoption d'un drapeau propre en 1948.",
+"notes_en": "After liberation in 1945, the northern People's Committee still used the traditional taegukgi, before adopting its own flag in 1948."
+}
+],
+"add": [
+{
+"date_start": "1948-09-08",
+"date_end": "1992-12-30",
+"label_fr": "République populaire démocratique de Corée (1948-1992)",
+"label_en": "Democratic People's Republic of Korea (1948–1992)",
+"notes_fr": "Le drapeau rouge bordé de bleu, à étoile rouge sur disque blanc, est adopté en 1948, sous influence soviétique ; ses spécifications sont précisées en 1992.",
+"notes_en": "The blue-edged red flag with a red star on a white disc was adopted in 1948 under Soviet influence; its specifications were refined in 1992.",
+"file": "Flag of North Korea (1948–1992).svg"
+}
+]
+}

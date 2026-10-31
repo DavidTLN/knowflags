@@ -1,0 +1,19 @@
+{"iso":"hr","update":[
+{"id":2121,"file":"Flag of SR Croatia.svg"},
+{"id":2387,"label_fr":"République de Croatie (juin-décembre 1990)","label_en":"Republic of Croatia (June–December 1990)",
+ "notes_fr":"Après les premières élections libres, l'étoile rouge disparaît au profit du damier rouge et blanc, avant l'adoption des armoiries actuelles en décembre 1990.",
+ "notes_en":"After the first free elections, the red star gave way to the red and white chequerboard, before the current arms were adopted in December 1990."}
+],"add":[
+{"date_start":"1358-06-27","date_end":"1808-01-31","label_fr":"République de Raguse (Dubrovnik)","label_en":"Republic of Ragusa (Dubrovnik)","file":"St. Blaise - National Flag of the Ragusan Republic.svg",
+ "notes_fr":"La république maritime de Raguse, indépendante jusqu'à sa suppression par Napoléon en 1808, arborait un drapeau blanc à l'effigie de saint Blaise, son patron.",
+ "notes_en":"The maritime Republic of Ragusa, independent until Napoleon abolished it in 1808, flew a white flag bearing St Blaise, its patron saint."},
+{"date_start":"1868-01-01","date_end":"1918-10-29","label_fr":"Royaume de Croatie-Slavonie","label_en":"Kingdom of Croatia-Slavonia","file":"Flag of Croatia-Slavonia.svg",
+ "notes_fr":"Le tricolore rouge-blanc-bleu, né pendant la révolution de 1848, devient en 1868 le drapeau du royaume autonome de Croatie-Slavonie, au sein de la couronne hongroise.",
+ "notes_en":"The red-white-blue tricolour, born in the 1848 revolution, became in 1868 the flag of the autonomous Kingdom of Croatia-Slavonia within the Hungarian crown."},
+{"date_start":"1939-08-26","date_end":"1941-04-10","label_fr":"Banovine de Croatie","label_en":"Banovina of Croatia","file":"Flag of Banate of Croatia (1939-1941).svg",
+ "notes_fr":"Province autonome créée au sein du royaume de Yougoslavie par l'accord Cvetković-Maček de 1939.",
+ "notes_en":"An autonomous province created within the Kingdom of Yugoslavia by the 1939 Cvetković–Maček agreement."},
+{"date_start":"1941-04-10","date_end":"1945-05-08","label_fr":"État indépendant de Croatie","label_en":"Independent State of Croatia","file":"Flag of Independent State of Croatia.svg",
+ "notes_fr":"État satellite de l'Axe dirigé par le régime oustachi d'Ante Pavelić : le tricolore porte le damier et l'emblème « U » du mouvement.",
+ "notes_en":"An Axis puppet state run by Ante Pavelić's Ustaše regime: the tricolour carried the chequerboard and the movement's \"U\" emblem."}
+]}

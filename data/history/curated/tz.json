@@ -1,0 +1,47 @@
+{
+"iso": "tz",
+"update": [
+{
+"id": 2274,
+"file": "Flag of Tanganyika (1961–1964).svg"
+}
+],
+"add": [
+{
+"date_start": "1856-10-19",
+"date_end": "1963-12-10",
+"label_fr": "Sultanat de Zanzibar",
+"label_en": "Sultanate of Zanzibar",
+"notes_fr": "Le sultanat né de la partition de l'empire omanais arbore un simple drapeau rouge ; il devient protectorat britannique en 1890.",
+"notes_en": "The sultanate born from the split of the Omani empire flew a plain red flag; it became a British protectorate in 1890.",
+"file": "Flag of the Sultanate of Zanzibar.svg"
+},
+{
+"date_start": "1923-01-01",
+"date_end": "1961-12-09",
+"label_fr": "Territoire du Tanganyika",
+"label_en": "Tanganyika Territory",
+"notes_fr": "Ancienne Afrique orientale allemande confiée au Royaume-Uni par la Société des Nations : Blue Ensign à la tête de girafe.",
+"notes_en": "Former German East Africa entrusted to Britain by the League of Nations: a Blue Ensign with a giraffe's head.",
+"file": "Flag of Tanganyika (1923–1961).svg"
+},
+{
+"date_start": "1963-12-10",
+"date_end": "1964-01-12",
+"label_fr": "Zanzibar indépendant",
+"label_en": "Independent Zanzibar",
+"notes_fr": "Drapeau du sultanat devenu indépendant le 10 décembre 1963, renversé un mois plus tard par la révolution de Zanzibar.",
+"notes_en": "Flag of the sultanate, independent from 10 December 1963 and overthrown a month later by the Zanzibar Revolution.",
+"file": "Flag of the Sultanate of Zanzibar (1963).svg"
+},
+{
+"date_start": "1964-01-12",
+"date_end": "1964-04-26",
+"label_fr": "République populaire de Zanzibar",
+"label_en": "People's Republic of Zanzibar",
+"notes_fr": "Après la révolution, la république de Zanzibar s'unit au Tanganyika le 26 avril 1964 pour former la Tanzanie.",
+"notes_en": "After the revolution, the republic of Zanzibar united with Tanganyika on 26 April 1964 to form Tanzania.",
+"file": "Flag of Zanzibar (January-April 1964).svg"
+}
+]
+}

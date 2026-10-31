@@ -1,0 +1,29 @@
+{
+"iso": "no",
+"update": [
+{
+"id": 2219,
+"file": "Flag of Norway (1814–1821).svg"
+}
+],
+"add": [
+{
+"date_start": "1821-07-13",
+"date_end": "1844-06-20",
+"label_fr": "Norvège (croix de Meltzer)",
+"label_en": "Norway (Meltzer's cross)",
+"notes_fr": "Le Storting adopte en 1821 la croix bleue bordée de blanc sur fond rouge proposée par le député Fredrik Meltzer.",
+"notes_en": "In 1821 the Storting adopted the white-edged blue cross on red proposed by MP Fredrik Meltzer.",
+"file": "Flag of Norway (1821–1844).svg"
+},
+{
+"date_start": "1844-06-20",
+"date_end": "1899-12-15",
+"label_fr": "Union suédo-norvégienne (« salade de harengs »)",
+"label_en": "Sweden–Norway union (\"herring salad\")",
+"notes_fr": "Pendant l'union avec la Suède, un canton mêlant les couleurs des deux royaumes, surnommé « salade de harengs », orne le drapeau ; il est retiré du pavillon marchand en 1899.",
+"notes_en": "During the union with Sweden, a canton mixing both kingdoms' colours, nicknamed the \"herring salad\", sat on the flag; it was removed from the merchant flag in 1899.",
+"file": "Norge-Unionsflagg-1844.svg"
+}
+]
+}

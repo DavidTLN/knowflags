@@ -1,0 +1,47 @@
+{
+"iso": "ma",
+"update": [
+{
+"id": 2197,
+"file": "Flag of Morocco 1666 1915.svg"
+}
+],
+"add": [
+{
+"date_start": "1073-01-01",
+"date_end": "1147-01-01",
+"label_fr": "Almoravides",
+"label_en": "Almoravids",
+"notes_fr": "Bannière attribuée aux Almoravides, dynastie berbère qui fonde Marrakech vers 1070 et unit le Maghreb occidental et Al-Andalus.",
+"notes_en": "Banner attributed to the Almoravids, the Berber dynasty that founded Marrakesh around 1070 and united the western Maghreb and al-Andalus.",
+"file": "Flag of Morocco 1073 1147.svg"
+},
+{
+"date_start": "1147-01-01",
+"date_end": "1269-01-01",
+"label_fr": "Almohades",
+"label_en": "Almohads",
+"notes_fr": "Bannière attribuée aux Almohades, dont l'empire s'étendit du Maroc à l'actuelle Libye et à l'Andalousie.",
+"notes_en": "Banner attributed to the Almohads, whose empire stretched from Morocco to present-day Libya and Andalusia.",
+"file": "Flag of Morocco 1147 1269.svg"
+},
+{
+"date_start": "1258-01-01",
+"date_end": "1659-01-01",
+"label_fr": "Mérinides et Saadiens",
+"label_en": "Marinids and Saadians",
+"notes_fr": "Bannière attribuée aux dynasties qui régnèrent depuis Fès puis Marrakech, des Mérinides aux Saadiens.",
+"notes_en": "Banner attributed to the dynasties that ruled from Fez and then Marrakesh, from the Marinids to the Saadians.",
+"file": "Flag of Morocco 1258 1659.svg"
+},
+{
+"date_start": "1921-09-18",
+"date_end": "1926-05-27",
+"label_fr": "République du Rif",
+"label_en": "Republic of the Rif",
+"notes_fr": "Proclamée par Abdelkrim el-Khattabi après sa victoire sur l'armée espagnole à Anoual, la république disparaît en 1926 face aux armées française et espagnole.",
+"notes_en": "Proclaimed by Abd el-Krim after his victory over the Spanish army at Annual, the republic fell in 1926 to the French and Spanish armies.",
+"file": "Flag of the Republic of the Rif.svg"
+}
+]
+}

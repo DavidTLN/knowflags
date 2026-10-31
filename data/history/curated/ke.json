@@ -1,0 +1,20 @@
+{
+"iso": "ke",
+"update": [
+{
+"id": 2176,
+"file": "Flag of Kenya (1921–1963).svg"
+}
+],
+"add": [
+{
+"date_start": "1895-07-01",
+"date_end": "1921-01-01",
+"label_fr": "Protectorat de l'Afrique orientale",
+"label_en": "East Africa Protectorate",
+"notes_fr": "Premier pavillon colonial du territoire, alors protectorat de l'Afrique orientale britannique.",
+"notes_en": "The territory's first colonial flag, when it was the British East Africa Protectorate.",
+"file": "Flag of Kenya (1895–1921).svg"
+}
+]
+}

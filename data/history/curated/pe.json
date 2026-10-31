@@ -1,0 +1,62 @@
+{
+"iso": "pe",
+"update": [
+{
+"id": 2232,
+"date_start": "1820-10-21",
+"date_end": "1822-03-15",
+"label_fr": "Drapeau de San Martín (1820-1822)",
+"label_en": "San Martín's flag (1820–1822)",
+"file": "Flag of Peru (1821-1822).svg",
+"notes_fr": "Créé par José de San Martín à Pisco : quartiers rouges et blancs en diagonale, avec un soleil se levant derrière les montagnes.",
+"notes_en": "Created by José de San Martín at Pisco: red and white quarters set diagonally, with a sun rising behind mountains."
+}
+],
+"add": [
+{
+"date_start": "1822-03-15",
+"date_end": "1822-05-31",
+"label_fr": "Drapeau de Torre Tagle (1822)",
+"label_en": "Torre Tagle's flag (1822)",
+"notes_fr": "Le marquis de Torre Tagle adopte des bandes horizontales rouge-blanc-rouge avec un soleil, trop faciles à confondre en mer avec le drapeau espagnol.",
+"notes_en": "The Marquis of Torre Tagle adopted horizontal red-white-red stripes with a sun, too easily mistaken at sea for the Spanish flag.",
+"file": "Flag of Peru (1822).svg"
+},
+{
+"date_start": "1822-05-31",
+"date_end": "1825-02-25",
+"label_fr": "République du Pérou (1822-1825)",
+"label_en": "Republic of Peru (1822–1825)",
+"notes_fr": "Les bandes deviennent verticales pour ne plus être confondues avec le drapeau espagnol ; le soleil reste au centre.",
+"notes_en": "The stripes became vertical so as not to be confused with the Spanish flag; the sun stayed at the centre.",
+"file": "Flag of Peru (1822–1825).svg"
+},
+{
+"date_start": "1825-02-25",
+"date_end": "1950-03-31",
+"label_fr": "République du Pérou (armoiries, 1825-1950)",
+"label_en": "Republic of Peru (arms, 1825–1950)",
+"notes_fr": "Le Congrès adopte le 25 février 1825 les bandes rouge-blanc-rouge chargées des armoiries à la vigogne, au quinquina et à la corne d'abondance ; en 1950, le drapeau civil perd ses armoiries.",
+"notes_en": "On 25 February 1825 Congress adopted the red-white-red stripes bearing the arms with a vicuña, a cinchona tree and a cornucopia; in 1950 the civil flag lost the arms.",
+"file": "Flag of Peru (1825 - 1950).svg"
+},
+{
+"date_start": "1836-03-17",
+"date_end": "1839-01-20",
+"label_fr": "État du Sud-Pérou",
+"label_en": "Republic of South Peru",
+"notes_fr": "État créé par Andrés de Santa Cruz pour former, avec le Nord-Pérou et la Bolivie, la Confédération péruvio-bolivienne.",
+"notes_en": "A state created by Andrés de Santa Cruz to form, with North Peru and Bolivia, the Peru–Bolivian Confederation.",
+"file": "Flag of South Peru.svg"
+},
+{
+"date_start": "1836-10-28",
+"date_end": "1839-08-25",
+"label_fr": "Confédération péruvio-bolivienne",
+"label_en": "Peru–Bolivian Confederation",
+"notes_fr": "Union du Pérou et de la Bolivie sous le protecteur Andrés de Santa Cruz, dissoute après la défaite de Yungay en 1839.",
+"notes_en": "A union of Peru and Bolivia under Protector Andrés de Santa Cruz, dissolved after the defeat at Yungay in 1839.",
+"file": "Flag of the Peru-Bolivian Confederation.svg"
+}
+]
+}

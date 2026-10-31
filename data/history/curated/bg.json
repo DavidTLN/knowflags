@@ -1,0 +1,21 @@
+{"iso":"bg","update":[
+{"id":2319,"label_fr":"République populaire (1947-1948)","label_en":"People's Republic (1947–1948)",
+ "notes_fr":"La Constitution « Dimitrov » du 6 décembre 1947 ajoute au tricolore, près de la hampe, l'emblème de la République populaire : un lion entouré d'épis de blé.",
+ "notes_en":"The \"Dimitrov\" Constitution of 6 December 1947 added the People's Republic emblem near the hoist: a lion framed by ears of wheat."},
+{"id":2320,"label_fr":"République populaire (1948-1968)","label_en":"People's Republic (1948–1968)",
+ "notes_fr":"Une étoile rouge à cinq branches est ajoutée au-dessus du lion de l'emblème.",
+ "notes_en":"A red five-pointed star was added above the emblem's lion."},
+{"id":2321,"label_fr":"République populaire (1968-1971)","label_en":"People's Republic (1968–1971)",
+ "notes_fr":"L'emblème est redessiné, avec un engrenage à sa base, symbole de l'industrie.",
+ "notes_en":"The emblem was redrawn with a cogwheel at its base, a symbol of industry."},
+{"id":2322,"label_fr":"République populaire (1971-1990)","label_en":"People's Republic (1971–1990)",
+ "notes_fr":"La Constitution de 1971 inscrit sur le ruban de l'emblème les dates 681 et 1944 : la fondation du premier État bulgare et la prise du pouvoir par les communistes. L'emblème est retiré le 22 novembre 1990.",
+ "notes_en":"The 1971 Constitution put the dates 681 and 1944 on the emblem's ribbon: the founding of the first Bulgarian state and the communist takeover. The emblem was removed on 22 November 1990."}
+],"add":[
+{"date_start":"1185-01-01","date_end":"1396-01-01","label_fr":"Second Empire bulgare (portulan, v. 1380)","label_en":"Second Bulgarian Empire (portolan, c. 1380)","file":"Flag of the Second Bulgarian Empire.svg",
+ "notes_fr":"Sur la carte marine de Guillem Soler (vers 1380), la capitale du tsar Ivan Chichman est surmontée de cette bannière, l'une des rares représentations d'époque d'un drapeau bulgare médiéval.",
+ "notes_en":"On Guillem Soler's sea chart (c. 1380), Tsar Ivan Shishman's capital is topped by this banner, one of the few period depictions of a medieval Bulgarian flag."},
+{"date_start":"1878-07-13","date_end":"1885-09-06","label_fr":"Roumélie orientale","label_en":"Eastern Rumelia","file":"Flag of Eastern Rumelia.svg",
+ "notes_fr":"Province ottomane autonome créée par le traité de Berlin, la Roumélie orientale a son propre drapeau jusqu'à son union avec la principauté de Bulgarie, le 6 septembre 1885.",
+ "notes_en":"An autonomous Ottoman province created by the Treaty of Berlin, Eastern Rumelia had its own flag until it united with the Principality of Bulgaria on 6 September 1885."}
+],"delete":[2094]}

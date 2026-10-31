@@ -1,0 +1,32 @@
+{
+"iso": "kg",
+"add": [
+{
+"date_start": "1936-12-05",
+"date_end": "1940-01-01",
+"label_fr": "RSS kirghize (1936-1940)",
+"label_en": "Kirghiz SSR (1936–1940)",
+"notes_fr": "Devenue république fédérée de l'URSS en décembre 1936, la Kirghizie arbore un drapeau rouge à la faucille et au marteau, avec son nom en kirghize et en russe.",
+"notes_en": "Made a full Union republic in December 1936, Kirghizia flew a red flag with the hammer and sickle and its name in Kyrgyz and Russian.",
+"file": "Flag of the Kirghiz Soviet Socialist Republic (1936–1940).svg"
+},
+{
+"date_start": "1940-01-01",
+"date_end": "1952-12-22",
+"label_fr": "RSS kirghize (1940-1952)",
+"label_en": "Kirghiz SSR (1940–1952)",
+"notes_fr": "Nouvelle version des inscriptions après le passage du kirghiz à l'alphabet cyrillique.",
+"notes_en": "New lettering after Kyrgyz switched to the Cyrillic alphabet.",
+"file": "Flag of the Kirghiz SSR 1940-1952.svg"
+},
+{
+"date_start": "1952-12-22",
+"date_end": "1992-03-03",
+"label_fr": "RSS kirghize (1952-1991)",
+"label_en": "Kirghiz SSR (1952–1991)",
+"notes_fr": "Champ rouge traversé d'une bande bleue bordée de blanc, évoquant les montagnes enneigées du Tian Shan ; il reste en usage quelques mois après l'indépendance.",
+"notes_en": "A red field crossed by a white-edged blue band, evoking the snowy Tian Shan mountains; it stayed in use for a few months after independence.",
+"file": "Flag of the Kyrgyz Soviet Socialist Republic.svg"
+}
+]
+}

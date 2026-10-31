@@ -1,0 +1,38 @@
+{
+"iso": "so",
+"update": [
+{
+"id": 2264,
+"image": "https://flagcdn.com/it.svg"
+}
+],
+"add": [
+{
+"date_start": "1903-01-01",
+"date_end": "1950-01-01",
+"label_fr": "Somaliland britannique (1903-1950)",
+"label_en": "British Somaliland (1903–1950)",
+"notes_fr": "Blue Ensign du protectorat britannique du nord, longtemps confronté à la résistance de l'État derviche de Mohammed Abdullah Hassan.",
+"notes_en": "Blue Ensign of the northern British protectorate, long challenged by Mohammed Abdullah Hassan's Dervish State.",
+"file": "Flag of British Somaliland (1903–1950).svg"
+},
+{
+"date_start": "1952-01-01",
+"date_end": "1960-06-26",
+"label_fr": "Somaliland britannique (1952-1960)",
+"label_en": "British Somaliland (1952–1960)",
+"notes_fr": "Dernier pavillon colonial du protectorat, avant son indépendance le 26 juin 1960.",
+"notes_en": "The protectorate's last colonial flag, before its independence on 26 June 1960.",
+"file": "Flag of British Somaliland (1952–1960).svg"
+},
+{
+"date_start": "1960-06-26",
+"date_end": "1960-07-01",
+"label_fr": "État du Somaliland",
+"label_en": "State of Somaliland",
+"notes_fr": "Indépendant pendant cinq jours, l'État du Somaliland s'unit le 1er juillet 1960 à l'ancienne Somalie italienne pour former la République somalienne.",
+"notes_en": "Independent for five days, the State of Somaliland united with former Italian Somaliland on 1 July 1960 to form the Somali Republic.",
+"file": "Flag of State of Somaliland.svg"
+}
+]
+}

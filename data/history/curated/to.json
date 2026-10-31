@@ -1,0 +1,22 @@
+{
+"iso": "to",
+"update": [
+{
+"id": 2278,
+"image": "/flags/history/to-1866.svg",
+"notes_fr": "Croix rouge sur fond blanc : jugé trop proche de l'emblème de la Croix-Rouge, il est remplacé en 1875 par le drapeau actuel, où la croix passe dans un canton blanc sur fond rouge.",
+"notes_en": "A red cross on white: judged too close to the Red Cross emblem, it was replaced in 1875 by the current flag, with the cross moved to a white canton on red."
+}
+],
+"add": [
+{
+"date_start": "1862-01-01",
+"date_end": "1866-01-01",
+"label_fr": "Royaume de Tonga (1862-1866)",
+"label_en": "Kingdom of Tonga (1862–1866)",
+"notes_fr": "Premier drapeau du royaume unifié par George Tupou Ier, qui promulgue le code de Vava'u la même année.",
+"notes_en": "The first flag of the kingdom unified by George Tupou I, who issued the Vava'u Code that same year.",
+"file": "Flag of Tonga (1862-1866).svg"
+}
+]
+}

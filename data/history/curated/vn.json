@@ -1,0 +1,20 @@
+{
+"iso": "vn",
+"update": [
+{
+"id": 2289,
+"file": "Flag of North Vietnam (1945–1955).svg"
+}
+],
+"add": [
+{
+"date_start": "1949-06-14",
+"date_end": "1975-04-30",
+"label_fr": "État du Viêt Nam puis République du Viêt Nam",
+"label_en": "State of Vietnam, then Republic of Vietnam",
+"notes_fr": "Bannière jaune à trois bandes rouges, adoptée par l'État du Viêt Nam de Bảo Đại puis par la République du Viêt Nam ; elle disparaît à la chute de Saïgon, le 30 avril 1975.",
+"notes_en": "A yellow banner with three red stripes, adopted by Bảo Đại's State of Vietnam and then by the Republic of Vietnam; it vanished with the fall of Saigon on 30 April 1975.",
+"file": "Flag of South Vietnam.svg"
+}
+]
+}

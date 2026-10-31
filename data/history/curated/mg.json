@@ -1,0 +1,20 @@
+{
+"iso": "mg",
+"update": [
+{
+"id": 2191,
+"file": "Flag of the Merina Kingdom.svg"
+}
+],
+"add": [
+{
+"date_start": "1885-12-17",
+"date_end": "1896-08-06",
+"label_fr": "Protectorat français de Madagascar",
+"label_en": "French protectorate of Madagascar",
+"notes_fr": "Après la première guerre franco-malgache, le royaume merina passe sous protectorat français ; l'île est annexée comme colonie en 1896.",
+"notes_en": "After the first Franco-Malagasy war, the Merina kingdom came under French protection; the island was annexed as a colony in 1896.",
+"file": "Flag of the Madagascar Protectorate (1885-1896).svg"
+}
+]
+}

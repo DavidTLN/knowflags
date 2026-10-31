@@ -1,0 +1,20 @@
+{
+"iso": "sd",
+"update": [
+{
+"id": 2265,
+"file": "Flag of Sudan (1956–1970, 2-3).svg"
+}
+],
+"add": [
+{
+"date_start": "1885-01-26",
+"date_end": "1898-09-02",
+"label_fr": "État mahdiste",
+"label_en": "Mahdist State",
+"notes_fr": "Après la prise de Khartoum en janvier 1885, l'État fondé par le Mahdi Muhammad Ahmad tient jusqu'à la bataille d'Omdurman en 1898.",
+"notes_en": "After Khartoum fell in January 1885, the state founded by the Mahdi Muhammad Ahmad held out until the Battle of Omdurman in 1898.",
+"file": "Flag of the Mahdi movement in Sudan.svg"
+}
+]
+}

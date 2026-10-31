@@ -1,0 +1,58 @@
+{
+"iso": "za",
+"update": [
+{
+"id": 2551,
+"label_fr": "Union d'Afrique du Sud (1910-1912)",
+"label_en": "Union of South Africa (1910–1912)",
+"notes_fr": "À la création de l'Union, un Red Ensign chargé des armes des quatre provinces sert de pavillon ; l'Union Jack reste le drapeau officiel.",
+"notes_en": "When the Union was formed, a Red Ensign bearing the arms of the four provinces served as its flag; the Union Jack remained the official flag."
+},
+{
+"id": 2552,
+"label_fr": "Union d'Afrique du Sud (1912-1928)",
+"label_en": "Union of South Africa (1912–1928)",
+"notes_fr": "Version de 1912 du Red Ensign sud-africain aux armes de l'Union, en usage jusqu'au drapeau national de 1928.",
+"notes_en": "The 1912 version of the South African Red Ensign with the Union's arms, used until the 1928 national flag."
+},
+{
+"id": 1778,
+"label_fr": "Afrique du Sud (1928-1994)",
+"label_en": "South Africa (1928–1994)",
+"notes_fr": "Le drapeau « Oranje-Blanje-Blou », adopté en 1928, porte au centre l'Union Jack et les drapeaux des deux républiques boers ; il reste en usage pendant toute la période de l'apartheid.",
+"notes_en": "The \"Oranje-Blanje-Blou\" flag, adopted in 1928, bears the Union Jack and the flags of the two Boer republics at its centre; it remained in use throughout apartheid.",
+"file": "Flag of South Africa (1928–1994).svg"
+},
+{
+"id": 1779,
+"label_fr": "République d'Afrique du Sud (actuel)",
+"label_en": "Republic of South Africa (current)",
+"notes_fr": "Dessiné par Frederick Brownell et hissé le 27 avril 1994, jour des premières élections multiraciales, le drapeau dessine un Y, symbole de la convergence des peuples.",
+"notes_en": "Designed by Frederick Brownell and raised on 27 April 1994, the day of the first multiracial elections, the flag forms a Y, a symbol of peoples coming together.",
+"image": "https://flagcdn.com/za.svg"
+}
+],
+"add": [
+{
+"date_start": "1857-01-06",
+"date_end": "1902-05-31",
+"label_fr": "République sud-africaine (Transvaal)",
+"label_en": "South African Republic (Transvaal)",
+"notes_fr": "Le « Vierkleur » de la république boer du Transvaal, aux couleurs néerlandaises et à bande verte, flotte jusqu'à la défaite boer de 1902.",
+"notes_en": "The \"Vierkleur\" of the Boer republic of Transvaal, in Dutch colours with a green band, flew until the Boer defeat of 1902.",
+"file": "Flag of Transvaal.svg"
+},
+{
+"date_start": "1857-02-23",
+"date_end": "1902-05-31",
+"label_fr": "État libre d'Orange",
+"label_en": "Orange Free State",
+"notes_fr": "La république boer d'Orange arbore des bandes orange et blanches avec le drapeau néerlandais au canton, jusqu'à la fin de la seconde guerre des Boers.",
+"notes_en": "The Boer republic of Orange flew orange and white stripes with the Dutch flag in the canton, until the end of the Second Boer War.",
+"file": "Flag of the Orange Free State.svg"
+}
+],
+"delete": [
+1777
+]
+}

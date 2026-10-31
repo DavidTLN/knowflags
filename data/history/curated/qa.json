@@ -1,0 +1,30 @@
+{
+"iso": "qa",
+"update": [
+{
+"id": 2238,
+"date_end": "1949-01-01",
+"file": "Flag of Qatar (1936-1949).svg"
+}
+],
+"add": [
+{
+"date_start": "1860-01-01",
+"date_end": "1932-01-01",
+"label_fr": "Cheikhat du Qatar (pavillon rouge)",
+"label_en": "Sheikhdom of Qatar (red flag)",
+"notes_fr": "Comme les autres cheikhats du Golfe, le Qatar arbore d'abord un pavillon rouge.",
+"notes_en": "Like the other Gulf sheikhdoms, Qatar first flew a red flag.",
+"file": "Flag of Qatar (c. 1860-1916, 1916-1932).svg"
+},
+{
+"date_start": "1949-01-01",
+"date_end": "1971-09-03",
+"label_fr": "Qatar (1949-1971)",
+"label_en": "Qatar (1949–1971)",
+"notes_fr": "Version de 1949, au bordeaux, ornée du nom du pays et de losanges, avant le dessin épuré de l'indépendance.",
+"notes_en": "The 1949 version in maroon, bearing the country's name and diamonds, before the cleaner independence design.",
+"file": "Flag of Qatar (1949).svg"
+}
+]
+}

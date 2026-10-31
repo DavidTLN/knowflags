@@ -1,0 +1,57 @@
+{
+"iso": "ua",
+"update": [
+{
+"id": 2511,
+"label_fr": "République populaire ukrainienne",
+"label_en": "Ukrainian People's Republic",
+"notes_fr": "Le bleu et jaune devient le drapeau de la république proclamée à Kyiv en 1917-1918, emportée par la guerre contre les bolcheviks.",
+"notes_en": "Blue and yellow became the flag of the republic proclaimed in Kyiv in 1917–1918, swept away by the war with the Bolsheviks."
+},
+{
+"id": 2284,
+"label_fr": "RSS d'Ukraine (1949-1991)",
+"label_en": "Ukrainian SSR (1949–1991)",
+"notes_fr": "Comme les autres républiques, l'Ukraine soviétique reçoit en 1949 un drapeau rouge à bande bleue inférieure, avec faucille, marteau et étoile.",
+"notes_en": "Like the other republics, Soviet Ukraine received in 1949 a red flag with a lower blue band, with the hammer, sickle and star.",
+"date_start": "1949-11-21",
+"file": "Flag of the Ukrainian Soviet Socialist Republic.svg"
+},
+{
+"id": 2512,
+"label_fr": "Ukraine indépendante (1991-1992)",
+"label_en": "Independent Ukraine (1991–1992)",
+"notes_fr": "Le bleu et jaune flotte sur le Parlement dès le 4 septembre 1991 ; il est officiellement adopté le 28 janvier 1992.",
+"notes_en": "Blue and yellow flew over Parliament from 4 September 1991; it was officially adopted on 28 January 1992."
+}
+],
+"add": [
+{
+"date_start": "1919-03-14",
+"date_end": "1929-05-15",
+"label_fr": "RSS d'Ukraine (1919-1929)",
+"label_en": "Ukrainian SSR (1919–1929)",
+"notes_fr": "Premier drapeau de la république soviétique : rouge, avec les initiales de la république.",
+"notes_en": "The Soviet republic's first flag: red, with the republic's initials.",
+"file": "Flag of the Ukrainian Soviet Socialist Republic (1919-1929).svg"
+},
+{
+"date_start": "1929-05-15",
+"date_end": "1937-01-30",
+"label_fr": "RSS d'Ukraine (1929-1937)",
+"label_en": "Ukrainian SSR (1929–1937)",
+"notes_fr": "Les initiales sont réécrites en ukrainien à l'époque de l'« ukrainisation ».",
+"notes_en": "The initials were rewritten in Ukrainian during the \"Ukrainisation\" period.",
+"file": "Flag of the Ukrainian Soviet Socialist Republic (1929-1937).svg"
+},
+{
+"date_start": "1937-01-30",
+"date_end": "1949-11-21",
+"label_fr": "RSS d'Ukraine (1937-1949)",
+"label_en": "Ukrainian SSR (1937–1949)",
+"notes_fr": "La faucille et le marteau dorés s'ajoutent au-dessus des initiales « УРСР ».",
+"notes_en": "The golden hammer and sickle were added above the initials \"УРСР\".",
+"file": "Flag of the Ukrainian Soviet Socialist Republic (1937–1949).svg"
+}
+]
+}

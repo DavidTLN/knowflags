@@ -1,0 +1,39 @@
+{
+"iso": "km",
+"update": [
+{
+"id": 2112,
+"date_end": "1992-01-01",
+"file": "Flag of the Comoros (1978–1992).svg"
+}
+],
+"add": [
+{
+"date_start": "1963-01-01",
+"date_end": "1975-07-06",
+"label_fr": "Territoire des Comores",
+"label_en": "Territory of the Comoros",
+"notes_fr": "Adopté par le territoire autonome au sein de la République française : le croissant blanc et les quatre étoiles des quatre îles sont déjà là.",
+"notes_en": "Adopted by the self-governing territory within the French Republic: the white crescent and the four stars for the four islands were already there.",
+"file": "Flag of the Comoros (1963–1975).svg"
+},
+{
+"date_start": "1975-07-06",
+"date_end": "1978-01-01",
+"label_fr": "État comorien (1975-1978)",
+"label_en": "Comorian State (1975–1978)",
+"notes_fr": "À l'indépendance proclamée le 6 juillet 1975, le drapeau rouge et vert porte le croissant et les quatre étoiles.",
+"notes_en": "At independence, proclaimed on 6 July 1975, the red and green flag carried the crescent and the four stars.",
+"file": "Flag of the Comoros (1975–1978).svg"
+},
+{
+"date_start": "1992-01-01",
+"date_end": "1996-10-06",
+"label_fr": "République fédérale islamique (1992-1996)",
+"label_en": "Federal Islamic Republic (1992–1996)",
+"notes_fr": "Version de 1992 du drapeau vert, avec un croissant et des étoiles redisposés.",
+"notes_en": "The 1992 version of the green flag, with the crescent and stars rearranged.",
+"file": "Flag of the Comoros (1992–1996).svg"
+}
+]
+}

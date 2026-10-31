@@ -1,0 +1,18 @@
+{"iso":"cd","update":[
+{"id":2331,"label_fr":"République du Congo (1963-1966)","label_en":"Republic of the Congo (1963–1966)",
+ "notes_fr":"Le champ bleu est traversé d'une diagonale rouge bordée de jaune, avec une seule étoile jaune au canton.",
+ "notes_en":"The blue field gained a diagonal red band edged in yellow, with a single yellow star in the canton."},
+{"id":2332,"label_fr":"République démocratique du Congo (1966-1971)","label_en":"Democratic Republic of the Congo (1966–1971)",
+ "notes_fr":"Adopté avec le nom de République démocratique du Congo : même dessin, mais la diagonale rouge et jaune est affinée.",
+ "notes_en":"Adopted with the name Democratic Republic of the Congo: same design, but with a narrower red and yellow diagonal."}
+],"add":[
+{"date_start":"1885-07-01","date_end":"1960-06-30","label_fr":"État indépendant du Congo puis Congo belge","label_en":"Congo Free State, then Belgian Congo","file":"Flag of the Congo Free State.svg",
+ "notes_fr":"Drapeau bleu à étoile d'or de l'Association internationale africaine de Léopold II, devenu celui de l'État indépendant du Congo en 1885 puis utilisé au Congo belge jusqu'à l'indépendance.",
+ "notes_en":"The blue flag with a gold star of Leopold II's International African Association, which became the Congo Free State's flag in 1885 and stayed in use in the Belgian Congo until independence."},
+{"date_start":"1960-07-11","date_end":"1963-01-21","label_fr":"État du Katanga (sécession)","label_en":"State of Katanga (secession)","file":"Flag of Katanga.svg",
+ "notes_fr":"Drapeau de la province minière sécessionniste de Moïse Tshombe : les trois croisettes rouges rappellent les lingots de cuivre en croix qui servaient de monnaie.",
+ "notes_en":"Flag of Moïse Tshombe's breakaway mining province: the three red crosses recall the cross-shaped copper ingots once used as currency."},
+{"date_start":"1997-05-17","date_end":"2006-02-18","label_fr":"République démocratique du Congo (1997-2006)","label_en":"Democratic Republic of the Congo (1997–2006)","image":"/flags/history/cd-1960.svg",
+ "notes_fr":"À la chute de Mobutu, Laurent-Désiré Kabila rétablit le drapeau de l'indépendance de 1960. La Constitution de 2006 le remplace par le drapeau actuel, inspiré de celui de 1963.",
+ "notes_en":"When Mobutu fell, Laurent-Désiré Kabila restored the 1960 independence flag. The 2006 Constitution replaced it with the current flag, modelled on the 1963 one."}
+]}

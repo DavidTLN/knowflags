@@ -1,0 +1,47 @@
+{
+"iso": "mt",
+"update": [
+{
+"id": 2196,
+"file": "Flag of Malta (1943).svg"
+}
+],
+"add": [
+{
+"date_start": "1530-03-23",
+"date_end": "1798-06-12",
+"label_fr": "Ordre de Saint-Jean (chevaliers de Malte)",
+"label_en": "Order of St John (Knights of Malta)",
+"notes_fr": "Les chevaliers de l'ordre de Saint-Jean gouvernent Malte de 1530 jusqu'à l'arrivée de Bonaparte en 1798, sous leur bannière rouge à croix blanche.",
+"notes_en": "The Knights of the Order of St John ruled Malta from 1530 until Bonaparte arrived in 1798, under their red banner with a white cross.",
+"file": "Flag of the Sovereign Military Order of Malta.svg"
+},
+{
+"date_start": "1875-01-01",
+"date_end": "1898-01-01",
+"label_fr": "Colonie de Malte (1875-1898)",
+"label_en": "Colony of Malta (1875–1898)",
+"notes_fr": "Premier Blue Ensign de la colonie britannique, établie après le départ des Français en 1800.",
+"notes_en": "The first Blue Ensign of the British colony, set up after the French left in 1800.",
+"file": "Flag of Malta (1875–1898).svg"
+},
+{
+"date_start": "1898-01-01",
+"date_end": "1923-01-01",
+"label_fr": "Colonie de Malte (1898-1923)",
+"label_en": "Colony of Malta (1898–1923)",
+"notes_fr": "Le badge colonial reprend l'écu blanc et rouge de Malte, couleurs que la tradition rattache au comte normand Roger de Sicile.",
+"notes_en": "The colonial badge took up Malta's white and red shield, colours tradition links to the Norman Count Roger of Sicily.",
+"file": "Flag of Malta (1898-1923).svg"
+},
+{
+"date_start": "1923-01-01",
+"date_end": "1943-12-28",
+"label_fr": "Colonie de Malte (1923-1943)",
+"label_en": "Colony of Malta (1923–1943)",
+"notes_fr": "Nouveau badge colonial, en usage jusqu'à l'ajout de la croix de Georges décernée à l'île en 1942.",
+"notes_en": "A new colonial badge, used until the George Cross awarded to the island in 1942 was added.",
+"file": "Flag of Malta (1923-1943).svg"
+}
+]
+}

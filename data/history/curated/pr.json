@@ -1,0 +1,29 @@
+{
+"iso": "pr",
+"update": [
+{
+"id": 2236,
+"file": "Flag of Grito de Lares (1868, dark blue).svg"
+}
+],
+"add": [
+{
+"date_start": "1895-12-22",
+"date_end": "1952-07-25",
+"label_fr": "Drapeau du Comité révolutionnaire (1895-1952)",
+"label_en": "Revolutionary Committee flag (1895–1952)",
+"notes_fr": "Créé en 1895 à New York par le Comité révolutionnaire portoricain sur le modèle du drapeau cubain aux couleurs inversées ; l'arborer est même puni par la « loi bâillon » de 1948.",
+"notes_en": "Created in 1895 in New York by the Puerto Rican Revolutionary Committee, modelled on the Cuban flag with reversed colours; flying it was even punished under the 1948 \"Gag Law\".",
+"file": "Flag of Puerto Rico (1895-1952, light blue).svg"
+},
+{
+"date_start": "1952-07-25",
+"date_end": "1995-01-01",
+"label_fr": "État libre associé (1952-1995)",
+"label_en": "Commonwealth (1952–1995)",
+"notes_fr": "Officialisé en 1952 avec le statut d'État libre associé, le drapeau est alors arboré dans un bleu foncé proche de celui des États-Unis.",
+"notes_en": "Made official in 1952 with Commonwealth status, the flag was then flown in a dark blue close to that of the United States.",
+"file": "Flag of Puerto Rico (1952-1995).svg"
+}
+]
+}

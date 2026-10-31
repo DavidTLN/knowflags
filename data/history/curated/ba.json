@@ -1,0 +1,14 @@
+{"iso":"ba","update":[
+{"id":2085,"file":"Flag of SR Bosnia and Herzegovina.svg"},
+{"id":2086,"file":"Flag of Bosnia and Herzegovina (1992-1998).svg"}
+],"add":[
+{"date_start":"1377-10-26","date_end":"1463-06-01","label_fr":"Royaume de Bosnie (bannière de Tvrtko Ier)","label_en":"Kingdom of Bosnia (banner of Tvrtko I)","file":"Banner of King Tvrtko I of Bosnia.svg",
+ "notes_fr":"Bannière royale de Tvrtko Ier, couronné roi en 1377 : champ blanc aux armes de la dynastie Kotromanić et pointe frangée. Le royaume tombe aux mains des Ottomans en 1463.",
+ "notes_en":"Royal banner of Tvrtko I, crowned king in 1377: a white field with the Kotromanić arms and a fringed fly. The kingdom fell to the Ottomans in 1463."},
+{"date_start":"1878-07-13","date_end":"1908-10-06","label_fr":"Bosnie sous administration austro-hongroise","label_en":"Bosnia under Austro-Hungarian administration","file":"Flag of Bosnia (1878-1908).svg",
+ "notes_fr":"Le congrès de Berlin confie l'administration de la province ottomane à l'Autriche-Hongrie, qui lui donne un bicolore rouge et jaune chargé d'un écu.",
+ "notes_en":"The Congress of Berlin handed the Ottoman province to Austria-Hungary to administer, which gave it a red and yellow bicolour bearing a shield."},
+{"date_start":"1908-10-06","date_end":"1918-10-29","label_fr":"Bosnie-Herzégovine annexée par l'Autriche-Hongrie","label_en":"Bosnia and Herzegovina annexed by Austria-Hungary","file":"Flag of Bosnia (1908-1918).svg",
+ "notes_fr":"L'annexion de 1908 déclenche la crise bosniaque ; le territoire, administré en commun par Vienne et Budapest, garde un drapeau propre jusqu'à la fin de l'empire.",
+ "notes_en":"The 1908 annexation set off the Bosnian crisis; ruled jointly by Vienna and Budapest, the territory kept its own flag until the empire collapsed."}
+]}

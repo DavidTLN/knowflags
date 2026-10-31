@@ -1,0 +1,48 @@
+{
+"iso": "mv",
+"update": [
+{
+"id": 2194,
+"date_end": "1953-01-01",
+"file": "Old National Flag of the Maldives.svg"
+}
+],
+"add": [
+{
+"date_start": "1796-01-01",
+"date_end": "1903-01-01",
+"label_fr": "Sultanat des Maldives (drapeau rouge)",
+"label_en": "Sultanate of the Maldives (red flag)",
+"notes_fr": "Les sultans des Maldives arborent un simple drapeau rouge, couleur traditionnelle des navires de l'océan Indien.",
+"notes_en": "The sultans of the Maldives flew a plain red flag, the traditional colour of Indian Ocean ships.",
+"file": "Earliest Flag of the Maldives.svg"
+},
+{
+"date_start": "1903-01-01",
+"date_end": "1926-01-01",
+"label_fr": "Sultanat des Maldives (bande du guindant)",
+"label_en": "Sultanate of the Maldives (hoist band)",
+"notes_fr": "Une bande à rayures noires et blanches, le « dhandimathi », est ajoutée le long de la hampe.",
+"notes_en": "A band of black and white stripes, the \"dhandimathi\", was added along the hoist.",
+"file": "Flag of the Maldives until 1903.svg"
+},
+{
+"date_start": "1953-01-01",
+"date_end": "1965-07-26",
+"label_fr": "Maldives (1953-1965)",
+"label_en": "Maldives (1953–1965)",
+"notes_fr": "Le rectangle vert au croissant blanc demeure au centre ; la bande rayée du guindant disparaît à l'indépendance de 1965.",
+"notes_en": "The green rectangle with a white crescent stayed at the centre; the striped hoist band was dropped at independence in 1965.",
+"file": "Flag of the Maldives 1953.svg"
+},
+{
+"date_start": "1959-01-03",
+"date_end": "1963-09-23",
+"label_fr": "République unie de Suvadive",
+"label_en": "United Suvadive Republic",
+"notes_fr": "République sécessionniste des atolls du sud, soutenue un temps par les Britanniques, dissoute en 1963.",
+"notes_en": "A breakaway republic of the southern atolls, backed for a while by the British, dissolved in 1963.",
+"file": "Flag of the United Suvadive Republic.svg"
+}
+]
+}

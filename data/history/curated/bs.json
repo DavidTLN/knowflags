@@ -1,0 +1,15 @@
+{"iso":"bs","update":[
+{"id":1980,"date_end":"1904-01-01","image":"/flags/history/bs-1869.svg",
+ "notes_fr":"Blue Ensign chargé du badge de la colonie : un navire britannique chassant des pirates, sous la devise « Expulsis piratis restituta commercia ».",
+ "notes_en":"Blue Ensign bearing the colony's badge: a British ship chasing pirates, under the motto \"Expulsis piratis restituta commercia\"."},
+{"id":1981,"image":"/flags/history/bs-1953.svg"},
+{"id":1982,"image":"/flags/history/bs-1964.svg"},
+{"id":1984,"image":"/flags/history/bs-1973.svg"}
+],"add":[
+{"date_start":"1904-01-01","date_end":"1923-01-01","label_fr":"Colonie britannique (Blue Ensign, badge de 1904)","label_en":"British colony (Blue Ensign, 1904 badge)","file":"Flag of the Bahamas (1904-1923).svg",
+ "notes_fr":"Même badge aux pirates, mais la couronne qui le surmonte devient une couronne Tudor bombée.",
+ "notes_en":"Same pirate badge, but the crown above it became a domed Tudor crown."},
+{"date_start":"1923-01-01","date_end":"1953-01-01","label_fr":"Colonie britannique (Blue Ensign, badge de 1923)","label_en":"British colony (Blue Ensign, 1923 badge)","file":"Flag of the Bahamas (1923-1953).svg",
+ "notes_fr":"Nouvelle retouche du badge : la couronne est redessinée en couronne Tudor classique.",
+ "notes_en":"Another update to the badge: the crown was redrawn as a standard Tudor crown."}
+]}

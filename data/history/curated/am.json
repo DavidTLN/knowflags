@@ -1,0 +1,16 @@
+{"iso":"am","update":[
+{"id":1969,"image":"/flags/history/am-1885.svg"},
+{"id":1970,"image":"/flags/history/am-1895.svg"},
+{"id":1971,"file":"Flag of Administration of Western Armenia.svg"},
+{"id":1972,"file":"Flag of the Transcaucasian Federation.svg"},
+{"id":1973,"file":"Flag of the First Republic of Armenia.svg"},
+{"id":1974,"image":"/flags/history/am-1922.svg"},
+{"id":1975,"file":"Flag of the Transcaucasian SFSR.svg"},
+{"id":1976,"image":"/flags/history/am-1936.svg"},
+{"id":1977,"image":"/flags/history/am-1940.svg"},
+{"id":1978,"image":"/flags/history/am-1952.svg"}
+],"add":[
+{"date_start":"1920-12-02","date_end":"1922-02-02","label_fr":"RSS d'Arménie (1920-1922)","label_en":"Armenian SSR (1920–1922)","image":"/flags/history/am-1920.png",
+ "notes_fr":"Premier drapeau de l'Arménie soviétique, proclamée à l'arrivée de l'Armée rouge à Erevan : un champ rouge portant les initiales de la république en lettres arméniennes.",
+ "notes_en":"First flag of Soviet Armenia, proclaimed as the Red Army entered Yerevan: a red field bearing the republic's initials in Armenian letters."}
+]}

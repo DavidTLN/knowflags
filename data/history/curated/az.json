@@ -1,0 +1,32 @@
+{"iso":"az","update":[
+{"id":1966,"file":"Flag of the Democratic Republic of Azerbaijan (1918).svg"},
+{"id":1485,"file":"Flag of Azerbaijan (1918–1920).svg"},
+{"id":1486,"date_start":"1952-10-07","label_fr":"RSS d'Azerbaïdjan (1952-1991)","label_en":"Azerbaijan SSR (1952–1991)","file":"Flag of the Azerbaijan Soviet Socialist Republic.svg",
+ "notes_fr":"Dernier drapeau de la RSS : champ rouge traversé d'une bande horizontale bleue, avec la faucille, le marteau et l'étoile dorés. Le tricolore de 1918 le remplace en 1991.",
+ "notes_en":"The SSR's last flag: a red field crossed by a horizontal blue band, with a golden hammer, sickle and star. The 1918 tricolour replaced it in 1991."}
+],"add":[
+{"date_start":"1920-04-28","date_end":"1921-05-19","label_fr":"RSS d'Azerbaïdjan (1920-1921)","label_en":"Azerbaijan SSR (1920–1921)","file":"Flag of the Azerbaijan Soviet Socialist Republic (1920).svg",
+ "notes_fr":"Premier drapeau de l'Azerbaïdjan soviétique, proclamé après l'entrée de l'Armée rouge à Bakou le 28 avril 1920.",
+ "notes_en":"First flag of Soviet Azerbaijan, proclaimed after the Red Army entered Baku on 28 April 1920."},
+{"date_start":"1921-05-19","date_end":"1922-03-12","label_fr":"RSS d'Azerbaïdjan (1921-1922)","label_en":"Azerbaijan SSR (1921–1922)","file":"Flag of the Azerbaijan Soviet Socialist Republic (1921–1922).svg",
+ "notes_fr":"Drapeau fixé par la première Constitution de la république soviétique, adoptée en mai 1921.",
+ "notes_en":"Flag set by the Soviet republic's first constitution, adopted in May 1921."},
+{"date_start":"1922-03-12","date_end":"1924-01-01","label_fr":"RSS d'Azerbaïdjan au sein de la Transcaucasie (1922-1924)","label_en":"Azerbaijan SSR within Transcaucasia (1922–1924)","file":"Flag of Azerbaijan 1922 (2).svg",
+ "notes_fr":"En mars 1922, l'Azerbaïdjan rejoint l'Arménie et la Géorgie dans la RSFS de Transcaucasie, mais garde un drapeau rouge qui lui est propre.",
+ "notes_en":"In March 1922 Azerbaijan joined Armenia and Georgia in the Transcaucasian SFSR, but kept a red flag of its own."},
+{"date_start":"1924-01-01","date_end":"1927-01-01","label_fr":"RSS d'Azerbaïdjan (1924-1927)","label_en":"Azerbaijan SSR (1924–1927)","file":"Flag of the Azerbaijan Soviet Socialist Republic (1924-1927).svg",
+ "notes_fr":"Version adoptée après la création de l'URSS : le drapeau rouge porte les inscriptions de la république au sein de la fédération transcaucasienne.",
+ "notes_en":"Version adopted after the USSR was formed: the red flag carries the republic's inscriptions within the Transcaucasian federation."},
+{"date_start":"1927-01-01","date_end":"1931-01-01","label_fr":"RSS d'Azerbaïdjan (1927-1931)","label_en":"Azerbaijan SSR (1927–1931)","file":"Flag of the Azerbaijan Soviet Socialist Republic (1927-1931).svg",
+ "notes_fr":"Nouvelle version liée à la Constitution de 1927, à l'époque où l'azéri abandonne l'alphabet arabe pour l'alphabet latin.",
+ "notes_en":"New version tied to the 1927 Constitution, when Azerbaijani was moving from the Arabic to the Latin alphabet."},
+{"date_start":"1931-01-01","date_end":"1937-03-14","label_fr":"RSS d'Azerbaïdjan (1931-1937)","label_en":"Azerbaijan SSR (1931–1937)","file":"Flag of the Azerbaijan Soviet Socialist Republic (1931-1937).svg",
+ "notes_fr":"Dernière version adoptée dans le cadre de la RSFS de Transcaucasie, dissoute en décembre 1936.",
+ "notes_en":"Last version adopted within the Transcaucasian SFSR, which was dissolved in December 1936."},
+{"date_start":"1937-03-14","date_end":"1940-01-01","label_fr":"RSS d'Azerbaïdjan (1937-1940)","label_en":"Azerbaijan SSR (1937–1940)","file":"Flag of the Azerbaijan Soviet Socialist Republic (1937–1940).svg",
+ "notes_fr":"Devenue république fédérée de l'URSS, l'Azerbaïdjan inscrit ses initiales en alphabet latin (« AzSSR ») sur le drapeau rouge.",
+ "notes_en":"Now a full Union republic, Azerbaijan wrote its initials in the Latin alphabet (\"AzSSR\") on the red flag."},
+{"date_start":"1940-01-01","date_end":"1952-10-07","label_fr":"RSS d'Azerbaïdjan (1940-1952)","label_en":"Azerbaijan SSR (1940–1952)","file":"Flag of the Azerbaijan Soviet Socialist Republic (1940–1952).svg",
+ "notes_fr":"Après le passage de l'azéri à l'alphabet cyrillique en 1939, les initiales deviennent « АзССР ».",
+ "notes_en":"After Azerbaijani switched to the Cyrillic alphabet in 1939, the initials became \"АзССР\"."}
+]}

@@ -1,0 +1,22 @@
+{"iso":"ec","update":[
+{"id":2132,"file":"Flag of the Gran Colombia.svg"},
+{"id":2347,"label_fr":"République de l'Équateur (1860-1900)","label_en":"Republic of Ecuador (1860–1900)",
+ "notes_fr":"Le 26 septembre 1860, Gabriel García Moreno rétablit le tricolore jaune-bleu-rouge hérité de la Grande Colombie.",
+ "notes_en":"On 26 September 1860 Gabriel García Moreno restored the yellow-blue-red tricolour inherited from Gran Colombia."},
+{"id":2348,"label_fr":"République de l'Équateur (1900-2009)","label_en":"Republic of Ecuador (1900–2009)",
+ "notes_fr":"Le décret du 31 octobre 1900 fixe le dessin officiel du drapeau, armoiries comprises, resté en vigueur jusqu'aux précisions apportées en 2009.",
+ "notes_en":"The decree of 31 October 1900 set the official design of the flag, coat of arms included, which stayed in force until the clarifications of 2009."}
+],"add":[
+{"date_start":"1820-10-09","date_end":"1822-06-02","label_fr":"Province libre de Guayaquil (1820-1822)","label_en":"Free Province of Guayaquil (1820–1822)","file":"Flag of Ecuador (1820-1822).svg",
+ "notes_fr":"Indépendante le 9 octobre 1820, Guayaquil arbore des bandes bleu ciel et blanches ; les trois étoiles représentent Guayaquil, Portoviejo et Machala.",
+ "notes_en":"Independent on 9 October 1820, Guayaquil flew sky-blue and white stripes; the three stars stand for Guayaquil, Portoviejo and Machala."},
+{"date_start":"1822-06-02","date_end":"1822-07-31","label_fr":"Province libre de Guayaquil (1822)","label_en":"Free Province of Guayaquil (1822)","file":"Flag of Ecuador (1822).svg",
+ "notes_fr":"Par décret du 2 juin 1822, la province adopte un nouveau drapeau, quelques semaines seulement avant son rattachement à la Grande Colombie.",
+ "notes_en":"By decree of 2 June 1822 the province adopted a new flag, only weeks before it was annexed to Gran Colombia."},
+{"date_start":"1830-11-19","date_end":"1835-01-01","label_fr":"État de l'Équateur (provisoire, 1830-1835)","label_en":"State of Ecuador (provisional, 1830–1835)","file":"Flag of Ecuador (1830-1835).svg",
+ "notes_fr":"Drapeau provisoire décrété le 19 novembre 1830, peu après la séparation d'avec la Grande Colombie.",
+ "notes_en":"Provisional flag decreed on 19 November 1830, shortly after the split from Gran Colombia."},
+{"date_start":"1835-01-01","date_end":"1845-03-06","label_fr":"République de l'Équateur (1835-1845)","label_en":"Republic of Ecuador (1835–1845)","file":"Flag of Ecuador (1830-1845).svg",
+ "notes_fr":"Premier drapeau officiel de l'Équateur indépendant : le tricolore jaune-bleu-rouge colombien, chargé de ses propres armoiries.",
+ "notes_en":"The first official flag of independent Ecuador: the Colombian yellow-blue-red tricolour, bearing Ecuador's own arms."}
+]}

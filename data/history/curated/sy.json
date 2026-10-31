@@ -1,0 +1,62 @@
+{
+"iso": "sy",
+"update": [
+{
+"id": 2499,
+"label_fr": "Royaume arabe de Syrie",
+"label_en": "Arab Kingdom of Syria",
+"notes_fr": "Fayçal Ier est proclamé roi de Syrie le 8 mars 1920 ; son royaume est balayé par l'armée française à Maysaloun en juillet.",
+"notes_en": "Faisal I was proclaimed King of Syria on 8 March 1920; his kingdom was swept away by the French army at Maysalun in July."
+},
+{
+"id": 2500,
+"label_fr": "Mandat français (1920-1932)",
+"label_en": "French Mandate (1920–1932)",
+"notes_fr": "Sous le mandat français, le drapeau syrien porte au canton le tricolore français.",
+"notes_en": "Under the French Mandate the Syrian flag carried the French tricolour in the canton."
+},
+{
+"id": 2501,
+"label_fr": "République arabe unie",
+"label_en": "United Arab Republic",
+"notes_fr": "Union de la Syrie et de l'Égypte : tricolore rouge-blanc-noir à deux étoiles vertes, une par pays.",
+"notes_en": "The union of Syria and Egypt: a red-white-black tricolour with two green stars, one per country."
+},
+{
+"id": 2502,
+"label_fr": "République arabe syrienne (1961-1963)",
+"label_en": "Syrian Arab Republic (1961–1963)",
+"notes_fr": "Après la rupture avec l'Égypte, la Syrie reprend le drapeau de l'indépendance à trois étoiles rouges.",
+"notes_en": "After breaking with Egypt, Syria brought back the independence flag with three red stars."
+},
+{
+"id": 2503,
+"label_fr": "République arabe syrienne (1963-1972)",
+"label_en": "Syrian Arab Republic (1963–1972)",
+"notes_fr": "Le parti Baas adopte un tricolore rouge-blanc-noir à trois étoiles vertes, pour une union projetée avec l'Égypte et l'Irak.",
+"notes_en": "The Ba'ath Party adopted a red-white-black tricolour with three green stars, for a planned union with Egypt and Iraq."
+},
+{
+"id": 2504,
+"label_fr": "Fédération des républiques arabes (1972-1980)",
+"label_en": "Federation of Arab Republics (1972–1980)",
+"notes_fr": "Le faucon doré de Quraych remplace les étoiles.",
+"notes_en": "The golden Hawk of Quraish replaced the stars."
+},
+{
+"id": 2271,
+"file": "Flag of United Arab Republic.svg"
+}
+],
+"add": [
+{
+"date_start": "1932-06-11",
+"date_end": "1958-02-22",
+"label_fr": "République syrienne (drapeau de l'indépendance)",
+"label_en": "Syrian Republic (independence flag)",
+"notes_fr": "Le drapeau vert-blanc-noir à trois étoiles rouges, adopté en 1932, devient celui de la Syrie indépendante en 1946 ; il est de nouveau national depuis la chute du régime Assad en décembre 2024.",
+"notes_en": "The green-white-black flag with three red stars, adopted in 1932, became independent Syria's flag in 1946; it has been national again since the Assad regime fell in December 2024.",
+"file": "Flag of Syria (1930–1958, 1961–1963).svg"
+}
+]
+}

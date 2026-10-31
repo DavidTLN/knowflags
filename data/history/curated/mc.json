@@ -1,0 +1,22 @@
+{
+"iso": "mc",
+"update": [
+{
+"id": 2203,
+"date_start": "1419-01-01",
+"date_end": "1793-02-15",
+"file": "Lozenge flag of Monaco.svg"
+}
+],
+"add": [
+{
+"date_start": "1814-05-17",
+"date_end": "1881-04-04",
+"label_fr": "Principauté de Monaco (1814-1881)",
+"label_en": "Principality of Monaco (1814–1881)",
+"notes_fr": "Après l'annexion à la France révolutionnaire, la principauté restaurée arbore un drapeau blanc aux armes des Grimaldi.",
+"notes_en": "After its annexation by revolutionary France, the restored principality flew a white flag with the Grimaldi arms.",
+"file": "Flag of Monaco (1814-1881).svg"
+}
+]
+}

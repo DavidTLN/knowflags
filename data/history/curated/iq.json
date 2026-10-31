@@ -1,0 +1,56 @@
+{
+"iso": "iq",
+"update": [
+{
+"id": 2409,
+"label_fr": "République d'Irak (Qasim)",
+"label_en": "Republic of Iraq (Qasim)",
+"notes_fr": "Sous Abdel Karim Qasim, les couleurs panarabes entourent une étoile rouge à huit branches et un disque jaune, symbole de la minorité kurde.",
+"notes_en": "Under Abd al-Karim Qasim, the Pan-Arab colours framed a red eight-pointed star and a yellow disc, the symbol of the Kurdish minority."
+},
+{
+"id": 2410,
+"label_fr": "République d'Irak (1963-1991)",
+"label_en": "Republic of Iraq (1963–1991)",
+"notes_fr": "Tricolore rouge-blanc-noir à trois étoiles vertes, conçu pour l'union projetée avec l'Égypte et la Syrie, qui ne verra jamais le jour.",
+"notes_en": "A red-white-black tricolour with three green stars, designed for a planned union with Egypt and Syria that never came about."
+},
+{
+"id": 2411,
+"label_fr": "République d'Irak (takbir, 1991-2004)",
+"label_en": "Republic of Iraq (takbir, 1991–2004)",
+"notes_fr": "Pendant la guerre du Golfe, Saddam Hussein fait ajouter entre les étoiles le takbir « Allahu akbar », écrit, selon la tradition, de sa propre main.",
+"notes_en": "During the Gulf War, Saddam Hussein had the takbir \"Allahu akbar\" added between the stars, said to be written in his own hand."
+},
+{
+"id": 2412,
+"label_fr": "République d'Irak (2004-2008)",
+"label_en": "Republic of Iraq (2004–2008)",
+"notes_fr": "Après la chute de Saddam Hussein, le takbir est réécrit en écriture coufique pour effacer sa calligraphie ; les trois étoiles disparaissent en 2008.",
+"notes_en": "After Saddam Hussein fell, the takbir was rewritten in Kufic script to erase his handwriting; the three stars were removed in 2008."
+}
+],
+"add": [
+{
+"date_start": "1921-08-23",
+"date_end": "1959-07-14",
+"label_fr": "Royaume d'Irak",
+"label_en": "Kingdom of Iraq",
+"file": "Flag of Iraq (1921–1959).svg",
+"notes_fr": "Drapeau du royaume hachémite de Fayçal Ier, inspiré de celui de la Grande Révolte arabe : bandes noire, blanche et verte, trapèze rouge et deux étoiles à sept branches.",
+"notes_en": "Flag of Faisal I's Hashemite kingdom, based on the Arab Revolt flag: black, white and green stripes, a red trapezium and two seven-pointed stars."
+},
+{
+"date_start": "1958-02-14",
+"date_end": "1958-07-14",
+"label_fr": "Fédération arabe d'Irak et de Jordanie",
+"label_en": "Arab Federation of Iraq and Jordan",
+"file": "Flag of the Arab Federation.svg",
+"notes_fr": "Union des deux royaumes hachémites formée en réponse à la République arabe unie ; elle disparaît avec la révolution irakienne du 14 juillet 1958.",
+"notes_en": "A union of the two Hashemite kingdoms formed in response to the United Arab Republic; it ended with the Iraqi revolution of 14 July 1958."
+}
+],
+"delete": [
+2166
+]
+}

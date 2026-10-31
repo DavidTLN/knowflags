@@ -1,0 +1,10 @@
+{"iso":"at","update":[
+{"id":1481,"image":"/flags/history/at-1804.svg"},
+{"id":1482,"image":"/flags/history/at-1918.svg"},
+{"id":1986,"image":"/flags/history/at-2000.svg"},
+{"id":1987,"image":"/flags/history/at-2018.svg"}
+],"add":[
+{"date_start":"1230-01-01","date_end":"1804-08-11","label_fr":"Duché puis archiduché d'Autriche (bannière rouge-blanc-rouge)","label_en":"Duchy, then Archduchy of Austria (red-white-red banner)","file":"Flag of Austria (1230–1934, 1945–2000).svg",
+ "notes_fr":"Le rouge-blanc-rouge apparaît sur un sceau du duc Frédéric II de Babenberg en 1230. La légende l'attribue à la tunique ensanglantée de Léopold V au siège d'Acre en 1191.",
+ "notes_en":"Red-white-red appears on a seal of Duke Frederick II of Babenberg in 1230. Legend traces it to Leopold V's blood-soaked tunic at the siege of Acre in 1191."}
+],"delete":[2318,1483]}

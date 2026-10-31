@@ -1,0 +1,18 @@
+{"iso":"bi","update":[
+{"id":2096,"date_end":"1966-07-08","label_fr":"Royaume du Burundi (1962-1966)","label_en":"Kingdom of Burundi (1962–1966)","file":"Flag of Burundi (1962–1966).svg",
+ "notes_fr":"À l'indépendance, le 1er juillet 1962, le disque blanc central porte le tambour royal karyenda, symbole de la monarchie, surmonté d'un plant de sorgho.",
+ "notes_en":"At independence on 1 July 1962, the central white disc carried the royal karyenda drum, the symbol of the monarchy, topped by a sorghum plant."}
+],"add":[
+{"date_start":"1961-01-01","date_end":"1962-07-01","label_fr":"Burundi sous tutelle (Ruanda-Urundi)","label_en":"Burundi under trusteeship (Ruanda-Urundi)","file":"Flag of Burundi (1961–1962).svg",
+ "notes_fr":"Adopté alors que le Burundi relève encore de la tutelle belge du Ruanda-Urundi : le sautoir blanc entre quartiers rouges et verts est déjà en place.",
+ "notes_en":"Adopted while Burundi was still part of the Belgian trust territory of Ruanda-Urundi: the white saltire between red and green quarters was already there."},
+{"date_start":"1966-07-08","date_end":"1966-11-28","label_fr":"Royaume du Burundi (Ntare V)","label_en":"Kingdom of Burundi (Ntare V)","file":"Flag of Burundi (1966).svg",
+ "notes_fr":"Dernier drapeau de la monarchie, adopté sous le bref règne de Ntare V, renversé le 28 novembre 1966 par le capitaine Michel Micombero.",
+ "notes_en":"The monarchy's last flag, adopted during the short reign of Ntare V, who was overthrown on 28 November 1966 by Captain Michel Micombero."},
+{"date_start":"1966-11-28","date_end":"1967-06-28","label_fr":"Première République (1966-1967)","label_en":"First Republic (1966–1967)","file":"Flag of Burundi (1966–1967).svg",
+ "notes_fr":"Après la proclamation de la République, le tambour royal disparaît du disque central ; seul le sorgho demeure.",
+ "notes_en":"Once the Republic was proclaimed, the royal drum was removed from the central disc; only the sorghum remained."},
+{"date_start":"1967-06-28","date_end":"1982-09-27","label_fr":"République du Burundi (1967-1982)","label_en":"Republic of Burundi (1967–1982)","file":"Flag of Burundi (1967–1982).svg",
+ "notes_fr":"Les trois étoiles rouges bordées de vert apparaissent, pour les trois mots de la devise « Unité, Travail, Progrès ». Le drapeau actuel, aux proportions différentes, date de 1982.",
+ "notes_en":"The three green-edged red stars appeared, one for each word of the motto \"Unity, Work, Progress\". The current flag, with different proportions, dates from 1982."}
+]}

@@ -1,0 +1,177 @@
+{
+"iso": "hu",
+"update": [
+{
+"id": 2389,
+"label_fr": "Principauté de Hongrie (Árpád)",
+"label_en": "Principality of Hungary (Árpád)",
+"notes_fr": "Selon la tradition, les tribus magyares menées par Árpád arborent un fanion rouge à queue d'aronde lors de la conquête du bassin des Carpates.",
+"notes_en": "According to tradition, the Magyar tribes led by Árpád flew a red swallow-tailed pennant during the conquest of the Carpathian Basin."
+},
+{
+"id": 2390,
+"label_fr": "Royaume de Hongrie (Étienne Ier)",
+"label_en": "Kingdom of Hungary (Stephen I)",
+"notes_fr": "Bannière attribuée à Étienne Ier, premier roi chrétien de Hongrie, couronné en l'an 1000.",
+"notes_en": "Banner attributed to Stephen I, Hungary's first Christian king, crowned in the year 1000."
+},
+{
+"id": 2391,
+"label_fr": "Royaume de Hongrie (croix latine)",
+"label_en": "Kingdom of Hungary (Latin cross)",
+"notes_fr": "Bannière rouge à croix latine blanche, symbole d'un royaume désormais chrétien.",
+"notes_en": "A red banner with a white Latin cross, the symbol of a now Christian kingdom."
+},
+{
+"id": 2392,
+"label_fr": "Royaume de Hongrie (croix patriarcale)",
+"label_en": "Kingdom of Hungary (patriarchal cross)",
+"notes_fr": "Sous Béla III, élevé à la cour de Constantinople, la croix patriarcale à double traverse venue de Byzance apparaît sur la bannière.",
+"notes_en": "Under Béla III, raised at the court of Constantinople, the Byzantine double-barred patriarchal cross appeared on the banner."
+},
+{
+"id": 2393,
+"label_fr": "Royaume de Hongrie (croix sur triple mont)",
+"label_en": "Kingdom of Hungary (cross on triple mount)",
+"notes_fr": "La croix patriarcale se dresse désormais sur un triple mont vert, motif toujours présent dans les armoiries hongroises.",
+"notes_en": "The patriarchal cross now stood on a green triple mount, a motif still found in the Hungarian arms.",
+"date_end": "1272-01-01"
+},
+{
+"id": 2394,
+"label_fr": "Maison d'Anjou (1301-1382)",
+"label_en": "House of Anjou (1301–1382)",
+"notes_fr": "Les rois angevins Charles Robert et Louis Ier le Grand associent les fasces rouges et blanches des Árpád aux fleurs de lys de leur dynastie.",
+"notes_en": "The Angevin kings Charles Robert and Louis I the Great combined the red and white bars of the Árpáds with the fleurs-de-lis of their dynasty."
+},
+{
+"id": 2395,
+"label_fr": "Sigismond de Luxembourg (1387-1437)",
+"label_en": "Sigismund of Luxembourg (1387–1437)",
+"notes_fr": "Bannière écartelée associant les fasces de Hongrie aux armes de Sigismond, qui devient aussi empereur du Saint-Empire.",
+"notes_en": "A quartered banner combining Hungary's bars with the arms of Sigismund, who also became Holy Roman Emperor."
+},
+{
+"id": 2396,
+"label_fr": "Ladislas Ier (1440-1444)",
+"label_en": "Vladislaus I (1440–1444)",
+"notes_fr": "Bannière du roi Ladislas Ier, également roi de Pologne, tué à la bataille de Varna en 1444.",
+"notes_en": "Banner of King Vladislaus I, also King of Poland, who was killed at the Battle of Varna in 1444."
+},
+{
+"id": 2397,
+"label_fr": "Matthias Corvin (1458-1490)",
+"label_en": "Matthias Corvinus (1458–1490)",
+"notes_fr": "Bannière à queue d'aronde de Matthias Corvin, dont les armes portent le corbeau tenant un anneau d'or, emblème des Hunyadi.",
+"notes_en": "Swallow-tailed banner of Matthias Corvinus, whose arms show a raven holding a gold ring, the emblem of the Hunyadi family."
+},
+{
+"id": 2398,
+"label_fr": "Ladislas II (1490-1516)",
+"label_en": "Vladislaus II (1490–1516)",
+"notes_fr": "Bannière de Ladislas II Jagellon, qui règne aussi sur la Bohême.",
+"notes_en": "Banner of Vladislaus II Jagiellon, who also ruled Bohemia."
+},
+{
+"id": 2399,
+"label_fr": "Louis II (1516-1526)",
+"label_en": "Louis II (1516–1526)",
+"notes_fr": "Bannière de Louis II, dernier roi de la Hongrie indépendante, tué à la bataille de Mohács en 1526.",
+"notes_en": "Banner of Louis II, the last king of independent Hungary, killed at the Battle of Mohács in 1526."
+},
+{
+"id": 2400,
+"label_fr": "Absolutisme autrichien (1849-1867)",
+"label_en": "Austrian absolutism (1849–1867)",
+"notes_fr": "Après l'écrasement de la révolution de 1848-1849, le tricolore est interdit : la Hongrie doit arborer le noir et jaune des Habsbourg.",
+"notes_en": "After the 1848–1849 revolution was crushed, the tricolour was banned: Hungary had to fly the Habsburg black and yellow."
+},
+{
+"id": 2401,
+"label_fr": "Compromis austro-hongrois (1867-1869)",
+"label_en": "Austro-Hungarian Compromise (1867–1869)",
+"notes_fr": "Le compromis de 1867 rétablit le tricolore rouge-blanc-vert aux armes de Hongrie, au sein de la double monarchie.",
+"notes_en": "The 1867 Compromise restored the red-white-green tricolour with Hungary's arms, within the Dual Monarchy."
+},
+{
+"id": 2402,
+"label_fr": "Royaume de Hongrie (1869-1874)",
+"label_en": "Kingdom of Hungary (1869–1874)",
+"notes_fr": "Les armoiries placées sur le tricolore sont redessinées sous la couronne de saint Étienne.",
+"notes_en": "The arms on the tricolour were redrawn beneath the Holy Crown of St Stephen."
+},
+{
+"id": 2403,
+"label_fr": "Royaume de Hongrie (1874-1896)",
+"label_en": "Kingdom of Hungary (1874–1896)",
+"notes_fr": "Nouvelle version des armoiries royales sur le tricolore.",
+"notes_en": "A new version of the royal arms on the tricolour."
+},
+{
+"id": 2404,
+"label_fr": "Royaume de Hongrie (millénaire, 1896-1915)",
+"label_en": "Kingdom of Hungary (millennium, 1896–1915)",
+"notes_fr": "Version introduite l'année du millénaire de la conquête magyare, célébré en 1896.",
+"notes_en": "A version introduced in the millennium year of the Magyar conquest, celebrated in 1896."
+},
+{
+"id": 2405,
+"label_fr": "République des conseils de Hongrie",
+"label_en": "Hungarian Soviet Republic",
+"notes_fr": "Le régime communiste de Béla Kun remplace le tricolore par un drapeau rouge pendant ses 133 jours d'existence.",
+"notes_en": "Béla Kun's communist regime replaced the tricolour with a red flag for the 133 days it lasted."
+},
+{
+"id": 2406,
+"label_fr": "Royaume de Hongrie (régence de Horthy)",
+"label_en": "Kingdom of Hungary (Horthy regency)",
+"notes_fr": "Royaume sans roi sous la régence de Miklós Horthy, la Hongrie arbore le tricolore aux armes surmontées de la couronne de saint Étienne.",
+"notes_en": "A kingdom without a king under Regent Miklós Horthy, Hungary flew the tricolour with the arms topped by St Stephen's crown."
+},
+{
+"id": 2407,
+"label_fr": "République de Hongrie (1989-2003)",
+"label_en": "Republic of Hungary (1989–2003)",
+"notes_fr": "Avec la proclamation de la République de Hongrie, le 23 octobre 1989, le tricolore uni devient le drapeau de la démocratie retrouvée.",
+"notes_en": "With the proclamation of the Republic of Hungary on 23 October 1989, the plain tricolour became the flag of restored democracy."
+}
+],
+"add": [
+{
+"date_start": "1272-01-01",
+"date_end": "1301-01-01",
+"label_fr": "Dynastie Árpád (fasces rouges et blanches)",
+"label_en": "Árpád dynasty (red and white bars)",
+"file": "Flag of Hungary (11th c. - 1301).svg",
+"notes_fr": "Huit fasces alternées rouges et blanches, les armes des Árpád, qui restent l'une des deux moitiés des armoiries hongroises.",
+"notes_en": "Eight alternating red and white bars, the Árpád arms, which remain one half of the Hungarian coat of arms."
+},
+{
+"date_start": "1848-04-11",
+"date_end": "1849-08-13",
+"label_fr": "Révolution de 1848-1849",
+"label_en": "1848–1849 Revolution",
+"file": "Flag of Hungary (1848-1849, 1867-1869).svg",
+"notes_fr": "Les lois d'avril 1848 consacrent le tricolore rouge-blanc-vert comme drapeau du royaume, symbole de la révolution contre les Habsbourg.",
+"notes_en": "The April Laws of 1848 made the red-white-green tricolour the kingdom's flag, the symbol of the revolution against the Habsburgs."
+},
+{
+"date_start": "1915-11-06",
+"date_end": "1918-11-16",
+"label_fr": "Royaume de Hongrie (1915-1918)",
+"label_en": "Kingdom of Hungary (1915–1918)",
+"file": "Flag of Hungary (1867-1918).svg",
+"notes_fr": "Dernière version des armes royales, adoptée en pleine Première Guerre mondiale, jusqu'à la proclamation de la République.",
+"notes_en": "The last version of the royal arms, adopted in the middle of the First World War and used until the Republic was proclaimed."
+},
+{
+"date_start": "1957-05-23",
+"date_end": "1989-10-23",
+"label_fr": "République populaire (tricolore uni)",
+"label_en": "People's Republic (plain tricolour)",
+"image": "https://flagcdn.com/hu.svg",
+"notes_fr": "Après la répression de 1956, le régime de János Kádár renonce à tout emblème sur le drapeau : le tricolore reste uni.",
+"notes_en": "After the 1956 crackdown, János Kádár's regime gave up putting any emblem on the flag: the tricolour stayed plain."
+}
+]
+}

@@ -1,0 +1,29 @@
+{
+"iso": "nz",
+"update": [
+{
+"id": 2221,
+"image": "https://flagcdn.com/nz.svg"
+}
+],
+"add": [
+{
+"date_start": "1834-03-20",
+"date_end": "1840-02-06",
+"label_fr": "Tribus unies de Nouvelle-Zélande",
+"label_en": "United Tribes of New Zealand",
+"notes_fr": "Choisi en 1834 par des chefs maoris pour que leurs navires puissent commercer sous un pavillon reconnu ; il précède le traité de Waitangi de 1840.",
+"notes_en": "Chosen in 1834 by Māori chiefs so their ships could trade under a recognised flag; it predates the 1840 Treaty of Waitangi.",
+"file": "Flag of the United Tribes of New Zealand.svg"
+},
+{
+"date_start": "1867-01-01",
+"date_end": "1869-01-01",
+"label_fr": "Navires du gouvernement colonial (1867-1869)",
+"label_en": "Colonial government ships (1867–1869)",
+"notes_fr": "Premier Blue Ensign néo-zélandais, simplement marqué des lettres rouges « NZ ».",
+"notes_en": "The first New Zealand Blue Ensign, simply marked with the red letters \"NZ\".",
+"file": "Flag of New Zealand Government Ships 1867.svg"
+}
+]
+}

@@ -1,0 +1,51 @@
+{
+"iso": "ph",
+"update": [
+{
+"id": 2233,
+"label_fr": "Philippines sous administration américaine (1919-1936)",
+"label_en": "US-administered Philippines (1919–1936)",
+"notes_fr": "Interdit par les autorités américaines de 1907 à 1919, le drapeau est de nouveau autorisé en 1919 ; il est alors fabriqué avec le bleu foncé du drapeau des États-Unis.",
+"notes_en": "Banned by the US authorities from 1907 to 1919, the flag was allowed again in 1919; it was then made with the dark blue of the US flag.",
+"date_start": "1919-03-26",
+"date_end": "1936-03-25",
+"file": "Flag of the Philippines (1919-1936).svg"
+},
+{
+"id": 2448,
+"label_fr": "Commonwealth puis République (1936-1985)",
+"label_en": "Commonwealth, then Republic (1936–1985)",
+"notes_fr": "Le Commonwealth fixe en 1936 un dessin officiel, avec le bleu du drapeau américain ; il devient le drapeau de la République indépendante en 1946.",
+"notes_en": "The Commonwealth set an official design in 1936, with the blue of the US flag; it became the flag of the independent Republic in 1946."
+}
+],
+"add": [
+{
+"date_start": "1898-06-12",
+"date_end": "1901-04-19",
+"label_fr": "Première République philippine",
+"label_en": "First Philippine Republic",
+"notes_fr": "Conçu par Emilio Aguinaldo et cousu à Hong Kong, le drapeau est déployé à Kawit lors de la proclamation de l'indépendance, le 12 juin 1898.",
+"notes_en": "Conceived by Emilio Aguinaldo and sewn in Hong Kong, the flag was unfurled at Kawit when independence was proclaimed on 12 June 1898.",
+"file": "Flag of the Philippines (1898–1901).svg"
+},
+{
+"date_start": "1985-02-24",
+"date_end": "1986-02-25",
+"label_fr": "Philippines (bleu clair, 1985-1986)",
+"label_en": "Philippines (light blue, 1985–1986)",
+"notes_fr": "Ferdinand Marcos remplace le bleu par un bleu clair ; le changement est annulé après la révolution EDSA de février 1986.",
+"notes_en": "Ferdinand Marcos switched the blue to a light blue; the change was reversed after the EDSA revolution of February 1986.",
+"file": "Flag of the Philippines (1985–1986).svg"
+},
+{
+"date_start": "1986-02-25",
+"date_end": "1998-02-12",
+"label_fr": "République des Philippines (1986-1998)",
+"label_en": "Republic of the Philippines (1986–1998)",
+"notes_fr": "Retour au bleu foncé après la chute de Marcos, avant l'adoption du bleu royal actuel par la loi de 1998.",
+"notes_en": "A return to the dark blue after Marcos fell, before the current royal blue was adopted by the 1998 law.",
+"image": "/flags/history/ph-1936.svg"
+}
+]
+}

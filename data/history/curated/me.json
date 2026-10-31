@@ -1,0 +1,47 @@
+{
+"iso": "me",
+"update": [
+{
+"id": 2205,
+"file": "Flag of Montenegro (1993-2004).svg"
+}
+],
+"add": [
+{
+"date_start": "1516-01-01",
+"date_end": "1852-03-13",
+"label_fr": "Prince-évêché du Monténégro",
+"label_en": "Prince-Bishopric of Montenegro",
+"notes_fr": "Drapeau du Monténégro gouverné par des princes-évêques orthodoxes, notamment ceux de la dynastie Petrović-Njegoš à partir de 1697.",
+"notes_en": "Flag of Montenegro under Orthodox prince-bishops, notably those of the Petrović-Njegoš dynasty from 1697.",
+"file": "Flag of Montenegro (1516–1852).svg"
+},
+{
+"date_start": "1852-03-13",
+"date_end": "1905-12-19",
+"label_fr": "Principauté du Monténégro",
+"label_en": "Principality of Montenegro",
+"notes_fr": "Danilo Ier sécularise le pouvoir en 1852 et prend le titre de prince ; l'indépendance est reconnue au congrès de Berlin en 1878.",
+"notes_en": "Danilo I secularised power in 1852 and took the title of prince; independence was recognised at the Congress of Berlin in 1878.",
+"file": "Flag of Montenegro (1852–1905).svg"
+},
+{
+"date_start": "1905-12-19",
+"date_end": "1918-11-26",
+"label_fr": "Monténégro de Nicolas Ier (1905-1918)",
+"label_en": "Montenegro under Nicholas I (1905–1918)",
+"notes_fr": "Tricolore rouge-bleu-blanc chargé des armes de Nicolas Ier, prince puis roi à partir de 1910 ; le royaume est absorbé par la Yougoslavie en 1918.",
+"notes_en": "A red-blue-white tricolour bearing the arms of Nicholas I, prince and then king from 1910; the kingdom was absorbed into Yugoslavia in 1918.",
+"file": "Flag of Montenegro (1905–1918).svg"
+},
+{
+"date_start": "1946-01-31",
+"date_end": "1993-12-29",
+"label_fr": "République socialiste du Monténégro",
+"label_en": "Socialist Republic of Montenegro",
+"notes_fr": "Au sein de la Yougoslavie, le Monténégro arbore le tricolore rouge-bleu-blanc frappé d'une étoile rouge.",
+"notes_en": "Within Yugoslavia, Montenegro flew the red-blue-white tricolour bearing a red star.",
+"file": "Flag of Montenegro (1946–1993), Flag of Serbia (1947–1992).svg"
+}
+]
+}

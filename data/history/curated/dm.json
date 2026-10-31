@@ -1,0 +1,14 @@
+{"iso":"dm","update":[
+{"id":2125,"file":"Flag of Dominica (1965-1978).svg"},
+{"id":2126,"date_end":"1981-11-03","file":"Flag of Dominica (1978-1981).svg"},
+{"id":2345,"label_fr":"Commonwealth de la Dominique (1981-1988)","label_en":"Commonwealth of Dominica (1981–1988)",
+ "notes_fr":"L'ordre des bandes devient jaune-noir-blanc et les étoiles reçoivent un liseré jaune.",
+ "notes_en":"The stripe order became yellow-black-white and the stars gained a yellow edge."},
+{"id":2346,"label_fr":"Commonwealth de la Dominique (1988-1990)","label_en":"Commonwealth of Dominica (1988–1990)",
+ "notes_fr":"Le perroquet sisserou, oiseau endémique de l'île, est retourné et ses couleurs sont modifiées ; le dessin actuel est fixé en 1990.",
+ "notes_en":"The sisserou parrot, a bird found only on the island, was turned around and its colours changed; the current design was set in 1990."}
+],"add":[
+{"date_start":"1955-01-01","date_end":"1965-01-01","label_fr":"Colonie britannique (1955-1965)","label_en":"British colony (1955–1965)","file":"Flag of Dominica (1955-1965).svg",
+ "notes_fr":"Blue Ensign chargé du badge de la colonie, à l'époque où l'île obtient une autonomie au sein des îles du Vent britanniques.",
+ "notes_en":"Blue Ensign bearing the colony's badge, at the time the island gained self-government within the British Windward Islands."}
+],"delete":[2344]}

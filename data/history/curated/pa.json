@@ -1,0 +1,30 @@
+{
+"iso": "pa",
+"update": [
+{
+"id": 2227,
+"date_end": "1831-11-17",
+"file": "Flag of the Gran Colombia.svg"
+}
+],
+"add": [
+{
+"date_start": "1855-02-27",
+"date_end": "1863-05-08",
+"label_fr": "État fédéral de Panama",
+"label_en": "Federal State of Panama",
+"notes_fr": "Premier État fédéré créé en 1855 au sein de la Nouvelle-Grenade, doté de son propre drapeau.",
+"notes_en": "The first federated state, created in 1855 within New Granada, with its own flag.",
+"file": "Flag of Federal State of Panama.svg"
+},
+{
+"date_start": "1863-05-08",
+"date_end": "1886-08-05",
+"label_fr": "État souverain de Panama",
+"label_en": "Sovereign State of Panama",
+"notes_fr": "Sous la Constitution de Rionegro, Panama devient un État souverain des États-Unis de Colombie, jusqu'à la centralisation de 1886.",
+"notes_en": "Under the Rionegro Constitution, Panama became a sovereign state of the United States of Colombia until centralisation in 1886.",
+"file": "Flag of Sovereign State of Panama.svg"
+}
+]
+}

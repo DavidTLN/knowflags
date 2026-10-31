@@ -1,0 +1,29 @@
+{
+"iso": "nl",
+"update": [
+{
+"id": 2231,
+"file": "Prinsenvlag.svg"
+}
+],
+"add": [
+{
+"date_start": "1660-01-01",
+"date_end": "1795-01-19",
+"label_fr": "Provinces-Unies (drapeau des États)",
+"label_en": "Dutch Republic (States Flag)",
+"notes_fr": "Au XVIIe siècle, l'orange, peu visible et qui se ternit vite en mer, cède la place au rouge : le drapeau des États devient celui des Provinces-Unies.",
+"notes_en": "In the 17th century orange, hard to see and quick to fade at sea, gave way to red: the States Flag became the Dutch Republic's flag.",
+"file": "Statenvlag.svg"
+},
+{
+"date_start": "1795-01-19",
+"date_end": "1806-06-05",
+"label_fr": "République batave",
+"label_en": "Batavian Republic",
+"notes_fr": "La République batave, sœur de la France révolutionnaire, ajoute au rouge-blanc-bleu une allégorie de la Liberté accompagnée du lion néerlandais.",
+"notes_en": "The Batavian Republic, a sister republic of revolutionary France, added an allegory of Liberty with the Dutch lion to the red-white-blue.",
+"file": "Flag of the Batavian Republic.svg"
+}
+]
+}

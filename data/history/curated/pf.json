@@ -1,0 +1,29 @@
+{
+"iso": "pf",
+"update": [
+{
+"id": 2235,
+"image": "/flags/history/pf-1880.svg"
+}
+],
+"add": [
+{
+"date_start": "1829-01-01",
+"date_end": "1843-09-09",
+"label_fr": "Royaume de Tahiti",
+"label_en": "Kingdom of Tahiti",
+"notes_fr": "Pavillon du royaume des Pomare, rouge-blanc-rouge, à l'origine du drapeau polynésien actuel.",
+"notes_en": "The red-white-red flag of the Pomare kingdom, the origin of today's French Polynesian flag.",
+"file": "Flag of the Kingdom of Tahiti.svg"
+},
+{
+"date_start": "1843-09-09",
+"date_end": "1880-06-29",
+"label_fr": "Protectorat de Tahiti",
+"label_en": "Tahiti Protectorate",
+"notes_fr": "Sous protectorat français, le pavillon tahitien reçoit un canton tricolore, jusqu'à l'annexion de 1880 par la France.",
+"notes_en": "Under the French protectorate, the Tahitian flag gained a tricolour canton, until France annexed the islands in 1880.",
+"file": "Flag of the Tahiti Protectorate 1843-1880.svg"
+}
+]
+}

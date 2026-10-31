@@ -1,0 +1,29 @@
+{
+"iso": "pg",
+"update": [
+{
+"id": 2228,
+"file": "Flag of Papua New Guinea (1965–1970).svg"
+}
+],
+"add": [
+{
+"date_start": "1906-09-01",
+"date_end": "1949-07-01",
+"label_fr": "Territoire de Papouasie",
+"label_en": "Territory of Papua",
+"notes_fr": "Territoire administré par l'Australie à partir de 1906, avec un Blue Ensign chargé d'un disque blanc portant la couronne et le nom « Papua ».",
+"notes_en": "A territory run by Australia from 1906, with a Blue Ensign bearing a white disc with the crown and the name \"Papua\".",
+"file": "Flag of the Territory of Papua.svg"
+},
+{
+"date_start": "1921-05-09",
+"date_end": "1949-07-01",
+"label_fr": "Territoire de Nouvelle-Guinée",
+"label_en": "Territory of New Guinea",
+"notes_fr": "Ancienne colonie allemande placée sous mandat australien par la Société des Nations, avec son propre Blue Ensign.",
+"notes_en": "A former German colony placed under Australian mandate by the League of Nations, with its own Blue Ensign.",
+"file": "Flag of the Territory of New Guinea.svg"
+}
+]
+}

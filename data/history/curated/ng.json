@@ -1,0 +1,57 @@
+{
+"iso": "ng",
+"update": [
+{
+"id": 2218,
+"date_end": "1952-01-01",
+"file": "Flag of Nigeria (1914–1952).svg"
+}
+],
+"add": [
+{
+"date_start": "1804-02-21",
+"date_end": "1903-03-15",
+"label_fr": "Califat de Sokoto",
+"label_en": "Sokoto Caliphate",
+"notes_fr": "Fondé par Usman dan Fodio en 1804, le califat est l'une des grandes puissances d'Afrique de l'Ouest jusqu'à la conquête britannique de 1903.",
+"notes_en": "Founded by Usman dan Fodio in 1804, the caliphate was one of West Africa's great powers until the British conquest of 1903.",
+"file": "Flag of the Sokoto Caliphate.svg"
+},
+{
+"date_start": "1900-01-01",
+"date_end": "1914-01-01",
+"label_fr": "Protectorat du Nigeria du Nord",
+"label_en": "Northern Nigeria Protectorate",
+"notes_fr": "Blue Ensign du protectorat du Nord, administré par Frederick Lugard selon le principe de l'administration indirecte.",
+"notes_en": "Blue Ensign of the northern protectorate, run by Frederick Lugard on the principle of indirect rule.",
+"file": "Flag of the Northern Nigeria Protectorate (1900–1914).svg"
+},
+{
+"date_start": "1900-01-01",
+"date_end": "1914-01-01",
+"label_fr": "Protectorat du Nigeria du Sud",
+"label_en": "Southern Nigeria Protectorate",
+"notes_fr": "Blue Ensign du protectorat du Sud ; les deux protectorats sont fusionnés en 1914 pour former le Nigeria.",
+"notes_en": "Blue Ensign of the southern protectorate; the two protectorates were merged in 1914 to form Nigeria.",
+"file": "Flag of the Southern Nigeria Protectorate (1900–1914).svg"
+},
+{
+"date_start": "1952-01-01",
+"date_end": "1960-10-01",
+"label_fr": "Colonie et protectorat du Nigeria (1952-1960)",
+"label_en": "Colony and Protectorate of Nigeria (1952–1960)",
+"notes_fr": "Dernier Blue Ensign colonial, au badge de l'étoile de David verte sous la couronne, avant le drapeau vert-blanc-vert de Michael Taiwo Akinkunmi.",
+"notes_en": "The last colonial Blue Ensign, with a green Star of David badge under the crown, before Michael Taiwo Akinkunmi's green-white-green flag.",
+"file": "Flag of Nigeria (1952–1960).svg"
+},
+{
+"date_start": "1967-05-30",
+"date_end": "1970-01-15",
+"label_fr": "République du Biafra",
+"label_en": "Republic of Biafra",
+"notes_fr": "Drapeau de la république sécessionniste du Sud-Est, au soleil levant jaune, pendant une guerre civile meurtrière marquée par une famine de grande ampleur.",
+"notes_en": "Flag of the breakaway south-eastern republic, with a yellow rising sun, during a deadly civil war marked by a large-scale famine.",
+"file": "Flag of Biafra.svg"
+}
+]
+}

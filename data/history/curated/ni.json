@@ -1,0 +1,68 @@
+{
+"iso": "ni",
+"update": [
+{
+"id": 2441,
+"label_fr": "Provinces-Unies d'Amérique centrale (1823-1824)",
+"label_en": "United Provinces of Central America (1823–1824)",
+"notes_fr": "Membre des Provinces-Unies d'Amérique centrale, le Nicaragua arbore leurs bandes bleu-blanc-bleu, toujours présentes sur son drapeau.",
+"notes_en": "As a member of the United Provinces of Central America, Nicaragua flew their blue-white-blue stripes, still found on its flag."
+},
+{
+"id": 2442,
+"label_fr": "République fédérale d'Amérique centrale",
+"label_en": "Federal Republic of Central America",
+"notes_fr": "Le drapeau fédéral, aux armes à cinq volcans, flotte jusqu'à la sortie du Nicaragua de la fédération en 1838.",
+"notes_en": "The federal flag, with its five-volcano arms, flew until Nicaragua left the federation in 1838."
+},
+{
+"id": 2443,
+"label_fr": "État libre du Nicaragua (1839-1858)",
+"label_en": "Free State of Nicaragua (1839–1858)",
+"notes_fr": "Après la dislocation de la fédération, le Nicaragua garde les couleurs fédérales avec ses propres armes.",
+"notes_en": "After the federation broke up, Nicaragua kept the federal colours with its own arms."
+},
+{
+"id": 2444,
+"label_fr": "République du Nicaragua (1858-1889)",
+"label_en": "Republic of Nicaragua (1858–1889)",
+"notes_fr": "Version adoptée au lendemain de la guerre contre le flibustier américain William Walker, chassé du pays en 1857.",
+"notes_en": "A version adopted after the war against the American filibuster William Walker, driven out of the country in 1857."
+},
+{
+"id": 2445,
+"label_fr": "République du Nicaragua (1889-1893)",
+"label_en": "Republic of Nicaragua (1889–1893)",
+"notes_fr": "Nouvelle version du drapeau adoptée en 1889.",
+"notes_en": "A new version of the flag adopted in 1889."
+},
+{
+"id": 2446,
+"label_fr": "République du Nicaragua (1896-1908)",
+"label_en": "Republic of Nicaragua (1896–1908)",
+"notes_fr": "Version de la fin du XIXe siècle, à l'époque où le Nicaragua rejoint la Grande République d'Amérique centrale.",
+"notes_en": "The late 19th-century version, from the time Nicaragua joined the Greater Republic of Central America."
+},
+{
+"id": 2447,
+"label_fr": "République du Nicaragua (1908-1971)",
+"label_en": "Republic of Nicaragua (1908–1971)",
+"notes_fr": "Le 4 septembre 1908, le Nicaragua revient aux bandes bleu-blanc-bleu de la fédération, avec le triangle aux cinq volcans ; le dessin est précisé en 1971.",
+"notes_en": "On 4 September 1908 Nicaragua went back to the federation's blue-white-blue stripes, with the five-volcano triangle; the design was refined in 1971."
+}
+],
+"add": [
+{
+"date_start": "1896-09-15",
+"date_end": "1898-11-29",
+"label_fr": "Grande République d'Amérique centrale",
+"label_en": "Greater Republic of Central America",
+"notes_fr": "Union éphémère du Nicaragua, du Honduras et du Salvador, dernière tentative de reconstituer la fédération centraméricaine.",
+"notes_en": "A short-lived union of Nicaragua, Honduras and El Salvador, the last attempt to rebuild the Central American federation.",
+"file": "Flag of the Greater Republic of Central America (1898).svg"
+}
+],
+"delete": [
+2216
+]
+}

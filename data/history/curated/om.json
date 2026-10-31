@@ -1,0 +1,29 @@
+{
+"iso": "om",
+"update": [
+{
+"id": 2222,
+"file": "Flag of Muscat.svg"
+}
+],
+"add": [
+{
+"date_start": "1954-01-01",
+"date_end": "1959-01-30",
+"label_fr": "Imamat d'Oman",
+"label_en": "Imamate of Oman",
+"notes_fr": "L'imamat de l'intérieur s'oppose au sultan de Mascate jusqu'à la fin de la guerre du Djebel Akhdar en 1959.",
+"notes_en": "The interior imamate opposed the Sultan of Muscat until the end of the Jebel Akhdar War in 1959.",
+"file": "Flag of the Imamate of Oman (1954–1959).svg"
+},
+{
+"date_start": "1970-12-17",
+"date_end": "1995-04-25",
+"label_fr": "Sultanat d'Oman (1970-1995)",
+"label_en": "Sultanate of Oman (1970–1995)",
+"notes_fr": "Le sultan Qabous adopte un drapeau rouge, blanc et vert portant au canton l'emblème national aux khandjars croisés ; ses proportions sont modifiées en 1995.",
+"notes_en": "Sultan Qaboos adopted a red, white and green flag bearing the national emblem of crossed khanjars in the canton; its proportions changed in 1995.",
+"file": "Flag of Oman (1970–1995).svg"
+}
+]
+}

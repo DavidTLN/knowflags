@@ -22,7 +22,7 @@ jobs:
           python-version: '3.12'
       - run: pip install requests mwparserfromhell cairosvg
       - name: Crawl Wikipedia
-        run: test -f data/history/candidates.txt || python3 scripts/history/crawl_wikipedia.py > data/history/crawl.log 2>&1 || true
+        run: mkdir -p data/history && test -f data/history/candidates.txt || python3 scripts/history/crawl_wikipedia.py > data/history/crawl.log 2>&1 || true
       - name: Download selected images
         run: |
           if [ -f data/history/selection.json ] && [ -f scripts/history/download.py ]; then
@@ -32,6 +32,6 @@ jobs:
         run: |
           git config user.name "knowflags-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/history public/flags/history
+          git add -A data/history public/flags/history
           git commit -m "Historical flags review: crawl/download [skip ci]" || echo "nothing to commit"
           git push origin HEAD:history-review

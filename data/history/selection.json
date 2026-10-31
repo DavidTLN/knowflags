@@ -365,11 +365,11 @@
  },
  {
   "file": "Flag of the German Empire.svg",
-  "name": "de-0000-3"
+  "name": "de-0000-2"
  },
  {
   "file": "Flag of the German Empire.svg",
-  "name": "de-0000-4"
+  "name": "de-0000-2"
  },
  {
   "file": "Banner of the Holy Roman Emperor with haloes (1400-1806).svg",
@@ -418,5 +418,637 @@
  {
   "file": "Flag of Algiers (Al-Sharafi Atlas).svg",
   "name": "dz-1516"
+ },
+ {
+  "file": "Flag of the Gran Colombia.svg",
+  "name": "ec-0000"
+ },
+ {
+  "file": "Flag of Ecuador (1820-1822).svg",
+  "name": "ec-1820"
+ },
+ {
+  "file": "Flag of Ecuador (1822).svg",
+  "name": "ec-1822"
+ },
+ {
+  "file": "Flag of Ecuador (1830-1835).svg",
+  "name": "ec-1830"
+ },
+ {
+  "file": "Flag of Ecuador (1830-1845).svg",
+  "name": "ec-1835"
+ },
+ {
+  "file": "Flag of Egypt (1922–1953).svg",
+  "name": "eg-0000"
+ },
+ {
+  "file": "Egypt flag 1882.svg",
+  "name": "eg-1914"
+ },
+ {
+  "file": "Flag of the Egyptian Revolution (1952).svg",
+  "name": "eg-1953"
+ },
+ {
+  "file": "Flag of Eritrea (1952-1961).svg",
+  "name": "er-0000"
+ },
+ {
+  "file": "Flag of Eritrea (1993-1995).svg",
+  "name": "er-1993"
+ },
+ {
+  "file": "Flag of Cross of Burgundy.svg",
+  "name": "es-0000"
+ },
+ {
+  "file": "Flag of the First Spanish Republic.svg",
+  "name": "es-1873"
+ },
+ {
+  "file": "Flag of Spain (1785-1873 and 1875-1931).svg",
+  "name": "es-1874"
+ },
+ {
+  "file": "Flag of the Bando Nacional (1936–1938).svg",
+  "name": "es-1936"
+ },
+ {
+  "file": "Flag of Ethiopia (1974-1975).svg",
+  "name": "et-1974"
+ },
+ {
+  "file": "State flag of Finland (1918).svg",
+  "name": "fi-1860"
+ },
+ {
+  "file": "Flag of Finland (1918-1920).svg",
+  "name": "fi-1918"
+ },
+ {
+  "file": "Flag of the Kingdom of Fiji (1871-1874).svg",
+  "name": "fj-0000"
+ },
+ {
+  "file": "Flag of Fiji (1924–1970).svg",
+  "name": "fj-0000-2"
+ },
+ {
+  "file": "Flag of the Confederacy of Independent Kingdoms of Fiji.svg",
+  "name": "fj-1865"
+ },
+ {
+  "file": "Flag of Fiji (1883–1903).svg",
+  "name": "fj-1883"
+ },
+ {
+  "file": "Flag of Fiji (1883–1908).svg",
+  "name": "fj-1903"
+ },
+ {
+  "file": "Flag of Fiji (1908–1924).svg",
+  "name": "fj-1908"
+ },
+ {
+  "file": "Flag of the Trust Territory of the Pacific Islands.svg",
+  "name": "fm-0000"
+ },
+ {
+  "file": "Flag of France (1794–1815, 1830–1974, 2020–present).svg",
+  "name": "fr-1830"
+ },
+ {
+  "file": "Flag of Free France (1940-1944).svg",
+  "name": "fr-1940"
+ },
+ {
+  "file": "Ulster banner.svg",
+  "name": "gb-nir-1953"
+ },
+ {
+  "file": "Flag of Wales (1953–1959).svg",
+  "name": "gb-wls-0000"
+ },
+ {
+  "file": "Union flag 1606 (Kings Colors).svg",
+  "name": "gb-0000"
+ },
+ {
+  "file": "Flag of the Commonwealth (1649-1651).svg",
+  "name": "gb-1649"
+ },
+ {
+  "file": "Flag of The Commonwealth.svg",
+  "name": "gb-1651"
+ },
+ {
+  "file": "Flag of Grenada (1875-1903).svg",
+  "name": "gd-1875"
+ },
+ {
+  "file": "Flag of Kingdom of Kartli-Kakheti.svg",
+  "name": "ge-1762"
+ },
+ {
+  "file": "Flag of Georgia (1918-1921).svg",
+  "name": "ge-1918"
+ },
+ {
+  "file": "Flag of Georgian SSR (1937-1951).svg",
+  "name": "ge-1937"
+ },
+ {
+  "file": "Flag of Georgian SSR.svg",
+  "name": "ge-1951"
+ },
+ {
+  "file": "Flag of the Gold Coast (1877–1957).svg",
+  "name": "gh-0000"
+ },
+ {
+  "file": "Flag of The Gambia (1889–1965).svg",
+  "name": "gm-0000"
+ },
+ {
+  "file": "Flag of Equatorial Guinea 1973-1979.svg",
+  "name": "gq-0000"
+ },
+ {
+  "file": "Flag of the Septinsular Republic.svg",
+  "name": "gr-1800"
+ },
+ {
+  "file": "State Flag of Greece (1863-1924 and 1935-1973).svg",
+  "name": "gr-1863"
+ },
+ {
+  "file": "State Flag of Greece (1863-1924 and 1935-1973).svg",
+  "name": "gr-1935"
+ },
+ {
+  "file": "Flag of Greece (1970-1975, 3-2).svg",
+  "name": "gr-1970"
+ },
+ {
+  "file": "Flag of the United Provinces of Central America.svg",
+  "name": "gt-1823"
+ },
+ {
+  "file": "Flag of Guatemala (1825-1838).svg",
+  "name": "gt-1825"
+ },
+ {
+  "file": "Flag of Guatemala (1838-1843).svg",
+  "name": "gt-1838"
+ },
+ {
+  "file": "Flag of Guatemala (1843-1851).svg",
+  "name": "gt-1843"
+ },
+ {
+  "file": "Flag of Guatemala (1851-1858).svg",
+  "name": "gt-1851"
+ },
+ {
+  "file": "Flag of Guatemala (1858–1871).svg",
+  "name": "gt-1858"
+ },
+ {
+  "file": "Flag of Guatemala (1871-1968).svg",
+  "name": "gt-1871"
+ },
+ {
+  "file": "Flag of Guatemala (1968–1997).svg",
+  "name": "gt-1968"
+ },
+ {
+  "file": "Flag of Guam (1917-1948).png",
+  "name": "gu-1917"
+ },
+ {
+  "file": "Flag of British Guiana (1919–1955).svg",
+  "name": "gy-0000"
+ },
+ {
+  "file": "Flag of British Guiana (1955–1966).svg",
+  "name": "gy-1955"
+ },
+ {
+  "file": "Flag of Hong Kong 1959.svg",
+  "name": "hk-0000"
+ },
+ {
+  "file": "Flag of Hong Kong 1871.svg",
+  "name": "hk-1871"
+ },
+ {
+  "file": "Flag of Hong Kong 1876.svg",
+  "name": "hk-1876"
+ },
+ {
+  "file": "Flag of the Greater Republic of Central America (1898).svg",
+  "name": "hn-1896"
+ },
+ {
+  "file": "Flag of SR Croatia.svg",
+  "name": "hr-0000"
+ },
+ {
+  "file": "St. Blaise - National Flag of the Ragusan Republic.svg",
+  "name": "hr-1358"
+ },
+ {
+  "file": "Flag of Croatia-Slavonia.svg",
+  "name": "hr-1868"
+ },
+ {
+  "file": "Flag of Banate of Croatia (1939-1941).svg",
+  "name": "hr-1939"
+ },
+ {
+  "file": "Flag of Independent State of Croatia.svg",
+  "name": "hr-1941"
+ },
+ {
+  "file": "Flag of Haiti (1806–1811).svg",
+  "name": "ht-1806"
+ },
+ {
+  "file": "Flag of Haiti (1807–1849).svg",
+  "name": "ht-1806-2"
+ },
+ {
+  "file": "Flag of Kingdom of Haiti.svg",
+  "name": "ht-1811"
+ },
+ {
+  "file": "Flag of Haiti (1820–1849, 1859–1964).svg",
+  "name": "ht-1820"
+ },
+ {
+  "file": "Flag of Haiti (1849–1859).svg",
+  "name": "ht-1849"
+ },
+ {
+  "file": "Flag of Hungary (11th c. - 1301).svg",
+  "name": "hu-1272"
+ },
+ {
+  "file": "Flag of Hungary (1848-1849, 1867-1869).svg",
+  "name": "hu-1848"
+ },
+ {
+  "file": "Flag of Hungary (1867-1918).svg",
+  "name": "hu-1915"
+ },
+ {
+  "file": "Green harp flag of Ireland.svg",
+  "name": "ie-0000"
+ },
+ {
+  "file": "Banner of the Lordship of Ireland.svg",
+  "name": "ie-1386"
+ },
+ {
+  "file": "1931 Flag of India.svg",
+  "name": "in-0000"
+ },
+ {
+  "file": "Flag of Iraq (1921–1959).svg",
+  "name": "iq-1921"
+ },
+ {
+  "file": "Flag of the Arab Federation.svg",
+  "name": "iq-1958"
+ },
+ {
+  "file": "State Flag of Iran (1925).svg",
+  "name": "ir-1933"
+ },
+ {
+  "file": "Flag of Persia (1502–1524).png",
+  "name": "ir-1501"
+ },
+ {
+  "file": "Zand Dynasty flag.svg",
+  "name": "ir-1751"
+ },
+ {
+  "file": "Mohammad Shah Qajar Flag.svg",
+  "name": "ir-1797"
+ },
+ {
+  "file": "Early 20th Century Qajar Flag.svg",
+  "name": "ir-1896"
+ },
+ {
+  "file": "State flag of Persia (1907–1933).svg",
+  "name": "ir-1907"
+ },
+ {
+  "file": "Hvítbláinn.svg",
+  "name": "is-0000"
+ },
+ {
+  "file": "Flag of the Cispadane Republic.svg",
+  "name": "it-1797"
+ },
+ {
+  "file": "Flag of the Cisalpine Republic.svg",
+  "name": "it-1797-2"
+ },
+ {
+  "file": "Flag of the Italian Republic (1802–1805).svg",
+  "name": "it-1802"
+ },
+ {
+  "file": "Flag of the Napoleonic Kingdom of Italy.svg",
+  "name": "it-1805"
+ },
+ {
+  "file": "Flag of Jersey (pre 1981).svg",
+  "name": "je-0000"
+ },
+ {
+  "file": "Flag of Jamaica (1906-1957).svg",
+  "name": "jm-0000"
+ },
+ {
+  "file": "Flag of Jamaica (1875-1906).svg",
+  "name": "jm-1875"
+ },
+ {
+  "file": "Flag of Jamaica (1957-1962).svg",
+  "name": "jm-1957"
+ },
+ {
+  "file": "Flag of the Arab Revolt.svg",
+  "name": "jo-0000"
+ },
+ {
+  "file": "Flag of Allied Occupied Japan.svg",
+  "name": "jp-1945"
+ },
+ {
+  "file": "Flag of Kenya (1921–1963).svg",
+  "name": "ke-0000"
+ },
+ {
+  "file": "Flag of Kenya (1895–1921).svg",
+  "name": "ke-1895"
+ },
+ {
+  "file": "Flag of the Kirghiz Soviet Socialist Republic (1936–1940).svg",
+  "name": "kg-1936"
+ },
+ {
+  "file": "Flag of the Kirghiz SSR 1940-1952.svg",
+  "name": "kg-1940"
+ },
+ {
+  "file": "Flag of the Kyrgyz Soviet Socialist Republic.svg",
+  "name": "kg-1952"
+ },
+ {
+  "file": "Flag of Democratic Kampuchea.svg",
+  "name": "kh-0000"
+ },
+ {
+  "file": "Flag of the State of Cambodia.svg",
+  "name": "kh-1989"
+ },
+ {
+  "file": "Flag of the Gilbert and Ellice Islands (1937–1976).svg",
+  "name": "ki-0000"
+ },
+ {
+  "file": "Flag of the Comoros (1978–1992).svg",
+  "name": "km-0000"
+ },
+ {
+  "file": "Flag of the Comoros (1963–1975).svg",
+  "name": "km-1963"
+ },
+ {
+  "file": "Flag of the Comoros (1975–1978).svg",
+  "name": "km-1975"
+ },
+ {
+  "file": "Flag of the Comoros (1992–1996).svg",
+  "name": "km-1992"
+ },
+ {
+  "file": "Flag of Saint Christopher-Nevis-Anguilla.svg",
+  "name": "kn-0000"
+ },
+ {
+  "file": "Flag of the Provisional People's Committee for North Korea.svg",
+  "name": "kp-1945"
+ },
+ {
+  "file": "Flag of North Korea (1948–1992).svg",
+  "name": "kp-1948"
+ },
+ {
+  "file": "Flag of Korea (1884).svg",
+  "name": "kr-0000"
+ },
+ {
+  "file": "Flag of the Provisional Government of the Republic of Korea.svg",
+  "name": "kr-1919"
+ },
+ {
+  "file": "Flag of South Korea (1946–1948).svg",
+  "name": "kr-1945"
+ },
+ {
+  "file": "Flag of Kuwait (1940-1961).svg",
+  "name": "kw-0000"
+ },
+ {
+  "file": "Flag of Kuwait (1921-1940).svg",
+  "name": "kw-1921"
+ },
+ {
+  "file": "Flag of the Cayman Islands (pre-1999).svg",
+  "name": "ky-0000"
+ },
+ {
+  "file": "Flag of the Kazakh SSR.svg",
+  "name": "kz-0000"
+ },
+ {
+  "file": "Flag of the Kazakh Soviet Socialist Republic (1937-1940).svg",
+  "name": "kz-1937"
+ },
+ {
+  "file": "Flag of the Kazakh Soviet Socialist Republic (1940–1953).svg",
+  "name": "kz-1940"
+ },
+ {
+  "file": "Flag of Laos (1952-1975).svg",
+  "name": "la-0000"
+ },
+ {
+  "file": "Flag of Laos (1893-1952).svg",
+  "name": "la-1893"
+ },
+ {
+  "file": "Flag of Lebanon (1920-1943).svg",
+  "name": "lb-0000"
+ },
+ {
+  "file": "Flag of Saint Lucia (1875-1939).svg",
+  "name": "lc-1875"
+ },
+ {
+  "file": "Flag of Saint Lucia (1967–1979).svg",
+  "name": "lc-1967"
+ },
+ {
+  "file": "Flag of Liechtenstein (1921-1937).svg",
+  "name": "li-0000"
+ },
+ {
+  "file": "Flag of Liechtenstein (1719-1852).svg",
+  "name": "li-1719"
+ },
+ {
+  "file": "Flag of Liechtenstein (1852-1921).svg",
+  "name": "li-1852"
+ },
+ {
+  "file": "Flag of Liechtenstein (1937-1982).svg",
+  "name": "li-1937"
+ },
+ {
+  "file": "Flag of Ceylon (1948–1951).svg",
+  "name": "lk-0000"
+ },
+ {
+  "file": "Flag of the King of Kandy in 1815.svg",
+  "name": "lk-1469"
+ },
+ {
+  "file": "Flag of Ceylon (1875–1948).svg",
+  "name": "lk-1875"
+ },
+ {
+  "file": "Flag of Ceylon (1951-1972).svg",
+  "name": "lk-1951"
+ },
+ {
+  "file": "Flag of Liberia (1827–1847).svg",
+  "name": "lr-0000"
+ },
+ {
+  "file": "Flag of the Republic of Maryland.svg",
+  "name": "lr-1854"
+ },
+ {
+  "file": "Flag of Lesotho (1966–1987).svg",
+  "name": "ls-0000"
+ },
+ {
+  "file": "Flag of the Lithuanian Soviet Socialist Republic (1953–1988).svg",
+  "name": "lt-0000"
+ },
+ {
+  "file": "Flag of the Lithuanian Soviet Socialist Republic (1940–1953).svg",
+  "name": "lt-1940"
+ },
+ {
+  "file": "Civil Ensign of Luxembourg.svg",
+  "name": "lu-0000"
+ },
+ {
+  "file": "Flag of the Latvian Soviet Socialist Republic (1940–1953).svg",
+  "name": "lv-0000"
+ },
+ {
+  "file": "Flag of Courland (state).svg",
+  "name": "lv-1562"
+ },
+ {
+  "file": "Flag of Latvian SSR.svg",
+  "name": "lv-1953"
+ },
+ {
+  "file": "Maritime flag of Regency of Tripoli (18th century).svg",
+  "name": "ly-1711"
+ },
+ {
+  "file": "Flag of Cyrenaica.svg",
+  "name": "ly-1949"
+ },
+ {
+  "file": "Flag of Morocco 1666 1915.svg",
+  "name": "ma-0000"
+ },
+ {
+  "file": "Flag of Morocco 1073 1147.svg",
+  "name": "ma-1073"
+ },
+ {
+  "file": "Flag of Morocco 1147 1269.svg",
+  "name": "ma-1147"
+ },
+ {
+  "file": "Flag of Morocco 1258 1659.svg",
+  "name": "ma-1258"
+ },
+ {
+  "file": "Flag of the Republic of the Rif.svg",
+  "name": "ma-1921"
+ },
+ {
+  "file": "Lozenge flag of Monaco.svg",
+  "name": "mc-1419"
+ },
+ {
+  "file": "Flag of Monaco (1814-1881).svg",
+  "name": "mc-1814"
+ },
+ {
+  "file": "Flag of the Moldavian Soviet Socialist Republic.svg",
+  "name": "md-0000"
+ },
+ {
+  "file": "National flag of the Moldavian Democratic Republic.svg",
+  "name": "md-1917"
+ },
+ {
+  "file": "Flag of the Moldavian Soviet Socialist Republic (1941–1952).svg",
+  "name": "md-1941"
+ },
+ {
+  "file": "Flag of Montenegro (1993-2004).svg",
+  "name": "me-0000"
+ },
+ {
+  "file": "Flag of Montenegro (1516–1852).svg",
+  "name": "me-1516"
+ },
+ {
+  "file": "Flag of Montenegro (1852–1905).svg",
+  "name": "me-1852"
+ },
+ {
+  "file": "Flag of Montenegro (1905–1918).svg",
+  "name": "me-1905"
+ },
+ {
+  "file": "Flag of Montenegro (1946–1993), Flag of Serbia (1947–1992).svg",
+  "name": "me-1946"
+ },
+ {
+  "file": "Flag of the Merina Kingdom.svg",
+  "name": "mg-0000"
+ },
+ {
+  "file": "Flag of the Madagascar Protectorate (1885-1896).svg",
+  "name": "mg-1885"
  }
 ]

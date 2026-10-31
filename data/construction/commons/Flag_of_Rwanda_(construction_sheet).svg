@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1079" height="749" viewBox="-3783 -3768 90636 62916" fill="none" font-family="Calibri,Arial,'Liberation Sans',sans-serif">
+	<title>Flag of Rwanda — construction sheet</title>
+	<!-- DIMENSIONS
+		SVG:
+			S_RAW:     90636.00 × 62916.00
+			S_DISPLAY:  1079.00 × 749.00
+		FLAG:
+			F_RAW:     83070.00 × 55380.00
+			F_DISPLAY:   988.93 × 659.29
+			F_LABEL:     195.00 × 130.00
+			F_RATIO:       3.00 × 2.00
+	-->
+	<defs>
+		<marker id="left-arrow" viewBox="-4 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+			<path fill="blue" d="m2 0 4 4-10-4L6-4z"/>
+		</marker>
+	</defs>
+	<path fill="#fafafa" d="m-3783-3768h90636v62916H-3783z"/>
+	<path fill="#fff" d="m0 0h83070v55380H0z"/>
+	<g opacity=".5">
+		<g transform="scale(1065)">
+			<path fill="#fad201" d="m0 0h78v52H0z"/>
+			<path fill="#00a3e0" d="m0 0h78v26H0z"/>
+			<path fill="#20603d" d="m0 39h78v13H0z"/>
+		</g>
+		<path fill="#e5be01" d="m68160 5538 361 6201 1954-5896-1255 6083 3413-5189-2787 5550 4640-4129-4129 4640 5550-2787-5189 3413 6083-1255-5896 1954 6201 361-6201 361 5896 1954-6083-1255 5189 3413-5550-2787 4129 4640-4640-4129 2787 5550-3413-5189 1255 6083-1954-5896-361 6201-361-6201-1954 5896 1255-6083-3413 5189 2787-5550-4640 4129 4129-4640-5550 2787 5189-3413-6083 1255 5896-1954-6201-361 6201-361-5896-1954 6083 1255-5189-3413 5550 2787-4129-4640 4640 4129-2787-5550 3413 5189-1255-6083 1954 5896z"/>
+		<circle cx="68160" cy="14484" fill="none" stroke="#00a3e0" r="2609.25" stroke-width="319.5"/>
+	</g>
+	<g stroke="#000" stroke-width="140" stroke-linejoin="round" stroke-linecap="round">
+		<g opacity=".4" stroke-width="100">
+			<path stroke-dashoffset="355" stroke-dasharray="710,315,105,315" d="m41535 27690V0m0 27690v27690"/>
+			<path stroke-dasharray="735,315,105,315" stroke-dashoffset="840" d="m85590 27690h-2520"/>
+		</g>
+		<path stroke="#844" opacity=".8" stroke-dasharray="420,360" stroke-dashoffset="210" d="m68160 5538a8946 8946 0 0 0 0 17892m0-17892a8946 8946 0 0 1 0 17892"/>
+		<path stroke="#444" stroke-width="250" d="m0 0h83070v55380H0z"/>
+		<path d="m0 27690h83070M0 41535h83070"/>
+		<g stroke-width="100">
+			<path d="m68160 5538 361 6201 1954-5896-1255 6083 3413-5189-2787 5550 4640-4129-4129 4640 5550-2787-5189 3413 6083-1255-5896 1954 6201 361-6201 361 5896 1954-6083-1255 5189 3413-5550-2787 4129 4640-4640-4129 2787 5550-3413-5189 1255 6083-1954-5896-361 6201-361-6201-1954 5896 1255-6083-3413 5189 2787-5550-4640 4129 4129-4640-5550 2787 5189-3413-6083 1255 5896-1954-6201-361 6201-361-5896-1954 6083 1255-5189-3413 5550 2787-4129-4640 4640 4129-2787-5550 3413 5189-1255-6083 1954 5896z"/>
+			<circle cx="68160" cy="14484" r="2769.0"/>
+			<circle cx="68160" cy="14484" r="2449.5"/>
+		</g>
+		<path stroke="#222" stroke-width="75" stroke-dasharray="210,210" d="m0-2520v30210m0 30210V27690m65710-1740V14484m4900 11466V14484M68160-2520v17004M83070-2520v30210m0 30210V27690M-2520 0h44055m44055 0H41535m11799 5538h14826m-11886 6177h11886m17430 2769H68160m-11886 2769h11886m-14826 6177h14826m17430 18105h-2520M-2520 55380h44055m44055 0H41535"/>
+		<path stroke-width="135" d="m67785 14484h750m-375-375v750"/>
+	</g>
+	<g fill="#008" opacity=".8">
+		<circle r="200" cx="65710" cy="14484"/>
+		<circle r="200" cx="70610" cy="14484"/>
+		<circle r="200" cx="68160" cy="11715"/>
+		<circle r="200" cx="68160" cy="17253"/>
+		<circle r="200" cx="68160" cy="5538"/>
+		<circle r="200" cx="68160" cy="23430"/>
+	</g>
+	<g fill="#f00">
+		<circle r="50" cx="68521" cy="11739"/>
+		<circle r="50" cx="69220" cy="11926"/>
+		<circle r="50" cx="69846" cy="12287"/>
+		<circle r="50" cx="70357" cy="12798"/>
+		<circle r="50" cx="70718" cy="13424"/>
+		<circle r="50" cx="70905" cy="14123"/>
+		<circle r="50" cx="70905" cy="14845"/>
+		<circle r="50" cx="70718" cy="15544"/>
+		<circle r="50" cx="70357" cy="16170"/>
+		<circle r="50" cx="69846" cy="16681"/>
+		<circle r="50" cx="69220" cy="17042"/>
+		<circle r="50" cx="68521" cy="17229"/>
+		<circle r="50" cx="67799" cy="17229"/>
+		<circle r="50" cx="67100" cy="17042"/>
+		<circle r="50" cx="66474" cy="16681"/>
+		<circle r="50" cx="65963" cy="16170"/>
+		<circle r="50" cx="65602" cy="15544"/>
+		<circle r="50" cx="65415" cy="14845"/>
+		<circle r="50" cx="65415" cy="14123"/>
+		<circle r="50" cx="65602" cy="13424"/>
+		<circle r="50" cx="65963" cy="12798"/>
+		<circle r="50" cx="66474" cy="12287"/>
+		<circle r="50" cx="67100" cy="11926"/>
+		<circle r="50" cx="67799" cy="11739"/>
+	</g>
+	<g stroke="#00f" stroke-width="75" marker-start="url(#left-arrow)">
+		<path d="m300-1575h31380"/>
+		<path d="m67860-1575H36480"/>
+		<path d="m68460-1575h5355"/>
+		<path d="m82770-1575h-5355"/>
+		<path d="m300 56955h38835"/>
+		<path d="m82770 56955H43935"/>
+		<path d="m65410 25845h-2200"/>
+		<path d="m70910 25845h2200"/>
+		<path d="m84645 55080v-4222"/>
+		<path d="m84645 41835v4223"/>
+		<path d="m84645 41235v-4223"/>
+		<path d="m84645 27990v4222"/>
+		<path d="m84645 27390v-4503"/>
+		<path d="m84645 14784v4503"/>
+		<path d="m84645 14184V9042"/>
+		<path d="m84645 300v5142"/>
+		<path d="m-1575 55080V30090"/>
+		<path d="m-1575 300v24990"/>
+		<path d="m57219 16953v-769"/>
+		<path d="m57219 12015v769"/>
+		<path d="m54279 23130v-6846"/>
+		<path d="m54279 5838v6846"/>
+	</g>
+	<g fill="#000" text-anchor="middle" font-size="50" transform="scale(50)">
+		<g>
+			<text x="682" y="-16">160</text>
+			<text x="1512" y="-16">35</text>
+			<text x="831" y="1154">195</text>
+			<text x="1347" y="546">∼11½</text>
+		</g>
+		<g transform="rotate(270)">
+			<text x="-969" y="1708">32½</text>
+			<text x="-692" y="1708">32½</text>
+			<text x="-422" y="1708">31</text>
+			<text x="-145" y="1708">34</text>
+			<text x="-554" y="-17">130</text>
+			<text x="-290" y="1159">13</text>
+			<text x="-290" y="1101">42</text>
+		</g>
+		<g font-size="27">
+			<text x="-37" y="1158">[<tspan font-weight="bold" fill="#080">RW</tspan>]</text>
+			<text x="1698" y="1158">[<tspan font-weight="bold" fill="#080">2:3</tspan>]</text>
+		</g>
+	</g>
+</svg>

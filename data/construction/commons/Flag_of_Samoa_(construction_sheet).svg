@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1290" height="690" viewBox="-3780 -3780 108360 57960" fill="none" font-family="Calibri,Arial,'Liberation Sans',sans-serif">
+	<title>Flag of Samoa — construction sheet</title>
+	<!-- DIMENSIONS
+		SVG:
+			S_RAW:     108360.00 × 57960.00
+			S_DISPLAY:  1290.00 × 690.00
+		FLAG:
+			F_RAW:     100800.00 × 50400.00
+			F_DISPLAY:  1200.00 × 600.00
+			F_LABEL:     288.00 × 144.00
+			F_RATIO:       2.00 × 1.00
+	-->
+	<defs>
+		<marker id="left-arrow" viewBox="-4 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+			<path fill="blue" d="m2 0 4 4-10-4L6-4z"/>
+		</marker>
+	</defs>
+	<path fill="#fafafa" d="m-3780-3780h108360v57960H-3780z"/>
+	<path fill="#fff" d="m0 0h100800v50400H0z"/>
+	<g opacity=".5">
+		<g transform="scale(175)">
+			<path fill="#ce1126" d="m0 0h576v288H0z"/>
+			<path fill="#002b7f" d="m0 0h288v144H0z"/>
+		</g>
+		<path fill="#fff" d="m25200 17493 2163 6657-5663-4114h7000l-5663 4114zM17500 7350l1730 5326-4530-3292h5600l-4530 3292zm7700-6300 1730 5326-4530-3292h5600l-4530 3292zm7875 5250 1622 4993-4247-3086h5250l-4247 3086zm-4025 6471 1082 3329-2832-2057h3500l-2832 2057z"/>
+	</g>
+	<g stroke="#000" stroke-width="140" stroke-linejoin="round" stroke-linecap="round">
+		<g opacity=".4" stroke-width="100">
+			<path stroke-dashoffset="362" stroke-dasharray="725,315,105,315" d="m50400 25200V0m0 25200v25200"/>
+			<path stroke-dashoffset="368" stroke-dasharray="735,315,105,315" d="m50400 25200h50400"/>
+			<path stroke-dasharray="735,315,105,315" stroke-dashoffset="840" d="m50400-2520V0M-2520 25200H0"/>
+		</g>
+		<path stroke="#444" stroke-width="250" d="m0 0h100800v50400H0z"/>
+		<path d="m50400 0v25200H0m25200-7707 826 2543h2674l-2163 1571 826 2543-2163-1572-2163 1572 826-2543-2163-1571h2674zM17500 7350l661 2034h2139l-1730 1258 660 2034-1730-1257-1730 1257 660-2034-1730-1258h2139zm7700-6300 661 2034h2139l-1730 1258 660 2034-1730-1257-1730 1257 660-2034-1730-1258h2139zm7875 5250 620 1907h2005l-1622 1179 619 1907-1622-1179-1622 1179 619-1907-1622-1179h2005zm-4025 6471 413 1272h1337l-1082 786 414 1271-1082-786-1082 786 414-1271-1082-786h1337z"/>
+		<path stroke="#222" stroke-width="75" stroke-dasharray="210,210" d="m0-2520v27720m0 27720V25200m21700 2520v-7684m3500-22556v23693m3500 6547v-7684m-14000-5155V9384m5600 5497V9384m2100-803V3084m5600 5497V3084m2450 10309V8207m5250 5186V8207m-8400 10098v-4262m3500 4262v-4262m70000-16563v27720m0 27720V25200M-2520 0h52920m52920 0H50400M7805 24150h19558M7805 7350h9695m455-6300h7245m17395 5250h-9520m9520 9800H27968M-2520 50400h52920m52920 0H50400"/>
+		<path stroke-width="135" d="m24825 21173h750m-375-375v750m-8075-11254h750m-375-375v750m7325-6675h750m-375-375v750m7500 4691h750m-375-375v750m-4400 5176h750m-375-375v750"/>
+	</g>
+	<g fill="#008" opacity=".8">
+		<circle r="200" cx="17500" cy="7350"/>
+		<circle r="200" cx="25200" cy="1050"/>
+		<circle r="200" cx="33075" cy="6300"/>
+		<circle r="200" cx="28700" cy="20036"/>
+		<circle r="200" cx="21700" cy="20036"/>
+		<circle r="200" cx="20300" cy="9384"/>
+		<circle r="200" cx="14700" cy="9384"/>
+		<circle r="200" cx="28000" cy="3084"/>
+		<circle r="200" cx="22400" cy="3084"/>
+		<circle r="200" cx="35700" cy="8207"/>
+		<circle r="200" cx="30450" cy="8207"/>
+		<circle r="200" cx="30800" cy="14043"/>
+		<circle r="200" cx="27300" cy="14043"/>
+		<circle r="200" cx="23037" cy="24150"/>
+		<circle r="200" cx="27363" cy="24150"/>
+		<circle r="200" cx="27968" cy="16100"/>
+		<circle r="200" cx="30132" cy="16100"/>
+	</g>
+	<g stroke="#00f" stroke-width="75" marker-start="url(#left-arrow)">
+		<path d="m300-1575h10500"/>
+		<path d="m24900-1575H14400"/>
+		<path d="m25500-1575h10500"/>
+		<path d="m50100-1575H39600"/>
+		<path d="m50700-1575h22500"/>
+		<path d="m100500-1575H78000"/>
+		<path d="m300 51975h47700"/>
+		<path d="m100500 51975H52800"/>
+		<path d="m22000 26775h1400"/>
+		<path d="m28400 26775h-1400"/>
+		<path d="m300 13936h5250"/>
+		<path d="m14400 13936H9150"/>
+		<path d="m15000 13936h900"/>
+		<path d="m20000 13936h-900"/>
+		<path d="m22700 7636h900"/>
+		<path d="m27700 7636h-900"/>
+		<path d="m30750 12448h725"/>
+		<path d="m35400 12448h-725"/>
+		<path d="m36000 12448h5250"/>
+		<path d="m50100 12448h-5250"/>
+		<path d="m27000 17360h-1200"/>
+		<path d="m31100 17360h1200"/>
+		<path d="m31100 14840h7700"/>
+		<path d="m50100 14840h-7700"/>
+		<path d="m-1575 50100V39600"/>
+		<path d="m-1575 25500v10500"/>
+		<path d="m-1575 24900V14400"/>
+		<path d="m-1575 300v10500"/>
+		<path d="m102375 50100V27600"/>
+		<path d="m102375 300v22500"/>
+		<path d="m8750 25500v1500"/>
+		<path d="m8750 23850v-1500"/>
+		<path d="m8750 7050V5475"/>
+		<path d="m8750 300v1575"/>
+		<path d="m18900 1350v1500"/>
+		<path d="m18900-300v-1000"/>
+		<path d="m41650 6000V4950"/>
+		<path d="m41650 300v1050"/>
+		<path d="m41650 24900v-2450"/>
+		<path d="m41650 16400v2450"/>
+	</g>
+	<g fill="#000" text-anchor="middle" font-size="50" transform="scale(50)">
+		<g>
+			<text x="252" y="-16">72</text>
+			<text x="756" y="-16">72</text>
+			<text x="1512" y="-16">144</text>
+			<text x="1008" y="1054">288</text>
+			<text x="504" y="550">20</text>
+			<text x="147" y="294">42</text>
+			<text x="350" y="294">16</text>
+			<text x="504" y="168">16</text>
+			<text x="662" y="264">15</text>
+			<text x="861" y="264">42</text>
+			<text x="581" y="362">10</text>
+			<text x="812" y="312">56</text>
+		</g>
+		<g transform="rotate(270)">
+			<text x="-756" y="-17">72</text>
+			<text x="-252" y="-17">72</text>
+			<text x="-504" y="2063">144</text>
+			<text x="-434" y="190">3</text>
+			<text x="-73" y="190">21</text>
+			<text x="-70" y="393">3</text>
+			<text x="-63" y="848">18</text>
+			<text x="-413" y="848">26</text>
+		</g>
+		<g font-size="27">
+			<text x="-37" y="1058">[<tspan font-weight="bold" fill="#080">WS</tspan>]</text>
+			<text x="2053" y="1058">[<tspan font-weight="bold" fill="#080">1:2</tspan>]</text>
+		</g>
+	</g>
+</svg>

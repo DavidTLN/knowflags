@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     version="1.1" width="1100px" height="800px" id="hk_flag_Constr">
+<title>Flag construction sheet for the flag of Hong Kong</title>
+<!-- modified version, by AnyFile on Sat 2007_Oct-06 to use text instead of flowRoot - extra comments removed, only svg simple parameters are kept -->
+<!-- licence GFDL -->
+  <desc id="desc3">Flag of Hong Kong</desc>
+  <defs id="defs5">
+    <g
+       transform="matrix(0.9724513,0.2331059,-0.2331059,0.9724513,0,0)"
+       id="petal">
+      <path
+         d="M 0,0 C -44.566882,-6.6620676 -77.546376,-44.93793 -77.546376,-90 C -77.546376,-135.06207 -44.566882,-173.33793 -4.798939e-014,-180 C -12.658446,-169.50195 -17.879249,-150.03247 -1.8048128,-135.04727 C 15.826639,-118.61056 16.507023,-83.873286 -5.815508,-66.029751 C -23.212813,-52.123199 -31.851421,-17.645181 0,0 z "
+         id="path8"
+         style="fill:#ffffff" />
+      <g
+         id="g10"
+         style="fill:#ff0000">
+        <polygon
+           id="star"
+           transform="matrix(14.854021,-2.0875965,-2.0875965,-14.854021,-32.160888,-105.19352)"
+           points="0,-1 0.58778525,0.80901699 -0.95105652,-0.30901699 0.95105652,-0.30901699 -0.58778525,0.80901699 " />
+        <path
+           d="M 0.1040913,-1.428629 C -37.826542,-13.482406 -50.196184,-58.130457 -39.378541,-87.111263 L -41.85269,-87.963134 C -52.48057,-61.061375 -42.445112,-11.988524 -0.53400654,1.114899 L 0.1040913,-1.428629 z "
+           id="path13" />
+      </g>
+    </g>
+    <marker id="Arrow_f"
+      viewBox="0 0 10 10"  refX="10" refY="5"
+      markerUnits="strokeWidth"
+      markerWidth="8" markerHeight="8"
+      orient="auto" > 
+	<g stroke="black" fill="black"  
+          stroke-linecap="butt"  stroke-linejoin="bevel" >
+	    <polygon points="5,5 3.75,2.835 10,5 3.75,7.165" />
+	     <line x1="10" y1="0" x2="10" y2="10"  />
+	</g>
+    </marker>
+    <marker id="Arrow_r"
+      viewBox="-10 0 10 10"  refX="0" refY="5"
+      markerUnits="strokeWidth"
+      markerWidth="8" markerHeight="8"
+      orient="auto" > 
+	<g stroke="black" fill="black"  
+          stroke-linecap="butt"  stroke-linejoin="bevel" >
+	    <polygon points="-5,5 -3.75,2.835 -10,5 -3.75,7.165" />
+	     <line x1="-10" y1="0" x2="-10" y2="10"  />
+	</g>
+    </marker>
+  </defs>
+	<g id="box_for_padding" transform="translate(100,100)"
+	writing-mode="lr" font-size="25"  font-weight="normal"
+	font-family="Arial, Nimbus Sans L, Bitstream Vera Sans, Lucida,
+	Verdana, FreeSans, sans-serif, Times New Roman, FreeSerif, serif">
+	<desc>This group is to make a 100px padding on top and on left
+	      keeping the top-left corner of the falg at 0,0</desc>
+	  <g id="g2184" ><desc> Flag without construction line and quotes</desc>
+	    <rect
+	       id="rect15"
+	       height="600"
+	       width="900"
+	       x="0"
+	       y="0"
+	       style="fill:#ff0000" />
+	    <g
+	       id="g17"
+	       transform="translate(450,300)">
+	      <use
+		 id="use19"
+		 xlink:href="#petal"
+		 x="0"
+		 y="0"
+		 width="900"
+		 height="600" />
+	      <use
+		 id="use21"
+		 transform="matrix(0.309017,0.9510565,-0.9510565,0.309017,0,0)"
+		 xlink:href="#petal"
+		 x="0"
+		 y="0"
+		 width="900"
+		 height="600" />
+	      <use
+		 id="use23"
+		 transform="matrix(0.309017,-0.9510565,0.9510565,0.309017,0,0)"
+		 xlink:href="#petal"
+		 x="0"
+		 y="0"
+		 width="900"
+		 height="600" />
+	      <use
+		 id="use25"
+		 transform="matrix(-0.809017,0.5877853,-0.5877853,-0.809017,0,0)"
+		 xlink:href="#petal"
+		 x="0"
+		 y="0"
+		 width="900"
+		 height="600" />
+	      <use
+		 id="use27"
+		 transform="matrix(-0.809017,-0.5877853,0.5877853,-0.809017,0,0)"
+		 xlink:href="#petal"
+		 x="0"
+		 y="0"
+		 width="900"
+		 height="600" />
+	      <circle
+		 id="circle29"
+		 r="4"
+		 cx="0"
+		 cy="0"
+		 style="fill:#ff0000" /> <!-- TODO AF is this circle needed -->
+	    </g>
+	  </g>
+	  <g id="top_edge_measure" style="fill:black;fill-rule:evenodd;stroke:black;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" >
+	    <line id="top_edge_measure_le"
+	       x1="0" y1="-25" x2="450" y2="-25" 
+	       marker-start="url(#Arrow_r)"  marker-end="url(#Arrow_f)"  />
+	    <text x="225" y="-25" text-anchor="middle" stroke-width="1"
+	      transform="translate(0,-10)" >45</text>
+	    <line id="top_edge_measure_re"
+	       x1="450" y1="-25" x2="900" y2="-25" 
+	       marker-start="url(#Arrow_r)"  marker-end="url(#Arrow_f)"  />
+	    <text x="675" y="-25" text-anchor="middle" stroke-width="1"
+	      transform="translate(0,-10)" >45</text>
+	  </g>
+	  <g id="right_edge_measure" style="fill:black;fill-rule:evenodd;stroke:black;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" >
+	    <line id="right_edge_measure_up"
+	       x1="925" y1="0" x2="925" y2="300"
+	       marker-start="url(#Arrow_r)"  marker-end="url(#Arrow_f)"  />
+	    <text x="925" y="150" text-anchor="start" stroke-width="1"
+	      transform="translate(10,0)" >30</text>
+	    <line id="right_edge_measure_down"
+	       x1="925" y1="300" x2="925" y2="600"
+	       marker-start="url(#Arrow_r)"  marker-end="url(#Arrow_f)"  />
+	    <text x="925" y="450" text-anchor="start" stroke-width="1"
+	      transform="translate(10,0)" >30</text>
+	  </g>
+	  <g id="centre_zone_measure" style="fill:black;fill-rule:evenodd;stroke:black;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+	    transform="translate(450,300)">
+	    <!-- now the centre of coordinate is the centre of the flag -->
+	    <g id="centre_cross">
+	      <line id="centre_cross_hor"
+	         x1="-15" y1="0" x2="15" y2="0" />
+	      <line id="centre_cross_ver"
+	         x1="0" y1="-15" x2="0" y2="15" />
+	    </g>
+	    <g id="circle_out_group">
+	      <circle id="circle_out" fill="none"
+	        cx="0" cy="0" r="180" />
+	      <line id="circle_out_up"
+	          x1="-270" y1="0" x2="-270" y2="-180" 
+	       marker-start="url(#Arrow_r)"  marker-end="url(#Arrow_f)"  />
+	    <text x="-270" y="-90" text-anchor="end" stroke-width="1"
+	      transform="translate(-5,0)" >18</text>
+	    </g>
+	    <g id="circle_inn_group">
+<!--	      
+	      <circle id="circle_inn" fill="none"
+	        cx="0" cy="0" r="110" />
+-->	      
+	      <g id="circle_inn_cut_group" >
+	        <path id="circle_inn_cut" fill="none"
+	          d="M-37.622,103.366 A 110,110 0 1,0 -77.782,77.782" />
+	      </g>
+	      <line id="circle_inn_up"
+	          x1="-220" y1="0" x2="-220" y2="-110" 
+	       marker-start="url(#Arrow_r)"  marker-end="url(#Arrow_f)"  />
+	    <text x="-220" y="-55" text-anchor="end" stroke-width="1"
+	      transform="translate(-5,0)" >11</text>
+	    </g>
+	    <g id="leaf_angle_group">
+	      <line id="leaf_angle_li1"
+	        x1="0" y1="0" x2="0" y2="-260" stroke-dasharray="20" />
+	      <line id="leaf_angle_li2"
+	        x1="0" y1="0" x2="0" y2="-260" transform="rotate(13.48)" />
+	      <path d="M0,-250 A 250,250 0 0 1 59.633,-242.784" /> 
+	        <text x="0" y="-250" text-anchor="start" stroke-width="1"
+	          transform="translate(5,-16)" font-size="20" >13°48'</text>
+	         
+	    </g>
+	  </g>
+	</g>
+</svg>

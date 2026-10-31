@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 560 370" preserveAspectRatio="xMidYMid slice">
+<marker id="diam" overflow="visible">
+<path d="M0,-1.5 1.5,0 0,1.5 -1.5,0z" fill="#222"/>
+</marker>
+<rect width="560" height="370" fill="#fff"/>
+<g stroke="#666" stroke-width="3" opacity="0.6">
+<rect width="450" height="300" x="50" y="50" fill="#ff0"/>
+<rect width="450" height="20" x="50" y="150" fill="#da251d"/>
+<rect width="450" height="20" x="50" y="190" fill="#da251d"/>
+<rect width="450" height="20" x="50" y="230" fill="#da251d"/>
+</g>
+<g fill="none" stroke="#222" stroke-width="3" marker-start="url(#diam)" marker-mid="url(#diam)" marker-end="url(#diam)">
+<path d="M30,150V170 190 210 230 250"/>
+<path d="M50,30H500"/>
+<path d="M520,50V150 250 350"/>
+</g>
+<g fill="#222" font-family="sans-serif" font-size="15">
+<text x="275" y="20" text-anchor="middle">45</text>
+<text text-anchor="end">
+<tspan x="16" y="165">2</tspan><tspan x="16" y="185">2</tspan><tspan x="16" y="205">2</tspan><tspan x="16" y="225">2</tspan><tspan x="16" y="245">2</tspan>
+</text>
+<text text-anchor="start">
+<tspan x="530" y="105">10</tspan><tspan x="530" y="205">10</tspan><tspan x="530" y="305">10</tspan>
+</text>
+<text font-family="monospace" font-variant="small-caps" text-anchor="start">
+<tspan x="70" y="140">vàng</tspan><tspan x="70" y="165">đỏ</tspan>
+</text>
+</g>
+</svg>

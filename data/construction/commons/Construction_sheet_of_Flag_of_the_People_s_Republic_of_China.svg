@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="900" height="600" viewBox="0 0 30 20">
+<defs><path id="s" d="M0-1 0.587785,0.809017-0.951057-0.309017H0.951057L-0.587785,0.809017" fill="#ffff00"/></defs>
+<path fill="#ee1c25" stroke="#000" stroke-width="0.1" fill-opacity=".5" d="m0,0H30v20H0z"/>
+<use xlink:href="#s" transform="translate(5,5) scale(3)"/>
+<use xlink:href="#s" transform="translate(10,2) rotate(23.036243)"/>
+<use xlink:href="#s" transform="translate(12,4) rotate(45.869898)"/>
+<use xlink:href="#s" transform="translate(12,7) rotate(69.945396)"/>
+<use xlink:href="#s" transform="translate(10,9) rotate(20.659808)"/>
+<g stroke="#000" stroke-width=".05" fill="none">
+<path d="m0,9.97H30M14.97,0V20M10,2 5,5 10,9M12,4 5,5 12,7"/>
+<path stroke-width="30" stroke-dasharray=".05,.95" d="m0,.95v10M.95-5h15"/>
+<circle cx="5" cy="5" r="3"/>
+<circle cx="10" cy="2" r="1"/>
+<circle cx="12" cy="4" r="1"/>
+<circle cx="12" cy="7" r="1"/>
+<circle cx="10" cy="9" r="1"/>
+</g></svg>

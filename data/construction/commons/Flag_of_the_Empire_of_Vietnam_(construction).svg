@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="600" version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<marker id="a" transform="translate(0,229.99997)" overflow="visible">
+		<path d="M 0,-1.5 1.5,0 0,1.5 -1.5,0 Z" fill="#222"/>
+	</marker>
+	<path d="M0 0H900V600H0z" fill="#fff"/>
+	<g transform="matrix(1.6071429,0,0,1.6071429,80.357145,85.714255)">
+		<g transform="scale(.5)" opacity=".6">
+			<path d="m0 0h900v600h-900" fill="#ff0"/>
+			<path d="m150 187.5h600m-600 112.5h262.5m337.5 0h-262.5m-337.5 112.5h600" stroke="#da251d" stroke-width="75"/>
+		</g>
+	</g>
+	<g transform="matrix(1.6071429,0,0,1.6071429,0,5.3571095)" fill="none" marker-end="url(#a)" marker-mid="url(#a)" marker-start="url(#a)" stroke="#222" stroke-width="3">
+		<path d="m50 30h450"/>
+		<path d="m520 50v300"/>
+		<path d="m125 114.27778h300"/>
+		<path d="m435.72222 124.82574v37.84853"/>
+		<path d="m425 256.25h75.00002"/>
+		<path d="m256.07574 223.25h37.84853"/>
+		<path d="m275 275v75.00002"/>
+		<path d="m126.5 218.75v18.92427"/>
+	</g>
+	<g transform="matrix(1.6071429,0,0,1.6071429,0,5.3571095)" fill="#222" font-family="sans-serif" font-size="15">
+		<text x="275" y="20" text-anchor="middle">6k</text>
+		<text><tspan x="530" y="205">4k</tspan></text>
+		<text x="-262.65833" y="-101.44444"><tspan x="267.34167" y="103.55556">4k</tspan></text>
+		<text x="-71.349991" y="43.527779"><tspan x="458.65002" y="248.52777">k</tspan></text>
+		<text x="-83.672249" y="-65.416656"><tspan x="446.32779" y="139.58334"><tspan x="446.32779" y="139.58334">k</tspan></tspan><tspan x="446.32779" y="158.33334">2</tspan></text>
+		<text x="-84.593964" y="-56.75658"><tspan x="445.40607" y="148.24341">‒</tspan></text>
+		<text x="-71.349991" y="43.527779"><tspan x="458.65002" y="248.52777">k</tspan></text>
+		<text x="-258.85004" y="-9.166666"><tspan x="271.14999" y="195.83333"><tspan x="271.14999" y="195.83333">k</tspan></tspan><tspan x="271.14999" y="214.58333">2</tspan></text>
+		<text x="-259.77176" y="-0.50659037"><tspan x="270.22827" y="204.49339">‒</tspan></text>
+		<text x="-247.39444" y="112.70835"><tspan x="282.60556" y="317.70834">k</tspan></text>
+		<text x="-419.11157" y="19.045469"><tspan x="110.88847" y="224.04547"><tspan x="110.88847" y="224.04547">k</tspan></tspan><tspan x="110.88847" y="242.79547">4</tspan></text>
+		<text x="-420.03329" y="27.705545"><tspan x="109.96674" y="232.70554">‒</tspan></text>
+	</g>
+</svg>

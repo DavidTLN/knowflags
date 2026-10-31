@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1290" height="690" viewBox="-3780 -28980 108360 57960" fill="none" font-family="Calibri,Arial,'Liberation Sans',sans-serif">
+	<title>Flag of Guyana 1:2 — construction sheet</title>
+	<!-- DIMENSIONS
+		SVG:
+			S_RAW:     108360.00 × 57960.00
+			S_DISPLAY:  1290.00 × 690.00
+		FLAG:
+			F_RAW:     100800.00 × 50400.00
+			F_DISPLAY:  1200.00 × 600.00
+			F_LABEL:     120.00 × 60.00
+			F_RATIO:       2.00 × 1.00
+	-->
+	<defs>
+		<clipPath id="w">
+			<path d="m0-30L120 0 0 30z"/>
+		</clipPath>
+		<clipPath id="b">
+			<path d="m0-30L60 0 0 30z"/>
+		</clipPath>
+		<marker id="left-arrow" viewBox="-4 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+			<path fill="blue" d="m2 0 4 4-10-4L6-4z"/>
+		</marker>
+	</defs>
+	<path fill="#fafafa" d="m-3780-28980h108360v57960H-3780z"/>
+	<path fill="#fff" d="m0-25200h100800v50400H0z"/>
+	<g opacity=".5" transform="scale(840)">
+		<path fill="#009e49" d="m0-30h120v60H0z"/>
+		<path clip-path="url(#w)" fill="#fcd116" stroke="#fff" stroke-width="4" d="m0-30L120 0 0 30"/>
+		<path clip-path="url(#b)" fill="#ce1126" stroke="#000" stroke-width="6" d="m0-30L60 0 0 30"/>
+	</g>
+	<g stroke="#000" stroke-width="140" stroke-linejoin="round" stroke-linecap="round">
+		<g opacity=".4" stroke-width="100">
+			<path stroke-dashoffset="362" stroke-dasharray="725,315,105,315" d="m50400 0v-25200m0 25200v25200"/>
+			<path stroke-dashoffset="376" stroke-dasharray="751,315,105,315" d="m50400 0H0m50400 0h50400"/>
+			<path stroke-dasharray="735,315,105,315" stroke-dashoffset="840" d="m50400-27720v2520M103320 0h-2520"/>
+		</g>
+		<path stroke="#444" stroke-width="250" d="m0-25200h100800v50400H0z"/>
+		<path d="m0-25200L50400 0 0 25200m0-50400L100800 0 0 25200m6927-46937L93873 0 6927 21737M0-22383 44765 0 0 22383"/>
+		<path stroke="#222" stroke-width="75" stroke-dasharray="210,210" d="m0-27720V0m0 27720V0m100800-27720V0m0 27720V0M-2520-25200h52920m52920 0H50400M-2520 25200h52920m52920 0H50400"/>
+	</g>
+	<g fill="#008" opacity=".8">
+		<circle r="200" cx="0" cy="-25200"/>
+		<circle r="200" cx="-0" cy="25200"/>
+		<circle r="200" cx="50400" cy="0"/>
+		<circle r="200" cx="100800" cy="0"/>
+	</g>
+	<g stroke="#00f" stroke-width="75" marker-start="url(#left-arrow)">
+		<path d="m300-26775h23100"/>
+		<path d="m50100-26775H27000"/>
+		<path d="m50700-26775h23100"/>
+		<path d="m100500-26775H77400"/>
+		<path d="m300 26775h47700"/>
+		<path d="m100500 26775H52800"/>
+		<path d="m-1575 24900V1800"/>
+		<path d="m-1575-24900v23100"/>
+		<path d="m102375 24900V14400"/>
+		<path d="m102375 300v10500"/>
+		<path d="m102375-300v-10500"/>
+		<path d="m102375-24900v10500"/>
+		<path d="m64713-6981-533 2135"/>
+		<path d="m65266-9193 534-2134"/>
+		<path d="m25035-9530-984 1968"/>
+		<path d="m26430-12320 984-1968"/>
+	</g>
+	<g fill="#000" text-anchor="middle" font-size="50" transform="scale(50)">
+		<g>
+			<text x="504" y="-520">60</text>
+			<text x="1512" y="-520">60</text>
+			<text x="1008" y="550">120</text>
+		</g>
+		<g transform="rotate(270)">
+			<text y="-17">60</text>
+			<text x="-252" y="2063">30</text>
+			<text x="252" y="2063">30</text>
+		</g>
+		<g transform="rotate(284)">
+			<text x="372" y="1237">∼2</text>
+		</g>
+		<g transform="rotate(296.6)">
+			<text x="314" y="378">∼3</text>
+		</g>
+		<g font-size="27">
+			<text x="-37" y="554">[<tspan font-weight="bold" fill="#080">GY</tspan>]</text>
+			<text x="2053" y="554">[<tspan font-weight="bold" fill="#080">1:2</tspan>]</text>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1130" height="740" viewBox="-42000 -31080 94920 62160" fill="none" font-family="Calibri,Arial,'Liberation Sans',sans-serif">
+	<title>Flag of Palau — construction sheet</title>
+	<!-- DIMENSIONS
+		SVG:
+			S_RAW:     94920.00 × 62160.00
+			S_DISPLAY:  1130.00 × 740.00
+		FLAG:
+			F_RAW:     87360.00 × 54600.00
+			F_DISPLAY:  1040.00 × 650.00
+			F_LABEL:      16.00 × 10.00
+			F_RATIO:       8.00 × 5.00
+	-->
+	<defs>
+		<marker id="left-arrow" viewBox="-4 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+			<path fill="blue" d="m2 0 4 4-10-4L6-4z"/>
+		</marker>
+	</defs>
+	<g opacity=".5" transform="scale(5460)">
+		<path fill="#09f" d="m-7-5H9V5H-7z"/>
+		<circle fill="#ff0" r="3"/>
+	</g>
+	<g stroke="#000" stroke-width="140" stroke-linejoin="round" stroke-linecap="round">
+		<g opacity=".40" stroke-width="100">
+			<path opacity=".25" stroke-dashoffset="375" stroke-dasharray="750,315,105,315" d="m5460 0v-27300M5460 0v27300"/>
+			<path stroke-dashoffset="400" stroke-dasharray="799,315,105,315" d="m0 0h-38220M0 0h49140"/>
+			<path stroke-dasharray="735,315,105,315" stroke-dashoffset="840" d="m-40740 0h2520"/>
+		</g>
+		<path stroke="#444" stroke-width="250" d="m-38220-27300h87360v54600h-87360z"/>
+		<circle r="16380"/>
+		<path stroke="#222" stroke-width="75" stroke-dasharray="210,210" d="m-38220-29820V0m0 29820V0m21840 18900V0M0-29820v46200m16380 2520V0m32760-29820V0m0 29820V0m-89880-27300H5460m46200 0H5460m-46200 54600H5460m46200 0H5460"/>
+		<path stroke-width="135" d="m-375 0h750M0-375v750"/>
+	</g>
+	<g fill="#008" opacity=".8">
+		<circle r="200" cx="0" cy="-16380"/>
+		<circle r="200" cx="16380" cy="0"/>
+		<circle r="200" cx="-0" cy="16380"/>
+		<circle r="200" cx="-16380" cy="0"/>
+	</g>
+	<g stroke="#00f" stroke-width="75" marker-start="url(#left-arrow)">
+		<path d="m-37920-28875h17610"/>
+		<path d="m-300-28875h-17610"/>
+		<path d="m300-28875h23070"/>
+		<path d="m48840-28875H25770"/>
+		<path d="m-37920 28875H3660"/>
+		<path d="m48840 28875H7260"/>
+		<path d="m-16080 17955h14880"/>
+		<path d="m16080 17955H1200"/>
+		<path d="m-39795-300v-12150"/>
+		<path d="m-39795-27000v12150"/>
+		<path d="m-39795 27000V14850"/>
+		<path d="m-39795 300v12150"/>
+		<path d="m50715 27000V1800"/>
+		<path d="m50715-27000v25200"/>
+	</g>
+	<g fill="#000" text-anchor="middle" font-size="50" transform="scale(50)">
+		<g>
+			<text x="-382" y="-562">7</text>
+			<text x="491" y="-562">9</text>
+			<text x="109" y="592">16</text>
+			<text y="374">6</text>
+		</g>
+		<g transform="rotate(270)">
+			<text x="273" y="-781">5</text>
+			<text x="-273" y="-781">5</text>
+			<text y="1029">10</text>
+		</g>
+		<g font-size="27">
+			<text x="-801" y="596">[<tspan font-weight="bold" fill="#080">PW</tspan>]</text>
+			<text x="1020" y="596">[<tspan font-weight="bold" fill="#080">5:8</tspan>]</text>
+		</g>
+	</g>
+</svg>

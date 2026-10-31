@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   viewBox="0 0 150 100"
+   version="1.1">
+  
+  <title>Flag of Angola</title>
+  <desc>Also includes construction sheet</desc>
+  
+  <metadata
+     id="metadata1335">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:publisher rdf:resource="https://commons.wikimedia.org" />
+        <dc:source rdf:resource="https://www.fotw.info/images/a/ao'.gif" />
+        <cc:attributionURL rdf:resource="https://commons.wikimedia.org/wiki/File:Flag_of_Angola_Construction.svg" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+
+  <style type="text/css">
+    .leader {stroke: blue; stroke-width: 0.2px; fill: none; }
+    .center {stroke: black; stroke-width: 0.2px; fill: none; }
+    .dimen  {stroke: blue; stroke-width: 0.2px; fill: none; marker-start: url(#arr); marker-end: url(#arr); }
+    .label  {font-family: sans-serif; font-size: 4.5px; text-anchor: middle; fill: blue; stroke: none; }
+    .rivet  {stroke: none; fill:black; }
+    
+    .construction { }
+    .flag {display: none; }
+  </style>
+  
+  <defs>
+    <marker id="arr" refX="5" refY="2.5" markerUnits="userSpaceOnUse" orient="auto-start-reverse" markerWidth="5" markerHeight="5">
+      <path d="M2,2.5 L1,1.5 L5,2.5 L1,3.5 L2,2.5 Z"
+            stroke="none"
+            fill="blue"/>
+    </marker>
+
+    <g id="star">
+      <!-- tips have a radius of 9  -->
+      <!-- 9 * sin(72) = 8.5595086466563821490479540004144 -->
+      <!-- 9 * cos(72) = 2.7811529493745268169206407546454 -->
+      <!-- 9 * sin(144) = 5.2900672706322581625183535917517 -->
+      <!-- 9 * cos(144) = -7.2811529493745268169206407546454 -->
+      <!-- inner corners have a radius r -->
+      <!-- if we want level edges, then r cos(36) = 9 cos(72) = 2.781153 -->
+      <!-- or r = 9 cos(72) / cos(3) = 3.4376941012509463661587184907093 -->
+      <!-- r sin(36) = 2.0206258946081341759887531830889 -->
+      <!-- r cos(36) = 2.7811529493745268169206407546454 -->
+      <!-- r sin(108) = 3.2694413760241239865296004086628 -->
+      <!-- r cos(108) = -1.0623058987490536338412815092907 -->
+      <path d="M0,-9 L2.02,-2.78
+               L8.56,-2.78 L 3.27,1.06
+               L5.29,7.28 L 0,3.44
+               L-5.29,7.28 L -3.27,1.06 
+               L-8.56,-2.78 L-2.02,-2.78 Z" />
+    </g>
+
+    <g id="tooth">
+      <!-- there are 16 teeth; 32 half periods; offset is 64 -->
+      <!-- 360/16 = 22.5 -->
+      <!-- 360/32 = 11.25 -->
+      <!-- 360/64 = 5.625 -->
+      <!-- 26 sin(5.625) = 2.5484456485685756518490846611047 -->
+      <!-- 26 cos(5.625) = 25.874802893477119042365760780846 -->
+      <!-- 24 sin(5.625) = 2.3524113679094544478606935333274 -->
+      <!-- 24 cos(5.625) = 23.884433440132725269876086874628 -->
+      <!-- 24 sin(16.875) = 6.9668322541070968232686170196175 -->
+      <!-- 24 cos(16.875) = 22.966568057573012758459149287526 -->
+      <!-- 26 sin(16.875) = 7.5474016086160215585410017712523 -->
+      <!-- 26 cos(16.875) = 24.880448729037430488330745061487 -->
+      <!-- 26 sin(28.125) = 12.256315157475938862466078273537 -->
+      <!-- 26 cos(28.125) = 22.92995287305723077253167845517 -->
+      <!-- 24 sin(28.125) = 11.313521683823943565353303021726 -->
+      <!-- 24 cos(28.125) = 21.166110344360520713106164727849 -->
+      <!-- 24 sin(39.375) = 15.225438819927491957164118717412 -->
+      <!-- 24 cos(39.375) = 18.552250880705687059461758634203 -->
+      <!-- 26 sin(39.375) = 16.494225388254782953594461943863 -->
+      <!-- 26 cos(39.375) = 20.09827178743116098108357185372 -->
+
+      <path d="M-2.35,-23.88 L-2.55,-25.87 A 26 26 0 0 1 2.55 -25.87 L2.35,-23.88 A 24 24 0 0 1 6.97 -22.97"
+            fill="none"
+            stroke="blue" stroke-width="0.3" />
+    </g>
+
+    <g id="gearUpper">
+      <!-- 20 sin(5.625) = 1.9603428065912120398839112777728 -->
+      <!-- 20 cos(5.625) = 19.90369453344393772489673906219 -->
+      <!-- this angle is a guess -->
+      <!-- 26 sin(46) = 18.702834808804929623257421535875 -->
+      <!-- 26 cos(46) = 18.06111763193392945306656378499 -->
+      <!-- this angle is a guess -->
+      <!-- 20 sin(48.5) = 14.979114415780042910065799003537 -->
+      <!-- 20 cos(48.5) = 13.252400964314749550062064846925 -->
+      <path d="M13.25,14.98 A 20 20 0 0 0 1.96,-19.90
+               L2.35,-23.88 A 24 24 0 0 1 6.97,-22.97
+               L7.55,-24.88 A 26 26 0 0 1 12.26,-22.92
+               L11.31,-21.17 A 24 24 0 0 1 15.23,-18.55
+               L16.49,-20.10 A 26 26 0 0 1 20.10,-16.49
+               
+               L18.55,-15.23 A 24 24 0 0 1 21.17,-11.31
+               L22.93,-12.26 A 26 26 0 0 1 24.88,-7.55               
+               L22.97,-6.79 A 24 24 0 0 1 23.88,-2.35 L25.87,-2.55 A 26 26 0 0 1 25.87,2.55
+               L23.88,2.35 A 24 24 0 0 1 22.97,6.97
+               L24.88,7.55 A 26 26 0 0 1 22.93,12.26 
+               L21.17,11.31 A 24 24 0 0 1 18.55,15.23
+               L20.10,16.49 A 26 26 0 0 1 18.06,18.70
+               Z" />
+    </g>
+
+    <g id="gearLower">
+      <!-- 24 * sin(33.75) = 13.333685592470453393827939534765 -->
+      <!-- 24 * cos(33.75) = 19.95527069526108568989092106283 -->
+      <!-- 20 * sin(33.75) = 11.111404660392044494856616278971 -->
+      <!-- 20 * cos(33.75) = 16.629392246050904741575767552358 -->
+      <!-- 20 * sin(18.5) = 6.3460931281018426875494685659776 -->
+      <!-- 20 * cos(18.5) = 18.966473104123986531786790025274 -->
+      <!-- 26 * sin(22.5) = 9.9497692414923340649399595847904 -->
+      <!-- 26 * cos(22.5) = 24.020867845293455659332762924316 -->
+      <path d="M9.95,24.02 A 26 26 0 0 1 7.55,24.8
+               L6.97,22.97 A 24 24 0 0 1 2.35,23.88
+               L2.55,25.87 A 26 26 0 0 1 -2.55,25.87
+               L-2.35,23.88 A 24 24 0 0 1 -6.97,22.97
+               L-7.55,24.88 A 26 26 0 0 1 -12.26,22.93
+               L-11.31,21.17 A 24 24 0 0 1 -13.33,19.96
+               L-11.11,16.63 A 20 20 0 0 0 6.35,18.97
+               L9.75,21
+               Z" />
+    </g>
+
+    <g id="gearQ">
+      <use xlink:href="#tooth" />
+      <use xlink:href="#tooth" transform="rotate(22.5)" />
+      <use xlink:href="#tooth" transform="rotate(45.0)"/>
+      <use xlink:href="#tooth" transform="rotate(67.5)"/>
+    </g>
+
+    <g id="gear">
+      <use xlink:href="#gearQ"></use>
+      <use xlink:href="#gearQ" transform="rotate(90)"></use>
+      <use xlink:href="#gearQ" transform="rotate(180)"></use>
+      <use xlink:href="#gearQ" transform="rotate(270)"></use>
+    </g>
+
+    <g id="machete">
+      <path d="M39,0 L8,0 C 4,0 3,-1.5 0,-3
+               C 0,0 3,5.7 8,6
+               L39,2.5 Z " />
+      
+      <!-- handle -->
+      <path d="M39,3 L39,-0.75
+               C 44,-0.75 51,-1 51,2
+               S 46,2 44,2
+               S 41,3 39,3
+               Z" />
+
+      <line x1="39" x2="39" y1="3.5" y2="-1.25" stroke="black" stroke-width="0.5" fill="none" />
+
+      <!-- blood groove -->
+      <path d="M39,.75 C 27,1.25 22,1.5 10,1" stroke="black" stroke-width="0.4" fill="none" />
+      
+      <!-- rivets -->
+      <circle class="rivet" cx="41.25" cy="0.25" r=".3" />
+      <circle class="rivet" cx="44.5" cy=".50" r=".3" />
+      <circle class="rivet" cx="47.75" cy=".75" r=".3" />
+
+      <line class="leader construction" x1="0" x2="0" y1="0" y2="22" />
+      <line class="leader construction" x1="39" x2="39" y1="4" y2="15" />
+      <line class="leader construction" x1="51" x2="51" y1="0" y2="22" />
+
+      <line class="dimen construction" x1="0" x2="51" y1="21" y2="21" />
+      <text class="label construction" x="30.5" y="20">51</text>
+      <line class="dimen construction" x1="39" x2="51" y1="14" y2="14" />
+      <text class="label construction" x="45" y="13">12</text>
+    </g>
+  </defs>
+
+  <g class="construction">
+    <title>Construction</title>
+    
+    <rect x="0.5" y="0.5" width="149" height="99" fill="none" stroke="black" />
+
+    <!-- 
+    <image opacity="0.5" xlink:href="AngolaFlagConstruction.gif" width="150" height="100" />
+
+    <image opacity="0.0" xlink:href="https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Angola.svg"
+           width="150" height="100" />
+           
+    -->
+
+    <!-- center line -->
+    <line class="center" x1="0" x2="150" y1="50" y2="50" />
+    <line class="center" x1="75" x2="75" y1="0" y2="41" />
+
+    <line class="dimen" x1="0" x2="75" y1="8" y2="8" />
+    <text class="label" x="37.5" y="7">75</text>
+    <line class="dimen" x1="75" x2="150" y1="8" y2="8" />
+    <text class="label" x="112.5" y="7">75</text>
+
+    <line class="dimen" x1="10" x2="10" y1="0" y2="50" />
+    <text class="label" transform="translate(9, 25) rotate(-90)">50</text>
+    <line class="dimen" x1="10" x2="10" y1="50" y2="100" />
+    <text class="label" transform="translate(9, 75) rotate(-90)">50</text>
+
+    <!-- star circle; dia 18-->
+    <circle cx="75" cy="41" r="9" fill="none" stroke="black" stroke-width="0.2"/>
+
+    <use xlink:href="#star" x="75" y="41"
+         fill="none"
+         stroke="black"
+         stroke-width="0.2" />
+
+    <line class="leader" x1="29" x2="75" y1="32" y2="32" />
+
+    <line class="dimen" x1="30" x2="30" y1="32" y2="50" />
+    <text class="label" transform="translate(29,41) rotate(-90)">18</text>
+
+    <!-- gears radius 20, 24, 26 -->
+    <circle cx="75" cy="50" r="20" fill="none" stroke="gray" stroke-width="0.2" />
+    <circle cx="75" cy="50" r="24" fill="none" stroke="gray" stroke-width="0.2" />
+    <circle cx="75" cy="50" r="26" fill="none" stroke="gray" stroke-width="0.2" />
+
+    <line class="leader" x1="75" x2="135" y1="24" y2="24" />
+    <line class="leader" x1="75" x2="125" y1="26" y2="26" />
+    <line class="leader" x1="75" x2="115" y1="30" y2="30" />
+
+    <line class="dimen" x1="114" x2="114" y1="30" y2="50" />
+    <text class="label" transform="translate(113,40) rotate(-90)">20</text>
+    <line class="dimen" x1="124" x2="124" y1="26" y2="50" />
+    <text class="label" transform="translate(123,38) rotate(-90)">24</text>
+    <line class="dimen" x1="134" x2="134" y1="24" y2="50" />
+    <text class="label" transform="translate(133,37) rotate(-90)">26</text>
+
+    <use xlink:href="#gear" x="75" y="50" />
+
+    <use xlink:href="#gearUpper" x="75" y="50"
+         fill="none"
+         stroke="black" stroke-width="0.8" />
+    <use xlink:href="#gearLower" x="75" y="50"
+         fill="none"
+         stroke="black" stroke-width="0.8" />
+
+    <!-- machete axis -->
+    <line x1="0" y1="0" x2="131" y2="100" stroke="black" stroke-width="0.2" />
+
+    <line class="leader" x1="131" x2="131" y1="84" y2="100" />
+
+    <line class="dimen" x1="131" x2="150" y1="85" y2="85" />
+    <text class="label" x="140.5" y="84">19</text>
+
+    <!-- the angle is atan2(100, 131) = 37.356621928520425894905324666354 -->
+    <use xlink:href="#machete" transform="rotate(37.3566) translate(81, 0)" 
+         fill="none"
+         stroke="blue" stroke-width="0.4" />
+  </g>
+
+  <g class="flag">
+    <title>Flag</title>
+
+    <!-- field color -->
+    <rect width="100%" height="100%" fill="#cc092f" />
+    <rect x="0" y="50%" width="100%" height="50%" fill="black" />
+
+    <use xlink:href="#star" x="75" y="41" fill="yellow" />
+    <use xlink:href="#gearUpper" x="75" y="50" fill="yellow" />
+    <use xlink:href="#gearLower" x="75" y="50" fill="yellow" />
+    <use class="live" xlink:href="#machete" transform="rotate(37.3566) translate(81, 0)" fill="yellow" />
+  </g>
+  
+</svg>

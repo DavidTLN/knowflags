@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg2"
+   height="1100"
+   width="1300">
+  <defs
+     id="defs4" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(150,-152.36218)"
+     id="layer1">
+    <g
+       id="g375">
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect3339"
+         width="1300"
+         height="1100"
+         x="-150"
+         y="152.36218" />
+      <g
+         id="g281">
+        <g
+           style="opacity:0.3"
+           id="g840"
+           transform="translate(9.4091274e-7,-25)">
+          <rect
+             style="fill:#000000;fill-opacity:1"
+             id="rect2987"
+             width="1000"
+             height="600"
+             x="-1e-06"
+             y="452.36218" />
+          <g
+             id="g833">
+            <ellipse
+               ry="199.99998"
+               rx="200"
+               cy="178.44693"
+               cx="885.55377"
+               transform="rotate(45)"
+               id="path2989"
+               style="fill:#6699ff;fill-opacity:1;stroke-width:1.53846145" />
+            <path
+               d="m 700,752.36218 a 200,200 0 0 1 -199.99999,200 l -10e-6,-200 z"
+               id="path824-0"
+               style="opacity:1;fill:#4477ff;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+            <path
+               transform="scale(-1)"
+               d="m -300,-752.36218 a 200,200 0 0 1 -199.99999,200 l -10e-6,-200 z"
+               id="path824-4-2"
+               style="opacity:1;fill:#88bbff;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+          </g>
+        </g>
+        <path
+           id="path3999-6-74-8-2-9-8"
+           d="m -1.1192093e-6,326.3622 v 802"
+           style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.00000004, 8.00000004;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3999-6-74-8-2-9-8-5"
+           d="M 1000,326.36221 V 1128.3622"
+           style="fill:none;stroke:#000000;stroke-width:1.99999988;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.00000081, 8.00000081;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3999-6-74-8-2-9-8-8"
+           d="M -50.000001,426.36217 V 1028.3622"
+           style="fill:none;stroke:#000000;stroke-width:1.99999976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.00000074, 8.00000074;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3999-6-74-8-2-9-8-1"
+           d="m 1050,426.3622 v 602"
+           style="fill:none;stroke:#000000;stroke-width:1.99999976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.00000079, 8.00000079;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3999-9-94-8-0-8-8"
+           d="M -1.000001,377.36217 H 1001"
+           style="fill:none;stroke:#000000;stroke-width:1.99999976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.00000008, 8.00000008;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3999-9-94-8-0-8-8-7"
+           d="M -101,427.36216 H 1101"
+           style="fill:none;stroke:#000000;stroke-width:1.99999964;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:7.99999988, 7.99999988;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3999-9-94-8-0-8-8-2"
+           d="M -101,1027.3622 H 1101"
+           style="fill:none;stroke:#000000;stroke-width:1.99999964;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.00000003, 8.00000003;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3999-9-94-8-0-8-8-0"
+           d="M -1.000001,1077.3622 H 1001"
+           style="fill:none;stroke:#000000;stroke-width:1.99999964;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:7.99999999, 7.99999999;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3999-6-74-8-2-9-8-1-9"
+           d="m 700,326.36217 v 402"
+           style="fill:none;stroke:#000000;stroke-width:1.99999976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.00000081, 8.00000081;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3999-6-74-8-2-9-8-1-6"
+           d="M 300,326.36217 V 728.36218"
+           style="fill:none;stroke:#000000;stroke-width:1.99999976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.00000082, 8.00000082;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3999-9-94-8-0-8-8-8"
+           d="m 499,527.36217 h 602"
+           style="fill:none;stroke:#000000;stroke-width:1.99999976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.00000004, 8.00000004;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3999-9-94-8-0-8-8-1"
+           d="m 499,927.36217 h 602"
+           style="fill:none;stroke:#000000;stroke-width:1.99999976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.00000011, 8.00000011;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3999-6-74-8-2-9-8-1-6-1"
+           d="M 500,326.36219 V 528.36218"
+           style="fill:none;stroke:#000000;stroke-width:1.99999976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.00000074, 8.00000074;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3999-9-94-8-0-8-8-1-7"
+           d="M 1101,727.36218 H 699"
+           style="fill:none;stroke:#000000;stroke-width:1.99999976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:7.99999997, 7.99999997;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3503-85-8-4-6-6-6-4"
+           d="m -50,427.36218 10,10 h -20 l 10,-10"
+           style="fill:#000000;fill-opacity:1;stroke:none" />
+        <path
+           id="path3503-1-7-3-4-0-3-58-4-55"
+           d="m -50,1027.3622 10,-10 h -20 l 10,10"
+           style="fill:#000000;fill-opacity:1;stroke:none" />
+        <path
+           id="path3503-85-8-4-6-6-6-42"
+           d="m 1050,427.36218 10,10 h -20 l 10,-10"
+           style="fill:#000000;fill-opacity:1;stroke:none" />
+        <path
+           id="path3503-1-7-3-4-0-3-58-4-7"
+           d="m 1050,1027.3622 10,-10 h -20 l 10,10"
+           style="fill:#000000;fill-opacity:1;stroke:none" />
+        <g
+           id="g4353"
+           transform="translate(-315,455)">
+          <path
+             style="fill:#000000;fill-opacity:1;stroke:none"
+             d="m 1365,472.36218 10,10 h -20 l 10,-10"
+             id="path3503-85-8-4-6-6-6" />
+          <path
+             style="fill:#000000;fill-opacity:1;stroke:none"
+             d="m 1365,472.3622 10,-10 h -20 l 10,10"
+             id="path3503-1-7-3-4-0-3-58-4" />
+        </g>
+        <g
+           id="g4353-9"
+           transform="translate(-315,255)">
+          <path
+             style="fill:#000000;fill-opacity:1;stroke:none"
+             d="m 1365,472.36218 10,10 h -20 l 10,-10"
+             id="path3503-85-8-4-6-6-6-7" />
+          <path
+             style="fill:#000000;fill-opacity:1;stroke:none"
+             d="m 1365,472.3622 10,-10 h -20 l 10,10"
+             id="path3503-1-7-3-4-0-3-58-4-1" />
+        </g>
+        <g
+           id="g4353-1"
+           transform="translate(-315,54.999997)">
+          <path
+             style="fill:#000000;fill-opacity:1;stroke:none"
+             d="m 1365,472.36218 10,10 h -20 l 10,-10"
+             id="path3503-85-8-4-6-6-6-5" />
+          <path
+             style="fill:#000000;fill-opacity:1;stroke:none"
+             d="m 1365,472.3622 10,-10 h -20 l 10,10"
+             id="path3503-1-7-3-4-0-3-58-4-56" />
+        </g>
+        <path
+           id="path3503-1-7-3-4-0-3-58-4-9-8"
+           d="m 0,377.36218 10,10 v -20 l -10,10"
+           style="fill:#000000;fill-opacity:1;stroke:none" />
+        <g
+           id="g4353-94-2"
+           transform="rotate(90,880,-107.63782)">
+          <path
+             style="fill:#000000;fill-opacity:1;stroke:none"
+             d="m 1365,472.36218 10,10 h -20 l 10,-10"
+             id="path3503-85-8-4-6-6-6-82-54" />
+          <path
+             style="fill:#000000;fill-opacity:1;stroke:none"
+             d="m 1365,472.3622 10,-10 h -20 l 10,10"
+             id="path3503-1-7-3-4-0-3-58-4-9-3" />
+        </g>
+        <g
+           id="g4353-94-4"
+           transform="rotate(90,980,-7.6378215)">
+          <path
+             style="fill:#000000;fill-opacity:1;stroke:none"
+             d="m 1365,472.36218 10,10 h -20 l 10,-10"
+             id="path3503-85-8-4-6-6-6-82-3" />
+          <path
+             style="fill:#000000;fill-opacity:1;stroke:none"
+             d="m 1365,472.3622 10,-10 h -20 l 10,10"
+             id="path3503-1-7-3-4-0-3-58-4-9-4" />
+        </g>
+        <g
+           id="g4353-94-3"
+           transform="rotate(90,1080,92.362189)">
+          <path
+             style="fill:#000000;fill-opacity:1;stroke:none"
+             d="m 1365,472.36218 10,10 h -20 l 10,-10"
+             id="path3503-85-8-4-6-6-6-82-2" />
+          <path
+             style="fill:#000000;fill-opacity:1;stroke:none"
+             d="m 1365,472.3622 10,-10 h -20 l 10,10"
+             id="path3503-1-7-3-4-0-3-58-4-9-5" />
+        </g>
+        <path
+           id="path3503-85-8-4-6-6-6-82-4"
+           d="m 1000,377.36218 -10,10 v -20 l 10,10"
+           style="fill:#000000;fill-opacity:1;stroke:none" />
+        <path
+           id="path3503-85-8-4-6-6-6-82-39"
+           d="m 1000,1077.3622 -10,10 v -20 l 10,10"
+           style="fill:#000000;fill-opacity:1;stroke:none" />
+        <path
+           id="path3503-1-7-3-4-0-3-58-4-9-0"
+           d="m 0,1077.3622 10,10 v -20 l -10,10"
+           style="fill:#000000;fill-opacity:1;stroke:none" />
+        <text
+           id="text4474"
+           y="1205.6434"
+           x="1100.2582"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus';text-align:end;text-anchor:end"
+             y="1205.6434"
+             x="1100.2582"
+             id="tspan4476">peristanom.org</tspan></text>
+        <text
+           id="text4478"
+           y="1206.1122"
+           x="-100"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus'"
+             y="1206.1122"
+             x="-100"
+             id="tspan4480">Aspect Ratio—6:10 (3:5)</tspan></text>
+        <text
+           id="text4482"
+           y="361.73718"
+           x="138.58333"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus'"
+             y="361.73718"
+             x="138.58333"
+             id="tspan4484">3</tspan></text>
+        <text
+           id="text4486"
+           y="362.36218"
+           x="387.95834"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus'"
+             y="362.36218"
+             x="387.95834"
+             id="tspan4488">2</tspan></text>
+        <text
+           id="text4490"
+           y="362.36218"
+           x="587.95831"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus'"
+             y="362.36218"
+             x="587.95831"
+             id="tspan4492">2</tspan></text>
+        <text
+           id="text4494"
+           y="361.73718"
+           x="838.58331"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus'"
+             y="361.73718"
+             x="838.58331"
+             id="tspan4496">3</tspan></text>
+        <text
+           id="text4498"
+           y="492.36218"
+           x="1062.1041"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus'"
+             y="492.36218"
+             x="1062.1041"
+             id="tspan4500">1</tspan></text>
+        <text
+           id="text4502"
+           y="642.36218"
+           x="1062.9584"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus'"
+             y="642.36218"
+             x="1062.9584"
+             id="tspan4504">2</tspan></text>
+        <text
+           id="text4506"
+           y="842.36218"
+           x="1062.9584"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus'"
+             y="842.36218"
+             x="1062.9584"
+             id="tspan4508">2</tspan></text>
+        <text
+           id="text4510"
+           y="992.36218"
+           x="1062.1041"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus'"
+             y="992.36218"
+             x="1062.1041"
+             id="tspan4512">1</tspan></text>
+        <text
+           id="text4514"
+           y="741.65906"
+           x="-87.578125"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus'"
+             y="741.65906"
+             x="-87.578125"
+             id="tspan4516">6</tspan></text>
+        <text
+           id="text4518"
+           y="1121.6591"
+           x="476.74219"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus'"
+             y="1121.6591"
+             x="476.74219"
+             id="tspan4520">10</tspan></text>
+        <circle
+           r="200"
+           cy="727.36218"
+           cx="500.00003"
+           id="path3407"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <rect
+           y="427.36215"
+           x="-5.9087288e-08"
+           height="600"
+           width="1000"
+           id="rect4297"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.99999988;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3999-9-94-8-0-8-8-1-7-9"
+           d="M 701,727.36218 H 299"
+           style="fill:none;stroke:#000000;stroke-width:1.99999976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3999-9-94-8-0-8-8-1-7-0"
+           d="m 500,928.36218 v -402"
+           style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="172.89246"
+           y="976.68359"
+           id="text3489-3"
+           transform="scale(1.0000042,0.9999958)"><tspan
+             x="172.89246"
+             y="976.68359"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus';text-align:center;text-anchor:middle"
+             id="tspan1394-5">PMS Black 6 C</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="468.96646"
+           y="782.66699"
+           id="text3489-3-9-2-3"
+           transform="scale(1.0000042,0.9999958)"><tspan
+             x="468.96646"
+             y="782.66699"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus';text-align:end;text-anchor:end"
+             id="tspan1394-5-1-6-3">PMS</tspan><tspan
+             id="tspan1062"
+             x="468.96646"
+             y="836.00031"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus';text-align:end;text-anchor:end">2381 C</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="528.97375"
+           y="642.66644"
+           id="text3489-3-9-2-3-9"
+           transform="scale(1.0000042,0.9999958)"><tspan
+             x="528.97375"
+             y="642.66644"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus';text-align:start;text-anchor:start"
+             id="tspan1394-5-1-6-3-6">PMS</tspan><tspan
+             id="tspan1066"
+             x="528.97375"
+             y="695.99976"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus';text-align:start;text-anchor:start">2381 C</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="469.46652"
+           y="642.66644"
+           id="text3489-3-9-1"
+           transform="scale(1.0000042,0.9999958)"><tspan
+             x="469.46652"
+             y="642.66644"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus';text-align:end;text-anchor:end"
+             id="tspan1394-5-1-03">PMS</tspan><tspan
+             id="tspan1068"
+             x="469.46652"
+             y="695.99976"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus';text-align:end;text-anchor:end">2142 C</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="528.97375"
+           y="782.66699"
+           id="text3489-3-9-4"
+           transform="scale(1.0000042,0.9999958)"><tspan
+             x="528.97375"
+             y="782.66699"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus';text-align:start;text-anchor:start"
+             id="tspan1394-5-1-1">PMS</tspan><tspan
+             id="tspan1074"
+             x="528.97375"
+             y="836.00031"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus';text-align:start;text-anchor:start">660 C</tspan></text>
+        <text
+           id="text102"
+           y="257.45789"
+           x="499.50485"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:52px;line-height:1.25;font-family:Metamorphous;-inkscape-font-specification:Metamorphous;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+           xml:space="preserve"><tspan
+             style="text-align:center;text-anchor:middle"
+             y="257.45789"
+             x="499.50485"
+             id="tspan100">Earth Flag Faceted Simple Construction</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

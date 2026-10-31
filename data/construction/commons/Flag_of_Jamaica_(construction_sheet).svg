@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1290" height="690" viewBox="-54180 -28980 108360 57960" fill="none" font-family="Calibri,Arial,'Liberation Sans',sans-serif">
+	<title>Flag of Jamaica — construction sheet</title>
+	<!-- DIMENSIONS
+		SVG:
+			S_RAW:     108360.00 × 57960.00
+			S_DISPLAY:  1290.00 × 690.00
+		FLAG:
+			F_RAW:     100800.00 × 50400.00
+			F_DISPLAY:  1200.00 × 600.00
+			F_LABEL:      12.00 × 6.00
+			F_RATIO:       2.00 × 1.00
+	-->
+	<defs>
+		<clipPath id="f">
+			<path d="m-6-3H6v6H-6z"/>
+		</clipPath>
+		<marker id="left-arrow" viewBox="-4 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+			<path fill="blue" d="m2 0 4 4-10-4L6-4z"/>
+		</marker>
+	</defs>
+	<path fill="#f8f8f8" d="m-54180-28980H54180v57960H-54180z"/>
+	<path fill="#fff" d="m-50400-25200H50400v50400H-50400z"/>
+	<g opacity=".5" transform="scale(8400)" clip-path="url(#f)">
+		<path fill="#007749" d="m-6-3H6v6H-6z"/>
+		<path fill="#000" stroke="#ffb81c" d="m-8-4v8L8-4v8z"/>
+	</g>
+	<g stroke="#000" stroke-width="140" stroke-linejoin="round" stroke-linecap="round">
+		<g opacity=".1" stroke-width="100">
+			<path stroke-dasharray="735,315,105,315" stroke-dashoffset="368" d="m0 0h-50400M0 0h50400"/>
+			<path stroke-dasharray="735,315,105,315" stroke-dashoffset="368" d="m0 0v-25200M0 0v25200"/>
+		</g>
+		<g stroke="#c90">
+			<path stroke-dasharray="1440,630,210,630" stroke-dashoffset="720" d="m0 0-23791-11896M0 0l50400 25200M0 0-50400 25200M0 0l23791-11896"/>
+			<path stroke-dasharray="1440,630,210,630" stroke-dashoffset="0" d="m-26609-13304-23791-11896m77009 11896 23791-11896"/>
+		</g>
+		<path stroke="#444" stroke-width="250" d="m-50400-25200H50400v50400H-50400z"/>
+		<path d="m-41009-25200L0-4696l41009-20504m-82018 50400L0 4696l41009 20504m-91409-45704L-9391 0-50400 20504M50400-20504 9391 0l41009 20504"/>
+		<path stroke="#222" stroke-width="75" stroke-dasharray="210,210" d="m-50400-25200V0m0 27720V0M50400-25200V0m0 27720V0M-50400-25200H0m52920 0H0m-50400 50400H0m52920 0H0M0-4696 9391 0M-9391 0 0 4696m0-9392L-9391 0M9391 0 0 4696"/>
+	</g>
+	<g fill="#008" opacity=".8">
+		<circle r="200" cx="0" cy="0"/>
+		<circle r="200" cx="-50400" cy="-25200"/>
+		<circle r="200" cx="50400" cy="-25200"/>
+		<circle r="200" cx="-50400" cy="25200"/>
+		<circle r="200" cx="50400" cy="25200"/>
+		<circle r="200" cx="0" cy="-4696"/>
+		<circle r="200" cx="0" cy="4696"/>
+		<circle r="200" cx="9391" cy="0"/>
+		<circle r="200" cx="-9391" cy="0"/>
+	</g>
+	<g stroke="#00f" stroke-width="75" marker-start="url(#left-arrow)">
+		<path d="m-50100 26775h48300"/>
+		<path d="m50100 26775H1800"/>
+		<path d="m51975 24900V1200"/>
+		<path d="m51975-24900v23700"/>
+		<path d="m-26944-9112 1207-2415"/>
+		<path d="m-23456-16088-1207 2415"/>
+		<path d="m23456-16088 1207 2415"/>
+		<path d="m26944-9112-1207-2415"/>
+	</g>
+	<g fill="#000" text-anchor="middle" font-size="50" transform="scale(50)">
+		<g>
+			<text y="550">12</text>
+		</g>
+		<g transform="rotate(63.4)">
+			<text y="-548">1</text>
+		</g>
+		<g transform="rotate(270)">
+			<text y="1054" text-decoration="underline">6</text>
+		</g>
+		<g transform="rotate(296.6)">
+			<text y="-548">1</text>
+		</g>
+		<g font-size="27">
+			<text x="-1045" y="554">[<tspan font-weight="bold" fill="#080">JM</tspan>]</text>
+			<text x="1045" y="554">[<tspan font-weight="bold" fill="#080">1:2</tspan>]</text>
+		</g>
+	</g>
+</svg>

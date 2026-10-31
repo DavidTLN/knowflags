@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 1000 700">
+
+<!-- green field -->
+<rect fill="#8FD400" width="750" height="500"/>
+
+<!-- blue earth disc -->
+<circle fill="#0063FF" cx="375" cy="250" r="150"/>
+
+<!-- arrow defs -->
+<defs>
+<marker orient="auto" id="ArrowEnd"   style="overflow:visible"><path stroke="black" d="M 0,0 5,-5 -12.5,0 5,5 0,0 z" transform="matrix(-0.8,0,0,-0.8,-10,0)"/></marker>
+<marker orient="auto" id="ArrowStart" style="overflow:visible"><path stroke="black" d="M 0,0 5,-5 -12.5,0 5,5 0,0 z" transform="matrix(0.8,0,0,0.8,10,0)"   /></marker>
+</defs>
+
+<style>.text { font: 50px sans-serif; }</style>
+
+<!-- horizontal lines on left / vertical arrow on left for 2 units width -->
+<line x1="0" y1="250" x2="375" y2="250" stroke="black"/>
+<line x1="-25" y1="0" x2="-25" y2="500" stroke="black" style="marker-start:url(#ArrowStart);marker-end:url(#ArrowEnd)"/>
+<text x="-65" y="265" class="text">2</text>
+
+<!-- vertical lines / horizontal arrow on top for 3 units length -->
+<line x1="250" y1="0" x2="250" y2="500" stroke="black"/>
+<line x1="500" y1="0" x2="500" y2="500" stroke="black"/>
+<line x1="0" y1="-25" x2="750" y2="-25" stroke="black" style="marker-start:url(#ArrowStart);marker-end:url(#ArrowEnd)"/>
+<text x="365" y="-40" class="text">3</text>
+
+<!-- horizontal lines on right / vertical arrow on right for earth disc size 3/5 -->
+<line x1="375" y1="100" x2="775" y2="100" stroke="black"/>
+<line x1="375" y1="200" x2="775" y2="200" stroke="black"/>
+<line x1="375" y1="300" x2="775" y2="300" stroke="black"/>
+<line x1="375" y1="400" x2="775" y2="400" stroke="black"/>
+<line x1="775" y1="100" x2="775" y2="400" stroke="black" style="marker-start:url(#ArrowStart);marker-end:url(#ArrowEnd)"/>
+<text x="790" y="265" class="text">3/5</text>
+
+</svg>

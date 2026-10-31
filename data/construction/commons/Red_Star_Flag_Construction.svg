@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg2"
+   height="1200"
+   width="1400">
+  <title
+     id="title2885">3D Star</title>
+  <defs
+     id="defs4" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>3D Star</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-80,147.63782)"
+     id="layer1">
+    <g
+       id="g271">
+      <g
+         id="g984">
+        <rect
+           y="-147.63782"
+           x="80"
+           height="1200"
+           width="1400"
+           id="rect4600"
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <g
+           style="opacity:0.3"
+           id="g1089">
+          <rect
+             style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.036"
+             id="rect4073-2"
+             width="1080"
+             height="720"
+             x="240"
+             y="112.36218" />
+          <path
+             style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.51357347"
+             d="M 780,202.36659 719.36623,388.92214 H 523.21328 L 780,472.36178 1036.7867,388.92214 H 840.63377 Z m 0,269.99519 158.71025,218.42918 -60.61772,-186.55553 158.69417,-115.29724 z m 0,0 L 621.3058,690.80704 780,575.5098 938.6942,690.80704 Z m 0,0 -256.78672,-83.42359 158.69419,115.29724 -60.61772,186.55553 z"
+             id="path3779-7-1" />
+        </g>
+        <rect
+           y="112.36221"
+           x="240"
+           height="720"
+           width="1080"
+           id="rect4073-7"
+           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           id="path3999-9-94-8-0"
+           d="M 149,832.36224 H 1411"
+           style="fill:none;stroke:#000000;stroke-width:1.99999988;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.00000002, 8.00000002;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3999-9-94-8-0-7"
+           d="M 1410.9999,202.36218 H 779"
+           style="fill:none;stroke:#000000;stroke-width:1.99999988;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:7.99999988, 7.99999988;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3999-6-74-8-2-9"
+           d="M 195,111.36224 V 833.36222"
+           style="fill:none;stroke:#000000;stroke-width:1.99999988;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.00000091, 8.00000091;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3999-6-74-8-2-9-6"
+           d="m 509.99999,923.36218 v -452"
+           style="fill:none;stroke:#000000;stroke-width:1.99999964;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.00000016, 8.00000016;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3999-6-74-8-2-9-65"
+           d="M 1050,923.36218 V 471.3622"
+           style="fill:none;stroke:#000000;stroke-width:1.99999976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.00000018, 8.00000018;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3999-9-94-8-0-7-4"
+           d="M 1411.0001,742.36218 H 779"
+           style="fill:none;stroke:#000000;stroke-width:1.99999988;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:7.99999988, 7.99999988;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3999-9-94-8-0-9"
+           d="M 149,112.36219 H 1411"
+           style="fill:none;stroke:#000000;stroke-width:1.99999988;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.00000013, 8.00000013;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3999-9-94-8-0-8"
+           d="M 239,877.36222 H 1321"
+           style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.00000011, 8.00000011;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3999-6-74-8-2-9-8"
+           d="m 239.99999,923.36218 v -902"
+           style="fill:none;stroke:#000000;stroke-width:1.99999964;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.00000041, 8.00000041;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3999-6-74-8-2-9-0"
+           d="m 1320,923.36218 v -902"
+           style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.00000071, 8.00000071;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3503-1-7-3-4-0-3"
+           d="m 195,832.36222 10,-10 h -20 l 10,10"
+           style="fill:#000000;fill-opacity:1;stroke:none" />
+        <path
+           id="path3999-9-94-8-0-8-8"
+           d="M 239,67.3622 H 1321"
+           style="fill:none;stroke:#000000;stroke-width:1.99999976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.0000001, 8.0000001;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3503-85-8-4-6-2"
+           d="m 195,112.3622 10,10 h -20 l 10,-10"
+           style="fill:#000000;fill-opacity:1;stroke:none" />
+        <path
+           id="path3503-45-2-4"
+           d="m 240,67.3621 10,-10 V 77.3622 L 240,67.3621"
+           style="fill:#000000;fill-opacity:1;stroke:none" />
+        <path
+           id="path3503-1-2-9-4"
+           d="m 1320,67.36218 -10,-10 V 77.3622 l 10,-10.00002"
+           style="fill:#000000;fill-opacity:1;stroke:none" />
+        <path
+           id="path3503-1-2-9-26"
+           d="m 1320,877.36222 -10,-10 v 20 l 10,-10"
+           style="fill:#000000;fill-opacity:1;stroke:none" />
+        <path
+           id="path3503-45-2-1"
+           d="m 240,877.36212 10,-10 v 20.0001 l -10,-10.0001"
+           style="fill:#000000;fill-opacity:1;stroke:none" />
+        <text
+           id="text4602"
+           y="-33.688599"
+           x="779.68536"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.875;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:56px;line-height:1.25;font-family:Metamorphous;-inkscape-font-specification:Metamorphous;text-align:center;text-anchor:middle;stroke:#000000;stroke-width:0.875;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             y="-33.688599"
+             x="779.68536"
+             id="tspan4604">Red Star Flag Construction</tspan></text>
+        <text
+           id="text3339"
+           y="990.64343"
+           x="1420.2582"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus';text-align:end;text-anchor:end"
+             y="990.64343"
+             x="1420.2582"
+             id="tspan3341">peristanom.org</tspan></text>
+        <text
+           id="text3478"
+           y="991.11218"
+           x="140"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman,';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus';text-align:start;text-anchor:start"
+             y="991.11218"
+             x="140"
+             id="tspan3482">Aspect Ratio—8:12 (2:3)</tspan><tspan
+             id="tspan254"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:1.25;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond';text-align:start;text-anchor:start"
+             y="1012.2636"
+             x="140" /></text>
+        <text
+           id="text3232"
+           y="206.59418"
+           x="439.1875"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus';text-align:center;text-anchor:middle"
+             y="206.59418"
+             x="439.1875"
+             id="tspan3234"> PMS Black 6 C</tspan></text>
+        <g
+           id="g173">
+          <path
+             style="fill:#000000;fill-opacity:1;stroke:none"
+             d="m 510,877.36216 -10,-10 v 20.00002 l 10,-10.00002"
+             id="path3503-1-2-9-6-1" />
+          <path
+             style="fill:#000000;fill-opacity:1;stroke:none"
+             d="m 510,877.36208 10,-10 v 20.0001 l -10,-10.0001"
+             id="path3503-45-2-0-6" />
+        </g>
+        <g
+           id="g177">
+          <path
+             style="fill:#000000;fill-opacity:1;stroke:none"
+             d="m 1050,877.36208 10,-10 v 20.0001 l -10,-10.0001"
+             id="path3503-45-2-0-9" />
+          <path
+             style="fill:#000000;fill-opacity:1;stroke:none"
+             d="m 1050,877.36216 -10,-10 v 20.00002 l 10,-10.00002"
+             id="path3503-1-2-9-6-1-0" />
+        </g>
+        <text
+           id="text4273"
+           y="486.65906"
+           x="157.79688"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus'"
+             id="tspan4275"
+             y="486.65906"
+             x="157.79688">8</tspan></text>
+        <text
+           id="text4527-1"
+           y="49.862179"
+           x="754.24219"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus';text-align:start;text-anchor:start"
+             y="49.862179"
+             x="754.24219"
+             id="tspan4529-2">12</tspan></text>
+        <text
+           id="text4515-39"
+           y="919.23718"
+           x="368.58334"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus';text-align:start;text-anchor:start"
+             y="919.23718"
+             x="368.58334"
+             id="tspan4517-3">3</tspan></text>
+        <text
+           id="text4515-39-4"
+           y="919.23718"
+           x="772.70831"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus';text-align:start;text-anchor:start"
+             y="919.23718"
+             x="772.70831"
+             id="tspan4517-3-1">6</tspan></text>
+        <text
+           id="text4515-39-8"
+           y="919.23718"
+           x="1178.5834"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus';text-align:start;text-anchor:start"
+             y="919.23718"
+             x="1178.5834"
+             id="tspan4517-3-9">3</tspan></text>
+        <text
+           id="text3510-7"
+           y="300.53818"
+           x="1043.848"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus'"
+             y="300.53818"
+             x="1043.848"
+             id="tspan3512-4">PMS 2347 C</tspan></text>
+        <path
+           id="path3999-6-74-8-2-9-00"
+           d="M 1365,111.36224 V 833.36222"
+           style="fill:none;stroke:#000000;stroke-width:1.99999988;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.00000091, 8.00000091;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3503-1-7-3-4-0-3-61"
+           d="m 1365,832.36222 10,-10 h -20 l 10,10"
+           style="fill:#000000;fill-opacity:1;stroke:none" />
+        <path
+           id="path3503-85-8-4-6-2-9"
+           d="m 1365,112.3622 10,10 h -20 l 10,-10"
+           style="fill:#000000;fill-opacity:1;stroke:none" />
+        <g
+           id="g185">
+          <path
+             style="fill:#000000;fill-opacity:1;stroke:none"
+             d="m 1365,202.3622 10,10 h -20 l 10,-10"
+             id="path3503-85-8-4-6-6-8" />
+          <path
+             style="fill:#000000;fill-opacity:1;stroke:none"
+             d="m 1365,202.3622 10,-10 h -20 l 10,10"
+             id="path3503-1-7-3-4-0-3-58-3" />
+        </g>
+        <g
+           id="g181">
+          <path
+             style="fill:#000000;fill-opacity:1;stroke:none"
+             d="m 1365,742.3622 10,10 h -20 l 10,-10"
+             id="path3503-85-8-4-6-4-6" />
+          <path
+             style="fill:#000000;fill-opacity:1;stroke:none"
+             d="m 1365,742.3622 10,-10 h -20 l 10,10"
+             id="path3503-1-7-3-4-0-3-9-4" />
+        </g>
+        <text
+           id="text4507-2-1"
+           y="169.86218"
+           x="1377.1041"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             id="tspan4314-2"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus'"
+             y="169.86218"
+             x="1377.1041">1</tspan><tspan
+             id="tspan256-5-3"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond'"
+             y="188.97937"
+             x="1377.1041" /></text>
+        <text
+           id="text4507-2-8-4"
+           y="799.86218"
+           x="1377.1041"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             id="tspan4314-9-2"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus'"
+             y="799.86218"
+             x="1377.1041">1</tspan><tspan
+             id="tspan256-5-4-5"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond'"
+             y="818.97937"
+             x="1377.1041" /></text>
+        <text
+           id="text4507-4-6-3"
+           y="486.73718"
+           x="1377.7084"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             id="tspan4310-5-6"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:'Gentium Plus';-inkscape-font-specification:'Gentium Plus'"
+             y="486.73718"
+             x="1377.7084">6</tspan><tspan
+             id="tspan256-4-1-0"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond'"
+             y="505.85437"
+             x="1377.7084" /></text>
+        <circle
+           transform="scale(-1,1)"
+           cy="472.36218"
+           cx="-780"
+           id="path4301"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8, 8;stroke-dashoffset:0;stroke-opacity:1"
+           r="270" />
+        <path
+           id="path3999-9-94-8-0-8-8-5"
+           d="M 522.99999,388.92017 H 1037"
+           style="fill:none;stroke:#000000;stroke-width:1.99999988;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8, 8;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3999-9-94-8-0-8-8-5-9"
+           d="M 621.22453,690.99869 780.05927,202.15563"
+           style="fill:none;stroke:#000000;stroke-width:1.99999988;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8, 8;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3999-9-94-8-0-8-8-5-1"
+           d="M 938.87136,690.92899 523.03662,388.80737"
+           style="fill:none;stroke:#000000;stroke-width:1.99999988;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8, 8;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3999-9-94-8-0-8-8-5-7"
+           d="M 1036.9634,388.80739 621.12864,690.92902"
+           style="fill:none;stroke:#000000;stroke-width:1.99999988;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8, 8;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path3999-9-94-8-0-8-8-5-8"
+           d="M 779.94073,202.15564 938.77547,690.9987"
+           style="fill:none;stroke:#000000;stroke-width:1.99999988;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8, 8;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path1240"
+           d="m 780,202.36659 60.63377,186.55555"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path1242"
+           d="M 1036.7867,388.93819 878.09747,504.23595"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path1244"
+           d="M 938.70497,690.7952 779.99999,575.50793"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path1246"
+           d="M 621.3058,690.80704 681.90253,504.23597"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path1248"
+           d="m 523.21534,388.92431 196.15739,-0.009"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path1240-1"
+           d="M 780,202.36659 719.36623,388.92214"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path1242-1"
+           d="M 523.2133,388.93819 681.90253,504.23595"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path1244-9"
+           d="M 621.29503,690.7952 780.00001,575.50793"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path1246-4"
+           d="M 938.6942,690.80704 878.09747,504.23597"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path1248-8"
+           d="m 1036.7847,388.92431 -196.15743,-0.009"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path1194"
+           d="M 1036.7867,285.98343 779.99999,472.55317"
+           style="opacity:1;fill:#00a6e2;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      </g>
+    </g>
+  </g>
+</svg>

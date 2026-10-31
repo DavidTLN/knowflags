@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="750" viewBox="-45360 -31500 90720 63000" fill="none" font-family="Calibri,Arial,'Liberation Sans',sans-serif">
+	<title>Flag of Burkina Faso — construction sheet</title>
+	<!-- DIMENSIONS
+		SVG:
+			S_RAW:     90720.00 × 63000.00
+			S_DISPLAY:  1080.00 × 750.00
+		FLAG:
+			F_RAW:     83160.00 × 55440.00
+			F_DISPLAY:   990.00 × 660.00
+			F_LABEL:      18.00 × 12.00
+			F_RATIO:       3.00 × 2.00
+	-->
+	<defs>
+		<marker id="left-arrow" viewBox="-4 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+			<path fill="blue" d="m2 0 4 4-10-4L6-4z"/>
+		</marker>
+	</defs>
+	<path fill="#f8f8f8" d="m-45360-31500h90720v63000h-90720z"/>
+	<path fill="#fff" d="m-41580-27720h83160v55440h-83160z"/>
+	<g opacity=".5">
+		<g transform="scale(4620)">
+			<path fill="#009e49" d="m-9-6H9V6H-9z"/>
+			<path fill="#ef2b2d" d="m-9-6H9v6H-9z"/>
+		</g>
+		<path fill="#fcd116" d="m0-9240L5431 7475-8788-2855H8788L-5431 7475z"/>
+	</g>
+	<g stroke="#000" stroke-width="140" stroke-linejoin="round" stroke-linecap="round">
+		<g opacity=".4" stroke-width="100">
+			<path stroke-dashoffset="362" stroke-dasharray="725,315,105,315" d="m0 0v-27720M0 0v9555m0 2520v15645"/>
+			<path stroke-dashoffset="376" stroke-dasharray="751,315,105,315" d="m0 0h-4858M0 0h4858"/>
+			<path stroke-dasharray="735,315,105,315" stroke-dashoffset="840" d="m0-30240v2520M-44100 0h2520"/>
+		</g>
+		<path stroke="#66f" opacity=".8" stroke-dasharray="420,473" stroke-dashoffset="210" d="m0-9240A1 1 0 0 0 0 9240M0-9240A1 1 0 0 1 0 9240"/>
+		<path stroke="#444" stroke-width="250" d="m-41580-27720h83160v55440h-83160z"/>
+		<path d="m-41580 0h36722m9716 0h36722M0-9240l2075 6385h6713L3357 1091l2074 6384L0 3529-5431 7475l2074-6384-5431-3946h6713z"/>
+		<path stroke="#222" stroke-width="75" stroke-dasharray="210,210" d="m-41580-30240V0m0 30240V0m32340 11760V0M9240 11760V0m32340-30240V0m0 30240V0m-85680-27720H0m44100 0H0m-44100 55440H0m44100 0H0"/>
+		<path stroke-width="135" d="m-375 0h750M0-375v750"/>
+	</g>
+	<g fill="#008" opacity=".8">
+		<circle r="200" cx="9240" cy="0"/>
+		<circle r="200" cx="-9240" cy="0"/>
+	</g>
+	<g stroke="#00f" stroke-width="75" marker-start="url(#left-arrow)">
+		<path d="m-41280-29295h19390"/>
+		<path d="m-300-29295h-19390"/>
+		<path d="m300-29295h19390"/>
+		<path d="m41280-29295H21890"/>
+		<path d="m-41280 29295h39480"/>
+		<path d="m41280 29295H1800"/>
+		<path d="m-8940 10815h7840"/>
+		<path d="m8940 10815H1100"/>
+		<path d="m-43155-300v-12460"/>
+		<path d="m-43155-27420v12460"/>
+		<path d="m-43155 27420V14960"/>
+		<path d="m-43155 300v12460"/>
+		<path d="m43155 27420V1800"/>
+		<path d="m43155-27420v25620"/>
+	</g>
+	<g fill="#000" text-anchor="middle" font-size="50" transform="scale(50)">
+		<g>
+			<text x="-416" y="-571">9</text>
+			<text x="416" y="-571">9</text>
+			<text y="231">4</text>
+			<text y="601">18</text>
+		</g>
+		<g transform="rotate(270)">
+			<text x="-277" y="-848" text-decoration="underline">6</text>
+			<text x="277" y="-848" text-decoration="underline">6</text>
+			<text y="878">12</text>
+		</g>
+		<g font-size="27">
+			<text x="-869" y="605">[<tspan font-weight="bold" fill="#080">BF</tspan>]</text>
+			<text x="869" y="605">[<tspan font-weight="bold" fill="#080">2:3</tspan>]</text>
+		</g>
+	</g>
+</svg>

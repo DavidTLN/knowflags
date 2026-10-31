@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1067" height="792" viewBox="-33264 -33264 89628 66528" fill="none" font-family="Calibri,Arial,'Liberation Sans',sans-serif">
+	<title>Flag of Iceland — construction sheet</title>
+	<!-- DIMENSIONS
+		SVG:
+			S_RAW:     89628.00 × 66528.00
+			S_DISPLAY:  1067.00 × 792.00
+		FLAG:
+			F_RAW:     81900.00 × 58968.00
+			F_DISPLAY:   975.00 × 702.00
+			F_LABEL:      25.00 × 18.00
+			F_RATIO:      25.00 × 18.00
+	-->
+	<defs>
+		<marker id="left-arrow" viewBox="-4 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+			<path fill="blue" d="m2 0 4 4-10-4L6-4z"/>
+		</marker>
+	</defs>
+	<path fill="#f8f8f8" d="m-33264-33264h89628v66528h-89628z"/>
+	<path fill="#fff" d="m-29484-29484h81900v58968h-81900z"/>
+	<g opacity=".5" transform="scale(3276)">
+		<path fill="#02529c" d="m-9-9h25V9H-9z"/>
+		<path fill="#fff" d="m-2-9h4V9h-4zm-7 7h25v4H-9z"/>
+		<path fill="#dc1e35" d="m-1-9h2V9h-2zm-8 8h25v2H-9z"/>
+	</g>
+	<g stroke="#000" stroke-width="140" stroke-linejoin="round" stroke-linecap="round">
+		<g opacity=".2" stroke-width="100">
+			<path stroke-dasharray="760,340,105,340" stroke-dashoffset="392" d="m11466 0v-29484m0 29484v29484"/>
+		</g>
+		<g stroke="#e55">
+			<path stroke-dasharray="1470,630,210,630" stroke-dashoffset="735" d="m0 0v-29484M0 0v29484M0 0h-29484M0 0h52416"/>
+		</g>
+		<path stroke="#444" stroke-width="250" d="m-29484-29484h81900v58968h-81900z"/>
+		<path d="m-29484-6552h22932v-22932M-29484-3276h26208v-26208M52416-6552H6552v-22932M52416-3276H3276v-26208M-29484 6552h22932v22932M-29484 3276h26208v26208M52416 6552H6552v22932M52416 3276H3276v26208"/>
+		<path stroke="#222" stroke-width="75" stroke-dasharray="210,210" d="m-29484-32004V0m0 32004V0m22932-32004v2520m3276-2520v2520m6552-2520v2520m3276-2520v2520m45864-2520V0m0 32004V0m-84420-29484h43470m43470 0H11466M-32004-6552h2520m-2520 3276h2520m-2520 6552h2520m-2520 3276h2520M-6552-6552H6552V6552H-6552zm3276 3276h6552v6552h-6552zm-28728 32760h43470m43470 0H11466"/>
+	</g>
+	<g fill="#008" opacity=".8">
+		<circle r="200" cx="-6552" cy="-6552"/>
+		<circle r="200" cx="-3276" cy="-3276"/>
+		<circle r="200" cx="6552" cy="-6552"/>
+		<circle r="200" cx="3276" cy="-3276"/>
+		<circle r="200" cx="6552" cy="6552"/>
+		<circle r="200" cx="3276" cy="3276"/>
+		<circle r="200" cx="-6552" cy="6552"/>
+		<circle r="200" cx="-3276" cy="3276"/>
+	</g>
+	<g stroke="#00f" stroke-width="75" marker-start="url(#left-arrow)">
+		<path d="m-29184-31059h10066"/>
+		<path d="m-6852-31059h-10066"/>
+		<path d="m-6252-31059h838"/>
+		<path d="m-3576-31059h-838"/>
+		<path d="m-2976-31059h2076"/>
+		<path d="m2976-31059H900"/>
+		<path d="m3576-31059h838"/>
+		<path d="m6252-31059h-838"/>
+		<path d="m6852-31059h20832"/>
+		<path d="m52116-31059H31284"/>
+		<path d="m-29184 31059H9666"/>
+		<path d="m52116 31059H13266"/>
+		<path d="m-31059 29184V19118"/>
+		<path d="m-31059 6852v10066"/>
+		<path d="m-31059 6252v-838"/>
+		<path d="m-31059 3576v838"/>
+		<path d="m-31059 2976V900"/>
+		<path d="m-31059-2976v2076"/>
+		<path d="m-31059-3576v-838"/>
+		<path d="m-31059-6252v838"/>
+		<path d="m-31059-6852v-10266"/>
+		<path d="m-31059-29184v10266"/>
+		<path d="m53991 29184V1800"/>
+		<path d="m53991-29184v27384"/>
+	</g>
+	<g fill="#000" text-anchor="middle" font-size="50" transform="scale(50)">
+		<g>
+			<text x="-360" y="-606">7</text>
+			<text x="-98" y="-606">1</text>
+			<text y="-606">2</text>
+			<text x="98" y="-606">1</text>
+			<text x="590" y="-606">14</text>
+			<text x="229" y="636">25</text>
+		</g>
+		<g transform="rotate(270)">
+			<text x="-360" y="-606">7</text>
+			<text x="-98" y="-606">1</text>
+			<text y="-606">2</text>
+			<text x="98" y="-606">1</text>
+			<text x="360" y="-606">7</text>
+			<text y="1095">18</text>
+		</g>
+		<g font-size="27">
+			<text x="-627" y="640">[<tspan font-weight="bold" fill="#080">IS</tspan>]</text>
+			<text x="1088" y="640">[<tspan font-weight="bold" fill="#080">18:25</tspan>]</text>
+		</g>
+	</g>
+</svg>

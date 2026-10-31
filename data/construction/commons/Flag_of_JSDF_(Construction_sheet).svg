@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+ width="800" height="800" viewBox="-400 -400 800 800">
+<title>Flag of JSDF (Construction sheet)</title>
+<defs>
+	<marker id="ts" orient="auto" refX="9" refY="0" markerUnits="userSpaceOnUse" style="overflow:visible">
+		<path id="tf" d="M	19	-5	L	0	0	19	5" />
+	</marker>
+	<marker id="te" orient="auto" refX="-9" refY="0" markerUnits="userSpaceOnUse" style="overflow:visible">
+		<use xlink:href="#tf" transform="scale(-1,1)" />
+	</marker>
+	<marker id="tsc" orient="auto" refX="-1" refY="0" markerUnits="userSpaceOnUse" style="overflow:visible">
+		<use xlink:href="#tf" />
+	</marker>
+	<marker id="tec" orient="auto" refX="1" refY="0" markerUnits="userSpaceOnUse" style="overflow:visible">
+		<use xlink:href="#tf" transform="scale(-1,1)" />
+	</marker>
+	<pattern id="h" width="20" height="20" x="10" patternUnits="userSpaceOnUse">
+		<rect fill="#FFF" stroke="#eee" stroke-width="2" width="40" height="40"/>
+		<path stroke="#000" stroke-width="2" fill="none" d="M20,-10 -10,20 M30,0 0,30" />
+	</pattern>
+</defs>
+<rect x="-400" y="-400" width="800" height="800" fill="#FFF" />
+<g stroke="#000" stroke-width="2" fill="none">
+	<!-- 外形 -->
+	<g stroke-width="4">
+		<rect x="-272.25" y="-228.4448746" width="544.5" height="456.8897492" fill="#DDD" />
+		<use xlink:href="#p" transform="scale(-1,1)" fill="#FFF" />
+		<g fill="#AAA">
+			<g id="p">
+				<path id="r" stroke-linejoin="round" d="
+				M	0	0
+					272.25	0
+					245.7754799	84.62728439
+					0	0
+					272.25	228.4448746
+					90.32158517	202.8656018
+					0	0
+					0	228.4448746
+					-90.32158517	202.8656018
+					0	0
+					-272.25	228.4448746
+					-245.7754799	84.62728439
+				Z
+				" />
+				<use xlink:href="#r" transform="rotate(180)" />
+			</g>
+			<circle r="103.75" />
+		</g>
+	</g>
+	<!-- 破線 -->
+	<path stroke-dasharray="90,3,3,3" d="
+	M	0	-382.25	V	288.4448746
+	M	-382.25	0	H	332.25
+	" />
+	<!-- 寸法補助線 -->
+	<path d="
+	M	-272.25	228.4448746	v	110
+	M	272.25	228.4448746	v	110
+	M	272.25	-228.4448746	h	110
+	M	272.25	228.4448746	h	110
+	
+	
+	M	-272.25	93.74319272
+		-245.7754799	84.62728439
+	M	101.7102112	-228.4448746
+		90.32158517	-202.8656018
+	" />
+	
+	
+	<path d="M	103.75	0	-103.75	0" transform="rotate(-45)" />
+	<path d="M	0	0	-382.25	0" transform="rotate(19)" />
+	<path d="M	0	0	-382.25	0" transform="rotate(40)" />
+	<path d="M	0	0	-382.25	0" transform="rotate(66)" />
+	<g marker-end="url(#te)">
+		<g marker-start="url(#ts)">
+			<!-- 寸法線 直 両 -->
+			<path d="M	262.25	278.4448746	H	10" />
+			<path d="M	-262.25	328.4448746	H	262.25" />
+			<path d="M	322.25	218.4448746	V	10" />
+			<path d="M	372.25	-218.4448746	V	218.4448746" />
+		</g>
+		<!-- 寸法線 直 片 -->
+		<path d="M	138.4415777	-310.9448746	106.2228063	-238.5803292" />
+		<path d="M	-354.75	122.1502208	-282.7051858	97.34320188" />
+		<g transform="rotate(-45)" >
+			<path d="M	220	0	114.75	0" />
+			<path d="M	-160	0	-114.75	0" />
+		</g>
+	</g>
+	
+	<!-- 寸法線 曲 両 -->
+	<g marker-start="url(#tsc)" marker-end="url(#tec)">
+		<path d="M	-372.25	0	A	372.25	372.25	0	0	1	-351.9692898	-121.1927455" stroke-dasharray="0 10 103.4427747 10" />
+		<path d="M	-351.9692898	-121.1927455	A	372.25	372.25	0	0	1	-285.160044	-239.2776877" stroke-dasharray="0 10 116.436751 10" />
+		<path d="M	-285.160044	-239.2776877	A	372.25	372.25	0	0	1	-151.4077154	-340.0672966" stroke-dasharray="0 10 148.9216917 10" />
+		<path d="M	-151.4077154	-340.0672966	A	372.25	372.25	0	0	1	0	-372.25" stroke-dasharray="0 10 135.9277154 10" />
+	</g>
+
+</g>
+<g font-size="24" text-anchor="middle" font-family="Bitstream Vera Sans, sans-serif">
+	<!-- 寸法数値 -->
+	<text x="136.125" y="272.4448746">544.5</text>
+	<text x="0" y="322.4448746">1089</text>
+	<text x="-340" y="-6" transform="rotate(-19)">56</text>
+	<text x="300" y="-6" transform="rotate(-66)">56</text>
+	<text x="170" y="-6" transform="rotate(-45)">D415</text>
+	<g transform="rotate(-90)">
+		<text x="-114.2224373" y="316.25">(456.9)</text>
+		<text x="0" y="366.25">(913.8)</text>
+	</g>
+	<text x="0" y="-378.25" transform="rotate(-80.5)">19°</text>
+	<text x="0" y="-378.25" transform="rotate(-60.5)">21°</text>
+	<text x="0" y="-378.25" transform="rotate(-37)">26°</text>
+	<text x="0" y="-378.25" transform="rotate(-12)">24°</text>
+</g>
+
+</svg>

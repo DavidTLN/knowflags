@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="490" height="340" viewBox="0 0 490 340">
+  <!-- 1 on the image is 24 SVG units -->
+  <style type="text/css">
+    text {
+      font-family: Arial;
+      font-size: 16px;
+      text-anchor: middle;
+    }
+    path {
+      fill: none;
+    }
+    path, line {
+      stroke: #000000;
+    }
+    path.white {
+      fill: #FFFFFF;
+      stroke: none;
+    }
+    path.red {
+      fill: #7F7F7F;
+      stroke: none;
+    }
+    path.dashed, line.dashed {
+      stroke-dasharray: 2 1;
+    }
+    path#arrow {
+      stroke: none;
+      fill: #000;
+    }
+  </style>
+  <defs>
+    <path class="arrow" id="arrow" d="M0,0 l3,6,-3,-2,-3,2 z" />
+  </defs>
+
+<!-- White and read -->
+<path class="white"  d="M 80, 60 h 384 v 120 h -384 z"/>
+<path class="red"    d="M 80,180 h 384 v 120 h -384 z"/>
+<path                d="M 80, 60 h 384 v 240 h -384 z"/>
+
+<!-- Size at the top -->
+<path class="dashed" d="M 80, 30 v 30"/>
+<path class="dashed" d="M464, 30 v 30"/>
+<path                d="M 80, 30 h384"/>
+<use transform="translate( 80, 30) rotate(-90)" xlink:href="#arrow" />
+<use transform="translate(464, 30) rotate( 90)" xlink:href="#arrow" />
+<text x="272" y="26">16</text>
+
+<!-- Sizes on the left -->
+<path class="dashed" d="M 20, 60 h 60"/>
+<path class="dashed" d="M 50,180 h 30"/>
+<path class="dashed" d="M 20,300 h 60"/>
+<path                d="M 20, 60 v240"/>
+<path                d="M 50, 60 v240"/>
+<use transform="translate( 20,  60)"             xlink:href="#arrow" />
+<use transform="translate( 20, 300) rotate(180)" xlink:href="#arrow" />
+<use transform="translate( 50,  60)"             xlink:href="#arrow" />
+<use transform="translate( 50, 180) rotate(180)" xlink:href="#arrow" />
+<use transform="translate( 50, 180)"             xlink:href="#arrow" />
+<use transform="translate( 50, 300) rotate(180)" xlink:href="#arrow" />
+<text transform="translate( 16,180) rotate(-90)">10</text>
+<text transform="translate( 46 120) rotate(-90)">5</text>
+<text transform="translate( 46 240) rotate(-90)">5</text>
+
+</svg>

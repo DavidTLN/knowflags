@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1290" height="690" viewBox="-3780 -3780 108360 57960" fill="none" font-family="Calibri,Arial,'Liberation Sans',sans-serif">
+	<title>Flag of Tonga — construction sheet</title>
+	<!-- DIMENSIONS
+		SVG:
+			S_RAW:     108360.00 × 57960.00
+			S_DISPLAY:  1290.00 × 690.00
+		FLAG:
+			F_RAW:     100800.00 × 50400.00
+			F_DISPLAY:  1200.00 × 600.00
+			F_LABEL:      48.00 × 24.00
+			F_RATIO:       2.00 × 1.00
+	-->
+	<defs>
+		<marker id="left-arrow" viewBox="-4 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+			<path fill="blue" d="m2 0 4 4-10-4L6-4z"/>
+		</marker>
+	</defs>
+	<path fill="#f8f8f8" d="m-3780-3780h108360v57960H-3780z"/>
+	<path fill="#fff" d="m0 0h100800v50400H0z"/>
+	<g opacity=".5" transform="scale(1050)">
+		<path fill="#fff" d="m0 0h96v48H0z"/>
+		<path fill="#C10000" d="m40 0h56v48H0V24h40zM17 3h6v6h6v6h-6v6h-6v-6h-6V9h6z"/>
+	</g>
+	<g stroke="#000" stroke-width="140" stroke-linejoin="round" stroke-linecap="round">
+		<g opacity=".4" stroke-width="100">
+			<path stroke-dashoffset="362" stroke-dasharray="725,315,105,315" d="m50400 25200V0m0 25200v25200"/>
+			<path stroke-dashoffset="376" stroke-dasharray="751,315,105,315" d="m50400 25200h-8400m8400 0h50400"/>
+			<path stroke-dasharray="735,315,105,315" stroke-dashoffset="840" d="m-2520 25200H0"/>
+		</g>
+		<path stroke="#444" stroke-width="250" d="m0 0h100800v50400H0z"/>
+		<path d="m0 25200h42000V0M17850 3150h6300v6300h6300v6300h-6300v6300h-6300v-6300h-6300V9450h6300z"/>
+		<path stroke="#222" stroke-width="75" stroke-dasharray="210,210" d="m0-2520v27720m0 27720V25200m11550-630v-8820m6300 8820v-2520m3150-24570v15120m3150 11970v-2520m6300 2520v-8820M42000-2520V0m58800-2520v27720m0 27720V25200M-2520 0h52920m52920 0H50400M32970 3150h-8820m8820 6300h-8820m-26670 3150h23520m11970 3150h-8820m8820 6300h-8820M-2520 50400h52920m52920 0H50400"/>
+		<path stroke-width="135" d="m20625 12600h750m-375-375v750"/>
+	</g>
+	<g fill="#008" opacity=".8">
+		<circle r="200" cx="24150" cy="3150"/>
+		<circle r="200" cx="30450" cy="9450"/>
+		<circle r="200" cx="30450" cy="15750"/>
+		<circle r="200" cx="24150" cy="22050"/>
+		<circle r="200" cx="17850" cy="22050"/>
+		<circle r="200" cx="11550" cy="15750"/>
+	</g>
+	<g stroke="#00f" stroke-width="75" marker-start="url(#left-arrow)">
+		<path d="m300-1575h8400"/>
+		<path d="m20700-1575h-8400"/>
+		<path d="m21300-1575h8400"/>
+		<path d="m41700-1575h-8400"/>
+		<path d="m42300-1575h27300"/>
+		<path d="m100500-1575H73200"/>
+		<path d="m300 51975h48300"/>
+		<path d="m100500 51975H52200"/>
+		<path d="m11850 23625h1750"/>
+		<path d="m17550 23625h-1750"/>
+		<path d="m18150 23625h1750"/>
+		<path d="m23850 23625h-1750"/>
+		<path d="m24450 23625h1750"/>
+		<path d="m30150 23625h-1750"/>
+		<path d="m-1575 50100V39600"/>
+		<path d="m-1575 25500v10500"/>
+		<path d="m-1575 24900v-4200"/>
+		<path d="m-1575 12900v4200"/>
+		<path d="m-1575 12300V8100"/>
+		<path d="m-1575 300v4200"/>
+		<path d="m102375 50100V27000"/>
+		<path d="m102375 300v23100"/>
+		<path d="m32025 21750v-1750"/>
+		<path d="m32025 16050v1750"/>
+		<path d="m32025 15450v-1750"/>
+		<path d="m32025 9750v1750"/>
+		<path d="m32025 9150V7400"/>
+		<path d="m32025 3450v1750"/>
+	</g>
+	<g fill="#000" text-anchor="middle" font-size="50" transform="scale(50)">
+		<g>
+			<text x="210" y="-16">10</text>
+			<text x="630" y="-16">10</text>
+			<text x="1428" y="-16">28</text>
+			<text x="294" y="488">3</text>
+			<text x="420" y="488">3</text>
+			<text x="546" y="488">3</text>
+			<text x="1008" y="1054">48</text>
+		</g>
+		<g transform="rotate(270)">
+			<text x="-756" y="-16">12</text>
+			<text x="-378" y="-16" text-decoration="underline">6</text>
+			<text x="-126" y="-16" text-decoration="underline">6</text>
+			<text x="-378" y="656">3</text>
+			<text x="-252" y="656">3</text>
+			<text x="-126" y="656">3</text>
+			<text x="-504" y="2062">24</text>
+		</g>
+		<g font-size="27">
+			<text x="-37" y="1058">[<tspan font-weight="bold" fill="#080">TO</tspan>]</text>
+			<text x="2053" y="1058">[<tspan font-weight="bold" fill="#080">1:2</tspan>]</text>
+		</g>
+	</g>
+</svg>

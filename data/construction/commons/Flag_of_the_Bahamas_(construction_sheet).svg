@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1290" height="690" viewBox="-3780 -28980 108360 57960" fill="none" font-family="Calibri,Arial,'Liberation Sans',sans-serif">
+	<title>Flag of the Bahamas — construction sheet</title>
+	<!-- DIMENSIONS
+		SVG:
+			S_RAW:     108360.00 × 57960.00
+			S_DISPLAY:  1290.00 × 690.00
+		FLAG:
+			F_RAW:     100800.00 × 50400.00
+			F_DISPLAY:  1200.00 × 600.00
+			F_LABEL:       6.00 × 3.00
+			F_RATIO:       2.00 × 1.00
+	-->
+	<defs>
+		<marker id="left-arrow" viewBox="-4 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+			<path fill="blue" d="m2 0 4 4-10-4L6-4z"/>
+		</marker>
+		<marker id="right-arrow" viewBox="-6 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+			<path fill="blue" d="m-2 0-4 4L4 0-6-4z"/>
+		</marker>
+	</defs>
+	<path fill="#f8f8f8" d="m-3780-28980h108360v57960H-3780z"/>
+	<path fill="#fff" d="m0-25200h100800v50400H0z"/>
+	<g opacity=".5">
+		<g transform="scale(8400)">
+			<path fill="#00778b" d="m0-3h12v6H0z"/>
+			<path fill="#ffc72c" d="m2-1h10v2H2z"/>
+		</g>
+		<path fill="#000" d="m43648 0L0 25200v-50400z"/>
+	</g>
+	<g stroke="#000" stroke-width="140" stroke-linejoin="round" stroke-linecap="round">
+		<g opacity=".4" stroke-width="100">
+			<path stroke-dasharray="747,327,105,327" stroke-dashoffset="368" d="m50400 0v-25200m0 25200v25200"/>
+			<path stroke-dasharray="743,323,105,323" stroke-dashoffset="368" d="m50400 0H0m50400 0h50400"/>
+		</g>
+		<path stroke="#444" stroke-width="250" d="m0-25200h100800v50400H0z"/>
+		<path d="m29098-8400h71702M29098 8400h71702M0-25200 43648 0 0 25200"/>
+		<path stroke="#222" stroke-width="75" stroke-dasharray="210,210" d="m0-25200V0m0 27720V0m100800-25200V0m0 27720V0M-2520-25200h52920m52920 0H50400m52920 16800h-2520m2520 16800h-2520M-2520 25200h52920m52920 0H50400M1260-27382 0-25200M44908-2182 43648 0"/>
+	</g>
+	<g fill="#008" opacity=".8">
+		<circle r="200" cx="0" cy="-25200"/>
+		<circle r="200" cx="-0" cy="25200"/>
+		<circle r="200" cx="43648" cy="0"/>
+	</g>
+	<g stroke="#00f" stroke-width="75" marker-start="url(#left-arrow)">
+		<path d="m300 26775h48900"/>
+		<path d="m100500 26775H51600"/>
+		<path d="m-1575 24900V1200"/>
+		<path d="m-1575-24900v23700"/>
+		<path d="m102375-8700v-6900"/>
+		<path d="m102375-24900v6900"/>
+		<path d="m102375 8100V1200"/>
+		<path d="m102375-8100v6900"/>
+		<path d="m102375 24900v-6900"/>
+		<path d="m102375 8700v6900"/>
+		<path d="m1047-26414 20525 11850"/>
+		<path d="m44175-1514-20524-11850"/>
+		<g marker-end="url(#right-arrow)">
+			<path d="m9598-19312a11256 11256 0 0 1-9298 5368"/>
+			<path d="m300 13944a11256 11256 0 0 1 9298 5368"/>
+		</g>
+	</g>
+	<g fill="#000" text-anchor="middle" font-size="50" transform="scale(50)">
+		<g>
+			<text x="1008" y="550">6</text>
+		</g>
+		<g transform="rotate(30)">
+			<text x="252" y="-453">3</text>
+			<text x="252" y="252">60°</text>
+		</g>
+		<g transform="rotate(270)">
+			<text y="-16">3</text>
+			<text x="-336" y="2062">1</text>
+			<text y="2062">1</text>
+			<text x="336" y="2062">1</text>
+		</g>
+		<g transform="rotate(330)">
+			<text x="252" y="-222">60°</text>
+		</g>
+		<g font-size="27">
+			<text x="-37" y="554">[<tspan font-weight="bold" fill="#080">BS</tspan>]</text>
+			<text x="2053" y="554">[<tspan font-weight="bold" fill="#080">1:2</tspan>]</text>
+		</g>
+	</g>
+</svg>

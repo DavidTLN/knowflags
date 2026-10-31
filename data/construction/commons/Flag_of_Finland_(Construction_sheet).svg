@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+ width="520" height="380">
+<title>Flag of Finland (Construction sheet)</title>
+<defs>
+	<g style="overflow:visible">
+		<marker id="ts" refX="9" orient="auto" markerUnits="userSpaceOnUse">
+			<path id="tf" d="M	19	-5	L	0	0	19	5" />
+		</marker>
+		<marker id="te" refX="-9" orient="auto" markerUnits="userSpaceOnUse">
+			<use xlink:href="#tf" transform="scale(-1,1)" />
+		</marker>
+	</g>
+</defs>
+<rect fill="#FFF" x="0" y="0" width="100%" height="100%" />
+<g stroke="#000" stroke-width="2" fill="none">
+	<!-- 外形 -->
+	<path fill="#CCC" d="
+	M	140	220
+	H	240
+	V	140
+	H	300
+	V	220
+	H	500
+	V	280
+	H	300
+	V	360
+	H	240
+	V	280
+	H	140
+	" />
+	<rect x="140" y="140" width="360" height="220" />
+	<!-- 寸法補助線 -->
+	<path d="
+	M	130	140	H	30
+	M	130	220	H	80
+	M	130	280	H	80
+	M	130	360	H	30
+	M	140	130	V	30
+	M	240	130	V	80
+	M	300	130	V	80
+	M	500	130	V	30
+	" />
+	<!-- 寸法線 直 両 -->
+	<g marker-end="url(#te)" marker-start="url(#ts)">
+		<path d="M	40	150	V	350" />
+		<path d="M	90	150	V	210" />
+		<path d="M	90	230	V	270" />
+		<path d="M	90	290	V	350" />
+		<path d="M	150	40	H	490" />
+		<path d="M	150	90	H	230" />
+		<path d="M	250	90	H	290" />
+		<path d="M	310	90	H	490" />
+	</g>
+</g>
+<g font-size="24" text-anchor="middle" font-family="Bitstream Vera Sans, sans-serif">
+	<!-- 寸法数値 -->
+	<text x="190" y="84">5</text>
+	<text x="270" y="84">3</text>
+	<text x="400" y="84">10</text>
+	<text x="320" y="34">18</text>
+	<g transform="rotate(-90)">
+		<text x="-180" y="84">4</text>
+		<text x="-250" y="84">3</text>
+		<text x="-320" y="84">4</text>
+		<text x="-250" y="34">11</text>
+	</g>
+</g>
+</svg>

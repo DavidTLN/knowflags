@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg"  width="603" height="303" viewBox="-4824 -2424 9648 4848">
+	<title>Drapeau du Canada (schéma de construction)</title>
+	<path fill="#fff" d="m-4800-2400h9600v4800h-9600z"/>
+	<g stroke-linejoin="round" fill="none" stroke="#000" stroke-width="50">
+		<path d="m-4800-2400h9600v4800h-9600zm2400 0v4800m4800-4800v4800"/>
+		<path d="m-90 2030 45-863a95 95 0 0 0-111-98l-859 151 116-320a65 65 0 0 0-20-73l-941-762 212-99a65 65 0 0 0 34-79l-186-572 542 115a65 65 0 0 0 73-38l105-247 423 454a65 65 0 0 0 111-57l-204-1052 327 189a65 65 0 0 0 91-27l332-652 332 652a65 65 0 0 0 91 27l327-189-204 1052a65 65 0 0 0 111 57l423-454 105 247a65 65 0 0 0 73 38l542-115-186 572a65 65 0 0 0 34 79l212 99-941 762a65 65 0 0 0-20 73l116 320-859-151a95 95 0 0 0-111 98l45 863z"/>
+	</g>
+	<g font-family="Calibri,Arial,sans-serif" fill="#000" transform="scale(5)" font-size="48" >
+		<text y="-407">
+			<tspan x="-925">Bande rouge:</tspan>
+			<tspan x="-925" dy="50">¼ of de la largeur</tspan>
+			<tspan x="-925" dy="50">du drapeau</tspan>
+			<tspan x="-925" y="390">Drapeau entier:</tspan>
+			<tspan x="-925" dy="50">Ratio 1:2</tspan>
+		</text>
+		<text  text-anchor="middle"  y="-5">
+			<tspan x="0">Feuille rouge d'érable</tspan>
+			<tspan x="0" dy="50">centrée à onze pointes</tspan>
+		</text>
+		<text y="340">
+			<tspan x="-446">Bande blanche:</tspan>
+			<tspan x="-446" dy="50">½ de la largeur</tspan>
+			<tspan x="-446" dy="50">du drapeau</tspan>
+		</text>
+	</g>
+</svg>

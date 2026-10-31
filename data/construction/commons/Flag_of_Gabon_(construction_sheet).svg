@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="802" viewBox="-3780 -33684 87360 67368" fill="none" font-family="Calibri,Arial,'Liberation Sans',sans-serif">
+	<title>Flag of Gabon — construction sheet</title>
+	<!-- DIMENSIONS
+		SVG:
+			S_RAW:     87360.00 × 67368.00
+			S_DISPLAY:  1040.00 × 802.00
+		FLAG:
+			F_RAW:     79800.00 × 59850.00
+			F_DISPLAY:   950.00 × 712.50
+			F_LABEL:       4.00 × 3.00
+			F_RATIO:       4.00 × 3.00
+	-->
+	<defs>
+		<marker id="left-arrow" viewBox="-4 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+			<path fill="blue" d="m2 0 4 4-10-4L6-4z"/>
+		</marker>
+	</defs>
+	<path fill="#fafafa" d="m-3780-33684h87360v67368H-3780z"/>
+	<path fill="#fff" d="m0-29925h79800v59850H0z"/>
+	<g opacity=".5" transform="scale(9975)">
+		<path fill="#fcd116" d="m0-3h8v6H0z"/>
+		<path fill="#009e60" d="m0-3h8v2H0z"/>
+		<path fill="#3a75c4" d="m0 1h8v2H0z"/>
+	</g>
+	<g stroke="#000" stroke-width="140" stroke-linejoin="round" stroke-linecap="round">
+		<g opacity=".4" stroke-width="100">
+			<path stroke-dashoffset="362" stroke-dasharray="725,315,105,315" d="m39900 0v-29925m0 29925v29925"/>
+			<path stroke-dashoffset="376" stroke-dasharray="751,315,105,315" d="m39900 0H0m39900 0h39900"/>
+		</g>
+		<path stroke="#444" stroke-width="250" d="m0-29925h79800v59850H0z"/>
+		<path d="m0-9975h79800M0 9975h79800"/>
+		<path stroke="#222" stroke-width="75" stroke-dasharray="210,210" d="m0-29925V0m0 32445V0m79800-29925V0m0 32445V0M-2520-29925h42420m42420 0H39900M-2520-9975H0M-2520 9975H0m-2520 19950h42420m42420 0H39900"/>
+	</g>
+	<g stroke="#00f" stroke-width="75" marker-start="url(#left-arrow)">
+		<path d="m300 31500h38500"/>
+		<path d="m79500 31500H41000"/>
+		<path d="m-1575 29625v-8575"/>
+		<path d="m-1575 10275v8575"/>
+		<path d="m-1575 9675V1100"/>
+		<path d="m-1575-9675v8575"/>
+		<path d="m-1575-10275v-8575"/>
+		<path d="m-1575-29625v8575"/>
+		<path d="m81375 29625V1100"/>
+		<path d="m81375-29625v28525"/>
+	</g>
+	<g fill="#000" text-anchor="middle" font-size="50" transform="scale(50)">
+		<g>
+			<text x="798" y="645">4</text>
+		</g>
+		<g transform="rotate(270)">
+			<text x="-399" y="-17">1</text>
+			<text y="-17">1</text>
+			<text x="399" y="-17">1</text>
+			<text y="1643">3</text>
+		</g>
+		<g font-size="27">
+			<text x="-37" y="649">[<tspan font-weight="bold" fill="#080">GA</tspan>]</text>
+			<text x="1633" y="649">[<tspan font-weight="bold" fill="#080">3:4</tspan>]</text>
+		</g>
+	</g>
+</svg>

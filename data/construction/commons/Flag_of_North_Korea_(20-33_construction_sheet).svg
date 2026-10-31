@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="4 4 324 211.7">
+  <circle r="999" fill="#fff"/>
+  <path d="M17.303 172.929h297v30h-297 M17.303 22.929h297v30h-297" fill="#024fa2"/>
+  <path d="M17.303 57.929h297v110h-297" fill="#ed1c27"/>
+  <circle cx="116.803" cy="112.929" r="40" fill="#fff"/>
+  <path d="m116.806 73.291 8.832 27.297 28.774-.063-23.316 16.808 8.952 27.259-23.242-16.91-23.242 16.91 8.952-27.259L79.2 100.525l28.774.063" fill="#ed1c27"/>
+  <g fill="none" stroke="#000">
+    <g stroke-opacity=".25">
+      <circle cx="116.803" cy="112.929" r="39" stroke-dasharray="8.16"/>
+      <path d="M116.803 112.929v-90" stroke-dasharray="2"/>
+      <path d="M17.303 112.929h297 M165.803 202.929v-180" stroke-dasharray="4"/>
+    </g>
+    <path d="M63 205h80 M143.5 210v-10M62.5 210v-10" transform="matrix(.98765 0 0 1 15.803 -50.571)"/>
+    <path d="M 18.319 17.929 h 295 M 17.826 12.929 v 10 M 116.803 12.929 v 10 M 313.803 12.929 v 10" transform="translate(0,-1)"/>
+  </g>
+  <g id="arrow">
+    <path d="M 134.109 94.719 L 142.256 88.241" stroke="#000"/>
+    <path d="M 143.773 85.013 L 145.771 88.978 L 141.806 88.978 L 143.773 85.013 Z" transform="matrix(0.622515, 0.782608, -0.782608, 0.622515, 122, -79.5)"/>
+  </g>
+  <use href="#arrow" transform="matrix(-1,0, 0,-1, 290.7, 171.3)"/>
+  <g font-family="'Liberation Sans',Helvetica,Arial,sans-serif" font-size="16" text-anchor="middle">
+    <text y="0.7ex" transform="translate(  26,207)" font-size="9" font-weight="700">[KP]<tspan x="274">[20:33]</tspan></text>
+    <text y="0.7ex" transform="translate(  66, 10)">99<tspan x="149">198</tspan><tspan x="100" y="205">297</tspan><tspan x="51" y="157">80</tspan></text>
+    <text y="0.7ex" transform="translate(10.7,190) rotate(-90)">30<tspan x="20">5</tspan><tspan x="50">55</tspan><tspan x="103">55</tspan><tspan x="134">5</tspan><tspan x="153">30</tspan><tspan x="77" y="316">180</tspan></text>
+    <text y="0.7ex" transform="translate(141, 81 ) rotate(-40)" font-size="9">5/4</text>
+  </g>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="750" viewBox="-3780 -3780 90720 63000" fill="none" font-family="Calibri,Arial,'Liberation Sans',sans-serif">
+	<title>Flag of the Republic of the Congo — construction sheet</title>
+	<!-- DIMENSIONS
+		SVG:
+			S_RAW:     90720.00 × 63000.00
+			S_DISPLAY:  1080.00 × 750.00
+		FLAG:
+			F_RAW:     83160.00 × 55440.00
+			F_DISPLAY:   990.00 × 660.00
+			F_LABEL:       3.00 × 2.00
+			F_RATIO:       3.00 × 2.00
+	-->
+	<defs>
+		<marker id="left-arrow" viewBox="-4 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+			<path fill="blue" d="m2 0 4 4-10-4L6-4z"/>
+		</marker>
+	</defs>
+	<g opacity=".5" transform="scale(27720)">
+		<path fill="#fbde4a" d="m0 0h3v2H0z"/>
+		<path fill="#009543" d="m0 2V0h2z"/>
+		<path fill="#da1a35" d="m3 0v2H1z"/>
+	</g>
+	<g stroke="#000" stroke-width="140" stroke-linejoin="round" stroke-linecap="round">
+		<path stroke="#444" stroke-width="250" d="m0 0h83160v55440H0z"/>
+		<path d="m0 55440L55440 0M27720 55440 83160 0"/>
+		<path stroke="#222" stroke-width="75" stroke-dasharray="210,210" d="m0-2520v30240m0 30240V27720m27720 30240v-2520M55440-2520V0m27720-2520v30240m0 30240V27720M0 0h41580m44100 0H41580M0 55440h41580m44100 0H41580"/>
+	</g>
+	<g stroke="#00f" stroke-width="75" marker-start="url(#left-arrow)">
+		<path d="m300-1575h26520"/>
+		<path d="m55140-1575H28620"/>
+		<path d="m55740-1575h12660"/>
+		<path d="m82860-1575H70200"/>
+		<path d="m300 57015h12660"/>
+		<path d="m27420 57015H14760"/>
+		<path d="m28020 57015h26520"/>
+		<path d="m82860 57015H56340"/>
+		<path d="m84735 55140V28620"/>
+		<path d="m84735 300v26520"/>
+	</g>
+	<g fill="#000" text-anchor="middle" font-size="50" transform="scale(50)">
+		<g>
+			<text x="554" y="-16">2</text>
+			<text x="1386" y="-16">1</text>
+			<text x="277" y="1155">1</text>
+			<text x="1109" y="1155">2</text>
+		</g>
+		<g transform="rotate(270)">
+			<text x="-554" y="1710">2</text>
+		</g>
+		<g font-size="27">
+			<text x="-37" y="1159">[<tspan font-weight="bold" fill="#080">CG</tspan>]</text>
+			<text x="1700" y="1159">[<tspan font-weight="bold" fill="#080">2:3</tspan>]</text>
+		</g>
+	</g>
+</svg>

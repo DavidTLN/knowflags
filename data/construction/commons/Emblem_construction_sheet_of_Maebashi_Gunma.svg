@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="500" height="600" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <desc>Emblem construction sheet of Maebashi, Gunma</desc>
+  <circle cx="250" cy="250" r="173" fill="none" stroke="#999" stroke-width="54" />
+  <g stroke="#000" stroke-width="4">
+    <line x1="50" y1="480" x2="450" y2="480" />
+    <line x1="50" y1="460" x2="50" y2="500" />
+    <line x1="450" y1="460" x2="450" y2="500" />
+    <line x1="104" y1="250" x2="396" y2="250" />
+    <line x1="104" y1="230" x2="104" y2="270" />
+    <line x1="396" y1="230" x2="396" y2="270" />
+  </g>
+  <g fill="#000" text-anchor="middle" font-size="40">
+    <text x="250" y="300">73</text>
+    <text x="250" y="530">100</text>
+  </g>
+</svg>

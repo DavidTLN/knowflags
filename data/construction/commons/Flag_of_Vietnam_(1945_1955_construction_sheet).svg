@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1080" height="750" viewBox="-45360 -31500 90720 63000" fill="none" font-family="Calibri,Arial,'Liberation Sans',sans-serif" version="1.1" id="svg36" sodipodi:docname="Flag_of_Vietnam_(1945–1955,_construction_sheet).svg" inkscape:version="1.4.2 (f4327f4, 2025-05-13)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview id="namedview36" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:zoom="0.80277778" inkscape:cx="540" inkscape:cy="325.74394" inkscape:window-width="1366" inkscape:window-height="705" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="g30" />
+  <title id="title1">Flag of North Vietnam, 1945–1955 — construction sheet</title>
+  <!-- DIMENSIONS
+		SVG:
+			S_RAW:     90720.00 × 63000.00
+			S_DISPLAY:  1080.00 × 750.00
+		FLAG:
+			F_RAW:     83160.00 × 55440.00
+			F_DISPLAY:   990.00 × 660.00
+			F_LABEL:      30.00 × 20.00
+			F_RATIO:       3.00 × 2.00
+	-->
+  <defs id="defs1">
+    <marker id="left-arrow" viewBox="-4 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+      <path fill="blue" d="m2 0 4 4-10-4L6-4z" id="path1" />
+    </marker>
+  </defs>
+  <path fill="#fff" d="m-41580-27720h83160v55440h-83160z" id="path3" />
+  <g opacity=".5" id="g5">
+    <path fill="#da251d" d="m-41580-27720h83160v55440h-83160z" id="path4" />
+    <path fill="#ffff00" d="M 0,-16632 4888,-6728 15818,-5140 7909,2570 9776,13456 0,8316 -9776,13456 -7909,2570 -15818,-5140 -4888,-6728 Z" id="path5" sodipodi:nodetypes="ccccccccccc" />
+  </g>
+  <g stroke="#000" stroke-width="140" stroke-linejoin="round" stroke-linecap="round" id="g13">
+    <g opacity=".4" stroke-width="100" id="g8">
+      <path stroke-dashoffset="362" stroke-dasharray="725, 315, 105, 315" d="M 0,0 V -27720 M 0,0 v 16947 m 0,2520 v 1260 m 0,2520 v 4473" id="path6" sodipodi:nodetypes="cccccccc" />
+      <path stroke-dashoffset="376" stroke-dasharray="751,315,105,315" d="m0 0h-41580M0 0h41580" id="path7" />
+      <path stroke-dasharray="735,315,105,315" stroke-dashoffset="840" d="m0-30240v2520M-44100 0h2520" id="path8" />
+    </g>
+    <path stroke="#66f" opacity=".8" stroke-dasharray="420,415" stroke-dashoffset="210" d="m0-16632a1 1 0 0 0 0 33264m0-33264a1 1 0 0 1 0 33264" id="path9" />
+    <path stroke="#444" stroke-width="250" d="m-41580-27720h83160v55440h-83160z" id="path10" />
+    <path d="M 0,-16632 4888,-6728 15818,-5140 7909,2570 9776,13456 0,8316 -9776,13456 -7909,2570 -15818,-5140 -4888,-6728 Z" id="path11" sodipodi:nodetypes="ccccccccccc" />
+    <path stroke="#222222" stroke-width="75" stroke-dasharray="210, 210" d="M -41580,-30240 V 0 m 0,30240 V 0 m 24948,23284.5 V 0 M 16632,23284.5 V 0 M 41580,-30240 V 0 m 0,30240 V 0 M -44100,-27720 H 0 m 44100,0 H 0 M -44100,27720 H 0 m 44100,0 H 0" id="path12" sodipodi:nodetypes="cccccccccccccccccccc" />
+    <path stroke-width="135" d="m-375 0h750M0-375v750" id="path13" />
+    <path stroke="#6666ff" opacity="0.8" stroke-dasharray="420, 415" stroke-dashoffset="210" d="M 0,-8316 A 8316,8316 0 0 0 0,8316 M 0,-8316 A 8316,8316 0 0 1 0,8316" id="path36" />
+    <path stroke="#222222" stroke-width="75" stroke-dasharray="210, 210" d="M -8316,19152 V 0 M 8316,19152 V 0" id="path40" sodipodi:nodetypes="cccc" />
+  </g>
+  <g fill="#008" opacity=".8" id="g14">
+    <circle r="200" cx="16632" cy="0" id="circle13" />
+    <circle r="200" cx="-16632" cy="0" id="circle14" />
+    <circle r="200" cx="-8316" cy="0" id="circle40" />
+    <circle r="200" cx="8316" cy="0" id="circle41" />
+  </g>
+  <g stroke="#00f" stroke-width="75" marker-start="url(#left-arrow)" id="g27">
+    <path d="m-41280-29295h18690" id="path14" />
+    <path d="m-300-29295h-18690" id="path15" />
+    <path d="m300-29295h18690" id="path16" />
+    <path d="m41280-29295H22590" id="path17" />
+    <path d="m-41280 29295h39480" id="path18" />
+    <path d="m41280 29295H1800" id="path19" />
+    <path d="m -7980,18207 h 6180" id="path20" sodipodi:nodetypes="cc" />
+    <path d="M 7980,18207 H 1800" id="path21" sodipodi:nodetypes="cc" />
+    <path d="m-43155-300v-11760" id="path22" />
+    <path d="m-43155-27420v11760" id="path23" />
+    <path d="m-43155 27420V15660" id="path24" />
+    <path d="m-43155 300v11760" id="path25" />
+    <path d="m43155 27420V1800" id="path26" />
+    <path d="m43155-27420v25620" id="path27" />
+    <path d="M -16296,21987 H -1800" id="path38" sodipodi:nodetypes="cc" />
+    <path d="M 16296,21987 H 1800" id="path39" sodipodi:nodetypes="cc" />
+  </g>
+  <g fill="#000" text-anchor="middle" font-size="50" transform="scale(50)" id="g36">
+    <g id="g30">
+      <text x="-416" y="-571" id="text27">15</text>
+      <text x="416" y="-571" id="text28">15</text>
+      <text y="601" id="text29">30</text>
+      <text y="455.75" id="text30">12</text>
+      <text y="379" id="text37">6</text>
+    </g>
+    <g transform="rotate(270)" id="g33">
+      <text x="277" y="-848" id="text31">10</text>
+      <text x="-277" y="-848" id="text32">10</text>
+      <text y="878" id="text33">20</text>
+    </g>
+    <g font-size="27" id="g35">
+      <text x="-869" y="605" id="text34">[<tspan font-weight="bold" fill="#080" id="tspan33">VN</tspan>]</text>
+      <text x="869" y="605" id="text35">[<tspan font-weight="bold" fill="#080" id="tspan34">2:3</tspan>]</text>
+    </g>
+  </g>
+</svg>

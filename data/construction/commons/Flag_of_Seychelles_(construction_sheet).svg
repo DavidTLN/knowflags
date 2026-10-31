@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1290" height="690" viewBox="-3780 -54180 108360 57960" fill="none" font-family="Calibri,Arial,'Liberation Sans',sans-serif">
+	<title>Flag of Seychelles — construction sheet</title>
+	<!-- DIMENSIONS
+		SVG:
+			S_RAW:     108360.00 × 57960.00
+			S_DISPLAY:  1290.00 × 690.00
+		FLAG:
+			F_RAW:     100800.00 × 50400.00
+			F_DISPLAY:  1200.00 × 600.00
+			F_LABEL:       6.00 × 3.00
+			F_RATIO:       2.00 × 1.00
+	-->
+	<defs>
+		<marker id="left-arrow" viewBox="-4 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+			<path fill="blue" d="m2 0 4 4-10-4L6-4z"/>
+		</marker>
+	</defs>
+	<g opacity=".5" transform="scale(16800)" clip-path="url(#f)">
+		<path fill="#fff" d="m0-3h6v3H0z"/>
+		<path fill="#d92223" d="m0 0v-3h6v1z"/>
+		<path fill="#fcd955" d="m0 0 2-3h2z"/>
+		<path fill="#003d88" d="m0 0v-3h2z"/>
+		<path fill="#007a39" d="m0 0 6-1v1z"/>
+	</g>
+	<g stroke="#000" stroke-width="140" stroke-linejoin="round" stroke-linecap="round">
+		<path stroke="#444" stroke-width="250" d="m0-50400h100800V0H0z"/>
+		<path d="m0 0 33600-50400M0 0l67200-50400M0 0l100800-33600M0 0l100800-16800"/>
+		<path stroke="#222" stroke-width="75" stroke-dasharray="210,210" d="m0-52920v27720M0 2520v-27720m33600-27720v2520m33600-2520v2520m33600-2520v27720m0 27720v-27720M-2520-50400h52920m52920 0H50400m52920 16800h-2520m2520 16800h-2520M-2520 0h52920m52920 0H50400"/>
+	</g>
+	<g fill="#008" opacity=".8">
+		<circle r="200" cx="0" cy="0"/>
+	</g>
+	<g stroke="#00f" stroke-width="75" marker-start="url(#left-arrow)">
+		<path d="m300-51975h15300"/>
+		<path d="m33300-51975H18000"/>
+		<path d="m33900-51975h15300"/>
+		<path d="m66900-51975H51600"/>
+		<path d="m67500-51975h15300"/>
+		<path d="m100500-51975H85200"/>
+		<path d="m300 1575h48900"/>
+		<path d="m100500 1575H51600"/>
+		<path d="m-1575-300v-23700"/>
+		<path d="m-1575-50100v23700"/>
+		<path d="m102375-300v-6900"/>
+		<path d="m102375-16500v6900"/>
+		<path d="m102375-17100v-6900"/>
+		<path d="m102375-33300v6900"/>
+		<path d="m102375-33900v-6900"/>
+		<path d="m102375-50100v6900"/>
+	</g>
+	<g fill="#000" text-anchor="middle" font-size="48" transform="scale(50)">
+		<g>
+			<text x="336" y="-1026">2</text>
+			<text x="1008" y="-1026">2</text>
+			<text x="1680" y="-1026">2</text>
+			<text x="1008" y="46">6</text>
+		</g>
+		<g transform="rotate(270)">
+			<text x="504" y="-18">3</text>
+			<text x="168" y="2062">1</text>
+			<text x="504" y="2062">1</text>
+			<text x="840" y="2062">1</text>
+		</g>
+		<g font-size="26">
+			<text x="-37" y="50">[<tspan font-weight="bold" fill="#080">SC</tspan>]</text>
+			<text x="2053" y="50">[<tspan font-weight="bold" fill="#080">1:2</tspan>]</text>
+		</g>
+	</g>
+</svg>

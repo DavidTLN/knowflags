@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1176" height="600" viewBox="-4900 -2500 9800 5000">
+	<title>Flag of Canada (construction sheet with grid)</title>
+	<defs>
+		<path id="leaf" d="m-90 2030 45-863a95 95 0 0 0-111-98l-859 151 116-320a65 65 0 0 0-20-73l-941-762 212-99a65 65 0 0 0 34-79l-186-572 542 115a65 65 0 0 0 73-38l105-247 423 454a65 65 0 0 0 111-57l-204-1052 327 189a65 65 0 0 0 91-27l332-652 332 652a65 65 0 0 0 91 27l327-189-204 1052a65 65 0 0 0 111 57l423-454 105 247a65 65 0 0 0 73 38l542-115-186 572a65 65 0 0 0 34 79l212 99-941 762a65 65 0 0 0-20 73l116 320-859-151a95 95 0 0 0-111 98l45 863z"/>
+	</defs>
+	<g opacity=".5">
+		<path fill="#fff" d="m-4800-2400h9600v4800h-9600z"/>
+		<g fill="#f00">
+			<use xlink:href="#leaf"/>
+			<path d="m-4800-2400h2400v4800h-2400z"/>
+			<path d="m2400-2400h2400v4800h-2400z"/>
+		</g>
+	</g>
+	<g fill="none" stroke="#222" transform="scale(150)">
+		<path stroke-width=".02" d="m-31 16v-32m1 32v-32m1 32v-32m2 32v-32m1 32v-32m1 32v-32m2 32v-32m1 32v-32m1 32v-32m2 32v-32m1 32v-32m1 32v-32m2 32v-32m1 32v-32m1 32v-32m2 32v-32m1 32v-32m1 32v-32m2 32v-32m1 32v-32m1 32v-32m2 32v-32m1 32v-32m1 32v-32m2 32v-32m1 32v-32m1 32v-32m2 32v-32m1 32v-32m1 32v-32m2 32v-32m1 32v-32m1 32v-32m2 32v-32m1 32v-32m1 32v-32m2 32v-32m1 32v-32m1 32v-32m2 32v-32m1 32v-32m1 32v-32m2 32v-32m1 32v-32m1 32v-32m2 32v-32m1 32v-32m1 32v-32m-63 1h64m0 1h-64m0 1h64m0 2h-64m0 1h64m0 1h-64m0 2h64m0 1h-64m0 1h64m0 2h-64m0 1h64m0 1h-64m0 2h64m0 1h-64m0 1h64m0 2h-64m0 1h64m0 1h-64m0 2h64m0 1h-64m0 1h64m0 2h-64m0 1h64m0 1h-64"/>
+		<path stroke-width=".04" d="m-28 16v-32m4 32v-32m4 32v-32m4 32v-32m4 32v-32m4 32v-32m4 32v-32m4 32v-32m4 32v-32m4 32v-32m4 32v-32m4 32v-32m4 32v-32m4 32v-32m4 32v-32m-60 4h64m0 4h-64m0 4h64m0 4h-64m0 4h64m0 4h-64m0 4h64"/>
+	</g>
+	<g stroke-linejoin="round" stroke="#000" fill="none" stroke-width="20">
+		<path d="m-4800-2400h9600v4800h-9600zm2400 0v4800m4800-4800v4800"/>
+		<use xlink:href="#leaf"/>
+	</g>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1290" height="690" viewBox="-3780 -28980 108360 57960" fill="none" font-family="Calibri,Arial,'Liberation Sans',sans-serif">
+	<title>Flag of Armenia — construction sheet</title>
+	<!-- DIMENSIONS
+		SVG:
+			S_RAW:     108360.00 × 57960.00
+			S_DISPLAY:  1290.00 × 690.00
+		FLAG:
+			F_RAW:     100800.00 × 50400.00
+			F_DISPLAY:  1200.00 × 600.00
+			F_LABEL:       6.00 × 3.00
+			F_RATIO:       2.00 × 1.00
+	-->
+	<defs>
+		<marker id="left-arrow" viewBox="-4 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+			<path fill="blue" d="m2 0 4 4-10-4L6-4z"/>
+		</marker>
+	</defs>
+	<path fill="#fafafa" d="m-3780-28980h108360v57960H-3780z"/>
+	<path fill="#fff" d="m0-25200h100800v50400H0z"/>
+	<g opacity=".5" transform="scale(8400)">
+		<path fill="#f2a800" d="m0-3h12v6H0z"/>
+		<path fill="#0033a0" d="m0-3h12v4H0z"/>
+		<path fill="#d90012" d="m0-3h12v2H0z"/>
+	</g>
+	<g stroke="#000" stroke-width="140" stroke-linejoin="round" stroke-linecap="round">
+		<g opacity=".4" stroke-width="100">
+			<path stroke-dashoffset="362" stroke-dasharray="725,315,105,315" d="m50400 0v-25200m0 25200v25200"/>
+			<path stroke-dashoffset="368" stroke-dasharray="735,315,105,315" d="m50400 0H0m50400 0h50400"/>
+		</g>
+		<path stroke="#444" stroke-width="250" d="m0-25200h100800v50400H0z"/>
+		<path d="m0-8400h100800M0 8400h100800"/>
+		<path stroke="#222" stroke-width="75" stroke-dasharray="210,210" d="m0-25200V0m0 27720V0m100800-25200V0m0 27720V0M-2520-25200h52920m52920 0H50400M-2520-8400H0M-2520 8400H0m-2520 16800h52920m52920 0H50400"/>
+	</g>
+	<g stroke="#00f" stroke-width="75" marker-start="url(#left-arrow)">
+		<path d="m300 26775h49000"/>
+		<path d="m100500 26775H51500"/>
+		<path d="m-1575 24900v-7100"/>
+		<path d="m-1575 8700v7100"/>
+		<path d="m-1575 8100V1000"/>
+		<path d="m-1575-8100v7100"/>
+		<path d="m-1575-8700v-7100"/>
+		<path d="m-1575-24900v7100"/>
+		<path d="m102375 24900V1100"/>
+		<path d="m102375-24900v23800"/>
+	</g>
+	<g fill="#000" text-anchor="middle" font-size="50" transform="scale(50)">
+		<g>
+			<text x="1008" y="550">6</text>
+		</g>
+		<g transform="rotate(270)">
+			<text x="-336" y="-17">1</text>
+			<text y="-17">1</text>
+			<text x="336" y="-17">1</text>
+			<text y="2063">3</text>
+		</g>
+		<g font-size="27">
+			<text x="-37" y="554">[<tspan font-weight="bold" fill="#080">AM</tspan>]</text>
+			<text x="2053" y="554">[<tspan font-weight="bold" fill="#080">1:2</tspan>]</text>
+		</g>
+	</g>
+</svg>

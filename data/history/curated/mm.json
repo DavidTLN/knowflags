@@ -1,0 +1,41 @@
+{
+"iso": "mm",
+"add": [
+{
+"date_start": "1752-02-29",
+"date_end": "1885-11-29",
+"label_fr": "Dynastie Konbaung",
+"label_en": "Konbaung dynasty",
+"notes_fr": "Bannière de la dernière dynastie royale birmane, ornée du paon, emblème des rois ; le roi Thibaw est déposé par les Britanniques en 1885.",
+"notes_en": "Banner of the last Burmese royal dynasty, bearing the peacock, emblem of the kings; King Thibaw was deposed by the British in 1885.",
+"image": "/flags/history/mm-1700.svg"
+},
+{
+"date_start": "1937-04-01",
+"date_end": "1948-01-04",
+"label_fr": "Birmanie britannique",
+"label_en": "British Burma",
+"notes_fr": "Séparée de l'Inde britannique en 1937, la Birmanie reçoit un Blue Ensign chargé d'un paon.",
+"notes_en": "Separated from British India in 1937, Burma received a Blue Ensign bearing a peacock.",
+"image": "/flags/history/mm-1939.svg"
+},
+{
+"date_start": "1943-08-01",
+"date_end": "1945-03-27",
+"label_fr": "État de Birmanie (occupation japonaise)",
+"label_en": "State of Burma (Japanese occupation)",
+"notes_fr": "Drapeau de l'État de Birmanie de Ba Maw, proclamé sous l'occupation japonaise : tricolore jaune-vert-rouge au paon.",
+"notes_en": "Flag of Ba Maw's State of Burma, proclaimed under Japanese occupation: a yellow-green-red tricolour with a peacock.",
+"image": "/flags/history/mm-1943.svg"
+},
+{
+"date_start": "1948-01-04",
+"date_end": "1974-01-03",
+"label_fr": "Union de Birmanie",
+"label_en": "Union of Burma",
+"notes_fr": "À l'indépendance, le drapeau rouge porte au canton bleu une grande étoile blanche entourée de cinq petites, pour les principaux peuples de l'Union.",
+"notes_en": "At independence the red flag carried, in a blue canton, a large white star ringed by five small ones for the Union's main peoples.",
+"image": "/flags/history/mm-1948.svg"
+}
+]
+}

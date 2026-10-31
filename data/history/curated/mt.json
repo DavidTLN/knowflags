@@ -1,0 +1,20 @@
+{
+"iso": "mt",
+"update": [
+{
+"id": 2196,
+"file": "Flag of Malta (1943–1964).svg"
+}
+],
+"add": [
+{
+"date_start": "1530-03-23",
+"date_end": "1798-06-12",
+"label_fr": "Ordre de Saint-Jean (chevaliers de Malte)",
+"label_en": "Order of St John (Knights of Malta)",
+"notes_fr": "Les chevaliers de l'ordre de Saint-Jean gouvernent Malte de 1530 jusqu'à l'arrivée de Bonaparte en 1798, sous leur bannière rouge à croix blanche.",
+"notes_en": "The Knights of the Order of St John ruled Malta from 1530 until Bonaparte arrived in 1798, under their red banner with a white cross.",
+"file": "Flag of the Sovereign Military Order of Malta.svg"
+}
+]
+}

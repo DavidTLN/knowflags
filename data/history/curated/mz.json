@@ -1,0 +1,23 @@
+{
+"iso": "mz",
+"update": [
+{
+"id": 2440,
+"label_fr": "Gouvernement de transition (1974-1975)",
+"label_en": "Transitional government (1974–1975)",
+"notes_fr": "Après la révolution des Œillets au Portugal, le gouvernement de transition adopte le drapeau du FRELIMO, le mouvement qui mène le pays à l'indépendance.",
+"notes_en": "After Portugal's Carnation Revolution, the transitional government adopted the flag of FRELIMO, the movement that led the country to independence."
+}
+],
+"add": [
+{
+"date_start": "1983-04-01",
+"date_end": "1983-05-01",
+"label_fr": "République populaire du Mozambique (avril 1983)",
+"label_en": "People's Republic of Mozambique (April 1983)",
+"notes_fr": "Version éphémère d'avril 1983, remplacée dès le 1er mai par le drapeau actuel.",
+"notes_en": "A short-lived April 1983 version, replaced on 1 May by the current flag.",
+"file": "Flag of Mozambique (1983).svg"
+}
+]
+}

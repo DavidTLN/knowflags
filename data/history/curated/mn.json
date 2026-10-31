@@ -1,0 +1,41 @@
+{
+"iso": "mn",
+"update": [
+{
+"id": 2435,
+"label_fr": "Mongolie (1992-2011)",
+"label_en": "Mongolia (1992–2011)",
+"notes_fr": "La révolution démocratique retire l'étoile communiste au-dessus du soyombo le 12 janvier 1992 ; une loi de 2011 précise teintes et proportions.",
+"notes_en": "The democratic revolution removed the communist star above the soyombo on 12 January 1992; a 2011 law specified the shades and proportions."
+}
+],
+"add": [
+{
+"date_start": "1911-12-29",
+"date_end": "1924-11-26",
+"label_fr": "Khanat du Bogd Khan",
+"label_en": "Bogd Khanate",
+"notes_fr": "Après la chute des Qing, le Bogd Khan, chef bouddhiste, proclame l'indépendance de la Mongolie : son drapeau porte le soyombo, symbole national.",
+"notes_en": "After the fall of the Qing, the Bogd Khan, a Buddhist leader, declared Mongolia's independence: his flag bore the soyombo, the national symbol.",
+"file": "Flag of Bogd Khaanate Mongolia.svg"
+},
+{
+"date_start": "1924-11-26",
+"date_end": "1940-06-30",
+"label_fr": "République populaire de Mongolie (1924-1940)",
+"label_en": "Mongolian People's Republic (1924–1940)",
+"notes_fr": "La République populaire, deuxième État communiste au monde, adopte un drapeau rouge portant le soyombo.",
+"notes_en": "The People's Republic, the world's second communist state, adopted a red flag bearing the soyombo.",
+"file": "Flag of the People's Republic of Mongolia (1924-1940).svg"
+},
+{
+"date_start": "1940-06-30",
+"date_end": "1945-06-10",
+"label_fr": "République populaire de Mongolie (1940-1945)",
+"label_en": "Mongolian People's Republic (1940–1945)",
+"notes_fr": "La Constitution de 1940 fixe un drapeau rouge à l'emblème national, avant le tricolore rouge-bleu-rouge de 1945.",
+"notes_en": "The 1940 Constitution set a red flag with the national emblem, ahead of the red-blue-red tricolour of 1945.",
+"file": "Flag of the Mongolian People's Republic (1940–1945).svg"
+}
+]
+}

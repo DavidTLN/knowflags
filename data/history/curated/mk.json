@@ -1,0 +1,23 @@
+{
+"iso": "mk",
+"add": [
+{
+"date_start": "1944-08-02",
+"date_end": "1946-01-31",
+"label_fr": "ASNOM (1944-1946)",
+"label_en": "ASNOM (1944–1946)",
+"notes_fr": "Drapeau adopté par l'Assemblée antifasciste de libération nationale de Macédoine, réunie le 2 août 1944, jour anniversaire de l'insurrection d'Ilinden.",
+"notes_en": "Flag adopted by the Anti-Fascist Assembly for the National Liberation of Macedonia, which met on 2 August 1944, the anniversary of the Ilinden uprising.",
+"file": "Flag of North Macedonia (1944–1946).svg"
+},
+{
+"date_start": "1946-01-31",
+"date_end": "1992-08-11",
+"label_fr": "République socialiste de Macédoine",
+"label_en": "Socialist Republic of Macedonia",
+"notes_fr": "Au sein de la Yougoslavie, la république arbore un drapeau rouge frappé, au canton, d'une étoile rouge bordée d'or.",
+"notes_en": "Within Yugoslavia the republic flew a red flag with a gold-edged red star in the canton.",
+"file": "Flag of the Socialist Republic of Macedonia (1946–1992).svg"
+}
+]
+}

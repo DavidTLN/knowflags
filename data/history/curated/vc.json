@@ -3,7 +3,27 @@
 "update": [
 {
 "id": 2247,
-"file": "Flag of Saint Vincent and the Grenadines (1979–1985).svg"
+"file": "Flag of Saint Vincent and the Grenadines (1979-1985).svg"
+}
+],
+"add": [
+{
+"date_start": "1877-01-01",
+"date_end": "1907-01-01",
+"label_fr": "Colonie de Saint-Vincent (1877-1907)",
+"label_en": "Colony of Saint Vincent (1877–1907)",
+"notes_fr": "Premier Blue Ensign de la colonie, chargé de son badge.",
+"notes_en": "The colony's first Blue Ensign, bearing its badge.",
+"file": "Flag of Saint Vincent and the Grenadines (1877-1907).svg"
+},
+{
+"date_start": "1907-01-01",
+"date_end": "1979-10-27",
+"label_fr": "Colonie de Saint-Vincent (1907-1979)",
+"label_en": "Colony of Saint Vincent (1907–1979)",
+"notes_fr": "Le badge montre deux femmes, la Paix et la Justice, devant un autel, sous la devise « Pax et Justitia », toujours présentes sur les armoiries actuelles.",
+"notes_en": "The badge shows two women, Peace and Justice, before an altar, under the motto \"Pax et Justitia\", still found on today's arms.",
+"file": "Flag of Saint Vincent and the Grenadines (1907-1979).svg"
 }
 ]
 }

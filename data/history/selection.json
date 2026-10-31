@@ -756,11 +756,11 @@
   "name": "it-1797"
  },
  {
-  "file": "Flag of the Cisalpine Republic.svg",
+  "file": "Flag of the Repubblica Cisalpina.svg",
   "name": "it-1797-2"
  },
  {
-  "file": "Flag of the Italian Republic (1802–1805).svg",
+  "file": "Flag of the Italian Republic (1802).svg",
   "name": "it-1802"
  },
  {
@@ -1632,7 +1632,7 @@
   "name": "us-1846-2"
  },
  {
-  "file": "Flag of Uruguay (1828–1830).svg",
+  "file": "Flag of Uruguay (1828-1830).svg",
   "name": "uy-0000"
  },
  {
@@ -1648,8 +1648,16 @@
   "name": "uz-0000"
  },
  {
-  "file": "Flag of Saint Vincent and the Grenadines (1979–1985).svg",
+  "file": "Flag of Saint Vincent and the Grenadines (1979-1985).svg",
   "name": "vc-0000"
+ },
+ {
+  "file": "Flag of Saint Vincent and the Grenadines (1877-1907).svg",
+  "name": "vc-1877"
+ },
+ {
+  "file": "Flag of Saint Vincent and the Grenadines (1907-1979).svg",
+  "name": "vc-1907"
  },
  {
   "file": "Flag of North Vietnam (1945–1955).svg",
@@ -1664,7 +1672,7 @@
   "name": "vu-0000"
  },
  {
-  "file": "Flag of Samoa (1948–1949).svg",
+  "file": "Flag of Samoa (1948-1949).svg",
   "name": "ws-0000"
  },
  {
@@ -1692,7 +1700,7 @@
   "name": "za-0000"
  },
  {
-  "file": "Flag of the Transvaal.svg",
+  "file": "Flag of Transvaal.svg",
   "name": "za-1857"
  },
  {

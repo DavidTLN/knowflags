@@ -3,7 +3,7 @@ name: Commons construction sheets
 on:
   push:
     branches: [construction-commons]
-    paths: [scripts/construction/fetch_commons.py, scripts/construction/probe_commons.py, data/construction/probe_names.txt, .github/workflows/construction-commons.yml]
+    paths: [scripts/construction/fetch_commons.py, scripts/construction/probe_commons.py, data/construction/probe_names.txt, data/construction/ref_list.txt, scripts/construction/fetch_files.py, .github/workflows/construction-commons.yml]
   workflow_dispatch:
 
 permissions:
@@ -24,9 +24,14 @@ jobs:
       - run: test -f data/construction/commons_index.json || python3 scripts/construction/fetch_commons.py
       - name: Probe specific flags
         run: |
-          if [ -f data/construction/probe_names.txt ]; then
+          if [ -f data/construction/probe_names.txt ] && [ ! -f data/construction/probe.json ]; then
             cd scripts/construction && mapfile -t N < ../../data/construction/probe_names.txt && cd ../.. && \
             PYTHONPATH=scripts/construction python3 scripts/construction/probe_commons.py "${N[@]}" > data/construction/probe.log 2>&1 || true
+          fi
+      - name: Reference files
+        run: |
+          if [ -f data/construction/ref_list.txt ]; then
+            PYTHONPATH=scripts/construction python3 scripts/construction/fetch_files.py data/construction/ref_list.txt > data/construction/ref.log 2>&1 || true
           fi
       - name: Commit results
         run: |

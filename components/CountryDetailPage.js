@@ -476,6 +476,8 @@ function SymbolBadge({ slug, fallback, keepColor = true, size = 40 }) {
 
 // Credits of the sheets taken from Wikimedia Commons (/flags/construction/credits.json),
 // shown under the sheet as their licences require. Loaded once per page session.
+// Bump when the sheets are regenerated: /flags is cached for a week by browsers.
+const CONSTRUCTION_VERSION = '2'
 let constructionCredits = null
 function useConstructionCredit(iso) {
   const [credit, setCredit] = useState(null)
@@ -483,7 +485,7 @@ function useConstructionCredit(iso) {
     let alive = true
     const load = constructionCredits
       ? Promise.resolve(constructionCredits)
-      : fetch('/flags/construction/credits.json').then(r => (r.ok ? r.json() : {})).catch(() => ({}))
+      : fetch(`/flags/construction/credits.json?v=${CONSTRUCTION_VERSION}`).then(r => (r.ok ? r.json() : {})).catch(() => ({}))
     load.then(data => {
       constructionCredits = data
       if (alive) setCredit((iso && data[iso]) || null)
@@ -500,8 +502,8 @@ function ConstructionSheet({ iso, locale }) {
   const primary = locale === 'fr' ? 'fr' : 'en'
   const secondary = primary === 'fr' ? 'en' : 'fr'
   const candidates = [
-    `/flags/construction/${iso}-construction-${primary}.svg`,
-    `/flags/construction/${iso}-construction-${secondary}.svg`,
+    `/flags/construction/${iso}-construction-${primary}.svg?v=${CONSTRUCTION_VERSION}`,
+    `/flags/construction/${iso}-construction-${secondary}.svg?v=${CONSTRUCTION_VERSION}`,
     `/flags/construction/${iso}-construction-${primary}.png`,
     `/flags/construction/${iso}-construction-${secondary}.png`,
   ]

@@ -36,7 +36,9 @@ def names(d, taken):
     for e in d.get('update', []) + d.get('add', []):
         if not e.get('file'):
             continue
-        year = (e.get('date_start') or '0000')[:4]
+        year = (e.get('date_start') or e.get('year') or '')[:4]
+        if not year:
+            raise SystemExit(f"{d['iso']}: give date_start or year for {e['file']} (images are named {{iso}}-{{year}})")
         base = f"{d['iso']}-{year}"
         n, name = 1, base
         while name in taken:

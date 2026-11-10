@@ -13,6 +13,7 @@ const STATUS_COLORS = {
   pending:  { bg: '#fefce8', color: '#854d0e', border: '#fde68a' },
   accepted: { bg: '#f0fdf4', color: '#166534', border: '#bbf7d0' },
   rejected: { bg: '#fef2f2', color: '#991b1b', border: '#fecaca' },
+  manual_review: { bg: '#FEF3C7', color: '#92400E', border: '#F4B400' },
 }
 
 const FLAG_TYPE_LABELS = {
@@ -55,8 +56,9 @@ export default function AdminSubmissionsList({ submissions, locale }) {
       <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '32px 24px' }}>
 
         {/* Stats */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px', marginBottom: '28px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '12px', marginBottom: '28px' }}>
           {[
+            { label: t('Manual review', 'Forçage manuel'), value: submissions.filter(s => s.status === 'manual_review').length, color: '#92400E', bg: '#FEF3C7' },
             { label: t('Pending', 'En attente'),  value: submissions.filter(s => s.status === 'pending').length,  color: '#854d0e', bg: '#fefce8' },
             { label: t('Accepted', 'Acceptées'),  value: submissions.filter(s => s.status === 'accepted').length, color: '#166534', bg: '#f0fdf4' },
             { label: t('Rejected', 'Refusées'),   value: submissions.filter(s => s.status === 'rejected').length, color: '#991b1b', bg: '#fef2f2' },
@@ -69,11 +71,11 @@ export default function AdminSubmissionsList({ submissions, locale }) {
         </div>
 
         {/* Filter tabs */}
-        <div style={{ display: 'flex', gap: '8px', marginBottom: '20px' }}>
-          {['all', 'pending', 'accepted', 'rejected'].map(f => (
+        <div style={{ display: 'flex', gap: '8px', marginBottom: '20px', overflowX: 'auto', paddingBottom: '4px' }}>
+          {['all', 'pending', 'manual_review', 'accepted', 'rejected'].map(f => (
             <button key={f} onClick={() => setFilter(f)}
-              style={{ padding: '7px 16px', borderRadius: '99px', border: `1.5px solid ${filter === f ? C.navy : C.border}`, backgroundColor: filter === f ? C.navy : 'white', color: filter === f ? 'white' : C.muted, fontSize: '13px', fontWeight: '700', cursor: 'pointer', textTransform: 'capitalize' }}>
-              {f === 'all' ? t('All', 'Toutes') : f}
+              style={{ padding: '7px 16px', borderRadius: '99px', border: `1.5px solid ${filter === f ? C.navy : C.border}`, backgroundColor: filter === f ? C.navy : 'white', color: filter === f ? 'white' : C.muted, fontSize: '13px', fontWeight: '700', cursor: 'pointer', whiteSpace: 'nowrap', minHeight: '40px' }}>
+              {({ all: t('All', 'Toutes'), pending: t('Pending', 'En attente'), manual_review: t('Manual review', 'Forçage manuel'), accepted: t('Accepted', 'Acceptées'), rejected: t('Rejected', 'Refusées') })[f]}
             </button>
           ))}
         </div>
@@ -106,7 +108,7 @@ export default function AdminSubmissionsList({ submissions, locale }) {
                       </div>
                     </div>
                     <span style={{ padding: '4px 12px', borderRadius: '99px', fontSize: '12px', fontWeight: '700', backgroundColor: st.bg, color: st.color, border: `1px solid ${st.border}`, flexShrink: 0 }}>
-                      {s.status}
+                      {s.status === 'manual_review' ? t('Manual review', 'Forçage manuel') : s.status}
                     </span>
                     <span style={{ color: C.muted, fontSize: '18px' }}>›</span>
                   </div>

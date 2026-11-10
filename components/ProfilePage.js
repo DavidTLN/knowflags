@@ -248,7 +248,7 @@ export default function ProfilePage() {
 
   const submittedCount = submissions.length
   const acceptedCount  = submissions.filter(s => s.status === 'accepted').length
-  const pendingCount   = submissions.filter(s => s.status === 'pending').length
+  const pendingCount   = submissions.filter(s => s.status === 'pending' || s.status === 'manual_review').length
   const rejectedCount  = submissions.filter(s => s.status === 'rejected').length
 
   const agg = {
@@ -648,7 +648,7 @@ export default function ProfilePage() {
                       <div style={{ fontSize: '11px', color: C.muted }}>{s.flag_type} · {s.entity_code} · {new Date(s.created_at).toLocaleDateString()}</div>
                     </div>
                     <span style={{ padding: '3px 10px', borderRadius: '99px', fontSize: '11px', fontWeight: '700', backgroundColor: statusColor.bg, color: statusColor.color, border: `1px solid ${statusColor.border}` }}>
-                      {s.status}
+                      {s.status === 'manual_review' ? 'pending' : s.status}
                     </span>
                   </div>
                 )

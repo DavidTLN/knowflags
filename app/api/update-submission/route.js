@@ -20,6 +20,11 @@ export async function POST(request) {
       .from('profiles').select('is_admin').eq('user_id', session.user.id).single()
     if (!profile?.is_admin) return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
 
+    // Les infos d'origine du formulaire (nouveau nom, region parente, pays absent...)
+    // vivent aussi dans metadata : on les garde et on ne remplace que les champs edites.
+    const { data: current } = await supabase.from('submissions').select('metadata').eq('id', id).single()
+    const prevMeta = current?.metadata || {}
+
     // Update submissions table
     const { error: updateError } = await supabase
       .from('submissions')
@@ -36,12 +41,13 @@ export async function POST(request) {
         facts:        (facts || []).filter(f => f.trim()),
         // Store extra fields in metadata jsonb for country-specific data
         metadata: {
+          ...prevMeta,
           adopted_year:   adopted_year  || null,
           ratio:          ratio         || null,
           shape:          shape         || null,
           colors:         colors        || [],
           symbols:        symbols       || [],
-          country_facts:  (country_facts || []).filter(f => f.fact_en.trim()),
+          country_facts:  (country_facts || []).filter(f => f?.fact_en?.trim()),
         },
       })
       .eq('id', id)

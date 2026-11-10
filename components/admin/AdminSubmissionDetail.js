@@ -6,15 +6,15 @@ import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 
 const C = {
-  navy: '#0B1F3B', cream: '#F4F1E6', border: '#E2DDD5',
-  muted: '#8A8278', green: '#426A5A', red: '#C0392B', bg: '#F7F5EF',
+  navy: '#16324F', cream: '#F4F1E6', border: '#E2DDD5',
+  muted: '#6B7280', green: '#16A34A', red: '#D62828', bg: '#F4F1E6',
   blue: '#9EB7E5',
 }
 
-const LABEL = { display: 'block', fontSize: '11px', fontWeight: '700', color: '#8A8278', marginBottom: '5px', textTransform: 'uppercase', letterSpacing: '0.05em' }
-const INPUT = { width: '100%', boxSizing: 'border-box', padding: '8px 12px', borderRadius: '8px', border: '1.5px solid #E2DDD5', fontSize: '13px', color: '#0B1F3B', backgroundColor: 'white', outline: 'none', fontFamily: 'inherit' }
+const LABEL = { display: 'block', fontSize: '11px', fontWeight: '700', color: '#6B7280', marginBottom: '5px', textTransform: 'uppercase', letterSpacing: '0.05em' }
+const INPUT = { width: '100%', boxSizing: 'border-box', padding: '8px 12px', borderRadius: '8px', border: '1.5px solid #E2DDD5', fontSize: '13px', color: '#16324F', backgroundColor: 'white', outline: 'none', fontFamily: 'inherit' }
 const SECTION = { backgroundColor: 'white', borderRadius: '14px', border: '1px solid #E2DDD5', overflow: 'hidden', marginBottom: '0' }
-const SECTION_HDR = { padding: '12px 16px', borderBottom: '1px solid #E2DDD5', fontSize: '12px', fontWeight: '700', color: '#8A8278', textTransform: 'uppercase', letterSpacing: '0.5px' }
+const SECTION_HDR = { padding: '12px 16px', borderBottom: '1px solid #E2DDD5', fontSize: '12px', fontWeight: '700', color: '#6B7280', textTransform: 'uppercase', letterSpacing: '0.5px' }
 
 const FLAG_COLORS = ['red','white','blue','green','yellow','black','orange','purple','brown','gold','silver','cyan','pink']
 const FLAG_SYMBOLS = ['star','cross','crescent','eagle','lion','sun','moon','shield','stripes','triangle','circle','coat_of_arms','tree','map']
@@ -33,6 +33,13 @@ export default function AdminSubmissionDetail({ submission: s, locale }) {
   const [done,      setDone]      = useState(false)
   const [reviewErr, setReviewErr] = useState('')
 
+  // Vérification par Claude
+  const [status,   setStatus]   = useState(s.status)
+  const [report,   setReport]   = useState(s.metadata?.ai_check || null)
+  const [aiStep,   setAiStep]   = useState('')      // '' | 'saving' | 'checking' | 'publishing'
+  const [noKey,    setNoKey]    = useState(false)
+  const open = status === 'pending' || status === 'manual_review'
+
   // Edit state — pre-fill from submission
   const [edit, setEdit] = useState({
     label_en:     s.label_en     || '',
@@ -45,14 +52,14 @@ export default function AdminSubmissionDetail({ submission: s, locale }) {
     valid_to:     s.valid_to     || '',
     is_permanent: s.is_permanent ?? true,
     facts:        (s.facts && s.facts.length > 0) ? s.facts : [''],
-    // Country-specific
-    adopted_year: s.adopted_year || '',
-    ratio:        s.ratio        || '',
-    shape:        s.shape        || '',
-    colors:       s.colors       || [],
-    symbols:      s.symbols      || [],
+    // Country-specific (stockes dans metadata)
+    adopted_year: s.metadata?.adopted_year || '',
+    ratio:        s.metadata?.ratio        || '',
+    shape:        s.metadata?.shape        || '',
+    colors:       s.metadata?.colors       || [],
+    symbols:      s.metadata?.symbols      || [],
     // Country facts
-    country_facts: s.country_facts || [{ fact_en: '', fact_fr: '', category: 'history' }],
+    country_facts: s.metadata?.country_facts?.length ? s.metadata.country_facts : [{ fact_en: '', fact_fr: '', category: 'history' }],
   })
   const [saving,   setSaving]   = useState(false)
   const [saveMsg,  setSaveMsg]  = useState('')
@@ -73,40 +80,99 @@ export default function AdminSubmissionDetail({ submission: s, locale }) {
   function updateCFact(i, key, v) { setEdit(e => ({ ...e, country_facts: e.country_facts.map((f, j) => j === i ? { ...f, [key]: v } : f) })) }
   function removeCFact(i) { setF('country_facts', edit.country_facts.filter((_, j) => j !== i)) }
 
+  async function saveEdits() {
+    const res = await fetch('/api/update-submission', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id: s.id, ...edit }),
+    })
+    const data = await res.json().catch(() => ({}))
+    if (!res.ok) throw new Error(data.error || 'Error')
+  }
+
   async function handleSave() {
     setSaving(true)
     setSaveMsg('')
     setSaveErr('')
     try {
-      const res = await fetch('/api/update-submission', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ id: s.id, ...edit }),
-      })
-      const data = await res.json()
-      if (!res.ok) throw new Error(data.error || 'Error')
+      await saveEdits()
       setSaveMsg(t('Saved!', 'Enregistré !'))
       setTimeout(() => setSaveMsg(''), 2000)
     } catch (e) { setSaveErr(e.message) }
     setSaving(false)
   }
 
-  async function handleReview() {
+  async function publish(act) {
+    const res = await fetch('/api/review-submission', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id: s.id, action: act, adminNote }),
+    })
+    const data = await res.json().catch(() => ({}))
+    if (!res.ok) throw new Error(data.error || 'Unknown error')
+    setAction(act)
+    setEmailSent(!!data.emailSent)
+    setDone(true)
+    setTimeout(() => router.push(`/${locale}/admin/submissions`), 3000)
+  }
+
+  // Accepter : on enregistre, Claude vérifie et complète, puis on publie.
+  // En cas de doute, la soumission part en « Forçage manuel » avec le rapport.
+  async function handleAccept({ skipCheck = false } = {}) {
     setReviewing(true)
     setReviewErr('')
     try {
-      const res = await fetch('/api/review-submission', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ id: s.id, action, adminNote }),
-      })
-      const data = await res.json()
-      if (!res.ok) throw new Error(data.error || 'Unknown error')
-      setEmailSent(!!data.emailSent)
-      setDone(true)
-      setTimeout(() => router.push(`/${locale}/admin/submissions`), 3000)
+      setAiStep('saving')
+      await saveEdits()
+      if (!skipCheck) {
+        setAiStep('checking')
+        const res = await fetch('/api/review-submission/ai-check', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id: s.id }),
+        })
+        const data = await res.json().catch(() => ({}))
+        if (res.status === 503 && data.code === 'no_key') { setNoKey(true); setAiStep(''); setReviewing(false); return }
+        if (!res.ok) throw new Error(data.error || 'Claude error')
+        setReport(data.report)
+        if (data.outcome === 'manual') {
+          setStatus('manual_review')
+          setAiStep('')
+          setReviewing(false)
+          return
+        }
+      }
+      setAiStep('publishing')
+      await publish('accept')
     } catch (e) { setReviewErr(e.message) }
+    setAiStep('')
     setReviewing(false)
+  }
+
+  async function handleReject() {
+    setReviewing(true)
+    setReviewErr('')
+    try { await publish('reject') } catch (e) { setReviewErr(e.message) }
+    setReviewing(false)
+  }
+
+  // Reprend les propositions de Claude dans le formulaire (forçage manuel)
+  function applyReport() {
+    const sg = report?.suggestions || {}
+    const v = (x) => (typeof x === 'string' && x.trim() ? x.trim() : null)
+    setEdit(e => ({
+      ...e,
+      label_en: v(sg.label_en) || e.label_en,
+      label_fr: v(sg.label_fr) || e.label_fr,
+      description: v(sg.description) || e.description,
+      source_url: v(sg.source_url) || e.source_url,
+      entity_code: (v(sg.entity_code) || e.entity_code).toLowerCase(),
+      country_code: (v(sg.country_code) || e.country_code).toLowerCase(),
+      valid_from: /^\d{4}-\d{2}-\d{2}$/.test(sg.valid_from || '') ? sg.valid_from : e.valid_from,
+      valid_to: /^\d{4}-\d{2}-\d{2}$/.test(sg.valid_to || '') ? sg.valid_to : e.valid_to,
+      is_permanent: typeof sg.is_permanent === 'boolean' ? sg.is_permanent : e.is_permanent,
+      facts: (sg.facts || []).filter(Boolean).length ? [...e.facts.filter(Boolean), ...sg.facts.filter(Boolean)] : e.facts,
+    }))
   }
 
   if (done) return (
@@ -135,17 +201,27 @@ export default function AdminSubmissionDetail({ submission: s, locale }) {
     <div style={{ backgroundColor: C.bg, minHeight: '100vh', fontFamily: 'var(--font-body)' }}>
 
       {/* Header */}
-      <div style={{ backgroundColor: C.navy, padding: '20px 32px', display: 'flex', alignItems: 'center', gap: '16px' }}>
+      <div className="kf-adm-hdr" style={{ backgroundColor: C.navy, padding: '20px 32px', display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
         <Link prefetch={false} href={`/${locale}/admin/submissions`} style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: '13px' }}>← {t('Back', 'Retour')}</Link>
-        <h1 style={{ margin: 0, fontSize: '20px', fontWeight: '900', color: 'white', flex: 1 }}>{s.label_en || s.name || t('Submission', 'Soumission')}</h1>
+        <h1 style={{ margin: 0, fontSize: '20px', fontWeight: '900', color: 'white', flex: '1 1 180px', minWidth: 0, overflowWrap: 'anywhere' }}>{s.label_en || s.name || t('Submission', 'Soumission')}</h1>
         <span style={{ padding: '4px 12px', borderRadius: '99px', fontSize: '12px', fontWeight: '700',
-          backgroundColor: s.status === 'pending' ? '#fefce8' : s.status === 'accepted' ? '#f0fdf4' : '#fef2f2',
-          color: s.status === 'pending' ? '#854d0e' : s.status === 'accepted' ? '#166534' : '#991b1b' }}>
-          {s.status}
+          backgroundColor: status === 'pending' ? '#fefce8' : status === 'manual_review' ? '#FEF3C7' : status === 'accepted' ? '#f0fdf4' : '#fef2f2',
+          color: status === 'pending' ? '#854d0e' : status === 'manual_review' ? '#92400E' : status === 'accepted' ? '#166534' : '#991b1b' }}>
+          {status === 'manual_review' ? t('Manual review', 'Forçage manuel') : status}
         </span>
       </div>
 
-      <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '32px 24px', display: 'grid', gridTemplateColumns: '1fr 340px', gap: '24px', alignItems: 'start' }}>
+      <style>{`
+        .kf-adm-grid{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:24px;align-items:start;max-width:1100px;margin:0 auto;padding:32px 24px}
+        .kf-adm-side{position:sticky;top:84px}
+        @media (max-width:899px){
+          .kf-adm-grid{grid-template-columns:minmax(0,1fr);padding:16px;gap:16px}
+          .kf-adm-side{position:static;order:-1}
+          .kf-adm-hdr{padding:16px!important}
+        }
+        @media (max-width:599px){ .kf-adm-2{grid-template-columns:1fr!important} }
+      `}</style>
+      <div className="kf-adm-grid">
 
         {/* ── LEFT: editable fields ── */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
@@ -165,7 +241,7 @@ export default function AdminSubmissionDetail({ submission: s, locale }) {
             <div style={SECTION_HDR}>{t('Basic Info', 'Infos de base')}</div>
             <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+              <div className="kf-adm-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
                 <div>
                   <label style={LABEL}>{t('Name (EN)', 'Nom (EN)')} *</label>
                   <input value={edit.label_en} onChange={e => setF('label_en', e.target.value)} style={INPUT} />
@@ -176,7 +252,7 @@ export default function AdminSubmissionDetail({ submission: s, locale }) {
                 </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+              <div className="kf-adm-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
                 <div>
                   <label style={LABEL}>{t('Entity code / ISO', 'Code entité / ISO')} *</label>
                   <input value={edit.entity_code} onChange={e => setF('entity_code', e.target.value.toLowerCase())}
@@ -210,7 +286,7 @@ export default function AdminSubmissionDetail({ submission: s, locale }) {
                   <input type="checkbox" id="perm" checked={edit.is_permanent} onChange={e => setF('is_permanent', e.target.checked)} style={{ width: '15px', height: '15px' }} />
                   <label htmlFor="perm" style={{ fontSize: '12px', color: C.navy, cursor: 'pointer', fontWeight: '600' }}>{t('Permanent / currently in use', 'Permanent / actuellement utilisé')}</label>
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+                <div className="kf-adm-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
                   <div>
                     <label style={{ ...LABEL, fontSize: '10px' }}>{t('Valid from', 'Valide depuis')}</label>
                     <input type="date" value={edit.valid_from} onChange={e => setF('valid_from', e.target.value)} style={INPUT} />
@@ -251,7 +327,7 @@ export default function AdminSubmissionDetail({ submission: s, locale }) {
               <div style={SECTION_HDR}>{t('Flag Properties', 'Propriétés du drapeau')}</div>
               <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
 
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+                <div className="kf-adm-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
                   <div>
                     <label style={LABEL}>{t('Adopted year', 'Année adoption')}</label>
                     <input type="number" value={edit.adopted_year} onChange={e => setF('adopted_year', e.target.value)}
@@ -354,8 +430,8 @@ export default function AdminSubmissionDetail({ submission: s, locale }) {
           </div>
 
           {/* Save edits button */}
-          {s.status === 'pending' && (
-            <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+          {open && (
+            <div style={{ display: 'flex', gap: '10px', alignItems: 'center', flexWrap: 'wrap' }}>
               <button onClick={handleSave} disabled={saving}
                 style={{ padding: '11px 24px', backgroundColor: C.navy, color: 'white', border: 'none', borderRadius: '10px', fontSize: '13px', fontWeight: '700', cursor: saving ? 'not-allowed' : 'pointer', opacity: saving ? 0.7 : 1 }}>
                 {saving ? t('Saving…', 'Enregistrement…') : t('Save edits', 'Enregistrer')}
@@ -366,41 +442,123 @@ export default function AdminSubmissionDetail({ submission: s, locale }) {
           )}
         </div>
 
-        {/* ── RIGHT: review panel ── */}
-        <div style={{ position: 'sticky', top: '24px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        {/* ── RIGHT (en haut sur mobile) : décision ── */}
+        <div className="kf-adm-side" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
 
-          {s.status === 'pending' && (
+          {open && (
             <div style={SECTION}>
-              <div style={{ ...SECTION_HDR, fontSize: '13px', color: C.navy }}>{t('Review Decision', 'Décision')}</div>
+              <div style={{ ...SECTION_HDR, fontSize: '13px', color: C.navy }}>
+                {status === 'manual_review' ? t('Manual review', 'Forçage manuel') : t('Review Decision', 'Décision')}
+              </div>
               <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                <button onClick={() => setAction('accept')}
-                  style={{ width: '100%', padding: '12px', borderRadius: '10px', border: `2px solid ${action === 'accept' ? '#16a34a' : C.border}`, backgroundColor: action === 'accept' ? '#f0fdf4' : 'white', color: action === 'accept' ? '#166534' : C.muted, fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
-                  {t('Accept', 'Accepter')}
-                </button>
-                <button onClick={() => setAction('reject')}
-                  style={{ width: '100%', padding: '12px', borderRadius: '10px', border: `2px solid ${action === 'reject' ? C.red : C.border}`, backgroundColor: action === 'reject' ? '#fef2f2' : 'white', color: action === 'reject' ? C.red : C.muted, fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
-                  {t('Reject', 'Refuser')}
-                </button>
-                <div>
-                  <label style={LABEL}>{action === 'reject' ? t('Reason (required)', 'Raison (obligatoire)') : t('Note (optional)', 'Note (optionnelle)')}</label>
-                  <textarea value={adminNote} onChange={e => setAdminNote(e.target.value)} rows={4}
-                    placeholder={action === 'reject' ? t('Explain why…', 'Expliquez pourquoi…') : t('Optional note…', 'Note optionnelle…')}
-                    style={{ ...INPUT, resize: 'vertical' }} />
+                {status === 'pending' && (
+                  <p style={{ margin: 0, fontSize: '12px', color: C.muted, lineHeight: 1.5 }}>
+                    {t('Claude checks the flag, files it in the right place and completes it from Wikipedia before publishing. If in doubt, it goes to manual review.',
+                       'Claude vérifie le drapeau, le range au bon endroit et le complète avec Wikipédia avant publication. En cas de doute, il part en forçage manuel.')}
+                  </p>
+                )}
+
+                <div className="kf-adm-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+                  <button onClick={() => setAction('accept')} disabled={reviewing}
+                    style={{ minHeight: '46px', padding: '10px', borderRadius: '10px', border: `2px solid ${action === 'accept' ? C.green : C.border}`, backgroundColor: action === 'accept' ? '#DCFCE7' : 'white', color: action === 'accept' ? '#166534' : C.navy, fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
+                    {status === 'manual_review' ? t('Force publish', 'Forcer la publication') : t('Accept', 'Accepter')}
+                  </button>
+                  <button onClick={() => setAction('reject')} disabled={reviewing}
+                    style={{ minHeight: '46px', padding: '10px', borderRadius: '10px', border: `2px solid ${action === 'reject' ? C.red : C.border}`, backgroundColor: action === 'reject' ? '#FEE2E2' : 'white', color: action === 'reject' ? C.red : C.navy, fontSize: '14px', fontWeight: '700', cursor: 'pointer' }}>
+                    {t('Reject', 'Refuser')}
+                  </button>
                 </div>
-                {reviewErr && <div style={{ padding: '10px', backgroundColor: '#fef2f2', border: '1px solid #fca5a5', borderRadius: '8px', fontSize: '12px', color: C.red }}>{reviewErr}</div>}
-                <button onClick={handleReview}
-                  disabled={!action || (action === 'reject' && !adminNote.trim()) || reviewing}
-                  style={{ width: '100%', padding: '13px', backgroundColor: !action || (action === 'reject' && !adminNote.trim()) ? C.border : action === 'accept' ? C.green : C.red, color: 'white', border: 'none', borderRadius: '10px', fontSize: '14px', fontWeight: '700', cursor: !action ? 'not-allowed' : 'pointer', opacity: reviewing ? 0.7 : 1 }}>
-                  {reviewing ? t('Processing…', 'En cours…') : t('Confirm decision', 'Confirmer')}
-                </button>
-                <p style={{ margin: 0, fontSize: '11px', color: C.muted, textAlign: 'center' }}>
-                  {t('Save your edits before accepting.', 'Enregistrez vos modifications avant d\'accepter.')}
-                </p>
+
+                {action && (
+                  <div>
+                    <label style={LABEL}>{action === 'reject' ? t('Reason (required, sent to the author)', "Raison (obligatoire, envoyée à l'auteur)") : t('Note (optional)', 'Note (optionnelle)')}</label>
+                    <textarea value={adminNote} onChange={e => setAdminNote(e.target.value)} rows={3}
+                      placeholder={action === 'reject' ? t('Explain why…', 'Expliquez pourquoi…') : t('Optional note…', 'Note optionnelle…')}
+                      style={{ ...INPUT, resize: 'vertical', fontSize: '16px' }} />
+                  </div>
+                )}
+
+                {noKey && (
+                  <div style={{ padding: '10px 12px', backgroundColor: '#FEF3C7', borderRadius: '8px', fontSize: '12px', color: '#92400E', lineHeight: 1.5 }}>
+                    {t('Claude check unavailable: add ANTHROPIC_API_KEY in Vercel.', 'Vérification Claude indisponible : ajoute ANTHROPIC_API_KEY dans Vercel.')}
+                  </div>
+                )}
+                {reviewErr && <div style={{ padding: '10px', backgroundColor: '#FEE2E2', borderRadius: '8px', fontSize: '12px', color: C.red, overflowWrap: 'anywhere' }}>{reviewErr}</div>}
+
+                {action === 'accept' && (
+                  <button onClick={() => (status === 'manual_review' || noKey) ? handleAccept({ skipCheck: true }) : handleAccept()} disabled={reviewing}
+                    style={{ minHeight: '48px', padding: '12px', backgroundColor: C.green, color: 'white', border: 'none', borderRadius: '10px', fontSize: '14px', fontWeight: '700', cursor: reviewing ? 'wait' : 'pointer', opacity: reviewing ? 0.75 : 1 }}>
+                    {aiStep === 'saving' ? t('Saving…', 'Enregistrement…')
+                      : aiStep === 'checking' ? t('Claude is checking… (up to 1 min)', 'Claude vérifie… (jusqu’à 1 min)')
+                      : aiStep === 'publishing' ? t('Publishing…', 'Publication…')
+                      : status === 'manual_review' ? t('Publish as is', 'Publier tel quel')
+                      : noKey ? t('Publish without check', 'Publier sans vérification')
+                      : t('Check with Claude and publish', 'Vérifier avec Claude et publier')}
+                  </button>
+                )}
+                {action === 'reject' && (
+                  <button onClick={handleReject} disabled={!adminNote.trim() || reviewing}
+                    style={{ minHeight: '48px', padding: '12px', backgroundColor: adminNote.trim() ? C.red : C.border, color: 'white', border: 'none', borderRadius: '10px', fontSize: '14px', fontWeight: '700', cursor: adminNote.trim() ? 'pointer' : 'not-allowed', opacity: reviewing ? 0.75 : 1 }}>
+                    {reviewing ? t('Processing…', 'En cours…') : t('Confirm rejection', 'Confirmer le refus')}
+                  </button>
+                )}
+                {status === 'manual_review' && (
+                  <button onClick={() => handleAccept()} disabled={reviewing}
+                    style={{ minHeight: '44px', padding: '9px', backgroundColor: 'transparent', color: C.navy, border: `1.5px solid ${C.border}`, borderRadius: '10px', fontSize: '13px', fontWeight: '600', cursor: 'pointer' }}>
+                    {t('Re-run Claude check after my edits', 'Relancer Claude après mes corrections')}
+                  </button>
+                )}
               </div>
             </div>
           )}
 
-          {s.status !== 'pending' && s.admin_notes && (
+          {report && (
+            <div style={SECTION}>
+              <div style={{ ...SECTION_HDR, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '8px' }}>
+                <span>{t('Claude report', 'Rapport de Claude')}</span>
+                <span style={{ padding: '3px 8px', borderRadius: '9999px', fontSize: '11px', fontWeight: 600,
+                  backgroundColor: report.verdict === 'doubt' ? '#FEE2E2' : report.verdict === 'ok' ? '#DCFCE7' : '#FEF3C7',
+                  color: report.verdict === 'doubt' ? '#D62828' : report.verdict === 'ok' ? '#16A34A' : '#92400E' }}>
+                  {report.verdict === 'doubt' ? t('Doubt', 'Doute') : report.verdict === 'ok' ? 'OK' : t('Corrected', 'Corrigé')}
+                </span>
+              </div>
+              <div style={{ padding: '14px 16px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                {report.summary_fr && <p style={{ margin: 0, fontSize: '13px', color: C.navy, lineHeight: 1.55 }}>{report.summary_fr}</p>}
+                {report.image_matches === false && (
+                  <p style={{ margin: 0, fontSize: '12px', fontWeight: 700, color: C.red }}>{t('The image does not seem to match.', 'L’image ne semble pas correspondre.')}</p>
+                )}
+                {(report.checks || []).length > 0 && (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                    {report.checks.map((c, i) => {
+                      const col = c.status === 'doubt' ? C.red : c.status === 'ok' ? C.green : '#92400E'
+                      return (
+                        <div key={i} style={{ display: 'flex', gap: '8px', fontSize: '12px', lineHeight: 1.45 }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: col, flexShrink: 0, marginTop: '5px' }} />
+                          <span style={{ color: C.navy }}><b>{c.field}</b> · {c.message_fr}</span>
+                        </div>
+                      )
+                    })}
+                  </div>
+                )}
+                {(report.sources || []).length > 0 && (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', borderTop: `1px solid ${C.border}`, paddingTop: '8px' }}>
+                    {report.sources.map((src, i) => (
+                      <a key={i} href={src.url} target="_blank" rel="noopener noreferrer" style={{ fontSize: '12px', color: '#2563EB', overflowWrap: 'anywhere' }}>{src.title || src.url}</a>
+                    ))}
+                  </div>
+                )}
+                {status === 'manual_review' && report.suggestions && (
+                  <button onClick={applyReport}
+                    style={{ minHeight: '44px', padding: '9px', backgroundColor: C.navy, color: 'white', border: 'none', borderRadius: '10px', fontSize: '13px', fontWeight: '600', cursor: 'pointer' }}>
+                    {t('Apply Claude suggestions to the form', 'Reprendre les propositions de Claude')}
+                  </button>
+                )}
+                {report.checked_at && <span style={{ fontSize: '11px', color: '#9CA3AF' }}>{new Date(report.checked_at).toLocaleString()}</span>}
+              </div>
+            </div>
+          )}
+
+          {!open && s.admin_notes && (
             <div style={SECTION}>
               <div style={SECTION_HDR}>{t('Admin note', 'Note admin')}</div>
               <div style={{ padding: '16px' }}>

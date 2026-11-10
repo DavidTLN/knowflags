@@ -1,5 +1,5 @@
 // DESTINATION: app/api/update-submission/route.js
-import { createClient } from '@/lib/supabase-server'
+import { createAuthClient as createClient } from '@/lib/supabase-server-auth'
 import { NextResponse } from 'next/server'
 
 export async function POST(request) {

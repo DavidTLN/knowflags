@@ -5,7 +5,7 @@
 // "Admins can insert/update ..." (migration flag_submit_admin_write_policies) les autorisent.
 // Les codes ISO sont toujours stockes en minuscules.
 
-import { createClient } from '@/lib/supabase-server'
+import { createAuthClient as createClient } from '@/lib/supabase-server-auth'
 import { NextResponse } from 'next/server'
 
 const SITE = 'https://knowflags.com'

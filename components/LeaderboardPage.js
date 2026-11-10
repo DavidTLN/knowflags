@@ -20,7 +20,7 @@ const GAMES = [
 
 // Jeux retires des menus : on les masque aussi du classement, filtres et lignes.
 // Retirer une cle ici les reaffiche, les scores restent en base dans tous les cas.
-const HIDDEN_GAMES = ['past-flag', 'subflag-quiz', 'capital-city', 'flag-clue']
+const HIDDEN_GAMES = ['subflag-quiz', 'capital-city', 'flag-clue']
 
 const VISIBLE_GAMES = GAMES.filter(g => !HIDDEN_GAMES.includes(g.key))
 

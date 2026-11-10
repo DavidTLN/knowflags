@@ -10,6 +10,7 @@ import GlobalSearch from '@/components/GlobalSearch'
 import { switchLocale } from '@/lib/locale'
 
 const GAMES = [
+  { key: 'daily',        en: 'Flag of the day', fr: 'Drapeau du jour', descEn: 'One mystery flag a day, 5 guesses', descFr: 'Un drapeau mystère par jour, 5 essais' },
   { key: 'flag-reveal',  en: 'Reveal the flag',  fr: 'Révèle le drapeau',  descEn: 'Uncover the flag tile by tile',           descFr: 'Révèle le drapeau tuile par tuile' },
   { key: 'flag-quiz',    en: 'Flag Quiz',    fr: 'Quiz Drapeau',    descEn: 'Multiple choice flag challenge',          descFr: 'Quel est ce drapeau ?' },
   { key: 'capital-city', en: 'Capital2Flag', fr: 'Capital2Flag', descEn: 'Match the capital to its country',        descFr: 'Trouve la capitale du pays' },
@@ -26,7 +27,7 @@ const GAMES = [
 
 // Jeux masques temporairement du menu. Retirer une cle de cette liste suffit a
 // le remettre en avant : rien n'est supprime, les routes restent accessibles.
-const HIDDEN_GAMES = ['past-flag', 'subflag-quiz', 'capital-city', 'flag-clue']
+const HIDDEN_GAMES = ['subflag-quiz', 'capital-city', 'flag-clue']
 
 const VISIBLE_GAMES = GAMES.filter(g => g.ready !== false && !HIDDEN_GAMES.includes(g.key))
 

@@ -18,10 +18,11 @@ const DS = {
 const GAME_ICON = {
   'flag-reveal': 'eye', 'flag-quiz': 'bulb', 'capital-city': 'pin', 'flag-clue': 'search',
   'flag-ranker': 'trophy', 'flag-locator': 'target', 'flag-drawing': 'brush', 'past-flag': 'clock',
-  'subflag-quiz': 'sparkle', 'gartic-phone': 'brush', 'qui-est-ce': 'search', 'imposteur': 'search',
+  'subflag-quiz': 'sparkle', 'daily': 'flame', 'gartic-phone': 'brush', 'qui-est-ce': 'search', 'imposteur': 'search',
 }
 
 const GAMES = [
+  { key: 'daily',        icon: '',   en: 'Flag of the Day', fr: 'Drapeau du jour', descEn: 'One mystery flag a day, the same for everyone', descFr: 'Un drapeau mystère par jour, le même pour tous', color: '#F4B400', difficulty: 'easy'   },
   { key: 'flag-reveal',  icon: '🏳️', en: 'Flag Reveal',  fr: 'Flag Reveal',  descEn: 'Uncover the flag tile by tile',        descFr: 'Révèle le drapeau tuile par tuile',          color: '#2563EB', difficulty: 'easy'   },
   { key: 'flag-quiz',    icon: '❓',  en: 'Flag Quiz',    fr: 'Flag Quiz',    descEn: 'Multiple choice flag challenge',       descFr: 'Quel est ce drapeau ?',                     color: '#16A34A', difficulty: 'easy'   },
   { key: 'capital-city', icon: '🏙️', en: 'Capital2Flag', fr: 'Capital2Flag', descEn: 'Match the capital to its country',     descFr: 'Trouve la capitale du pays',                 color: '#EA580C', difficulty: 'medium' },
@@ -36,7 +37,7 @@ const GAMES = [
   { key: 'imposteur',    icon: '🔎',  en: 'Impostor',     fr: 'Imposteur',    descEn: "Find the flag that doesn't belong",    descFr: "Trouve l'imposteur parmi les drapeaux",       color: '#F59E0B', difficulty: 'medium', ready: false },
 ]
 
-const HIDDEN_GAMES = ['past-flag', 'subflag-quiz', 'capital-city', 'flag-clue']
+const HIDDEN_GAMES = ['subflag-quiz', 'capital-city', 'flag-clue']
 const COMING_SOON = []
 
 const DIFFICULTY = {

@@ -83,7 +83,7 @@ const BADGES = [
 
 // Jeux masques des menus : la carte de stats reste (archive du joueur) mais le
 // bouton Jouer disparait, sinon il renvoie vers un jeu introuvable ailleurs.
-const HIDDEN_GAMES = ['past-flag', 'subflag-quiz', 'capital-city', 'flag-clue']
+const HIDDEN_GAMES = ['subflag-quiz', 'capital-city', 'flag-clue']
 
 const GAMES_META = {
   'flag-reveal':  { icon: '🏳️', en: 'Flag Reveal',  fr: 'Révèle le Drapeau', color: C.blue,    href: 'flag-reveal'  },

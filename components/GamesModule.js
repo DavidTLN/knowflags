@@ -20,10 +20,11 @@ const DS = {
 const GAME_ICON = {
   'flag-reveal': 'eye', 'flag-quiz': 'bulb', 'capital-city': 'pin', 'flag-clue': 'search',
   'flag-ranker': 'trophy', 'flag-locator': 'target', 'flag-drawing': 'brush',
-  'past-flag': 'clock', 'subflag-quiz': 'sparkle',
+  'past-flag': 'clock', 'subflag-quiz': 'sparkle', 'daily': 'flame',
 }
 
 const GAMES = [
+  { key: 'daily',        en: 'Flag of the Day', fr: 'Drapeau du jour', descEn: 'One mystery flag a day, the same for everyone', descFr: 'Un drapeau mystère par jour, le même pour tous', color: '#F4B400', difficulty: 'easy' },
   { key: 'flag-reveal',  en: 'Flag Reveal',  fr: 'Flag Reveal',  descEn: 'Uncover the flag tile by tile',        descFr: 'Révèle le drapeau tuile par tuile',    color: '#2563EB', difficulty: 'easy'   },
   { key: 'flag-quiz',    en: 'Flag Quiz',    fr: 'Flag Quiz',    descEn: 'Multiple choice flag challenge',       descFr: 'Quel est ce drapeau ?',                color: '#16A34A', difficulty: 'easy'   },
   { key: 'capital-city', en: 'Capital2Flag', fr: 'Capital2Flag', descEn: 'Match the capital to its country',     descFr: 'Trouve la capitale du pays',           color: '#EA580C', difficulty: 'medium' },
@@ -35,7 +36,7 @@ const GAMES = [
   { key: 'subflag-quiz', en: 'SubFlag Quiz', fr: 'SubFlag Quiz', descEn: 'Regional flag, find the country',      descFr: 'Drapeau régional, trouve le pays',     color: '#14B8A6', difficulty: 'hard'   },
 ]
 
-const HIDDEN_GAMES = ['past-flag', 'subflag-quiz', 'capital-city', 'flag-clue']
+const HIDDEN_GAMES = ['subflag-quiz', 'capital-city', 'flag-clue']
 const VISIBLE_GAMES = GAMES.filter(g => !HIDDEN_GAMES.includes(g.key))
 
 const DIFFICULTY = {

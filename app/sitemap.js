@@ -92,6 +92,8 @@ const STATIC_PATHS = [
   { path: '/countries',     priority: 0.9, changeFrequency: 'weekly',  dated: 'countries' },
   { path: '/blog',          priority: 0.8, changeFrequency: 'weekly',  dated: 'blog' },
   { path: '/games',         priority: 0.7, changeFrequency: 'monthly', dated: null },
+  { path: '/games/daily',   priority: 0.7, changeFrequency: 'daily',   dated: null },
+  { path: '/games/past-flag', priority: 0.6, changeFrequency: 'monthly', dated: null },
   { path: '/forum',         priority: 0.7, changeFrequency: 'daily',   dated: 'forum' },
   { path: '/flags/cities',  priority: 0.6, changeFrequency: 'monthly', dated: 'cities' },
   { path: '/flags/regions', priority: 0.6, changeFrequency: 'monthly', dated: null },

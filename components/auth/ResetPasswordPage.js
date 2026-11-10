@@ -31,11 +31,50 @@ export default function ResetPasswordPage() {
   const [loading, setLoading]   = useState(false)
   const [error, setError]       = useState('')
 
-  // Sans session, le lien est expire ou deja utilise.
+  // Ouvre la session a partir du lien de l'e-mail, quel que soit son format :
+  //  - #access_token=...&refresh_token=...  lien « implicite » (envoye par LoginPage), valable sur tout appareil
+  //  - ?token_hash=...&type=recovery         gabarit Supabase personnalise, valable sur tout appareil
+  //  - ?code=...                              ancien lien PKCE : echange fait par le client lui-meme
+  //  - #error_code=otp_expired                lien expire ou deja utilise
+  // Sans session a la fin, le lien est expire ou deja utilise.
   useEffect(() => {
-    supabase.auth.getUser().then(({ data }) => {
-      setStatus(data?.user ? 'ready' : 'invalid')
-    })
+    let cancelled = false
+
+    async function init() {
+      const hash = new URLSearchParams(window.location.hash.replace(/^#/, ''))
+      const query = new URLSearchParams(window.location.search)
+      let failed = !!(hash.get('error_code') || hash.get('error') || query.get('error_code'))
+
+      try {
+        if (!failed && hash.get('access_token') && hash.get('refresh_token')) {
+          const { error: err } = await supabase.auth.setSession({
+            access_token: hash.get('access_token'),
+            refresh_token: hash.get('refresh_token'),
+          })
+          if (err) failed = true
+        } else if (!failed && query.get('token_hash')) {
+          const { error: err } = await supabase.auth.verifyOtp({
+            type: query.get('type') || 'recovery',
+            token_hash: query.get('token_hash'),
+          })
+          if (err) failed = true
+        }
+        // ?code= : le client navigateur l'echange tout seul a son initialisation (getUser l'attend).
+      } catch {
+        failed = true
+      }
+
+      // Retire les jetons de la barre d'adresse et de l'historique
+      if (window.location.hash || window.location.search) {
+        window.history.replaceState(null, '', window.location.pathname)
+      }
+
+      const { data } = failed ? { data: null } : await supabase.auth.getUser()
+      if (!cancelled) setStatus(data?.user ? 'ready' : 'invalid')
+    }
+
+    init()
+    return () => { cancelled = true }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 

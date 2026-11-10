@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-client'
+import { createClient as createSupabaseJsClient } from '@supabase/supabase-js'
 
 function GoogleIcon() {
   return (
@@ -67,9 +68,16 @@ export default function LoginPage() {
     setError(''); setInfo(''); setLoading(true)
     try {
       if (mode === 'forgot') {
-        const { error: err } = await supabase.auth.resetPasswordForEmail(email, {
-          // Le callback echange le code (PKCE) contre une session, puis ouvre la page du nouveau mot de passe
-          redirectTo: `${location.origin}/${locale}/auth/callback?next=/${locale}/auth/reset-password`,
+        // Flux « implicite » reserve a cette demande : le lien de l'e-mail porte lui-meme
+        // les jetons de session (dans le #fragment). Il fonctionne donc sur n'importe quel
+        // appareil ou navigateur, contrairement au flux PKCE qui exige le navigateur d'origine.
+        const recoveryClient = createSupabaseJsClient(
+          process.env.NEXT_PUBLIC_SUPABASE_URL,
+          process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+          { auth: { flowType: 'implicit', persistSession: false, autoRefreshToken: false, detectSessionInUrl: false } }
+        )
+        const { error: err } = await recoveryClient.auth.resetPasswordForEmail(email, {
+          redirectTo: `${location.origin}/${locale}/auth/reset-password`,
         })
         if (err) throw err
         setInfo(tr('resetSent', locale))

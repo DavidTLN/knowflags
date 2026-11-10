@@ -129,9 +129,9 @@ function applySuggestions(sub, sg = {}) {
 
 export async function POST(request) {
   try {
-    // Clé absente ou encore à la valeur provisoire : la page propose de publier sans vérification
-    if (!process.env.ANTHROPIC_API_KEY?.startsWith('sk-ant-')) {
-      return NextResponse.json({ error: 'ANTHROPIC_API_KEY manquante dans Vercel : la vérification par Claude est indisponible.', code: 'no_key' }, { status: 503 })
+    // Clé ou modèle non configurés (ou valeur provisoire) : la page publie directement, sans vérification
+    if (!process.env.ANTHROPIC_API_KEY?.startsWith('sk-ant-') || !process.env.ANTHROPIC_MODEL?.trim()) {
+      return NextResponse.json({ error: 'ANTHROPIC_API_KEY ou ANTHROPIC_MODEL non configurée : vérification par Claude ignorée.', code: 'no_key' }, { status: 503 })
     }
 
     const { id } = await request.json()

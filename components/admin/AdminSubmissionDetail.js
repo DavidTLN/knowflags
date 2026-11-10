@@ -132,14 +132,18 @@ export default function AdminSubmissionDetail({ submission: s, locale }) {
           body: JSON.stringify({ id: s.id }),
         })
         const data = await res.json().catch(() => ({}))
-        if (res.status === 503 && data.code === 'no_key') { setNoKey(true); setAiStep(''); setReviewing(false); return }
-        if (!res.ok) throw new Error(data.error || 'Claude error')
-        setReport(data.report)
-        if (data.outcome === 'manual') {
-          setStatus('manual_review')
-          setAiStep('')
-          setReviewing(false)
-          return
+        if (res.status === 503 && data.code === 'no_key') {
+          // Claude non configuré : on saute la vérification et on publie tel quel
+          setNoKey(true)
+        } else {
+          if (!res.ok) throw new Error(data.error || 'Claude error')
+          setReport(data.report)
+          if (data.outcome === 'manual') {
+            setStatus('manual_review')
+            setAiStep('')
+            setReviewing(false)
+            return
+          }
         }
       }
       setAiStep('publishing')
@@ -190,6 +194,11 @@ export default function AdminSubmissionDetail({ submission: s, locale }) {
             ? t('The author has been notified by email.', "L'auteur a été prévenu par e-mail.")
             : t('No email sent (RESEND_API_KEY missing or no address).', 'Aucun e-mail envoyé (RESEND_API_KEY absente ou adresse introuvable).')}
         </p>
+        {action === 'accept' && noKey && (
+          <p style={{ color: '#92400E', margin: '0 0 6px', fontSize: '13px' }}>
+            {t('Published without Claude check (API key or model not configured).', 'Publié sans vérification Claude (clé API ou modèle non configuré).')}
+          </p>
+        )}
         <p style={{ color: C.muted, margin: 0 }}>{t('Redirecting…', 'Redirection…')}</p>
       </div>
     </div>
@@ -478,21 +487,15 @@ export default function AdminSubmissionDetail({ submission: s, locale }) {
                   </div>
                 )}
 
-                {noKey && (
-                  <div style={{ padding: '10px 12px', backgroundColor: '#FEF3C7', borderRadius: '8px', fontSize: '12px', color: '#92400E', lineHeight: 1.5 }}>
-                    {t('Claude check unavailable: add ANTHROPIC_API_KEY in Vercel.', 'Vérification Claude indisponible : ajoute ANTHROPIC_API_KEY dans Vercel.')}
-                  </div>
-                )}
                 {reviewErr && <div style={{ padding: '10px', backgroundColor: '#FEE2E2', borderRadius: '8px', fontSize: '12px', color: C.red, overflowWrap: 'anywhere' }}>{reviewErr}</div>}
 
                 {action === 'accept' && (
-                  <button onClick={() => (status === 'manual_review' || noKey) ? handleAccept({ skipCheck: true }) : handleAccept()} disabled={reviewing}
+                  <button onClick={() => status === 'manual_review' ? handleAccept({ skipCheck: true }) : handleAccept()} disabled={reviewing}
                     style={{ minHeight: '48px', padding: '12px', backgroundColor: C.green, color: 'white', border: 'none', borderRadius: '10px', fontSize: '14px', fontWeight: '700', cursor: reviewing ? 'wait' : 'pointer', opacity: reviewing ? 0.75 : 1 }}>
                     {aiStep === 'saving' ? t('Saving…', 'Enregistrement…')
                       : aiStep === 'checking' ? t('Claude is checking… (up to 1 min)', 'Claude vérifie… (jusqu’à 1 min)')
                       : aiStep === 'publishing' ? t('Publishing…', 'Publication…')
                       : status === 'manual_review' ? t('Publish as is', 'Publier tel quel')
-                      : noKey ? t('Publish without check', 'Publier sans vérification')
                       : t('Check with Claude and publish', 'Vérifier avec Claude et publier')}
                   </button>
                 )}

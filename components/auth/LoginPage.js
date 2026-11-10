@@ -59,7 +59,8 @@ export default function LoginPage() {
     setError('')
     await supabase.auth.signInWithOAuth({
       provider: 'google',
-      options: { redirectTo: `${location.origin}/${locale}/auth/callback` },
+      // `next` est transmis au callback pour revenir sur la page demandee (admin, fin de partie...)
+      options: { redirectTo: `${location.origin}/${locale}/auth/callback${next ? `?next=${encodeURIComponent(next)}` : ''}` },
     })
   }
 

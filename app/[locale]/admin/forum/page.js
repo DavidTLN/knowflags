@@ -1,5 +1,5 @@
 // DESTINATION: app/[locale]/admin/forum/page.js
-import { createClient } from '@/lib/supabase-server'
+import { createAuthClient as createClient } from '@/lib/supabase-server-auth'
 import { redirect } from 'next/navigation'
 import AdminForumCategories from '@/components/admin/AdminForumCategories'
 
@@ -12,8 +12,10 @@ export default async function AdminForumPage({ params }) {
   const { locale } = await params
   const supabase = await createClient()
 
-  const { data: { session } } = await supabase.auth.getSession()
-  if (!session) redirect(`/${locale}/auth/login`)
+  // getUser verifie le jeton aupres de Supabase (getSession se contente du cookie)
+  const { data: { user: authUser } } = await supabase.auth.getUser()
+  const session = authUser ? { user: authUser } : null
+  if (!session) redirect(`/${locale}/auth/login?next=${encodeURIComponent(`/${locale}/admin/forum`)}`)
 
   const { data: profile } = await supabase
     .from('profiles')

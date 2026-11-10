@@ -7,7 +7,7 @@
 // forum_topics, donc pas de jointure PostgREST — on requete separement et on
 // recompose les liens en memoire.
 
-import { createClient } from '@/lib/supabase-server'
+import { createAuthClient as createClient } from '@/lib/supabase-server-auth'
 import { redirect } from 'next/navigation'
 import AdminForumModeration from '@/components/admin/AdminForumModeration'
 
@@ -22,8 +22,10 @@ export default async function AdminForumModerationPage({ params }) {
   const { locale } = await params
   const supabase = await createClient()
 
-  const { data: { session } } = await supabase.auth.getSession()
-  if (!session) redirect(`/${locale}/auth/login`)
+  // getUser verifie le jeton aupres de Supabase (getSession se contente du cookie)
+  const { data: { user: authUser } } = await supabase.auth.getUser()
+  const session = authUser ? { user: authUser } : null
+  if (!session) redirect(`/${locale}/auth/login?next=${encodeURIComponent(`/${locale}/admin/forum/moderation`)}`)
 
   const { data: profile } = await supabase
     .from('profiles').select('is_admin').eq('user_id', session.user.id).single()

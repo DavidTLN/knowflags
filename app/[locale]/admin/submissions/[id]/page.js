@@ -1,5 +1,5 @@
 // DESTINATION: app/[locale]/admin/submissions/[id]/page.js
-import { createClient } from '@/lib/supabase-server'
+import { createAuthClient as createClient } from '@/lib/supabase-server-auth'
 import { redirect } from 'next/navigation'
 import AdminSubmissionDetail from '@/components/admin/AdminSubmissionDetail'
 
@@ -7,8 +7,10 @@ export default async function AdminSubmissionDetailPage({ params }) {
   const { locale, id } = await params
   const supabase = await createClient()
 
-  const { data: { session } } = await supabase.auth.getSession()
-  if (!session) redirect(`/${locale}/auth/login`)
+  // getUser verifie le jeton aupres de Supabase (getSession se contente du cookie)
+  const { data: { user: authUser } } = await supabase.auth.getUser()
+  const session = authUser ? { user: authUser } : null
+  if (!session) redirect(`/${locale}/auth/login?next=${encodeURIComponent(`/${locale}/admin/submissions/${id}`)}`)
 
   const { data: profile } = await supabase
     .from('profiles').select('is_admin').eq('user_id', session.user.id).single()

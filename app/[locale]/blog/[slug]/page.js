@@ -4,6 +4,9 @@ import { getPostBySlug, getAllSlugs, getAllPosts } from '@/lib/contentful'
 import BlogPostPage from '@/components/blog/BlogPostPage'
 import { notFound } from 'next/navigation'
 
+// Page prérendue : les données Contentful (articles) sont relues au plus toutes les 60 s.
+export const revalidate = 60
+
 export const dynamic = 'force-dynamic'
 
 const RELATED_LIMIT = 6

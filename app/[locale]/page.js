@@ -9,6 +9,9 @@ import Footer from '@/components/Footer'
 import { getAllPosts } from '@/lib/contentful'
 import { pageAlternates } from '@/lib/seo'
 
+// Page prérendue : les données Contentful (articles) sont relues au plus toutes les 60 s.
+export const revalidate = 60
+
 const BASE_URL = 'https://knowflags.com'
 
 export async function generateMetadata({ params }) {

@@ -73,6 +73,20 @@ async function getCountry(code) {
   return toCountry(data)
 }
 
+// Drapeaux régionaux et de villes du pays (flag_taxonomy), comme le faisait le navigateur.
+async function getSubFlags(supabase, code) {
+  const { data: node } = await supabase
+    .from('flag_taxonomy').select('id')
+    .eq('flag_type', 'country').eq('metadata->>iso2', code).maybeSingle()
+  if (!node) return { regions: [], cities: [] }
+  const { data } = await supabase
+    .from('flag_taxonomy')
+    .select('id, slug, name_en, name_fr, flag_type, image_path, sort_order, parent:parent_id(name_en, name_fr)')
+    .eq('country_id', node.id).neq('id', node.id).order('sort_order')
+  const all = data || []
+  return { regions: all.filter(f => f.flag_type === 'region'), cities: all.filter(f => f.flag_type === 'city') }
+}
+
 // ── Pre-render every country at build time ───────────────────────────────────
 export async function generateStaticParams() {
   try {
@@ -142,7 +156,8 @@ export default async function Page({ params }) {
   if (!country) notFound()
 
   // Everything else in parallel — all on the server, all in the initial HTML.
-  const [factsRes, relatedRes, childrenRes, relatedPosts] = await Promise.all([
+  const iso = country.code.toLowerCase()
+  const [factsRes, relatedRes, childrenRes, relatedPosts, historyRes, subFlags] = await Promise.all([
     supabase
       .from('country_facts')
       .select('fact_en, fact_fr, category')
@@ -159,7 +174,20 @@ export default async function Page({ params }) {
       .eq('parent_iso', country.code)
       .order('iso_code'),
       getPostsForCountry(country.code, locale, 3),
+    supabase
+      .from('country_flag_history')
+      .select('*')
+      .eq('iso_code', iso)
+      .order('date_start', { ascending: true, nullsFirst: true }),
+    getSubFlags(supabase, iso).catch(() => null),
   ])
+
+  // Frise historique : null si la requête échoue (le composant se recharge alors seul)
+  const history = historyRes.error ? null : (historyRes.data || [])
+  // Image principale : flag_url, sinon drapeau actuel de l'historique, sinon flagcdn
+  const currentRow = (history || []).filter(h => !h.date_end && h.image_url)
+    .sort((a, b) => String(b.date_start || '').localeCompare(String(a.date_start || '')))[0]
+  const heroSrc = country.flag_url || currentRow?.image_url || `https://flagcdn.com/w2560/${iso}.webp`
 
   const facts = (factsRes.data || [])
     .map(f => (locale === 'fr' ? f.fact_fr : f.fact_en))
@@ -180,6 +208,9 @@ export default async function Page({ params }) {
       relatedCountries={relatedCountries}
       childEntities={childEntities}
       relatedPosts={relatedPosts}
+      history={history}
+      heroSrc={heroSrc}
+      subFlags={subFlags}
     />
   )
 }

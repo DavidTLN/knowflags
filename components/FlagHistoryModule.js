@@ -70,13 +70,35 @@ function FlagImage({ imageUrl, isoCode, dateStart, duplicateIndex, alt, style })
 }
 
 // ── Main component ────────────────────────────────────────────
-export default function FlagHistoryModule({ countryCode, countryName }) {
+// Index de doublon d'année (nommage des images locales {iso}-{année}-{n})
+function withDupIndexes(data) {
+  const yearCount = {}
+  const withIndex = data.map(flag => {
+    const year = flag.date_start ? new Date(flag.date_start).getFullYear() : null
+    if (year == null) return { ...flag, _dupIndex: null }
+    yearCount[year] = (yearCount[year] || 0) + 1
+    return { ...flag, _yearKey: year, _dupCount: yearCount[year] }
+  })
+  const yearTotal = {}
+  withIndex.forEach(f => { if (f._yearKey) yearTotal[f._yearKey] = (yearTotal[f._yearKey] || 0) + 1 })
+  return withIndex.map(f => ({
+    ...f,
+    _dupIndex: f._yearKey && yearTotal[f._yearKey] > 1 ? f._dupCount : null,
+  }))
+}
+
+const currentOf = (flags) => flags.find(f => !f.date_end) ?? flags[flags.length - 1] ?? null
+
+// initialFlags : lignes country_flag_history lues côté serveur (page pays). Quand elles
+// sont fournies, la frise est dans le HTML initial et aucune requête n'est faite ici.
+export default function FlagHistoryModule({ countryCode, countryName, initialFlags = null }) {
   const locale = useLocale()
   const t = (en, fr) => locale === 'fr' ? fr : en
 
-  const [flags, setFlags]       = useState([])
-  const [loading, setLoading]   = useState(true)
-  const [selected, setSelected] = useState(null)
+  const prepared = initialFlags ? withDupIndexes(initialFlags) : null
+  const [flags, setFlags]       = useState(() => prepared || [])
+  const [loading, setLoading]   = useState(!prepared)
+  const [selected, setSelected] = useState(() => (prepared ? currentOf(prepared) : null))
   const [isMobile, setIsMobile] = useState(false)
   const previewRef = useRef(null)
   useEffect(() => {
@@ -93,7 +115,7 @@ export default function FlagHistoryModule({ countryCode, countryName }) {
   }
 
   useEffect(() => {
-    if (!countryCode) return
+    if (!countryCode || initialFlags) return
     const supabase = createClient()
     supabase
       .from('country_flag_history')
@@ -102,28 +124,13 @@ export default function FlagHistoryModule({ countryCode, countryName }) {
       .order('date_start', { ascending: true, nullsFirst: true })
       .then(({ data, error }) => {
         if (!error && data && data.length > 0) {
-          // Compute duplicate year indexes for local image naming
-          const yearCount = {}
-          const withIndex = data.map(flag => {
-            const year = flag.date_start ? new Date(flag.date_start).getFullYear() : null
-            if (year == null) return { ...flag, _dupIndex: null }
-            yearCount[year] = (yearCount[year] || 0) + 1
-            return { ...flag, _yearKey: year, _dupCount: yearCount[year] }
-          })
-          // Second pass: assign index only if year appears more than once
-          const yearTotal = {}
-          withIndex.forEach(f => { if (f._yearKey) yearTotal[f._yearKey] = (yearTotal[f._yearKey] || 0) + 1 })
-          const flagsWithIndex = withIndex.map(f => ({
-            ...f,
-            _dupIndex: f._yearKey && yearTotal[f._yearKey] > 1 ? f._dupCount : null,
-          }))
+          const flagsWithIndex = withDupIndexes(data)
           setFlags(flagsWithIndex)
-          const current = flagsWithIndex.find(f => !f.date_end) ?? flagsWithIndex[flagsWithIndex.length - 1]
-          setSelected(current)
+          setSelected(currentOf(flagsWithIndex))
         }
         setLoading(false)
       })
-  }, [countryCode])
+  }, [countryCode, initialFlags])
 
   if (loading) return (
     <section style={{ marginTop: '48px' }}>

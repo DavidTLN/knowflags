@@ -9,6 +9,10 @@
 //   Difficile : saisie libre du pays, bonus période
 // 10 manches de 20 s. Points = 10 + temps restant / 2. Bonus période : +5.
 // Leurres pris dans le même continent que la bonne réponse.
+//
+// Bonus période (Normal et Difficile, seulement si toutes les périodes sont jouées) :
+// « adopté en quelle période ? », les 5 périodes + « Je ne sais pas ». Les dates du
+// drapeau (fiche, frise du pays) ne s'affichent qu'une fois le bonus répondu.
 
 import { useState, useEffect, useMemo, useRef } from 'react'
 import { useLocale } from 'next-intl'
@@ -36,12 +40,13 @@ const DIFFICULTIES = [
   { key: 'hard',   en: 'Hard',   fr: 'Difficile', descEn: 'Type the country · period bonus +5',       descFr: 'Saisie libre du pays · bonus période +5' },
 ]
 
+// Bornes incluses, sans chevauchement : chaque année n'appartient qu'à une période.
 const PERIODS = [
-  { key: 'p1', from: -9999, to: 1799, en: 'Before 1800',  fr: 'Avant 1800' },
-  { key: 'p2', from: 1800,  to: 1913, en: '1800 to 1914', fr: '1800 à 1914' },
-  { key: 'p3', from: 1914,  to: 1944, en: '1914 to 1945', fr: '1914 à 1945' },
-  { key: 'p4', from: 1945,  to: 1989, en: '1945 to 1990', fr: '1945 à 1990' },
-  { key: 'p5', from: 1990,  to: 9999, en: 'After 1990',   fr: 'Après 1990' },
+  { key: 'p1', from: -9999, to: 1799, en: 'Before 1800',    fr: 'Avant 1800' },
+  { key: 'p2', from: 1800,  to: 1913, en: '1800 to 1913',   fr: '1800 à 1913' },
+  { key: 'p3', from: 1914,  to: 1944, en: '1914 to 1944',   fr: '1914 à 1944' },
+  { key: 'p4', from: 1945,  to: 1989, en: '1945 to 1989',   fr: '1945 à 1989' },
+  { key: 'p5', from: 1990,  to: 9999, en: '1990 and after', fr: '1990 et après' },
 ]
 
 const CONTINENTS = [
@@ -93,7 +98,7 @@ export default function PastFlagGame() {
   const [bestStreak, setBestStreak] = useState(0)
   const [timeLeft, setTimeLeft] = useState(TIME_PER_ROUND)
   const [results, setResults] = useState([])
-  const [bonusPick, setBonusPick] = useState(null)
+  const [bonusPick, setBonusPick] = useState(null)   // index de période, 'skip', ou null (pas encore répondu)
   const [imgError, setImgError] = useState(false)
   const [typed, setTyped] = useState('')
   const [suggest, setSuggest] = useState([])
@@ -192,7 +197,7 @@ export default function PastFlagGame() {
     const q = questions[current]
     const right = periodIndex(yearOf(q.flag.date_start))
     setBonusPick(idx)
-    if (idx === right) {
+    if (idx !== 'skip' && idx === right) {
       setScore(s => s + PERIOD_BONUS)
       setResults(r => r.map((x, i) => (i === r.length - 1 ? { ...x, bonus: PERIOD_BONUS } : x)))
     }
@@ -302,10 +307,17 @@ export default function PastFlagGame() {
               <button type="button" style={chip(period === 'all')} onClick={() => setPeriod('all')}>{t('All', 'Toutes')}</button>
               {periodsForDiff.map(p => (
                 <button key={p.key} type="button" style={chip(period === p.key)} onClick={() => setPeriod(p.key)}>
-                  {difficulty === 'easy' && p.key === 'p2' ? t('1900 to 1914', '1900 à 1914') : t(p.en, p.fr)}
+                  {difficulty === 'easy' && p.key === 'p2' ? t('1900 to 1913', '1900 à 1913') : t(p.en, p.fr)}
                 </button>
               ))}
             </div>
+          )}
+          {step === 1 && difficulty !== 'easy' && (
+            <p style={{ margin: 0, fontSize: '13px', lineHeight: 1.5, color: C.muted }}>
+              {period === 'all'
+                ? t(`Period bonus (+${PERIOD_BONUS}) after each answer: guess when the flag was adopted.`, `Bonus période (+${PERIOD_BONUS}) après chaque réponse : devine quand le drapeau a été adopté.`)
+                : t('No period bonus when you pick a single period: you already know the answer.', 'Pas de bonus période quand tu choisis une seule période : tu connais déjà la réponse.')}
+            </p>
           )}
 
           {step === 2 && (
@@ -401,8 +413,11 @@ export default function PastFlagGame() {
   const lastResult = results[results.length - 1]
   const y = yearOf(flag.date_start)
   const rightPeriod = periodIndex(y)
-  const bonusChoices = [rightPeriod - 1, rightPeriod, rightPeriod + 1].filter(i => i >= 0 && i < PERIODS.length)
-  const showBonus = isResult && difficulty !== 'easy'
+  // Toutes les périodes proposées, dans l'ordre : la bonne n'a pas de place fixe.
+  const bonusChoices = PERIODS.map((_, i) => i)
+  const showBonus = isResult && difficulty !== 'easy' && period === 'all' && rightPeriod >= 0
+  // Tant que le bonus n'est pas répondu, rien ne trahit la date du drapeau.
+  const bonusPending = showBonus && bonusPick == null
   const countryFlags = history.filter(h => h.iso_code === flag.iso_code)
 
   return (
@@ -493,17 +508,9 @@ export default function PastFlagGame() {
         {/* Après la réponse */}
         {isResult && (
           <>
-            <section style={{ backgroundColor: C.surface, color: C.text, borderRadius: '12px', padding: '14px 16px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-              <span style={{ fontSize: '15px', fontWeight: 800, color: C.navy }}>{locale === 'fr' ? flag.label_fr : flag.label_en}</span>
-              <span style={{ fontSize: '13px', color: C.muted }}>{yearOf(flag.date_start)} {t('to', 'à')} {yearOf(flag.date_end)}</span>
-              {(locale === 'fr' ? flag.notes_fr : flag.notes_en) && (
-                <p style={{ margin: '4px 0 0', fontSize: '13px', lineHeight: 1.6, color: C.text }}>{locale === 'fr' ? flag.notes_fr : flag.notes_en}</p>
-              )}
-            </section>
-
-            {showBonus && rightPeriod >= 0 && (
+            {showBonus && (
               <section style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                <p style={overline(C.gold)}>{t(`Bonus · which period? (+${PERIOD_BONUS})`, `Bonus · en quelle période ? (+${PERIOD_BONUS})`)}</p>
+                <p style={overline(C.gold)}>{t(`Bonus · adopted in which period? (+${PERIOD_BONUS})`, `Bonus · adopté en quelle période ? (+${PERIOD_BONUS})`)}</p>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
                   {bonusChoices.map(i => {
                     const picked = bonusPick === i
@@ -512,16 +519,39 @@ export default function PastFlagGame() {
                     const bg = reveal ? (isRight ? C.green : picked ? C.red : 'rgba(255,255,255,0.08)') : 'rgba(255,255,255,0.12)'
                     return (
                       <button key={i} type="button" disabled={reveal} onClick={() => pickBonus(i)}
-                        style={{ minHeight: '40px', padding: '7px 14px', borderRadius: '9999px', border: 'none', backgroundColor: bg, color: 'white', fontSize: '13px', fontWeight: 700, cursor: reveal ? 'default' : 'pointer', fontFamily: 'inherit', transition: 'background-color 0.15s ease' }}>
-                        {t(PERIODS[i].en, PERIODS[i].fr)}{reveal && isRight ? (picked ? ` +${PERIOD_BONUS}` : '') : ''}
+                        style={{ minHeight: '44px', padding: '7px 14px', borderRadius: '9999px', border: 'none', backgroundColor: bg, color: reveal && !isRight && !picked ? 'rgba(255,255,255,0.5)' : 'white', fontSize: '13px', fontWeight: 700, cursor: reveal ? 'default' : 'pointer', fontFamily: 'inherit', transition: 'background-color 0.15s ease' }}>
+                        {t(PERIODS[i].en, PERIODS[i].fr)}{reveal && isRight && picked ? ` +${PERIOD_BONUS}` : ''}
                       </button>
                     )
                   })}
+                  <button type="button" disabled={bonusPick != null} onClick={() => pickBonus('skip')}
+                    style={{ minHeight: '44px', padding: '7px 14px', borderRadius: '9999px', border: '1.5px solid rgba(255,255,255,0.3)', backgroundColor: bonusPick === 'skip' ? 'rgba(255,255,255,0.18)' : 'transparent', color: bonusPick != null && bonusPick !== 'skip' ? 'rgba(255,255,255,0.4)' : 'white', fontSize: '13px', fontWeight: 600, cursor: bonusPick != null ? 'default' : 'pointer', fontFamily: 'inherit', transition: 'background-color 0.15s ease' }}>
+                    {t('I don’t know', 'Je ne sais pas')}
+                  </button>
                 </div>
+                {bonusPending ? (
+                  <p style={{ margin: 0, fontSize: '13px', color: 'rgba(255,255,255,0.6)' }}>
+                    {t('Answer to see the story of this flag.', 'Réponds pour découvrir l’histoire de ce drapeau.')}
+                  </p>
+                ) : bonusPick !== rightPeriod && (
+                  <p style={{ margin: 0, fontSize: '13px', color: 'rgba(255,255,255,0.75)' }}>
+                    {t('Adopted in', 'Adopté en')} {y} · {t(PERIODS[rightPeriod].en, PERIODS[rightPeriod].fr)}
+                  </p>
+                )}
               </section>
             )}
 
-            {countryFlags.length > 1 && (
+            {!bonusPending && (
+              <section style={{ backgroundColor: C.surface, color: C.text, borderRadius: '12px', padding: '14px 16px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                <span style={{ fontSize: '15px', fontWeight: 800, color: C.navy }}>{locale === 'fr' ? flag.label_fr : flag.label_en}</span>
+                <span style={{ fontSize: '13px', color: C.muted }}>{yearOf(flag.date_start)} {t('to', 'à')} {yearOf(flag.date_end)}</span>
+                {(locale === 'fr' ? flag.notes_fr : flag.notes_en) && (
+                  <p style={{ margin: '4px 0 0', fontSize: '13px', lineHeight: 1.6, color: C.text }}>{locale === 'fr' ? flag.notes_fr : flag.notes_en}</p>
+                )}
+              </section>
+            )}
+
+            {!bonusPending && countryFlags.length > 1 && (
               <section style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 <p style={overline(C.steel)}>{t(`The ${countryFlags.length} flags of ${nameOf(flag.iso_code)}`, `Les ${countryFlags.length} drapeaux : ${nameOf(flag.iso_code)}`)}</p>
                 <div style={{ display: 'flex', gap: '6px', overflowX: 'auto', paddingBottom: '4px' }}>
@@ -541,10 +571,12 @@ export default function PastFlagGame() {
               </section>
             )}
 
-            <button type="button" onClick={next}
-              style={{ minHeight: '48px', borderRadius: '10px', border: 'none', backgroundColor: C.gold, color: '#3A2A05', fontSize: '15px', fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit' }}>
-              {current + 1 >= questions.length ? t('See results', 'Voir les résultats') : t('Next round', 'Manche suivante')}
-            </button>
+            {!bonusPending && (
+              <button type="button" onClick={next}
+                style={{ minHeight: '48px', borderRadius: '10px', border: 'none', backgroundColor: C.gold, color: '#3A2A05', fontSize: '15px', fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit' }}>
+                {current + 1 >= questions.length ? t('See results', 'Voir les résultats') : t('Next round', 'Manche suivante')}
+              </button>
+            )}
           </>
         )}
 

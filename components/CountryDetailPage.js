@@ -50,9 +50,9 @@ function CountryFlagsSection({ countryIso2 }) {
   const [regions, setRegions] = useState([])
   const [cities,  setCities]  = useState([])
   const [activeTab, setActiveTab] = useState('regions')
-  const [showAll, setShowAll] = useState(false)
+  const [page, setPage] = useState(0)
   const [loading, setLoading] = useState(true)
-  const PREVIEW = 12
+  const PAGE = 24   // 3 lignes de 8 sur desktop
 
   useEffect(() => {
     if (!countryIso2) return
@@ -88,7 +88,7 @@ function CountryFlagsSection({ countryIso2 }) {
         {regions.length > 0 && cities.length > 0 && (
           <div style={{ display: 'flex', gap: '6px' }}>
             {[['regions', t('Regions','Régions'), regions.length], ['cities', t('Cities','Villes'), cities.length]].map(([tab, label, n]) => (
-              <button key={tab} onClick={() => { setActiveTab(tab); setShowAll(false) }}
+              <button key={tab} onClick={() => { setActiveTab(tab); setPage(0) }}
                 style={{ minHeight: '36px', padding: '5px 12px', borderRadius: '99px', fontSize: '12px', fontWeight: '700', border: `1.5px solid ${activeTab === tab ? DS.navy : DS.border}`, backgroundColor: activeTab === tab ? DS.navy : 'transparent', color: activeTab === tab ? 'white' : DS.muted, cursor: 'pointer', transition: 'all 0.15s' }}>
                 {label} · {n}
               </button>
@@ -97,7 +97,7 @@ function CountryFlagsSection({ countryIso2 }) {
         )}
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(130px, 1fr))', gap: '10px' }}>
-        {(showAll ? items : items.slice(0, PREVIEW)).map(f => {
+        {items.slice(page * PAGE, (page + 1) * PAGE).map(f => {
           const fname = locale === 'fr' ? f.name_fr : f.name_en
           const Card = f.flag_type === 'city' ? Link : 'div'
           const linkProps = f.flag_type === 'city' ? { href: `/${locale}/flags/cities/${f.slug}`, prefetch: false } : {}
@@ -120,16 +120,23 @@ function CountryFlagsSection({ countryIso2 }) {
           )
         })}
       </div>
-      {items.length > PREVIEW && (
-        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '14px' }}>
-          <button onClick={() => setShowAll(v => !v)}
-            style={{ minHeight: '44px', padding: '9px 20px', borderRadius: '10px', backgroundColor: 'transparent', color: DS.navy, border: '1.5px solid #E2DDD5', fontSize: '14px', fontWeight: 600, cursor: 'pointer', transition: 'all 0.12s ease' }}>
-            {showAll
-              ? t('Show less', 'Afficher moins')
-              : activeTab === 'cities' ? t(`Show all ${items.length} cities`, `Voir les ${items.length} villes`) : t(`Show all ${items.length} regions`, `Voir les ${items.length} régions`)}
-          </button>
-        </div>
-      )}
+      {items.length > PAGE && (() => {
+        const pages = Math.ceil(items.length / PAGE)
+        const btn = (disabled) => ({ width: '44px', height: '44px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '10px', border: '1.5px solid #E2DDD5', backgroundColor: disabled ? DS.bg : DS.surface, color: disabled ? '#9CA3AF' : DS.navy, cursor: disabled ? 'default' : 'pointer', transition: 'all 0.12s ease' })
+        return (
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', marginTop: '14px' }}>
+            <button onClick={() => setPage(p => Math.max(0, p - 1))} disabled={page === 0} aria-label={t('Previous', 'Précédent')} style={btn(page === 0)}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6" /></svg>
+            </button>
+            <span style={{ fontSize: '13px', fontWeight: 600, color: DS.muted, minWidth: '90px', textAlign: 'center' }}>
+              {page * PAGE + 1}–{Math.min(items.length, (page + 1) * PAGE)} / {items.length}
+            </span>
+            <button onClick={() => setPage(p => Math.min(pages - 1, p + 1))} disabled={page >= pages - 1} aria-label={t('Next', 'Suivant')} style={btn(page >= pages - 1)}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6" /></svg>
+            </button>
+          </div>
+        )
+      })()}
     </section>
   )
 }

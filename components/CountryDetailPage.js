@@ -50,7 +50,9 @@ function CountryFlagsSection({ countryIso2 }) {
   const [regions, setRegions] = useState([])
   const [cities,  setCities]  = useState([])
   const [activeTab, setActiveTab] = useState('regions')
+  const [showAll, setShowAll] = useState(false)
   const [loading, setLoading] = useState(true)
+  const PREVIEW = 12
 
   useEffect(() => {
     if (!countryIso2) return
@@ -68,6 +70,7 @@ function CountryFlagsSection({ countryIso2 }) {
             const all = data ?? []
             setRegions(all.filter(f => f.flag_type === 'region'))
             setCities(all.filter(f => f.flag_type === 'city'))
+            if (!all.some(f => f.flag_type === 'region')) setActiveTab('cities')
             setLoading(false)
           })
       })
@@ -78,26 +81,28 @@ function CountryFlagsSection({ countryIso2 }) {
 
   return (
     <section style={{ backgroundColor: DS.surface, borderRadius: '16px', border: `1px solid ${DS.border}`, padding: '20px' }}>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px', flexWrap: 'wrap', gap: '10px' }}>
         <h2 style={{ margin: 0, fontSize: '20px', fontWeight: '900', color: DS.navy, letterSpacing: '-0.3px' }}>
           {t('Subnational Flags', 'Drapeaux régionaux')}
         </h2>
         {regions.length > 0 && cities.length > 0 && (
           <div style={{ display: 'flex', gap: '6px' }}>
-            {[['regions', t('Regions','Régions')], ['cities', t('Cities','Villes')]].map(([tab, label]) => (
-              <button key={tab} onClick={() => setActiveTab(tab)}
-                style={{ padding: '5px 12px', borderRadius: '99px', fontSize: '12px', fontWeight: '700', border: `1.5px solid ${activeTab === tab ? DS.navy : DS.border}`, backgroundColor: activeTab === tab ? DS.navy : 'transparent', color: activeTab === tab ? 'white' : DS.muted, cursor: 'pointer' }}>
-                {label}
+            {[['regions', t('Regions','Régions'), regions.length], ['cities', t('Cities','Villes'), cities.length]].map(([tab, label, n]) => (
+              <button key={tab} onClick={() => { setActiveTab(tab); setShowAll(false) }}
+                style={{ minHeight: '36px', padding: '5px 12px', borderRadius: '99px', fontSize: '12px', fontWeight: '700', border: `1.5px solid ${activeTab === tab ? DS.navy : DS.border}`, backgroundColor: activeTab === tab ? DS.navy : 'transparent', color: activeTab === tab ? 'white' : DS.muted, cursor: 'pointer', transition: 'all 0.15s' }}>
+                {label} · {n}
               </button>
             ))}
           </div>
         )}
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(130px, 1fr))', gap: '10px' }}>
-        {items.slice(0, 12).map(f => {
+        {(showAll ? items : items.slice(0, PREVIEW)).map(f => {
           const fname = locale === 'fr' ? f.name_fr : f.name_en
+          const Card = f.flag_type === 'city' ? Link : 'div'
+          const linkProps = f.flag_type === 'city' ? { href: `/${locale}/flags/cities/${f.slug}`, prefetch: false } : {}
           return (
-            <div key={f.id} style={{ backgroundColor: DS.surface, borderRadius: '10px', overflow: 'hidden', border: `1px solid ${DS.border}` }}>
+            <Card key={f.id} {...linkProps} style={{ display: 'block', textDecoration: 'none', backgroundColor: DS.surface, borderRadius: '10px', overflow: 'hidden', border: `1px solid ${DS.border}` }}>
               <div style={{ aspectRatio: '3/2', backgroundColor: DS.bg, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 {f.image_path && <img src={f.image_path} alt={fname} loading="lazy"
                   style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '4px' }}
@@ -111,10 +116,20 @@ function CountryFlagsSection({ countryIso2 }) {
               <div style={{ padding: '6px 8px' }}>
                 <p style={{ margin: 0, fontSize: '11px', fontWeight: '700', color: DS.navy, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{fname}</p>
               </div>
-            </div>
+            </Card>
           )
         })}
       </div>
+      {items.length > PREVIEW && (
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '14px' }}>
+          <button onClick={() => setShowAll(v => !v)}
+            style={{ minHeight: '44px', padding: '9px 20px', borderRadius: '10px', backgroundColor: 'transparent', color: DS.navy, border: '1.5px solid #E2DDD5', fontSize: '14px', fontWeight: 600, cursor: 'pointer', transition: 'all 0.12s ease' }}>
+            {showAll
+              ? t('Show less', 'Afficher moins')
+              : activeTab === 'cities' ? t(`Show all ${items.length} cities`, `Voir les ${items.length} villes`) : t(`Show all ${items.length} regions`, `Voir les ${items.length} régions`)}
+          </button>
+        </div>
+      )}
     </section>
   )
 }

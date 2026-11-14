@@ -11,6 +11,7 @@ Usage: python3 scripts/wikidata/fetch_cities.py [iso ...]   (default: every coun
 """
 import json
 import os
+import re
 import sys
 import time
 
@@ -35,7 +36,11 @@ TYPES = {
 }
 
 # Slugs déjà utilisés sur le site pour ces villes
-SLUG_OVERRIDE = {'Q60': 'new-york-city', 'Q61': 'washington-dc', 'Q1794': 'frankfurt'}
+SLUG_OVERRIDE = {'Q60': 'new-york-city', 'Q61': 'washington-dc', 'Q1794': 'frankfurt', 'Q28848': 'saint-paul'}
+
+# Pas des villes au sens du site : boroughs de New York, quartier de Hambourg, Porto Rico,
+# Tokyo (déjà publiée comme préfecture)
+EXCLUDE = {'Q18424', 'Q11299', 'Q18426', 'Q18432', 'Q1630', 'Q41211', 'Q1490', 'Q7473516'}
 
 
 def cities_for(iso):
@@ -66,10 +71,13 @@ SELECT ?c ?en ?fr ?local ?pop ?flag ?rank ?wen ?wfr WHERE {{
             if not d['file'] or (preferred and not d['file_rank']):
                 d['file'] = commons_file(v(b, 'flag'))
                 d['file_rank'] = preferred
-    out = [d for d in by.values() if d['name_en'] or d['name_fr']]
+    out = [d for d in by.values() if (d['name_en'] or d['name_fr']) and d['qid'] not in EXCLUDE]
     for d in out:
         d['name_en'] = d['name_en'] or d['name_fr']
         d['name_fr'] = d['name_fr'] or d['name_en']
+        if iso == 'jp':   # « Hachiōji-shi » -> « Hachiōji »
+            d['name_en'] = re.sub(r'-shi$', '', d['name_en'])
+            d['name_fr'] = re.sub(r'-shi$', '', d['name_fr'])
         d.pop('file_rank')
     return sorted(out, key=lambda d: -d['population'])
 

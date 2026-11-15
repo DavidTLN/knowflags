@@ -86,10 +86,10 @@ export function CountryFlagsSection({ countryIso2 }) {
   if (loading || (regions.length === 0 && cities.length === 0)) return null
 
   // Desktop : 3 lignes (8 colonnes ≥ 1024 px, 5 colonnes sur tablette), puis « Voir tout ».
-  // Mobile : slider libre sur 2 lignes, tout est accessible en glissant.
+  // Mobile : slider libre sur 3 lignes, tout est accessible en glissant.
   const PREVIEW_DESKTOP = 24, PREVIEW_TABLET = 15
   const isCities = activeTab === 'cities'
-  const mobileRows = items.length > 4 ? 2 : 1
+  const mobileRows = Math.max(1, Math.min(3, Math.ceil(items.length / 3)))   // 3 lignes, moins s'il y a peu de drapeaux
   const switchTab = (tab) => { setActiveTab(tab); setShowAll(false); setQuery('') }
 
   return (

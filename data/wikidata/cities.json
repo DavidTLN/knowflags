@@ -93,12 +93,12 @@
     "en": "Flemish Community"
    },
    {
-    "qid": "Q89959",
-    "en": "French Community"
-   },
-   {
     "qid": "Q90870",
     "en": "Arrondissement of Brussels-Capital"
+   },
+   {
+    "qid": "Q89959",
+    "en": "French Community"
    }
   ],
   "image_path": "/flags/cities/brussels.svg",
@@ -167,12 +167,12 @@
     "en": "Flemish Community"
    },
    {
-    "qid": "Q89959",
-    "en": "French Community"
-   },
-   {
     "qid": "Q90870",
     "en": "Arrondissement of Brussels-Capital"
+   },
+   {
+    "qid": "Q89959",
+    "en": "French Community"
    }
   ],
   "image_path": "/flags/cities/schaerbeek.svg",
@@ -206,12 +206,12 @@
     "en": "Flemish Community"
    },
    {
-    "qid": "Q89959",
-    "en": "French Community"
-   },
-   {
     "qid": "Q90870",
     "en": "Arrondissement of Brussels-Capital"
+   },
+   {
+    "qid": "Q89959",
+    "en": "French Community"
    }
   ],
   "image_path": "/flags/cities/anderlecht.svg",
@@ -350,12 +350,12 @@
     "en": "Flemish Community"
    },
    {
-    "qid": "Q89959",
-    "en": "French Community"
-   },
-   {
     "qid": "Q90870",
     "en": "Arrondissement of Brussels-Capital"
+   },
+   {
+    "qid": "Q89959",
+    "en": "French Community"
    }
   ],
   "image_path": "/flags/cities/molenbeek-saint-jean.svg",
@@ -377,8 +377,20 @@
   "slug": "mons",
   "ancestors": [
    {
+    "qid": "Q622783",
+    "en": "Spanish Netherlands"
+   },
+   {
+    "qid": "Q6581823",
+    "en": "Southern Netherlands"
+   },
+   {
     "qid": "Q155187",
     "en": "Burgundian Circle"
+   },
+   {
+    "qid": "Q157109",
+    "en": "Burgundian Netherlands"
    },
    {
     "qid": "Q309460",
@@ -387,18 +399,6 @@
    {
     "qid": "Q330533",
     "en": "Seventeen Provinces"
-   },
-   {
-    "qid": "Q157109",
-    "en": "Burgundian Netherlands"
-   },
-   {
-    "qid": "Q622783",
-    "en": "Spanish Netherlands"
-   },
-   {
-    "qid": "Q6581823",
-    "en": "Southern Netherlands"
    }
   ],
   "image_path": "/flags/cities/mons.svg",
@@ -502,12 +502,12 @@
     "en": "Flemish Community"
    },
    {
-    "qid": "Q89959",
-    "en": "French Community"
-   },
-   {
     "qid": "Q90870",
     "en": "Arrondissement of Brussels-Capital"
+   },
+   {
+    "qid": "Q89959",
+    "en": "French Community"
    }
   ],
   "image_path": "/flags/cities/ixelles.svg",
@@ -576,12 +576,12 @@
     "en": "Flemish Community"
    },
    {
-    "qid": "Q89959",
-    "en": "French Community"
-   },
-   {
     "qid": "Q90870",
     "en": "Arrondissement of Brussels-Capital"
+   },
+   {
+    "qid": "Q89959",
+    "en": "French Community"
    }
   ],
   "image_path": "/flags/cities/uccle.svg",
@@ -765,12 +765,12 @@
     "en": "Ottoman Empire"
    },
    {
-    "qid": "Q43690",
-    "en": "Bursa Province"
-   },
-   {
     "qid": "Q3928674",
     "en": "Hudavendigar vilayet"
+   },
+   {
+    "qid": "Q43690",
+    "en": "Bursa Province"
    }
   ],
   "image_path": null
@@ -813,16 +813,16 @@
     "en": "Turkey"
    },
    {
-    "qid": "Q12560",
-    "en": "Ottoman Empire"
-   },
-   {
     "qid": "Q81551",
     "en": "Konya Province"
    },
    {
     "qid": "Q1410367",
     "en": "Konya vilayet"
+   },
+   {
+    "qid": "Q12560",
+    "en": "Ottoman Empire"
    }
   ],
   "image_path": null
@@ -843,16 +843,16 @@
     "en": "Turkey"
    },
    {
+    "qid": "Q1493892",
+    "en": "Aleppo vilayet"
+   },
+   {
     "qid": "Q12560",
     "en": "Ottoman Empire"
    },
    {
     "qid": "Q388469",
     "en": "Şanlıurfa Province"
-   },
-   {
-    "qid": "Q1493892",
-    "en": "Aleppo vilayet"
    },
    {
     "qid": "Q12216996",
@@ -921,28 +921,28 @@
     "en": "Turkey"
    },
    {
-    "qid": "Q12560",
-    "en": "Ottoman Empire"
-   },
-   {
     "qid": "Q1493892",
     "en": "Aleppo vilayet"
    },
    {
-    "qid": "Q483154",
-    "en": "Gaziantep Province"
+    "qid": "Q12560",
+    "en": "Ottoman Empire"
    },
    {
     "qid": "Q3043596",
     "en": "Aleppo eyalet"
    },
    {
+    "qid": "Q15715196",
+    "en": "Aleppo sanjak"
+   },
+   {
     "qid": "Q12217003",
     "en": "Aintab Sanjak"
    },
    {
-    "qid": "Q15715196",
-    "en": "Aleppo sanjak"
+    "qid": "Q483154",
+    "en": "Gaziantep Province"
    }
   ],
   "image_path": null
@@ -985,16 +985,16 @@
     "en": "Turkey"
    },
    {
+    "qid": "Q483040",
+    "en": "Samsun Province"
+   },
+   {
     "qid": "Q12560",
     "en": "Ottoman Empire"
    },
    {
     "qid": "Q116408",
     "en": "Trebizond vilayet"
-   },
-   {
-    "qid": "Q483040",
-    "en": "Samsun Province"
    },
    {
     "qid": "Q3854038",
@@ -1041,12 +1041,12 @@
     "en": "Turkey"
    },
    {
-    "qid": "Q12560",
-    "en": "Ottoman Empire"
-   },
-   {
     "qid": "Q80550",
     "en": "Van Province"
+   },
+   {
+    "qid": "Q12560",
+    "en": "Ottoman Empire"
    },
    {
     "qid": "Q3854047",
@@ -1171,20 +1171,20 @@
     "en": "Turkey"
    },
    {
-    "qid": "Q12560",
-    "en": "Ottoman Empire"
-   },
-   {
-    "qid": "Q376797",
-    "en": "Erzurum Province"
-   },
-   {
     "qid": "Q1366246",
     "en": "Erzurum vilayet"
    },
    {
+    "qid": "Q12560",
+    "en": "Ottoman Empire"
+   },
+   {
     "qid": "Q3808715",
     "en": "Erzurum eyalet"
+   },
+   {
+    "qid": "Q376797",
+    "en": "Erzurum Province"
    }
   ],
   "image_path": null
@@ -1236,16 +1236,16 @@
     "en": "Quebec"
    },
    {
-    "qid": "Q656150",
-    "en": "Greater Montreal"
-   },
-   {
     "qid": "Q1474984",
     "en": "Montreal Region"
    },
    {
     "qid": "Q2826806",
     "en": "Urban agglomeration of Montreal"
+   },
+   {
+    "qid": "Q656150",
+    "en": "Greater Montreal"
    }
   ],
   "image_path": "/flags/cities/montreal.svg",
@@ -1607,12 +1607,12 @@
     "en": "Canada"
    },
    {
-    "qid": "Q18458",
-    "en": "Regional Municipality of York"
-   },
-   {
     "qid": "Q1904",
     "en": "Ontario"
+   },
+   {
+    "qid": "Q18458",
+    "en": "Regional Municipality of York"
    }
   ],
   "image_path": null
@@ -1633,12 +1633,12 @@
     "en": "Canada"
    },
    {
-    "qid": "Q18458",
-    "en": "Regional Municipality of York"
-   },
-   {
     "qid": "Q1904",
     "en": "Ontario"
+   },
+   {
+    "qid": "Q18458",
+    "en": "Regional Municipality of York"
    }
   ],
   "image_path": "/flags/cities/vaughan.svg",
@@ -1774,12 +1774,12 @@
     "en": "Canada"
    },
    {
-    "qid": "Q18458",
-    "en": "Regional Municipality of York"
-   },
-   {
     "qid": "Q1904",
     "en": "Ontario"
+   },
+   {
+    "qid": "Q18458",
+    "en": "Regional Municipality of York"
    }
   ],
   "image_path": null
@@ -1800,12 +1800,12 @@
     "en": "Canada"
    },
    {
-    "qid": "Q382458",
-    "en": "Regional Municipality of Halton"
-   },
-   {
     "qid": "Q1904",
     "en": "Ontario"
+   },
+   {
+    "qid": "Q382458",
+    "en": "Regional Municipality of Halton"
    }
   ],
   "image_path": null
@@ -1957,6 +1957,33 @@
  },
  {
   "iso": "ph",
+  "qid": "Q1475",
+  "name_en": "Quezon City",
+  "name_fr": "Quezon City",
+  "population": 3084270,
+  "file": "Quezon City Flag.svg",
+  "wiki_en": "https://en.wikipedia.org/wiki/Quezon_City",
+  "wiki_fr": "https://fr.wikipedia.org/wiki/Quezon_City",
+  "slug": "quezon-city",
+  "ancestors": [
+   {
+    "qid": "Q928",
+    "en": "Philippines"
+   },
+   {
+    "qid": "Q13580",
+    "en": "Metro Manila"
+   }
+  ],
+  "image_path": "/flags/cities/quezon-city.svg",
+  "license": "Public domain",
+  "artist": "Exec8",
+  "page": "https://commons.wikimedia.org/wiki/File:Quezon_City_Flag.svg",
+  "width": 599,
+  "height": 299
+ },
+ {
+  "iso": "ph",
   "qid": "Q1461",
   "name_en": "Manila",
   "name_fr": "Manille",
@@ -1984,6 +2011,60 @@
  },
  {
   "iso": "ph",
+  "qid": "Q1473",
+  "name_en": "Davao City",
+  "name_fr": "Davao",
+  "population": 1848947,
+  "file": "Flag of Davao City.png",
+  "wiki_en": "https://en.wikipedia.org/wiki/Davao_City",
+  "wiki_fr": "https://fr.wikipedia.org/wiki/Davao",
+  "slug": "davao-city",
+  "ancestors": [
+   {
+    "qid": "Q928",
+    "en": "Philippines"
+   },
+   {
+    "qid": "Q13694",
+    "en": "Davao Region"
+   }
+  ],
+  "image_path": "/flags/cities/davao-city.png",
+  "license": "CC BY-SA 4.0",
+  "artist": "0KNR",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Davao_City.png",
+  "width": 2000,
+  "height": 1448
+ },
+ {
+  "iso": "ph",
+  "qid": "Q1478",
+  "name_en": "Caloocan",
+  "name_fr": "Caloocan",
+  "population": 1712945,
+  "file": "Flag of Caloocan City.png",
+  "wiki_en": "https://en.wikipedia.org/wiki/Caloocan",
+  "wiki_fr": "https://fr.wikipedia.org/wiki/Caloocan",
+  "slug": "caloocan",
+  "ancestors": [
+   {
+    "qid": "Q928",
+    "en": "Philippines"
+   },
+   {
+    "qid": "Q13580",
+    "en": "Metro Manila"
+   }
+  ],
+  "image_path": "/flags/cities/caloocan.png",
+  "license": "Public domain",
+  "artist": "Exec8",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Caloocan_City.png",
+  "width": 4000,
+  "height": 2000
+ },
+ {
+  "iso": "ph",
   "qid": "Q1643",
   "name_en": "Taguig",
   "name_fr": "Taguig",
@@ -2008,6 +2089,477 @@
   "page": "https://commons.wikimedia.org/wiki/File:Taguig_City_flag.png",
   "width": 415,
   "height": 260
+ },
+ {
+  "iso": "ph",
+  "qid": "Q1629",
+  "name_en": "Zamboanga",
+  "name_fr": "Zamboanga",
+  "population": 1018849,
+  "file": "Flag of Zamboanga.jpg",
+  "wiki_en": "https://en.wikipedia.org/wiki/Zamboanga_City",
+  "wiki_fr": "https://fr.wikipedia.org/wiki/Zamboanga",
+  "slug": "zamboanga",
+  "ancestors": [
+   {
+    "qid": "Q928",
+    "en": "Philippines"
+   },
+   {
+    "qid": "Q13682",
+    "en": "Zamboanga Peninsula"
+   }
+  ],
+  "image_path": "/flags/cities/zamboanga.png",
+  "license": "Public domain",
+  "artist": "City Government of Zamboanga",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Zamboanga.jpg",
+  "width": 600,
+  "height": 300
+ },
+ {
+  "iso": "ph",
+  "qid": "Q1467",
+  "name_en": "Cebu City",
+  "name_fr": "Cebu",
+  "population": 965332,
+  "file": "Cebu City flag.svg",
+  "wiki_en": "https://en.wikipedia.org/wiki/Cebu_City",
+  "wiki_fr": "https://fr.wikipedia.org/wiki/Cebu_(ville)",
+  "slug": "cebu-city",
+  "ancestors": [
+   {
+    "qid": "Q928",
+    "en": "Philippines"
+   },
+   {
+    "qid": "Q13669",
+    "en": "Central Visayas"
+   }
+  ],
+  "image_path": "/flags/cities/cebu-city.svg",
+  "license": "Public domain",
+  "artist": "Cebu City",
+  "page": "https://commons.wikimedia.org/wiki/File:Cebu_City_flag.svg",
+  "width": 447,
+  "height": 224
+ },
+ {
+  "iso": "ph",
+  "qid": "Q1624",
+  "name_en": "Pasig",
+  "name_fr": "Pasig",
+  "population": 853050,
+  "file": "Pasig City Flag 2.svg",
+  "wiki_en": "https://en.wikipedia.org/wiki/Pasig",
+  "wiki_fr": "https://fr.wikipedia.org/wiki/Pasig",
+  "slug": "pasig",
+  "ancestors": [
+   {
+    "qid": "Q928",
+    "en": "Philippines"
+   },
+   {
+    "qid": "Q13580",
+    "en": "Metro Manila"
+   }
+  ],
+  "image_path": "/flags/cities/pasig.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "City Government of Pasig",
+  "page": "https://commons.wikimedia.org/wiki/File:Pasig_City_Flag_2.svg",
+  "width": 1280,
+  "height": 640
+ },
+ {
+  "iso": "ph",
+  "qid": "Q1645",
+  "name_en": "Cagayan de Oro",
+  "name_fr": "Cagayán de Oro",
+  "population": 741617,
+  "file": null,
+  "wiki_en": "https://en.wikipedia.org/wiki/Cagayan_de_Oro",
+  "wiki_fr": "https://fr.wikipedia.org/wiki/Cagay%C3%A1n_de_Oro",
+  "slug": "cagayan-de-oro",
+  "ancestors": [
+   {
+    "qid": "Q928",
+    "en": "Philippines"
+   },
+   {
+    "qid": "Q13690",
+    "en": "Northern Mindanao"
+   }
+  ],
+  "image_path": null
+ },
+ {
+  "iso": "ph",
+  "qid": "Q594275",
+  "name_en": "General Santos",
+  "name_fr": "General Santos",
+  "population": 722059,
+  "file": "Flag of General Santos, South Cotabato (2022-present).png",
+  "wiki_en": "https://en.wikipedia.org/wiki/General_Santos",
+  "wiki_fr": "https://fr.wikipedia.org/wiki/General_Santos",
+  "slug": "general-santos",
+  "ancestors": [
+   {
+    "qid": "Q928",
+    "en": "Philippines"
+   },
+   {
+    "qid": "Q13701",
+    "en": "Soccsksargen"
+   }
+  ],
+  "image_path": "/flags/cities/general-santos.png",
+  "license": "Public domain",
+  "artist": "City Government of General Santos",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_General_Santos,_South_Cotabato_(2022-present).png",
+  "width": 1200,
+  "height": 600
+ },
+ {
+  "iso": "ph",
+  "qid": "Q8854",
+  "name_en": "Las Piñas",
+  "name_fr": "Las Piñas",
+  "population": 615549,
+  "file": null,
+  "wiki_en": "https://en.wikipedia.org/wiki/Las_Pi%C3%B1as",
+  "wiki_fr": "https://fr.wikipedia.org/wiki/Las_Pi%C3%B1as",
+  "slug": "las-pinas",
+  "ancestors": [
+   {
+    "qid": "Q928",
+    "en": "Philippines"
+   },
+   {
+    "qid": "Q13580",
+    "en": "Metro Manila"
+   }
+  ],
+  "image_path": null
+ },
+ {
+  "iso": "ph",
+  "qid": "Q17176",
+  "name_en": "Muntinlupa",
+  "name_fr": "Muntinlupa",
+  "population": 552225,
+  "file": null,
+  "wiki_en": "https://en.wikipedia.org/wiki/Muntinlupa",
+  "wiki_fr": "https://fr.wikipedia.org/wiki/Muntinlupa",
+  "slug": "muntinlupa",
+  "ancestors": [
+   {
+    "qid": "Q928",
+    "en": "Philippines"
+   },
+   {
+    "qid": "Q13580",
+    "en": "Metro Manila"
+   }
+  ],
+  "image_path": null
+ },
+ {
+  "iso": "ph",
+  "qid": "Q574903",
+  "name_en": "Lapu-Lapu",
+  "name_fr": "Lapu-Lapu City",
+  "population": 497813,
+  "file": "Flag of Lapu-Lapu City.gif",
+  "wiki_en": "https://en.wikipedia.org/wiki/Lapu-Lapu_City",
+  "wiki_fr": "https://fr.wikipedia.org/wiki/Lapu-Lapu_(ville)",
+  "slug": "lapu-lapu",
+  "ancestors": [
+   {
+    "qid": "Q928",
+    "en": "Philippines"
+   },
+   {
+    "qid": "Q13669",
+    "en": "Central Visayas"
+   }
+  ],
+  "image_path": "/flags/cities/lapu-lapu.png",
+  "license": "Public domain",
+  "artist": "Dirk Schönberger",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Lapu-Lapu_City.gif",
+  "width": 432,
+  "height": 216
+ },
+ {
+  "iso": "ph",
+  "qid": "Q55741",
+  "name_en": "Ángeles",
+  "name_fr": "Ángeles",
+  "population": 483452,
+  "file": "Pampanga Flag.png",
+  "wiki_en": "https://en.wikipedia.org/wiki/Angeles_City",
+  "wiki_fr": "https://fr.wikipedia.org/wiki/%C3%81ngeles_(Philippines)",
+  "slug": "angeles",
+  "ancestors": [
+   {
+    "qid": "Q928",
+    "en": "Philippines"
+   },
+   {
+    "qid": "Q13617",
+    "en": "Central Luzon"
+   }
+  ],
+  "image_path": "/flags/cities/angeles.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Provincial Government of Pampanga",
+  "page": "https://commons.wikimedia.org/wiki/File:Pampanga_Flag.png",
+  "width": 2100,
+  "height": 900
+ },
+ {
+  "iso": "ph",
+  "qid": "Q459787",
+  "name_en": "Iloilo City",
+  "name_fr": "Iloïlo",
+  "population": 473728,
+  "file": "Vlag Fil Iloilo.gif",
+  "wiki_en": "https://en.wikipedia.org/wiki/Iloilo_City",
+  "wiki_fr": "https://fr.wikipedia.org/wiki/Ilo%C3%ADlo",
+  "slug": "iloilo-city",
+  "ancestors": [
+   {
+    "qid": "Q928",
+    "en": "Philippines"
+   },
+   {
+    "qid": "Q13665",
+    "en": "Western Visayas"
+   }
+  ],
+  "image_path": "/flags/cities/iloilo-city.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 3.0",
+  "artist": "Original uploader was Ninane at nl.wikipedia",
+  "page": "https://commons.wikimedia.org/wiki/File:Vlag_Fil_Iloilo.gif",
+  "width": 432,
+  "height": 216
+ },
+ {
+  "iso": "ph",
+  "qid": "Q17175",
+  "name_en": "Marikina",
+  "name_fr": "Marikina",
+  "population": 471323,
+  "file": "Marikina City Flag.svg",
+  "wiki_en": "https://en.wikipedia.org/wiki/Marikina",
+  "wiki_fr": "https://fr.wikipedia.org/wiki/Marikina",
+  "slug": "marikina",
+  "ancestors": [
+   {
+    "qid": "Q928",
+    "en": "Philippines"
+   },
+   {
+    "qid": "Q13580",
+    "en": "Metro Manila"
+   }
+  ],
+  "image_path": "/flags/cities/marikina.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "City Government of Marikina",
+  "page": "https://commons.wikimedia.org/wiki/File:Marikina_City_Flag.svg",
+  "width": 1920,
+  "height": 1080
+ },
+ {
+  "iso": "ph",
+  "qid": "Q9085",
+  "name_en": "Mandaluyong",
+  "name_fr": "Mandaluyong",
+  "population": 465902,
+  "file": "Flag of Mandaluyong.png",
+  "wiki_en": "https://en.wikipedia.org/wiki/Mandaluyong",
+  "wiki_fr": "https://fr.wikipedia.org/wiki/Mandaluyong",
+  "slug": "mandaluyong",
+  "ancestors": [
+   {
+    "qid": "Q928",
+    "en": "Philippines"
+   },
+   {
+    "qid": "Q13580",
+    "en": "Metro Manila"
+   }
+  ],
+  "image_path": "/flags/cities/mandaluyong.png",
+  "license": "Public domain",
+  "artist": "Mandaluyong City Government",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Mandaluyong.png",
+  "width": 1000,
+  "height": 500
+ },
+ {
+  "iso": "ph",
+  "qid": "Q17189",
+  "name_en": "Pasay",
+  "name_fr": "Pasay",
+  "population": 453186,
+  "file": "Flag of Pasay.png",
+  "wiki_en": "https://en.wikipedia.org/wiki/Pasay",
+  "wiki_fr": "https://fr.wikipedia.org/wiki/Pasay",
+  "slug": "pasay",
+  "ancestors": [
+   {
+    "qid": "Q928",
+    "en": "Philippines"
+   },
+   {
+    "qid": "Q13580",
+    "en": "Metro Manila"
+   }
+  ],
+  "image_path": "/flags/cities/pasay.png",
+  "license": "Public domain",
+  "artist": "Government of Pasay City",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Pasay.png",
+  "width": 4000,
+  "height": 2000
+ },
+ {
+  "iso": "ph",
+  "qid": "Q8861",
+  "name_en": "Malabon",
+  "name_fr": "Malabon",
+  "population": 389929,
+  "file": null,
+  "wiki_en": "https://en.wikipedia.org/wiki/Malabon",
+  "wiki_fr": "https://fr.wikipedia.org/wiki/Malabon",
+  "slug": "malabon",
+  "ancestors": [
+   {
+    "qid": "Q928",
+    "en": "Philippines"
+   },
+   {
+    "qid": "Q13580",
+    "en": "Metro Manila"
+   }
+  ],
+  "image_path": null
+ },
+ {
+  "iso": "ph",
+  "qid": "Q1686",
+  "name_en": "Butuan",
+  "name_fr": "Butuan",
+  "population": 385530,
+  "file": "Butuancityflag.jpg",
+  "wiki_en": "https://en.wikipedia.org/wiki/Butuan",
+  "wiki_fr": "https://fr.wikipedia.org/wiki/Butuan",
+  "slug": "butuan",
+  "ancestors": [
+   {
+    "qid": "Q928",
+    "en": "Philippines"
+   },
+   {
+    "qid": "Q13704",
+    "en": "Caraga"
+   }
+  ],
+  "image_path": "/flags/cities/butuan.png",
+  "license": "Public domain",
+  "artist": "Historyadororig",
+  "page": "https://commons.wikimedia.org/wiki/File:Butuancityflag.jpg",
+  "width": 648,
+  "height": 360
+ },
+ {
+  "iso": "ph",
+  "qid": "Q285488",
+  "name_en": "Iligan",
+  "name_fr": "Iligan",
+  "population": 368132,
+  "file": "Flag of Iligan.png",
+  "wiki_en": "https://en.wikipedia.org/wiki/Iligan",
+  "wiki_fr": "https://fr.wikipedia.org/wiki/Iligan",
+  "slug": "iligan",
+  "ancestors": [
+   {
+    "qid": "Q928",
+    "en": "Philippines"
+   },
+   {
+    "qid": "Q13690",
+    "en": "Northern Mindanao"
+   }
+  ],
+  "image_path": "/flags/cities/iligan.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "City Government of Iligan",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Iligan.png",
+  "width": 1200,
+  "height": 600
+ },
+ {
+  "iso": "ph",
+  "qid": "Q1889017",
+  "name_en": "Mandaue",
+  "name_fr": "Mandaue",
+  "population": 364482,
+  "file": "Flag of Mandaue, Cebu.png",
+  "wiki_en": "https://en.wikipedia.org/wiki/Mandaue",
+  "wiki_fr": "https://fr.wikipedia.org/wiki/Mandaue",
+  "slug": "mandaue",
+  "ancestors": [
+   {
+    "qid": "Q928",
+    "en": "Philippines"
+   },
+   {
+    "qid": "Q13669",
+    "en": "Central Visayas"
+   }
+  ],
+  "image_path": "/flags/cities/mandaue.png",
+  "license": "Public domain",
+  "artist": "City Government of Mandaue",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Mandaue,_Cebu.png",
+  "width": 1200,
+  "height": 600
+ },
+ {
+  "iso": "ph",
+  "qid": "Q111739",
+  "name_en": "Puerto Princesa",
+  "name_fr": "Puerto Princesa",
+  "population": 316384,
+  "file": "Flag of Puerto Princesa.svg",
+  "wiki_en": "https://en.wikipedia.org/wiki/Puerto_Princesa",
+  "wiki_fr": "https://fr.wikipedia.org/wiki/Puerto_Princesa",
+  "slug": "puerto-princesa",
+  "ancestors": [
+   {
+    "qid": "Q928",
+    "en": "Philippines"
+   },
+   {
+    "qid": "Q13658",
+    "en": null
+   }
+  ],
+  "image_path": "/flags/cities/puerto-princesa.svg",
+  "license": "Public domain",
+  "artist": "Puerto Princesa",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Puerto_Princesa.svg",
+  "width": 419,
+  "height": 210
  },
  {
   "iso": "cn",
@@ -2685,7 +3237,7 @@
   "name_en": "Kunming",
   "name_fr": "Kunming",
   "population": 8460088,
-  "file": null,
+  "file": "Flag of Kunming (1922-49).svg",
   "wiki_en": "https://en.wikipedia.org/wiki/Kunming",
   "wiki_fr": "https://fr.wikipedia.org/wiki/Kunming",
   "slug": "kunming",
@@ -2699,7 +3251,13 @@
     "en": "Yunnan"
    }
   ],
-  "image_path": null
+  "image_path": "/flags/cities/kunming.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Mnmazur",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Kunming_(1922-49).svg",
+  "width": 2460,
+  "height": 2052
  },
  {
   "iso": "cn",
@@ -3242,12 +3800,12 @@
   "slug": "maoming",
   "ancestors": [
    {
-    "qid": "Q15175",
-    "en": "Guangdong"
-   },
-   {
     "qid": "Q148",
     "en": "People's Republic of China"
+   },
+   {
+    "qid": "Q15175",
+    "en": "Guangdong"
    }
   ],
   "image_path": null
@@ -3264,12 +3822,12 @@
   "slug": "huizhou",
   "ancestors": [
    {
-    "qid": "Q15175",
-    "en": "Guangdong"
-   },
-   {
     "qid": "Q148",
     "en": "People's Republic of China"
+   },
+   {
+    "qid": "Q15175",
+    "en": "Guangdong"
    }
   ],
   "image_path": null
@@ -3330,12 +3888,12 @@
   "slug": "yulin-cn",
   "ancestors": [
    {
-    "qid": "Q148",
-    "en": "People's Republic of China"
-   },
-   {
     "qid": "Q15176",
     "en": "Guangxi"
+   },
+   {
+    "qid": "Q148",
+    "en": "People's Republic of China"
    }
   ],
   "image_path": null
@@ -3484,12 +4042,12 @@
   "slug": "jieyang",
   "ancestors": [
    {
-    "qid": "Q15175",
-    "en": "Guangdong"
-   },
-   {
     "qid": "Q148",
     "en": "People's Republic of China"
+   },
+   {
+    "qid": "Q15175",
+    "en": "Guangdong"
    }
   ],
   "image_path": null
@@ -3528,12 +4086,12 @@
   "slug": "shantou",
   "ancestors": [
    {
-    "qid": "Q15175",
-    "en": "Guangdong"
-   },
-   {
     "qid": "Q148",
     "en": "People's Republic of China"
+   },
+   {
+    "qid": "Q15175",
+    "en": "Guangdong"
    }
   ],
   "image_path": null
@@ -3544,7 +4102,7 @@
   "name_en": "Anyang",
   "name_fr": "Anyang",
   "population": 5477614,
-  "file": null,
+  "file": "Flag of South Korea.svg",
   "wiki_en": "https://en.wikipedia.org/wiki/Anyang",
   "wiki_fr": "https://fr.wikipedia.org/wiki/Anyang",
   "slug": "anyang",
@@ -3558,7 +4116,13 @@
     "en": "Henan"
    }
   ],
-  "image_path": null
+  "image_path": "/flags/cities/anyang.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Original: Government of the Republic of Korea Vector:  Great Brightstar and others",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_South_Korea.svg",
+  "width": 900,
+  "height": 600
  },
  {
   "iso": "cn",
@@ -3858,12 +4422,12 @@
   "slug": "guilin",
   "ancestors": [
    {
-    "qid": "Q148",
-    "en": "People's Republic of China"
-   },
-   {
     "qid": "Q15176",
     "en": "Guangxi"
+   },
+   {
+    "qid": "Q148",
+    "en": "People's Republic of China"
    }
   ],
   "image_path": null
@@ -4056,12 +4620,12 @@
   "slug": "jiangmen",
   "ancestors": [
    {
-    "qid": "Q15175",
-    "en": "Guangdong"
-   },
-   {
     "qid": "Q148",
     "en": "People's Republic of China"
+   },
+   {
+    "qid": "Q15175",
+    "en": "Guangdong"
    }
   ],
   "image_path": null
@@ -4276,12 +4840,12 @@
   "slug": "zhongshan",
   "ancestors": [
    {
-    "qid": "Q15175",
-    "en": "Guangdong"
-   },
-   {
     "qid": "Q148",
     "en": "People's Republic of China"
+   },
+   {
+    "qid": "Q15175",
+    "en": "Guangdong"
    }
   ],
   "image_path": null
@@ -5662,12 +6226,12 @@
   "slug": "shaoguan",
   "ancestors": [
    {
-    "qid": "Q148",
-    "en": "People's Republic of China"
-   },
-   {
     "qid": "Q15175",
     "en": "Guangdong"
+   },
+   {
+    "qid": "Q148",
+    "en": "People's Republic of China"
    }
   ],
   "image_path": null
@@ -5684,12 +6248,12 @@
   "slug": "heyuan",
   "ancestors": [
    {
-    "qid": "Q148",
-    "en": "People's Republic of China"
-   },
-   {
     "qid": "Q15175",
     "en": "Guangdong"
+   },
+   {
+    "qid": "Q148",
+    "en": "People's Republic of China"
    }
   ],
   "image_path": null
@@ -5728,12 +6292,12 @@
   "slug": "shanwei",
   "ancestors": [
    {
-    "qid": "Q148",
-    "en": "People's Republic of China"
-   },
-   {
     "qid": "Q15175",
     "en": "Guangdong"
+   },
+   {
+    "qid": "Q148",
+    "en": "People's Republic of China"
    }
   ],
   "image_path": null
@@ -5926,12 +6490,12 @@
   "slug": "yangjiang",
   "ancestors": [
    {
-    "qid": "Q148",
-    "en": "People's Republic of China"
-   },
-   {
     "qid": "Q15175",
     "en": "Guangdong"
+   },
+   {
+    "qid": "Q148",
+    "en": "People's Republic of China"
    }
   ],
   "image_path": null
@@ -5970,12 +6534,12 @@
   "slug": "chaozhou",
   "ancestors": [
    {
-    "qid": "Q148",
-    "en": "People's Republic of China"
-   },
-   {
     "qid": "Q15175",
     "en": "Guangdong"
+   },
+   {
+    "qid": "Q148",
+    "en": "People's Republic of China"
    }
   ],
   "image_path": null
@@ -6146,12 +6710,12 @@
   "slug": "zhuhai",
   "ancestors": [
    {
-    "qid": "Q148",
-    "en": "People's Republic of China"
-   },
-   {
     "qid": "Q15175",
     "en": "Guangdong"
+   },
+   {
+    "qid": "Q148",
+    "en": "People's Republic of China"
    }
   ],
   "image_path": null
@@ -6256,12 +6820,12 @@
   "slug": "yunfu",
   "ancestors": [
    {
-    "qid": "Q148",
-    "en": "People's Republic of China"
-   },
-   {
     "qid": "Q15175",
     "en": "Guangdong"
+   },
+   {
+    "qid": "Q148",
+    "en": "People's Republic of China"
    }
   ],
   "image_path": null
@@ -6520,12 +7084,12 @@
   "slug": "puning",
   "ancestors": [
    {
-    "qid": "Q148",
-    "en": "People's Republic of China"
-   },
-   {
     "qid": "Q15175",
     "en": "Guangdong"
+   },
+   {
+    "qid": "Q148",
+    "en": "People's Republic of China"
    },
    {
     "qid": "Q26323",
@@ -7066,12 +7630,12 @@
     "en": "Maharashtra"
    },
    {
-    "qid": "Q1797336",
-    "en": "Pune district"
-   },
-   {
     "qid": "Q1854679",
     "en": "Pune division"
+   },
+   {
+    "qid": "Q1797336",
+    "en": "Pune district"
    }
   ],
   "image_path": null
@@ -7126,8 +7690,8 @@
     "en": "Gujarat"
    },
    {
-    "qid": "Q2001966",
-    "en": "Company rule in India"
+    "qid": "Q129286",
+    "en": "British Raj"
    },
    {
     "qid": "Q891827",
@@ -7138,8 +7702,8 @@
     "en": "Bombay State"
    },
    {
-    "qid": "Q129286",
-    "en": "British Raj"
+    "qid": "Q2001966",
+    "en": "Company rule in India"
    }
   ],
   "image_path": null
@@ -7180,7 +7744,7 @@
   "name_en": "Kolkata",
   "name_fr": "Calcutta",
   "population": 4496694,
-  "file": null,
+  "file": "Flag of India 1906 (Calcutta Flag).svg",
   "wiki_en": "https://en.wikipedia.org/wiki/Kolkata",
   "wiki_fr": "https://fr.wikipedia.org/wiki/Calcutta",
   "slug": "kolkata",
@@ -7202,7 +7766,13 @@
     "en": "Presidency division"
    }
   ],
-  "image_path": null
+  "image_path": "/flags/cities/kolkata.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "Sodacan This W3C-unspecified vector image was created with Inkscape .",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_India_1906_(Calcutta_Flag).svg",
+  "width": 470,
+  "height": 300
  },
  {
   "iso": "in",
@@ -7254,16 +7824,16 @@
     "en": "Gujarat"
    },
    {
-    "qid": "Q808575",
-    "en": "Baroda State"
-   },
-   {
     "qid": "Q129286",
     "en": "British Raj"
    },
    {
     "qid": "Q578285",
     "en": "Vadodara district"
+   },
+   {
+    "qid": "Q808575",
+    "en": "Baroda State"
    }
   ],
   "image_path": null
@@ -7280,12 +7850,12 @@
   "slug": "jaipur",
   "ancestors": [
    {
-    "qid": "Q668",
-    "en": "India"
-   },
-   {
     "qid": "Q1437",
     "en": "Rajasthan"
+   },
+   {
+    "qid": "Q668",
+    "en": "India"
    },
    {
     "qid": "Q1134770",
@@ -7348,12 +7918,12 @@
     "en": "Uttar Pradesh"
    },
    {
-    "qid": "Q1773444",
-    "en": "Ghaziabad district"
-   },
-   {
     "qid": "Q2222026",
     "en": "Meerut division"
+   },
+   {
+    "qid": "Q1773444",
+    "en": "Ghaziabad district"
    }
   ],
   "image_path": null
@@ -7416,7 +7986,7 @@
   "name_en": "Indore",
   "name_fr": "Indore",
   "population": 1994397,
-  "file": null,
+  "file": "Indore Flag.svg",
   "wiki_en": "https://en.wikipedia.org/wiki/Indore",
   "wiki_fr": "https://fr.wikipedia.org/wiki/Indore",
   "slug": "indore",
@@ -7434,19 +8004,25 @@
     "en": "Maratha Empire"
    },
    {
-    "qid": "Q742938",
-    "en": "Indore district"
-   },
-   {
     "qid": "Q716890",
     "en": "Indore State"
+   },
+   {
+    "qid": "Q742938",
+    "en": "Indore district"
    },
    {
     "qid": "Q1661796",
     "en": "Indore division"
    }
   ],
-  "image_path": null
+  "image_path": "/flags/cities/indore.svg",
+  "method": "wikipedia",
+  "license": "CC BY 3.0",
+  "artist": "NINTENPUG",
+  "page": "https://commons.wikimedia.org/wiki/File:Indore_Flag.svg",
+  "width": 600,
+  "height": 324
  },
  {
   "iso": "in",
@@ -7484,7 +8060,7 @@
   "name_en": "Bhopal",
   "name_fr": "Bhopal",
   "population": 1798218,
-  "file": null,
+  "file": "Drapeau Bhopal.svg",
   "wiki_en": "https://en.wikipedia.org/wiki/Bhopal",
   "wiki_fr": "https://fr.wikipedia.org/wiki/Bhopal",
   "slug": "bhopal",
@@ -7498,14 +8074,6 @@
     "en": "Madhya Pradesh"
    },
    {
-    "qid": "Q1797245",
-    "en": "Bhopal district"
-   },
-   {
-    "qid": "Q4100821",
-    "en": "Bhopal State (1949–1956)"
-   },
-   {
     "qid": "Q855044",
     "en": "Bhopal State"
    },
@@ -7514,11 +8082,25 @@
     "en": "Bhopal division"
    },
    {
+    "qid": "Q1797245",
+    "en": "Bhopal district"
+   },
+   {
     "qid": "Q2299029",
     "en": "Sehore district"
+   },
+   {
+    "qid": "Q4100821",
+    "en": "Bhopal State (1949–1956)"
    }
   ],
-  "image_path": null
+  "image_path": "/flags/cities/bhopal.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Ricordisamoa",
+  "page": "https://commons.wikimedia.org/wiki/File:Drapeau_Bhopal.svg",
+  "width": 600,
+  "height": 300
  },
  {
   "iso": "in",
@@ -7566,12 +8148,12 @@
     "en": "India"
    },
    {
-    "qid": "Q172482",
-    "en": "Ludhiana district"
-   },
-   {
     "qid": "Q22424",
     "en": "Punjab"
+   },
+   {
+    "qid": "Q172482",
+    "en": "Ludhiana district"
    },
    {
     "qid": "Q56508196",
@@ -7630,12 +8212,12 @@
     "en": "Uttar Pradesh"
    },
    {
-    "qid": "Q1764627",
-    "en": "Meerut district"
-   },
-   {
     "qid": "Q2222026",
     "en": "Meerut division"
+   },
+   {
+    "qid": "Q1764627",
+    "en": "Meerut district"
    }
   ],
   "image_path": null
@@ -7646,7 +8228,7 @@
   "name_en": "Madurai",
   "name_fr": "Madurai",
   "population": 1561129,
-  "file": null,
+  "file": "Madurai Municipal Flag.png",
   "wiki_en": "https://en.wikipedia.org/wiki/Madurai",
   "wiki_fr": "https://fr.wikipedia.org/wiki/Madurai",
   "slug": "madurai",
@@ -7664,7 +8246,13 @@
     "en": "Madurai district"
    }
   ],
-  "image_path": null
+  "image_path": "/flags/cities/madurai.png",
+  "method": "wikipedia",
+  "license": "CC BY 4.0",
+  "artist": "Aml-401",
+  "page": "https://commons.wikimedia.org/wiki/File:Madurai_Municipal_Flag.png",
+  "width": 1500,
+  "height": 1000
  },
  {
   "iso": "in",
@@ -7716,12 +8304,12 @@
     "en": "Maharashtra"
    },
    {
-    "qid": "Q1797269",
-    "en": "Nashik district"
-   },
-   {
     "qid": "Q526400",
     "en": "Nashik division"
+   },
+   {
+    "qid": "Q1797269",
+    "en": "Nashik district"
    }
   ],
   "image_path": null
@@ -7746,12 +8334,12 @@
     "en": "Haryana"
    },
    {
-    "qid": "Q48734314",
-    "en": "Faridabad division"
-   },
-   {
     "qid": "Q2086173",
     "en": "Faridabad district"
+   },
+   {
+    "qid": "Q48734314",
+    "en": "Faridabad division"
    }
   ],
   "image_path": null
@@ -7836,12 +8424,12 @@
     "en": "Uttar Pradesh"
    },
    {
-    "qid": "Q1321140",
-    "en": "Varanasi district"
-   },
-   {
     "qid": "Q2478439",
     "en": "Varanasi division"
+   },
+   {
+    "qid": "Q1321140",
+    "en": "Varanasi district"
    }
   ],
   "image_path": null
@@ -7862,12 +8450,12 @@
     "en": "India"
    },
    {
-    "qid": "Q3712126",
-    "en": "Kashmir division"
-   },
-   {
     "qid": "Q1506029",
     "en": "Srinagar district"
+   },
+   {
+    "qid": "Q3712126",
+    "en": "Kashmir division"
    },
    {
     "qid": "Q66278313",
@@ -7882,7 +8470,7 @@
   "name_en": "Aurangabad",
   "name_fr": "Aurangābād",
   "population": 1175116,
-  "file": null,
+  "file": "Flag of Maharashtra.svg",
   "wiki_en": "https://en.wikipedia.org/wiki/Aurangabad",
   "wiki_fr": "https://fr.wikipedia.org/wiki/Aurangabad",
   "slug": "aurangabad",
@@ -7904,7 +8492,13 @@
     "en": "Sambhajinagar division"
    }
   ],
-  "image_path": null
+  "image_path": "/flags/cities/aurangabad.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Government of India",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Maharashtra.svg",
+  "width": 1920,
+  "height": 1280
  },
  {
   "iso": "in",
@@ -7922,12 +8516,12 @@
     "en": "India"
    },
    {
-    "qid": "Q202822",
-    "en": "Amritsar district"
-   },
-   {
     "qid": "Q22424",
     "en": "Punjab"
+   },
+   {
+    "qid": "Q202822",
+    "en": "Amritsar district"
    },
    {
     "qid": "Q56508194",
@@ -7956,16 +8550,16 @@
     "en": "Maharashtra"
    },
    {
+    "qid": "Q2019683",
+    "en": "Raigad district"
+   },
+   {
     "qid": "Q943099",
     "en": "Thane district"
    },
    {
     "qid": "Q6268840",
     "en": "Konkan division"
-   },
-   {
-    "qid": "Q2019683",
-    "en": "Raigad district"
    }
   ],
   "image_path": null
@@ -7990,12 +8584,12 @@
     "en": "Assam"
    },
    {
-    "qid": "Q2464674",
-    "en": "Kamrup Metropolitan district"
-   },
-   {
     "qid": "Q16911447",
     "en": "Lower Assam division"
+   },
+   {
+    "qid": "Q2464674",
+    "en": "Kamrup Metropolitan district"
    }
   ],
   "image_path": null
@@ -8020,12 +8614,12 @@
     "en": "Jharkhand"
    },
    {
-    "qid": "Q7566816",
-    "en": "South Chotanagpur division"
-   },
-   {
     "qid": "Q1947380",
     "en": "Ranchi district"
+   },
+   {
+    "qid": "Q7566816",
+    "en": "South Chotanagpur division"
    }
   ],
   "image_path": null
@@ -8050,12 +8644,12 @@
     "en": "Madhya Pradesh"
    },
    {
-    "qid": "Q1557788",
-    "en": "Gwalior division"
-   },
-   {
     "qid": "Q2085310",
     "en": "Gwalior district"
+   },
+   {
+    "qid": "Q1557788",
+    "en": "Gwalior division"
    }
   ],
   "image_path": "/flags/cities/gwalior.svg",
@@ -8125,12 +8719,12 @@
   "slug": "jodhpur",
   "ancestors": [
    {
-    "qid": "Q668",
-    "en": "India"
-   },
-   {
     "qid": "Q1437",
     "en": "Rajasthan"
+   },
+   {
+    "qid": "Q668",
+    "en": "India"
    },
    {
     "qid": "Q1434965",
@@ -8149,7 +8743,7 @@
   "name_en": "Raipur",
   "name_fr": "Raipur",
   "population": 1010087,
-  "file": null,
+  "file": "Chhattisgarh Flag(INDIA).png",
   "wiki_en": "https://en.wikipedia.org/wiki/Raipur",
   "wiki_fr": "https://fr.wikipedia.org/wiki/Raipur",
   "slug": "raipur",
@@ -8171,7 +8765,13 @@
     "en": "Raipur district"
    }
   ],
-  "image_path": null
+  "image_path": "/flags/cities/raipur.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Government of Chhattisgarh",
+  "page": "https://commons.wikimedia.org/wiki/File:Chhattisgarh_Flag(INDIA).png",
+  "width": 400,
+  "height": 400
  },
  {
   "iso": "in",
@@ -8185,20 +8785,20 @@
   "slug": "kota",
   "ancestors": [
    {
-    "qid": "Q668",
-    "en": "India"
-   },
-   {
     "qid": "Q1437",
     "en": "Rajasthan"
    },
    {
-    "qid": "Q999432",
-    "en": "Kota district"
+    "qid": "Q668",
+    "en": "India"
    },
    {
     "qid": "Q3712135",
     "en": "Kota division"
+   },
+   {
+    "qid": "Q999432",
+    "en": "Kota district"
    }
   ],
   "image_path": null
@@ -8433,7 +9033,7 @@
   "name_en": "Aba",
   "name_fr": "Aba",
   "population": 1160000,
-  "file": null,
+  "file": "Flag of Abia (new).png",
   "wiki_en": "https://en.wikipedia.org/wiki/Aba,_Nigeria",
   "wiki_fr": "https://fr.wikipedia.org/wiki/Aba_(Nigeria)",
   "slug": "aba",
@@ -8455,7 +9055,13 @@
     "en": "Aba South"
    }
   ],
-  "image_path": null
+  "image_path": "/flags/cities/aba.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Government of Abia State",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Abia_(new).png",
+  "width": 2560,
+  "height": 1707
  },
  {
   "iso": "ng",
@@ -8605,6 +9211,14 @@
     "en": "Nigeria"
    },
    {
+    "qid": "Q464953",
+    "en": "Kwara State"
+   },
+   {
+    "qid": "Q587085",
+    "en": "Ilorin"
+   },
+   {
     "qid": "Q6001095",
     "en": "Ilorin-East"
    },
@@ -8615,14 +9229,6 @@
    {
     "qid": "Q16733661",
     "en": "Ilorin-South"
-   },
-   {
-    "qid": "Q464953",
-    "en": "Kwara State"
-   },
-   {
-    "qid": "Q587085",
-    "en": "Ilorin"
    }
   ],
   "image_path": null
@@ -9311,21 +9917,27 @@
   "name_en": "Sydney",
   "name_fr": "Sydney",
   "population": 5450496,
-  "file": null,
+  "file": "City of Sydney Flag.svg",
   "wiki_en": "https://en.wikipedia.org/wiki/Sydney",
   "wiki_fr": "https://fr.wikipedia.org/wiki/Sydney",
   "slug": "sydney",
   "ancestors": [
    {
-    "qid": "Q3224",
-    "en": "New South Wales"
-   },
-   {
     "qid": "Q408",
     "en": "Australia"
+   },
+   {
+    "qid": "Q3224",
+    "en": "New South Wales"
    }
   ],
-  "image_path": null
+  "image_path": "/flags/cities/sydney.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "City of Sydney / derivative work: Squiresy92",
+  "page": "https://commons.wikimedia.org/wiki/File:City_of_Sydney_Flag.svg",
+  "width": 562,
+  "height": 281
  },
  {
   "iso": "au",
@@ -9387,7 +9999,7 @@
   "name_en": "Perth",
   "name_fr": "Perth",
   "population": 2141834,
-  "file": null,
+  "file": "Flag of Western Australia.svg",
   "wiki_en": "https://en.wikipedia.org/wiki/Perth",
   "wiki_fr": "https://fr.wikipedia.org/wiki/Perth_(Australie-Occidentale)",
   "slug": "perth",
@@ -9401,7 +10013,13 @@
     "en": "Western Australia"
    }
   ],
-  "image_path": null
+  "image_path": "/flags/cities/perth.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Original: Frederick Weld Vector:  Denelson83",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Western_Australia.svg",
+  "width": 1200,
+  "height": 600
  },
  {
   "iso": "au",
@@ -9490,12 +10108,12 @@
   "slug": "wollongong",
   "ancestors": [
    {
-    "qid": "Q3224",
-    "en": "New South Wales"
-   },
-   {
     "qid": "Q408",
     "en": "Australia"
+   },
+   {
+    "qid": "Q3224",
+    "en": "New South Wales"
    },
    {
     "qid": "Q820296",
@@ -9536,7 +10154,7 @@
   "name_en": "Hobart",
   "name_fr": "Hobart",
   "population": 197451,
-  "file": null,
+  "file": "Flag of Tasmania.svg",
   "wiki_en": "https://en.wikipedia.org/wiki/Hobart",
   "wiki_fr": "https://fr.wikipedia.org/wiki/Hobart",
   "slug": "hobart",
@@ -9550,7 +10168,13 @@
     "en": "Tasmania"
    }
   ],
-  "image_path": null
+  "image_path": "/flags/cities/hobart.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Unknown author (Proclaimed by Sir Frederick Weld)",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Tasmania.svg",
+  "width": 1200,
+  "height": 600
  },
  {
   "iso": "au",
@@ -9616,12 +10240,12 @@
   "slug": "newcastle",
   "ancestors": [
    {
-    "qid": "Q3224",
-    "en": "New South Wales"
-   },
-   {
     "qid": "Q408",
     "en": "Australia"
+   },
+   {
+    "qid": "Q3224",
+    "en": "New South Wales"
    },
    {
     "qid": "Q820325",
@@ -9662,7 +10286,7 @@
   "name_en": "Darwin",
   "name_fr": "Darwin",
   "population": 139902,
-  "file": null,
+  "file": "Flag of Darwin.svg",
   "wiki_en": "https://en.wikipedia.org/wiki/Darwin,_Northern_Territory",
   "wiki_fr": "https://fr.wikipedia.org/wiki/Darwin_(Australie)",
   "slug": "darwin",
@@ -9676,7 +10300,13 @@
     "en": "Northern Territory"
    }
   ],
-  "image_path": null
+  "image_path": "/flags/cities/darwin.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "Strenatos",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Darwin.svg",
+  "width": 512,
+  "height": 256
  },
  {
   "iso": "au",
@@ -9895,12 +10525,12 @@
     "en": "South Africa"
    },
    {
-    "qid": "Q311544",
-    "en": "eThekwini Metropolitan Municipality"
-   },
-   {
     "qid": "Q81725",
     "en": "KwaZulu-Natal"
+   },
+   {
+    "qid": "Q311544",
+    "en": "eThekwini Metropolitan Municipality"
    }
   ],
   "image_path": "/flags/cities/durban.svg",
@@ -10008,12 +10638,12 @@
     "en": "Eastern Cape"
    },
    {
-    "qid": "Q1856565",
-    "en": "Nelson Mandela Bay Metropolitan Municipality"
-   },
-   {
     "qid": "Q59136540",
     "en": "Eastern Cape"
+   },
+   {
+    "qid": "Q1856565",
+    "en": "Nelson Mandela Bay Metropolitan Municipality"
    }
   ],
   "image_path": null

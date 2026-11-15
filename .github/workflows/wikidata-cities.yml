@@ -10,7 +10,7 @@ on:
         default: ''
   push:
     branches: [main]
-    paths: ['scripts/wikidata/fetch_cities.py']
+    paths: ['scripts/wikidata/fetch_cities.py', 'scripts/wikidata/fetch_city_flags_wiki.py']
 
 permissions:
   contents: write
@@ -28,6 +28,7 @@ jobs:
           python-version: '3.12'
       - run: pip install requests
       - run: python3 scripts/wikidata/fetch_cities.py ${{ inputs.isos }}
+      - run: python3 scripts/wikidata/fetch_city_flags_wiki.py
       - name: Commit results
         run: |
           git config user.name "knowflags-bot"

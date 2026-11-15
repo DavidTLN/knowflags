@@ -40,6 +40,7 @@ TYPES = {
     'us': ['Q1093829', 'Q3301053'],                     # city of the US, consolidated city-county
     'jp': ['Q494721', 'Q1137833'],                      # city of Japan, designated city
     'be': ['Q493522'],                                  # municipality of Belgium
+    'ph': ['Q104157', 'Q29946056'],                     # city of the Philippines, highly urbanized city
 }
 
 # Slugs déjà utilisés sur le site pour ces villes

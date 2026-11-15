@@ -1,0 +1,4261 @@
+[
+{
+"iso": "ad",
+"num": "020",
+"land": 118.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "es",
+"km": 63.0
+},
+{
+"iso": "fr",
+"km": 55.0
+}
+]
+},
+{
+"iso": "ae",
+"num": "784",
+"land": 1066.0,
+"coast": 1318.0,
+"neighbours": [
+{
+"iso": "om",
+"km": 609.0
+},
+{
+"iso": "sa",
+"km": 457.0
+}
+]
+},
+{
+"iso": "af",
+"num": "004",
+"land": 5987.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "pk",
+"km": 2670.0
+},
+{
+"iso": "tj",
+"km": 1357.0
+},
+{
+"iso": "ir",
+"km": 921.0
+},
+{
+"iso": "tm",
+"km": 804.0
+},
+{
+"iso": "uz",
+"km": 144.0
+},
+{
+"iso": "cn",
+"km": 91.0
+}
+]
+},
+{
+"iso": "ag",
+"num": "028",
+"land": 0.0,
+"coast": 153.0,
+"neighbours": []
+},
+{
+"iso": "al",
+"num": "008",
+"land": 691.0,
+"coast": 362.0,
+"neighbours": [
+{
+"iso": "gr",
+"km": 212.0
+},
+{
+"iso": "me",
+"km": 186.0
+},
+{
+"iso": "mk",
+"km": 181.0
+},
+{
+"iso": "xk",
+"km": 112.0
+}
+]
+},
+{
+"iso": "am",
+"num": "051",
+"land": 1570.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "az",
+"km": 996.0
+},
+{
+"iso": "tr",
+"km": 311.0
+},
+{
+"iso": "ge",
+"km": 219.0
+},
+{
+"iso": "ir",
+"km": 44.0
+}
+]
+},
+{
+"iso": "ao",
+"num": "024",
+"land": 5369.0,
+"coast": 1600.0,
+"neighbours": [
+{
+"iso": "cd",
+"km": 2646.0
+},
+{
+"iso": "na",
+"km": 1427.0
+},
+{
+"iso": "zm",
+"km": 1065.0
+},
+{
+"iso": "cg",
+"km": 231.0
+}
+]
+},
+{
+"iso": "ar",
+"num": "032",
+"land": 11968.0,
+"coast": 4989.0,
+"neighbours": [
+{
+"iso": "cl",
+"km": 6691.0
+},
+{
+"iso": "py",
+"km": 2531.0
+},
+{
+"iso": "br",
+"km": 1263.0
+},
+{
+"iso": "bo",
+"km": 942.0
+},
+{
+"iso": "uy",
+"km": 541.0
+}
+]
+},
+{
+"iso": "at",
+"num": "040",
+"land": 2524.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "de",
+"km": 801.0
+},
+{
+"iso": "it",
+"km": 404.0
+},
+{
+"iso": "cz",
+"km": 402.0
+},
+{
+"iso": "hu",
+"km": 321.0
+},
+{
+"iso": "si",
+"km": 299.0
+},
+{
+"iso": "ch",
+"km": 158.0
+},
+{
+"iso": "sk",
+"km": 105.0
+},
+{
+"iso": "li",
+"km": 34.0
+}
+]
+},
+{
+"iso": "au",
+"num": "036",
+"land": 0.0,
+"coast": 25760.0,
+"neighbours": []
+},
+{
+"iso": "aw",
+"num": "533",
+"land": 0.0,
+"coast": 68.5,
+"neighbours": []
+},
+{
+"iso": "ax",
+"num": "248",
+"land": 0,
+"coast": null,
+"neighbours": []
+},
+{
+"iso": "az",
+"num": "031",
+"land": 2468.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "am",
+"km": 996.0
+},
+{
+"iso": "ir",
+"km": 689.0
+},
+{
+"iso": "ge",
+"km": 428.0
+},
+{
+"iso": "ru",
+"km": 338.0
+},
+{
+"iso": "tr",
+"km": 17.0
+}
+]
+},
+{
+"iso": "ba",
+"num": "070",
+"land": 1543.0,
+"coast": 20.0,
+"neighbours": [
+{
+"iso": "hr",
+"km": 956.0
+},
+{
+"iso": "rs",
+"km": 345.0
+},
+{
+"iso": "me",
+"km": 242.0
+}
+]
+},
+{
+"iso": "bb",
+"num": "052",
+"land": 0.0,
+"coast": 97.0,
+"neighbours": []
+},
+{
+"iso": "bd",
+"num": "050",
+"land": 4413.0,
+"coast": 580.0,
+"neighbours": [
+{
+"iso": "in",
+"km": 4142.0
+},
+{
+"iso": "mm",
+"km": 271.0
+}
+]
+},
+{
+"iso": "be",
+"num": "056",
+"land": 1297.0,
+"coast": 66.5,
+"neighbours": [
+{
+"iso": "fr",
+"km": 556.0
+},
+{
+"iso": "nl",
+"km": 478.0
+},
+{
+"iso": "de",
+"km": 133.0
+},
+{
+"iso": "lu",
+"km": 130.0
+}
+]
+},
+{
+"iso": "bf",
+"num": "854",
+"land": 3611.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "ml",
+"km": 1325.0
+},
+{
+"iso": "ne",
+"km": 622.0
+},
+{
+"iso": "gh",
+"km": 602.0
+},
+{
+"iso": "ci",
+"km": 545.0
+},
+{
+"iso": "bj",
+"km": 386.0
+},
+{
+"iso": "tg",
+"km": 131.0
+}
+]
+},
+{
+"iso": "bg",
+"num": "100",
+"land": 1806.0,
+"coast": 354.0,
+"neighbours": [
+{
+"iso": "ro",
+"km": 605.0
+},
+{
+"iso": "gr",
+"km": 472.0
+},
+{
+"iso": "rs",
+"km": 344.0
+},
+{
+"iso": "tr",
+"km": 223.0
+},
+{
+"iso": "mk",
+"km": 162.0
+}
+]
+},
+{
+"iso": "bh",
+"num": "048",
+"land": 0.0,
+"coast": 161.0,
+"neighbours": []
+},
+{
+"iso": "bi",
+"num": "108",
+"land": 1140.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "tz",
+"km": 589.0
+},
+{
+"iso": "rw",
+"km": 315.0
+},
+{
+"iso": "cd",
+"km": 236.0
+}
+]
+},
+{
+"iso": "bj",
+"num": "204",
+"land": 2123.0,
+"coast": 121.0,
+"neighbours": [
+{
+"iso": "ng",
+"km": 809.0
+},
+{
+"iso": "tg",
+"km": 651.0
+},
+{
+"iso": "bf",
+"km": 386.0
+},
+{
+"iso": "ne",
+"km": 277.0
+}
+]
+},
+{
+"iso": "bm",
+"num": "060",
+"land": 0.0,
+"coast": 103.0,
+"neighbours": []
+},
+{
+"iso": "bn",
+"num": "096",
+"land": 266.0,
+"coast": 161.0,
+"neighbours": [
+{
+"iso": "my",
+"km": 266.0
+}
+]
+},
+{
+"iso": "bo",
+"num": "068",
+"land": 7252.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "br",
+"km": 3403.0
+},
+{
+"iso": "pe",
+"km": 1212.0
+},
+{
+"iso": "ar",
+"km": 942.0
+},
+{
+"iso": "cl",
+"km": 942.0
+},
+{
+"iso": "py",
+"km": 753.0
+}
+]
+},
+{
+"iso": "br",
+"num": "076",
+"land": 16145.0,
+"coast": 7491.0,
+"neighbours": [
+{
+"iso": "bo",
+"km": 3403.0
+},
+{
+"iso": "pe",
+"km": 2659.0
+},
+{
+"iso": "ve",
+"km": 2137.0
+},
+{
+"iso": "co",
+"km": 1790.0
+},
+{
+"iso": "py",
+"km": 1371.0
+},
+{
+"iso": "gy",
+"km": 1308.0
+},
+{
+"iso": "ar",
+"km": 1263.0
+},
+{
+"iso": "uy",
+"km": 1050.0
+},
+{
+"iso": "gf",
+"km": 649.0
+},
+{
+"iso": "sr",
+"km": 515.0
+}
+]
+},
+{
+"iso": "bs",
+"num": "044",
+"land": 0.0,
+"coast": 3542.0,
+"neighbours": []
+},
+{
+"iso": "bt",
+"num": "064",
+"land": 1136.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "in",
+"km": 659.0
+},
+{
+"iso": "cn",
+"km": 477.0
+}
+]
+},
+{
+"iso": "bw",
+"num": "072",
+"land": 4347.15,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "za",
+"km": 1969.0
+},
+{
+"iso": "na",
+"km": 1544.0
+},
+{
+"iso": "zw",
+"km": 834.0
+},
+{
+"iso": "zm",
+"km": 0.15
+}
+]
+},
+{
+"iso": "by",
+"num": "112",
+"land": 3599.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "ru",
+"km": 1312.0
+},
+{
+"iso": "ua",
+"km": 1111.0
+},
+{
+"iso": "lt",
+"km": 640.0
+},
+{
+"iso": "pl",
+"km": 375.0
+},
+{
+"iso": "lv",
+"km": 161.0
+}
+]
+},
+{
+"iso": "bz",
+"num": "084",
+"land": 542.0,
+"coast": 386.0,
+"neighbours": [
+{
+"iso": "mx",
+"km": 276.0
+},
+{
+"iso": "gt",
+"km": 266.0
+}
+]
+},
+{
+"iso": "ca",
+"num": "124",
+"land": 8892.0,
+"coast": 202080.0,
+"neighbours": [
+{
+"iso": "us",
+"km": 8891.0
+},
+{
+"iso": "dk",
+"km": 1.3
+}
+]
+},
+{
+"iso": "cd",
+"num": "180",
+"land": 11027.0,
+"coast": 37.0,
+"neighbours": [
+{
+"iso": "ao",
+"km": 2646.0
+},
+{
+"iso": "zm",
+"km": 2332.0
+},
+{
+"iso": "cg",
+"km": 1775.0
+},
+{
+"iso": "cf",
+"km": 1747.0
+},
+{
+"iso": "ug",
+"km": 877.0
+},
+{
+"iso": "ss",
+"km": 714.0
+},
+{
+"iso": "tz",
+"km": 479.0
+},
+{
+"iso": "bi",
+"km": 236.0
+},
+{
+"iso": "rw",
+"km": 221.0
+}
+]
+},
+{
+"iso": "cf",
+"num": "140",
+"land": 5920.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "cd",
+"km": 1747.0
+},
+{
+"iso": "td",
+"km": 1556.0
+},
+{
+"iso": "ss",
+"km": 1055.0
+},
+{
+"iso": "cm",
+"km": 901.0
+},
+{
+"iso": "sd",
+"km": 174.0
+}
+]
+},
+{
+"iso": "cg",
+"num": "178",
+"land": 5554.0,
+"coast": 169.0,
+"neighbours": [
+{
+"iso": "ga",
+"km": 2567.0
+},
+{
+"iso": "cd",
+"km": 1775.0
+},
+{
+"iso": "cm",
+"km": 494.0
+},
+{
+"iso": "cf",
+"km": 487.0
+},
+{
+"iso": "ao",
+"km": 231.0
+}
+]
+},
+{
+"iso": "ch",
+"num": "756",
+"land": 1770.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "it",
+"km": 698.0
+},
+{
+"iso": "fr",
+"km": 525.0
+},
+{
+"iso": "de",
+"km": 348.0
+},
+{
+"iso": "at",
+"km": 158.0
+},
+{
+"iso": "li",
+"km": 41.0
+}
+]
+},
+{
+"iso": "ci",
+"num": "384",
+"land": 3458.0,
+"coast": 515.0,
+"neighbours": [
+{
+"iso": "gn",
+"km": 816.0
+},
+{
+"iso": "lr",
+"km": 778.0
+},
+{
+"iso": "gh",
+"km": 720.0
+},
+{
+"iso": "ml",
+"km": 599.0
+},
+{
+"iso": "bf",
+"km": 545.0
+}
+]
+},
+{
+"iso": "cl",
+"num": "152",
+"land": 7801.0,
+"coast": 6435.0,
+"neighbours": [
+{
+"iso": "ar",
+"km": 6691.0
+},
+{
+"iso": "bo",
+"km": 942.0
+},
+{
+"iso": "pe",
+"km": 168.0
+}
+]
+},
+{
+"iso": "cm",
+"num": "120",
+"land": 5018.0,
+"coast": 402.0,
+"neighbours": [
+{
+"iso": "ng",
+"km": 1975.0
+},
+{
+"iso": "td",
+"km": 1116.0
+},
+{
+"iso": "cf",
+"km": 901.0
+},
+{
+"iso": "cg",
+"km": 494.0
+},
+{
+"iso": "ga",
+"km": 349.0
+},
+{
+"iso": "gq",
+"km": 183.0
+}
+]
+},
+{
+"iso": "cn",
+"num": "156",
+"land": 22457.0,
+"coast": 14500.0,
+"neighbours": [
+{
+"iso": "mn",
+"km": 4630.0
+},
+{
+"iso": "ru",
+"km": 4133.0
+},
+{
+"iso": "in",
+"km": 2659.0
+},
+{
+"iso": "mm",
+"km": 2129.0
+},
+{
+"iso": "kz",
+"km": 1765.0
+},
+{
+"iso": "np",
+"km": 1389.0
+},
+{
+"iso": "kp",
+"km": 1352.0
+},
+{
+"iso": "vn",
+"km": 1297.0
+},
+{
+"iso": "kg",
+"km": 1063.0
+},
+{
+"iso": "bt",
+"km": 477.0
+},
+{
+"iso": "tj",
+"km": 477.0
+},
+{
+"iso": "la",
+"km": 475.0
+},
+{
+"iso": "pk",
+"km": 438.0
+},
+{
+"iso": "af",
+"km": 91.0
+}
+]
+},
+{
+"iso": "co",
+"num": "170",
+"land": 6672.0,
+"coast": 3208.0,
+"neighbours": [
+{
+"iso": "ve",
+"km": 2341.0
+},
+{
+"iso": "br",
+"km": 1790.0
+},
+{
+"iso": "pe",
+"km": 1494.0
+},
+{
+"iso": "ec",
+"km": 708.0
+},
+{
+"iso": "pa",
+"km": 339.0
+}
+]
+},
+{
+"iso": "cr",
+"num": "188",
+"land": 661.0,
+"coast": 1290.0,
+"neighbours": [
+{
+"iso": "pa",
+"km": 348.0
+},
+{
+"iso": "ni",
+"km": 313.0
+}
+]
+},
+{
+"iso": "cu",
+"num": "192",
+"land": 28.5,
+"coast": 3735.0,
+"neighbours": []
+},
+{
+"iso": "cv",
+"num": "132",
+"land": 0.0,
+"coast": 965.0,
+"neighbours": []
+},
+{
+"iso": "cw",
+"num": "531",
+"land": 0.0,
+"coast": 364.0,
+"neighbours": []
+},
+{
+"iso": "cy",
+"num": "196",
+"land": 156.0,
+"coast": 648.0,
+"neighbours": []
+},
+{
+"iso": "cz",
+"num": "203",
+"land": 2046.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "de",
+"km": 704.0
+},
+{
+"iso": "pl",
+"km": 699.0
+},
+{
+"iso": "at",
+"km": 402.0
+},
+{
+"iso": "sk",
+"km": 241.0
+}
+]
+},
+{
+"iso": "de",
+"num": "276",
+"land": 3694.0,
+"coast": 2389.0,
+"neighbours": [
+{
+"iso": "at",
+"km": 801.0
+},
+{
+"iso": "cz",
+"km": 704.0
+},
+{
+"iso": "nl",
+"km": 575.0
+},
+{
+"iso": "pl",
+"km": 447.0
+},
+{
+"iso": "fr",
+"km": 418.0
+},
+{
+"iso": "ch",
+"km": 348.0
+},
+{
+"iso": "dk",
+"km": 140.0
+},
+{
+"iso": "be",
+"km": 133.0
+},
+{
+"iso": "lu",
+"km": 128.0
+}
+]
+},
+{
+"iso": "dj",
+"num": "262",
+"land": 528.0,
+"coast": 314.0,
+"neighbours": [
+{
+"iso": "et",
+"km": 342.0
+},
+{
+"iso": "er",
+"km": 125.0
+},
+{
+"iso": "so",
+"km": 61.0
+}
+]
+},
+{
+"iso": "dk",
+"num": "208",
+"land": 141.0,
+"coast": 7314.0,
+"neighbours": [
+{
+"iso": "de",
+"km": 140.0
+},
+{
+"iso": "ca",
+"km": 1.3
+}
+]
+},
+{
+"iso": "dm",
+"num": "212",
+"land": 0.0,
+"coast": 148.0,
+"neighbours": []
+},
+{
+"iso": "do",
+"num": "214",
+"land": 376.0,
+"coast": 1288.0,
+"neighbours": [
+{
+"iso": "ht",
+"km": 376.0
+}
+]
+},
+{
+"iso": "dz",
+"num": "012",
+"land": 6734.0,
+"coast": 998.0,
+"neighbours": [
+{
+"iso": "ma",
+"km": 1941.0
+},
+{
+"iso": "ml",
+"km": 1359.0
+},
+{
+"iso": "tn",
+"km": 1034.0
+},
+{
+"iso": "ly",
+"km": 989.0
+},
+{
+"iso": "ne",
+"km": 951.0
+},
+{
+"iso": "mr",
+"km": 460.0
+}
+]
+},
+{
+"iso": "ec",
+"num": "218",
+"land": 2237.0,
+"coast": 2237.0,
+"neighbours": [
+{
+"iso": "pe",
+"km": 1529.0
+},
+{
+"iso": "co",
+"km": 708.0
+}
+]
+},
+{
+"iso": "ee",
+"num": "233",
+"land": 657.0,
+"coast": 3794.0,
+"neighbours": [
+{
+"iso": "lv",
+"km": 333.0
+},
+{
+"iso": "ru",
+"km": 324.0
+}
+]
+},
+{
+"iso": "eg",
+"num": "818",
+"land": 2612.0,
+"coast": 2450.0,
+"neighbours": [
+{
+"iso": "sd",
+"km": 1276.0
+},
+{
+"iso": "ly",
+"km": 1115.0
+},
+{
+"iso": "il",
+"km": 208.0
+},
+{
+"iso": "ps",
+"km": 13.0
+}
+]
+},
+{
+"iso": "er",
+"num": "232",
+"land": 1840.0,
+"coast": 2234.0,
+"neighbours": [
+{
+"iso": "et",
+"km": 1033.0
+},
+{
+"iso": "sd",
+"km": 682.0
+},
+{
+"iso": "dj",
+"km": 125.0
+}
+]
+},
+{
+"iso": "es",
+"num": "724",
+"land": 1952.7,
+"coast": 4964.0,
+"neighbours": [
+{
+"iso": "pt",
+"km": 1224.0
+},
+{
+"iso": "fr",
+"km": 646.0
+},
+{
+"iso": "ad",
+"km": 63.0
+},
+{
+"iso": "ma",
+"km": 8.0
+},
+{
+"iso": "gi",
+"km": 1.2
+}
+]
+},
+{
+"iso": "et",
+"num": "231",
+"land": 5925.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "so",
+"km": 1640.0
+},
+{
+"iso": "ss",
+"km": 1299.0
+},
+{
+"iso": "er",
+"km": 1033.0
+},
+{
+"iso": "ke",
+"km": 867.0
+},
+{
+"iso": "sd",
+"km": 744.0
+},
+{
+"iso": "dj",
+"km": 342.0
+}
+]
+},
+{
+"iso": "fi",
+"num": "246",
+"land": 2563.0,
+"coast": 1250.0,
+"neighbours": [
+{
+"iso": "ru",
+"km": 1309.0
+},
+{
+"iso": "no",
+"km": 709.0
+},
+{
+"iso": "se",
+"km": 545.0
+}
+]
+},
+{
+"iso": "fj",
+"num": "242",
+"land": 0.0,
+"coast": 1129.0,
+"neighbours": []
+},
+{
+"iso": "fk",
+"num": "238",
+"land": 0.0,
+"coast": 1288.0,
+"neighbours": []
+},
+{
+"iso": "fm",
+"num": "583",
+"land": 0.0,
+"coast": 6112.0,
+"neighbours": []
+},
+{
+"iso": "fo",
+"num": "234",
+"land": 0.0,
+"coast": 1117.0,
+"neighbours": []
+},
+{
+"iso": "fr",
+"num": "250",
+"land": 3956.0,
+"coast": 4853.0,
+"neighbours": [
+{
+"iso": "es",
+"km": 646.0
+},
+{
+"iso": "be",
+"km": 556.0
+},
+{
+"iso": "ch",
+"km": 525.0
+},
+{
+"iso": "it",
+"km": 476.0
+},
+{
+"iso": "de",
+"km": 418.0
+},
+{
+"iso": "lu",
+"km": 69.0
+},
+{
+"iso": "ad",
+"km": 55.0
+},
+{
+"iso": "mc",
+"km": 6.0
+}
+]
+},
+{
+"iso": "ga",
+"num": "266",
+"land": 3261.0,
+"coast": 885.0,
+"neighbours": [
+{
+"iso": "cg",
+"km": 2567.0
+},
+{
+"iso": "cm",
+"km": 349.0
+},
+{
+"iso": "gq",
+"km": 345.0
+}
+]
+},
+{
+"iso": "gb",
+"num": "826",
+"land": 499.0,
+"coast": 12429.0,
+"neighbours": [
+{
+"iso": "ie",
+"km": 499.0
+}
+]
+},
+{
+"iso": "gb-eng",
+"num": null,
+"land": null,
+"coast": null,
+"neighbours": [
+{
+"iso": "gb-sct",
+"km": null
+},
+{
+"iso": "gb-wls",
+"km": null
+}
+]
+},
+{
+"iso": "gb-nir",
+"num": null,
+"land": null,
+"coast": null,
+"neighbours": [
+{
+"iso": "ie",
+"km": null
+}
+]
+},
+{
+"iso": "gb-sct",
+"num": null,
+"land": null,
+"coast": null,
+"neighbours": [
+{
+"iso": "gb-eng",
+"km": null
+}
+]
+},
+{
+"iso": "gb-wls",
+"num": null,
+"land": null,
+"coast": null,
+"neighbours": [
+{
+"iso": "gb-eng",
+"km": null
+}
+]
+},
+{
+"iso": "gd",
+"num": "308",
+"land": 0.0,
+"coast": 121.0,
+"neighbours": []
+},
+{
+"iso": "ge",
+"num": "268",
+"land": 1814.0,
+"coast": 310.0,
+"neighbours": [
+{
+"iso": "ru",
+"km": 894.0
+},
+{
+"iso": "az",
+"km": 428.0
+},
+{
+"iso": "tr",
+"km": 273.0
+},
+{
+"iso": "am",
+"km": 219.0
+}
+]
+},
+{
+"iso": "gg",
+"num": "831",
+"land": 0.0,
+"coast": 50.0,
+"neighbours": []
+},
+{
+"iso": "gh",
+"num": "288",
+"land": 2420.0,
+"coast": 539.0,
+"neighbours": [
+{
+"iso": "tg",
+"km": 1098.0
+},
+{
+"iso": "ci",
+"km": 720.0
+},
+{
+"iso": "bf",
+"km": 602.0
+}
+]
+},
+{
+"iso": "gi",
+"num": "292",
+"land": 1.2,
+"coast": 12.0,
+"neighbours": [
+{
+"iso": "es",
+"km": 1.2
+}
+]
+},
+{
+"iso": "gl",
+"num": "304",
+"land": 0.0,
+"coast": 44087.0,
+"neighbours": []
+},
+{
+"iso": "gm",
+"num": "270",
+"land": 749.0,
+"coast": 80.0,
+"neighbours": [
+{
+"iso": "sn",
+"km": 749.0
+}
+]
+},
+{
+"iso": "gn",
+"num": "324",
+"land": 4046.0,
+"coast": 320.0,
+"neighbours": [
+{
+"iso": "ml",
+"km": 1062.0
+},
+{
+"iso": "ci",
+"km": 816.0
+},
+{
+"iso": "sl",
+"km": 794.0
+},
+{
+"iso": "lr",
+"km": 590.0
+},
+{
+"iso": "gw",
+"km": 421.0
+},
+{
+"iso": "sn",
+"km": 363.0
+}
+]
+},
+{
+"iso": "gq",
+"num": "226",
+"land": 528.0,
+"coast": 296.0,
+"neighbours": [
+{
+"iso": "ga",
+"km": 345.0
+},
+{
+"iso": "cm",
+"km": 183.0
+}
+]
+},
+{
+"iso": "gr",
+"num": "300",
+"land": 1110.0,
+"coast": 13676.0,
+"neighbours": [
+{
+"iso": "bg",
+"km": 472.0
+},
+{
+"iso": "mk",
+"km": 234.0
+},
+{
+"iso": "al",
+"km": 212.0
+},
+{
+"iso": "tr",
+"km": 192.0
+}
+]
+},
+{
+"iso": "gt",
+"num": "320",
+"land": 1667.0,
+"coast": 400.0,
+"neighbours": [
+{
+"iso": "mx",
+"km": 958.0
+},
+{
+"iso": "bz",
+"km": 266.0
+},
+{
+"iso": "hn",
+"km": 244.0
+},
+{
+"iso": "sv",
+"km": 199.0
+}
+]
+},
+{
+"iso": "gu",
+"num": "316",
+"land": 0.0,
+"coast": 125.5,
+"neighbours": []
+},
+{
+"iso": "gw",
+"num": "624",
+"land": 762.0,
+"coast": 350.0,
+"neighbours": [
+{
+"iso": "gn",
+"km": 421.0
+},
+{
+"iso": "sn",
+"km": 341.0
+}
+]
+},
+{
+"iso": "gy",
+"num": "328",
+"land": 2933.0,
+"coast": 459.0,
+"neighbours": [
+{
+"iso": "br",
+"km": 1308.0
+},
+{
+"iso": "sr",
+"km": 836.0
+},
+{
+"iso": "ve",
+"km": 789.0
+}
+]
+},
+{
+"iso": "hk",
+"num": "344",
+"land": 33.0,
+"coast": 733.0,
+"neighbours": []
+},
+{
+"iso": "hn",
+"num": "340",
+"land": 1575.0,
+"coast": 823.0,
+"neighbours": [
+{
+"iso": "ni",
+"km": 940.0
+},
+{
+"iso": "sv",
+"km": 391.0
+},
+{
+"iso": "gt",
+"km": 244.0
+}
+]
+},
+{
+"iso": "hr",
+"num": "191",
+"land": 2237.0,
+"coast": 5835.0,
+"neighbours": [
+{
+"iso": "ba",
+"km": 956.0
+},
+{
+"iso": "si",
+"km": 600.0
+},
+{
+"iso": "hu",
+"km": 348.0
+},
+{
+"iso": "rs",
+"km": 314.0
+},
+{
+"iso": "me",
+"km": 19.0
+}
+]
+},
+{
+"iso": "ht",
+"num": "332",
+"land": 376.0,
+"coast": 1771.0,
+"neighbours": [
+{
+"iso": "do",
+"km": 376.0
+}
+]
+},
+{
+"iso": "hu",
+"num": "348",
+"land": 2106.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "sk",
+"km": 627.0
+},
+{
+"iso": "ro",
+"km": 424.0
+},
+{
+"iso": "hr",
+"km": 348.0
+},
+{
+"iso": "at",
+"km": 321.0
+},
+{
+"iso": "rs",
+"km": 164.0
+},
+{
+"iso": "ua",
+"km": 128.0
+},
+{
+"iso": "si",
+"km": 94.0
+}
+]
+},
+{
+"iso": "id",
+"num": "360",
+"land": 2958.0,
+"coast": 54716.0,
+"neighbours": [
+{
+"iso": "my",
+"km": 1881.0
+},
+{
+"iso": "pg",
+"km": 824.0
+},
+{
+"iso": "tl",
+"km": 253.0
+}
+]
+},
+{
+"iso": "ie",
+"num": "372",
+"land": 490.0,
+"coast": 1448.0,
+"neighbours": [
+{
+"iso": "gb",
+"km": 499.0
+}
+]
+},
+{
+"iso": "il",
+"num": "376",
+"land": 1068.0,
+"coast": 273.0,
+"neighbours": [
+{
+"iso": "ps",
+"km": 389.0
+},
+{
+"iso": "jo",
+"km": 327.0
+},
+{
+"iso": "eg",
+"km": 208.0
+},
+{
+"iso": "sy",
+"km": 83.0
+},
+{
+"iso": "lb",
+"km": 81.0
+}
+]
+},
+{
+"iso": "im",
+"num": "833",
+"land": 0.0,
+"coast": 160.0,
+"neighbours": []
+},
+{
+"iso": "in",
+"num": "356",
+"land": 13888.0,
+"coast": 7000.0,
+"neighbours": [
+{
+"iso": "bd",
+"km": 4142.0
+},
+{
+"iso": "pk",
+"km": 3190.0
+},
+{
+"iso": "cn",
+"km": 2659.0
+},
+{
+"iso": "np",
+"km": 1770.0
+},
+{
+"iso": "mm",
+"km": 1468.0
+},
+{
+"iso": "bt",
+"km": 659.0
+}
+]
+},
+{
+"iso": "iq",
+"num": "368",
+"land": 3809.0,
+"coast": 58.0,
+"neighbours": [
+{
+"iso": "ir",
+"km": 1599.0
+},
+{
+"iso": "sa",
+"km": 811.0
+},
+{
+"iso": "sy",
+"km": 599.0
+},
+{
+"iso": "tr",
+"km": 367.0
+},
+{
+"iso": "kw",
+"km": 254.0
+},
+{
+"iso": "jo",
+"km": 179.0
+}
+]
+},
+{
+"iso": "ir",
+"num": "364",
+"land": 5894.0,
+"coast": 2440.0,
+"neighbours": [
+{
+"iso": "iq",
+"km": 1599.0
+},
+{
+"iso": "tm",
+"km": 1148.0
+},
+{
+"iso": "pk",
+"km": 959.0
+},
+{
+"iso": "af",
+"km": 921.0
+},
+{
+"iso": "az",
+"km": 689.0
+},
+{
+"iso": "tr",
+"km": 534.0
+},
+{
+"iso": "am",
+"km": 44.0
+}
+]
+},
+{
+"iso": "is",
+"num": "352",
+"land": 0.0,
+"coast": 4970.0,
+"neighbours": []
+},
+{
+"iso": "it",
+"num": "380",
+"land": 1836.4,
+"coast": 7600.0,
+"neighbours": [
+{
+"iso": "ch",
+"km": 698.0
+},
+{
+"iso": "fr",
+"km": 476.0
+},
+{
+"iso": "at",
+"km": 404.0
+},
+{
+"iso": "si",
+"km": 218.0
+},
+{
+"iso": "sm",
+"km": 37.0
+},
+{
+"iso": "va",
+"km": 3.4
+}
+]
+},
+{
+"iso": "je",
+"num": "832",
+"land": 0.0,
+"coast": 70.0,
+"neighbours": []
+},
+{
+"iso": "jm",
+"num": "388",
+"land": 0.0,
+"coast": 1022.0,
+"neighbours": []
+},
+{
+"iso": "jo",
+"num": "400",
+"land": 1744.0,
+"coast": 26.0,
+"neighbours": [
+{
+"iso": "sa",
+"km": 731.0
+},
+{
+"iso": "sy",
+"km": 379.0
+},
+{
+"iso": "il",
+"km": 307.0
+},
+{
+"iso": "iq",
+"km": 179.0
+},
+{
+"iso": "ps",
+"km": 148.0
+}
+]
+},
+{
+"iso": "jp",
+"num": "392",
+"land": 0.0,
+"coast": 29751.0,
+"neighbours": []
+},
+{
+"iso": "ke",
+"num": "404",
+"land": 3457.0,
+"coast": 536.0,
+"neighbours": [
+{
+"iso": "et",
+"km": 867.0
+},
+{
+"iso": "ug",
+"km": 814.0
+},
+{
+"iso": "tz",
+"km": 775.0
+},
+{
+"iso": "so",
+"km": 684.0
+},
+{
+"iso": "ss",
+"km": 317.0
+}
+]
+},
+{
+"iso": "kg",
+"num": "417",
+"land": 4573.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "uz",
+"km": 1314.0
+},
+{
+"iso": "kz",
+"km": 1212.0
+},
+{
+"iso": "cn",
+"km": 1063.0
+},
+{
+"iso": "tj",
+"km": 984.0
+}
+]
+},
+{
+"iso": "kh",
+"num": "116",
+"land": 2530.0,
+"coast": 443.0,
+"neighbours": [
+{
+"iso": "vn",
+"km": 1158.0
+},
+{
+"iso": "th",
+"km": 817.0
+},
+{
+"iso": "la",
+"km": 555.0
+}
+]
+},
+{
+"iso": "ki",
+"num": "296",
+"land": 0.0,
+"coast": 1143.0,
+"neighbours": []
+},
+{
+"iso": "km",
+"num": "174",
+"land": 0.0,
+"coast": 340.0,
+"neighbours": []
+},
+{
+"iso": "kn",
+"num": "659",
+"land": 0.0,
+"coast": 135.0,
+"neighbours": []
+},
+{
+"iso": "kp",
+"num": "408",
+"land": 1607.0,
+"coast": 2495.0,
+"neighbours": [
+{
+"iso": "cn",
+"km": 1352.0
+},
+{
+"iso": "kr",
+"km": 237.0
+},
+{
+"iso": "ru",
+"km": 18.0
+}
+]
+},
+{
+"iso": "kr",
+"num": "410",
+"land": 237.0,
+"coast": 2413.0,
+"neighbours": [
+{
+"iso": "kp",
+"km": 237.0
+}
+]
+},
+{
+"iso": "kw",
+"num": "414",
+"land": 475.0,
+"coast": 499.0,
+"neighbours": [
+{
+"iso": "iq",
+"km": 254.0
+},
+{
+"iso": "sa",
+"km": 221.0
+}
+]
+},
+{
+"iso": "ky",
+"num": "136",
+"land": 0.0,
+"coast": 160.0,
+"neighbours": []
+},
+{
+"iso": "kz",
+"num": "398",
+"land": 13364.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "ru",
+"km": 7644.0
+},
+{
+"iso": "uz",
+"km": 2330.0
+},
+{
+"iso": "cn",
+"km": 1765.0
+},
+{
+"iso": "kg",
+"km": 1212.0
+},
+{
+"iso": "tm",
+"km": 413.0
+}
+]
+},
+{
+"iso": "la",
+"num": "418",
+"land": 5274.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "vn",
+"km": 2161.0
+},
+{
+"iso": "th",
+"km": 1845.0
+},
+{
+"iso": "kh",
+"km": 555.0
+},
+{
+"iso": "cn",
+"km": 475.0
+},
+{
+"iso": "mm",
+"km": 238.0
+}
+]
+},
+{
+"iso": "lb",
+"num": "422",
+"land": 484.0,
+"coast": 225.0,
+"neighbours": [
+{
+"iso": "sy",
+"km": 403.0
+},
+{
+"iso": "il",
+"km": 81.0
+}
+]
+},
+{
+"iso": "lc",
+"num": "662",
+"land": 0.0,
+"coast": 158.0,
+"neighbours": []
+},
+{
+"iso": "li",
+"num": "438",
+"land": 75.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "ch",
+"km": 41.0
+},
+{
+"iso": "at",
+"km": 34.0
+}
+]
+},
+{
+"iso": "lk",
+"num": "144",
+"land": 0.0,
+"coast": 1340.0,
+"neighbours": []
+},
+{
+"iso": "lr",
+"num": "430",
+"land": 1667.0,
+"coast": 579.0,
+"neighbours": [
+{
+"iso": "ci",
+"km": 778.0
+},
+{
+"iso": "gn",
+"km": 590.0
+},
+{
+"iso": "sl",
+"km": 299.0
+}
+]
+},
+{
+"iso": "ls",
+"num": "426",
+"land": 1106.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "za",
+"km": 1106.0
+}
+]
+},
+{
+"iso": "lt",
+"num": "440",
+"land": 1545.0,
+"coast": 90.0,
+"neighbours": [
+{
+"iso": "by",
+"km": 640.0
+},
+{
+"iso": "lv",
+"km": 544.0
+},
+{
+"iso": "ru",
+"km": 261.0
+},
+{
+"iso": "pl",
+"km": 100.0
+}
+]
+},
+{
+"iso": "lu",
+"num": "442",
+"land": 327.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "be",
+"km": 130.0
+},
+{
+"iso": "de",
+"km": 128.0
+},
+{
+"iso": "fr",
+"km": 69.0
+}
+]
+},
+{
+"iso": "lv",
+"num": "428",
+"land": 1370.0,
+"coast": 498.0,
+"neighbours": [
+{
+"iso": "lt",
+"km": 544.0
+},
+{
+"iso": "ee",
+"km": 333.0
+},
+{
+"iso": "ru",
+"km": 332.0
+},
+{
+"iso": "by",
+"km": 161.0
+}
+]
+},
+{
+"iso": "ly",
+"num": "434",
+"land": 4339.0,
+"coast": 1770.0,
+"neighbours": [
+{
+"iso": "eg",
+"km": 1115.0
+},
+{
+"iso": "td",
+"km": 1050.0
+},
+{
+"iso": "dz",
+"km": 989.0
+},
+{
+"iso": "tn",
+"km": 461.0
+},
+{
+"iso": "sd",
+"km": 382.0
+},
+{
+"iso": "ne",
+"km": 342.0
+}
+]
+},
+{
+"iso": "ma",
+"num": "504",
+"land": 3523.5,
+"coast": 2945.0,
+"neighbours": [
+{
+"iso": "dz",
+"km": 1941.0
+},
+{
+"iso": "mr",
+"km": 1564.0
+},
+{
+"iso": "es",
+"km": 8.0
+}
+]
+},
+{
+"iso": "mc",
+"num": "492",
+"land": 6.0,
+"coast": 4.1,
+"neighbours": [
+{
+"iso": "fr",
+"km": 6.0
+}
+]
+},
+{
+"iso": "md",
+"num": "498",
+"land": 1885.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "ua",
+"km": 1202.0
+},
+{
+"iso": "ro",
+"km": 683.0
+}
+]
+},
+{
+"iso": "me",
+"num": "499",
+"land": 680.0,
+"coast": 293.5,
+"neighbours": [
+{
+"iso": "ba",
+"km": 242.0
+},
+{
+"iso": "al",
+"km": 186.0
+},
+{
+"iso": "rs",
+"km": 157.0
+},
+{
+"iso": "xk",
+"km": 76.0
+},
+{
+"iso": "hr",
+"km": 19.0
+}
+]
+},
+{
+"iso": "mg",
+"num": "450",
+"land": 0.0,
+"coast": 4828.0,
+"neighbours": []
+},
+{
+"iso": "mh",
+"num": "584",
+"land": 0.0,
+"coast": 370.4,
+"neighbours": []
+},
+{
+"iso": "mk",
+"num": "807",
+"land": 838.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "gr",
+"km": 234.0
+},
+{
+"iso": "al",
+"km": 181.0
+},
+{
+"iso": "bg",
+"km": 162.0
+},
+{
+"iso": "xk",
+"km": 160.0
+},
+{
+"iso": "rs",
+"km": 101.0
+}
+]
+},
+{
+"iso": "ml",
+"num": "466",
+"land": 7908.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "mr",
+"km": 2236.0
+},
+{
+"iso": "dz",
+"km": 1359.0
+},
+{
+"iso": "bf",
+"km": 1325.0
+},
+{
+"iso": "gn",
+"km": 1062.0
+},
+{
+"iso": "ne",
+"km": 838.0
+},
+{
+"iso": "ci",
+"km": 599.0
+}
+]
+},
+{
+"iso": "mm",
+"num": "104",
+"land": 6522.0,
+"coast": 1930.0,
+"neighbours": [
+{
+"iso": "th",
+"km": 2416.0
+},
+{
+"iso": "cn",
+"km": 2129.0
+},
+{
+"iso": "in",
+"km": 1468.0
+},
+{
+"iso": "bd",
+"km": 271.0
+},
+{
+"iso": "la",
+"km": 238.0
+}
+]
+},
+{
+"iso": "mn",
+"num": "496",
+"land": 8082.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "cn",
+"km": 4630.0
+},
+{
+"iso": "ru",
+"km": 3452.0
+}
+]
+},
+{
+"iso": "mo",
+"num": "446",
+"land": 3.0,
+"coast": 41.0,
+"neighbours": []
+},
+{
+"iso": "mr",
+"num": "478",
+"land": 5002.0,
+"coast": 754.0,
+"neighbours": [
+{
+"iso": "ml",
+"km": 2236.0
+},
+{
+"iso": "ma",
+"km": 1564.0
+},
+{
+"iso": "sn",
+"km": 742.0
+},
+{
+"iso": "dz",
+"km": 460.0
+}
+]
+},
+{
+"iso": "mt",
+"num": "470",
+"land": 0.0,
+"coast": 196.8,
+"neighbours": []
+},
+{
+"iso": "mu",
+"num": "480",
+"land": 0.0,
+"coast": 177.0,
+"neighbours": []
+},
+{
+"iso": "mv",
+"num": "462",
+"land": 0.0,
+"coast": 644.0,
+"neighbours": []
+},
+{
+"iso": "mw",
+"num": "454",
+"land": 2857.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "mz",
+"km": 1498.0
+},
+{
+"iso": "zm",
+"km": 847.0
+},
+{
+"iso": "tz",
+"km": 512.0
+}
+]
+},
+{
+"iso": "mx",
+"num": "484",
+"land": 4389.0,
+"coast": 9330.0,
+"neighbours": [
+{
+"iso": "us",
+"km": 3155.0
+},
+{
+"iso": "gt",
+"km": 958.0
+},
+{
+"iso": "bz",
+"km": 276.0
+}
+]
+},
+{
+"iso": "my",
+"num": "458",
+"land": 2742.0,
+"coast": 4675.0,
+"neighbours": [
+{
+"iso": "id",
+"km": 1881.0
+},
+{
+"iso": "th",
+"km": 595.0
+},
+{
+"iso": "bn",
+"km": 266.0
+}
+]
+},
+{
+"iso": "mz",
+"num": "508",
+"land": 4783.0,
+"coast": 2470.0,
+"neighbours": [
+{
+"iso": "mw",
+"km": 1498.0
+},
+{
+"iso": "zw",
+"km": 1402.0
+},
+{
+"iso": "tz",
+"km": 840.0
+},
+{
+"iso": "za",
+"km": 496.0
+},
+{
+"iso": "zm",
+"km": 439.0
+},
+{
+"iso": "sz",
+"km": 108.0
+}
+]
+},
+{
+"iso": "na",
+"num": "516",
+"land": 4220.0,
+"coast": 1572.0,
+"neighbours": [
+{
+"iso": "bw",
+"km": 1544.0
+},
+{
+"iso": "ao",
+"km": 1427.0
+},
+{
+"iso": "za",
+"km": 1005.0
+},
+{
+"iso": "zm",
+"km": 244.0
+}
+]
+},
+{
+"iso": "nc",
+"num": "540",
+"land": 0.0,
+"coast": 2254.0,
+"neighbours": []
+},
+{
+"iso": "ne",
+"num": "562",
+"land": 5834.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "ng",
+"km": 1608.0
+},
+{
+"iso": "td",
+"km": 1196.0
+},
+{
+"iso": "dz",
+"km": 951.0
+},
+{
+"iso": "ml",
+"km": 838.0
+},
+{
+"iso": "bf",
+"km": 622.0
+},
+{
+"iso": "ly",
+"km": 342.0
+},
+{
+"iso": "bj",
+"km": 277.0
+}
+]
+},
+{
+"iso": "ng",
+"num": "566",
+"land": 4477.0,
+"coast": 853.0,
+"neighbours": [
+{
+"iso": "cm",
+"km": 1975.0
+},
+{
+"iso": "ne",
+"km": 1608.0
+},
+{
+"iso": "bj",
+"km": 809.0
+},
+{
+"iso": "td",
+"km": 85.0
+}
+]
+},
+{
+"iso": "ni",
+"num": "558",
+"land": 1253.0,
+"coast": 910.0,
+"neighbours": [
+{
+"iso": "hn",
+"km": 940.0
+},
+{
+"iso": "cr",
+"km": 313.0
+}
+]
+},
+{
+"iso": "nl",
+"num": "528",
+"land": 1053.0,
+"coast": 451.0,
+"neighbours": [
+{
+"iso": "de",
+"km": 575.0
+},
+{
+"iso": "be",
+"km": 478.0
+}
+]
+},
+{
+"iso": "no",
+"num": "578",
+"land": 2566.0,
+"coast": 25148.0,
+"neighbours": [
+{
+"iso": "se",
+"km": 1666.0
+},
+{
+"iso": "fi",
+"km": 709.0
+},
+{
+"iso": "ru",
+"km": 191.0
+}
+]
+},
+{
+"iso": "np",
+"num": "524",
+"land": 3159.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "in",
+"km": 1770.0
+},
+{
+"iso": "cn",
+"km": 1389.0
+}
+]
+},
+{
+"iso": "nr",
+"num": "520",
+"land": 0.0,
+"coast": 30.0,
+"neighbours": []
+},
+{
+"iso": "nz",
+"num": "554",
+"land": 0.0,
+"coast": 15134.0,
+"neighbours": []
+},
+{
+"iso": "om",
+"num": "512",
+"land": 1561.0,
+"coast": 2092.0,
+"neighbours": [
+{
+"iso": "sa",
+"km": 658.0
+},
+{
+"iso": "ae",
+"km": 609.0
+},
+{
+"iso": "ye",
+"km": 294.0
+}
+]
+},
+{
+"iso": "pa",
+"num": "591",
+"land": 687.0,
+"coast": 2490.0,
+"neighbours": [
+{
+"iso": "cr",
+"km": 348.0
+},
+{
+"iso": "co",
+"km": 339.0
+}
+]
+},
+{
+"iso": "pe",
+"num": "604",
+"land": 7062.0,
+"coast": 2414.0,
+"neighbours": [
+{
+"iso": "br",
+"km": 2659.0
+},
+{
+"iso": "ec",
+"km": 1529.0
+},
+{
+"iso": "co",
+"km": 1494.0
+},
+{
+"iso": "bo",
+"km": 1212.0
+},
+{
+"iso": "cl",
+"km": 168.0
+}
+]
+},
+{
+"iso": "pf",
+"num": "258",
+"land": 0.0,
+"coast": 2525.0,
+"neighbours": []
+},
+{
+"iso": "pg",
+"num": "598",
+"land": 824.0,
+"coast": 5152.0,
+"neighbours": [
+{
+"iso": "id",
+"km": 824.0
+}
+]
+},
+{
+"iso": "ph",
+"num": "608",
+"land": 0.0,
+"coast": 36289.0,
+"neighbours": []
+},
+{
+"iso": "pk",
+"num": "586",
+"land": 7257.0,
+"coast": 1046.0,
+"neighbours": [
+{
+"iso": "in",
+"km": 3190.0
+},
+{
+"iso": "af",
+"km": 2670.0
+},
+{
+"iso": "ir",
+"km": 959.0
+},
+{
+"iso": "cn",
+"km": 438.0
+}
+]
+},
+{
+"iso": "pl",
+"num": "616",
+"land": 2865.0,
+"coast": 440.0,
+"neighbours": [
+{
+"iso": "cz",
+"km": 699.0
+},
+{
+"iso": "sk",
+"km": 517.0
+},
+{
+"iso": "ua",
+"km": 498.0
+},
+{
+"iso": "de",
+"km": 467.0
+},
+{
+"iso": "by",
+"km": 375.0
+},
+{
+"iso": "lt",
+"km": 100.0
+}
+]
+},
+{
+"iso": "pr",
+"num": "630",
+"land": 0.0,
+"coast": 501.0,
+"neighbours": []
+},
+{
+"iso": "ps",
+"num": "275",
+"land": 478.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "il",
+"km": 330.0
+},
+{
+"iso": "jo",
+"km": 148.0
+}
+]
+},
+{
+"iso": "pt",
+"num": "620",
+"land": 1224.0,
+"coast": 1793.0,
+"neighbours": [
+{
+"iso": "es",
+"km": 1224.0
+}
+]
+},
+{
+"iso": "pw",
+"num": "585",
+"land": 0.0,
+"coast": 1519.0,
+"neighbours": []
+},
+{
+"iso": "py",
+"num": "600",
+"land": 4655.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "ar",
+"km": 2531.0
+},
+{
+"iso": "br",
+"km": 1371.0
+},
+{
+"iso": "bo",
+"km": 753.0
+}
+]
+},
+{
+"iso": "qa",
+"num": "634",
+"land": 87.0,
+"coast": 563.0,
+"neighbours": [
+{
+"iso": "sa",
+"km": 87.0
+}
+]
+},
+{
+"iso": "ro",
+"num": "642",
+"land": 2844.0,
+"coast": 225.0,
+"neighbours": [
+{
+"iso": "md",
+"km": 683.0
+},
+{
+"iso": "bg",
+"km": 605.0
+},
+{
+"iso": "ua",
+"km": 601.0
+},
+{
+"iso": "rs",
+"km": 531.0
+},
+{
+"iso": "hu",
+"km": 424.0
+}
+]
+},
+{
+"iso": "rs",
+"num": "688",
+"land": 2322.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "ro",
+"km": 531.0
+},
+{
+"iso": "xk",
+"km": 366.0
+},
+{
+"iso": "ba",
+"km": 345.0
+},
+{
+"iso": "bg",
+"km": 344.0
+},
+{
+"iso": "hr",
+"km": 314.0
+},
+{
+"iso": "hu",
+"km": 164.0
+},
+{
+"iso": "me",
+"km": 157.0
+},
+{
+"iso": "mk",
+"km": 101.0
+}
+]
+},
+{
+"iso": "ru",
+"num": "643",
+"land": 22407.0,
+"coast": 37653.0,
+"neighbours": [
+{
+"iso": "kz",
+"km": 7644.0
+},
+{
+"iso": "cn",
+"km": 4133.0
+},
+{
+"iso": "mn",
+"km": 3452.0
+},
+{
+"iso": "ua",
+"km": 1944.0
+},
+{
+"iso": "by",
+"km": 1312.0
+},
+{
+"iso": "fi",
+"km": 1309.0
+},
+{
+"iso": "ge",
+"km": 894.0
+},
+{
+"iso": "az",
+"km": 338.0
+},
+{
+"iso": "lv",
+"km": 332.0
+},
+{
+"iso": "ee",
+"km": 324.0
+},
+{
+"iso": "lt",
+"km": 261.0
+},
+{
+"iso": "pl",
+"km": 209.0
+},
+{
+"iso": "no",
+"km": 191.0
+},
+{
+"iso": "kp",
+"km": 18.0
+}
+]
+},
+{
+"iso": "rw",
+"num": "646",
+"land": 930.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "bi",
+"km": 315.0
+},
+{
+"iso": "tz",
+"km": 222.0
+},
+{
+"iso": "cd",
+"km": 221.0
+},
+{
+"iso": "ug",
+"km": 172.0
+}
+]
+},
+{
+"iso": "sa",
+"num": "682",
+"land": 4272.0,
+"coast": 2640.0,
+"neighbours": [
+{
+"iso": "ye",
+"km": 1307.0
+},
+{
+"iso": "iq",
+"km": 811.0
+},
+{
+"iso": "jo",
+"km": 731.0
+},
+{
+"iso": "om",
+"km": 658.0
+},
+{
+"iso": "ae",
+"km": 457.0
+},
+{
+"iso": "kw",
+"km": 221.0
+},
+{
+"iso": "qa",
+"km": 87.0
+}
+]
+},
+{
+"iso": "sb",
+"num": "090",
+"land": 0.0,
+"coast": 5313.0,
+"neighbours": []
+},
+{
+"iso": "sc",
+"num": "690",
+"land": 0.0,
+"coast": 491.0,
+"neighbours": []
+},
+{
+"iso": "sd",
+"num": "729",
+"land": 6819.0,
+"coast": 853.0,
+"neighbours": [
+{
+"iso": "ss",
+"km": 2158.0
+},
+{
+"iso": "td",
+"km": 1403.0
+},
+{
+"iso": "eg",
+"km": 1276.0
+},
+{
+"iso": "et",
+"km": 744.0
+},
+{
+"iso": "er",
+"km": 682.0
+},
+{
+"iso": "ly",
+"km": 382.0
+},
+{
+"iso": "cf",
+"km": 174.0
+}
+]
+},
+{
+"iso": "se",
+"num": "752",
+"land": 2211.0,
+"coast": 3218.0,
+"neighbours": [
+{
+"iso": "no",
+"km": 1666.0
+},
+{
+"iso": "fi",
+"km": 545.0
+}
+]
+},
+{
+"iso": "sg",
+"num": "702",
+"land": 0.0,
+"coast": 193.0,
+"neighbours": []
+},
+{
+"iso": "si",
+"num": "705",
+"land": 1211.0,
+"coast": 46.6,
+"neighbours": [
+{
+"iso": "hr",
+"km": 600.0
+},
+{
+"iso": "at",
+"km": 299.0
+},
+{
+"iso": "it",
+"km": 218.0
+},
+{
+"iso": "hu",
+"km": 94.0
+}
+]
+},
+{
+"iso": "sk",
+"num": "703",
+"land": 1587.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "hu",
+"km": 627.0
+},
+{
+"iso": "pl",
+"km": 517.0
+},
+{
+"iso": "cz",
+"km": 241.0
+},
+{
+"iso": "at",
+"km": 105.0
+},
+{
+"iso": "ua",
+"km": 97.0
+}
+]
+},
+{
+"iso": "sl",
+"num": "694",
+"land": 1093.0,
+"coast": 402.0,
+"neighbours": [
+{
+"iso": "gn",
+"km": 794.0
+},
+{
+"iso": "lr",
+"km": 299.0
+}
+]
+},
+{
+"iso": "sm",
+"num": "674",
+"land": 37.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "it",
+"km": 37.0
+}
+]
+},
+{
+"iso": "sn",
+"num": "686",
+"land": 2684.0,
+"coast": 531.0,
+"neighbours": [
+{
+"iso": "gm",
+"km": 749.0
+},
+{
+"iso": "mr",
+"km": 742.0
+},
+{
+"iso": "ml",
+"km": 489.0
+},
+{
+"iso": "gn",
+"km": 363.0
+},
+{
+"iso": "gw",
+"km": 341.0
+}
+]
+},
+{
+"iso": "so",
+"num": "706",
+"land": 2385.0,
+"coast": 3025.0,
+"neighbours": [
+{
+"iso": "et",
+"km": 1640.0
+},
+{
+"iso": "ke",
+"km": 684.0
+},
+{
+"iso": "dj",
+"km": 61.0
+}
+]
+},
+{
+"iso": "sr",
+"num": "740",
+"land": 1907.0,
+"coast": 386.0,
+"neighbours": [
+{
+"iso": "gy",
+"km": 836.0
+},
+{
+"iso": "gf",
+"km": 556.0
+},
+{
+"iso": "br",
+"km": 515.0
+}
+]
+},
+{
+"iso": "ss",
+"num": "728",
+"land": 6018.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "sd",
+"km": 2158.0
+},
+{
+"iso": "et",
+"km": 1299.0
+},
+{
+"iso": "cf",
+"km": 1055.0
+},
+{
+"iso": "cd",
+"km": 714.0
+},
+{
+"iso": "ug",
+"km": 475.0
+},
+{
+"iso": "ke",
+"km": 317.0
+}
+]
+},
+{
+"iso": "st",
+"num": "678",
+"land": 0.0,
+"coast": 209.0,
+"neighbours": []
+},
+{
+"iso": "sv",
+"num": "222",
+"land": 590.0,
+"coast": 307.0,
+"neighbours": [
+{
+"iso": "hn",
+"km": 391.0
+},
+{
+"iso": "gt",
+"km": 199.0
+}
+]
+},
+{
+"iso": "sx",
+"num": "534",
+"land": 16.0,
+"coast": 58.9,
+"neighbours": [
+{
+"iso": "mf",
+"km": 16.0
+}
+]
+},
+{
+"iso": "sy",
+"num": "760",
+"land": 2363.0,
+"coast": 193.0,
+"neighbours": [
+{
+"iso": "tr",
+"km": 899.0
+},
+{
+"iso": "iq",
+"km": 599.0
+},
+{
+"iso": "lb",
+"km": 403.0
+},
+{
+"iso": "jo",
+"km": 379.0
+},
+{
+"iso": "il",
+"km": 83.0
+}
+]
+},
+{
+"iso": "sz",
+"num": "748",
+"land": 546.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "za",
+"km": 438.0
+},
+{
+"iso": "mz",
+"km": 108.0
+}
+]
+},
+{
+"iso": "td",
+"num": "148",
+"land": 6406.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "cf",
+"km": 1556.0
+},
+{
+"iso": "sd",
+"km": 1403.0
+},
+{
+"iso": "ne",
+"km": 1196.0
+},
+{
+"iso": "cm",
+"km": 1116.0
+},
+{
+"iso": "ly",
+"km": 1050.0
+},
+{
+"iso": "ng",
+"km": 85.0
+}
+]
+},
+{
+"iso": "tg",
+"num": "768",
+"land": 1880.0,
+"coast": 56.0,
+"neighbours": [
+{
+"iso": "gh",
+"km": 1098.0
+},
+{
+"iso": "bj",
+"km": 651.0
+},
+{
+"iso": "bf",
+"km": 131.0
+}
+]
+},
+{
+"iso": "th",
+"num": "764",
+"land": 5673.0,
+"coast": 3219.0,
+"neighbours": [
+{
+"iso": "mm",
+"km": 2416.0
+},
+{
+"iso": "la",
+"km": 1845.0
+},
+{
+"iso": "kh",
+"km": 817.0
+},
+{
+"iso": "my",
+"km": 595.0
+}
+]
+},
+{
+"iso": "tj",
+"num": "762",
+"land": 4130.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "af",
+"km": 1357.0
+},
+{
+"iso": "uz",
+"km": 1312.0
+},
+{
+"iso": "kg",
+"km": 984.0
+},
+{
+"iso": "cn",
+"km": 477.0
+}
+]
+},
+{
+"iso": "tl",
+"num": "626",
+"land": 253.0,
+"coast": 706.0,
+"neighbours": [
+{
+"iso": "id",
+"km": 253.0
+}
+]
+},
+{
+"iso": "tm",
+"num": "795",
+"land": 4158.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "uz",
+"km": 1793.0
+},
+{
+"iso": "ir",
+"km": 1148.0
+},
+{
+"iso": "af",
+"km": 804.0
+},
+{
+"iso": "kz",
+"km": 413.0
+}
+]
+},
+{
+"iso": "tn",
+"num": "788",
+"land": 1495.0,
+"coast": 1148.0,
+"neighbours": [
+{
+"iso": "dz",
+"km": 1034.0
+},
+{
+"iso": "ly",
+"km": 461.0
+}
+]
+},
+{
+"iso": "to",
+"num": "776",
+"land": 0.0,
+"coast": 419.0,
+"neighbours": []
+},
+{
+"iso": "tr",
+"num": "792",
+"land": 2816.0,
+"coast": 7200.0,
+"neighbours": [
+{
+"iso": "sy",
+"km": 899.0
+},
+{
+"iso": "ir",
+"km": 534.0
+},
+{
+"iso": "iq",
+"km": 367.0
+},
+{
+"iso": "am",
+"km": 311.0
+},
+{
+"iso": "ge",
+"km": 273.0
+},
+{
+"iso": "bg",
+"km": 223.0
+},
+{
+"iso": "gr",
+"km": 192.0
+},
+{
+"iso": "az",
+"km": 17.0
+}
+]
+},
+{
+"iso": "tt",
+"num": "780",
+"land": 0.0,
+"coast": 362.0,
+"neighbours": []
+},
+{
+"iso": "tv",
+"num": "798",
+"land": 0.0,
+"coast": 24.0,
+"neighbours": []
+},
+{
+"iso": "tw",
+"num": "158",
+"land": 0.0,
+"coast": 1566.3,
+"neighbours": []
+},
+{
+"iso": "tz",
+"num": "834",
+"land": 4161.0,
+"coast": 1424.0,
+"neighbours": [
+{
+"iso": "mz",
+"km": 840.0
+},
+{
+"iso": "ke",
+"km": 775.0
+},
+{
+"iso": "bi",
+"km": 589.0
+},
+{
+"iso": "mw",
+"km": 512.0
+},
+{
+"iso": "cd",
+"km": 479.0
+},
+{
+"iso": "ug",
+"km": 391.0
+},
+{
+"iso": "zm",
+"km": 353.0
+},
+{
+"iso": "rw",
+"km": 222.0
+}
+]
+},
+{
+"iso": "ua",
+"num": "804",
+"land": 5581.0,
+"coast": 2782.0,
+"neighbours": [
+{
+"iso": "ru",
+"km": 1944.0
+},
+{
+"iso": "md",
+"km": 1202.0
+},
+{
+"iso": "by",
+"km": 1111.0
+},
+{
+"iso": "ro",
+"km": 601.0
+},
+{
+"iso": "pl",
+"km": 498.0
+},
+{
+"iso": "hu",
+"km": 128.0
+}
+]
+},
+{
+"iso": "ug",
+"num": "800",
+"land": 2729.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "cd",
+"km": 877.0
+},
+{
+"iso": "ke",
+"km": 814.0
+},
+{
+"iso": "ss",
+"km": 475.0
+},
+{
+"iso": "tz",
+"km": 391.0
+},
+{
+"iso": "rw",
+"km": 172.0
+}
+]
+},
+{
+"iso": "us",
+"num": "840",
+"land": 12002.0,
+"coast": 19924.0,
+"neighbours": [
+{
+"iso": "ca",
+"km": 8891.0
+},
+{
+"iso": "mx",
+"km": 3111.0
+}
+]
+},
+{
+"iso": "uy",
+"num": "858",
+"land": 1591.0,
+"coast": 660.0,
+"neighbours": [
+{
+"iso": "br",
+"km": 1050.0
+},
+{
+"iso": "ar",
+"km": 541.0
+}
+]
+},
+{
+"iso": "uz",
+"num": "860",
+"land": 6893.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "kz",
+"km": 2330.0
+},
+{
+"iso": "tm",
+"km": 1793.0
+},
+{
+"iso": "kg",
+"km": 1314.0
+},
+{
+"iso": "tj",
+"km": 1312.0
+},
+{
+"iso": "af",
+"km": 144.0
+}
+]
+},
+{
+"iso": "va",
+"num": "336",
+"land": 3.4,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "it",
+"km": 3.4
+}
+]
+},
+{
+"iso": "vc",
+"num": "670",
+"land": 0.0,
+"coast": 84.0,
+"neighbours": []
+},
+{
+"iso": "ve",
+"num": "862",
+"land": 5267.0,
+"coast": 2800.0,
+"neighbours": [
+{
+"iso": "co",
+"km": 2341.0
+},
+{
+"iso": "br",
+"km": 2137.0
+},
+{
+"iso": "gy",
+"km": 789.0
+}
+]
+},
+{
+"iso": "vn",
+"num": "704",
+"land": 4616.0,
+"coast": 3444.0,
+"neighbours": [
+{
+"iso": "la",
+"km": 2161.0
+},
+{
+"iso": "cn",
+"km": 1297.0
+},
+{
+"iso": "kh",
+"km": 1158.0
+}
+]
+},
+{
+"iso": "vu",
+"num": "548",
+"land": 0.0,
+"coast": 2528.0,
+"neighbours": []
+},
+{
+"iso": "ws",
+"num": "882",
+"land": 0.0,
+"coast": 403.0,
+"neighbours": []
+},
+{
+"iso": "xk",
+"num": null,
+"land": 714.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "rs",
+"km": 366.0
+},
+{
+"iso": "mk",
+"km": 160.0
+},
+{
+"iso": "al",
+"km": 112.0
+},
+{
+"iso": "me",
+"km": 76.0
+}
+]
+},
+{
+"iso": "ye",
+"num": "887",
+"land": 1601.0,
+"coast": 1906.0,
+"neighbours": [
+{
+"iso": "sa",
+"km": 1307.0
+},
+{
+"iso": "om",
+"km": 294.0
+}
+]
+},
+{
+"iso": "za",
+"num": "710",
+"land": 5244.0,
+"coast": 2798.0,
+"neighbours": [
+{
+"iso": "bw",
+"km": 1969.0
+},
+{
+"iso": "ls",
+"km": 1106.0
+},
+{
+"iso": "na",
+"km": 1005.0
+},
+{
+"iso": "mz",
+"km": 496.0
+},
+{
+"iso": "sz",
+"km": 438.0
+},
+{
+"iso": "zw",
+"km": 230.0
+}
+]
+},
+{
+"iso": "zm",
+"num": "894",
+"land": 6043.15,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "cd",
+"km": 2332.0
+},
+{
+"iso": "ao",
+"km": 1065.0
+},
+{
+"iso": "mw",
+"km": 847.0
+},
+{
+"iso": "zw",
+"km": 763.0
+},
+{
+"iso": "mz",
+"km": 439.0
+},
+{
+"iso": "tz",
+"km": 353.0
+},
+{
+"iso": "na",
+"km": 244.0
+},
+{
+"iso": "bw",
+"km": 0.15
+}
+]
+},
+{
+"iso": "zw",
+"num": "716",
+"land": 3229.0,
+"coast": 0.0,
+"neighbours": [
+{
+"iso": "mz",
+"km": 1402.0
+},
+{
+"iso": "bw",
+"km": 834.0
+},
+{
+"iso": "zm",
+"km": 763.0
+},
+{
+"iso": "za",
+"km": 230.0
+}
+]
+}
+]

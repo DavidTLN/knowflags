@@ -21,7 +21,8 @@ const COUNTRY_SELECT =
   'population, area_km2, adopted_year, median_age, last_flag_change, spec_en, spec_fr, ' +
   'etiquette_en, etiquette_fr, color_meanings, symbol_meanings, display_symbols, ' +
   'designer_en, designer_fr, adopted_note_fr, adopted_note_en, adopted_detail_fr, adopted_detail_en, ' +
-  'flag_url, entity_type, parent_iso, sovereignty_note_en, sovereignty_note_fr'
+  'flag_url, entity_type, parent_iso, sovereignty_note_en, sovereignty_note_fr, ' +
+  'iso_numeric, land_border_km, coastline_km, neighbours'
 
 // Shape the DB row exactly the way the presentation component expects it.
 function toCountry(data) {
@@ -60,6 +61,10 @@ function toCountry(data) {
     parentIso:         data.parent_iso,
     sovNoteEn:         data.sovereignty_note_en,
     sovNoteFr:         data.sovereignty_note_fr,
+    isoNumeric:        data.iso_numeric,
+    landBorderKm:      data.land_border_km,
+    coastlineKm:       data.coastline_km,
+    neighbours:        data.neighbours || [],
   }
 }
 

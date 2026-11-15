@@ -4,6 +4,7 @@ import { createClient } from '@/lib/supabase-client'
 import Link from 'next/link'
 import { useState, useEffect, useRef } from 'react'
 import FlagHistoryModule from '@/components/FlagHistoryModule'
+import CountryLocationMap from '@/components/CountryLocationMap'
 import { useLocale } from 'next-intl'
 import { labelColor, labelSymbol, labelShape } from '@/lib/flagSymbolsFr'
 import Footer from '@/components/Footer'
@@ -1174,6 +1175,9 @@ export default function CountryDetailPage({ country, facts = [], relatedCountrie
           {/* Historical Timeline */}
           <FlagHistoryModule countryCode={country.code} countryName={name} />
 
+          {/* Where is X? — carte, voisins, frontières */}
+          <CountryLocationMap country={country} locale={locale} />
+
           {/* Sub-national flags (self-contained card; renders nothing when empty) */}
           <CountryFlagsSection countryIso2={country.code} />
 
@@ -1318,6 +1322,9 @@ export default function CountryDetailPage({ country, facts = [], relatedCountrie
 
           {/* Historical Timeline */}
           <FlagHistoryModule countryCode={country.code} countryName={name} />
+
+          {/* Where is X? — carte, voisins, frontières */}
+          <CountryLocationMap country={country} locale={locale} />
 
           {/* Sub-national flags (self-contained card; renders nothing when empty) */}
           <CountryFlagsSection countryIso2={country.code} />

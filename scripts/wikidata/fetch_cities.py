@@ -21,8 +21,14 @@ from fetch_flags import ROOT, OUT_DIR, sparql, v, qid, slugify, commons_file, co
 CITY_DIR = os.path.join(ROOT, 'public', 'flags', 'cities')
 
 # « Grande ville » : seuil de population par pays (habitants de la commune elle-même)
-MIN_POP = {'fr': 100_000, 'ch': 30_000, 'de': 100_000, 'gb': 100_000, 'us': 250_000, 'jp': 300_000}
-COUNTRY_QID = {'fr': 'Q142', 'ch': 'Q39', 'de': 'Q183', 'gb': 'Q145', 'us': 'Q30', 'jp': 'Q17'}
+MIN_POP = {'fr': 100_000, 'ch': 30_000, 'de': 100_000, 'gb': 100_000, 'us': 250_000, 'jp': 300_000,
+           'be': 75_000, 'tr': 500_000, 'ca': 150_000, 'ph': 300_000, 'cn': 1_500_000, 'in': 1_000_000,
+           'ng': 500_000, 'eg': 500_000, 'au': 100_000, 'za': 300_000, 'ke': 200_000}
+# Lot traité quand le script est lancé sans argument (push du script)
+DEFAULT_ISOS = ['be', 'tr', 'ca', 'ph', 'cn', 'in', 'ng', 'eg', 'au', 'za', 'ke']
+COUNTRY_QID = {'fr': 'Q142', 'ch': 'Q39', 'de': 'Q183', 'gb': 'Q145', 'us': 'Q30', 'jp': 'Q17',
+               'be': 'Q31', 'tr': 'Q43', 'ca': 'Q16', 'ph': 'Q928', 'cn': 'Q148', 'in': 'Q668',
+               'ng': 'Q1033', 'eg': 'Q79', 'au': 'Q408', 'za': 'Q258', 'ke': 'Q114'}
 
 # Types Wikidata acceptés comme « ville » (on évite ainsi arrondissements, boroughs, quartiers)
 GENERIC = ['Q515', 'Q1549591', 'Q1637706', 'Q200250', 'Q5119']
@@ -33,6 +39,7 @@ TYPES = {
     'gb': ['Q3957'],                                    # town
     'us': ['Q1093829', 'Q3301053'],                     # city of the US, consolidated city-county
     'jp': ['Q494721', 'Q1137833'],                      # city of Japan, designated city
+    'be': ['Q493522'],                                  # municipality of Belgium
 }
 
 # Slugs déjà utilisés sur le site pour ces villes
@@ -44,7 +51,7 @@ EXCLUDE = {'Q18424', 'Q11299', 'Q18426', 'Q18432', 'Q1630', 'Q41211', 'Q1490', '
 
 
 def cities_for(iso):
-    types = ' '.join('wd:' + t for t in GENERIC + TYPES[iso])
+    types = ' '.join('wd:' + t for t in GENERIC + TYPES.get(iso, []))
     rows = sparql(f'''
 SELECT ?c ?en ?fr ?local ?pop ?flag ?rank ?wen ?wfr WHERE {{
   ?c wdt:P17 wd:{COUNTRY_QID[iso]} ; wdt:P1082 ?pop .
@@ -99,8 +106,27 @@ SELECT ?c ?a ?en WHERE {{
     return res
 
 
+def existing_slugs():
+    """Tous les slugs de flag_taxonomy (uniques sur le site) -> QID Wikidata de l'entité, ou None."""
+    key = os.environ.get('SUPABASE_PUBLISHABLE_KEY')
+    if not key:
+        return {}
+    import requests
+    out, start = {}, 0
+    while True:
+        r = requests.get('https://rounuhpemkrnftoafoxg.supabase.co/rest/v1/flag_taxonomy?select=slug,metadata',
+                         headers={'apikey': key, 'Range': f'{start}-{start + 999}'}, timeout=60)
+        r.raise_for_status()
+        rows = r.json()
+        for x in rows:
+            out[x['slug']] = (x.get('metadata') or {}).get('wikidata')
+        if len(rows) < 1000:
+            return out
+        start += 1000
+
+
 def main():
-    isos = [i.lower() for i in sys.argv[1:]] or list(MIN_POP)
+    isos = [i.lower() for i in sys.argv[1:]] or DEFAULT_ISOS
     os.makedirs(CITY_DIR, exist_ok=True)
     os.makedirs(OUT_DIR, exist_ok=True)
 
@@ -118,6 +144,16 @@ def main():
     for s, ds in base.items():
         for d in ds:
             d['slug'] = SLUG_OVERRIDE.get(d['qid']) or (s if len(ds) == 1 else f"{s}-{d['iso']}")
+
+    # Slug déjà pris sur le site par une autre entité (London en Ontario, Perth, Victoria...) : suffixe pays
+    taken = existing_slugs()
+    for d in recs:
+        owner = taken.get(d['slug'], 'free')
+        if owner != 'free' and owner != d['qid']:
+            d['slug'] = f"{d['slug']}-{d['iso']}"
+            n = 2
+            while d['slug'] in taken:
+                d['slug'] = f"{d['slug'].rsplit('-', 1)[0] if n > 2 else d['slug']}-{n}"; n += 1
 
     anc = ancestors([d['qid'] for d in recs])
     for d in recs:

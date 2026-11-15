@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       isos:
-        description: 'Space-separated ISO codes (empty = fr ch de gb us jp)'
+        description: 'Space-separated ISO codes (empty = DEFAULT_ISOS in the script)'
         default: ''
   push:
     branches: [main]
@@ -19,6 +19,8 @@ jobs:
   fetch:
     runs-on: ubuntu-latest
     timeout-minutes: 60
+    env:
+      SUPABASE_PUBLISHABLE_KEY: sb_publishable_VH4sPWc-eOLG5-Fm3kvq7g_lcUPDSQ6
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

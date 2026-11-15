@@ -44,15 +44,15 @@ const COLOR_HEX = {
 }
 
 // ── CountryFlagsSection (sub-national) ──────────────────────────────────────
-function CountryFlagsSection({ countryIso2 }) {
+export function CountryFlagsSection({ countryIso2 }) {
   const locale = useLocale()
   const t = (en, fr) => locale === 'fr' ? fr : en
   const [regions, setRegions] = useState([])
   const [cities,  setCities]  = useState([])
   const [activeTab, setActiveTab] = useState('regions')
   const [showAll, setShowAll] = useState(false)
+  const [query, setQuery] = useState('')
   const [loading, setLoading] = useState(true)
-  const PREVIEW = 12
 
   useEffect(() => {
     if (!countryIso2) return
@@ -76,19 +76,54 @@ function CountryFlagsSection({ countryIso2 }) {
       })
   }, [countryIso2])
 
-  const items = activeTab === 'regions' ? regions : cities
+  // Ordre alphabétique (nom affiché, accents ignorés), puis recherche
+  const fold = (x) => (x || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
+  const nameOf = (f) => (locale === 'fr' ? f.name_fr : f.name_en) || f.name_en || f.name_fr || ''
+  const all = (activeTab === 'regions' ? regions : cities)
+    .slice().sort((a, b) => nameOf(a).localeCompare(nameOf(b), locale, { sensitivity: 'base' }))
+  const q = fold(query.trim())
+  const items = q ? all.filter(f => fold(nameOf(f)).includes(q)) : all
   if (loading || (regions.length === 0 && cities.length === 0)) return null
+
+  // Desktop : 3 lignes (8 colonnes ≥ 1024 px, 5 colonnes sur tablette), puis « Voir tout ».
+  // Mobile : slider libre sur 2 lignes, tout est accessible en glissant.
+  const PREVIEW_DESKTOP = 24, PREVIEW_TABLET = 15
+  const isCities = activeTab === 'cities'
+  const mobileRows = items.length > 4 ? 2 : 1
+  const switchTab = (tab) => { setActiveTab(tab); setShowAll(false); setQuery('') }
 
   return (
     <section style={{ backgroundColor: DS.surface, borderRadius: '16px', border: `1px solid ${DS.border}`, padding: '20px' }}>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px', flexWrap: 'wrap', gap: '10px' }}>
+      <style>{`
+        .kf-sub-grid{display:grid;gap:10px}
+        .kf-sub-more,.kf-sub-hint{display:none}
+        @media (max-width:767px){
+          .kf-sub-grid{grid-auto-flow:column;grid-template-rows:repeat(var(--kf-rows),auto);grid-auto-columns:108px;overflow-x:auto;scroll-snap-type:x mandatory;margin-right:-20px;padding-right:20px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+          .kf-sub-grid::-webkit-scrollbar{display:none}
+          .kf-sub-grid>*{scroll-snap-align:start}
+          .kf-sub-hint.on{display:block}
+        }
+        @media (min-width:768px) and (max-width:1023px){
+          .kf-sub-grid{grid-template-columns:repeat(5,minmax(0,1fr))}
+          .kf-sub-grid:not(.open)>:nth-child(n+${PREVIEW_TABLET + 1}){display:none!important}
+          .kf-sub-more.t{display:flex}
+        }
+        @media (min-width:1024px){
+          .kf-sub-grid{grid-template-columns:repeat(8,minmax(0,1fr))}
+          .kf-sub-grid:not(.open)>:nth-child(n+${PREVIEW_DESKTOP + 1}){display:none!important}
+          .kf-sub-more.d{display:flex}
+        }
+        .kf-sub-search:focus{border-color:${DS.navy}!important;box-shadow:0 0 0 3px rgba(22,50,79,0.12)}
+      `}</style>
+
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px', flexWrap: 'wrap', gap: '10px' }}>
         <h2 style={{ margin: 0, fontSize: '20px', fontWeight: '900', color: DS.navy, letterSpacing: '-0.3px' }}>
           {t('Subnational Flags', 'Drapeaux régionaux')}
         </h2>
         {regions.length > 0 && cities.length > 0 && (
           <div style={{ display: 'flex', gap: '6px' }}>
             {[['regions', t('Regions','Régions'), regions.length], ['cities', t('Cities','Villes'), cities.length]].map(([tab, label, n]) => (
-              <button key={tab} onClick={() => { setActiveTab(tab); setShowAll(false) }}
+              <button key={tab} onClick={() => switchTab(tab)}
                 style={{ minHeight: '36px', padding: '5px 12px', borderRadius: '99px', fontSize: '12px', fontWeight: '700', border: `1.5px solid ${activeTab === tab ? DS.navy : DS.border}`, backgroundColor: activeTab === tab ? DS.navy : 'transparent', color: activeTab === tab ? 'white' : DS.muted, cursor: 'pointer', transition: 'all 0.15s' }}>
                 {label} · {n}
               </button>
@@ -96,40 +131,68 @@ function CountryFlagsSection({ countryIso2 }) {
           </div>
         )}
       </div>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(130px, 1fr))', gap: '10px' }}>
-        {(showAll ? items : items.slice(0, PREVIEW)).map(f => {
-          const fname = locale === 'fr' ? f.name_fr : f.name_en
-          const Card = f.flag_type === 'city' ? Link : 'div'
-          const linkProps = f.flag_type === 'city' ? { href: `/${locale}/flags/cities/${f.slug}`, prefetch: false } : {}
-          return (
-            <Card key={f.id} {...linkProps} style={{ display: 'block', textDecoration: 'none', backgroundColor: DS.surface, borderRadius: '10px', overflow: 'hidden', border: `1px solid ${DS.border}` }}>
-              <div style={{ aspectRatio: '3/2', backgroundColor: DS.bg, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                {f.image_path && <img src={f.image_path} alt={fname} loading="lazy"
-                  style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '4px' }}
-                  onError={e => {
-                    const img = e.currentTarget
-                    if (img.dataset.tried !== '1' && /\.svg$/i.test(img.src)) { img.dataset.tried = '1'; img.src = img.src.replace(/\.svg$/i, '.png') }
-                    else if (img.dataset.tried !== '1' && /\.png$/i.test(img.src)) { img.dataset.tried = '1'; img.src = img.src.replace(/\.png$/i, '.svg') }
-                    else { img.style.display = 'none' }
-                  }} />}
-              </div>
-              <div style={{ padding: '6px 8px' }}>
-                <p style={{ margin: 0, fontSize: '11px', fontWeight: '700', color: DS.navy, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{fname}</p>
-              </div>
-            </Card>
-          )
-        })}
-      </div>
-      {items.length > PREVIEW && (
-        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '14px' }}>
+
+      {all.length > 6 && (
+        <div style={{ position: 'relative', marginBottom: '14px', maxWidth: '320px' }}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={DS.muted} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"
+            style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }}>
+            <circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" />
+          </svg>
+          <input type="search" value={query} onChange={e => { setQuery(e.target.value); setShowAll(false) }}
+            className="kf-sub-search"
+            aria-label={isCities ? t('Search a city', 'Rechercher une ville') : t('Search a region', 'Rechercher une région')}
+            placeholder={isCities ? t(`Search ${all.length} cities`, `Rechercher parmi ${all.length} villes`) : t(`Search ${all.length} regions`, `Rechercher parmi ${all.length} régions`)}
+            style={{ width: '100%', boxSizing: 'border-box', padding: '9px 12px 9px 36px', borderRadius: '10px', border: '1.5px solid #E2DDD5', backgroundColor: DS.surface, fontSize: '16px', color: '#0F1923', outline: 'none', transition: 'border-color 0.12s ease, box-shadow 0.12s ease' }} />
+        </div>
+      )}
+
+      {items.length === 0 ? (
+        <p style={{ margin: '4px 0 0', fontSize: '13px', color: DS.muted }}>
+          {isCities ? t('No city matches this search.', 'Aucune ville ne correspond à cette recherche.') : t('No region matches this search.', 'Aucune région ne correspond à cette recherche.')}
+        </p>
+      ) : (
+        <div className={`kf-sub-grid${showAll ? ' open' : ''}`} style={{ '--kf-rows': mobileRows }}>
+          {items.map(f => {
+            const fname = nameOf(f)
+            const Card = f.flag_type === 'city' ? Link : 'div'
+            const linkProps = f.flag_type === 'city' ? { href: `/${locale}/flags/cities/${f.slug}`, prefetch: false } : {}
+            return (
+              <Card key={f.id} {...linkProps} title={fname} style={{ display: 'block', textDecoration: 'none', backgroundColor: DS.surface, borderRadius: '10px', overflow: 'hidden', border: `1px solid ${DS.border}` }}>
+                <div style={{ aspectRatio: '3/2', backgroundColor: DS.bg, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  {f.image_path && <img src={f.image_path} alt={fname} loading="lazy"
+                    style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '4px' }}
+                    onError={e => {
+                      const img = e.currentTarget
+                      if (img.dataset.tried !== '1' && /\.svg$/i.test(img.src)) { img.dataset.tried = '1'; img.src = img.src.replace(/\.svg$/i, '.png') }
+                      else if (img.dataset.tried !== '1' && /\.png$/i.test(img.src)) { img.dataset.tried = '1'; img.src = img.src.replace(/\.png$/i, '.svg') }
+                      else { img.style.display = 'none' }
+                    }} />}
+                </div>
+                <div style={{ padding: '6px 8px' }}>
+                  <p style={{ margin: 0, fontSize: '11px', fontWeight: '700', color: DS.navy, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{fname}</p>
+                </div>
+              </Card>
+            )
+          })}
+        </div>
+      )}
+
+      {/* Mobile : rappel que la liste défile */}
+      <p className={`kf-sub-hint${items.length > mobileRows * 3 ? ' on' : ''}`} style={{ margin: '10px 0 0', fontSize: '12px', fontWeight: 600, color: DS.muted }}>
+        {isCities ? t(`${items.length} cities · swipe to see more`, `${items.length} villes · glissez pour voir la suite`) : t(`${items.length} regions · swipe to see more`, `${items.length} régions · glissez pour voir la suite`)}
+      </p>
+
+      {/* Tablette / desktop : 3 lignes, puis tout afficher */}
+      {[['t', PREVIEW_TABLET], ['d', PREVIEW_DESKTOP]].map(([k, n]) => items.length > n && (
+        <div key={k} className={`kf-sub-more ${k}`} style={{ justifyContent: 'center', marginTop: '14px' }}>
           <button onClick={() => setShowAll(v => !v)}
             style={{ minHeight: '44px', padding: '9px 20px', borderRadius: '10px', backgroundColor: 'transparent', color: DS.navy, border: '1.5px solid #E2DDD5', fontSize: '14px', fontWeight: 600, cursor: 'pointer', transition: 'all 0.12s ease' }}>
             {showAll
               ? t('Show less', 'Afficher moins')
-              : activeTab === 'cities' ? t(`Show all ${items.length} cities`, `Voir les ${items.length} villes`) : t(`Show all ${items.length} regions`, `Voir les ${items.length} régions`)}
+              : isCities ? t(`Show all ${items.length} cities`, `Voir les ${items.length} villes`) : t(`Show all ${items.length} regions`, `Voir les ${items.length} régions`)}
           </button>
         </div>
-      )}
+      ))}
     </section>
   )
 }

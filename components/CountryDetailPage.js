@@ -155,8 +155,8 @@ export function CountryFlagsSection({ countryIso2 }) {
         <div className={`kf-sub-grid${showAll ? ' open' : ''}`} style={{ '--kf-rows': mobileRows }}>
           {items.map(f => {
             const fname = nameOf(f)
-            const Card = f.flag_type === 'city' ? Link : 'div'
-            const linkProps = f.flag_type === 'city' ? { href: `/${locale}/flags/cities/${f.slug}`, prefetch: false } : {}
+            const Card = Link
+            const linkProps = { href: `/${locale}/flags/${f.flag_type === 'city' ? 'cities' : 'regions'}/${f.slug}`, prefetch: false }
             return (
               <Card key={f.id} {...linkProps} title={fname} style={{ display: 'block', textDecoration: 'none', backgroundColor: DS.surface, borderRadius: '10px', overflow: 'hidden', border: `1px solid ${DS.border}` }}>
                 <div style={{ aspectRatio: '3/2', backgroundColor: DS.bg, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

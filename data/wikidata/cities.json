@@ -2312,13 +2312,14 @@
     "en": "Central Luzon"
    }
   ],
-  "image_path": "/flags/cities/angeles.png",
+  "image_path": null,
   "method": "wikipedia",
   "license": "Public domain",
   "artist": "Provincial Government of Pampanga",
   "page": "https://commons.wikimedia.org/wiki/File:Pampanga_Flag.png",
   "width": 2100,
-  "height": 900
+  "height": 900,
+  "rejected": "Pampanga Flag.png"
  },
  {
   "iso": "ph",
@@ -3251,13 +3252,14 @@
     "en": "Yunnan"
    }
   ],
-  "image_path": "/flags/cities/kunming.svg",
+  "image_path": null,
   "method": "wikipedia",
   "license": "Public domain",
   "artist": "Mnmazur",
   "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Kunming_(1922-49).svg",
   "width": 2460,
-  "height": 2052
+  "height": 2052,
+  "rejected": "Flag of Kunming (1922-49).svg"
  },
  {
   "iso": "cn",
@@ -3451,12 +3453,13 @@
     "en": "People's Republic of China"
    }
   ],
-  "image_path": "/flags/cities/hong-kong-cn.svg",
+  "image_path": null,
   "license": "Public domain",
   "artist": "Designed by Tao Ho\nSVG code of 24 November 2005 version copied from Open Clip Art\nSVG code of 20 August 2011 version by Alkari\nSVG code of 6 September 2021 version by Mike Rohsopht",
   "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Hong_Kong.svg",
   "width": 900,
-  "height": 600
+  "height": 600,
+  "rejected": "Flag of Hong Kong.svg"
  },
  {
   "iso": "cn",
@@ -4116,13 +4119,14 @@
     "en": "Henan"
    }
   ],
-  "image_path": "/flags/cities/anyang.svg",
+  "image_path": null,
   "method": "wikipedia",
   "license": "Public domain",
   "artist": "Original: Government of the Republic of Korea Vector:  Great Brightstar and others",
   "page": "https://commons.wikimedia.org/wiki/File:Flag_of_South_Korea.svg",
   "width": 900,
-  "height": 600
+  "height": 600,
+  "rejected": "Flag of South Korea.svg"
  },
  {
   "iso": "cn",
@@ -7766,13 +7770,14 @@
     "en": "Presidency division"
    }
   ],
-  "image_path": "/flags/cities/kolkata.svg",
+  "image_path": null,
   "method": "wikipedia",
   "license": "CC BY-SA 4.0",
   "artist": "Sodacan This W3C-unspecified vector image was created with Inkscape .",
   "page": "https://commons.wikimedia.org/wiki/File:Flag_of_India_1906_(Calcutta_Flag).svg",
   "width": 470,
-  "height": 300
+  "height": 300,
+  "rejected": "Flag of India 1906 (Calcutta Flag).svg"
  },
  {
   "iso": "in",
@@ -8016,13 +8021,14 @@
     "en": "Indore division"
    }
   ],
-  "image_path": "/flags/cities/indore.svg",
+  "image_path": null,
   "method": "wikipedia",
   "license": "CC BY 3.0",
   "artist": "NINTENPUG",
   "page": "https://commons.wikimedia.org/wiki/File:Indore_Flag.svg",
   "width": 600,
-  "height": 324
+  "height": 324,
+  "rejected": "Indore Flag.svg"
  },
  {
   "iso": "in",
@@ -8094,13 +8100,14 @@
     "en": "Bhopal State (1949–1956)"
    }
   ],
-  "image_path": "/flags/cities/bhopal.svg",
+  "image_path": null,
   "method": "wikipedia",
   "license": "Public domain",
   "artist": "Ricordisamoa",
   "page": "https://commons.wikimedia.org/wiki/File:Drapeau_Bhopal.svg",
   "width": 600,
-  "height": 300
+  "height": 300,
+  "rejected": "Drapeau Bhopal.svg"
  },
  {
   "iso": "in",
@@ -8492,13 +8499,14 @@
     "en": "Sambhajinagar division"
    }
   ],
-  "image_path": "/flags/cities/aurangabad.svg",
+  "image_path": null,
   "method": "wikipedia",
   "license": "Public domain",
   "artist": "Government of India",
   "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Maharashtra.svg",
   "width": 1920,
-  "height": 1280
+  "height": 1280,
+  "rejected": "Flag of Maharashtra.svg"
  },
  {
   "iso": "in",
@@ -8652,12 +8660,13 @@
     "en": "Gwalior division"
    }
   ],
-  "image_path": "/flags/cities/gwalior.svg",
+  "image_path": null,
   "license": "Public domain",
   "artist": "Robert Alfers",
   "page": "https://commons.wikimedia.org/wiki/File:Gwalior_flag.svg",
   "width": 1000,
-  "height": 540
+  "height": 540,
+  "rejected": "Gwalior flag.svg"
  },
  {
   "iso": "in",
@@ -8765,13 +8774,14 @@
     "en": "Raipur district"
    }
   ],
-  "image_path": "/flags/cities/raipur.png",
+  "image_path": null,
   "method": "wikipedia",
   "license": "Public domain",
   "artist": "Government of Chhattisgarh",
   "page": "https://commons.wikimedia.org/wiki/File:Chhattisgarh_Flag(INDIA).png",
   "width": 400,
-  "height": 400
+  "height": 400,
+  "rejected": "Chhattisgarh Flag(INDIA).png"
  },
  {
   "iso": "in",
@@ -8853,12 +8863,13 @@
     "en": "Lagos State"
    }
   ],
-  "image_path": "/flags/cities/lagos.svg",
+  "image_path": null,
   "license": "Public domain",
   "artist": "Goverment of Nigeria",
   "page": "https://commons.wikimedia.org/wiki/File:Lagos_State_Flag_(1967-1970).svg",
   "width": 1200,
-  "height": 600
+  "height": 600,
+  "rejected": "Lagos State Flag (1967-1970).svg"
  },
  {
   "iso": "ng",
@@ -9055,13 +9066,14 @@
     "en": "Aba South"
    }
   ],
-  "image_path": "/flags/cities/aba.png",
+  "image_path": null,
   "method": "wikipedia",
   "license": "Public domain",
   "artist": "Government of Abia State",
   "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Abia_(new).png",
   "width": 2560,
-  "height": 1707
+  "height": 1707,
+  "rejected": "Flag of Abia (new).png"
  },
  {
   "iso": "ng",
@@ -9275,12 +9287,13 @@
     "en": "Kaduna State"
    }
   ],
-  "image_path": "/flags/cities/zaria.svg",
+  "image_path": null,
   "license": "Public domain",
   "artist": "Orange Tuesday",
   "page": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Zaria_Emirate.svg",
   "width": 360,
-  "height": 240
+  "height": 240,
+  "rejected": "Flag of the Zaria Emirate.svg"
  },
  {
   "iso": "ng",
@@ -9712,12 +9725,13 @@
     "en": "Republic of Egypt"
    }
   ],
-  "image_path": "/flags/cities/mansoura.png",
+  "image_path": null,
   "license": "CC BY-SA 3.0",
   "artist": "",
   "page": "https://commons.wikimedia.org/wiki/File:Governadorat_de_Daqahliya.png",
   "width": 326,
-  "height": 217
+  "height": 217,
+  "rejected": "Governadorat de Daqahliya.png"
  },
  {
   "iso": "eg",
@@ -10013,13 +10027,14 @@
     "en": "Western Australia"
    }
   ],
-  "image_path": "/flags/cities/perth.svg",
+  "image_path": null,
   "method": "wikipedia",
   "license": "Public domain",
   "artist": "Original: Frederick Weld Vector:  Denelson83",
   "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Western_Australia.svg",
   "width": 1200,
-  "height": 600
+  "height": 600,
+  "rejected": "Flag of Western Australia.svg"
  },
  {
   "iso": "au",
@@ -10041,12 +10056,13 @@
     "en": "South Australia"
    }
   ],
-  "image_path": "/flags/cities/adelaide.svg",
+  "image_path": null,
   "license": "CC BY-SA 4.0",
   "artist": "Villacastrojimeno",
   "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Adelaide.svg",
   "width": 512,
-  "height": 256
+  "height": 256,
+  "rejected": "Flag of Adelaide.svg"
  },
  {
   "iso": "au",
@@ -10168,13 +10184,14 @@
     "en": "Tasmania"
    }
   ],
-  "image_path": "/flags/cities/hobart.svg",
+  "image_path": null,
   "method": "wikipedia",
   "license": "Public domain",
   "artist": "Unknown author (Proclaimed by Sir Frederick Weld)",
   "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Tasmania.svg",
   "width": 1200,
-  "height": 600
+  "height": 600,
+  "rejected": "Flag of Tasmania.svg"
  },
  {
   "iso": "au",

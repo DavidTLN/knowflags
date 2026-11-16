@@ -18,6 +18,12 @@ const CONTINENT_DATA = {
   americas:           { en: 'Americas',        fr: 'Amériques',         count: 35 },
 }
 
+// Rendu statique : les sept continents (et l'alias historique) sont connus d'avance.
+export const revalidate = 3600
+export function generateStaticParams() {
+  return Object.keys(CONTINENT_DATA).map(slug => ({ slug }))
+}
+
 export async function generateMetadata({ params }) {
   const { slug, locale } = await params
   const isFr = locale === 'fr'

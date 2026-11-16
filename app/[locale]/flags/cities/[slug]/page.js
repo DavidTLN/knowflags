@@ -3,6 +3,13 @@ import { createClient } from '@/lib/supabase-server'
 
 const BASE_URL = 'https://knowflags.com'
 
+// Rendu statique à la première visite (ISR), puis mis en cache une heure.
+// Liste vide : aucune ville pré-calculée à la compilation, chacune l'est à la demande.
+export const revalidate = 3600
+export function generateStaticParams() {
+  return []
+}
+
 export async function generateMetadata({ params }) {
   const { slug, locale } = await params
   const isFr = locale === 'fr'

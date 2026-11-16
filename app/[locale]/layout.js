@@ -1,7 +1,8 @@
 // app/[locale]/layout.js
 
 import { NextIntlClientProvider } from 'next-intl'
-import { getMessages } from 'next-intl/server'
+import { getMessages, setRequestLocale } from 'next-intl/server'
+import { notFound } from 'next/navigation'
 import { Inter } from 'next/font/google'
 import Header from '@/components/Header'
 import LocaleSync from '@/components/LocaleSync'
@@ -102,8 +103,20 @@ export const viewport = {
   maximumScale: 1,
 }
 
+const LOCALES = ['en', 'fr']
+
+// Rendu statique (ISR) : les deux langues sont connues à la compilation.
+export function generateStaticParams() {
+  return LOCALES.map(locale => ({ locale }))
+}
+
 export default async function RootLayout({ children, params }) {
   const { locale } = await params
+  if (!LOCALES.includes(locale)) notFound()
+  // Indispensable au rendu statique : sans cet appel, next-intl lit la langue dans
+  // les en-têtes de la requête, ce qui rend TOUTES les pages dynamiques
+  // (cache-control: no-store, aucun cache CDN, chaque visite de Google recalcule la page).
+  setRequestLocale(locale)
   const messages = await getMessages()
 
   const jsonLd = {

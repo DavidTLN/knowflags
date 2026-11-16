@@ -45,18 +45,19 @@ const COLOR_HEX = {
 }
 
 // ── CountryFlagsSection (sub-national) ──────────────────────────────────────
-export function CountryFlagsSection({ countryIso2 }) {
+// initial : { regions, cities } lus côté serveur ; sinon chargement dans le navigateur.
+export function CountryFlagsSection({ countryIso2, initial = null }) {
   const locale = useLocale()
   const t = (en, fr) => locale === 'fr' ? fr : en
-  const [regions, setRegions] = useState([])
-  const [cities,  setCities]  = useState([])
-  const [activeTab, setActiveTab] = useState('regions')
+  const [regions, setRegions] = useState(() => initial?.regions || [])
+  const [cities,  setCities]  = useState(() => initial?.cities || [])
+  const [activeTab, setActiveTab] = useState(() => (initial && !initial.regions?.length && initial.cities?.length ? 'cities' : 'regions'))
   const [showAll, setShowAll] = useState(false)
   const [query, setQuery] = useState('')
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(!initial)
 
   useEffect(() => {
-    if (!countryIso2) return
+    if (!countryIso2 || initial) return
     const supabase = createClient()
     supabase
       .from('flag_taxonomy').select('id')
@@ -75,7 +76,7 @@ export function CountryFlagsSection({ countryIso2 }) {
             setLoading(false)
           })
       })
-  }, [countryIso2])
+  }, [countryIso2, initial])
 
   // Ordre alphabétique (nom affiché, accents ignorés), puis recherche
   const fold = (x) => (x || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
@@ -199,17 +200,19 @@ export function CountryFlagsSection({ countryIso2 }) {
 }
 
 // ── FlagHero ─────────────────────────────────────────────────────────────────
-function FlagHero({ countryCode, countryName, locale, flagUrl }) {
+// initialSrc : image choisie côté serveur (flag_url, sinon drapeau actuel de l'historique,
+// sinon flagcdn). Elle est alors dans le HTML initial, avec son texte alternatif.
+function FlagHero({ countryCode, countryName, locale, flagUrl, initialSrc = null }) {
   const t = (en, fr) => locale === 'fr' ? fr : en
-  const [src, setSrc] = useState(null)
-  const [loaded, setLoaded] = useState(false)
+  const [src, setSrc] = useState(initialSrc)
+  const [loaded, setLoaded] = useState(!!initialSrc)
   const [hover, setHover] = useState(false)
-  const [isCdn, setIsCdn] = useState(false)
+  const [isCdn, setIsCdn] = useState(() => !!initialSrc && initialSrc.startsWith('https://flagcdn.com/'))
   const iso = (countryCode || '').toLowerCase()
   const cdn = (w) => `https://flagcdn.com/w${w}/${iso}.webp`
 
   useEffect(() => {
-    if (!countryCode) return
+    if (!countryCode || initialSrc) return
     // 1) explicit override on the country (flag_url) wins everywhere
     if (flagUrl) { setSrc(flagUrl); setIsCdn(false); setLoaded(true); return }
     // 2) otherwise the current flag-history entry, 3) else flagcdn
@@ -226,7 +229,7 @@ function FlagHero({ countryCode, countryName, locale, flagUrl }) {
         setSrc(cdn(2560)); setIsCdn(true)
         setLoaded(true)
       })
-  }, [countryCode, flagUrl])
+  }, [countryCode, flagUrl, initialSrc])
 
   async function downloadPng() {
     const url = flagUrl || `https://flagcdn.com/w2560/${countryCode.toLowerCase()}.png`
@@ -931,35 +934,46 @@ function DesignSpecs({ country, locale }) {
 }
 
 // ── Fact/Did you know card ────────────────────────────────────────────────────
+// Toutes les anecdotes sont dans le HTML : les 3 premières visibles, les suivantes
+// dans un <details> (repliées, mais lues par les moteurs de recherche).
 function DidYouKnow({ facts }) {
   const locale = useLocale()
   const t = (en, fr) => locale === 'fr' ? fr : en
-  const [idx, setIdx] = useState(0)
   if (!facts || facts.length === 0) return null
-  const fact = facts[idx]
+  const shown = facts.slice(0, 3)
+  const more = facts.slice(3)
+  const item = (f, i) => (
+    <li key={i} style={{ display: 'flex', gap: '10px', fontSize: '14px', color: '#1E3A5F', lineHeight: 1.6 }}>
+      <span aria-hidden="true" style={{ flexShrink: 0, width: '6px', height: '6px', marginTop: '9px', borderRadius: '9999px', backgroundColor: DS.steel }} />
+      <span>{f}</span>
+    </li>
+  )
+  const list = { margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px' }
   return (
     <div style={{ backgroundColor: '#EFF6FF', border: `1px solid ${DS.steel}`, borderLeft: `4px solid ${DS.steel}`, borderRadius: '12px', padding: '16px' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '10px' }}>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={DS.steel} strokeWidth="2.2" strokeLinecap="round">
           <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
         </svg>
-        <span style={{ fontSize: '11px', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.1em', color: '#1D4ED8' }}>
+        <h2 style={{ margin: 0, fontSize: '11px', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.1em', color: '#1D4ED8' }}>
           {t('Did you know?', 'Le saviez-vous ?')}
-        </span>
+        </h2>
       </div>
-      <p style={{ margin: 0, fontSize: '14px', color: '#1E3A5F', lineHeight: 1.6 }}>{fact}</p>
-      {facts.length > 1 && (
-        <button onClick={() => setIdx((idx + 1) % facts.length)}
-          style={{ marginTop: '10px', background: 'none', border: 'none', cursor: 'pointer', fontSize: '12px', fontWeight: '700', color: '#2563EB', padding: 0 }}>
-          {t('Next fact →', 'Anecdote suivante →')}
-        </button>
+      <ul style={list}>{shown.map(item)}</ul>
+      {more.length > 0 && (
+        <details style={{ marginTop: '10px' }}>
+          <summary style={{ cursor: 'pointer', fontSize: '12px', fontWeight: '700', color: '#2563EB', minHeight: '32px', display: 'flex', alignItems: 'center' }}>
+            {t(`${more.length} more fact${more.length > 1 ? 's' : ''}`, `${more.length} autre${more.length > 1 ? 's' : ''} anecdote${more.length > 1 ? 's' : ''}`)}
+          </summary>
+          <ul style={{ ...list, marginTop: '8px' }}>{more.map((f, i) => item(f, i + 3))}</ul>
+        </details>
       )}
     </div>
   )
 }
 
 // ── Main Component ────────────────────────────────────────────────────────────
-export default function CountryDetailPage({ country, facts = [], relatedCountries = [], childEntities = [], relatedPosts = [] }) {
+export default function CountryDetailPage({ country, facts = [], relatedCountries = [], childEntities = [], relatedPosts = [], history = null, heroSrc = null, subFlags = null }) {
   const locale = useLocale()
   const t = (en, fr) => locale === 'fr' ? fr : en
 
@@ -1134,7 +1148,7 @@ export default function CountryDetailPage({ country, facts = [], relatedCountrie
 
         {/* ── Flag hero — full width ── */}
         <div style={{ backgroundColor: DS.surface, borderTop: `1px solid ${DS.border}`, borderBottom: `1px solid ${DS.border}` }}>
-          <FlagHero countryCode={country.code} countryName={name} locale={locale} flagUrl={country.flag_url} />
+          <FlagHero countryCode={country.code} countryName={name} locale={locale} flagUrl={country.flag_url} initialSrc={heroSrc} />
         </div>
 
         {/* ── Page content — spaced sections ── */}
@@ -1173,13 +1187,13 @@ export default function CountryDetailPage({ country, facts = [], relatedCountrie
           {facts.length > 0 && <DidYouKnow facts={facts} />}
 
           {/* Historical Timeline */}
-          <FlagHistoryModule countryCode={country.code} countryName={name} />
+          <FlagHistoryModule countryCode={country.code} countryName={name} initialFlags={history} />
 
           {/* Where is X? — carte, voisins, frontières */}
           <CountryLocationMap country={country} locale={locale} />
 
           {/* Sub-national flags (self-contained card; renders nothing when empty) */}
-          <CountryFlagsSection countryIso2={country.code} />
+          <CountryFlagsSection countryIso2={country.code} initial={subFlags} />
 
           {/* CTA — Test your knowledge */}
           <Link prefetch={false} href={`/${locale}/games/flag-reveal`} style={{ textDecoration: 'none', display: 'block' }}>
@@ -1279,7 +1293,7 @@ export default function CountryDetailPage({ country, facts = [], relatedCountrie
 
           {/* Flag card */}
           <div style={{ flex: '1 1 380px', maxWidth: '440px', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 8px 32px rgba(22,50,79,0.12)', border: `1px solid ${DS.border}`, backgroundColor: DS.bg }}>
-            <FlagHero countryCode={country.code} countryName={name} locale={locale} flagUrl={country.flag_url} />
+            <FlagHero countryCode={country.code} countryName={name} locale={locale} flagUrl={country.flag_url} initialSrc={heroSrc} />
           </div>
 
           {/* Quick Facts card */}
@@ -1321,13 +1335,13 @@ export default function CountryDetailPage({ country, facts = [], relatedCountrie
           {facts.length > 0 && <DidYouKnow facts={facts} />}
 
           {/* Historical Timeline */}
-          <FlagHistoryModule countryCode={country.code} countryName={name} />
+          <FlagHistoryModule countryCode={country.code} countryName={name} initialFlags={history} />
 
           {/* Where is X? — carte, voisins, frontières */}
           <CountryLocationMap country={country} locale={locale} />
 
           {/* Sub-national flags (self-contained card; renders nothing when empty) */}
-          <CountryFlagsSection countryIso2={country.code} />
+          <CountryFlagsSection countryIso2={country.code} initial={subFlags} />
 
           {/* CTA */}
           <div style={{ backgroundColor: DS.navy, borderRadius: '16px', padding: '24px 28px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px' }}>

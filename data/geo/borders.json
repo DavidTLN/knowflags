@@ -7,13 +7,16 @@
 "neighbours": [
 {
 "iso": "es",
-"km": 63.0
+"km": 63.0,
+"via": null
 },
 {
 "iso": "fr",
-"km": 55.0
+"km": 55.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "ae",
@@ -23,11 +26,31 @@
 "neighbours": [
 {
 "iso": "om",
-"km": 609.0
+"km": 609.0,
+"via": null
 },
 {
 "iso": "sa",
-"km": 457.0
+"km": 457.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "ir",
+"via": null
+},
+{
+"iso": "om",
+"via": null
+},
+{
+"iso": "qa",
+"via": null
+},
+{
+"iso": "sa",
+"via": null
 }
 ]
 },
@@ -39,36 +62,57 @@
 "neighbours": [
 {
 "iso": "pk",
-"km": 2670.0
+"km": 2670.0,
+"via": null
 },
 {
 "iso": "tj",
-"km": 1357.0
+"km": 1357.0,
+"via": null
 },
 {
 "iso": "ir",
-"km": 921.0
+"km": 921.0,
+"via": null
 },
 {
 "iso": "tm",
-"km": 804.0
+"km": 804.0,
+"via": null
 },
 {
 "iso": "uz",
-"km": 144.0
+"km": 144.0,
+"via": null
 },
 {
 "iso": "cn",
-"km": 91.0
+"km": 91.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "ag",
 "num": "028",
 "land": 0.0,
 "coast": 153.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "fr",
+"via": null
+},
+{
+"iso": "gb",
+"via": null
+},
+{
+"iso": "kn",
+"via": null
+}
+]
 },
 {
 "iso": "al",
@@ -78,19 +122,37 @@
 "neighbours": [
 {
 "iso": "gr",
-"km": 212.0
+"km": 212.0,
+"via": null
 },
 {
 "iso": "me",
-"km": 186.0
+"km": 186.0,
+"via": null
 },
 {
 "iso": "mk",
-"km": 181.0
+"km": 181.0,
+"via": null
 },
 {
 "iso": "xk",
-"km": 112.0
+"km": 112.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "gr",
+"via": null
+},
+{
+"iso": "it",
+"via": null
+},
+{
+"iso": "me",
+"via": null
 }
 ]
 },
@@ -102,21 +164,26 @@
 "neighbours": [
 {
 "iso": "az",
-"km": 996.0
+"km": 996.0,
+"via": null
 },
 {
 "iso": "tr",
-"km": 311.0
+"km": 311.0,
+"via": null
 },
 {
 "iso": "ge",
-"km": 219.0
+"km": 219.0,
+"via": null
 },
 {
 "iso": "ir",
-"km": 44.0
+"km": 44.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "ao",
@@ -126,19 +193,37 @@
 "neighbours": [
 {
 "iso": "cd",
-"km": 2646.0
+"km": 2646.0,
+"via": null
 },
 {
 "iso": "na",
-"km": 1427.0
+"km": 1427.0,
+"via": null
 },
 {
 "iso": "zm",
-"km": 1065.0
+"km": 1065.0,
+"via": null
 },
 {
 "iso": "cg",
-"km": 231.0
+"km": 231.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "cd",
+"via": null
+},
+{
+"iso": "cg",
+"via": null
+},
+{
+"iso": "na",
+"via": null
 }
 ]
 },
@@ -150,23 +235,46 @@
 "neighbours": [
 {
 "iso": "cl",
-"km": 6691.0
+"km": 6691.0,
+"via": null
 },
 {
 "iso": "py",
-"km": 2531.0
+"km": 2531.0,
+"via": null
 },
 {
 "iso": "br",
-"km": 1263.0
+"km": 1263.0,
+"via": null
 },
 {
 "iso": "bo",
-"km": 942.0
+"km": 942.0,
+"via": null
 },
 {
 "iso": "uy",
-"km": 541.0
+"km": 541.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "cl",
+"via": null
+},
+{
+"iso": "fk",
+"via": null
+},
+{
+"iso": "gb",
+"via": null
+},
+{
+"iso": "uy",
+"via": null
 }
 ]
 },
@@ -178,58 +286,121 @@
 "neighbours": [
 {
 "iso": "de",
-"km": 801.0
+"km": 801.0,
+"via": null
 },
 {
 "iso": "it",
-"km": 404.0
+"km": 404.0,
+"via": null
 },
 {
 "iso": "cz",
-"km": 402.0
+"km": 402.0,
+"via": null
 },
 {
 "iso": "hu",
-"km": 321.0
+"km": 321.0,
+"via": null
 },
 {
 "iso": "si",
-"km": 299.0
+"km": 299.0,
+"via": null
 },
 {
 "iso": "ch",
-"km": 158.0
+"km": 158.0,
+"via": null
 },
 {
 "iso": "sk",
-"km": 105.0
+"km": 105.0,
+"via": null
 },
 {
 "iso": "li",
-"km": 34.0
+"km": 34.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "au",
 "num": "036",
 "land": 0.0,
 "coast": 25760.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "fr",
+"via": "French Southern Lands"
+},
+{
+"iso": "id",
+"via": null
+},
+{
+"iso": "nc",
+"via": null
+},
+{
+"iso": "nz",
+"via": null
+},
+{
+"iso": "pg",
+"via": null
+},
+{
+"iso": "sb",
+"via": null
+},
+{
+"iso": "tl",
+"via": null
+}
+]
 },
 {
 "iso": "aw",
 "num": "533",
 "land": 0.0,
 "coast": 68.5,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "do",
+"via": null
+},
+{
+"iso": "nl",
+"via": null
+},
+{
+"iso": "ve",
+"via": null
+}
+]
 },
 {
 "iso": "ax",
 "num": "248",
-"land": 0,
+"land": null,
 "coast": null,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "fi",
+"via": null
+},
+{
+"iso": "se",
+"via": null
+}
+]
 },
 {
 "iso": "az",
@@ -239,23 +410,38 @@
 "neighbours": [
 {
 "iso": "am",
-"km": 996.0
+"km": 996.0,
+"via": null
 },
 {
 "iso": "ir",
-"km": 689.0
+"km": 689.0,
+"via": null
 },
 {
 "iso": "ge",
-"km": 428.0
+"km": 428.0,
+"via": null
 },
 {
 "iso": "ru",
-"km": 338.0
+"km": 338.0,
+"via": null
 },
 {
 "iso": "tr",
-"km": 17.0
+"km": 17.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "ir",
+"via": null
+},
+{
+"iso": "ru",
+"via": null
 }
 ]
 },
@@ -267,15 +453,24 @@
 "neighbours": [
 {
 "iso": "hr",
-"km": 956.0
+"km": 956.0,
+"via": null
 },
 {
 "iso": "rs",
-"km": 345.0
+"km": 345.0,
+"via": null
 },
 {
 "iso": "me",
-"km": 242.0
+"km": 242.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "hr",
+"via": null
 }
 ]
 },
@@ -284,7 +479,33 @@
 "num": "052",
 "land": 0.0,
 "coast": 97.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "fr",
+"via": null
+},
+{
+"iso": "gy",
+"via": null
+},
+{
+"iso": "lc",
+"via": null
+},
+{
+"iso": "tt",
+"via": null
+},
+{
+"iso": "vc",
+"via": null
+},
+{
+"iso": "ve",
+"via": null
+}
+]
 },
 {
 "iso": "bd",
@@ -294,11 +515,23 @@
 "neighbours": [
 {
 "iso": "in",
-"km": 4142.0
+"km": 4142.0,
+"via": null
 },
 {
 "iso": "mm",
-"km": 271.0
+"km": 271.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "in",
+"via": null
+},
+{
+"iso": "mm",
+"via": null
 }
 ]
 },
@@ -310,19 +543,46 @@
 "neighbours": [
 {
 "iso": "fr",
-"km": 556.0
+"km": 556.0,
+"via": null
 },
 {
 "iso": "nl",
-"km": 478.0
+"km": 478.0,
+"via": null
 },
 {
 "iso": "de",
-"km": 133.0
+"km": 133.0,
+"via": null
 },
 {
 "iso": "lu",
-"km": 130.0
+"km": 130.0,
+"via": null
+},
+{
+"iso": "sx",
+"km": null,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "fr",
+"via": null
+},
+{
+"iso": "gb",
+"via": null
+},
+{
+"iso": "nl",
+"via": null
+},
+{
+"iso": "sx",
+"via": null
 }
 ]
 },
@@ -334,29 +594,36 @@
 "neighbours": [
 {
 "iso": "ml",
-"km": 1325.0
+"km": 1325.0,
+"via": null
 },
 {
 "iso": "ne",
-"km": 622.0
+"km": 622.0,
+"via": null
 },
 {
 "iso": "gh",
-"km": 602.0
+"km": 602.0,
+"via": null
 },
 {
 "iso": "ci",
-"km": 545.0
+"km": 545.0,
+"via": null
 },
 {
 "iso": "bj",
-"km": 386.0
+"km": 386.0,
+"via": null
 },
 {
 "iso": "tg",
-"km": 131.0
+"km": 131.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "bg",
@@ -366,23 +633,38 @@
 "neighbours": [
 {
 "iso": "ro",
-"km": 605.0
+"km": 605.0,
+"via": null
 },
 {
 "iso": "gr",
-"km": 472.0
+"km": 472.0,
+"via": null
 },
 {
 "iso": "rs",
-"km": 344.0
+"km": 344.0,
+"via": null
 },
 {
 "iso": "tr",
-"km": 223.0
+"km": 223.0,
+"via": null
 },
 {
 "iso": "mk",
-"km": 162.0
+"km": 162.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "ro",
+"via": null
+},
+{
+"iso": "tr",
+"via": null
 }
 ]
 },
@@ -391,7 +673,21 @@
 "num": "048",
 "land": 0.0,
 "coast": 161.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "ir",
+"via": null
+},
+{
+"iso": "qa",
+"via": null
+},
+{
+"iso": "sa",
+"via": null
+}
+]
 },
 {
 "iso": "bi",
@@ -401,17 +697,21 @@
 "neighbours": [
 {
 "iso": "tz",
-"km": 589.0
+"km": 589.0,
+"via": null
 },
 {
 "iso": "rw",
-"km": 315.0
+"km": 315.0,
+"via": null
 },
 {
 "iso": "cd",
-"km": 236.0
+"km": 236.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "bj",
@@ -421,19 +721,33 @@
 "neighbours": [
 {
 "iso": "ng",
-"km": 809.0
+"km": 809.0,
+"via": null
 },
 {
 "iso": "tg",
-"km": 651.0
+"km": 651.0,
+"via": null
 },
 {
 "iso": "bf",
-"km": 386.0
+"km": 386.0,
+"via": null
 },
 {
 "iso": "ne",
-"km": 277.0
+"km": 277.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "ng",
+"via": null
+},
+{
+"iso": "tg",
+"via": null
 }
 ]
 },
@@ -442,7 +756,8 @@
 "num": "060",
 "land": 0.0,
 "coast": 103.0,
-"neighbours": []
+"neighbours": [],
+"maritime": []
 },
 {
 "iso": "bn",
@@ -452,7 +767,14 @@
 "neighbours": [
 {
 "iso": "my",
-"km": 266.0
+"km": 266.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "my",
+"via": null
 }
 ]
 },
@@ -464,25 +786,31 @@
 "neighbours": [
 {
 "iso": "br",
-"km": 3403.0
+"km": 3403.0,
+"via": null
 },
 {
 "iso": "pe",
-"km": 1212.0
+"km": 1212.0,
+"via": null
 },
 {
 "iso": "ar",
-"km": 942.0
+"km": 942.0,
+"via": null
 },
 {
 "iso": "cl",
-"km": 942.0
+"km": 942.0,
+"via": null
 },
 {
 "iso": "py",
-"km": 753.0
+"km": 753.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "br",
@@ -492,43 +820,63 @@
 "neighbours": [
 {
 "iso": "bo",
-"km": 3403.0
+"km": 3403.0,
+"via": null
 },
 {
 "iso": "pe",
-"km": 2659.0
+"km": 2659.0,
+"via": null
 },
 {
 "iso": "ve",
-"km": 2137.0
+"km": 2137.0,
+"via": null
 },
 {
 "iso": "co",
-"km": 1790.0
+"km": 1790.0,
+"via": null
 },
 {
 "iso": "py",
-"km": 1371.0
+"km": 1371.0,
+"via": null
 },
 {
 "iso": "gy",
-"km": 1308.0
+"km": 1308.0,
+"via": null
 },
 {
 "iso": "ar",
-"km": 1263.0
+"km": 1263.0,
+"via": null
 },
 {
 "iso": "uy",
-"km": 1050.0
+"km": 1050.0,
+"via": null
 },
 {
-"iso": "gf",
-"km": 649.0
+"iso": "fr",
+"km": 649.0,
+"via": "French Guiana"
 },
 {
 "iso": "sr",
-"km": 515.0
+"km": 515.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "fr",
+"via": null
+},
+{
+"iso": "uy",
+"via": null
 }
 ]
 },
@@ -537,7 +885,25 @@
 "num": "044",
 "land": 0.0,
 "coast": 3542.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "cu",
+"via": null
+},
+{
+"iso": "gb",
+"via": null
+},
+{
+"iso": "ht",
+"via": null
+},
+{
+"iso": "us",
+"via": null
+}
+]
 },
 {
 "iso": "bt",
@@ -547,13 +913,16 @@
 "neighbours": [
 {
 "iso": "in",
-"km": 659.0
+"km": 659.0,
+"via": null
 },
 {
 "iso": "cn",
-"km": 477.0
+"km": 477.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "bw",
@@ -563,21 +932,26 @@
 "neighbours": [
 {
 "iso": "za",
-"km": 1969.0
+"km": 1969.0,
+"via": null
 },
 {
 "iso": "na",
-"km": 1544.0
+"km": 1544.0,
+"via": null
 },
 {
 "iso": "zw",
-"km": 834.0
+"km": 834.0,
+"via": null
 },
 {
 "iso": "zm",
-"km": 0.15
+"km": 0.15,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "by",
@@ -587,25 +961,31 @@
 "neighbours": [
 {
 "iso": "ru",
-"km": 1312.0
+"km": 1312.0,
+"via": null
 },
 {
 "iso": "ua",
-"km": 1111.0
+"km": 1111.0,
+"via": null
 },
 {
 "iso": "lt",
-"km": 640.0
+"km": 640.0,
+"via": null
 },
 {
 "iso": "pl",
-"km": 375.0
+"km": 375.0,
+"via": null
 },
 {
 "iso": "lv",
-"km": 161.0
+"km": 161.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "bz",
@@ -615,11 +995,27 @@
 "neighbours": [
 {
 "iso": "mx",
-"km": 276.0
+"km": 276.0,
+"via": null
 },
 {
 "iso": "gt",
-"km": 266.0
+"km": 266.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "gt",
+"via": null
+},
+{
+"iso": "hn",
+"via": null
+},
+{
+"iso": "mx",
+"via": null
 }
 ]
 },
@@ -631,11 +1027,36 @@
 "neighbours": [
 {
 "iso": "us",
-"km": 8891.0
+"km": 8891.0,
+"via": null
 },
 {
 "iso": "dk",
-"km": 1.3
+"km": 1.3,
+"via": null
+},
+{
+"iso": "gl",
+"km": null,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "dk",
+"via": null
+},
+{
+"iso": "fr",
+"via": null
+},
+{
+"iso": "gl",
+"via": null
+},
+{
+"iso": "us",
+"via": null
 }
 ]
 },
@@ -647,39 +1068,58 @@
 "neighbours": [
 {
 "iso": "ao",
-"km": 2646.0
+"km": 2646.0,
+"via": null
 },
 {
 "iso": "zm",
-"km": 2332.0
+"km": 2332.0,
+"via": null
 },
 {
 "iso": "cg",
-"km": 1775.0
+"km": 1775.0,
+"via": null
 },
 {
 "iso": "cf",
-"km": 1747.0
+"km": 1747.0,
+"via": null
 },
 {
 "iso": "ug",
-"km": 877.0
+"km": 877.0,
+"via": null
 },
 {
 "iso": "ss",
-"km": 714.0
+"km": 714.0,
+"via": null
 },
 {
 "iso": "tz",
-"km": 479.0
+"km": 479.0,
+"via": null
 },
 {
 "iso": "bi",
-"km": 236.0
+"km": 236.0,
+"via": null
 },
 {
 "iso": "rw",
-"km": 221.0
+"km": 221.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "ao",
+"via": null
+},
+{
+"iso": "cg",
+"via": null
 }
 ]
 },
@@ -691,25 +1131,36 @@
 "neighbours": [
 {
 "iso": "cd",
-"km": 1747.0
+"km": 1747.0,
+"via": null
 },
 {
 "iso": "td",
-"km": 1556.0
+"km": 1556.0,
+"via": null
 },
 {
 "iso": "ss",
-"km": 1055.0
+"km": 1055.0,
+"via": null
 },
 {
 "iso": "cm",
-"km": 901.0
+"km": 901.0,
+"via": null
+},
+{
+"iso": "cg",
+"km": 487.0,
+"via": null
 },
 {
 "iso": "sd",
-"km": 174.0
+"km": 174.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "cg",
@@ -719,23 +1170,42 @@
 "neighbours": [
 {
 "iso": "ga",
-"km": 2567.0
+"km": 2567.0,
+"via": null
 },
 {
 "iso": "cd",
-"km": 1775.0
+"km": 1775.0,
+"via": null
 },
 {
 "iso": "cm",
-"km": 494.0
+"km": 494.0,
+"via": null
 },
 {
 "iso": "cf",
-"km": 487.0
+"km": 487.0,
+"via": null
 },
 {
 "iso": "ao",
-"km": 231.0
+"km": 231.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "ao",
+"via": null
+},
+{
+"iso": "cd",
+"via": null
+},
+{
+"iso": "ga",
+"via": null
 }
 ]
 },
@@ -747,25 +1217,31 @@
 "neighbours": [
 {
 "iso": "it",
-"km": 698.0
+"km": 698.0,
+"via": null
 },
 {
 "iso": "fr",
-"km": 525.0
+"km": 525.0,
+"via": null
 },
 {
 "iso": "de",
-"km": 348.0
+"km": 348.0,
+"via": null
 },
 {
 "iso": "at",
-"km": 158.0
+"km": 158.0,
+"via": null
 },
 {
 "iso": "li",
-"km": 41.0
+"km": 41.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "ci",
@@ -775,23 +1251,38 @@
 "neighbours": [
 {
 "iso": "gn",
-"km": 816.0
+"km": 816.0,
+"via": null
 },
 {
 "iso": "lr",
-"km": 778.0
+"km": 778.0,
+"via": null
 },
 {
 "iso": "gh",
-"km": 720.0
+"km": 720.0,
+"via": null
 },
 {
 "iso": "ml",
-"km": 599.0
+"km": 599.0,
+"via": null
 },
 {
 "iso": "bf",
-"km": 545.0
+"km": 545.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "gh",
+"via": null
+},
+{
+"iso": "lr",
+"via": null
 }
 ]
 },
@@ -803,15 +1294,32 @@
 "neighbours": [
 {
 "iso": "ar",
-"km": 6691.0
+"km": 6691.0,
+"via": null
 },
 {
 "iso": "bo",
-"km": 942.0
+"km": 942.0,
+"via": null
 },
 {
 "iso": "pe",
-"km": 168.0
+"km": 168.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "ar",
+"via": null
+},
+{
+"iso": "no",
+"via": "Peter I Island"
+},
+{
+"iso": "pe",
+"via": null
 }
 ]
 },
@@ -823,27 +1331,43 @@
 "neighbours": [
 {
 "iso": "ng",
-"km": 1975.0
+"km": 1975.0,
+"via": null
 },
 {
 "iso": "td",
-"km": 1116.0
+"km": 1116.0,
+"via": null
 },
 {
 "iso": "cf",
-"km": 901.0
+"km": 901.0,
+"via": null
 },
 {
 "iso": "cg",
-"km": 494.0
+"km": 494.0,
+"via": null
 },
 {
 "iso": "ga",
-"km": 349.0
+"km": 349.0,
+"via": null
 },
 {
 "iso": "gq",
-"km": 183.0
+"km": 183.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "gq",
+"via": null
+},
+{
+"iso": "ng",
+"via": null
 }
 ]
 },
@@ -855,59 +1379,91 @@
 "neighbours": [
 {
 "iso": "mn",
-"km": 4630.0
+"km": 4630.0,
+"via": null
 },
 {
 "iso": "ru",
-"km": 4133.0
+"km": 4133.0,
+"via": null
 },
 {
 "iso": "in",
-"km": 2659.0
+"km": 2659.0,
+"via": null
 },
 {
 "iso": "mm",
-"km": 2129.0
+"km": 2129.0,
+"via": null
 },
 {
 "iso": "kz",
-"km": 1765.0
+"km": 1765.0,
+"via": null
 },
 {
 "iso": "np",
-"km": 1389.0
+"km": 1389.0,
+"via": null
 },
 {
 "iso": "kp",
-"km": 1352.0
+"km": 1352.0,
+"via": null
 },
 {
 "iso": "vn",
-"km": 1297.0
+"km": 1297.0,
+"via": null
 },
 {
 "iso": "kg",
-"km": 1063.0
-},
-{
-"iso": "bt",
-"km": 477.0
+"km": 1063.0,
+"via": null
 },
 {
 "iso": "tj",
-"km": 477.0
+"km": 477.0,
+"via": null
+},
+{
+"iso": "bt",
+"km": 477.0,
+"via": null
 },
 {
 "iso": "la",
-"km": 475.0
+"km": 475.0,
+"via": null
 },
 {
 "iso": "pk",
-"km": 438.0
+"km": 438.0,
+"via": null
 },
 {
 "iso": "af",
-"km": 91.0
+"km": 91.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "jp",
+"via": null
+},
+{
+"iso": "kp",
+"via": null
+},
+{
+"iso": "kr",
+"via": null
+},
+{
+"iso": "vn",
+"via": null
 }
 ]
 },
@@ -919,23 +1475,62 @@
 "neighbours": [
 {
 "iso": "ve",
-"km": 2341.0
+"km": 2341.0,
+"via": null
 },
 {
 "iso": "br",
-"km": 1790.0
+"km": 1790.0,
+"via": null
 },
 {
 "iso": "pe",
-"km": 1494.0
+"km": 1494.0,
+"via": null
 },
 {
 "iso": "ec",
-"km": 708.0
+"km": 708.0,
+"via": null
 },
 {
 "iso": "pa",
-"km": 339.0
+"km": 339.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "cr",
+"via": null
+},
+{
+"iso": "do",
+"via": null
+},
+{
+"iso": "ec",
+"via": null
+},
+{
+"iso": "ht",
+"via": null
+},
+{
+"iso": "jm",
+"via": null
+},
+{
+"iso": "ni",
+"via": null
+},
+{
+"iso": "pa",
+"via": null
+},
+{
+"iso": "ve",
+"via": null
 }
 ]
 },
@@ -947,11 +1542,31 @@
 "neighbours": [
 {
 "iso": "pa",
-"km": 348.0
+"km": 348.0,
+"via": null
 },
 {
 "iso": "ni",
-"km": 313.0
+"km": 313.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "co",
+"via": null
+},
+{
+"iso": "ec",
+"via": null
+},
+{
+"iso": "ni",
+"via": null
+},
+{
+"iso": "pa",
+"via": null
 }
 ]
 },
@@ -960,28 +1575,122 @@
 "num": "192",
 "land": 28.5,
 "coast": 3735.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "bs",
+"via": null
+},
+{
+"iso": "gb",
+"via": null
+},
+{
+"iso": "hn",
+"via": null
+},
+{
+"iso": "ht",
+"via": null
+},
+{
+"iso": "jm",
+"via": null
+},
+{
+"iso": "ky",
+"via": null
+},
+{
+"iso": "mx",
+"via": null
+},
+{
+"iso": "us",
+"via": null
+}
+]
 },
 {
 "iso": "cv",
 "num": "132",
 "land": 0.0,
 "coast": 965.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "gm",
+"via": null
+},
+{
+"iso": "mr",
+"via": null
+},
+{
+"iso": "sn",
+"via": null
+}
+]
 },
 {
 "iso": "cw",
 "num": "531",
 "land": 0.0,
 "coast": 364.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "do",
+"via": null
+},
+{
+"iso": "nl",
+"via": null
+},
+{
+"iso": "ve",
+"via": null
+}
+]
 },
 {
 "iso": "cy",
 "num": "196",
 "land": 156.0,
 "coast": 648.0,
-"neighbours": []
+"neighbours": [
+{
+"iso": "gb",
+"km": 48.0,
+"via": "Akrotiri"
+}
+],
+"maritime": [
+{
+"iso": "eg",
+"via": null
+},
+{
+"iso": "gb",
+"via": null
+},
+{
+"iso": "il",
+"via": null
+},
+{
+"iso": "lb",
+"via": null
+},
+{
+"iso": "sy",
+"via": null
+},
+{
+"iso": "tr",
+"via": "Northern Cyprus"
+}
+]
 },
 {
 "iso": "cz",
@@ -991,21 +1700,26 @@
 "neighbours": [
 {
 "iso": "de",
-"km": 704.0
+"km": 704.0,
+"via": null
 },
 {
 "iso": "pl",
-"km": 699.0
+"km": 699.0,
+"via": null
 },
 {
 "iso": "at",
-"km": 402.0
+"km": 402.0,
+"via": null
 },
 {
 "iso": "sk",
-"km": 241.0
+"km": 241.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "de",
@@ -1015,39 +1729,88 @@
 "neighbours": [
 {
 "iso": "at",
-"km": 801.0
+"km": 801.0,
+"via": null
 },
 {
 "iso": "cz",
-"km": 704.0
+"km": 704.0,
+"via": null
 },
 {
 "iso": "nl",
-"km": 575.0
+"km": 575.0,
+"via": null
 },
 {
 "iso": "pl",
-"km": 447.0
+"km": 447.0,
+"via": null
 },
 {
 "iso": "fr",
-"km": 418.0
+"km": 418.0,
+"via": null
 },
 {
 "iso": "ch",
-"km": 348.0
+"km": 348.0,
+"via": null
 },
 {
 "iso": "dk",
-"km": 140.0
+"km": 140.0,
+"via": null
 },
 {
 "iso": "be",
-"km": 133.0
+"km": 133.0,
+"via": null
 },
 {
 "iso": "lu",
-"km": 128.0
+"km": 128.0,
+"via": null
+},
+{
+"iso": "gl",
+"km": null,
+"via": null
+},
+{
+"iso": "sx",
+"km": null,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "dk",
+"via": null
+},
+{
+"iso": "gb",
+"via": null
+},
+{
+"iso": "gl",
+"via": null
+},
+{
+"iso": "nl",
+"via": null
+},
+{
+"iso": "pl",
+"via": null
+},
+{
+"iso": "se",
+"via": null
+},
+{
+"iso": "sx",
+"via": null
 }
 ]
 },
@@ -1059,15 +1822,32 @@
 "neighbours": [
 {
 "iso": "et",
-"km": 342.0
+"km": 342.0,
+"via": null
 },
 {
 "iso": "er",
-"km": 125.0
+"km": 125.0,
+"via": null
 },
 {
 "iso": "so",
-"km": 61.0
+"km": 61.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "er",
+"via": null
+},
+{
+"iso": "so",
+"via": "Somaliland"
+},
+{
+"iso": "ye",
+"via": null
 }
 ]
 },
@@ -1079,11 +1859,43 @@
 "neighbours": [
 {
 "iso": "de",
-"km": 140.0
+"km": 140.0,
+"via": null
 },
 {
 "iso": "ca",
-"km": 1.3
+"km": 1.3,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "ca",
+"via": null
+},
+{
+"iso": "de",
+"via": null
+},
+{
+"iso": "gb",
+"via": null
+},
+{
+"iso": "is",
+"via": null
+},
+{
+"iso": "no",
+"via": null
+},
+{
+"iso": "pl",
+"via": null
+},
+{
+"iso": "se",
+"via": null
 }
 ]
 },
@@ -1092,7 +1904,17 @@
 "num": "212",
 "land": 0.0,
 "coast": 148.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "fr",
+"via": null
+},
+{
+"iso": "ve",
+"via": null
+}
+]
 },
 {
 "iso": "do",
@@ -1102,7 +1924,50 @@
 "neighbours": [
 {
 "iso": "ht",
-"km": 376.0
+"km": 376.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "aw",
+"via": null
+},
+{
+"iso": "co",
+"via": null
+},
+{
+"iso": "cw",
+"via": null
+},
+{
+"iso": "gb",
+"via": null
+},
+{
+"iso": "ht",
+"via": null
+},
+{
+"iso": "nl",
+"via": null
+},
+{
+"iso": "pr",
+"via": null
+},
+{
+"iso": "sx",
+"via": null
+},
+{
+"iso": "us",
+"via": null
+},
+{
+"iso": "ve",
+"via": null
 }
 ]
 },
@@ -1114,27 +1979,51 @@
 "neighbours": [
 {
 "iso": "ma",
-"km": 1941.0
+"km": 1941.0,
+"via": null
 },
 {
 "iso": "ml",
-"km": 1359.0
+"km": 1359.0,
+"via": null
 },
 {
 "iso": "tn",
-"km": 1034.0
+"km": 1034.0,
+"via": null
 },
 {
 "iso": "ly",
-"km": 989.0
+"km": 989.0,
+"via": null
 },
 {
 "iso": "ne",
-"km": 951.0
+"km": 951.0,
+"via": null
 },
 {
 "iso": "mr",
-"km": 460.0
+"km": 460.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "es",
+"via": null
+},
+{
+"iso": "it",
+"via": null
+},
+{
+"iso": "ma",
+"via": null
+},
+{
+"iso": "tn",
+"via": null
 }
 ]
 },
@@ -1146,11 +2035,27 @@
 "neighbours": [
 {
 "iso": "pe",
-"km": 1529.0
+"km": 1529.0,
+"via": null
 },
 {
 "iso": "co",
-"km": 708.0
+"km": 708.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "co",
+"via": null
+},
+{
+"iso": "cr",
+"via": null
+},
+{
+"iso": "pe",
+"via": null
 }
 ]
 },
@@ -1162,11 +2067,31 @@
 "neighbours": [
 {
 "iso": "lv",
-"km": 333.0
+"km": 333.0,
+"via": null
 },
 {
 "iso": "ru",
-"km": 324.0
+"km": 324.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "fi",
+"via": null
+},
+{
+"iso": "lv",
+"via": null
+},
+{
+"iso": "ru",
+"via": null
+},
+{
+"iso": "se",
+"via": null
 }
 ]
 },
@@ -1178,19 +2103,53 @@
 "neighbours": [
 {
 "iso": "sd",
-"km": 1276.0
+"km": 1276.0,
+"via": null
 },
 {
 "iso": "ly",
-"km": 1115.0
+"km": 1115.0,
+"via": null
 },
 {
 "iso": "il",
-"km": 208.0
+"km": 208.0,
+"via": null
 },
 {
 "iso": "ps",
-"km": 13.0
+"km": 13.0,
+"via": "Gaza Strip"
+}
+],
+"maritime": [
+{
+"iso": "cy",
+"via": null
+},
+{
+"iso": "il",
+"via": null
+},
+{
+"iso": "jo",
+"via": null
+},
+{
+"iso": "ly",
+"via": null
+},
+{
+"iso": "ps",
+"via": null
+},
+{
+"iso": "sa",
+"via": null
+},
+{
+"iso": "sd",
+"via": null
 }
 ]
 },
@@ -1202,15 +2161,36 @@
 "neighbours": [
 {
 "iso": "et",
-"km": 1033.0
+"km": 1033.0,
+"via": null
 },
 {
 "iso": "sd",
-"km": 682.0
+"km": 682.0,
+"via": null
 },
 {
 "iso": "dj",
-"km": 125.0
+"km": 125.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "dj",
+"via": null
+},
+{
+"iso": "sa",
+"via": null
+},
+{
+"iso": "sd",
+"via": null
+},
+{
+"iso": "ye",
+"via": null
 }
 ]
 },
@@ -1222,23 +2202,59 @@
 "neighbours": [
 {
 "iso": "pt",
-"km": 1224.0
+"km": 1224.0,
+"via": null
 },
 {
 "iso": "fr",
-"km": 646.0
+"km": 646.0,
+"via": null
 },
 {
 "iso": "ad",
-"km": 63.0
+"km": 63.0,
+"via": null
 },
 {
 "iso": "ma",
-"km": 8.0
+"km": 8.0,
+"via": null
 },
 {
 "iso": "gi",
-"km": 1.2
+"km": 1.2,
+"via": null
+},
+{
+"iso": "gb",
+"km": null,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "dz",
+"via": null
+},
+{
+"iso": "fr",
+"via": null
+},
+{
+"iso": "gb",
+"via": null
+},
+{
+"iso": "it",
+"via": null
+},
+{
+"iso": "ma",
+"via": null
+},
+{
+"iso": "pt",
+"via": null
 }
 ]
 },
@@ -1250,29 +2266,36 @@
 "neighbours": [
 {
 "iso": "so",
-"km": 1640.0
+"km": 1640.0,
+"via": null
 },
 {
 "iso": "ss",
-"km": 1299.0
+"km": 1299.0,
+"via": null
 },
 {
 "iso": "er",
-"km": 1033.0
+"km": 1033.0,
+"via": null
 },
 {
 "iso": "ke",
-"km": 867.0
+"km": 867.0,
+"via": null
 },
 {
 "iso": "sd",
-"km": 744.0
+"km": 744.0,
+"via": null
 },
 {
 "iso": "dj",
-"km": 342.0
+"km": 342.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "fi",
@@ -1282,15 +2305,36 @@
 "neighbours": [
 {
 "iso": "ru",
-"km": 1309.0
+"km": 1309.0,
+"via": null
 },
 {
 "iso": "no",
-"km": 709.0
+"km": 709.0,
+"via": null
 },
 {
 "iso": "se",
-"km": 545.0
+"km": 545.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "ax",
+"via": null
+},
+{
+"iso": "ee",
+"via": null
+},
+{
+"iso": "ru",
+"via": null
+},
+{
+"iso": "se",
+"via": null
 }
 ]
 },
@@ -1299,28 +2343,96 @@
 "num": "242",
 "land": 0.0,
 "coast": 1129.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "fr",
+"via": null
+},
+{
+"iso": "nc",
+"via": null
+},
+{
+"iso": "nz",
+"via": null
+},
+{
+"iso": "sb",
+"via": null
+},
+{
+"iso": "to",
+"via": null
+},
+{
+"iso": "tv",
+"via": null
+},
+{
+"iso": "vu",
+"via": null
+}
+]
 },
 {
 "iso": "fk",
 "num": "238",
 "land": 0.0,
 "coast": 1288.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "ar",
+"via": null
+}
+]
 },
 {
 "iso": "fm",
 "num": "583",
 "land": 0.0,
 "coast": 6112.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "gu",
+"via": null
+},
+{
+"iso": "mh",
+"via": null
+},
+{
+"iso": "pg",
+"via": null
+},
+{
+"iso": "pw",
+"via": null
+},
+{
+"iso": "us",
+"via": null
+}
+]
 },
 {
 "iso": "fo",
 "num": "234",
 "land": 0.0,
 "coast": 1117.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "gb",
+"via": null
+},
+{
+"iso": "is",
+"via": null
+}
+]
 },
 {
 "iso": "fr",
@@ -1329,36 +2441,186 @@
 "coast": 4853.0,
 "neighbours": [
 {
+"iso": "br",
+"km": 649.0,
+"via": "French Guiana"
+},
+{
 "iso": "es",
-"km": 646.0
+"km": 646.0,
+"via": null
 },
 {
 "iso": "be",
-"km": 556.0
+"km": 556.0,
+"via": null
+},
+{
+"iso": "sr",
+"km": 556.0,
+"via": "French Guiana"
 },
 {
 "iso": "ch",
-"km": 525.0
+"km": 525.0,
+"via": null
 },
 {
 "iso": "it",
-"km": 476.0
+"km": 476.0,
+"via": null
 },
 {
 "iso": "de",
-"km": 418.0
+"km": 418.0,
+"via": null
 },
 {
 "iso": "lu",
-"km": 69.0
+"km": 69.0,
+"via": null
 },
 {
 "iso": "ad",
-"km": 55.0
+"km": 55.0,
+"via": null
+},
+{
+"iso": "sx",
+"km": 16.0,
+"via": "Saint Martin"
 },
 {
 "iso": "mc",
-"km": 6.0
+"km": 6.0,
+"via": null
+},
+{
+"iso": "nl",
+"km": null,
+"via": "Wallis and Futuna"
+}
+],
+"maritime": [
+{
+"iso": "ag",
+"via": null
+},
+{
+"iso": "au",
+"via": "French Southern Lands"
+},
+{
+"iso": "bb",
+"via": null
+},
+{
+"iso": "be",
+"via": null
+},
+{
+"iso": "br",
+"via": null
+},
+{
+"iso": "ca",
+"via": null
+},
+{
+"iso": "dm",
+"via": null
+},
+{
+"iso": "es",
+"via": null
+},
+{
+"iso": "fj",
+"via": null
+},
+{
+"iso": "gb",
+"via": null
+},
+{
+"iso": "gg",
+"via": null
+},
+{
+"iso": "it",
+"via": null
+},
+{
+"iso": "je",
+"via": null
+},
+{
+"iso": "ki",
+"via": null
+},
+{
+"iso": "km",
+"via": null
+},
+{
+"iso": "kn",
+"via": null
+},
+{
+"iso": "lc",
+"via": null
+},
+{
+"iso": "mg",
+"via": null
+},
+{
+"iso": "mu",
+"via": null
+},
+{
+"iso": "mz",
+"via": "Wallis and Futuna"
+},
+{
+"iso": "nl",
+"via": null
+},
+{
+"iso": "nz",
+"via": "Wallis and Futuna"
+},
+{
+"iso": "sb",
+"via": null
+},
+{
+"iso": "sc",
+"via": null
+},
+{
+"iso": "sr",
+"via": null
+},
+{
+"iso": "sx",
+"via": null
+},
+{
+"iso": "to",
+"via": null
+},
+{
+"iso": "tv",
+"via": null
+},
+{
+"iso": "ve",
+"via": null
+},
+{
+"iso": "ws",
+"via": null
 }
 ]
 },
@@ -1370,15 +2632,32 @@
 "neighbours": [
 {
 "iso": "cg",
-"km": 2567.0
+"km": 2567.0,
+"via": null
 },
 {
 "iso": "cm",
-"km": 349.0
+"km": 349.0,
+"via": null
 },
 {
 "iso": "gq",
-"km": 345.0
+"km": 345.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "cg",
+"via": null
+},
+{
+"iso": "gq",
+"via": null
+},
+{
+"iso": "st",
+"via": null
 }
 ]
 },
@@ -1390,7 +2669,136 @@
 "neighbours": [
 {
 "iso": "ie",
-"km": 499.0
+"km": 499.0,
+"via": null
+},
+{
+"iso": "cy",
+"km": 48.0,
+"via": "Akrotiri"
+},
+{
+"iso": "es",
+"km": null,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "ag",
+"via": null
+},
+{
+"iso": "ar",
+"via": null
+},
+{
+"iso": "be",
+"via": null
+},
+{
+"iso": "bs",
+"via": null
+},
+{
+"iso": "cu",
+"via": null
+},
+{
+"iso": "cy",
+"via": null
+},
+{
+"iso": "de",
+"via": null
+},
+{
+"iso": "dk",
+"via": null
+},
+{
+"iso": "do",
+"via": null
+},
+{
+"iso": "es",
+"via": null
+},
+{
+"iso": "fo",
+"via": null
+},
+{
+"iso": "fr",
+"via": null
+},
+{
+"iso": "gg",
+"via": null
+},
+{
+"iso": "gl",
+"via": null
+},
+{
+"iso": "hn",
+"via": null
+},
+{
+"iso": "ht",
+"via": null
+},
+{
+"iso": "ie",
+"via": null
+},
+{
+"iso": "im",
+"via": null
+},
+{
+"iso": "je",
+"via": null
+},
+{
+"iso": "jm",
+"via": null
+},
+{
+"iso": "kn",
+"via": null
+},
+{
+"iso": "mv",
+"via": null
+},
+{
+"iso": "nl",
+"via": null
+},
+{
+"iso": "no",
+"via": null
+},
+{
+"iso": "pf",
+"via": "Turks and Caicos"
+},
+{
+"iso": "pr",
+"via": null
+},
+{
+"iso": "sx",
+"via": null
+},
+{
+"iso": "us",
+"via": "US Virgin Islands"
+},
+{
+"iso": "ve",
+"via": null
 }
 ]
 },
@@ -1402,13 +2810,16 @@
 "neighbours": [
 {
 "iso": "gb-sct",
-"km": null
+"km": null,
+"via": null
 },
 {
 "iso": "gb-wls",
-"km": null
+"km": null,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "gb-nir",
@@ -1418,9 +2829,11 @@
 "neighbours": [
 {
 "iso": "ie",
-"km": null
+"km": null,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "gb-sct",
@@ -1430,9 +2843,11 @@
 "neighbours": [
 {
 "iso": "gb-eng",
-"km": null
+"km": null,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "gb-wls",
@@ -1442,16 +2857,32 @@
 "neighbours": [
 {
 "iso": "gb-eng",
-"km": null
+"km": null,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "gd",
 "num": "308",
 "land": 0.0,
 "coast": 121.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "tt",
+"via": null
+},
+{
+"iso": "vc",
+"via": null
+},
+{
+"iso": "ve",
+"via": null
+}
+]
 },
 {
 "iso": "ge",
@@ -1461,19 +2892,33 @@
 "neighbours": [
 {
 "iso": "ru",
-"km": 894.0
+"km": 894.0,
+"via": null
 },
 {
 "iso": "az",
-"km": 428.0
+"km": 428.0,
+"via": null
 },
 {
 "iso": "tr",
-"km": 273.0
+"km": 273.0,
+"via": null
 },
 {
 "iso": "am",
-"km": 219.0
+"km": 219.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "ru",
+"via": null
+},
+{
+"iso": "tr",
+"via": null
 }
 ]
 },
@@ -1482,7 +2927,17 @@
 "num": "831",
 "land": 0.0,
 "coast": 50.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "fr",
+"via": null
+},
+{
+"iso": "gb",
+"via": null
+}
+]
 },
 {
 "iso": "gh",
@@ -1492,15 +2947,28 @@
 "neighbours": [
 {
 "iso": "tg",
-"km": 1098.0
+"km": 1098.0,
+"via": null
 },
 {
 "iso": "ci",
-"km": 720.0
+"km": 720.0,
+"via": null
 },
 {
 "iso": "bf",
-"km": 602.0
+"km": 602.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "ci",
+"via": null
+},
+{
+"iso": "tg",
+"via": null
 }
 ]
 },
@@ -1512,16 +2980,59 @@
 "neighbours": [
 {
 "iso": "es",
-"km": 1.2
+"km": 1.2,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "gl",
 "num": "304",
 "land": 0.0,
 "coast": 44087.0,
-"neighbours": []
+"neighbours": [
+{
+"iso": "ca",
+"km": null,
+"via": null
+},
+{
+"iso": "de",
+"km": null,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "ca",
+"via": null
+},
+{
+"iso": "de",
+"via": null
+},
+{
+"iso": "gb",
+"via": null
+},
+{
+"iso": "is",
+"via": null
+},
+{
+"iso": "no",
+"via": null
+},
+{
+"iso": "pl",
+"via": null
+},
+{
+"iso": "se",
+"via": null
+}
+]
 },
 {
 "iso": "gm",
@@ -1531,7 +3042,18 @@
 "neighbours": [
 {
 "iso": "sn",
-"km": 749.0
+"km": 749.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "cv",
+"via": null
+},
+{
+"iso": "sn",
+"via": null
 }
 ]
 },
@@ -1543,27 +3065,43 @@
 "neighbours": [
 {
 "iso": "ml",
-"km": 1062.0
+"km": 1062.0,
+"via": null
 },
 {
 "iso": "ci",
-"km": 816.0
+"km": 816.0,
+"via": null
 },
 {
 "iso": "sl",
-"km": 794.0
+"km": 794.0,
+"via": null
 },
 {
 "iso": "lr",
-"km": 590.0
+"km": 590.0,
+"via": null
 },
 {
 "iso": "gw",
-"km": 421.0
+"km": 421.0,
+"via": null
 },
 {
 "iso": "sn",
-"km": 363.0
+"km": 363.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "gw",
+"via": null
+},
+{
+"iso": "sl",
+"via": null
 }
 ]
 },
@@ -1575,11 +3113,31 @@
 "neighbours": [
 {
 "iso": "ga",
-"km": 345.0
+"km": 345.0,
+"via": null
 },
 {
 "iso": "cm",
-"km": 183.0
+"km": 183.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "cm",
+"via": null
+},
+{
+"iso": "ga",
+"via": null
+},
+{
+"iso": "ng",
+"via": null
+},
+{
+"iso": "st",
+"via": null
 }
 ]
 },
@@ -1591,19 +3149,41 @@
 "neighbours": [
 {
 "iso": "bg",
-"km": 472.0
+"km": 472.0,
+"via": null
 },
 {
 "iso": "mk",
-"km": 234.0
+"km": 234.0,
+"via": null
 },
 {
 "iso": "al",
-"km": 212.0
+"km": 212.0,
+"via": null
 },
 {
 "iso": "tr",
-"km": 192.0
+"km": 192.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "al",
+"via": null
+},
+{
+"iso": "it",
+"via": null
+},
+{
+"iso": "ly",
+"via": null
+},
+{
+"iso": "tr",
+"via": null
 }
 ]
 },
@@ -1615,19 +3195,41 @@
 "neighbours": [
 {
 "iso": "mx",
-"km": 958.0
+"km": 958.0,
+"via": null
 },
 {
 "iso": "bz",
-"km": 266.0
+"km": 266.0,
+"via": null
 },
 {
 "iso": "hn",
-"km": 244.0
+"km": 244.0,
+"via": null
 },
 {
 "iso": "sv",
-"km": 199.0
+"km": 199.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "bz",
+"via": null
+},
+{
+"iso": "hn",
+"via": null
+},
+{
+"iso": "mx",
+"via": null
+},
+{
+"iso": "sv",
+"via": null
 }
 ]
 },
@@ -1636,7 +3238,17 @@
 "num": "316",
 "land": 0.0,
 "coast": 125.5,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "fm",
+"via": null
+},
+{
+"iso": "us",
+"via": null
+}
+]
 },
 {
 "iso": "gw",
@@ -1646,11 +3258,23 @@
 "neighbours": [
 {
 "iso": "gn",
-"km": 421.0
+"km": 421.0,
+"via": null
 },
 {
 "iso": "sn",
-"km": 341.0
+"km": 341.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "gn",
+"via": null
+},
+{
+"iso": "sn",
+"via": null
 }
 ]
 },
@@ -1662,15 +3286,36 @@
 "neighbours": [
 {
 "iso": "br",
-"km": 1308.0
+"km": 1308.0,
+"via": null
 },
 {
 "iso": "sr",
-"km": 836.0
+"km": 836.0,
+"via": null
 },
 {
 "iso": "ve",
-"km": 789.0
+"km": 789.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "bb",
+"via": null
+},
+{
+"iso": "sr",
+"via": null
+},
+{
+"iso": "tt",
+"via": null
+},
+{
+"iso": "ve",
+"via": null
 }
 ]
 },
@@ -1679,7 +3324,8 @@
 "num": "344",
 "land": 33.0,
 "coast": 733.0,
-"neighbours": []
+"neighbours": [],
+"maritime": []
 },
 {
 "iso": "hn",
@@ -1689,15 +3335,56 @@
 "neighbours": [
 {
 "iso": "ni",
-"km": 940.0
+"km": 940.0,
+"via": null
 },
 {
 "iso": "sv",
-"km": 391.0
+"km": 391.0,
+"via": null
 },
 {
 "iso": "gt",
-"km": 244.0
+"km": 244.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "bz",
+"via": null
+},
+{
+"iso": "cu",
+"via": null
+},
+{
+"iso": "gb",
+"via": null
+},
+{
+"iso": "gt",
+"via": null
+},
+{
+"iso": "jm",
+"via": null
+},
+{
+"iso": "ky",
+"via": null
+},
+{
+"iso": "mx",
+"via": null
+},
+{
+"iso": "ni",
+"via": null
+},
+{
+"iso": "sv",
+"via": null
 }
 ]
 },
@@ -1709,23 +3396,46 @@
 "neighbours": [
 {
 "iso": "ba",
-"km": 956.0
+"km": 956.0,
+"via": null
 },
 {
 "iso": "si",
-"km": 600.0
+"km": 600.0,
+"via": null
 },
 {
 "iso": "hu",
-"km": 348.0
+"km": 348.0,
+"via": null
 },
 {
 "iso": "rs",
-"km": 314.0
+"km": 314.0,
+"via": null
 },
 {
 "iso": "me",
-"km": 19.0
+"km": 19.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "ba",
+"via": null
+},
+{
+"iso": "it",
+"via": null
+},
+{
+"iso": "me",
+"via": null
+},
+{
+"iso": "si",
+"via": null
 }
 ]
 },
@@ -1737,7 +3447,38 @@
 "neighbours": [
 {
 "iso": "do",
-"km": 376.0
+"km": 376.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "bs",
+"via": null
+},
+{
+"iso": "co",
+"via": null
+},
+{
+"iso": "cu",
+"via": null
+},
+{
+"iso": "do",
+"via": null
+},
+{
+"iso": "gb",
+"via": null
+},
+{
+"iso": "jm",
+"via": null
+},
+{
+"iso": "us",
+"via": "Navassa Island"
 }
 ]
 },
@@ -1749,33 +3490,41 @@
 "neighbours": [
 {
 "iso": "sk",
-"km": 627.0
+"km": 627.0,
+"via": null
 },
 {
 "iso": "ro",
-"km": 424.0
+"km": 424.0,
+"via": null
 },
 {
 "iso": "hr",
-"km": 348.0
+"km": 348.0,
+"via": null
 },
 {
 "iso": "at",
-"km": 321.0
+"km": 321.0,
+"via": null
 },
 {
 "iso": "rs",
-"km": 164.0
+"km": 164.0,
+"via": null
 },
 {
 "iso": "ua",
-"km": 128.0
+"km": 128.0,
+"via": null
 },
 {
 "iso": "si",
-"km": 94.0
+"km": 94.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "id",
@@ -1785,15 +3534,56 @@
 "neighbours": [
 {
 "iso": "my",
-"km": 1881.0
+"km": 1881.0,
+"via": null
 },
 {
 "iso": "pg",
-"km": 824.0
+"km": 824.0,
+"via": null
 },
 {
 "iso": "tl",
-"km": 253.0
+"km": 253.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "au",
+"via": null
+},
+{
+"iso": "in",
+"via": null
+},
+{
+"iso": "my",
+"via": null
+},
+{
+"iso": "pg",
+"via": null
+},
+{
+"iso": "ph",
+"via": null
+},
+{
+"iso": "pw",
+"via": null
+},
+{
+"iso": "sg",
+"via": null
+},
+{
+"iso": "th",
+"via": null
+},
+{
+"iso": "tl",
+"via": null
 }
 ]
 },
@@ -1805,7 +3595,19 @@
 "neighbours": [
 {
 "iso": "gb",
-"km": 499.0
+"km": 499.0,
+"via": null
+},
+{
+"iso": "gb-nir",
+"km": null,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "gb",
+"via": null
 }
 ]
 },
@@ -1817,23 +3619,50 @@
 "neighbours": [
 {
 "iso": "ps",
-"km": 389.0
+"km": 330.0,
+"via": null
 },
 {
 "iso": "jo",
-"km": 327.0
+"km": 307.0,
+"via": null
 },
 {
 "iso": "eg",
-"km": 208.0
+"km": 208.0,
+"via": null
 },
 {
 "iso": "sy",
-"km": 83.0
+"km": 83.0,
+"via": null
 },
 {
 "iso": "lb",
-"km": 81.0
+"km": 81.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "cy",
+"via": null
+},
+{
+"iso": "eg",
+"via": null
+},
+{
+"iso": "jo",
+"via": null
+},
+{
+"iso": "lb",
+"via": null
+},
+{
+"iso": "ps",
+"via": null
 }
 ]
 },
@@ -1842,7 +3671,13 @@
 "num": "833",
 "land": 0.0,
 "coast": 160.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "gb",
+"via": null
+}
+]
 },
 {
 "iso": "in",
@@ -1852,27 +3687,63 @@
 "neighbours": [
 {
 "iso": "bd",
-"km": 4142.0
+"km": 4142.0,
+"via": null
 },
 {
 "iso": "pk",
-"km": 3190.0
+"km": 3190.0,
+"via": null
 },
 {
 "iso": "cn",
-"km": 2659.0
+"km": 2659.0,
+"via": null
 },
 {
 "iso": "np",
-"km": 1770.0
+"km": 1770.0,
+"via": null
 },
 {
 "iso": "mm",
-"km": 1468.0
+"km": 1468.0,
+"via": null
 },
 {
 "iso": "bt",
-"km": 659.0
+"km": 659.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "bd",
+"via": null
+},
+{
+"iso": "id",
+"via": null
+},
+{
+"iso": "lk",
+"via": null
+},
+{
+"iso": "mm",
+"via": null
+},
+{
+"iso": "mv",
+"via": null
+},
+{
+"iso": "pk",
+"via": null
+},
+{
+"iso": "th",
+"via": null
 }
 ]
 },
@@ -1884,27 +3755,43 @@
 "neighbours": [
 {
 "iso": "ir",
-"km": 1599.0
+"km": 1599.0,
+"via": null
 },
 {
 "iso": "sa",
-"km": 811.0
+"km": 811.0,
+"via": null
 },
 {
 "iso": "sy",
-"km": 599.0
+"km": 599.0,
+"via": null
 },
 {
 "iso": "tr",
-"km": 367.0
+"km": 367.0,
+"via": null
 },
 {
 "iso": "kw",
-"km": 254.0
+"km": 254.0,
+"via": null
 },
 {
 "iso": "jo",
-"km": 179.0
+"km": 179.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "ir",
+"via": null
+},
+{
+"iso": "kw",
+"via": null
 }
 ]
 },
@@ -1916,31 +3803,80 @@
 "neighbours": [
 {
 "iso": "iq",
-"km": 1599.0
+"km": 1599.0,
+"via": null
 },
 {
 "iso": "tm",
-"km": 1148.0
+"km": 1148.0,
+"via": null
 },
 {
 "iso": "pk",
-"km": 959.0
+"km": 959.0,
+"via": null
 },
 {
 "iso": "af",
-"km": 921.0
+"km": 921.0,
+"via": null
 },
 {
 "iso": "az",
-"km": 689.0
+"km": 689.0,
+"via": null
 },
 {
 "iso": "tr",
-"km": 534.0
+"km": 534.0,
+"via": null
 },
 {
 "iso": "am",
-"km": 44.0
+"km": 44.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "ae",
+"via": null
+},
+{
+"iso": "az",
+"via": null
+},
+{
+"iso": "bh",
+"via": null
+},
+{
+"iso": "iq",
+"via": null
+},
+{
+"iso": "kw",
+"via": null
+},
+{
+"iso": "om",
+"via": null
+},
+{
+"iso": "pk",
+"via": null
+},
+{
+"iso": "qa",
+"via": null
+},
+{
+"iso": "sa",
+"via": null
+},
+{
+"iso": "tm",
+"via": null
 }
 ]
 },
@@ -1949,7 +3885,25 @@
 "num": "352",
 "land": 0.0,
 "coast": 4970.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "dk",
+"via": null
+},
+{
+"iso": "fo",
+"via": null
+},
+{
+"iso": "gl",
+"via": null
+},
+{
+"iso": "no",
+"via": null
+}
+]
 },
 {
 "iso": "it",
@@ -1959,27 +3913,79 @@
 "neighbours": [
 {
 "iso": "ch",
-"km": 698.0
+"km": 698.0,
+"via": null
 },
 {
 "iso": "fr",
-"km": 476.0
+"km": 476.0,
+"via": null
 },
 {
 "iso": "at",
-"km": 404.0
+"km": 404.0,
+"via": null
 },
 {
 "iso": "si",
-"km": 218.0
+"km": 218.0,
+"via": null
 },
 {
 "iso": "sm",
-"km": 37.0
+"km": 37.0,
+"via": null
 },
 {
 "iso": "va",
-"km": 3.4
+"km": 3.4,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "al",
+"via": null
+},
+{
+"iso": "dz",
+"via": null
+},
+{
+"iso": "es",
+"via": null
+},
+{
+"iso": "fr",
+"via": null
+},
+{
+"iso": "gr",
+"via": null
+},
+{
+"iso": "hr",
+"via": null
+},
+{
+"iso": "ly",
+"via": null
+},
+{
+"iso": "me",
+"via": null
+},
+{
+"iso": "mt",
+"via": null
+},
+{
+"iso": "si",
+"via": null
+},
+{
+"iso": "tn",
+"via": null
 }
 ]
 },
@@ -1988,14 +3994,58 @@
 "num": "832",
 "land": 0.0,
 "coast": 70.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "fr",
+"via": null
+},
+{
+"iso": "gb",
+"via": null
+}
+]
 },
 {
 "iso": "jm",
 "num": "388",
 "land": 0.0,
 "coast": 1022.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "co",
+"via": null
+},
+{
+"iso": "cu",
+"via": null
+},
+{
+"iso": "gb",
+"via": null
+},
+{
+"iso": "hn",
+"via": null
+},
+{
+"iso": "ht",
+"via": null
+},
+{
+"iso": "ky",
+"via": null
+},
+{
+"iso": "ni",
+"via": null
+},
+{
+"iso": "us",
+"via": "Navassa Island"
+}
+]
 },
 {
 "iso": "jo",
@@ -2005,23 +4055,42 @@
 "neighbours": [
 {
 "iso": "sa",
-"km": 731.0
+"km": 731.0,
+"via": null
 },
 {
 "iso": "sy",
-"km": 379.0
+"km": 379.0,
+"via": null
 },
 {
 "iso": "il",
-"km": 307.0
+"km": 307.0,
+"via": null
 },
 {
 "iso": "iq",
-"km": 179.0
+"km": 179.0,
+"via": null
 },
 {
 "iso": "ps",
-"km": 148.0
+"km": 148.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "eg",
+"via": null
+},
+{
+"iso": "il",
+"via": null
+},
+{
+"iso": "sa",
+"via": null
 }
 ]
 },
@@ -2030,7 +4099,25 @@
 "num": "392",
 "land": 0.0,
 "coast": 29751.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "cn",
+"via": null
+},
+{
+"iso": "ph",
+"via": null
+},
+{
+"iso": "ru",
+"via": null
+},
+{
+"iso": "us",
+"via": "Northern Mariana Islands"
+}
+]
 },
 {
 "iso": "ke",
@@ -2040,23 +4127,38 @@
 "neighbours": [
 {
 "iso": "et",
-"km": 867.0
+"km": 867.0,
+"via": null
 },
 {
 "iso": "ug",
-"km": 814.0
+"km": 814.0,
+"via": null
 },
 {
 "iso": "tz",
-"km": 775.0
+"km": 775.0,
+"via": null
 },
 {
 "iso": "so",
-"km": 684.0
+"km": 684.0,
+"via": null
 },
 {
 "iso": "ss",
-"km": 317.0
+"km": 317.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "so",
+"via": null
+},
+{
+"iso": "tz",
+"via": null
 }
 ]
 },
@@ -2068,21 +4170,26 @@
 "neighbours": [
 {
 "iso": "uz",
-"km": 1314.0
+"km": 1314.0,
+"via": null
 },
 {
 "iso": "kz",
-"km": 1212.0
+"km": 1212.0,
+"via": null
 },
 {
 "iso": "cn",
-"km": 1063.0
+"km": 1063.0,
+"via": null
 },
 {
 "iso": "tj",
-"km": 984.0
+"km": 984.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "kh",
@@ -2092,15 +4199,28 @@
 "neighbours": [
 {
 "iso": "vn",
-"km": 1158.0
+"km": 1158.0,
+"via": null
 },
 {
 "iso": "th",
-"km": 817.0
+"km": 817.0,
+"via": null
 },
 {
 "iso": "la",
-"km": 555.0
+"km": 555.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "th",
+"via": null
+},
+{
+"iso": "vn",
+"via": null
 }
 ]
 },
@@ -2109,21 +4229,99 @@
 "num": "296",
 "land": 0.0,
 "coast": 1143.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "fr",
+"via": null
+},
+{
+"iso": "mh",
+"via": null
+},
+{
+"iso": "nr",
+"via": null
+},
+{
+"iso": "nz",
+"via": null
+},
+{
+"iso": "pf",
+"via": null
+},
+{
+"iso": "tv",
+"via": null
+},
+{
+"iso": "us",
+"via": null
+}
+]
 },
 {
 "iso": "km",
 "num": "174",
 "land": 0.0,
 "coast": 340.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "fr",
+"via": null
+},
+{
+"iso": "mg",
+"via": null
+},
+{
+"iso": "mz",
+"via": null
+},
+{
+"iso": "sc",
+"via": null
+},
+{
+"iso": "tz",
+"via": null
+}
+]
 },
 {
 "iso": "kn",
 "num": "659",
 "land": 0.0,
 "coast": 135.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "ag",
+"via": null
+},
+{
+"iso": "fr",
+"via": null
+},
+{
+"iso": "gb",
+"via": null
+},
+{
+"iso": "nl",
+"via": null
+},
+{
+"iso": "sx",
+"via": null
+},
+{
+"iso": "ve",
+"via": null
+}
+]
 },
 {
 "iso": "kp",
@@ -2133,15 +4331,32 @@
 "neighbours": [
 {
 "iso": "cn",
-"km": 1352.0
+"km": 1352.0,
+"via": null
 },
 {
 "iso": "kr",
-"km": 237.0
+"km": 237.0,
+"via": null
 },
 {
 "iso": "ru",
-"km": 18.0
+"km": 18.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "cn",
+"via": null
+},
+{
+"iso": "kr",
+"via": null
+},
+{
+"iso": "ru",
+"via": null
 }
 ]
 },
@@ -2153,7 +4368,22 @@
 "neighbours": [
 {
 "iso": "kp",
-"km": 237.0
+"km": 237.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "cn",
+"via": null
+},
+{
+"iso": "kp",
+"via": null
+},
+{
+"iso": "ru",
+"via": null
 }
 ]
 },
@@ -2165,11 +4395,27 @@
 "neighbours": [
 {
 "iso": "iq",
-"km": 254.0
+"km": 254.0,
+"via": null
 },
 {
 "iso": "sa",
-"km": 221.0
+"km": 221.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "iq",
+"via": null
+},
+{
+"iso": "ir",
+"via": null
+},
+{
+"iso": "sa",
+"via": null
 }
 ]
 },
@@ -2178,7 +4424,21 @@
 "num": "136",
 "land": 0.0,
 "coast": 160.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "cu",
+"via": null
+},
+{
+"iso": "hn",
+"via": null
+},
+{
+"iso": "jm",
+"via": null
+}
+]
 },
 {
 "iso": "kz",
@@ -2188,23 +4448,38 @@
 "neighbours": [
 {
 "iso": "ru",
-"km": 7644.0
+"km": 7644.0,
+"via": null
 },
 {
 "iso": "uz",
-"km": 2330.0
+"km": 2330.0,
+"via": null
 },
 {
 "iso": "cn",
-"km": 1765.0
+"km": 1765.0,
+"via": null
 },
 {
 "iso": "kg",
-"km": 1212.0
+"km": 1212.0,
+"via": null
 },
 {
 "iso": "tm",
-"km": 413.0
+"km": 413.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "ru",
+"via": null
+},
+{
+"iso": "tm",
+"via": null
 }
 ]
 },
@@ -2216,25 +4491,31 @@
 "neighbours": [
 {
 "iso": "vn",
-"km": 2161.0
+"km": 2161.0,
+"via": null
 },
 {
 "iso": "th",
-"km": 1845.0
+"km": 1845.0,
+"via": null
 },
 {
 "iso": "kh",
-"km": 555.0
+"km": 555.0,
+"via": null
 },
 {
 "iso": "cn",
-"km": 475.0
+"km": 475.0,
+"via": null
 },
 {
 "iso": "mm",
-"km": 238.0
+"km": 238.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "lb",
@@ -2244,11 +4525,27 @@
 "neighbours": [
 {
 "iso": "sy",
-"km": 403.0
+"km": 403.0,
+"via": null
 },
 {
 "iso": "il",
-"km": 81.0
+"km": 81.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "cy",
+"via": null
+},
+{
+"iso": "il",
+"via": null
+},
+{
+"iso": "sy",
+"via": null
 }
 ]
 },
@@ -2257,7 +4554,25 @@
 "num": "662",
 "land": 0.0,
 "coast": 158.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "bb",
+"via": null
+},
+{
+"iso": "fr",
+"via": null
+},
+{
+"iso": "vc",
+"via": null
+},
+{
+"iso": "ve",
+"via": null
+}
+]
 },
 {
 "iso": "li",
@@ -2267,20 +4582,33 @@
 "neighbours": [
 {
 "iso": "ch",
-"km": 41.0
+"km": 41.0,
+"via": null
 },
 {
 "iso": "at",
-"km": 34.0
+"km": 34.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "lk",
 "num": "144",
 "land": 0.0,
 "coast": 1340.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "in",
+"via": null
+},
+{
+"iso": "mv",
+"via": null
+}
+]
 },
 {
 "iso": "lr",
@@ -2290,15 +4618,28 @@
 "neighbours": [
 {
 "iso": "ci",
-"km": 778.0
+"km": 778.0,
+"via": null
 },
 {
 "iso": "gn",
-"km": 590.0
+"km": 590.0,
+"via": null
 },
 {
 "iso": "sl",
-"km": 299.0
+"km": 299.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "ci",
+"via": null
+},
+{
+"iso": "sl",
+"via": null
 }
 ]
 },
@@ -2310,9 +4651,11 @@
 "neighbours": [
 {
 "iso": "za",
-"km": 1106.0
+"km": 1106.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "lt",
@@ -2322,19 +4665,37 @@
 "neighbours": [
 {
 "iso": "by",
-"km": 640.0
+"km": 640.0,
+"via": null
 },
 {
 "iso": "lv",
-"km": 544.0
+"km": 544.0,
+"via": null
 },
 {
 "iso": "ru",
-"km": 261.0
+"km": 261.0,
+"via": null
 },
 {
 "iso": "pl",
-"km": 100.0
+"km": 100.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "lv",
+"via": null
+},
+{
+"iso": "ru",
+"via": null
+},
+{
+"iso": "se",
+"via": null
 }
 ]
 },
@@ -2346,17 +4707,21 @@
 "neighbours": [
 {
 "iso": "be",
-"km": 130.0
+"km": 130.0,
+"via": null
 },
 {
 "iso": "de",
-"km": 128.0
+"km": 128.0,
+"via": null
 },
 {
 "iso": "fr",
-"km": 69.0
+"km": 69.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "lv",
@@ -2366,19 +4731,37 @@
 "neighbours": [
 {
 "iso": "lt",
-"km": 544.0
+"km": 544.0,
+"via": null
 },
 {
 "iso": "ee",
-"km": 333.0
+"km": 333.0,
+"via": null
 },
 {
 "iso": "ru",
-"km": 332.0
+"km": 332.0,
+"via": null
 },
 {
 "iso": "by",
-"km": 161.0
+"km": 161.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "ee",
+"via": null
+},
+{
+"iso": "lt",
+"via": null
+},
+{
+"iso": "se",
+"via": null
 }
 ]
 },
@@ -2390,27 +4773,55 @@
 "neighbours": [
 {
 "iso": "eg",
-"km": 1115.0
+"km": 1115.0,
+"via": null
 },
 {
 "iso": "td",
-"km": 1050.0
+"km": 1050.0,
+"via": null
 },
 {
 "iso": "dz",
-"km": 989.0
+"km": 989.0,
+"via": null
 },
 {
 "iso": "tn",
-"km": 461.0
+"km": 461.0,
+"via": null
 },
 {
 "iso": "sd",
-"km": 382.0
+"km": 382.0,
+"via": null
 },
 {
 "iso": "ne",
-"km": 342.0
+"km": 342.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "eg",
+"via": null
+},
+{
+"iso": "gr",
+"via": null
+},
+{
+"iso": "it",
+"via": null
+},
+{
+"iso": "mt",
+"via": null
+},
+{
+"iso": "tn",
+"via": null
 }
 ]
 },
@@ -2422,15 +4833,36 @@
 "neighbours": [
 {
 "iso": "dz",
-"km": 1941.0
+"km": 1941.0,
+"via": null
 },
 {
 "iso": "mr",
-"km": 1564.0
+"km": 1564.0,
+"via": null
 },
 {
 "iso": "es",
-"km": 8.0
+"km": 8.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "dz",
+"via": null
+},
+{
+"iso": "es",
+"via": null
+},
+{
+"iso": "mr",
+"via": "Western Sahara"
+},
+{
+"iso": "pt",
+"via": null
 }
 ]
 },
@@ -2442,9 +4874,11 @@
 "neighbours": [
 {
 "iso": "fr",
-"km": 6.0
+"km": 6.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "md",
@@ -2454,13 +4888,16 @@
 "neighbours": [
 {
 "iso": "ua",
-"km": 1202.0
+"km": 1202.0,
+"via": null
 },
 {
 "iso": "ro",
-"km": 683.0
+"km": 683.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "me",
@@ -2470,23 +4907,42 @@
 "neighbours": [
 {
 "iso": "ba",
-"km": 242.0
+"km": 242.0,
+"via": null
 },
 {
 "iso": "al",
-"km": 186.0
+"km": 186.0,
+"via": null
 },
 {
 "iso": "rs",
-"km": 157.0
+"km": 157.0,
+"via": null
 },
 {
 "iso": "xk",
-"km": 76.0
+"km": 76.0,
+"via": null
 },
 {
 "iso": "hr",
-"km": 19.0
+"km": 19.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "al",
+"via": null
+},
+{
+"iso": "hr",
+"via": null
+},
+{
+"iso": "it",
+"via": null
 }
 ]
 },
@@ -2495,14 +4951,54 @@
 "num": "450",
 "land": 0.0,
 "coast": 4828.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "fr",
+"via": null
+},
+{
+"iso": "km",
+"via": null
+},
+{
+"iso": "mu",
+"via": null
+},
+{
+"iso": "mz",
+"via": null
+},
+{
+"iso": "sc",
+"via": null
+}
+]
 },
 {
 "iso": "mh",
 "num": "584",
 "land": 0.0,
 "coast": 370.4,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "fm",
+"via": null
+},
+{
+"iso": "ki",
+"via": null
+},
+{
+"iso": "nr",
+"via": null
+},
+{
+"iso": "us",
+"via": null
+}
+]
 },
 {
 "iso": "mk",
@@ -2512,25 +5008,31 @@
 "neighbours": [
 {
 "iso": "gr",
-"km": 234.0
+"km": 234.0,
+"via": null
 },
 {
 "iso": "al",
-"km": 181.0
+"km": 181.0,
+"via": null
 },
 {
 "iso": "bg",
-"km": 162.0
+"km": 162.0,
+"via": null
 },
 {
 "iso": "xk",
-"km": 160.0
+"km": 160.0,
+"via": null
 },
 {
 "iso": "rs",
-"km": 101.0
+"km": 101.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "ml",
@@ -2540,29 +5042,41 @@
 "neighbours": [
 {
 "iso": "mr",
-"km": 2236.0
+"km": 2236.0,
+"via": null
 },
 {
 "iso": "dz",
-"km": 1359.0
+"km": 1359.0,
+"via": null
 },
 {
 "iso": "bf",
-"km": 1325.0
+"km": 1325.0,
+"via": null
 },
 {
 "iso": "gn",
-"km": 1062.0
+"km": 1062.0,
+"via": null
 },
 {
 "iso": "ne",
-"km": 838.0
+"km": 838.0,
+"via": null
 },
 {
 "iso": "ci",
-"km": 599.0
+"km": 599.0,
+"via": null
+},
+{
+"iso": "sn",
+"km": 489.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "mm",
@@ -2572,23 +5086,42 @@
 "neighbours": [
 {
 "iso": "th",
-"km": 2416.0
+"km": 2416.0,
+"via": null
 },
 {
 "iso": "cn",
-"km": 2129.0
+"km": 2129.0,
+"via": null
 },
 {
 "iso": "in",
-"km": 1468.0
+"km": 1468.0,
+"via": null
 },
 {
 "iso": "bd",
-"km": 271.0
+"km": 271.0,
+"via": null
 },
 {
 "iso": "la",
-"km": 238.0
+"km": 238.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "bd",
+"via": null
+},
+{
+"iso": "in",
+"via": null
+},
+{
+"iso": "th",
+"via": null
 }
 ]
 },
@@ -2600,20 +5133,24 @@
 "neighbours": [
 {
 "iso": "cn",
-"km": 4630.0
+"km": 4630.0,
+"via": null
 },
 {
 "iso": "ru",
-"km": 3452.0
+"km": 3452.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "mo",
 "num": "446",
 "land": 3.0,
 "coast": 41.0,
-"neighbours": []
+"neighbours": [],
+"maritime": []
 },
 {
 "iso": "mr",
@@ -2623,19 +5160,37 @@
 "neighbours": [
 {
 "iso": "ml",
-"km": 2236.0
+"km": 2236.0,
+"via": null
 },
 {
 "iso": "ma",
-"km": 1564.0
+"km": 1564.0,
+"via": null
 },
 {
 "iso": "sn",
-"km": 742.0
+"km": 742.0,
+"via": null
 },
 {
 "iso": "dz",
-"km": 460.0
+"km": 460.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "cv",
+"via": null
+},
+{
+"iso": "ma",
+"via": "Western Sahara"
+},
+{
+"iso": "sn",
+"via": null
 }
 ]
 },
@@ -2644,21 +5199,59 @@
 "num": "470",
 "land": 0.0,
 "coast": 196.8,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "it",
+"via": null
+},
+{
+"iso": "ly",
+"via": null
+}
+]
 },
 {
 "iso": "mu",
 "num": "480",
 "land": 0.0,
 "coast": 177.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "fr",
+"via": null
+},
+{
+"iso": "mg",
+"via": null
+},
+{
+"iso": "sc",
+"via": null
+}
+]
 },
 {
 "iso": "mv",
 "num": "462",
 "land": 0.0,
 "coast": 644.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "gb",
+"via": null
+},
+{
+"iso": "in",
+"via": null
+},
+{
+"iso": "lk",
+"via": null
+}
+]
 },
 {
 "iso": "mw",
@@ -2668,17 +5261,21 @@
 "neighbours": [
 {
 "iso": "mz",
-"km": 1498.0
+"km": 1498.0,
+"via": null
 },
 {
 "iso": "zm",
-"km": 847.0
+"km": 847.0,
+"via": null
 },
 {
 "iso": "tz",
-"km": 512.0
+"km": 512.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "mx",
@@ -2688,15 +5285,40 @@
 "neighbours": [
 {
 "iso": "us",
-"km": 3155.0
+"km": 3155.0,
+"via": null
 },
 {
 "iso": "gt",
-"km": 958.0
+"km": 958.0,
+"via": null
 },
 {
 "iso": "bz",
-"km": 276.0
+"km": 276.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "bz",
+"via": null
+},
+{
+"iso": "cu",
+"via": null
+},
+{
+"iso": "gt",
+"via": null
+},
+{
+"iso": "hn",
+"via": null
+},
+{
+"iso": "us",
+"via": null
 }
 ]
 },
@@ -2708,15 +5330,40 @@
 "neighbours": [
 {
 "iso": "id",
-"km": 1881.0
+"km": 1881.0,
+"via": null
 },
 {
 "iso": "th",
-"km": 595.0
+"km": 595.0,
+"via": null
 },
 {
 "iso": "bn",
-"km": 266.0
+"km": 266.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "bn",
+"via": null
+},
+{
+"iso": "id",
+"via": null
+},
+{
+"iso": "ph",
+"via": null
+},
+{
+"iso": "sg",
+"via": null
+},
+{
+"iso": "th",
+"via": null
 }
 ]
 },
@@ -2728,27 +5375,55 @@
 "neighbours": [
 {
 "iso": "mw",
-"km": 1498.0
+"km": 1498.0,
+"via": null
 },
 {
 "iso": "zw",
-"km": 1402.0
+"km": 1402.0,
+"via": null
 },
 {
 "iso": "tz",
-"km": 840.0
+"km": 840.0,
+"via": null
 },
 {
 "iso": "za",
-"km": 496.0
+"km": 496.0,
+"via": null
 },
 {
 "iso": "zm",
-"km": 439.0
+"km": 439.0,
+"via": null
 },
 {
 "iso": "sz",
-"km": 108.0
+"km": 108.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "fr",
+"via": "Wallis and Futuna"
+},
+{
+"iso": "km",
+"via": null
+},
+{
+"iso": "mg",
+"via": null
+},
+{
+"iso": "tz",
+"via": null
+},
+{
+"iso": "za",
+"via": null
 }
 ]
 },
@@ -2760,19 +5435,33 @@
 "neighbours": [
 {
 "iso": "bw",
-"km": 1544.0
+"km": 1544.0,
+"via": null
 },
 {
 "iso": "ao",
-"km": 1427.0
+"km": 1427.0,
+"via": null
 },
 {
 "iso": "za",
-"km": 1005.0
+"km": 1005.0,
+"via": null
 },
 {
 "iso": "zm",
-"km": 244.0
+"km": 244.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "ao",
+"via": null
+},
+{
+"iso": "za",
+"via": null
 }
 ]
 },
@@ -2781,7 +5470,25 @@
 "num": "540",
 "land": 0.0,
 "coast": 2254.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "au",
+"via": null
+},
+{
+"iso": "fj",
+"via": null
+},
+{
+"iso": "sb",
+"via": null
+},
+{
+"iso": "vu",
+"via": null
+}
+]
 },
 {
 "iso": "ne",
@@ -2791,33 +5498,41 @@
 "neighbours": [
 {
 "iso": "ng",
-"km": 1608.0
+"km": 1608.0,
+"via": null
 },
 {
 "iso": "td",
-"km": 1196.0
+"km": 1196.0,
+"via": null
 },
 {
 "iso": "dz",
-"km": 951.0
+"km": 951.0,
+"via": null
 },
 {
 "iso": "ml",
-"km": 838.0
+"km": 838.0,
+"via": null
 },
 {
 "iso": "bf",
-"km": 622.0
+"km": 622.0,
+"via": null
 },
 {
 "iso": "ly",
-"km": 342.0
+"km": 342.0,
+"via": null
 },
 {
 "iso": "bj",
-"km": 277.0
+"km": 277.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "ng",
@@ -2827,19 +5542,41 @@
 "neighbours": [
 {
 "iso": "cm",
-"km": 1975.0
+"km": 1975.0,
+"via": null
 },
 {
 "iso": "ne",
-"km": 1608.0
+"km": 1608.0,
+"via": null
 },
 {
 "iso": "bj",
-"km": 809.0
+"km": 809.0,
+"via": null
 },
 {
 "iso": "td",
-"km": 85.0
+"km": 85.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "bj",
+"via": null
+},
+{
+"iso": "cm",
+"via": null
+},
+{
+"iso": "gq",
+"via": null
+},
+{
+"iso": "st",
+"via": null
 }
 ]
 },
@@ -2851,11 +5588,39 @@
 "neighbours": [
 {
 "iso": "hn",
-"km": 940.0
+"km": 940.0,
+"via": null
 },
 {
 "iso": "cr",
-"km": 313.0
+"km": 313.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "co",
+"via": null
+},
+{
+"iso": "cr",
+"via": null
+},
+{
+"iso": "hn",
+"via": null
+},
+{
+"iso": "jm",
+"via": null
+},
+{
+"iso": "pa",
+"via": null
+},
+{
+"iso": "sv",
+"via": null
 }
 ]
 },
@@ -2867,11 +5632,60 @@
 "neighbours": [
 {
 "iso": "de",
-"km": 575.0
+"km": 575.0,
+"via": null
 },
 {
 "iso": "be",
-"km": 478.0
+"km": 478.0,
+"via": null
+},
+{
+"iso": "fr",
+"km": null,
+"via": "Wallis and Futuna"
+}
+],
+"maritime": [
+{
+"iso": "aw",
+"via": null
+},
+{
+"iso": "be",
+"via": null
+},
+{
+"iso": "cw",
+"via": null
+},
+{
+"iso": "de",
+"via": null
+},
+{
+"iso": "do",
+"via": null
+},
+{
+"iso": "fr",
+"via": null
+},
+{
+"iso": "gb",
+"via": null
+},
+{
+"iso": "kn",
+"via": null
+},
+{
+"iso": "us",
+"via": null
+},
+{
+"iso": "ve",
+"via": null
 }
 ]
 },
@@ -2883,15 +5697,48 @@
 "neighbours": [
 {
 "iso": "se",
-"km": 1666.0
+"km": 1666.0,
+"via": null
 },
 {
 "iso": "fi",
-"km": 709.0
+"km": 709.0,
+"via": null
 },
 {
 "iso": "ru",
-"km": 191.0
+"km": 191.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "cl",
+"via": "Peter I Island"
+},
+{
+"iso": "dk",
+"via": null
+},
+{
+"iso": "gb",
+"via": null
+},
+{
+"iso": "gl",
+"via": null
+},
+{
+"iso": "is",
+"via": null
+},
+{
+"iso": "ru",
+"via": null
+},
+{
+"iso": "se",
+"via": null
 }
 ]
 },
@@ -2903,27 +5750,74 @@
 "neighbours": [
 {
 "iso": "in",
-"km": 1770.0
+"km": 1770.0,
+"via": null
 },
 {
 "iso": "cn",
-"km": 1389.0
+"km": 1389.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "nr",
 "num": "520",
 "land": 0.0,
 "coast": 30.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "ki",
+"via": null
+},
+{
+"iso": "mh",
+"via": null
+}
+]
 },
 {
 "iso": "nz",
 "num": "554",
 "land": 0.0,
 "coast": 15134.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "au",
+"via": null
+},
+{
+"iso": "fj",
+"via": null
+},
+{
+"iso": "fr",
+"via": "Wallis and Futuna"
+},
+{
+"iso": "ki",
+"via": null
+},
+{
+"iso": "pf",
+"via": null
+},
+{
+"iso": "to",
+"via": null
+},
+{
+"iso": "us",
+"via": "Cook Islands"
+},
+{
+"iso": "ws",
+"via": null
+}
+]
 },
 {
 "iso": "om",
@@ -2933,15 +5827,36 @@
 "neighbours": [
 {
 "iso": "sa",
-"km": 658.0
+"km": 658.0,
+"via": null
 },
 {
 "iso": "ae",
-"km": 609.0
+"km": 609.0,
+"via": null
 },
 {
 "iso": "ye",
-"km": 294.0
+"km": 294.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "ae",
+"via": null
+},
+{
+"iso": "ir",
+"via": null
+},
+{
+"iso": "pk",
+"via": null
+},
+{
+"iso": "ye",
+"via": null
 }
 ]
 },
@@ -2953,11 +5868,27 @@
 "neighbours": [
 {
 "iso": "cr",
-"km": 348.0
+"km": 348.0,
+"via": null
 },
 {
 "iso": "co",
-"km": 339.0
+"km": 339.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "co",
+"via": null
+},
+{
+"iso": "cr",
+"via": null
+},
+{
+"iso": "ni",
+"via": null
 }
 ]
 },
@@ -2969,23 +5900,38 @@
 "neighbours": [
 {
 "iso": "br",
-"km": 2659.0
+"km": 2659.0,
+"via": null
 },
 {
 "iso": "ec",
-"km": 1529.0
+"km": 1529.0,
+"via": null
 },
 {
 "iso": "co",
-"km": 1494.0
+"km": 1494.0,
+"via": null
 },
 {
 "iso": "bo",
-"km": 1212.0
+"km": 1212.0,
+"via": null
 },
 {
 "iso": "cl",
-"km": 168.0
+"km": 168.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "cl",
+"via": null
+},
+{
+"iso": "ec",
+"via": null
 }
 ]
 },
@@ -2994,7 +5940,21 @@
 "num": "258",
 "land": 0.0,
 "coast": 2525.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "gb",
+"via": "Turks and Caicos"
+},
+{
+"iso": "ki",
+"via": null
+},
+{
+"iso": "nz",
+"via": null
+}
+]
 },
 {
 "iso": "pg",
@@ -3004,7 +5964,26 @@
 "neighbours": [
 {
 "iso": "id",
-"km": 824.0
+"km": 824.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "au",
+"via": null
+},
+{
+"iso": "fm",
+"via": null
+},
+{
+"iso": "id",
+"via": null
+},
+{
+"iso": "sb",
+"via": null
 }
 ]
 },
@@ -3013,7 +5992,25 @@
 "num": "608",
 "land": 0.0,
 "coast": 36289.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "id",
+"via": null
+},
+{
+"iso": "jp",
+"via": null
+},
+{
+"iso": "my",
+"via": null
+},
+{
+"iso": "pw",
+"via": null
+}
+]
 },
 {
 "iso": "pk",
@@ -3023,19 +6020,37 @@
 "neighbours": [
 {
 "iso": "in",
-"km": 3190.0
+"km": 3190.0,
+"via": null
 },
 {
 "iso": "af",
-"km": 2670.0
+"km": 2670.0,
+"via": null
 },
 {
 "iso": "ir",
-"km": 959.0
+"km": 959.0,
+"via": null
 },
 {
 "iso": "cn",
-"km": 438.0
+"km": 438.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "in",
+"via": null
+},
+{
+"iso": "ir",
+"via": null
+},
+{
+"iso": "om",
+"via": null
 }
 ]
 },
@@ -3047,27 +6062,60 @@
 "neighbours": [
 {
 "iso": "cz",
-"km": 699.0
+"km": 699.0,
+"via": null
 },
 {
 "iso": "sk",
-"km": 517.0
+"km": 517.0,
+"via": null
 },
 {
 "iso": "ua",
-"km": 498.0
+"km": 498.0,
+"via": null
 },
 {
 "iso": "de",
-"km": 467.0
+"km": 447.0,
+"via": null
 },
 {
 "iso": "by",
-"km": 375.0
+"km": 375.0,
+"via": null
+},
+{
+"iso": "ru",
+"km": 209.0,
+"via": null
 },
 {
 "iso": "lt",
-"km": 100.0
+"km": 100.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "de",
+"via": null
+},
+{
+"iso": "dk",
+"via": null
+},
+{
+"iso": "gl",
+"via": null
+},
+{
+"iso": "ru",
+"via": null
+},
+{
+"iso": "se",
+"via": null
 }
 ]
 },
@@ -3076,7 +6124,25 @@
 "num": "630",
 "land": 0.0,
 "coast": 501.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "do",
+"via": null
+},
+{
+"iso": "gb",
+"via": null
+},
+{
+"iso": "us",
+"via": null
+},
+{
+"iso": "ve",
+"via": null
+}
+]
 },
 {
 "iso": "ps",
@@ -3086,11 +6152,28 @@
 "neighbours": [
 {
 "iso": "il",
-"km": 330.0
+"km": 330.0,
+"via": null
 },
 {
 "iso": "jo",
-"km": 148.0
+"km": 148.0,
+"via": null
+},
+{
+"iso": "eg",
+"km": 13.0,
+"via": "Gaza Strip"
+}
+],
+"maritime": [
+{
+"iso": "eg",
+"via": null
+},
+{
+"iso": "il",
+"via": null
 }
 ]
 },
@@ -3102,7 +6185,18 @@
 "neighbours": [
 {
 "iso": "es",
-"km": 1224.0
+"km": 1224.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "es",
+"via": null
+},
+{
+"iso": "ma",
+"via": null
 }
 ]
 },
@@ -3111,7 +6205,21 @@
 "num": "585",
 "land": 0.0,
 "coast": 1519.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "fm",
+"via": null
+},
+{
+"iso": "id",
+"via": null
+},
+{
+"iso": "ph",
+"via": null
+}
+]
 },
 {
 "iso": "py",
@@ -3121,17 +6229,21 @@
 "neighbours": [
 {
 "iso": "ar",
-"km": 2531.0
+"km": 2531.0,
+"via": null
 },
 {
 "iso": "br",
-"km": 1371.0
+"km": 1371.0,
+"via": null
 },
 {
 "iso": "bo",
-"km": 753.0
+"km": 753.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "qa",
@@ -3141,7 +6253,26 @@
 "neighbours": [
 {
 "iso": "sa",
-"km": 87.0
+"km": 87.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "ae",
+"via": null
+},
+{
+"iso": "bh",
+"via": null
+},
+{
+"iso": "ir",
+"via": null
+},
+{
+"iso": "sa",
+"via": null
 }
 ]
 },
@@ -3153,23 +6284,42 @@
 "neighbours": [
 {
 "iso": "md",
-"km": 683.0
+"km": 683.0,
+"via": null
 },
 {
 "iso": "bg",
-"km": 605.0
+"km": 605.0,
+"via": null
 },
 {
 "iso": "ua",
-"km": 601.0
+"km": 601.0,
+"via": null
 },
 {
 "iso": "rs",
-"km": 531.0
+"km": 531.0,
+"via": null
 },
 {
 "iso": "hu",
-"km": 424.0
+"km": 424.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "bg",
+"via": null
+},
+{
+"iso": "ru",
+"via": null
+},
+{
+"iso": "ua",
+"via": null
 }
 ]
 },
@@ -3181,37 +6331,46 @@
 "neighbours": [
 {
 "iso": "ro",
-"km": 531.0
+"km": 531.0,
+"via": null
 },
 {
 "iso": "xk",
-"km": 366.0
+"km": 366.0,
+"via": null
 },
 {
 "iso": "ba",
-"km": 345.0
+"km": 345.0,
+"via": null
 },
 {
 "iso": "bg",
-"km": 344.0
+"km": 344.0,
+"via": null
 },
 {
 "iso": "hr",
-"km": 314.0
+"km": 314.0,
+"via": null
 },
 {
 "iso": "hu",
-"km": 164.0
+"km": 164.0,
+"via": null
 },
 {
 "iso": "me",
-"km": 157.0
+"km": 157.0,
+"via": null
 },
 {
 "iso": "mk",
-"km": 101.0
+"km": 101.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "ru",
@@ -3221,59 +6380,139 @@
 "neighbours": [
 {
 "iso": "kz",
-"km": 7644.0
+"km": 7644.0,
+"via": null
 },
 {
 "iso": "cn",
-"km": 4133.0
+"km": 4133.0,
+"via": null
 },
 {
 "iso": "mn",
-"km": 3452.0
+"km": 3452.0,
+"via": null
 },
 {
 "iso": "ua",
-"km": 1944.0
+"km": 1944.0,
+"via": null
 },
 {
 "iso": "by",
-"km": 1312.0
+"km": 1312.0,
+"via": null
 },
 {
 "iso": "fi",
-"km": 1309.0
+"km": 1309.0,
+"via": null
 },
 {
 "iso": "ge",
-"km": 894.0
+"km": 894.0,
+"via": null
 },
 {
 "iso": "az",
-"km": 338.0
+"km": 338.0,
+"via": null
 },
 {
 "iso": "lv",
-"km": 332.0
+"km": 332.0,
+"via": null
 },
 {
 "iso": "ee",
-"km": 324.0
+"km": 324.0,
+"via": null
 },
 {
 "iso": "lt",
-"km": 261.0
+"km": 261.0,
+"via": null
 },
 {
 "iso": "pl",
-"km": 209.0
+"km": 209.0,
+"via": null
 },
 {
 "iso": "no",
-"km": 191.0
+"km": 191.0,
+"via": null
 },
 {
 "iso": "kp",
-"km": 18.0
+"km": 18.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "az",
+"via": null
+},
+{
+"iso": "ee",
+"via": null
+},
+{
+"iso": "fi",
+"via": null
+},
+{
+"iso": "ge",
+"via": null
+},
+{
+"iso": "jp",
+"via": null
+},
+{
+"iso": "kp",
+"via": null
+},
+{
+"iso": "kr",
+"via": null
+},
+{
+"iso": "kz",
+"via": null
+},
+{
+"iso": "lt",
+"via": null
+},
+{
+"iso": "no",
+"via": null
+},
+{
+"iso": "pl",
+"via": null
+},
+{
+"iso": "ro",
+"via": null
+},
+{
+"iso": "se",
+"via": null
+},
+{
+"iso": "tr",
+"via": null
+},
+{
+"iso": "ua",
+"via": null
+},
+{
+"iso": "us",
+"via": null
 }
 ]
 },
@@ -3285,21 +6524,26 @@
 "neighbours": [
 {
 "iso": "bi",
-"km": 315.0
+"km": 315.0,
+"via": null
 },
 {
 "iso": "tz",
-"km": 222.0
+"km": 222.0,
+"via": null
 },
 {
 "iso": "cd",
-"km": 221.0
+"km": 221.0,
+"via": null
 },
 {
 "iso": "ug",
-"km": 172.0
+"km": 172.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "sa",
@@ -3309,31 +6553,80 @@
 "neighbours": [
 {
 "iso": "ye",
-"km": 1307.0
+"km": 1307.0,
+"via": null
 },
 {
 "iso": "iq",
-"km": 811.0
+"km": 811.0,
+"via": null
 },
 {
 "iso": "jo",
-"km": 731.0
+"km": 731.0,
+"via": null
 },
 {
 "iso": "om",
-"km": 658.0
+"km": 658.0,
+"via": null
 },
 {
 "iso": "ae",
-"km": 457.0
+"km": 457.0,
+"via": null
 },
 {
 "iso": "kw",
-"km": 221.0
+"km": 221.0,
+"via": null
 },
 {
 "iso": "qa",
-"km": 87.0
+"km": 87.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "ae",
+"via": null
+},
+{
+"iso": "bh",
+"via": null
+},
+{
+"iso": "eg",
+"via": null
+},
+{
+"iso": "er",
+"via": null
+},
+{
+"iso": "ir",
+"via": null
+},
+{
+"iso": "jo",
+"via": null
+},
+{
+"iso": "kw",
+"via": null
+},
+{
+"iso": "qa",
+"via": null
+},
+{
+"iso": "sd",
+"via": null
+},
+{
+"iso": "ye",
+"via": null
 }
 ]
 },
@@ -3342,14 +6635,62 @@
 "num": "090",
 "land": 0.0,
 "coast": 5313.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "au",
+"via": null
+},
+{
+"iso": "fj",
+"via": null
+},
+{
+"iso": "fr",
+"via": null
+},
+{
+"iso": "nc",
+"via": null
+},
+{
+"iso": "pg",
+"via": null
+},
+{
+"iso": "vu",
+"via": null
+}
+]
 },
 {
 "iso": "sc",
 "num": "690",
 "land": 0.0,
 "coast": 491.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "fr",
+"via": null
+},
+{
+"iso": "km",
+"via": null
+},
+{
+"iso": "mg",
+"via": null
+},
+{
+"iso": "mu",
+"via": null
+},
+{
+"iso": "tz",
+"via": null
+}
+]
 },
 {
 "iso": "sd",
@@ -3359,31 +6700,52 @@
 "neighbours": [
 {
 "iso": "ss",
-"km": 2158.0
+"km": 2158.0,
+"via": null
 },
 {
 "iso": "td",
-"km": 1403.0
+"km": 1403.0,
+"via": null
 },
 {
 "iso": "eg",
-"km": 1276.0
+"km": 1276.0,
+"via": null
 },
 {
 "iso": "et",
-"km": 744.0
+"km": 744.0,
+"via": null
 },
 {
 "iso": "er",
-"km": 682.0
+"km": 682.0,
+"via": null
 },
 {
 "iso": "ly",
-"km": 382.0
+"km": 382.0,
+"via": null
 },
 {
 "iso": "cf",
-"km": 174.0
+"km": 174.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "eg",
+"via": null
+},
+{
+"iso": "er",
+"via": null
+},
+{
+"iso": "sa",
+"via": null
 }
 ]
 },
@@ -3395,11 +6757,59 @@
 "neighbours": [
 {
 "iso": "no",
-"km": 1666.0
+"km": 1666.0,
+"via": null
 },
 {
 "iso": "fi",
-"km": 545.0
+"km": 545.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "ax",
+"via": null
+},
+{
+"iso": "de",
+"via": null
+},
+{
+"iso": "dk",
+"via": null
+},
+{
+"iso": "ee",
+"via": null
+},
+{
+"iso": "fi",
+"via": null
+},
+{
+"iso": "gl",
+"via": null
+},
+{
+"iso": "lt",
+"via": null
+},
+{
+"iso": "lv",
+"via": null
+},
+{
+"iso": "no",
+"via": null
+},
+{
+"iso": "pl",
+"via": null
+},
+{
+"iso": "ru",
+"via": null
 }
 ]
 },
@@ -3408,7 +6818,17 @@
 "num": "702",
 "land": 0.0,
 "coast": 193.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "id",
+"via": null
+},
+{
+"iso": "my",
+"via": null
+}
+]
 },
 {
 "iso": "si",
@@ -3418,19 +6838,33 @@
 "neighbours": [
 {
 "iso": "hr",
-"km": 600.0
+"km": 600.0,
+"via": null
 },
 {
 "iso": "at",
-"km": 299.0
+"km": 299.0,
+"via": null
 },
 {
 "iso": "it",
-"km": 218.0
+"km": 218.0,
+"via": null
 },
 {
 "iso": "hu",
-"km": 94.0
+"km": 94.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "hr",
+"via": null
+},
+{
+"iso": "it",
+"via": null
 }
 ]
 },
@@ -3442,25 +6876,31 @@
 "neighbours": [
 {
 "iso": "hu",
-"km": 627.0
+"km": 627.0,
+"via": null
 },
 {
 "iso": "pl",
-"km": 517.0
+"km": 517.0,
+"via": null
 },
 {
 "iso": "cz",
-"km": 241.0
+"km": 241.0,
+"via": null
 },
 {
 "iso": "at",
-"km": 105.0
+"km": 105.0,
+"via": null
 },
 {
 "iso": "ua",
-"km": 97.0
+"km": 97.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "sl",
@@ -3470,11 +6910,23 @@
 "neighbours": [
 {
 "iso": "gn",
-"km": 794.0
+"km": 794.0,
+"via": null
 },
 {
 "iso": "lr",
-"km": 299.0
+"km": 299.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "gn",
+"via": null
+},
+{
+"iso": "lr",
+"via": null
 }
 ]
 },
@@ -3486,9 +6938,11 @@
 "neighbours": [
 {
 "iso": "it",
-"km": 37.0
+"km": 37.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "sn",
@@ -3498,23 +6952,46 @@
 "neighbours": [
 {
 "iso": "gm",
-"km": 749.0
+"km": 749.0,
+"via": null
 },
 {
 "iso": "mr",
-"km": 742.0
+"km": 742.0,
+"via": null
 },
 {
 "iso": "ml",
-"km": 489.0
+"km": 489.0,
+"via": null
 },
 {
 "iso": "gn",
-"km": 363.0
+"km": 363.0,
+"via": null
 },
 {
 "iso": "gw",
-"km": 341.0
+"km": 341.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "cv",
+"via": null
+},
+{
+"iso": "gm",
+"via": null
+},
+{
+"iso": "gw",
+"via": null
+},
+{
+"iso": "mr",
+"via": null
 }
 ]
 },
@@ -3526,15 +7003,32 @@
 "neighbours": [
 {
 "iso": "et",
-"km": 1640.0
+"km": 1640.0,
+"via": null
 },
 {
 "iso": "ke",
-"km": 684.0
+"km": 684.0,
+"via": null
 },
 {
 "iso": "dj",
-"km": 61.0
+"km": 61.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "dj",
+"via": "Somaliland"
+},
+{
+"iso": "ke",
+"via": null
+},
+{
+"iso": "ye",
+"via": null
 }
 ]
 },
@@ -3546,15 +7040,28 @@
 "neighbours": [
 {
 "iso": "gy",
-"km": 836.0
+"km": 836.0,
+"via": null
 },
 {
-"iso": "gf",
-"km": 556.0
+"iso": "fr",
+"km": 556.0,
+"via": "French Guiana"
 },
 {
 "iso": "br",
-"km": 515.0
+"km": 515.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "fr",
+"via": null
+},
+{
+"iso": "gy",
+"via": null
 }
 ]
 },
@@ -3566,36 +7073,57 @@
 "neighbours": [
 {
 "iso": "sd",
-"km": 2158.0
+"km": 2158.0,
+"via": null
 },
 {
 "iso": "et",
-"km": 1299.0
+"km": 1299.0,
+"via": null
 },
 {
 "iso": "cf",
-"km": 1055.0
+"km": 1055.0,
+"via": null
 },
 {
 "iso": "cd",
-"km": 714.0
+"km": 714.0,
+"via": null
 },
 {
 "iso": "ug",
-"km": 475.0
+"km": 475.0,
+"via": null
 },
 {
 "iso": "ke",
-"km": 317.0
+"km": 317.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "st",
 "num": "678",
 "land": 0.0,
 "coast": 209.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "ga",
+"via": null
+},
+{
+"iso": "gq",
+"via": null
+},
+{
+"iso": "ng",
+"via": null
+}
+]
 },
 {
 "iso": "sv",
@@ -3605,11 +7133,27 @@
 "neighbours": [
 {
 "iso": "hn",
-"km": 391.0
+"km": 391.0,
+"via": null
 },
 {
 "iso": "gt",
-"km": 199.0
+"km": 199.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "gt",
+"via": null
+},
+{
+"iso": "hn",
+"via": null
+},
+{
+"iso": "ni",
+"via": null
 }
 ]
 },
@@ -3620,8 +7164,53 @@
 "coast": 58.9,
 "neighbours": [
 {
-"iso": "mf",
-"km": 16.0
+"iso": "fr",
+"km": 16.0,
+"via": "Saint Martin"
+},
+{
+"iso": "be",
+"km": null,
+"via": null
+},
+{
+"iso": "de",
+"km": null,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "be",
+"via": null
+},
+{
+"iso": "de",
+"via": null
+},
+{
+"iso": "do",
+"via": null
+},
+{
+"iso": "fr",
+"via": null
+},
+{
+"iso": "gb",
+"via": null
+},
+{
+"iso": "kn",
+"via": null
+},
+{
+"iso": "us",
+"via": "US Virgin Islands"
+},
+{
+"iso": "ve",
+"via": null
 }
 ]
 },
@@ -3633,23 +7222,42 @@
 "neighbours": [
 {
 "iso": "tr",
-"km": 899.0
+"km": 899.0,
+"via": null
 },
 {
 "iso": "iq",
-"km": 599.0
+"km": 599.0,
+"via": null
 },
 {
 "iso": "lb",
-"km": 403.0
+"km": 403.0,
+"via": null
 },
 {
 "iso": "jo",
-"km": 379.0
+"km": 379.0,
+"via": null
 },
 {
 "iso": "il",
-"km": 83.0
+"km": 83.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "cy",
+"via": null
+},
+{
+"iso": "lb",
+"via": null
+},
+{
+"iso": "tr",
+"via": null
 }
 ]
 },
@@ -3661,13 +7269,16 @@
 "neighbours": [
 {
 "iso": "za",
-"km": 438.0
+"km": 438.0,
+"via": null
 },
 {
 "iso": "mz",
-"km": 108.0
+"km": 108.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "td",
@@ -3677,29 +7288,36 @@
 "neighbours": [
 {
 "iso": "cf",
-"km": 1556.0
+"km": 1556.0,
+"via": null
 },
 {
 "iso": "sd",
-"km": 1403.0
+"km": 1403.0,
+"via": null
 },
 {
 "iso": "ne",
-"km": 1196.0
+"km": 1196.0,
+"via": null
 },
 {
 "iso": "cm",
-"km": 1116.0
+"km": 1116.0,
+"via": null
 },
 {
 "iso": "ly",
-"km": 1050.0
+"km": 1050.0,
+"via": null
 },
 {
 "iso": "ng",
-"km": 85.0
+"km": 85.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "tg",
@@ -3709,15 +7327,28 @@
 "neighbours": [
 {
 "iso": "gh",
-"km": 1098.0
+"km": 1098.0,
+"via": null
 },
 {
 "iso": "bj",
-"km": 651.0
+"km": 651.0,
+"via": null
 },
 {
 "iso": "bf",
-"km": 131.0
+"km": 131.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "bj",
+"via": null
+},
+{
+"iso": "gh",
+"via": null
 }
 ]
 },
@@ -3729,19 +7360,45 @@
 "neighbours": [
 {
 "iso": "mm",
-"km": 2416.0
+"km": 2416.0,
+"via": null
 },
 {
 "iso": "la",
-"km": 1845.0
+"km": 1845.0,
+"via": null
 },
 {
 "iso": "kh",
-"km": 817.0
+"km": 817.0,
+"via": null
 },
 {
 "iso": "my",
-"km": 595.0
+"km": 595.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "id",
+"via": null
+},
+{
+"iso": "in",
+"via": null
+},
+{
+"iso": "kh",
+"via": null
+},
+{
+"iso": "mm",
+"via": null
+},
+{
+"iso": "my",
+"via": null
 }
 ]
 },
@@ -3753,21 +7410,26 @@
 "neighbours": [
 {
 "iso": "af",
-"km": 1357.0
+"km": 1357.0,
+"via": null
 },
 {
 "iso": "uz",
-"km": 1312.0
+"km": 1312.0,
+"via": null
 },
 {
 "iso": "kg",
-"km": 984.0
+"km": 984.0,
+"via": null
 },
 {
 "iso": "cn",
-"km": 477.0
+"km": 477.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "tl",
@@ -3777,7 +7439,18 @@
 "neighbours": [
 {
 "iso": "id",
-"km": 253.0
+"km": 253.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "au",
+"via": null
+},
+{
+"iso": "id",
+"via": null
 }
 ]
 },
@@ -3789,19 +7462,33 @@
 "neighbours": [
 {
 "iso": "uz",
-"km": 1793.0
+"km": 1793.0,
+"via": null
 },
 {
 "iso": "ir",
-"km": 1148.0
+"km": 1148.0,
+"via": null
 },
 {
 "iso": "af",
-"km": 804.0
+"km": 804.0,
+"via": null
 },
 {
 "iso": "kz",
-"km": 413.0
+"km": 413.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "ir",
+"via": null
+},
+{
+"iso": "kz",
+"via": null
 }
 ]
 },
@@ -3813,11 +7500,27 @@
 "neighbours": [
 {
 "iso": "dz",
-"km": 1034.0
+"km": 1034.0,
+"via": null
 },
 {
 "iso": "ly",
-"km": 461.0
+"km": 461.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "dz",
+"via": null
+},
+{
+"iso": "it",
+"via": null
+},
+{
+"iso": "ly",
+"via": null
 }
 ]
 },
@@ -3826,7 +7529,29 @@
 "num": "776",
 "land": 0.0,
 "coast": 419.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "fj",
+"via": null
+},
+{
+"iso": "fr",
+"via": null
+},
+{
+"iso": "nz",
+"via": null
+},
+{
+"iso": "us",
+"via": null
+},
+{
+"iso": "ws",
+"via": null
+}
+]
 },
 {
 "iso": "tr",
@@ -3836,35 +7561,73 @@
 "neighbours": [
 {
 "iso": "sy",
-"km": 899.0
+"km": 899.0,
+"via": null
 },
 {
 "iso": "ir",
-"km": 534.0
+"km": 534.0,
+"via": null
 },
 {
 "iso": "iq",
-"km": 367.0
+"km": 367.0,
+"via": null
 },
 {
 "iso": "am",
-"km": 311.0
+"km": 311.0,
+"via": null
 },
 {
 "iso": "ge",
-"km": 273.0
+"km": 273.0,
+"via": null
 },
 {
 "iso": "bg",
-"km": 223.0
+"km": 223.0,
+"via": null
 },
 {
 "iso": "gr",
-"km": 192.0
+"km": 192.0,
+"via": null
 },
 {
 "iso": "az",
-"km": 17.0
+"km": 17.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "bg",
+"via": null
+},
+{
+"iso": "cy",
+"via": "Northern Cyprus"
+},
+{
+"iso": "ge",
+"via": null
+},
+{
+"iso": "gr",
+"via": null
+},
+{
+"iso": "ru",
+"via": null
+},
+{
+"iso": "sy",
+"via": null
+},
+{
+"iso": "ua",
+"via": null
 }
 ]
 },
@@ -3873,21 +7636,58 @@
 "num": "780",
 "land": 0.0,
 "coast": 362.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "bb",
+"via": null
+},
+{
+"iso": "gd",
+"via": null
+},
+{
+"iso": "gy",
+"via": null
+},
+{
+"iso": "vc",
+"via": null
+},
+{
+"iso": "ve",
+"via": null
+}
+]
 },
 {
 "iso": "tv",
 "num": "798",
 "land": 0.0,
 "coast": 24.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "fj",
+"via": null
+},
+{
+"iso": "fr",
+"via": null
+},
+{
+"iso": "ki",
+"via": null
+}
+]
 },
 {
 "iso": "tw",
 "num": "158",
 "land": 0.0,
 "coast": 1566.3,
-"neighbours": []
+"neighbours": [],
+"maritime": []
 },
 {
 "iso": "tz",
@@ -3897,35 +7697,61 @@
 "neighbours": [
 {
 "iso": "mz",
-"km": 840.0
+"km": 840.0,
+"via": null
 },
 {
 "iso": "ke",
-"km": 775.0
+"km": 775.0,
+"via": null
 },
 {
 "iso": "bi",
-"km": 589.0
+"km": 589.0,
+"via": null
 },
 {
 "iso": "mw",
-"km": 512.0
+"km": 512.0,
+"via": null
 },
 {
 "iso": "cd",
-"km": 479.0
+"km": 479.0,
+"via": null
 },
 {
 "iso": "ug",
-"km": 391.0
+"km": 391.0,
+"via": null
 },
 {
 "iso": "zm",
-"km": 353.0
+"km": 353.0,
+"via": null
 },
 {
 "iso": "rw",
-"km": 222.0
+"km": 222.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "ke",
+"via": null
+},
+{
+"iso": "km",
+"via": null
+},
+{
+"iso": "mz",
+"via": null
+},
+{
+"iso": "sc",
+"via": null
 }
 ]
 },
@@ -3937,27 +7763,52 @@
 "neighbours": [
 {
 "iso": "ru",
-"km": 1944.0
+"km": 1944.0,
+"via": null
 },
 {
 "iso": "md",
-"km": 1202.0
+"km": 1202.0,
+"via": null
 },
 {
 "iso": "by",
-"km": 1111.0
+"km": 1111.0,
+"via": null
 },
 {
 "iso": "ro",
-"km": 601.0
+"km": 601.0,
+"via": null
 },
 {
 "iso": "pl",
-"km": 498.0
+"km": 498.0,
+"via": null
 },
 {
 "iso": "hu",
-"km": 128.0
+"km": 128.0,
+"via": null
+},
+{
+"iso": "sk",
+"km": 97.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "ro",
+"via": null
+},
+{
+"iso": "ru",
+"via": null
+},
+{
+"iso": "tr",
+"via": null
 }
 ]
 },
@@ -3969,25 +7820,31 @@
 "neighbours": [
 {
 "iso": "cd",
-"km": 877.0
+"km": 877.0,
+"via": null
 },
 {
 "iso": "ke",
-"km": 814.0
+"km": 814.0,
+"via": null
 },
 {
 "iso": "ss",
-"km": 475.0
+"km": 475.0,
+"via": null
 },
 {
 "iso": "tz",
-"km": 391.0
+"km": 391.0,
+"via": null
 },
 {
 "iso": "rw",
-"km": 172.0
+"km": 172.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "us",
@@ -3997,11 +7854,99 @@
 "neighbours": [
 {
 "iso": "ca",
-"km": 8891.0
+"km": 8891.0,
+"via": null
 },
 {
 "iso": "mx",
-"km": 3111.0
+"km": 3155.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "bs",
+"via": null
+},
+{
+"iso": "ca",
+"via": null
+},
+{
+"iso": "cu",
+"via": null
+},
+{
+"iso": "do",
+"via": null
+},
+{
+"iso": "fm",
+"via": null
+},
+{
+"iso": "gb",
+"via": "US Virgin Islands"
+},
+{
+"iso": "gu",
+"via": null
+},
+{
+"iso": "ht",
+"via": "Navassa Island"
+},
+{
+"iso": "jm",
+"via": "Navassa Island"
+},
+{
+"iso": "jp",
+"via": "Northern Mariana Islands"
+},
+{
+"iso": "ki",
+"via": null
+},
+{
+"iso": "mh",
+"via": null
+},
+{
+"iso": "mx",
+"via": null
+},
+{
+"iso": "nl",
+"via": null
+},
+{
+"iso": "nz",
+"via": "Cook Islands"
+},
+{
+"iso": "pr",
+"via": null
+},
+{
+"iso": "ru",
+"via": null
+},
+{
+"iso": "sx",
+"via": "US Virgin Islands"
+},
+{
+"iso": "to",
+"via": null
+},
+{
+"iso": "ve",
+"via": null
+},
+{
+"iso": "ws",
+"via": null
 }
 ]
 },
@@ -4013,11 +7958,23 @@
 "neighbours": [
 {
 "iso": "br",
-"km": 1050.0
+"km": 1050.0,
+"via": null
 },
 {
 "iso": "ar",
-"km": 541.0
+"km": 541.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "ar",
+"via": null
+},
+{
+"iso": "br",
+"via": null
 }
 ]
 },
@@ -4029,25 +7986,31 @@
 "neighbours": [
 {
 "iso": "kz",
-"km": 2330.0
+"km": 2330.0,
+"via": null
 },
 {
 "iso": "tm",
-"km": 1793.0
+"km": 1793.0,
+"via": null
 },
 {
 "iso": "kg",
-"km": 1314.0
+"km": 1314.0,
+"via": null
 },
 {
 "iso": "tj",
-"km": 1312.0
+"km": 1312.0,
+"via": null
 },
 {
 "iso": "af",
-"km": 144.0
+"km": 144.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "va",
@@ -4057,16 +8020,40 @@
 "neighbours": [
 {
 "iso": "it",
-"km": 3.4
+"km": 3.4,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "vc",
 "num": "670",
 "land": 0.0,
 "coast": 84.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "bb",
+"via": null
+},
+{
+"iso": "gd",
+"via": null
+},
+{
+"iso": "lc",
+"via": null
+},
+{
+"iso": "tt",
+"via": null
+},
+{
+"iso": "ve",
+"via": null
+}
+]
 },
 {
 "iso": "ve",
@@ -4076,15 +8063,92 @@
 "neighbours": [
 {
 "iso": "co",
-"km": 2341.0
+"km": 2341.0,
+"via": null
 },
 {
 "iso": "br",
-"km": 2137.0
+"km": 2137.0,
+"via": null
 },
 {
 "iso": "gy",
-"km": 789.0
+"km": 789.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "aw",
+"via": null
+},
+{
+"iso": "bb",
+"via": null
+},
+{
+"iso": "co",
+"via": null
+},
+{
+"iso": "cw",
+"via": null
+},
+{
+"iso": "dm",
+"via": null
+},
+{
+"iso": "do",
+"via": null
+},
+{
+"iso": "fr",
+"via": null
+},
+{
+"iso": "gb",
+"via": null
+},
+{
+"iso": "gd",
+"via": null
+},
+{
+"iso": "gy",
+"via": null
+},
+{
+"iso": "kn",
+"via": null
+},
+{
+"iso": "lc",
+"via": null
+},
+{
+"iso": "nl",
+"via": null
+},
+{
+"iso": "pr",
+"via": null
+},
+{
+"iso": "sx",
+"via": null
+},
+{
+"iso": "tt",
+"via": null
+},
+{
+"iso": "us",
+"via": null
+},
+{
+"iso": "vc",
+"via": null
 }
 ]
 },
@@ -4096,15 +8160,28 @@
 "neighbours": [
 {
 "iso": "la",
-"km": 2161.0
+"km": 2161.0,
+"via": null
 },
 {
 "iso": "cn",
-"km": 1297.0
+"km": 1297.0,
+"via": null
 },
 {
 "iso": "kh",
-"km": 1158.0
+"km": 1158.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "cn",
+"via": null
+},
+{
+"iso": "kh",
+"via": null
 }
 ]
 },
@@ -4113,14 +8190,46 @@
 "num": "548",
 "land": 0.0,
 "coast": 2528.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "fj",
+"via": null
+},
+{
+"iso": "nc",
+"via": null
+},
+{
+"iso": "sb",
+"via": null
+}
+]
 },
 {
 "iso": "ws",
 "num": "882",
 "land": 0.0,
 "coast": 403.0,
-"neighbours": []
+"neighbours": [],
+"maritime": [
+{
+"iso": "fr",
+"via": null
+},
+{
+"iso": "nz",
+"via": null
+},
+{
+"iso": "to",
+"via": null
+},
+{
+"iso": "us",
+"via": null
+}
+]
 },
 {
 "iso": "xk",
@@ -4130,21 +8239,26 @@
 "neighbours": [
 {
 "iso": "rs",
-"km": 366.0
+"km": 366.0,
+"via": null
 },
 {
 "iso": "mk",
-"km": 160.0
+"km": 160.0,
+"via": null
 },
 {
 "iso": "al",
-"km": 112.0
+"km": 112.0,
+"via": null
 },
 {
 "iso": "me",
-"km": 76.0
+"km": 76.0,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "ye",
@@ -4154,11 +8268,35 @@
 "neighbours": [
 {
 "iso": "sa",
-"km": 1307.0
+"km": 1307.0,
+"via": null
 },
 {
 "iso": "om",
-"km": 294.0
+"km": 294.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "dj",
+"via": null
+},
+{
+"iso": "er",
+"via": null
+},
+{
+"iso": "om",
+"via": null
+},
+{
+"iso": "sa",
+"via": null
+},
+{
+"iso": "so",
+"via": null
 }
 ]
 },
@@ -4170,27 +8308,43 @@
 "neighbours": [
 {
 "iso": "bw",
-"km": 1969.0
+"km": 1969.0,
+"via": null
 },
 {
 "iso": "ls",
-"km": 1106.0
+"km": 1106.0,
+"via": null
 },
 {
 "iso": "na",
-"km": 1005.0
+"km": 1005.0,
+"via": null
 },
 {
 "iso": "mz",
-"km": 496.0
+"km": 496.0,
+"via": null
 },
 {
 "iso": "sz",
-"km": 438.0
+"km": 438.0,
+"via": null
 },
 {
 "iso": "zw",
-"km": 230.0
+"km": 230.0,
+"via": null
+}
+],
+"maritime": [
+{
+"iso": "mz",
+"via": null
+},
+{
+"iso": "na",
+"via": null
 }
 ]
 },
@@ -4202,37 +8356,46 @@
 "neighbours": [
 {
 "iso": "cd",
-"km": 2332.0
+"km": 2332.0,
+"via": null
 },
 {
 "iso": "ao",
-"km": 1065.0
+"km": 1065.0,
+"via": null
 },
 {
 "iso": "mw",
-"km": 847.0
+"km": 847.0,
+"via": null
 },
 {
 "iso": "zw",
-"km": 763.0
+"km": 763.0,
+"via": null
 },
 {
 "iso": "mz",
-"km": 439.0
+"km": 439.0,
+"via": null
 },
 {
 "iso": "tz",
-"km": 353.0
+"km": 353.0,
+"via": null
 },
 {
 "iso": "na",
-"km": 244.0
+"km": 244.0,
+"via": null
 },
 {
 "iso": "bw",
-"km": 0.15
+"km": 0.15,
+"via": null
 }
-]
+],
+"maritime": []
 },
 {
 "iso": "zw",
@@ -4242,20 +8405,25 @@
 "neighbours": [
 {
 "iso": "mz",
-"km": 1402.0
+"km": 1402.0,
+"via": null
 },
 {
 "iso": "bw",
-"km": 834.0
+"km": 834.0,
+"via": null
 },
 {
 "iso": "zm",
-"km": 763.0
+"km": 763.0,
+"via": null
 },
 {
 "iso": "za",
-"km": 230.0
+"km": 230.0,
+"via": null
 }
-]
+],
+"maritime": []
 }
 ]

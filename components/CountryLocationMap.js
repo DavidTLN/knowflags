@@ -7,7 +7,9 @@
 // - Vue initiale cadrée sur le pays (sa plus grande partie : France métropolitaine, USA contigus…),
 //   bouton « recentrer » pour y revenir. Zoom +/− et plein écran.
 // - Clic sur un autre pays : aperçu (drapeau, capitale, « Voir la page »).
-// - Voisins (CIA World Factbook) : liste à droite sur desktop, puces sous la carte sur mobile.
+// - Voisins terrestres (CIA World Factbook, territoires d'outre-mer compris : « via la Guyane »)
+//   et voisins maritimes (frontières maritimes délimitées, Wikipédia) : liste à droite sur desktop,
+//   puces sous la carte sur mobile.
 // - Mobile : la carte ne capture pas le défilement de la page ; on la déplace avec deux doigts.
 // - La carte (Leaflet + formes, ~700 ko) ne se charge que lorsque le bloc approche de l'écran.
 
@@ -44,7 +46,27 @@ function loadCountries() {
 
 const flagSrc = (iso, w = 80) => `https://flagcdn.com/w${w}/${iso}.png`
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]))
-const fmtKm = (n, locale) => `${Math.round(Number(n)).toLocaleString(locale === 'fr' ? 'fr-FR' : 'en-US')} km`
+const fmtKm = (n, locale) => {
+  const v = Number(n)
+  return `${(v < 10 ? Math.round(v * 10) / 10 : Math.round(v)).toLocaleString(locale === 'fr' ? 'fr-FR' : 'en-US')} km`
+}
+
+// Territoires par lesquels passe une frontière (« via la Guyane »)
+const VIA_FR = {
+  'Akrotiri & Dhekelia': 'Akrotiri et Dhekelia', 'Akrotiri and Dhekelia': 'Akrotiri et Dhekelia',
+  'American Samoa': 'les Samoa américaines', 'Anguilla': 'Anguilla', 'Baker Island': 'l’île Baker',
+  'British Indian Ocean Territory': 'le Territoire britannique de l’océan Indien',
+  'British Virgin Islands': 'les îles Vierges britanniques', 'Cook Islands': 'les îles Cook',
+  'French Guiana': 'la Guyane', 'French Southern Lands': 'les Terres australes françaises',
+  'Gaza Strip': 'la bande de Gaza', 'Gibraltar': 'Gibraltar', 'Jan Mayen': 'Jan Mayen',
+  'Montserrat': 'Montserrat', 'Navassa Island': 'l’île de la Navasse',
+  'Northern Mariana Islands': 'les îles Mariannes du Nord', 'Pitcairn Islands': 'les îles Pitcairn',
+  'Saint Martin': 'Saint-Martin', 'Saint Pierre and Miquelon': 'Saint-Pierre-et-Miquelon',
+  'Sint Maarten': 'Sint Maarten', 'Somaliland': 'le Somaliland', 'Turks and Caicos': 'les îles Turques-et-Caïques',
+  'US Virgin Islands': 'les îles Vierges des États-Unis', 'Wake Island': 'l’île Wake',
+  'Wallis and Futuna': 'Wallis-et-Futuna', 'Western Sahara': 'le Sahara occidental',
+}
+const viaText = (via, locale) => via ? (locale === 'fr' ? `via ${VIA_FR[via] || via}` : `via ${via}`) : ''
 
 // Plus grande partie d'un pays (aire planaire en degrés, suffisant pour comparer)
 function ringArea(r) { let a = 0; for (let i = 0, j = r.length - 1; i < r.length; j = i++) a += (r[j][0] + r[i][0]) * (r[j][1] - r[i][1]); return Math.abs(a / 2) }
@@ -71,6 +93,11 @@ export default function CountryLocationMap({ country, locale = 'en' }) {
   const name = locale === 'fr' ? country.fr : country.en
   const iso = (country.code || '').toLowerCase()
   const neighbours = useMemo(() => (Array.isArray(country.neighbours) ? country.neighbours : []), [country.neighbours])
+  // Voisins maritimes qui ne sont pas déjà voisins terrestres
+  const seaNeighbours = useMemo(() => {
+    const landSet = new Set(neighbours.map(n => n.iso))
+    return (Array.isArray(country.maritimeNeighbours) ? country.maritimeNeighbours : []).filter(n => n?.iso && !landSet.has(n.iso))
+  }, [country.maritimeNeighbours, neighbours])
 
   const wrapRef = useRef(null)
   const mapEl = useRef(null)
@@ -185,10 +212,11 @@ export default function CountryLocationMap({ country, locale = 'en' }) {
         const where = at || centerOf(i)
         if (isMobileRef.current) map.closePopup()
         else if (where && c) {
-          const km = nbKm.current[i]
+          const info = nbInfo.current[i]
+          const detail = info ? (info.sea ? t('Maritime border', 'Frontière maritime') : (info.km ? fmtKm(info.km, locale) + ' ' + t('shared border', 'de frontière commune') : '')) + (info.via ? ' ' + viaText(info.via, locale) : '') : ''
           popup.setLatLng(where).setContent(
             `<div class="kf-pop"><div class="kf-pop-top"><img src="${flagSrc(i)}" alt="" /><button type="button" class="kf-pop-x" aria-label="${esc(t('Close', 'Fermer'))}">×</button></div>` +
-            `<strong>${esc(label(c))}</strong><span>${esc(capitalOf(c) ? t('Capital: ', 'Capitale : ') + capitalOf(c) : '')}${km ? ' · ' + esc(fmtKm(km, locale)) + ' ' + esc(t('shared border', 'de frontière commune')) : ''}</span>` +
+            `<strong>${esc(label(c))}</strong><span>${esc(capitalOf(c) ? t('Capital: ', 'Capitale : ') + capitalOf(c) : '')}</span>${detail ? `<span>${esc(detail)}</span>` : ''}` +
             `<a href="/${locale}/countries/${esc(i)}">${esc(t('See page', 'Voir la page'))} →</a></div>`
           )
           swapping = true; popup.openOn(map); swapping = false
@@ -230,7 +258,11 @@ export default function CountryLocationMap({ country, locale = 'en' }) {
   const byIsoRef = useRef({}); byIsoRef.current = byIso
   const isMobileRef = useRef(false); isMobileRef.current = isMobile
   const fullRef = useRef(false); fullRef.current = full
-  const nbKm = useRef({}); nbKm.current = Object.fromEntries(neighbours.map(n => [n.iso, n.km]))
+  const nbInfo = useRef({})
+  nbInfo.current = Object.fromEntries([
+    ...seaNeighbours.map(n => [n.iso, { sea: true, via: n.via }]),
+    ...neighbours.map(n => [n.iso, { km: n.km, via: n.via }]),
+  ])
 
   useEffect(() => {
     document.body.style.overflow = full ? 'hidden' : ''
@@ -243,8 +275,11 @@ export default function CountryLocationMap({ country, locale = 'en' }) {
   if (failed) return null
 
   const nbRows = neighbours.map(n => ({ ...n, c: byIso[n.iso] })).filter(n => n.c)
+  const seaRows = seaNeighbours.map(n => ({ ...n, sea: true, c: byIso[n.iso] })).filter(n => n.c)
+    .sort((a, b) => label(a.c).localeCompare(label(b.c), locale))
   const sel = selected && byIso[selected]
-  const selKm = selected ? (neighbours.find(n => n.iso === selected)?.km) : null
+  const selInfo = selected ? nbInfo.current[selected] : null
+  const selDetail = selInfo ? [selInfo.sea ? t('Maritime border', 'Frontière maritime') : (selInfo.km ? fmtKm(selInfo.km, locale) : ''), viaText(selInfo.via, locale)].filter(Boolean).join(' ') : ''
   const land = country.landBorderKm, coast = country.coastlineKm
   const stats = [
     land != null && { k: t('Land borders', 'Frontières terrestres'), v: Number(land) > 0 ? fmtKm(land, locale) : t('None', 'Aucune') },
@@ -286,7 +321,8 @@ export default function CountryLocationMap({ country, locale = 'en' }) {
           <img src={flagSrc(selected)} alt="" style={{ width: '54px', height: '36px', objectFit: 'cover', borderRadius: '4px', border: `1px solid ${C.border}`, flexShrink: 0 }} />
           <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', gap: '2px' }}>
             <span style={{ fontSize: '15px', fontWeight: 800, color: C.navy, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{label(sel)}</span>
-            <span style={{ fontSize: '12px', color: C.muted, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{capitalOf(sel) && `${t('Capital: ', 'Capitale : ')}${capitalOf(sel)}`}{selKm ? ` · ${fmtKm(selKm, locale)}` : ''}</span>
+            <span style={{ fontSize: '12px', color: C.muted, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{capitalOf(sel) && `${t('Capital: ', 'Capitale : ')}${capitalOf(sel)}`}</span>
+            {selDetail && <span style={{ fontSize: '12px', color: C.muted, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{selDetail}</span>}
           </div>
           <Link prefetch={false} href={`/${locale}/countries/${selected}`} style={{ minHeight: '40px', padding: '0 14px', borderRadius: '10px', backgroundColor: C.navy, color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', display: 'flex', alignItems: 'center' }}>{t('See page', 'Voir la page')}</Link>
           <button type="button" onClick={() => api.current.select?.(null)} aria-label={t('Close', 'Fermer')} style={{ width: '32px', height: '32px', border: 'none', background: 'transparent', color: C.muted, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0 }}>{Icon.close}</button>
@@ -308,7 +344,54 @@ export default function CountryLocationMap({ country, locale = 'en' }) {
   const overline = { margin: 0, fontSize: '11px', fontWeight: 700, color: C.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }
   const noNeighbours = (
     <p style={{ margin: 0, fontSize: '13px', color: C.muted, lineHeight: 1.5 }}>
-      {Number(land) === 0 ? t(`${name} has no land border.`, `${name} n’a aucune frontière terrestre.`) : t('No neighbouring country listed.', 'Aucun pays voisin répertorié.')}
+      {Number(land) === 0 || nbRows.length === 0
+        ? (seaRows.length > 0
+          ? t(`${name} has no land border, but shares maritime borders with ${seaRows.length} ${seaRows.length > 1 ? 'countries' : 'country'}.`,
+              `${name} n’a aucune frontière terrestre, mais partage des frontières maritimes avec ${seaRows.length} pays.`)
+          : (Number(land) === 0 ? t(`${name} has no land border.`, `${name} n’a aucune frontière terrestre.`) : t('No neighbouring country listed.', 'Aucun pays voisin répertorié.')))
+        : null}
+    </p>
+  )
+
+  const subline = (n) => n.sea
+    ? (n.via ? viaText(n.via, locale) : t('Maritime border', 'Frontière maritime'))
+    : [n.km ? fmtKm(n.km, locale) : capitalOf(n.c), viaText(n.via, locale)].filter(Boolean).join(' · ')
+
+  const chips = (rows) => (
+    <div className="kf-nb-chips" style={{ display: 'flex', gap: '8px', overflowX: 'auto', margin: '0 -20px', padding: '0 20px' }}>
+      {rows.map(n => {
+        const on = n.iso === selected
+        return (
+          <button key={n.iso} type="button" onClick={() => api.current.select?.(on ? null : n.iso)}
+            style={{ flexShrink: 0, minHeight: '44px', padding: '0 12px 0 8px', display: 'flex', alignItems: 'center', gap: '8px', borderRadius: '9999px', fontSize: '13px', fontWeight: 600, cursor: 'pointer', whiteSpace: 'nowrap', border: on ? `2px solid ${C.navy}` : `1.5px solid ${C.border}`, backgroundColor: on ? C.navy : C.surface, color: on ? 'white' : C.navy, transition: 'all 0.15s' }}>
+            <img src={flagSrc(n.iso, 40)} alt="" style={{ width: '27px', height: '18px', objectFit: 'cover', borderRadius: '3px', border: `1px solid ${C.border}` }} />
+            {label(n.c)}
+          </button>
+        )
+      })}
+    </div>
+  )
+
+  const rowItem = (n) => {
+    const on = n.iso === selected
+    return (
+      <div key={(n.sea ? 's-' : 'l-') + n.iso} className="kf-nb-row" style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '6px 8px', borderRadius: '10px', border: on ? `2px solid ${C.gold}` : `1px solid ${C.border}`, backgroundColor: on ? C.goldLight : C.surface, transition: 'all 0.15s', flexShrink: 0 }}>
+        <button type="button" onClick={() => api.current.select?.(on ? null : n.iso)} aria-pressed={on}
+          style={{ flex: 1, minWidth: 0, minHeight: '40px', display: 'flex', alignItems: 'center', gap: '10px', border: 'none', background: 'transparent', padding: 0, cursor: 'pointer', textAlign: 'left' }}>
+          <img src={flagSrc(n.iso, 80)} alt="" style={{ width: '40px', height: '27px', objectFit: 'cover', borderRadius: '4px', border: `1px solid ${C.border}`, flexShrink: 0 }} />
+          <span style={{ minWidth: 0, display: 'flex', flexDirection: 'column', gap: '1px' }}>
+            <span style={{ fontSize: '13px', fontWeight: 800, color: C.navy, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{label(n.c)}</span>
+            <span style={{ fontSize: '11px', color: C.muted, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{subline(n)}</span>
+          </span>
+        </button>
+        <Link prefetch={false} href={`/${locale}/countries/${n.iso}`} aria-label={t(`See ${label(n.c)} page`, `Voir la page ${label(n.c)}`)} style={{ width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '8px', flexShrink: 0 }}>{Icon.chevron}</Link>
+      </div>
+    )
+  }
+
+  const source = (
+    <p style={{ margin: 0, fontSize: '11px', color: C.light }}>
+      {t('Land borders and coastline: CIA World Factbook, overseas territories included. Maritime borders: Wikipedia.', 'Frontières terrestres et littoral : CIA World Factbook, territoires d’outre-mer compris. Frontières maritimes : Wikipédia.')}
     </p>
   )
 
@@ -350,51 +433,34 @@ export default function CountryLocationMap({ country, locale = 'en' }) {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
           <div style={{ margin: '0 -20px' }}>{mapBox}</div>
           {statTiles}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            <p style={overline}>{t('Neighbours', 'Pays voisins')} · {nbRows.length}</p>
-            {nbRows.length === 0 ? noNeighbours : (
-              <div className="kf-nb-chips" style={{ display: 'flex', gap: '8px', overflowX: 'auto', margin: '0 -20px', padding: '0 20px' }}>
-                {nbRows.map(n => {
-                  const on = n.iso === selected
-                  return (
-                    <button key={n.iso} type="button" onClick={() => api.current.select?.(on ? null : n.iso)}
-                      style={{ flexShrink: 0, minHeight: '44px', padding: '0 12px 0 8px', display: 'flex', alignItems: 'center', gap: '8px', borderRadius: '9999px', fontSize: '13px', fontWeight: 600, cursor: 'pointer', whiteSpace: 'nowrap', border: on ? `2px solid ${C.navy}` : `1.5px solid ${C.border}`, backgroundColor: on ? C.navy : C.surface, color: on ? 'white' : C.navy, transition: 'all 0.15s' }}>
-                      <img src={flagSrc(n.iso, 40)} alt="" style={{ width: '27px', height: '18px', objectFit: 'cover', borderRadius: '3px', border: `1px solid ${C.border}` }} />
-                      {label(n.c)}
-                    </button>
-                  )
-                })}
-              </div>
-            )}
-          </div>
+          {nbRows.length === 0 && noNeighbours}
+          {nbRows.length > 0 && (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <p style={overline}>{t('Land neighbours', 'Voisins terrestres')} · {nbRows.length}</p>
+              {chips(nbRows)}
+            </div>
+          )}
+          {seaRows.length > 0 && (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <p style={overline}>{t('Maritime neighbours', 'Voisins maritimes')} · {seaRows.length}</p>
+              {chips(seaRows)}
+            </div>
+          )}
+          {source}
         </div>
       ) : (
         <div style={{ display: 'flex', gap: '18px', alignItems: 'stretch' }}>
           <div style={{ flex: '1 1 auto', minWidth: 0 }}>{mapBox}</div>
           <div style={{ flex: '0 0 280px', display: 'flex', flexDirection: 'column', gap: '12px', maxHeight: '460px' }}>
             {statTiles}
-            <p style={overline}>{t('Neighbours', 'Pays voisins')} · {nbRows.length}</p>
-            {nbRows.length === 0 ? noNeighbours : (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', overflowY: 'auto', minHeight: 0 }}>
-                {nbRows.map(n => {
-                  const on = n.iso === selected
-                  return (
-                    <div key={n.iso} className="kf-nb-row" style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '6px 8px', borderRadius: '10px', border: on ? `2px solid ${C.gold}` : `1px solid ${C.border}`, backgroundColor: on ? C.goldLight : C.surface, transition: 'all 0.15s' }}>
-                      <button type="button" onClick={() => api.current.select?.(on ? null : n.iso)} aria-pressed={on}
-                        style={{ flex: 1, minWidth: 0, minHeight: '40px', display: 'flex', alignItems: 'center', gap: '10px', border: 'none', background: 'transparent', padding: 0, cursor: 'pointer', textAlign: 'left' }}>
-                        <img src={flagSrc(n.iso, 80)} alt="" style={{ width: '40px', height: '27px', objectFit: 'cover', borderRadius: '4px', border: `1px solid ${C.border}`, flexShrink: 0 }} />
-                        <span style={{ minWidth: 0, display: 'flex', flexDirection: 'column', gap: '1px' }}>
-                          <span style={{ fontSize: '13px', fontWeight: 800, color: C.navy, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{label(n.c)}</span>
-                          <span style={{ fontSize: '11px', color: C.muted }}>{n.km ? fmtKm(n.km, locale) : capitalOf(n.c)}</span>
-                        </span>
-                      </button>
-                      <Link prefetch={false} href={`/${locale}/countries/${n.iso}`} aria-label={t(`See ${label(n.c)} page`, `Voir la page ${label(n.c)}`)} style={{ width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '8px', flexShrink: 0 }}>{Icon.chevron}</Link>
-                    </div>
-                  )
-                })}
-              </div>
-            )}
-            <p style={{ margin: 'auto 0 0', fontSize: '11px', color: C.light }}>{t('Borders and coastline: CIA World Factbook.', 'Frontières et littoral : CIA World Factbook.')}</p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', overflowY: 'auto', minHeight: 0, margin: '0 -4px', padding: '0 4px' }}>
+              {nbRows.length === 0 && noNeighbours}
+              {nbRows.length > 0 && <p style={{ ...overline, margin: '0 0 2px' }}>{t('Land neighbours', 'Voisins terrestres')} · {nbRows.length}</p>}
+              {nbRows.map(rowItem)}
+              {seaRows.length > 0 && <p style={{ ...overline, margin: nbRows.length ? '10px 0 2px' : '4px 0 2px' }}>{t('Maritime neighbours', 'Voisins maritimes')} · {seaRows.length}</p>}
+              {seaRows.map(rowItem)}
+            </div>
+            <div style={{ marginTop: 'auto' }}>{source}</div>
           </div>
         </div>
       )}

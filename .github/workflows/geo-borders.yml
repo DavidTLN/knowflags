@@ -1,0 +1,34 @@
+name: Country borders build
+
+# Voisins terrestres (CIA World Factbook) et maritimes (Wikipédia) de chaque pays : scripts/geo/build_borders.py
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['scripts/geo/build_borders.py']
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      SUPABASE_PUBLISHABLE_KEY: sb_publishable_VH4sPWc-eOLG5-Fm3kvq7g_lcUPDSQ6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests
+      - run: git clone --depth 1 https://github.com/factbook/factbook.json.git /tmp/factbook
+      - run: python3 scripts/geo/build_borders.py /tmp/factbook
+      - name: Commit results
+        run: |
+          git config user.name "knowflags-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/geo/borders.json
+          git commit -m "Country borders: land (Factbook) + maritime (Wikipedia)" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push origin HEAD:main

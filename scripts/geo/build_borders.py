@@ -151,6 +151,8 @@ def main():
     # ── Wikipedia (maritime + land via territories) ───────────────────────
     w = requests.get('https://en.wikipedia.org/w/api.php', headers=UA, timeout=60,
                      params={'action': 'parse', 'page': WIKI_PAGE, 'prop': 'wikitext', 'format': 'json', 'formatversion': 2}).json()['parse']['wikitext']
+    if os.environ.get('DUMP_WIKI'):
+        open(os.environ['DUMP_WIKI'], 'w').write(w)
     maritime = {}
     name_re = re.compile(r"\{\{flag(?:icon)?\|([^}|]+)[^}]*\}\}|\[\[([^\]|]+)(?:\|[^\]]*)?\]\]")
     for row in re.split(r'\n\|-[^\n]*\n', w):

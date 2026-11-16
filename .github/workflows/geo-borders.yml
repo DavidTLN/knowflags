@@ -23,12 +23,12 @@ jobs:
           python-version: '3.12'
       - run: pip install requests
       - run: git clone --depth 1 https://github.com/factbook/factbook.json.git /tmp/factbook
-      - run: python3 scripts/geo/build_borders.py /tmp/factbook
+      - run: DUMP_WIKI=data/geo/_wiki_borders.txt python3 scripts/geo/build_borders.py /tmp/factbook
       - name: Commit results
         run: |
           git config user.name "knowflags-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/geo/borders.json
+          git add data/geo/borders.json data/geo/_wiki_borders.txt
           git commit -m "Country borders: land (Factbook) + maritime (Wikipedia)" || echo "nothing to commit"
           git pull --rebase origin main
           git push origin HEAD:main

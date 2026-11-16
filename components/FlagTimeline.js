@@ -100,7 +100,28 @@ function buildGeometry(items) {
       prev = Math.max(prev, g.x1)
     })
   }
-  return { segs, lanesN, gaps: parts.filter(p => p.gap) }
+  // Position (0..1) → année, pour la bulle pendant le glissement
+  const yearAt = (x) => {
+    for (const p of parts) {
+      if (p.w > 0 && x <= p.x1) return p.a + (p.b - p.a) * Math.max(0, (x - p.x0) / ((p.x1 - p.x0) || 1))
+    }
+    return pts[pts.length - 1]
+  }
+  return { segs, lanesN, gaps: parts.filter(p => p.gap), yearAt }
+}
+
+// Drapeau sous le curseur : d'abord dans le couloir visé, sinon le plus proche
+function segAt(geo, x, lane) {
+  const inLane = geo.segs.filter(s => s.lane === lane && x >= s.x0 && x <= s.x1)
+  if (inLane.length) return inLane[0].i
+  const any = geo.segs.filter(s => x >= s.x0 && x <= s.x1).sort((a, b) => a.lane - b.lane)
+  if (any.length) return any[0].i
+  let best = geo.segs[0], bd = Infinity
+  for (const s of geo.segs) {
+    const d = x < s.x0 ? s.x0 - x : x - s.x1
+    if (d < bd - 1e-9 || (Math.abs(d - bd) < 1e-9 && s.lane < best.lane)) { bd = d; best = s }
+  }
+  return best.i
 }
 
 // Années sous la frise : la sélection et la fin d'abord, puis les débuts qui ont la place
@@ -135,7 +156,7 @@ function HistImg({ flag, iso, alt = '', cover = false, eager = false }) {
     return cover ? null : <span style={{ fontSize: '10px', fontWeight: 700, color: C.light }}>{flag.y0 || '?'}</span>
   }
   return (
-    <img src={src} alt={alt} loading={eager ? 'eager' : 'lazy'} decoding="async"
+    <img src={src} alt={alt} loading={eager ? 'eager' : 'lazy'} decoding="async" draggable={false}
       onError={() => setSrc(src !== local && local ? local : null)}
       style={cover ? { width: '100%', height: '100%', objectFit: 'cover', display: 'block' } : undefined} />
   )
@@ -179,11 +200,17 @@ const CSS = `
 .kft-lanes{position:relative;display:flex;flex-direction:column;gap:4px}
 .kft-lane{position:relative;height:22px}
 .kft-lane.sub{height:12px}
-.kft-seg{position:absolute;top:0;bottom:0;min-width:2px;padding:0;border:none;border-radius:3px;overflow:hidden;background:${C.secondary};cursor:pointer}
+.kft-track{position:relative;padding:14px 0;margin:-14px 0;border-radius:8px;cursor:grab;touch-action:pan-y;user-select:none;-webkit-user-select:none;-webkit-tap-highlight-color:transparent}
+.kft-track.drag{cursor:grabbing}
+.kft-track:focus-visible{outline:3px solid rgba(22,50,79,0.35);outline-offset:2px}
+.kft-track img{pointer-events:none;-webkit-user-drag:none}
+.kft-track.drag .kft-knob,.kft-track.drag .kft-cursor{transition:none}
+.kft-bubble{position:absolute;top:-40px;padding:4px 9px;border-radius:6px;background:${C.navy};color:#fff;font-size:12px;font-weight:800;white-space:nowrap;box-shadow:0 4px 12px rgba(22,50,79,0.25);pointer-events:none;z-index:4}
+.kft-seg{position:absolute;top:0;bottom:0;min-width:2px;border-radius:3px;overflow:hidden;background:${C.secondary}}
 .kft-seg::after{content:'';position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(22,50,79,0.14);pointer-events:none}
 .kft-seg.on{outline:2px solid ${C.navy};outline-offset:2px;z-index:2}
 .kft-gap{position:absolute;top:50%;margin-top:-1px;border-top:2px dashed #C9C3B8}
-.kft-knob{position:absolute;top:-4px;width:30px;height:30px;margin-left:-15px;border-radius:9999px;background:${C.gold};border:3px solid #fff;box-shadow:0 2px 8px rgba(22,50,79,0.3);z-index:3;pointer-events:none;transition:left .4s ease}
+.kft-knob{position:absolute;top:-5px;width:32px;height:32px;margin-left:-16px;border-radius:9999px;background:${C.gold};border:3px solid #fff;box-shadow:0 2px 8px rgba(22,50,79,0.3);z-index:3;pointer-events:none;transition:left .4s ease}
 .kft-cursor{display:none}
 .kft-labels{position:relative;height:16px;margin-top:10px;font-size:11px;font-weight:600;color:${C.muted}}
 .kft-labels span{position:absolute;top:0;white-space:nowrap}
@@ -246,7 +273,8 @@ const CSS = `
   .kft-seg.on{outline-width:3px}
   .kft-knob{display:none}
   .kft-cursor{display:block;position:absolute;top:-8px;bottom:-8px;width:4px;margin-left:-2px;border-radius:2px;background:${C.gold};z-index:3;pointer-events:none;transition:left .4s ease}
-  .kft-cursor::before{content:'';position:absolute;top:-6px;left:-6px;width:16px;height:16px;border-radius:9999px;background:${C.gold};box-shadow:0 2px 6px rgba(22,50,79,0.25)}
+  .kft-cursor::before{content:'';position:absolute;top:-8px;left:-8px;width:20px;height:20px;border-radius:9999px;background:${C.gold};border:2px solid #fff;box-sizing:border-box;box-shadow:0 2px 6px rgba(22,50,79,0.25)}
+  .kft-bubble{top:-50px}
   .kft-labels{margin-top:14px;font-size:12px}
   .kft-labels.m{display:none}
   .kft-labels.d{display:block}
@@ -294,7 +322,11 @@ export default function FlagTimeline({ countryCode, countryName, initialFlags = 
   const [idx, setIdx] = useState(null)
   const [playing, setPlaying] = useState(false)
   const [submitOpen, setSubmitOpen] = useState(false)
+  const [scrub, setScrub] = useState(null)        // position libre du curseur (0..1) après un glissement
+  const [dragging, setDragging] = useState(false)
   const stageRef = useRef(null)
+  const lanesRef = useRef(null)
+  const drag = useRef(null)
 
   useEffect(() => {
     if (initialFlags || !iso) return
@@ -322,7 +354,7 @@ export default function FlagTimeline({ countryCode, countryName, initialFlags = 
   useEffect(() => {
     if (!playing) return
     if (sel >= n - 1) { setPlaying(false); return }
-    const id = setTimeout(() => setIdx(sel + 1), PLAY_MS)
+    const id = setTimeout(() => { setScrub(null); setIdx(sel + 1) }, PLAY_MS)
     return () => clearTimeout(id)
   }, [playing, sel, n])
 
@@ -336,13 +368,73 @@ export default function FlagTimeline({ countryCode, countryName, initialFlags = 
       el.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'center' })
     }
   }
-  const pick = (i) => { setPlaying(false); setIdx(i); setTimeout(reveal, 30) }
-  const step = (d) => { setPlaying(false); setIdx(Math.max(0, Math.min(n - 1, sel + d))) }
+  const pick = (i) => { setPlaying(false); setScrub(null); setIdx(i); setTimeout(reveal, 30) }
+  const step = (d) => { setPlaying(false); setScrub(null); setIdx(Math.max(0, Math.min(n - 1, sel + d))) }
   const togglePlay = () => {
     if (playing) { setPlaying(false); return }
+    setScrub(null)
     if (sel >= n - 1) setIdx(0)
     setPlaying(true)
     setTimeout(reveal, 30)
+  }
+
+  // ── Glisser le curseur doré (souris, doigt, stylet) ──
+  // Souris : le curseur suit dès l'appui. Doigt : il suit dès qu'on glisse à
+  // l'horizontale (un geste vertical fait défiler la page) ; un simple toucher
+  // place le curseur.
+  const scrubTo = (e) => {
+    const el = lanesRef.current
+    if (!el || !geo) return
+    const r = el.getBoundingClientRect()
+    const x = Math.min(1, Math.max(0, (e.clientX - r.left) / r.width))
+    let lane = 0, best = Infinity
+    el.querySelectorAll('.kft-lane').forEach((ln, l) => {
+      const b = ln.getBoundingClientRect()
+      const d = e.clientY < b.top ? b.top - e.clientY : e.clientY > b.bottom ? e.clientY - b.bottom : 0
+      if (d < best) { best = d; lane = l }
+    })
+    setScrub(x)
+    setIdx(segAt(geo, x, lane))
+  }
+  const onPointerDown = (e) => {
+    if (e.pointerType === 'mouse' && e.button !== 0) return
+    const active = e.pointerType !== 'touch'
+    drag.current = { id: e.pointerId, x: e.clientX, active }
+    if (active) {
+      e.preventDefault()
+      e.currentTarget.setPointerCapture?.(e.pointerId)
+      setPlaying(false)
+      setDragging(true)
+      scrubTo(e)
+    }
+  }
+  const onPointerMove = (e) => {
+    const d = drag.current
+    if (!d || d.id !== e.pointerId) return
+    if (!d.active) {
+      if (Math.abs(e.clientX - d.x) < 6) return
+      d.active = true
+      e.currentTarget.setPointerCapture?.(e.pointerId)
+      setPlaying(false)
+      setDragging(true)
+    }
+    scrubTo(e)
+  }
+  const onPointerUp = (e) => {
+    const d = drag.current
+    if (d && d.id === e.pointerId && !d.active) { setPlaying(false); scrubTo(e) }   // toucher simple
+    drag.current = null
+    setDragging(false)
+  }
+  const onPointerCancel = () => { drag.current = null; setDragging(false) }
+  const onTrackKey = (e) => {
+    const k = e.key
+    if (k === 'ArrowLeft' || k === 'ArrowDown') step(-1)
+    else if (k === 'ArrowRight' || k === 'ArrowUp') step(1)
+    else if (k === 'Home') { setPlaying(false); setScrub(null); setIdx(0) }
+    else if (k === 'End') { setPlaying(false); setScrub(null); setIdx(n - 1) }
+    else return
+    e.preventDefault()
   }
 
   // ── Textes ──
@@ -472,7 +564,8 @@ export default function FlagTimeline({ countryCode, countryName, initialFlags = 
   // ── Plusieurs drapeaux ──
   const f = items[sel]
   const sg = geo.segs[sel]
-  const cx = (sg.x0 + sg.x1) / 2
+  const cx = scrub ?? (sg.x0 + sg.x1) / 2
+  const scrubYear = Math.min(Math.floor(NOW_Y), Math.floor(geo.yearAt(cx)))
   const endText = items.some(i => i.current) ? today : String(Math.max(...items.map(i => i.y1 || i.y0)))
   const labelsM = pickLabels(geo, items, sel, 0.17, endText)
   const labelsD = pickLabels(geo, items, sel, 0.06, endText)
@@ -512,25 +605,36 @@ export default function FlagTimeline({ countryCode, countryName, initialFlags = 
           </div>
         )}
         <div style={{ minWidth: 0 }}>
-          <div className="kft-lanes" aria-hidden="true">
-            {Array.from({ length: geo.lanesN }, (_, l) => (
-              <div key={l} className={`kft-lane${l ? ' sub' : ''}`}>
-                {l === 0 && geo.gaps.map((g, k) => (
-                  <span key={`g${k}`} className="kft-gap" style={{ left: pct(g.x0), width: pct(g.x1 - g.x0) }} />
-                ))}
-                {geo.segs.filter(s => s.lane === l).map(s => (
-                  <button key={items[s.i].id ?? s.i} type="button" tabIndex={-1}
-                    className={`kft-seg${s.i === sel ? ' on' : ''}`}
-                    title={`${label(items[s.i])} · ${range(items[s.i])}`}
-                    onClick={() => pick(s.i)}
-                    style={{ left: `calc(${pct(s.x0)} + 1px)`, width: `calc(${pct(s.x1 - s.x0)} - 2px)` }}>
-                    <HistImg flag={items[s.i]} iso={iso} cover />
-                  </button>
-                ))}
-              </div>
-            ))}
-            <span className="kft-knob" style={{ left: pct(cx) }} />
-            <span className="kft-cursor" style={{ left: pct(cx) }} />
+          <div className={`kft-track${dragging ? ' drag' : ''}`}
+            role="slider" tabIndex={0}
+            aria-label={t('Timeline: drag to travel through time', 'Frise : glisser pour remonter le temps')}
+            aria-valuemin={1} aria-valuemax={n} aria-valuenow={sel + 1}
+            aria-valuetext={`${label(f)}, ${range(f)}`}
+            onKeyDown={onTrackKey}
+            onPointerDown={onPointerDown} onPointerMove={onPointerMove}
+            onPointerUp={onPointerUp} onPointerCancel={onPointerCancel}>
+            <div className="kft-lanes" ref={lanesRef} aria-hidden="true">
+              {Array.from({ length: geo.lanesN }, (_, l) => (
+                <div key={l} className={`kft-lane${l ? ' sub' : ''}`}>
+                  {l === 0 && geo.gaps.map((g, k) => (
+                    <span key={`g${k}`} className="kft-gap" style={{ left: pct(g.x0), width: pct(g.x1 - g.x0) }} />
+                  ))}
+                  {geo.segs.filter(s => s.lane === l).map(s => (
+                    <span key={items[s.i].id ?? s.i}
+                      className={`kft-seg${s.i === sel ? ' on' : ''}`}
+                      title={`${label(items[s.i])} · ${range(items[s.i])}`}
+                      style={{ left: `calc(${pct(s.x0)} + 1px)`, width: `calc(${pct(s.x1 - s.x0)} - 2px)` }}>
+                      <HistImg flag={items[s.i]} iso={iso} cover />
+                    </span>
+                  ))}
+                </div>
+              ))}
+              <span className="kft-knob" style={{ left: pct(cx) }} />
+              <span className="kft-cursor" style={{ left: pct(cx) }} />
+              {dragging && (
+                <span className="kft-bubble" style={{ left: pct(cx), transform: `translateX(-${Math.round(cx * 100)}%)` }}>{scrubYear}</span>
+              )}
+            </div>
           </div>
           {labelRow(labelsM, 'm')}
           {labelRow(labelsD, 'd')}

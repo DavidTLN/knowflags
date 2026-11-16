@@ -4,12 +4,17 @@ import { createClient } from '@/lib/supabase-client'
 import Link from 'next/link'
 import { useState, useEffect, useRef } from 'react'
 import FlagHistoryModule from '@/components/FlagHistoryModule'
+import FlagTimeline from '@/components/FlagTimeline'
 import CountryLocationMap from '@/components/CountryLocationMap'
 import { useLocale } from 'next-intl'
 import { labelColor, labelSymbol, labelShape } from '@/lib/flagSymbolsFr'
 import Footer from '@/components/Footer'
 import CountryRelatedPosts from '@/components/blog/CountryRelatedPosts'
 import ReportModal from '@/components/ReportModal'
+
+// Ancien arbre « Évolution du drapeau » (FlagHistoryModule) : gardé dans le code mais
+// masqué ; FlagTimeline prend sa place. Passer à true pour le réafficher.
+const SHOW_LEGACY_FLAG_TREE = false
 
 // ── DS Tokens ─────────────────────────────────────────────────────────────────
 const DS = {
@@ -1187,7 +1192,9 @@ export default function CountryDetailPage({ country, facts = [], relatedCountrie
           {facts.length > 0 && <DidYouKnow facts={facts} />}
 
           {/* Historical Timeline */}
-          <FlagHistoryModule countryCode={country.code} countryName={name} initialFlags={history} />
+          {SHOW_LEGACY_FLAG_TREE
+            ? <FlagHistoryModule countryCode={country.code} countryName={name} initialFlags={history} />
+            : <FlagTimeline countryCode={country.code} countryName={name} initialFlags={history} />}
 
           {/* Where is X? — carte, voisins, frontières */}
           <CountryLocationMap country={country} locale={locale} />
@@ -1335,7 +1342,9 @@ export default function CountryDetailPage({ country, facts = [], relatedCountrie
           {facts.length > 0 && <DidYouKnow facts={facts} />}
 
           {/* Historical Timeline */}
-          <FlagHistoryModule countryCode={country.code} countryName={name} initialFlags={history} />
+          {SHOW_LEGACY_FLAG_TREE
+            ? <FlagHistoryModule countryCode={country.code} countryName={name} initialFlags={history} />
+            : <FlagTimeline countryCode={country.code} countryName={name} initialFlags={history} />}
 
           {/* Where is X? — carte, voisins, frontières */}
           <CountryLocationMap country={country} locale={locale} />

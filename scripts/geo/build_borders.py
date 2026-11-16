@@ -119,12 +119,11 @@ def main():
         """a borders b (via_a = territory of a, via_b = territory of b)."""
         if not a or not b or a == b:
             return
-        via = via_a or via_b
-        for x, y in ((a, b), (b, a)):
+        for x, y, via in ((a, b, via_a or via_b), (b, a, via_b or via_a)):   # chacun voit d'abord son propre territoire
             cur = land.setdefault(x, {})
             e = cur.get(y)
             if e is None or (length and not e['km']):
-                cur[y] = {'km': length, 'via': via}
+                cur[y] = {'km': length, 'via': via if e is None else (e['via'] and via)}
             elif via and e['via'] and via not in e['via'] and length and e['km']:
                 # Deux territoires du même État contre le même voisin (Akrotiri + Dhekelia) : on additionne
                 cur[y] = {'km': e['km'] + length, 'via': e['via'] + ' & ' + via}
@@ -218,11 +217,15 @@ def main():
                     continue
             if oiso == siso:
                 continue
-            via = svia or ovia
             if 'M' in kind:
-                for x, y in ((siso, oiso), (oiso, siso)):
-                    maritime.setdefault(x, {}).setdefault(y, via)
-            if 'L' in kind and not aggregate and oiso not in land.get(siso, {}) and total.get(siso) != 0 and total.get(oiso) != 0:
+                for x, y, via in ((siso, oiso, svia or ovia), (oiso, siso, ovia or svia)):
+                    cur = maritime.setdefault(x, {})
+                    if y not in cur:
+                        cur[y] = via
+                    elif via is None and not aggregate:   # frontière directe (ligne du pays seul) : l'emporte sur un « via »
+                        cur[y] = None
+            own = PARENT.get(oiso, (None,))[0] == siso or PARENT.get(siso, (None,))[0] == oiso
+            if 'L' in kind and not own and not aggregate and oiso not in land.get(siso, {}) and total.get(siso) != 0 and total.get(oiso) != 0:
                 add_edge(siso, oiso, None, svia, ovia)
 
     # Pays constitutifs du Royaume-Uni (absents du Factbook) : voisins terrestres saisis à la main

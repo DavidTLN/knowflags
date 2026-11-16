@@ -1,0 +1,34 @@
+name: Region flags recovery
+
+# Cherche les drapeaux des régions qui n'ont pas encore d'image (scripts/wikidata/fetch_region_flags.py).
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['scripts/wikidata/fetch_region_flags.py']
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      # Clé publiable (déjà publique dans le site) : lecture seule de flag_taxonomy
+      SUPABASE_PUBLISHABLE_KEY: sb_publishable_VH4sPWc-eOLG5-Fm3kvq7g_lcUPDSQ6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests
+      - run: python3 scripts/wikidata/fetch_region_flags.py
+      - name: Commit results
+        run: |
+          git config user.name "knowflags-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/flags/regions data/wikidata/regions_recovered.json
+          git commit -m "Region flags recovery" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push origin HEAD:main

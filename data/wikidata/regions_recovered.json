@@ -1,0 +1,2693 @@
+[
+ {
+  "slug": "al-dibra-county",
+  "image_path": "/flags/regions/al-dibra-county.svg",
+  "file": "ALB Qarku i Dibrës flag.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "NekoMax",
+  "page": "https://commons.wikimedia.org/wiki/File:ALB_Qarku_i_Dibrës_flag.svg"
+ },
+ {
+  "slug": "al-fier-county",
+  "image_path": "/flags/regions/al-fier-county.svg",
+  "file": "Flag of Fier.svg",
+  "method": "wikipedia",
+  "license": "Copyrighted free use",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Fier.svg"
+ },
+ {
+  "slug": "ao-cabinda-province",
+  "image_path": "/flags/regions/ao-cabinda-province.svg",
+  "file": "Flag of the Republic of Cabinda.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Unknown",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Republic_of_Cabinda.svg"
+ },
+ {
+  "slug": "bg-burgas",
+  "image_path": "/flags/regions/bg-burgas.png",
+  "file": "BG-Burgas flag.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 3.0",
+  "artist": "LadyPopular",
+  "page": "https://commons.wikimedia.org/wiki/File:BG-Burgas_flag.png"
+ },
+ {
+  "slug": "bg-gabrovo",
+  "image_path": "/flags/regions/bg-gabrovo.svg",
+  "file": "BG Gabrovo flag.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Brosen",
+  "page": "https://commons.wikimedia.org/wiki/File:BG_Gabrovo_flag.svg"
+ },
+ {
+  "slug": "bg-haskovo",
+  "image_path": "/flags/regions/bg-haskovo.png",
+  "file": "Flag of Haskovo.gif",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Stoyan Antonov",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Haskovo.gif"
+ },
+ {
+  "slug": "bg-kardzhali",
+  "image_path": "/flags/regions/bg-kardzhali.png",
+  "file": "Flag of Kardzhali.gif",
+  "method": "wikipedia",
+  "license": "Share Alike",
+  "artist": "Stoyan Antonov",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Kardzhali.gif"
+ },
+ {
+  "slug": "bg-kyustendil",
+  "image_path": "/flags/regions/bg-kyustendil.svg",
+  "file": "Flag of Kyustendil.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Kyustendil.svg"
+ },
+ {
+  "slug": "bg-lovech",
+  "image_path": "/flags/regions/bg-lovech.svg",
+  "file": "Flag of Lovech.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Lovech.svg"
+ },
+ {
+  "slug": "bg-montana",
+  "image_path": "/flags/regions/bg-montana.svg",
+  "file": "Flag of Montana, Bulgaria.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Original:  Stoyan Antonov, Derivative work:  HapHaxion",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Montana,_Bulgaria.svg"
+ },
+ {
+  "slug": "bg-pazardzhik",
+  "image_path": "/flags/regions/bg-pazardzhik.png",
+  "file": "Flag of Pazardzhik.gif",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Stoyan Antonov",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Pazardzhik.gif"
+ },
+ {
+  "slug": "bg-pernik",
+  "image_path": "/flags/regions/bg-pernik.svg",
+  "file": "Flag of Pernik.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Pernik.svg"
+ },
+ {
+  "slug": "bg-plovdiv",
+  "image_path": "/flags/regions/bg-plovdiv.svg",
+  "file": "Plovdiv flag.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Kreuzkümmel",
+  "page": "https://commons.wikimedia.org/wiki/File:Plovdiv_flag.svg"
+ },
+ {
+  "slug": "bg-razgrad",
+  "image_path": "/flags/regions/bg-razgrad.svg",
+  "file": "Flag of Razgrad.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Razgrad.svg"
+ },
+ {
+  "slug": "bg-ruse",
+  "image_path": "/flags/regions/bg-ruse.png",
+  "file": "Flag of Ruse.gif",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Stoyan Antonov",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Ruse.gif"
+ },
+ {
+  "slug": "bg-shumen",
+  "image_path": "/flags/regions/bg-shumen.svg",
+  "file": "Flag of Shumen.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Shumen.svg"
+ },
+ {
+  "slug": "bg-silistra",
+  "image_path": "/flags/regions/bg-silistra.png",
+  "file": "Flag of Silistra.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Silistra.svg"
+ },
+ {
+  "slug": "bg-sliven",
+  "image_path": "/flags/regions/bg-sliven.png",
+  "file": "Sliven flag.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Own work. w:nl:Gebruiker:Brimz",
+  "page": "https://commons.wikimedia.org/wiki/File:Sliven_flag.png"
+ },
+ {
+  "slug": "bg-stara-zagora",
+  "image_path": "/flags/regions/bg-stara-zagora.svg",
+  "file": "Flag of Stara Zagora (obverse).svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Scroch",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Stara_Zagora_(obverse).svg"
+ },
+ {
+  "slug": "bg-varna",
+  "image_path": "/flags/regions/bg-varna.png",
+  "file": "Varna flag.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "w:nl:Gebruiker:Brimz",
+  "page": "https://commons.wikimedia.org/wiki/File:Varna_flag.png"
+ },
+ {
+  "slug": "bg-veliko-tarnovo",
+  "image_path": "/flags/regions/bg-veliko-tarnovo.png",
+  "file": "Veliko tarnovo flag.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "w:nl:Gebruiker:Brimz",
+  "page": "https://commons.wikimedia.org/wiki/File:Veliko_tarnovo_flag.png"
+ },
+ {
+  "slug": "bg-vidin",
+  "image_path": "/flags/regions/bg-vidin.png",
+  "file": "Flag of Vidin.gif",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Stoyan Antonov",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Vidin.gif"
+ },
+ {
+  "slug": "bg-yambol",
+  "image_path": "/flags/regions/bg-yambol.png",
+  "file": "Flag of Yambol.gif",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Stoyan Antonov",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Yambol.gif"
+ },
+ {
+  "slug": "cd-mongala",
+  "image_path": "/flags/regions/cd-mongala.png",
+  "file": "Flag of Mongala.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Mongala.png"
+ },
+ {
+  "slug": "cd-sankuru",
+  "image_path": "/flags/regions/cd-sankuru.svg",
+  "file": "Flag of Sankuru Province.svg",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "Flagvisioner",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Sankuru_Province.svg"
+ },
+ {
+  "slug": "cf-bangui",
+  "image_path": "/flags/regions/cf-bangui.svg",
+  "file": "Flag of Bangui, Central African Republic.svg",
+  "method": "commons-name",
+  "license": "CC BY-SA 4.0",
+  "artist": "Moschops2026",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Bangui,_Central_African_Republic.svg"
+ },
+ {
+  "slug": "cu-cienfuegos-province",
+  "image_path": "/flags/regions/cu-cienfuegos-province.png",
+  "file": "Flag of Cienfuegos, Cuba.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Clotilde del Carmen Rodríguez López",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Cienfuegos,_Cuba.svg"
+ },
+ {
+  "slug": "cu-havana-province",
+  "image_path": "/flags/regions/cu-havana-province.svg",
+  "file": "Official flag of Havana, Cuba.svg",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "Flagvisioner",
+  "page": "https://commons.wikimedia.org/wiki/File:Official_flag_of_Havana,_Cuba.svg"
+ },
+ {
+  "slug": "cv-praia",
+  "image_path": "/flags/regions/cv-praia.svg",
+  "file": "Flag of Praia.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "Demon201x",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Praia.svg"
+ },
+ {
+  "slug": "do-distrito-nacional",
+  "image_path": "/flags/regions/do-distrito-nacional.png",
+  "file": "Bandera del Distrito Nacional RD.png",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "TexasEnthusiast",
+  "page": "https://commons.wikimedia.org/wiki/File:Bandera_del_Distrito_Nacional_RD.png"
+ },
+ {
+  "slug": "do-espaillat-province",
+  "image_path": "/flags/regions/do-espaillat-province.png",
+  "file": "Espaillat province flag.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "Domied",
+  "page": "https://commons.wikimedia.org/wiki/File:Espaillat_province_flag.png"
+ },
+ {
+  "slug": "do-la-altagracia-province",
+  "image_path": "/flags/regions/do-la-altagracia-province.png",
+  "file": "Bandera de la Altagracia RD.png",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "TexasEnthusiast",
+  "page": "https://commons.wikimedia.org/wiki/File:Bandera_de_la_Altagracia_RD.png"
+ },
+ {
+  "slug": "do-peravia-province",
+  "image_path": "/flags/regions/do-peravia-province.png",
+  "file": "Bandera de Peravia RD.png",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "TexasEnthusiast",
+  "page": "https://commons.wikimedia.org/wiki/File:Bandera_de_Peravia_RD.png"
+ },
+ {
+  "slug": "do-puerto-plata-province",
+  "image_path": "/flags/regions/do-puerto-plata-province.svg",
+  "file": "Flag of Puerto Plata Province.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Flagvisioner",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Puerto_Plata_Province.svg"
+ },
+ {
+  "slug": "do-san-pedro-de-macoris",
+  "image_path": "/flags/regions/do-san-pedro-de-macoris.svg",
+  "file": "Flag of San Pedro de Macorís Province.svg",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "Flagvisioner",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_San_Pedro_de_Macorís_Province.svg"
+ },
+ {
+  "slug": "do-santiago-province",
+  "image_path": "/flags/regions/do-santiago-province.png",
+  "file": "Santiago province flag.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "Domied",
+  "page": "https://commons.wikimedia.org/wiki/File:Santiago_province_flag.png"
+ },
+ {
+  "slug": "ec-esmeraldas-province",
+  "image_path": "/flags/regions/ec-esmeraldas-province.svg",
+  "file": "Bandera Provincia Esmeraldas.svg",
+  "method": "wikidata",
+  "license": "Public domain",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Bandera_Provincia_Esmeraldas.svg"
+ },
+ {
+  "slug": "ec-pichincha-province",
+  "image_path": "/flags/regions/ec-pichincha-province.svg",
+  "file": "Bandera Provincia Pichincha.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Bandera_Provincia_Pichincha.svg"
+ },
+ {
+  "slug": "eg-cairo-governorate",
+  "image_path": "/flags/regions/eg-cairo-governorate.svg",
+  "file": "Flag of Cairo Governorate.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Cairo_Governorate.svg"
+ },
+ {
+  "slug": "eg-luxor-governorate",
+  "image_path": "/flags/regions/eg-luxor-governorate.png",
+  "file": "Flag of Luxor Governorate.gif",
+  "method": "wikipedia",
+  "license": "CC BY-SA 3.0",
+  "artist": "Ninane at Dutch Wikipedia",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Luxor_Governorate.gif"
+ },
+ {
+  "slug": "fi-lapland",
+  "image_path": "/flags/regions/fi-lapland.png",
+  "file": "Flag of Lapland (Finland).gif",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "António Martins-Tuvalkin",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Lapland_(Finland).gif"
+ },
+ {
+  "slug": "ga-estuaire-province",
+  "image_path": "/flags/regions/ga-estuaire-province.svg",
+  "file": "Flag of Estuaire Province, Gabon.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Original by Louis Mühlemann, vectorised by User:Fenn-O-maniC; derivative work by Flagvisioner",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Estuaire_Province,_Gabon.svg"
+ },
+ {
+  "slug": "ga-haut-ogooue-province",
+  "image_path": "/flags/regions/ga-haut-ogooue-province.svg",
+  "file": "Flag of Haut-Ogooué Province, Gabon.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Original by Louis Mühlemann, vectorised by User:Fenn-O-maniC; derivative work by Flagvisioner",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Haut-Ogooué_Province,_Gabon.svg"
+ },
+ {
+  "slug": "ga-moyen-ogooue-province",
+  "image_path": "/flags/regions/ga-moyen-ogooue-province.svg",
+  "file": "Flag of Moyen-Ogooué Province, Gabon.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "Original by Louis Mühlemann, vectorised by User:Fenn-O-maniC; derivative work by Flagvisioner",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Moyen-Ogooué_Province,_Gabon.svg"
+ },
+ {
+  "slug": "ga-ngounie-province",
+  "image_path": "/flags/regions/ga-ngounie-province.svg",
+  "file": "Flag of Ngounié Province, Gabon.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "Original by Louis Mühlemann, vectorised by User:Fenn-O-maniC; derivative work by Flagvisioner",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Ngounié_Province,_Gabon.svg"
+ },
+ {
+  "slug": "ga-ogooue-ivindo-province",
+  "image_path": "/flags/regions/ga-ogooue-ivindo-province.svg",
+  "file": "Flag of Ogooué-Ivindo Province, Gabon.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "Original by Louis Mühlemann, vectorised by User:Fenn-O-maniC; derivative work by Flagvisioner",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Ogooué-Ivindo_Province,_Gabon.svg"
+ },
+ {
+  "slug": "ga-ogooue-lolo-province",
+  "image_path": "/flags/regions/ga-ogooue-lolo-province.svg",
+  "file": "Flag of Ogooué-Lolo Province, Gabon.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "Original by Louis Mühlemann, vectorised by User:Fenn-O-maniC; derivative work by Flagvisioner",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Ogooué-Lolo_Province,_Gabon.svg"
+ },
+ {
+  "slug": "ga-ogooue-maritime-province",
+  "image_path": "/flags/regions/ga-ogooue-maritime-province.svg",
+  "file": "Flag of Ogooué-Maritime Province, Gabon.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Original by Louis Mühlemann, vectorised by User:Fenn-O-maniC; derivative work by Flagvisioner",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Ogooué-Maritime_Province,_Gabon.svg"
+ },
+ {
+  "slug": "ga-woleu-ntem-province",
+  "image_path": "/flags/regions/ga-woleu-ntem-province.svg",
+  "file": "Flag of Woleu-Ntem Province, Gabon.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "Original by Louis Mühlemann, vectorised by User:Fenn-O-maniC; derivative work by Flagvisioner",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Woleu-Ntem_Province,_Gabon.svg"
+ },
+ {
+  "slug": "gh-volta-region",
+  "image_path": "/flags/regions/gh-volta-region.png",
+  "file": "Flag of Volta Region.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Government of Ghana",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Volta_Region.png"
+ },
+ {
+  "slug": "gh-western-north-region",
+  "image_path": "/flags/regions/gh-western-north-region.png",
+  "file": "Flag of Western Region (Ghana).gif",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Government of Ghana",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Western_Region_(Ghana).gif"
+ },
+ {
+  "slug": "gl-avannaata",
+  "image_path": "/flags/regions/gl-avannaata.svg",
+  "file": "Flag of Avannaata Municipality, Greenland.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Avannaata Kommunia",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Avannaata_Municipality,_Greenland.svg"
+ },
+ {
+  "slug": "gl-qeqertalik",
+  "image_path": "/flags/regions/gl-qeqertalik.svg",
+  "file": "Flag of Qeqertalik Municipality, Denmark.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Qeqertalik Kommune",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Qeqertalik_Municipality,_Denmark.svg"
+ },
+ {
+  "slug": "gl-sermersooq",
+  "image_path": "/flags/regions/gl-sermersooq.svg",
+  "file": "Flag of Sermersooq, Denmark.svg",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "Flagvisioner",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Sermersooq,_Denmark.svg"
+ },
+ {
+  "slug": "gm-greater-banjul-area",
+  "image_path": "/flags/regions/gm-greater-banjul-area.svg",
+  "file": "Flag of Banjul, The Gambia.svg",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "Flagvisioner",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Banjul,_The_Gambia.svg"
+ },
+ {
+  "slug": "gq-annobon-province",
+  "image_path": "/flags/regions/gq-annobon-province.png",
+  "file": "Bandera Annobon.png",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "Edeiaid",
+  "page": "https://commons.wikimedia.org/wiki/File:Bandera_Annobon.png"
+ },
+ {
+  "slug": "gr-attica-region",
+  "image_path": "/flags/regions/gr-attica-region.svg",
+  "file": "Bandera d'Àtica.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "User:Walden69",
+  "page": "https://commons.wikimedia.org/wiki/File:Bandera_d'Àtica.svg"
+ },
+ {
+  "slug": "gr-south-aegean-region",
+  "image_path": "/flags/regions/gr-south-aegean-region.svg",
+  "file": "Flag of the Region of South Aegean.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 3.0",
+  "artist": "Philly boy92",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Region_of_South_Aegean.svg"
+ },
+ {
+  "slug": "gt-chiquimula-department",
+  "image_path": "/flags/regions/gt-chiquimula-department.svg",
+  "file": "Flag of Chiquimula, Guatemala.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Chiquimula,_Guatemala.svg"
+ },
+ {
+  "slug": "gt-huehuetenango-department",
+  "image_path": "/flags/regions/gt-huehuetenango-department.svg",
+  "file": "Flag of Huehuetenango Department.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Huehuetenango_Department.svg"
+ },
+ {
+  "slug": "gt-izabal-department",
+  "image_path": "/flags/regions/gt-izabal-department.svg",
+  "file": "Flag of Izabal Department.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Izabal_Department.svg"
+ },
+ {
+  "slug": "gt-jutiapa-department",
+  "image_path": "/flags/regions/gt-jutiapa-department.png",
+  "file": "Flag of Jutiapa Department.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Jutiapa_Department.svg"
+ },
+ {
+  "slug": "gt-santa-rosa-department",
+  "image_path": "/flags/regions/gt-santa-rosa-department.svg",
+  "file": "Flag of Santa Rosa Department.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Santa_Rosa_Department.svg"
+ },
+ {
+  "slug": "gu-hagatna",
+  "image_path": "/flags/regions/gu-hagatna.svg",
+  "file": "Flag of Hagåtña, Guam.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Gerard V. Aflague",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Hagåtña,_Guam.svg"
+ },
+ {
+  "slug": "gy-barima-waini",
+  "image_path": "/flags/regions/gy-barima-waini.svg",
+  "file": "Flag of Barima-Waini, Guyana.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Barima-Waini,_Guyana.svg"
+ },
+ {
+  "slug": "hn-atlantida-department",
+  "image_path": "/flags/regions/hn-atlantida-department.png",
+  "file": "Flag Of Atlantida Department.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "Jvdfos",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_Of_Atlantida_Department.png"
+ },
+ {
+  "slug": "hn-cortes-department",
+  "image_path": "/flags/regions/hn-cortes-department.png",
+  "file": "Bandera Cortés.png",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "Xuppu4276",
+  "page": "https://commons.wikimedia.org/wiki/File:Bandera_Cortés.png"
+ },
+ {
+  "slug": "hn-el-paraiso-department",
+  "image_path": "/flags/regions/hn-el-paraiso-department.png",
+  "file": "Bandera del Paraíso.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Bandera_del_Paraíso.png"
+ },
+ {
+  "slug": "hn-gracias-a-dios-department",
+  "image_path": "/flags/regions/hn-gracias-a-dios-department.svg",
+  "file": "Flag of Gracias a Dios Department.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "Bennurarities25",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Gracias_a_Dios_Department.svg"
+ },
+ {
+  "slug": "hn-intibuca-department",
+  "image_path": "/flags/regions/hn-intibuca-department.svg",
+  "file": "Bandera de Intibucá.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Bandera_de_Intibucá.svg"
+ },
+ {
+  "slug": "hn-lempira-department",
+  "image_path": "/flags/regions/hn-lempira-department.svg",
+  "file": "Flag of Lempira Department.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "Bennurarities25",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Lempira_Department.svg"
+ },
+ {
+  "slug": "ht-artibonite",
+  "image_path": "/flags/regions/ht-artibonite.png",
+  "file": "Flag of Artibonite department.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "Vexillology Wiki",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Artibonite_department.png"
+ },
+ {
+  "slug": "ie-county-carlow",
+  "image_path": "/flags/regions/ie-county-carlow.svg",
+  "file": "Flag of county Carlow.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_county_Carlow.svg"
+ },
+ {
+  "slug": "ie-county-clare",
+  "image_path": "/flags/regions/ie-county-clare.svg",
+  "file": "Flag of county Clare.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_county_Clare.svg"
+ },
+ {
+  "slug": "ie-county-dublin",
+  "image_path": "/flags/regions/ie-county-dublin.svg",
+  "file": "Flag of county Dublin.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_county_Dublin.svg"
+ },
+ {
+  "slug": "ie-county-kerry",
+  "image_path": "/flags/regions/ie-county-kerry.svg",
+  "file": "Flag of county Kerry.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_county_Kerry.svg"
+ },
+ {
+  "slug": "ie-county-kildare",
+  "image_path": "/flags/regions/ie-county-kildare.svg",
+  "file": "Flag of county Kildare.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_county_Kildare.svg"
+ },
+ {
+  "slug": "ie-county-kilkenny",
+  "image_path": "/flags/regions/ie-county-kilkenny.svg",
+  "file": "Flag of county Kilkenny.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_county_Kilkenny.svg"
+ },
+ {
+  "slug": "ie-county-leitrim",
+  "image_path": "/flags/regions/ie-county-leitrim.svg",
+  "file": "Flag of county Leitrim.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_county_Leitrim.svg"
+ },
+ {
+  "slug": "ie-county-limerick",
+  "image_path": "/flags/regions/ie-county-limerick.svg",
+  "file": "Flag of County Limerick.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Ricordisamoa",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_County_Limerick.svg"
+ },
+ {
+  "slug": "ie-county-monaghan",
+  "image_path": "/flags/regions/ie-county-monaghan.svg",
+  "file": "Flag of county Monaghan.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_county_Monaghan.svg"
+ },
+ {
+  "slug": "ie-county-offaly",
+  "image_path": "/flags/regions/ie-county-offaly.svg",
+  "file": "Flag of county Offaly.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_county_Offaly.svg"
+ },
+ {
+  "slug": "ie-county-roscommon",
+  "image_path": "/flags/regions/ie-county-roscommon.svg",
+  "file": "Flag of county Roscommon.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_county_Roscommon.svg"
+ },
+ {
+  "slug": "ie-county-sligo",
+  "image_path": "/flags/regions/ie-county-sligo.svg",
+  "file": "Flag of county Sligo.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_county_Sligo.svg"
+ },
+ {
+  "slug": "ie-county-tipperary",
+  "image_path": "/flags/regions/ie-county-tipperary.svg",
+  "file": "Flag of county Tipperary.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_county_Tipperary.svg"
+ },
+ {
+  "slug": "ie-county-waterford",
+  "image_path": "/flags/regions/ie-county-waterford.svg",
+  "file": "Flag of County Waterford.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Ricordisamoa",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_County_Waterford.svg"
+ },
+ {
+  "slug": "ie-county-wexford",
+  "image_path": "/flags/regions/ie-county-wexford.svg",
+  "file": "Flag of county Wexford.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_county_Wexford.svg"
+ },
+ {
+  "slug": "il-tel-aviv-district",
+  "image_path": "/flags/regions/il-tel-aviv-district.svg",
+  "file": "Tel Aviv flag.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Municipality of Tel Aviv Yafo",
+  "page": "https://commons.wikimedia.org/wiki/File:Tel_Aviv_flag.svg"
+ },
+ {
+  "slug": "iq-al-qadisiyyah-governorate",
+  "image_path": "/flags/regions/iq-al-qadisiyyah-governorate.png",
+  "file": "Flag of Al-Qadisiya.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Al-Qadisiya.png"
+ },
+ {
+  "slug": "iq-babylon-governorate",
+  "image_path": "/flags/regions/iq-babylon-governorate.png",
+  "file": "Flag of Babylon Governorate.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Babylon_Governorate.svg"
+ },
+ {
+  "slug": "iq-basra-governorate",
+  "image_path": "/flags/regions/iq-basra-governorate.svg",
+  "file": "Flag of Basra Governorate.svg",
+  "method": "commons-name",
+  "license": "CC0",
+  "artist": "MrPenguin20",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Basra_Governorate.svg"
+ },
+ {
+  "slug": "iq-diyala-governorate",
+  "image_path": "/flags/regions/iq-diyala-governorate.png",
+  "file": "Flag of Diyala Governorate.png",
+  "method": "commons-name",
+  "license": "CC0",
+  "artist": "This image includes elements that have been taken or adapted from this file:",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Diyala_Governorate.png"
+ },
+ {
+  "slug": "iq-duhok-governorate",
+  "image_path": "/flags/regions/iq-duhok-governorate.png",
+  "file": "Flag of Duhok Governorate.png",
+  "method": "commons-name",
+  "license": "CC0",
+  "artist": "Ahmed Wael12012",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Duhok_Governorate.png"
+ },
+ {
+  "slug": "iq-karbala-governorate",
+  "image_path": "/flags/regions/iq-karbala-governorate.png",
+  "file": "Flag of Karbala.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Karbala.png"
+ },
+ {
+  "slug": "iq-kirkuk-governorate",
+  "image_path": "/flags/regions/iq-kirkuk-governorate.svg",
+  "file": "Flag of Kirkuk Governorate.svg",
+  "method": "commons-name",
+  "license": "CC BY-SA 4.0",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Kirkuk_Governorate.svg"
+ },
+ {
+  "slug": "iq-maysan-governorate",
+  "image_path": "/flags/regions/iq-maysan-governorate.png",
+  "file": "FLAG Maysan.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:FLAG_Maysan.png"
+ },
+ {
+  "slug": "iq-nineveh-governorate",
+  "image_path": "/flags/regions/iq-nineveh-governorate.png",
+  "file": "Flag of Nineveh Governorate.svg",
+  "method": "commons-name",
+  "license": "CC BY-SA 4.0",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Nineveh_Governorate.svg"
+ },
+ {
+  "slug": "ir-kurdistan-province",
+  "image_path": "/flags/regions/ir-kurdistan-province.svg",
+  "file": "Flag of Kurdistan.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Unknown authorUnknown author",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Kurdistan.svg"
+ },
+ {
+  "slug": "ir-tehran-province",
+  "image_path": "/flags/regions/ir-tehran-province.svg",
+  "file": "Flag of Tehran.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Government of Tehran",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Tehran.svg"
+ },
+ {
+  "slug": "ke-western-province",
+  "image_path": "/flags/regions/ke-western-province.svg",
+  "file": "Flag of Western Province.svg",
+  "method": "commons-name",
+  "license": "Public domain",
+  "artist": "Unknown authorUnknown author",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Western_Province.svg"
+ },
+ {
+  "slug": "kp-rason",
+  "image_path": "/flags/regions/kp-rason.png",
+  "file": "Flag of Rason.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Unknown",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Rason.png"
+ },
+ {
+  "slug": "kw-al-ahmadi-governorate",
+  "image_path": "/flags/regions/kw-al-ahmadi-governorate.png",
+  "file": "Flag of Ahmadi Governorate.gif",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "MrFlags",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Ahmadi_Governorate.gif"
+ },
+ {
+  "slug": "kw-mubarak-al-kabeer-governorate",
+  "image_path": "/flags/regions/kw-mubarak-al-kabeer-governorate.png",
+  "file": "Flag Of Mubarak-Al-Kabeer Governorate.gif",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "MrFlags",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_Of_Mubarak-Al-Kabeer_Governorate.gif"
+ },
+ {
+  "slug": "kz-akmola-region",
+  "image_path": "/flags/regions/kz-akmola-region.png",
+  "file": "Bandera de Akmola.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Bandera_de_Akmola.png"
+ },
+ {
+  "slug": "kz-atyrau-region",
+  "image_path": "/flags/regions/kz-atyrau-region.svg",
+  "file": "Flag of Atyrau, Kazakhstan.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Jelican9",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Atyrau,_Kazakhstan.svg"
+ },
+ {
+  "slug": "kz-east-kazakhstan-region",
+  "image_path": "/flags/regions/kz-east-kazakhstan-region.svg",
+  "file": "Flag of East Kazakhstan Province.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_East_Kazakhstan_Province.svg"
+ },
+ {
+  "slug": "kz-jambyl-region",
+  "image_path": "/flags/regions/kz-jambyl-region.png",
+  "file": "Zhambyl Flag.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Zhambyl_Flag.png"
+ },
+ {
+  "slug": "kz-kostanay-region",
+  "image_path": "/flags/regions/kz-kostanay-region.png",
+  "file": "Bandera de la Región de Kostanay.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Bandera_de_la_Región_de_Kostanay.png"
+ },
+ {
+  "slug": "kz-north-kazakhstan-region",
+  "image_path": "/flags/regions/kz-north-kazakhstan-region.png",
+  "file": "Bandera de la Región del norte de Kazajstán.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Bandera_de_la_Región_del_norte_de_Kazajstán.svg"
+ },
+ {
+  "slug": "kz-pavlodar-region",
+  "image_path": "/flags/regions/kz-pavlodar-region.png",
+  "file": "Flag of Pavlodar.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Pavlodar.png"
+ },
+ {
+  "slug": "kz-turkistan-region",
+  "image_path": "/flags/regions/kz-turkistan-region.png",
+  "file": "Bandera de Turkestán.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Bandera_de_Turkestán.png"
+ },
+ {
+  "slug": "kz-west-kazakhstan-region",
+  "image_path": "/flags/regions/kz-west-kazakhstan-region.png",
+  "file": "Flag of West Kazakhstan Region.png",
+  "method": "commons-name",
+  "license": "CC BY-SA 4.0",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_West_Kazakhstan_Region.png"
+ },
+ {
+  "slug": "la-vientiane",
+  "image_path": "/flags/regions/la-vientiane.svg",
+  "file": "Flag of Vientiane, Laos.svg",
+  "method": "commons-name",
+  "license": "CC BY-SA 4.0",
+  "artist": "Yupekosi",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Vientiane,_Laos.svg"
+ },
+ {
+  "slug": "lt-alytus-city-municipality",
+  "image_path": "/flags/regions/lt-alytus-city-municipality.svg",
+  "file": "Flag of Alytus.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Unknown authorUnknown author",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Alytus.svg"
+ },
+ {
+  "slug": "lt-alytus-district-municipality",
+  "image_path": "/flags/regions/lt-alytus-district-municipality.svg",
+  "file": "Alytus County flag.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Arvydas Každailis or Rimvydas Rimkūnas\n\nvector version by Helmy oved",
+  "page": "https://commons.wikimedia.org/wiki/File:Alytus_County_flag.svg"
+ },
+ {
+  "slug": "lt-kaunas-city-municipality",
+  "image_path": "/flags/regions/lt-kaunas-city-municipality.svg",
+  "file": "LTU Kaunas flag.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Szczepan1990",
+  "page": "https://commons.wikimedia.org/wiki/File:LTU_Kaunas_flag.svg"
+ },
+ {
+  "slug": "lt-klaipeda-city-municipality",
+  "image_path": "/flags/regions/lt-klaipeda-city-municipality.svg",
+  "file": "Flag of Klaipėda.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Original: Kestutis Mickevicius Vector:  Jefim Vytovtov",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Klaipėda.svg"
+ },
+ {
+  "slug": "lt-lazdijai-district-municipality",
+  "image_path": "/flags/regions/lt-lazdijai-district-municipality.png",
+  "file": "Flag of Lazdijų.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Unknown",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Lazdijų.png"
+ },
+ {
+  "slug": "lt-marijampole-municipality",
+  "image_path": "/flags/regions/lt-marijampole-municipality.svg",
+  "file": "Flag of Marijampole.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Plaga med",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Marijampole.svg"
+ },
+ {
+  "slug": "lt-panevezys-district-municipality",
+  "image_path": "/flags/regions/lt-panevezys-district-municipality.svg",
+  "file": "Panevezys County flag.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Arvydas Každailis or Rimvydas Rimkūnas",
+  "page": "https://commons.wikimedia.org/wiki/File:Panevezys_County_flag.svg"
+ },
+ {
+  "slug": "lt-utena-district-municipality",
+  "image_path": "/flags/regions/lt-utena-district-municipality.svg",
+  "file": "Utena County flag.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Tohaomg",
+  "page": "https://commons.wikimedia.org/wiki/File:Utena_County_flag.svg"
+ },
+ {
+  "slug": "lu-canton-of-wiltz",
+  "image_path": "/flags/regions/lu-canton-of-wiltz.svg",
+  "file": "Flag of Wiltz Canton, Luxembourg.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Flagvisioner",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Wiltz_Canton,_Luxembourg.svg"
+ },
+ {
+  "slug": "lv-marupe-municipality",
+  "image_path": "/flags/regions/lv-marupe-municipality.png",
+  "file": "LVA Mārupes novads flag.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Unknown authorUnknown author",
+  "page": "https://commons.wikimedia.org/wiki/File:LVA_Mārupes_novads_flag.png"
+ },
+ {
+  "slug": "ma-fes-meknes",
+  "image_path": "/flags/regions/ma-fes-meknes.svg",
+  "file": "Flag of Meknes province.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Flad",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Meknes_province.svg"
+ },
+ {
+  "slug": "md-bender-municipality",
+  "image_path": "/flags/regions/md-bender-municipality.png",
+  "file": "Flag of Bendery District.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Bendery_District.svg"
+ },
+ {
+  "slug": "md-briceni-district",
+  "image_path": "/flags/regions/md-briceni-district.svg",
+  "file": "Flag of Briceni.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Silviu ANDRIEȘ-TABAC; Mariana ȘLAPAC",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Briceni.svg"
+ },
+ {
+  "slug": "me-budva-municipality",
+  "image_path": "/flags/regions/me-budva-municipality.svg",
+  "file": "Flag of Budva, Montenegro.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Slav",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Budva,_Montenegro.svg"
+ },
+ {
+  "slug": "me-old-royal-capital-cetinje",
+  "image_path": "/flags/regions/me-old-royal-capital-cetinje.svg",
+  "file": "Flag of Cetinje.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 3.0",
+  "artist": "Дмитрий-5-Аверин",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Cetinje.svg"
+ },
+ {
+  "slug": "me-podgorica-capital-city",
+  "image_path": "/flags/regions/me-podgorica-capital-city.svg",
+  "file": "Flag of Podgorica, Montenegro.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Lewis R",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Podgorica,_Montenegro.svg"
+ },
+ {
+  "slug": "mh-ailinglaplap-atoll",
+  "image_path": "/flags/regions/mh-ailinglaplap-atoll.png",
+  "file": "Flag of Ailinglaplap Atoll.gif",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "Olivier Touzeau",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Ailinglaplap_Atoll.gif"
+ },
+ {
+  "slug": "mh-ailuk-atoll",
+  "image_path": "/flags/regions/mh-ailuk-atoll.svg",
+  "file": "Flag of Ailuk Atoll, Marshall Islands.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Flagvisioner",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Ailuk_Atoll,_Marshall_Islands.svg"
+ },
+ {
+  "slug": "mh-arno-atoll",
+  "image_path": "/flags/regions/mh-arno-atoll.svg",
+  "file": "Flag of Arno Atoll.svg",
+  "method": "wikipedia",
+  "license": "CC BY 4.0",
+  "artist": "Burjkh",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Arno_Atoll.svg"
+ },
+ {
+  "slug": "mh-kwajalein-atoll",
+  "image_path": "/flags/regions/mh-kwajalein-atoll.svg",
+  "file": "Kwajalein Atoll Flag.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Flagvisioner (SVG), CRW Flags (raster)",
+  "page": "https://commons.wikimedia.org/wiki/File:Kwajalein_Atoll_Flag.svg"
+ },
+ {
+  "slug": "mh-mili-atoll",
+  "image_path": "/flags/regions/mh-mili-atoll.svg",
+  "file": "Flag of Mili Atoll.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "SVG-image-maker",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Mili_Atoll.svg"
+ },
+ {
+  "slug": "mh-namdrik-atoll",
+  "image_path": "/flags/regions/mh-namdrik-atoll.svg",
+  "file": "Flag of Namdrik Atoll.svg",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "Flagvisioner (SVG), CRW Flags (raster)",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Namdrik_Atoll.svg"
+ },
+ {
+  "slug": "mh-utirik-atoll",
+  "image_path": "/flags/regions/mh-utirik-atoll.svg",
+  "file": "Flag of Utirik Atoll.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "SVG-image-maker",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Utirik_Atoll.svg"
+ },
+ {
+  "slug": "mk-karbinci-municipality",
+  "image_path": "/flags/regions/mk-karbinci-municipality.svg",
+  "file": "Flag of Karbinci Municipality, North Macedonia.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "MacedonianBoy",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Karbinci_Municipality,_North_Macedonia.svg"
+ },
+ {
+  "slug": "mk-konce-municipality",
+  "image_path": "/flags/regions/mk-konce-municipality.svg",
+  "file": "Flag of Konče Municipality, North Macedonia.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "MacedonianBoy",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Konče_Municipality,_North_Macedonia.svg"
+ },
+ {
+  "slug": "mk-lozovo-municipality",
+  "image_path": "/flags/regions/mk-lozovo-municipality.svg",
+  "file": "Flag of Lozovo Municipality, North Macedonia.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "MacedonianBoy",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Lozovo_Municipality,_North_Macedonia.svg"
+ },
+ {
+  "slug": "mk-sveti-nikole-municipality",
+  "image_path": "/flags/regions/mk-sveti-nikole-municipality.svg",
+  "file": "Flag of Sveti Nikole.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 3.0",
+  "artist": "Hogweard",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Sveti_Nikole.svg"
+ },
+ {
+  "slug": "mk-zelenikovo-municipality",
+  "image_path": "/flags/regions/mk-zelenikovo-municipality.svg",
+  "file": "Flag of Zelenikovo Municipality, North Macedonia.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "MacedonianBoy",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Zelenikovo_Municipality,_North_Macedonia.svg"
+ },
+ {
+  "slug": "mk-zrnovci-municipality",
+  "image_path": "/flags/regions/mk-zrnovci-municipality.svg",
+  "file": "Flag of Zrnovci Municipality, North Macedonia.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 3.0",
+  "artist": "vector version: MacedonianBoy",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Zrnovci_Municipality,_North_Macedonia.svg"
+ },
+ {
+  "slug": "mm-danu-self-administered-zone",
+  "image_path": "/flags/regions/mm-danu-self-administered-zone.svg",
+  "file": "Flag of the Danu people.svg",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "Albert Poliakoff",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Danu_people.svg"
+ },
+ {
+  "slug": "mm-naga-self-administered-zone",
+  "image_path": "/flags/regions/mm-naga-self-administered-zone.png",
+  "file": "Flag of Naga Self-Administered Zone.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "Cordyceps-Zombie",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Naga_Self-Administered_Zone.png"
+ },
+ {
+  "slug": "mm-pa-laung-self-administered-zone",
+  "image_path": "/flags/regions/mm-pa-laung-self-administered-zone.svg",
+  "file": "Flag of the Palaung people.svg",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "Albert Poliakoff",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Palaung_people.svg"
+ },
+ {
+  "slug": "mu-port-louis-district",
+  "image_path": "/flags/regions/mu-port-louis-district.svg",
+  "file": "Flag of Port Louis, Mauritius.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 3.0",
+  "artist": "Yash400",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Port_Louis,_Mauritius.svg"
+ },
+ {
+  "slug": "mx-aguascalientes",
+  "image_path": "/flags/regions/mx-aguascalientes.png",
+  "file": "Flag of Aguascalientes.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Heraldry",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Aguascalientes.svg"
+ },
+ {
+  "slug": "mx-baja-california",
+  "image_path": "/flags/regions/mx-baja-california.svg",
+  "file": "Flag of Baja California.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Heraldry",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Baja_California.svg"
+ },
+ {
+  "slug": "mx-campeche",
+  "image_path": "/flags/regions/mx-campeche.png",
+  "file": "Flag of Campeche.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Heraldry",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Campeche.svg"
+ },
+ {
+  "slug": "mx-chiapas",
+  "image_path": "/flags/regions/mx-chiapas.png",
+  "file": "Flag of Chiapas.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Heraldry",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Chiapas.svg"
+ },
+ {
+  "slug": "mx-coahuila",
+  "image_path": "/flags/regions/mx-coahuila.png",
+  "file": "Flag of Coahuila.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Heraldry",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Coahuila.svg"
+ },
+ {
+  "slug": "mx-hidalgo",
+  "image_path": "/flags/regions/mx-hidalgo.png",
+  "file": "Flag of Hidalgo.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Heraldry",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Hidalgo.svg"
+ },
+ {
+  "slug": "mx-michoacan",
+  "image_path": "/flags/regions/mx-michoacan.png",
+  "file": "Flag of Michoacan.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Heraldry",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Michoacan.svg"
+ },
+ {
+  "slug": "mx-morelos",
+  "image_path": "/flags/regions/mx-morelos.svg",
+  "file": "Flag of Morelos.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Heraldry",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Morelos.svg"
+ },
+ {
+  "slug": "mx-nayarit",
+  "image_path": "/flags/regions/mx-nayarit.png",
+  "file": "Flag of Nayarit.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Heraldry",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Nayarit.svg"
+ },
+ {
+  "slug": "mx-nuevo-leon",
+  "image_path": "/flags/regions/mx-nuevo-leon.svg",
+  "file": "Flag of Nuevo Leon.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Heraldry",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Nuevo_Leon.svg"
+ },
+ {
+  "slug": "mx-puebla",
+  "image_path": "/flags/regions/mx-puebla.svg",
+  "file": "Flag of Puebla.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Heraldry",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Puebla.svg"
+ },
+ {
+  "slug": "mx-san-luis-potosi",
+  "image_path": "/flags/regions/mx-san-luis-potosi.png",
+  "file": "Flag of San Luis Potosi.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Heraldry",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_San_Luis_Potosi.svg"
+ },
+ {
+  "slug": "mx-sinaloa",
+  "image_path": "/flags/regions/mx-sinaloa.svg",
+  "file": "Flag of Sinaloa.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Heraldry",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Sinaloa.svg"
+ },
+ {
+  "slug": "mx-sonora",
+  "image_path": "/flags/regions/mx-sonora.svg",
+  "file": "Flag of Sonora.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Heraldry",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Sonora.svg"
+ },
+ {
+  "slug": "mx-state-of-mexico",
+  "image_path": "/flags/regions/mx-state-of-mexico.png",
+  "file": "Flag of the State of Mexico.svg",
+  "method": "wikidata",
+  "license": "Public domain",
+  "artist": "Malarz pl",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_the_State_of_Mexico.svg"
+ },
+ {
+  "slug": "mx-tamaulipas",
+  "image_path": "/flags/regions/mx-tamaulipas.svg",
+  "file": "Flag of Tamaulipas.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Heraldry",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Tamaulipas.svg"
+ },
+ {
+  "slug": "mx-veracruz",
+  "image_path": "/flags/regions/mx-veracruz.svg",
+  "file": "Bandera del Gobierno de Veracruz de Ignacio de la Llave.svg",
+  "method": "wikidata",
+  "license": "Public domain",
+  "artist": "ManuelContreras1996",
+  "page": "https://commons.wikimedia.org/wiki/File:Bandera_del_Gobierno_de_Veracruz_de_Ignacio_de_la_Llave.svg"
+ },
+ {
+  "slug": "mx-zacatecas",
+  "image_path": "/flags/regions/mx-zacatecas.png",
+  "file": "Flag of Zacatecas.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Keepscases",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Zacatecas.svg"
+ },
+ {
+  "slug": "nc-noumea",
+  "image_path": "/flags/regions/nc-noumea.png",
+  "file": "Flag of Nouméa.png",
+  "method": "wikipedia",
+  "license": "Attribution",
+  "artist": "Charlesladano",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Nouméa.png"
+ },
+ {
+  "slug": "ng-adamawa-state",
+  "image_path": "/flags/regions/ng-adamawa-state.svg",
+  "file": "Adamawa State Flag.svg",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "7bdIa9",
+  "page": "https://commons.wikimedia.org/wiki/File:Adamawa_State_Flag.svg"
+ },
+ {
+  "slug": "ng-akwa-ibom-state",
+  "image_path": "/flags/regions/ng-akwa-ibom-state.svg",
+  "file": "Flag of Akwa Ibom State.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Jack Ryan Morris",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Akwa_Ibom_State.svg"
+ },
+ {
+  "slug": "ng-bauchi-state",
+  "image_path": "/flags/regions/ng-bauchi-state.png",
+  "file": "Flag of Bauchi State, Nigeria.png",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "RCSALSACEEQUALSEUPARLIMENT",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Bauchi_State,_Nigeria.png"
+ },
+ {
+  "slug": "ng-benue-state",
+  "image_path": "/flags/regions/ng-benue-state.png",
+  "file": "Flag of Benue.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Benue.png"
+ },
+ {
+  "slug": "ng-cross-river-state",
+  "image_path": "/flags/regions/ng-cross-river-state.svg",
+  "file": "Cross River State Flag.svg",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "7bdIa9",
+  "page": "https://commons.wikimedia.org/wiki/File:Cross_River_State_Flag.svg"
+ },
+ {
+  "slug": "ng-delta-state",
+  "image_path": "/flags/regions/ng-delta-state.png",
+  "file": "Flag of Delta State.gif",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "State Government",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Delta_State.gif"
+ },
+ {
+  "slug": "ng-edo-state",
+  "image_path": "/flags/regions/ng-edo-state.png",
+  "file": "Flag of Edo State.svg",
+  "method": "commons-name",
+  "license": "Public domain",
+  "artist": "GaelVector",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Edo_State.svg"
+ },
+ {
+  "slug": "ng-ekiti-state",
+  "image_path": "/flags/regions/ng-ekiti-state.png",
+  "file": "Ekiti State Flag.gif",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "State Government",
+  "page": "https://commons.wikimedia.org/wiki/File:Ekiti_State_Flag.gif"
+ },
+ {
+  "slug": "ng-enugu-state",
+  "image_path": "/flags/regions/ng-enugu-state.png",
+  "file": "Flag of Enugu State.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Government of Enugu State",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Enugu_State.png"
+ },
+ {
+  "slug": "ng-kebbi-state",
+  "image_path": "/flags/regions/ng-kebbi-state.png",
+  "file": "Kebbi flag.png",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "Julio Lopez Romero",
+  "page": "https://commons.wikimedia.org/wiki/File:Kebbi_flag.png"
+ },
+ {
+  "slug": "ng-kogi-state",
+  "image_path": "/flags/regions/ng-kogi-state.svg",
+  "file": "Kogi State Flag.svg",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "7bdIa9",
+  "page": "https://commons.wikimedia.org/wiki/File:Kogi_State_Flag.svg"
+ },
+ {
+  "slug": "ng-nasarawa-state",
+  "image_path": "/flags/regions/ng-nasarawa-state.png",
+  "file": "Flag of Nasarawa State.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Government of Nasarawa State",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Nasarawa_State.png"
+ },
+ {
+  "slug": "ng-ondo-state",
+  "image_path": "/flags/regions/ng-ondo-state.png",
+  "file": "Flag of Ondo State.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Ondo_State.png"
+ },
+ {
+  "slug": "ng-sokoto-state",
+  "image_path": "/flags/regions/ng-sokoto-state.svg",
+  "file": "Sokoto State Flag.svg",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "7bdIa9",
+  "page": "https://commons.wikimedia.org/wiki/File:Sokoto_State_Flag.svg"
+ },
+ {
+  "slug": "np-lumbini-province",
+  "image_path": "/flags/regions/np-lumbini-province.png",
+  "file": "Bandeira de Lumbini.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "Emmanuel Lucas Vieira",
+  "page": "https://commons.wikimedia.org/wiki/File:Bandeira_de_Lumbini.png"
+ },
+ {
+  "slug": "nz-chatham-islands-council",
+  "image_path": "/flags/regions/nz-chatham-islands-council.svg",
+  "file": "Flag of Chatham Islands.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Washiucho",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Chatham_Islands.svg"
+ },
+ {
+  "slug": "pf-fatu-hiva-2",
+  "image_path": "/flags/regions/pf-fatu-hiva-2.svg",
+  "file": "Flag of Fatu-Hiva.svg",
+  "method": "wikidata",
+  "license": "Public domain",
+  "artist": "Juan Manuel Gabino Villascán, vectorization by Queen of Hearts",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Fatu-Hiva.svg"
+ },
+ {
+  "slug": "pf-huahine-2",
+  "image_path": "/flags/regions/pf-huahine-2.svg",
+  "file": "Flag of Huahine.svg",
+  "method": "wikidata",
+  "license": "Public domain",
+  "artist": "Bringing It All Back Home",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Huahine.svg"
+ },
+ {
+  "slug": "pf-iles-tuamotu-gambier",
+  "image_path": "/flags/regions/pf-iles-tuamotu-gambier.svg",
+  "file": "Flag of the Gambier Islands.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "No machine-readable author provided. Bredt~commonswiki assumed (based on copyright claims).\n\n https://www.tahitiheritage.pf/wp-content/uploads/2015/01/drapeau-gambier.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Gambier_Islands.svg"
+ },
+ {
+  "slug": "pf-puka-puka",
+  "image_path": "/flags/regions/pf-puka-puka.png",
+  "file": "Flag of Puka-Puka.gif",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "Juan Manuel Gabino Villascán",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Puka-Puka.gif"
+ },
+ {
+  "slug": "pf-reao-2",
+  "image_path": "/flags/regions/pf-reao-2.svg",
+  "file": "Flag of Reao Pukaruha.svg",
+  "method": "wikidata",
+  "license": "Public domain",
+  "artist": "ArnoldPlaton",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Reao_Pukaruha.svg"
+ },
+ {
+  "slug": "pf-rimatara-2",
+  "image_path": "/flags/regions/pf-rimatara-2.svg",
+  "file": "Flag of Rimatara.svg",
+  "method": "wikidata",
+  "license": "Public domain",
+  "artist": "ArnoldPlaton",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Rimatara.svg"
+ },
+ {
+  "slug": "pf-rurutu-2",
+  "image_path": "/flags/regions/pf-rurutu-2.svg",
+  "file": "Flag of Rurutu.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Bringing It All Back Home",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Rurutu.svg"
+ },
+ {
+  "slug": "pf-tatakoto-2",
+  "image_path": "/flags/regions/pf-tatakoto-2.png",
+  "file": "Flag of Tatakoto.gif",
+  "method": "wikidata",
+  "license": "CC0",
+  "artist": "YAT LI",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Tatakoto.gif"
+ },
+ {
+  "slug": "pf-tubuai-2",
+  "image_path": "/flags/regions/pf-tubuai-2.svg",
+  "file": "Flag of Tubuai.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "ArnoldPlaton",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Tubuai.svg"
+ },
+ {
+  "slug": "ph-cordillera-administrative-region",
+  "image_path": "/flags/regions/ph-cordillera-administrative-region.svg",
+  "file": "Flag of the Cordillera Administrative Region.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Baselle",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Cordillera_Administrative_Region.svg"
+ },
+ {
+  "slug": "ph-metro-manila",
+  "image_path": "/flags/regions/ph-metro-manila.svg",
+  "file": "Flag of Manila.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 3.0",
+  "artist": "Own work by Philtro (file log)",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Manila.svg"
+ },
+ {
+  "slug": "ph-negros-island-region",
+  "image_path": "/flags/regions/ph-negros-island-region.png",
+  "file": "Vlag Fil NegrosOriental.gif",
+  "method": "wikipedia",
+  "license": "CC BY-SA 3.0",
+  "artist": "The original uploader was Ninane at Dutch Wikipedia.",
+  "page": "https://commons.wikimedia.org/wiki/File:Vlag_Fil_NegrosOriental.gif"
+ },
+ {
+  "slug": "pk-islamabad-capital-territory",
+  "image_path": "/flags/regions/pk-islamabad-capital-territory.svg",
+  "file": "Proposed Flag of Islamabad Capital Territory.svg",
+  "method": "wikidata",
+  "license": "Public domain",
+  "artist": "Himasaram",
+  "page": "https://commons.wikimedia.org/wiki/File:Proposed_Flag_of_Islamabad_Capital_Territory.svg"
+ },
+ {
+  "slug": "ps-quds-governorate",
+  "image_path": "/flags/regions/ps-quds-governorate.svg",
+  "file": "Al-Quds flag.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Al-Quds_Flag.JPG: Alquds-palestine\nAl-Quds_star.svg: PleaseStand\nderivative work: PleaseStand (talk)",
+  "page": "https://commons.wikimedia.org/wiki/File:Al-Quds_flag.svg"
+ },
+ {
+  "slug": "pt-aveiro",
+  "image_path": "/flags/regions/pt-aveiro.png",
+  "file": "Aveiro Flag.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "This vector image includes elements that have been taken or adapted from this file:",
+  "page": "https://commons.wikimedia.org/wiki/File:Aveiro_Flag.svg"
+ },
+ {
+  "slug": "pt-beja",
+  "image_path": "/flags/regions/pt-beja.png",
+  "file": "Flag of Beja.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "117-M-I-K-E",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Beja.svg"
+ },
+ {
+  "slug": "pt-braga",
+  "image_path": "/flags/regions/pt-braga.png",
+  "file": "Bandeira de Braga - 2.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 3.0",
+  "artist": "Sérgio Horta",
+  "page": "https://commons.wikimedia.org/wiki/File:Bandeira_de_Braga_-_2.png"
+ },
+ {
+  "slug": "pt-coimbra",
+  "image_path": "/flags/regions/pt-coimbra.png",
+  "file": "Flag Coimbra.gif",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "Gonçalo Veiga",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_Coimbra.gif"
+ },
+ {
+  "slug": "pt-leiria",
+  "image_path": "/flags/regions/pt-leiria.png",
+  "file": "Flag of Leiria.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "H3nrique Bregie",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Leiria.png"
+ },
+ {
+  "slug": "pt-lisbon",
+  "image_path": "/flags/regions/pt-lisbon.png",
+  "file": "Flag of Lisbon.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Sérgio Horta, a partir de orginal de Ornellas e outros\nvetorização de GumSkyloard (talk · contribs)",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Lisbon.svg"
+ },
+ {
+  "slug": "pt-oporto",
+  "image_path": "/flags/regions/pt-oporto.png",
+  "file": "Flag of Porto.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Crest_of_Porto.png: Brgesto\nderivative work: Brgesto",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Porto.svg"
+ },
+ {
+  "slug": "pt-setubal",
+  "image_path": "/flags/regions/pt-setubal.png",
+  "file": "Flag Setúbal 2.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "Gonçalo Veiga",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_Setúbal_2.png"
+ },
+ {
+  "slug": "pw-koror",
+  "image_path": "/flags/regions/pw-koror.png",
+  "file": "Flag of Koror State.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Juergen Krause",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Koror_State.png"
+ },
+ {
+  "slug": "pw-ngiwal",
+  "image_path": "/flags/regions/pw-ngiwal.png",
+  "file": "Flag of Ngiwal.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "Meeepmep",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Ngiwal.png"
+ },
+ {
+  "slug": "ro-bihor-county",
+  "image_path": "/flags/regions/ro-bihor-county.svg",
+  "file": "Flag of Bihor County, Romania.svg",
+  "method": "wikidata",
+  "license": "Public domain",
+  "artist": "Unknown authorUnknown author",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Bihor_County,_Romania.svg"
+ },
+ {
+  "slug": "ro-caras-severin-county",
+  "image_path": "/flags/regions/ro-caras-severin-county.png",
+  "file": "Flag of Caras-Severin County.gif",
+  "method": "wikidata",
+  "license": "Public domain",
+  "artist": "Zoltan Horvath",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Caras-Severin_County.gif"
+ },
+ {
+  "slug": "ro-giurgiu-county",
+  "image_path": "/flags/regions/ro-giurgiu-county.svg",
+  "file": "Flag of Giurgiu County, Romania.svg",
+  "method": "wikidata",
+  "license": "Public domain",
+  "artist": "Giurgiu County Government",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Giurgiu_County,_Romania.svg"
+ },
+ {
+  "slug": "ro-satu-mare-county",
+  "image_path": "/flags/regions/ro-satu-mare-county.png",
+  "file": "Flag of Satu Mare County.png",
+  "method": "wikidata",
+  "license": "CC BY-SA 4.0",
+  "artist": "Koralovescoas",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Satu_Mare_County.png"
+ },
+ {
+  "slug": "sa-mecca-province",
+  "image_path": "/flags/regions/sa-mecca-province.svg",
+  "file": "Flag of Mecca.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Strenatos",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Mecca.svg"
+ },
+ {
+  "slug": "se-varmland-county",
+  "image_path": "/flags/regions/se-varmland-county.svg",
+  "file": "Värmlands län vapenflagga.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 2.5",
+  "artist": "Lokal_Profil",
+  "page": "https://commons.wikimedia.org/wiki/File:Värmlands_län_vapenflagga.svg"
+ },
+ {
+  "slug": "si-bohinj-municipality",
+  "image_path": "/flags/regions/si-bohinj-municipality.svg",
+  "file": "Flag of Bohinj.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Občina Bohinj",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Bohinj.svg"
+ },
+ {
+  "slug": "si-city-municipality-of-nova-gorica",
+  "image_path": "/flags/regions/si-city-municipality-of-nova-gorica.svg",
+  "file": "Flag of Nova Gorica.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Burjkh",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Nova_Gorica.svg"
+ },
+ {
+  "slug": "si-city-municipality-of-velenje",
+  "image_path": "/flags/regions/si-city-municipality-of-velenje.svg",
+  "file": "Flag of Velenje.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Občina Velenje",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Velenje.svg"
+ },
+ {
+  "slug": "si-crnomelj-municipality",
+  "image_path": "/flags/regions/si-crnomelj-municipality.svg",
+  "file": "Flag of Črnomelj.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Občina Črnomelj",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Črnomelj.svg"
+ },
+ {
+  "slug": "si-municipality-of-beltinci",
+  "image_path": "/flags/regions/si-municipality-of-beltinci.svg",
+  "file": "Flag of Beltinci.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Občina Beltinci",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Beltinci.svg"
+ },
+ {
+  "slug": "si-municipality-of-bloke",
+  "image_path": "/flags/regions/si-municipality-of-bloke.svg",
+  "file": "Flag of Bloke.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Občina Bloke",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Bloke.svg"
+ },
+ {
+  "slug": "si-municipality-of-braslovce",
+  "image_path": "/flags/regions/si-municipality-of-braslovce.svg",
+  "file": "Flag of Braslovce.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Občina Braslovče",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Braslovce.svg"
+ },
+ {
+  "slug": "si-municipality-of-cerklje-na-gorenjskem",
+  "image_path": "/flags/regions/si-municipality-of-cerklje-na-gorenjskem.svg",
+  "file": "Flag of Cerklje na Gorenjskem.svg",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "EuropeanV",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Cerklje_na_Gorenjskem.svg"
+ },
+ {
+  "slug": "si-municipality-of-cerknica",
+  "image_path": "/flags/regions/si-municipality-of-cerknica.png",
+  "file": "Zastava Občine Cerknica.gif",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Jan Petric",
+  "page": "https://commons.wikimedia.org/wiki/File:Zastava_Občine_Cerknica.gif"
+ },
+ {
+  "slug": "si-municipality-of-duplek",
+  "image_path": "/flags/regions/si-municipality-of-duplek.svg",
+  "file": "Flag of Duplek.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Občina Duplek",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Duplek.svg"
+ },
+ {
+  "slug": "si-municipality-of-gornji-grad",
+  "image_path": "/flags/regions/si-municipality-of-gornji-grad.svg",
+  "file": "Flag of Gornji Grad.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Občina Gornji Grad",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Gornji_Grad.svg"
+ },
+ {
+  "slug": "si-municipality-of-idrija",
+  "image_path": "/flags/regions/si-municipality-of-idrija.svg",
+  "file": "Flag of Idrija.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Občina Idrija",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Idrija.svg"
+ },
+ {
+  "slug": "si-municipality-of-izola",
+  "image_path": "/flags/regions/si-municipality-of-izola.png",
+  "file": "Izola flag.gif",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Mrwho00tm (talk)",
+  "page": "https://commons.wikimedia.org/wiki/File:Izola_flag.gif"
+ },
+ {
+  "slug": "si-municipality-of-kamnik",
+  "image_path": "/flags/regions/si-municipality-of-kamnik.svg",
+  "file": "Zastava Kamnika.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Isidor Welti",
+  "page": "https://commons.wikimedia.org/wiki/File:Zastava_Kamnika.svg"
+ },
+ {
+  "slug": "si-municipality-of-lovrenc-na-pohorju",
+  "image_path": "/flags/regions/si-municipality-of-lovrenc-na-pohorju.svg",
+  "file": "Flag of Lovrenc na Pohorju.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Občina Lovrenc na Pohorju",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Lovrenc_na_Pohorju.svg"
+ },
+ {
+  "slug": "si-municipality-of-prevalje",
+  "image_path": "/flags/regions/si-municipality-of-prevalje.png",
+  "file": "Flag of Prevalje.gif",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Željko Heimer",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Prevalje.gif"
+ },
+ {
+  "slug": "si-municipality-of-ribnica",
+  "image_path": "/flags/regions/si-municipality-of-ribnica.svg",
+  "file": "Flag of Ribnica.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Občina Ribnica",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Ribnica.svg"
+ },
+ {
+  "slug": "si-municipality-of-salovci",
+  "image_path": "/flags/regions/si-municipality-of-salovci.svg",
+  "file": "Flag of Šalovci.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Občina Šalovci",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Šalovci.svg"
+ },
+ {
+  "slug": "si-municipality-of-semic",
+  "image_path": "/flags/regions/si-municipality-of-semic.svg",
+  "file": "Flag of Semič.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Občina Semič",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Semič.svg"
+ },
+ {
+  "slug": "si-municipality-of-smarjeske-toplice",
+  "image_path": "/flags/regions/si-municipality-of-smarjeske-toplice.svg",
+  "file": "Flag of Šmarješke Toplice.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Šmarješke Toplice",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Šmarješke_Toplice.svg"
+ },
+ {
+  "slug": "si-municipality-of-smartno-ob-paki",
+  "image_path": "/flags/regions/si-municipality-of-smartno-ob-paki.svg",
+  "file": "Flag Šmartno ob Paki.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Občina Šmartno ob Paki",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_Šmartno_ob_Paki.svg"
+ },
+ {
+  "slug": "si-municipality-of-sveta-trojica-v-slovenskih-goricah",
+  "image_path": "/flags/regions/si-municipality-of-sveta-trojica-v-slovenskih-goricah.svg",
+  "file": "Flag of Sveta Trojica.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Občina Sveta Trojica v Slovenskih goricah",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Sveta_Trojica.svg"
+ },
+ {
+  "slug": "si-municipality-of-tolmin",
+  "image_path": "/flags/regions/si-municipality-of-tolmin.svg",
+  "file": "Flag of Tolmin.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Občina Tolmin",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Tolmin.svg"
+ },
+ {
+  "slug": "si-municipality-of-turnisce",
+  "image_path": "/flags/regions/si-municipality-of-turnisce.svg",
+  "file": "Flag of Turnišče.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Občina Turnišče",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Turnišče.svg"
+ },
+ {
+  "slug": "si-municipality-of-velika-polana",
+  "image_path": "/flags/regions/si-municipality-of-velika-polana.png",
+  "file": "Flag of Velika Polana.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Občina Velika Polana",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Velika_Polana.svg"
+ },
+ {
+  "slug": "si-municipality-of-zirovnica",
+  "image_path": "/flags/regions/si-municipality-of-zirovnica.svg",
+  "file": "Flag of Žirovnica.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Občina Žirovnica",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Žirovnica.svg"
+ },
+ {
+  "slug": "si-radece-municipality",
+  "image_path": "/flags/regions/si-radece-municipality.svg",
+  "file": "Flag of Radeče.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Občina Radečce",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Radeče.svg"
+ },
+ {
+  "slug": "sn-dakar",
+  "image_path": "/flags/regions/sn-dakar.svg",
+  "file": "Flag of Dakar, Senegal.svg",
+  "method": "commons-name",
+  "license": "CC0",
+  "artist": "Flagvisioner",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Dakar,_Senegal.svg"
+ },
+ {
+  "slug": "ss-abyei",
+  "image_path": "/flags/regions/ss-abyei.png",
+  "file": "Flag of the Abyei Area.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "This image includes elements that have been taken or adapted from this file:",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Abyei_Area.png"
+ },
+ {
+  "slug": "ss-ruweng-administrative-area",
+  "image_path": "/flags/regions/ss-ruweng-administrative-area.png",
+  "file": "Flag of Ruweng.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Government of Ruweng",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Ruweng.png"
+ },
+ {
+  "slug": "sv-ahuachapan-department",
+  "image_path": "/flags/regions/sv-ahuachapan-department.png",
+  "file": "Bandera del Departamento de Ahuachapán.PNG",
+  "method": "wikipedia",
+  "license": "CC BY-SA 3.0",
+  "artist": "Jaume Olle",
+  "page": "https://commons.wikimedia.org/wiki/File:Bandera_del_Departamento_de_Ahuachapán.PNG"
+ },
+ {
+  "slug": "sv-san-miguel-department",
+  "image_path": "/flags/regions/sv-san-miguel-department.png",
+  "file": "Flag of San Miguel Department.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 3.0",
+  "artist": "Fred Drews, Jaume Olle, and Ninane",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_San_Miguel_Department.png"
+ },
+ {
+  "slug": "sv-sonsonate-department",
+  "image_path": "/flags/regions/sv-sonsonate-department.png",
+  "file": "Bandera Sonsonate SV.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "Idea SV",
+  "page": "https://commons.wikimedia.org/wiki/File:Bandera_Sonsonate_SV.png"
+ },
+ {
+  "slug": "th-ang-thong",
+  "image_path": "/flags/regions/th-ang-thong.svg",
+  "file": "Flag of Ang Thong Province.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "RWN38",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Ang_Thong_Province.svg"
+ },
+ {
+  "slug": "th-buriram",
+  "image_path": "/flags/regions/th-buriram.png",
+  "file": "Flag of Buriram province.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "RWN38",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Buriram_province.png"
+ },
+ {
+  "slug": "th-chachoengsao",
+  "image_path": "/flags/regions/th-chachoengsao.png",
+  "file": "Flag of Chachoengsao Province.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "PP2014",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Chachoengsao_Province.png"
+ },
+ {
+  "slug": "th-lampang",
+  "image_path": "/flags/regions/th-lampang.png",
+  "file": "Flag of Lampang province.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Vectorization:  HaeKN",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Lampang_province.svg"
+ },
+ {
+  "slug": "th-lopburi",
+  "image_path": "/flags/regions/th-lopburi.png",
+  "file": "Lopburi provincial flag.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "BbriteNBTF",
+  "page": "https://commons.wikimedia.org/wiki/File:Lopburi_provincial_flag.png"
+ },
+ {
+  "slug": "th-maha-sarakham",
+  "image_path": "/flags/regions/th-maha-sarakham.png",
+  "file": "Flag of Maha Sarakham Province.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Bbritteethewise, vectorized by RWN38",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Maha_Sarakham_Province.svg"
+ },
+ {
+  "slug": "th-nakhon-ratchasima",
+  "image_path": "/flags/regions/th-nakhon-ratchasima.png",
+  "file": "Flag of Nakhon Ratchasima province.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "RWN38",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Nakhon_Ratchasima_province.png"
+ },
+ {
+  "slug": "th-satun",
+  "image_path": "/flags/regions/th-satun.png",
+  "file": "Flag of satun province.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "OktaRama2010 Thanawat kalakan",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_satun_province.png"
+ },
+ {
+  "slug": "th-suphan-buri",
+  "image_path": "/flags/regions/th-suphan-buri.png",
+  "file": "Flag of Suphan Buri province.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "RWN38",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Suphan_Buri_province.png"
+ },
+ {
+  "slug": "tj-gorno-badakhshan-autonomous-region",
+  "image_path": "/flags/regions/tj-gorno-badakhshan-autonomous-region.svg",
+  "file": "Flag of Gorno-Badakhshan.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Peter Connolly",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Gorno-Badakhshan.svg"
+ },
+ {
+  "slug": "tl-aileu-municipality",
+  "image_path": "/flags/regions/tl-aileu-municipality.svg",
+  "file": "Flag of Aileu.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 3.0",
+  "artist": "SiBr4",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Aileu.svg"
+ },
+ {
+  "slug": "tl-ainaro-municipality",
+  "image_path": "/flags/regions/tl-ainaro-municipality.svg",
+  "file": "Flag of Ainaro.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 3.0",
+  "artist": "Дмитрий-5-Аверин",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Ainaro.svg"
+ },
+ {
+  "slug": "tl-atauro",
+  "image_path": "/flags/regions/tl-atauro.png",
+  "file": "Flag of Atauro.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "J. Patrick Fischer",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Atauro.png"
+ },
+ {
+  "slug": "tl-baucau-municipality",
+  "image_path": "/flags/regions/tl-baucau-municipality.png",
+  "file": "Flag of Baucau (municipality).png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Gemeinde Baucau",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Baucau_(municipality).png"
+ },
+ {
+  "slug": "tl-bobonaro-municipality",
+  "image_path": "/flags/regions/tl-bobonaro-municipality.svg",
+  "file": "Flag of Bobonaro.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 3.0",
+  "artist": "SiBr4",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Bobonaro.svg"
+ },
+ {
+  "slug": "tl-cova-lima-municipality",
+  "image_path": "/flags/regions/tl-cova-lima-municipality.png",
+  "file": "Flag of Cova Lima.png",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "GuterresTL",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Cova_Lima.png"
+ },
+ {
+  "slug": "tl-dili-municipality",
+  "image_path": "/flags/regions/tl-dili-municipality.svg",
+  "file": "Flag of Dili.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 3.0",
+  "artist": "SiBr4",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Dili.svg"
+ },
+ {
+  "slug": "tl-ermera-municipality",
+  "image_path": "/flags/regions/tl-ermera-municipality.png",
+  "file": "Flag of Ermera.png",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "GuterresTL",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Ermera.png"
+ },
+ {
+  "slug": "tl-lautem-municipality",
+  "image_path": "/flags/regions/tl-lautem-municipality.svg",
+  "file": "Flag of Lautem.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 3.0",
+  "artist": "No machine-readable author provided. Hosmich assumed (based on copyright claims).",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Lautem.svg"
+ },
+ {
+  "slug": "tl-liquica-municipality",
+  "image_path": "/flags/regions/tl-liquica-municipality.png",
+  "file": "Flag of Liquica.png",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "GuterresTL",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Liquica.png"
+ },
+ {
+  "slug": "tl-manatuto-municipality",
+  "image_path": "/flags/regions/tl-manatuto-municipality.svg",
+  "file": "Flag of Manatuto.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 3.0",
+  "artist": "SiBr4",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Manatuto.svg"
+ },
+ {
+  "slug": "tl-manufahi-municipality",
+  "image_path": "/flags/regions/tl-manufahi-municipality.png",
+  "file": "Flag of Manufahi.png",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "GuterresTL",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Manufahi.png"
+ },
+ {
+  "slug": "tl-viqueque-municipality",
+  "image_path": "/flags/regions/tl-viqueque-municipality.svg",
+  "file": "Flag of Viqueque.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 3.0",
+  "artist": "SiBr4",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Viqueque.svg"
+ },
+ {
+  "slug": "tn-gabes-governorate",
+  "image_path": "/flags/regions/tn-gabes-governorate.svg",
+  "file": "Flag of Gabès Governorate.svg",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "GiongUGV",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Gabès_Governorate.svg"
+ },
+ {
+  "slug": "tn-mahdia-governorate",
+  "image_path": "/flags/regions/tn-mahdia-governorate.svg",
+  "file": "Flag of Mahdia Governorate.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "Burjkh",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Mahdia_Governorate.svg"
+ },
+ {
+  "slug": "tn-sousse-governorate",
+  "image_path": "/flags/regions/tn-sousse-governorate.svg",
+  "file": "Flag of Sousse Governorate.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 3.0",
+  "artist": "Burjkh",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Sousse_Governorate.svg"
+ },
+ {
+  "slug": "tr-hatay-province",
+  "image_path": "/flags/regions/tr-hatay-province.svg",
+  "file": "Hatay flag.svg",
+  "method": "wikipedia",
+  "license": "CC BY-SA 3.0",
+  "artist": "A. Özgür Erdemli",
+  "page": "https://commons.wikimedia.org/wiki/File:Hatay_flag.svg"
+ },
+ {
+  "slug": "tt-couva-tabaquite-talparo",
+  "image_path": "/flags/regions/tt-couva-tabaquite-talparo.png",
+  "file": "Flag of Couva-Tabaquite-Talparo Regional Corporation.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "MrFlags",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Couva-Tabaquite-Talparo_Regional_Corporation.png"
+ },
+ {
+  "slug": "tt-mayaro-rio-claro",
+  "image_path": "/flags/regions/tt-mayaro-rio-claro.png",
+  "file": "Flag of Mayaro-Rio Claro Regional Corporation.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 4.0",
+  "artist": "MrFlags",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Mayaro-Rio_Claro_Regional_Corporation.png"
+ },
+ {
+  "slug": "tz-dar-es-salaam",
+  "image_path": "/flags/regions/tz-dar-es-salaam.png",
+  "file": "Dar Es-Salaam City Flag.png",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "Aml-401",
+  "page": "https://commons.wikimedia.org/wiki/File:Dar_Es-Salaam_City_Flag.png"
+ },
+ {
+  "slug": "tz-mbeya",
+  "image_path": "/flags/regions/tz-mbeya.png",
+  "file": "Mbeya City Flag.png",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "Aml-401",
+  "page": "https://commons.wikimedia.org/wiki/File:Mbeya_City_Flag.png"
+ },
+ {
+  "slug": "tz-mwanza",
+  "image_path": "/flags/regions/tz-mwanza.svg",
+  "file": "Flag of Mwanza, Tanzania.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "City Council of Mwanza",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Mwanza,_Tanzania.svg"
+ },
+ {
+  "slug": "ug-kapchorwa-district",
+  "image_path": "/flags/regions/ug-kapchorwa-district.svg",
+  "file": "Flag of Kapchorwa District, Uganda.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Flagvisioner",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Kapchorwa_District,_Uganda.svg"
+ },
+ {
+  "slug": "vn-hung-yen",
+  "image_path": "/flags/regions/vn-hung-yen.png",
+  "file": "Flag of Hưng Yên Province.png",
+  "method": "commons-name",
+  "license": "CC0",
+  "artist": "Baiyue1",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Hưng_Yên_Province.png"
+ },
+ {
+  "slug": "xk-drenas-municipality",
+  "image_path": "/flags/regions/xk-drenas-municipality.png",
+  "file": "Flag of Drenas.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Dn9ahx (talk) 17:06, 19 June 2023 (UTC) incorporating file File:Stema e Komunës Gllogoc.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Drenas.png"
+ },
+ {
+  "slug": "xk-elez-han-municipality",
+  "image_path": "/flags/regions/xk-elez-han-municipality.png",
+  "file": "Flag of Elez Han, Kosovo.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Government of the Municipality of Elez Han",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Elez_Han,_Kosovo.svg"
+ },
+ {
+  "slug": "xk-ferizaj-municipality",
+  "image_path": "/flags/regions/xk-ferizaj-municipality.png",
+  "file": "Flag of Ferizaj.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Cordyceps-Zombie (talk) 11:58, 13 October 2019 (UTC)",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Ferizaj.png"
+ },
+ {
+  "slug": "xk-fushe-kosove-municipality",
+  "image_path": "/flags/regions/xk-fushe-kosove-municipality.png",
+  "file": "Flag of Fushë Kosova.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Government of Kosovo",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Fushë_Kosova.png"
+ },
+ {
+  "slug": "xk-gjilan-municipality",
+  "image_path": "/flags/regions/xk-gjilan-municipality.png",
+  "file": "Flag of Gjilan Municipality.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Gjilan Municipality",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Gjilan_Municipality.png"
+ },
+ {
+  "slug": "xk-kamenica-municipality",
+  "image_path": "/flags/regions/xk-kamenica-municipality.png",
+  "file": "Flag of Kamenica, Kosovo.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Kamenica Municipality",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Kamenica,_Kosovo.png"
+ },
+ {
+  "slug": "xk-lipjan-municipality",
+  "image_path": "/flags/regions/xk-lipjan-municipality.png",
+  "file": "Flag of Lipjan.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Dn9ahx (talk) 17:09, 19 June 2023 (UTC) incorporating File:Stema e Komunës Lipjan.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Lipjan.png"
+ },
+ {
+  "slug": "xk-podujeva-municipality",
+  "image_path": "/flags/regions/xk-podujeva-municipality.png",
+  "file": "Flag of Podujevo.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "This image includes elements that have been taken or adapted from this file:",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Podujevo.png"
+ },
+ {
+  "slug": "xk-prishtina-municipality",
+  "image_path": "/flags/regions/xk-prishtina-municipality.svg",
+  "file": "Flag of Pristina.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Flagvisioner (SVG), Cordyceps-Zombie (rasster)",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Pristina.svg"
+ },
+ {
+  "slug": "xk-prizren-municipality",
+  "image_path": "/flags/regions/xk-prizren-municipality.png",
+  "file": "Flag of Prizren.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Cordyceps-Zombie",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Prizren.png"
+ },
+ {
+  "slug": "xk-rahovec-municipality",
+  "image_path": "/flags/regions/xk-rahovec-municipality.png",
+  "file": "Flag of Rahovec.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Rahovec Municipality",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Rahovec.png"
+ },
+ {
+  "slug": "xk-suhareka-municipality",
+  "image_path": "/flags/regions/xk-suhareka-municipality.png",
+  "file": "Flag of Suva Reka.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Government of Kosovo",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Suva_Reka.png"
+ },
+ {
+  "slug": "xk-viti-municipality",
+  "image_path": "/flags/regions/xk-viti-municipality.png",
+  "file": "Flag of Vitina.png",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Cordyceps-Zombie (talk) 12:07, 13 October 2019 (UTC)",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Vitina.png"
+ },
+ {
+  "slug": "xk-vushtrri-municipality",
+  "image_path": "/flags/regions/xk-vushtrri-municipality.png",
+  "file": "Flag of Vushtrri, Kosovo.svg",
+  "method": "wikipedia",
+  "license": "Public domain",
+  "artist": "Government of Vushtrri",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Vushtrri,_Kosovo.svg"
+ },
+ {
+  "slug": "za-gauteng",
+  "image_path": "/flags/regions/za-gauteng.png",
+  "file": "Flag of the Gauteng Province.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 3.0",
+  "artist": "AlexR.L.",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Gauteng_Province.png"
+ },
+ {
+  "slug": "za-kwazulu-natal",
+  "image_path": "/flags/regions/za-kwazulu-natal.png",
+  "file": "Flag of the KwaZulu-Natal Province.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 3.0",
+  "artist": "AlexR.L.",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_the_KwaZulu-Natal_Province.png"
+ },
+ {
+  "slug": "za-limpopo",
+  "image_path": "/flags/regions/za-limpopo.png",
+  "file": "Flag of the Limpopo Province.png",
+  "method": "wikipedia",
+  "license": "CC BY-SA 3.0",
+  "artist": "AlexR.L.",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Limpopo_Province.png"
+ },
+ {
+  "slug": "zm-central-province",
+  "image_path": "/flags/regions/zm-central-province.svg",
+  "file": "Flag of Central Province.svg",
+  "method": "commons-name",
+  "license": "Public domain",
+  "artist": "Alaisd",
+  "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Central_Province.svg"
+ },
+ {
+  "slug": "zm-copperbelt-province",
+  "image_path": "/flags/regions/zm-copperbelt-province.png",
+  "file": "CopperbeltFlagZM.png",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "Here37",
+  "page": "https://commons.wikimedia.org/wiki/File:CopperbeltFlagZM.png"
+ },
+ {
+  "slug": "zm-luapula-province",
+  "image_path": "/flags/regions/zm-luapula-province.svg",
+  "file": "LuapulaFlagZM.svg",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "7bdIa9",
+  "page": "https://commons.wikimedia.org/wiki/File:LuapulaFlagZM.svg"
+ },
+ {
+  "slug": "zm-southern-province",
+  "image_path": "/flags/regions/zm-southern-province.svg",
+  "file": "SouthernFlagZM.svg",
+  "method": "wikipedia",
+  "license": "CC0",
+  "artist": "7bdIa9",
+  "page": "https://commons.wikimedia.org/wiki/File:SouthernFlagZM.svg"
+ }
+]

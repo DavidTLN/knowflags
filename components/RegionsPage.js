@@ -78,9 +78,9 @@ function FilterChip({ active, onClick, children }) {
   )
 }
 
-function FlagCard({ flag, name, parentName }) {
+function FlagCard({ flag, name, parentName, href }) {
   return (
-    <div
+    <Link prefetch={false} href={href}
       style={{ textDecoration: 'none', display: 'block', backgroundColor: 'white', borderRadius: '12px', overflow: 'hidden', border: '1px solid #e2e8f0', transition: 'transform 0.15s, box-shadow 0.15s', cursor: 'pointer' }}
       onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.10)' }}
       onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none' }}
@@ -99,7 +99,7 @@ function FlagCard({ flag, name, parentName }) {
           </div>
         )}
       </div>
-    </div>
+    </Link>
   )
 }
 
@@ -324,7 +324,7 @@ export default function RegionsPage() {
         {filtered.slice(0, visible).map(flag => {
           const name = locale === 'fr' ? flag.name_fr : flag.name_en
           const parentName = flag.parent ? (locale === 'fr' ? flag.parent.name_fr : flag.parent.name_en) : null
-          return <FlagCard key={flag.slug} flag={flag} name={name} parentName={parentName} />
+          return <FlagCard key={flag.slug} flag={flag} name={name} parentName={parentName} href={`/${locale}/flags/regions/${flag.slug}`} />
         })}
       </div>
     )

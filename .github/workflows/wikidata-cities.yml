@@ -1,0 +1,39 @@
+name: Wikidata cities import
+
+# Grandes villes + drapeaux depuis Wikidata / Commons (scripts/wikidata/fetch_cities.py).
+# Se lance à la main, ou quand le script change sur main.
+on:
+  workflow_dispatch:
+    inputs:
+      isos:
+        description: 'Space-separated ISO codes (empty = DEFAULT_ISOS in the script)'
+        default: ''
+  push:
+    branches: [main]
+    paths: ['scripts/wikidata/fetch_cities.py', 'scripts/wikidata/fetch_city_flags_wiki.py']
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      SUPABASE_PUBLISHABLE_KEY: sb_publishable_VH4sPWc-eOLG5-Fm3kvq7g_lcUPDSQ6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests
+      - run: python3 scripts/wikidata/fetch_cities.py ${{ inputs.isos }}
+      - run: python3 scripts/wikidata/fetch_city_flags_wiki.py
+      - name: Commit results
+        run: |
+          git config user.name "knowflags-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/flags/cities data/wikidata/cities.json
+          git commit -m "Wikidata import: city flags ${{ inputs.isos }}" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push origin HEAD:main

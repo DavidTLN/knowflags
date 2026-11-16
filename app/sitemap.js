@@ -123,9 +123,6 @@ export default async function sitemap() {
   }, [])
 
   // ── Drapeaux de villes ─────────────────────────────────────────────────────
-  // NOTE : uniquement les villes. Il n'existe pas de route
-  // /flags/regions/[slug], les slugs de regions ne doivent PAS etre listes
-  // (ils renverraient tous un 404).
   const cityFlags = await safe(async () => {
     if (!supabase) return []
     const { data } = await supabase
@@ -133,6 +130,22 @@ export default async function sitemap() {
       .select('slug, updated_at')
       .eq('flag_type', 'city')
     return data || []
+  }, [])
+
+  // ── Drapeaux de régions (seulement celles qui ont un drapeau : les autres sont en noindex)
+  const regionFlags = await safe(async () => {
+    if (!supabase) return []
+    const out = []
+    for (let from = 0; ; from += 1000) {
+      const { data } = await supabase
+        .from('flag_taxonomy')
+        .select('slug, updated_at')
+        .eq('flag_type', 'region').not('image_path', 'is', null)
+        .order('slug').range(from, from + 999)
+      out.push(...(data || []))
+      if (!data || data.length < 1000) break
+    }
+    return out
   }, [])
 
   // ── Articles de blog ───────────────────────────────────────────────────────
@@ -229,6 +242,16 @@ export default async function sitemap() {
     for (const f of cityFlags) {
       if (!f.slug) continue
       entries.push(entry(locale, `/flags/cities/${f.slug}`, {
+        priority: 0.5,
+        changeFrequency: 'monthly',
+        date: f.updated_at,
+      }))
+    }
+
+    // Régions
+    for (const f of regionFlags) {
+      if (!f.slug) continue
+      entries.push(entry(locale, `/flags/regions/${f.slug}`, {
         priority: 0.5,
         changeFrequency: 'monthly',
         date: f.updated_at,

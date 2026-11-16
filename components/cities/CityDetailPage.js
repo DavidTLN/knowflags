@@ -31,7 +31,7 @@
 //   flag_name_local
 //   facts_en[] / facts_fr[]
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Fragment } from 'react'
 import Link from 'next/link'
 import { useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-client'
@@ -209,14 +209,40 @@ function DidYouKnow({ facts, locale }) {
   )
 }
 
+// Petite grille de drapeaux (villes d'une région, autres régions du pays)
+function FlagGrid({ items, prefix, hrefBase, locale, isMobile }) {
+  return (
+    <div style={{ display: 'grid', gridTemplateColumns: isMobile ? 'repeat(3, minmax(0, 1fr))' : 'repeat(auto-fill, minmax(130px, 1fr))', gap: '10px' }}>
+      {items.map(f => {
+        const fname = locale === 'fr' ? (f.name_fr || f.name_en) : f.name_en
+        const noFlag = !f.image_path && f.metadata?.source === 'wikidata'
+        return (
+          <Link prefetch={false} key={f.slug} href={`${hrefBase}/${f.slug}`} title={fname}
+            style={{ display: 'block', textDecoration: 'none', backgroundColor: DS.surface, borderRadius: '10px', overflow: 'hidden', border: `1px solid ${DS.borderSolid}` }}>
+            <div style={{ aspectRatio: '3/2', backgroundColor: DS.bg, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <FlagImage slug={noFlag ? null : f.slug} prefix={prefix} name={fname} acronym={f.metadata?.abbr} color={DS.navy}
+                style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '4px' }} />
+            </div>
+            <p style={{ margin: 0, padding: '6px 8px', fontSize: '11px', fontWeight: '700', color: DS.navy, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{fname}</p>
+          </Link>
+        )
+      })}
+    </div>
+  )
+}
+
 // ═════════════════════════════════════════════════════════════════════════════
-export default function CityDetailPage({ slug }) {
+// kind = 'city' (défaut) ou 'region' : même gabarit, blocs propres à chaque type.
+export default function CityDetailPage({ slug, kind = 'city' }) {
+  const isRegion = kind === 'region'
   const locale = useLocale()
   const t = (en, fr) => (locale === 'fr' ? fr : en)
 
   const [city, setCity] = useState(null)
   const [countryIso, setCountryIso] = useState(null)
   const [twins, setTwins] = useState([])
+  const [children, setChildren] = useState([])   // région : ses villes
+  const [siblings, setSiblings] = useState([])   // région : autres régions du pays
   const [loading, setLoading] = useState(true)
   const [notFound, setNotFound] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
@@ -237,7 +263,7 @@ export default function CityDetailPage({ slug }) {
 
     supabase.from('flag_taxonomy')
       .select('id, slug, name_en, name_fr, image_path, metadata, country_id, country:country_id(id, slug, name_en, name_fr, image_path), parent:parent_id(slug, name_en, name_fr, image_path)')
-      .eq('slug', slug).eq('flag_type', 'city').single()
+      .eq('slug', slug).eq('flag_type', kind).single()
       .then(async ({ data }) => {
         if (!active) return
         if (!data) { setNotFound(true); setLoading(false); return }
@@ -253,6 +279,20 @@ export default function CityDetailPage({ slug }) {
             if (active && c?.iso_code) setCountryIso(c.iso_code)
           } catch { /* colonne absente : bloc pays non cliquable */ }
         }
+        if (isRegion) {
+          const [{ data: kids }, { data: sibs }] = await Promise.all([
+            supabase.from('flag_taxonomy').select('slug, name_en, name_fr, image_path, metadata, sort_order')
+              .eq('flag_type', 'city').eq('parent_id', data.id).order('sort_order'),
+            data.country_id
+              ? supabase.from('flag_taxonomy').select('slug, name_en, name_fr, image_path, metadata')
+                  .eq('flag_type', 'region').eq('country_id', data.country_id).neq('id', data.id).not('image_path', 'is', null).limit(60)
+              : Promise.resolve({ data: [] }),
+          ])
+          if (!active) return
+          setChildren(kids || [])
+          setSiblings(sibs || [])
+          return
+        }
         try {
           const { data: tw } = await supabase
             .from('city_twinning_view')
@@ -263,14 +303,14 @@ export default function CityDetailPage({ slug }) {
       })
 
     return () => { active = false }
-  }, [slug])
+  }, [slug, kind]) // eslint-disable-line react-hooks/exhaustive-deps
 
   if (loading) return <PageLoader label={t('Loading…', 'Chargement…')} />
 
   if (notFound || !city) return (
     <div style={{ backgroundColor: DS.bg, minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: '12px', padding: '40px' }}>
-      <p style={{ fontSize: '18px', fontWeight: '700', color: DS.navy }}>{t('City not found', 'Ville introuvable')}</p>
-      <Link prefetch={false} href={`/${locale}/flags/cities`} style={{ color: DS.navyLight, fontWeight: '600' }}>{t('Back to city flags', 'Retour aux drapeaux de villes')}</Link>
+      <p style={{ fontSize: '18px', fontWeight: '700', color: DS.navy }}>{isRegion ? t('Region not found', 'Région introuvable') : t('City not found', 'Ville introuvable')}</p>
+      <Link prefetch={false} href={`/${locale}/flags/${isRegion ? 'regions' : 'cities'}`} style={{ color: DS.navyLight, fontWeight: '600' }}>{isRegion ? t('Back to regional flags', 'Retour aux drapeaux régionaux') : t('Back to city flags', 'Retour aux drapeaux de villes')}</Link>
     </div>
   )
 
@@ -279,7 +319,13 @@ export default function CityDetailPage({ slug }) {
   const meta = city.metadata || {}
   const country = city.country
   const countryName = country ? (isFr ? (country.name_fr || country.name_en) : country.name_en) : null
-  const parentName = city.parent ? (isFr ? (city.parent.name_fr || city.parent.name_en) : city.parent.name_en) : null
+  // Une région a son pays pour parent : pas de bloc « Sa région » dans ce cas
+  const parentIsCountry = city.parent && country && city.parent.slug === country.slug
+  const parentName = city.parent && !parentIsCountry ? (isFr ? (city.parent.name_fr || city.parent.name_en) : city.parent.name_en) : null
+  const prefix = isRegion ? '/flags/regions' : '/flags/cities'
+  const hasFlag = !!city.image_path || meta.source !== 'wikidata'
+  const capital = isFr ? (meta.capital_fr || meta.capital_en) : (meta.capital_en || meta.capital_fr)
+  const flagSource = meta.flag_source || (meta.commons ? { commons: meta.commons, license: meta.license } : null)
 
   const colors = Array.isArray(meta.colors) ? meta.colors : []
   const symbols = Array.isArray(meta.symbols) ? meta.symbols : []
@@ -305,7 +351,10 @@ export default function CityDetailPage({ slug }) {
 
   // ── Chiffres cles ──────────────────────────────────────────────────────────
   const quickFactItems = [
+    capital && { label: t('Capital', 'Chef-lieu'), value: capital },
     meta.population && { label: t('Population', 'Population'), value: Number(meta.population).toLocaleString(isFr ? 'fr-FR' : 'en-US') },
+    meta.iso_3166_2 && { label: t('ISO 3166-2 code', 'Code ISO 3166-2'), value: meta.iso_3166_2 },
+    isRegion && children.length > 0 && { label: t('City flags', 'Drapeaux de villes'), value: String(children.length) },
     meta.ratio && { label: t('Proportions', 'Proportions'), value: meta.ratio },
     meta.shape && { label: t('Shape', 'Forme'), value: humanize(meta.shape) },
     meta.adopted_year && { label: t('Adopted', 'Adoption'), value: String(meta.adopted_year) },
@@ -317,7 +366,7 @@ export default function CityDetailPage({ slug }) {
     <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: isMobile ? '12px' : '13px', color: DS.muted, flexWrap: 'wrap' }}>
       <Link prefetch={false} href={`/${locale}/countries`} style={{ color: DS.steel, textDecoration: 'none', fontWeight: '600' }}>{t('Flags', 'Drapeaux')}</Link>
       <span>›</span>
-      <Link prefetch={false} href={`/${locale}/flags/cities`} style={{ color: DS.steel, textDecoration: 'none', fontWeight: '600' }}>{t('Cities', 'Villes')}</Link>
+      <Link prefetch={false} href={`/${locale}/flags/${isRegion ? 'regions' : 'cities'}`} style={{ color: DS.steel, textDecoration: 'none', fontWeight: '600' }}>{isRegion ? t('Regions', 'Régions') : t('Cities', 'Villes')}</Link>
       <span>›</span>
       <span style={{ color: DS.navy, fontWeight: '600' }}>{name}</span>
     </div>
@@ -337,11 +386,21 @@ export default function CityDetailPage({ slug }) {
     <div style={{ borderRadius: '16px', overflow: 'hidden', boxShadow: '0 8px 32px rgba(22,50,79,0.12)', border: `1px solid ${DS.border}`, backgroundColor: DS.surface }}>
       <div style={{ aspectRatio: '3/2', backgroundColor: DS.bg, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '16px' }}>
         <FlagImage
-          slug={city.slug} prefix="/flags/cities" name={name} color={DS.navy}
+          slug={hasFlag ? city.slug : null} prefix={prefix} name={name} acronym={meta.abbr} color={DS.navy}
           width={320} height={213}
           style={{ width: '100%', height: 'auto', maxHeight: '100%', objectFit: 'contain', borderRadius: '4px' }}
         />
       </div>
+      {!hasFlag && (
+        <p style={{ margin: 0, padding: '10px 16px', fontSize: '12px', color: DS.muted, borderTop: `1px solid ${DS.border}` }}>
+          {t('No official flag on record yet.', 'Aucun drapeau officiel répertorié pour l’instant.')}
+        </p>
+      )}
+      {hasFlag && flagSource?.commons && (
+        <p style={{ margin: 0, padding: '10px 16px', fontSize: '11px', color: DS.light, borderTop: `1px solid ${DS.border}` }}>
+          {t('Image', 'Image')} : <a href={flagSource.commons} target="_blank" rel="noopener noreferrer" style={{ color: DS.muted }}>Wikimedia Commons</a>{flagSource.license ? ` · ${flagSource.license}` : ''}
+        </p>
+      )}
     </div>
   )
 
@@ -401,11 +460,11 @@ export default function CityDetailPage({ slug }) {
             <FlagImage slug={city.parent?.slug} prefix="/flags/regions" name={parentName}
               color={DS.navy} width={SLOT.w} height={SLOT.h} style={SLOT_IMG} />
           </FlagSlot>,
-          `/${locale}/flags/regions`,
-          t('Browse regional flags', 'Voir les drapeaux régionaux')
+          city.parent?.slug ? `/${locale}/flags/regions/${city.parent.slug}` : `/${locale}/flags/regions`,
+          t('Open the region page', 'Ouvrir la fiche région')
         )}
         {countryName && belongingCard(
-          t('Its country', 'Son pays'), countryName,
+          isRegion ? t('Country', 'Pays') : t('Its country', 'Son pays'), countryName,
           <FlagSlot>
             {countryIso
               ? <img loading="lazy" decoding="async" src={`https://flagcdn.com/w160/${countryIso}.png`} alt="" style={SLOT_IMG} />
@@ -571,7 +630,22 @@ export default function CityDetailPage({ slug }) {
 
   const didYouKnow = facts.length > 0 && <DidYouKnow facts={facts} locale={locale} />
 
-  const stack = [belonging, designSection, descriptionSection, twinningSection, didYouKnow].filter(Boolean)
+  // ── Région : ses villes, puis les autres régions du pays ───────────────────
+  const citiesSection = isRegion && children.length > 0 && (
+    <Section title={t(`Cities of ${name}`, `Villes de ${name}`)}
+      subtitle={t('City flags in this region.', 'Les drapeaux des villes de cette région.')}>
+      <FlagGrid items={children} prefix="/flags/cities" hrefBase={`/${locale}/flags/cities`} locale={locale} isMobile={isMobile} />
+    </Section>
+  )
+  const siblingsSorted = [...siblings].sort((a, b) =>
+    String(isFr ? (a.name_fr || a.name_en) : a.name_en).localeCompare(String(isFr ? (b.name_fr || b.name_en) : b.name_en), isFr ? 'fr' : 'en'))
+  const siblingsSection = isRegion && siblingsSorted.length > 0 && (
+    <Section title={countryName ? t(`Other regions of ${countryName}`, `Autres régions : ${countryName}`) : t('Other regions', 'Autres régions')}>
+      <FlagGrid items={siblingsSorted} prefix="/flags/regions" hrefBase={`/${locale}/flags/regions`} locale={locale} isMobile={isMobile} />
+    </Section>
+  )
+
+  const stack = [belonging, designSection, descriptionSection, citiesSection, twinningSection, didYouKnow, siblingsSection].filter(Boolean)
 
   return (
     <>
@@ -589,7 +663,7 @@ export default function CityDetailPage({ slug }) {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               {flagCard}
               {quickFacts}
-              {stack}
+              {stack.map((el, i) => <Fragment key={i}>{el}</Fragment>)}
             </div>
           ) : (
             <>
@@ -597,7 +671,7 @@ export default function CityDetailPage({ slug }) {
                 <div style={{ flex: '1 1 380px', maxWidth: '440px' }}>{flagCard}</div>
                 {quickFacts && <div style={{ flex: '1 1 360px', minWidth: 0 }}>{quickFacts}</div>}
               </div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>{stack}</div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>{stack.map((el, i) => <Fragment key={i}>{el}</Fragment>)}</div>
             </>
           )}
 

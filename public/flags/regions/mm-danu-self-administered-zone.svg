@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1e3" height="600" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <path d="m0 0h1e3v600h-1e3z" fill="#005bbb" stroke-width=".79057"/>
+ <path d="m0 300h1e3v300h-1e3z" fill="#ffd700" stroke-width=".79057"/>
+ <path d="m650 300c1e-5 82.843-67.157 150-150 150-82.843 1e-5 -150-67.157-150-150-1e-5 -82.843 67.157-150 150-150 82.843-1e-5 150 67.157 150 150z" fill="#19af00" fill-rule="evenodd" stroke-width=".70983"/>
+ <g stroke="#da2d1c">
+  <g fill="#fff">
+   <path d="m500 447.09-39.939-107.15-107.15-39.939 107.15-39.939 39.939-107.15 39.939 107.15 107.15 39.939-107.15 39.939z" fill-rule="evenodd" stroke-width="2.0339"/>
+   <g>
+    <path d="m500 300 70.357 27.931 14.496 56.922-56.922-14.496z" stroke-width="1.7073px"/>
+    <path d="m500 300-70.357 27.931-14.496 56.922 56.922-14.496z" stroke-width="1.7073px"/>
+    <path d="m500 300 70.357-27.931 14.496-56.922-56.922 14.496z" stroke-width="1.707"/>
+    <path d="m500 300-70.357-27.931-14.496-56.922 56.922 14.496z" stroke-width="1.7073px"/>
+   </g>
+  </g>
+  <g fill="none" stroke-width="1.7">
+   <path d="m415.15 215.15 169.71 169.71"/>
+   <path d="m584.85 215.15-169.71 169.71"/>
+   <path d="m647.09 300-294.18 2e-5"/>
+   <path d="m500 152.91 2e-5 294.18"/>
+  </g>
+ </g>
+</svg>

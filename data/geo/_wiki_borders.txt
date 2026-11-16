@@ -1,0 +1,1721 @@
+{{short description|None}}
+
+This is a '''list of countries and territories by land and maritime borders'''. For each country or territory, the number and identity of other [[countries]] and [[territories]] that neighbor it are listed. Land [[border]]s and [[ocean|maritime]] boundaries are included and are tabulated separately and in combination. For purposes of this list, "[[maritime boundary]]" includes boundaries that are recognized by the [[United Nations Convention on the Law of the Sea]], which includes boundaries of [[territorial waters]], [[contiguous zone]]s, and [[exclusive economic zone]]s. However, it does not include [[lake]] or [[river]] boundaries, which are considered land boundaries.
+
+Also included is the number of unique [[sovereign states]]{{efn|name="sovereign"|The concept of [[sovereign state|state sovereignty]] is somewhat imprecise and there are disagreements about whether certain territories are sovereign. There are currently [[List of sovereign states#Internationally recognized sovereign states|195 states]] that are generally regarded as "fully" sovereign: this includes the [[United Nations member states|193 member states]] of the [[United Nations]] plus the observer states of [[Vatican City]] and the [[State of Palestine]]. Some of these states have under their jurisdiction [[Territory (administrative division)|territories, dependencies, or collectivities]] that are clearly non-sovereign geographical areas. These territories are generally regarded as being subsumed within the overarching sovereignty of the governing state. For example, the [[United Kingdom]] holds sovereignty over the territory of [[Gibraltar]], even though Gibraltar is not considered to be part of the United Kingdom. There are a few territories in the world that are neither clearly sovereign nor clearly subsumed under another state's sovereignty. Often, these territories have declared themselves to be sovereign, but they are either not widely recognized as such or lack some of the necessary conditions for sovereign statehood. In these cases, explanatory footnotes indicate how the territory is treated for the purposes of this list.}} that a country or territory shares as neighbors. If the number is higher due to multiple dependencies or [[List of unrecognized states|unrecognized states]] bordering the state, the larger number is shown in brackets.
+
+Footnotes are provided to provide clarity regarding the status of certain countries and territories.
+
+==List==
+{{Compact TOC|allowtoc=yes|name=no|x=}}
+
+{{Sort under}}
+{{Table alignment}}
+{| class="wikitable sortable sort-under-center col2center col3center col4center"
+! rowspan=2|Country or territory<br /><small>''(Territories without full sovereignty{{efn|name = sovereign}} in italics)''</small>
+! colspan=3|Unique neighbours{{efn|name = unique|Numbers in parentheses include territories without full sovereignty.}}
+! rowspan=2 class="unsortable"|Neighbouring countries and territories<br /><small>''(Territories without full sovereignty{{efn|name = sovereign}} in italics)''</small><br><small>With (L/M) both land and maritime boundaries (L) land-only or (M) maritime-only</small>
+|-
+! data-sort-type="number" | Land 
+! data-sort-type="number" | Maritime
+! data-sort-type="number" | Total
+|- id="A"
+|'''''{{flag|Abkhazia}}'''''{{efn|name="abkhazia"|In 1992, Abkhazia declared sovereignty from [[Georgia (country)|Georgia]]. Georgia disputes the declaration and considers Abkhazia to be part of its territory. The only sovereign states that recognize Abkhazia's sovereignty are [[Russia]], [[Nicaragua]], [[Venezuela]], and [[Nauru]]. Because of the low level of international recognition, Abkhazia is not considered a sovereign state for the purposes of this list and is not included in other countries' listings of neighboring countries and territories.}}
+|2
+|3
+|3
+|{{flag|Georgia}} (L/M)<br>{{flag|Russia}} (L/M)<br>{{flag|Turkey}} (M)
+|-
+|'''''{{flagicon|French Southern and Antarctic Lands}} [[Adélie Land]]'''''{{efn|name="antarctic"|This is a territorial claim in [[Antarctica]]. Territorial claims in Antarctica have been recognized only between the few countries making claims in the area. Because some of the claims overlap and there is a low number of recognition for these claims, Antarctic territorial claims are not included in this chart when listing countries' neighboring countries and territories. The specific Antarctic claims are included in this chart, but only in reference to each other.}}{{efn|name="fsal"|This territory is part of the widely dispersed [[French Southern and Antarctic Lands]], an [[Overseas departments and territories of France#Overseas territories|overseas territory]] of [[France]].}} ([[France]])
+|1
+|1
+|1
+|''{{Flagicon|Australia}} [[Australian Antarctic Territory]]''{{efn|name = antarctic}} <small>([[Australia]]) (L/M)</small>
+|-
+|'''{{flag|Afghanistan}}'''
+|6
+|0
+|6
+|{{flag|China}} (L)<br>{{flag|Iran}} (L)<br>{{flag|Pakistan}} (L){{efn|name="crown"|The [[Government of India]] also considers Afghanistan to be a bordering country. This is because it considers the entire [[Kashmir]] region to be a part of India including the portion bordering Afghanistan. A ceasefire sponsored by the UN in 1948 froze the positions of Indian and Pakistani-held territory. As a consequence, the region bordering Afghanistan is in Pakistan's [[Gilgit-Baltistan]] area.}}<br>{{flag|Tajikistan}} (L)<br>{{flag|Turkmenistan}} (L)<br>{{flag|Uzbekistan}} (L)
+|-
+|'''''{{flagicon|United Kingdom}} [[Akrotiri and Dhekelia]]'''''{{efn|name = bot|This territory is not sovereign but is a [[British Overseas Territories|British Overseas Territory]]. Its territory constitutes part of the sovereign territory of the [[United Kingdom]] but strictly speaking is not part of the United Kingdom itself.}} ([[United Kingdom]])
+|2
+|1
+|3
+|{{flag|Cyprus}} (L/M)<br>{{flag|Northern Cyprus}}{{efn|name="NCyprus"}} (L)<br>{{flagicon|UN}} [[United Nations Buffer Zone in Cyprus]] (L){{efn|name="Cyprus"|reference=The Republic of Cyprus has claimed an EEZ around the entirety of the island of Cyprus, disregarding the coastlines of Akrotiri and Dhekelia and the [[Turkish Republic of Northern Cyprus]]. ([https://books.google.com/books?id=GllKAgAAQBAJ&dq=akrotiri+dhekelia+eez&pg=PA106 The Extension of Coastal State Jurisdiction in Enclosed and Semi-Enclosed Seas], Mitja Grbec, 2014.)}}
+|-
+|'''{{flag|Aland Islands}}'''
+|0
+|2
+|2
+|{{flag|Sweden}} (M)<br>{{flag|Finland}} (M)<br>
+|-
+|'''{{flag|Albania}}'''
+|4
+|3
+|5
+|{{flag|Greece}} (L/M)<br>{{flag|Italy}} (M)<br>{{flag|Montenegro}} (L/M)<br>{{flag|North Macedonia}} (L)<br>''{{flag|Kosovo}}''{{efn|name = kosovo|In 2008, Kosovo declared independence from [[Serbia]]. Although Kosovo's sovereignty has been recognized by {{Numrec|Kos||UN member states}}, Serbia disputes its sovereignty, claiming that Kosovo remains one of its provinces. Serbia referred the dispute to the [[International Court of Justice]], which ruled that the declaration of independence was legal. For purposes of this list, Kosovo is considered to be a sovereign country. If Kosovo is considered part of Serbia, some numbers in the table would be reduced by one (e.g., when a state borders both Serbia and Kosovo). Other numbers would remain the same (e.g., when a state borders Kosovo but not Serbia).}} (L),<small> which [[Recognition of Kosovo|some countries consider]] part of Serbia, borders [[Serbia]]</small>
+|-
+|'''{{flag|Algeria}}'''
+|8
+|5
+|10
+|{{flag|Italy}} (M)<br>{{flag|Libya}} (L) <br>{{flag|Mali}} (L)<br>{{flag|Mauritania}} (L)<br>{{flag|Morocco}} (L/M)<br>{{flag|Niger}} (L)<br>{{flag|Spain}} (M)<br>{{flag|Tunisia}} (L/M)<br/>''{{flag|Western Sahara}}''{{efn|name = sahara}} 
+|-
+|'''''{{flag|American Samoa}}'''''{{efn|name="ust"|This territory is not sovereign, but is an [[insular area]] of the United States. [[United States territory|U.S. territories]] are considered to be part of the sovereign territory  of the United States.}} ([[United States]])
+|0
+|3 (5) 
+|3 (5) 
+|{{flag|Samoa}} (M)<br>{{flag|Tonga}} (M)<br/>''{{flag|Cook Islands}}''{{efn|name = cook|The [[Cook Islands]] is a self-governing country in [[Associated state|free association]] with [[New Zealand]]. The Cook Islands controls a portion of its own foreign affairs, including the establishment and regulation of borders. However, the Cook Islands is not a member of the [[United Nations]] and is part of the [[Realm of New Zealand]], with Cook Island people being New Zealand citizens. For purposes of this list, the Cook Islands, New Zealand, [[Niue]], and [[Tokelau]] are considered constituent parts of one sovereign state.}} <small>([[New Zealand]])</small> (M)<br>''{{flag|Niue}}''{{efn|name = niue}} <small>([[New Zealand]])</small> (M)<br>''{{flag|Tokelau}}''{{efn|name = tokelau}} <small>([[New Zealand]])</small> (M)
+|-
+|'''{{flag|Andorra}}'''
+|2
+|0
+|2
+|{{flag|France}} (L)<br>{{flag|Spain}} (L)
+|-
+|'''{{flag|Angola}}'''
+|4
+|3
+|4
+|{{flag|Democratic Republic of the Congo}} (L/M)<br>{{flag|Republic of the Congo}} (L/M)<br>{{flag|Namibia}} (L/M)<br>{{flag|Zambia}} (L)
+|-
+|'''''{{flag|Anguilla}}'''''{{efn|name="bot"}} ([[United Kingdom]])
+|0
+|4 (6)
+|4 (6)
+|{{flag|Antigua and Barbuda}} (M)<br/>''{{flag|British Virgin Islands}}''{{efn|name = bot}} <small>([[United Kingdom]])</small> (M)<br>{{flag|Netherlands}} (M)<br>''{{flag|Saint Barthélemy}}''{{efn|name=foc|This territory is not sovereign, but is an [[Overseas departments and territories of France#Overseas collectivities|overseas collectivity]] of [[France]], and as such it is part of the sovereign territory of France.}} <small>([[France]])</small> (M)<br>''{{flagicon|France}} [[Saint Martin (France)|Saint Martin]]''{{efn|name = foc}} <small>([[France]])</small> (M)<br>''{{flag|United States Virgin Islands}}''{{efn|name = ust}} <small>([[United States]])</small> (M)
+|-
+|'''{{flag|Antigua and Barbuda}}'''
+|0
+|3 (5) 
+|3 (5) 
+|{{flag|France}} (M)<br>{{flag|Saint Kitts and Nevis}} (M)<br/>''{{flag|Anguilla}}''{{efn|name = bot}} <small>([[United Kingdom]])</small> (M)<br>''{{flag|Montserrat}}''{{efn|name = bot}} <small>([[United Kingdom]])</small> (M)<br>{{flagicon|France}} ''[[Saint Barthélemy]]''{{efn|name = foc}} <small>([[France]])</small> (M)
+|-
+|'''{{flag|Argentina}}'''
+|5
+|4
+|6
+|{{flag|Bolivia}} (L)<br>{{flag|Brazil}} (L)<br>{{flag|Chile}} (L/M)<br>{{flag|Paraguay}} (L)<br>{{flag|Uruguay}} (L/M)<br>''{{flag|Falkland Islands}}''{{efn|name = bot}}{{efn|name = falkland|Argentina claims sovereignty over the Falkland Islands, which is a [[British Overseas Territories|British Overseas Territory]].}} <small>([[United Kingdom]])</small> (M)
+|-
+|'''''{{flag|Argentine Antarctica}}'''''{{efn|name = antarctic}} ([[Argentina]])
+|2
+|2
+|2
+|''{{Flag|Chilean Antarctic Territory}}''{{efn|name = antarctic}}{{efn|name = overlap|Claims to territory overlap.}} <small>([[Chile]]) (L/M)</small><br />''{{Flag|British Antarctic Territory}}''{{efn|name = antarctic}}{{efn|name = overlap}} <small>([[United Kingdom]]) (L/M)</small>
+|-
+|'''{{flag|Armenia}}'''
+|4
+|0
+|4
+|{{flag|Azerbaijan}} (L)<br>{{flag|Georgia}} (L)<br>{{flag|Iran}} (L)<br>{{flag|Turkey}} (L)
+|-
+|'''''{{flag|Aruba}}'''''{{efn|name="netherlands"|This territory is not sovereign, but is a constituent country within the [[Kingdom of the Netherlands]]. For purposes of this list, [[Aruba]], [[Curaçao]], the [[Netherlands]], and [[Sint Maarten]] are considered constituent parts of one sovereign state.}} ([[Kingdom of the Netherlands|Netherlands]])
+|0
+|2 (3)
+|2 (3)
+|''{{flag|Curaçao}}''{{efn|name = netherlands}} <small>([[Kingdom of the Netherlands|Netherlands]])</small> (M)<br>{{flag|Dominican Republic}} (M)<br>{{flag|Venezuela}} (M)
+|-
+|'''''{{flag|Ashmore and Cartier Islands}}'''''{{efn|name = aust|This territory is not sovereign but is part of the sovereign [[States and territories of Australia|territory]] of [[Australia]].}} ([[Australia]])
+|0
+|2 (3)
+|2 (3)
+|{{flag|Australia}} (M)<br>{{flag|East Timor}} (M)<br>{{flag|Indonesia}} (M)
+|-
+|'''{{flag|Australia}}'''<br />→includes:<br />→{{flag|Ashmore and Cartier Islands}}<br />→{{flag|Christmas Island}}<br />→{{flag|Cocos (Keeling) Islands}}<br />→{{flag|Coral Sea Islands}}<br>→{{flag|Heard Island and McDonald Islands}}<br />→{{flag|Norfolk Island}}
+|0
+|6 (7)
+|6 (7)
+|{{flag|East Timor}} (M)<br>{{flag|Indonesia}} (M)<br>{{flag|New Zealand}} (M)<br>{{flag|Papua New Guinea}} (M)<br>{{flag|Solomon Islands}} (M)<br/>''{{flag|French Southern and Antarctic Lands}}'' <small>([[France]])</small> (M)<br>''{{flag|New Caledonia}}''{{efn|name = newcaledonia|[[New Caledonia]] is not sovereign but is a [[Overseas departments and territories of France#Sui generis collectivity|''sui generis'' collectivity]] of [[France]] and as such it is part of the sovereign territory of France.}} <small>([[France]])</small> (M)
+|-
+|'''{{flagicon|Australia}} [[Australia|Australia (excluding outlying islands)]]'''
+|0
+|4 (6)
+|4 (6)
+|''{{flag|Ashmore and Cartier Islands}}''{{efn|name = aust}} <small>([[Australia]])</small> (M)<br>''{{flag|Coral Sea Islands}}''{{efn|name = aust}} <small>([[Australia]])</small> (M)<br/>{{flag|East Timor}} (M)<br>{{flag|Indonesia}} (M)<br>{{flag|New Zealand}} (M)<br>{{flag|Papua New Guinea}} (M)
+|-
+|'''''{{flagicon|Australia}} [[Australian Antarctic Territory]]'''''{{efn|name = antarctic}} ([[Australia]])
+|3
+|3
+|3
+|''{{Flagicon|French Southern and Antarctic Lands}} [[Adélie Land]]''{{efn|name = antarctic}} <small>([[France]]) (L/M)</small><br />''{{Flagicon|Norway}} [[Queen Maud Land]]''{{efn|name = antarctic}} <small>([[Norway]]) (L/M)</small><br />''{{Flagicon|New Zealand}} [[Ross Dependency]]''{{efn|name = antarctic}} <small>([[New Zealand]]) (L/M)</small>
+|-
+|'''{{flag|Austria}}'''
+|8
+|0
+|8
+|{{flag|Czech Republic}} (L)<br>{{flag|Germany}} (L)<br>{{flag|Hungary}} (L)<br>{{flag|Italy}} (L)<br>{{flag|Liechtenstein}} (L)<br>{{flag|Slovakia}} (L)<br>{{flag|Slovenia}} (L)<br>{{flag|Switzerland}} (L)
+|-
+|'''{{flag|Azerbaijan}}'''
+|5
+|4
+|7
+|{{flag|Armenia}} (L)<br>{{flag|Georgia}} (L)<br>{{flag|Iran}}{{efn|name="caspian"|The maritime boundary is in the [[Caspian Sea]]. Some consider the Caspian Sea to be a lake.}} (L/M)<br>{{flag|Kazakhstan}} (M){{efn|name=caspian}}<br>{{flag|Russia}}{{efn|name = caspian}} (L/M)<br>{{flag|Turkey}} (L)<br>{{flag|Turkmenistan}} (M){{efn|name=caspian}}{{efn|name=artsakh|The [[Republic of Artsakh]], formerly known as the Nagorno-Karabakh Republic, declared independence from [[Azerbaijan]] in 1991. However, neither Azerbaijan nor any other state or international organization has recognized it as a sovereign state. For this reason, Artsakh is not considered a sovereign state for the purposes of this list and is not included in other countries' listings of neighboring countries and territories.}}
+|- id="B"
+|'''{{flag|Bahamas}}'''
+|0
+|4
+|4
+|{{flag|Cuba}} (M)<br>{{flag|Haiti}} (M)<br>{{flag|United States}} (M)<br/>''{{flag|Turks and Caicos Islands}}''{{efn|name = bot}} <small>([[United Kingdom]])</small> (M)
+|-
+|'''{{flag|Bahrain}}'''
+|0
+|3
+|3
+|{{flag|Iran}} (M)<br>{{flag|Qatar}} (M)<br>{{flag|Saudi Arabia}} (M)
+|-
+|'''''{{flagicon|United States}} [[Baker Island]]'''''{{efn|name = ust}} ([[United States]])
+|0
+|1 (2)
+|1 (2)
+|{{flagicon|United States}} ''[[Howland Island]]''{{efn|name = ust}} <small>([[United States]])</small> (M)<br>{{flag|Kiribati}} (M)
+|-
+|'''{{flag|Bangladesh}}'''
+|2
+|2
+|2
+|{{flag|Myanmar}} (L/M)<br>{{flag|India}} (L/M)
+|-
+|'''{{flag|Barbados}}'''
+|0
+|6
+|6
+|{{flag|France}} (M)<br>{{flag|Guyana}} (M)<br>{{flag|Saint Lucia}} (M)<br>{{flag|Saint Vincent and the Grenadines}} (M)<br>{{flag|Trinidad and Tobago}} (M)<br>{{flag|Venezuela}} (M)<ref name="BDOS-GUY-Ven">[http://www.indexmundi.com/venezuela/disputes_international.html Venezuela Disputes], IndexMundi</ref>
+|-
+|'''{{flag|Belarus}}'''
+|5
+|0
+|5
+|{{flag|Latvia}} (L)<br>{{flag|Lithuania}} (L)<br>{{flag|Poland}} (L)<br>{{flag|Russia}} (L)<br>{{flag|Ukraine}} (L)
+|-
+|'''{{flag|Belgium}}'''
+|4
+|3
+|5
+|{{flag|France}} (L/M)<br>{{flag|Germany}} (L)<br>{{flag|Luxembourg}} (L)<br>{{flag|Netherlands}} (L/M)<br>{{flag|United Kingdom}} (M)
+|-
+|'''{{flag|Belize}}'''
+|2
+|3
+|3
+|{{flag|Guatemala}} (L/M)<br>{{flag|Honduras}}  (M)<br>{{flag|Mexico}} (L/M)
+|-
+|'''{{flag|Benin}}'''
+|4
+|2
+|4
+|{{flag|Burkina Faso}} (L)<br>{{flag|Niger}} (L)<br>{{flag|Nigeria}} (L/M)<br>{{flag|Togo}} (L/M)
+|-
+|'''''{{flag|Bermuda}}'''''{{efn|name = bot}} ([[United Kingdom]])
+|0
+|0
+|0
+|None
+|-
+|'''{{flag|Bhutan}}'''
+|2
+|0
+|2
+|{{flag|China}} (L)<br />{{flag|India}} (L)
+|-
+|'''{{flag|Bolivia}}'''
+|5
+|0
+|5
+|{{flag|Argentina}} (L)<br>{{flag|Brazil}} (L)<br>{{flag|Chile}} (L)<br>{{flag|Paraguay}} (L)<br>{{flag|Peru}} (L)
+|-
+|'''{{flag|Bosnia and Herzegovina}}'''
+|3
+|1
+|3
+|{{flag|Croatia}} (L/M)<br>{{flag|Montenegro}} (L)<br>{{flag|Serbia}} (L)
+|-
+|'''{{flag|Botswana}}'''
+|4
+|0
+|4
+|{{flag|Namibia}} (L)<br>{{flag|South Africa}} (L) <br>{{flag|Zambia}} (L)<br>{{flag|Zimbabwe}} (L)
+|-
+|'''''{{flag|Bouvet Island}}'''''{{efn|name="norway"|This territory is not sovereign and is a dependent territory of [[Norway]]. It is not part of the [[Norway|Kingdom of Norway]], but it is considered to be part of the sovereign territory of Norway.}} ([[Norway]])
+|0
+|0
+|0
+|None
+|-
+|'''{{flag|Brazil}}'''
+|10
+|2
+|10
+|{{flag|Argentina}} (L)<br>{{flag|Bolivia}} (L)<br>{{flag|Colombia}} (L)<br>{{flag|France}} (L/M)<br>{{flag|Guyana}} (L)<br>{{flag|Paraguay}} (L)<br>{{flag|Peru}} (L)<br>{{flag|Suriname}} (L)<br>{{flag|Uruguay}} (L/M)<br>{{flag|Venezuela}} (L)
+|-
+|'''''{{flag|British Antarctic Territory}}'''''{{efn|name = antarctic}} ([[United Kingdom]])
+|3
+|3
+|3
+|''{{Flag|Chilean Antarctic Territory}}''{{efn|name = antarctic}}{{efn|name = overlap}} <small>([[Chile]]) (L/M)</small><br />''{{Flag|Argentine Antarctica}}''{{efn|name = antarctic}}{{efn|name = overlap}} <small>([[Argentina]]) (L/M)</small><br>''{{Flagicon|Norway}} [[Queen Maud Land]]''{{efn|name = antarctic}} <small>([[Norway]]) (L/M)</small>
+|-
+|'''''{{flag|British Indian Ocean Territory}}'''''{{efn|name = bot}}{{efn|name="chagos"|[[Mauritius]] claims sovereignty over the [[Chagos Archipelago]], which is a [[British Overseas Territories|British Overseas Territory]] called the [[British Indian Ocean Territory]].}} ([[United Kingdom]])
+|0
+|1
+|1
+|{{flag|Maldives}} (M)
+|-
+|'''''{{flag|British Virgin Islands}}'''''{{efn|name = bot}} ([[United Kingdom]])
+|0
+|1 (3)
+|1 (3)
+|''{{flag|Anguilla}}''{{efn|name = bot}} <small>([[United Kingdom]])</small> (M)<br/>''{{flag|Puerto Rico}}''{{efn|name = ust}} <small>([[United States]])</small> (M)<br>''{{flag|United States Virgin Islands}}''{{efn|name = ust}} <small>([[United States]])</small> (M)
+|-
+|'''{{flag|Brunei}}'''
+|1
+|5
+|5
+|{{flag|China}} (M){{efn|name = overlap}}<br/>{{flag|Malaysia}} (L/M)<br/>{{flag|Philippines}} (M){{efn|name = overlap}}<br/>''{{flag|Taiwan}}'' (M){{efn|name = overlap}}<br/>{{flag|Vietnam}} (M){{efn|name = overlap}}
+|-
+|'''{{flag|Bulgaria}}'''
+|5
+|4
+|7
+|{{flag|Greece}} (L) <br>{{flag|North Macedonia}} (L)<br>{{flag|Romania}} (L/M)<br>{{flag|Serbia}} (L)<br>{{flag|Turkey}} (L/M)<br>{{flag|Russia}} (M){{efn|name=black-sea-eezs|The exclusive economic zones of Turkey, Bulgaria, Romania, and Crimea (disputed between Ukraine and Russia), meet at a [[quadripoint]].}}<br>{{flag|Ukraine}} (M){{efn|name=black-sea-eezs}}
+|-
+|'''{{flag|Burkina Faso}}'''
+|6
+|0
+|6
+|{{flag|Benin}} (L) <br>{{flag|Côte d'Ivoire}} (L)<br>{{flag|Ghana}} (L)<br>{{flag|Mali}} (L)<br>{{flag|Niger}} (L)<br>{{flag|Togo}} (L)
+|-
+|'''{{flag|Burundi}}'''
+|3
+|0
+|3
+|{{flag|Democratic Republic of the Congo}} (L)<br>{{flag|Rwanda}} (L)<br>{{flag|Tanzania}} (L)
+|- id="C"
+|'''{{flag|Cambodia}}'''
+|3
+|2
+|3
+|{{flag|Laos}} (L)<br/>{{flag|Thailand}}{{efn|name = overlap}} (L/M)<br>{{flag|Vietnam}}{{efn|name = overlap}} (L/M)
+|-
+|'''{{flag|Cameroon}}'''
+|6
+|2
+|6
+|{{flag|Central African Republic}} (L)<br>{{flag|Chad}} (L)<br>{{flag|Republic of the Congo}} (L)<br>{{flag|Equatorial Guinea}} (L/M)<br>{{flag|Gabon}} (L)<br>{{flag|Nigeria}} (L/M)
+|-
+|'''{{flag|Canada}}'''
+|2
+|3
+|3
+|{{flag|United States}} (L/M)<br/>''{{flag|Greenland}}''{{efn|name = denmark|This territory is not sovereign, but is a country within the [[Kingdom of Denmark]]. For purposes of this list, [[Denmark]], the [[Faroe Islands]], and [[Greenland]] are considered constituent parts of one sovereign state.}} <small>([[Denmark]]) (L/M)</small><br>''{{flag|Saint Pierre and Miquelon}}''{{efn|name = foc}} <small>([[France]])</small> (M)
+|-
+|'''{{flag|Cape Verde}}'''
+|0
+|3
+|3
+|{{flag|The Gambia}} (M)<br>{{flag|Mauritania}} (M)<br>{{flag|Senegal}} (M)
+|-
+|'''''{{flag|Cayman Islands}}'''''{{efn|name = bot}} ([[United Kingdom]])
+|0
+|3
+|3
+|{{flag|Cuba}} (M)<br>{{flag|Honduras}} (M) <br>{{flag|Jamaica}} (M)
+|-
+|'''{{flag|Central African Republic}}'''
+|6
+|0
+|6
+|{{flag|Cameroon}} (L)<br>{{flag|Chad}} (L)<br>{{flag|Democratic Republic of the Congo}} (L)<br>{{flag|Republic of the Congo}} (L)<br>{{flag|South Sudan}} (L)<br>{{flag|Sudan}} (L)
+|-
+|'''{{flag|Chad}}'''
+|6
+|0
+|6
+|{{flag|Cameroon}} (L)<br>{{flag|Central African Republic}} (L)<br>{{flag|Libya}} (L)<br>{{flag|Niger}} (L)<br>{{flag|Nigeria}} (L)<br>{{flag|Sudan}} (L)
+|-
+|'''{{flag|Chile}}'''
+|3
+|2
+|3
+|{{flag|Argentina}} (L/M)<br>{{flag|Bolivia}} (L)<br>{{flag|Peru}} (L/M)
+|-
+|'''''{{flag|Chilean Antarctic Territory}}'''''{{efn|name = antarctic}} ([[Chile]])
+|2
+|3
+|3
+|''{{Flag|Argentine Antarctica}}''{{efn|name = antarctic}}{{efn|name = overlap}} <small>([[Argentina]]) (L/M)</small><br />''{{Flag|British Antarctic Territory}}''{{efn|name = antarctic}}{{efn|name = overlap}} <small>([[United Kingdom]]) (L/M)</small><br>''{{Flagicon|Norway}} [[Peter I Island]]''{{efn|name = antarctic}} <small>([[Norway]])</small> (M)
+|-
+|'''{{flag|People's Republic of China}}'''{{efn|For information on the [[Republic of China]], see the listing in this table under '''"Taiwan"'''.}}<br/>(excluding ''{{flag|Hong Kong}}'' and ''{{flag|Macau}}'',<br/>as well as ''{{flag|Taiwan}}'', which is [[Political status of Taiwan|claimed by the PRC]].)
+
+|14 (16)
+|11
+|21 (23)
+|{{flag|Afghanistan}} (L)<br>{{flag|Bhutan}} (L)<br>{{flag|Brunei}} (M){{efn|name = overlap}}<br>{{flag|India}} (L){{efn|name = overlap}}<br>{{flag|Indonesia}} (M){{efn|name = overlap}}<br>{{flag|Japan}} (M)<br>{{flag|Kazakhstan}} (L)<br>{{flag|North Korea}} (L/M)<br>{{flag|South Korea}} (M)<br>{{flag|Kyrgyzstan}} (L)<br>{{flag|Laos}} (L)<br>{{flag|Malaysia}} (M){{efn|name = overlap}}<br>{{flag|Mongolia}} (L)<br>{{flag|Myanmar}} (L)<br>{{flag|Nepal}} (L)<br>{{flag|Pakistan}} (L)<br>{{flag|Philippines}} (M){{efn|name = overlap}}<br>{{flag|Russia}} (L)<br>{{flag|Tajikistan}} (L)<br>{{flag|Vietnam}} (L/M){{efn|name = overlap}}<br>''{{flag|Taiwan}}'' (M){{efn|name = overlap}}
+|-
+|'''''{{flag|Christmas Island}}'''''{{efn|name="aust"}} ([[Australia]])
+|0
+|1
+|1
+|{{flag|Indonesia}} (M)
+|-
+|'''''{{flag|Clipperton Island}}'''''{{efn|[[Clipperton Island]] is not sovereign but is property of the government of [[France]]; as such, it is part of the sovereign territory of France.}} ([[France]])
+|0
+|0
+|0
+|None
+|-
+|'''''{{flag|Cocos (Keeling) Islands}}'''''{{efn|name = aust}} ([[Australia]])
+|0
+|0
+|0
+|None 
+|-
+|'''{{flag|Colombia}}'''
+|5
+|8
+|10
+|{{flag|Brazil}} (L)<br>{{flag|Costa Rica}} (M)<br>{{flag|Dominican Republic}} (M)<br>{{flag|Ecuador}} (L/M)<br>{{flag|Haiti}} (M)<br>{{flag|Jamaica}} (M)<br>{{flag|Nicaragua}} (M)<br>{{flag|Panama}} (L/M)<br>{{flag|Peru}} (L)<br>{{flag|Venezuela}} (L/M)
+|-
+|'''{{flag|Comoros}}'''
+|0
+|5 (6)
+|5 (6)
+|{{flag|France}} (M)<br>{{flag|Madagascar}} (M)<br>{{flag|Mozambique}} (M)<br>{{flag|Seychelles}} (M)<br>{{flag|Tanzania}} (M)<br/>''{{flag|French Southern and Antarctic Lands}}{{efn|name="glorioso"|[[Madagascar]] claims sovereignty over the [[Glorioso Islands]].}} <small>([[France]])</small> (M)''
+|-
+|'''{{flag|Democratic Republic of the Congo}}'''
+|9
+|2
+|9
+|{{flag|Angola}}{{efn|name=overlap}} (L/M)<br>{{flag|Burundi}} (L)<br>{{flag|Central African Republic}} (L)<br>{{flag|Republic of the Congo}} (L/M)<br>{{flag|Rwanda}} (L)<br>{{flag|South Sudan}} (L)<br>{{flag|Tanzania}} (L)<br>{{flag|Uganda}} (L)<br>{{flag|Zambia}} (L)
+|-
+|'''{{flag|Republic of the Congo}}'''
+|5
+|3
+|5
+|{{flag|Angola}} (L/M)<br>{{flag|Cameroon}} (L)<br>{{flag|Central African Republic}} (L)<br>{{flag|Democratic Republic of the Congo}} (L/M)<br>{{flag|Gabon}} (L/M)
+|-
+|'''''{{flag|Cook Islands}}'''''{{efn|name="cook"}} ([[New Zealand]])
+|0
+|3 (5)
+|3 (5)
+|{{flag|Kiribati}} (M)<br/>''{{flag|American Samoa}}''{{efn|name = ust}} <small>([[United States]])</small> (M)<br>''{{flag|French Polynesia}}''{{efn|name = foc}} <small>([[France]])</small> (M)<br>''{{flag|Niue}}''{{efn|name = niue}} <small>([[New Zealand]])</small> (M)<br>''{{flag|Tokelau}}''{{efn|name = tokelau}} <small>([[New Zealand]])</small> (M)
+|-
+|'''''{{flag|Coral Sea Islands}}'''''{{efn|name = aust}} ([[Australia]])
+|0
+|3 (4)
+|3 (4)
+|{{flag|Australia}} (M)<br>''{{flag|New Caledonia}}''{{efn|name = newcaledonia}} <small>([[France]])</small> (M)<br>{{flag|Papua New Guinea}} (M)<br>{{flag|Solomon Islands}} (M)
+|-
+|'''{{flag|Costa Rica}}'''
+|2
+|4
+|4
+|{{flag|Colombia}} (M)<br>{{flag|Ecuador}} (M)<br>{{flag|Nicaragua}} (L/M)<br>{{flag|Panama}} (L/M)
+|-
+|'''{{flag|Côte d'Ivoire}}'''
+|5
+|2
+|5
+|{{flag|Burkina Faso}} (L)<br>{{flag|Ghana}} (L/M)<br>{{flag|Guinea}} (L)<br>{{flag|Liberia}} (L/M)<br>{{flag|Mali}} (L)
+|-
+|'''{{flag|Croatia}}'''
+|5
+|4
+|6
+|{{flag|Bosnia and Herzegovina}} (L/M)<br>{{flag|Hungary}} (L)<br>{{flag|Italy}} (M)<br>{{flag|Montenegro}} (L/M)<br>{{flag|Serbia}} (L)<br>{{flag|Slovenia}} (L/M)
+|-
+|'''{{flag|Cuba}}'''
+|0
+|7 (8)
+|7 (8)
+|{{flag|Bahamas}} (M)<br>{{flag|Haiti}} (M)<br>{{flag|Honduras}} (M)<br>{{flag|Jamaica}} (M)<br>{{flag|Mexico}} (M)<br>{{flag|United States}} (M)<br/>''{{flag|Cayman Islands}}''{{efn|name = bot}} <small>([[United Kingdom]])</small> (M)<br>''[[Navassa Island]]''{{efn|name = ust}}{{efn|name = navassa}} <small>([[United States]]/Haiti)</small> (M)
+|-
+|'''''{{flag|Curaçao}}'''''{{efn|name = netherlands}} ([[Kingdom of the Netherlands|Netherlands]])
+|0
+|2 (4)
+|2 (4)
+|{{flag|Dominican Republic}} (M)<br>{{flag|Netherlands}} (M)<br>{{flag|Venezuela}} (M)<br/>''{{flag|Aruba}}''{{efn|name = netherlands}} <small>([[Kingdom of the Netherlands|Netherlands]])</small> (M)
+|-
+|'''{{flag|Cyprus}}'''
+|1
+|8 
+|8
+|''{{flag|Northern Cyprus}}{{efn|name="NCyprus"}} (M)''<br>{{flag|Egypt}} (M)<br>{{flag|Greece}} (M){{efn|name=overlap}}<br>{{flag|Israel}} (M)<br>{{flag|Lebanon}} (M)<br>{{flag|Syria}} (M)<br>{{flag|Turkey}} (M){{efn|name=overlap}}<br/>''{{flagicon|United Kingdom}} [[Akrotiri and Dhekelia]]''{{efn|name = bot}} <small>([[United Kingdom]]) (L/M)</small><br>{{flagicon|UN}} [[United Nations Buffer Zone in Cyprus]] (L) 
+|-
+|'''''{{flag|Northern Cyprus}}'''''{{efn|name="NCyprus"|[[Northern Cyprus]] declared independence in 1983, shortly after [[Turkey]] invaded the island in response to a [[coup d'état]] by [[Greek Cypriot]]s that was backed by [[Greece]]. Cyprus disputes the declaration of sovereignty and considers Northern Cyprus to be part of its territory. The [[United Nations]] and the [[European Union]] also do not recognize the sovereignty of Northern Cyprus. The only sovereign state that recognizes Northern Cyprus's sovereignty is Turkey. Northern Cyprus also lacks some of the indicators of legal sovereignty, relying heavily on Turkey for its continuing existence separate from Cyprus. Because of these factors, Northern Cyprus is not considered a sovereign state for the purposes of this list and is not included in other countries' listings of neighboring countries and territories.}}
+|1
+|4
+|4
+|{{flag|Cyprus}} (M)<br />{{flag|Syria}} (M)<br>{{flag|Turkey}} (M)<br/>''{{flagicon|United Kingdom}} [[Akrotiri and Dhekelia]]''{{efn|name = bot}} <small>([[United Kingdom]]) (L/M)</small><br>{{flagicon|UN}} [[United Nations Buffer Zone in Cyprus]] (L)
+|-
+|'''{{flag|Czech Republic}}'''
+|4
+|0
+|4
+|{{flag|Austria}} (L)<br>{{flag|Germany}} (L)<br>{{flag|Poland}} (L)<br>{{flag|Slovakia}} (L)
+|- id="D"
+|'''{{flag|Denmark}}'''{{efn|Does not include the [[Faroe Islands]] and [[Greenland]].}}
+|1
+|5
+|5
+|{{flag|Germany}} (L/M)<br>{{flag|Norway}} (M)<br>{{flag|Poland}} (M)<br>{{flag|Sweden}} (M)<br>{{flag|United Kingdom}} (M)
+|-
+|'''{{flagicon|Denmark}} [[Kingdom of Denmark|Denmark, Kingdom of]]'''<br />→includes:<br />→{{flag|Denmark}}<br />→{{flag|Faroe Islands}}<br />→{{flag|Greenland}}
+|2
+|7 (9)
+|7 (9) 
+|{{flag|Canada}} (L/M)<br>{{flag|Germany}} (L/M)<br>{{flag|Iceland}} (M)<br>{{flag|Norway}} (M)<br>{{flag|Poland}} (M)<br>{{flag|Sweden}} (M)<br>{{flag|United Kingdom}} (M)<br>''{{flag|Jan Mayen}}''{{efn|name = norway}} ([[Norway]]) (M)<br/>''{{flag|Svalbard}}'' ([[Norway]]) (M)
+|-
+|'''{{flag|Djibouti}}'''
+|3
+|3
+|4
+|{{flag|Eritrea}} (L/M)<br>{{flag|Ethiopia}} (L)<br>{{flag|Somaliland}}.{{efn|[[Somaliland]] declared independence from [[Somalia]] in 1991. However, neither Somalia nor any other state or international organization has recognized Somaliland as a sovereign state. For this reason, Somaliland is not considered a sovereign state for the purposes of this list and is not included in other countries' listings of neighboring countries and territories.}} (L/M)<br>{{flag|Yemen}} (M)<br/><small>Djibouti borders Somaliland, who is considered by the international community to be part of Somalia</small>
+|-
+|'''{{flag|Dominica}}'''
+|0
+|2
+|2
+|''{{flag|France}} (M)<br>{{flag|Venezuela}} (M)''
+|-
+|'''{{flag|Dominican Republic}}'''
+|1
+|6 (7)
+|6 (7) 
+|{{flag|Colombia}} (M)<br>{{flag|Haiti}} (L/M)<br>{{flag|Venezuela}} (M)<br/>''{{flag|Aruba}}''{{efn|name=netherlands}} <small>([[Kingdom of the Netherlands|Netherlands]])</small> (M)<br>''{{flag|Curaçao}}''{{efn|name=netherlands}} <small>([[Kingdom of the Netherlands|Netherlands]])</small> (M)<br>''{{flag|Puerto Rico}}''{{efn|name = ust}} <small>([[United States]])</small> (M)<br>''{{flag|Turks and Caicos Islands}}''{{efn|name = bot}} <small>([[United Kingdom]])</small> (M)
+|- id="E"
+|'''{{flag|East Timor}}'''
+|1
+|2 (3)
+|2 (3)
+|{{flag|Australia}} (M)<br>{{flag|Indonesia}} (L/M)<br/>''{{flag|Ashmore and Cartier Islands}}''{{efn|name = aust}} <small>([[Australia]])</small> (M)
+|-
+|'''{{flag|Ecuador}}'''
+|2
+|3
+|3
+|{{flag|Colombia}} (L/M)<br>{{flag|Costa Rica}} (M)<br>{{flag|Peru}} (L/M)
+|-
+|'''{{flag|Egypt}}'''
+|4
+|9 
+|9 
+|{{flag|Cyprus}} (M)<br>{{flag|Greece}} (M){{efn|name=overlap}}<br>{{flag|Israel}} (L/M)<br>{{flag|Jordan}} (M)<br>{{flag|Libya}} (L/M)<br>{{flag|Palestine}}{{efn|name = palestine}} (L/M)<br>{{flag|Saudi Arabia}} (M)<br>{{flag|Sudan}} (L/M)<br>{{flag|Turkey}} (M){{efn|name=overlap}}
+|-
+|'''{{flag|El Salvador}}'''
+|2
+|3
+|3
+|{{flag|Guatemala}} (L/M)<br>{{flag|Honduras}} (L/M)<br>{{flag|Nicaragua}} (M)
+|-
+|'''{{flag|Equatorial Guinea}}'''
+|2
+|4
+|4
+|{{flag|Cameroon}} (L/M)<br>{{flag|Gabon}} (L/M)<br>{{flag|Nigeria}} (M)<br>{{flag|São Tomé and Príncipe}} (M)
+|-
+|'''{{flag|Eritrea}}'''
+|3
+|4
+|5
+|{{flag|Djibouti}} (L/M)<br>{{flag|Saudi Arabia}} (M)<br>{{flag|Sudan}} (L/M)<br>{{flag|Ethiopia}} (L)<br>{{flag|Yemen}} (M)
+|-
+|'''{{flag|Estonia}}'''
+|2
+|4
+|4
+|{{flag|Finland}} (M)<br>{{flag|Latvia}} (L/M)<br>{{flag|Russia}} (L/M)<br>{{flag|Sweden}} (M)
+|-
+|'''{{flag|Eswatini|name=Eswatini (Swaziland)}}'''
+|2
+|0
+|2
+|{{flag|Mozambique}} (L)<br>{{flag|South Africa}} (L)
+|-
+|'''{{flag|Ethiopia}}'''
+|7 
+|0
+|7 
+|{{flag|Djibouti}} (L)<br>{{flag|Eritrea}} (L)<br>{{flag|Kenya}} (L)<br>{{flag|Somalia}} (L)<br>{{flag|Somaliland}}{{efn|[[Somaliland]] declared independence from [[Somalia]] in 1991. However, neither Somalia nor any other state or international organization has recognized Somaliland as a sovereign state. For this reason, Somaliland is not considered a sovereign state for the purposes of this list and is not included in other countries' listings of neighboring countries and territories.}} (L)<br>{{flag|South Sudan}} (L)<br>{{flag|Sudan}} (L)
+|- id="F"
+|'''''{{flag|Falkland Islands}}'''''{{efn|name = bot}}{{efn|name="falkland"}} ([[United Kingdom]])
+|0
+|1
+|1
+|{{flag|Argentina}} (M)
+|-
+|'''''{{flag|Faroe Islands}}'''''{{efn|name = denmark}} ([[Denmark]])
+|0
+|3
+|3
+|{{flag|Iceland}} (M)<br>{{flag|Norway}} (M)<br>{{flag|United Kingdom}} (M)
+|-
+|'''{{flag|Fiji}}'''
+|0
+|6 (7) 
+|6 (7) 
+|{{flag|New Zealand}} (M)<br/>{{flag|Solomon Islands}} (M)<br/>{{flag|Tonga}} (M)<br>{{flag|Tuvalu}} (M)<br>{{flag|Vanuatu}} (M)<br/>''{{flag|New Caledonia}}''{{efn|name = newcaledonia}} <small>([[France]])</small> (M)<br>''{{flag|Wallis and Futuna}}''{{efn|name = foc}} <small>([[France]])</small> (M)
+|-
+|'''{{flag|Finland}}'''
+|3
+|3
+|4
+|{{flag|Estonia}} (M)<br>{{flag|Norway}} (L)<br>{{flag|Russia}} (L/M)<br>{{flag|Sweden}} (L/M)
+|-
+|'''{{flag|France}}'''{{efn|Includes [[Metropolitan France]] and the five [[Overseas departments and regions of France|overseas regions]], but excludes French [[overseas departments and territories of France|collectivities and territories]].}}
+|10
+|15 (19)
+|19 (23) 
+|{{flag|Andorra}} (L)<br>{{flag|Antigua and Barbuda}} (M)<br>{{flag|Barbados}} (M)<br>{{flag|Belgium}} (L/M)<br>{{flag|Brazil}} (L/M)<br>{{flag|Comoros}} (M)<br>{{flag|Dominica}} (M)<br>{{flag|Germany}} (L)<br>{{flag|Italy}} (L/M)<br>{{flag|Luxembourg}} (L)<br>{{flag|Madagascar}} (M)<br>{{flag|Mauritius}} (M)<br>{{Flag|Monaco}} (L/M)<br>{{flag|Saint Lucia}} (M)<br>{{flag|Spain}} (L/M)<br>{{flag|Switzerland}} (L)<br>{{flag|Suriname}} (L/M)<br>{{flag|United Kingdom}} (M)<br>{{flag|Venezuela}} (M)<br/>''{{flag|French Southern and Antarctic Lands}}'' <small>([[France]])</small> (M)<br/>''{{flag|Guernsey}}''{{efn|name = crowndep|This territory is not sovereign but it a [[Crown Dependencies|British Crown Dependency]]. Crown Dependencies are possessions of the [[Monarchy of the United Kingdom|British Crown]] but strictly speaking are not part of the United Kingdom.}} <small>([[United Kingdom]])</small> (M)<br>''{{flag|Jersey}}''{{efn|name = crowndep}} <small>([[United Kingdom]])</small> (M)<br>''{{flag|Montserrat}}''{{efn|name = bot}} <small>([[United Kingdom]])</small> (M)
+|-
+|'''{{flag|France}} [[Overseas departments and territories of France|(including French collectivities and territories)]]'''<br />→includes:<br />→{{flag|Clipperton Island}}<br />→{{flag|French Polynesia}}<br />→{{flag|French Southern and Antarctic Lands}}{{efn|name="notadelie"|Excluding [[Adélie Land]].}}<br />→{{flag|New Caledonia}}<br />→{{flag|Saint Barthélemy}}<br />→{{flagicon|France}} [[Saint Martin (France)|Saint Martin]]<br />→{{flag|Saint Pierre and Miquelon}}<br />→{{flag|Wallis and Futuna}}
+|11 (12)
+|27 (38) 
+|31 (42)
+|{{flag|Andorra}} (L)<br>{{flag|Antigua and Barbuda}} (M)<br>{{flag|Barbados}} (M)<br>{{flag|Belgium}} (L/M)<br>{{flag|Brazil}} (L/M)<br>{{flag|Canada}} (M)<br>{{flag|Comoros}} (M)<br>{{flag|Dominica}} (M)<br>{{flag|Fiji}} (M)<br>{{flag|Germany}} (L)<br>{{flag|Italy}} (L/M)<br>{{flag|Kiribati}} (M)<br>{{flag|Luxembourg}} (L)<br>{{flag|Madagascar}} (M)<br>{{flag|Mauritius}} (M)<br>{{Flag|Monaco}} (L/M)<br>{{flag|Mozambique}} (M)<br>{{flag|Netherlands}} (L/M)<br>{{flag|Saint Kitts and Nevis}} (M)<br>{{flag|Saint Lucia}} (M)<br>{{Flag|Samoa}} (M)<br>{{flag|Seychelles}} (M)<br>{{flag|Solomon Islands}} (M)<br>{{flag|Spain}} (L/M)<br>{{flag|Suriname}} (L/M)<br>{{flag|Switzerland}} (L)<br>{{flag|Tonga}} (M)<br>{{flag|Tuvalu}} (M)<br>{{flag|United Kingdom}} (M)<br>{{flag|Vanuatu}} (M){{efn|name=overlap}}<br>{{flag|Venezuela}} (M)<br/>''{{flag|Anguilla}}''{{efn|name = bot}} <small>([[United Kingdom]])</small> (M)<br>''{{flag|Cook Islands}}''{{efn|name = cook}} <small>([[New Zealand]])</small> (M)<br>''{{flag|Coral Sea Islands}}''{{efn|name = aust}} <small>([[Australia]])</small> (M)<br/>''{{flag|Guernsey}}''{{efn|name = crowndep}} <small>([[United Kingdom]])</small> (M)<br>{{flagicon|Australia}} ''[[Heard Island and McDonald Islands]]''{{efn|name = aust}} <small>([[Australia]])</small> (M)<br>''{{flag|Jersey}}''{{efn|name = crowndep}} <small>([[United Kingdom]])</small> (M)<br>''{{flag|Montserrat}}''{{efn|name = bot}} <small>([[United Kingdom]])</small> (M)<br>''{{flag|Sint Maarten}}''{{efn|name = netherlands}} <small>([[Kingdom of the Netherlands|Netherlands]]) (L/M)</small><br>''{{flag|Norfolk Island}}''{{efn|name = aust}} <small>([[Australia]])</small> (M)<br>''{{flag|Pitcairn Islands}}''{{efn|name = bot}} <small>([[United Kingdom]])</small> (M)<br>''{{flag|Tokelau}}''{{efn|name = tokelau}} <small>([[New Zealand]])</small> (M)
+|-
+|'''''{{flag|French Polynesia}}'''''{{efn|name="foc"}} ([[France]])
+|0
+|3
+|3
+|{{flag|Kiribati}} (M)<br/>''{{flag|Cook Islands}}''{{efn|name = cook}} <small>([[New Zealand]])</small> (M)<br>''{{flag|Pitcairn Islands}}''{{efn|name = bot}} <small>([[United Kingdom]])</small> (M)
+|-
+|'''''{{flag|French Southern and Antarctic Lands}}''''' <small>Excluding [[Adélie Land]]</small>{{efn|name = notadelie}}{{efn|name="fot"|This territory is not sovereign but is an [[Overseas departments and territories of France#Overseas territories|overseas territory]] of [[France]].}} ([[France]])
+|0
+|6 (7)
+|6 (7)
+|{{flag|Comoros}} (M)<br>{{flag|France}} (M)<br/>{{flag|Madagascar}} (M)<br>{{flag|Mauritius}} (M)<br>{{Flag|Mozambique}} (M)<br>{{flag|Seychelles}} (M)<br/>''{{flag|Heard Island and McDonald Islands}}''{{efn|name = aust}} <small>([[Australia]])</small> (M)
+|- id="G"
+|'''{{flag|Gabon}}'''
+|3
+|3
+|4
+|{{flag|Cameroon}} (L)<br>{{flag|Republic of the Congo}} (L/M)<br>{{flag|Equatorial Guinea}} (L/M)<br>{{flag|São Tomé and Príncipe}} (M)
+|-
+|'''{{flag|The Gambia}}'''
+|1
+|2
+|2
+|{{flag|Cape Verde}} (M)<br>{{flag|Senegal}} (L/M)
+|-
+|'''{{flag|Georgia}}'''
+|6
+|3
+|6
+|{{flag|Abkhazia}}{{efn|name="abkhazia"}} (L/M)<br>{{flag|Armenia}} (L)<br>{{flag|Azerbaijan}} (L)<br>{{flag|Russia}} (L/M)<br>{{flag|South Ossetia}}{{efn|name="ossetia"}} (L)<br>{{flag|Turkey}} (L/M)
+|-
+|'''{{flag|Germany}}'''
+|9
+|5
+|11
+|{{flag|Austria}} (L)<br>{{flag|Belgium}} (L)<br>{{flag|Czech Republic}} (L)<br>{{flag|Denmark}} (L/M)<br>{{flag|France}} (L)<br>{{flag|Luxembourg}} (L)<br>{{flag|Netherlands}} (L/M)<br>{{flag|Poland}} (L/M)<br>{{flag|Sweden}} (M)<br>{{flag|Switzerland}} (L)<br>{{flag|United Kingdom}} (M)
+|-
+|'''{{flag|Ghana}}'''
+|3
+|2
+|3
+|{{flag|Burkina Faso}} (L)<br>{{flag|Côte d'Ivoire}} (L/M)<br>{{flag|Togo}} (L/M)
+|-
+|'''''{{flag|Gibraltar}}'''''{{efn|name = bot}} ([[United Kingdom]])
+|1
+|1
+|1
+|{{flag|Spain}} (L/M)
+|-
+|'''{{flag|Greece}}'''
+|4
+|6
+|8
+|{{flag|Albania}} (L/M)<br>{{flag|Bulgaria}} (L)<br>{{flag|Cyprus}} (M){{efn|name=overlap}}<br>{{flag|Egypt}} (M){{efn|name=overlap}}<br>{{flag|Italy}} (M)<br>{{flag|Libya}} (M)<br>{{flag|North Macedonia}} (L)<br>{{flag|Turkey}} (L/M)
+|-
+|'''''{{flag|Greenland}}'''''{{efn|name="denmark"}} ([[Denmark]])
+|1
+|3 (4) 
+|3 (4) 
+|{{flag|Canada}} (L/M)<br>{{flag|Iceland}} (M)<br>''{{flag|Jan Mayen}}''{{efn|name = norway}} <small>([[Norway]])</small> (M)<br/>''{{flag|Svalbard}}''{{efn|name = norway}} <small>([[Norway]])</small> (M)
+|-
+|'''{{flag|Grenada}}'''
+|0
+|3
+|3
+|{{flag|Saint Vincent and the Grenadines}} (M)<br>{{flag|Trinidad and Tobago}} (M)<br/>{{flag|Venezuela}} (M)
+|-
+|'''''{{flag|Guam}}'''''{{efn|name = ust}} ([[United States]])
+|0
+|1 (2)
+|1 (2)
+|{{flag|Federated States of Micronesia}} (M)<br/>''{{flag|Northern Mariana Islands}}''{{efn|name = ust}} <small>([[United States]])</small> (M)
+|-
+|'''{{flag|Guatemala}}'''
+|4
+|4
+|4
+|{{flag|Belize}} (L/M)<br>{{flag|El Salvador}} (L/M)<br>{{flag|Honduras}} (L/M)<br>{{flag|Mexico}} (L/M)
+|-
+|'''''{{flag|Guernsey}}'''''{{efn|name="crowndep"}} ([[United Kingdom]])
+|0
+|1 (3) 
+|1 (3) 
+|{{flag|France}} (M)<br>{{flag|United Kingdom}} (M)<br/>''{{flag|Jersey}}''{{efn|name = crowndep}} <small>([[United Kingdom]])</small> (M)
+|-
+|'''{{flag|Guinea}}'''
+|6
+|2
+|6
+|{{flag|Côte d'Ivoire}} (L)<br>{{flag|Guinea-Bissau}} (L/M)<br>{{flag|Liberia}} (L)<br>{{flag|Mali}} (L)<br>{{flag|Senegal}} (L)<br>{{flag|Sierra Leone}} (L/M)
+|-
+|'''{{flag|Guinea-Bissau}}'''
+|2
+|2
+|2
+|{{flag|Guinea}} (L/M)<br>{{flag|Senegal}} (L/M)
+|-
+|'''{{flag|Guyana}}'''
+|3
+|4
+|5
+|{{flag|Barbados}} (M)<ref name="BDOS-GUY-Ven" /><ref>[http://www.landofsixpeoples.com/news401/ns402252.htm Guyana, Barbados in maritime pact], February 25, 2004, Stabroek News</ref><br>{{flag|Brazil}} (L)<br>{{flag|Suriname}} (L/M)<br>{{flag|Trinidad and Tobago}} (M)<br>{{flag|Venezuela}}<ref name="BDOS-GUY-Ven" />{{efn|name=overlap}} (L/M)
+|- id="H"
+|'''{{flag|Haiti}}'''
+|1
+|7
+|7
+|{{flag|Bahamas}} (M)<br>{{flag|Colombia}} (M)<br>{{flag|Cuba}} (M)<br>{{flag|Dominican Republic}} (L/M)<br>{{Flag|Jamaica}} (M)<br/>''[[Navassa Island]]''{{efn|name = ust}}{{efn|name = navassa}} <small>([[United States]]/[[Haiti]])</small> (M)<br>''{{flag|Turks and Caicos Islands}}''{{efn|name = bot}} <small>([[United Kingdom]])</small> (M)
+|-
+|'''''{{flag|Heard Island and McDonald Islands}}'''''{{efn|name = aust}} ([[Australia]])
+|0
+|1
+|1
+|''{{flag|French Southern and Antarctic Lands}}'' <small>([[France]])</small> (M)
+|-
+|'''{{flag|Honduras}}'''
+|3
+|8
+|8
+|{{flag|Belize}} (M)<br>{{flag|Cuba}} (M)<br>{{Flag|El Salvador}} (L/M)<br>{{flag|Guatemala}} (L/M)<br>{{flag|Jamaica}} (M)<br>{{flag|Mexico}} (M)<br>{{flag|Nicaragua}} (L/M)<br/>''{{flag|Cayman Islands}}''{{efn|name = bot}} <small>([[United Kingdom]])</small> (M)
+|-
+|'''''{{flag|Hong Kong}}''''' ([[China]])
+|0 (1) 
+|0 (1)
+|0 (1)
+|{{flag|China}} (L/M)
+|-
+|'''''{{flagicon|United States}} [[Howland Island]]{{efn|name = ust}}''''' ([[United States]])
+|0
+|0 (1)
+|0 (1)
+|{{flagicon|United States}} ''[[Baker Island]]''{{efn|name = ust}} <small>([[United States]])</small> (M)
+|-
+|'''{{flag|Hungary}}'''
+|7
+|0
+|7
+|{{flag|Austria}} (L)<br>{{flag|Croatia}} (L)<br>{{flag|Romania}} (L)<br>{{flag|Serbia}} (L)<br>{{flag|Slovakia}} (L)<br>{{flag|Slovenia}} (L)<br>{{flag|Ukraine}} (L)
+|- id="I"
+|'''{{flag|Iceland}}'''
+|0
+|2 (3) 
+|2 (3) 
+|''{{flag|Faroe Islands}}''{{efn|name = denmark}} <small>([[Denmark]])</small> (M)<br>''{{flag|Greenland}}''{{efn|name = denmark}} <small>([[Denmark]])</small> (M)<br>''{{flag|Jan Mayen}}''{{efn|name = norway}} <small>([[Norway]])</small> (M)
+|-
+|'''{{flag|India}}'''
+|6
+|7
+|10
+|{{flag|Bangladesh}} (L/M)<br>{{flag|Bhutan}} (L)<br>{{flag|China}} (L){{efn|name=overlap}}<br>{{flag|Indonesia}} (M)<br>{{flag|Maldives}} (M)<br>{{flag|Myanmar}} (L/M)<br>{{flag|Nepal}} (L)<br>{{flag|Pakistan}} (L/M)<br>{{flag|Sri Lanka}} (M)<ref name="sl1">[https://scroll.in/article/830499/what-will-you-see-if-you-visit-the-precise-point-where-india-ends-and-sri-lanka-begins What will you see if you visit the precise point where India ends and Sri Lanka begins?], Scroll.in, 1 March 2017.</ref> <br>{{flag|Thailand}} (M)
+|-
+|'''{{flag|Indonesia}}'''
+|3
+|12 (14) 
+|12 (14) 
+|{{flag|Australia}} (M)<br>{{flag|China}} (M){{efn|name=overlap}}<br/>{{flag|East Timor}} (L/M)<br>{{flag|India}} (M)<br>{{flag|Malaysia}} (L/M)<br>{{flag|Palau}} (M)<br>{{flag|Papua New Guinea}} (L/M)<br>{{flag|Philippines}} (M)<br>{{flag|Singapore}} (M)<br>''{{flag|Taiwan}}'' (M){{efn|name=overlap}}<br/>{{flag|Thailand}} (M)<br>{{flag|Vietnam}} (M){{efn|name=overlap}}<br/>''{{flag|Ashmore and Cartier Islands}}''{{efn|name = aust}} <small>([[Australia]])</small> (M)<br>''{{flag|Christmas Island}}''{{efn|name = aust}} <small>([[Australia]])</small> (M)
+|-
+|'''{{flag|Iran}}'''
+|7
+|10
+|13
+|{{flag|Afghanistan}} (L)<br>{{flag|Armenia}} (L)<br>{{flag|Azerbaijan}}{{efn|name = caspian}} (L/M)<br>{{flag|Bahrain}} (M)<br>{{flag|Iraq}} (L/M)<br>{{flag|Kuwait}} (M)<br>{{flag|Oman}} (M)<br>{{flag|Pakistan}} (L/M)<br>{{flag|Qatar}} (M)<br>{{flag|Saudi Arabia}} (M)<br>{{flag|Turkey}} (L)<br>{{flag|Turkmenistan}}{{efn|name = caspian}} (L/M)<br>{{flag|United Arab Emirates}} (M)
+|-
+|'''{{flag|Iraq}}'''
+|6
+|2
+|6
+|{{flag|Iran}} (L/M)<br>{{flag|Jordan}} (L)<br>{{flag|Kuwait}} (L/M)<br>{{flag|Saudi Arabia}} (L)<br>{{flag|Syria}} (L)<br>{{flag|Turkey}} (L)
+|-
+|'''{{flag|Ireland}}'''
+|1
+|1
+|1
+|{{flag|United Kingdom}} (L/M)
+|-
+|'''''{{flag|Isle of Man}}'''''{{efn|name = crowndep}} ([[United Kingdom]])
+|0
+|0 (1)
+|0 (1)
+|{{flag|United Kingdom}} (L/M)
+|-
+|'''{{flag|Israel}}'''
+|5
+|5
+|6
+|{{flag|Cyprus}} (M)<br>{{flag|Egypt}} (L/M)<br>{{flag|Jordan}} (L/M)<br>{{flag|Lebanon}} (L/M)<br>{{flag|Syria}} (L)<br/>''{{flag|Palestine}}''{{efn|name = palestine}} (L/M)
+|-
+|'''{{flag|Italy}}'''
+|6
+|11
+|15
+|{{flag|Albania}} (M)<br>{{flag|Algeria}} (M)<br>{{flag|Austria}} (L)<br>{{flag|Croatia}} (M)<br>{{flag|France}} (L/M)<br>{{flag|Greece}} (M)<br>{{flag|Libya}} (M)<br>{{flag|Malta}} (M)<br>{{flag|Montenegro}} (M)<br>{{flag|San Marino}} (L)<br>{{flag|Slovenia}} (L/M)<br>{{flag|Spain}} (M)<br>{{flag|Switzerland}} (L)<br>{{flag|Tunisia}} (M)<br>{{flag|Vatican City}} (L)
+|- id="J"
+|'''{{flag|Jamaica}}'''
+|0
+|7
+|7
+|{{flag|Colombia}} (M)<br>{{flag|Cuba}} (M)<br>{{flag|Haiti}} (M)<br/>{{flag|Honduras}} (M)<br/>{{flag|Nicaragua}} (M)<br/>''{{flag|Cayman Islands}}''{{efn|name = bot}} <small>([[United Kingdom]])</small> (M)<br>''[[Navassa Island]]''{{efn|name = ust}}{{efn|name = navassa}} <small>([[United States]]/[[Haiti]])</small> (M)
+|-
+|'''''{{flag|Jan Mayen}}'''''{{efn|name = norway}} ([[Norway]])
+|0
+|2
+|2
+|{{flag|Iceland}} (M)<br/>''{{flag|Greenland}}''{{efn|name = denmark}} <small>([[Denmark]])</small> (M)
+|-
+|'''{{flag|Japan}}'''
+|0
+|7
+|7
+|{{flag|China}} (M)<br>{{flag|South Korea}} (M){{efn|name=overlap}}<br> {{Flag|North Korea}} (M){{efn|name=overlap}} <br /> {{Flag|Philippines}} (M)<br />{{flag|Russia}} (M)<br/>''{{flag|Northern Mariana Islands}}''{{efn|name = ust}} <small>([[United States]])</small> (M)<br>''{{flag|Taiwan}}'' (M){{efn|name=overlap}}
+|-
+|'''''{{flag|Jarvis Island}}'''''{{efn|name = ust}} ([[United States]])
+|0
+|1
+|1
+|{{flag|Kiribati}} (M)
+|-
+|'''''{{flag|Jersey}}'''''{{efn|name = crowndep}} ([[United Kingdom]])
+|0
+|1 (2)
+|1 (2)
+|{{flag|France}} (M)<br/>''{{flag|Guernsey}}''{{efn|name = crowndep}} <small>([[United Kingdom]])</small> (M)
+|-
+|'''''{{flag|Johnston Atoll}}'''''{{efn|name = ust}} ([[United States]])
+|0
+|0
+|0
+|None 
+|-
+|'''{{flag|Jordan}}'''
+|5
+|3
+|6
+|{{flag|Egypt}} (M)<br>{{flag|Iraq}} (L)<br>{{flag|Israel}} (L/M)<br>{{Flag|Saudi Arabia}} (L/M)<br>{{flag|Syria}} (L)<br/>''{{flag|Palestine}}''{{efn|name = palestine}} (L)
+|- id="K"
+|'''{{flag|Kazakhstan}}'''
+|5
+|3{{efn|name = caspian}}
+|6
+|{{flag|Azerbaijan}} (M){{efn|name = caspian}}<br>{{flag|China}} (L)<br>{{flag|Kyrgyzstan}} (L)<br>{{flag|Russia}}{{efn|name = caspian}} (L/M)<br>{{Flag|Turkmenistan}}{{efn|name = caspian}} (L/M)<br>{{flag|Uzbekistan}} (L)
+|-
+|'''{{flag|Kenya}}'''
+|5
+|2
+|5
+|{{flag|Ethiopia}} (L)<br>{{flag|Somalia}} (L/M)<br>{{flag|South Sudan}} (L)<br>{{Flag|Tanzania}} (L/M)<br>{{flag|Uganda}} (L)
+|-
+|'''''{{flag|Kingman Reef}}{{efn|name = ust}}''''' ([[United States]])
+|0
+|1 (2)
+|1 (2)
+|{{flag|Kiribati}} (M)<br>''{{flag|Palmyra Atoll}}''{{efn|name = ust}} <small>([[United States]])</small> (M)
+|-
+|'''{{flag|Kiribati}}'''
+|0
+|6 (10)
+|6 (10)
+|{{flag|Marshall Islands}} (M)<br>{{flag|Nauru}} (M)<br>{{flag|Tuvalu}} (M)<br/>''{{flag|Cook Islands}}''{{efn|name = cook}} <small>([[New Zealand]])</small> (M)<br>''{{flag|French Polynesia}}''{{efn|name = foc}} <small>([[France]])</small> (M)<br>{{flagicon|United States}} ''[[Baker Island]]''{{efn|name = ust}} <small>([[United States]])</small> (M)<br>''{{flag|Jarvis Island}}''{{efn|name = ust}} <small>([[United States]])</small> (M)<br>''{{flag|Kingman Reef}}'' <small>([[United States]])</small> (M)<br>''{{flag|Palmyra Atoll}}''{{efn|name = ust}} <small>([[United States]])</small> (M)<br>''{{flag|Tokelau}}''{{efn|name = tokelau}} <small>([[New Zealand]])</small> (M)
+|-
+|'''{{flag|North Korea}}'''
+|3
+|3
+|3
+|{{flag|China}} (L/M)<br>{{flag|South Korea}} (L/M)<br>{{Flag|Russia}} (L/M)<br>{{Flag|Japan}} (M){{efn|name=overlap}}
+|-
+|'''{{flag|South Korea}}'''
+|1
+|3
+|3
+|{{flag|China}} (M)<br>{{flag|Japan}} (M){{efn|name=overlap}}<br>{{flag|North Korea}} (L/M)<br>{{flag|Russia}} (M)
+|-
+|'''''{{flag|Kosovo}}'''''{{efn|name="kosovo"}}
+|4
+|0
+|4
+|{{flag|Albania}} (L)<br>{{flag|Montenegro}} (L)<br>{{flag|North Macedonia}} (L)<br>{{flag|Serbia}} (L)
+|-
+|'''{{flag|Kuwait}}'''
+|2
+|3
+|3
+|{{flag|Iran}} (M)<br>{{flag|Iraq}} (L/M)<br>{{flag|Saudi Arabia}} (L/M)
+|-
+|'''{{flag|Kyrgyzstan}}'''
+|4
+|0
+|4
+|{{flag|China}} (L)<br>{{flag|Kazakhstan}} (L)<br>{{flag|Tajikistan}} (L)<br>{{flag|Uzbekistan}} (L)
+|- id="L"
+|'''{{flag|Laos}}'''
+|5
+|0
+|5
+|{{Flag|Myanmar}} (L)<br>{{flag|Cambodia}} (L)<br>{{flag|China}} (L)<br>{{flag|Thailand}} (L)<br>{{flag|Vietnam}} (L)
+|-
+|'''{{flag|Latvia}}'''
+|4
+|3
+|5
+|{{Flag|Belarus}} (L)<br>{{flag|Estonia}} (L/M)<br>{{flag|Lithuania}} (L/M)<br>{{flag|Russia}} (L)<br>{{Flag|Sweden}} (M)
+|-
+|'''{{flag|Lebanon}}'''
+|2
+|3
+|3
+|{{flag|Cyprus}} (M)<br>{{flag|Israel}} (L/M)<br>{{flag|Syria}} (L/M)
+|-
+|'''{{flag|Lesotho}}'''
+|1
+|0
+|1
+|{{flag|South Africa}} (L)
+|-
+|'''{{flag|Liberia}}'''
+|3
+|2
+|3
+|{{flag|Côte d'Ivoire}} (L/M)<br>{{flag|Guinea}} (L)<br>{{flag|Sierra Leone}} (L/M)
+|-
+|'''{{flag|Libya}}'''
+|6
+|6
+|10
+|{{flag|Algeria}} (L)<br>{{flag|Chad}} (L)<br>{{flag|Egypt}} (L/M)<br>{{flag|Greece}} (M)<br>{{flag|Italy}} (M)<br>{{flag|Malta}} (M)<br>{{flag|Niger}} (L)<br>{{Flag|Sudan}} (L)<br>{{flag|Tunisia}} (L/M)<br>{{flag|Turkey}} (M){{efn|name=overlap}}
+|-
+|'''{{flag|Liechtenstein}}'''
+|2
+|0
+|2
+|{{flag|Austria}} (L)<br>{{flag|Switzerland}} (L)
+|-
+|'''{{flag|Lithuania}}'''
+|4
+|3
+|5
+|{{Flag|Belarus}} (L)<br>{{flag|Latvia}} (L/M)<br>{{flag|Poland}} (L)<br>{{flag|Russia}} (L/M)<br>{{Flag|Sweden}} (M)
+|-
+|'''{{flag|Luxembourg}}'''
+|3
+|0
+|3
+|{{flag|Belgium}} (L)<br>{{flag|France}} (L)<br>{{flag|Germany}} (L)
+|- id="M"
+|'''''{{flag|Macau}}''''' ([[China]]){{Efn|Macau is not sovereign but since 1999 has been a Special Administrative Region of the People's Republic of China. Macau has a high degree of autonomy, including separate passports and a defined international boundary within China, but it is not considered a separate sovereign state for the purposes of this list.}}
+|0 (1)
+|0 (1)
+|0 (1)
+|{{flag|China}} (L/M)
+|-
+|'''{{flag|Madagascar}}'''
+|0
+|5 (6)
+|5 (6)
+|{{flag|Comoros}} (M)<br>{{flag|France}} (M)<br>{{flag|Mauritius}} (M)<br/>{{flag|Mozambique}} (M)<br>{{flag|Seychelles}} (M)<br/>''{{flag|French Southern and Antarctic Lands}}''{{efn|name = fot}}{{efn|More specifically, [[Bassas da India]], [[Europa Island]], [[Glorioso Islands]], [[Juan de Nova Island]], and [[Tromelin Island]]. Madagascar claims sovereignty over all these islands.}} <small>([[France]])</small> (M)
+|-
+|'''{{flag|Malawi}}'''
+|3
+|0
+|3
+|{{flag|Mozambique}} (L)<br>{{flag|Tanzania}} (L)<br>{{flag|Zambia}} (L)
+|-
+|'''{{flag|Malaysia}}'''
+|3
+|8
+|8
+|{{Flag|Brunei}} (L/M)<br/>{{flag|China}} (M){{efn|name=overlap}}<br>{{flag|Indonesia}} (L/M)<br>{{flag|Philippines}} (M){{efn|name=overlap}}<br>{{flag|Singapore}} (M)<br>{{Flag|Thailand}} (L/M)<br>{{flag|Vietnam}} (M){{efn|name=overlap}}<br/>''{{flag|Taiwan}}'' (M){{efn|name=overlap}}
+|-
+|'''{{flag|Maldives}}'''
+|0
+|4
+|4
+|{{flag|India}} (M)<br />{{flag|Sri Lanka}} (M)<br/>''{{flag|British Indian Ocean Territory}}''{{efn|name = bot}}{{efn|name="chagos"}} <small>([[United Kingdom]])</small> (M)<br />{{flag|Mauritius}} (M){{efn|name="chagos"}}
+|-
+|'''{{flag|Mali}}'''
+|7
+|0
+|7
+|{{flag|Algeria}} (L)<br>{{flag|Burkina Faso}} (L)<br>{{flag|Côte d'Ivoire}} (L)<br>{{flag|Guinea}} (L)<br>{{flag|Mauritania}} (L)<br>{{flag|Niger}} (L)<br>{{flag|Senegal}} (L)
+|-
+|'''{{flag|Malta}}'''
+|0
+|2
+|2
+|{{flag|Italy}} (M)<br />{{flag|Libya}} (M)
+|-
+|'''{{flag|Marshall Islands}}'''
+|0
+|4
+|4
+|{{flag|Kiribati}} (M)<br>{{flag|Federated States of Micronesia}} (M)<br>{{flag|Nauru}} (M)<br/>''{{flag|Wake Island}}''{{efn|name = wake}} <small>([[United States]])</small> (M)
+|-
+|'''{{flag|Mauritania}}'''
+|4
+|3
+|5
+|{{Flag|Algeria}} (L)<br>{{flag|Cape Verde}} (M)<br>{{flag|Mali}} (L)<br>{{flag|Senegal}} (L/M)
+{{flag|Western Sahara}}{{efn|name = sahara}} (L/M)<br><small>Mauritania borders the [[Western Sahara]], which [[Morocco]] claims as its territory</small>
+|-
+|'''{{flag|Mauritius}}'''
+|0
+|4 (5)
+|4 (5)
+|{{flag|France}} (M)<br />{{flag|Madagascar}} (M)<br/>{{flag|Seychelles}} (M)<br/>''{{flag|French Southern and Antarctic Lands}}''{{efn|name = fsal}}{{efn|name="tromelin"|[[Madagascar]] claims sovereignty over [[Tromelin Island]].}} <small>([[France]])</small> (M){{efn|name=overlap}}<br />{{flag|Maldives}} (M){{efn|name="chagos"}}
+|-
+|'''{{flag|Mexico}}'''
+|3
+|5
+|5
+|{{Flag|Belize}} (L/M)<br>{{flag|Cuba}} (M)<br>{{flag|Guatemala}} (L/M)<br>{{flag|Honduras}} (M)<br>{{flag|United States}} (L/M)
+|-
+|'''{{flag|Federated States of Micronesia}}'''
+|0
+|4
+|4
+|{{flag|Marshall Islands}} (M)<br>{{flag|Palau}} (M)<br>{{flag|Papua New Guinea}} (M)<br/>''{{flag|Guam}}''{{efn|name = ust}} <small>([[United States]])</small> (M)
+|-
+|'''''{{flag|Midway Atoll}}'''''{{efn|name = ust}} ([[United States]])
+|0
+|0 (1)
+|0 (1)
+|{{flag|United States}} (M)
+|-
+|'''{{flag|Moldova}}'''
+|3
+|0
+|3
+|{{Flag|Romania}} (L)<br>{{flag|Transnistria}}{{efn|name="transnistria"}} (L)<br>{{flag|Ukraine}} (L)
+|-
+|'''{{flag|Monaco}}'''
+|1
+|1
+|1
+|{{Flag|France}} (L/M)
+|-
+|'''{{flag|Mongolia}}'''
+|2
+|0
+|2
+|{{Flag|China}} (L)<br>{{flag|Russia}} (L)
+|-
+|'''{{flag|Montenegro}}'''
+|5
+|3
+|6
+|{{Flag|Albania}} (L/M)<br>{{flag|Bosnia and Herzegovina}} (L)<br>{{flag|Croatia}} (L/M)<br>{{flag|Italy}} (M)<br>{{flag|Serbia}} (L)<br/>''{{Flag|Kosovo}}''{{efn|name = kosovo}} (L)
+|-
+|'''''{{flag|Montserrat}}'''''{{efn|name = bot}} ([[United Kingdom]])
+|0
+|4
+|4
+|{{flag|Antigua and Barbuda}} (M)<br>{{flag|France}} (M)<br>{{flag|Saint Kitts and Nevis}} (M)<br>{{flag|Venezuela}} (M)
+|-
+|'''{{flag|Morocco}}'''
+|3
+|4
+|4
+|{{Flag|Algeria}} (L/M)<br>{{flag|Portugal}} (M)<br>{{flag|Spain}} (L/M)<br/>''{{flag|Western Sahara}}''{{efn|name = sahara}} (L/M)<br><small>Morocco claims the Western Sahara, which claims independence. The Western Sahara borders Mauritania </small>
+|-
+|'''{{flag|Mozambique}}'''
+|6
+|5
+|9
+|{{Flag|Comoros}} (M)<br>{{flag|Eswatini|name=Eswatini (Swaziland)}} (L)<br />{{flag|Madagascar}} (M)<br>{{flag|Malawi}} (L)<br>{{Flag|South Africa}} (L/M)<br>{{flag|Tanzania}} (L/M)<br />{{flag|Zambia}} (L)<br />{{flag|Zimbabwe}} (L)<br/>''{{flag|French Southern and Antarctic Lands}}''{{efn|name = fot}}{{efn|More specifically, [[Bassas da India]], [[Europa Island]], and [[Juan de Nova Island]].}} <small>([[France]])</small> (M)
+|-
+|'''{{flag|Myanmar}}'''
+|5
+|3
+|5
+|{{flag|Bangladesh}} (L/M)<br>{{flag|China}} (L)<br>{{flag|India}} (L/M)<br>{{flag|Laos}} (L)<br>{{flag|Thailand}} (L/M)
+|- id="N"
+|'''{{flag|Namibia}}'''
+|4
+|2
+|4
+|{{Flag|Angola}} (L/M)<br>{{flag|Botswana}} (L)<br>{{Flag|South Africa}} (L/M)<br>{{flag|Zambia}} (L)
+|-
+|'''{{flag|Nauru}}'''
+|0
+|2
+|2
+|{{flag|Kiribati}} (M)<br />{{flag|Marshall Islands}} (M)
+|-
+|'''''[[Navassa Island]]'''''{{efn|name = ust}}{{efn|name="navassa"|[[Haiti]] claims sovereignty over [[Navassa Island]], which is under longstanding dispute as a [[United States territory|United States]] [[insular area]].}} ([[United States]]/[[Haiti]]<ref>[https://www.msn.com/en-us/news/us/did-the-us-steal-an-island-covered-in-bird-poop-from-haiti-a-fortune-is-in-dispute/ar-BB1bojka Did the US steal an island covered in bird poop from Haiti? A fortune is in dispute], (By Jacqueline Charles), November 26, 2020, Miami Herald</ref>)
+|0
+|3
+|3
+|{{flag|Cuba}} (M)<br>{{flag|Haiti}} (M)<br>{{flag|Jamaica}} (M)
+|-
+|'''{{flag|Nepal}}'''
+|2
+|0
+|2
+|{{flag|India}} (L)<br>{{Flag|China}} (L)
+|-
+|'''{{flag|Netherlands}}'''{{efn|Includes [[Bonaire]], [[Saba (island)|Saba]], and [[Sint Eustatius]], but excludes [[Aruba]], [[Curaçao]], and [[Sint Maarten]].}}
+|3 (2)
+|7 (11)
+|7 (11)
+|{{flag|Belgium}} (L/M)<br>{{flag|Germany}} (L/M)<br>{{flag|Saint Kitts and Nevis}} (M)<br>{{flag|United Kingdom}} (M)<br>{{flag|Venezuela}} (M)<br>''{{flag|Anguilla}}''{{efn|name=bot}} <small>([[United Kingdom]])</small> (M)<br>''{{flag|Curaçao}}''{{efn|name = netherlands}} <small>([[Kingdom of the Netherlands|Netherlands]])</small> (M)<br>''{{flag|Saint Barthélemy}}''{{efn|name=foc}} <small>([[France]])</small> (M)<br>''{{flag|Saint Martin}}''{{efn|name=foc}} <small>([[France]])</small> (M)<br>''{{flag|Sint Maarten}}''{{efn|name = netherlands}} <small>([[Kingdom of the Netherlands|Netherlands]]) (L/M)</small><br>''{{flag|United States Virgin Islands}}''{{efn|name=ust}} <small>([[United States]])</small> (M)
+|-
+|'''{{flagicon|Kingdom of the Netherlands}} [[Kingdom of the Netherlands|Netherlands, Kingdom of the]]'''<br />→includes:<br />→{{flag|Aruba}}<br />→{{flag|Curaçao}}<br />→{{flag|Netherlands}}<br />→{{flag|Sint Maarten}}
+|3
+|8 (10)
+|8 (10)
+|{{flag|Belgium}} (L/M)<br>{{flag|Dominican Republic}} (M)<br>{{flag|Germany}} (L/M)<br>{{flag|Saint Kitts and Nevis}} (M)<br>{{flag|United Kingdom}} (M)<br>{{flag|Venezuela}} (M)<br/>''{{flag|Anguilla}}''{{efn|name = bot}} <small>([[United Kingdom]])</small> (M)<br>''{{flagicon|France}} [[Saint Barthélemy]]''{{efn|name = foc}} <small>([[France]])</small> (M)<br>''{{flagicon|France}} [[Saint Martin (France)|Saint Martin]]''{{efn|name = foc}} <small>([[France]]) (L/M)</small><br>''{{flag|United States Virgin Islands}}''{{efn|name = ust}} <small>([[United States]])</small> (M)
+|-
+|'''''{{flag|New Caledonia}}'''''{{efn|name="newcaledonia"}} ([[France]])
+|0
+|4 (5)
+|4 (5)
+|{{flag|Fiji}} (M)<br>{{flag|Solomon Islands}} (M)<br>{{flag|Vanuatu}} (M){{efn|name=overlap}}<br/>''{{flag|Coral Sea Islands}}''{{efn|name = aust}} <small>([[Australia]])</small> (M)<br/>''{{flag|Norfolk Island}}'' <small>([[Australia]])</small> (M)
+|-
+|'''{{flag|New Zealand}}'''{{efn|Does not include the [[Cook Islands]], [[Niue]], or [[Tokelau]].}}
+|0
+|2 (3)
+|2 (3)
+|{{flag|Australia}} (M)<br/>{{flag|Fiji}} (M)<br/>''{{flag|Norfolk Island}}''{{efn|name = aust}} <small>([[Australia]])</small> (M)
+|-
+|'''{{flagicon|New Zealand}} [[Realm of New Zealand|New Zealand, Realm of]]'''<br />→includes:<br>→{{flag|Cook Islands}}<br />→{{flag|New Zealand}}<br>→{{flag|Niue}}<br>→{{flag|Tokelau}}
+|0
+|7 (9)
+|7 (9)
+|{{flag|Australia}} (M)<br/>{{flag|Fiji}} (M)<br>{{flag|Kiribati}} (M)<br>{{flag|Samoa}} (M)<br>{{flag|Tonga}} (M)<br/>''{{flag|American Samoa}}''{{efn|name = ust}} <small>([[United States]])</small> (M)<br>''{{flag|French Polynesia}}''{{efn|name = foc}} <small>([[France]])</small> (M)<br>''{{flag|Norfolk Island}}''{{efn|name = aust}} <small>([[Australia]])</small> (M)<br>''{{flag|Wallis and Futuna}}''{{efn|name = foc}} <small>([[France]])</small> (M)
+|-
+|'''{{flag|Nicaragua}}'''
+|2
+|6
+|6
+|{{Flag|Colombia}} (M)<br>{{flag|Costa Rica}} (L/M)<br>{{flag|El Salvador}} (M)<br>{{Flag|Honduras}} (L/M)<br>{{flag|Jamaica}} (M)<br>{{flag|Panama}} (M)
+|-
+|'''{{flag|Niger}}'''
+|7
+|0
+|7
+|{{flag|Algeria}} (L)<br>{{flag|Benin}} (L)<br>{{flag|Burkina Faso}} (L)<br>{{flag|Chad}} (L)<br>{{flag|Libya}} (L)<br>{{flag|Mali}} (L)<br>{{flag|Nigeria}} (L)
+|-
+|'''{{flag|Nigeria}}'''
+|4
+|4
+|6
+|{{Flag|Benin}} (L/M)<br>{{flag|Cameroon}} (L/M)<br>{{flag|Chad}} (L)<br>{{Flag|Equatorial Guinea}} (M)<br>{{flag|Niger}} (L)<br>{{flag|São Tomé and Príncipe}} (M)
+|-
+|'''''{{flag|Niue}}'''''{{efn|name="niue"|[[Niue]] is a self-governing country in [[Associated state|free association]] with [[New Zealand]]. Niue controls a portion of its own foreign affairs, including the establishment and regulation of borders. However, Niue is not a member of the [[United Nations]] and is part of the [[Realm of New Zealand]], with Niuean people being New Zealand citizens. For purposes of this list, Niue, the [[Cook Islands]], New Zealand, and [[Tokelau]] are considered constituent parts of one sovereign state.}} ([[New Zealand]])
+|0
+|2 (3)
+|2 (3)
+|{{flag|Tonga}} (M)<br/>''{{flag|American Samoa}}''{{efn|name = ust}} <small>([[United States]])</small> (M)<br>''{{flag|Cook Islands}}''{{efn|name = cook}} <small>([[New Zealand]])</small> (M)
+|-
+|'''''{{flag|Norfolk Island}}'''''{{efn|name = aust}} ([[Australia]])
+|0
+|2
+|2
+|{{flag|New Zealand}} (M)<br/>''{{flag|New Caledonia}}''{{efn|name = newcaledonia}} <small>([[France]])</small> (M)
+|-
+|'''{{flag|North Macedonia}}'''
+|5
+|0
+|5
+|{{flag|Albania}} (L)<br>{{flag|Bulgaria}} (L)<br>{{flag|Greece}} (L)<br>{{flag|Serbia}} (L)<br/>''{{flag|Kosovo}}''{{efn|name = kosovo}} (L)
+|-
+|'''''{{flag|Northern Mariana Islands}}'''''{{efn|name = ust}} ([[United States]])
+|0
+|1 (2)
+|1 (2)
+|{{Flag|Japan}} (M)<br/>''{{flag|Guam}}''{{efn|name = ust}} <small>([[United States]])</small> (M)
+|-
+|'''{{flag|Norway}}'''{{efn|Not including [[Bouvet Island]], [[Svalbard]], or [[Jan Mayen]].}}
+|3
+|4 (6)
+|5 (7)
+|{{flag|Denmark}} (M)<br>{{flag|Finland}} (L)<br>{{flag|Russia}} (L/M)<br>{{flag|Sweden}} (L/M)<br>{{Flag|United Kingdom}} (M)<br/>''{{Flag|Faroe Islands}}''{{efn|name = denmark}} <small>([[Denmark]])</small> (M)<br/>''{{flag|Svalbard}}'' ([[Norway]]) (M)
+|-
+|'''{{flagicon|Norway}} [[Norway|Norway, Kingdom of (plus dependent Norwegian territories)]]'''<br>→includes:<br>→{{flag|Bouvet Island}}<br>→{{flag|Jan Mayen}}<br>→{{flag|Norway}}<br>→{{flag|Svalbard}}
+|3
+|5 (7)
+|6 (8)
+|{{flag|Denmark}} (M)<br>{{flag|Finland}} (L)<br>{{flag|Iceland}} (M)<br>{{flag|Russia}} (L/M)<br>{{flag|Sweden}} (L/M)<br>{{Flag|United Kingdom}} (M)<br/>''{{Flag|Faroe Islands}}''{{efn|name = denmark}} <small>([[Denmark]])</small> (M)<br>''{{flag|Greenland}}''{{efn|name = denmark}} <small>([[Denmark]])</small> (M)
+|- id="O"
+|'''{{flag|Oman}}'''
+|3
+|4
+|5
+|{{flag|Iran}} (M)<br>{{flag|Pakistan}} (M)<br>{{flag|Saudi Arabia}} (L)<br>{{flag|United Arab Emirates}} (L/M)<br>{{flag|Yemen}} (L/M)
+|- id="P"
+|'''{{flag|Pakistan}}'''
+|4
+|3
+|5
+|{{flag|Afghanistan}} (L)<br>{{flag|China}} (L)<br>{{flag|India}} (L/M)<br>{{flag|Iran}} (L/M) <br>{{flag|Oman}} (M)
+|-
+|'''{{flag|Palau}}'''
+|0
+|3
+|3
+|{{flag|Indonesia}} (M)<br />{{Flag|Federated States of Micronesia}} (M)<br>{{flag|Philippines}} (M)
+|-
+|'''''{{flag|Palestine}}'''''{{efn|name="palestine"|In 1988, the [[Palestine Liberation Organization]] declared as sovereign the [[State of Palestine]]. Palestinian sovereignty is recognized by {{Numrec|Palestine||UN member states}}, and is a [[United Nations General Assembly observers|United Nations non-member observer state]]. The State of Palestine consists of [[West Bank]] and the [[Gaza Strip]]. In this list, for purposes of counting bordering states, Palestine is considered to be a single sovereign entity.}}
+|3
+|2
+|3
+|{{flag|Egypt}} (L/M)<br>{{flag|Israel}} (L/M)<br>{{flag|Jordan}} (L)
+|-
+|'''''{{flag|Palmyra Atoll}}{{efn|name = ust}}''''' ([[United States]])
+|0
+|1 (2)
+|1 (2)
+|{{flag|Kiribati}} (M)<br>''{{flag|Kingman Reef}}''{{efn|name = ust}} <small>([[United States]])</small> (M)
+|-
+|'''{{flag|Panama}}'''
+|2
+|3
+|3
+|{{flag|Colombia}} (L/M)<br>{{flag|Costa Rica}} (L/M)<br/>{{flag|Nicaragua}} (M)
+|-
+|'''{{flag|Papua New Guinea}}'''
+|1
+|4 (5)
+|4 (5)
+|{{flag|Australia}} (M)<br>{{flag|Indonesia}} (L/M)<br>{{Flag|Federated States of Micronesia}} (M)<br>{{flag|Solomon Islands}} (M)<br/>''{{flag|Coral Sea Islands}}''{{efn|name = aust}} <small>([[Australia]])</small> (M)
+|-
+|'''{{flag|Paraguay}}'''
+|3
+|0
+|3
+|{{flag|Argentina}} (L)<br>{{flag|Bolivia}} (L)<br>{{flag|Brazil}} (L)
+|-
+|'''{{flag|Peru}}'''
+|5
+|2
+|5
+|{{flag|Bolivia}} (L)<br>{{flag|Brazil}} (L)<br>{{flag|Chile}} (L/M)<br>{{flag|Colombia}} (L)<br>{{flag|Ecuador}} (L/M)
+|-
+|'''''{{flagicon|Norway}} [[Peter I Island]]'''''{{efn|name = antarctic}} ([[Norway]])
+|0
+|1
+|1
+|''{{Flag|Chilean Antarctic Territory}}''{{efn|name = antarctic}} <small>([[Chile]])</small> (M)
+|-
+|'''{{flag|Philippines}}'''
+|0
+|8
+|8
+|{{flag|Brunei}} (M){{efn|name=overlap}}<br>{{flag|China}} (M){{efn|name=overlap}}<br>{{flag|Indonesia}} (M)<br>{{flag|Japan}} (M)<br>{{flag|Malaysia}} (M)<br>{{flag|Vietnam}} (M){{efn|name=overlap}}<br>''{{flag|Taiwan}}'' (M){{efn|name=overlap}}
+|-
+|'''''{{flag|Pitcairn Islands}}'''''{{efn|name = bot}} ([[United Kingdom]])
+|0
+|1
+|1
+|''{{flag|French Polynesia}}''{{efn|name = foc}} ([[France]]) (M)
+|-
+|'''{{flag|Poland}}'''
+|7
+|4
+|9
+|{{flag|Belarus}} (L)<br>{{flag|Czech Republic}} (L)<br>{{flag|Denmark}} (M)<br>{{flag|Germany}} (L/M)<br>{{flag|Lithuania}} (L)<br>{{flag|Russia}} (L/M)<br>{{flag|Slovakia}} (L)<br>{{flag|Sweden}} (M)<br>{{flag|Ukraine}} (L)
+|-
+|'''{{flag|Portugal}}'''{{efn|Includes [[autonomous regions of Portugal]].}}
+|1
+|2
+|2
+|{{flag|Morocco}} (M)<br>{{flag|Spain}} (L/M)
+|-
+|'''''{{flag|Puerto Rico}}'''''{{efn|name = ust}}([[United States]])
+|0
+|3 (4)
+|3 (4)
+|{{flag|Dominican Republic}} (M)<br>{{flag|Venezuela}} (M)<br/>''{{flag|British Virgin Islands}}''{{efn|name = bot}} <small>([[United Kingdom]])</small> (M)<br>''{{flag|United States Virgin Islands}}''{{efn|name = ust}} <small>([[United States]])</small> (M)
+|- id="Q"
+|'''{{flag|Qatar}}'''
+|1
+|4
+|4
+|{{flag|Bahrain}} (M)<br>{{flag|Iran}} (M)<br>{{flag|Saudi Arabia}} (L/M)<br>{{flag|United Arab Emirates}} (M)
+|-
+|'''''{{flagicon|Norway}} [[Queen Maud Land]]'''''{{efn|name = antarctic}} ([[Norway]])
+|2
+|2
+|2
+|''{{Flagicon|Australia}} [[Australian Antarctic Territory]]''{{efn|name = antarctic}} <small>([[Australia]]) (L/M)</small><br>''{{Flag|British Antarctic Territory}}''{{efn|name = antarctic}} <small>([[United Kingdom]]) (L/M)</small>
+|- id="R"
+|'''{{Flag|Réunion}}'''
+|0
+|2
+|2
+|{{flag|Mauritius}} (M)<br>{{flag|Seychelles}} (M)
+|-
+|'''{{flag|Romania}}'''
+|5
+|3
+|6
+|{{flag|Bulgaria}} (L/M)<br>{{flag|Hungary}} (L)<br>{{flag|Moldova}} (L)<br>{{flag|Russia}} (M)<br/>{{flag|Serbia}} (L)<br>{{flag|Ukraine}} (L/M)
+|-
+|'''''{{flagicon|New Zealand}} [[Ross Dependency]]'''''{{efn|name = antarctic}} ([[New Zealand]])
+|1
+|1
+|1
+|''{{Flagicon|Australia}} [[Australian Antarctic Territory]]''{{efn|name = antarctic}} <small>([[Australia]]) (L/M)</small>
+|-
+|'''{{flag|Russia}}'''
+|16
+|17 (18)
+|22 (24+)
+|{{flag|Abkhazia}}{{efn|name="abkhazia"}} (L/M)<br>{{flag|Azerbaijan}}{{efn|name = caspian}} (L/M)<br>{{flag|Belarus}} (L)<br>{{flag|Bulgaria}} (M){{efn|name=black-sea-eezs}}<br>{{flag|China}} (L)<br>{{flag|Estonia}} (L/M)<br>{{flag|Finland}} (L/M)<br>{{flag|Georgia}} (L/M)<br>{{flag|Japan}} (M){{efn|name=overlap}}<br>{{flag|Kazakhstan}}{{efn|name = caspian}} (L/M)<br>{{flag|North Korea}} (L/M)<br>{{flag|South Korea}} (M)<br>{{flag|Latvia}} (L)<br>{{flag|Lithuania}} (L/M)<br>{{flag|Mongolia}} (L)<br>{{flag|Norway}} (L/M)<br>{{flag|Poland}} (L/M)<br>{{flag|Romania}} (M)<br>{{flag|South Ossetia}}{{efn|name="ossetia"}} (L)<br>{{flag|Sweden}} (M)<br>{{flag|Turkey}} (M)<br>{{flag|Ukraine}}{{efn|name=overlap}} (L/M)<br>{{flag|United States}} (M)<br>''{{flag|Svalbard}}'' ([[Norway]]) (M)
+|-
+|'''{{flag|Rwanda}}'''
+|4
+|0
+|4
+|{{flag|Burundi}} (L)<br>{{flag|Democratic Republic of the Congo}} (L)<br>{{flag|Tanzania}} (L)<br>{{flag|Uganda}} (L)
+|- id="S"
+|'''''{{flag|Saint Barthélemy}}'''''{{efn|name = foc}} ([[France]])
+|0
+|4 (6)
+|4 (6)
+|{{flag|Antigua and Barbuda}} (M)<br>{{flag|Netherlands}} (M)<br>{{flag|Saint Kitts and Nevis}} (M)<br/>''{{flag|Anguilla}}''{{efn|name = bot}} <small>([[United Kingdom]])</small> (M)<br>''{{flagicon|France}} [[Saint Martin (France)|Saint Martin]]''{{efn|name = foc}} <small>([[France]])</small> (M)<br/>''{{flag|Sint Maarten}}''{{efn|name = netherlands}} <small>([[Kingdom of the Netherlands|Netherlands]])</small> (M)
+|-
+|'''''{{flag|Saint Helena, Ascension and Tristan da Cunha}}'''''{{efn|name = bot}} ([[United Kingdom]])
+|0
+|0
+|0
+|None 
+|-
+|'''{{flag|Saint Kitts and Nevis}}'''
+|0
+|5
+|5
+|{{flag|Antigua and Barbuda}} (M)<br>{{flag|Netherlands}} (M)<br>{{flag|Venezuela}} (M)<br/>''{{flag|Montserrat}}''{{efn|name = bot}} <small>([[United Kingdom]])</small> (M)<br>''{{flag|Saint Barthélemy}}''{{efn|name = foc}} <small>([[France]])</small> (M)
+|-
+|'''{{flag|Saint Lucia}}'''
+|0
+|4
+|4
+|{{flag|Barbados}} (M)<br>{{flag|France}} (M)<br>{{flag|Saint Vincent and the Grenadines}} (M)<br>{{flag|Venezuela}} (M)
+|-
+|'''''{{flagicon|France}} [[Saint Martin (France)|Saint Martin]]'''''{{efn|name = foc}} ([[France]])
+|1
+|2 (4)
+|2 (4)
+|{{flag|Netherlands}} (M)<br>''{{flag|Anguilla}}''{{efn|name = bot}} <small>([[United Kingdom]])</small> (M)<br>''{{flag|Saint Barthélemy}}''{{efn|name = foc}} <small>([[France]])</small> (M)<br>''{{flag|Sint Maarten}}''{{efn|name = netherlands}} <small>([[Kingdom of the Netherlands|Netherlands]]) (L/M)</small>
+|-
+|'''{{flag|Saint Pierre and Miquelon}}'''{{efn|name = foc}} ([[France]])
+|0
+|1
+|1
+|{{flag|Canada}} (M)
+|-
+|'''{{flag|Saint Vincent and the Grenadines}}'''
+|0
+|5
+|5
+|{{flag|Barbados}} (M)<br>{{Flag|Grenada}} (M)<br>{{flag|Saint Lucia}} (M)<br>{{flag|Trinidad and Tobago}} (M)<br>{{flag|Venezuela}} (M)
+|-
+|'''{{flag|Samoa}}'''
+|0
+|4
+|4
+|{{flag|Tonga}} (M)<br/>''{{flag|American Samoa}}''{{efn|name = ust}} <small>([[United States]])</small> (M)<br>''{{Flag|Tokelau}}''{{efn|name = tokelau}} <small>([[New Zealand]])</small> (M)<br>''{{flag|Wallis and Futuna}}''{{efn|name = foc}} <small>([[France]])</small> (M)
+|-
+|'''{{flag|San Marino}}'''
+|1
+|0
+|1
+|{{flag|Italy}} (L)
+|-
+|'''{{flag|São Tomé and Príncipe}}'''
+|0
+|3
+|3
+|{{flag|Equatorial Guinea}} (M)<br>{{flag|Gabon}} (M)<br>{{flag|Nigeria}} (M)
+|-
+|'''{{flag|Saudi Arabia}}'''
+|7
+|10
+|12
+|{{flag|Bahrain}} (M)<br>{{flag|Egypt}} (M)<br>{{flag|Eritrea}} (M)<br>{{flag|Iran}} (M)<br>{{flag|Iraq}} (L)<br>{{flag|Jordan}} (L/M)<br>{{flag|Kuwait}} (L/M)<br>{{flag|Oman}} (L)<br>{{flag|Qatar}} (L/M)<br>{{flag|Sudan}} (M)<br>{{flag|United Arab Emirates}} (L/M)<br>{{flag|Yemen}} (L/M)
+|-
+|'''{{flag|Senegal}}'''
+|5
+|4
+|6
+|{{flag|Cape Verde}} (M)<br>{{flag|The Gambia}} (L/M)<br>{{flag|Guinea}} (L)<br>{{flag|Guinea-Bissau}} (L/M)<br>{{flag|Mali}} (L)<br>{{flag|Mauritania}} (L/M)
+|-
+|'''{{flag|Serbia}}'''
+|8
+|0
+|8
+|{{flag|Bosnia and Herzegovina}} (L)<br>{{flag|Bulgaria}} (L)<br>{{flag|Croatia}} (L)<br>{{flag|Hungary}} (L)<br>{{flag|Montenegro}} (L)<br>{{flag|North Macedonia}} (L)<br>{{flag|Romania}} (L)<br/>''{{flag|Kosovo}}''{{efn|name = kosovo}} (L)<br><small>Kosovo, which [[Recognition of Kosovo|some countries consider]] part of Serbia, borders [[Albania]]</small>
+|-
+|'''{{flag|Seychelles}}'''
+|0
+|5
+|5
+|{{flag|Comoros}} (M)<br>{{flag|Madagascar}} (M)<br>{{flag|Mauritius}} (M)<br>{{flag|Tanzania}} (M)<br/>''{{Flag|French Southern and Antarctic Lands}}''{{efn|name = fsal}}{{efn|name = glorioso}} <small>([[France]])</small> (M)
+|-
+|'''{{flag|Sierra Leone}}'''
+|2
+|2
+|2
+|{{flag|Guinea}} (L/M)<br>{{flag|Liberia}} (L/M)
+|-
+|'''{{flag|Singapore}}'''
+|0
+|2
+|2
+|{{flag|Indonesia}} (M)<br>{{flag|Malaysia}} (M)
+|-
+|'''''{{flag|Sint Maarten}}'''''{{efn|name = netherlands}} ([[Kingdom of the Netherlands|Netherlands]])
+|1
+|1 (3)
+|1 (3)
+|{{flag|Netherlands}} (M)<br/>''{{flagicon|France}} [[Saint Barthélemy]]''{{efn|name = foc}} <small>([[France]])</small> (M)<br>''{{flagicon|France}} [[Saint Martin (France)|Saint Martin]]''{{efn|name = foc}} <small>([[France]]) (L/M)</small>
+|-
+|'''{{flag|Slovakia}}'''
+|5
+|0
+|5
+|{{flag|Austria}} (L)<br>{{flag|Czech Republic}} (L)<br>{{flag|Hungary}} (L)<br>{{flag|Poland}} (L)<br>{{flag|Ukraine}} (L)
+|-
+|'''{{flag|Slovenia}}'''
+|4
+|2
+|4
+|{{flag|Austria}} (L)<br>{{flag|Croatia}} (L/M)<br>{{flag|Italy}} (L/M)<br>{{flag|Hungary}} (L)
+|-
+|'''{{flag|Solomon Islands}}'''
+|0
+|5
+|5
+|{{flag|Fiji}} (M)<br/>{{flag|Papua New Guinea}} (M)<br>{{flag|Vanuatu}} (M)<br/>''{{flag|Coral Sea Islands}}''{{efn|name = aust}} <small>([[Australia]])</small> (M)<br/>''{{flag|New Caledonia}}''{{efn|name = newcaledonia}} <small>([[France]])</small> (M)
+|-
+|'''{{flag|Somalia}}'''
+|3
+|3
+|4
+|{{flag|Ethiopia}} (L)<br>{{flag|Kenya}} (L/M)<br>{{flag|Somaliland}}{{efn|[[Somaliland]] declared independence from [[Somalia]] in 1991. However, neither Somalia nor any other state or international organization has recognized Somaliland as a sovereign state. For this reason, Somaliland is not considered a sovereign state for the purposes of this list and is not included in other countries' listings of neighboring countries and territories.}} (L/M)<br>{{flag|Yemen}} (M)<br/><small>Somaliland, which considers itself independent, is the only part of Somalia to border Djibouti</small>
+|-
+|'''''{{flag|Somaliland}}'''''{{efn|[[Somaliland]] declared independence from [[Somalia]] in 1991. However, neither Somalia nor any other state or international organization has recognized Somaliland as a sovereign state. For this reason, Somaliland is not considered a sovereign state for the purposes of this list and is not included in other countries' listings of neighboring countries and territories.}}
+|3
+|3
+|4
+|{{flag|Djibouti}} (L/M)<br>{{flag|Ethiopia}} (L)<br>{{flag|Somalia}} (L/M)<br>{{flag|Yemen}} (M)
+|-
+|'''{{flag|South Africa}}'''
+|6
+|2
+|6
+|{{flag|Botswana}} (L)<br>{{flag|Eswatini|name=Eswatini (Swaziland)}} (L)<br>{{flag|Lesotho}} (L)<br>{{flag|Mozambique}} (L/M)<br>{{flag|Namibia}} (L/M)<br>{{flag|Zimbabwe}} (L)
+|-
+|'''''{{flag|South Georgia and the South Sandwich Islands}}'''''{{efn|name = bot}} ([[United Kingdom]])
+|0
+|0
+|0
+|None 
+|-
+|'''''{{flag|South Ossetia}}'''''{{efn|name="ossetia"|In 1990, South Ossetia declared sovereignty from [[Georgia (country)|Georgia]]. Georgia disputes the declaration and considers South Ossetia to be part of its territory. The only sovereign states that recognize South Ossentia's sovereignty are [[Russia]], [[Nicaragua]], [[Venezuela]], and [[Nauru]]. Because of the low level of international recognition, South Ossetia is not considered a sovereign state for the purposes of this list and is not included in other countries' listings of neighboring countries and territories.}}
+|2
+|0
+|2
+|{{flag|Georgia}} (L)<br>{{flag|Russia}} (L)
+|-
+|'''{{flag|South Sudan}}'''
+|6
+|0
+|6
+|{{flag|Central African Republic}} (L)<br>{{flag|Democratic Republic of the Congo}} (L)<br>{{flag|Ethiopia}} (L)<br>{{flag|Kenya}} (L)<br>{{flag|Sudan}} (L)<br>{{flag|Uganda}} (L)
+|-
+|'''{{flag|Spain}}'''
+|5
+|7
+|8
+|{{flag|Algeria}} (M)<br>{{flag|Andorra}} (L)<br>{{flag|France}} (L/M)<br>{{flag|Italy}} (M)<br>{{flag|Morocco}} (L/M)<br>{{flag|Portugal}} (L/M)<br/>''{{flag|Gibraltar}}''{{efn|name = bot}} <small>([[United Kingdom]]) (L/M)</small><br>''{{flag|Western Sahara}}''{{efn|name = sahara}} (M)
+|-
+|'''{{flag|Sri Lanka}}'''
+|0
+|2
+|2
+|{{flag|India}} (M)<br>{{Flag|Maldives}} (M)
+|-
+|'''{{flag|Sudan}}'''
+|7
+|3
+|8
+|{{flag|Central African Republic}} (L)<br>{{flag|Chad}} (L)<br>{{flag|Egypt}} (L/M)<br>{{flag|Eritrea}} (L/M)<br>{{flag|Ethiopia}} (L)<br>{{flag|Libya}} (L)<br>{{flag|Saudi Arabia}} (M)<br>{{flag|South Sudan}} (L)<br>
+|-
+|'''{{flag|Suriname}}'''
+|3
+|2
+|3
+|{{flag|Brazil}} (L)<br>{{flag|France}} (L/M)<br>{{flag|Guyana}} (L/M)
+|-
+|'''''{{flag|Svalbard}}'''''{{efn|name = norway}} ([[Norway]])
+|0
+|2 (3)
+|2 (3)
+|{{flag|Norway}} (M)<br/>{{flag|Russia}} (M){{efn|The maritime boundary between Norway and Russia is continuous from the north edge of the European mainland to the sea between [[Svalbard]] and [[Franz Josef Land]]. In other words, there are not two separate Russian boundaries for Russia–Norway and Russia–Svalbard. Svalbard therefore acts only to extend the otherwise existing Russia–Norway boundary.}}<br/>''{{flag|Greenland}}''{{efn|name = denmark}} <small>([[Denmark]])</small> (M)
+|-
+|'''{{flag|Sweden}}'''
+|2
+|9
+|9
+|{{flag|Denmark}} (M)<br>{{flag|Estonia}} (M)<br>{{flag|Finland}} (L/M)<br>{{flag|Germany}} (M)<br>{{flag|Latvia}} (M)<br>{{flag|Lithuania}} (M)<br>{{flag|Norway}} (L/M)<br>{{flag|Poland}} (M)<br>{{flag|Russia}} (M)
+|-
+|'''{{flag|Switzerland}}'''
+|5
+|0
+|5
+|{{flag|Austria}} (L)<br>{{flag|France}} (L)<br>{{flag|Italy}} (L)<br>{{flag|Liechtenstein}} (L)<br>{{flag|Germany}} (L)
+|-
+|'''{{flag|Syria}}'''
+|5
+|4
+|7
+|{{flag|Cyprus}} (M)<br>{{flag|Iraq}} (L)<br>{{flag|Israel}} (L)<br>{{flag|Jordan}} (L)<br>{{flag|Lebanon}} (L/M)<br>{{flag|Turkey}} (L/M)<br>''{{flag|Northern Cyprus}}'' (M)
+|- id="T"
+|'''{{flag|Republic of China}}'''{{efn|In 1949, during the [[Chinese Civil War]], the government and leaders of the [[Republic of China]] (ROC), led by [[Chiang Kai-shek]], retreated from mainland China to the island of [[Taiwan]]. In Taiwan, the ROC continues to claim sovereignty over ''all'' China, including the mainland and Taiwan. The [[People's Republic of China]] (PRC), which has governed mainland China since the ROC government retreated, also claims to be the sole representative of ''all'' China, including Taiwan. Even though the ROC government in Taiwan has never asserted that Taiwan's sovereignty is separate from that of China's, for many practical purposes Taiwan is treated by other countries and international organizations as a country that is separate from the PRC. For the purposes of this list, Taiwan is considered to be an entity that is separate from China.}}
+|0
+|7
+|7
+||{{flag|Brunei}} (M){{efn|name=overlap}}<br/>{{flag|China}} (M){{efn|name=overlap}}<br>{{flag|Indonesia}} (M){{efn|name=overlap}}<br/>{{flag|Japan}} (M){{efn|name=overlap}}<br/>{{flag|Malaysia}} (M){{efn|name=overlap}}<br>{{flag|Philippines}} (M){{efn|name=overlap}}<br/>{{flag|Vietnam}} (M){{efn|name=overlap}}
+|-
+|'''{{flag|Tajikistan}}'''
+|4
+|0
+|4
+|{{flag|Afghanistan}} (L)<br>{{flag|China}} (L)<br>{{flag|Kyrgyzstan}} (L)<br>{{flag|Uzbekistan}} (L)
+|-
+|'''{{flag|Tanzania}}'''
+|8
+|4
+|10
+|{{flag|Burundi}} (L)<br>{{flag|Comoros}} (M)<br>{{flag|Democratic Republic of the Congo}} (L)<br>{{flag|Kenya}} (L/M)<br>{{flag|Malawi}} (L)<br>{{flag|Mozambique}} (L/M)<br>{{flag|Rwanda}} (L)<br>{{flag|Seychelles}} (M)<br>{{flag|Uganda}} (L)<br>{{flag|Zambia}} (L)
+|-
+|'''{{flag|Thailand}}'''
+|4
+|6
+|7
+|{{flag|Myanmar}} (L/M)<br>{{flag|Cambodia}}{{efn|name=overlap}} (L/M)<br>{{flag|India}} (M)<br>{{flag|Indonesia}} (M)<br>{{flag|Laos}} (L)<br>{{flag|Malaysia}}{{efn|name=overlap}} (L/M)<br>{{flag|Vietnam}} (M){{efn|name=overlap}}
+|-
+|'''{{flag|Togo}}'''
+|3
+|2
+|3
+|{{flag|Benin}} (L/M)<br>{{flag|Burkina Faso}} (L)<br>{{flag|Ghana}} (L/M)
+|-
+|'''''{{flag|Tokelau}}'''''{{efn|name="tokelau"|[[Tokelau]] is a non-self-governing territory within the [[Realm of New Zealand]].}} ([[New Zealand]])
+|0
+|4 (5)
+|4 (5)
+|{{flag|Kiribati}} (M)<br>{{flag|Samoa}} (M)<br/>''{{flag|American Samoa}}''{{efn|name = ust}} <small>([[United States]])</small> (M)<br>''{{flag|Cook Islands}}''{{efn|name = cook}} <small>([[New Zealand]])</small> (M)<br>''{{flag|Wallis and Futuna}}''{{efn|name = foc}} <small>([[France]])</small> (M)
+|-
+|'''{{flag|Tonga}}'''
+|0
+|5
+|5
+|{{flag|Fiji}} (M)<br>{{flag|Samoa}} (M)<br/>''{{flag|American Samoa}}''{{efn|name = ust}} <small>([[United States]])</small> (M)<br>''{{flag|Niue}}''{{efn|name = niue}} <small>([[New Zealand]])</small> (M)<br>''{{flag|Wallis and Futuna}}''{{efn|name = foc}} <small>([[France]])</small> (M)
+|-
+|'''''{{flag|Transnistria}}'''''{{efn|name="transnistria"|In the early 1990, Transnistria attempted to separate itself, first from the [[Moldavian Soviet Socialist Republic|Moldavian SSR]] and then from sovereign [[Moldova]]. Moldova disputes Transnistrian sovereignty and considers it to be part of its territory. There are no sovereign states that recognize Transnistria's sovereignty. Because of the lack of international recognition, Transnistria is not considered a sovereign state for the purposes of this list and is not included in other countries' listings of neighboring countries and territories.}}
+|2
+|0
+|2
+|{{flag|Moldova}} (L)<br>{{flag|Ukraine}} (L)
+|-
+|'''{{flag|Trinidad and Tobago}}'''
+|0
+|5
+|5
+|{{flag|Barbados}} (M)<br>{{flag|Grenada}} (M)<br>{{flag|Guyana}} (M)<br/>{{flag|Saint Vincent and the Grenadines}} (M)<br>{{flag|Venezuela}} (M)
+|-
+|'''{{flag|Tunisia}}'''
+|2
+|3
+|3
+|{{flag|Algeria}} (L/M)<br>{{flag|Italy}} (M)<br>{{flag|Libya}} (L/M)
+|-
+|'''{{flag|Turkey}}'''
+|8
+|10
+|14
+|{{flag|Abkhazia}}{{efn|name="abkhazia"}} (M)<br>{{flag|Armenia}} (L)<br>{{flag|Azerbaijan}} (L)<br>{{flag|Bulgaria}} (L/M)<br>{{flag|Cyprus}} (M){{efn|name=overlap}}<br>{{flag|Georgia}} (L/M)<br>{{flag|Greece}}{{efn|name=overlap}} (L/M)<br>{{flag|Iran}} (L)<br>{{flag|Iraq}} (L)<br>{{flag|Libya}} (M){{efn|name=overlap}}<br>{{flag|Russia}} (M)<br>{{flag|Syria}} (L/M)<br>{{flag|Ukraine}} (M)<br>''{{flag|Northern Cyprus}}'' (M)
+|-
+|'''{{flag|Turkmenistan}}'''
+|4
+|3{{efn|name = caspian}}
+|5
+|{{flag|Afghanistan}} (L)<br>{{flag|Azerbaijan}} (M){{efn|name = caspian}}<br>{{flag|Iran}}{{efn|name = caspian}} (L/M)<br>{{flag|Kazakhstan}}{{efn|name = caspian}} (L/M)<br>{{flag|Uzbekistan}} (L)
+|-
+|'''''{{flag|Turks and Caicos Islands}}'''''{{efn|name = bot}} ([[United Kingdom]])
+|0
+|3
+|3
+|{{flag|Bahamas}} (M)<br>{{flag|Dominican Republic}} (M)<br>{{flag|Haiti}} (M)
+|-
+|'''{{flag|Tuvalu}}'''
+|0
+|3
+|3
+|{{flag|Fiji}} (M)<br>{{flag|Kiribati}} (M)<br/>''{{flag|Wallis and Futuna}}''{{efn|name = foc}} <small>([[France]])</small> (M)
+|- id="U"
+|'''{{flag|Uganda}}'''
+|5
+|0
+|5
+|{{flag|Democratic Republic of the Congo}} (L)<br>{{flag|Kenya}} (L)<br>{{flag|Rwanda}} (L)<br>{{flag|South Sudan}} (L)<br>{{flag|Tanzania}} (L)
+|-
+|'''{{flag|Ukraine}}'''
+|8
+|4
+|10
+|{{flag|Belarus}} (L)<br>{{flag|Bulgaria}} (M){{efn|name=black-sea-eezs}}<br>{{flag|Hungary}} (L)<br>{{flag|Moldova}} (L)<br>{{flag|Poland}} (L)<br>{{flag|Romania}} (L/M)<br>{{flag|Russia}} (L/M)<br>{{flag|Slovakia}} (L)<br>{{flag|Transnistria}}{{efn|name="transnistria"}} (L)<br>{{flag|Turkey}} (M)
+|-
+|'''{{flag|United Arab Emirates}}'''
+|2
+|4
+|4
+|{{flag|Iran}} (M)<br>{{flag|Oman}} (L/M)<br>{{flag|Qatar}} (M)<br>{{flag|Saudi Arabia}} (L/M)
+|-
+|'''{{flag|United Kingdom}}'''{{efn|The United Kingdom does not include [[British Overseas Territories]] or [[Crown Dependencies]].}}
+|1
+|7 (10)
+|7 (10)
+|{{flag|Belgium}} (M)<br>{{flag|Denmark}} (M)<br>{{flag|France}} (M)<br>{{flag|Germany}} (M)<br>{{flag|Ireland}} (L/M)<br>{{flag|Netherlands}} (M)<br>{{flag|Norway}} (M)<br/>''{{flag|Faroe Islands}}''{{efn|name = denmark}} <small>([[Denmark]])</small> (M)<br/>''{{flag|Guernsey}}''{{efn|name = crowndep}} <small>([[United Kingdom]])</small> (M)<br/>''{{flag|Isle of Man}}''{{efn|name = crowndep}} <small>([[United Kingdom]])</small> (M)
+|-
+|'''{{flag|United Kingdom}} [[British Overseas Territories|(plus British Overseas Territories]] [[Crown Dependencies|and Crown Dependencies)]]'''<br />→including:<br>→{{flagicon|United Kingdom}} [[Akrotiri and Dhekelia]]<br>→{{flag|Anguilla}}<br>→{{flag|Bermuda}}<br>→{{flag|British Indian Ocean Territory}}<br>→{{flag|British Virgin Islands}}<br>→{{flag|Cayman Islands}}<br>→{{flag|Falkland Islands}}<br>→{{flag|Gibraltar}}<br>→{{flag|Guernsey}}<br>→{{flag|Isle of Man}}<br>→{{flag|Jersey}}<br>→{{flag|Montserrat}}<br>→{{flag|Pitcairn Islands}}<br>→{{flag|Saint Helena, Ascension and Tristan da Cunha}}<br>→{{flag|South Georgia and the South Sandwich Islands}}<br>→{{flag|Turks and Caicos Islands}}
+|3
+|21 (26)
+|21 (26)
+|{{flag|Antigua and Barbuda}} (M)<br>{{flag|Argentina}} (M)<br>{{flag|Bahamas}} (M)<br>{{flag|Belgium}} (M)<br>{{flag|Cuba}} (M)<br>{{flag|Cyprus}} (L/M)<br>{{flag|Denmark}} (M)<br>{{flag|Dominican Republic}} (M)<br>{{flag|France}} (M)<br>{{flag|Germany}} (M)<br>{{flag|Haiti}} (M)<br>{{flag|Honduras}} (M)<br>{{flag|Ireland}} (L/M)<br>{{flag|Jamaica}} (M)<br>{{flag|Maldives}} (M)<br>{{flag|Netherlands}} (M)<br>{{flag|Norway}} (M)<br>{{flag|Saint Kitts and Nevis}} (M)<br>{{flag|Spain}} (L/M)<br>{{flag|Venezuela}} (M)<br/>''{{flag|Faroe Islands}}''{{efn|name = denmark}} <small>([[Denmark]])</small> (M)<br>''{{flag|French Polynesia}}''{{efn|name = foc}} <small>([[France]])</small> (M)<br>''{{flag|Puerto Rico}}''{{efn|name = ust}} <small>([[United States]])</small> (M)<br>''{{flag|Saint Barthélemy}}''{{efn|name=foc}} <small>([[France]])</small> (M)<br>''{{flagicon|France}} [[Saint Martin (France)|Saint Martin]]''{{efn|name=foc}} <small>([[France]])</small> (M)<br>''{{flag|United States Virgin Islands}}''{{efn|name = ust}} <small>([[United States]])</small> (M)
+|-
+|'''{{flag|United States}}{{efn|Includes the [[U.S. state|50 states]] and the [[Washington, D.C.|District of Columbia]], but excludes insular areas.}}'''
+| 2
+| 5 (6)
+| 5 (6)
+| {{flag|Bahamas}} (M)<br>{{flag|Canada}} (L/M)<br>{{flag|Cuba}} (M)<br>{{flag|Mexico}} (L/M)<br>{{flag|Russia}} (M)<br/>''{{flag|Midway Atoll}}''{{efn|name = ust}} <small>([[United States]])</small> (M)
+
+|-
+|'''{{flag|United States}} (including [[insular area]]s)'''<br />→includes:<br>→{{flag|American Samoa}}<br>→{{flag|Baker Island}}<br>→{{flag|Guam}}<br>→{{flag|Howland Island}}<br>→{{flag|Jarvis Island}}<br>→{{flag|Johnston Atoll}}<br>→{{flag|Kingman Reef}}<br>→{{flag|Midway Atoll}}<br>→[[Navassa Island]]<br>→{{flag|Northern Mariana Islands}}<br>→{{flag|Palmyra Atoll}}<br>→{{flag|Puerto Rico}}<br>→{{flag|United States Virgin Islands}}<br>→{{flag|Wake Island}}
+|2
+|18 (21)
+|18 (21)
+|{{flag|Bahamas}} (M)<br>{{flag|Canada}} (L/M)<br>{{flag|Cuba}} (M)<br>{{flag|Dominican Republic}} (M)<br>{{flag|Haiti}} (M)<br>{{flag|Jamaica}} (M)<br>{{flag|Japan}} (M)<br>{{flag|Kiribati}} (M)<br>{{flag|Marshall Islands}} (M)<br>{{flag|Mexico}} (L/M)<br>{{flag|Federated States of Micronesia}} (M)<br>{{flag|Netherlands}} (M)<br>{{flag|Russia}} (M)<br>{{flag|Samoa}} (M)<br>{{flag|Tonga}} (M)<br>{{flag|Venezuela}} (M)<br/>''{{flag|Anguilla}}''{{efn|name = bot}} <small>([[United Kingdom]])</small> (M)<br>''{{flag|British Virgin Islands}}''{{efn|name = bot}} <small>([[United Kingdom]])</small> (M)<br>''{{flag|Cook Islands}}''{{efn|name = cook}} <small>([[New Zealand]])</small> (M)<br>''{{flag|Niue}}''{{efn|name = niue}} <small>([[New Zealand]])</small> (M)<br>''{{flag|Tokelau}}''{{efn|name = tokelau}} <small>([[New Zealand]])</small> (M)
+|-
+|'''''{{flag|United States Virgin Islands}}'''''{{efn|name = ust}} ([[United States]])
+|0
+|3 (5)
+|3 (5)
+|{{flag|Netherlands}} (M)<br>{{flag|Venezuela}} (M)<br/>''{{flag|Anguilla}}''{{efn|name = bot}} <small>([[United Kingdom]])</small> (M)<br>''{{flag|British Virgin Islands}}''{{efn|name = bot}} <small>([[United Kingdom]])</small> (M)<br/>''{{flag|Puerto Rico}}''{{efn|name = ust}} <small>([[United States]])</small> (M)
+|-
+|'''{{flag|Uruguay}}'''
+| 2
+| 2
+| 2
+|{{flag|Argentina}} (L/M)<br>{{flag|Brazil}} (L/M)
+|-
+|'''{{flag|Uzbekistan}}'''
+|5
+|0
+|5
+|{{flag|Afghanistan}} (L)<br>{{flag|Kazakhstan}} (L)<br>{{flag|Kyrgyzstan}} (L)<br>{{flag|Tajikistan}} (L)<br>{{flag|Turkmenistan}} (L)
+|- id="V"
+|'''{{flag|Vanuatu}}'''
+|0
+|3
+|3
+|{{flag|Fiji}} (M)<br>{{flag|Solomon Islands}} (M)<br/>''{{flag|New Caledonia}}''{{efn|name = newcaledonia}} <small>([[France]])</small> (M)
+|-
+|'''{{flag|Vatican City}}'''
+|1
+|0
+|1
+|{{flag|Italy}} (L)
+|-
+|'''{{flag|Venezuela}}'''
+|3
+|14 (17)
+|15 (18)
+|{{flag|Barbados}} (M)<ref name="BDOS-GUY-Ven" /><br>{{flag|Brazil}} (L)<br>{{flag|Colombia}} (L/M)<br>{{flag|Dominica}} (M)<br>{{flag|Dominican Republic}} (M)<br>{{flag|France}} (M)<br>{{flag|Grenada}} (M)<br/>{{flag|Guyana}}{{efn|name=overlap}} (L/M)<br>{{flag|Netherlands}} (M)<br>{{flag|Saint Kitts and Nevis}} (M)<br>{{flag|Saint Lucia}} (M)<br>{{flag|Saint Vincent and the Grenadines}} (M)<br>{{flag|Trinidad and Tobago}} (M)<br/>''{{flag|Aruba}}''{{efn|name = netherlands}} <small>([[Kingdom of the Netherlands|Netherlands]])</small> (M)<br>''{{flag|Curaçao}}''{{efn|name = netherlands}} <small>([[Kingdom of the Netherlands|Netherlands]])</small> (M)<br>''{{flag|Montserrat}}''{{efn|name = bot}} <small>([[United Kingdom]])</small> (M)<br>''{{flag|Puerto Rico}}''{{efn|name = ust}} <small>([[United States]])</small> (M)<br>''{{flag|United States Virgin Islands}}''{{efn|name = ust}} <small>([[United States]])</small> (M)
+|-
+|'''{{flag|Vietnam}}'''
+|3
+|8
+|9
+|{{flag|Brunei}} (M){{efn|name=overlap}}<br/>{{flag|Cambodia}}{{efn|name=overlap}} (L/M)<br>{{flag|China}}{{efn|name=overlap}} (L/M)<br>{{flag|Indonesia}} (M){{efn|name=overlap}}<br>{{flag|Laos}} (L)<br>{{flag|Malaysia}} (M){{efn|name=overlap}}<br>{{flag|Philippines}} (M){{efn|name=overlap}}<br>{{flag|Taiwan}} (M){{efn|name=overlap}}<br/>{{flag|Thailand}} (M){{efn|name=overlap}}
+|- id="W"
+|'''''{{flag|Wake Island}}'''''{{efn|name="wake"|The [[Marshall Islands]] claims sovereignty over [[Wake Island]], which is an [[insular area]] of the [[United States territory|United States]].}} ([[United States]])
+|0
+|1
+|1
+|{{flag|Marshall Islands}} (M)
+|-
+|'''''{{flag|Wallis and Futuna}}'''''{{efn|name = foc}} ([[France]])
+|0
+|5
+|5
+|{{flag|Fiji}} (M)<br>{{flag|Samoa}} (M)<br>{{flag|Tonga}} (M)<br>{{flag|Tuvalu}} (M)<br/>''{{flag|Tokelau}}''{{efn|name = tokelau}} <small>([[New Zealand]])</small> (M)
+|-
+|'''''{{flag|Western Sahara}} '''''{{efn|name="sahara"|[[Western Sahara]] is a non-self-governing territory. Administration is split between [[Morocco]] and the largely unrecognized [[Sahrawi Arab Democratic Republic]], both of which claim sovereignty over the entire territory (see [[Legal status of Western Sahara]]). For purposes of this list, Western Sahara is considered to be a sovereign country.}}
+|3
+|3
+|4
+|{{flag|Algeria}} (L)<br>{{flag|Mauritania}} (L/M)<br>{{flag|Morocco}} (L/M)<br>{{flag|Spain}} (M)
+|- id="Y"
+|'''{{flag|Yemen}}'''
+|2
+|6
+|6
+|{{flag|Djibouti}} (M)<br>{{flag|Eritrea}} (M)<br>{{flag|Somaliland}}{{efn|[[Somaliland]] declared independence from [[Somalia]] in 1991. However, neither Somalia nor any other state or international organization has recognized Somaliland as a sovereign state. For this reason, Somaliland is not considered a sovereign state for the purposes of this list and is not included in other countries' listings of neighboring countries and territories.}} (M)<br>{{flag|Oman}} (L/M)<br>{{flag|Saudi Arabia}} (L/M)<br>{{flag|Somalia}} (M)
+|- id="Z"
+|'''{{flag|Zambia}}'''
+|8
+|0
+|8
+|{{flag|Angola}} (L)<br>{{flag|Botswana}} (L)<br>{{flag|Democratic Republic of the Congo}} (L)<br>{{flag|Malawi}} (L)<br>{{flag|Mozambique}} (L)<br>{{flag|Namibia}} (L)<br>{{flag|Tanzania}} (L)<br>{{flag|Zimbabwe}} (L)
+|-
+|'''{{flag|Zimbabwe}}'''
+|4
+|0
+|4
+|{{flag|Botswana}} (L)<br>{{flag|Mozambique}} (L)<br>{{flag|South Africa}} (L)<br>{{flag|Zambia}} (L)
+|}
+
+==See also==
+* [[List of political and geographic borders]]
+* [[List of countries and territories by land borders]]
+* [[List of countries and territories by maritime boundaries]]
+* [[List of maritime boundary treaties]]
+* [[List of territorial disputes]]
+* [[Landlocked country]]
+
+==Notes==
+{{notelist}}
+
+==References==
+{{reflist}}
+
+==Further reading==
+* Anderson, Ewan W. (2003). ''International Boundaries: A Geopolitical Atlas.'' Routledge: New York. {{ISBN|9781579583750}}; [https://www.worldcat.org/oclc/54061586  OCLC 54061586]
+* Charney, Jonathan I., David A. Colson, Robert W. Smith. (2005). ''International Maritime Boundaries.'' Hotei Publishing: Leiden.	{{ISBN|9780792311874}}; {{ISBN|9789041119544}}; {{ISBN|9789041103451}}; {{ISBN|9789004144613}}; {{ISBN|9789004144798}}; [https://www.worldcat.org/oclc/23254092  OCLC 23254092]
+* Jagota, S. P. (1985). ''Maritime Boundary.'' Martinis Nijhoff: Dordrecht. {{ISBN|9789024731336}}; {{ISBN|9789024726165}}; [https://www.worldcat.org/oclc/11756409  OCLC 	1175640]
+* [[John Robert Victor Prescott|Prescott, John Robert Victor]]. (1985). ''The Maritime Political Boundaries of the World.'' London: Methuen. {{ISBN|9780416417500}}; [https://www.worldcat.org/oclc/12582178  OCLC 12582178]
+
+{{Geography country lists}}
+
+{{DEFAULTSORT:List Of Countries And Territories By Land And Maritime Borders}}
+[[Category:Border-related lists|Countries and territories by land and maritime borders]]
+[[Category:Maritime boundaries|*]]
+[[Category:Borders by country|*]]
+[[Category:Lists of countries by geography|Borders]]

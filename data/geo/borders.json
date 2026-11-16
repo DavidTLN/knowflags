@@ -340,7 +340,7 @@
 },
 {
 "iso": "id",
-"via": "Ashmore and Cartier Islands"
+"via": null
 },
 {
 "iso": "nc",
@@ -360,7 +360,7 @@
 },
 {
 "iso": "tl",
-"via": "Ashmore and Cartier Islands"
+"via": null
 }
 ]
 },
@@ -1437,12 +1437,12 @@
 "via": null
 },
 {
-"iso": "bt",
+"iso": "tj",
 "km": 477.0,
 "via": null
 },
 {
-"iso": "tj",
+"iso": "bt",
 "km": 477.0,
 "via": null
 },
@@ -2505,14 +2505,14 @@
 "via": null
 },
 {
-"iso": "sr",
-"km": 556.0,
-"via": "French Guiana"
-},
-{
 "iso": "be",
 "km": 556.0,
 "via": null
+},
+{
+"iso": "sr",
+"km": 556.0,
+"via": "French Guiana"
 },
 {
 "iso": "ch",
@@ -2547,7 +2547,7 @@
 {
 "iso": "nl",
 "km": 16.0,
-"via": "Sint Maarten"
+"via": "Saint Martin"
 },
 {
 "iso": "mc",
@@ -2594,7 +2594,7 @@
 },
 {
 "iso": "gb",
-"via": "Anguilla"
+"via": null
 },
 {
 "iso": "gg",
@@ -2792,7 +2792,7 @@
 },
 {
 "iso": "fr",
-"via": "Anguilla"
+"via": null
 },
 {
 "iso": "gg",
@@ -2828,7 +2828,7 @@
 },
 {
 "iso": "nl",
-"via": "Anguilla"
+"via": null
 },
 {
 "iso": "no",
@@ -2964,11 +2964,11 @@
 "maritime": [
 {
 "iso": "ru",
-"via": "Abkhazia"
+"via": null
 },
 {
 "iso": "tr",
-"via": "Abkhazia"
+"via": null
 }
 ]
 },
@@ -3602,7 +3602,7 @@
 "maritime": [
 {
 "iso": "au",
-"via": "Ashmore and Cartier Islands"
+"via": null
 },
 {
 "iso": "cn",
@@ -3687,7 +3687,7 @@
 },
 {
 "iso": "jo",
-"km": 327.0,
+"km": 307.0,
 "via": null
 },
 {
@@ -4128,7 +4128,7 @@
 },
 {
 "iso": "il",
-"km": 327.0,
+"km": 307.0,
 "via": null
 },
 {
@@ -5767,11 +5767,6 @@
 "iso": "fr",
 "km": 16.0,
 "via": "Sint Maarten"
-},
-{
-"iso": "sx",
-"km": null,
-"via": null
 }
 ],
 "maritime": [
@@ -5797,7 +5792,7 @@
 },
 {
 "iso": "gb",
-"via": "Anguilla"
+"via": null
 },
 {
 "iso": "kn",
@@ -5939,7 +5934,7 @@
 },
 {
 "iso": "us",
-"via": "American Samoa"
+"via": "Cook Islands"
 },
 {
 "iso": "ws",
@@ -6608,7 +6603,7 @@
 },
 {
 "iso": "ge",
-"via": "Abkhazia"
+"via": null
 },
 {
 "iso": "jp",
@@ -7307,11 +7302,6 @@
 "iso": "fr",
 "km": 16.0,
 "via": "Saint Martin"
-},
-{
-"iso": "nl",
-"km": null,
-"via": null
 }
 ],
 "maritime": [
@@ -7561,7 +7551,7 @@
 "maritime": [
 {
 "iso": "au",
-"via": "Ashmore and Cartier Islands"
+"via": null
 },
 {
 "iso": "id",
@@ -7734,7 +7724,7 @@
 },
 {
 "iso": "ge",
-"via": "Abkhazia"
+"via": null
 },
 {
 "iso": "gr",
@@ -8046,7 +8036,7 @@
 },
 {
 "iso": "gb",
-"via": "Anguilla"
+"via": "US Virgin Islands"
 },
 {
 "iso": "gu",

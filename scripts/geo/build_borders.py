@@ -24,7 +24,7 @@ import requests
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 FB = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, 'factbook')
-KEY = os.environ['SUPABASE_PUBLISHABLE_KEY']
+KEY = os.environ.get('SUPABASE_PUBLISHABLE_KEY', '')
 UA = {'User-Agent': 'KnowFlags/1.0 (https://knowflags.com)'}
 WIKI_PAGE = 'List_of_countries_and_territories_by_land_and_maritime_borders'
 
@@ -54,7 +54,10 @@ TERRITORIES = {
     'tristan da cunha': ('gb', 'Tristan da Cunha'), 'ascension island': ('gb', 'Ascension Island'), 'saint helena': ('gb', 'Saint Helena'),
     'falkland islands': ('fk', None), 'south ossetia': ('ge', 'South Ossetia'), 'abkhazia': ('ge', 'Abkhazia'), 'transnistria': ('md', 'Transnistria'),
     'northern cyprus': ('cy', 'Northern Cyprus'), 'somaliland': ('so', 'Somaliland'),
+    'akrotiri and dhekelia': ('gb', 'Akrotiri and Dhekelia'),
 }
+# Territoires présents dans la base : leurs frontières terrestres comptent aussi pour leur État (avec « via »)
+PARENT = {'gi': ('gb', 'Gibraltar'), 'sx': ('nl', 'Sint Maarten'), 'gl': ('dk', 'Greenland'), 'aw': ('nl', 'Aruba'), 'cw': ('nl', 'Curaçao')}
 ALIASES = {
     'czechia': 'cz', 'democratic republic of the congo': 'cd', 'congo, democratic republic of the': 'cd', 'republic of the congo': 'cg',
     'congo, republic of the': 'cg', 'congo': 'cg', "cote d'ivoire": 'ci', 'ivory coast': 'ci', 'burma': 'mm', 'myanmar': 'mm',
@@ -71,6 +74,7 @@ ALIASES = {
     'curacao': 'cw', 'aruba': 'aw', 'sint maarten': 'sx', 'gibraltar': 'gi', 'greenland': 'gl', 'faroe islands': 'fo', 'bermuda': 'bm',
     'cayman islands': 'ky', 'puerto rico': 'pr', 'guam': 'gu', 'new caledonia': 'nc', 'french polynesia': 'pf', 'jersey': 'je',
     'guernsey': 'gg', 'isle of man': 'im', 'aland islands': 'ax', 'aland': 'ax',
+    'kingdom of denmark': 'dk', 'realm of new zealand': 'nz',
 }
 
 
@@ -80,8 +84,11 @@ def fold(s):
 
 
 def main():
-    countries = requests.get('https://rounuhpemkrnftoafoxg.supabase.co/rest/v1/countries?select=iso_code,name_en',
-                             headers={'apikey': KEY}, timeout=60).json()
+    if os.environ.get('COUNTRIES_FILE'):            # test local
+        countries = json.load(open(os.environ['COUNTRIES_FILE']))
+    else:
+        countries = requests.get('https://rounuhpemkrnftoafoxg.supabase.co/rest/v1/countries?select=iso_code,name_en',
+                                 headers={'apikey': KEY}, timeout=60).json()
     ours = {c['iso_code'] for c in countries}
     name2iso = {fold(c['name_en']): c['iso_code'] for c in countries if c.get('name_en')}
     name2iso.update(ALIASES)
@@ -115,10 +122,12 @@ def main():
         via = via_a or via_b
         for x, y in ((a, b), (b, a)):
             cur = land.setdefault(x, {})
-            if y not in cur or (length and not cur[y]['km']):
+            e = cur.get(y)
+            if e is None or (length and not e['km']):
                 cur[y] = {'km': length, 'via': via}
-            elif via and cur[y]['via'] is None and cur[y]['km'] and length and x == a:
-                pass
+            elif via and e['via'] and via not in e['via'] and length and e['km']:
+                # Deux territoires du même État contre le même voisin (Akrotiri + Dhekelia) : on additionne
+                cur[y] = {'km': e['km'] + length, 'via': e['via'] + ' & ' + via}
 
     # ── Factbook ──────────────────────────────────────────────────────────
     for p in glob.glob(os.path.join(FB, '*', '*.json')):
@@ -146,58 +155,74 @@ def main():
             other, via = resolve(m.group(1).strip())
             if via == 'MISSING':
                 missing.add('factbook:' + m.group(1).strip()); continue
-            add_edge(iso, other, float(m.group(2).replace(',', '')), own_via, via)
+            length = float(m.group(2).replace(',', ''))
+            add_edge(iso, other, length, own_via, via)
+            if iso in PARENT and other != PARENT[iso][0]:
+                add_edge(PARENT[iso][0], other, length, PARENT[iso][1], via)
 
     # ── Wikipedia (maritime + land via territories) ───────────────────────
-    w = requests.get('https://en.wikipedia.org/w/api.php', headers=UA, timeout=60,
+    w = open(os.environ['WIKI_FILE']).read() if os.environ.get('WIKI_FILE') else requests.get('https://en.wikipedia.org/w/api.php', headers=UA, timeout=60,
                      params={'action': 'parse', 'page': WIKI_PAGE, 'prop': 'wikitext', 'format': 'json', 'formatversion': 2}).json()['parse']['wikitext']
     if os.environ.get('DUMP_WIKI'):
         open(os.environ['DUMP_WIKI'], 'w').write(w)
     maritime = {}
-    name_re = re.compile(r"\{\{flag(?:icon)?\|([^}|]+)[^}]*\}\}|\[\[([^\]|]+)(?:\|[^\]]*)?\]\]")
+    tok_re = re.compile(r"\{\{[Ff]lag(icon)?\|([^}|]+)[^}]*\}\}|\[\[([^\]|]+)(?:\|[^\]]*)?\]\]")
+    ROW_START = "|" + "'" * 3
+
+    def first_name(fragment):
+        """Premier nom d'une cellule : {{flag|X}}, ou le lien qui suit un {{flagicon|État}}."""
+        toks = tok_re.findall(fragment)
+        if not toks:
+            return None
+        icon, flagname, link = toks[0]
+        if icon and len(toks) > 1 and toks[1][2]:
+            return toks[1][2]
+        return flagname or link
+
     for row in re.split(r'\n\|-[^\n]*\n', w):
         lines = [l for l in row.split('\n') if l.startswith('|')]
-        if len(lines) < 5 or not lines[0].startswith("|'''"):
+        if len(lines) < 5 or not lines[0].startswith(ROW_START):
             continue
-        head = re.sub(r'<small>.*?</small>|\{\{efn[^}]*\}\}', '', lines[0])
-        names = [a or b for a, b in name_re.findall(head)]
-        if not names:
+        head = re.sub(r'\{\{efn[^}]*\}\}', '', lines[0])
+        aggregate = 'includ' in head.split('<br')[1] if '<br' in head else False   # « France (y compris ses territoires) »
+        subj = first_name(head.split('<br')[0])
+        if not subj:
             continue
-        # Ligne d'un territoire : '''''{{flagicon|État}} [[Territoire]]''''' -> le nom entre [[ ]]
-        subj = names[-1] if '[[' in head else names[0]
         siso, svia = resolve(subj)
         if not siso:
             if svia == 'MISSING':
                 missing.add('wiki-row:' + subj)
             continue
+        if aggregate:
+            svia = None
         for item in re.split(r'<br\s*/?>', lines[-1]):
-            tm = re.search(r'\((L/M|L|M)\)\s*(?:<ref.*)?$', re.sub(r'<ref[^>]*/>|<ref.*?</ref>', '', item).strip())
+            item = re.sub(r'<ref[^>]*/>|<ref.*?</ref>|<ref.*$', '', item)
+            item = re.sub(r'\{\{efn[^}]*\}\}', '', item)
+            tm = re.search(r'\((L/M|L|M)\)\s*(?:</small>)?\s*$', item.strip())
             if not tm:
                 continue
             kind = tm.group(1)
-            clean = re.sub(r'<small>.*?</small>|\{\{efn[^}]*\}\}|<ref.*', '', item)
-            ns = [a or b for a, b in name_re.findall(clean)]
-            if not ns:
+            nm = first_name(re.sub(r'<small>.*', '', item))
+            if not nm:
                 continue
-            nm = ns[-1] if '[[' in clean else ns[0]
             oiso, ovia = resolve(nm)
             if ovia == 'MISSING' or not oiso:
                 sov = re.search(r'<small>\(\[\[([^\]|]+)', item)          # territoire étranger : son État
+                oiso, ovia = None, None
                 if sov:
                     oiso2, _ = resolve(sov.group(1))
                     if oiso2:
                         oiso, ovia = oiso2, nm
                 if not oiso:
-                    missing.add('wiki:' + nm); continue
+                    missing.add('wiki:' + nm)
+                    continue
             if oiso == siso:
                 continue
             via = svia or ovia
             if 'M' in kind:
                 for x, y in ((siso, oiso), (oiso, siso)):
-                    cur = maritime.setdefault(x, {})
-                    if y not in cur or (cur[y] and not via):
-                        cur[y] = via
-            if 'L' in kind and oiso not in land.get(siso, {}):
+                    maritime.setdefault(x, {}).setdefault(y, via)
+            if 'L' in kind and not aggregate and oiso not in land.get(siso, {}) and total.get(siso) != 0 and total.get(oiso) != 0:
                 add_edge(siso, oiso, None, svia, ovia)
 
     # Pays constitutifs du Royaume-Uni (absents du Factbook) : voisins terrestres saisis à la main

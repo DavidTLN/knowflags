@@ -30,6 +30,14 @@ const LASTMOD_FLOOR = new Date('2025-01-01T00:00:00.000Z')
 // Regenere le sitemap une fois par jour.
 export const revalidate = 86400
 
+// Pages de détail des drapeaux de villes et de régions (≈ 4 600 URL) retirées du
+// sitemap pour l'instant. Ajoutées le 15 novembre, elles ont fait passer le sitemap
+// de 600 à 5 106 URL : les robots les ont découvertes d'un coup (pic de requêtes
+// Vercel du 16 novembre, plafond Hobby de 1 M de requêtes par mois). Elles restent
+// en ligne et accessibles par les liens internes. À remettre (true) une fois les
+// pages pays indexées et ces pages rendues côté serveur.
+const INCLUDE_SUBNATIONAL_DETAIL = false
+
 // ── Helpers ──────────────────────────────────────────────────────────────────
 
 // Normalise et borne une date. Retourne null si inutilisable.
@@ -239,7 +247,7 @@ export default async function sitemap() {
     }
 
     // Villes
-    for (const f of cityFlags) {
+    for (const f of INCLUDE_SUBNATIONAL_DETAIL ? cityFlags : []) {
       if (!f.slug) continue
       entries.push(entry(locale, `/flags/cities/${f.slug}`, {
         priority: 0.5,
@@ -249,7 +257,7 @@ export default async function sitemap() {
     }
 
     // Régions
-    for (const f of regionFlags) {
+    for (const f of INCLUDE_SUBNATIONAL_DETAIL ? regionFlags : []) {
       if (!f.slug) continue
       entries.push(entry(locale, `/flags/regions/${f.slug}`, {
         priority: 0.5,

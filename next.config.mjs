@@ -17,6 +17,12 @@ const nextConfig = {
   // On les garde 7 jours en cache navigateur (30 jours de stale-while-revalidate).
   // Pas d'immutable : les noms de fichiers ne sont pas hashes, une image corrigee
   // doit pouvoir remplacer l'ancienne.
+  // Ancien nom du jeu du camembert
+  async redirects() {
+    return [
+      { source: '/:locale(en|fr)/games/flag-palette', destination: '/:locale/games/camembert', permanent: true },
+    ]
+  },
   async headers() {
     const cache = [{ key: 'Cache-Control', value: 'public, max-age=604800, stale-while-revalidate=2592000' }]
     return [

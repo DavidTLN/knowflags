@@ -8,6 +8,7 @@ import { createClient } from '@/lib/supabase-client'
 import FlagSubmitModal from '@/components/FlagSubmitModal'
 import GlobalSearch from '@/components/GlobalSearch'
 import { switchLocale } from '@/lib/locale'
+import GameIcon from '@/components/games/GameIcon'
 
 const GAMES = [
   { key: 'daily',        en: 'Flag of the day', fr: 'Drapeau du jour', descEn: 'One mystery flag a day, 5 guesses', descFr: 'Un drapeau mystère par jour, 5 essais' },
@@ -19,7 +20,7 @@ const GAMES = [
   { key: 'flag-clue',    en: 'Clue2flag',    fr: 'Clue2flag',    descEn: 'Guess the country from fun facts',        descFr: 'Devine le pays grâce à des anecdotes' },
   { key: 'flag-locator', en: 'Flag on Map', fr: 'Drapeaux sur carte', descEn: 'Find the country on the map',             descFr: 'Trouve le pays sur la carte' },
   { key: 'past-flag',    en: 'PastFlag',    fr: 'PastFlag',    descEn: 'Guess the country from a historical flag', descFr: 'Trouve le pays via un drapeau historique' },
-  { key: 'flag-palette', en: 'Flag Palette', fr: 'Palette du drapeau', descEn: 'Guess the flag from its colour chart', descFr: 'Devine le drapeau d’après ses couleurs' },
+  { key: 'camembert', en: 'The Camembert Game', fr: 'Le jeu du camembert', descEn: 'Guess the flag from its colour chart', descFr: 'Devine le drapeau d’après ses couleurs' },
   { key: 'subflag-quiz', en: 'SubFlagQuiz', fr: 'SubFlagQuiz', descEn: 'Regional flag, find the country',         descFr: 'Drapeau régional, trouve le pays' },
   { key: 'gartic-phone', en: 'FlagPhone',   fr: 'FlagPhone',   descEn: 'Describe, draw and guess flags',          descFr: 'Décris, dessine et devine les drapeaux', ready: false },
   { key: 'qui-est-ce',   en: 'Guess Who',   fr: 'Qui est-ce ?', descEn: 'Yes/no questions to find the country',   descFr: 'Questions oui/non pour trouver le pays', ready: false },
@@ -360,20 +361,23 @@ export default function Header() {
                       {GAMES_COL2.map((game, idx) => (
                         <GameItem key={game.key} game={game} locale={locale} first={idx === 0} onClick={() => { if (!game.soon) { router.push(`/${locale}/games/${game.key}`); setGamesOpen(false) } }} />
                       ))}
-                      <div onClick={() => { router.push(`/${locale}/leaderboard`); setGamesOpen(false) }}
-                        style={{ padding: '10px 12px', borderRadius: '10px', cursor: 'pointer', transition: 'background 0.12s', borderTop: '1px solid #F1F3F6' }}
-                        onMouseEnter={e => e.currentTarget.style.backgroundColor = '#EEF2F7'}
-                        onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}>
-                        <div>
-                          <div style={{ fontSize: '13px', fontWeight: '700', color: '#16324F' }}>{t('Leaderboard', 'Classement')}</div>
-                          <p style={{ margin: 0, fontSize: '11px', color: '#6B7280', marginTop: '1px' }}>{t('Global rankings', 'Classement mondial')}</p>
-                        </div>
-                      </div>
                     </div>
                   </div>
-                  <div style={{ borderTop: '1px solid #f0f0f0', padding: '10px 16px' }}>
+                  <div style={{ borderTop: '1px solid #E2DDD5', backgroundColor: '#FAFAF7', padding: '10px 12px 10px 16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px' }}>
                     <Link href={`/${locale}/games`} onClick={() => setGamesOpen(false)} style={{ fontSize: '13px', color: '#16324F', textDecoration: 'none', fontWeight: '700' }}>
                       {t('View all games →', 'Voir tous les jeux →')}
+                    </Link>
+                    <Link href={`/${locale}/leaderboard`} onClick={() => setGamesOpen(false)}
+                      style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '8px 14px 8px 10px', borderRadius: '10px', backgroundColor: '#FEF3C7', border: '1px solid rgba(146,64,14,0.15)', textDecoration: 'none', transition: 'background-color 0.12s ease' }}
+                      onMouseEnter={e => e.currentTarget.style.backgroundColor = '#FDE68A'}
+                      onMouseLeave={e => e.currentTarget.style.backgroundColor = '#FEF3C7'}>
+                      <span style={{ width: '30px', height: '30px', borderRadius: '8px', backgroundColor: '#F4B400', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <GameIcon name="trophy" size={17} color="#16324F" />
+                      </span>
+                      <span style={{ display: 'flex', flexDirection: 'column' }}>
+                        <span style={{ fontSize: '13px', fontWeight: 800, color: '#16324F' }}>{t('Leaderboard', 'Classement')}</span>
+                        <span style={{ fontSize: '11px', color: '#92400E' }}>{t('Scores from every game', 'Scores de tous les jeux')}</span>
+                      </span>
                     </Link>
                   </div>
                 </DropdownPanel>
@@ -613,14 +617,21 @@ export default function Header() {
                           {game.soon && <span style={{ fontSize: '10px', color: '#92400E', backgroundColor: '#fef3c7', padding: '1px 6px', borderRadius: '99px', fontWeight: '700' }}>{t('Soon', 'Bientôt')}</span>}
                         </span>
                       ))}
-                      <span onClick={() => { router.push(`/${locale}/leaderboard`); closeDrawer() }}
-                        style={{ display: 'block', padding: '15px 2px', fontSize: '16px', fontWeight: '500', color: '#16324F', borderBottom: '1px solid #E2DDD5', cursor: 'pointer' }}>
-                        {t('Leaderboard', 'Classement')}
-                      </span>
                     </div>
                     <Link href={`/${locale}/games`} onClick={closeDrawer}
-                      style={{ display: 'inline-block', marginTop: '16px', fontSize: '13px', color: '#92400E', textDecoration: 'none', fontWeight: '700' }}>
+                      style={{ display: 'inline-block', marginTop: '14px', fontSize: '13px', color: '#16324F', textDecoration: 'none', fontWeight: '700' }}>
                       {t('View all games →', 'Voir tous les jeux →')}
+                    </Link>
+                    <Link href={`/${locale}/leaderboard`} onClick={closeDrawer}
+                      style={{ marginTop: '18px', display: 'flex', alignItems: 'center', gap: '12px', minHeight: '60px', padding: '10px 14px 10px 10px', borderRadius: '12px', backgroundColor: '#FEF3C7', border: '1px solid rgba(146,64,14,0.15)', textDecoration: 'none' }}>
+                      <span style={{ width: '38px', height: '38px', borderRadius: '10px', backgroundColor: '#F4B400', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                        <GameIcon name="trophy" size={20} color="#16324F" />
+                      </span>
+                      <span style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+                        <span style={{ fontSize: '16px', fontWeight: 800, color: '#16324F' }}>{t('Leaderboard', 'Classement')}</span>
+                        <span style={{ fontSize: '12px', color: '#92400E' }}>{t('Scores from every game', 'Scores de tous les jeux')}</span>
+                      </span>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#92400E" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6" /></svg>
                     </Link>
                   </div>
                 </div>

@@ -1,6 +1,6 @@
-// Répartition des couleurs de chaque drapeau, pour le jeu Flag Palette.
+// Répartition des couleurs de chaque drapeau, pour le jeu The Camembert Game.
 // Usage : npm i --no-save svg-country-flags @resvg/resvg-js
-//         node scripts/games/build_flag_palette.js "fr,de,..." data/games/flag-palette.json
+//         node scripts/games/build_camembert.js "fr,de,..." data/games/camembert.json
 // Rendu SVG à 600 px sans anticrénelage, couleurs proches regroupées (distance « redmean » < 70),
 // teintes sous 1 % ignorées (détails d’emblème), 7 parts au maximum.
 const fs = require('fs'), path = require('path')

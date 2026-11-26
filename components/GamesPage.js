@@ -17,7 +17,7 @@ const DS = {
 
 const GAME_ICON = {
   'flag-reveal': 'eye', 'flag-quiz': 'bulb', 'capital-city': 'pin', 'flag-clue': 'search',
-  'flag-ranker': 'trophy', 'flag-locator': 'target', 'flag-drawing': 'brush', 'past-flag': 'clock', 'flag-palette': 'pie',
+  'flag-ranker': 'trophy', 'flag-locator': 'target', 'flag-drawing': 'brush', 'past-flag': 'clock', 'camembert': 'pie',
   'subflag-quiz': 'sparkle', 'daily': 'flame', 'gartic-phone': 'brush', 'qui-est-ce': 'search', 'imposteur': 'search',
 }
 
@@ -31,7 +31,7 @@ const GAMES = [
   { key: 'flag-locator', icon: '📍',  en: 'Flag Locator', fr: 'Flag Locator', descEn: 'Find the country on the map',          descFr: 'Trouve le pays sur la carte',                color: '#2563EB', difficulty: 'medium' },
   { key: 'flag-drawing', icon: '✏️',  en: 'Flag Draw',    fr: 'Flag Draw',    descEn: 'Can you draw it from memory?',         descFr: 'Sauras-tu le dessiner de mémoire ?',         color: '#7C3AED', difficulty: 'hard'   },
   { key: 'past-flag',    icon: '🏛️', en: 'Past Flag',    fr: 'Past Flag',    descEn: 'Guess the country from a historical flag', descFr: 'Trouve le pays via un drapeau historique', color: '#0EA5E9', difficulty: 'medium' },
-  { key: 'flag-palette', icon: '',   en: 'Flag Palette', fr: 'Flag Palette', descEn: 'Guess the flag from its colour chart', descFr: 'Devine le drapeau d’après ses couleurs', color: '#D62828', difficulty: 'medium' },
+  { key: 'camembert', icon: '',   en: 'The Camembert Game', fr: 'Le jeu du camembert', descEn: 'Guess the flag from its colour chart', descFr: 'Devine le drapeau d’après ses couleurs', color: '#D62828', difficulty: 'medium' },
   { key: 'subflag-quiz', icon: '🗺️', en: 'SubFlag Quiz', fr: 'SubFlag Quiz', descEn: 'Regional flag, find the country',      descFr: 'Drapeau régional, trouve le pays',           color: '#14B8A6', difficulty: 'hard'   },
   { key: 'gartic-phone', icon: '🎨',  en: 'Flag Phone',   fr: 'Flag Phone',   descEn: 'Describe, draw and guess flags',       descFr: 'Décris, dessine et devine les drapeaux',     color: '#F43F5E', difficulty: 'easy',   ready: false },
   { key: 'qui-est-ce',   icon: '🕵️', en: 'Guess Who',    fr: 'Qui est-ce ?', descEn: 'Yes/no questions to find the country', descFr: 'Questions oui/non pour trouver le pays',     color: '#8B5CF6', difficulty: 'medium', ready: false },

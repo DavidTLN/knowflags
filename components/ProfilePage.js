@@ -91,6 +91,7 @@ const GAMES_META = {
   'capital-city': { icon: '🏙️', en: 'Capital City', fr: 'Capitale',          color: '#e07c3a', href: 'capital-city' },
   'flag-drawing': { icon: '✏️', en: 'Flag Drawing', fr: 'Dessin du Drapeau', color: C.gold,    href: 'flag-drawing' },
   'flag-locator': { icon: '📍', en: 'Flag Locator', fr: 'Localise le Pays', color: C.blue,    href: 'flag-locator' },
+  'camembert':    { icon: '🥧', en: 'The Camembert Game', fr: 'Le jeu du camembert', color: '#D62828', href: 'camembert' },
 }
 
 const CAPITAL_MODES = {
@@ -487,7 +488,7 @@ export default function ProfilePage() {
                         { label: t('Best streak', 'Meilleure série'),        value: s?.streak_best  || 0,            icon: '🔥' },
                         { label: t('Flags found', 'Drapeaux trouvés'),       value: s?.flags_found  || 0,            icon: '✅' },
                         { label: t('Longest game', 'Partie la plus longue'), value: formatDuration(s?.longest_game), icon: '⏱' },
-                        ...(key === 'flag-reveal' || key === 'flag-quiz' ? [
+                        ...(key === 'flag-reveal' || key === 'flag-quiz' || key === 'camembert' ? [
                           { label: t('Best score', 'Meilleur score'), value: singleScore?.best_streak ? `${singleScore.best_streak} pts` : '—', icon: '⭐' },
                         ] : []),
                         ...(key === 'flag-drawing' ? [

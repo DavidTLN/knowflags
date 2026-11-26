@@ -32,6 +32,7 @@ export default function GuestSaveCTA({
   correct,
   played,
   label,           // 'Flag Quiz'
+  compact = false, // une ligne : titre + « Se connecter » (écrans de jeu sans défilement)
 }) {
   const t = (en, fr) => (locale === 'fr' ? fr : en)
   const [stored, setStored] = useState(false)
@@ -50,6 +51,23 @@ export default function GuestSaveCTA({
   const back = typeof window !== 'undefined'
     ? encodeURIComponent(window.location.pathname)
     : ''
+
+  if (compact) return (
+    <div style={{ backgroundColor: DS.navy, borderRadius: '12px', padding: '10px 10px 10px 14px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+      <div style={{ flex: 1, minWidth: 0 }}>
+        <p style={{ margin: 0, fontSize: '10px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.12em', color: DS.gold }}>
+          {t('Score not saved', 'Score non enregistré')}
+        </p>
+        <p style={{ margin: 0, fontSize: '13px', fontWeight: 700, color: '#FFFFFF', lineHeight: 1.3 }}>
+          {t('Sign in to join the leaderboard', 'Connecte-toi pour entrer au classement')}
+        </p>
+      </div>
+      <Link prefetch={false} href={`/${locale}/auth/login?next=${back}`}
+        style={{ padding: '0 14px', borderRadius: '10px', minHeight: '44px', flexShrink: 0, backgroundColor: '#FFFFFF', color: DS.navy, fontSize: '14px', fontWeight: 800, textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
+        {t('Sign in', 'Se connecter')}
+      </Link>
+    </div>
+  )
 
   return (
     <div style={{

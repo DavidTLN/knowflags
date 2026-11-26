@@ -20,7 +20,7 @@ const DS = {
 const GAME_ICON = {
   'flag-reveal': 'eye', 'flag-quiz': 'bulb', 'capital-city': 'pin', 'flag-clue': 'search',
   'flag-ranker': 'trophy', 'flag-locator': 'target', 'flag-drawing': 'brush',
-  'past-flag': 'clock', 'flag-palette': 'pie', 'subflag-quiz': 'sparkle', 'daily': 'flame',
+  'past-flag': 'clock', 'camembert': 'pie', 'subflag-quiz': 'sparkle', 'daily': 'flame',
 }
 
 const GAMES = [
@@ -33,7 +33,7 @@ const GAMES = [
   { key: 'flag-locator', en: 'Flag Locator', fr: 'Flag Locator', descEn: 'Find the country on the map',          descFr: 'Trouve le pays sur la carte',          color: '#2563EB', difficulty: 'medium' },
   { key: 'flag-drawing', en: 'Flag Draw',    fr: 'Flag Draw',    descEn: 'Can you draw it from memory?',         descFr: 'Sauras-tu le dessiner de mémoire ?',   color: '#7C3AED', difficulty: 'hard'   },
   { key: 'past-flag',    en: 'Past Flag',    fr: 'Past Flag',    descEn: 'Guess the country from a historical flag', descFr: 'Trouve le pays via un drapeau historique', color: '#0EA5E9', difficulty: 'medium' },
-  { key: 'flag-palette', en: 'Flag Palette', fr: 'Flag Palette', descEn: 'Guess the flag from its colour chart', descFr: 'Devine le drapeau d’après ses couleurs', color: '#D62828', difficulty: 'medium' },
+  { key: 'camembert', en: 'The Camembert Game', fr: 'Le jeu du camembert', descEn: 'Guess the flag from its colour chart', descFr: 'Devine le drapeau d’après ses couleurs', color: '#D62828', difficulty: 'medium' },
   { key: 'subflag-quiz', en: 'SubFlag Quiz', fr: 'SubFlag Quiz', descEn: 'Regional flag, find the country',      descFr: 'Drapeau régional, trouve le pays',     color: '#14B8A6', difficulty: 'hard'   },
 ]
 

@@ -11,7 +11,7 @@ const GAMES = [
   { key: 'flag-reveal',  en: 'Flag Reveal',  fr: 'Flag Reveal' },
   { key: 'flag-quiz',    en: 'Flag Quiz',    fr: 'Flag Quiz' },
   { key: 'past-flag',    en: 'Past Flag',    fr: 'Past Flag' },
-  { key: 'flag-palette', en: 'Flag Palette', fr: 'Flag Palette' },
+  { key: 'camembert',    en: 'The Camembert Game', fr: 'Le jeu du camembert' },
   { key: 'capital-city', en: 'Capital2Flag', fr: 'Capital2Flag' },
   { key: 'flag-drawing', en: 'Flag Draw',    fr: 'Flag Draw' },
   { key: 'flag-ranker',  en: 'Flag Rank',    fr: 'Flag Rank' },

@@ -19,6 +19,7 @@ const GAMES = [
   { key: 'flag-clue',    en: 'Clue2flag',    fr: 'Clue2flag',    descEn: 'Guess the country from fun facts',        descFr: 'Devine le pays grâce à des anecdotes' },
   { key: 'flag-locator', en: 'Flag on Map', fr: 'Drapeaux sur carte', descEn: 'Find the country on the map',             descFr: 'Trouve le pays sur la carte' },
   { key: 'past-flag',    en: 'PastFlag',    fr: 'PastFlag',    descEn: 'Guess the country from a historical flag', descFr: 'Trouve le pays via un drapeau historique' },
+  { key: 'flag-palette', en: 'Flag Palette', fr: 'Palette du drapeau', descEn: 'Guess the flag from its colour chart', descFr: 'Devine le drapeau d’après ses couleurs' },
   { key: 'subflag-quiz', en: 'SubFlagQuiz', fr: 'SubFlagQuiz', descEn: 'Regional flag, find the country',         descFr: 'Drapeau régional, trouve le pays' },
   { key: 'gartic-phone', en: 'FlagPhone',   fr: 'FlagPhone',   descEn: 'Describe, draw and guess flags',          descFr: 'Décris, dessine et devine les drapeaux', ready: false },
   { key: 'qui-est-ce',   en: 'Guess Who',   fr: 'Qui est-ce ?', descEn: 'Yes/no questions to find the country',   descFr: 'Questions oui/non pour trouver le pays', ready: false },

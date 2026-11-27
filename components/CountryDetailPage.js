@@ -866,7 +866,7 @@ function DesignSpecs({ country, locale }) {
         <div style={{ marginBottom: (symbols.length || hasDisplaySymbols || spec) ? '18px' : 0 }}>
           <p style={{ margin: '0 0 10px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{t('Colors', 'Couleurs')}</p>
           {hasDistribution ? (
-            <ColorBreakdown country={country} locale={locale} renderRow={(c, pctNode, barNode) => {
+            <ColorBreakdown country={country} locale={locale} renderRow={(c) => {
               const cm = colorMeanings[String(c).toLowerCase()] || {}
               const hex = cm.hex || COLOR_HEX[String(c).toLowerCase()] || '#cccccc'
               const pantone = cm.pantone || null
@@ -879,17 +879,11 @@ function DesignSpecs({ country, locale }) {
                 }} />
               )
               const labelNode = (
-                <span style={{ display: 'block' }}>
-                  <span style={{ display: 'flex', alignItems: 'baseline', gap: '8px' }}>
-                    <span style={{ display: 'flex', alignItems: 'baseline', gap: '8px', flexWrap: 'wrap', minWidth: 0 }}>
-                      <span style={{ fontSize: '14px', fontWeight: '700', color: DS.navy }}>{labelColor(c, locale)}</span>
-                      <code style={{ fontSize: '11px', fontFamily: 'monospace', color: DS.muted, textTransform: 'uppercase' }}>
-                        {hex}{pantone ? ` · Pantone ${pantone}` : ''}
-                      </code>
-                    </span>
-                    {pctNode}
-                  </span>
-                  {barNode}
+                <span style={{ display: 'flex', alignItems: 'baseline', gap: '8px', flexWrap: 'wrap' }}>
+                  <span style={{ fontSize: '14px', fontWeight: '700', color: DS.navy }}>{labelColor(c, locale)}</span>
+                  <code style={{ fontSize: '11px', fontFamily: 'monospace', color: DS.muted, textTransform: 'uppercase' }}>
+                    {hex}{pantone ? ` · Pantone ${pantone}` : ''}
+                  </code>
                 </span>
               )
               return disclosure('c:' + c, meaningOf(colorMeanings, c), badge, labelNode)

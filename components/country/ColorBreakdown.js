@@ -2,10 +2,10 @@
 
 // Bloc « Couleurs » de la fiche pays (dans Conception et Symbolisme) :
 //   - le camembert de la surface du drapeau (countries.color_distribution) ;
-//   - les lignes de couleurs existantes, avec leur part et une barre ;
-//     survoler / ouvrir une ligne met sa part en avant dans le camembert ;
-//   - les 3 drapeaux au camembert le plus proche (countries.similar_palettes) ;
-//   - un lien vers The Camembert Game.
+//   - les lignes de couleurs existantes, triées comme le camembert ;
+//     survoler une ligne met sa part en avant dans le camembert ;
+//   - les 3 drapeaux au camembert le plus proche (countries.similar_palettes),
+//     avec un lien discret vers The Camembert Game.
 // Sans données de répartition, le composant n'est pas utilisé (ancienne liste).
 
 import { useState } from 'react'
@@ -22,8 +22,7 @@ const CSS = `
 .kf-cb-near { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
 .kf-cb-near a { transition: border-color 0.15s ease, transform 0.15s ease; }
 .kf-cb-near a:hover { border-color: #16324F55 !important; transform: translateY(-1px); }
-.kf-cb-play { transition: background-color 0.15s ease; }
-.kf-cb-play:hover { background-color: #FDE68A !important; }
+.kf-cb-game:hover { color: #16324F !important; text-decoration: underline !important; }
 @media (max-width: 640px) {
   .kf-cb-top { grid-template-columns: minmax(0, 1fr); gap: 14px; }
   .kf-cb-pie { flex-direction: row !important; text-align: left !important; }
@@ -42,7 +41,8 @@ export function ColorPie({ slices, size = 176, labels = true, focus = null, labe
     const a1 = a0 + (s.pct / 100) * Math.PI * 2
     return [...acc, { ...s, a0, a1, mid: (a0 + a1) / 2 }]
   }, [])
-  const pt = (a, r = 50) => [50 + r * Math.cos(a), 50 + r * Math.sin(a)]
+  // Arrondi : le serveur et le navigateur ne calculent pas cos/sin au même dernier chiffre
+  const pt = (a, r = 50) => [+(50 + r * Math.cos(a)).toFixed(3), +(50 + r * Math.sin(a)).toFixed(3)]
   return (
     <svg viewBox="-2 -2 104 104" width={size} height={size} role="img" aria-label={label} style={{ display: 'block', flexShrink: 0 }}>
       {parts.length === 1
@@ -70,8 +70,7 @@ export function ColorPie({ slices, size = 176, labels = true, focus = null, labe
   )
 }
 
-// renderRow(couleur, pctNode, barNode) : rend une ligne de couleur existante
-// (pastille + nom + signification dépliable) avec sa part et sa barre.
+// renderRow(couleur) : rend une ligne de couleur existante (pastille, nom, sens dépliable).
 export default function ColorBreakdown({ country, locale, renderRow }) {
   const t = (en, fr) => (locale === 'fr' ? fr : en)
   const [focus, setFocus] = useState(null)
@@ -80,9 +79,6 @@ export default function ColorBreakdown({ country, locale, renderRow }) {
   // Couleurs officielles, triées comme le camembert (part décroissante)
   const share = Object.fromEntries(dist.map(d => [String(d.key).toLowerCase(), d]))
   const colors = [...(country.colors || [])].sort((a, b) => (share[String(b).toLowerCase()]?.pct || 0) - (share[String(a).toLowerCase()]?.pct || 0))
-  const official = new Set(colors.map(c => String(c).toLowerCase()))
-  const others = dist.filter(d => !official.has(String(d.key).toLowerCase())).reduce((s, d) => s + d.pct, 0)
-  const dominant = dist[0]
   const pieLabel = t('Colour breakdown of the flag: ', 'Part de chaque couleur du drapeau : ') +
     dist.map(d => `${locale === 'fr' ? d.fr : d.en} ${fmt(d.pct, locale)} %`).join(', ')
   const near = (country.similarPalettes || []).filter(s => Array.isArray(s.slices) && s.slices.length)
@@ -93,51 +89,35 @@ export default function ColorBreakdown({ country, locale, renderRow }) {
       <div className="kf-cb-top">
         <div className="kf-cb-pie" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px', textAlign: 'center' }}>
           <ColorPie slices={dist} focus={focus} label={pieLabel} size={160} />
-          {dominant && (
-            <p style={{ margin: 0, fontSize: '12px', lineHeight: 1.5, color: DS.muted }}>
-              {t('Share of the flag’s surface. ', 'Part de la surface du drapeau. ')}
-              <strong style={{ color: DS.navy }}>{locale === 'fr' ? dominant.fr : dominant.en}</strong>
-              {t(` covers ${fmt(dominant.pct, locale)} %.`, ` en couvre ${fmt(dominant.pct, locale)} %.`)}
-            </p>
-          )}
+          <p style={{ margin: 0, fontSize: '12px', lineHeight: 1.5, color: DS.muted }}>
+            {t('Share of each colour', 'Part de chaque couleur')}
+          </p>
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', minWidth: 0 }}
           onMouseLeave={() => setFocus(null)}>
           {colors.map(c => {
             const key = String(c).toLowerCase()
-            const d = share[key]
-            const pct = d?.pct
-            const hex = d?.hex
-            const pctNode = (
-              <span style={{ marginLeft: 'auto', paddingLeft: '8px', fontSize: '14px', fontWeight: 800, color: DS.navy, whiteSpace: 'nowrap' }}>
-                {pct ? `${fmt(pct, locale)} %` : '< 1 %'}
-              </span>
-            )
-            const barNode = (
-              <span aria-hidden="true" style={{ display: 'block', height: '4px', marginTop: '7px', borderRadius: '9999px', backgroundColor: DS.track, overflow: 'hidden' }}>
-                <span style={{ display: 'block', height: '100%', width: `${Math.max(pct || 0.6, 0.6)}%`, borderRadius: '9999px', backgroundColor: hex || DS.light, boxShadow: hex && isLight(hex) ? 'inset 0 0 0 1px #C9C3B8' : 'none', transition: 'width 0.4s ease' }} />
-              </span>
-            )
             return (
               <div key={key} onMouseEnter={() => setFocus(key)} onFocus={() => setFocus(key)} onBlur={() => setFocus(null)}>
-                {renderRow(c, pctNode, barNode)}
+                {renderRow(c)}
               </div>
             )
           })}
-          {others >= 0.5 && (
-            <p style={{ margin: '2px 2px 0', fontSize: '12px', color: DS.muted }}>
-              {t(`Other shades (emblem details): ${fmt(others, locale)} %`, `Autres teintes (détails de l’emblème) : ${fmt(others, locale)} %`)}
-            </p>
-          )}
         </div>
       </div>
 
       {near.length > 0 && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-          <p style={{ margin: 0, fontSize: '11px', fontWeight: 700, color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
-            {t('Closest colour charts', 'Camemberts les plus proches')}
-          </p>
+          <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: '12px', flexWrap: 'wrap' }}>
+            <p style={{ margin: 0, fontSize: '11px', fontWeight: 700, color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+              {t('Closest colour charts', 'Camemberts les plus proches')}
+            </p>
+            <Link prefetch={false} href={`/${locale}/games/camembert`} className="kf-cb-game"
+              style={{ fontSize: '12px', fontWeight: 600, color: DS.muted, textDecoration: 'none' }}>
+              {t('Play The Camembert Game →', 'Jouer au jeu du camembert →')}
+            </Link>
+          </div>
           <div className="kf-cb-near">
             {near.map(s => {
               const nm = locale === 'fr' ? (s.fr || s.en) : (s.en || s.fr)
@@ -156,19 +136,6 @@ export default function ColorBreakdown({ country, locale, renderRow }) {
         </div>
       )}
 
-      <Link prefetch={false} href={`/${locale}/games/camembert`} className="kf-cb-play"
-        style={{ display: 'flex', alignItems: 'center', gap: '12px', minHeight: '52px', padding: '8px 14px 8px 10px', borderRadius: '12px', backgroundColor: DS.goldLight, textDecoration: 'none' }}>
-        <span aria-hidden="true" style={{ width: '36px', height: '36px', borderRadius: '10px', backgroundColor: DS.gold, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={DS.navy} strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12A9 9 0 1 1 12 3v9z" /><path d="M15 3.5A9 9 0 0 1 20.5 9H15z" /></svg>
-        </span>
-        <span style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column' }}>
-          <span style={{ fontSize: '14px', fontWeight: 800, color: DS.navy }}>{t('The Camembert Game', 'Le jeu du camembert')}</span>
-          <span style={{ fontSize: '12px', color: DS.goldDark, lineHeight: 1.4 }}>
-            {t('Could you recognise a flag from its colours alone?', 'Reconnaîtrais-tu un drapeau à ses seules couleurs ?')}
-          </span>
-        </span>
-        <span style={{ fontSize: '13px', fontWeight: 800, color: DS.navy, whiteSpace: 'nowrap' }}>{t('Play', 'Jouer')} →</span>
-      </Link>
     </div>
   )
 }

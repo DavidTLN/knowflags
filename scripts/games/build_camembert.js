@@ -11,7 +11,9 @@ const dist = (a, b) => { const rm = (a[0] + b[0]) / 2, dr = a[0] - b[0], dg = a[
 const hex = c => '#' + c.map(v => v.toString(16).padStart(2, '0')).join('').toUpperCase()
 const out = {}, missing = []
 for (const iso of ISOS) {
-  const file = path.join(DIR, iso + '.svg')
+  // Le drapeau affiché sur le site quand il diffère de flagcdn (countries.flag_url / historique)
+  const OVERRIDES = { af: 'public/flags/history/af-2021.svg', at: 'public/flags/history/at-2018.svg', 'gb-nir': path.join(DIR, 'gb.svg') }
+  const file = OVERRIDES[iso] ? path.resolve(OVERRIDES[iso]) : path.join(DIR, iso + '.svg')
   if (!fs.existsSync(file)) { missing.push(iso); continue }
   const r = new Resvg(fs.readFileSync(file), { fitTo: { mode: 'width', value: 600 }, shapeRendering: 0, textRendering: 0, imageRendering: 1 }).render()
   const px = r.pixels, counts = new Map(); let total = 0

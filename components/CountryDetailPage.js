@@ -11,6 +11,7 @@ import { labelColor, labelSymbol, labelShape } from '@/lib/flagSymbolsFr'
 import Footer from '@/components/Footer'
 import CountryRelatedPosts from '@/components/blog/CountryRelatedPosts'
 import ReportModal from '@/components/ReportModal'
+import ColorBreakdown from '@/components/country/ColorBreakdown'
 
 // Ancien arbre « Évolution du drapeau » (FlagHistoryModule) : gardé dans le code mais
 // masqué ; FlagTimeline prend sa place. Passer à true pour le réafficher.
@@ -772,6 +773,7 @@ function DesignSpecs({ country, locale }) {
   const symbolMeanings = country.symbol_meanings || {}
   const displaySymbols = Array.isArray(country.display_symbols) ? country.display_symbols : []
   const hasDisplaySymbols = displaySymbols.length > 0
+  const hasDistribution = Array.isArray(country.colorDistribution) && country.colorDistribution.length > 0
   const spec = locale === 'fr' ? (country.spec_fr || country.spec_en) : (country.spec_en || country.spec_fr)
   const designer = locale === 'fr' ? (country.designer_fr || country.designer_en) : (country.designer_en || country.designer_fr)
 
@@ -863,6 +865,36 @@ function DesignSpecs({ country, locale }) {
       {colors.length > 0 && (
         <div style={{ marginBottom: (symbols.length || hasDisplaySymbols || spec) ? '18px' : 0 }}>
           <p style={{ margin: '0 0 10px', fontSize: '11px', fontWeight: '700', color: DS.muted, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{t('Colors', 'Couleurs')}</p>
+          {hasDistribution ? (
+            <ColorBreakdown country={country} locale={locale} renderRow={(c, pctNode, barNode) => {
+              const cm = colorMeanings[String(c).toLowerCase()] || {}
+              const hex = cm.hex || COLOR_HEX[String(c).toLowerCase()] || '#cccccc'
+              const pantone = cm.pantone || null
+              const badge = (isOpen) => (
+                <span style={{
+                  width: `${isOpen ? OPEN_SIZE : SHUT_SIZE}px`, height: `${isOpen ? OPEN_SIZE : SHUT_SIZE}px`,
+                  borderRadius: isOpen ? '18px' : '10px', backgroundColor: hex, flexShrink: 0,
+                  border: String(c).toLowerCase() === 'white' ? `1px solid ${DS.border}` : 'none',
+                  transition: 'width 0.22s ease, height 0.22s ease, border-radius 0.22s ease',
+                }} />
+              )
+              const labelNode = (
+                <span style={{ display: 'block' }}>
+                  <span style={{ display: 'flex', alignItems: 'baseline', gap: '8px' }}>
+                    <span style={{ display: 'flex', alignItems: 'baseline', gap: '8px', flexWrap: 'wrap', minWidth: 0 }}>
+                      <span style={{ fontSize: '14px', fontWeight: '700', color: DS.navy }}>{labelColor(c, locale)}</span>
+                      <code style={{ fontSize: '11px', fontFamily: 'monospace', color: DS.muted, textTransform: 'uppercase' }}>
+                        {hex}{pantone ? ` · Pantone ${pantone}` : ''}
+                      </code>
+                    </span>
+                    {pctNode}
+                  </span>
+                  {barNode}
+                </span>
+              )
+              return disclosure('c:' + c, meaningOf(colorMeanings, c), badge, labelNode)
+            }} />
+          ) : (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             {colors.map(c => {
               const cm = colorMeanings[String(c).toLowerCase()] || {}
@@ -887,6 +919,7 @@ function DesignSpecs({ country, locale }) {
               return disclosure('c:' + c, meaningOf(colorMeanings, c), badge, labelNode)
             })}
           </div>
+          )}
         </div>
       )}
 

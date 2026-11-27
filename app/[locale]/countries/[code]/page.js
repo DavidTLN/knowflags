@@ -22,7 +22,7 @@ const COUNTRY_SELECT =
   'etiquette_en, etiquette_fr, color_meanings, symbol_meanings, display_symbols, ' +
   'designer_en, designer_fr, adopted_note_fr, adopted_note_en, adopted_detail_fr, adopted_detail_en, ' +
   'flag_url, entity_type, parent_iso, sovereignty_note_en, sovereignty_note_fr, ' +
-  'iso_numeric, land_border_km, coastline_km, neighbours, maritime_neighbours'
+  'iso_numeric, land_border_km, coastline_km, neighbours, maritime_neighbours, color_distribution, similar_palettes'
 
 // Shape the DB row exactly the way the presentation component expects it.
 function toCountry(data) {
@@ -66,6 +66,8 @@ function toCountry(data) {
     coastlineKm:       data.coastline_km,
     neighbours:        data.neighbours || [],
     maritimeNeighbours: data.maritime_neighbours || [],
+    colorDistribution: data.color_distribution || [],
+    similarIsos:       data.similar_palettes || [],
   }
 }
 
@@ -163,7 +165,7 @@ export default async function Page({ params }) {
 
   // Everything else in parallel — all on the server, all in the initial HTML.
   const iso = country.code.toLowerCase()
-  const [factsRes, relatedRes, childrenRes, relatedPosts, historyRes, subFlags] = await Promise.all([
+  const [factsRes, relatedRes, childrenRes, relatedPosts, historyRes, subFlags, similarRes] = await Promise.all([
     supabase
       .from('country_facts')
       .select('fact_en, fact_fr, category')
@@ -186,7 +188,16 @@ export default async function Page({ params }) {
       .eq('iso_code', iso)
       .order('date_start', { ascending: true, nullsFirst: true }),
     getSubFlags(supabase, iso).catch(() => null),
+    // Drapeaux au camembert de couleurs le plus proche (bloc Couleurs)
+    country.similarIsos.length
+      ? supabase.from('countries').select('iso_code, name_en, name_fr, color_distribution').in('iso_code', country.similarIsos)
+      : Promise.resolve({ data: [] }),
   ])
+  const similarRows = Object.fromEntries((similarRes.data || []).map(r => [r.iso_code, r]))
+  country.similarPalettes = country.similarIsos
+    .map(code => similarRows[code])
+    .filter(Boolean)
+    .map(r => ({ code: r.iso_code, en: r.name_en, fr: r.name_fr, slices: r.color_distribution || [] }))
 
   // Frise historique : null si la requête échoue (le composant se recharge alors seul)
   const history = historyRes.error ? null : (historyRes.data || [])
